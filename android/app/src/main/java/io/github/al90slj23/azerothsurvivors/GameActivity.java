@@ -34,7 +34,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** A local-origin game view. Native bridge capabilities are limited to GPU probing and save export. */
+/** A local-origin game view with GPU probing, save export, and read-only thermal information. */
 public final class GameActivity extends Activity {
     public static final String EXTRA_CHROME = "chrome_mode";
     private static final int PICK_FILE = 20;
@@ -56,6 +56,9 @@ public final class GameActivity extends Activity {
     private boolean externalSession;
     private boolean dialogShown;
     private long serverDeadline;
+    private volatile ThermalMonitor thermalMonitor;
+    // Set only by UI navigation/lifecycle callbacks; queried on WebView's JavaBridge thread.
+    private volatile boolean thermalBridgeAllowed;
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -101,6 +104,7 @@ public final class GameActivity extends Activity {
 
     private void createGameView() {
         if (web != null) return;
+        thermalMonitor = new ThermalMonitor(this);
         web = new WebView(this);
         web.setBackgroundColor(Color.BLACK);
         WebSettings settings = web.getSettings();
@@ -118,6 +122,10 @@ public final class GameActivity extends Activity {
         web.setOnLongClickListener(v -> true);
         web.addJavascriptInterface(new AndroidHost(), "AndroidHost");
         web.setWebViewClient(new WebViewClient() {
+            @Override public void onPageStarted(WebView view, String url, android.graphics.Bitmap favicon) {
+                Uri uri = url == null ? null : Uri.parse(url);
+                thermalBridgeAllowed = worldLoaded && isLocal(uri) && "/".equals(uri.getPath());
+            }
             @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 if (!request.isForMainFrame()) return !isLocal(request.getUrl());
                 if (isLocal(request.getUrl())) return false;
@@ -129,6 +137,7 @@ public final class GameActivity extends Activity {
             }
             @Override public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                 if (request.isForMainFrame()) {
+                    thermalBridgeAllowed = false;
                     fail("游戏页面无法载入，请返回重试或尝试 Chrome 模式。");
                 }
             }
@@ -184,6 +193,11 @@ public final class GameActivity extends Activity {
     }
 
     public final class AndroidHost {
+        @JavascriptInterface public String getThermalInfo() {
+            ThermalMonitor monitor = thermalMonitor;
+            return thermalBridgeAllowed && monitor != null ? monitor.snapshot() : ThermalMonitor.UNAVAILABLE;
+        }
+
         @JavascriptInterface public void reportGpu(boolean available, String reason) {
             runOnUiThread(() -> {
                 if (!probing || web == null || !PROBE_URL.equals(web.getUrl()) || isFinishing()) return;
@@ -316,6 +330,8 @@ public final class GameActivity extends Activity {
     @Override public void onWindowFocusChanged(boolean focus) { super.onWindowFocusChanged(focus); if (focus) immersive(); }
 
     @Override protected void onDestroy() {
+        thermalBridgeAllowed = false;
+        if (thermalMonitor != null) { thermalMonitor.close(); thermalMonitor = null; }
         handler.removeCallbacksAndMessages(null);
         if (fileCallback != null) { fileCallback.onReceiveValue(null); fileCallback = null; }
         if (web != null) {

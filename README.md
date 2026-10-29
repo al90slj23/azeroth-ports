@@ -9,6 +9,12 @@ Aethus 原作网页游戏的非官方社区封装与平台适配。macOS 和 And
 
 两端目前使用不同版本的核心，未统一更新。合作游戏前需要核对各端的游戏版本；本仓库不代表已完成所有机型或跨平台联机验收。
 
+## Android 安装包
+
+[下载 Android 第四版（0.126.0-android.4）](https://github.com/al90slj23/azeroth-ports/releases/tag/android-v0.126.0-r4)。保留原版卡片直接选择，原“重抽”按钮和点击区域等比放大两倍；同时包含快捷浮窗暂停、HUD 缩放、图形调节、电池温度和部分简体中文补译。
+
+使用相同签名，可直接覆盖之前的社区 Android 包；不要先卸载，以免丢失存档。Release 附带 APK、SHA-256 校验、实际画面及验证摘要。桌面模拟已验证鼠标和菜单模式触控，真实手机普通触控、温度和性能仍需真机确认。
+
 ## 目录
 
 - `macos/mac/`：Electron 启动器、本地静态服务、合作代理、存档移转与测试。
@@ -23,7 +29,14 @@ Aethus 原作网页游戏的非官方社区封装与平台适配。macOS 和 And
 
 ```sh
 node --test macos/mac/static-server.test.js macos/mac/profile-migration.test.js macos/mac/coop-proxy.test.js
-node --test android/tests/android-bridge.test.js
+node --test android/tests/android-bridge.test.js android/tests/touch-tools.test.js android/tests/performance.test.js android/tests/localization-resources.test.js
+```
+
+准备好已验证的官方核心后，可检查刷新按钮补丁与引擎暂停导入（后一项需要先构建资源）：
+
+```sh
+python3 android/tests/native-reroll-patch.test.py
+python3 android/tests/pause-packaging.test.py
 ```
 
 这些测试验证本地实现，不等同于真实 Android 手机兼容性、性能或完整游戏流程验收。详细验证范围见各平台 README。

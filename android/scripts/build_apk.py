@@ -9,7 +9,7 @@ import secrets
 import shutil
 import subprocess
 import zipfile
-from prepare_assets import prepare, DEFAULT_WEB, DEFAULT_CORE
+from prepare_assets import prepare, DEFAULT_WEB, DEFAULT_CORE, ANDROID_REVISION
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = 'io.github.al90slj23.azerothsurvivors'
@@ -46,9 +46,9 @@ def main():
     output.mkdir(exist_ok=True)
     files = prepare(args.web, build / 'assets', args.core)
     core = json.loads((build / 'assets/game-provenance.json').read_text())
-    version = core['game_version'] + '-android.1'
+    version = core['game_version'] + f'-android.{ANDROID_REVISION}'
     numbers = [int(n) for n in core['game_version'].split('.')]
-    version_code = str(numbers[0] * 100000000 + numbers[1] * 10000 + numbers[2] * 10 + 1)
+    version_code = str(numbers[0] * 100000000 + numbers[1] * 10000 + numbers[2] * 10 + ANDROID_REVISION)
     build_info = ROOT / 'app/src/main/java/io/github/al90slj23/azerothsurvivors/BuildInfo.java'
     build_info.write_text('package ' + PACKAGE + ';\npublic final class BuildInfo {\n'
                           + ' public static final String GAME_VERSION = ' + json.dumps(core['game_version']) + ';\n'

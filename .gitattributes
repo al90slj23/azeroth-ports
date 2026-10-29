@@ -1,0 +1,2 @@
+# Verified localized resource variants must retain exact bytes, including CRLF.
+android/android-overrides/zh-CN/data/** -text

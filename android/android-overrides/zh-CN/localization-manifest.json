@@ -1,0 +1,269 @@
+{
+  "locale": "zh-CN",
+  "selection_required": true,
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "original_wasm_modified": false,
+  "scope": "XP/loot/exploration system templates and a bounded set of area/map display names",
+  "not_full_translation": true,
+  "files": {
+    "data/interface/framexml/globalstrings.lua": {
+      "original_sha256": "b95edefbf2afb4861f9fb619092fa11b5b8816c80b06a02c9321a9e1fdbab8a2",
+      "sha256": "5f14651a1b43368996b5d2c93fae00e0c241f3d785e5e522a916359a1cbe1804",
+      "translated_globals": 46,
+      "format_arguments_preserved": true
+    },
+    "data/dbfilesclient/areatable.dbc": {
+      "original_sha256": "ac4c33c2ae65d37ab801050adf489ea5286d7dd9f9ebf78e6e5c7120418a3528",
+      "sha256": "2ff3d4d0a3d30af550c2ab6094c8c596307e92091e61054ec6b8922f6d0f47b8",
+      "display_name_field": 11,
+      "changed_rows": 40,
+      "other_record_fields_unchanged": true,
+      "translations": [
+        {
+          "id": 9,
+          "from": "Northshire Valley",
+          "to": "北郡山谷"
+        },
+        {
+          "id": 10,
+          "from": "Duskwood",
+          "to": "暮色森林"
+        },
+        {
+          "id": 12,
+          "from": "Elwynn Forest",
+          "to": "艾尔文森林"
+        },
+        {
+          "id": 18,
+          "from": "Crystal Lake",
+          "to": "水晶湖"
+        },
+        {
+          "id": 24,
+          "from": "Northshire Abbey",
+          "to": "北郡修道院"
+        },
+        {
+          "id": 25,
+          "from": "Blackrock Mountain",
+          "to": "黑石山"
+        },
+        {
+          "id": 42,
+          "from": "Darkshire",
+          "to": "夜色镇"
+        },
+        {
+          "id": 54,
+          "from": "Jasperlode Mine",
+          "to": "玉石矿洞"
+        },
+        {
+          "id": 57,
+          "from": "Fargodeep Mine",
+          "to": "法戈第矿洞"
+        },
+        {
+          "id": 59,
+          "from": "Northshire Vineyards",
+          "to": "北郡葡萄园"
+        },
+        {
+          "id": 61,
+          "from": "Thunder Falls",
+          "to": "雷霆瀑布"
+        },
+        {
+          "id": 62,
+          "from": "Brackwell Pumpkin Patch",
+          "to": "布莱克威尔南瓜田"
+        },
+        {
+          "id": 86,
+          "from": "Stone Cairn Lake",
+          "to": "石碑湖"
+        },
+        {
+          "id": 87,
+          "from": "Goldshire",
+          "to": "闪金镇"
+        },
+        {
+          "id": 88,
+          "from": "Eastvale Logging Camp",
+          "to": "东谷伐木场"
+        },
+        {
+          "id": 89,
+          "from": "Mirror Lake Orchard",
+          "to": "明镜湖果园"
+        },
+        {
+          "id": 91,
+          "from": "Tower of Azora",
+          "to": "阿祖拉之塔"
+        },
+        {
+          "id": 92,
+          "from": "Mirror Lake",
+          "to": "明镜湖"
+        },
+        {
+          "id": 94,
+          "from": "Raven Hill",
+          "to": "乌鸦岭"
+        },
+        {
+          "id": 120,
+          "from": "Westbrook Garrison",
+          "to": "西泉要塞"
+        },
+        {
+          "id": 254,
+          "from": "Blackrock Mountain",
+          "to": "黑石山"
+        },
+        {
+          "id": 357,
+          "from": "Feralas",
+          "to": "菲拉斯"
+        },
+        {
+          "id": 490,
+          "from": "Un'Goro Crater",
+          "to": "安戈洛环形山"
+        },
+        {
+          "id": 492,
+          "from": "Raven Hill Cemetery",
+          "to": "乌鸦岭墓园"
+        },
+        {
+          "id": 537,
+          "from": "Fire Plume Ridge",
+          "to": "火羽山"
+        },
+        {
+          "id": 538,
+          "from": "Lakkari Tar Pits",
+          "to": "拉卡利油沼"
+        },
+        {
+          "id": 541,
+          "from": "Marshal's Refuge",
+          "to": "马绍尔营地"
+        },
+        {
+          "id": 543,
+          "from": "Golakka Hot Springs",
+          "to": "葛拉卡温泉"
+        },
+        {
+          "id": 796,
+          "from": "Scarlet Monastery",
+          "to": "血色修道院"
+        },
+        {
+          "id": 797,
+          "from": "Jerod's Landing",
+          "to": "杰罗德码头"
+        },
+        {
+          "id": 798,
+          "from": "Ridgepoint Tower",
+          "to": "山巅之塔"
+        },
+        {
+          "id": 1445,
+          "from": "Blackrock Mountain",
+          "to": "黑石山"
+        },
+        {
+          "id": 1519,
+          "from": "Stormwind City",
+          "to": "暴风城"
+        },
+        {
+          "id": 1741,
+          "from": "Gurubashi Arena",
+          "to": "古拉巴什竞技场"
+        },
+        {
+          "id": 2597,
+          "from": "Alterac Valley",
+          "to": "奥特兰克山谷"
+        },
+        {
+          "id": 2839,
+          "from": "Alterac Valley",
+          "to": "奥特兰克山谷"
+        },
+        {
+          "id": 3277,
+          "from": "Warsong Gulch",
+          "to": "战歌峡谷"
+        },
+        {
+          "id": 3358,
+          "from": "Arathi Basin",
+          "to": "阿拉希盆地"
+        },
+        {
+          "id": 3456,
+          "from": "Naxxramas",
+          "to": "纳克萨玛斯"
+        },
+        {
+          "id": 3478,
+          "from": "Gates of Ahn'Qiraj",
+          "to": "安其拉之门"
+        }
+      ]
+    },
+    "data/dbfilesclient/map.dbc": {
+      "original_sha256": "4bb6b53841b113eb0ec4fa624ef42d7de7ebdd5169aac17d3e6f9a4f73654245",
+      "sha256": "8b389a30dd85f36a7cf0fda3e5bfd24c7ff891995127bd0bd3aea06ff291cc6c",
+      "display_name_field": 4,
+      "changed_rows": 7,
+      "other_record_fields_unchanged": true,
+      "translations": [
+        {
+          "id": 0,
+          "from": "Eastern Kingdoms",
+          "to": "东部王国"
+        },
+        {
+          "id": 1,
+          "from": "Kalimdor",
+          "to": "卡利姆多"
+        },
+        {
+          "id": 30,
+          "from": "Alterac Valley",
+          "to": "奥特兰克山谷"
+        },
+        {
+          "id": 189,
+          "from": "Scarlet Monastery",
+          "to": "血色修道院"
+        },
+        {
+          "id": 489,
+          "from": "Warsong Gulch",
+          "to": "战歌峡谷"
+        },
+        {
+          "id": 529,
+          "from": "Arathi Basin",
+          "to": "阿拉希盆地"
+        },
+        {
+          "id": 533,
+          "from": "Naxxramas",
+          "to": "纳克萨玛斯"
+        }
+      ]
+    }
+  }
+}
