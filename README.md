@@ -1,6 +1,6 @@
-# Azeroth Survivors
+# Azeroth Survivors Community Ports
 
-Aethus 原作网页游戏的社区封装与平台适配。macOS 和 Android 放在同一个仓库，分别维护启动器、平台功能与打包工具；游戏核心仍由原作提供，没有从原作 Rust 源码重新编译。
+Aethus 原作网页游戏的非官方社区封装与平台适配。macOS 和 Android 放在同一个仓库，分别维护启动器、平台功能与打包工具；游戏核心仍由原作提供，没有从原作 Rust 源码重新编译。
 
 | 平台 | 当前游戏核心 | 入口 |
 |---|---|---|
