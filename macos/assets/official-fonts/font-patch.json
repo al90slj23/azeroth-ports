@@ -1,0 +1,31 @@
+{
+  "patch": "official-cjk-v3",
+  "fonts": {
+    "azs_sc.ttf": {
+      "sha256": "5499291b696324c10c3e7f2d3d89a5c490897319a629141ea5b40c85e62e6224",
+      "bytes": 1225412,
+      "unicode_count": 3929,
+      "sample_complete": true,
+      "source": "https://wow.aethus.pl/data/fonts/azs_sc.ttf"
+    },
+    "azs_jp.ttf": {
+      "sha256": "49dbce69a139ef37d64fb4b36c12483e3a68b9895eb37e322a40368acbeb91d5",
+      "bytes": 1303236,
+      "unicode_count": 3295,
+      "sample_complete": true,
+      "source": "https://wow.aethus.pl/data/fonts/azs_jp.ttf"
+    },
+    "azs_kr.ttf": {
+      "sha256": "5498795e84c1895f1a01a1877020fb8acf589ed0dbcb00a6fa4369d3f57f9e7a",
+      "bytes": 498808,
+      "unicode_count": 2487,
+      "sample_complete": true,
+      "source": "https://wow.aethus.pl/data/fonts/azs_kr.ttf"
+    }
+  },
+  "index_names": [
+    "Fonts\\AZS_SC.TTF",
+    "Fonts\\AZS_JP.TTF",
+    "Fonts\\AZS_KR.TTF"
+  ]
+}

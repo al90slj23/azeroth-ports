@@ -1,0 +1,10 @@
+dist/
+node_modules/
+*.zip
+*.rar
+.DS_Store
+.venv/
+assets/cjk-fonts/
+assets/font-source/*.ttf
+__pycache__/
+assets/latest-web-core/

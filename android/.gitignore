@@ -1,0 +1,10 @@
+.toolchain/
+.private/
+build/
+dist/
+__pycache__/
+*.apk
+*.keystore
+local.properties
+.DS_Store
+assets/latest-web-core/

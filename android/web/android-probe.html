@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>检查图形支持</title>
+<style>html{color-scheme:dark;background:#11100d;color:#f5dda6;font:18px system-ui}body{display:grid;place-content:center;min-height:80vh;text-align:center;margin:24px}p{color:#c3bda8;font-size:14px}</style>
+</head><body><main><h2>正在检查图形支持</h2><p>首次启动可能需要几秒。</p></main>
+<script>
+(async () => {
+  let completed = false;
+  const report = (ok, detail) => {
+    if (completed) return;
+    completed = true;
+    if (window.AndroidHost) window.AndroidHost.reportGpu(ok, detail);
+    else document.querySelector('p').textContent = detail;
+  };
+  const timeout = setTimeout(() => report(false, '图形初始化超时，请尝试 Chrome 模式。'), 8000);
+  try {
+    if (!isSecureContext || !navigator.gpu) throw new Error('当前内置渲染环境没有提供 WebGPU，请更新 Android System WebView 或使用 Chrome 模式。');
+    const adapter = await navigator.gpu.requestAdapter({powerPreference: 'high-performance'});
+    if (!adapter) throw new Error('当前图形驱动没有可用的 WebGPU 适配器，请尝试 Chrome 模式。');
+    const device = await adapter.requestDevice();
+    device.destroy();
+    clearTimeout(timeout);
+    report(true, 'WebGPU adapter and device initialized');
+  } catch (error) {
+    clearTimeout(timeout);
+    report(false, error.message || '当前设备的图形初始化失败。');
+  }
+})();
+</script></body></html>

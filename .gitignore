@@ -1,0 +1,36 @@
+# Local toolchains, dependencies and generated files.
+**/.venv/
+**/node_modules/
+**/.toolchain/
+**/build/
+**/dist/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+
+# Downloaded game snapshots and superseded font experiments.
+**/assets/latest-web-core/
+**/assets/cjk-fonts/
+**/assets/font-source/*.ttf
+
+# Local QA includes screenshots, network traces and user-specific state.
+**/evidence/
+
+# Signing material and local configuration must stay on this machine.
+**/.private/
+*.keystore
+*.jks
+*.p12
+*.pfx
+signing-password.txt
+local.properties
+.env
+.env.local
+.env.*.local
+
+# Download archives and distributable packages are stored outside Git.
+*.zip
+*.rar
+*.apk
+*.aab
+*.dmg

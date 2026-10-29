@@ -1,0 +1,10 @@
+{
+  "name": "azeroth-survivors",
+  "productName": "Azeroth Survivors",
+  "version": "0.123.0",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "test": "node --test static-server.test.js profile-migration.test.js coop-proxy.test.js"
+  }
+}
