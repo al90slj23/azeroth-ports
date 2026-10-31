@@ -6,6 +6,21 @@
   "javascript_analysis": "static; does not execute target code",
   "wasm_file_limit_bytes": 8388608,
   "wasm_wabt_version": "1.0.42",
+  "local_wasm_extension": {
+    "provider_id": "azeroth-ports-local-wasm-focus",
+    "stock_wasm_limits_unchanged": true,
+    "method": "full WABT validation and on-disk decode; streamed complete function selection; REA Evidence schema validation",
+    "wabt_macos_arm64_archive_sha256": "3f654779b436c628db3ca4323c51538815f5fbc887a6d5f3bb1c18d36281e240"
+  },
+  "native_provider": {
+    "ghidra_version": "12.1.4",
+    "jdk_version": "21.0.13+9",
+    "platform": "macOS ARM64",
+    "doctor_passed": true,
+    "full_target_autoanalysis_completed": false,
+    "previous_session_interruption": "User reboot; retained provider_timeout is not a continuous-runtime measurement",
+    "full_target_autoanalysis_limit_seconds": 1800
+  },
   "documentation": {
     "chinese": "https://github.com/bbylw/rea-cn",
     "implementation": "https://github.com/morluto/rea",

@@ -1,0 +1,217 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "method": "REA6.8.0 Evidence library + explicitly identified project-local streamed WABT extension",
+  "stock_inspect_wasm_artifact_completed": false,
+  "stock_REA_package_unchanged": true,
+  "local_provider": {
+    "id": "azeroth-ports-local-wasm-focus",
+    "name": "Azeroth Ports local streamed WASM research extension",
+    "version": "1+rea6.8.0+wabt1.0.42"
+  },
+  "evidence_id": "ev_70d6c96079550dc1b2ca2d6f7c4969d705c480f0def03ad62c2edf9666f04289",
+  "original_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "original_bytes": 90116970,
+  "complete_module_validated": true,
+  "complete_wat_bytes": 1315634084,
+  "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "function_imports": 878,
+  "defined_functions": 174803,
+  "selected_complete_functions": [
+    {
+      "function_index": 905,
+      "code_body_index": 27,
+      "size_leb_offset": 2123784,
+      "body_start": 2123787,
+      "body_end": 2205826,
+      "body_bytes": 82039,
+      "body_sha256": "3269ce04a68309605d5856478c805e73a40e231979c15ca56a394914b9075b87",
+      "wat_start": 113110644,
+      "wat_start_line": 551512,
+      "wat_end": 116429332,
+      "wat_bytes": 3318688,
+      "wat_sha256": "8a35e443a3d9934e3fa70111cd6ddfd109cec7e5a16ab02c282c06752e4c1ba5",
+      "wat_file": "function-905.wat"
+    },
+    {
+      "function_index": 1065,
+      "code_body_index": 187,
+      "size_leb_offset": 5574710,
+      "body_start": 5574712,
+      "body_end": 5590947,
+      "body_bytes": 16235,
+      "body_sha256": "f37ff412a377544132ceefbcad008468a369b64b5f5b78a6749bb87cdbb3cf27",
+      "wat_start": 217215668,
+      "wat_start_line": 2102188,
+      "wat_end": 217536659,
+      "wat_bytes": 320991,
+      "wat_sha256": "1a5f390ba62fb41c411ca17faf922b98b62b4a544b9772b980511f9ab0d4ce7f",
+      "wat_file": "function-1065.wat"
+    },
+    {
+      "function_index": 4201,
+      "code_body_index": 3323,
+      "size_leb_offset": 20706643,
+      "body_start": 20706646,
+      "body_end": 20886337,
+      "body_bytes": 179691,
+      "body_sha256": "bde07deff50b4aeffd3ccac9704c173b9fba941e07e7ba09e062853a65b5f126",
+      "wat_start": 519711936,
+      "wat_start_line": 9003097,
+      "wat_end": 526443638,
+      "wat_bytes": 6731702,
+      "wat_sha256": "24b171e9592ff32fcd1df950c4c490d7aceff99dd91b15c558e4130af6714bc0",
+      "wat_file": "function-4201.wat"
+    },
+    {
+      "function_index": 12692,
+      "code_body_index": 11814,
+      "size_leb_offset": 36315299,
+      "body_start": 36315301,
+      "body_end": 36316148,
+      "body_bytes": 847,
+      "body_sha256": "35bb47980d0537ce0162cf1e130828f835b791884073d49ee03b98a8bcf9c177",
+      "wat_start": 769744034,
+      "wat_start_line": 16112457,
+      "wat_end": 769754193,
+      "wat_bytes": 10159,
+      "wat_sha256": "8acf201a5c1c7f66421fea36762affe54d5c7e08e8dc00aec7a699b248166973",
+      "wat_file": "function-12692.wat"
+    },
+    {
+      "function_index": 15920,
+      "code_body_index": 15042,
+      "size_leb_offset": 39863102,
+      "body_start": 39863104,
+      "body_end": 39863791,
+      "body_bytes": 687,
+      "body_sha256": "a5e6b5f450a4665151c680fd0607dd0a6431814213022bacdba1eb2b22f5ce94",
+      "wat_start": 814443611,
+      "wat_start_line": 17734237,
+      "wat_end": 814451116,
+      "wat_bytes": 7505,
+      "wat_sha256": "ed51d181a1ec1e6fa2b371a7be8af9823f8183407b566d7328cd6afb6dfc477d",
+      "wat_file": "function-15920.wat"
+    },
+    {
+      "function_index": 25238,
+      "code_body_index": 24360,
+      "size_leb_offset": 49300387,
+      "body_start": 49300389,
+      "body_end": 49301023,
+      "body_bytes": 634,
+      "body_sha256": "82295aec1eaf8efb8ed737c0f7854f630337a92856956aabd289d027337a0a66",
+      "wat_start": 942241231,
+      "wat_start_line": 22020084,
+      "wat_end": 942247149,
+      "wat_bytes": 5918,
+      "wat_sha256": "8eef86a9c7a4726aa121203c782d853bf4822de213515601261a04f1a64c0d8f",
+      "wat_file": "function-25238.wat"
+    },
+    {
+      "function_index": 25242,
+      "code_body_index": 24364,
+      "size_leb_offset": 49302712,
+      "body_start": 49302714,
+      "body_end": 49303334,
+      "body_bytes": 620,
+      "body_sha256": "f9534cbe556e1d07b3c464d9ffff601d7ac45b9615cfb06bac794d406a1eb023",
+      "wat_start": 942266338,
+      "wat_start_line": 22021134,
+      "wat_end": 942274162,
+      "wat_bytes": 7824,
+      "wat_sha256": "6f2b604d5905ff04dd9a1c99d58be8cdce67b7279afbecd4a677de45a46d5ba5",
+      "wat_file": "function-25242.wat"
+    },
+    {
+      "function_index": 81718,
+      "code_body_index": 80840,
+      "size_leb_offset": 70855668,
+      "body_start": 70855669,
+      "body_end": 70855736,
+      "body_bytes": 67,
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "wat_start": 1223519840,
+      "wat_start_line": 31586301,
+      "wat_end": 1223520603,
+      "wat_bytes": 763,
+      "wat_sha256": "e390aeb8f7a5af6bad4126c54db35b6e7d4f1fc73d59c6f925e2ec684de49d59",
+      "wat_file": "function-81718.wat"
+    }
+  ],
+  "direct_call_sites": [
+    {
+      "caller": 1065,
+      "callee": 25242,
+      "wat_offset": 217256749,
+      "wat_line": 2103037
+    },
+    {
+      "caller": 1472,
+      "callee": 25242,
+      "wat_offset": 322689975,
+      "wat_line": 4026655
+    },
+    {
+      "caller": 12692,
+      "callee": 25238,
+      "wat_offset": 769752617,
+      "wat_line": 16112771
+    },
+    {
+      "caller": 15920,
+      "callee": 25238,
+      "wat_offset": 814449578,
+      "wat_line": 17734480
+    },
+    {
+      "caller": 25238,
+      "callee": 630,
+      "wat_offset": 942245519,
+      "wat_line": 22020291
+    },
+    {
+      "caller": 27239,
+      "callee": 25242,
+      "wat_offset": 966526460,
+      "wat_line": 22772158
+    }
+  ],
+  "presence_url_references": [
+    {
+      "function_index": 905,
+      "wat_offset": 116336243,
+      "wat_line": 585012
+    }
+  ],
+  "lua_api_source_references": [
+    {
+      "function_index": 4201,
+      "wat_offset": 520032443,
+      "wat_line": 9009368,
+      "linear_memory_address": 1758940
+    }
+  ],
+  "observed_presence_constants": {
+    "unchanged_mode_threshold": 60,
+    "initial_or_changed_mode_threshold": 10,
+    "modes": [
+      "menu",
+      "lobby",
+      "solo",
+      "coop"
+    ],
+    "sendBeacon_import_function_index": 630
+  },
+  "time_unit": "Seconds are inferred from the engine clock context; runtime timing is not measured in this pass.",
+  "target_executed": false,
+  "original_preserved": true,
+  "limitations": [
+    "This explicitly identified local extension uses REA Evidence machinery and upstream WABT; stock REA inspect_wasm_artifact was not run on this oversized module.",
+    "The complete original module was statically validated and decoded. Only the selected complete function slices and specified reference searches are retained in this focused result.",
+    "WAT is decoded instructions, not original Rust source. Binary function indices, source digests and exact byte ranges are authoritative.",
+    "Observed direct call instructions do not establish indirect callers, runtime reachability, time units, gameplay behavior or network delivery.",
+    "No target execution, no game-file mutation and no implicit external network fetch occurred during analysis."
+  ],
+  "mode_comparison_helper_function_index": 81718
+}

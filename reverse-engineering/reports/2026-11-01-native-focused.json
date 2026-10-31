@@ -1,0 +1,359 @@
+{
+  "date": "2026-11-01",
+  "target": {
+    "version": "0.102.3",
+    "build": "f78e6fab",
+    "local_source_key": "windows_exe",
+    "filename": "AzerothSurvivors.exe",
+    "format": "PE32+ x86-64 GUI",
+    "bytes": 139691008,
+    "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a"
+  },
+  "method": "project-local Ghidra 12.1.4 noanalysis selected .pdata functions; separate from stock REA",
+  "stock_rea_session": {
+    "interrupted_by": "user computer restart",
+    "retained_error_codes": [
+      "provider_timeout",
+      "resource_constraint"
+    ],
+    "configured_startup_timeout_ms": 1800000,
+    "cannot_infer": "Continuous elapsed execution or inherent performance limit from the interrupted session"
+  },
+  "run": "evidence/20261031T211759.962494Z-native-focus",
+  "run_summary": {
+    "method": "project-local-ghidra-noanalysis-selected-pdata-functions",
+    "relationship_to_rea": "Independent fallback, not the stock REA native provider",
+    "original_sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
+    "original_preserved": true,
+    "target_executed": false,
+    "automatic_analysis": false,
+    "whole_process_timeout_seconds": 180,
+    "per_function_timeout_seconds": 60,
+    "timed_out": false,
+    "exit_code": 0,
+    "selected_functions": 5,
+    "pseudocode_completed": 5,
+    "pseudocode_with_flow_warning_patterns": [
+      "abilities_source_anchor_candidate"
+    ],
+    "scripts_sha256": {
+      "decompile_native_focus.py": "9dc8a6904fbd0c6d3d99881839940266f121098da2bc5bd270255f3691a3a9e1",
+      "AzerothFocusedDecompile.java": "06cdeb75d6c13532e8f773d01bc30f8a3dc991163df7297368c47e8fb6bf3668"
+    },
+    "scripts_preserved_during_run": true,
+    "complete_control_flow_verified": false
+  },
+  "function_metadata": [
+    {
+      "label": "damage_label_candidate",
+      "start": "0x145862ab0",
+      "end_exclusive": "0x145862d03",
+      "range_source": "original PE .pdata",
+      "file_offset": 92675760,
+      "bytes": 595,
+      "sha256": "b7c5bd5e507f823f727df2567ef539579a46e474a7c2be01112cd0b495135697",
+      "instruction_count": 133,
+      "disassembled_bytes_within_selected_range": 595,
+      "instructions_crossing_selected_end": [],
+      "computed_jump_sites_requiring_followup": [],
+      "complete_control_flow_verified": false,
+      "decompiler_completed": true,
+      "pseudocode_utf8_bytes": 2530,
+      "pseudocode_sha256": "9beab695268cb75c065f4b0c708ff86852f140af9c02121bd5e5e13445100106",
+      "flow_warning_patterns": false,
+      "diagnostic": ""
+    },
+    {
+      "label": "cooldown_label_candidate",
+      "start": "0x145862e00",
+      "end_exclusive": "0x14586305a",
+      "range_source": "original PE .pdata",
+      "file_offset": 92676608,
+      "bytes": 602,
+      "sha256": "16b4a7c583c93d21d7a48fb044ad0c57a8b2b959d4f20a1fdf0ff80f0c910679",
+      "instruction_count": 147,
+      "disassembled_bytes_within_selected_range": 602,
+      "instructions_crossing_selected_end": [],
+      "computed_jump_sites_requiring_followup": [
+        "145863058"
+      ],
+      "complete_control_flow_verified": false,
+      "decompiler_completed": true,
+      "pseudocode_utf8_bytes": 3724,
+      "pseudocode_sha256": "53958dc1b0fbf69fd18ac0f8d39e103cf5cbb2cbce3db737cb2a62178a40b984",
+      "flow_warning_patterns": false,
+      "diagnostic": ""
+    },
+    {
+      "label": "abilities_source_anchor_candidate",
+      "start": "0x1458978c0",
+      "end_exclusive": "0x145897ac1",
+      "range_source": "original PE .pdata",
+      "file_offset": 92892352,
+      "bytes": 513,
+      "sha256": "8251474d03e0f0e79d8343eb1281f464d51f260a3e8ed5e1392e95822445f0c5",
+      "instruction_count": 6,
+      "disassembled_bytes_within_selected_range": 24,
+      "instructions_crossing_selected_end": [],
+      "computed_jump_sites_requiring_followup": [
+        "1458978d5"
+      ],
+      "complete_control_flow_verified": false,
+      "decompiler_completed": true,
+      "pseudocode_utf8_bytes": 50156,
+      "pseudocode_sha256": "c0ee803ea277b8247f2f6c748497fba705503877b16dcd8986b6bfe9c789fc76",
+      "flow_warning_patterns": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "enemy_source_anchor_candidate",
+      "start": "0x145883b70",
+      "end_exclusive": "0x145884140",
+      "range_source": "original PE .pdata",
+      "file_offset": 92811120,
+      "bytes": 1488,
+      "sha256": "cb6c9d505767add2cbd986bd6e588e8e259f64689dae3ab9881116f8420e450e",
+      "instruction_count": 384,
+      "disassembled_bytes_within_selected_range": 1403,
+      "instructions_crossing_selected_end": [],
+      "computed_jump_sites_requiring_followup": [
+        "145884101",
+        "14588410f",
+        "14588412a",
+        "14588413e"
+      ],
+      "complete_control_flow_verified": false,
+      "decompiler_completed": true,
+      "pseudocode_utf8_bytes": 10312,
+      "pseudocode_sha256": "cf60ad0427debd4b462417684060b360d09e14ace028eea2826ad17b135a80d5",
+      "flow_warning_patterns": false,
+      "diagnostic": ""
+    },
+    {
+      "label": "reroll_ui_candidate",
+      "start": "0x14024e290",
+      "end_exclusive": "0x14025126c",
+      "range_source": "original PE .pdata",
+      "file_offset": 2414224,
+      "bytes": 12252,
+      "sha256": "8ec8aac14e92e7cde30a1ecd26517fe8e9ac4d016def4dc7eb8b0e114667747f",
+      "instruction_count": 1885,
+      "disassembled_bytes_within_selected_range": 12244,
+      "instructions_crossing_selected_end": [],
+      "computed_jump_sites_requiring_followup": [
+        "14025126a"
+      ],
+      "complete_control_flow_verified": false,
+      "decompiler_completed": true,
+      "pseudocode_utf8_bytes": 100499,
+      "pseudocode_sha256": "da56030f14d1dcf087b71517539839bdaf4e614f330d71c07a3cbbd76ccf06ad",
+      "flow_warning_patterns": false,
+      "diagnostic": ""
+    }
+  ],
+  "constants": [
+    {
+      "name": "one",
+      "address": "0x145d4c67c",
+      "file_offset": 97825916,
+      "bytes": 4,
+      "hex": "0000803f",
+      "value": [
+        1.0
+      ],
+      "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+    },
+    {
+      "name": "minus_one",
+      "address": "0x145d65264",
+      "file_offset": 97927268,
+      "bytes": 4,
+      "hex": "000080bf",
+      "value": [
+        -1.0
+      ],
+      "sha256": "c68830a25204a09f8e77aada6bc5807f607cccaaa0ebb2a7122d317584478a8b"
+    },
+    {
+      "name": "percent",
+      "address": "0x145d4c7c0",
+      "file_offset": 97826240,
+      "bytes": 4,
+      "hex": "0000c842",
+      "value": [
+        100.0
+      ],
+      "sha256": "2238f30df488055daf5e8f362cf904e370011a172d20df193c1b7ae8e5db8e01"
+    },
+    {
+      "name": "cooldown_index_1_to_5",
+      "address": "0x146b8ef54",
+      "file_offset": 112778580,
+      "bytes": 20,
+      "hex": "295c8f3dcdcccc3db81e053e7b142e3e1f856b3e",
+      "value": [
+        0.07000000029802322,
+        0.10000000149011612,
+        0.12999999523162842,
+        0.17000000178813934,
+        0.23000000417232513
+      ],
+      "sha256": "2ce51b76784775bddcb4c4eb37d6405f17b8ffdcf9a042b0f111ff2ffd0d5dbb"
+    },
+    {
+      "name": "damage_index_1_to_5",
+      "address": "0x146b8efc0",
+      "file_offset": 112778688,
+      "bytes": 20,
+      "hex": "ec51383e0000803e7b14ae3e1f85eb3e6666263f",
+      "value": [
+        0.18000000715255737,
+        0.25,
+        0.3400000035762787,
+        0.46000000834465027,
+        0.6499999761581421
+      ],
+      "sha256": "4d4dd659e77d55323c3388420d4041fe90fc678657ef3e7c614a7fd98aa05c0a"
+    },
+    {
+      "name": "healing_label",
+      "address": "0x146b8ef05",
+      "file_offset": 112778501,
+      "bytes": 13,
+      "hex": "2b7b707d25206865616c696e67",
+      "value": "+{p}% healing",
+      "sha256": "a7422a722c0277b9f436979f36e6506191bb947abee89bd6108e9cc5024b1688"
+    },
+    {
+      "name": "absorb_label",
+      "address": "0x146b8ef39",
+      "file_offset": 112778553,
+      "bytes": 12,
+      "hex": "2b7b707d25206162736f7262",
+      "value": "+{p}% absorb",
+      "sha256": "314e40229d3a2dd8f88dbe6cab6714940e72342de4fff8e2e0fa1757a2db163e"
+    },
+    {
+      "name": "damage_label",
+      "address": "0x146b8ef45",
+      "file_offset": 112778565,
+      "bytes": 12,
+      "hex": "2b7b707d252064616d616765",
+      "value": "+{p}% damage",
+      "sha256": "eb4f64959b0a39428d83f1daa6e212aac58948e764cd6b1c9c47cc8fa3519566"
+    },
+    {
+      "name": "cooldown_label",
+      "address": "0x146b8efb0",
+      "file_offset": 112778672,
+      "bytes": 14,
+      "hex": "2d7b707d2520636f6f6c646f776e",
+      "value": "-{p}% cooldown",
+      "sha256": "9002933f61a47fe833e69cce849a9eee41c3882f4398dc32462da484fe6ddd86"
+    }
+  ],
+  "artifact_metadata": {
+    "functions.json": {
+      "bytes": 626950,
+      "sha256": "7d3418ae476c4eb07d1bc0fb880100078321fcf9cc70b9358d568e69384d9029"
+    },
+    "selection.json": {
+      "bytes": 1432,
+      "sha256": "dab03e4bd24c3ff2a4bad6c8729202e32fe04c2d989c9cd29a72cf61ef74cb27"
+    },
+    "constants.json": {
+      "bytes": 2608,
+      "sha256": "c614a5e6e55915535f8b57628fe66590b3a8cbfa48148a04ccba6d80056c1f50"
+    },
+    "process.log": {
+      "bytes": 15923,
+      "sha256": "4db5d3f5c47165d93227a02b0baa81399ff061589ee5988b8cf133c6f04087b1"
+    },
+    "ghidra.log": {
+      "bytes": 17331,
+      "sha256": "cb949a2b23cce5b96f0d5f117bf63c8aadbc33163cc3b0bc2a78b49056bdcf18"
+    },
+    "script.log": {
+      "bytes": 495,
+      "sha256": "49fb17bfd79d92df5d7e103b8bc019ac4e9ec45c40ef8d7943f020d582ad196c"
+    },
+    "run-summary.json": {
+      "bytes": 915,
+      "sha256": "8e519751404c6b4e9f0d371b2156f58b9e6f9de78bfda3486d490170dcf31fc4"
+    }
+  },
+  "observations": [
+    {
+      "function": "0x145862e00",
+      "branch": "multiplicative field +0x10 update",
+      "index_range": [
+        1,
+        5
+      ],
+      "coefficients_display": [
+        0.18,
+        0.25,
+        0.34,
+        0.46,
+        0.65
+      ],
+      "expression": "old_f32 * (1 + coefficient)",
+      "assembly_addresses": [
+        "0x145862ebd",
+        "0x145862ec4",
+        "0x145862ed3",
+        "0x145862ed7",
+        "0x145862edc"
+      ],
+      "semantic_limit": "Record field type and combat consumers remain unproven"
+    },
+    {
+      "function": "0x145862e00",
+      "branch": "multiplicative field +0x14 update",
+      "index_range": [
+        1,
+        5
+      ],
+      "coefficients_display": [
+        0.07,
+        0.1,
+        0.13,
+        0.17,
+        0.23
+      ],
+      "expression": "old_f32 * (1 - coefficient)",
+      "assembly_addresses": [
+        "0x145862f06",
+        "0x145862f0d",
+        "0x145862f1c",
+        "0x145862f20",
+        "0x145862f25"
+      ],
+      "associated_label": "-{p}% cooldown",
+      "semantic_limit": "Record field type and combat consumers remain unproven"
+    },
+    {
+      "function": "0x145862ab0",
+      "branch": "label formatting",
+      "expressions": [
+        "100 * x",
+        "100 * (sqrt(1 + x) - 1)"
+      ],
+      "labels": [
+        "+{p}% damage",
+        "+{p}% healing",
+        "+{p}% absorb"
+      ],
+      "semantic_limit": "Formatting formula only, not full damage/healing/absorb combat formula"
+    }
+  ],
+  "limitations": [
+    "No original Rust symbols/PDB/source recovered",
+    "No whole-program analysis and no complete call graph",
+    "Abilities candidate has invalid control-flow output and must not support behavior claims",
+    "Ghidra inferred parameter types and calling conventions are not verified",
+    "Old Windows 0.102.3 offsets do not transfer to current web 0.126.0",
+    "No target execution, dynamic combat validation, binary patch, or package rebuild",
+    "Input record may be live state or an upgrade-preview copy; caller lifecycle remains unproven"
+  ]
+}

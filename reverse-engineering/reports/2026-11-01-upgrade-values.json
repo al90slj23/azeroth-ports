@@ -1,0 +1,219 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "game_version": "0.126.0",
+  "game_build": "3e72472a",
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "analysis_method": "complete-original WABT decode with explicit local REA Evidence extension; decoded instructions and manual local data/control-flow interpretation, no target execution",
+  "provider": "azeroth-ports-local-wasm-focus",
+  "evidence_id": "ev_70d6c96079550dc1b2ca2d6f7c4969d705c480f0def03ad62c2edf9666f04289",
+  "complete_functions": [
+    {
+      "function_index": 1065,
+      "code_body_index": 187,
+      "size_leb_offset": 5574710,
+      "body_start": 5574712,
+      "body_end": 5590947,
+      "body_bytes": 16235,
+      "body_sha256": "f37ff412a377544132ceefbcad008468a369b64b5f5b78a6749bb87cdbb3cf27",
+      "wat_start": 217215668,
+      "wat_start_line": 2102188,
+      "wat_end": 217536659,
+      "wat_bytes": 320991,
+      "wat_sha256": "1a5f390ba62fb41c411ca17faf922b98b62b4a544b9772b980511f9ab0d4ce7f",
+      "wat_file": "function-1065.wat"
+    },
+    {
+      "function_index": 25242,
+      "code_body_index": 24364,
+      "size_leb_offset": 49302712,
+      "body_start": 49302714,
+      "body_end": 49303334,
+      "body_bytes": 620,
+      "body_sha256": "f9534cbe556e1d07b3c464d9ffff601d7ac45b9615cfb06bac794d406a1eb023",
+      "wat_start": 942266338,
+      "wat_start_line": 22021134,
+      "wat_end": 942274162,
+      "wat_bytes": 7824,
+      "wat_sha256": "6f2b604d5905ff04dd9a1c99d58be8cdce67b7279afbecd4a677de45a46d5ba5",
+      "wat_file": "function-25242.wat"
+    }
+  ],
+  "numeric_function": {
+    "function_index": 25242,
+    "signature": "(i32 state, i32 kind, i32 tier) -> f32",
+    "parameter_names": "descriptive names inferred for this report; not recovered Rust identifiers",
+    "source_location_references": [
+      {
+        "function": 25242,
+        "wat_offset": 942268630,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "fileoffset": 81305214,
+        "address": 5308528,
+        "line": 197,
+        "column": 17,
+        "wat_bytes": 7824
+      },
+      {
+        "function": 25242,
+        "wat_offset": 942271300,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "fileoffset": 81305286,
+        "address": 5308600,
+        "line": 207,
+        "column": 17,
+        "wat_bytes": 7824
+      },
+      {
+        "function": 25242,
+        "wat_offset": 942271583,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "fileoffset": 81305322,
+        "address": 5308636,
+        "line": 210,
+        "column": 17,
+        "wat_bytes": 7824
+      },
+      {
+        "function": 25242,
+        "wat_offset": 942271742,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "fileoffset": 81305178,
+        "address": 5308492,
+        "line": 195,
+        "column": 29,
+        "wat_bytes": 7824
+      },
+      {
+        "function": 25242,
+        "wat_offset": 942273663,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "fileoffset": 81305250,
+        "address": 5308564,
+        "line": 204,
+        "column": 17,
+        "wat_bytes": 7824
+      }
+    ],
+    "observed_direct_callers": [
+      1065,
+      1472,
+      27239
+    ],
+    "valid_tier_range": [
+      0,
+      4
+    ],
+    "kind_0_formula": "A[tier] / (1 + 0.5 * u32(state + 32 + 4 * kind))",
+    "kind_1_formula": "B[tier] * positive_or_zero_non_nan((f32(state+16) - f32(0.2)) / f32(0.8))",
+    "kind_2_formula": "f32(min(saturating_sub_u32(cap, u32(state+20)), C[tier]))",
+    "kind_2_cap_selection": "12 for non-11 ability discriminator; for discriminator 11, cap 2 for seal_fate, soul_fire, lightwell, faerie_fire, otherwise 0",
+    "kind_3_formula": "D[tier] * positive_or_zero_non_nan((5 - f32(state+24)) * 0.25)",
+    "kind_4_formula": "E[tier] * positive_or_zero_non_nan((6 - f32(state+28)) / 5)",
+    "float_note": "All arithmetic is original f32, with rounded binary32 table literals; decimal formulas describe instruction structure.",
+    "non_nan_clamp": "WAT explicitly turns NaN into zero before selecting values greater than zero."
+  },
+  "observed_static_tables": [
+    {
+      "name": "A",
+      "linear_memory_address": 5308472,
+      "wasm_file_offset": 81305158,
+      "element_type": "f32",
+      "values_rounded_decimal": [
+        0.18,
+        0.25,
+        0.34,
+        0.46,
+        0.65
+      ],
+      "bytes": 20,
+      "raw_hex": "ec51383e0000803e7b14ae3e1f85eb3e6666263f",
+      "sha256": "4d4dd659e77d55323c3388420d4041fe90fc678657ef3e7c614a7fd98aa05c0a"
+    },
+    {
+      "name": "B",
+      "linear_memory_address": 5308508,
+      "wasm_file_offset": 81305194,
+      "element_type": "f32",
+      "values_rounded_decimal": [
+        0.07,
+        0.1,
+        0.13,
+        0.17,
+        0.23
+      ],
+      "bytes": 20,
+      "raw_hex": "295c8f3dcdcccc3db81e053e7b142e3e1f856b3e",
+      "sha256": "2ce51b76784775bddcb4c4eb37d6405f17b8ffdcf9a042b0f111ff2ffd0d5dbb"
+    },
+    {
+      "name": "C",
+      "linear_memory_address": 5308544,
+      "wasm_file_offset": 81305230,
+      "element_type": "u32",
+      "values": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "bytes": 20,
+      "raw_hex": "0100000001000000010000000200000002000000",
+      "sha256": "c7a5958727276cdee4286492253978d00e716955fd04834ea62dfeb962a95291"
+    },
+    {
+      "name": "D",
+      "linear_memory_address": 5308580,
+      "wasm_file_offset": 81305266,
+      "element_type": "f32",
+      "values_rounded_decimal": [
+        0.12,
+        0.18,
+        0.25,
+        0.35,
+        0.5
+      ],
+      "bytes": 20,
+      "raw_hex": "8fc2f53dec51383e0000803e3333b33e0000003f",
+      "sha256": "d5139f32188f8bd7419a9ebaeb6a2dc494109f7b4881cedbb7b94e3eb74be2d4"
+    },
+    {
+      "name": "E",
+      "linear_memory_address": 5308616,
+      "wasm_file_offset": 81305302,
+      "element_type": "f32",
+      "values_rounded_decimal": [
+        0.15,
+        0.22,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "bytes": 20,
+      "raw_hex": "9a99193eae47613e9a99993ecdcccc3e9a99193f",
+      "sha256": "74ec3c67c4fc280877855dc4cff0d087827ab62f072f9139ce46e3bdc06c5790"
+    }
+  ],
+  "observed_caller_1065_writes": {
+    "ability_record_stride_bytes": 80,
+    "level_field_offset": 4,
+    "order": "increment level; call25242; write selected kind field; increment kind counter; apply shared field+12 growth",
+    "kind_0": "f32(state+12) *= 1 + x",
+    "kind_1": "f32(state+16) -= x",
+    "kind_2": "u32(state+20) += trunc_sat_f32_u(x)",
+    "kind_3": "f32(state+24) += x",
+    "kind_4": "f32(state+28) += x",
+    "counter": "u32(state+32+4*kind) += 1",
+    "shared_growth": "f32(state+12) *= 1 + 0.04 / (1 + 0.125 * saturating_sub_u32(new_level, 2))"
+  },
+  "limitations": [
+    "Function25242 arithmetic and caller1065 state writes are statically observed; reachability and gameplay result are not runtime-validated.",
+    "The numeric routine role as an ability-upgrade value helper is inferred from source-path references, table selection and applying caller structure; original Rust name/type/enum labels are absent.",
+    "Offsets12/16/20/24/28 are not yet proven to be damage/cooldown/projectiles/duration/radius types.",
+    "The consumer that subtracts actual target HP has not been traced. This is not proof that changing a table alone changes dealt damage.",
+    "The official cooperative state authority/synchronization and compatibility of numeric edits have not been validated.",
+    "Old Windows0.102.3 evidence does not establish current0.126.0 fields or offsets.",
+    "No binary patch, target execution, installed APK/App change or save mutation was performed."
+  ]
+}
