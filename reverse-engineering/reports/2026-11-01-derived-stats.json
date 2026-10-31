@@ -1,0 +1,3340 @@
+{
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "index_sha256": "0716743732ad8756c81167b27712456a944c07420146e142ba2d88c7168b1e8e",
+  "evidence_directory": "evidence/derived-stats-20261031T233112.519450Z",
+  "complete_functions": [
+    {
+      "function_index": 1573,
+      "wat_start": 337945703,
+      "wat_end": 338005868,
+      "wat_line": 4321638,
+      "wat_bytes": 60165,
+      "wat_sha256": "e7b5a66090c94986c3de1eaacc7f0c22d2c485a8c91fce77cafbf782355f1951",
+      "body_start": 10499475,
+      "body_end": 10503954,
+      "body_bytes": 4479,
+      "body_sha256": "e05c38868e23157be89c2ac8030ef941ce24f583758c2e3c5f9d29cda8d5db07"
+    },
+    {
+      "function_index": 2017,
+      "wat_start": 387762695,
+      "wat_end": 387802053,
+      "wat_line": 5520624,
+      "wat_bytes": 39358,
+      "wat_sha256": "8774360616d538828277cbac638591c324fda49b327895afe71f9cd2d81e1f80",
+      "body_start": 13123803,
+      "body_end": 13127257,
+      "body_bytes": 3454,
+      "body_sha256": "e6663b13fa2a57b6e4f1c1a3bf0af931407f7a8bf4f68574dff9ae9eab6397ad"
+    }
+  ],
+  "classes": [
+    {
+      "identifier": "warrior",
+      "observed_selector_bytes": [
+        6,
+        10
+      ],
+      "default_for_outside_2_through_11": true,
+      "header_word0_uninterpreted_u32": 1,
+      "definition_address": 1714716,
+      "base_hp_bits_hex": "43660000",
+      "base_arm_bits_hex": "3e6147ae",
+      "word80_uninterpreted_hex": "3c75c28f",
+      "source": {
+        "memory_address": 1714716,
+        "bytes": 88,
+        "sha256": "a4ee50a72548dc3e65f3fa5aa532c323598e0466a0e2e5e12c7331278111c88d",
+        "hex": "010000000000dc41cdcccc3f0000c040941e1a00070000009b1e1a00070000000c1f1a000b000000a21e1a0006000000641f1a00070000006b1f1a000c000000771f1a005c00000000006643ae47613e8fc2753c01010000"
+      }
+    },
+    {
+      "identifier": "paladin",
+      "observed_selector_bytes": [
+        2
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 1,
+      "definition_address": 1714804,
+      "base_hp_bits_hex": "43750000",
+      "base_arm_bits_hex": "3e4ccccd",
+      "word80_uninterpreted_hex": "3bc49ba6",
+      "source": {
+        "memory_address": 1714804,
+        "bytes": 88,
+        "sha256": "298f6862a1eb1851a47c47e3d9b4392f0b3e5a7320153aa7f773ce27197d4fd7",
+        "hex": "010000000000d8416666e63f0000c040d31f1a0007000000da1f1a000700000060201a000b000000e11f1a000c000000b8201a0007000000bf201a0013000000d2201a005300000000007543cdcc4c3ea69bc43b02000000"
+      }
+    },
+    {
+      "identifier": "hunter",
+      "observed_selector_bytes": [
+        3
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 0,
+      "definition_address": 1714892,
+      "base_hp_bits_hex": "43700000",
+      "base_arm_bits_hex": "3e23d70a",
+      "word80_uninterpreted_hex": "3ba3d70a",
+      "source": {
+        "memory_address": 1714892,
+        "bytes": 88,
+        "sha256": "0fb07e9ca4c685f6928fcc1dd8ec6f8d53f4f371d99acd85108be3ef230d4a16",
+        "hex": "0000000000000000000000000000000025211a00060000002b211a0006000000b0211a000b00000031211a000900000008221a00070000000f221a001100000020221a004f000000000070430ad7233e0ad7a33b03000000"
+      }
+    },
+    {
+      "identifier": "rogue",
+      "observed_selector_bytes": [
+        4
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 1,
+      "definition_address": 1714980,
+      "base_hp_bits_hex": "433e0000",
+      "base_arm_bits_hex": "3e3851ec",
+      "word80_uninterpreted_hex": "3cf5c28f",
+      "source": {
+        "memory_address": 1714980,
+        "bytes": 88,
+        "sha256": "a2c11cceb62a3dede7f0938ad87172ae8ce14a21eca5ea9fb154940acd83cd98",
+        "hex": "01000000000060419a99993f0000c0406f221a000500000074221a0005000000f4221a000b00000079221a000f0000004c231a000700000053231a001400000067231a004b00000000003e43ec51383e8fc2f53c04030000"
+      }
+    },
+    {
+      "identifier": "priest",
+      "observed_selector_bytes": [
+        5
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 0,
+      "definition_address": 1715068,
+      "base_hp_bits_hex": "432a0000",
+      "base_arm_bits_hex": "3da3d70a",
+      "word80_uninterpreted_hex": "3c656042",
+      "source": {
+        "memory_address": 1715068,
+        "bytes": 88,
+        "sha256": "fb908599aecb5b2e8f4b51c5c5c3400d95f3aafa663525827875b2a6449ea1fe",
+        "hex": "00000000000000000000000000000000b2231a0006000000b8231a00060000001c241a000b000000be231a000500000074241a00070000007b241a000c00000087241a005800000000002a430ad7a33d4260653c05000000"
+      }
+    },
+    {
+      "identifier": "shaman",
+      "observed_selector_bytes": [
+        7
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 0,
+      "definition_address": 1715156,
+      "base_hp_bits_hex": "43430000",
+      "base_arm_bits_hex": "3e2e147b",
+      "word80_uninterpreted_hex": "00000000",
+      "source": {
+        "memory_address": 1715156,
+        "bytes": 88,
+        "sha256": "ab73916d492d177b3fdc3a797b3b79646eb7674199257268c1007b4b5ed83116",
+        "hex": "00000000000000000000000000000000df241a0006000000e5241a000600000074251a000b000000eb241a000e000000cc251a0007000000d3251a0016000000e9251a0043000000000043437b142e3e0000000007000000"
+      }
+    },
+    {
+      "identifier": "mage",
+      "observed_selector_bytes": [
+        8
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 0,
+      "definition_address": 1715244,
+      "base_hp_bits_hex": "43570000",
+      "base_arm_bits_hex": "3da3d70a",
+      "word80_uninterpreted_hex": "3ba3d70a",
+      "source": {
+        "memory_address": 1715244,
+        "bytes": 88,
+        "sha256": "22561518998220e48ff3f89cab2bd9356be59762386184dfe89bbb2dd0a8a00c",
+        "hex": "000000000000000000000000000000002c261a000400000030261a0004000000c0261a000d00000034261a000800000028271a00070000002f271a000c0000003b271a0051000000000057430ad7a33d0ad7a33b08000000"
+      }
+    },
+    {
+      "identifier": "warlock",
+      "observed_selector_bytes": [
+        9
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 0,
+      "definition_address": 1715332,
+      "base_hp_bits_hex": "43250000",
+      "base_arm_bits_hex": "3d75c28f",
+      "word80_uninterpreted_hex": "3c23d70a",
+      "source": {
+        "memory_address": 1715332,
+        "bytes": 88,
+        "sha256": "d84201c7995b5e0a5072af5a33547fe70d69b6a31da1310925ea6af7cf878e15",
+        "hex": "000000000000000000000000000000008c271a000700000093271a00070000001c281a000c0000009a271a000b0000007c281a000700000083281a00170000009a281a004a000000000025438fc2753d0ad7233c09000000"
+      }
+    },
+    {
+      "identifier": "druid",
+      "observed_selector_bytes": [
+        11
+      ],
+      "default_for_outside_2_through_11": false,
+      "header_word0_uninterpreted_u32": 0,
+      "definition_address": 1715420,
+      "base_hp_bits_hex": "434d0000",
+      "base_arm_bits_hex": "3df5c28f",
+      "word80_uninterpreted_hex": "00000000",
+      "source": {
+        "memory_address": 1715420,
+        "bytes": 88,
+        "sha256": "f0118c59fcf13c7fffb3b9103a988bdabb935d6a1f751ee11f02fa87f8bb1833",
+        "hex": "00000000000000000000000000000000e4281a0005000000e9281a000500000058291a000c000000ee281a0005000000b8291a0007000000bf291a0012000000d1291a004900000000004d438fc2f53d000000000b000000"
+      }
+    }
+  ],
+  "races": [
+    {
+      "race_byte": 1,
+      "name": "Human",
+      "display_token": "HUMAN",
+      "active_ability_id": "perception",
+      "definition_address": 1711412,
+      "modifiers": [
+        {
+          "tag": 8,
+          "value_bits_hex": "3dcccccd"
+        },
+        {
+          "tag": 9,
+          "value_bits_hex": "3e4ccccd"
+        }
+      ],
+      "source": {
+        "memory_address": 1711412,
+        "bytes": 44,
+        "sha256": "489f107e13de59d02952e02fec1cf6faa67576e09d03dcb69ac5019ca292c567",
+        "hex": "7c171a000500000081171a000500000088171a000200000098171a000a00000010181a000300000001000000"
+      },
+      "modifier_source": {
+        "memory_address": 1709960,
+        "bytes": 16,
+        "sha256": "535ee0d512deb4942f0507c292a46b29b51d3a9efede0359d787879b03f8e09c",
+        "hex": "08000000cdcccc3d09000000cdcc4c3e"
+      }
+    },
+    {
+      "race_byte": 2,
+      "name": "Orc",
+      "display_token": "ORC",
+      "active_ability_id": "blood_fury",
+      "definition_address": 1711456,
+      "modifiers": [
+        {
+          "tag": 0,
+          "value_bits_hex": "3dcccccd"
+        }
+      ],
+      "source": {
+        "memory_address": 1711456,
+        "bytes": 44,
+        "sha256": "01953236677d76d0fb997cfb26ff989b34970e424e780493c4d64361df99901e",
+        "hex": "28181a00030000002b181a000300000030181a000100000038181a000a00000090181a000200000002000000"
+      },
+      "modifier_source": {
+        "memory_address": 1710128,
+        "bytes": 8,
+        "sha256": "5a1dfa10657e0a21707cf91228b779a860426ba61f928eebffa3038bda0dbd68",
+        "hex": "00000000cdcccc3d"
+      }
+    },
+    {
+      "race_byte": 3,
+      "name": "Dwarf",
+      "display_token": "DWARF",
+      "active_ability_id": "stoneform",
+      "definition_address": 1711500,
+      "modifiers": [
+        {
+          "tag": 1,
+          "value_bits_hex": "3d75c28f"
+        },
+        {
+          "tag": 7,
+          "value_bits_hex": "3e99999a"
+        }
+      ],
+      "source": {
+        "memory_address": 1711500,
+        "bytes": 44,
+        "sha256": "57e1de31fa986706514a117e088eab287bb7e83b8922443d8faf5d61ebe282a0",
+        "hex": "a0181a0005000000a5181a0005000000ac181a0002000000bc181a00090000004c191a000300000003000000"
+      },
+      "modifier_source": {
+        "memory_address": 1710252,
+        "bytes": 16,
+        "sha256": "468d6b6aa078c7fea2530cf0a3b7838f024ade042c6a9ca377c321a1ffbdb6d7",
+        "hex": "010000008fc2753d070000009a99993e"
+      }
+    },
+    {
+      "race_byte": 4,
+      "name": "Night Elf",
+      "display_token": "NIGHTELF",
+      "active_ability_id": "shadowmeld",
+      "definition_address": 1711544,
+      "modifiers": [
+        {
+          "tag": 3,
+          "value_bits_hex": "3da3d70a"
+        },
+        {
+          "tag": 5,
+          "value_bits_hex": "3d4ccccd"
+        }
+      ],
+      "source": {
+        "memory_address": 1711544,
+        "bytes": 44,
+        "sha256": "116d7d5f23a10d8fecf75dd39ad01fbdae953e0c35226d95c96b9a97fc6ab465",
+        "hex": "64191a00090000006d191a000800000078191a000200000088191a000a000000181a1a000300000004000000"
+      },
+      "modifier_source": {
+        "memory_address": 1710456,
+        "bytes": 16,
+        "sha256": "2e8d49e0461f2012d634745cd5ab97768952cf42a20a2bf29c06ad856be53b11",
+        "hex": "030000000ad7a33d05000000cdcc4c3d"
+      }
+    },
+    {
+      "race_byte": 5,
+      "name": "Undead",
+      "display_token": "SCOURGE",
+      "active_ability_id": "will_of_the_forsaken",
+      "definition_address": 1711588,
+      "modifiers": [
+        {
+          "tag": 11,
+          "value_bits_hex": "3f800000"
+        },
+        {
+          "tag": 5,
+          "value_bits_hex": "3d23d70a"
+        }
+      ],
+      "source": {
+        "memory_address": 1711588,
+        "bytes": 44,
+        "sha256": "706e4c0194befdc01a8c03f58aa680719c6f7296990d2f22aa44dc968a30bd61",
+        "hex": "301a1a0006000000361a1a0007000000401a1a0002000000501a1a0014000000fc1a1a000300000005000000"
+      },
+      "modifier_source": {
+        "memory_address": 1710656,
+        "bytes": 16,
+        "sha256": "5c237e5411092553c1811b29c6afa8383fd4ef2d3615fa5247c18ef7bff1b01f",
+        "hex": "0b0000000000803f050000000ad7233d"
+      }
+    },
+    {
+      "race_byte": 6,
+      "name": "Tauren",
+      "display_token": "TAUREN",
+      "active_ability_id": "war_stomp",
+      "definition_address": 1711632,
+      "modifiers": [
+        {
+          "tag": 0,
+          "value_bits_hex": "3e19999a"
+        }
+      ],
+      "source": {
+        "memory_address": 1711632,
+        "bytes": 44,
+        "sha256": "53b13a0d4bf1f2efe15555b5411fabe29805138169fead054d42692a7994b939",
+        "hex": "141b1a00060000001a1b1a0006000000201b1a0001000000281b1a0009000000881b1a000200000006000000"
+      },
+      "modifier_source": {
+        "memory_address": 1710880,
+        "bytes": 8,
+        "sha256": "36298ae79037b14baa26550c38b605e7cf8c5a28f3d54f109b18707749fd08dc",
+        "hex": "000000009a99193e"
+      }
+    },
+    {
+      "race_byte": 7,
+      "name": "Gnome",
+      "display_token": "GNOME",
+      "active_ability_id": "escape_artist",
+      "definition_address": 1711676,
+      "modifiers": [
+        {
+          "tag": 2,
+          "value_bits_hex": "3da3d70a"
+        },
+        {
+          "tag": 10,
+          "value_bits_hex": "3e4ccccd"
+        }
+      ],
+      "source": {
+        "memory_address": 1711676,
+        "bytes": 44,
+        "sha256": "17fd3d73a41400faf827cc69de78ebdf779194ea9f865888067971bb071f22ed",
+        "hex": "981b1a00050000009d1b1a0005000000a41b1a0002000000b41b1a000d000000441c1a000300000007000000"
+      },
+      "modifier_source": {
+        "memory_address": 1711012,
+        "bytes": 16,
+        "sha256": "efd0ce115a9eeea07f772b6a21206166e640c005fb20a702b951c30eb18c18d2",
+        "hex": "020000000ad7a33d0a000000cdcc4c3e"
+      }
+    },
+    {
+      "race_byte": 8,
+      "name": "Troll",
+      "display_token": "TROLL",
+      "active_ability_id": "berserking",
+      "definition_address": 1711720,
+      "modifiers": [
+        {
+          "tag": 6,
+          "value_bits_hex": "3fc00000"
+        },
+        {
+          "tag": 4,
+          "value_bits_hex": "3cf5c28f"
+        }
+      ],
+      "source": {
+        "memory_address": 1711720,
+        "bytes": 44,
+        "sha256": "58145b1c53f35a942aa8a9737741825043a70c11f01296303f687c85d2a520c7",
+        "hex": "5c1c1a0005000000611c1a0005000000681c1a0002000000781c1a000a0000001c1d1a000300000008000000"
+      },
+      "modifier_source": {
+        "memory_address": 1711208,
+        "bytes": 16,
+        "sha256": "602a1475dfd463712068d169acb7e66829cfcf357256afcdecd9c470a5f854cd",
+        "hex": "060000000000c03f040000008fc2f53c"
+      }
+    }
+  ],
+  "class_lookup_source": {
+    "memory_address": 1577992,
+    "bytes": 40,
+    "sha256": "4436669cd75441b0d468c2822b9816bcccac2ccafd0cfcbd3e479909431d0f54",
+    "hex": "742a1a00cc2a1a00242b1a007c2b1a001c2a1a00d42b1a002c2c1a00842c1a001c2a1a00dc2c1a00"
+  },
+  "race_lookup_source": {
+    "memory_address": 1577904,
+    "bytes": 28,
+    "sha256": "d1d593b88266b3f42516b645fd10e6833cee0145ab9b66d7435f13e9dcbe2647",
+    "hex": "601d1a008c1d1a00b81d1a00e41d1a00101e1a003c1e1a00681e1a00"
+  },
+  "dispatches": [
+    {
+      "role": "race_modifiers",
+      "branch_function_line": 530,
+      "selector": "u32(tag-1)",
+      "arms": [
+        {
+          "tag": 0,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 4294967295,
+          "table_slot": 11,
+          "depth": 0,
+          "target": {
+            "start_function_line": 525,
+            "header": "block  ;; label = @15",
+            "end_function_line": 531
+          },
+          "following_instructions_preview": [
+            "local.get 25",
+            "local.get 21",
+            "f32.add",
+            "local.set 25",
+            "br 11 (;@3;)",
+            "end",
+            "local.get 28",
+            "local.get 21",
+            "f32.add",
+            "local.set 28",
+            "br 10 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 1,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 0,
+          "table_slot": 0,
+          "depth": 1,
+          "target": {
+            "start_function_line": 524,
+            "header": "block  ;; label = @14",
+            "end_function_line": 537
+          },
+          "following_instructions_preview": [
+            "local.get 28",
+            "local.get 21",
+            "f32.add",
+            "local.set 28",
+            "br 10 (;@3;)",
+            "end",
+            "local.get 30",
+            "local.get 21",
+            "f32.add",
+            "local.set 30",
+            "br 9 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 2,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 1,
+          "table_slot": 1,
+          "depth": 2,
+          "target": {
+            "start_function_line": 523,
+            "header": "block  ;; label = @13",
+            "end_function_line": 543
+          },
+          "following_instructions_preview": [
+            "local.get 30",
+            "local.get 21",
+            "f32.add",
+            "local.set 30",
+            "br 9 (;@3;)",
+            "end",
+            "local.get 24",
+            "local.get 21",
+            "f32.add",
+            "local.set 24",
+            "br 8 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 3,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 2,
+          "table_slot": 2,
+          "depth": 3,
+          "target": {
+            "start_function_line": 522,
+            "header": "block  ;; label = @12",
+            "end_function_line": 549
+          },
+          "following_instructions_preview": [
+            "local.get 24",
+            "local.get 21",
+            "f32.add",
+            "local.set 24",
+            "br 8 (;@3;)",
+            "end",
+            "local.get 26",
+            "local.get 21",
+            "f32.add",
+            "local.set 26",
+            "br 7 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 4,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 3,
+          "table_slot": 3,
+          "depth": 4,
+          "target": {
+            "start_function_line": 521,
+            "header": "block  ;; label = @11",
+            "end_function_line": 555
+          },
+          "following_instructions_preview": [
+            "local.get 26",
+            "local.get 21",
+            "f32.add",
+            "local.set 26",
+            "br 7 (;@3;)",
+            "end",
+            "local.get 22",
+            "local.get 21",
+            "f32.add",
+            "local.set 22",
+            "br 6 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 5,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 4,
+          "table_slot": 4,
+          "depth": 5,
+          "target": {
+            "start_function_line": 520,
+            "header": "block  ;; label = @10",
+            "end_function_line": 561
+          },
+          "following_instructions_preview": [
+            "local.get 22",
+            "local.get 21",
+            "f32.add",
+            "local.set 22",
+            "br 6 (;@3;)",
+            "end",
+            "local.get 31",
+            "local.get 21",
+            "f32.add",
+            "local.set 31",
+            "br 5 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 6,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 5,
+          "table_slot": 5,
+          "depth": 6,
+          "target": {
+            "start_function_line": 519,
+            "header": "block  ;; label = @9",
+            "end_function_line": 567
+          },
+          "following_instructions_preview": [
+            "local.get 31",
+            "local.get 21",
+            "f32.add",
+            "local.set 31",
+            "br 5 (;@3;)",
+            "end",
+            "local.get 29",
+            "local.get 21",
+            "f32.const 0x1p+0 (;=1;)",
+            "f32.add",
+            "f32.mul",
+            "local.set 29"
+          ]
+        },
+        {
+          "tag": 7,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 6,
+          "table_slot": 6,
+          "depth": 7,
+          "target": {
+            "start_function_line": 518,
+            "header": "block  ;; label = @8",
+            "end_function_line": 573
+          },
+          "following_instructions_preview": [
+            "local.get 29",
+            "local.get 21",
+            "f32.const 0x1p+0 (;=1;)",
+            "f32.add",
+            "f32.mul",
+            "local.set 29",
+            "br 4 (;@3;)",
+            "end",
+            "local.get 33",
+            "local.get 21",
+            "f32.add",
+            "local.set 33"
+          ]
+        },
+        {
+          "tag": 8,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 7,
+          "table_slot": 7,
+          "depth": 8,
+          "target": {
+            "start_function_line": 517,
+            "header": "block  ;; label = @7",
+            "end_function_line": 581
+          },
+          "following_instructions_preview": [
+            "local.get 33",
+            "local.get 21",
+            "f32.add",
+            "local.set 33",
+            "br 3 (;@3;)",
+            "end",
+            "local.get 27",
+            "local.get 21",
+            "f32.add",
+            "local.set 27",
+            "br 2 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 9,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 8,
+          "table_slot": 8,
+          "depth": 9,
+          "target": {
+            "start_function_line": 516,
+            "header": "block  ;; label = @6",
+            "end_function_line": 587
+          },
+          "following_instructions_preview": [
+            "local.get 27",
+            "local.get 21",
+            "f32.add",
+            "local.set 27",
+            "br 2 (;@3;)",
+            "end",
+            "local.get 36",
+            "local.get 21",
+            "f32.add",
+            "local.set 36",
+            "br 1 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 10,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 9,
+          "table_slot": 9,
+          "depth": 10,
+          "target": {
+            "start_function_line": 515,
+            "header": "block  ;; label = @5",
+            "end_function_line": 593
+          },
+          "following_instructions_preview": [
+            "local.get 36",
+            "local.get 21",
+            "f32.add",
+            "local.set 36",
+            "br 1 (;@3;)",
+            "end",
+            "local.get 38",
+            "local.get 21",
+            "f32.add",
+            "local.set 38",
+            "end",
+            "local.get 1"
+          ]
+        },
+        {
+          "tag": 11,
+          "branch_function_line": 530,
+          "instruction": "br_table 1 (;@14;) 2 (;@13;) 3 (;@12;) 4 (;@11;) 5 (;@10;) 6 (;@9;) 7 (;@8;) 8 (;@7;) 9 (;@6;) 10 (;@5;) 11 (;@4;) 0 (;@15;)",
+          "selector": 10,
+          "table_slot": 10,
+          "depth": 11,
+          "target": {
+            "start_function_line": 514,
+            "header": "block  ;; label = @4",
+            "end_function_line": 599
+          },
+          "following_instructions_preview": [
+            "local.get 38",
+            "local.get 21",
+            "f32.add",
+            "local.set 38",
+            "end",
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.tee 1",
+            "local.get 2",
+            "i32.ne",
+            "br_if 0 (;@2;)"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "passive_records",
+      "branch_function_line": 654,
+      "selector": "u32(tag-1)",
+      "arms": [
+        {
+          "tag": 0,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 4294967295,
+          "table_slot": 14,
+          "depth": 0,
+          "target": {
+            "start_function_line": 649,
+            "header": "block  ;; label = @18",
+            "end_function_line": 655
+          },
+          "following_instructions_preview": [
+            "local.get 28",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 28",
+            "br 14 (;@3;)",
+            "end",
+            "local.get 30",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 1,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 0,
+          "table_slot": 0,
+          "depth": 1,
+          "target": {
+            "start_function_line": 648,
+            "header": "block  ;; label = @17",
+            "end_function_line": 664
+          },
+          "following_instructions_preview": [
+            "local.get 30",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 30",
+            "br 13 (;@3;)",
+            "end",
+            "local.get 42",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 2,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 1,
+          "table_slot": 1,
+          "depth": 2,
+          "target": {
+            "start_function_line": 647,
+            "header": "block  ;; label = @16",
+            "end_function_line": 673
+          },
+          "following_instructions_preview": [
+            "local.get 42",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 42",
+            "br 12 (;@3;)",
+            "end",
+            "local.get 26",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 3,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 2,
+          "table_slot": 2,
+          "depth": 3,
+          "target": {
+            "start_function_line": 646,
+            "header": "block  ;; label = @15",
+            "end_function_line": 682
+          },
+          "following_instructions_preview": [
+            "local.get 26",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 26",
+            "br 11 (;@3;)",
+            "end",
+            "local.get 32",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 4,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 3,
+          "table_slot": 3,
+          "depth": 4,
+          "target": {
+            "start_function_line": 645,
+            "header": "block  ;; label = @14",
+            "end_function_line": 691
+          },
+          "following_instructions_preview": [
+            "local.get 32",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 32",
+            "br 10 (;@3;)",
+            "end",
+            "local.get 24",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 5,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 4,
+          "table_slot": 4,
+          "depth": 5,
+          "target": {
+            "start_function_line": 644,
+            "header": "block  ;; label = @13",
+            "end_function_line": 700
+          },
+          "following_instructions_preview": [
+            "local.get 24",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 24",
+            "br 9 (;@3;)",
+            "end",
+            "local.get 22",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 6,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 5,
+          "table_slot": 5,
+          "depth": 6,
+          "target": {
+            "start_function_line": 643,
+            "header": "block  ;; label = @12",
+            "end_function_line": 709
+          },
+          "following_instructions_preview": [
+            "local.get 22",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 22",
+            "br 8 (;@3;)",
+            "end",
+            "local.get 31",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 7,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 6,
+          "table_slot": 6,
+          "depth": 7,
+          "target": {
+            "start_function_line": 642,
+            "header": "block  ;; label = @11",
+            "end_function_line": 718
+          },
+          "following_instructions_preview": [
+            "local.get 31",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 31",
+            "br 7 (;@3;)",
+            "end",
+            "local.get 29",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 8,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 7,
+          "table_slot": 7,
+          "depth": 8,
+          "target": {
+            "start_function_line": 641,
+            "header": "block  ;; label = @10",
+            "end_function_line": 727
+          },
+          "following_instructions_preview": [
+            "local.get 29",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.const 0x1p+0 (;=1;)",
+            "f32.add",
+            "f32.mul",
+            "local.set 29",
+            "br 6 (;@3;)",
+            "end",
+            "local.get 27"
+          ]
+        },
+        {
+          "tag": 9,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 8,
+          "table_slot": 8,
+          "depth": 9,
+          "target": {
+            "start_function_line": 640,
+            "header": "block  ;; label = @9",
+            "end_function_line": 738
+          },
+          "following_instructions_preview": [
+            "local.get 27",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 27",
+            "br 5 (;@3;)",
+            "end",
+            "local.get 35",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 10,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 9,
+          "table_slot": 9,
+          "depth": 10,
+          "target": {
+            "start_function_line": 639,
+            "header": "block  ;; label = @8",
+            "end_function_line": 747
+          },
+          "following_instructions_preview": [
+            "local.get 35",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 35",
+            "br 4 (;@3;)",
+            "end",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add"
+          ]
+        },
+        {
+          "tag": 11,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 10,
+          "table_slot": 10,
+          "depth": 11,
+          "target": {
+            "start_function_line": 638,
+            "header": "block  ;; label = @7",
+            "end_function_line": 756
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "i32.load",
+            "local.get 17",
+            "i32.add",
+            "local.set 17",
+            "br 3 (;@3;)",
+            "end",
+            "local.get 39",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 12,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 11,
+          "table_slot": 11,
+          "depth": 12,
+          "target": {
+            "start_function_line": 637,
+            "header": "block  ;; label = @6",
+            "end_function_line": 765
+          },
+          "following_instructions_preview": [
+            "local.get 39",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 39",
+            "br 2 (;@3;)",
+            "end",
+            "local.get 43",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 13,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 12,
+          "table_slot": 12,
+          "depth": 13,
+          "target": {
+            "start_function_line": 636,
+            "header": "block  ;; label = @5",
+            "end_function_line": 774
+          },
+          "following_instructions_preview": [
+            "local.get 43",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 43",
+            "br 1 (;@3;)",
+            "end",
+            "local.get 44",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 14,
+          "branch_function_line": 654,
+          "instruction": "br_table 1 (;@17;) 2 (;@16;) 3 (;@15;) 4 (;@14;) 5 (;@13;) 6 (;@12;) 7 (;@11;) 8 (;@10;) 9 (;@9;) 10 (;@8;) 11 (;@7;) 12 (;@6;) 13 (;@5;) 14 (;@4;) 0 (;@18;)",
+          "selector": 13,
+          "table_slot": 13,
+          "depth": 14,
+          "target": {
+            "start_function_line": 635,
+            "header": "block  ;; label = @4",
+            "end_function_line": 783
+          },
+          "following_instructions_preview": [
+            "local.get 44",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 44",
+            "end",
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "owned_adjustments",
+      "branch_function_line": 854,
+      "selector": "u32(tag-1)",
+      "arms": [
+        {
+          "tag": 0,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 4294967295,
+          "table_slot": 19,
+          "depth": 0,
+          "target": {
+            "start_function_line": 847,
+            "header": "block  ;; label = @21",
+            "end_function_line": 855
+          },
+          "following_instructions_preview": [
+            "local.get 28",
+            "local.get 21",
+            "f32.add",
+            "local.set 28",
+            "br 17 (;@3;)",
+            "end",
+            "local.get 30",
+            "local.get 21",
+            "f32.add",
+            "local.set 30",
+            "br 16 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 1,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 0,
+          "table_slot": 0,
+          "depth": 1,
+          "target": {
+            "start_function_line": 846,
+            "header": "block  ;; label = @20",
+            "end_function_line": 861
+          },
+          "following_instructions_preview": [
+            "local.get 30",
+            "local.get 21",
+            "f32.add",
+            "local.set 30",
+            "br 16 (;@3;)",
+            "end",
+            "local.get 25",
+            "local.get 21",
+            "f32.add",
+            "local.set 25",
+            "br 15 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 2,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 1,
+          "table_slot": 1,
+          "depth": 2,
+          "target": {
+            "start_function_line": 845,
+            "header": "block  ;; label = @19",
+            "end_function_line": 867
+          },
+          "following_instructions_preview": [
+            "local.get 25",
+            "local.get 21",
+            "f32.add",
+            "local.set 25",
+            "br 15 (;@3;)",
+            "end",
+            "local.get 26",
+            "local.get 21",
+            "f32.add",
+            "local.set 26",
+            "br 14 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 3,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 2,
+          "table_slot": 2,
+          "depth": 3,
+          "target": {
+            "start_function_line": 844,
+            "header": "block  ;; label = @18",
+            "end_function_line": 873
+          },
+          "following_instructions_preview": [
+            "local.get 26",
+            "local.get 21",
+            "f32.add",
+            "local.set 26",
+            "br 14 (;@3;)",
+            "end",
+            "local.get 32",
+            "local.get 21",
+            "f32.add",
+            "local.set 32",
+            "br 13 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 4,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 3,
+          "table_slot": 3,
+          "depth": 4,
+          "target": {
+            "start_function_line": 843,
+            "header": "block  ;; label = @17",
+            "end_function_line": 879
+          },
+          "following_instructions_preview": [
+            "local.get 32",
+            "local.get 21",
+            "f32.add",
+            "local.set 32",
+            "br 13 (;@3;)",
+            "end",
+            "local.get 22",
+            "f32.const 0x1.eb851ep-4 (;=0.12;)",
+            "local.get 21",
+            "f32.const 0x1.47ae14p-3 (;=0.16;)",
+            "f32.mul",
+            "local.tee 22"
+          ]
+        },
+        {
+          "tag": 5,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 4,
+          "table_slot": 4,
+          "depth": 17,
+          "target": {
+            "start_function_line": 830,
+            "header": "block  ;; label = @4",
+            "end_function_line": 977
+          },
+          "following_instructions_preview": [
+            "local.get 22",
+            "local.get 3",
+            "f32.load offset=32",
+            "f32.const 0x1.8p+1 (;=3;)",
+            "f32.mul",
+            "local.tee 22",
+            "local.get 21",
+            "local.get 21",
+            "local.get 21",
+            "f32.ne",
+            "select",
+            "local.tee 37"
+          ]
+        },
+        {
+          "tag": 6,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 5,
+          "table_slot": 5,
+          "depth": 5,
+          "target": {
+            "start_function_line": 842,
+            "header": "block  ;; label = @16",
+            "end_function_line": 885
+          },
+          "following_instructions_preview": [
+            "local.get 22",
+            "f32.const 0x1.eb851ep-4 (;=0.12;)",
+            "local.get 21",
+            "f32.const 0x1.47ae14p-3 (;=0.16;)",
+            "f32.mul",
+            "local.tee 22",
+            "local.get 22",
+            "local.get 22",
+            "f32.ne",
+            "select",
+            "local.tee 22",
+            "f32.const 0x1.eb851ep-4 (;=0.12;)"
+          ]
+        },
+        {
+          "tag": 7,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 6,
+          "table_slot": 6,
+          "depth": 6,
+          "target": {
+            "start_function_line": 841,
+            "header": "block  ;; label = @15",
+            "end_function_line": 909
+          },
+          "following_instructions_preview": [
+            "local.get 31",
+            "local.get 21",
+            "f32.add",
+            "local.set 31",
+            "br 11 (;@3;)",
+            "end",
+            "local.get 35",
+            "local.get 21",
+            "f32.add",
+            "local.set 35",
+            "br 10 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 8,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 7,
+          "table_slot": 7,
+          "depth": 7,
+          "target": {
+            "start_function_line": 840,
+            "header": "block  ;; label = @14",
+            "end_function_line": 915
+          },
+          "following_instructions_preview": [
+            "local.get 35",
+            "local.get 21",
+            "f32.add",
+            "local.set 35",
+            "br 10 (;@3;)",
+            "end",
+            "local.get 39",
+            "local.get 21",
+            "f32.add",
+            "local.set 39",
+            "br 9 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 9,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 8,
+          "table_slot": 8,
+          "depth": 8,
+          "target": {
+            "start_function_line": 839,
+            "header": "block  ;; label = @13",
+            "end_function_line": 921
+          },
+          "following_instructions_preview": [
+            "local.get 39",
+            "local.get 21",
+            "f32.add",
+            "local.set 39",
+            "br 9 (;@3;)",
+            "end",
+            "local.get 24",
+            "local.get 21",
+            "f32.add",
+            "local.set 24",
+            "br 8 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 10,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 9,
+          "table_slot": 9,
+          "depth": 9,
+          "target": {
+            "start_function_line": 838,
+            "header": "block  ;; label = @12",
+            "end_function_line": 927
+          },
+          "following_instructions_preview": [
+            "local.get 24",
+            "local.get 21",
+            "f32.add",
+            "local.set 24",
+            "br 8 (;@3;)",
+            "end",
+            "local.get 29",
+            "local.get 21",
+            "f32.const 0x1p+0 (;=1;)",
+            "f32.add",
+            "f32.mul",
+            "local.set 29"
+          ]
+        },
+        {
+          "tag": 11,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 10,
+          "table_slot": 10,
+          "depth": 10,
+          "target": {
+            "start_function_line": 837,
+            "header": "block  ;; label = @11",
+            "end_function_line": 933
+          },
+          "following_instructions_preview": [
+            "local.get 29",
+            "local.get 21",
+            "f32.const 0x1p+0 (;=1;)",
+            "f32.add",
+            "f32.mul",
+            "local.set 29",
+            "br 7 (;@3;)",
+            "end",
+            "local.get 33",
+            "local.get 21",
+            "f32.add",
+            "local.set 33"
+          ]
+        },
+        {
+          "tag": 12,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 11,
+          "table_slot": 11,
+          "depth": 11,
+          "target": {
+            "start_function_line": 836,
+            "header": "block  ;; label = @10",
+            "end_function_line": 941
+          },
+          "following_instructions_preview": [
+            "local.get 33",
+            "local.get 21",
+            "f32.add",
+            "local.set 33",
+            "br 6 (;@3;)",
+            "end",
+            "local.get 27",
+            "local.get 21",
+            "f32.add",
+            "local.set 27",
+            "br 5 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 13,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 12,
+          "table_slot": 12,
+          "depth": 12,
+          "target": {
+            "start_function_line": 835,
+            "header": "block  ;; label = @9",
+            "end_function_line": 947
+          },
+          "following_instructions_preview": [
+            "local.get 27",
+            "local.get 21",
+            "f32.add",
+            "local.set 27",
+            "br 5 (;@3;)",
+            "end",
+            "local.get 36",
+            "local.get 21",
+            "f32.add",
+            "local.set 36",
+            "br 4 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 14,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 13,
+          "table_slot": 13,
+          "depth": 13,
+          "target": {
+            "start_function_line": 834,
+            "header": "block  ;; label = @8",
+            "end_function_line": 953
+          },
+          "following_instructions_preview": [
+            "local.get 36",
+            "local.get 21",
+            "f32.add",
+            "local.set 36",
+            "br 4 (;@3;)",
+            "end",
+            "local.get 38",
+            "local.get 21",
+            "f32.add",
+            "local.set 38",
+            "br 3 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 15,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 14,
+          "table_slot": 14,
+          "depth": 14,
+          "target": {
+            "start_function_line": 833,
+            "header": "block  ;; label = @7",
+            "end_function_line": 959
+          },
+          "following_instructions_preview": [
+            "local.get 38",
+            "local.get 21",
+            "f32.add",
+            "local.set 38",
+            "br 3 (;@3;)",
+            "end",
+            "local.get 40",
+            "local.get 21",
+            "f32.add",
+            "local.set 40",
+            "br 2 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 16,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 15,
+          "table_slot": 15,
+          "depth": 18,
+          "target": {
+            "start_function_line": 829,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1009
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 16",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 16",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "f32.const 0x1.99999ap-2 (;=0.4;)",
+            "local.get 23"
+          ]
+        },
+        {
+          "tag": 17,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 16,
+          "table_slot": 16,
+          "depth": 15,
+          "target": {
+            "start_function_line": 832,
+            "header": "block  ;; label = @6",
+            "end_function_line": 965
+          },
+          "following_instructions_preview": [
+            "local.get 40",
+            "local.get 21",
+            "f32.add",
+            "local.set 40",
+            "br 2 (;@3;)",
+            "end",
+            "local.get 23",
+            "local.get 21",
+            "f32.add",
+            "local.set 23",
+            "br 1 (;@3;)",
+            "end"
+          ]
+        },
+        {
+          "tag": 18,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 17,
+          "table_slot": 17,
+          "depth": 18,
+          "target": {
+            "start_function_line": 829,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1009
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 16",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 16",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "f32.const 0x1.99999ap-2 (;=0.4;)",
+            "local.get 23"
+          ]
+        },
+        {
+          "tag": 19,
+          "branch_function_line": 854,
+          "instruction": "br_table 1 (;@20;) 2 (;@19;) 3 (;@18;) 4 (;@17;) 17 (;@4;) 5 (;@16;) 6 (;@15;) 7 (;@14;) 8 (;@13;) 9 (;@12;) 10 (;@11;) 11 (;@10;) 12 (;@9;) 13 (;@8;) 14 (;@7;) 18 (;@3;) 15 (;@6;) 18 (;@3;) 16 (;@5;) 0 (;@21;)",
+          "selector": 18,
+          "table_slot": 18,
+          "depth": 16,
+          "target": {
+            "start_function_line": 831,
+            "header": "block  ;; label = @5",
+            "end_function_line": 971
+          },
+          "following_instructions_preview": [
+            "local.get 23",
+            "local.get 21",
+            "f32.add",
+            "local.set 23",
+            "br 1 (;@3;)",
+            "end",
+            "local.get 22",
+            "local.get 3",
+            "f32.load offset=32",
+            "f32.const 0x1.8p+1 (;=3;)",
+            "f32.mul",
+            "local.tee 22"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "copied_item_and_timed_modifiers",
+      "branch_function_line": 1082,
+      "selector": "u32(tag-1)",
+      "arms": [
+        {
+          "tag": 0,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 4294967295,
+          "table_slot": 32,
+          "depth": 0,
+          "target": {
+            "start_function_line": 1077,
+            "header": "block  ;; label = @23",
+            "end_function_line": 1083
+          },
+          "following_instructions_preview": [
+            "local.get 28",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 28",
+            "br 19 (;@3;)",
+            "end",
+            "local.get 30",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 1,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 0,
+          "table_slot": 0,
+          "depth": 1,
+          "target": {
+            "start_function_line": 1076,
+            "header": "block  ;; label = @22",
+            "end_function_line": 1092
+          },
+          "following_instructions_preview": [
+            "local.get 30",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 30",
+            "br 18 (;@3;)",
+            "end",
+            "local.get 25",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 2,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 1,
+          "table_slot": 1,
+          "depth": 2,
+          "target": {
+            "start_function_line": 1075,
+            "header": "block  ;; label = @21",
+            "end_function_line": 1101
+          },
+          "following_instructions_preview": [
+            "local.get 25",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 25",
+            "br 17 (;@3;)",
+            "end",
+            "local.get 26",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 3,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 2,
+          "table_slot": 2,
+          "depth": 3,
+          "target": {
+            "start_function_line": 1074,
+            "header": "block  ;; label = @20",
+            "end_function_line": 1110
+          },
+          "following_instructions_preview": [
+            "local.get 26",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 26",
+            "br 16 (;@3;)",
+            "end",
+            "local.get 32",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 4,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 3,
+          "table_slot": 3,
+          "depth": 4,
+          "target": {
+            "start_function_line": 1073,
+            "header": "block  ;; label = @19",
+            "end_function_line": 1119
+          },
+          "following_instructions_preview": [
+            "local.get 32",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 32",
+            "br 15 (;@3;)",
+            "end",
+            "local.get 22",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 5,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 4,
+          "table_slot": 4,
+          "depth": 5,
+          "target": {
+            "start_function_line": 1072,
+            "header": "block  ;; label = @18",
+            "end_function_line": 1128
+          },
+          "following_instructions_preview": [
+            "local.get 22",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 22",
+            "br 14 (;@3;)",
+            "end",
+            "local.get 31",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 6,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 5,
+          "table_slot": 5,
+          "depth": 6,
+          "target": {
+            "start_function_line": 1071,
+            "header": "block  ;; label = @17",
+            "end_function_line": 1137
+          },
+          "following_instructions_preview": [
+            "local.get 31",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 31",
+            "br 13 (;@3;)",
+            "end",
+            "local.get 24",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 7,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 6,
+          "table_slot": 6,
+          "depth": 7,
+          "target": {
+            "start_function_line": 1070,
+            "header": "block  ;; label = @16",
+            "end_function_line": 1146
+          },
+          "following_instructions_preview": [
+            "local.get 24",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 24",
+            "br 12 (;@3;)",
+            "end",
+            "local.get 35",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 8,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 7,
+          "table_slot": 7,
+          "depth": 8,
+          "target": {
+            "start_function_line": 1069,
+            "header": "block  ;; label = @15",
+            "end_function_line": 1155
+          },
+          "following_instructions_preview": [
+            "local.get 35",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 35",
+            "br 11 (;@3;)",
+            "end",
+            "local.get 29",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 9,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 8,
+          "table_slot": 8,
+          "depth": 9,
+          "target": {
+            "start_function_line": 1068,
+            "header": "block  ;; label = @14",
+            "end_function_line": 1164
+          },
+          "following_instructions_preview": [
+            "local.get 29",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.const 0x1p+0 (;=1;)",
+            "f32.add",
+            "f32.mul",
+            "local.set 29",
+            "br 10 (;@3;)",
+            "end",
+            "local.get 33"
+          ]
+        },
+        {
+          "tag": 10,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 9,
+          "table_slot": 9,
+          "depth": 10,
+          "target": {
+            "start_function_line": 1067,
+            "header": "block  ;; label = @13",
+            "end_function_line": 1175
+          },
+          "following_instructions_preview": [
+            "local.get 33",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 33",
+            "br 9 (;@3;)",
+            "end",
+            "local.get 27",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 11,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 10,
+          "table_slot": 10,
+          "depth": 11,
+          "target": {
+            "start_function_line": 1066,
+            "header": "block  ;; label = @12",
+            "end_function_line": 1184
+          },
+          "following_instructions_preview": [
+            "local.get 27",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 27",
+            "br 8 (;@3;)",
+            "end",
+            "local.get 36",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 12,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 11,
+          "table_slot": 11,
+          "depth": 12,
+          "target": {
+            "start_function_line": 1065,
+            "header": "block  ;; label = @11",
+            "end_function_line": 1193
+          },
+          "following_instructions_preview": [
+            "local.get 36",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 36",
+            "br 7 (;@3;)",
+            "end",
+            "local.get 39",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 13,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 12,
+          "table_slot": 12,
+          "depth": 13,
+          "target": {
+            "start_function_line": 1064,
+            "header": "block  ;; label = @10",
+            "end_function_line": 1202
+          },
+          "following_instructions_preview": [
+            "local.get 39",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 39",
+            "br 6 (;@3;)",
+            "end",
+            "local.get 38",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 14,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 13,
+          "table_slot": 13,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 15,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 14,
+          "table_slot": 14,
+          "depth": 14,
+          "target": {
+            "start_function_line": 1063,
+            "header": "block  ;; label = @9",
+            "end_function_line": 1211
+          },
+          "following_instructions_preview": [
+            "local.get 38",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 38",
+            "br 5 (;@3;)",
+            "end",
+            "local.get 40",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 16,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 15,
+          "table_slot": 15,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 17,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 16,
+          "table_slot": 16,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 18,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 17,
+          "table_slot": 17,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 19,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 18,
+          "table_slot": 18,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 20,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 19,
+          "table_slot": 19,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 21,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 20,
+          "table_slot": 20,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 22,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 21,
+          "table_slot": 21,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 23,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 22,
+          "table_slot": 22,
+          "depth": 15,
+          "target": {
+            "start_function_line": 1062,
+            "header": "block  ;; label = @8",
+            "end_function_line": 1220
+          },
+          "following_instructions_preview": [
+            "local.get 40",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 40",
+            "br 4 (;@3;)",
+            "end",
+            "local.get 45",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 24,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 23,
+          "table_slot": 23,
+          "depth": 16,
+          "target": {
+            "start_function_line": 1061,
+            "header": "block  ;; label = @7",
+            "end_function_line": 1229
+          },
+          "following_instructions_preview": [
+            "local.get 45",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 45",
+            "br 3 (;@3;)",
+            "end",
+            "local.get 37",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 25,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 24,
+          "table_slot": 24,
+          "depth": 17,
+          "target": {
+            "start_function_line": 1060,
+            "header": "block  ;; label = @6",
+            "end_function_line": 1238
+          },
+          "following_instructions_preview": [
+            "local.get 37",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 37",
+            "br 2 (;@3;)",
+            "end",
+            "local.get 46",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 26,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 25,
+          "table_slot": 25,
+          "depth": 18,
+          "target": {
+            "start_function_line": 1059,
+            "header": "block  ;; label = @5",
+            "end_function_line": 1247
+          },
+          "following_instructions_preview": [
+            "local.get 46",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 46",
+            "br 1 (;@3;)",
+            "end",
+            "local.get 23",
+            "local.get 1",
+            "i32.const 4"
+          ]
+        },
+        {
+          "tag": 27,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 26,
+          "table_slot": 26,
+          "depth": 19,
+          "target": {
+            "start_function_line": 1058,
+            "header": "block  ;; label = @4",
+            "end_function_line": 1256
+          },
+          "following_instructions_preview": [
+            "local.get 23",
+            "local.get 1",
+            "i32.const 4",
+            "i32.add",
+            "f32.load",
+            "f32.add",
+            "local.set 23",
+            "end",
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1"
+          ]
+        },
+        {
+          "tag": 28,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 27,
+          "table_slot": 27,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 29,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 28,
+          "table_slot": 28,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 30,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 29,
+          "table_slot": 29,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 31,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 30,
+          "table_slot": 30,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        },
+        {
+          "tag": 32,
+          "branch_function_line": 1082,
+          "instruction": "br_table 1 (;@22;) 2 (;@21;) 3 (;@20;) 4 (;@19;) 5 (;@18;) 6 (;@17;) 7 (;@16;) 8 (;@15;) 9 (;@14;) 10 (;@13;) 11 (;@12;) 12 (;@11;) 13 (;@10;) 20 (;@3;) 14 (;@9;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 15 (;@8;) 16 (;@7;) 17 (;@6;) 18 (;@5;) 19 (;@4;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 20 (;@3;) 0 (;@23;)",
+          "selector": 31,
+          "table_slot": 31,
+          "depth": 20,
+          "target": {
+            "start_function_line": 1057,
+            "header": "block  ;; label = @3",
+            "end_function_line": 1264
+          },
+          "following_instructions_preview": [
+            "local.get 1",
+            "i32.const 8",
+            "i32.add",
+            "local.set 1",
+            "local.get 2",
+            "i32.const 8",
+            "i32.sub",
+            "local.tee 2",
+            "br_if 0 (;@2;)",
+            "end",
+            "end",
+            "local.get 0"
+          ]
+        }
+      ]
+    }
+  ],
+  "instruction_guards": [
+    {
+      "label": "class selector",
+      "first_function_line": 10,
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=360",
+        "i32.const 2",
+        "i32.sub",
+        "i32.const 255",
+        "i32.and"
+      ]
+    },
+    {
+      "label": "race selector",
+      "first_function_line": 28,
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=361",
+        "i32.const 2",
+        "i32.sub"
+      ]
+    },
+    {
+      "label": "base modifier vector",
+      "first_function_line": 62,
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1012",
+        "local.set 6"
+      ]
+    },
+    {
+      "label": "copy original modifier vector",
+      "first_function_line": 99,
+      "instructions": [
+        "local.get 8",
+        "local.get 6",
+        "local.get 1",
+        "memory.copy"
+      ]
+    },
+    {
+      "label": "12B timed-modifier vector",
+      "first_function_line": 349,
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=500",
+        "local.tee 1"
+      ]
+    },
+    {
+      "label": "timed effect tag27 contributes modifier",
+      "first_function_line": 383,
+      "instructions": [
+        "local.tee 2",
+        "i32.load",
+        "i32.const 27",
+        "i32.ne"
+      ]
+    },
+    {
+      "label": "level-derived baseline",
+      "first_function_line": 438,
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1336",
+        "f32.convert_i32_u",
+        "f32.const -0x1p+0 (;=-1;)",
+        "f32.add"
+      ]
+    },
+    {
+      "label": "class base HP",
+      "first_function_line": 803,
+      "instructions": [
+        "local.get 3",
+        "f32.load offset=72",
+        "local.set 49"
+      ]
+    },
+    {
+      "label": "class base armor",
+      "first_function_line": 464,
+      "instructions": [
+        "local.get 3",
+        "f32.load offset=76",
+        "local.set 22"
+      ]
+    },
+    {
+      "label": "8B passive-vector source",
+      "first_function_line": 628,
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1504",
+        "local.set 1"
+      ]
+    },
+    {
+      "label": "16B owned-adjustment vector",
+      "first_function_line": 820,
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1480",
+        "local.set 1"
+      ]
+    },
+    {
+      "label": "32B live-effect vector",
+      "first_function_line": 1288,
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1516",
+        "local.tee 7"
+      ]
+    },
+    {
+      "label": "area scalar output",
+      "first_function_line": 1567,
+      "instructions": [
+        "local.get 0",
+        "local.get 35",
+        "f32.store offset=1216"
+      ]
+    },
+    {
+      "label": "XP scalar output",
+      "first_function_line": 1570,
+      "instructions": [
+        "local.get 0",
+        "local.get 33",
+        "f32.store offset=1204"
+      ]
+    },
+    {
+      "label": "haste becomes reciprocal cooldown scalar",
+      "first_function_line": 1585,
+      "instructions": [
+        "local.get 0",
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 30",
+        "f32.const 0x1p+0 (;=1;)",
+        "f32.add",
+        "f32.div",
+        "f32.store offset=1184"
+      ]
+    },
+    {
+      "label": "critical overflow feeds critical multiplier",
+      "first_function_line": 1608,
+      "instructions": [
+        "local.get 0",
+        "local.get 32",
+        "local.get 26",
+        "f32.const -0x1p+0 (;=-1;)",
+        "f32.add",
+        "f32.add",
+        "local.get 32",
+        "local.get 3",
+        "select",
+        "f32.store offset=1192"
+      ]
+    }
+  ],
+  "derived_output_stores": [
+    {
+      "function_line": 1529,
+      "type": "f32",
+      "state_offset": 1260,
+      "preceding_instructions": [
+        "end",
+        "local.get 24",
+        "f32.const 0x1.333334p-1 (;=0.6;)",
+        "f32.add",
+        "local.set 24",
+        "end",
+        "local.get 3",
+        "local.get 19",
+        "i32.ne",
+        "br_if 0 (;@2;)",
+        "end",
+        "end",
+        "local.get 0",
+        "local.get 44",
+        "f32.store offset=1260"
+      ]
+    },
+    {
+      "function_line": 1532,
+      "type": "f32",
+      "state_offset": 1256,
+      "preceding_instructions": [
+        "f32.add",
+        "local.set 24",
+        "end",
+        "local.get 3",
+        "local.get 19",
+        "i32.ne",
+        "br_if 0 (;@2;)",
+        "end",
+        "end",
+        "local.get 0",
+        "local.get 44",
+        "f32.store offset=1260",
+        "local.get 0",
+        "local.get 43",
+        "f32.store offset=1256"
+      ]
+    },
+    {
+      "function_line": 1535,
+      "type": "f32",
+      "state_offset": 1248,
+      "preceding_instructions": [
+        "local.get 3",
+        "local.get 19",
+        "i32.ne",
+        "br_if 0 (;@2;)",
+        "end",
+        "end",
+        "local.get 0",
+        "local.get 44",
+        "f32.store offset=1260",
+        "local.get 0",
+        "local.get 43",
+        "f32.store offset=1256",
+        "local.get 0",
+        "local.get 50",
+        "f32.store offset=1248"
+      ]
+    },
+    {
+      "function_line": 1543,
+      "type": "i32",
+      "state_offset": 1244,
+      "preceding_instructions": [
+        "f32.store offset=1260",
+        "local.get 0",
+        "local.get 43",
+        "f32.store offset=1256",
+        "local.get 0",
+        "local.get 50",
+        "f32.store offset=1248",
+        "local.get 0",
+        "i32.const 3",
+        "local.get 16",
+        "local.get 16",
+        "i32.const 3",
+        "i32.ge_u",
+        "select",
+        "i32.store offset=1244"
+      ]
+    },
+    {
+      "function_line": 1546,
+      "type": "f32",
+      "state_offset": 1240,
+      "preceding_instructions": [
+        "f32.store offset=1256",
+        "local.get 0",
+        "local.get 50",
+        "f32.store offset=1248",
+        "local.get 0",
+        "i32.const 3",
+        "local.get 16",
+        "local.get 16",
+        "i32.const 3",
+        "i32.ge_u",
+        "select",
+        "i32.store offset=1244",
+        "local.get 0",
+        "local.get 40",
+        "f32.store offset=1240"
+      ]
+    },
+    {
+      "function_line": 1549,
+      "type": "f32",
+      "state_offset": 1236,
+      "preceding_instructions": [
+        "f32.store offset=1248",
+        "local.get 0",
+        "i32.const 3",
+        "local.get 16",
+        "local.get 16",
+        "i32.const 3",
+        "i32.ge_u",
+        "select",
+        "i32.store offset=1244",
+        "local.get 0",
+        "local.get 40",
+        "f32.store offset=1240",
+        "local.get 0",
+        "local.get 38",
+        "f32.store offset=1236"
+      ]
+    },
+    {
+      "function_line": 1552,
+      "type": "f32",
+      "state_offset": 1232,
+      "preceding_instructions": [
+        "local.get 16",
+        "local.get 16",
+        "i32.const 3",
+        "i32.ge_u",
+        "select",
+        "i32.store offset=1244",
+        "local.get 0",
+        "local.get 40",
+        "f32.store offset=1240",
+        "local.get 0",
+        "local.get 38",
+        "f32.store offset=1236",
+        "local.get 0",
+        "local.get 39",
+        "f32.store offset=1232"
+      ]
+    },
+    {
+      "function_line": 1555,
+      "type": "i32",
+      "state_offset": 1228,
+      "preceding_instructions": [
+        "i32.ge_u",
+        "select",
+        "i32.store offset=1244",
+        "local.get 0",
+        "local.get 40",
+        "f32.store offset=1240",
+        "local.get 0",
+        "local.get 38",
+        "f32.store offset=1236",
+        "local.get 0",
+        "local.get 39",
+        "f32.store offset=1232",
+        "local.get 0",
+        "local.get 17",
+        "i32.store offset=1228"
+      ]
+    },
+    {
+      "function_line": 1558,
+      "type": "f32",
+      "state_offset": 1224,
+      "preceding_instructions": [
+        "local.get 0",
+        "local.get 40",
+        "f32.store offset=1240",
+        "local.get 0",
+        "local.get 38",
+        "f32.store offset=1236",
+        "local.get 0",
+        "local.get 39",
+        "f32.store offset=1232",
+        "local.get 0",
+        "local.get 17",
+        "i32.store offset=1228",
+        "local.get 0",
+        "local.get 27",
+        "f32.store offset=1224"
+      ]
+    },
+    {
+      "function_line": 1566,
+      "type": "f32",
+      "state_offset": 1220,
+      "preceding_instructions": [
+        "f32.store offset=1232",
+        "local.get 0",
+        "local.get 17",
+        "i32.store offset=1228",
+        "local.get 0",
+        "local.get 27",
+        "f32.store offset=1224",
+        "local.get 0",
+        "local.get 36",
+        "local.get 51",
+        "f32.add",
+        "local.get 36",
+        "local.get 20",
+        "select",
+        "f32.store offset=1220"
+      ]
+    },
+    {
+      "function_line": 1569,
+      "type": "f32",
+      "state_offset": 1216,
+      "preceding_instructions": [
+        "i32.store offset=1228",
+        "local.get 0",
+        "local.get 27",
+        "f32.store offset=1224",
+        "local.get 0",
+        "local.get 36",
+        "local.get 51",
+        "f32.add",
+        "local.get 36",
+        "local.get 20",
+        "select",
+        "f32.store offset=1220",
+        "local.get 0",
+        "local.get 35",
+        "f32.store offset=1216"
+      ]
+    },
+    {
+      "function_line": 1572,
+      "type": "f32",
+      "state_offset": 1204,
+      "preceding_instructions": [
+        "f32.store offset=1224",
+        "local.get 0",
+        "local.get 36",
+        "local.get 51",
+        "f32.add",
+        "local.get 36",
+        "local.get 20",
+        "select",
+        "f32.store offset=1220",
+        "local.get 0",
+        "local.get 35",
+        "f32.store offset=1216",
+        "local.get 0",
+        "local.get 33",
+        "f32.store offset=1204"
+      ]
+    },
+    {
+      "function_line": 1575,
+      "type": "f32",
+      "state_offset": 1200,
+      "preceding_instructions": [
+        "local.get 51",
+        "f32.add",
+        "local.get 36",
+        "local.get 20",
+        "select",
+        "f32.store offset=1220",
+        "local.get 0",
+        "local.get 35",
+        "f32.store offset=1216",
+        "local.get 0",
+        "local.get 33",
+        "f32.store offset=1204",
+        "local.get 0",
+        "local.get 29",
+        "f32.store offset=1200"
+      ]
+    },
+    {
+      "function_line": 1584,
+      "type": "f32",
+      "state_offset": 1188,
+      "preceding_instructions": [
+        "local.get 0",
+        "local.get 33",
+        "f32.store offset=1204",
+        "local.get 0",
+        "local.get 29",
+        "f32.store offset=1200",
+        "local.get 0",
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 26",
+        "local.get 26",
+        "f32.const 0x1p+0 (;=1;)",
+        "f32.gt",
+        "local.tee 3",
+        "select",
+        "f32.store offset=1188"
+      ]
+    },
+    {
+      "function_line": 1591,
+      "type": "f32",
+      "state_offset": 1184,
+      "preceding_instructions": [
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 26",
+        "local.get 26",
+        "f32.const 0x1p+0 (;=1;)",
+        "f32.gt",
+        "local.tee 3",
+        "select",
+        "f32.store offset=1188",
+        "local.get 0",
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 30",
+        "f32.const 0x1p+0 (;=1;)",
+        "f32.add",
+        "f32.div",
+        "f32.store offset=1184"
+      ]
+    },
+    {
+      "function_line": 1607,
+      "type": "f32",
+      "state_offset": 1176,
+      "preceding_instructions": [
+        "f32.load offset=1176",
+        "local.set 29",
+        "local.get 0",
+        "local.get 49",
+        "local.get 41",
+        "f32.const 0x1.2p+3 (;=9;)",
+        "f32.mul",
+        "f32.add",
+        "local.tee 27",
+        "local.get 42",
+        "f32.add",
+        "local.get 25",
+        "f32.mul",
+        "local.tee 21",
+        "f32.store offset=1176"
+      ]
+    },
+    {
+      "function_line": 1617,
+      "type": "f32",
+      "state_offset": 1192,
+      "preceding_instructions": [
+        "f32.add",
+        "local.get 25",
+        "f32.mul",
+        "local.tee 21",
+        "f32.store offset=1176",
+        "local.get 0",
+        "local.get 32",
+        "local.get 26",
+        "f32.const -0x1p+0 (;=-1;)",
+        "f32.add",
+        "f32.add",
+        "local.get 32",
+        "local.get 3",
+        "select",
+        "f32.store offset=1192"
+      ]
+    },
+    {
+      "function_line": 1624,
+      "type": "f32",
+      "state_offset": 1212,
+      "preceding_instructions": [
+        "local.get 26",
+        "f32.const -0x1p+0 (;=-1;)",
+        "f32.add",
+        "f32.add",
+        "local.get 32",
+        "local.get 3",
+        "select",
+        "f32.store offset=1192",
+        "local.get 0",
+        "local.get 45",
+        "local.get 21",
+        "f32.mul",
+        "local.get 31",
+        "f32.add",
+        "f32.store offset=1212"
+      ]
+    },
+    {
+      "function_line": 1639,
+      "type": "f32",
+      "state_offset": 1196,
+      "preceding_instructions": [
+        "local.get 0",
+        "f32.const 0x1.19999ap+1 (;=2.2;)",
+        "local.get 24",
+        "local.get 24",
+        "local.get 24",
+        "f32.ne",
+        "select",
+        "local.tee 24",
+        "f32.const 0x1.19999ap+1 (;=2.2;)",
+        "local.get 24",
+        "f32.const 0x1.19999ap+1 (;=2.2;)",
+        "f32.lt",
+        "select",
+        "local.tee 26",
+        "f32.store offset=1196"
+      ]
+    },
+    {
+      "function_line": 1660,
+      "type": "f32",
+      "state_offset": 1208,
+      "preceding_instructions": [
+        "select",
+        "local.tee 24",
+        "local.get 24",
+        "local.get 23",
+        "local.get 23",
+        "local.get 23",
+        "f32.ne",
+        "select",
+        "local.tee 25",
+        "local.get 24",
+        "local.get 25",
+        "f32.lt",
+        "select",
+        "local.tee 24",
+        "f32.store offset=1208"
+      ]
+    },
+    {
+      "function_line": 1678,
+      "type": "f32",
+      "state_offset": 1252,
+      "preceding_instructions": [
+        "local.get 27",
+        "local.get 27",
+        "local.get 27",
+        "f32.ne",
+        "select",
+        "local.tee 25",
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 25",
+        "f32.const 0x1p+0 (;=1;)",
+        "f32.gt",
+        "select",
+        "f32.div",
+        "f32.const -0x1p+0 (;=-1;)",
+        "f32.add",
+        "f32.store offset=1252"
+      ]
+    },
+    {
+      "function_line": 1705,
+      "type": "f32",
+      "state_offset": 1180,
+      "preceding_instructions": [
+        "local.get 23",
+        "local.get 23",
+        "f32.ne",
+        "select",
+        "local.tee 23",
+        "f32.const 0x0p+0 (;=0;)",
+        "local.get 23",
+        "f32.const 0x0p+0 (;=0;)",
+        "f32.gt",
+        "select",
+        "f32.mul",
+        "f32.add",
+        "local.get 28",
+        "f32.add",
+        "f32.store offset=1180"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "scripts/trace_derived_stats.py": "12172be53ede153a619cfd7d25c02e21bdf24ce7ec523f3a2440c89381f1607e",
+    "scripts/trace_abilities.py": "2b97bdda3d0dc967f9ee35f71ab6210c1d0e45dc38ae8f3a4179e4d06bd3e286",
+    "scripts/trace_ecs_forward.py": "fd70b417c5fb2fd6cd5b259aa268f8ecea1cd68ad7e625d5d86745c56e9d9863",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "validation": {
+    "complete_functions": 2,
+    "classes": 9,
+    "races": 8,
+    "dispatch_tables": 4,
+    "resolved_tag_arms": 80,
+    "instruction_guards": 16,
+    "derived_output_stores": 22
+  },
+  "target_executed": false,
+  "network_used": false,
+  "user_saves_read": false,
+  "limitations": [
+    "Static input/accumulator/output recovery, not an independent complete stat recalculation model.",
+    "Dispatch tables use separate tag spaces; shared tag numbers do not imply shared meaning.",
+    "Instruction previews identify branch destinations, not complete branch semantics.",
+    "Timed-effect dominance, all talent writers, modifier production and network side effects remain incomplete."
+  ],
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "report": "reports/2026-11-01-derived-stats.md",
+  "local_manifest_sha256": "61b405b3cb7cc9b02f7ce294917245cb09a6f2dff4aea11eb5c39dc4c72a8870",
+  "report_markdown_sha256": "1205ffc28c8472dd493206ca847e523a04a52dac4ed3e4ff7d3b00f17301615b",
+  "method": "Fixed-original static input/dispatch/output reconstruction. No original1573 execution or complete independent stat model.",
+  "consumer_connections": {
+    "max_hp1176": "934 HP-based damage and1107 revive/HP paths",
+    "damage1180": "934 base hit",
+    "cooldown1184": "917 cooldown",
+    "critical1188_and1192": "934 critical selection",
+    "armor1208": "1107 incoming damage",
+    "area1216": "934 range",
+    "xp1204": "2852 pickup XP",
+    "current_hp1344": "1573 itself adjusts live HP after maxHP changes;1107 incoming damage"
+  },
+  "remaining": [
+    "Independent full1573 implementation and original-state differential",
+    "All producing writers for modifier tags and packed fields",
+    "32B live-effect dominance/tie/special-ID branches",
+    "Buff/debuff expiry and object-message runtime acceptance"
+  ],
+  "rea_evidence": {
+    "id": "ev_ae072cbcde4a76fa6fe19c6d5a8cfba365234de9242a5e4bd993178b4eccbb43",
+    "provider": "azeroth-ports-local-wasm-focus",
+    "run": "evidence/wasm-focused-20261031T233240.507722Z",
+    "selected_functions": [
+      1573,
+      2017
+    ],
+    "scope": "Selected complete-function identity; static manual semantics, not stock REA full-module analysis."
+  },
+  "independent_static_review": {
+    "file": "evidence/derived-stats-20261031T233112.519450Z/independent-review.json",
+    "sha256": "6a37f4c78a07c62a9a6d16a5d99ebb1131991b9dbe2384d5498b132ba9c8aa71",
+    "target_executed": false,
+    "scope": "Independent original code/data parsing, classes/races/modifiers,80 branch destinations,22 output stores,16 guards and manual formula review. Review hashes bind pre-annotation public JSON, avoiding circular self-hashing."
+  }
+}

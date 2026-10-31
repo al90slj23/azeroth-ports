@@ -29,6 +29,9 @@ flowchart LR
 | 独立数值 | 升级11560、成长24636、半径helper/组合29041份对照均0差异 | [升级](reports/2026-11-01-executable-spec.md)、[成长](reports/2026-11-01-world-progression.md)、[半径](reports/2026-11-01-radius-spec.md)；局部隔离函数验证，未执行原934外层或完整游戏。 |
 | 账号存档 | 368B聚合、24正常tag及unlock兼容、一条地图解锁保存/加载链、RSE1结构 | [存档报告](reports/2026-11-01-save-schema.md)；仅静态及合成模型自检，尚无原件差分。 |
 | 更易阅读的指令 | 1065已生成命名callee的合成模块C | [C阅读辅助](reports/2026-11-01-readable-ir.md)；不含callee实现/原数据初始化，不是源码恢复或独立实现。 |
+| 随机数与经验 | 四字状态/高23位区间采样及拒绝重抽；85387舍入、XP阈值/循环/开卡guard投影 | [RNG](reports/2026-11-01-rng.md)18144组原体对照；[经验](reports/2026-11-01-progression.md)24643份原helper及5482份重组，均0差异；seed与完整副作用尚缺。 |
+| 其他技能执行 | 12kind/14tag全目录和跳表入口；Fireball→112B待命中→到期→933 | [执行类别报告](reports/2026-11-01-cast-dispatch.md)；延迟到达不等于已恢复逐帧投射物碰撞/显示。 |
+| 属性重算 | 4套modifier tag表、9职业/8种族、生命/暴击溢出/haste/护甲等真实写入 | [属性报告](reports/2026-11-01-derived-stats.md)；22个范围内store不等于完整属性模型已实现。 |
 
 ## 已接通的伤害与同步路径
 
@@ -91,6 +94,8 @@ python3 reverse-engineering/scripts/trace_game_loop.py --index /path/to/index.sq
 python3 reverse-engineering/scripts/trace_abilities.py --index /path/to/index.sqlite
 python3 reverse-engineering/scripts/trace_world_progression.py --index /path/to/index.sqlite
 python3 reverse-engineering/scripts/trace_save_schema.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_cast_dispatch.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_derived_stats.py --index /path/to/index.sqlite
 
 # 用独立手写字节样本核对本地协议转写，不连接或重放到游戏服务。
 python3 reverse-engineering/scripts/check_coop_wire.py

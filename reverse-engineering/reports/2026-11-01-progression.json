@@ -1,0 +1,939 @@
+{
+  "title": "0.126.0 independent XP progression arithmetic and original85387 oracle",
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "scope": "Independent ordered-binary32 XP arithmetic projection; full3231/13409/1573/2098 behavior is not reconstructed.",
+  "validation": {
+    "version": "0.126.0",
+    "build": "3e72472a",
+    "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+    "original_helper_function": 85387,
+    "original_helper_body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+    "original_helper_body_bytes": 68,
+    "oracle_module_sha256": "098402f73a870888bb0a893d249354f3f82e1689094fd6d46f349a3c4897319a",
+    "oracle_module_bytes": 108,
+    "copied_body_byte_identical": true,
+    "case_count": 30125,
+    "mismatch_count": 0,
+    "modes": {
+      "helper": {
+        "case_count": 24643,
+        "mismatch_count": 0,
+        "nan_category_pairs": 80
+      },
+      "threshold_composition": {
+        "case_count": 2376,
+        "mismatch_count": 0,
+        "nan_category_pairs": 0
+      },
+      "xp_projection_composition": {
+        "case_count": 1954,
+        "mismatch_count": 0,
+        "nan_category_pairs": 0
+      },
+      "card_guard_composition": {
+        "case_count": 1152,
+        "mismatch_count": 0,
+        "nan_category_pairs": 0
+      }
+    },
+    "groups": {
+      "helper_special_values": 30,
+      "helper_all_exponents_signs_fraction_boundaries": 2048,
+      "helper_integer_half_adjacent_bits": 2565,
+      "helper_seeded_raw_bits": 20000,
+      "threshold_small_levels_u32_conversion_boundaries": 376,
+      "threshold_seeded_u32_levels": 2000,
+      "xp_exact_threshold_and_neighbors": 303,
+      "xp_existing_balance_amount_zero": 303,
+      "xp_add_wrap_cap_pending_wrap": 54,
+      "xp_multilevel_cumulative_threshold_boundaries": 294,
+      "xp_seeded_balances_levels_pending": 1000,
+      "card_guard_canonical_and_noncanonical_bytes": 1152
+    },
+    "seed": "0xa2e03231",
+    "original85387_executed": true,
+    "original3231_executed": false,
+    "original13409_executed": false,
+    "threshold_xp_guard_comparisons": "JS recomposition around copied85387; not original3231 differential execution",
+    "full_game_started": false,
+    "host_imports": [],
+    "memory": null,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "installed_game_modified": false,
+    "static_guard_count": 13,
+    "runtime_version": "v22.23.4",
+    "runtime_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+    "validator_sha256": "a17b421f1cca2c0bba48c6ab3a510f9510db44e505cffd5a48c64bb1f0b5659c",
+    "source_sha256": {
+      "scripts/build_progression_oracle.py": "ccde52f8f76d412622c5872a21d00fe2abd68501c79e6a390762bfee387168f7",
+      "scripts/check_progression_spec.py": "d0cee869d670d8904646c0327155f2af9f4fa7a866337819cbb986efd4682344",
+      "scripts/run_progression_oracle.mjs": "bcd9d6811884a565d25fefff8475fe7a7c645880996052c942c0426c98b49aac",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26"
+    },
+    "artifact_sha256": {
+      "cases.jsonl": "ea1bb559c55e745aed0ada465a00aedd94f9e770e1faa72eac3e5af33b24fec5",
+      "independent-model-results.jsonl": "4b3eef4cefde5d07569a28c99d0c03e02b68360368fdc47f35b6efcee1726926",
+      "original-helper-and-recomposition-results.jsonl": "ff03b43163b3a9aba2a3be46b555f4a526ef855011114d4b86423e1801dbb01a",
+      "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "evidence_directory": "evidence/progression-oracle-20261031T233144.054697Z",
+    "limitations": [
+      "Only85387 is an unchanged original function executed in isolation.",
+      "XP/threshold/card-guard modes check an independently recomposed instruction projection, not the full original3231.",
+      "Attribute/heal recalculation1573, messages, notifications and2098 card side effects are excluded.",
+      "NaN payload, sign and signaling state are compared by category only.",
+      "Deterministic differential checks do not exhaust all binary32 inputs."
+    ]
+  },
+  "static_source_functions": [
+    {
+      "function_index": 3231,
+      "wat_start": 472323902,
+      "wat_end": 472355689,
+      "wat_line": 7728575,
+      "wat_sha256": "1c842df05383e4917f0ef53c2f948cdedf9d0155cc72078cd8bf95826b373b8f",
+      "body_start": 17935730,
+      "body_end": 17938357,
+      "body_bytes": 2627,
+      "body_sha256": "0b00363c3b7539f785134a2c23528b101183a02dbd61616502a1e6ce8af7a2aa",
+      "original_body_executed": false
+    },
+    {
+      "function_index": 85387,
+      "wat_start": 1253537916,
+      "wat_end": 1253538567,
+      "wat_line": 32561490,
+      "wat_sha256": "75d3607174046c79b83c9b79dbf358aa94140b26ff45e163b167853cd7ba9a4e",
+      "body_start": 73195404,
+      "body_end": 73195472,
+      "body_bytes": 68,
+      "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+      "original_body_executed": true
+    },
+    {
+      "function_index": 13409,
+      "wat_start": 782647566,
+      "wat_end": 783012940,
+      "wat_line": 16533304,
+      "wat_sha256": "7c8a00f7a53cd85d6166f23a13602c411abaa8d880ed76bf877f6f0b9d7abc46",
+      "body_start": 37226474,
+      "body_end": 37257818,
+      "body_bytes": 31344,
+      "body_sha256": "b04f3a72d6c2ef9d6f849d3eb6b8a2fbce5d136d5756317c09b9f744c4db4931",
+      "original_body_executed": false
+    }
+  ],
+  "static_guards": [
+    {
+      "function_index": 3231,
+      "role": "XP addition wraps at32 bits",
+      "function_relative_start_lines": [
+        8
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 0",
+        "i32.load offset=1340",
+        "local.get 1",
+        "i32.add",
+        "local.tee 4",
+        "i32.store offset=1340"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "unsigned guard limits ordinary level to99",
+      "function_relative_start_lines": [
+        66
+      ],
+      "instructions": [
+        "local.get 3",
+        "i32.const 98",
+        "i32.le_u"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "level+1 XP-threshold pending+1 are real state stores",
+      "function_relative_start_lines": [
+        178
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 3",
+        "i32.const 1",
+        "i32.add",
+        "local.tee 10",
+        "i32.store offset=1336",
+        "local.get 0",
+        "local.get 4",
+        "local.get 1",
+        "i32.sub",
+        "i32.store offset=1340",
+        "local.get 0",
+        "local.get 0",
+        "i32.load offset=2088",
+        "i32.const 1",
+        "i32.add",
+        "i32.store offset=2088"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "XP reloaded before reentering upgrade loop",
+      "function_relative_start_lines": [
+        1038
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1340",
+        "local.set 4",
+        "br 1 (;@2;)"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "unsigned level-minus-nonzero conversion",
+      "function_relative_start_lines": [
+        45
+      ],
+      "instructions": [
+        "i32.load offset=1336",
+        "local.tee 3",
+        "local.get 3",
+        "i32.const 0",
+        "i32.ne",
+        "i32.sub",
+        "f32.convert_i32_u"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "ordered threshold formula shared by XP apply and HUD serializer",
+      "function_relative_start_lines": [
+        52,
+        1072
+      ],
+      "instructions": [
+        "local.tee 14",
+        "f32.const 0x1p+2 (;=4;)",
+        "f32.mul",
+        "f32.const 0x1.4p+2 (;=5;)",
+        "f32.add",
+        "local.get 14",
+        "f32.const 0x1.666666p-2 (;=0.35;)",
+        "f32.mul",
+        "local.get 14",
+        "f32.mul",
+        "f32.add",
+        "call 85387"
+      ]
+    },
+    {
+      "function_index": 13409,
+      "role": "unsigned level-minus-nonzero conversion",
+      "function_relative_start_lines": [
+        1561
+      ],
+      "instructions": [
+        "i32.load offset=1336",
+        "local.tee 1",
+        "local.get 1",
+        "i32.const 0",
+        "i32.ne",
+        "i32.sub",
+        "f32.convert_i32_u"
+      ]
+    },
+    {
+      "function_index": 13409,
+      "role": "ordered threshold formula shared by XP apply and HUD serializer",
+      "function_relative_start_lines": [
+        1568
+      ],
+      "instructions": [
+        "local.tee 28",
+        "f32.const 0x1p+2 (;=4;)",
+        "f32.mul",
+        "f32.const 0x1.4p+2 (;=5;)",
+        "f32.add",
+        "local.get 28",
+        "f32.const 0x1.666666p-2 (;=0.35;)",
+        "f32.mul",
+        "local.get 28",
+        "f32.mul",
+        "f32.add",
+        "call 85387"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "pending phase and open-card guard",
+      "function_relative_start_lines": [
+        1206
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=2088",
+        "i32.eqz",
+        "br_if 0 (;@1;)",
+        "local.get 0",
+        "i32.load8_u offset=2299",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 0 (;@1;)",
+        "local.get 0",
+        "i32.load8_u offset=2288",
+        "i32.const 1",
+        "i32.and",
+        "br_if 0 (;@1;)"
+      ]
+    },
+    {
+      "function_index": 3231,
+      "role": "conditional ready guard and2098 arguments",
+      "function_relative_start_lines": [
+        1220
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=2284",
+        "i32.const 1",
+        "i32.eq",
+        "if  ;; label = @2",
+        "local.get 0",
+        "i32.load8_u offset=2285",
+        "i32.const 1",
+        "i32.and",
+        "i32.eqz",
+        "br_if 1 (;@1;)",
+        "end",
+        "local.get 0",
+        "i32.const 0",
+        "i32.const 1",
+        "call 2098"
+      ]
+    },
+    {
+      "function_index": 13409,
+      "role": "serializer carries a typed pointer to real XP field",
+      "function_relative_start_lines": [
+        2251
+      ],
+      "instructions": [
+        "i32.const 1340",
+        "i32.add",
+        "i64.extend_i32_u",
+        "i64.const 335007449088",
+        "i64.or",
+        "i64.store offset=184"
+      ]
+    },
+    {
+      "function_index": 13409,
+      "role": "serializer retains the real level field pointer",
+      "function_relative_start_lines": [
+        1846
+      ],
+      "instructions": [
+        "i32.const 1336",
+        "i32.add",
+        "local.set 5"
+      ]
+    },
+    {
+      "function_index": 13409,
+      "role": "serializer uses the t/ph/lvl/xp/xpn formatting template",
+      "function_relative_start_lines": [
+        2279
+      ],
+      "instructions": [
+        "i32.const 1567017",
+        "local.get 3",
+        "i32.const 160",
+        "i32.add",
+        "call 32068"
+      ]
+    }
+  ],
+  "hud_format_prefix": {
+    "memory_start": 1567017,
+    "bytes": 36,
+    "raw_hex": "02743dc5200000700200043b70683dc0053b6c766c3dc0043b78703dc0053b78706e3dc0",
+    "sha256": "441d2c18cac22abb3e7120d0b071048763ae40a6a7dd54a22d412fdfdf72ae72",
+    "file_fragments": [
+      {
+        "memory_start": 1567017,
+        "bytes": 36,
+        "file_start": 77589546
+      }
+    ],
+    "field_order": [
+      "t",
+      "ph",
+      "lvl",
+      "xp",
+      "xpn"
+    ]
+  },
+  "rules": {
+    "state_u32_fields": {
+      "level": 1336,
+      "xp": 1340,
+      "pending_upgrades": 2088
+    },
+    "xp_add": "xp = (xp + amount) & 0xffffffff before the loop, even at level99 or above",
+    "threshold_order": [
+      "n = u32_to_f32(level - (level != 0))",
+      "linear = f32_add(f32_mul(n, f32(4)), f32(5))",
+      "quadratic = f32_mul(f32_mul(n, bits0x3eb33333), n)",
+      "rounded = round85387(f32_add(linear, quadratic))",
+      "threshold = i32.trunc_sat_f32_u(rounded)"
+    ],
+    "loop": "while unsigned(level)<=98 and unsigned(xp)>=threshold: level+=1; xp-=threshold; pending=(pending+1)&0xffffffff; recompute threshold",
+    "cap_qualification": "Valid initial levels0..99 cannot exceed99. Inputs>=99 are retained without clamping; XP addition still wraps.",
+    "pending_qualification": "The model tracks increments only. It does not consume pending choices or run2098.",
+    "card_guard": "pending!=0 && phase2299==1 && !(flags2288&1) && (gate2284!=1 || (flags2285&1))",
+    "round85387": {
+      "signed_addend_absolute_bits": "0x3effffff",
+      "signed_addend_absolute_exact_decimal": "0.4999999701976776123046875",
+      "steps": [
+        "add x and copysign(addend,x) with binary32 RNE",
+        "extract biased exponent e from the sum",
+        "if e>149 return the sum",
+        "if e<127 retain only sign bit, else retain sum & (signed(-8388608) >> (e-127))"
+      ],
+      "nan_policy": "Category only; payload/sign/signaling are not promised."
+    },
+    "excluded_side_effects": [
+      "1573 attribute recomputation",
+      "level-up healing and dependent attributes",
+      "3736 field notifications and other messages",
+      "HUD serialization as a whole",
+      "2098 card generation/consumption and actual item effects"
+    ],
+    "initial_level_policy": "No inferred game-start level; both0 and1 are admitted and have threshold5."
+  },
+  "thresholds_level0_through99": [
+    {
+      "level": 0,
+      "threshold_u32": 5,
+      "rounded_f32_bits": "0x40a00000"
+    },
+    {
+      "level": 1,
+      "threshold_u32": 5,
+      "rounded_f32_bits": "0x40a00000"
+    },
+    {
+      "level": 2,
+      "threshold_u32": 9,
+      "rounded_f32_bits": "0x41100000"
+    },
+    {
+      "level": 3,
+      "threshold_u32": 14,
+      "rounded_f32_bits": "0x41600000"
+    },
+    {
+      "level": 4,
+      "threshold_u32": 20,
+      "rounded_f32_bits": "0x41a00000"
+    },
+    {
+      "level": 5,
+      "threshold_u32": 27,
+      "rounded_f32_bits": "0x41d80000"
+    },
+    {
+      "level": 6,
+      "threshold_u32": 34,
+      "rounded_f32_bits": "0x42080000"
+    },
+    {
+      "level": 7,
+      "threshold_u32": 42,
+      "rounded_f32_bits": "0x42280000"
+    },
+    {
+      "level": 8,
+      "threshold_u32": 50,
+      "rounded_f32_bits": "0x42480000"
+    },
+    {
+      "level": 9,
+      "threshold_u32": 59,
+      "rounded_f32_bits": "0x426c0000"
+    },
+    {
+      "level": 10,
+      "threshold_u32": 69,
+      "rounded_f32_bits": "0x428a0000"
+    },
+    {
+      "level": 11,
+      "threshold_u32": 80,
+      "rounded_f32_bits": "0x42a00000"
+    },
+    {
+      "level": 12,
+      "threshold_u32": 91,
+      "rounded_f32_bits": "0x42b60000"
+    },
+    {
+      "level": 13,
+      "threshold_u32": 103,
+      "rounded_f32_bits": "0x42ce0000"
+    },
+    {
+      "level": 14,
+      "threshold_u32": 116,
+      "rounded_f32_bits": "0x42e80000"
+    },
+    {
+      "level": 15,
+      "threshold_u32": 130,
+      "rounded_f32_bits": "0x43020000"
+    },
+    {
+      "level": 16,
+      "threshold_u32": 144,
+      "rounded_f32_bits": "0x43100000"
+    },
+    {
+      "level": 17,
+      "threshold_u32": 159,
+      "rounded_f32_bits": "0x431f0000"
+    },
+    {
+      "level": 18,
+      "threshold_u32": 174,
+      "rounded_f32_bits": "0x432e0000"
+    },
+    {
+      "level": 19,
+      "threshold_u32": 190,
+      "rounded_f32_bits": "0x433e0000"
+    },
+    {
+      "level": 20,
+      "threshold_u32": 207,
+      "rounded_f32_bits": "0x434f0000"
+    },
+    {
+      "level": 21,
+      "threshold_u32": 225,
+      "rounded_f32_bits": "0x43610000"
+    },
+    {
+      "level": 22,
+      "threshold_u32": 243,
+      "rounded_f32_bits": "0x43730000"
+    },
+    {
+      "level": 23,
+      "threshold_u32": 262,
+      "rounded_f32_bits": "0x43830000"
+    },
+    {
+      "level": 24,
+      "threshold_u32": 282,
+      "rounded_f32_bits": "0x438d0000"
+    },
+    {
+      "level": 25,
+      "threshold_u32": 303,
+      "rounded_f32_bits": "0x43978000"
+    },
+    {
+      "level": 26,
+      "threshold_u32": 324,
+      "rounded_f32_bits": "0x43a20000"
+    },
+    {
+      "level": 27,
+      "threshold_u32": 346,
+      "rounded_f32_bits": "0x43ad0000"
+    },
+    {
+      "level": 28,
+      "threshold_u32": 368,
+      "rounded_f32_bits": "0x43b80000"
+    },
+    {
+      "level": 29,
+      "threshold_u32": 391,
+      "rounded_f32_bits": "0x43c38000"
+    },
+    {
+      "level": 30,
+      "threshold_u32": 415,
+      "rounded_f32_bits": "0x43cf8000"
+    },
+    {
+      "level": 31,
+      "threshold_u32": 440,
+      "rounded_f32_bits": "0x43dc0000"
+    },
+    {
+      "level": 32,
+      "threshold_u32": 465,
+      "rounded_f32_bits": "0x43e88000"
+    },
+    {
+      "level": 33,
+      "threshold_u32": 491,
+      "rounded_f32_bits": "0x43f58000"
+    },
+    {
+      "level": 34,
+      "threshold_u32": 518,
+      "rounded_f32_bits": "0x44018000"
+    },
+    {
+      "level": 35,
+      "threshold_u32": 546,
+      "rounded_f32_bits": "0x44088000"
+    },
+    {
+      "level": 36,
+      "threshold_u32": 574,
+      "rounded_f32_bits": "0x440f8000"
+    },
+    {
+      "level": 37,
+      "threshold_u32": 603,
+      "rounded_f32_bits": "0x4416c000"
+    },
+    {
+      "level": 38,
+      "threshold_u32": 632,
+      "rounded_f32_bits": "0x441e0000"
+    },
+    {
+      "level": 39,
+      "threshold_u32": 662,
+      "rounded_f32_bits": "0x44258000"
+    },
+    {
+      "level": 40,
+      "threshold_u32": 693,
+      "rounded_f32_bits": "0x442d4000"
+    },
+    {
+      "level": 41,
+      "threshold_u32": 725,
+      "rounded_f32_bits": "0x44354000"
+    },
+    {
+      "level": 42,
+      "threshold_u32": 757,
+      "rounded_f32_bits": "0x443d4000"
+    },
+    {
+      "level": 43,
+      "threshold_u32": 790,
+      "rounded_f32_bits": "0x44458000"
+    },
+    {
+      "level": 44,
+      "threshold_u32": 824,
+      "rounded_f32_bits": "0x444e0000"
+    },
+    {
+      "level": 45,
+      "threshold_u32": 859,
+      "rounded_f32_bits": "0x4456c000"
+    },
+    {
+      "level": 46,
+      "threshold_u32": 894,
+      "rounded_f32_bits": "0x445f8000"
+    },
+    {
+      "level": 47,
+      "threshold_u32": 930,
+      "rounded_f32_bits": "0x44688000"
+    },
+    {
+      "level": 48,
+      "threshold_u32": 966,
+      "rounded_f32_bits": "0x44718000"
+    },
+    {
+      "level": 49,
+      "threshold_u32": 1003,
+      "rounded_f32_bits": "0x447ac000"
+    },
+    {
+      "level": 50,
+      "threshold_u32": 1041,
+      "rounded_f32_bits": "0x44822000"
+    },
+    {
+      "level": 51,
+      "threshold_u32": 1080,
+      "rounded_f32_bits": "0x44870000"
+    },
+    {
+      "level": 52,
+      "threshold_u32": 1119,
+      "rounded_f32_bits": "0x448be000"
+    },
+    {
+      "level": 53,
+      "threshold_u32": 1159,
+      "rounded_f32_bits": "0x4490e000"
+    },
+    {
+      "level": 54,
+      "threshold_u32": 1200,
+      "rounded_f32_bits": "0x44960000"
+    },
+    {
+      "level": 55,
+      "threshold_u32": 1242,
+      "rounded_f32_bits": "0x449b4000"
+    },
+    {
+      "level": 56,
+      "threshold_u32": 1284,
+      "rounded_f32_bits": "0x44a08000"
+    },
+    {
+      "level": 57,
+      "threshold_u32": 1327,
+      "rounded_f32_bits": "0x44a5e000"
+    },
+    {
+      "level": 58,
+      "threshold_u32": 1370,
+      "rounded_f32_bits": "0x44ab4000"
+    },
+    {
+      "level": 59,
+      "threshold_u32": 1414,
+      "rounded_f32_bits": "0x44b0c000"
+    },
+    {
+      "level": 60,
+      "threshold_u32": 1459,
+      "rounded_f32_bits": "0x44b66000"
+    },
+    {
+      "level": 61,
+      "threshold_u32": 1505,
+      "rounded_f32_bits": "0x44bc2000"
+    },
+    {
+      "level": 62,
+      "threshold_u32": 1551,
+      "rounded_f32_bits": "0x44c1e000"
+    },
+    {
+      "level": 63,
+      "threshold_u32": 1598,
+      "rounded_f32_bits": "0x44c7c000"
+    },
+    {
+      "level": 64,
+      "threshold_u32": 1646,
+      "rounded_f32_bits": "0x44cdc000"
+    },
+    {
+      "level": 65,
+      "threshold_u32": 1695,
+      "rounded_f32_bits": "0x44d3e000"
+    },
+    {
+      "level": 66,
+      "threshold_u32": 1744,
+      "rounded_f32_bits": "0x44da0000"
+    },
+    {
+      "level": 67,
+      "threshold_u32": 1794,
+      "rounded_f32_bits": "0x44e04000"
+    },
+    {
+      "level": 68,
+      "threshold_u32": 1844,
+      "rounded_f32_bits": "0x44e68000"
+    },
+    {
+      "level": 69,
+      "threshold_u32": 1895,
+      "rounded_f32_bits": "0x44ece000"
+    },
+    {
+      "level": 70,
+      "threshold_u32": 1947,
+      "rounded_f32_bits": "0x44f36000"
+    },
+    {
+      "level": 71,
+      "threshold_u32": 2000,
+      "rounded_f32_bits": "0x44fa0000"
+    },
+    {
+      "level": 72,
+      "threshold_u32": 2053,
+      "rounded_f32_bits": "0x45005000"
+    },
+    {
+      "level": 73,
+      "threshold_u32": 2107,
+      "rounded_f32_bits": "0x4503b000"
+    },
+    {
+      "level": 74,
+      "threshold_u32": 2162,
+      "rounded_f32_bits": "0x45072000"
+    },
+    {
+      "level": 75,
+      "threshold_u32": 2218,
+      "rounded_f32_bits": "0x450aa000"
+    },
+    {
+      "level": 76,
+      "threshold_u32": 2274,
+      "rounded_f32_bits": "0x450e2000"
+    },
+    {
+      "level": 77,
+      "threshold_u32": 2331,
+      "rounded_f32_bits": "0x4511b000"
+    },
+    {
+      "level": 78,
+      "threshold_u32": 2388,
+      "rounded_f32_bits": "0x45154000"
+    },
+    {
+      "level": 79,
+      "threshold_u32": 2446,
+      "rounded_f32_bits": "0x4518e000"
+    },
+    {
+      "level": 80,
+      "threshold_u32": 2505,
+      "rounded_f32_bits": "0x451c9000"
+    },
+    {
+      "level": 81,
+      "threshold_u32": 2565,
+      "rounded_f32_bits": "0x45205000"
+    },
+    {
+      "level": 82,
+      "threshold_u32": 2625,
+      "rounded_f32_bits": "0x45241000"
+    },
+    {
+      "level": 83,
+      "threshold_u32": 2686,
+      "rounded_f32_bits": "0x4527e000"
+    },
+    {
+      "level": 84,
+      "threshold_u32": 2748,
+      "rounded_f32_bits": "0x452bc000"
+    },
+    {
+      "level": 85,
+      "threshold_u32": 2811,
+      "rounded_f32_bits": "0x452fb000"
+    },
+    {
+      "level": 86,
+      "threshold_u32": 2874,
+      "rounded_f32_bits": "0x4533a000"
+    },
+    {
+      "level": 87,
+      "threshold_u32": 2938,
+      "rounded_f32_bits": "0x4537a000"
+    },
+    {
+      "level": 88,
+      "threshold_u32": 3002,
+      "rounded_f32_bits": "0x453ba000"
+    },
+    {
+      "level": 89,
+      "threshold_u32": 3067,
+      "rounded_f32_bits": "0x453fb000"
+    },
+    {
+      "level": 90,
+      "threshold_u32": 3133,
+      "rounded_f32_bits": "0x4543d000"
+    },
+    {
+      "level": 91,
+      "threshold_u32": 3200,
+      "rounded_f32_bits": "0x45480000"
+    },
+    {
+      "level": 92,
+      "threshold_u32": 3267,
+      "rounded_f32_bits": "0x454c3000"
+    },
+    {
+      "level": 93,
+      "threshold_u32": 3335,
+      "rounded_f32_bits": "0x45507000"
+    },
+    {
+      "level": 94,
+      "threshold_u32": 3404,
+      "rounded_f32_bits": "0x4554c000"
+    },
+    {
+      "level": 95,
+      "threshold_u32": 3474,
+      "rounded_f32_bits": "0x45592000"
+    },
+    {
+      "level": 96,
+      "threshold_u32": 3544,
+      "rounded_f32_bits": "0x455d8000"
+    },
+    {
+      "level": 97,
+      "threshold_u32": 3615,
+      "rounded_f32_bits": "0x4561f000"
+    },
+    {
+      "level": 98,
+      "threshold_u32": 3686,
+      "rounded_f32_bits": "0x45666000"
+    },
+    {
+      "level": 99,
+      "threshold_u32": 3758,
+      "rounded_f32_bits": "0x456ae000"
+    }
+  ],
+  "reproduce": [
+    "python3 reverse-engineering/scripts/check_progression_spec.py"
+  ],
+  "coverage_claim": "Original85387 differential evidence is separate from JS instruction recomposition. Deterministic corpus agreement is not an exhaustive proof.",
+  "rea_evidence": {
+    "id": "ev_416fafa378523481fa1206c90338302612be71a8bdf514a7172ed856305004bb",
+    "provider": "azeroth-ports-local-wasm-focus",
+    "run": "evidence/wasm-focused-20261031T233429.054333Z",
+    "combined_selected_functions": 13,
+    "scope": "Combined selected complete-function identity; semantics and isolated execution scopes are recorded separately."
+  },
+  "independent_review": {
+    "file": "evidence/progression-oracle-20261031T233144.054697Z/independent-review.json",
+    "sha256": "37b24c5842ac9ac841d4c7d6c43418cfb7208b2b7a2af0c72f0dfda1a3a7a1a5",
+    "original_executed_in_review": false
+  }
+}
