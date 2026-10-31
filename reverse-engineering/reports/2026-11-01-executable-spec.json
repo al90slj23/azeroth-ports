@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "method": "Independent executable specification compared with isolated execution of the byte-identical original numeric function; not full-game execution.",
+  "local_run": "evidence/upgrade-oracle-20261031T224048.518152Z",
+  "differential": {
+    "version": "0.126.0",
+    "build": "3e72472a",
+    "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "original_function_index": 25242,
+    "original_body_sha256": "f9534cbe556e1d07b3c464d9ffff601d7ac45b9615cfb06bac794d406a1eb023",
+    "oracle_module_sha256": "bd97cf7ff45cff81415270f9dd6acd3d253dcfc9a363ad6e466d2f2b4046d116",
+    "body_byte_identical": true,
+    "case_count": 11560,
+    "groups": {
+      "all_kind_tier_pairs": 25,
+      "u32_counter_rounding": 55,
+      "f32_edges_thresholds_nan_infinity": 390,
+      "caps_identifiers_and_u32_edges": 1080,
+      "seeded_raw_bit_patterns": 10000,
+      "invalid_tier_trap": 10
+    },
+    "mismatch_count": 0,
+    "valid_numeric_results_compared_by_u32_bits": 11550,
+    "invalid_tier_traps_compared": 10,
+    "seed": "0xA2E2026",
+    "isolated_original_function_executed": true,
+    "full_game_started": false,
+    "host_imports": [],
+    "network_used": false,
+    "user_saves_accessed": false,
+    "installed_game_modified": false,
+    "arithmetic_model": "exact rational operations with per-operation binary32 nearest-even rounding",
+    "runtime_version": "v22.23.4",
+    "source_sha256": {
+      "scripts/build_upgrade_oracle.py": "796e8c481ba34e69b15f16103b0c4a918e3fcc288cb321b2c509248a63590ede",
+      "scripts/check_upgrade_spec.py": "d2f759227f0bb77cced797346b2ae5801d96e747c4ac967d912b9fb207fcc5da",
+      "scripts/run_upgrade_oracle.mjs": "57869c72c71631eb1e0e44ba97cc65f01a56604b0b3c6d98c2e935f27620b1b1",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+    },
+    "limitations": [
+      "Covers the supported five upgrade kinds/tiers, not the complete game.",
+      "No float32 NaN payload identity claim; recovered routine clamps NaN factors to zero.",
+      "Bounds panic is replaced with an unreachable stub; original panic text/host behavior is not compared.",
+      "Deterministic corpus agreement is differential evidence, not exhaustive enumeration of every possible input."
+    ]
+  },
+  "oracle_module": {
+    "version": "0.126.0",
+    "build": "3e72472a",
+    "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "original_function_index": 25242,
+    "original_body_start": 49302714,
+    "original_body_end": 49303334,
+    "original_body_bytes": 620,
+    "original_body_sha256": "f9534cbe556e1d07b3c464d9ffff601d7ac45b9615cfb06bac794d406a1eb023",
+    "copied_body_byte_identical": true,
+    "module_file": "isolated-upgrade.wasm",
+    "module_bytes": 402485,
+    "module_sha256": "bd97cf7ff45cff81415270f9dd6acd3d253dcfc9a363ad6e466d2f2b4046d116",
+    "defined_functions": 80331,
+    "original_function_bodies_copied": 1,
+    "trap_placeholder_count": 80330,
+    "bounds_panic_stub_function_index": 80330,
+    "imports": [],
+    "start_function": null,
+    "table": null,
+    "memory_initial_pages": 82,
+    "memory_maximum_pages": 82,
+    "exports": [
+      "upgrade",
+      "memory"
+    ],
+    "tables": [
+      {
+        "linear_memory_address": 5308472,
+        "original_file_offset": 81305158,
+        "bytes": 20,
+        "raw_hex": "ec51383e0000803e7b14ae3e1f85eb3e6666263f",
+        "sha256": "4d4dd659e77d55323c3388420d4041fe90fc678657ef3e7c614a7fd98aa05c0a"
+      },
+      {
+        "linear_memory_address": 5308508,
+        "original_file_offset": 81305194,
+        "bytes": 20,
+        "raw_hex": "295c8f3dcdcccc3db81e053e7b142e3e1f856b3e",
+        "sha256": "2ce51b76784775bddcb4c4eb37d6405f17b8ffdcf9a042b0f111ff2ffd0d5dbb"
+      },
+      {
+        "linear_memory_address": 5308544,
+        "original_file_offset": 81305230,
+        "bytes": 20,
+        "raw_hex": "0100000001000000010000000200000002000000",
+        "sha256": "c7a5958727276cdee4286492253978d00e716955fd04834ea62dfeb962a95291"
+      },
+      {
+        "linear_memory_address": 5308580,
+        "original_file_offset": 81305266,
+        "bytes": 20,
+        "raw_hex": "8fc2f53dec51383e0000803e3333b33e0000003f",
+        "sha256": "d5139f32188f8bd7419a9ebaeb6a2dc494109f7b4881cedbb7b94e3eb74be2d4"
+      },
+      {
+        "linear_memory_address": 5308616,
+        "original_file_offset": 81305302,
+        "bytes": 20,
+        "raw_hex": "9a99193eae47613e9a99993ecdcccc3e9a99193f",
+        "sha256": "74ec3c67c4fc280877855dc4cff0d087827ab62f072f9139ce46e3bdc06c5790"
+      }
+    ],
+    "validation": "verified WABT1.0.42 wasm-validate exit0; target body re-extracted and compared",
+    "qualification": "Valid upgrade inputs execute the original pure numeric body. Bounds failures trap at a replacement stub; original panic behavior is not reconstructed."
+  },
+  "artifact_hashes": {
+    "manifest.json": "6b60cbb9b71eccc88093aa1c360c7cba4ccda1b840729beb1322117c0e4316ff",
+    "differential-summary.json": "a3e40b002637fd3ed3067fbec02583645e65a7af0ce80fbea8d7a99ab5146449",
+    "cases.jsonl": "fb64c891ee1e72b3876e5e2b94a2818f648da8b2f8a61642d99e4ab9c7dd4373",
+    "model-results.jsonl": "60a459534a679a9bfa76a18a4f649e134caf85c2e63ad8d11000d75b156d8e26",
+    "original-function-results.jsonl": "46329aa742c5eb69591d05412c8c01b4ea9db78850b60dcf0e28ed540cc2b800",
+    "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "independent_review": {
+    "local_file": "evidence/upgrade-oracle-20261031T224048.518152Z/independent-review.json",
+    "sha256": "831d8960f2eca3962103c8f4fc2f347e8ade5a29faf7a84a239b24a516ea8dd6"
+  },
+  "goal_scope": "One executable rule model toward independent reconstruction; full game remains incomplete."
+}

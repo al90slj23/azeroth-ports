@@ -1,0 +1,168 @@
+{
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "original_wasm_bytes": 90116970,
+  "original_function_index": 35684,
+  "original_body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+  "original_body_bytes": 364,
+  "oracle_module_sha256": "71fbb10deea99827acc669884cec84ca52b41721babbeda3383cc6dfb9bf3765",
+  "oracle_module_bytes": 423,
+  "body_byte_identical": true,
+  "defined_original_functions": 1,
+  "case_count": 29041,
+  "comparisons": {
+    "helper": {
+      "case_count": 24514,
+      "non_nan_u32_bit_pairs": 18978,
+      "nan_category_pairs": 5536,
+      "mismatch_count": 0
+    },
+    "radius_composition": {
+      "case_count": 4527,
+      "non_nan_u32_bit_pairs": 4511,
+      "nan_category_pairs": 16,
+      "mismatch_count": 0
+    }
+  },
+  "groups": {
+    "special_values": 46,
+    "helper_branch_neighbors": 585,
+    "helper_exponent_neighbors": 1524,
+    "helper_magnitude_neighbors": 374,
+    "known_mathematical_log1p_one_ulp_distinctions": 8,
+    "radius_threshold_neighbors": 257,
+    "radius_game_magnitude_neighbors": 247,
+    "helper_seeded_raw_binary32": 20000,
+    "helper_seeded_domain": 2000,
+    "radius_seeded_raw_binary32": 3000,
+    "radius_seeded_game_range": 1000
+  },
+  "mismatch_count": 0,
+  "seed": "0xa2e35684",
+  "original_helper35684_executed": true,
+  "original_function934_executed": false,
+  "radius_composition_scope": "JS ordered-f32 extracted934 callsite plus original35684; not execution of original934",
+  "full_game_started": false,
+  "host_imports": [],
+  "start_function": null,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "installed_game_modified": false,
+  "memory": {
+    "minimum_pages": 1,
+    "maximum_pages": 1,
+    "exported": false
+  },
+  "global0": {
+    "type": "i32",
+    "mutable": false,
+    "value": 1024,
+    "exported": false
+  },
+  "arithmetic_model": "exact rational add/sub/mul/div with each binary32 nearest-even rounding; instruction-order helper approximation",
+  "runtime_version": "v22.23.4",
+  "source_sha256": {
+    "scripts/build_radius_oracle.py": "ba62e1cce34fbd6c1a65d553afc63fed295c927634f64ac3c708b00f76638afc",
+    "scripts/check_radius_spec.py": "537dcc23e24b2b2af62c6f10840eb7ad04cf86904b28d91ddf8a54617e6a28f0",
+    "scripts/run_radius_oracle.mjs": "9ee97b49e576b25158bd529fab456975ef92772a8017234b515b419837f90f53",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30"
+  },
+  "artifact_sha256": {
+    "cases.jsonl": "9e44bf3a27b3a456e0e74ab43f615c59913dac77d1dc69b2fa2044a5644bb1cc",
+    "model-results.jsonl": "911eb59d8329cbc0ca2446413ce2d00b66947fb3ae9db9c60b6cba763d86a0da",
+    "original-helper-results.jsonl": "31d239c301b16d3173a8c4f11228778417f0ae115e2bd4f2f0cede07ec5f5adb",
+    "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "manifest.json": "7ccbe51dcf3c08ff21d16b6451a45a7e0d60ee9c87f2ab0ded8c0c1b3bcf3f05",
+    "oracle.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "isolated-radius-helper.wasm": "71fbb10deea99827acc669884cec84ca52b41721babbeda3383cc6dfb9bf3765"
+  },
+  "limitations": [
+    "Finite deterministic corpus is not exhaustive verification of all2^32 inputs.",
+    "NaN payload/sign/signaling state are not compared or generally preserved.",
+    "Radius composition is recovered callsite arithmetic, not original934 or all ability radius state.",
+    "No complete game loop, graphics, official server or user save was executed."
+  ],
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "original_body_range": [
+    57481576,
+    57481940
+  ],
+  "static_callsite": {
+    "function": 934,
+    "guard": "not(r <= f32(70))",
+    "formula": "f32(f32(F35684(f32(f32(r + f32(-70)) / f32(10))) * f32(10)) + f32(70))",
+    "executed_original_function": false,
+    "source_manifest": "evidence/abilities-log1p-helper-20261031T225046.228952Z/manifest.json"
+  },
+  "examples": [
+    {
+      "input": 0,
+      "input_bits": "00000000",
+      "radius": 0.0,
+      "radius_bits": "00000000"
+    },
+    {
+      "input": 69,
+      "input_bits": "428a0000",
+      "radius": 69.0,
+      "radius_bits": "428a0000"
+    },
+    {
+      "input": 70,
+      "input_bits": "428c0000",
+      "radius": 70.0,
+      "radius_bits": "428c0000"
+    },
+    {
+      "input": 71,
+      "input_bits": "428e0000",
+      "radius": 70.9531021118164,
+      "radius_bits": "428de7fd"
+    },
+    {
+      "input": 80,
+      "input_bits": "42a00000",
+      "radius": 76.93147277832031,
+      "radius_bits": "4299dcea"
+    },
+    {
+      "input": 100,
+      "input_bits": "42c80000",
+      "radius": 83.86294555664062,
+      "radius_bits": "42a7b9d4"
+    },
+    {
+      "input": 140,
+      "input_bits": "430c0000",
+      "radius": 90.79441833496094,
+      "radius_bits": "42b596be"
+    },
+    {
+      "input": 1000,
+      "input_bits": "447a0000",
+      "radius": 115.43295288085938,
+      "radius_bits": "42e6ddac"
+    }
+  ],
+  "reproduction": "python3 reverse-engineering/scripts/check_radius_spec.py",
+  "repository_outputs": [
+    "reconstruction/core_spec/radius.py",
+    "scripts/build_radius_oracle.py",
+    "scripts/check_radius_spec.py",
+    "scripts/run_radius_oracle.mjs"
+  ],
+  "original_body_and_micro_module_git_ignored": true,
+  "evidence_directory": "evidence/radius-oracle-20261031T225828.198178Z",
+  "differential_summary_sha256": "f42fc86d212f9d7a33f88f20e0b117136d9ac4b0973f99d0597c16bf6e92fa11",
+  "independent_readback": {
+    "local_file": "evidence/radius-oracle-20261031T225828.198178Z/root-independent-review.json",
+    "sha256": "3c5333daa3bd41825d1df82e347410e910e81a816f558d830b3c338842781228",
+    "additional_original_execution": false,
+    "passed": true
+  },
+  "fresh_checkout_reproduction": "Original identity/body digest and verified tools are sufficient; a prior ignored WAT/body sidecar is checked only when available."
+}

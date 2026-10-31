@@ -210,10 +210,18 @@
   "limitations": [
     "Function25242 arithmetic and caller1065 state writes are statically observed; reachability and gameplay result are not runtime-validated.",
     "The numeric routine role as an ability-upgrade value helper is inferred from source-path references, table selection and applying caller structure; original Rust name/type/enum labels are absent.",
-    "Offsets12/16/20/24/28 are not yet proven to be damage/cooldown/projectiles/duration/radius types.",
-    "The consumer that subtracts actual target HP has not been traced. This is not proof that changing a table alone changes dealt damage.",
     "The official cooperative state authority/synchronization and compatibility of numeric edits have not been validated.",
     "Old Windows0.102.3 evidence does not establish current0.126.0 fields or offsets.",
     "No binary patch, target execution, installed APK/App change or save mutation was performed."
-  ]
+  ],
+  "follow_up_owned_combat_path": {
+    "report": "reports/2026-11-01-abilities.json",
+    "resolved": "1065 applies to real owned Vec1468/1472,22136 copies that80B record to917/934/933. Fields12/16/20/24/28 are damage/cooldown/extra count/area/duration adjustments. This is static consumer recovery, not full-game runtime acceptance."
+  },
+  "follow_up_executable_spec": {
+    "report": "reports/2026-11-01-executable-spec.json",
+    "cases": 11560,
+    "mismatches": 0,
+    "scope": "Isolated original25242 and independent arithmetic, not whole-game behavior."
+  }
 }

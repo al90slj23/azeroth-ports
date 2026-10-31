@@ -1,0 +1,2301 @@
+{
+  "scope": "static current-original account-save structure, envelope and class-zone unlock persistence",
+  "game_version": "0.126.0",
+  "game_build": "3e72472a",
+  "original_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "evidence_directory": "evidence/save-schema-20261031T230727.871372Z",
+  "target_executed": false,
+  "user_saves_read": false,
+  "network_used": false,
+  "functions": [
+    {
+      "function_index": 880,
+      "body_start": 1150438,
+      "body_end": 1280218,
+      "body_bytes": 129780,
+      "body_sha256": "7fdf92b007495b879f624fd4959b5dd072093e93f13b8f96b6d9b9ba6826d46a",
+      "wat_start": 69419863,
+      "wat_end": 73118403,
+      "wat_line": 122371,
+      "wat_bytes": 3698540,
+      "wat_sha256": "2256079aed6438ec79af459530217f193694ee68c5a59c5d877ac92017b556da",
+      "direct_callers": [
+        58247,
+        83471
+      ]
+    },
+    {
+      "function_index": 889,
+      "body_start": 1634196,
+      "body_end": 1671468,
+      "body_bytes": 37272,
+      "body_sha256": "c3c98106c47edac1753e328dab9ad9c3630126016be451ba51f7715684ced792",
+      "wat_start": 83530096,
+      "wat_end": 84155680,
+      "wat_line": 342312,
+      "wat_bytes": 625584,
+      "wat_sha256": "de3b0b57cb2e2e0422173dc4c068abb1af1a779651ab82d6f153117c7d249e80",
+      "direct_callers": [
+        1160,
+        2883
+      ]
+    },
+    {
+      "function_index": 980,
+      "body_start": 4169339,
+      "body_end": 4184398,
+      "body_bytes": 15059,
+      "body_sha256": "614646926116cc0b479bdf7240417812bab218cdf154e77983ecadfd57a9eb81",
+      "wat_start": 185658837,
+      "wat_end": 185940025,
+      "wat_line": 1465848,
+      "wat_bytes": 281188,
+      "wat_sha256": "dc74905c477036807af66bcccc8a532efbf1df4b3447434d6fc783ffd831b37e",
+      "direct_callers": [
+        1160,
+        3903
+      ]
+    },
+    {
+      "function_index": 1160,
+      "body_start": 6794065,
+      "body_end": 6815844,
+      "body_bytes": 21779,
+      "body_sha256": "93ae6d9ed59df3f27e97d6725549c1cf308b82b364d48972903ad891dd343471",
+      "wat_start": 245773794,
+      "wat_end": 246215036,
+      "wat_line": 2660313,
+      "wat_bytes": 441242,
+      "wat_sha256": "74f4cdfe2f6ae14550e42b0adbcba52677b79a40a6e9aabc85899759ce0a5c54",
+      "direct_callers": [
+        62568,
+        62569,
+        78099
+      ]
+    },
+    {
+      "function_index": 2883,
+      "body_start": 16959405,
+      "body_end": 16962265,
+      "body_bytes": 2860,
+      "body_sha256": "9e93283c29094da9e9dff9138dea59a2efaa20b7739d599f7fb12be89b3a2ea7",
+      "wat_start": 457334702,
+      "wat_end": 457368096,
+      "wat_line": 7263136,
+      "wat_bytes": 33394,
+      "wat_sha256": "834c958729241784ca40ceb8497fbf2e5d1972d41517811f95f6e27d81039a11",
+      "direct_callers": [
+        905,
+        1160,
+        1366,
+        1459,
+        4201,
+        39619
+      ]
+    },
+    {
+      "function_index": 3903,
+      "body_start": 19918641,
+      "body_end": 19922039,
+      "body_bytes": 3398,
+      "body_sha256": "e73acb15ee4f93ec7c0b33dc4367f4bc5cc1ca1b7471ae627462a46175faa748",
+      "wat_start": 507843726,
+      "wat_end": 507880519,
+      "wat_line": 8637024,
+      "wat_bytes": 36793,
+      "wat_sha256": "684820341c6c8c5de41468d3ac54c5ba96f36d262bfbd2a3bef2ce38f39eb066",
+      "direct_callers": [
+        880,
+        1160,
+        1366,
+        1414,
+        1753,
+        2307,
+        4201,
+        4801,
+        9766,
+        11750,
+        26533,
+        58041
+      ]
+    },
+    {
+      "function_index": 4427,
+      "body_start": 21473651,
+      "body_end": 21477886,
+      "body_bytes": 4235,
+      "body_sha256": "cc3b20b9cfdd42c2c7bc78c7b44d556688099f42a3dd1b968fd4facb94ac9b5b",
+      "wat_start": 535227386,
+      "wat_end": 535292933,
+      "wat_line": 9344699,
+      "wat_bytes": 65547,
+      "wat_sha256": "884ade7671e5d79f13198363d927344d1e5795ee70a4aa12c819f294eca96d2e",
+      "direct_callers": [
+        1160,
+        3903
+      ]
+    },
+    {
+      "function_index": 4801,
+      "body_start": 22417685,
+      "body_end": 22419869,
+      "body_bytes": 2184,
+      "body_sha256": "cb30ef0e06024dd1f92b849b5e6808163ad11acdeb81010c8edd04baa0348d93",
+      "wat_start": 549304518,
+      "wat_end": 549327279,
+      "wat_line": 9773590,
+      "wat_bytes": 22761,
+      "wat_sha256": "31ad5e43c3178b96739d64b3d7fcbc18bad09a8c70eaec754c8cb89158b11b1c",
+      "direct_callers": [
+        880,
+        1341,
+        1414
+      ]
+    },
+    {
+      "function_index": 5361,
+      "body_start": 23646058,
+      "body_end": 23647801,
+      "body_bytes": 1743,
+      "body_sha256": "ba810a490b4ed9b132c1ce276f5dcf6a9810dec3fcc38c09ff628618158ca689",
+      "wat_start": 571265766,
+      "wat_end": 571287944,
+      "wat_line": 10326826,
+      "wat_bytes": 22178,
+      "wat_sha256": "9e238048f7723129c53969570397c402b3efacfa4f93be30be12640a284a1218",
+      "direct_callers": [
+        889
+      ]
+    },
+    {
+      "function_index": 1436,
+      "body_start": 9576534,
+      "body_end": 9580792,
+      "body_bytes": 4258,
+      "body_sha256": "7f0d7c3d9730182128c057e1c9e676b735acdcf44ddf760b89a09610e4937f88",
+      "wat_start": 317010069,
+      "wat_end": 317056635,
+      "wat_line": 3903557,
+      "wat_bytes": 46566,
+      "wat_sha256": "9139b0bd78a9e65ab0a13201f20cc146d97d30c50812b683452dc53fdd9e29dd",
+      "direct_callers": [
+        880,
+        1088,
+        1434,
+        3640,
+        15708
+      ]
+    },
+    {
+      "function_index": 3640,
+      "body_start": 19178680,
+      "body_end": 19181206,
+      "body_bytes": 2526,
+      "body_sha256": "ab892f899e4263bd8faff1a56dbfbab5aa4eff71a2f97993a7174e275ff67837",
+      "wat_start": 491759706,
+      "wat_end": 491780886,
+      "wat_line": 8296611,
+      "wat_bytes": 21180,
+      "wat_sha256": "54e75d32c104892a5345f5aeb9907c73da187534515ec0123d60a17bec4cdc0b",
+      "direct_callers": [
+        4427,
+        18819,
+        27429
+      ]
+    },
+    {
+      "function_index": 18163,
+      "body_start": 42393271,
+      "body_end": 42393946,
+      "body_bytes": 675,
+      "body_sha256": "db0709f47cd6ef1836f00fb6051b4b223df583dbfcca6b3d750dc88d7d226bc5",
+      "wat_start": 850342411,
+      "wat_end": 850351299,
+      "wat_line": 18887239,
+      "wat_bytes": 8888,
+      "wat_sha256": "75692f73cb39ee8c68e9f8d8f44376cf2d2c9920e604dd45c08077e5e2562af3",
+      "direct_callers": [
+        880,
+        889,
+        951,
+        979,
+        1056,
+        1089,
+        1112,
+        1125,
+        1141,
+        1237,
+        1281,
+        1341,
+        1432,
+        1533,
+        1669,
+        1765,
+        1907,
+        1935,
+        2055,
+        2198,
+        2464,
+        2467,
+        2569,
+        2816,
+        2883,
+        3250,
+        3277,
+        3546,
+        3550,
+        3573,
+        3604,
+        3695,
+        3860,
+        3903,
+        4201,
+        4323,
+        4687,
+        5057,
+        5361,
+        5503,
+        5871,
+        5927,
+        6601,
+        7035,
+        7053,
+        7100,
+        8108,
+        8612,
+        9019,
+        9247,
+        9315,
+        9341,
+        9951,
+        10418,
+        10625,
+        11473,
+        12045,
+        13854,
+        16003,
+        16145,
+        16256,
+        16725,
+        16802,
+        16803,
+        17006,
+        17174,
+        18967,
+        18969,
+        19450,
+        19728,
+        19929,
+        20640,
+        20807,
+        21192,
+        21379,
+        22293,
+        22771,
+        22932,
+        22933,
+        23308,
+        23309,
+        25061,
+        25534,
+        26051,
+        26636,
+        26774,
+        26779,
+        26841,
+        27429,
+        30934,
+        31615,
+        38127,
+        46047,
+        47266,
+        47297,
+        47812,
+        51975,
+        52453,
+        57035,
+        57628,
+        81725
+      ]
+    },
+    {
+      "function_index": 18819,
+      "body_start": 43071191,
+      "body_end": 43071857,
+      "body_bytes": 666,
+      "body_sha256": "84dde2480cb6c60a361210d8c3ecb860d200086bc7d3c22ff497b5c5a5b2a47c",
+      "wat_start": 859741635,
+      "wat_end": 859749061,
+      "wat_line": 19195443,
+      "wat_bytes": 7426,
+      "wat_sha256": "e69fa3141a0914d90217be8524efcfe8d9e8e93112ac94c6ea091f128c23be73",
+      "direct_callers": [
+        4427,
+        27429
+      ]
+    },
+    {
+      "function_index": 25062,
+      "body_start": 49168894,
+      "body_end": 49169384,
+      "body_bytes": 490,
+      "body_sha256": "4995dcd10e1cfde78d5d28e7f92dd442380564b80c39272c74fd7b2e982d644e",
+      "wat_start": 940517935,
+      "wat_end": 940523373,
+      "wat_line": 21960643,
+      "wat_bytes": 5438,
+      "wat_sha256": "97d7e0491acc0d67b6d39c8a29a975558b8e120cd6f07dbf195075921b4a51b9",
+      "direct_callers": [
+        980,
+        47320
+      ]
+    },
+    {
+      "function_index": 27429,
+      "body_start": 51082247,
+      "body_end": 51082981,
+      "body_bytes": 734,
+      "body_sha256": "a3b1fd9d6b4d3fbf1b0a319def4446b5b360e818cfde4acb58392cce7b804e1a",
+      "wat_start": 967833539,
+      "wat_end": 967842234,
+      "wat_line": 22826650,
+      "wat_bytes": 8695,
+      "wat_sha256": "e1db9d3a57ced1bff23f836eefd9c10d6444f4b5846d0465f79dd77e650ba95f",
+      "direct_callers": [
+        1160,
+        2883,
+        3903
+      ]
+    },
+    {
+      "function_index": 30934,
+      "body_start": 54283699,
+      "body_end": 54284528,
+      "body_bytes": 829,
+      "body_sha256": "de028d768a7793f21c076af78f33c888c68e43161a5f29bbb3fdc53d02c3d833",
+      "wat_start": 1012911785,
+      "wat_end": 1012922853,
+      "wat_line": 24263052,
+      "wat_bytes": 11068,
+      "wat_sha256": "de3808615fd34d40ec14449a1ed99660741469395ff81844143cda7e09500d6b",
+      "direct_callers": [
+        889
+      ]
+    },
+    {
+      "function_index": 38110,
+      "body_start": 59161549,
+      "body_end": 59161894,
+      "body_bytes": 345,
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379",
+      "wat_start": 1079885585,
+      "wat_end": 1079890494,
+      "wat_line": 26437138,
+      "wat_bytes": 4909,
+      "wat_sha256": "9a8e086b91ebb1acc691714247420d2bcc5851beeab4221fe8c8f0e2064d1751",
+      "direct_callers": [
+        880,
+        890,
+        911,
+        915,
+        921,
+        948,
+        1084,
+        1107,
+        1341,
+        1366,
+        1411,
+        1414,
+        1636,
+        1671,
+        1683,
+        2250,
+        2307,
+        2321,
+        2365,
+        2563,
+        2768,
+        2798,
+        2852,
+        2918,
+        4595,
+        4801,
+        4857,
+        5560,
+        5684,
+        6706,
+        8254,
+        8672,
+        9075,
+        9475,
+        11750,
+        11826,
+        13408,
+        13409,
+        14864,
+        16088,
+        16145,
+        16902,
+        18753,
+        20145,
+        20604,
+        25789,
+        28620,
+        28705,
+        31344,
+        35492,
+        42094,
+        53576,
+        122213,
+        134798
+      ]
+    },
+    {
+      "function_index": 42687,
+      "body_start": 61446076,
+      "body_end": 61446347,
+      "body_bytes": 271,
+      "body_sha256": "c92641b540c70d27195961dc9f3dace0d84fb74c6f45088201a99d7384f5432c",
+      "wat_start": 1104172678,
+      "wat_end": 1104175389,
+      "wat_line": 27439523,
+      "wat_bytes": 2711,
+      "wat_sha256": "071ab518b3859cccc93248236c406821825e73e9cb1fa8d9271bd0f2100265da",
+      "direct_callers": [
+        980
+      ]
+    },
+    {
+      "function_index": 47320,
+      "body_start": 63393525,
+      "body_end": 63393762,
+      "body_bytes": 237,
+      "body_sha256": "4224c0c8fd3de9ee3a90849587486783d5f68b0abb9cd4654bb383f65304de41",
+      "wat_start": 1127630243,
+      "wat_end": 1127632221,
+      "wat_line": 28290109,
+      "wat_bytes": 1978,
+      "wat_sha256": "5b61fd26ba551ba4f355335eb2082474ace540703641a1225c0cb654de812549",
+      "direct_callers": [
+        980,
+        2918,
+        14865
+      ]
+    },
+    {
+      "function_index": 58403,
+      "body_start": 67256696,
+      "body_end": 67256822,
+      "body_bytes": 126,
+      "body_sha256": "15e9b9d2d10d87fb660cbf3fcb659160edd3b45c394af342529ec9f79ce154fb",
+      "wat_start": 1180444899,
+      "wat_end": 1180446044,
+      "wat_line": 29996720,
+      "wat_bytes": 1145,
+      "wat_sha256": "b24cd846fefe7aac3a19333c60161501048f944dca087052623ee4ba9003f35e",
+      "direct_callers": [
+        980,
+        2798,
+        28787,
+        37800
+      ]
+    },
+    {
+      "function_index": 47324,
+      "body_start": 63395274,
+      "body_end": 63395529,
+      "body_bytes": 255,
+      "body_sha256": "8f68472fc1a5a7d3b7bd824324378c1d00c60e86e485a45ffb1872a6162a1e1b",
+      "wat_start": 1127646171,
+      "wat_end": 1127648990,
+      "wat_line": 28290839,
+      "wat_bytes": 2819,
+      "wat_sha256": "53ff9f681515ffe2bff789006a665db178b4e475a3648bd4c581b3d7f3b5800c",
+      "direct_callers": [
+        1160,
+        2883
+      ]
+    },
+    {
+      "function_index": 51776,
+      "body_start": 65201081,
+      "body_end": 65201295,
+      "body_bytes": 214,
+      "body_sha256": "97fc416abddda6bc6736da70541db84f1eeb392ee5f531e3383248bfc658fc5b",
+      "wat_start": 1151514873,
+      "wat_end": 1151516841,
+      "wat_line": 29086983,
+      "wat_bytes": 1968,
+      "wat_sha256": "3e80141303eabc97ec2b0bdeaab175d906f567278e1d5da4117b6298d9f4b6b6",
+      "direct_callers": [
+        3903
+      ]
+    },
+    {
+      "function_index": 65427,
+      "body_start": 68604445,
+      "body_end": 68604559,
+      "body_bytes": 114,
+      "body_sha256": "027b5f4497e60d1e4f949c26d914acf3b42f76af16dfec3d696df75b2c30cbf9",
+      "wat_start": 1198636061,
+      "wat_end": 1198637034,
+      "wat_line": 30587793,
+      "wat_bytes": 973,
+      "wat_sha256": "1519744ac49b8511bdd1d65f6ea715f4a4b526e88bb9d23db457c3f30aa521af",
+      "direct_callers": [
+        26323,
+        35827,
+        47324
+      ]
+    },
+    {
+      "function_index": 86262,
+      "body_start": 73322146,
+      "body_end": 73322224,
+      "body_bytes": 78,
+      "body_sha256": "b0a01c8c288bb71d76014fc7d52e924d785153f43c8d58a1d579eae315b207a6",
+      "wat_start": 1254881414,
+      "wat_end": 1254881974,
+      "wat_line": 32616518,
+      "wat_bytes": 560,
+      "wat_sha256": "fee450a4993d449130be0068ea62d98466d2c3a46f8889bb76f28876b3030d53",
+      "direct_callers": [
+        3903,
+        26323,
+        35085,
+        35341,
+        35827,
+        43380,
+        47324,
+        51776
+      ]
+    },
+    {
+      "function_index": 93274,
+      "body_start": 73901860,
+      "body_end": 73901927,
+      "body_bytes": 67,
+      "body_sha256": "e89c7082a02a53171196e32ef8068021a9fb6a1c12703cdb3aad3baad0c3884a",
+      "wat_start": 1259698064,
+      "wat_end": 1259698540,
+      "wat_line": 32858822,
+      "wat_bytes": 476,
+      "wat_sha256": "0507279e3f6741be5107d41622e3798157d21d92d1c4389de75b353f03008182",
+      "direct_callers": [
+        3903,
+        35085,
+        43380,
+        51776
+      ]
+    },
+    {
+      "function_index": 95768,
+      "body_start": 74102926,
+      "body_end": 74102981,
+      "body_bytes": 55,
+      "body_sha256": "9da3609ea94e0dc7f1e0e44474f999a5194a31bf7e0ce800c2eeb3cfd3f23872",
+      "wat_start": 1261471626,
+      "wat_end": 1261472072,
+      "wat_line": 32943910,
+      "wat_bytes": 446,
+      "wat_sha256": "8950aba3d5b730c2b3c7820457ffa01e08c8c564eeddc873b5ecf7a9e9e5ed8c",
+      "direct_callers": [
+        1372,
+        1513,
+        1664,
+        1942,
+        3903,
+        4201,
+        4323,
+        4863,
+        5541,
+        5615,
+        5828,
+        5899,
+        8425,
+        9247,
+        11402,
+        13860,
+        17016,
+        23016,
+        25238,
+        26323,
+        27284,
+        32806,
+        33805,
+        35085,
+        35341,
+        35827,
+        40889,
+        43380,
+        46052,
+        47324,
+        48389,
+        49104,
+        50051,
+        50200,
+        51776,
+        56918,
+        57256,
+        58945,
+        83517
+      ]
+    },
+    {
+      "function_index": 170036,
+      "body_start": 76158264,
+      "body_end": 76158277,
+      "body_bytes": 13,
+      "body_sha256": "0d8a9aa2a06bd80dcff238bbe4f305a02d7a3e054e51d0e4c340fdc4118cae1b",
+      "wat_start": 1278320423,
+      "wat_end": 1278320541,
+      "wat_line": 33680249,
+      "wat_bytes": 118,
+      "wat_sha256": "092f2318b519f0614d772a2a305c907214b0642eb23aa826cc3790a078d03742",
+      "direct_callers": []
+    },
+    {
+      "function_index": 170037,
+      "body_start": 76158278,
+      "body_end": 76158291,
+      "body_bytes": 13,
+      "body_sha256": "7549958e8c49afe108bfaaa86bf714d8bb5b65e9c10c1376825770182fa695c2",
+      "wat_start": 1278320541,
+      "wat_end": 1278320659,
+      "wat_line": 33680254,
+      "wat_bytes": 118,
+      "wat_sha256": "6105fae188131ce905ff68513287349f0a49bdf2c56caf8f862bc9fef2bc7b5e",
+      "direct_callers": []
+    },
+    {
+      "function_index": 169994,
+      "body_start": 76157718,
+      "body_end": 76157731,
+      "body_bytes": 13,
+      "body_sha256": "52e03864e13147471f1520697375223e55c7c909728adccd287d03d360723849",
+      "wat_start": 1278315695,
+      "wat_end": 1278315813,
+      "wat_line": 33680039,
+      "wat_bytes": 118,
+      "wat_sha256": "f50f4dce6eda9a969c626abd5dca783483d403f1c033bdd622c5add0d43342a6",
+      "direct_callers": []
+    },
+    {
+      "function_index": 57441,
+      "body_start": 67031953,
+      "body_end": 67032094,
+      "body_bytes": 141,
+      "body_sha256": "db02c9ee8063d32e56d91bd1311dbfd8505d3b617af72b2773fdacb1d3c4530c",
+      "wat_start": 1177704647,
+      "wat_end": 1177705909,
+      "wat_line": 29896674,
+      "wat_bytes": 1262,
+      "wat_sha256": "b955603cb2193fe1236615f0e9d1601b8c6ba79366fa84058ad36557c38617c6",
+      "direct_callers": [
+        68034,
+        68890,
+        90332,
+        93285,
+        170036
+      ]
+    },
+    {
+      "function_index": 41074,
+      "body_start": 60809135,
+      "body_end": 60809406,
+      "body_bytes": 271,
+      "body_sha256": "5cc4335630835fe56b2bfd58a08a66c3ffc61f8410649c79405f169712371a7f",
+      "wat_start": 1097684882,
+      "wat_end": 1097687392,
+      "wat_line": 27156684,
+      "wat_bytes": 2510,
+      "wat_sha256": "ce73730037e79964415162115112e6311899123e4addb6fda1b65b466f58331d",
+      "direct_callers": [
+        1043,
+        25874,
+        47516,
+        47978,
+        48138,
+        56584,
+        56586,
+        56629,
+        57086,
+        57154,
+        57157,
+        57159,
+        57164,
+        57166,
+        58564,
+        66189,
+        66560,
+        67812,
+        68583,
+        84888,
+        90063,
+        90331,
+        93281,
+        95081,
+        95351,
+        95704,
+        96130,
+        169994,
+        173457
+      ]
+    },
+    {
+      "function_index": 39998,
+      "body_start": 60129340,
+      "body_end": 60129625,
+      "body_bytes": 285,
+      "body_sha256": "81adfe10aabed871ba26a889695f6b3462e21d738cbfd3ed409fe439cb69af14",
+      "wat_start": 1090661923,
+      "wat_end": 1090664597,
+      "wat_line": 26866201,
+      "wat_bytes": 2674,
+      "wat_sha256": "7d08eaab38daca59253439d0cb49b404fdb785ab9113b1782701312559b7e33f",
+      "direct_callers": [
+        5494,
+        37963,
+        46805,
+        47977,
+        52434,
+        56646,
+        57160,
+        57165,
+        67533,
+        68762,
+        90370,
+        93294,
+        95709,
+        96125,
+        170037
+      ]
+    },
+    {
+      "function_index": 135154,
+      "body_start": 75426928,
+      "body_end": 75426946,
+      "body_bytes": 18,
+      "body_sha256": "8688010bca14466be7e5c8a5e421cc39784708318ca65e05c5fd12f0c4faec52",
+      "wat_start": 1272347556,
+      "wat_end": 1272347721,
+      "wat_line": 33422480,
+      "wat_bytes": 165,
+      "wat_sha256": "c982bd08e7f3c428d0348deb9c7a2339e708416a847d61e65e4b6221bccb63f5",
+      "direct_callers": []
+    }
+  ],
+  "instruction_guards": [
+    {
+      "function_index": 3903,
+      "label": "account to plaintext serializer",
+      "first_function_line": 11,
+      "instructions": [
+        "local.get 0",
+        "call 980"
+      ]
+    },
+    {
+      "function_index": 3903,
+      "label": "plaintext span to envelope writer",
+      "first_function_line": 21,
+      "instructions": [
+        "local.tee 3",
+        "call 4427"
+      ]
+    },
+    {
+      "function_index": 3903,
+      "label": "writer unseals its own output",
+      "first_function_line": 31,
+      "instructions": [
+        "local.tee 6",
+        "call 27429"
+      ]
+    },
+    {
+      "function_index": 3903,
+      "label": "round-trip plaintext equality gate",
+      "first_function_line": 49,
+      "instructions": [
+        "local.tee 7",
+        "local.get 4",
+        "local.get 3",
+        "call 81718",
+        "i32.eqz"
+      ]
+    },
+    {
+      "function_index": 3903,
+      "label": "unsealed fallback writer",
+      "first_function_line": 81,
+      "instructions": [
+        "local.get 4",
+        "local.get 3",
+        "call 51776"
+      ]
+    },
+    {
+      "function_index": 3903,
+      "label": "sealed normal writer",
+      "first_function_line": 92,
+      "instructions": [
+        "local.get 5",
+        "local.get 6",
+        "call 51776"
+      ]
+    },
+    {
+      "function_index": 51776,
+      "label": "fixed rogue.characters key and value span",
+      "first_function_line": 57,
+      "instructions": [
+        "i32.const 1800780",
+        "i32.const 16",
+        "local.get 0",
+        "local.get 1",
+        "call 93274"
+      ]
+    },
+    {
+      "function_index": 93274,
+      "label": "setItem imported call",
+      "first_function_line": 7,
+      "instructions": [
+        "local.get 4",
+        "local.get 5",
+        "call 649"
+      ]
+    },
+    {
+      "function_index": 47324,
+      "label": "read same key",
+      "first_function_line": 60,
+      "instructions": [
+        "i32.const 1800780",
+        "i32.const 16",
+        "call 65427"
+      ]
+    },
+    {
+      "function_index": 65427,
+      "label": "getItem imported call",
+      "first_function_line": 14,
+      "instructions": [
+        "local.get 2",
+        "local.get 3",
+        "call 641"
+      ]
+    },
+    {
+      "function_index": 86262,
+      "label": "localStorage imported access",
+      "first_function_line": 5,
+      "instructions": [
+        "table.get 1",
+        "call 499"
+      ]
+    },
+    {
+      "function_index": 2883,
+      "label": "load account storage",
+      "first_function_line": 9,
+      "instructions": [
+        "i32.const 288",
+        "i32.add",
+        "call 47324"
+      ]
+    },
+    {
+      "function_index": 2883,
+      "label": "load sealed envelope",
+      "first_function_line": 97,
+      "instructions": [
+        "local.get 3",
+        "local.get 2",
+        "call 27429"
+      ]
+    },
+    {
+      "function_index": 2883,
+      "label": "legacy plaintext accepted",
+      "first_function_line": 1165,
+      "instructions": [
+        "local.get 0",
+        "local.get 3",
+        "local.get 2",
+        "call 889"
+      ]
+    },
+    {
+      "function_index": 980,
+      "label": "open record rendering",
+      "first_function_line": 640,
+      "instructions": [
+        "i32.const 1380410",
+        "local.get 2",
+        "i32.const 32",
+        "i32.add",
+        "call 32068"
+      ]
+    },
+    {
+      "function_index": 980,
+      "label": "open vector length",
+      "first_function_line": 581,
+      "instructions": [
+        "local.get 1",
+        "i32.load offset=124",
+        "local.tee 4"
+      ]
+    },
+    {
+      "function_index": 980,
+      "label": "open vector elements",
+      "first_function_line": 585,
+      "instructions": [
+        "local.get 1",
+        "i32.load offset=120",
+        "local.tee 3"
+      ]
+    },
+    {
+      "function_index": 980,
+      "label": "pick final field is decimal byte100",
+      "first_function_line": 361,
+      "instructions": [
+        "local.get 1",
+        "i32.load8_u offset=100",
+        "local.get 3",
+        "call 58403"
+      ]
+    },
+    {
+      "function_index": 58403,
+      "label": "pick final byte uses unsigned8 integer formatter",
+      "first_function_line": 4,
+      "instructions": [
+        "local.get 1",
+        "i32.const 255",
+        "i32.and",
+        "local.tee 4",
+        "i32.const 10",
+        "i32.lt_u"
+      ]
+    },
+    {
+      "function_index": 4801,
+      "label": "only first eleven source zones unlock next",
+      "first_function_line": 15,
+      "instructions": [
+        "local.get 2",
+        "local.get 3",
+        "call 38110",
+        "local.tee 5",
+        "i32.const 10",
+        "i32.gt_u",
+        "br_if 0 (;@2;)"
+      ]
+    },
+    {
+      "function_index": 4801,
+      "label": "new open count is zone index plus two",
+      "first_function_line": 147,
+      "instructions": [
+        "local.get 5",
+        "i32.const 2",
+        "i32.add",
+        "i32.store offset=4"
+      ]
+    },
+    {
+      "function_index": 4801,
+      "label": "append or update progress then persist",
+      "first_function_line": 155,
+      "instructions": [
+        "local.get 8",
+        "i32.const 1",
+        "i32.add",
+        "i32.store offset=3820",
+        "end",
+        "call 3903"
+      ]
+    },
+    {
+      "function_index": 4801,
+      "label": "game account aggregate offset",
+      "first_function_line": 22,
+      "instructions": [
+        "local.get 0",
+        "i32.const 3696",
+        "i32.add"
+      ]
+    },
+    {
+      "function_index": 889,
+      "label": "open tag parser",
+      "first_function_line": 2167,
+      "instructions": [
+        "i32.const 1852141679",
+        "i32.ne"
+      ]
+    },
+    {
+      "function_index": 889,
+      "label": "legacy unlock tag parser",
+      "first_function_line": 2303,
+      "instructions": [
+        "i32.const 1869377141",
+        "i32.xor"
+      ]
+    },
+    {
+      "function_index": 889,
+      "label": "duplicate class unlocks take max",
+      "first_function_line": 2910,
+      "instructions": [
+        "local.get 11",
+        "local.get 4",
+        "i32.load",
+        "local.tee 4",
+        "local.get 4",
+        "local.get 11",
+        "i32.lt_u",
+        "select",
+        "i32.store"
+      ]
+    },
+    {
+      "function_index": 889,
+      "label": "load open vector count into account",
+      "first_function_line": 17723,
+      "instructions": [
+        "i32.load offset=236",
+        "i32.store offset=124"
+      ]
+    },
+    {
+      "function_index": 889,
+      "label": "load open capacity and pointer into account",
+      "first_function_line": 17727,
+      "instructions": [
+        "i64.load offset=228 align=4",
+        "i64.store offset=116 align=4"
+      ]
+    },
+    {
+      "function_index": 2883,
+      "label": "default selection absent",
+      "first_function_line": 871,
+      "instructions": [
+        "local.get 0",
+        "i32.const -1",
+        "i32.store offset=68"
+      ]
+    },
+    {
+      "function_index": 2883,
+      "label": "default character vector cap0 ptr8",
+      "first_function_line": 808,
+      "instructions": [
+        "local.get 0",
+        "i64.const 34359738368",
+        "i64.store offset=104"
+      ]
+    },
+    {
+      "function_index": 30934,
+      "label": "numeric-leading lines excluded from unknown preservation",
+      "first_function_line": 312,
+      "instructions": [
+        "i32.const 48",
+        "i32.sub",
+        "i32.const 10",
+        "i32.lt_u",
+        "br_if 0 (;@5;)"
+      ]
+    },
+    {
+      "function_index": 30934,
+      "label": "unknown preservation compares exactly25 pointer-length entries",
+      "first_function_line": 317,
+      "instructions": [
+        "i32.const -200",
+        "local.set 3",
+        "loop  ;; label = @6"
+      ]
+    },
+    {
+      "function_index": 980,
+      "label": "unknown lines emitted after modeled records",
+      "first_function_line": 6792,
+      "instructions": [
+        "local.get 1",
+        "i32.load offset=364",
+        "local.tee 3"
+      ]
+    },
+    {
+      "function_index": 27429,
+      "label": "envelope minimum36 bytes",
+      "first_function_line": 203,
+      "instructions": [
+        "local.tee 1",
+        "i32.const 36",
+        "i32.ge_u"
+      ]
+    },
+    {
+      "function_index": 27429,
+      "label": "outer Unicode trim precedes prefix check",
+      "first_function_line": 11,
+      "instructions": [
+        "local.get 1",
+        "local.get 2",
+        "call 18163"
+      ]
+    },
+    {
+      "function_index": 18819,
+      "label": "ks domain pointer",
+      "first_function_line": 24,
+      "instructions": [
+        "i32.const 1744644",
+        "i32.store offset=32"
+      ]
+    },
+    {
+      "function_index": 18819,
+      "label": "block counter is little-endian u64",
+      "first_function_line": 27,
+      "instructions": [
+        "local.get 5",
+        "i64.extend_i32_u",
+        "i64.store offset=56"
+      ]
+    },
+    {
+      "function_index": 18819,
+      "label": "keystream block counter starts zero and increments",
+      "first_function_line": 313,
+      "instructions": [
+        "local.get 5",
+        "i32.const 1",
+        "i32.add",
+        "local.set 5"
+      ]
+    },
+    {
+      "function_index": 3640,
+      "label": "HMAC inner pad",
+      "first_function_line": 107,
+      "instructions": [
+        "i32.const 54",
+        "i32.xor",
+        "i32.store8"
+      ]
+    },
+    {
+      "function_index": 3640,
+      "label": "HMAC outer pad",
+      "first_function_line": 484,
+      "instructions": [
+        "i32.const 92",
+        "i32.xor",
+        "i32.store8"
+      ]
+    },
+    {
+      "function_index": 57441,
+      "label": "numeric formatter width",
+      "first_function_line": 10,
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u"
+      ]
+    },
+    {
+      "function_index": 41074,
+      "label": "numeric formatter width",
+      "first_function_line": 10,
+      "instructions": [
+        "local.get 0",
+        "i32.load"
+      ]
+    },
+    {
+      "function_index": 39998,
+      "label": "numeric formatter width",
+      "first_function_line": 10,
+      "instructions": [
+        "local.get 0",
+        "i64.load"
+      ]
+    }
+  ],
+  "browser_imports": [
+    {
+      "function_index": 499,
+      "module": "./wenilla_bg.js",
+      "name": "__wbg_localStorage_a1773c6a8a951c81",
+      "type_index": 21
+    },
+    {
+      "function_index": 523,
+      "module": "./wenilla_bg.js",
+      "name": "__wbg_instanceof_Window_e093be59ee9a8e14",
+      "type_index": 21
+    },
+    {
+      "function_index": 641,
+      "module": "./wenilla_bg.js",
+      "name": "__wbg_getItem_4f09713b84e02011",
+      "type_index": 132
+    },
+    {
+      "function_index": 649,
+      "module": "./wenilla_bg.js",
+      "name": "__wbg_setItem_bb2b8d07227815d5",
+      "type_index": 50
+    }
+  ],
+  "javascript": {
+    "saves.js": {
+      "bytes": 1920,
+      "sha256": "a9d2b682f979be19b3da4ba3b8bebaa78a7791604a2609d1f4f91424e4d85253"
+    },
+    "wenilla.js": {
+      "bytes": 187006,
+      "sha256": "c4ab8bfc1fb2ad4b4bbd4818ffb7abf4548efc41a888b16114f32a6e4806abce"
+    },
+    "rogue.js": {
+      "bytes": 24224,
+      "sha256": "7644df9f61fdca9865d20b9995ff3f57c51223de53ae9d926c5c539ac739a515"
+    }
+  },
+  "account_bytes": 368,
+  "account_in_game_state_offset": 3696,
+  "vec_word_layout": [
+    "capacity_u32",
+    "pointer_u32",
+    "length_u32"
+  ],
+  "records": [
+    {
+      "tag": "character",
+      "template_memory_address": null,
+      "vec_account_offset": 104,
+      "element_bytes": 48,
+      "grammar": "u64|string|u8|u8|u8|five-u8-csv|u32|u32|u32|u32",
+      "reviewed_interpretation": "ten untagged fields; element offsets 0,8,36,37,38,39..43,20,24,28,32"
+    },
+    {
+      "tag": "pick",
+      "template_memory_address": 1380476,
+      "vec_account_offset": null,
+      "element_bytes": null,
+      "grammar": "pick|u8|u8|u8|string|string|five-u8-csv|u8",
+      "reviewed_interpretation": "optional selection at account+68..100; emitted only when +68 != -1"
+    },
+    {
+      "tag": "open",
+      "template_memory_address": 1380410,
+      "vec_account_offset": 116,
+      "element_bytes": 8,
+      "grammar": "open|class-u8|zone-id",
+      "reviewed_interpretation": "element +0 class byte; +4 open-count u32; writes zone[clamp(count,1,12)-1].id"
+    },
+    {
+      "tag": "items",
+      "template_memory_address": 1380293,
+      "vec_account_offset": 128,
+      "element_bytes": 4,
+      "grammar": "items|u32-csv",
+      "reviewed_interpretation": "numeric item IDs"
+    },
+    {
+      "tag": "equip",
+      "template_memory_address": 1380525,
+      "vec_account_offset": 140,
+      "element_bytes": 232,
+      "grammar": "equip|class-u8|slot:item-u32-csv",
+      "reviewed_interpretation": "element +152..227 is 19 u32 slots; class byte +228; zero slots omitted"
+    },
+    {
+      "tag": "look",
+      "template_memory_address": 1380525,
+      "vec_account_offset": 140,
+      "element_bytes": 232,
+      "grammar": "look|class-u8|slot:item-u32-csv",
+      "reviewed_interpretation": "element +0..151 is 19 pairs of presence-u32 and item-u32; class +228; absent pairs omitted"
+    },
+    {
+      "tag": "talent",
+      "template_memory_address": 1380423,
+      "vec_account_offset": 152,
+      "element_bytes": 24,
+      "grammar": "talent|u8|u8|node:rank-csv",
+      "reviewed_interpretation": "two key bytes +0,+1; allocation at +8 stores 8-byte pairs; optional flag +20"
+    },
+    {
+      "tag": "spec",
+      "template_memory_address": 1380441,
+      "vec_account_offset": 164,
+      "element_bytes": 52,
+      "grammar": "spec|u8|u8|three-pipe-separated-node-rank-groups",
+      "reviewed_interpretation": "element key bytes +0,+1; three groups at +4,+20,+36; grammar remains partly reviewed"
+    },
+    {
+      "tag": "seen",
+      "template_memory_address": 1380315,
+      "vec_account_offset": 176,
+      "element_bytes": 16,
+      "grammar": "seen|string:u8-csv",
+      "reviewed_interpretation": "element String +0 and value byte +12"
+    },
+    {
+      "tag": "ach",
+      "template_memory_address": 1380335,
+      "vec_account_offset": 188,
+      "element_bytes": 4,
+      "grammar": "ach|u32-csv",
+      "reviewed_interpretation": "numeric achievement IDs"
+    },
+    {
+      "tag": "achat",
+      "template_memory_address": 1380235,
+      "vec_account_offset": 200,
+      "element_bytes": 24,
+      "grammar": "achat|string=u64-csv",
+      "reviewed_interpretation": "element String +0 and numeric u64 +16"
+    },
+    {
+      "tag": "stat",
+      "template_memory_address": 1380225,
+      "vec_account_offset": null,
+      "element_bytes": 8,
+      "grammar": "stat|name=u64-csv",
+      "reviewed_interpretation": "eight counters at +0..63; omitted when all zero"
+    },
+    {
+      "tag": "beat",
+      "template_memory_address": 1380383,
+      "vec_account_offset": 212,
+      "element_bytes": 8,
+      "grammar": "beat|class-u8|zone-id-csv",
+      "reviewed_interpretation": "pairs of class u8 +0 and zone index u32 +4"
+    },
+    {
+      "tag": "coopbeat",
+      "template_memory_address": 1380246,
+      "vec_account_offset": 224,
+      "element_bytes": 4,
+      "grammar": "coopbeat|zone-id-csv",
+      "reviewed_interpretation": "stored as zone indices u32; invalid indices skipped by writer"
+    },
+    {
+      "tag": "perk",
+      "template_memory_address": 1380325,
+      "vec_account_offset": 236,
+      "element_bytes": 16,
+      "grammar": "perk|string:u8-csv",
+      "reviewed_interpretation": "String +0; rank byte +12"
+    },
+    {
+      "tag": "tabard",
+      "template_memory_address": 1380344,
+      "vec_account_offset": 248,
+      "element_bytes": 4,
+      "grammar": "tabard|u32-csv",
+      "reviewed_interpretation": "numeric IDs"
+    },
+    {
+      "tag": "races",
+      "template_memory_address": 1380304,
+      "vec_account_offset": 260,
+      "element_bytes": 1,
+      "grammar": "races|u8-csv",
+      "reviewed_interpretation": "race-code bytes"
+    },
+    {
+      "tag": "pets",
+      "template_memory_address": 1380272,
+      "vec_account_offset": 272,
+      "element_bytes": 4,
+      "grammar": "pets|u32-csv",
+      "reviewed_interpretation": "numeric IDs"
+    },
+    {
+      "tag": "hero",
+      "template_memory_address": 1380457,
+      "vec_account_offset": 284,
+      "element_bytes": 8,
+      "grammar": "hero|u8|u8|u8|five-u8-csv",
+      "reviewed_interpretation": "three bytes +0,+1,+2; five bytes +3..7"
+    },
+    {
+      "tag": "marks",
+      "template_memory_address": 1380396,
+      "vec_account_offset": 296,
+      "element_bytes": 8,
+      "grammar": "marks|class-u8|u32",
+      "reviewed_interpretation": "element class +0; numeric value +4"
+    },
+    {
+      "tag": "stars",
+      "template_memory_address": 1380282,
+      "vec_account_offset": 308,
+      "element_bytes": 8,
+      "grammar": "stars|u32:u8-csv",
+      "reviewed_interpretation": "element numeric key +0; byte value +4"
+    },
+    {
+      "tag": "pity",
+      "template_memory_address": 1380215,
+      "vec_account_offset": 320,
+      "element_bytes": 8,
+      "grammar": "pity|u32:u8-csv",
+      "reviewed_interpretation": "element numeric key +0; byte value +4"
+    },
+    {
+      "tag": "hbeat",
+      "template_memory_address": 1380369,
+      "vec_account_offset": 332,
+      "element_bytes": 8,
+      "grammar": "hbeat|class-u8|zone-id-csv",
+      "reviewed_interpretation": "pairs of zone index u32 +0 and class u8 +4"
+    },
+    {
+      "tag": "glow",
+      "template_memory_address": 1380356,
+      "vec_account_offset": 344,
+      "element_bytes": 8,
+      "grammar": "glow|class-u8|u32",
+      "reviewed_interpretation": "element class +0; numeric value +4"
+    },
+    {
+      "tag": "resets",
+      "template_memory_address": 1380260,
+      "vec_account_offset": null,
+      "element_bytes": 4,
+      "grammar": "resets|u32",
+      "reviewed_interpretation": "counter at account+64; omitted when zero"
+    },
+    {
+      "tag": "unknown_lines",
+      "template_memory_address": null,
+      "vec_account_offset": 356,
+      "element_bytes": 12,
+      "grammar": "unrecognized non-numeric record text",
+      "reviewed_interpretation": "30934 skips numeric-leading records and all 25 known tags; preserves other trimmed lines"
+    }
+  ],
+  "stat_counters": [
+    {
+      "name": "kills",
+      "account_offset": 0,
+      "type": "u64",
+      "memory_address": 1581652
+    },
+    {
+      "name": "gold",
+      "account_offset": 8,
+      "type": "u64",
+      "memory_address": 1581657
+    },
+    {
+      "name": "guardians",
+      "account_offset": 16,
+      "type": "u64",
+      "memory_address": 1581661
+    },
+    {
+      "name": "bosses",
+      "account_offset": 24,
+      "type": "u64",
+      "memory_address": 1581670
+    },
+    {
+      "name": "runs",
+      "account_offset": 32,
+      "type": "u64",
+      "memory_address": 1581676
+    },
+    {
+      "name": "wins",
+      "account_offset": 40,
+      "type": "u64",
+      "memory_address": 1581680
+    },
+    {
+      "name": "caches",
+      "account_offset": 48,
+      "type": "u64",
+      "memory_address": 1581684
+    },
+    {
+      "name": "marks",
+      "account_offset": 56,
+      "type": "u64",
+      "memory_address": 1581690
+    }
+  ],
+  "format_templates": [
+    {
+      "memory_address": 1055777,
+      "bytes": 5,
+      "sha256": "62d208d533bb87edc5b5537e786389d301e18afd76cf27078e4b0d40f828fb8a",
+      "hex": "c0013dc000",
+      "format": "{0}={1}",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1056201,
+      "bytes": 5,
+      "sha256": "434924db3bd7152049e942f8d9cf8166e4e2ea75bb0c0264cf8436f8770599bf",
+      "hex": "c0013ac000",
+      "format": "{0}:{1}",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1380215,
+      "bytes": 10,
+      "sha256": "eac10b2e1790af45026b2a202be66f449c1ff3209661e0afb72c7b28a430f7e0",
+      "hex": "05706974797cc0010a00",
+      "format": "pity|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380225,
+      "bytes": 10,
+      "sha256": "eb1f16da4128ffac65cb26718ac37958458973843c02621344156c882ee285e9",
+      "hex": "05737461747cc0010a00",
+      "format": "stat|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380235,
+      "bytes": 11,
+      "sha256": "819ab3cfbbc2aa72ecb8600cae012195688137d77dd81a828f5a7620c9ca1151",
+      "hex": "0661636861747cc0010a00",
+      "format": "achat|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380246,
+      "bytes": 14,
+      "sha256": "d1f86ed3a9f04388d30828969a320edfe82fd58ffd76da5b23554607322d2f12",
+      "hex": "09636f6f70626561747cc0010a00",
+      "format": "coopbeat|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380260,
+      "bytes": 12,
+      "sha256": "d5c898f940939f2723394a09eb57bf0ee72c7e60089b62ae1d5bda30b86725e7",
+      "hex": "077265736574737cc0010a00",
+      "format": "resets|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380272,
+      "bytes": 10,
+      "sha256": "2463a1ab84b5f0f7eface69e2883e193ba8c3a84ca214d528c621eeb5b6769d4",
+      "hex": "05706574737cc0010a00",
+      "format": "pets|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380282,
+      "bytes": 11,
+      "sha256": "990f40a1c9050fe95f12335100dabba994d182bccd5c7dadd808478bba214344",
+      "hex": "0673746172737cc0010a00",
+      "format": "stars|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380293,
+      "bytes": 11,
+      "sha256": "749f9b15b294ed717cabc06b13062b01970697214def73f7137128352397b37a",
+      "hex": "066974656d737cc0010a00",
+      "format": "items|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380304,
+      "bytes": 11,
+      "sha256": "040bf8472255b8838527b6758ba8d93907b9d06148f162cb7effecbe8d726ec5",
+      "hex": "0672616365737cc0010a00",
+      "format": "races|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380315,
+      "bytes": 10,
+      "sha256": "3bb4549e2eb4b32131c91ce8c1874ad8ad963b746aeb71b7a3088a62d1d83374",
+      "hex": "057365656e7cc0010a00",
+      "format": "seen|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380325,
+      "bytes": 10,
+      "sha256": "040ed950321d0af7b604972ec364f4e1db998238a50b832d78a24f18595b6395",
+      "hex": "057065726b7cc0010a00",
+      "format": "perk|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380335,
+      "bytes": 9,
+      "sha256": "aa96bdd0c05da50bb622454be0554ff8be12717a010ee124dcee72199c05fcc9",
+      "hex": "046163687cc0010a00",
+      "format": "ach|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380344,
+      "bytes": 12,
+      "sha256": "f3521aedc5c57783011665f0f68c3edc5e9769c6b395e94fe089f4dee7267469",
+      "hex": "077461626172647cc0010a00",
+      "format": "tabard|{0}\n",
+      "arguments": 1
+    },
+    {
+      "memory_address": 1380356,
+      "bytes": 13,
+      "sha256": "bdab8786db52b0eec808741ba9a9f68516329188c36b8aa71b7c6b23def928f3",
+      "hex": "05676c6f777cc0017cc0010a00",
+      "format": "glow|{0}|{1}\n",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1380369,
+      "bytes": 14,
+      "sha256": "d71d6dfe55d6f771309597c548257aca2a78a35746182e877d7c5f41c427ab87",
+      "hex": "0668626561747cc0017cc0010a00",
+      "format": "hbeat|{0}|{1}\n",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1380383,
+      "bytes": 13,
+      "sha256": "5d9c35cb33f7d795f938a532fb08b40c64963e3cc4236cab0df028fe024e9938",
+      "hex": "05626561747cc0017cc0010a00",
+      "format": "beat|{0}|{1}\n",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1380396,
+      "bytes": 14,
+      "sha256": "2f2a0544e6331026a7a07b0e2b4c6554162bc16256942d9081f8f03d41fc6596",
+      "hex": "066d61726b737cc0017cc0010a00",
+      "format": "marks|{0}|{1}\n",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1380410,
+      "bytes": 13,
+      "sha256": "c034af9b3f02d929f78005520172ebb5492df14ed8312f52470324d415ffc729",
+      "hex": "056f70656e7cc0017cc0010a00",
+      "format": "open|{0}|{1}\n",
+      "arguments": 2
+    },
+    {
+      "memory_address": 1380423,
+      "bytes": 18,
+      "sha256": "e80b3aa3f18c92a2c30e19e741383388f94187d57c7b99a7ac0a8a89812db277",
+      "hex": "0774616c656e747cc0017cc0017cc0010a00",
+      "format": "talent|{0}|{1}|{2}\n",
+      "arguments": 3
+    },
+    {
+      "memory_address": 1380441,
+      "bytes": 16,
+      "sha256": "efe80171189002faa3edacacf3b967f6a975b519b91e5b707cdff53a543e3333",
+      "hex": "05737065637cc0017cc0017cc0010a00",
+      "format": "spec|{0}|{1}|{2}\n",
+      "arguments": 3
+    },
+    {
+      "memory_address": 1380457,
+      "bytes": 19,
+      "sha256": "825c003b584c328647a2271e4025fe7298e211b2cef971569352339958550666",
+      "hex": "056865726f7cc0017cc0017cc0017cc0010a00",
+      "format": "hero|{0}|{1}|{2}|{3}\n",
+      "arguments": 4
+    },
+    {
+      "memory_address": 1380476,
+      "bytes": 28,
+      "sha256": "4c46e04a8ffc0d86712bcdb1922f80f82a8bcda64c27cf5638ac45688c574ac2",
+      "hex": "057069636b7cc0017cc0017cc0017cc0017cc0017cc0017cc0010a00",
+      "format": "pick|{0}|{1}|{2}|{3}|{4}|{5}|{6}\n",
+      "arguments": 7
+    },
+    {
+      "memory_address": 1380504,
+      "bytes": 31,
+      "sha256": "b480d0ee3ad8cd00940d89a79f8b40ec3226c92fe03394fca407fe846fe44733",
+      "hex": "c0017cc0017cc0017cc0017cc0017cc0017cc0017cc0017cc0017cc0010a00",
+      "format": "{0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}|{8}|{9}\n",
+      "arguments": 10
+    },
+    {
+      "memory_address": 1380525,
+      "bytes": 10,
+      "sha256": "e09fe754af3dfe54062523bd2cee6030383a5396320b6412e441786187e16376",
+      "hex": "c0017cc0017cc0010a00",
+      "format": "{0}|{1}|{2}\n",
+      "arguments": 3
+    }
+  ],
+  "zone_id_order": [
+    "elwynn",
+    "duskwood",
+    "wsg",
+    "ungoro",
+    "ab",
+    "feralas",
+    "arena",
+    "sm",
+    "av",
+    "brm",
+    "aq",
+    "naxx"
+  ],
+  "default_account": {
+    "bytes": 368,
+    "zero_filled_projection_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000000000000000000000000000000000000800000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000800000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000100000000000000000000000400000000000000000000000100000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000000000000400000000000000",
+    "zero_filled_projection_sha256": "1c1c1cd0d4d339fa8ffd88f5fb5a1de43aacdfdebb64118d3d22080326b6b99b",
+    "unwritten_inactive_or_padding_ranges": [
+      {
+        "start": 72,
+        "end_exclusive": 104
+      }
+    ],
+    "constant_stores": [
+      {
+        "function_line": 781,
+        "offset": 56,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 784,
+        "offset": 48,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 787,
+        "offset": 40,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 790,
+        "offset": 32,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 793,
+        "offset": 24,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 796,
+        "offset": 16,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 799,
+        "offset": 8,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 802,
+        "offset": 0,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 805,
+        "offset": 112,
+        "width": 4,
+        "value": 0
+      },
+      {
+        "function_line": 808,
+        "offset": 104,
+        "width": 8,
+        "value": 34359738368
+      },
+      {
+        "function_line": 811,
+        "offset": 268,
+        "width": 4,
+        "value": 0
+      },
+      {
+        "function_line": 814,
+        "offset": 260,
+        "width": 8,
+        "value": 4294967296
+      },
+      {
+        "function_line": 817,
+        "offset": 252,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 820,
+        "offset": 244,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 823,
+        "offset": 236,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 826,
+        "offset": 228,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 829,
+        "offset": 220,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 832,
+        "offset": 212,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 835,
+        "offset": 204,
+        "width": 8,
+        "value": 8
+      },
+      {
+        "function_line": 838,
+        "offset": 196,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 841,
+        "offset": 188,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 844,
+        "offset": 180,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 847,
+        "offset": 172,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 850,
+        "offset": 164,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 853,
+        "offset": 156,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 856,
+        "offset": 148,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 859,
+        "offset": 140,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 862,
+        "offset": 132,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 865,
+        "offset": 124,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 868,
+        "offset": 116,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 871,
+        "offset": 68,
+        "width": 4,
+        "value": -1
+      },
+      {
+        "function_line": 874,
+        "offset": 360,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 877,
+        "offset": 352,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 880,
+        "offset": 344,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 883,
+        "offset": 336,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 886,
+        "offset": 328,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 889,
+        "offset": 320,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 892,
+        "offset": 312,
+        "width": 8,
+        "value": 4
+      },
+      {
+        "function_line": 895,
+        "offset": 304,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 898,
+        "offset": 296,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 901,
+        "offset": 288,
+        "width": 8,
+        "value": 1
+      },
+      {
+        "function_line": 904,
+        "offset": 280,
+        "width": 8,
+        "value": 0
+      },
+      {
+        "function_line": 907,
+        "offset": 272,
+        "width": 8,
+        "value": 17179869184
+      },
+      {
+        "function_line": 910,
+        "offset": 64,
+        "width": 4,
+        "value": 0
+      }
+    ],
+    "interpretation": "empty account; pick absent; vectors length0; counters0; unwritten inactive bytes are not claimed zero"
+  },
+  "known_tag_table": {
+    "memory_address": 5309252,
+    "bytes": 200,
+    "sha256": "911318851316a510cae1e6ec2dd5f4f1d48767251ea9ab1effa8e1b727afde59",
+    "source_spans": [
+      {
+        "segment_index": 3515,
+        "memory_start": 5309252,
+        "file_start": 81305938,
+        "bytes": 200
+      }
+    ],
+    "entries": [
+      {
+        "entry_memory_address": 5309252,
+        "text_memory_address": 5309184,
+        "bytes": 4,
+        "tag": "pick"
+      },
+      {
+        "entry_memory_address": 5309260,
+        "text_memory_address": 5308692,
+        "bytes": 4,
+        "tag": "hero"
+      },
+      {
+        "entry_memory_address": 5309268,
+        "text_memory_address": 5308972,
+        "bytes": 4,
+        "tag": "open"
+      },
+      {
+        "entry_memory_address": 5309276,
+        "text_memory_address": 5308976,
+        "bytes": 6,
+        "tag": "unlock"
+      },
+      {
+        "entry_memory_address": 5309284,
+        "text_memory_address": 5309188,
+        "bytes": 5,
+        "tag": "items"
+      },
+      {
+        "entry_memory_address": 5309292,
+        "text_memory_address": 5308896,
+        "bytes": 5,
+        "tag": "equip"
+      },
+      {
+        "entry_memory_address": 5309300,
+        "text_memory_address": 5308901,
+        "bytes": 4,
+        "tag": "look"
+      },
+      {
+        "entry_memory_address": 5309308,
+        "text_memory_address": 5308264,
+        "bytes": 6,
+        "tag": "talent"
+      },
+      {
+        "entry_memory_address": 5309316,
+        "text_memory_address": 5308892,
+        "bytes": 4,
+        "tag": "spec"
+      },
+      {
+        "entry_memory_address": 5309324,
+        "text_memory_address": 5309193,
+        "bytes": 4,
+        "tag": "seen"
+      },
+      {
+        "entry_memory_address": 5309332,
+        "text_memory_address": 5309197,
+        "bytes": 3,
+        "tag": "ach"
+      },
+      {
+        "entry_memory_address": 5309340,
+        "text_memory_address": 5309200,
+        "bytes": 5,
+        "tag": "achat"
+      },
+      {
+        "entry_memory_address": 5309348,
+        "text_memory_address": 5309205,
+        "bytes": 4,
+        "tag": "stat"
+      },
+      {
+        "entry_memory_address": 5309356,
+        "text_memory_address": 5308880,
+        "bytes": 4,
+        "tag": "beat"
+      },
+      {
+        "entry_memory_address": 5309364,
+        "text_memory_address": 5309209,
+        "bytes": 8,
+        "tag": "coopbeat"
+      },
+      {
+        "entry_memory_address": 5309372,
+        "text_memory_address": 5309217,
+        "bytes": 4,
+        "tag": "perk"
+      },
+      {
+        "entry_memory_address": 5309380,
+        "text_memory_address": 5309221,
+        "bytes": 6,
+        "tag": "tabard"
+      },
+      {
+        "entry_memory_address": 5309388,
+        "text_memory_address": 5309227,
+        "bytes": 5,
+        "tag": "races"
+      },
+      {
+        "entry_memory_address": 5309396,
+        "text_memory_address": 5309232,
+        "bytes": 4,
+        "tag": "pets"
+      },
+      {
+        "entry_memory_address": 5309404,
+        "text_memory_address": 5309236,
+        "bytes": 6,
+        "tag": "resets"
+      },
+      {
+        "entry_memory_address": 5309412,
+        "text_memory_address": 5308380,
+        "bytes": 5,
+        "tag": "marks"
+      },
+      {
+        "entry_memory_address": 5309420,
+        "text_memory_address": 5309242,
+        "bytes": 5,
+        "tag": "stars"
+      },
+      {
+        "entry_memory_address": 5309428,
+        "text_memory_address": 5309247,
+        "bytes": 4,
+        "tag": "pity"
+      },
+      {
+        "entry_memory_address": 5309436,
+        "text_memory_address": 5308875,
+        "bytes": 5,
+        "tag": "hbeat"
+      },
+      {
+        "entry_memory_address": 5309444,
+        "text_memory_address": 5308871,
+        "bytes": 4,
+        "tag": "glow"
+      }
+    ]
+  },
+  "envelope": {
+    "prefix": "RSE1:",
+    "binary_order": [
+      "nonce_16",
+      "ciphertext_N",
+      "tag_20"
+    ],
+    "encoding": "standard padded base64",
+    "key_static_span": {
+      "memory_address": 1744646,
+      "bytes": 42,
+      "sha256": "fd3428ef1325ac0f65fccbb964105b7c1e8c7f9441088059b9de9c99f6e6dc71",
+      "source_spans": [
+        {
+          "segment_index": 3452,
+          "memory_start": 1744646,
+          "file_start": 77742070,
+          "bytes": 42
+        }
+      ]
+    },
+    "keystream": "HMAC-SHA1(key, b\"ks\" + nonce16 + block_u64_little_endian), XOR per20 bytes",
+    "tag": "HMAC-SHA1(key, b\"tag\" + nonce16 + ciphertext)",
+    "verification_order": "Unicode trim/prefix/base64/min36/tag equality/XOR/UTF8 validation",
+    "synthetic_model_subset": "strict ASCII prefix and base64; outer Unicode trim and all base64 tolerance not reproduced",
+    "nonce_source": "4427 takes16 bytes from95651 RNG state; RNG algorithm not reviewed here"
+  },
+  "independent_synthetic_self_checks": [
+    {
+      "plaintext_bytes": 0,
+      "plaintext_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sealed_bytes": 53,
+      "sealed_sha256": "1b2b29b2ac510bf705fa34f16d07fad87147ff998b1a31683294ed058db52c15",
+      "model_roundtrip": true,
+      "damaged_tag_rejected": true
+    },
+    {
+      "plaintext_bytes": 16,
+      "plaintext_sha256": "ddcb31cbe8539f56af64366a9e00dca38c906b0943d9819c18b259084190bd1b",
+      "sealed_bytes": 77,
+      "sealed_sha256": "81aa226490e015d59e8f4d1d5a0e53d904339831ca0e7e285b559f3390543d63",
+      "model_roundtrip": true,
+      "damaged_tag_rejected": true
+    },
+    {
+      "plaintext_bytes": 21,
+      "plaintext_sha256": "69302aa8e5d373843e3a5e0c2b8ea60a974d0a5860405a489539c95f2856ea5b",
+      "sealed_bytes": 81,
+      "sealed_sha256": "c71afa3ab8882ec46fea556cff62604715ac86ec337dec2751158131b401bcf2",
+      "model_roundtrip": true,
+      "damaged_tag_rejected": true
+    },
+    {
+      "plaintext_bytes": 276,
+      "plaintext_sha256": "4f0d28af3e1899b473da60167212e95063d8fc089d75081043c1a30d28be593e",
+      "sealed_bytes": 421,
+      "sealed_sha256": "3b7fdcca171a0e5f6564dcbb9de6bbc9db78830d86e983db978ba0580a157f70",
+      "model_roundtrip": true,
+      "damaged_tag_rejected": true
+    }
+  ],
+  "limitations": [
+    "No original-target execution or differential save fixtures; envelope model has synthetic self-checks only.",
+    "368-byte aggregate and record families are recovered, but not every parser clamp/error/duplicate rule.",
+    "Character/pick/hero byte meanings and all spec/talent subgrammar variants need more consumers.",
+    "Default empty vector pointers are allocator sentinels, not playable initial unlock rules.",
+    "Storage failure is swallowed by browser wrappers; static calls do not prove durable writes on any device.",
+    "Backup rotation, import confirmation and full migration paths are retained but not fully specified."
+  ],
+  "report": "reports/2026-11-01-save-schema.md",
+  "reproduction_command": "python3 reverse-engineering/scripts/trace_save_schema.py --index reverse-engineering/evidence/wasm-index-20261031T213003.825753Z/index.sqlite",
+  "rea_evidence": {
+    "id": "ev_35611e6267c10e5a1e54f49b4bbd4eb95d3f52408471a41a2a80a728a559a583",
+    "provider": "azeroth-ports-local-wasm-focus",
+    "local_run": "evidence/wasm-focused-20261031T231502.827792Z",
+    "selected_complete_functions": 33,
+    "scope": "Explicit local streamed selected-function identity Evidence, not stock REA full-core semantic recovery."
+  },
+  "independent_static_review": {
+    "local_file": "evidence/save-schema-20261031T230727.871372Z/independent-review-2.json",
+    "sha256": "85300e8ae26b86e1bd8fc17a2e8cc6ff52ea4c68bc8da1f572208ecc13010fc0",
+    "target_executed": false,
+    "envelope_model_executed": false,
+    "user_saves_read": false,
+    "boundary": "Extractor itself rechecks original WASM and three JS at end; independent review also checked WAT/index identities before and after."
+  },
+  "report_source_sha256": {
+    "scripts/trace_save_schema.py": "5dcb4211cbf8479600ae7503db590975490f86869da6a56ca01827db0e81af84",
+    "reports/2026-11-01-save-schema.md": "316a7cc3df3626ad6c4a0b019bb1c7da47686836f701dd5855dd1c1dd08ba0f7"
+  }
+}

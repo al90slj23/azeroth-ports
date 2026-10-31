@@ -496,7 +496,6 @@
   "limitations": [
     "These are recovered shipped instructions and explanatory names, not original Rust source or symbols.",
     "The selected934 hit path is not a universal damage formula for every spell, DoT, companion or triggered effect.",
-    "The1065 record may be an upgrade preview; same-offset arithmetic alone does not prove that a UI mutation changes live combat.",
     "Dynamic gameplay effects, simultaneous triggers, floating-point replay and cooperative authority/synchronization remain separately validated tasks.",
     "No game binary patch, target execution, installed APK/App change or user-save mutation was performed."
   ],
@@ -881,5 +880,9 @@
     "evidence_id": "ev_9e5275a3e7ce53c9c65593e57fcfb2de48b5838e753e74d94a8cab9c0cedbece",
     "status": "Previously untraced decoded-message to registered ECS system delivery is statically connected for the observed object-values path.",
     "runtime_delivery_or_rendering_verified": false
+  },
+  "follow_up_owned_upgrade": {
+    "report": "reports/2026-11-01-abilities.json",
+    "resolved": "1065 directly mutates actual owned-ability Vec,22136 reads it for917→934→933; previous preview-only uncertainty resolved statically. Full gameplay runtime remains unverified."
   }
 }

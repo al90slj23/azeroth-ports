@@ -1,6 +1,34 @@
 # 当前核心还原图
 
-目标固定为 **Web 0.126.0 / 3e72472a**，不是旧 Windows 0.102.3。原始核心身份见 [targets.json](targets.json)。本页是当前静态研究的入口；完整指令、字节范围和哈希保存在本机证据中。
+目标固定为 **Web 0.126.0 / 3e72472a**。原始核心身份见 [targets.json](targets.json)。本页汇总静态链路和局部独立数值验证；完整指令、字节范围和哈希保存在本机证据中。全模块覆盖、未完成项和独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
+
+## 一局游戏的核心主干
+
+```mermaid
+flowchart LR
+    Clock[880：计时与阶段] --> Spawn[948/5684/2768：普通怪与Boss生成]
+    Clock --> Cast[917：冷却与自动施法]
+    Owned[实际拥有技能向量] --> Read[22136：按定义ID读取]
+    Read --> Cast
+    Cast --> Hit[934/933：命中、HP与死亡]
+    Spawn --> Hit
+    Hit --> Pickup[1411/2852：经验拾取]
+    Pickup --> XP[3231：经验阈值、等级与待选卡]
+    XP --> Cards[2098：选卡入口]
+    Cards --> ApplyCard[1065：应用所选卡]
+    ApplyCard --> Owned
+```
+
+箭头表示已定位的静态消费者主干，包含相应阶段、模式和状态guard；不是所有系统在每帧无条件执行。尤其多人全局/个人阶段、暂停/选卡及结束处理不能按简化图替代原顺序。
+
+| 部分 | 当前结果 | 依据/边界 |
+|---|---|---|
+| 主循环 | 时差夹到0..0.1再转f32、阶段0..5、暂停门槛、多人状态交换及单人运行尾部调用顺序 | [主循环报告](reports/2026-11-01-game-loop.md)；尚无独立调度器或完整命令覆盖。 |
+| 职业与技能 | 9职业、113定义，真实选卡写入→拥有技能读取→一条圆形施法 | [能力报告](reports/2026-11-01-abilities.md)；完整效果/触发尚缺。 |
+| 世界与成长 | 12图、148普通/精英定义、60Boss定义，刷怪预算/权重、生成HP/攻击及经验升级 | [世界报告](reports/2026-11-01-world-progression.md)；完整AI/全部波次及RNG等尚缺。 |
+| 独立数值 | 升级11560、成长24636、半径helper/组合29041份对照均0差异 | [升级](reports/2026-11-01-executable-spec.md)、[成长](reports/2026-11-01-world-progression.md)、[半径](reports/2026-11-01-radius-spec.md)；局部隔离函数验证，未执行原934外层或完整游戏。 |
+| 账号存档 | 368B聚合、24正常tag及unlock兼容、一条地图解锁保存/加载链、RSE1结构 | [存档报告](reports/2026-11-01-save-schema.md)；仅静态及合成模型自检，尚无原件差分。 |
+| 更易阅读的指令 | 1065已生成命名callee的合成模块C | [C阅读辅助](reports/2026-11-01-readable-ir.md)；不含callee实现/原数据初始化，不是源码恢复或独立实现。 |
 
 ## 已接通的伤害与同步路径
 
@@ -59,6 +87,10 @@ python3 reverse-engineering/scripts/trace_client_values.py --index /path/to/inde
 python3 reverse-engineering/scripts/trace_ecs_forward.py --index /path/to/index.sqlite
 python3 reverse-engineering/scripts/trace_ecs_backward.py --index /path/to/index.sqlite
 python3 reverse-engineering/scripts/ecs_event_map.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_game_loop.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_abilities.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_world_progression.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_save_schema.py --index /path/to/index.sqlite
 
 # 用独立手写字节样本核对本地协议转写，不连接或重放到游戏服务。
 python3 reverse-engineering/scripts/check_coop_wire.py
@@ -67,7 +99,7 @@ python3 reverse-engineering/scripts/check_update_object_wire.py
 
 `wasm_focus.py` 可显式指定 `--functions` 和 `--call-targets`，生成完整函数范围和真实REA库校验的本地Evidence。原版REA的8MiB输入限制保持不变；这里的流式扩展有独立提供方名称。`wasm_index.py` 同时记录 `call`、`return_call` 和WAT末行带右括号的指令，避免遗漏薄封装的尾部调用；间接调用需用实际vtable与元素表另外对应。
 
-本轮代码仅用于研究，没有更改游戏核心、安装包或用户存档。模型、贴图与特效替换仍在另一条未完成的研究线上。
+以上代码仅用于研究，没有更改游戏核心、安装包或用户存档。独立规格位于[reconstruction/](reconstruction/README.md)，生产逻辑不读取或调用原核心；测试器执行隔离原件函数的范围在对应报告单列。模型、贴图与特效管线仍未完成。
 
 离线转写已通过27个合作协议样本和10个对象更新样本；509个截断、尾随或未覆盖输入被拒绝。样本是按原始指令独立手写的字节，不是线上抓包，也不是原游戏运行验收。
 

@@ -1,0 +1,1060 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "method": "Identity-bound original-byte/full-WAT extraction plus reviewed phase/control-flow interpretation. No game execution.",
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "original_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "complete_functions": [
+    {
+      "function_index": 880,
+      "body_start": 1150438,
+      "body_end": 1280218,
+      "body_bytes": 129780,
+      "body_sha256": "7fdf92b007495b879f624fd4959b5dd072093e93f13b8f96b6d9b9ba6826d46a",
+      "wat_start": 69419863,
+      "wat_end": 73118403,
+      "wat_line": 122371,
+      "wat_bytes": 3698540,
+      "wat_sha256": "2256079aed6438ec79af459530217f193694ee68c5a59c5d877ac92017b556da"
+    },
+    {
+      "function_index": 1084,
+      "body_start": 5833472,
+      "body_end": 5845102,
+      "body_bytes": 11630,
+      "body_sha256": "62c03e5f0ff32b65fbd9565ef84d5b7508192a3ee61fb2e17a0dda57c9c1d0ab",
+      "wat_start": 222357430,
+      "wat_end": 222529042,
+      "wat_line": 2216832,
+      "wat_bytes": 171612,
+      "wat_sha256": "468cc2fd7105527fea55abb2c66b077cecb6962c145ec1de70858e940123112e"
+    },
+    {
+      "function_index": 1366,
+      "body_start": 8962230,
+      "body_end": 8987889,
+      "body_bytes": 25659,
+      "body_sha256": "365c245aac905ed173bfd8d383d85419fb8d1033fc673c0ed9a3b0f9c1fa344b",
+      "wat_start": 294617829,
+      "wat_end": 295543326,
+      "wat_line": 3621786,
+      "wat_bytes": 925497,
+      "wat_sha256": "4d69b487cb042ea527e8ac0c0311035e51a48c913b3f37de51932cbed787f837"
+    },
+    {
+      "function_index": 1678,
+      "body_start": 11293173,
+      "body_end": 11298689,
+      "body_bytes": 5516,
+      "body_sha256": "d15937a68a56ddea59c8c78383cf2f613817517296f10d65e9f41c6149c51b1d",
+      "wat_start": 351881345,
+      "wat_end": 351920555,
+      "wat_line": 4677250,
+      "wat_bytes": 39210,
+      "wat_sha256": "db54d35f4517686fc84aeb1f8a36c1b9faf50f2da11293e3f381e2fc68771c18"
+    },
+    {
+      "function_index": 2098,
+      "body_start": 13516532,
+      "body_end": 13521025,
+      "body_bytes": 4493,
+      "body_sha256": "1e8e9f07e3601a625f5aa1573640d15d064666c5141bd280914fdf543ad790e0",
+      "wat_start": 395202385,
+      "wat_end": 395269988,
+      "wat_line": 5698190,
+      "wat_bytes": 67603,
+      "wat_sha256": "5239abe5c4e381753b34887281ad99c8fae151e28206fbb782930074ba7bbdbf"
+    },
+    {
+      "function_index": 4391,
+      "body_start": 21386611,
+      "body_end": 21388643,
+      "body_bytes": 2032,
+      "body_sha256": "d2e4e8dbc0b8c9d34ca607ffb6dfaec9a1f6f0c8f329ebbf84e522d1468e5817",
+      "wat_start": 533975391,
+      "wat_end": 533997055,
+      "wat_line": 9304762,
+      "wat_bytes": 21664,
+      "wat_sha256": "597f8cfe03a21e01522e1d01cf41620c2d81632f56e256c67b721ade4cd4a21d"
+    },
+    {
+      "function_index": 4595,
+      "body_start": 21904944,
+      "body_end": 21906932,
+      "body_bytes": 1988,
+      "body_sha256": "4c741601941360016f066516a83925796fc044eaad8471913cb7fee3937fa23c",
+      "wat_start": 541790036,
+      "wat_end": 541812996,
+      "wat_line": 9545037,
+      "wat_bytes": 22960,
+      "wat_sha256": "f3253cb4dd48a7353ac2f6f973ee7463b9b10d0ff59675c3a9f2cb96aedf9240"
+    },
+    {
+      "function_index": 7654,
+      "body_start": 28625308,
+      "body_end": 28626817,
+      "body_bytes": 1509,
+      "body_sha256": "f1e6582e7ed9efb88ccb8f91f173e9b0e52cb75633d687b93cee55b9b3fa874c",
+      "wat_start": 648057435,
+      "wat_end": 648073920,
+      "wat_line": 12560514,
+      "wat_bytes": 16485,
+      "wat_sha256": "46726bdbe36070bee2d6ca6376f1eda52aaf755a889567c64ed3891a6d38ad42"
+    },
+    {
+      "function_index": 39211,
+      "body_start": 59748543,
+      "body_end": 59748894,
+      "body_bytes": 351,
+      "body_sha256": "f30596a80b16ad49e84f33aa1d43a0e8eff9c2f4d75d1c7fe5a47ac080a16289",
+      "wat_start": 1086379896,
+      "wat_end": 1086382867,
+      "wat_line": 26696136,
+      "wat_bytes": 2971,
+      "wat_sha256": "bafff2633af6416aaf5d06b5276f70a5bfd6f7e1a86b518e305332dea08130bc"
+    },
+    {
+      "function_index": 48790,
+      "body_start": 63930885,
+      "body_end": 63931142,
+      "body_bytes": 257,
+      "body_sha256": "3dfa83e2c5e898e543a9730d9317d99ba2d13955b536ca0fe69995bab532627b",
+      "wat_start": 1133210418,
+      "wat_end": 1133212607,
+      "wat_line": 28527222,
+      "wat_bytes": 2189,
+      "wat_sha256": "eb1fadb6ff578eeb525da64dce847ffe8fa829e0d90532c00ad01f303df0d2c8"
+    },
+    {
+      "function_index": 58247,
+      "body_start": 67221372,
+      "body_end": 67221518,
+      "body_bytes": 146,
+      "body_sha256": "6b4d48f3b702f8d7d6548aae5415e2cd1c7b4efebe7bf7e4e35e819db9a563b0",
+      "wat_start": 1180009931,
+      "wat_end": 1180011092,
+      "wat_line": 29981055,
+      "wat_bytes": 1161,
+      "wat_sha256": "5c2c9f7484eef7bf44c8da6d15624e1479d13a79783082315fde6c9ed7087ba2"
+    },
+    {
+      "function_index": 83471,
+      "body_start": 72587005,
+      "body_end": 72587081,
+      "body_bytes": 76,
+      "body_sha256": "69623937a726180abb5a16c65834bb884122ddaaca5c48631433ee1e9703ab84",
+      "wat_start": 1245895080,
+      "wat_end": 1245895685,
+      "wat_line": 32291497,
+      "wat_bytes": 605,
+      "wat_sha256": "91d631f6bd026b067b76a3ef32a5b83e67baf06746c694c6a08a90f1beecc2ef"
+    },
+    {
+      "function_index": 173617,
+      "body_start": 76328528,
+      "body_end": 76328540,
+      "body_bytes": 12,
+      "body_sha256": "e1c61b41ea6f192e2b72c3ec78ef874bb20ecaece985324421bb6a1f0057f85b",
+      "wat_start": 1280401903,
+      "wat_end": 1280402016,
+      "wat_line": 33750705,
+      "wat_bytes": 113,
+      "wat_sha256": "ef99c9b4c1e6d0eead5db0058632afaf7a0a5fa510eabe120ea9077235fbf0ed"
+    },
+    {
+      "function_index": 25345,
+      "body_start": 49379326,
+      "body_end": 49379854,
+      "body_bytes": 528,
+      "body_sha256": "b08c3003af1a14ecce2784dcecd3300744227d0f87ba295167b05cae5ff39668",
+      "wat_start": 943202105,
+      "wat_end": 943207373,
+      "wat_line": 22055737,
+      "wat_bytes": 5268,
+      "wat_sha256": "acef7f0ea5375cae2bb5944446d43a22804cd23578beefe00e5b1f7d529a7047"
+    },
+    {
+      "function_index": 35322,
+      "body_start": 57239417,
+      "body_end": 57239777,
+      "body_bytes": 360,
+      "body_sha256": "9eb456c46378aeea180da80c486ade4f57cebbe2e6265c0041f166e6a94cc936",
+      "wat_start": 1047677761,
+      "wat_end": 1047681265,
+      "wat_line": 25584614,
+      "wat_bytes": 3504,
+      "wat_sha256": "dec82e63e01543aeb3ac515bd7c36133b737858862b86be78b669ca71098755f"
+    },
+    {
+      "function_index": 26076,
+      "body_start": 50127048,
+      "body_end": 50130022,
+      "body_bytes": 2974,
+      "body_sha256": "e21ac07145354bf9bd3eced8426201fccf48190ad097718b0630f1f709357be8",
+      "wat_start": 956937858,
+      "wat_end": 956972593,
+      "wat_line": 22393029,
+      "wat_bytes": 34735,
+      "wat_sha256": "b951200fbf9f1b348e910ada8fd4703373996ac989aa81845e1662d641128ca2"
+    },
+    {
+      "function_index": 45603,
+      "body_start": 62610081,
+      "body_end": 62610345,
+      "body_bytes": 264,
+      "body_sha256": "369d261bb1af581e47c486f7a21b293474f128a5cf7ae1abdea18fbe711ba824",
+      "wat_start": 1116656693,
+      "wat_end": 1116659044,
+      "wat_line": 27948383,
+      "wat_bytes": 2351,
+      "wat_sha256": "ca001a0a33dff6de4f714c1ba0e9bb3990bd955c8c63393e5eee71fd6309d446"
+    },
+    {
+      "function_index": 27317,
+      "body_start": 51010052,
+      "body_end": 51010524,
+      "body_bytes": 472,
+      "body_sha256": "d8e18ef939776c194f829710f0a904906c9b4b00d6cd8d0a7a12b8a78144eecb",
+      "wat_start": 967034771,
+      "wat_end": 967039066,
+      "wat_line": 22794582,
+      "wat_bytes": 4295,
+      "wat_sha256": "0e4109ddd1891f361f5b07fa8431660196a545427c16aa82750d3620e5fdaa76"
+    },
+    {
+      "function_index": 1065,
+      "body_start": 5574712,
+      "body_end": 5590947,
+      "body_bytes": 16235,
+      "body_sha256": "f37ff412a377544132ceefbcad008468a369b64b5f5b78a6749bb87cdbb3cf27",
+      "wat_start": 217215668,
+      "wat_end": 217536659,
+      "wat_line": 2102188,
+      "wat_bytes": 320991,
+      "wat_sha256": "1a5f390ba62fb41c411ca17faf922b98b62b4a544b9772b980511f9ab0d4ce7f"
+    }
+  ],
+  "instruction_guards": [
+    {
+      "function_index": 880,
+      "first_function_line": 8,
+      "label": "first-zero tick and ordered lower/upper delta clamp",
+      "instructions": [
+        "local.get 0",
+        "i64.load",
+        "i64.const 1",
+        "i64.eq",
+        "if  ;; label = @1",
+        "f64.const 0x1.999999999999ap-4 (;=0.1;)",
+        "f64.const 0x0p+0 (;=0;)",
+        "local.get 1",
+        "local.get 0",
+        "f64.load offset=8",
+        "f64.sub",
+        "local.tee 158",
+        "local.get 158",
+        "f64.const 0x0p+0 (;=0;)",
+        "f64.lt",
+        "select",
+        "local.tee 158",
+        "local.get 158",
+        "f64.const 0x1.999999999999ap-4 (;=0.1;)",
+        "f64.gt",
+        "select",
+        "f32.demote_f64",
+        "local.set 153",
+        "end",
+        "local.get 0",
+        "local.get 1",
+        "f64.store offset=8",
+        "local.get 0",
+        "i64.const 1",
+        "i64.store"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 31895,
+      "label": "single/multi state branch and pending start",
+      "instructions": [
+        "local.get 6",
+        "i32.load8_u offset=2294",
+        "i32.eqz",
+        "if  ;; label = @15",
+        "local.get 6",
+        "i32.load8_u offset=2299",
+        "local.tee 2",
+        "br_if 2 (;@13;)",
+        "local.get 6",
+        "i32.load8_u offset=2287",
+        "i32.const 1",
+        "i32.and",
+        "br_if 1 (;@14;)",
+        "br 2 (;@13;)"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 44374,
+      "label": "consume pending start and initialize run",
+      "instructions": [
+        "local.get 6",
+        "i32.const 0",
+        "i32.store8 offset=2287",
+        "local.get 6",
+        "call 1084",
+        "local.get 6",
+        "i32.load8_u offset=2299",
+        "local.set 2"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 44383,
+      "label": "single-state clock advances only for phase1",
+      "instructions": [
+        "block  ;; label = @13",
+        "local.get 2",
+        "i32.const 255",
+        "i32.and",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 0 (;@13;)",
+        "local.get 6",
+        "local.get 153",
+        "local.get 6",
+        "f32.load offset=2064",
+        "f32.add",
+        "local.tee 147",
+        "f32.store offset=2064"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 31945,
+      "label": "multi-state global-phase clock update",
+      "instructions": [
+        "block  ;; label = @15",
+        "local.get 2",
+        "i32.const 255",
+        "i32.and",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 0 (;@15;)",
+        "local.get 6",
+        "local.get 153",
+        "local.get 6",
+        "f32.load offset=2064",
+        "f32.add",
+        "f32.store offset=2064"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 31920,
+      "label": "multi-state phase source is2300",
+      "instructions": [
+        "block  ;; label = @15",
+        "local.get 6",
+        "i32.load8_u offset=2300",
+        "local.tee 2",
+        "br_if 0 (;@15;)"
+      ]
+    },
+    {
+      "function_index": 1084,
+      "first_function_line": 8,
+      "label": "run initialization phase1",
+      "instructions": [
+        "local.get 0",
+        "i32.const 1",
+        "i32.store8 offset=2299"
+      ]
+    },
+    {
+      "function_index": 1084,
+      "first_function_line": 4809,
+      "label": "multi-state start global phase1",
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=2294",
+        "i32.eqz",
+        "br_if 0 (;@3;)",
+        "local.get 0",
+        "i32.const 1",
+        "i32.store8 offset=2300"
+      ]
+    },
+    {
+      "function_index": 1366,
+      "first_function_line": 11396,
+      "label": "pause input boolean selects resume versus pause",
+      "instructions": [
+        "local.get 1",
+        "i32.load8_u offset=4",
+        "i32.eqz",
+        "if  ;; label = @23"
+      ]
+    },
+    {
+      "function_index": 1366,
+      "first_function_line": 46,
+      "label": "raw command tag7 normalizes to switch selector4",
+      "instructions": [
+        "i32.const 11",
+        "local.get 1",
+        "i32.load",
+        "local.tee 2",
+        "i32.const 2",
+        "i32.sub",
+        "local.get 2",
+        "i32.const 1",
+        "i32.le_u",
+        "select",
+        "local.tee 19",
+        "i32.const 1",
+        "i32.sub"
+      ]
+    },
+    {
+      "function_index": 1366,
+      "first_function_line": 11407,
+      "label": "paused3 to running1",
+      "instructions": [
+        "local.get 2",
+        "i32.load8_u offset=2299",
+        "i32.const 3",
+        "i32.ne",
+        "br_if 0 (;@25;)",
+        "local.get 2",
+        "i32.load8_u offset=2294",
+        "i32.const 1",
+        "i32.and",
+        "br_if 0 (;@25;)",
+        "local.get 2",
+        "i32.const 1",
+        "i32.store8 offset=2299",
+        "local.get 2",
+        "call 25345"
+      ]
+    },
+    {
+      "function_index": 1366,
+      "first_function_line": 11599,
+      "label": "running1 to paused3",
+      "instructions": [
+        "local.get 2",
+        "i32.load8_u offset=2299",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 0 (;@23;)",
+        "local.get 2",
+        "i32.load8_u offset=2294",
+        "i32.const 1",
+        "i32.and",
+        "br_if 0 (;@23;)",
+        "local.get 2",
+        "i32.const 3",
+        "i32.store8 offset=2299",
+        "local.get 2",
+        "call 35322"
+      ]
+    },
+    {
+      "function_index": 2098,
+      "first_function_line": 2037,
+      "label": "offer-choice entry and single-state movement stop",
+      "instructions": [
+        "local.get 0",
+        "local.get 1",
+        "i32.store8 offset=2297",
+        "local.get 0",
+        "local.get 0",
+        "i32.load offset=2112",
+        "i32.const 1",
+        "i32.add",
+        "i32.store offset=2112",
+        "local.get 2",
+        "i32.eqz",
+        "br_if 1 (;@1;)",
+        "local.get 0",
+        "i32.const 2",
+        "i32.store8 offset=2299",
+        "local.get 0",
+        "i32.load8_u offset=2294",
+        "br_if 1 (;@1;)",
+        "local.get 0",
+        "call 35322"
+      ]
+    },
+    {
+      "function_index": 4595,
+      "first_function_line": 430,
+      "label": "choice completion resumes phase1",
+      "instructions": [
+        "local.get 0",
+        "i32.const 1",
+        "i32.store8 offset=2299",
+        "local.get 0",
+        "i32.load8_u offset=2294",
+        "i32.eqz",
+        "if  ;; label = @6",
+        "local.get 0",
+        "call 25345"
+      ]
+    },
+    {
+      "function_index": 1678,
+      "first_function_line": 32,
+      "label": "per-player phase swap",
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=2299",
+        "local.set 2",
+        "local.get 0",
+        "local.get 1",
+        "i32.load8_u offset=1800",
+        "i32.store8 offset=2299",
+        "local.get 1",
+        "local.get 2",
+        "i32.store8 offset=1800"
+      ]
+    },
+    {
+      "function_index": 7654,
+      "first_function_line": 8,
+      "label": "defeat-state entry",
+      "instructions": [
+        "local.get 0",
+        "i32.const 4",
+        "i32.store8 offset=2299"
+      ]
+    },
+    {
+      "function_index": 48790,
+      "first_function_line": 9,
+      "label": "running to victory5 guarded by400 and endless flag",
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=400",
+        "i32.eqz",
+        "br_if 0 (;@1;)",
+        "local.get 0",
+        "i32.load8_u offset=2299",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 0 (;@1;)",
+        "local.get 0",
+        "i32.load8_u offset=2280",
+        "i32.const 1",
+        "i32.and",
+        "br_if 0 (;@1;)",
+        "local.get 0",
+        "i32.const 5",
+        "i32.store8 offset=2299"
+      ]
+    },
+    {
+      "function_index": 39211,
+      "first_function_line": 9,
+      "label": "victory to endless continuation and next300 deadline",
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=2299",
+        "i32.const 5",
+        "i32.ne",
+        "br_if 0 (;@1;)",
+        "local.get 0",
+        "i32.const 1",
+        "i32.store8 offset=2299",
+        "local.get 0",
+        "i32.load8_u offset=2280",
+        "local.get 0",
+        "i32.const 1",
+        "i32.store8 offset=2280",
+        "local.get 0",
+        "local.get 0",
+        "f32.load offset=2064",
+        "f32.const 0x1.2cp+8 (;=300;)",
+        "f32.add",
+        "f32.store offset=2172"
+      ]
+    },
+    {
+      "function_index": 4391,
+      "first_function_line": 8,
+      "label": "revived-handler phase1 and flags",
+      "instructions": [
+        "local.get 0",
+        "i32.const 1",
+        "i32.store8 offset=2299",
+        "local.get 0",
+        "i32.const 0",
+        "i32.store offset=2264",
+        "local.get 0",
+        "i32.const 0",
+        "i32.store offset=408"
+      ]
+    },
+    {
+      "function_index": 58247,
+      "first_function_line": 23,
+      "label": "clock adapter division1000",
+      "instructions": [
+        "local.get 1",
+        "i32.const 16",
+        "i32.add",
+        "local.get 3",
+        "f64.const 0x1.f4p+9 (;=1000;)",
+        "f64.div",
+        "call 880"
+      ]
+    },
+    {
+      "function_index": 83471,
+      "first_function_line": 23,
+      "label": "second clock adapter division1000",
+      "instructions": [
+        "local.get 0",
+        "i32.const 16",
+        "i32.add",
+        "local.get 1",
+        "f64.const 0x1.f4p+9 (;=1000;)",
+        "f64.div",
+        "call 880"
+      ]
+    },
+    {
+      "function_index": 173617,
+      "first_function_line": 2,
+      "label": "externref now import",
+      "instructions": [
+        "local.get 0",
+        "i32.load",
+        "table.get 1",
+        "call 681)"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 39868,
+      "label": "phase1-or2 prevents global terminal aggregation",
+      "instructions": [
+        "local.get 2",
+        "if  ;; label = @19",
+        "local.get 2",
+        "i32.const 1",
+        "i32.sub",
+        "local.set 2",
+        "local.get 5",
+        "i32.load8_u",
+        "local.get 5",
+        "i32.const 1",
+        "i32.add",
+        "local.set 5",
+        "i32.const 1",
+        "i32.sub",
+        "i32.const 255",
+        "i32.and",
+        "i32.const 2",
+        "i32.ge_u",
+        "br_if 1 (;@18;)",
+        "br 2 (;@17;)"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 39901,
+      "label": "any victory phase selects global victory",
+      "instructions": [
+        "local.get 7",
+        "i32.load8_u",
+        "local.get 7",
+        "i32.const 1",
+        "i32.add",
+        "local.set 7",
+        "i32.const 5",
+        "i32.ne",
+        "br_if 0 (;@21;)",
+        "end",
+        "local.get 6",
+        "i32.const 5",
+        "i32.store8 offset=2300"
+      ]
+    },
+    {
+      "function_index": 880,
+      "first_function_line": 39939,
+      "label": "no active players and no victory selects global defeat",
+      "instructions": [
+        "local.get 6",
+        "i32.const 4",
+        "i32.store8 offset=2300"
+      ]
+    }
+  ],
+  "mode_phase_branches": {
+    "31902": {
+      "branch_function_line": 31902,
+      "instruction": "br_if 2 (;@13;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 2,
+      "target": {
+        "start_function_line": 31893,
+        "header": "block  ;; label = @13",
+        "end_function_line": 44382
+      }
+    },
+    "31907": {
+      "branch_function_line": 31907,
+      "instruction": "br_if 1 (;@14;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 1,
+      "target": {
+        "start_function_line": 31894,
+        "header": "block  ;; label = @14",
+        "end_function_line": 44373
+      }
+    },
+    "31908": {
+      "branch_function_line": 31908,
+      "instruction": "br 2 (;@13;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 2,
+      "target": {
+        "start_function_line": 31893,
+        "header": "block  ;; label = @13",
+        "end_function_line": 44382
+      }
+    },
+    "31951": {
+      "branch_function_line": 31951,
+      "instruction": "br_if 0 (;@15;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 0,
+      "target": {
+        "start_function_line": 31945,
+        "header": "block  ;; label = @15",
+        "end_function_line": 40324
+      }
+    },
+    "44372": {
+      "branch_function_line": 44372,
+      "instruction": "br 2 (;@12;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 2,
+      "target": {
+        "start_function_line": 31892,
+        "header": "block  ;; label = @12",
+        "end_function_line": 46581
+      }
+    },
+    "44389": {
+      "branch_function_line": 44389,
+      "instruction": "br_if 0 (;@13;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 0,
+      "target": {
+        "start_function_line": 44383,
+        "header": "block  ;; label = @13",
+        "end_function_line": 46451
+      }
+    }
+  },
+  "party_terminal_branches": {
+    "39886": {
+      "branch_function_line": 39886,
+      "instruction": "br_if 1 (;@18;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 1,
+      "target": {
+        "start_function_line": 39867,
+        "header": "loop  ;; label = @18",
+        "end_function_line": 39889
+      }
+    },
+    "39887": {
+      "branch_function_line": 39887,
+      "instruction": "br 2 (;@17;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 2,
+      "target": {
+        "start_function_line": 39866,
+        "header": "block  ;; label = @17",
+        "end_function_line": 40311
+      }
+    },
+    "39896": {
+      "branch_function_line": 39896,
+      "instruction": "br_if 1 (;@20;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 1,
+      "target": {
+        "start_function_line": 39892,
+        "header": "block  ;; label = @20",
+        "end_function_line": 39938
+      }
+    },
+    "39909": {
+      "branch_function_line": 39909,
+      "instruction": "br_if 0 (;@21;)",
+      "selector": 0,
+      "table_slot": null,
+      "depth": 0,
+      "target": {
+        "start_function_line": 39893,
+        "header": "loop  ;; label = @21",
+        "end_function_line": 39910
+      }
+    }
+  },
+  "pause_command_branch": {
+    "branch_function_line": 59,
+    "instruction": "br_table 10 (;@28;) 11 (;@27;) 12 (;@26;) 0 (;@38;) 15 (;@23;) 16 (;@22;) 1 (;@37;) 17 (;@21;) 2 (;@36;) 3 (;@35;) 4 (;@34;) 19 (;@19;) 5 (;@33;) 6 (;@32;) 20 (;@18;) 7 (;@31;) 23 (;@15;) 8 (;@30;) 9 (;@29;) 35 (;@3;) 35 (;@3;) 35 (;@3;) 35 (;@3;) 35 (;@3;) 35 (;@3;) 24 (;@14;) 25 (;@13;) 26 (;@12;) 27 (;@11;) 18 (;@20;)",
+    "selector": 4,
+    "table_slot": 4,
+    "depth": 15,
+    "target": {
+      "start_function_line": 30,
+      "header": "block  ;; label = @23",
+      "end_function_line": 11386
+    }
+  },
+  "phase_literals": [
+    {
+      "memory_address": 1567007,
+      "file_offset": 77589536,
+      "bytes": 6,
+      "text": "paused",
+      "sha256": "a7a9dc5bcf71adb2edc202814060a5ab6fca515382e9f1133dcc47d52d9090a2"
+    },
+    {
+      "memory_address": 1570916,
+      "file_offset": 77593445,
+      "bytes": 8,
+      "text": "unpaused",
+      "sha256": "286e82c22ef5d6f49ef067cfc65030e8ba9dc9b8e309154f032074081a536c85"
+    },
+    {
+      "memory_address": 1566470,
+      "file_offset": 77588999,
+      "bytes": 7,
+      "text": "victory",
+      "sha256": "21665ca201d4070f6fcc99b84aa1e55ae49e7b47069a24ed524da86413381b23"
+    },
+    {
+      "memory_address": 1566464,
+      "file_offset": 77588993,
+      "bytes": 6,
+      "text": "defeat",
+      "sha256": "5fff5b4eec6c48b6a82dbaadf38a0735e57ba6a1d6ee5672af4accbf100727e8"
+    },
+    {
+      "memory_address": 1567940,
+      "file_offset": 77590469,
+      "bytes": 5,
+      "text": "start",
+      "sha256": "cced28c6dc3f99c2396a5eaad732bf6b28142335892b1cd0e6af6cdb53f5ccfa"
+    },
+    {
+      "memory_address": 1567964,
+      "file_offset": 77590493,
+      "bytes": 7,
+      "text": "revived",
+      "sha256": "eb1c7f738bbe6d0fd106bf4a2fe976009eaeadaa7b25ce2fc8026197934d0cb9"
+    },
+    {
+      "memory_address": 1569243,
+      "file_offset": 77591772,
+      "bytes": 7,
+      "text": "Endless",
+      "sha256": "adf7aba3a5acd9e631511f0e2559b934bb96233ca5829168d51cff845cc5c76c"
+    },
+    {
+      "memory_address": 1569250,
+      "file_offset": 77591779,
+      "bytes": 27,
+      "text": "The onslaught never ends...",
+      "sha256": "44ad72c4a5a89b577a1e2303f0a7922f158edada15fd9a4a25938226aecda48d"
+    }
+  ],
+  "clock": {
+    "tick_function": 880,
+    "wall_previous_flag_offset": 0,
+    "wall_previous_time_offset": 8,
+    "game_view_offset_in_tick_context": 16,
+    "game_clock_offset": 2064,
+    "initial_delta": 0,
+    "delta_formula": "f32(ordered_clamp(now_f64-previous_f64,0,0.1))",
+    "wall_previous_updated_even_when_paused": true,
+    "clock_adapter_functions": [
+      58247,
+      83471
+    ],
+    "clock_import": 681,
+    "clock_adapter_divisor": 1000,
+    "nan_caveat": "Comparisons are ordered; NaN delta is not sanitized to zero."
+  },
+  "observed_phase_values": {
+    "0": "not-started/pending-start path",
+    "1": "running",
+    "2": "choice open",
+    "3": "paused",
+    "4": "defeat/end",
+    "5": "victory"
+  },
+  "multi_state": {
+    "mode_byte_offset": 2294,
+    "single_mode_value": 0,
+    "global_phase_offset": 2300,
+    "current_player_phase_offset": 2299,
+    "player_record_stride": 1808,
+    "player_phase_offset": 1800,
+    "swap_function": 1678,
+    "global_end_rule": "If any player phase is1 or2, retain the global running state; otherwise global victory5 if any player phase5, else defeat4.",
+    "qualification": "Two phase layers are observed; not equated to external co-op role enum at2320."
+  },
+  "single_running_tail_call_order": [
+    {
+      "function_line": 46331,
+      "callee": 2896
+    },
+    {
+      "function_line": 46334,
+      "callee": 917
+    },
+    {
+      "function_line": 46337,
+      "callee": 976
+    },
+    {
+      "function_line": 46339,
+      "callee": 1819
+    },
+    {
+      "function_line": 46341,
+      "callee": 3849
+    },
+    {
+      "function_line": 46344,
+      "callee": 915
+    },
+    {
+      "function_line": 46346,
+      "callee": 37799
+    },
+    {
+      "function_line": 46348,
+      "callee": 1874
+    },
+    {
+      "function_line": 46351,
+      "callee": 921
+    },
+    {
+      "function_line": 46353,
+      "callee": 2852
+    },
+    {
+      "function_line": 46355,
+      "callee": 2563
+    },
+    {
+      "function_line": 46362,
+      "callee": 948
+    },
+    {
+      "function_line": 46364,
+      "callee": 2365
+    },
+    {
+      "function_line": 46367,
+      "callee": 48790
+    }
+  ],
+  "post_simulation_drains": {
+    "main_function": 880,
+    "first_function_line": 46586,
+    "observation": "Queued client/notification/network handling continues outside the single-state running block."
+  },
+  "target_executed": false,
+  "official_network_used": false,
+  "limitations": [
+    "Names are explanatory phase names, not recovered Rust enum identifiers.",
+    "Only selected main-loop paths are interpreted; all commands/systems and initial construction remain incomplete.",
+    "The callback frequency, browser clock object type and all scheduler timing are not established here.",
+    "A common numeric field offset does not identify the same Rust structure; bases are tracked separately.",
+    "Static pause/phase behavior does not establish physical-device timing, delivery or full multiplayer conformance."
+  ],
+  "local_extraction_run": "evidence/game-loop-20261031T224735.578795Z",
+  "local_extraction_manifest_sha256": "8e581f9d3af8f38214a09e6a3dd78849db867b73aa9b71924d43e5d5b7e576f3",
+  "rea_evidence": {
+    "id": "ev_e90420d4923e8956b73108ce4545977c21c8c0c03a17b8360465411065e86ca3",
+    "provider": {
+      "id": "azeroth-ports-local-wasm-focus",
+      "name": "Azeroth Ports local streamed WASM research extension",
+      "version": "1+rea6.8.0+wabt1.0.42"
+    },
+    "run": "evidence/wasm-focused-20261031T224507.473672Z",
+    "selected_complete_functions": 19,
+    "stock_REA_large_WASM_interface_completed": false
+  },
+  "reconstruction_contract": {
+    "context": "880 param0; initialized marker u64+0, previous time f64+8, game view G=context+16",
+    "inputs": [
+      "now_f64 after the observed callback adapter /1000",
+      "pending-start flag G2287",
+      "raw commandtag7 with boolean at+4",
+      "choice-open/choice-completion calls",
+      "per-player phase records in multi-state mode"
+    ],
+    "preserve": [
+      "f64 ordered delta clamp then f32 demotion",
+      "float32 game-clock accumulation order",
+      "first/invalid previous marker gives dt0",
+      "wall previous timestamp updates before phase simulation",
+      "phase2/3 skip single-state simulation but not every output/network processing path",
+      "global2300 versus per-player2299/record1800",
+      "pause mode-bit guard",
+      "conditional terminal aggregation and victory/endless transitions"
+    ],
+    "unrecovered": [
+      "complete start-flag producer and menu lifecycle",
+      "all initial defaults/save restoration",
+      "full tick callback frequency/browser clock object",
+      "all per-player timers and all command variants",
+      "full gameplay/system schedule semantics"
+    ]
+  },
+  "validation": {
+    "complete_functions": 19,
+    "instruction_guards_passed": 25,
+    "structured_branch_matches": 11,
+    "phase_literals": 8,
+    "independent_static_review": [
+      "880 first-zero and ordered delta clamp, including NaN",
+      "880 single-state phase1 gate around2064 accumulation",
+      "1366 rawtag7→selector4→pause branch; mode/phase/boolean gates"
+    ],
+    "scripts_sha256": {
+      "trace_game_loop.py": "b0baf068766709a69faa33dc2922a030ada59e8cb46e64eaf72708241b9fe296",
+      "trace_ecs_forward.py": "fd70b417c5fb2fd6cd5b259aa268f8ecea1cd68ad7e625d5d86745c56e9d9863",
+      "trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+      "wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    },
+    "target_executed": false,
+    "official_network_used": false,
+    "original_preserved": true
+  }
+}

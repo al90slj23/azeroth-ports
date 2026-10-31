@@ -1,0 +1,448 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "method": "WABT C translation of one synthetic micro-module; not original-module decompilation",
+  "scope": "static reading aid; no independent game implementation or recovered original Rust",
+  "evidence_directory": "reverse-engineering/evidence/readable-ir-20261031T231903.632258Z",
+  "original_module_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "original_module_bytes": 90116970,
+  "selected_function": {
+    "original_index": 1065,
+    "synthetic_index": 37,
+    "original_type_index": 0,
+    "original_body_range": [
+      5574712,
+      5590947
+    ],
+    "original_body_sha256": "f37ff412a377544132ceefbcad008468a369b64b5f5b78a6749bb87cdbb3cf27",
+    "original_wat_range": [
+      217215668,
+      217536659
+    ],
+    "original_wat_first_line": 2102188,
+    "original_wat_sha256": "1a5f390ba62fb41c411ca17faf922b98b62b4a544b9772b980511f9ab0d4ce7f",
+    "exact_wat_round_trip_verified": true
+  },
+  "direct_call_sites": 251,
+  "direct_callee_import_count": 37,
+  "direct_callee_remap": [
+    {
+      "original_index": 1036,
+      "synthetic_index": 0,
+      "wat_name": "$original_f1036",
+      "import_module": "original_function",
+      "import_name": "f1036",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 1573,
+      "synthetic_index": 1,
+      "wat_name": "$original_f1573",
+      "import_module": "original_function",
+      "import_name": "f1573",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 1965,
+      "synthetic_index": 2,
+      "wat_name": "$original_f1965",
+      "import_module": "original_function",
+      "import_name": "f1965",
+      "original_type_index": 15,
+      "signature": "(func (param i32 i32 f32))"
+    },
+    {
+      "original_index": 2573,
+      "synthetic_index": 3,
+      "wat_name": "$original_f2573",
+      "import_module": "original_function",
+      "import_name": "f2573",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 2944,
+      "synthetic_index": 4,
+      "wat_name": "$original_f2944",
+      "import_module": "original_function",
+      "import_name": "f2944",
+      "original_type_index": 15,
+      "signature": "(func (param i32 i32 f32))"
+    },
+    {
+      "original_index": 3736,
+      "synthetic_index": 5,
+      "wat_name": "$original_f3736",
+      "import_module": "original_function",
+      "import_name": "f3736",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 4595,
+      "synthetic_index": 6,
+      "wat_name": "$original_f4595",
+      "import_module": "original_function",
+      "import_name": "f4595",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 8551,
+      "synthetic_index": 7,
+      "wat_name": "$original_f8551",
+      "import_module": "original_function",
+      "import_name": "f8551",
+      "original_type_index": 8,
+      "signature": "(func (param i32 i32 i32 i32 i32))"
+    },
+    {
+      "original_index": 19836,
+      "synthetic_index": 8,
+      "wat_name": "$original_f19836",
+      "import_module": "original_function",
+      "import_name": "f19836",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 20516,
+      "synthetic_index": 9,
+      "wat_name": "$original_f20516",
+      "import_module": "original_function",
+      "import_name": "f20516",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 23311,
+      "synthetic_index": 10,
+      "wat_name": "$original_f23311",
+      "import_module": "original_function",
+      "import_name": "f23311",
+      "original_type_index": 90,
+      "signature": "(func (param i32 i32 i64) (result i32))"
+    },
+    {
+      "original_index": 24018,
+      "synthetic_index": 11,
+      "wat_name": "$original_f24018",
+      "import_module": "original_function",
+      "import_name": "f24018",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 25242,
+      "synthetic_index": 12,
+      "wat_name": "$original_f25242",
+      "import_module": "original_function",
+      "import_name": "f25242",
+      "original_type_index": 92,
+      "signature": "(func (param i32 i32 i32) (result f32))"
+    },
+    {
+      "original_index": 26384,
+      "synthetic_index": 13,
+      "wat_name": "$original_f26384",
+      "import_module": "original_function",
+      "import_name": "f26384",
+      "original_type_index": 92,
+      "signature": "(func (param i32 i32 i32) (result f32))"
+    },
+    {
+      "original_index": 26457,
+      "synthetic_index": 14,
+      "wat_name": "$original_f26457",
+      "import_module": "original_function",
+      "import_name": "f26457",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 26772,
+      "synthetic_index": 15,
+      "wat_name": "$original_f26772",
+      "import_module": "original_function",
+      "import_name": "f26772",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 26840,
+      "synthetic_index": 16,
+      "wat_name": "$original_f26840",
+      "import_module": "original_function",
+      "import_name": "f26840",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 28620,
+      "synthetic_index": 17,
+      "wat_name": "$original_f28620",
+      "import_module": "original_function",
+      "import_name": "f28620",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 32068,
+      "synthetic_index": 18,
+      "wat_name": "$original_f32068",
+      "import_module": "original_function",
+      "import_name": "f32068",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 48794,
+      "synthetic_index": 19,
+      "wat_name": "$original_f48794",
+      "import_module": "original_function",
+      "import_name": "f48794",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 50054,
+      "synthetic_index": 20,
+      "wat_name": "$original_f50054",
+      "import_module": "original_function",
+      "import_name": "f50054",
+      "original_type_index": 29,
+      "signature": "(func (param i32 i64 i32))"
+    },
+    {
+      "original_index": 50551,
+      "synthetic_index": 21,
+      "wat_name": "$original_f50551",
+      "import_module": "original_function",
+      "import_name": "f50551",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 51319,
+      "synthetic_index": 22,
+      "wat_name": "$original_f51319",
+      "import_module": "original_function",
+      "import_name": "f51319",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 54535,
+      "synthetic_index": 23,
+      "wat_name": "$original_f54535",
+      "import_module": "original_function",
+      "import_name": "f54535",
+      "original_type_index": 8,
+      "signature": "(func (param i32 i32 i32 i32 i32))"
+    },
+    {
+      "original_index": 65040,
+      "synthetic_index": 24,
+      "wat_name": "$original_f65040",
+      "import_module": "original_function",
+      "import_name": "f65040",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 65042,
+      "synthetic_index": 25,
+      "wat_name": "$original_f65042",
+      "import_module": "original_function",
+      "import_name": "f65042",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 65058,
+      "synthetic_index": 26,
+      "wat_name": "$original_f65058",
+      "import_module": "original_function",
+      "import_name": "f65058",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 71577,
+      "synthetic_index": 27,
+      "wat_name": "$original_f71577",
+      "import_module": "original_function",
+      "import_name": "f71577",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 75130,
+      "synthetic_index": 28,
+      "wat_name": "$original_f75130",
+      "import_module": "original_function",
+      "import_name": "f75130",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 80327,
+      "synthetic_index": 29,
+      "wat_name": "$original_f80327",
+      "import_module": "original_function",
+      "import_name": "f80327",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 81718,
+      "synthetic_index": 30,
+      "wat_name": "$original_f81718",
+      "import_module": "original_function",
+      "import_name": "f81718",
+      "original_type_index": 4,
+      "signature": "(func (param i32 i32 i32) (result i32))"
+    },
+    {
+      "original_index": 81720,
+      "synthetic_index": 31,
+      "wat_name": "$original_f81720",
+      "import_module": "original_function",
+      "import_name": "f81720",
+      "original_type_index": 3,
+      "signature": "(func (param i32))"
+    },
+    {
+      "original_index": 85387,
+      "synthetic_index": 32,
+      "wat_name": "$original_f85387",
+      "import_module": "original_function",
+      "import_name": "f85387",
+      "original_type_index": 55,
+      "signature": "(func (param f32) (result f32))"
+    },
+    {
+      "original_index": 90323,
+      "synthetic_index": 33,
+      "wat_name": "$original_f90323",
+      "import_module": "original_function",
+      "import_name": "f90323",
+      "original_type_index": 1,
+      "signature": "(func (param i32 i32 i32))"
+    },
+    {
+      "original_index": 106495,
+      "synthetic_index": 34,
+      "wat_name": "$original_f106495",
+      "import_module": "original_function",
+      "import_name": "f106495",
+      "original_type_index": 6,
+      "signature": "(func (param i32 i32) (result i32))"
+    },
+    {
+      "original_index": 107451,
+      "synthetic_index": 35,
+      "wat_name": "$original_f107451",
+      "import_module": "original_function",
+      "import_name": "f107451",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    },
+    {
+      "original_index": 171817,
+      "synthetic_index": 36,
+      "wat_name": "$original_f171817",
+      "import_module": "original_function",
+      "import_name": "f171817",
+      "original_type_index": 0,
+      "signature": "(func (param i32 i32))"
+    }
+  ],
+  "indirect_calls": [],
+  "copied_type_count": 459,
+  "copied_resource_declarations": [
+    "  (table (;0;) 223180 223180 funcref)",
+    "  (table (;1;) 1024 externref)",
+    "  (memory (;0;) 219)",
+    "  (global (;0;) (mut i32) (i32.const 1048576))"
+  ],
+  "generated_c": {
+    "filename": "synthetic-f1065.c",
+    "bytes": 621804,
+    "sha256": "bc37c5b6aff3d2ea9692d1c8416fb21a940d3d4d5c9546657b23bb0cd30b119e",
+    "entry_points": [
+      {
+        "symbol": "w2c_synthetic__f1065_target_f1065",
+        "line": 1371
+      },
+      {
+        "symbol": "w2c_synthetic__f1065_target_f1065_0",
+        "line": 5887
+      }
+    ]
+  },
+  "generated_synthetic_wasm": {
+    "bytes": 21218,
+    "sha256": "7f51a01fdb92cd40a449369132fb6acb850e6730d950976e173b8e1f4d52a21a"
+  },
+  "wabt_archive_sha256": "3f654779b436c628db3ca4323c51538815f5fbc887a6d5f3bb1c18d36281e240",
+  "wabt_tools": {
+    "wat2wasm": {
+      "version": "1.0.42",
+      "sha256": "69117d2b10c1818cf6da921f96ab4e3c50e45a05a848d6c4c1788375aec4d250",
+      "matches_verified_archive": true
+    },
+    "wasm-validate": {
+      "version": "1.0.42",
+      "sha256": "a17b421f1cca2c0bba48c6ab3a510f9510db44e505cffd5a48c64bb1f0b5659c",
+      "matches_verified_archive": true
+    },
+    "wasm2c": {
+      "version": "1.0.42",
+      "sha256": "4f1ba571063deca36e330ad67cf0414dbbaee944c7d920df7a338a30725570f2",
+      "matches_verified_archive": true
+    }
+  },
+  "invocation_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "omissions": [
+    "all other function bodies",
+    "original imports/export/start surface",
+    "all original data segments",
+    "all original element/table initialization"
+  ],
+  "interpretation_limits": [
+    "C is stack-to-C translation, not original Rust source",
+    "named direct imports have original signatures but no implementations",
+    "copied resource declarations do not restore original runtime state",
+    "indirect targets remain unknown; original vtable/table evidence must be consulted",
+    "synthetic output must not be used as a behavior oracle"
+  ],
+  "target_executed": false,
+  "synthetic_module_executed": false,
+  "generated_c_compiled_or_executed": false,
+  "original_REA_size_limits_changed": false,
+  "reproduction_command": "python3 reverse-engineering/scripts/emit_function_c.py --index reverse-engineering/evidence/wasm-index-20261031T213003.825753Z/index.sqlite --function 1065",
+  "producer_script": {
+    "path": "reverse-engineering/scripts/emit_function_c.py",
+    "sha256": "204ed4d9d3a605ce4f1ef9a3fad7c3f3cbb74192d2a0924fa07b9df076149737"
+  },
+  "full_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "index_coverage": {
+    "terminal_parentheses_supported": true,
+    "direct_call_kinds": [
+      "call",
+      "return_call"
+    ]
+  },
+  "identity_guard_rejections_verified": [
+    "wrong full-WAT hash",
+    "terminal-parentheses support false",
+    "missing return_call coverage"
+  ]
+}
