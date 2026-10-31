@@ -1,0 +1,23 @@
+{
+  "web_core": {
+    "version": "0.126.0",
+    "build": "3e72472a",
+    "repository_path": "android/assets/latest-web-core",
+    "manifest": "core-manifest.json",
+    "wasm_filename": "wenilla_bg.wasm",
+    "wasm_bytes": 90116970,
+    "wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "javascript_sources": ["rogue.js", "boot.js", "wenilla.js", "wasi_stubs.js", "addons.js", "saves.js", "ime.js"],
+    "limitations": ["REA 6.8.0 WASM inspection admits at most 8 MiB per artifact; this complete core exceeds it.", "JavaScript analysis does not establish the WASM gameplay implementation."]
+  },
+  "windows_native_reference": {
+    "version": "0.102.3",
+    "build": "f78e6fab",
+    "local_source_key": "windows_exe",
+    "filename": "AzerothSurvivors.exe",
+    "format": "PE32+ x86-64 GUI",
+    "bytes": 139691008,
+    "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
+    "limitations": ["Older reference only; do not transfer offsets or behavior directly to web 0.126.0.", "Native decompilation needs a working REA analysis provider."]
+  }
+}

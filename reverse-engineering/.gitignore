@@ -1,0 +1,13 @@
+# Tool binaries, original game artifacts, and raw analysis stay local.
+.toolchain/
+evidence/
+originals/
+work/
+local.sources.json
+*.ghidra/
+*.gpr
+*.rep/
+*.wasm
+*.exe
+*.mpq
+*.tgz

@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "rea_version": "6.8.0",
+  "node_version": "22.23.4",
+  "client_integration": "project-local CLI; no MCP registration created",
+  "javascript": {
+    "version": "0.126.0",
+    "build": "3e72472a",
+    "wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "scope": "seven exact original JS files; excludes WASM body, assets and platform adaptations",
+    "evidence_id": "ev_55c9e415c53e5809dfbbc34bcc3972154aaed0cafb66e3f0ab084fc128a0d2f3",
+    "summary_evidence_id": "ev_991b8170bd71423d86dba629ac0d944f49656c62a6441f63daed1b681bea73f7",
+    "artifact_sha256": "8dbd5a61c2115979b5a1dd755733f57fd9d6a3c4a00068979d2f04c6b2181d12",
+    "application_report_sha256": "fd8118607402524d76bfb3f5078294f0c33bd1109e47645eb509c808d5e3d848",
+    "statistics": {
+      "relevant_files": 7,
+      "nested_asar_containers": 0,
+      "text_bytes_read": 242910,
+      "invalid_utf8_files": 0,
+      "parsed_javascript_files": 7,
+      "skipped_javascript_files": 0,
+      "visited_ast_nodes": 26775,
+      "findings": 54,
+      "modules": 0,
+      "parse_failures": 0
+    },
+    "graph_nodes": 67,
+    "graph_edges": 68,
+    "application_coverage": "partial",
+    "semantic_coverage": "unknown",
+    "semantic_unknowns": 6988,
+    "source_syntax_complete": 7,
+    "target_executed": false
+  },
+  "windows_native": {
+    "version": "0.102.3",
+    "build": "f78e6fab",
+    "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
+    "bytes": 139691008,
+    "architecture": "amd64",
+    "pe_evidence_id": "ev_8744c8b515b10f379178cb0f3c09722ddb94b505edd7147c98484a3d535a041a",
+    "rust_evidence_id": "ev_ab59465051e7e178f9eee2c43e84809773566c3e1392415206fcf8c45a05b221",
+    "import_descriptors": 33,
+    "imported_functions": 420,
+    "delay_import_directory": null,
+    "cargo_auditable_metadata_present": false,
+    "rustc_commit_candidates": {
+      "evidence_kind": "inferred",
+      "hashes": [
+        {
+          "hash": "48a229ceaefd4985c50990b14116b6d856af0985",
+          "file_offset": 97824356
+        }
+      ]
+    },
+    "target_executed": false,
+    "functions_decompiled": false
+  },
+  "capabilities": {
+    "wasm_input_bytes": 90116970,
+    "rea_wasm_input_limit_bytes": 8388608,
+    "complete_wasm_admitted": false,
+    "limit_verified_from": "rea-agents6.8.0 dist/wasm/WabtRelease.js",
+    "native_decompiler_provider": "not configured",
+    "mcp_registered": false
+  },
+  "limitations": [
+    "Static facts and conservative relation candidates only; no target execution or gameplay-value modifications.",
+    "All seven JS files parsed, but application graph coverage is partial and semantic coverage is unknown.",
+    "Native reference0.102.3 does not establish web0.126.0 behavior or offset equivalence.",
+    "No .dep-v0 section observed; Rust compiler commit is inferred from a read-only path string.",
+    "Complete WASM not inspected by REA due to its fixed file limit."
+  ],
+  "original_snapshots_preserved": true,
+  "game_bundles_or_user_saves_changed": false
+}

@@ -1,0 +1,15 @@
+{
+  "rea_package": "rea-agents",
+  "rea_version": "6.8.0",
+  "rea_tarball_integrity": "sha512-9QDeRnGqEDzABZyr04eLnBXBv/c6I9/TWu/6M0MD4pEfkySI/BIgwTODIbAReX3C1x6hjw9+Jlx4A2yUSPZ9ww==",
+  "node_version": "22.23.4",
+  "javascript_analysis": "static; does not execute target code",
+  "wasm_file_limit_bytes": 8388608,
+  "wasm_wabt_version": "1.0.42",
+  "documentation": {
+    "chinese": "https://github.com/bbylw/rea-cn",
+    "implementation": "https://github.com/morluto/rea",
+    "cli": "https://github.com/morluto/rea/blob/main/docs/cli.md",
+    "wasm": "https://github.com/morluto/rea/blob/main/docs/wasm-artifacts.md"
+  }
+}
