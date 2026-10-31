@@ -1,0 +1,1004 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "result": "Previously missing decoded-message to registered ECS object-values system path is statically connected for the observed HP/values-update flow.",
+  "method": "Exact original-byte/full-WAT analysis, same-instance channel alias tracing, original vtable/element bindings and independently reviewed control/data flow; no target execution.",
+  "rea_evidence": {
+    "id": "ev_9e5275a3e7ce53c9c65593e57fcfb2de48b5838e753e74d94a8cab9c0cedbece",
+    "provider": {
+      "id": "azeroth-ports-local-wasm-focus",
+      "name": "Azeroth Ports local streamed WASM research extension",
+      "version": "1+rea6.8.0+wabt1.0.42"
+    },
+    "local_run": "evidence/wasm-focused-20261031T221738.066788Z",
+    "complete_functions": [
+      {
+        "function_index": 878,
+        "code_body_index": 0,
+        "size_leb_offset": 895393,
+        "body_start": 895396,
+        "body_end": 1073902,
+        "body_bytes": 178506,
+        "body_sha256": "08709bf72576adc4993238f1436147b6a27cd6ddc538fafd8455d18614236db8",
+        "wat_start": 110416,
+        "wat_start_line": 1339,
+        "wat_end": 67991578,
+        "wat_bytes": 67881162,
+        "wat_sha256": "e869d07fd9da8f63dffa507f6b7cae206ecfe4fcd02c505154f5c18fc9516559",
+        "wat_file": "function-878.wat"
+      },
+      {
+        "function_index": 907,
+        "code_body_index": 29,
+        "size_leb_offset": 2229462,
+        "body_start": 2229465,
+        "body_end": 2266709,
+        "body_bytes": 37244,
+        "body_sha256": "28e3cbd1f5744ce28ea6eef03ccb58f473ea1f23dd1d6536d1e5acd249cd4ca7",
+        "wat_start": 116780804,
+        "wat_start_line": 597238,
+        "wat_end": 122771340,
+        "wat_bytes": 5990536,
+        "wat_sha256": "2340c59ea438260ee0b50765ad5ae6470fca32035dc72d662e4844501fca57e0",
+        "wat_file": "function-907.wat"
+      },
+      {
+        "function_index": 922,
+        "code_body_index": 44,
+        "size_leb_offset": 2667430,
+        "body_start": 2667433,
+        "body_end": 2710456,
+        "body_bytes": 43023,
+        "body_sha256": "a601c4ca360f28ad8817800e20d65b201e3d1f4b0ac0bc4c58af37823fe8b565",
+        "wat_start": 133932134,
+        "wat_start_line": 789987,
+        "wat_end": 134895647,
+        "wat_bytes": 963513,
+        "wat_sha256": "38cd4e06623a1d900c82f4e81e91fa459f2b29f279bf701debf7e8c21dd04ee4",
+        "wat_file": "function-922.wat"
+      },
+      {
+        "function_index": 1434,
+        "code_body_index": 556,
+        "size_leb_offset": 9494813,
+        "body_start": 9494816,
+        "body_end": 9570801,
+        "body_bytes": 75985,
+        "body_sha256": "0c61b7bbdcab78db012eba1d0d384fec78738d359fd975d817a833ecab70fe23",
+        "wat_start": 305426536,
+        "wat_start_line": 3868347,
+        "wat_end": 316902154,
+        "wat_bytes": 11475618,
+        "wat_sha256": "de7031902b6b4c4f6aeb5c6e8ed009f2fb13995247a38b9145d3e47b84944a68",
+        "wat_file": "function-1434.wat"
+      },
+      {
+        "function_index": 3634,
+        "code_body_index": 2756,
+        "size_leb_offset": 19162240,
+        "body_start": 19162242,
+        "body_end": 19165857,
+        "body_bytes": 3615,
+        "body_sha256": "d1cd1abea0e664b991bf30298f6984a5ae0a9e639c2336ab412550605c96e43f",
+        "wat_start": 491505328,
+        "wat_start_line": 8289349,
+        "wat_end": 491559844,
+        "wat_bytes": 54516,
+        "wat_sha256": "ccc049739b9c86b7f646142cbe48691557a7fd47e8a87b9f05ced60831a606d9",
+        "wat_file": "function-3634.wat"
+      },
+      {
+        "function_index": 4126,
+        "code_body_index": 3248,
+        "size_leb_offset": 20511137,
+        "body_start": 20511139,
+        "body_end": 20513315,
+        "body_bytes": 2176,
+        "body_sha256": "e76ac378ef4e60989f99dbcd4003c681d7a0189803287c86f90e19356a35819f",
+        "wat_start": 516641494,
+        "wat_start_line": 8912052,
+        "wat_end": 516669953,
+        "wat_bytes": 28459,
+        "wat_sha256": "b244caf83b24f4048c0f0b3a73d6ef943b49e70b4e9733eaf4eb69b4cc0df2ff",
+        "wat_file": "function-4126.wat"
+      },
+      {
+        "function_index": 4292,
+        "code_body_index": 3414,
+        "size_leb_offset": 21105862,
+        "body_start": 21105864,
+        "body_end": 21109511,
+        "body_bytes": 3647,
+        "body_sha256": "cc625ced5e2feec9b55b7608c3c2838ffd3d57ea45372ed1e0955e1722d1d3ff",
+        "wat_start": 529773887,
+        "wat_start_line": 9176678,
+        "wat_end": 529819150,
+        "wat_bytes": 45263,
+        "wat_sha256": "24701d29b728a21d6af6460f729363af7b62afa101ca2e62f5b19ab1bb7e3379",
+        "wat_file": "function-4292.wat"
+      },
+      {
+        "function_index": 4642,
+        "code_body_index": 3764,
+        "size_leb_offset": 22015205,
+        "body_start": 22015207,
+        "body_end": 22017458,
+        "body_bytes": 2251,
+        "body_sha256": "3968a7c8683004176dd5224448a92291ece7ff5cc8444ed01e50cef595cf2ea5",
+        "wat_start": 543402679,
+        "wat_start_line": 9594592,
+        "wat_end": 543437576,
+        "wat_bytes": 34897,
+        "wat_sha256": "7f782b6c3a9831115ea93df936dcb544c79d176a4b385c04d88170409b3a203a",
+        "wat_file": "function-4642.wat"
+      },
+      {
+        "function_index": 7001,
+        "code_body_index": 6123,
+        "size_leb_offset": 27502038,
+        "body_start": 27502040,
+        "body_end": 27503983,
+        "body_bytes": 1943,
+        "body_sha256": "7d9a91243bd6709a42ee0dbccc41ce15d1d18268c2a2ba5ecf84acb782ee76cb",
+        "wat_start": 632395117,
+        "wat_start_line": 12058780,
+        "wat_end": 632430959,
+        "wat_bytes": 35842,
+        "wat_sha256": "fd0a09958d88bffd287a6769d7906290d47dff74f3953915e76d1db47ee537bb",
+        "wat_file": "function-7001.wat"
+      },
+      {
+        "function_index": 9445,
+        "code_body_index": 8567,
+        "size_leb_offset": 31610878,
+        "body_start": 31610880,
+        "body_end": 31612026,
+        "body_bytes": 1146,
+        "body_sha256": "3851950c871bb67edd914f528a8af5d5ed3b06caf7e4cb8c40c515e5a55dfb49",
+        "wat_start": 688103844,
+        "wat_start_line": 13908065,
+        "wat_end": 688120673,
+        "wat_bytes": 16829,
+        "wat_sha256": "bfaadfba2ea36640f1718dd4e0876acc16a1615d29f57c6b384fc597eb0f1459",
+        "wat_file": "function-9445.wat"
+      },
+      {
+        "function_index": 9713,
+        "code_body_index": 8835,
+        "size_leb_offset": 32017834,
+        "body_start": 32017836,
+        "body_end": 32019150,
+        "body_bytes": 1314,
+        "body_sha256": "331496123731deab744f871f5f84d30b1752b27d99abfab12aad650abc565376",
+        "wat_start": 693589261,
+        "wat_start_line": 14094056,
+        "wat_end": 693602746,
+        "wat_bytes": 13485,
+        "wat_sha256": "49a3ba0c3c72ed916b4609617fc9da403333ec164ac0e2f2270154f6cf555131",
+        "wat_file": "function-9713.wat"
+      },
+      {
+        "function_index": 10310,
+        "code_body_index": 9432,
+        "size_leb_offset": 33211678,
+        "body_start": 33211680,
+        "body_end": 33212700,
+        "body_bytes": 1020,
+        "body_sha256": "04d08194afd42588f80cf24ad66c9844657618aaf15a4e139a9aa6480af074ea",
+        "wat_start": 724892626,
+        "wat_start_line": 14643926,
+        "wat_end": 724909509,
+        "wat_bytes": 16883,
+        "wat_sha256": "9841628bfd1891df7f9f708c37d1c05fc2b38c0aa51bb24896ca3705479fdc90",
+        "wat_file": "function-10310.wat"
+      },
+      {
+        "function_index": 10914,
+        "code_body_index": 10036,
+        "size_leb_offset": 34154463,
+        "body_start": 34154465,
+        "body_end": 34157319,
+        "body_bytes": 2854,
+        "body_sha256": "8c5dacfa91df75d1f9f605bb06e3c6a4458600b8fc6fa233d5ec4745914c1c73",
+        "wat_start": 741937186,
+        "wat_start_line": 15089138,
+        "wat_end": 741988143,
+        "wat_bytes": 50957,
+        "wat_sha256": "abd3b49fac8d19a3e2095ae4cceb9c75f5f4fe00d3c717c7ca00c00d269aaed5",
+        "wat_file": "function-10914.wat"
+      },
+      {
+        "function_index": 19385,
+        "code_body_index": 18507,
+        "size_leb_offset": 43626165,
+        "body_start": 43626167,
+        "body_end": 43628369,
+        "body_bytes": 2202,
+        "body_sha256": "566dd53f47d448c475c12947f66b2fc45b16edfca66e4fc96e3e2df31aafdb8a",
+        "wat_start": 867667499,
+        "wat_start_line": 19446716,
+        "wat_end": 867718060,
+        "wat_bytes": 50561,
+        "wat_sha256": "593119b9e5cb6d942c97c7b2e8de354f0b7f0849041989037767635a1a5bf170",
+        "wat_file": "function-19385.wat"
+      },
+      {
+        "function_index": 24517,
+        "code_body_index": 23639,
+        "size_leb_offset": 48641906,
+        "body_start": 48641908,
+        "body_end": 48642441,
+        "body_bytes": 533,
+        "body_sha256": "4bbd97b2276c8c1910b99fa2c0e4fb54d63ed0b5ea5b0a234de4027fd12c3957",
+        "wat_start": 933947622,
+        "wat_start_line": 21718484,
+        "wat_end": 933954068,
+        "wat_bytes": 6446,
+        "wat_sha256": "bcd52a75463175e8fc941c0fb819e9a23ead926c19ee3c24c45337dfb8aa841c",
+        "wat_file": "function-24517.wat"
+      },
+      {
+        "function_index": 25537,
+        "code_body_index": 24659,
+        "size_leb_offset": 49600411,
+        "body_start": 49600413,
+        "body_end": 49605531,
+        "body_bytes": 5118,
+        "body_sha256": "ae75a2d0d981355c973c01e08ac804cc710e16c7531eed3156e2b305490bd219",
+        "wat_start": 947105482,
+        "wat_start_line": 22154746,
+        "wat_end": 947292513,
+        "wat_bytes": 187031,
+        "wat_sha256": "2271e37a7f656bf3d322d68730c9e33c4e5a8dbdc20a22796edfdea170863d80",
+        "wat_file": "function-25537.wat"
+      },
+      {
+        "function_index": 26862,
+        "code_body_index": 25984,
+        "size_leb_offset": 50733483,
+        "body_start": 50733485,
+        "body_end": 50733922,
+        "body_bytes": 437,
+        "body_sha256": "baa706220fda39ee9d337949fe91d410dc5b418829a9148ae05d8080ec94a6aa",
+        "wat_start": 963934388,
+        "wat_start_line": 22668903,
+        "wat_end": 963938848,
+        "wat_bytes": 4460,
+        "wat_sha256": "e0893f751b6565ab95bb5ee4f9705d24bcb3abe7b207439e77f788d4acec5648",
+        "wat_file": "function-26862.wat"
+      },
+      {
+        "function_index": 27452,
+        "code_body_index": 26574,
+        "size_leb_offset": 51094683,
+        "body_start": 51094685,
+        "body_end": 51095162,
+        "body_bytes": 477,
+        "body_sha256": "60c7cc11a0cfd08ee4667c2949c017d112b4ac35073d83054f91e6d69221c7ef",
+        "wat_start": 967975728,
+        "wat_start_line": 22832265,
+        "wat_end": 967980243,
+        "wat_bytes": 4515,
+        "wat_sha256": "98a94debf78bddd029b22c308aa449d321187a95cc72886b2ba2130c94a26a96",
+        "wat_file": "function-27452.wat"
+      },
+      {
+        "function_index": 33765,
+        "code_body_index": 32887,
+        "size_leb_offset": 56072803,
+        "body_start": 56072805,
+        "body_end": 56073206,
+        "body_bytes": 401,
+        "body_sha256": "dd6c3ec235043e9bc5fc0a7e26b7e779dee405d19dcea85d6461324b4d158020",
+        "wat_start": 1034085430,
+        "wat_start_line": 25062029,
+        "wat_end": 1034089258,
+        "wat_bytes": 3828,
+        "wat_sha256": "65b177d0906c5a4badb681895def05c24507cfcb445c8648d7ef2c8fd003667e",
+        "wat_file": "function-33765.wat"
+      },
+      {
+        "function_index": 34970,
+        "code_body_index": 34092,
+        "size_leb_offset": 56850008,
+        "body_start": 56850010,
+        "body_end": 56850415,
+        "body_bytes": 405,
+        "body_sha256": "7500878727960a0cada553d04b3f303a61e71342ac45125d09d2305c7067288f",
+        "wat_start": 1042764868,
+        "wat_start_line": 25407503,
+        "wat_end": 1042769131,
+        "wat_bytes": 4263,
+        "wat_sha256": "1dd6136095c4210c1eb918833fcab56b3e60505fd93f9c01572405982a980ff3",
+        "wat_file": "function-34970.wat"
+      },
+      {
+        "function_index": 35968,
+        "code_body_index": 35090,
+        "size_leb_offset": 57799089,
+        "body_start": 57799091,
+        "body_end": 57799495,
+        "body_bytes": 404,
+        "body_sha256": "214c0d15e211a1e6c49676c153223046e0d2d6db5b91d2de19fb4f0995a13771",
+        "wat_start": 1054450193,
+        "wat_start_line": 25834188,
+        "wat_end": 1054453634,
+        "wat_bytes": 3441,
+        "wat_sha256": "78f5409e3ddc032bcb6a28eceac8411622833a184914a047fb86a39ece99a4e2",
+        "wat_file": "function-35968.wat"
+      },
+      {
+        "function_index": 37811,
+        "code_body_index": 36933,
+        "size_leb_offset": 58781464,
+        "body_start": 58781467,
+        "body_end": 58809492,
+        "body_bytes": 28025,
+        "body_sha256": "7af7cb5f86c583ad0711b3573e61d29ef5075bc9856c19aee733cdf069de616f",
+        "wat_start": 1065463213,
+        "wat_start_line": 26269083,
+        "wat_end": 1068343899,
+        "wat_bytes": 2880686,
+        "wat_sha256": "fa561e6191ff06a501668b7e78a3bea96c87d768867be5c4ca765f56aebc793b",
+        "wat_file": "function-37811.wat"
+      },
+      {
+        "function_index": 38361,
+        "code_body_index": 37483,
+        "size_leb_offset": 59289520,
+        "body_start": 59289522,
+        "body_end": 59289872,
+        "body_bytes": 350,
+        "body_sha256": "af3351d99a152a132aa79cefa447b1a459323a4260cc522a344601c7ead4a7f8",
+        "wat_start": 1081452568,
+        "wat_start_line": 26494375,
+        "wat_end": 1081456147,
+        "wat_bytes": 3579,
+        "wat_sha256": "5a9b67a11d4e5e6b851b652883a5afe12864e49e640446d62873e913e7a1783e",
+        "wat_file": "function-38361.wat"
+      },
+      {
+        "function_index": 39474,
+        "code_body_index": 38596,
+        "size_leb_offset": 59876934,
+        "body_start": 59876936,
+        "body_end": 59878894,
+        "body_bytes": 1958,
+        "body_sha256": "2ca8dc3b0d0c61067ba1baa4fab0e45724683569ef508cbcc9a1a90b3281df31",
+        "wat_start": 1087720457,
+        "wat_start_line": 26753122,
+        "wat_end": 1087750403,
+        "wat_bytes": 29946,
+        "wat_sha256": "eebe6920c05e2c5415c0bc1362a86d3b96b4ff69827c0bedd83a2388e2ae2d25",
+        "wat_file": "function-39474.wat"
+      },
+      {
+        "function_index": 44683,
+        "code_body_index": 43805,
+        "size_leb_offset": 62257324,
+        "body_start": 62257326,
+        "body_end": 62257613,
+        "body_bytes": 287,
+        "body_sha256": "66134e9fb22dd445e6e2c9f8d100f5681799e935ff239e2e10aca39508702b3c",
+        "wat_start": 1112977127,
+        "wat_start_line": 27790658,
+        "wat_end": 1112979782,
+        "wat_bytes": 2655,
+        "wat_sha256": "fb3cc3a52316268667e88c745b40b974890032ce0226c8d01b10a53fe21da217",
+        "wat_file": "function-44683.wat"
+      },
+      {
+        "function_index": 47119,
+        "code_body_index": 46241,
+        "size_leb_offset": 63311007,
+        "body_start": 63311009,
+        "body_end": 63311316,
+        "body_bytes": 307,
+        "body_sha256": "f3bd748a9e8ef0670be70b1dabe84de1289b6737a2240d8bee4b520b2bd19932",
+        "wat_start": 1126562727,
+        "wat_start_line": 28253504,
+        "wat_end": 1126565485,
+        "wat_bytes": 2758,
+        "wat_sha256": "0e10a6258495349401659fbaa4fc59b7870435c36a0bb9fade45fc1ae4df2510",
+        "wat_file": "function-47119.wat"
+      },
+      {
+        "function_index": 53951,
+        "code_body_index": 53073,
+        "size_leb_offset": 65951571,
+        "body_start": 65951573,
+        "body_end": 65951770,
+        "body_bytes": 197,
+        "body_sha256": "ad568b109ffc62c49fc0774fd90fb45801202fb9c53a9661472e770e27591237",
+        "wat_start": 1165861337,
+        "wat_start_line": 29418565,
+        "wat_end": 1165863002,
+        "wat_bytes": 1665,
+        "wat_sha256": "a9c2a8f1a3e9ca55462b4c1dc673b0c51125aafa88f01c244ad72c428d3a37a1",
+        "wat_file": "function-53951.wat"
+      },
+      {
+        "function_index": 62584,
+        "code_body_index": 61706,
+        "size_leb_offset": 68176103,
+        "body_start": 68176105,
+        "body_end": 68176238,
+        "body_bytes": 133,
+        "body_sha256": "22f29b38befadc3b7cdcd7342fe1f83d0cb3964668df494519144136b7d11bcd",
+        "wat_start": 1194712221,
+        "wat_start_line": 30402988,
+        "wat_end": 1194713193,
+        "wat_bytes": 972,
+        "wat_sha256": "c87a8181e528a3f63bae8cc4c22221cc3c13027b7aaf35fb063bda0459a0c6f3",
+        "wat_file": "function-62584.wat"
+      },
+      {
+        "function_index": 62585,
+        "code_body_index": 61707,
+        "size_leb_offset": 68176238,
+        "body_start": 68176240,
+        "body_end": 68176373,
+        "body_bytes": 133,
+        "body_sha256": "826d03bb74b9c0bfc408253e70bd345e83f9f2a6797ebd4fb6b9de2074616fa8",
+        "wat_start": 1194713193,
+        "wat_start_line": 30403043,
+        "wat_end": 1194714165,
+        "wat_bytes": 972,
+        "wat_sha256": "b7ce695fef654db99dee0cc4a157befe9efac0a9d2de024ecaa0e65034121dca",
+        "wat_file": "function-62585.wat"
+      },
+      {
+        "function_index": 65110,
+        "code_body_index": 64232,
+        "size_leb_offset": 68565643,
+        "body_start": 68565644,
+        "body_end": 68565749,
+        "body_bytes": 105,
+        "body_sha256": "c4f87a35805a63a40f29ace8e12d9a901a9f6b4c8ad0aaf556a87d504ab1b846",
+        "wat_start": 1198318079,
+        "wat_start_line": 30571063,
+        "wat_end": 1198319120,
+        "wat_bytes": 1041,
+        "wat_sha256": "5bf89bda10ea7b35205b3a03a55a808a7ad0a9ea24c1484b60b8620c25320f63",
+        "wat_file": "function-65110.wat"
+      },
+      {
+        "function_index": 65528,
+        "code_body_index": 64650,
+        "size_leb_offset": 68621859,
+        "body_start": 68621860,
+        "body_end": 68621958,
+        "body_bytes": 98,
+        "body_sha256": "b1b4c16fd4a60942ea2913835a2c0dbaa30293f9c240b2a123c26c8274c8b93f",
+        "wat_start": 1198812507,
+        "wat_start_line": 30595592,
+        "wat_end": 1198813511,
+        "wat_bytes": 1004,
+        "wat_sha256": "0cc1a81171d754b9765ae39fe8aec14baae91798e7b900c5dfd09b9a987f1470",
+        "wat_file": "function-65528.wat"
+      },
+      {
+        "function_index": 78110,
+        "code_body_index": 77232,
+        "size_leb_offset": 70380414,
+        "body_start": 70380415,
+        "body_end": 70380522,
+        "body_bytes": 107,
+        "body_sha256": "dcfdb43acb0b39e791eee6109af69ec86c38b5d316d769b6f2f3b2e7945e2be1",
+        "wat_start": 1218001812,
+        "wat_start_line": 31375444,
+        "wat_end": 1218002555,
+        "wat_bytes": 743,
+        "wat_sha256": "803eeff7f5f82aceedef28e5e777fceb922db057266f119042da30ba547025af",
+        "wat_file": "function-78110.wat"
+      },
+      {
+        "function_index": 91493,
+        "code_body_index": 90615,
+        "size_leb_offset": 73698625,
+        "body_start": 73698626,
+        "body_end": 73698680,
+        "body_bytes": 54,
+        "body_sha256": "41e7d06df01535989a2d3adb12a5e10fe37d00827fc2f2fc3ed6748974dbaf30",
+        "wat_start": 1257804052,
+        "wat_start_line": 32770253,
+        "wat_end": 1257804532,
+        "wat_bytes": 480,
+        "wat_sha256": "cbd009c5d1fa5d1a5859c20aecb99120b15d3f4cdfedf3815abc65a34e81ea65",
+        "wat_file": "function-91493.wat"
+      }
+    ],
+    "stock_large_wasm_interface_completed": false,
+    "stock_REA_limits_unchanged": true
+  },
+  "local_checks": {
+    "forward": {
+      "run": "evidence/ecs-forward-20261031T221655.340431Z",
+      "manifest_sha256": "6046fad1fbd1625a7bd634a53830a9dfb03d3db58b1339d2ee8b3a71a2639768",
+      "complete_function_count": 9
+    },
+    "backward": {
+      "run": "evidence/ecs-backward-20261031T221655.340688Z",
+      "manifest_sha256": "8f4fb734207b5da7079e07d700ab08da26abb49712851414cc0f36dc2c5eb067",
+      "complete_function_count": 9
+    },
+    "registry": {
+      "run": "evidence/ecs-event-map-20261031T221655.340432Z",
+      "manifest_sha256": "0fb10eb9d4d7983ff94dc0d24b7c777b8c467d50f0f0df2dbfe12610d768c6d4",
+      "complete_function_count": 12
+    }
+  },
+  "representations": {
+    "wire_opcode_u16": 169,
+    "decoded_message_discriminant_i32": -2147483641,
+    "decoded_message_discriminant_u32_hex": "80000007",
+    "wire_update_kind": 0,
+    "decoded_update_record_tag": 2,
+    "decoded_record_stride_bytes": 168,
+    "internal_event_stride_bytes": 176,
+    "internal_object_values_tag": 22,
+    "event_guid_byte_offset": 8,
+    "event_fields_descriptor_byte_offset": 16,
+    "event_fields_descriptor_bytes": 28,
+    "handler_registry_key_u16": 20,
+    "health_field_index": 22,
+    "qualification": "These constants belong to different representations; their conversion is separately traced."
+  },
+  "conversion": {
+    "decoder": 878,
+    "object_update_parser": 4642,
+    "async_client": 1434,
+    "message_wrapper": 7001,
+    "converter": 907,
+    "sender": 10914,
+    "observed_path": [
+      "Opcode169 decodes to message discriminant0x80000007 in878.",
+      "Wire update-kind0 becomes internal update-record discriminant2 in4642.",
+      "1434 converts decoded message using907 after the success branch.",
+      "907 iterates update records with stride168 and constructs stride176 tag22 events.",
+      "Tag22 stores the original64-bit GUID at+8 and28-byte Fields at+16.",
+      "Two temporary event vectors merge before batch-end eventtag26 is appended.",
+      "1434 iterates the returned vector with stride176 and sends tag22 unchanged through10914."
+    ],
+    "structural_branch_targets": {
+      "878": {
+        "4818": {
+          "branch_function_line": 4818,
+          "instruction": "br 577 (;@8;)",
+          "selector": 0,
+          "table_slot": null,
+          "depth": 577,
+          "target": {
+            "start_function_line": 27,
+            "header": "block  ;; label = @8",
+            "end_function_line": 84332
+          }
+        }
+      },
+      "907": {
+        "309": {
+          "branch_function_line": 309,
+          "instruction": "br_table 1 (;@288;) 0 (;@289;) 0 (;@289;) 0 (;@289;) 2 (;@287;) 3 (;@286;) 4 (;@285;) 5 (;@284;) 6 (;@283;) 7 (;@282;) 8 (;@281;) 9 (;@280;) 10 (;@279;) 11 (;@278;) 12 (;@277;) 13 (;@276;) 14 (;@275;) 15 (;@274;) 16 (;@273;) 17 (;@272;) 18 (;@271;) 19 (;@270;) 20 (;@269;) 21 (;@268;) 22 (;@267;) 23 (;@266;) 24 (;@265;) 25 (;@264;) 26 (;@263;) 27 (;@262;) 28 (;@261;) 29 (;@260;) 30 (;@259;) 31 (;@258;) 32 (;@257;) 33 (;@256;) 34 (;@255;) 35 (;@254;) 36 (;@253;) 37 (;@252;) 38 (;@251;) 39 (;@250;) 40 (;@249;) 41 (;@248;) 42 (;@247;) 43 (;@246;) 44 (;@245;) 45 (;@244;) 46 (;@243;) 47 (;@242;) 48 (;@241;) 49 (;@240;) 50 (;@239;) 51 (;@238;) 52 (;@237;) 53 (;@236;) 54 (;@235;) 55 (;@234;) 56 (;@233;) 57 (;@232;) 58 (;@231;) 59 (;@230;) 60 (;@229;) 61 (;@228;) 62 (;@227;) 63 (;@226;) 64 (;@225;) 65 (;@224;) 66 (;@223;) 67 (;@222;) 68 (;@221;) 69 (;@220;) 70 (;@219;) 71 (;@218;) 72 (;@217;) 73 (;@216;) 74 (;@215;) 75 (;@214;) 76 (;@213;) 77 (;@212;) 78 (;@211;) 79 (;@210;) 80 (;@209;) 81 (;@208;) 283 (;@6;) 82 (;@207;) 83 (;@206;) 84 (;@205;) 85 (;@204;) 86 (;@203;) 87 (;@202;) 88 (;@201;) 89 (;@200;) 90 (;@199;) 91 (;@198;) 92 (;@197;) 93 (;@196;) 94 (;@195;) 95 (;@194;) 96 (;@193;) 97 (;@192;) 98 (;@191;) 99 (;@190;) 100 (;@189;) 101 (;@188;) 102 (;@187;) 103 (;@186;) 104 (;@185;) 284 (;@5;) 105 (;@184;) 106 (;@183;) 107 (;@182;) 108 (;@181;) 109 (;@180;) 110 (;@179;) 111 (;@178;) 112 (;@177;) 113 (;@176;) 114 (;@175;) 115 (;@174;) 116 (;@173;) 117 (;@172;) 118 (;@171;) 119 (;@170;) 120 (;@169;) 121 (;@168;) 122 (;@167;) 123 (;@166;) 124 (;@165;) 125 (;@164;) 126 (;@163;) 127 (;@162;) 128 (;@161;) 129 (;@160;) 130 (;@159;) 131 (;@158;) 132 (;@157;) 133 (;@156;) 134 (;@155;) 135 (;@154;) 136 (;@153;) 137 (;@152;) 138 (;@151;) 139 (;@150;) 140 (;@149;) 141 (;@148;) 142 (;@147;) 143 (;@146;) 144 (;@145;) 145 (;@144;) 146 (;@143;) 147 (;@142;) 148 (;@141;) 149 (;@140;) 150 (;@139;) 151 (;@138;) 152 (;@137;) 153 (;@136;) 154 (;@135;) 155 (;@134;) 156 (;@133;) 157 (;@132;) 158 (;@131;) 159 (;@130;) 160 (;@129;) 161 (;@128;) 162 (;@127;) 163 (;@126;) 164 (;@125;) 165 (;@124;) 166 (;@123;) 167 (;@122;) 168 (;@121;) 169 (;@120;) 170 (;@119;) 171 (;@118;) 172 (;@117;) 173 (;@116;) 174 (;@115;) 175 (;@114;) 176 (;@113;) 177 (;@112;) 178 (;@111;) 179 (;@110;) 180 (;@109;) 181 (;@108;) 182 (;@107;) 183 (;@106;) 184 (;@105;) 185 (;@104;) 186 (;@103;) 187 (;@102;) 188 (;@101;) 189 (;@100;) 190 (;@99;) 191 (;@98;) 192 (;@97;) 193 (;@96;) 194 (;@95;) 195 (;@94;) 196 (;@93;) 197 (;@92;) 198 (;@91;) 199 (;@90;) 200 (;@89;) 201 (;@88;) 202 (;@87;) 203 (;@86;) 204 (;@85;) 205 (;@84;) 206 (;@83;) 207 (;@82;) 208 (;@81;) 209 (;@80;) 210 (;@79;) 211 (;@78;) 212 (;@77;) 213 (;@76;) 214 (;@75;) 215 (;@74;) 216 (;@73;) 217 (;@72;) 218 (;@71;) 219 (;@70;) 220 (;@69;) 221 (;@68;) 222 (;@67;) 223 (;@66;) 224 (;@65;) 225 (;@64;) 226 (;@63;) 227 (;@62;) 228 (;@61;) 229 (;@60;) 230 (;@59;) 231 (;@58;) 232 (;@57;) 233 (;@56;) 234 (;@55;) 235 (;@54;) 236 (;@53;) 237 (;@52;) 238 (;@51;) 239 (;@50;) 240 (;@49;) 241 (;@48;) 242 (;@47;) 243 (;@46;) 244 (;@45;) 245 (;@44;) 246 (;@43;) 247 (;@42;) 248 (;@41;) 249 (;@40;) 250 (;@39;) 251 (;@38;) 252 (;@37;) 253 (;@36;) 254 (;@35;) 255 (;@34;) 256 (;@33;) 257 (;@32;) 258 (;@31;) 259 (;@30;) 260 (;@29;) 261 (;@28;) 262 (;@27;) 263 (;@26;) 264 (;@25;) 265 (;@24;) 266 (;@23;) 267 (;@22;) 268 (;@21;) 269 (;@20;) 270 (;@19;) 271 (;@18;) 272 (;@17;) 0 (;@289;) 273 (;@16;) 0 (;@289;)",
+          "selector": 5,
+          "table_slot": 5,
+          "depth": 3,
+          "target": {
+            "start_function_line": 293,
+            "header": "block  ;; label = @286",
+            "end_function_line": 386
+          }
+        },
+        "700": {
+          "branch_function_line": 700,
+          "instruction": "br_table 7 (;@306;) 1 (;@312;) 8 (;@305;) 4 (;@309;) 2 (;@311;)",
+          "selector": 4294967295,
+          "table_slot": 4,
+          "depth": 2,
+          "target": {
+            "start_function_line": 519,
+            "header": "block  ;; label = @311",
+            "end_function_line": 709
+          }
+        }
+      },
+      "1434": {
+        "19000": {
+          "branch_function_line": 19000,
+          "instruction": "br_if 57 (;@62;)",
+          "selector": 0,
+          "table_slot": null,
+          "depth": 57,
+          "target": {
+            "start_function_line": 1416,
+            "header": "block  ;; label = @62",
+            "end_function_line": 27080
+          }
+        },
+        "28512": {
+          "branch_function_line": 28512,
+          "instruction": "br_table 2 (;@66;) 1 (;@67;) 3 (;@65;)",
+          "selector": 9,
+          "table_slot": 2,
+          "depth": 3,
+          "target": {
+            "start_function_line": 28486,
+            "header": "block  ;; label = @65",
+            "end_function_line": 28957
+          }
+        }
+      }
+    }
+  },
+  "same_channel_instance": {
+    "constructor_function": 922,
+    "shared_allocation_local": 7,
+    "future_capture": "future+0 flavor1, future+4 shared local7",
+    "session_constructor_output": "frame4+68; output+8 flavor1, output+12 shared local7",
+    "receiver_resource_staging": "frame4+76/80 -> locals13/11 -> frame4+536/540",
+    "receiver_resource_typeid_lo": -7652179191381602884,
+    "receiver_resource_typeid_hi": 8322580366045022567,
+    "qualification": "Same constructor pointer source is preserved through handle indirections; not a match based only on payload type.",
+    "receiver_resource_typeid_references": [
+      {
+        "function_index": 922,
+        "signed_word": -7652179191381602884,
+        "function_lines": [
+          5858,
+          5959
+        ]
+      },
+      {
+        "function_index": 922,
+        "signed_word": 8322580366045022567,
+        "function_lines": [
+          5862,
+          5963
+        ]
+      },
+      {
+        "function_index": 37811,
+        "signed_word": -7652179191381602884,
+        "function_lines": [
+          64
+        ]
+      },
+      {
+        "function_index": 37811,
+        "signed_word": 8322580366045022567,
+        "function_lines": [
+          68
+        ]
+      }
+    ],
+    "receiver_resource_installation": "922 stages endpoint at frame+536/+540, then installs it through24517/91493 or direct storage copy.",
+    "receiver_consumption": "37811 retrieves this resource, takes data+8, then passes its address to19385.",
+    "endpoint_dereference": "10914 reads sender_handle+4;19385 reads *receiver_handle_address then endpoint+4, reaching the same constructor allocation.",
+    "sender_capture": {
+      "future_state_base": "poll param0+344",
+      "send_field_offset": 892,
+      "endpoint_pointer": "future+32",
+      "endpoint_flavor": 1,
+      "shared_channel_pointer": "future+36 = constructor922 local7",
+      "lineage": [
+        "constructor future+0/+4 endpoint{1,local7}",
+        "first poll copies future+0 i64 to future+32",
+        "future+32 address -> future+288 -> future+312(low32)",
+        "future+312 i64 -> future+864 (=nested_state+520)",
+        "nested_state+520 -> +552 -> local114 -> +892",
+        "nested_state+892 endpoint pointer ->10914"
+      ]
+    },
+    "receiver_function": 19385,
+    "consumer_function": 37811
+  },
+  "spawned_task_binding": {
+    "constructor": 922,
+    "vtable_memory_address": 6113676,
+    "vtable_file_offset": 82100433,
+    "raw_hex": "653e00008007000008000000663e0000",
+    "sha256": "0041edfe7b5cf7a1549795716ee854366f0e985f54117f527539f2499231e80c",
+    "words_u32": [
+      15973,
+      1920,
+      8,
+      15974
+    ],
+    "callback_field_offset": 12,
+    "callback_table_slot": 15974,
+    "callback_function": 1434,
+    "allocation_bytes": 1920,
+    "spawn_call": 47119,
+    "qualification": "Original constructor and data/element-table binding; executor runtime timing is not measured."
+  },
+  "dispatch": {
+    "function": 37811,
+    "event_stride_bytes": 176,
+    "handler_stride_bytes": 16,
+    "key_expression": "(tag_u64 <= 1 ? 16 : wrapping_u32(tag_u64)-2) & 65535",
+    "object_values_event_tag": 22,
+    "object_values_registry_key": 20,
+    "handler_execution_function": 25537,
+    "instruction_guards": {
+      "event_payload_copy": {
+        "first_function_line": 519,
+        "instructions": [
+          "local.get 14",
+          "local.get 128",
+          "i64.store offset=40",
+          "local.get 110",
+          "local.get 18",
+          "i32.const 8",
+          "i32.add",
+          "i32.const 168",
+          "memory.copy"
+        ]
+      },
+      "event_tag_to_registry_key": {
+        "first_function_line": 543,
+        "instructions": [
+          "local.get 1",
+          "i32.const 16",
+          "local.get 14",
+          "i32.const 40",
+          "i32.add",
+          "local.tee 8",
+          "i64.load",
+          "local.tee 128",
+          "i32.wrap_i64",
+          "i32.const 2",
+          "i32.sub",
+          "local.get 128",
+          "i64.const 1",
+          "i64.le_u",
+          "select",
+          "i32.const 65535",
+          "i32.and",
+          "local.tee 5",
+          "i32.store16 offset=304"
+        ]
+      },
+      "handler_descriptor_bounds": {
+        "first_function_line": 687,
+        "instructions": [
+          "local.get 3",
+          "i32.const 8",
+          "i32.sub",
+          "i32.load",
+          "local.tee 54",
+          "local.get 2",
+          "i32.const 4",
+          "i32.shl",
+          "local.tee 2",
+          "i32.add",
+          "local.tee 89",
+          "i32.const 16",
+          "i32.sub",
+          "local.set 90"
+        ]
+      },
+      "final_handler_delivery": {
+        "first_function_line": 11088,
+        "instructions": [
+          "local.get 1",
+          "i32.const 304",
+          "i32.add",
+          "local.tee 7",
+          "local.get 8",
+          "i32.const 176",
+          "memory.copy",
+          "local.get 0",
+          "local.get 1",
+          "i32.const 8",
+          "i32.add",
+          "local.get 2",
+          "local.get 4",
+          "local.get 7",
+          "call 25537"
+        ]
+      }
+    },
+    "registration": {
+      "initializer_function": 922,
+      "name_function_line": 4670,
+      "name": "benilla_app::net::objects::update::on_object_values",
+      "name_address": 5885211,
+      "name_file_offset": 81872829,
+      "name_bytes": 51,
+      "registry_key_u16": 20,
+      "vtable_address": 6033116,
+      "vtable_file_offset": 82020012,
+      "callback_bindings": [
+        {
+          "vtable_field_offset": 36,
+          "table_slot": 14256,
+          "function_index": 53951
+        },
+        {
+          "vtable_field_offset": 44,
+          "table_slot": 14258,
+          "function_index": 38361
+        }
+      ]
+    },
+    "resource_typeid_signed_words": [
+      -538272048549998661,
+      -400749426167419993
+    ],
+    "named_network_registration_count": 25
+  },
+  "registered_system": {
+    "registered_component_type": {
+      "memory_address": 6038078,
+      "file_offset": 82024974,
+      "bytes": 124,
+      "sha256": "64fad93015782ef33e6d7aa719625bde108cbac3762840eb9338db3d2c34b265",
+      "text": "bevy_ecs::system::system_registry::RegisteredSystem<bevy_ecs::system::input::In<benilla_protocol::events::SessionEvent>, ()>",
+      "type_id_words_signed": [
+        -5355875713241034512,
+        8875168251625424859
+      ]
+    },
+    "runtime_invocation": {
+      "caller_function": 37811,
+      "runner_function": 25537,
+      "component_lookup_function": 34970,
+      "input_bytes": 176,
+      "vtable_field_offset": 44,
+      "table_slot": 14258,
+      "callback_function": 38361,
+      "handler_function": 3634,
+      "handler_internal_event_tag": 22
+    },
+    "vtable": {
+      "memory_address": 6033116,
+      "file_offset": 82020012,
+      "bytes": 84,
+      "sha256": "aaad6b57cad0bfeee1a33385b6b750c17a2a3cc72608979c516cb592c9c497d5",
+      "raw_hex": "61370000d008000004000000ec300000af37000063370000643700006537000066370000b0370000b1370000b23700006a3700006b3700006c3700006d3700006e3700006f370000b33700007137000072370000",
+      "table_base": 1
+    },
+    "registry": {
+      "registration_function": 922,
+      "entry_append_function": 27452,
+      "resource_accessor_function": 9713,
+      "key_u16": 20,
+      "descriptor_bytes": 16
+    }
+  },
+  "dispatcher_installation": {
+    "initializer_function": 922,
+    "vtable_address": 5999068,
+    "vtable_file_offset": 81985974,
+    "vtable_bytes": 84,
+    "vtable_sha256": "89b667a4d33035c61e693d9af22906b5fe053bfd2fdcda83969efef1c710f863",
+    "vtable_raw_hex": "000000000c00000004000000272b0000d82d0000832b0000842b0000852b0000842b0000d92d0000da2d0000db2d0000892b00008a2b00008b2b0000152a00008c2b00008d2b0000dc2d00008f2b0000902b0000",
+    "callback_bindings": [
+      {
+        "vtable_field_offset": 36,
+        "table_slot": 11737,
+        "function_index": 78110
+      },
+      {
+        "vtable_field_offset": 40,
+        "table_slot": 11738,
+        "function_index": 62585
+      },
+      {
+        "vtable_field_offset": 44,
+        "table_slot": 11739,
+        "function_index": 62584
+      }
+    ],
+    "config_constructor_function": 44683,
+    "configuration_handoff_function": 33765,
+    "world_resource_lookup_typeid_signed_i64_words": [
+      5332251379967486405,
+      3138377300317167680
+    ],
+    "configuration_application_function": 4126,
+    "instruction_guards": {
+      "constructor_into_system_configs": {
+        "first_function_line": 18017,
+        "instructions": [
+          "local.get 1",
+          "local.get 7",
+          "i32.const 5999068",
+          "call 44683"
+        ]
+      },
+      "configs_handoff": {
+        "first_function_line": 18429,
+        "instructions": [
+          "local.get 0",
+          "local.get 5",
+          "call 33765"
+        ]
+      },
+      "retain_system_fat_pointer": {
+        "first_function_line": 94,
+        "instructions": [
+          "local.get 0",
+          "local.get 2",
+          "i32.store offset=52",
+          "local.get 0",
+          "local.get 1",
+          "i32.store offset=48"
+        ]
+      },
+      "world_resource_config_application": {
+        "first_function_line": 138,
+        "instructions": [
+          "local.get 3",
+          "i32.const 8",
+          "i32.add",
+          "local.get 2",
+          "i32.load offset=8",
+          "call 35968",
+          "local.get 1",
+          "i32.const 0",
+          "call 4126"
+        ]
+      }
+    },
+    "qualification": "Configuration construction/handoff and dispatcher callback bindings are statically observed; schedule label/timing and all Bevy scheduler paths are not inferred here."
+  },
+  "application": {
+    "handler": 3634,
+    "event_guard": 22,
+    "target_guid_offset": 8,
+    "target_selection": "GUID-key lookup yields an entity; existing-object path validates entity generation/state/query membership before obtaining its Fields component.",
+    "merge_functions": [
+      9445,
+      10310
+    ],
+    "field_setter": 26862,
+    "field22_readers": [
+      65110,
+      65528
+    ],
+    "missing_or_filtered_target": "Alternative same-GUID record path exists; not established as unconditional write or unconditional drop.",
+    "multi_handler": "Earlier handlers deep-clone mask/value vectors preserving GUID and field contents; the last handler can take the original event. Pointer values and padding need not be identical."
+  },
+  "independent_reviews": [
+    {
+      "local_file": "evidence/ecs-backward-20261031T220822.551754Z/channel-independent-review.json",
+      "sha256": "b0eafef6fe23eb316445b1a3033a8ebe29918d9358787a58a0d1f03102449a08"
+    },
+    {
+      "local_file": "evidence/ecs-backward-20261031T220822.551754Z/object-target-independent-review.json",
+      "sha256": "447775a7835918487576f7f72d103c632f734ee7be0b238a75017674f857a42c"
+    },
+    {
+      "local_file": "evidence/ecs-event-map-20261031T221341.766578Z/human-report-independent-review.json",
+      "sha256": "193622c96c065a672855e168d818095a1b0b24a7ae6012d8781335154b10dac0",
+      "reviewed_human_report_sha256": "e40bfe38c355dcf8633b52131e98fc2c33c0f43ba4d94a4008bd6f4350a21e68"
+    }
+  ],
+  "validation": {
+    "instruction_guards_passed": 47,
+    "structural_branch_matches_passed": 5,
+    "named_network_registrations": 25,
+    "selected_complete_REA_functions": 33,
+    "original_preserved": true,
+    "target_executed": false,
+    "official_network_used": false,
+    "gameplay_runtime_verified": false,
+    "scripts_sha256": {
+      "trace_ecs_forward.py": "fd70b417c5fb2fd6cd5b259aa268f8ecea1cd68ad7e625d5d86745c56e9d9863",
+      "trace_ecs_backward.py": "03cd45b915bacdde285c51fbb079cb8db28938d8a656804d7336c3c30c4ba637",
+      "ecs_event_map.py": "69ef7a1d37b0d4d2fe00e387dbbd89bfbb0f63303f49bb6dc89cdd634b5692a8",
+      "trace_ecs_tags.py": "808a09d978ac24b0c783973210d1738785d1fa51288f3fb2d0b19f5e4371de9d"
+    }
+  },
+  "limitations": [
+    "This closes the static object-values/HP path, not every message, gameplay branch or scheduler state.",
+    "No original game execution, official connection, packet injection, save mutation or installed-app modification.",
+    "Actual cross-device delivery, reconnect behavior, rendering convergence and full runtime timing remain unverified.",
+    "The remote relay server implementation and full original Rust source are not recovered.",
+    "Rust TypeIds, function indices, layouts and offsets apply only to the exact hashed0.126.0 artifact."
+  ]
+}

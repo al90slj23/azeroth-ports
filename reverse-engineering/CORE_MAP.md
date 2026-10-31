@@ -18,11 +18,18 @@ flowchart TD
     App --> Transport[按peer确认层与中继WebSocket]
     Transport --> Guest[1341：客人角色、ready、长度与opcode过滤]
     Guest --> Ingress[58042 / 22098 / 59035：本地客户端字节流]
+    Ingress --> Decode[878 / 4642：对象更新解码]
+    Decode --> Convert[1434 / 907：SessionEvent tag22]
+    Convert --> Channel[10914 / 19385：同一通道实例]
+    Channel --> Dispatch[37811：tag22映射注册键20]
+    Dispatch --> Registered[25537 / 38361：携带事件运行已注册系统]
+    Registered --> Apply[3634：按GUID选择对象并合并Fields]
+    Apply --> Write[26862：写入字段值]
     Incoming[玩家受到伤害] --> Player[1107：模式缩放、护甲、条件减伤、吸收盾、生命]
     Player --> Revive[复活、剩余生命或运行状态转换]
 ```
 
-图中的跨端路径来自发送、接收实现的静态对应，未以两台设备实测送达。另外已分别定位opcode169解析器、字段22读取和 `on_object_values` 对象字段更新系统；解析消息到该ECS系统的事件投递尚未闭合，不能将两端拼成完整运行证明。
+图中的跨端路径来自发送、接收实现的静态对应，未以两台设备实测送达。此前缺失的“解码消息→ECS对象更新系统”投递现已通过同一通道来源、注册键映射和已注册系统回调闭合，详见[事件投递报告](reports/2026-11-01-ecs-delivery.md)。这完成了该HP/对象字段值路径的静态还原，未替代真实运行验收。
 
 ## 已经能够解释什么
 
@@ -32,12 +39,12 @@ flowchart TD
 | 敌人实际受伤 | 条件加成的加法累积、阶段倍率、特例上限、NaN处理、至少1点伤害、真实HP写回 | 反伤、触发效果和三处递归伤害尚未完整命名。 |
 | 伤害统计和死亡 | 统计截在扣血前非负生命以内；原始HP可变负；HP≤0后设置死亡状态 | 原始扣血量、统计量、UI显示值不是同一数值。 |
 | 玩家受伤 | 模式缩放、护甲、附近条件减伤、吸收盾、剩余生命及部分复活路径 | 保护标志和特定天赋的全部语义尚未恢复。 |
-| HP结果同步 | 实际HP→字段22→opcode169→主机发送队列→应用tag7→客人过滤→客户端字节流 | 这条结果路径不能代表全部玩法的计算归属或完整联机兼容。 |
-| 客户端对象侧 | 169→878→4642/9772的解析分支；命名系统→回调→字段合并/setter；字段22读取 | 解码消息到该系统的事件投递仍缺同一路径证据；未验证渲染/生命条收敛。 |
+| HP结果同步 | 实际HP→字段22→opcode169→主机发送队列→应用tag7→客人过滤→事件投递→客户端字段写入 | 这条静态结果路径不能代表全部玩法的计算归属、真实送达或完整联机兼容。 |
+| 客户端对象侧 | 解码→SessionEvent→同一通道→注册键20→系统回调→按GUID合并Fields；字段22读取 | 对象存在/实体及查询条件需成立；未验证渲染/生命条收敛。 |
 | 协议转写 | 两个不同标签空间；8/11个中继变体、19/25个应用变体的离线编解码 | 复杂未还原变体明确拒绝；远端服务实现不可由客户端直接恢复。 |
 | 对象更新读取 | kind0值更新、packedGUID、字段掩码及u32字段；可读取字段22的HP | 只支持已观察子集，未实现创建、移动、压缩等变体。 |
 
-具体公式、偏移、分支与依据见[伤害报告](reports/2026-11-01-damage-core.md)和[联机报告](reports/2026-11-01-coop-sync.md)。这已达到局部算法、状态转换和消息格式可读还原的程度，尚未恢复完整Rust源码、所有类型、ECS调度、全部技能规则或可替代原作的完整核心。
+具体公式、偏移、分支与依据见[伤害报告](reports/2026-11-01-damage-core.md)、[联机报告](reports/2026-11-01-coop-sync.md)和[事件投递报告](reports/2026-11-01-ecs-delivery.md)。这已达到局部算法、状态转换、消息格式及该投递路径可读还原的程度，尚未恢复完整Rust源码、所有类型、完整ECS调度、全部技能规则或可替代原作的完整核心。
 
 ## 复现入口
 
@@ -49,6 +56,9 @@ python3 reverse-engineering/scripts/wasm_index.py --producer /path/to/full-wat-p
 python3 reverse-engineering/scripts/trace_damage.py --index /path/to/index.sqlite
 python3 reverse-engineering/scripts/trace_coop.py --index /path/to/index.sqlite
 python3 reverse-engineering/scripts/trace_client_values.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_ecs_forward.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/trace_ecs_backward.py --index /path/to/index.sqlite
+python3 reverse-engineering/scripts/ecs_event_map.py --index /path/to/index.sqlite
 
 # 用独立手写字节样本核对本地协议转写，不连接或重放到游戏服务。
 python3 reverse-engineering/scripts/check_coop_wire.py
@@ -60,3 +70,5 @@ python3 reverse-engineering/scripts/check_update_object_wire.py
 本轮代码仅用于研究，没有更改游戏核心、安装包或用户存档。模型、贴图与特效替换仍在另一条未完成的研究线上。
 
 离线转写已通过27个合作协议样本和10个对象更新样本；509个截断、尾随或未覆盖输入被拒绝。样本是按原始指令独立手写的字节，不是线上抓包，也不是原游戏运行验收。
+
+后续投递调查另保留33个完整函数的REA Evidence，47处指令guard和5处结构化分支匹配通过；注册表恢复了25项命名网络系统。以上计数属于静态证据检查，不是对局测试数量。

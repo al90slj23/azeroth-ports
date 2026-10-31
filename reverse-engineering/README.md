@@ -2,7 +2,7 @@
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 
-目前已将一条技能命中追到真实HP扣减与死亡状态，并把HP对象更新追到主机发送和客人客户端字节流入口。先看[核心还原图](CORE_MAP.md)，具体依据见[伤害计算](reports/2026-11-01-damage-core.md)和[合作同步](reports/2026-11-01-coop-sync.md)。这些是静态还原与离线协议验证，尚未完成真实联机验收或全部客户端字段应用追踪。
+目前已将一条技能命中追到真实HP扣减与死亡状态，并将HP对象更新经主机发送、客人解码、事件通道和注册系统追到客户端字段写入。先看[核心还原图](CORE_MAP.md)，最新补齐部分见[事件投递](reports/2026-11-01-ecs-delivery.md)，此前依据见[伤害计算](reports/2026-11-01-damage-core.md)和[合作同步](reports/2026-11-01-coop-sync.md)。这是该路径的静态还原与离线协议验证，尚未完成真实联机验收。
 
 用户提供的 [bbylw/rea-cn](https://github.com/bbylw/rea-cn) 是中文文档站，真实工具是 [morluto/rea](https://github.com/morluto/rea) 的 npm 包 `rea-agents`。这里固定 **REA 6.8.0 + Node 22.23.4**，使用 CLI 和项目内的持久 MCP 会话，不要求注册全局 MCP 或重启客户端。工具、运行时及分析器安装不会进入游戏 APK。
 
@@ -59,7 +59,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 原生 Windows EXE 的导入表／Rust 元数据 | 已运行无目标执行的 REA 检查；元数据不是函数实现或源码。 |
 | 原生函数、伪代码、调用关系 | 两个完整解码函数支持旧版系数与字段写入结论；其余三个候选不能等同为可靠行为还原。完整REA分析尚未完成。 |
 | 真实战斗数值 | 已追到一条完整命中与敌人HP/死亡，以及玩家受伤主干；反伤、全部技能和逐帧一致性尚未恢复。 |
-| 合作同步 | 已追通HP结果到远端客户端字节流的静态路径，部分协议已有离线转写；最终客户端应用、真实送达和完整权限仍待验证。 |
+| 合作同步 | 已追通HP结果到客户端对象字段写入的静态路径；同一事件通道、注册表和系统回调已闭合。真实送达、渲染和全部权限/异常仍待验证。 |
 | 模型／特效 | 资源入口已有线索；实际替换与效果验证仍未开展。 |
 
 依据固定发行包中的 `dist/wasm/WabtRelease.js`、匹配工作流及 [官方 WASM 指南](https://github.com/morluto/rea/blob/main/docs/wasm-artifacts.md)。说明文档 main 可能领先发行包，执行以本地 6.8.0 的 `--help` 和实际结果为准。

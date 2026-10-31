@@ -773,7 +773,7 @@
   "limitations": [
     "Static path recovery does not prove runtime reachability, delivery, timing, visual HP application, reconnection correctness or official interoperability.",
     "Only selected HP result and role branches are traced; this is not all combat or all synchronization authority.",
-    "The final client field22 application consumer has not been identified in this report.",
+    "Final decoder-to-ECS delivery and field application are now statically traced in the companion ECS-delivery report; actual delivery/rendering remain unverified.",
     "Original Rust symbols and full types are absent; offsets and dynamic trait mappings are version-specific.",
     "Remote relay implementation/source, its checks and server-side state are not recoverable from these client artifacts alone.",
     "The offline codecs cover supported variant shapes only; complex unimplemented variants are rejected.",
@@ -800,5 +800,11 @@
       "update_object_wire.py": "950bc6cebcc57762a5b0dbac7de358c5c475e5aecffc75da6dd29ec8b271079a",
       "check_update_object_wire.py": "00653897e160c1701019354a17939964066bdb8dafd1a2b2e9635b0273393835"
     }
+  },
+  "follow_up_ecs_delivery": {
+    "report": "2026-11-01-ecs-delivery.md",
+    "evidence_id": "ev_9e5275a3e7ce53c9c65593e57fcfb2de48b5838e753e74d94a8cab9c0cedbece",
+    "status": "Previously untraced decoded-message to registered ECS system delivery is statically connected for the observed object-values path.",
+    "runtime_delivery_or_rendering_verified": false
   }
 }

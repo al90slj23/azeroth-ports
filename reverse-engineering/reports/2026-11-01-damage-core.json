@@ -867,7 +867,7 @@
     "setter_26862": "Grow mask and value vectors as needed; OR field bit; values[index]=word.",
     "mask_count_caveat": "9772 min(41,count) is initial capacity, not a protocol hard limit.",
     "vtable_caveat": "The 21 words include size/alignment/other metadata; only the two selected callback bindings are claimed. Original trait method names are not recovered.",
-    "unresolved_hop": "Parsed UpdateObject message from878/4642 to the on_object_values ECS event delivery has not been traced through the same data flow.",
+    "unresolved_hop": "Unresolved in the initial parser/system endpoint extraction; subsequently statically connected by the companion ECS-delivery report. Runtime behavior remains unverified.",
     "auxiliary_function_10095": "Locally retained full function and identity-bound ranges; not included in the five-function decoder REA Evidence.",
     "target_executed": false,
     "network_used": false,
@@ -875,5 +875,11 @@
     "scripts_sha256": {
       "trace_client_values.py": "1f7cc4fcf8a3d99a8814859cb194e459dcee04501d7a9ab0c668fb68212423a9"
     }
+  },
+  "follow_up_ecs_delivery": {
+    "report": "2026-11-01-ecs-delivery.md",
+    "evidence_id": "ev_9e5275a3e7ce53c9c65593e57fcfb2de48b5838e753e74d94a8cab9c0cedbece",
+    "status": "Previously untraced decoded-message to registered ECS system delivery is statically connected for the observed object-values path.",
+    "runtime_delivery_or_rendering_verified": false
   }
 }
