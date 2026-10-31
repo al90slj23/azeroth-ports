@@ -46,7 +46,8 @@ def command(argv, stdout, stderr, timeout=120):
             'elapsed_seconds': round(time.monotonic() - started, 3)}
 
 
-def binary_functions(data):
+def binary_functions(data, requested=None):
+    requested = SELECTED if requested is None else set(requested)
     def uint(p):
         value = shift = 0
         while p < len(data) and shift <= 28:
@@ -79,16 +80,18 @@ def binary_functions(data):
     for local_index in range(count):
         leb = p; length, begin = uint(p); p = begin + length
         index = local_index + imported
-        if index in SELECTED:
+        if index in requested:
             selected[index] = {'function_index': index, 'code_body_index': local_index,
                                'size_leb_offset': leb, 'body_start': begin, 'body_end': p,
                                'body_bytes': length,
                                'body_sha256': hashlib.sha256(data[begin:p]).hexdigest()}
     assert p == sections[10][1]
+    if set(selected) != requested:
+        raise ValueError('Requested indices must identify existing local functions')
     return imported, count, selected
 
 
-def extract(wat, output, selected):
+def extract(wat, output, selected, call_targets=(630, 25238, 25242)):
     head = re.compile(rb'^  \(func \(;(\d+);\)')
     current = None
     written = None
@@ -97,18 +100,20 @@ def extract(wat, output, selected):
     lua_references = []
     offset = 0
     wat_line = 0
+    target_calls = set(call_targets)
+    direct_call = re.compile(rb'^(call|return_call) (\d+)\)*$')
     with wat.open('rb') as stream:
         for line in stream:
             wat_line += 1
-            if line.startswith(b'  (func '):
+            if line.startswith(b'  (') or line == b')\n':
                 match = head.match(line)
-                if match is None:
+                if match is None and line.startswith(b'  (func '):
                     raise ValueError('Unexpected WABT function header')
                 if written is not None:
                     written.close(); written = None
                 if current in selected:
                     selected[current]['wat_end'] = offset
-                current = int(match[1])
+                current = int(match[1]) if match else None
                 if current in selected:
                     selected[current]['wat_start'] = offset
                     selected[current]['wat_start_line'] = wat_line
@@ -116,13 +121,16 @@ def extract(wat, output, selected):
             if written is not None:
                 written.write(line)
             stripped = line.strip()
-            if stripped in (b'call 630', b'call 25238', b'call 25242'):
-                calls.append({'caller': current, 'callee': int(stripped.split()[1]),
+            if current is not None and stripped.startswith((b'call ', b'return_call ')):
+                call = direct_call.fullmatch(stripped)
+                if call is not None and int(call[2]) in target_calls:
+                    calls.append({'caller': current, 'callee': int(call[2]), 'instruction': call[1].decode(),
                               'wat_offset': offset, 'wat_line': wat_line})
-            if stripped == f'i32.const {PRESENCE_ADDRESS}'.encode():
+            instruction = stripped.rstrip(b')')
+            if current is not None and instruction == f'i32.const {PRESENCE_ADDRESS}'.encode():
                 url_references.append({'function_index': current, 'wat_offset': offset,
                                        'wat_line': wat_line})
-            if stripped == b'i32.const 1758940':
+            if current is not None and instruction == b'i32.const 1758940':
                 lua_references.append({'function_index': current, 'wat_offset': offset,
                                        'wat_line': wat_line, 'linear_memory_address': 1758940})
             offset += len(line)
@@ -141,10 +149,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reuse-preflight', type=Path,
                         help='Reuse an existing recorded WABT preflight with matching provenance')
+    parser.add_argument('--functions', type=int, nargs='+', default=sorted(SELECTED),
+                        help='Complete local function indices to retain; defaults to the original eight')
+    parser.add_argument('--call-targets', type=int, nargs='+', default=[630, 25238, 25242],
+                        help='Direct call/return_call targets to index, including final-line calls')
     args = parser.parse_args()
     wasm = ROOT.parent / 'android/assets/latest-web-core/wenilla_bg.wasm'
     if sha(wasm) != ORIGINAL_SHA:
         raise SystemExit('Original 0.126.0 core identity changed')
+    if any(i < 0 for i in args.functions + args.call_targets):
+        parser.error('Function indices must be nonnegative')
+    imported, defined, selected = binary_functions(wasm.read_bytes(), args.functions)
     tools = ROOT / '.toolchain/rea-wasm-profile'
     archive = tools / 'wabt-1.0.42-macos-arm64.tar.gz'
     if sha(archive) != WABT_ARCHIVE_SHA:
@@ -179,8 +194,7 @@ def main():
                       'wat_sha256': sha(wat), 'wat_bytes': wat.stat().st_size,
                       'invocations': invocations}
         (output / 'producer-provenance.json').write_text(json.dumps(provenance, indent=2) + '\n')
-    imported, defined, selected = binary_functions(wasm.read_bytes())
-    calls, url_references, lua_references = extract(wat, output, selected)
+    calls, url_references, lua_references = extract(wat, output, selected, args.call_targets)
     result = {'profile': 'local-focused-extension; not stock REA inspect_wasm_artifact',
               'original_module': {'path': str(wasm), 'bytes': wasm.stat().st_size, 'sha256': ORIGINAL_SHA},
               'wabt_archive_sha256': WABT_ARCHIVE_SHA, 'wabt_tools': identities,
@@ -188,6 +202,8 @@ def main():
                                                          'sha256': provenance['wat_sha256']},
               'function_imports': imported, 'defined_functions': defined,
               'selected_complete_functions': list(selected.values()), 'direct_call_sites': calls,
+              'indexed_direct_call_kinds': ['call', 'return_call'],
+              'indexed_call_targets': sorted(set(args.call_targets)),
               'presence_url_memory_address': PRESENCE_ADDRESS, 'presence_url_references': url_references,
               'lua_api_source_references': lua_references,
               'invocations': invocations, 'target_executed': False,

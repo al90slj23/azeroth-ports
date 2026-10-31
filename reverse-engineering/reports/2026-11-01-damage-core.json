@@ -1,0 +1,879 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "target_version": "0.126.0",
+  "target_build": "3e72472a",
+  "original_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "method": "complete-original WABT decode, project-local REA focused Evidence, manual instruction/control-flow interpretation, independent static cross-review",
+  "provider_id": "azeroth-ports-local-wasm-focus",
+  "evidence_id": "ev_9357c18f97f9f0b1487a3db7533d48a92ec3eff0b29300cb70da68709abfe77d",
+  "combined_evidence_run": "evidence/wasm-focused-20261031T213817.960378Z",
+  "local_extraction_run": "evidence/damage-core-20261031T214725.681383Z",
+  "complete_functions": [
+    {
+      "idx": 933,
+      "wat_start": 149501211,
+      "wat_end": 149809476,
+      "wat_line": 1007554,
+      "body_start": 3145172,
+      "body_end": 3168252,
+      "body_bytes": 23080,
+      "wat_bytes": 308265,
+      "wat_sha256": "e3f34bbb48729849c3d8feb3aed7ee9710e0550ec0e0e78dc45e636335221d26",
+      "body_sha256": "8f3936de6295d0250b32ab3abf1a3bb7f6b913a2b3067f26f6e0561dd3128e5f",
+      "wat_file": "function-933.wat",
+      "instruction_guards": [
+        {
+          "normalized_instructions": [
+            "local.get 18",
+            "i32.const 288",
+            "i32.add",
+            "local.tee 7",
+            "local.get 7",
+            "f32.load",
+            "local.tee 32"
+          ],
+          "first_function_line": 1303
+        },
+        {
+          "normalized_instructions": [
+            "local.tee 33",
+            "f32.sub",
+            "f32.store"
+          ],
+          "first_function_line": 1322
+        },
+        {
+          "normalized_instructions": [
+            "local.get 7",
+            "i32.const 416",
+            "i32.sub",
+            "local.tee 11",
+            "i32.const 1",
+            "i32.store"
+          ],
+          "first_function_line": 4630
+        }
+      ],
+      "observed_direct_callers": [
+        915,
+        917,
+        921,
+        933,
+        934,
+        963,
+        976,
+        1107,
+        1269,
+        1785,
+        1819,
+        1874,
+        3849,
+        4341,
+        5719,
+        8282,
+        10233,
+        12175
+      ]
+    },
+    {
+      "idx": 934,
+      "wat_start": 149809476,
+      "wat_end": 150201005,
+      "wat_line": 1018349,
+      "body_start": 3168255,
+      "body_end": 3190783,
+      "body_bytes": 22528,
+      "wat_bytes": 391529,
+      "wat_sha256": "41c6ec557bded46c1c3f51ca048ae950058d053690498fc764dda27ac3242609",
+      "body_sha256": "0da442c86897761d461c11007b5fdb4cbafb27a1ba1f923a379592c832b67175",
+      "wat_file": "function-934.wat",
+      "instruction_guards": [
+        {
+          "normalized_instructions": [
+            "local.get 1",
+            "f32.load offset=12",
+            "local.set 34"
+          ],
+          "first_function_line": 457
+        },
+        {
+          "normalized_instructions": [
+            "local.get 0",
+            "f32.load offset=1188"
+          ],
+          "first_function_line": 772
+        },
+        {
+          "normalized_instructions": [
+            "local.get 0",
+            "f32.load offset=1192",
+            "f32.mul"
+          ],
+          "first_function_line": 768
+        },
+        {
+          "normalized_instructions": [
+            "local.get 1",
+            "i32.const 0",
+            "call 933"
+          ],
+          "first_function_line": 794
+        }
+      ],
+      "observed_direct_callers": [
+        917,
+        963,
+        1107,
+        1785
+      ]
+    },
+    {
+      "idx": 1107,
+      "wat_start": 227788338,
+      "wat_end": 227953308,
+      "wat_line": 2329984,
+      "body_start": 6073560,
+      "body_end": 6084343,
+      "body_bytes": 10783,
+      "wat_bytes": 164970,
+      "wat_sha256": "23c072eab8e5620e4d23b4855e6d5436d9b8678b8f22f18752db32634894b395",
+      "body_sha256": "0717f6e2e4227da48bf1d9eded2768b46f15b5d8d4868192d8293d2a3aac28bb",
+      "wat_file": "function-1107.wat",
+      "instruction_guards": [
+        {
+          "normalized_instructions": [
+            "local.get 1",
+            "f32.const 0x1p+0 (;=1;)",
+            "local.get 0",
+            "f32.load offset=1208",
+            "f32.sub",
+            "f32.mul",
+            "local.set 30"
+          ],
+          "first_function_line": 101
+        },
+        {
+          "normalized_instructions": [
+            "local.get 0",
+            "local.get 0",
+            "f32.load offset=1344",
+            "local.get 30",
+            "f32.sub",
+            "f32.store offset=1344"
+          ],
+          "first_function_line": 1584
+        }
+      ],
+      "observed_direct_callers": [
+        915,
+        921,
+        1819,
+        3849
+      ]
+    },
+    {
+      "idx": 2017,
+      "wat_start": 387762695,
+      "wat_end": 387802053,
+      "wat_line": 5520624,
+      "body_start": 13123803,
+      "body_end": 13127257,
+      "body_bytes": 3454,
+      "wat_bytes": 39358,
+      "wat_sha256": "8774360616d538828277cbac638591c324fda49b327895afe71f9cd2d81e1f80",
+      "body_sha256": "e6663b13fa2a57b6e4f1c1a3bf0af931407f7a8bf4f68574dff9ae9eab6397ad",
+      "wat_file": "function-2017.wat",
+      "instruction_guards": [],
+      "observed_direct_callers": [
+        880
+      ]
+    },
+    {
+      "idx": 7654,
+      "wat_start": 648057435,
+      "wat_end": 648073920,
+      "wat_line": 12560514,
+      "body_start": 28625308,
+      "body_end": 28626817,
+      "body_bytes": 1509,
+      "wat_bytes": 16485,
+      "wat_sha256": "46726bdbe36070bee2d6ca6376f1eda52aaf755a889567c64ed3891a6d38ad42",
+      "body_sha256": "f1e6582e7ed9efb88ccb8f91f173e9b0e52cb75633d687b93cee55b9b3fa874c",
+      "wat_file": "function-7654.wat",
+      "instruction_guards": [
+        {
+          "normalized_instructions": [
+            "local.get 0",
+            "i32.const 4",
+            "i32.store8 offset=2299"
+          ],
+          "first_function_line": 8
+        }
+      ],
+      "observed_direct_callers": [
+        1107,
+        18753,
+        40874
+      ]
+    },
+    {
+      "idx": 13409,
+      "wat_start": 782647566,
+      "wat_end": 783012940,
+      "wat_line": 16533304,
+      "body_start": 37226474,
+      "body_end": 37257818,
+      "body_bytes": 31344,
+      "wat_bytes": 365374,
+      "wat_sha256": "7c8a00f7a53cd85d6166f23a13602c411abaa8d880ed76bf877f6f0b9d7abc46",
+      "body_sha256": "b04f3a72d6c2ef9d6f849d3eb6b8a2fbce5d136d5756317c09b9f744c4db4931",
+      "wat_file": "function-13409.wat",
+      "instruction_guards": [],
+      "observed_direct_callers": [
+        880
+      ]
+    }
+  ],
+  "field_mapping": {
+    "enemy_collection": {
+      "pointer_offset": 1596,
+      "length_offset": 1600,
+      "record_stride_bytes": 416,
+      "id_u64_offset": 112,
+      "hp_f32_offset": 288,
+      "hpm_f32_offset": 292,
+      "death_discriminator_u32_offset": 0,
+      "death_discriminator_value": 1,
+      "supporting_output_function": 13409,
+      "lua_prefix": "AZSUNITS",
+      "lua_field_order": [
+        "kind",
+        "id",
+        "name",
+        "hp",
+        "hpm",
+        "state"
+      ],
+      "lua_id_output_bits": 32,
+      "lua_id_caveat": "AZSUNITS stores the low32 bits into its formatter; combat and packedGUID paths retain the full64-bit ID."
+    },
+    "player_attributes": {
+      "max_hp_attribute": 1176,
+      "damage_multiplier": 1180,
+      "critical_chance": 1188,
+      "critical_multiplier": 1192,
+      "damage_reduction_arm": 1208,
+      "current_hp": 1344,
+      "absorb_shield": 1348,
+      "supporting_stats_function": 2017
+    }
+  },
+  "observed_hit_path": {
+    "caller": 934,
+    "consumer": 933,
+    "selected_934_path": {
+      "arithmetic": "f32 and ordered operations; not all ability branches",
+      "base": "state.dmg * ((((definition.f32(48) * f32(1.4)) * ability.f32(12)) * ability.f32(52)) * category_scale + (definition.f32(48)>0 ? state.hp_attribute * ability.f32(72) : 0))",
+      "category_scale_condition": "((definition.u8(84)-2)&255)<=6; otherwise scale1",
+      "category_scale_table": {
+        "linear_memory_address": 1577964,
+        "wasm_file_offset": 77600493,
+        "values": [
+          0.5,
+          0.5,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.5
+        ],
+        "raw_hex": "0000003f0000003f0000803f0000803f0000803f0000803f0000003f"
+      },
+      "rng_u24": "((u32(rotl32(s0+s3,7)+s0)) >> 8) * f32(2^-24)",
+      "critical_condition": "state.f32(1188) > U24; no chance clamp observed here",
+      "passed_amount": "critical ? base * state.f32(1192) : base",
+      "wasm_function_lines": {
+        "base": [
+          428,
+          512
+        ],
+        "critical_and_call": [
+          720,
+          796
+        ]
+      }
+    },
+    "933_order": [
+      "active-state guard",
+      "conditional additive multiplier M",
+      "target phase multiplier P",
+      "conditional special-target cap / early rejection",
+      "NaN to1 and minimum1",
+      "raw HP subtraction",
+      "capped damage accounting",
+      "death transition and subsequent effects"
+    ],
+    "active_state_guard": {
+      "byte_offset": 2299,
+      "required_value": 1
+    },
+    "target_guard": "matching u64(unit+112), unit.u32(0)!=1; value1 is written by HP<=0 death path",
+    "M": {
+      "initial": 1,
+      "record_table_pointer_offset": 1012,
+      "record_table_length_offset": 1016,
+      "record_stride_bytes": 8,
+      "aggregate_operation": "sum matching f32 values; conditionally f32.add to same M",
+      "named_terms": [
+        {
+          "tag": 18,
+          "name": "Vs Controlled",
+          "condition": "unit.f32(376)>now || unit.f32(124)>now || unit.f32(384)>now"
+        },
+        {
+          "tag": 19,
+          "name": "Vs Elites",
+          "condition": "unit.i32(244)!=-1 || unit.u8(412)==1"
+        },
+        {
+          "tag": 20,
+          "name": "Execute",
+          "condition": "unit.f32(288) < f32(0.3)*unit.f32(292)"
+        },
+        {
+          "tag": 21,
+          "name": "Vs Afflicted",
+          "condition": "unit.u32(240)!=0"
+        },
+        {
+          "tag": 28,
+          "name": "Shielded",
+          "condition": "state.f32(1348)>0"
+        }
+      ],
+      "other_terms": [
+        "if now<unit.f32(148): add unit.f32(144)",
+        "if now<unit.f32(156): add unit.f32(152); else if now<unit.f32(164): add unit.f32(160)",
+        "always add unit.f32(364)"
+      ],
+      "unknowns": "Individual time/status field Rust names and ability-specific effect identities are not recovered.",
+      "ordered_terms": [
+        "1",
+        "conditional sum(tag18)",
+        "conditional sum(tag19)",
+        "conditional sum(tag20)",
+        "conditional sum(tag21)",
+        "conditional unit.f32(144)",
+        "conditional choice unit.f32(152) or unit.f32(160)",
+        "conditional sum(tag28)",
+        "unit.f32(364)"
+      ]
+    },
+    "P": {
+      "initial": 1,
+      "eligibility": "unit.i32(244)!=-1 || unit.i32(64)!=-1",
+      "branches": [
+        "unit.f32(408)>now =>1.5",
+        "else unit.f32(404)>now =>0.25",
+        "else any associated unit with u32(0)==0,u32(40)==2,u64(32)==target_id =>0.25",
+        "else1"
+      ],
+      "unknowns": "Exact effect/phase names remain unconfirmed."
+    },
+    "special_cap": {
+      "target_condition": "unit.u32(40)==3 && unit.u64(32)==0",
+      "zero_spell_id": "skip ability-category rejection, still apply cap",
+      "nonzero_spell_id": "lookup ability category; category<=11 and bit(3340,category)==1 => return without HP write",
+      "allowed_path": "minNum-like select(amount, unit.f32(292)/5); result==0 =>return",
+      "nan_handling": "one NaN operand selects the other; both NaN remain NaN before the final NaN-to1 floor"
+    },
+    "final_damage": "if isNaN(amount_after_modifiers) then1; then max(1, amount)",
+    "hp_store": "unit.f32(288)=old_hp-damage; no lower-zero clamp",
+    "accounted_damage": "f32.min(nonnegative_nonNaN(old_hp),damage), promoted to f64 and added at state+824",
+    "death": {
+      "condition": "new_hp<=0; NaN does not pass",
+      "writes": [
+        "unit.u32(0)=1",
+        "unit.f32(344)=0",
+        "unit.u32(240)=0",
+        "unit.f32(4)=now"
+      ],
+      "source_lines": {
+        "new_hp_load": 2678,
+        "guard": [
+          4264,
+          4274
+        ],
+        "discriminator_store": [
+          4626,
+          4635
+        ]
+      }
+    },
+    "self_recursive_calls": {
+      "count": 3,
+      "function_lines": [
+        8580,
+        8799,
+        10187
+      ],
+      "semantic_limit": "Additional triggered/recursive damage paths exist; their complete gameplay identities and recursion guards are not all reconstructed."
+    }
+  },
+  "observed_player_incoming_path": {
+    "function": 1107,
+    "required_state_byte2299": 1,
+    "main_reduction": "incoming_amount * optional_mode_scaling * (1-state.f32(1208))",
+    "nearby_reduction": "if qualifying unit within squared distance64 exists, multiply once by (1-state.f32(1260))",
+    "shield": "if state.f32(1348)>0, subtract NaN-aware minNum-like(shield,amount) from both shield and amount",
+    "hp_store": "state.f32(1344)=read_current_hp_at_write-remaining_amount",
+    "statistics": "state.f64(832)+=f64(remaining_amount)",
+    "minimum_damage": "No enemy-style minimum1 floor is present on this main incoming path.",
+    "source_lines": {
+      "arm_reduction": [
+        101,
+        107
+      ],
+      "shield_store": 639,
+      "hp_store": [
+        1583,
+        1590
+      ],
+      "stats_store": [
+        1591,
+        1599
+      ]
+    },
+    "revival_observations": [
+      "protection byte2290 branch clamps HP to at least1",
+      "ability/talent-specific revival branches exist",
+      "if earlier revival did not handle and state.u32(1440)>0: decrement life count and restore half of hp_attribute1176",
+      "otherwise write HP0 and call7654; 7654 writes state byte2299=4"
+    ],
+    "limitations": "Exact names of mode/protection/immunity/nearby flags and all resurrection effects are not fully recovered; side effects may change state before final HP read.",
+    "optional_mode_scaling": {
+      "condition": "state.u8(2294)==1",
+      "ordered_steps": [
+        "a=(state.u32(1888)!=0 ? f32(0.8):f32(1))",
+        "b=(call38110(state.u32(184),state.u32(188)) <u 3 ? f32(0.7):f32(1))",
+        "n=f32.convert_u32(wrapping_sub_u32(state.u32(2252),1))",
+        "t=b*n",
+        "t*=f32(0.064)",
+        "t+=f32(1)",
+        "t=a*t",
+        "amount=amount*t"
+      ],
+      "unknowns": "Mode/level-like field names and helper38110 semantics remain unconfirmed.",
+      "function_lines": [
+        23,
+        58
+      ]
+    }
+  },
+  "validation": {
+    "complete_function_slices": 6,
+    "instruction_guards_passed": 10,
+    "independent_static_review": [
+      "UI HP field mapping",
+      "state!=1 target filtering branch depth",
+      "base and critical structure",
+      "NaN/minimum1/accounting",
+      "HP<=0 guarded death discriminator write",
+      "client named-system/vtable/element-table association",
+      "generic field setter and field22 getter"
+    ],
+    "original_preserved": true,
+    "target_executed": false,
+    "semantic_runtime_validation": false,
+    "scripts_sha256": {
+      "trace_damage.py": "6b4cb3061c449c84a46361c3cc0a52b8dd8066c653aab8a22d6b24635a28b66d"
+    },
+    "original_code_section_ranges_verified": true,
+    "legacy_incomplete_call_index_rejected": true
+  },
+  "limitations": [
+    "These are recovered shipped instructions and explanatory names, not original Rust source or symbols.",
+    "The selected934 hit path is not a universal damage formula for every spell, DoT, companion or triggered effect.",
+    "The1065 record may be an upgrade preview; same-offset arithmetic alone does not prove that a UI mutation changes live combat.",
+    "Dynamic gameplay effects, simultaneous triggers, floating-point replay and cooperative authority/synchronization remain separately validated tasks.",
+    "No game binary patch, target execution, installed APK/App change or user-save mutation was performed."
+  ],
+  "hp_update_packet": {
+    "evidence_id": "ev_95bddbf35e7e6a67801cf0eb2eae835d7b15175f340364f65451738d341d37b8",
+    "complete_evidence_run": "evidence/wasm-focused-20261031T214051.566794Z",
+    "opcode_u16": 169,
+    "opcode_hex": "0x00A9",
+    "source_function": 933,
+    "hp_value": "u32.trunc_sat(f32.ceil(nonnegative_nonNaN(new_hp)))",
+    "field_index": 22,
+    "block": "u8(0) + packedGUID(target_id) + fieldMaskBlockCount + LEu32 masks + ordered LEu32 values",
+    "packet_payload": "LEu32(updateBlockCount=1) + u8(0) + block",
+    "queue_offsets": {
+      "capacity": 1688,
+      "pointer": 1692,
+      "length": 1696,
+      "descriptor_stride_bytes": 16
+    },
+    "helper_functions": [
+      {
+        "function_index": 6565,
+        "code_body_index": 5687,
+        "size_leb_offset": 26661082,
+        "body_start": 26661084,
+        "body_end": 26662530,
+        "body_bytes": 1446,
+        "body_sha256": "a871751825ea12d7c17c87faf15e5bf341a67237aa1dd7d00f8db7c5f6060d2b",
+        "wat_start": 620690972,
+        "wat_start_line": 11675833,
+        "wat_end": 620710317,
+        "wat_bytes": 19345,
+        "wat_sha256": "c93bf2afc44971c8b44f0fc13386b2b33d5dba8f3df22e71c2789b7d3517963b",
+        "wat_file": "function-6565.wat"
+      },
+      {
+        "function_index": 15808,
+        "code_body_index": 14930,
+        "size_leb_offset": 39725754,
+        "body_start": 39725756,
+        "body_end": 39726533,
+        "body_bytes": 777,
+        "body_sha256": "a30a427c84bcb6bc44318f4593f0b80a68ccfcea405658740d866f3727e43eda",
+        "wat_start": 812596481,
+        "wat_start_line": 17670991,
+        "wat_end": 812603822,
+        "wat_bytes": 7341,
+        "wat_sha256": "29ef7ae83ddb96beb0eb01b81f51e445bffc37990b4a68423f230a83f9b70b72",
+        "wat_file": "function-15808.wat"
+      },
+      {
+        "function_index": 50551,
+        "code_body_index": 49673,
+        "size_leb_offset": 64741785,
+        "body_start": 64741787,
+        "body_end": 64742003,
+        "body_bytes": 216,
+        "body_sha256": "46adcd7e1d3917daf9146ad10b91419ddce741080bbde87914242ce490c6f1ab",
+        "wat_start": 1145389087,
+        "wat_start_line": 28884712,
+        "wat_end": 1145391131,
+        "wat_bytes": 2044,
+        "wat_sha256": "cc2470b6ca9ecb6b503f016d029ae76bd4f57aeeae0b48e3088d349b010cbeb3",
+        "wat_file": "function-50551.wat"
+      }
+    ],
+    "source_locations": {
+      "HP_sanitization_ceil": {
+        "function": 933,
+        "function_lines": [
+          3101,
+          3150
+        ]
+      },
+      "HP_unsigned_conversion": {
+        "function": 933,
+        "function_line": 3292
+      },
+      "field22_and_mask": {
+        "function": 933,
+        "function_lines": [
+          3773,
+          3844
+        ]
+      },
+      "opcode169": {
+        "function": 50551,
+        "function_lines": [
+          20,
+          22
+        ]
+      }
+    },
+    "limitations": [
+      "This report establishes production of the update packet and local queue insertion. Transport delivery, peer application and online behavior require the separate cooperative-flow investigation.",
+      "Opcode and field numbers come from shipped instructions; no unverified external protocol naming is required."
+    ]
+  },
+  "guest_client_parser_extension": {
+    "local_extraction_run": "evidence/client-values-20261031T215631.867478Z",
+    "decoder_evidence_id": "ev_f33d56158bc5b4cbdd18818267a5faebfd709e25f2fc3b762c562f9928f5805e",
+    "system_evidence_id": "ev_65f50cb05a9783365e82155f86d92294e4b9bb457845d9385f908bbc7f668aa8",
+    "complete_functions": [
+      {
+        "function_index": 878,
+        "body_start": 895396,
+        "body_end": 1073902,
+        "body_bytes": 178506,
+        "body_sha256": "08709bf72576adc4993238f1436147b6a27cd6ddc538fafd8455d18614236db8",
+        "wat_start": 110416,
+        "wat_end": 67991578,
+        "wat_line": 1339,
+        "wat_bytes": 67881162,
+        "wat_sha256": "e869d07fd9da8f63dffa507f6b7cae206ecfe4fcd02c505154f5c18fc9516559"
+      },
+      {
+        "function_index": 922,
+        "body_start": 2667433,
+        "body_end": 2710456,
+        "body_bytes": 43023,
+        "body_sha256": "a601c4ca360f28ad8817800e20d65b201e3d1f4b0ac0bc4c58af37823fe8b565",
+        "wat_start": 133932134,
+        "wat_end": 134895647,
+        "wat_line": 789987,
+        "wat_bytes": 963513,
+        "wat_sha256": "38cd4e06623a1d900c82f4e81e91fa459f2b29f279bf701debf7e8c21dd04ee4"
+      },
+      {
+        "function_index": 3634,
+        "body_start": 19162242,
+        "body_end": 19165857,
+        "body_bytes": 3615,
+        "body_sha256": "d1cd1abea0e664b991bf30298f6984a5ae0a9e639c2336ab412550605c96e43f",
+        "wat_start": 491505328,
+        "wat_end": 491559844,
+        "wat_line": 8289349,
+        "wat_bytes": 54516,
+        "wat_sha256": "ccc049739b9c86b7f646142cbe48691557a7fd47e8a87b9f05ced60831a606d9"
+      },
+      {
+        "function_index": 4642,
+        "body_start": 22015207,
+        "body_end": 22017458,
+        "body_bytes": 2251,
+        "body_sha256": "3968a7c8683004176dd5224448a92291ece7ff5cc8444ed01e50cef595cf2ea5",
+        "wat_start": 543402679,
+        "wat_end": 543437576,
+        "wat_line": 9594592,
+        "wat_bytes": 34897,
+        "wat_sha256": "7f782b6c3a9831115ea93df936dcb544c79d176a4b385c04d88170409b3a203a"
+      },
+      {
+        "function_index": 9445,
+        "body_start": 31610880,
+        "body_end": 31612026,
+        "body_bytes": 1146,
+        "body_sha256": "3851950c871bb67edd914f528a8af5d5ed3b06caf7e4cb8c40c515e5a55dfb49",
+        "wat_start": 688103844,
+        "wat_end": 688120673,
+        "wat_line": 13908065,
+        "wat_bytes": 16829,
+        "wat_sha256": "bfaadfba2ea36640f1718dd4e0876acc16a1615d29f57c6b384fc597eb0f1459"
+      },
+      {
+        "function_index": 9772,
+        "body_start": 32117113,
+        "body_end": 32118246,
+        "body_bytes": 1133,
+        "body_sha256": "41600964d2431d5835d2ea774dc380741270dd86635fbc8ef986ef3153f8b262",
+        "wat_start": 695049621,
+        "wat_end": 695067001,
+        "wat_line": 14140758,
+        "wat_bytes": 17380,
+        "wat_sha256": "27a84b2e3b2462ad1b87d09d455f06f72c84a1391ec2f372708bbe793dd640de"
+      },
+      {
+        "function_index": 10095,
+        "body_start": 32834454,
+        "body_end": 32835544,
+        "body_bytes": 1090,
+        "body_sha256": "daed2e4ebe340808f771f7992ca96b4184f02e116cb662bc7a927a035cb6894e",
+        "wat_start": 717953097,
+        "wat_end": 717967444,
+        "wat_line": 14467954,
+        "wat_bytes": 14347,
+        "wat_sha256": "e6a73701ea055dfac606b16f255dfd995ec09f831ca87d701cfdafa9010b9226"
+      },
+      {
+        "function_index": 10310,
+        "body_start": 33211680,
+        "body_end": 33212700,
+        "body_bytes": 1020,
+        "body_sha256": "04d08194afd42588f80cf24ad66c9844657618aaf15a4e139a9aa6480af074ea",
+        "wat_start": 724892626,
+        "wat_end": 724909509,
+        "wat_line": 14643926,
+        "wat_bytes": 16883,
+        "wat_sha256": "9841628bfd1891df7f9f708c37d1c05fc2b38c0aa51bb24896ca3705479fdc90"
+      },
+      {
+        "function_index": 26862,
+        "body_start": 50733485,
+        "body_end": 50733922,
+        "body_bytes": 437,
+        "body_sha256": "baa706220fda39ee9d337949fe91d410dc5b418829a9148ae05d8080ec94a6aa",
+        "wat_start": 963934388,
+        "wat_end": 963938848,
+        "wat_line": 22668903,
+        "wat_bytes": 4460,
+        "wat_sha256": "e0893f751b6565ab95bb5ee4f9705d24bcb3abe7b207439e77f788d4acec5648"
+      },
+      {
+        "function_index": 38361,
+        "body_start": 59289522,
+        "body_end": 59289872,
+        "body_bytes": 350,
+        "body_sha256": "af3351d99a152a132aa79cefa447b1a459323a4260cc522a344601c7ead4a7f8",
+        "wat_start": 1081452568,
+        "wat_end": 1081456147,
+        "wat_line": 26494375,
+        "wat_bytes": 3579,
+        "wat_sha256": "5a9b67a11d4e5e6b851b652883a5afe12864e49e640446d62873e913e7a1783e"
+      },
+      {
+        "function_index": 53951,
+        "body_start": 65951573,
+        "body_end": 65951770,
+        "body_bytes": 197,
+        "body_sha256": "ad568b109ffc62c49fc0774fd90fb45801202fb9c53a9661472e770e27591237",
+        "wat_start": 1165861337,
+        "wat_end": 1165863002,
+        "wat_line": 29418565,
+        "wat_bytes": 1665,
+        "wat_sha256": "a9c2a8f1a3e9ca55462b4c1dc673b0c51125aafa88f01c244ad72c428d3a37a1"
+      },
+      {
+        "function_index": 65110,
+        "body_start": 68565644,
+        "body_end": 68565749,
+        "body_bytes": 105,
+        "body_sha256": "c4f87a35805a63a40f29ace8e12d9a901a9f6b4c8ad0aaf556a87d504ab1b846",
+        "wat_start": 1198318079,
+        "wat_end": 1198319120,
+        "wat_line": 30571063,
+        "wat_bytes": 1041,
+        "wat_sha256": "5bf89bda10ea7b35205b3a03a55a808a7ad0a9ea24c1484b60b8620c25320f63"
+      },
+      {
+        "function_index": 65528,
+        "body_start": 68621860,
+        "body_end": 68621958,
+        "body_bytes": 98,
+        "body_sha256": "b1b4c16fd4a60942ea2913835a2c0dbaa30293f9c240b2a123c26c8274c8b93f",
+        "wat_start": 1198812507,
+        "wat_end": 1198813511,
+        "wat_line": 30595592,
+        "wat_bytes": 1004,
+        "wat_sha256": "0cc1a81171d754b9765ae39fe8aec14baae91798e7b900c5dfd09b9a987f1470"
+      }
+    ],
+    "opcode169_dispatch": {
+      "dispatch_function_line": 735,
+      "selector": 111,
+      "function_line": 606,
+      "header": "block  ;; label = @586",
+      "branch_depth": 122,
+      "end_function_line": 4764,
+      "opcode_u16": 169,
+      "selector_subtraction": 58,
+      "next_instructions": [
+        "local.get 4",
+        "i32.const 648",
+        "i32.add",
+        "local.get 4",
+        "i32.const 8",
+        "i32.add",
+        "call 4642"
+      ],
+      "parser_function": 4642
+    },
+    "update_kind0_dispatch": {
+      "dispatch_function_line": 234,
+      "selector": 0,
+      "function_line": 204,
+      "header": "block  ;; label = @14",
+      "branch_depth": 2,
+      "end_function_line": 301,
+      "next_instructions": [
+        "local.get 2",
+        "i32.const 568",
+        "i32.add",
+        "local.tee 6",
+        "local.get 1",
+        "call 10095",
+        "local.get 2",
+        "i32.load offset=568",
+        "br_if 9 (;@4;)",
+        "local.get 2",
+        "i64.load offset=576",
+        "local.set 31",
+        "local.get 6",
+        "local.get 1",
+        "call 9772"
+      ]
+    },
+    "named_system": {
+      "name": "benilla_app::net::objects::update::on_object_values",
+      "memory_address": 5885211,
+      "file_offset": 81872829,
+      "bytes": 51,
+      "sha256": "d73f8c7080f74d75a3e69a51cda20164a19779216f3132f0e040741c7633d0d2",
+      "initializer_function": 922,
+      "normalized_constructor_span": "5\nlocal.tee 6\ni32.eqz\nbr_if 8 (;@1;)\nlocal.get 6\ni32.const 0\ni32.store8 offset=2252\nlocal.get 6\ni32.const 0\ni32.store offset=2248\nlocal.get 6\ni32.const -1\ni32.store\nlocal.get 2\ni32.const 6032780\ni32.store offset=56\nlocal.get 2\nlocal.get 6\ni32.store offset=52\nlocal.get 2\ni32.const 0\ni32.store8 offset=60\nlocal.get 2\ni32.const 16\ni32.add\nlocal.tee 6\nlocal.get 0\nlocal.get 2\ni32.const 52\ni32.add\ncall 4292\nlocal.get 2\nlocal.get 2\ni64.load offset=16\ni64.store\nlocal.get 6\nlocal.get 0\ncall 9713\nlocal.get 2\ni32.load offset=24\nlocal.get 2\ni32.load offset=32\ni32.store\nlocal.get 2\ni32.const 49\ni32.store offset=12\nlocal.get 2\ni32.const 5885012\ni32.store offset=8\nlocal.get 2\ni32.load offset=16\ni32.const 17\nlocal.get 2\ni32.const 0\ncall 27452\nlocal.get 2\ni32.const -64\ni32.sub\nglobal.set 0\nglobal.get 0\ni32.const -64\ni32.add\nlocal.tee 2\nglobal.set 0\ni32.const 2256\ni32.const 4\ncall 106495\nlocal.tee 6\ni32.eqz\nbr_if 8 (;@1;)\nlocal.get 6\ni32.const 0\ni32.store8 offset=2252\nlocal.get 6\ni32.const 0\ni32.store offset=2248\nlocal.get 6\ni32.const -1\ni32.store\nlocal.get 2\ni32.const 6033116\ni32.store offset=56\nlocal.get 2\nlocal.get 6\ni32.store offset=52\nlocal.get 2\ni32.const 0\ni32.store8 offset=60\nlocal.get 2\ni32.const 16\ni32.add\nlocal.tee 6\nlocal.get 0\nlocal.get 2\ni32.const 52\ni32.add\ncall 4292\nlocal.get 2\nlocal.get 2\ni64.load offset=16\ni64.store\nlocal.get 6\nlocal.get 0\ncall 9713\nlocal.get 2\ni32.load offset=24\nlocal.get 2\ni32.load offset=32\ni32.store\nlocal.get 2\ni32.const 51\ni32.store offset=12\nlocal.get 2\ni32.const 5885211\ni32.store offset=8\nlocal.get 2\ni32.load offset=16\ni32.const 20\nlocal.get 2\ni32.const 0\ncall 27452\nlocal.get 2\ni32.const -64\ni32.sub\nglobal.set 0\nglobal.get 0\ni32.const "
+    },
+    "system_vtable": {
+      "memory_address": 6033116,
+      "file_offset": 82020012,
+      "bytes": 84,
+      "raw_hex": "61370000d008000004000000ec300000af37000063370000643700006537000066370000b0370000b1370000b23700006a3700006b3700006c3700006d3700006e3700006f370000b33700007137000072370000",
+      "sha256": "aaad6b57cad0bfeee1a33385b6b750c17a2a3cc72608979c516cb592c9c497d5",
+      "table_base": 1,
+      "callback_bindings": [
+        {
+          "vtable_field_offset": 36,
+          "table_slot": 14256,
+          "function_index": 53951
+        },
+        {
+          "vtable_field_offset": 44,
+          "table_slot": 14258,
+          "function_index": 38361
+        }
+      ]
+    },
+    "verified_direct_call_edges": [
+      {
+        "caller": 53951,
+        "callee": 3634
+      },
+      {
+        "caller": 38361,
+        "callee": 3634
+      },
+      {
+        "caller": 3634,
+        "callee": 9445
+      },
+      {
+        "caller": 3634,
+        "callee": 10310
+      },
+      {
+        "caller": 9445,
+        "callee": 26862
+      },
+      {
+        "caller": 10310,
+        "callee": 26862
+      }
+    ],
+    "field22_getters": [
+      65110,
+      65528
+    ],
+    "field22_mask_bit": 22,
+    "field22_value_array_byte_offset": 88,
+    "getter_65110_caveat": "Also produces availability information from mask/baseline field extent; it is not just a scalar return.",
+    "setter_26862": "Grow mask and value vectors as needed; OR field bit; values[index]=word.",
+    "mask_count_caveat": "9772 min(41,count) is initial capacity, not a protocol hard limit.",
+    "vtable_caveat": "The 21 words include size/alignment/other metadata; only the two selected callback bindings are claimed. Original trait method names are not recovered.",
+    "unresolved_hop": "Parsed UpdateObject message from878/4642 to the on_object_values ECS event delivery has not been traced through the same data flow.",
+    "auxiliary_function_10095": "Locally retained full function and identity-bound ranges; not included in the five-function decoder REA Evidence.",
+    "target_executed": false,
+    "network_used": false,
+    "local_extraction_manifest_sha256": "7174d84d9455edd21d9705c0d0d7779c1442cf23e1504048908a4c84a06c87b6",
+    "scripts_sha256": {
+      "trace_client_values.py": "1f7cc4fcf8a3d99a8814859cb194e459dcee04501d7a9ab0c668fb68212423a9"
+    }
+  }
+}
