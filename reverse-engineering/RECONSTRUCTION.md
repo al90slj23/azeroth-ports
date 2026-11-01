@@ -1,14 +1,20 @@
 # 独立重造的工作基线
 
+当前连续闭环新增[500帧／40秒资源生成](reports/2026-11-02-opening-resource-combat0135.md)：固定135真实opening→战斗→4次选卡→首件资源→继续，7004阶段／7006原件入口0声明差异，99源／86production；[独立只读复核通过](reports/2026-11-02-opening-resource-combat0135-independent-review.md)，receipt SHA `cd9b122b6f004552c84d2efde8f8d61b313af9fb102cd010e8ee5887911d92e7`。G2444首次在第401帧40.09996秒触发，deadline更新85.09996秒，完整56B／RNG／counter／资源169逐阶段一致；其它wire语义仍只观察。
+
+另有[raw451资源独立构造world后跑500帧](evidence/asset-combat500-owned-20261101T181719.658025Z/model500/receipt.json)及[44项终态衔接](evidence/asset-combat500-owned-20261101T181719.658025Z/projection-bridge.json)：93源与67,281,330B资产不变，不读原memory/WASM/预解析world；这是modelselfcheck，不新增原件case。独立预解析world下的[纯模型延伸](evidence/opening-resource135-model-boundary-20261101T182112.106492Z/receipt.json)到600帧／5select后停在G2424/G2448计时守卫，500之后尚无原件差分，不称600验收。完整880、Windows原生运行及独立完整一局仍为0。
+
+[官方manifest核对](evidence/official-latest-goalcheck-20261101T181528.650406Z/receipt.json)截至2026-11-01T18:15:28Z仍为0.137.0且EXE SHA与固定137一致；仅小型metadata读取，没有重取二进制或替换安装包。最新137另有[资源链静态与Windows局部互证](reports/2026-11-02-resource-migration0137-static.md)和[完整1420资源分支90新例／90调用0差异](reports/2026-11-02-resource-pickup0137.md)，[限定分支只读复核已通过](reports/2026-11-02-resource-pickup0137-independent-review.md)，receipt SHA `e175290ea37ebd87c64b8d73067cc264b952e8bcc94c60d50eff6cac72478ef4`；137完整947／原生执行／一局仍为0，135结果不转记137。
+
 目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。功能目标持续跟随官方最新稳定版，每轮固定版本与SHA：**latest0.137.0 / `d171b8f9f`已有完整静态profile与非致死伤害80组/125调用0差异；固定0.136.0 / `fe24fb74c`仅静态profile/迁移候选，动态验收0**。持续动态组合研究保持**固定0.135.1 / `90898d5e3`**及原SHA，旧`0898d5e3`为历史截短alias，旧收据和输入不覆写；0.134.0 / 983346a7与0.126.0 / 3e72472a继续作各自固定历史参照。任何旧通过均不自动转记新版。完整身份及分工见[targets.json](targets.json)、[先前身份采集状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。工具、原件与分析产物留在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
 
-收尾metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
+此前metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
 
 固定135新增[400帧／第四次选卡与Battle Shout组合](reports/2026-11-02-opening-battle-combat0135.md)：400受控帧／4select／5604stage／5606原件入口、0声明差异，98源／85 production；实际第379帧选择Battle Shout，随后完成6673施放、effect8与属性变化，最终level5／XP6／gold53。修复后fresh收据SHA `b5d9c546789401d738b43cc58cac1d7aeb117c94753ed4d63f60d923224520a7`，该限定投影已通过[400帧只读独审](reports/2026-11-02-opening-combat0135-400frame-independent-review.md)（receipt SHA `376b09cd9ce10da25396d815824432e48eb456dbb1aeaea9674db95d25aa6482`），核对24,443,084个已知叶；905包峰值及其未恢复的payload语义仍只观察。原件snapshot、独立预解析world与外部f32调度的范围保持明确，完整880／Windows执行／独立一局仍为0。
 
 另有[raw451资源→world→opening→400帧](evidence/asset-combat400-owned-20261101T174254.757426Z/model400/receipt.json)纯modelselfcheck：67,281,330B、92源与资源前后不变，不读原件memory／WASM／预解析world，400帧／4select也达到level5／XP6／gold53；三项world SHA、四guardian实体／GUID／timer及None字节均核对。[35项终态衔接](evidence/asset-combat400-owned-20261101T174254.757426Z/projection-bridge.json)与差分组合一致；这层不新增原件case或完整880帧。
 
-[Battle组件134组／171调用](reports/2026-11-02-battle-shout0135-independent-review.md)与[CAS codec两正例／26负例全拒绝](reports/2026-11-02-opening-combat0135-cas-codec-review.md)已分别通过各自范围独审。CAS保留6008条完整logical records（1,662,490,742B；unique blobs 83,331,346B），没有删阶段或字段；旧`171633.375141Z` decoder批与120／250 checkpoint保留，不与最终400计数相加。下一纯模型帧401为`pending_due_event:G2444`资源40秒到期；[资源组件64组](reports/2026-11-02-resource-spawn0135.md)单独差分0差异，尚未接入这批400，不能据此称500帧已通过。
+[Battle组件134组／171调用](reports/2026-11-02-battle-shout0135-independent-review.md)与[CAS codec两正例／26负例全拒绝](reports/2026-11-02-opening-combat0135-cas-codec-review.md)已分别通过各自范围独审。CAS保留6008条完整logical records（1,662,490,742B；unique blobs 83,331,346B），没有删阶段或字段；旧`171633.375141Z` decoder批与120／250 checkpoint保留，不与最终400计数相加。该400旧批当时的下一纯模型帧401为`pending_due_event:G2444`资源40秒到期；[资源组件64组](reports/2026-11-02-resource-spawn0135.md)单独差分0差异，未接入这批旧400；后继500使用独立新收据，不能倒填旧批。
 
 固定135的[250帧守卫出生组合](reports/2026-11-02-opening-guardian-combat0135.md)完成250受控帧／3select／3503stage／3505原件调用、0差异，94源/84 production；跨20秒4守卫出生并继续50帧，U68地址保持None、timer所有者按GUID严格核payload。该限定投影已通过[最终只读独审](reports/2026-11-02-opening-combat0135-250frame-independent-review.md)（receipt SHA `556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7`），仍是预解析world、原件snapshot及外部clock域；旧120收据保持原身份，不相加。
 
@@ -20,7 +26,7 @@
 
 | 版本域 | 当前事实 | 验收边界 |
 |---|---|---|
-| latest0.137.0 | [175327函数完整profile/RO索引](reports/2026-11-02-wasm0137-profile.md)；[非致死/no-proc damage913：80组/125完整调用0差异](reports/2026-11-02-combat0137.md)，11源、全432B记录/f64/RNG | [限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)；完整death/proc/137开局/Windows ABI及运行/一局未验收。12个原生NPC声明仅静态互证，135/136结果不外推。 |
+| latest0.137.0 | [175327函数完整profile/RO索引](reports/2026-11-02-wasm0137-profile.md)；[资源1420新90例/90调用与独审](reports/2026-11-02-resource-pickup0137-independent-review.md)，36源、完整56B/169/Gguard；[非致死/no-proc damage913：80组/125完整调用0差异](reports/2026-11-02-combat0137.md)，11源、全432B记录/f64/RNG | [限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)；完整death/proc/137开局/Windows ABI及运行/一局未验收。12个原生NPC声明仅静态互证，135/136结果不外推。 |
 | 固定0.136.0静态迁移 | [175319函数完整profile/RO索引、12入口候选和引用审查](reports/2026-11-01-wasm0136-profile.md)；实际9字节build `fe24fb74c` | 动态case0；候选同形与callee/数据等价分开验证。 |
 | 固定0.135.1动态研究 | 既有与进行中的独立资源、opening、combat、XP/选卡实验保持原始SHA；实际build `90898d5e3` | 下表计数仍属于各自冻结135收据；新组合另记，不倒填历史或转记136/137。 |
 
@@ -84,6 +90,8 @@
 | 真实cast部分投影 | [730B对照](reports/2026-11-01-app-state0135-capture.md)及[独审](reports/2026-11-01-app-state0135-capture-independent-review.md)，33B明确输入→697B独立预测，4438None，0差异 | 复用首SwiftShader原观察，0新原件调用/案例；8idle与GPU panic不算投影验收，不推断全部App/owner合法性。 |
 | 自然原App/Metal观察 | [官方构造、中文角色选择页及8次完整idle880返回](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)），999HTTP均200、0 page error | 原件观察，Game tag2未开局、0独立gameplay帧。CSP拦presence外发；早期SwiftShader真实GPU失败、首Metal研究observer达1M事件上限throw及字体404均保留，独立App/full880仍未恢复。 |
 | 自然UI→运行态Game | [603完整返回/8running/7clock推进](reports/2026-11-01-game-entry0135-probe.md)与[独审](reports/2026-11-01-game-entry0135-independent-review.md)：真实点击/W、2418素材、0page error、1,378,877,440B coherent memory；实际7units/2pickups | 原件观察、0独立case/主切片帧。首running已是1089后续状态；Start命令tag仍未定位。独立输入/所有权/容量交接、cleave exec5和完整一局仍缺。 |
+| 资源生产135 | [64例完整1417/947组件与独审](reports/2026-11-02-resource-spawn0135-independent-review.md)；G2444已接下行500，物理56B/+4/共享RNG/counter/169严格对照 | 资源3..5近身消费者、自然85秒再生/cap2连续域未验；组件与组合计数不相加。 |
+| 真实开局资源战斗500 | [1case/500frames/4select/7004stage/7006入口0差异与独审](reports/2026-11-02-opening-resource-combat0135-independent-review.md)，99源/86production；raw451另跑500并经44项终态衔接 | 原件snapshot/外调度与独立预解析world明确；纯模型600/5不是差分，60秒G2424/G2448仍待接，非全880/native/一局。 |
 | 完整游戏 | 尚无独立完整一局验收；0.134.0局部组合另列 | 新版刷怪、施法、拾取、选卡应用、存档、UI和联机继续连接与验证。 |
 
 基础资源属于另一层证据：[MPQ读取器/索引](reports/2026-11-01-resource-index-base.md)已对29602个命名块、1636167198B完成固定StormLib逐字节对照，154份DBC容器可独立读取。基础RAR包内程序仍是0.102.3，不能自动认定为0.135.1完整资产。上表后继451资源链已独立产生默认Elwynn查询world并与历史输出逐字相符；完整物理App/Once/Rc/VFS所有权、其它地图模式、最新全部资产等价、动画／材质／音画及渲染仍未完成。
@@ -156,7 +164,7 @@
 
 ## 当前独立实现
 
-**0.135.1当前主切片**仍为[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。旧072329/064308/061901冻结为历史；新默认开局16/32、placement13/13、451资源历史组合及其它组件/观测分别记录，不相加。独立组合新增bootstrap0、主切片帧0；自然原App观察另列，不当作独立实现。其它地图/完整物理world所有权、开局接主切片、活跃队列／全部技能AI／full880／存档UI网络和独立完整一局仍缺。详见[版本支持清单](reconstruction/version-support.json)。
+**0.135.1历史平地主切片**为[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。旧072329/064308/061901冻结为历史；新默认开局16/32、placement13/13、451资源历史组合及其它组件/观测分别记录，不相加。该旧批独立组合新增bootstrap0、主切片帧0；后继真实开局连续500另列于本文开头，自然原App观察另列，不当作独立实现。其它地图/完整物理world所有权、开局接主切片、活跃队列／全部技能AI／full880／存档UI网络和独立完整一局仍缺。详见[版本支持清单](reconstruction/version-support.json)。
 
 `core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**包括升级值、有序拥有记录、伤害/受伤投影、经验与拾取、限定普通死亡组合、属性数值、kind0候选metadata、金币收取和新能力初始化；各自例数、输入域和未实现项见上表与[版本支持清单](reconstruction/version-support.json)，不同层级的计数不合并为完整游戏覆盖。完整原模块对照保留内部callee；未调用应用start，所有878宿主导入拒绝且实际调用0次。另有`level_cycle134`把XP消费者、每级属性/治疗与kind0候选接成限定组合，但仍未接普通死亡/混合拾取、金币、选卡应用或自然主循环。
 
@@ -243,4 +251,4 @@ python3 reverse-engineering/scripts/check_combat_full_spec.py
 
 上述不同验证层分开记录：无宿主导入的微模块、承载原连续片段的合成wrapper、仅新增导出的完整原模块。完整模块所有878个宿主导入均拒绝调用，应用start未调用，真实内部callee按所述fixture运行。这些旧函数实验没有启动完整游戏或访问网络/存档；后继自然原App浏览器观察是另域，有真实presence联网尝试被CSP阻止。0.126.0实验次数不转记0.134.0验收。有限输入的一致不等于穷举证明，NaN不承诺载荷一致，替代panic的范围各自列明。
 
-当前独立切片连接14个单状态尾入口的已恢复/实际守卫域，保留6未知技能与2预算边界。后续补齐world资源实例／placement／合并缓存／所有权生产，连接已验默认开局与主切片，继续来源容器/keyed/proc、活跃尾队列／效果及未知技能，再扩终局存档/UI/联机；在完整一局及关键行为均有依据前不宣布重造完成。
+当前真实资源入口与已解析world组合已分别推进到500帧，原件差分只覆盖明确的14阶段受控投影。历史平地切片的6未知技能与2预算边界继续保留；下一步接G2424/G2448和资源消费者，扩展完整world/App/主循环所有权、来源/keyed/proc、活跃队列与全部技能AI，继续终局存档/UI/渲染/音频/联机和137迁移。在完整一局及关键行为均有依据前不宣布重造完成。

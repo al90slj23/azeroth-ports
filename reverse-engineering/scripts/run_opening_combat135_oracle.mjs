@@ -166,7 +166,7 @@ for(const c of cases){
    return{raw_game2592_hex:hex(G,2592),vectors,unit_cooldowns:cooldowns.observations,packets,notifications,new_packets:newPackets,new_notifications:newNotifications,
     player_keyed_tree:keyed,projection:{phase2587:byte(G+2587),selection_kind2585:byte(G+2585),generation_counter2400:r(2400),field1092:r(1092),mode2582:byte(G+2582),
      candidates:candidates(),guardian_cooldowns:cooldowns.guardians,now_bits:r(2352),rng_words:[0,1,2,3].map(i=>r(1720+i*4)),
-     spawn_counter:r(2408),message_sequence:r(2412),kill_cost_bits:r(2420),source_id:d().getBigUint64(G+1336,true).toString(),
+     spawn_counter:r(2408),message_sequence:r(2412),kill_cost_bits:r(2420),next_resource2444_bits:r(2444),source_id:d().getBigUint64(G+1336,true).toString(),
      map_id_utf8:map,player_xyz:[r(1416),r(1420),r(1424)],velocity_xy:[r(1736),r(1740)],previous_player_xyz:[r(2428),r(2432),r(2436)],
      progression:{level:r(1432),xp:r(1436),pending_upgrades:r(2376)},current_hp_bits:r(1440),
      derived_bits:Object.fromEntries(Array.from({length:23},(_,i)=>[1536+i*4,r(1536+i*4)])),player_fields:keyed.fields,

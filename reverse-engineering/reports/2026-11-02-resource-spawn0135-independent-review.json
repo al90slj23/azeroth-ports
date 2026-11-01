@@ -1,0 +1,91 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-spawn135-comparison.json",
+  "comparison_sha256": "85b5c088e80e33d059b880275e59aa6f2a3613344fc887f2886566130fdde005",
+  "reviewer_script_sha256": "dc096f04085bbf96d016ebf0db0ada4cef62c7d1ed12b874071204fd00f13446",
+  "source_files": 58,
+  "production_AST_closure_files": 50,
+  "current_and_frozen_SHA_verified": true,
+  "only_private_exports_added": true,
+  "all_nonexport_sections_and_callees_unchanged": true,
+  "static_function_windows_verified": 9,
+  "cases": 64,
+  "original_entries": {
+    "947": 52,
+    "1417": 12
+  },
+  "comparison_counts": {
+    "equal_known_values": 122748,
+    "explicit_unknown_cells": 71736,
+    "packets": 196,
+    "packet_bytes": 32043
+  },
+  "independent_semantic_checks": {
+    "1417_clamp_cases": 4,
+    "resource_packet_bindings": 40,
+    "nonzero_unknown_original_cells": 28209,
+    "selection_rejection_cases": 5,
+    "cap_cases": 12,
+    "cap_cases_with_nonzero_marker": 12,
+    "future_cases": 12,
+    "fallback13_cases": 2
+  },
+  "all196_opcode169_payloads_strictly_compared_and_decoded": true,
+  "resource_amount_post_selection_state0_independently_verified": true,
+  "ordinary_prefix_RNG_draws_are_frozen_model_provenance": true,
+  "resource_rng_and_final_four_words_independently_replayed": true,
+  "world_input": {
+    "source": "Independent451-asset query artifacts; manually packed query-equivalent Rc124/terrain/nav/secondary layout into fresh original with explicit unconsumed metadata zeros",
+    "primary_absent": true,
+    "terrain_tiles": 9,
+    "nav_width": 280,
+    "secondary_width": 560,
+    "artifact_hashes": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+    },
+    "asset_receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+    "original_snapshot_read": false,
+    "original_World_constructor_claimed": false,
+    "asset_parser_or_query_model_rerun_by_reviewer": false
+  },
+  "clamp_and_height_order": "Original1417 clamp radius-2 and first height query precede resource common height query. FinalXY independently recomputed; finalZ and exact packet bytes strictly rechecked from frozen expected/original, without rerunning terrain query models.",
+  "fallback13_scope": "Two realworld fixtures explicitly raise playerZ100; full13516 RNG confirms13 trials/26draws, final unconditional branch then1417 final clamp/height. Not a natural elapsed run.",
+  "cap_marker_scope": "Count active-prefix kinds3..5 regardless of marker; cap/future stop resource work, while ordinary947 prefix still consumes its own RNG/world queries.",
+  "process": {
+    "pid": 6261,
+    "pgid": 6261,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 1.6132842079969123,
+    "launcher_error": null
+  },
+  "host_calls": 0,
+  "stack_all_restored": true,
+  "model_or_original_or_checker_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "natural40_second_runs": 0,
+  "already_integrated_into400_chain": false,
+  "pending": [
+    "Other due947 events/Boss/elite",
+    "Resource collection/effects",
+    "1417 primary-present nearest-miss low-address read",
+    "Natural40-second full880 sequence not validated by component calls"
+  ],
+  "elapsed_seconds": 0.7723347909923177,
+  "reviewer_sources": {
+    "scripts/review_resource_spawn135.py": "dc096f04085bbf96d016ebf0db0ada4cef62c7d1ed12b874071204fd00f13446",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87"
+  },
+  "review_receipt": "evidence/resource-spawn135-independent-review-20261101T180953.939397Z/review.json",
+  "review_receipt_sha256": "4b28ac7f2c381a1d12b854eb70708e6d3f24b33e7da91000df1200cb3ec48347",
+  "primary_report": "reports/2026-11-02-resource-spawn0135.md",
+  "core_sha256": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3",
+  "version": "0.135.1",
+  "build": "90898d5e3"
+}

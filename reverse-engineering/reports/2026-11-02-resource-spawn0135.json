@@ -19,7 +19,8 @@
     "full880_frames": 0,
     "natural40_second_runs": 0,
     "original_memory_snapshot_read": false,
-    "input": "Independent451-asset world + independent absent-companion opening; typed fixture into fresh original; explicit~40 single947, actual ordinary then resource"
+    "input": "Independent451-asset world + independent absent-companion opening; typed fixture into fresh original; explicit~40 single947, actual ordinary then resource",
+    "world_layout": "Existing independent451 asset query artifacts manually packed into query-equivalent Rc124/terrain/nav/secondary fresh-original layout; explicit unconsumed metadata zeros; no original World constructor execution."
   },
   "acceptance": {
     "cases": 64,
@@ -90,7 +91,8 @@
     "13516 samples actual world at radius15..40, then1417 clamp radius-2 and final world height.",
     "1417 kinds3/4/5: visual9006/9007/9008, display5931/5995/5991, scale1, actor kind21=5 flags9=0.",
     "1821 uses shared counter, xoshiro yaw, GUID F110|entry<<24|counter; exact169 via26970/50798.",
-    "Append56 writes0,8..55 only; +4 and prior backing retained; aux Vec(cap0,ptr8,len0)."
+    "Append56 writes0,8..55 only; +4 and prior backing retained; aux Vec(cap0,ptr8,len0).",
+    "Cap2/future skip resource-subbranch RNG/world work only; earlier ordinary947 work still consumes shared RNG, queries world and may create NPCs."
   ],
   "functions": [
     {
@@ -208,5 +210,13 @@
     "owned_process": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-owned-process.json",
     "terminal": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-process-terminal.json",
     "frozen_source_closure": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/source-snapshot"
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-resource-spawn0135-independent-review.md",
+    "structured_report": "reports/2026-11-02-resource-spawn0135-independent-review.json",
+    "receipt": "evidence/resource-spawn135-independent-review-20261101T180953.939397Z/review.json",
+    "receipt_sha256": "4b28ac7f2c381a1d12b854eb70708e6d3f24b33e7da91000df1200cb3ec48347",
+    "new_original_cases": 0,
+    "new_full880_frames": 0
   }
 }

@@ -6,7 +6,7 @@
 
 ## 规则与所有权
 
-- `now >= G2444` 先写 `G2444 = f32(now+45)`；统计活动 pickup56 前缀中 `kind+8 ∈ [3,5]` 的合计，忽略 marker。达到 2 个时不抽 RNG、不查 world。
+- `now >= G2444` 先写 `G2444 = f32(now+45)`；统计活动 pickup56 前缀中 `kind+8 ∈ [3,5]` 的合计，忽略 marker。达到 2 个时，资源子分支不抽 RNG、不查 world；完整947此前的 ordinary 分支仍消费共享 RNG、查询 world 并可创建 NPC。
 - 未达上限，xoshiro128++ 输出乘 3；低位 `(product & 0xc0000000) == 0xc0000000` 时重抽，高 32 位选 kind3/4/5。**1417 的 amount 是这次抽取后的 state[0]**，之后 13516 才继续改共享 RNG。
 - 13516 使用真实 world、半径 15..40；1417 再执行地图半径减 2 的夹取和最终高度查询。覆盖 5 例种类 RNG 重抽、2 例真实 world 连续 12 次拒绝后的第 13 次无条件位置回退。
 - kind3/4/5 分别为 visual 9006/9007/9008、display 5931/5995/5991，scale1、对象 kind21=5、flags9=0。1821 按真实 GUID/counter、朝向 RNG 顺序创建；完整 169 字节与原件一致，消息序号保持。
@@ -37,3 +37,5 @@
 - 运行：`PYTHONDONTWRITEBYTECODE=1 python3 reverse-engineering/scripts/check_resource_spawn135.py --phase full`。
 
 机器可接续的函数身份、源码哈希和证据绝对路径见同名 JSON。
+
+[只读独审](2026-11-02-resource-spawn0135-independent-review.md)已复核完整196包、58份冻结/当前源码、None写掩码、独立RNG及资源字段；独审收据SHA `4b28ac7f2c381a1d12b854eb70708e6d3f24b33e7da91000df1200cb3ec48347`。world为既有独立451资产查询文件手工装入fresh原件的查询等价布局，未执行原件World构造器；该组件仍不代表自然40秒或完整880验收。

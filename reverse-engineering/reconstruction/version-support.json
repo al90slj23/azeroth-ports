@@ -1,20 +1,18 @@
 {
   "active_target": {
-    "version": "0.135.1",
-    "status": "partial_components_and_controlled_same_state_gameplay_slice_original_differentials_passed",
-    "official_native_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
-    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
-    "web_build": "0898d5e3",
-    "web_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
-    "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
-    "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
-    "migration_report": "../reports/2026-11-01-migration0135.json",
-    "approved_research_roles": 52,
-    "latest_same_state_report": "../reports/2026-11-01-headless-tail0135.json",
-    "latest_independent_opening_report": "../reports/2026-11-01-opening0135.json",
-    "version_policy": "Continuously align to verified official latest stable; each experiment freezes its own version/build/SHA; this round remains0.135.1/0898d5e3.",
-    "latest_independent_asset_world_report": "../reports/2026-11-01-asset-world0135.json",
-    "last_official_manifest_check": "2026-11-01T13:26:11+00:00"
+    "version": "0.137.0",
+    "web_build": "d171b8f9f",
+    "web_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+    "official_native_sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8",
+    "status": "partial_nonlethal_damage913_and_resource1420_component_differentials_with_scoped_reviews_passed_not_fullgame",
+    "role": "functional_latest_target",
+    "latest_official_manifest_check_utc": "2026-11-01T18:15:28.650406+00:00",
+    "latest_official_manifest_check": "../evidence/official-latest-goalcheck-20261101T181528.650406Z/receipt.json",
+    "version_policy": "Align to verified official lateststable with frozen version/build/SHA per experiment; do not transfer135 validation or replace running inputs.",
+    "installation_packages_updated": false,
+    "full_mainloop_frames": 0,
+    "native_windows_execution": false,
+    "complete_games": 0
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -476,7 +474,7 @@
   ],
   "full_game_remaining": [
     "Independent completeApp/profile/menu/settings/preferences/ownership producers; original naturalApp/UI/Game+8running880 is now observed, not independent App or full game. Quiet transport/history/partial ctor projections retain their own scopes.",
-    "Independent real input/movement, opening-to-combat handoff and full880 front/party/orchestration. Natural UI original observation is recorded separately; actual cleave exec5 and real capacity/unknown NPC bytes remain integration blockers.",
+    "Beyond default stationaryElwynn warrior500: independent real input/movement, completeApp/physicalworld/full880 front/party/orchestration, otherprofiles/classes/maps and137mainflow. Defaultopening/cleave/handoff and physical unknown-byte owners now have scoped135 acceptance, not global pending.",
     "active56/120/ordinary910headlesscontinuation;other915families;geometry390277normal113hostprefixfrozen",
     "remaining timedgeneration/rangedBossPetAI/collision/pathfinding and otherworld cache paths; Elwynn no-primary terrain/nav/secondary querycache production matched historical payloads separately",
     "unsupportedselectedskillsretainedandstoppedbeforeunimplementedcast",
@@ -485,7 +483,7 @@
     "latest asset completeness; actual M2/WMO collision parsers/raster components passed separately, but complete instancing/world assembly, BLP/material/animation/effects/audio and renderer remain incomplete",
     "saves/terminalrewards/phase4deathrecap/otherlocalizations",
     "independentUI/input and actualmultiplayer/crossplatformruntime;originalChinesecharacterUIvisible onlyasoriginaloracle. QuietSelfTransport methods are notserverdelivery;presence attemptblockedbyCSP.",
-    "independent complete-run acceptance;14-tail controlledphase1/zero-slot inputs and separate opening resolvedworld inputs remain research boundaries until integrated and independently produced"
+    "Independent complete-run acceptance beyond controlled500snapshot/originalcontext and rawasset500selfcheck. G2424/G2448 at60s and nearbyresource3..5 consumption remain to connect; puremodel600/5 is not an originaldifferential."
   ],
   "native_windows_execution_validated": false,
   "installed_apps_or_saves_modified": false,
@@ -493,9 +491,9 @@
     "version": "0.134.0",
     "web_build": "983346a7",
     "web_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
-    "role": "fixed_0.134.0_regression_reference; latest0.135.1 acceptance is separately recorded in latest_verified_domains"
+    "role": "fixed134regression_reference; fixed135 legacyentries and recentdomains are separately scoped; functional137 acceptance is in verified_domains_0137."
   },
-  "current_verified_domains_scope": "Legacy key current_verified_domains contains fixed0.134.0 domains only. Separate latest_verified_domains records0.135.1 original differentials; resource_verified_domains records base-format evidence without claiming latest asset equivalence.",
+  "current_verified_domains_scope": "Legacy current_verified_domains remains fixed134. Legacy latest_verified_domains remains fixed135 components, not floatinglatest. New135 combinations/components are separately registered in recent_verified_domains_0135;137 separately in verified_domains_0137. No historical counts reassigned.",
   "latest_verified_domains": [
     {
       "module": "core_spec.derived_stats135",
@@ -2317,7 +2315,7 @@
     "observed_execution11_snapshots": 2521,
     "execution11_model_support_claimed": false
   },
-  "latest_verified_domains_scope": "Fixed135 components and current08292714-tail remain separate. Six additional resolved-world/collision/default-opening domains have their own receipts and reviews; no case counts summed, no historical scope expanded. Default opening16/32 assumes resolved realworld input and adds0 freshworld bootstraps/0 mainloop frames. Earlier real6730/1089 observation still adds0 independent model cases. Placement13/13 is a fresh original1446 component differential. Independent451asset-to-queryworld-to-opening is a separate one-historical-case comparison with0neworiginalcalls/0mainframes; its byte counts and old main-slice counts are not added. Transport43/220 and history24/96 are scoped fresh completeleaf original differentials; staticApp32/10source and actualcast730(33input+697prediction) are separately classified. Natural originalMetalApp/8idle880 is observation withGameabsent;no independentgameframes added and no counts summed.",
+  "latest_verified_domains_scope": "Historical fixed135 entries preserve their original alias/input/case/domain identities. Later realopening/resource500 and rawassets500 are separately registered below; they do not expand or addcounts to older44 entries. OriginalApp/UI observations are not independent gameplay.",
   "entry_world_observational_probe": {
     "status": "original_true_world_and_entry_observed_not_independent_model",
     "validated_version": "0.135.1",
@@ -2455,5 +2453,115 @@
     "Start_button_command_tag_resolved": false,
     "new_native_Windows_execution": false,
     "full_game_completed": false
+  },
+  "fixed_dynamic_research_target_0135": {
+    "version": "0.135.1",
+    "status": "partial_components_and_controlled_same_state_gameplay_slice_original_differentials_passed",
+    "official_native_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
+    "web_build": "90898d5e3",
+    "web_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
+    "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
+    "migration_report": "../reports/2026-11-01-migration0135.json",
+    "approved_research_roles": 52,
+    "latest_same_state_report": "../reports/2026-11-01-headless-tail0135.json",
+    "latest_independent_opening_report": "../reports/2026-11-01-opening0135.json",
+    "version_policy": "Every135 experiment stays on its own originalSHA; functional target137 has separate acceptance.",
+    "latest_independent_asset_world_report": "../reports/2026-11-01-asset-world0135.json",
+    "last_official_manifest_check": "2026-11-01T13:26:11+00:00",
+    "historical_web_build_alias": "0898d5e3",
+    "role": "fixed135historical_and_current_controlled_dynamic_experiments_not_functional_latest",
+    "latest_controlled_opening_report": "../reports/2026-11-02-opening-resource-combat0135.json"
+  },
+  "recent_verified_domains_0135": [
+    {
+      "module": "core_spec.headless135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "../reports/2026-11-02-opening-resource-combat0135.json",
+      "cases": 1,
+      "frames": 500,
+      "selections": 4,
+      "stages": 7004,
+      "original_entry_calls": 7006,
+      "differences": 0,
+      "source_files": 99,
+      "production_files": 86,
+      "independent_review": "../reports/2026-11-02-opening-resource-combat0135-independent-review.json",
+      "review_receipt_sha256": "cd9b122b6f004552c84d2efde8f8d61b313af9fb102cd010e8ee5887911d92e7",
+      "domain": "Realopening and controlled14tail, first40sresource, snapshot/originalcontext and preparsedindependentworld; no full880/native/completegame."
+    },
+    {
+      "module": "core_spec.resource_spawn135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "../reports/2026-11-02-resource-spawn0135.json",
+      "cases": 64,
+      "full1417_calls": 12,
+      "full947_calls": 52,
+      "differences": 0,
+      "independent_review": "../reports/2026-11-02-resource-spawn0135-independent-review.json",
+      "scope": "Isolatedresource producer/scheduler domain with explicitqueryworld, not fullgame. Componentcounts not added to500."
+    },
+    {
+      "module": "core_spec.battle_shout135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "../reports/2026-11-02-battle-shout0135.json",
+      "cases": 134,
+      "original_calls": 171,
+      "differences": 0,
+      "independent_review": "../reports/2026-11-02-battle-shout0135-independent-review.json",
+      "scope": "Learned effect8 selfbuff, selection/defaultsource domain; not allproc/aura/wire."
+    }
+  ],
+  "raw_asset500_modelselfcheck": {
+    "report": "../reports/2026-11-02-opening-resource-combat0135.json",
+    "receipt": "../evidence/asset-combat500-owned-20261101T181719.658025Z/model500/receipt.json",
+    "receipt_sha256": "562309d015a695934f02344daeea1c9d6d54b4313ed5a2c55522c001e1ffef7a",
+    "frames": 500,
+    "selections": 4,
+    "source_files": 93,
+    "loaded_assets": 451,
+    "decoded_bytes": 67281330,
+    "new_original_cases": 0,
+    "preparsed_world_read": false,
+    "original_memory_read": false,
+    "bridge_checks": 44,
+    "bridge_sha256": "3fe02192f59ec50a7101236ae1d182b20524c297cc017f1b10da786f2be6577d"
+  },
+  "verified_domains_0137": [
+    {
+      "module": "core_spec.combat137",
+      "validated_version": "0.137.0",
+      "validated_web_build": "d171b8f9f",
+      "report": "../reports/2026-11-02-combat0137.json",
+      "cases": 80,
+      "original_calls": 125,
+      "differences": 0,
+      "independent_review": "../reports/2026-11-02-combat0137-independent-review.json",
+      "scope": "Nonlethal/noproc damage913only, full432B knownfixture, notdeath/fullgame."
+    },
+    {
+      "module": "core_spec.resource_pickup137",
+      "validated_version": "0.137.0",
+      "validated_web_build": "d171b8f9f",
+      "report": "../reports/2026-11-02-resource-pickup0137.json",
+      "cases": 90,
+      "original_calls": 90,
+      "differences": 0,
+      "source_files": 36,
+      "local_import_edges": 91,
+      "independent_review": "../reports/2026-11-02-resource-pickup0137-independent-review.json",
+      "review_receipt_sha256": "e175290ea37ebd87c64b8d73067cc264b952e8bcc94c60d50eff6cac72478ef4",
+      "scope": "1420resource kinds3..5, explicitGame8192/Rc124 and controlledflat/primary or135asset-query input, full56B/169/RNG/counter/Gguard; not137assetboot/full947/native/fullgame."
+    }
+  ],
+  "native_resource137_static_correspondence": {
+    "report": "../reports/2026-11-02-resource-migration0137-static.json",
+    "native_stride": 72,
+    "web_stride": 56,
+    "native_runtime_validated": false
   }
 }

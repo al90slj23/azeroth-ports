@@ -29,15 +29,16 @@
     "build_identity_sidecar_sha256": "f93884e6798bce704b4d565be88627bb2dd54259589fd531f7609d472b1251f3",
     "latest_check_report": "reports/2026-11-02-wasm0137-profile.json",
     "runtime_acceptance_reports": [
-      "reports/2026-11-02-combat0137.json"
+      "reports/2026-11-02-combat0137.json",
+      "reports/2026-11-02-resource-pickup0137.json"
     ],
     "approved_research_role_count": 0,
     "new_original_runtime_cases": 80,
     "full_mainloop_frames": 0,
-    "scope_note": "Fixed137 full175327-function static profile and a new independent nonlethal/no-proc432B damage913 numeric projection:80cases/125originalcalls0diff. Scoped read-only independent review passed; numeric fixtures do not prove full timer owner validity. Windows remains primary native reference but only12NPC declaration layouts matched statically; no Windows execution/Game ABI proof. Death/proc/full137opening/full880/fullgame remain unaccepted; no135/136 cases transferred.",
-    "latest_metadata_recheck": "evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json",
+    "scope_note": "Latest137 has separate bounded913nonlethal damage80/125 and1420resource90/90 fresh original differentials plus scoped reviews. No full137opening/947/mainloop/native execution/fullgame. Fixed135 controlled500 is a separate version and scope.",
+    "latest_metadata_recheck": "evidence/official-latest-goalcheck-20261101T181528.650406Z/receipt.json",
     "historical_identity_only_report": "reports/2026-11-01-latest-version-state.json",
-    "latest_metadata_recheck_sha256": "423c67ffd40d2d668df3f907f75d8fd0fe0ae51e49c2862499ece6a9813003e8",
+    "latest_metadata_recheck_sha256": "ae2f5d9dcf8eefae0723399f5d64808fbdb13f0503a6c02245a1db6f4eb7e2be",
     "new_original_entry_calls": 125,
     "partial_damage_checkpoint": {
       "report": "reports/2026-11-02-combat0137.json",
@@ -69,15 +70,105 @@
       "receipt": "evidence/official-latest137-recheck-20261101T162115.396819Z/receipt.json",
       "sha256": "576b6056bbe2e05b5322785c81b61eb1b2c562b690fbba8a1b6ae411c81c846b"
     },
-    "latest_metadata_recheck_utc": "2026-11-01T16:51:39.999468+00:00",
-    "latest_metadata_recheck_scope": "Only official manifest andHTML stamp; still137 same EXESHA/stamp. No binary redownload, original execution or fixed sample replacement.",
+    "latest_metadata_recheck_utc": "2026-11-01T18:15:28.650406+00:00",
+    "latest_metadata_recheck_scope": "Official Windows manifest only; still0.137.0/same147844608B EXE SHA. No new Web stamp or binary download, no sample replacement.",
     "combat137_independent_review": {
       "report": "reports/2026-11-02-combat0137-independent-review.md",
       "receipt": "evidence/combat0137-independent-review-20261101T165245.268006Z/review.json",
       "sha256": "ed989d9ed22a20bbc9ae173432bdf8c3b2a1151fb424073cc51bc2d2107b2d33",
       "scope": "Scoped nonlethal numeric fixture review, not valid full owner/runtime/native acceptance",
       "new_original_cases": 0
-    }
+    },
+    "previous_latest_metadata_recheck_1651": {
+      "latest_metadata_recheck": "evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json",
+      "latest_metadata_recheck_sha256": "423c67ffd40d2d668df3f907f75d8fd0fe0ae51e49c2862499ece6a9813003e8",
+      "latest_metadata_recheck_utc": "2026-11-01T16:51:39.999468+00:00",
+      "latest_metadata_recheck_scope": "Only official manifest andHTML stamp; still137 same EXESHA/stamp. No binary redownload, original execution or fixed sample replacement."
+    },
+    "resource_pickup137_checkpoint": {
+      "version": "0.137.0",
+      "actual_build": "d171b8f9f",
+      "status": "passed_complete1420_resource345_declared_component_domain",
+      "evidence": "evidence/resource-pickup0137-oracle-20261101T182737.085717Z/comparison.json",
+      "comparison_sha256": "1e9a748dd96d9c12b239c874067c943a344f96e9fb0eb94c8c3f42510690dba2",
+      "cases": 90,
+      "full1420_calls": 90,
+      "differences": 0,
+      "source_files": 36,
+      "source_unchanged": true,
+      "artifacts_unchanged": true,
+      "world_unchanged": true,
+      "production_file": "reconstruction/core_spec/resource_pickup137.py",
+      "production_sha256": "f008d587399ff8e333f08be07a8e7430f78867705ff005e634f6cfed991fb17f",
+      "entry": {
+        "index": 1420,
+        "signature": [
+          "7f7f7f7f",
+          ""
+        ],
+        "body_start": 9578690,
+        "body_end": 9583773,
+        "body_sha256": "5d9f5c8a129a1f74a86b0fd9c57179efbecc0b3daa61123ef6b3d3e923fcd5be",
+        "wat_sha256": "05398ae6ad7157b7b7e139650d0849f1d4e43d02f07abadbb730e13338bf29f0"
+      },
+      "runtime": {
+        "version": "0.137.0",
+        "build": "d171b8f9f",
+        "cases": 90,
+        "functions": {
+          "1420": 90
+        },
+        "fresh_instances": 90,
+        "max_memory_bytes": 20578304,
+        "memory_cap_bytes": 33554432,
+        "actual_host_calls": 0,
+        "denied_imports": 878,
+        "stack_all_restored": true,
+        "original_function_bodies_unchanged": true,
+        "application_start_called": false,
+        "full_game_started": false,
+        "network_used": false,
+        "user_saves_accessed": false,
+        "original_memory_snapshot_read": false
+      },
+      "process": {
+        "pid": 97273,
+        "pgid": 97273,
+        "exit_code": 0,
+        "pid_missing": true,
+        "pgid_missing": true,
+        "seconds": 2.1793592080066446,
+        "error": null
+      },
+      "independent_review": {
+        "status": "passed_scoped_read_only_review",
+        "owner": "world_placements135",
+        "report": "reports/2026-11-02-resource-pickup0137-independent-review.json",
+        "receipt": "evidence/resource-pickup0137-independent-review-20261101T183500.844507Z/review.json",
+        "receipt_sha256": "e175290ea37ebd87c64b8d73067cc264b952e8bcc94c60d50eff6cac72478ef4",
+        "reviewer_sha256": "11f6ec20ce019720f2ee6c5f04e1f17422ba879f475652776747357030e9666e",
+        "scope": "Full1420 resource345 declared fixture domain; complete backing/precise unknown masks/RNG/GUID/169/Game guard/source/module/ownership proof. No full947,137world constructor,native/fullgame acceptance.",
+        "new_original_cases": 0,
+        "new_model_validation_cases": 0,
+        "new_full880_frames": 0
+      },
+      "full947_calls": 0,
+      "full880_frames": 0,
+      "native_windows_execution": false,
+      "complete_games": 0,
+      "goal_complete": false,
+      "report": "reports/2026-11-02-resource-pickup0137.json"
+    },
+    "resource_migration137_static": {
+      "report": "reports/2026-11-02-resource-migration0137-static.json",
+      "receipt": "evidence/resource-migration0137-static-20261101T182241.791715Z/mapping.json",
+      "receipt_sha256": "59b088cea0c3a7e1779cd3283c80ec864bcea603b20740dcade59bbbedff2e65",
+      "native_resource_record_stride": 72,
+      "web_resource_record_stride": 56,
+      "native_execution": false,
+      "static_correspondence_not_runtime_acceptance": true
+    },
+    "legacy_runtime_counters_scope": "Existing new_original_runtime_cases80/new_original_entry_calls125 describe damage913 only; resource1420 has its own90/90 checkpoint. Do not combine these into gameplay coverage."
   },
   "fixed_dynamic_research_target_0135": {
     "version": "0.135.1",
@@ -143,7 +234,9 @@
       "reports/2026-11-01-opening0135.json",
       "reports/2026-11-01-world-placements0135.json",
       "reports/2026-11-01-transport0135.json",
-      "reports/2026-11-01-app-history0135.json"
+      "reports/2026-11-01-app-history0135.json",
+      "reports/2026-11-02-opening-resource-combat0135.json",
+      "reports/2026-11-02-resource-spawn0135.json"
     ],
     "approved_research_role_count": 52,
     "catalogue_report": "reports/2026-11-01-catalogue0135.json",
@@ -770,7 +863,7 @@
     "build_identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json",
     "build_identity_sidecar_sha256": "be6c2874770470d160ca0d0cf0cb72c9be88f7be491be070c1a60d14b72190e5",
     "historical_nested_build_labels_retained": true,
-    "ongoing_lane_note": "The nested checkpoints retain their own historical counts/inputs; subsequent real-opening/combat/XP/selection work stays135 and receives separate new receipts. No135 pass is transferred to136/137.",
+    "ongoing_lane_note": "Latest functional target remains137. Fixed135 realopening/controlled14tail now500frames/4select with natural firstG2444 resource, fresh99sources and independentreview. Rawassets500/selfcheck separatelybridged; puremodel600 is not differential acceptance. Next60sG2424/G2448/collection, otherclasses/maps/full880/App/native/fullgame remain incomplete.",
     "real_opening_combat_checkpoint": {
       "report": "reports/2026-11-01-opening-combat0135.md",
       "receipt": "evidence/opening-combat0135-oracle-20261101T154826.676203Z/comparison.json",
@@ -1024,8 +1117,187 @@
       "resource_component_cases": 64,
       "resource_component_differences": 0,
       "resource_component_integrated_into400": false,
-      "resource_component_independent_review_status": "not_registered_here",
-      "frame500_accepted": false
+      "resource_component_independent_review_status": "Passed separately; original400scope not expanded.",
+      "frame500_accepted": false,
+      "historical_scope_only": true,
+      "superseded_continuation_key": "real_opening_resource_combat500_checkpoint"
+    },
+    "real_opening_resource_combat500_checkpoint": {
+      "status": "matched_requested_budget_scoped_independent_review_passed",
+      "evidence": "evidence/opening-combat0135-oracle-20261101T181700.263141Z/comparison.json",
+      "comparison_sha256": "2ce0181ba4f9303213d6038e9e0f5001c361dcddb771086b609ca96ff356dd71",
+      "cases": 1,
+      "frames": 500,
+      "selections": 4,
+      "stages": 7004,
+      "original_entry_calls": 7006,
+      "differences": 0,
+      "source_files": 99,
+      "production_files": 86,
+      "first_resource": {
+        "frame_one_based": 401,
+        "frame_zero_based": 400,
+        "now_bits": 1109419612,
+        "now_seconds": 40.09996032714844,
+        "old_deadline_bits": 1109393408,
+        "old_deadline_seconds": 40.0,
+        "next_deadline_bits": 1118450478,
+        "next_deadline_seconds": 85.09996032714844,
+        "records": [
+          {
+            "marker": 0,
+            "arrival_bits": 1109270289,
+            "kind": 5,
+            "amount": 3146146168,
+            "guid": 17370383913897164969,
+            "aux_capacity": 0,
+            "aux_pointer": 8,
+            "aux_count": 0,
+            "visual_id": 9008,
+            "x_bits": 3323116698,
+            "y_bits": 3289787621,
+            "height_bits": 1116246366,
+            "spawn_time_bits": 1109419612
+          }
+        ],
+        "packets169": [
+          {
+            "guid": "17370383913897164969",
+            "payload169_hex": "010000000002d9a9302310f105509abc12c6e52c16c45e918842215c5b4001000000011ff33700a9000030230010f121000000302300000000803f671700000000000082637d3fb2e211be010000009abc12c6e52c16c45e918842215c5b402300000005000000"
+          }
+        ]
+      },
+      "final_projection": {
+        "progression": {
+          "level": 5,
+          "xp": 20,
+          "pending_upgrades": 0
+        },
+        "now_bits": 1112014798,
+        "next_resource2444_bits": 1118450478,
+        "gold": 64,
+        "earned": 64,
+        "spawn_counter": 196,
+        "message_sequence": 455,
+        "rng_words": [
+          3819624987,
+          4053344310,
+          3007427681,
+          3458647144
+        ],
+        "current_hp_bits": 1132432188
+      },
+      "independent_review": {
+        "report": "reports/2026-11-02-opening-resource-combat0135-independent-review.json",
+        "receipt": "evidence/resource500-independent-review-owned-20261101T182704.730013Z/review/review.json",
+        "receipt_sha256": "cd9b122b6f004552c84d2efde8f8d61b313af9fb102cd010e8ee5887911d92e7",
+        "original_or_model_executed": false
+      },
+      "full880_frames": 0,
+      "native_windows_executed": false,
+      "complete_games": 0,
+      "goal_complete": false,
+      "report": "reports/2026-11-02-opening-resource-combat0135.json",
+      "scope": "Same realopening/physicalpickup/world, controlled14tail and explicit snapshot/originalcontext; fullresource169subset only. Historical counts not added."
+    },
+    "raw_asset_resource_combat500_entry": {
+      "evidence": "evidence/asset-combat500-owned-20261101T181719.658025Z/model500/receipt.json",
+      "sha256": "562309d015a695934f02344daeea1c9d6d54b4313ed5a2c55522c001e1ffef7a",
+      "frames": 500,
+      "selections": 4,
+      "source_count": 93,
+      "loaded_assets": 451,
+      "decoded_bytes": 67281330,
+      "source_stable": true,
+      "assets_stable": true,
+      "world_artifacts": {
+        "terrain": {
+          "file": "terrain-query.bin",
+          "bytes": 4022968,
+          "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+          "projection": "tilecount:u32,each(bounds:4u32,chunkcount:u32,each(holes:u16,vertexcount:u32,XYZ:3u32[]))"
+        },
+        "navigation": {
+          "file": "navigation.bin",
+          "bytes": 78400,
+          "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+          "origin_xy_bits": [
+            3323265024,
+            3292610560
+          ],
+          "width": 280
+        },
+        "secondary": {
+          "file": "secondary-height.u32le",
+          "bytes": 1254400,
+          "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+          "origin_xy_bits": [
+            3323265024,
+            3292610560
+          ],
+          "width": 560
+        }
+      },
+      "original_memory_read": false,
+      "preparsed_world_input_read": false,
+      "owned_terminal": {
+        "pid": 78574,
+        "pgid": 78574,
+        "exit_code": 0,
+        "pid_missing": true,
+        "pgid_missing": true,
+        "deadline_seconds": 300,
+        "seconds": 179.79565349999757,
+        "error": null
+      },
+      "projection_bridge": "evidence/asset-combat500-owned-20261101T181719.658025Z/projection-bridge.json",
+      "projection_bridge_sha256": "3fe02192f59ec50a7101236ae1d182b20524c297cc017f1b10da786f2be6577d",
+      "projection_bridge_checks": 44,
+      "projection_bridge_passed": true,
+      "new_original_cases": 0
+    },
+    "pure_model600_boundary_after500": {
+      "evidence": "evidence/opening-resource135-model-boundary-20261101T182112.106492Z/receipt.json",
+      "sha256": "8a4d3d8c3585afda86283bc03698b4df31a3848a15b828ef846f59186327e71f",
+      "frames": 600,
+      "selections": 5,
+      "boundary": "pending_due_event",
+      "due_unimplemented_offsets": [
+        2424,
+        2448
+      ],
+      "original_cases": 0,
+      "preparsed_independent_world_input": true,
+      "source_stable": true,
+      "seconds": 8.66115970799001,
+      "not_original_differential_after500": true
+    },
+    "resource_spawn135_component_review": {
+      "evidence": "evidence/resource-spawn135-independent-review-20261101T180953.939397Z/review.json",
+      "sha256": "4b28ac7f2c381a1d12b854eb70708e6d3f24b33e7da91000df1200cb3ec48347",
+      "cases": 64,
+      "original1417_calls": 12,
+      "original947_calls": 52,
+      "not_added_to_continuous_case": true
+    },
+    "opening_capture_cas_codec_post_optimization": {
+      "evidence": "evidence/opening-cas-codec135-review-20261101T181343.524929Z/review.json",
+      "sha256": "fa66c3ba5a9aa13e118ec04fc694ed63cffae5efbba5391c76d3ec63410795d3",
+      "negative_count": 26,
+      "rejected_count": 26,
+      "decoder_sha256": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+      "one_line_optimization_from_verified_benchmark": true
+    },
+    "legacy_headless_regression_after_resource_integration": {
+      "evidence": "evidence/full0135-oracle-20261101T182527.169824Z/headless135-comparison.json",
+      "sha256": "9d43e6c8e7ae2050e90711cbe36ce72381682c3beaac7c6ed3358305bfeb52df",
+      "cases": 8,
+      "frames": 1614,
+      "stages": 22607,
+      "selections": 11,
+      "differences": 0,
+      "new_deadline_field_compared": true,
+      "counts_not_added": true
     }
   },
   "fixed_static_migration_target_0136": {

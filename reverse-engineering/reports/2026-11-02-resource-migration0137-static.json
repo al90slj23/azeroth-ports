@@ -1,0 +1,520 @@
+{
+  "status": "static_resource_migration_mapping_complete_dynamic_pending",
+  "version": "0.137.0",
+  "actual_build": "d171b8f9f",
+  "scope": "Read-only selected Web135/Web137 function and data correspondence, with bounded Windows137 producer declaration/field evidence; zero original execution",
+  "evidence": "evidence/resource-migration0137-static-20261101T182241.791715Z",
+  "mapping_sha256": "59b088cea0c3a7e1779cd3283c80ec864bcea603b20740dcade59bbbedff2e65",
+  "trace": "scripts/trace_resource_migration137.py",
+  "trace_sha256": "09cb7d0208e156061fe101b41892ded1ac8926b3725a96c7d294754d6c373527",
+  "source_before": {
+    "scripts/trace_resource_migration137.py": "09cb7d0208e156061fe101b41892ded1ac8926b3725a96c7d294754d6c373527",
+    "scripts/trace_resource_spawn135.py": "6070df69abf375f55beee1a51ab576847b38db8cb43f314d493cb39cee68d36a",
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3"
+  },
+  "source_after": {
+    "scripts/trace_resource_migration137.py": "09cb7d0208e156061fe101b41892ded1ac8926b3725a96c7d294754d6c373527",
+    "scripts/trace_resource_spawn135.py": "6070df69abf375f55beee1a51ab576847b38db8cb43f314d493cb39cee68d36a",
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3"
+  },
+  "original_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+  "native_sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8",
+  "function_mapping": [
+    {
+      "old": 947,
+      "new": 947,
+      "scope": "G2444 resource window only, not full947",
+      "instruction_lines": 225,
+      "instruction_shape_after_explicit_relocations": true,
+      "call_relocations": 2,
+      "data_relocations": [],
+      "dynamic_acceptance": false
+    },
+    {
+      "old": 1417,
+      "new": 1420,
+      "scope": "complete function instruction shape only",
+      "instruction_lines": 2560,
+      "instruction_shape_after_explicit_relocations": true,
+      "call_relocations": 34,
+      "data_relocations": [
+        {
+          "line": 16,
+          "operation": "f32.load offset=",
+          "old": 5456136,
+          "new": 1666088
+        },
+        {
+          "line": 23,
+          "operation": "f32.load offset=",
+          "old": 5456120,
+          "new": 1666072
+        },
+        {
+          "line": 31,
+          "operation": "f32.load offset=",
+          "old": 5456124,
+          "new": 1666076
+        },
+        {
+          "line": 811,
+          "operation": "i32.const",
+          "old": 1588496,
+          "new": 1589580
+        },
+        {
+          "line": 836,
+          "operation": "i32.const",
+          "old": 1588508,
+          "new": 1589592
+        },
+        {
+          "line": 2451,
+          "operation": "i32.const",
+          "old": 1587548,
+          "new": 1588632
+        }
+      ],
+      "dynamic_acceptance": false
+    },
+    {
+      "old": 13516,
+      "new": 13502,
+      "scope": "complete function instruction shape only",
+      "instruction_lines": 424,
+      "instruction_shape_after_explicit_relocations": true,
+      "call_relocations": 11,
+      "data_relocations": [
+        {
+          "line": 19,
+          "operation": "i32.const",
+          "old": 5456016,
+          "new": 1665968
+        },
+        {
+          "line": 422,
+          "operation": "i32.const",
+          "old": 5508708,
+          "new": 1816764
+        }
+      ],
+      "dynamic_acceptance": false
+    },
+    {
+      "old": 1821,
+      "new": 1827,
+      "scope": "complete function instruction shape only",
+      "instruction_lines": 1913,
+      "instruction_shape_after_explicit_relocations": true,
+      "call_relocations": 21,
+      "data_relocations": [],
+      "dynamic_acceptance": false
+    }
+  ],
+  "Web137_layout": {
+    "Game": {
+      "now": 2352,
+      "resource_deadline": 2444,
+      "rng": [
+        1720,
+        1724,
+        1728,
+        1732
+      ],
+      "pickup_capacity": 1868,
+      "pickup_pointer": 1872,
+      "pickup_count": 1876,
+      "world_pointer": 2348,
+      "shared_counter": 2408
+    },
+    "pickup": {
+      "stride": 56,
+      "marker": 0,
+      "kind": 8,
+      "amount": 12,
+      "guid": 16,
+      "auxiliary_vector": [
+        24,
+        28,
+        32
+      ],
+      "visual": 36,
+      "xyz": [
+        40,
+        44,
+        48
+      ],
+      "time": 52,
+      "unwritten_padding": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "resource_definitions": [
+      {
+        "kind": 3,
+        "visual": 9006,
+        "display": 5931,
+        "scale_bits": 1065353216
+      },
+      {
+        "kind": 4,
+        "visual": 9007,
+        "display": 5995,
+        "scale_bits": 1065353216
+      },
+      {
+        "kind": 5,
+        "visual": 9008,
+        "display": 5991,
+        "scale_bits": 1065353216
+      }
+    ]
+  },
+  "zone_geometry12_equal135": true,
+  "zone_geometry12_equal_native": true,
+  "native": {
+    "exe_sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8",
+    "exe_bytes": 147844608,
+    "image_base": 5368709120,
+    "function": {
+      "start": 5466135008,
+      "end": 5466137885,
+      "bytes": 2877,
+      "pdata_file_offset": 146120548,
+      "unwind_rva": 141156844
+    },
+    "function_body_sha256": "85b225b630b954ae830a3c6eb59a96b390eddb4353084f6d3e58837911631088",
+    "resource_declarations": [
+      {
+        "kind": 3,
+        "visual": 9006,
+        "display": 5931,
+        "scale_bits": 1065353216,
+        "branch_va": 5466137111,
+        "file_offset": 97424919,
+        "bytes20_hex": "c785900000002e23000049bf2b1700000000803f",
+        "section": ".text",
+        "packed_display_scale_occurrences": 1
+      },
+      {
+        "kind": 4,
+        "visual": 9007,
+        "display": 5995,
+        "scale_bits": 1065353216,
+        "branch_va": 5466137155,
+        "file_offset": 97424963,
+        "bytes20_hex": "c785900000002f23000049bf6b1700000000803f",
+        "section": ".text",
+        "packed_display_scale_occurrences": 1
+      },
+      {
+        "kind": 5,
+        "visual": 9008,
+        "display": 5991,
+        "scale_bits": 1065353216,
+        "branch_va": 5466137089,
+        "file_offset": 97424897,
+        "bytes20_hex": "c785900000003023000049bf671700000000803f",
+        "section": ".text",
+        "packed_display_scale_occurrences": 1
+      }
+    ],
+    "jump_table": {
+      "va": 5494506856,
+      "file_offset": 125791592,
+      "raw28_hex": "91154ffec51c4ffebf154ffeaf1c4ffedb1c4ffe991c4ffef11c4ffe",
+      "targets": [
+        5466135289,
+        5466137133,
+        5466135335,
+        5466137111,
+        5466137155,
+        5466137089,
+        5466137177
+      ]
+    },
+    "zone_geometry": {
+      "native_base_va": 5487171256,
+      "stride": 240,
+      "xy_offsets": [
+        200,
+        204
+      ],
+      "radius_offset": 216,
+      "all12_match_Web137": true,
+      "rows": [
+        {
+          "index": 0,
+          "record_va": 5487171256,
+          "words": [
+            3323121664,
+            3290316800,
+            1123024896
+          ]
+        },
+        {
+          "index": 1,
+          "record_va": 5487171496,
+          "words": [
+            3324293120,
+            1127481344,
+            1123024896
+          ]
+        },
+        {
+          "index": 2,
+          "record_va": 5487171736,
+          "words": [
+            1150926848,
+            1152729088,
+            1123024896
+          ]
+        },
+        {
+          "index": 3,
+          "record_va": 5487171976,
+          "words": [
+            3318874112,
+            3304062976,
+            1123024896
+          ]
+        },
+        {
+          "index": 4,
+          "record_va": 5487172216,
+          "words": [
+            1148436480,
+            1149288448,
+            1124007936
+          ]
+        },
+        {
+          "index": 5,
+          "record_va": 5487172456,
+          "words": [
+            3314696192,
+            1151500288,
+            1123024896
+          ]
+        },
+        {
+          "index": 6,
+          "record_va": 5487172696,
+          "words": [
+            3327021056,
+            1133051904,
+            1107296256
+          ]
+        },
+        {
+          "index": 7,
+          "record_va": 5487172936,
+          "words": [
+            1149411328,
+            1152286720,
+            1125515264
+          ]
+        },
+        {
+          "index": 8,
+          "record_va": 5487173176,
+          "words": [
+            3278241792,
+            3281059840,
+            1124532224
+          ]
+        },
+        {
+          "index": 9,
+          "record_va": 5487173416,
+          "words": [
+            3321004032,
+            3303079936,
+            1123024896
+          ]
+        },
+        {
+          "index": 10,
+          "record_va": 5487173656,
+          "words": [
+            3321085952,
+            1153138688,
+            1123024896
+          ]
+        },
+        {
+          "index": 11,
+          "record_va": 5487173896,
+          "words": [
+            1164460032,
+            3315568640,
+            1110441984
+          ]
+        }
+      ]
+    },
+    "native_pickup_projection": {
+      "stride": 72,
+      "stride_instruction": "lea rcx,[rsi+8*rsi]; address[rax+8*rcx]",
+      "marker": 24,
+      "kind": 32,
+      "amount": 36,
+      "guid": 40,
+      "visual": 48,
+      "xyz": [
+        52,
+        56,
+        60
+      ],
+      "time": 64,
+      "auxiliary_vector": {
+        "capacity": 0,
+        "pointer": 8,
+        "length": 16
+      },
+      "instruction_byte_anchors": {
+        "kind32": "448974c820",
+        "amount36": "448964c824",
+        "guid40": "4c897cc828",
+        "visual48": "8954c830",
+        "xy52": "0f1374c834",
+        "z60": "f30f117cc83c",
+        "time64": "f3440f1144c840"
+      },
+      "complete_record_layout_claimed": false
+    },
+    "narrow_native_Game_reads": {
+      "world_pointer": 3552,
+      "time": 3720,
+      "pickup_capacity": 1768,
+      "pickup_pointer": 1776,
+      "pickup_length": 1784
+    },
+    "static_correspondence_only": true,
+    "complete_Game_ABI_claimed": false,
+    "native_executed": false,
+    "tool": {
+      "path": "/usr/bin/objdump",
+      "sha256": "b8763cf250e607a778bb4603cecb5b90338814d0a3dfcba0d57b1de242f610e9",
+      "disassembly_sha256": "fc4990da3b81d6f43fd4155b2437e72da63e409a416048c24401a4048ce8c3a0",
+      "owned_terminal": {
+        "pid": 87713,
+        "pgid": 87713,
+        "exit_code": 0,
+        "pid_missing": true,
+        "pgid_missing": true,
+        "seconds": 3.2773537500033854,
+        "deadline_seconds": 30
+      }
+    }
+  },
+  "readonly_index_seeks": {
+    "135": 496384,
+    "137": 496512
+  },
+  "complete_WAT_read": false,
+  "full_index_rehashed": false,
+  "helper_pairs": 22,
+  "raw_identical_helpers": [
+    {
+      "old": 38323,
+      "new": 38342,
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379"
+    },
+    {
+      "old": 49503,
+      "new": 49511,
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302"
+    },
+    {
+      "old": 85719,
+      "new": 85702,
+      "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36"
+    }
+  ],
+  "owned_process": {
+    "pid": 87707,
+    "pgid": 87707,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 4.467395416999352,
+    "deadline_seconds": 60,
+    "error": null
+  },
+  "new_original_cases": 0,
+  "new_model_validation_cases": 0,
+  "new_full880_frames": 0,
+  "native_executed": false,
+  "wasm_instantiated": false,
+  "whole_game_complete": false,
+  "resource137_model_implemented_by_this_report": false,
+  "independent_review_status": "not_requested_for_this_static_note",
+  "pending": [
+    "No137 resource model or original-function differential in this report.",
+    "Referenced changed callee bodies require independent migration/validation; normalized shape alone is not execution proof.",
+    "Resource collection effects,other due schedules and full947/880 remain outside scope.",
+    "Windows resource producer fields are narrow static observations,not complete native Game/Unit ABI or cross-platform equivalence."
+  ],
+  "resource_declaration_instruction_windows": [
+    {
+      "kind": 3,
+      "visual": 9006,
+      "display": 5931,
+      "scale_bits": 1065353216,
+      "packed_display_scale": 4575657221408429867,
+      "local_line": 684,
+      "absolute_WAT_line": 3897165,
+      "instruction_window": [
+        "                      i64.const 4575657221408429867",
+        "                      local.set 14",
+        "                      i32.const 9006",
+        "                      local.set 9",
+        "                      br 3 (;@6;)"
+      ],
+      "kind_switch_correspondence": "Full1351417/1371420 control-flow instructions identical after recorded call/data relocations"
+    },
+    {
+      "kind": 4,
+      "visual": 9007,
+      "display": 5995,
+      "scale_bits": 1065353216,
+      "packed_display_scale": 4575657221408429931,
+      "local_line": 690,
+      "absolute_WAT_line": 3897171,
+      "instruction_window": [
+        "                    i64.const 4575657221408429931",
+        "                    local.set 14",
+        "                    i32.const 9007",
+        "                    local.set 9",
+        "                    br 2 (;@6;)"
+      ],
+      "kind_switch_correspondence": "Full1351417/1371420 control-flow instructions identical after recorded call/data relocations"
+    },
+    {
+      "kind": 5,
+      "visual": 9008,
+      "display": 5991,
+      "scale_bits": 1065353216,
+      "packed_display_scale": 4575657221408429927,
+      "local_line": 696,
+      "absolute_WAT_line": 3897177,
+      "instruction_window": [
+        "                  i64.const 4575657221408429927",
+        "                  local.set 14",
+        "                  i32.const 9008",
+        "                  local.set 9",
+        "                  br 1 (;@6;)"
+      ],
+      "kind_switch_correspondence": "Full1351417/1371420 control-flow instructions identical after recorded call/data relocations"
+    }
+  ],
+  "previous_static_run": {
+    "evidence": "evidence/resource-migration0137-static-20261101T181921.968921Z",
+    "mapping_sha256": "39c0de063c9a9e57c111895d894a8d46ecd5f85e915d5d858902640028a57cb8",
+    "reason": "Initial static receipt retained; final adds explicit three packed display/scale-to-visual WAT instruction windows. No original/model calls in either run."
+  }
+}

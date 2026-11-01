@@ -116,6 +116,7 @@ class HeadlessState135:
     special_endless_start404_bits: int|None = None
     special_mode2582: int = 0
     special_members2540: int|None = None
+    next_resource2444_bits: int|None = None
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
@@ -150,7 +151,8 @@ def from_initial(initial: InitialState135, *, flat_height_bits, zeroed_unit_stor
             absorbed_740_bits=words[740], maximum_shield_744_bits=words[744]), (), (), (), words[2416], (0, 0),
         tuple(words[o] for o in (2428, 2432, 2436)), initial.region_index, flat_height_bits,
         initial.source_id, initial.initial_scalar_words, initial.game_tag,
-        action_sequence1644=2 if abs(f.to_float(f.sub(initial.level.stats.previous_speed_bits, 0x40e00000))) > f.to_float(0x3c23d70a) else 1)
+        action_sequence1644=2 if abs(f.to_float(f.sub(initial.level.stats.previous_speed_bits, 0x40e00000))) > f.to_float(0x3c23d70a) else 1,
+        next_resource2444_bits=words[2444])
 
 
 def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
@@ -189,7 +191,7 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None):
         pickup_storage56=storage(o.pickups),pickup_active_count=o.pickups.count,
         window_storage8=storage(o.windows),window_count=o.windows.count,
         boundary_storage8=storage(o.boundaries),boundary_count=o.boundaries.count,
-        special_locale=special_locale,produced_packets=o.packets)
+        special_locale=special_locale,produced_packets=o.packets,next_resource2444_bits=words[2444])
 
 
 def supported(pointer):
@@ -604,6 +606,37 @@ def _tail_phase(state, kind, dt):
     return replace(state, tail=tail)
 
 
+def _resource_phase(state):
+    """947 resource slice after ordinary work; other due branches are guarded.
+
+    The current physical pickup owner, shared RNG/counter and real world are
+    authoritative. Creation is after this frame's collection, even if that
+    collection changed phase. No nearby-resource consumer is implied here.
+    """
+    from .resource_spawn135 import ResourceSpawnInput135,step_resource_spawn135
+    from .opening_npc_pickups135 import OpeningVector135
+    from .opening_handoff135 import pickup_semantics135
+    if state.next_resource2444_bits is None:
+        raise PendingHeadless135('Resource deadline has no explicit producer')
+    level=state.collection.level
+    if f.to_float(level.stats.now_bits)<f.to_float(state.next_resource2444_bits):return state
+    if state.opening_handoff is None:
+        raise PendingHeadless135('Resource production requires actual opening pickup/world ownership')
+    if (state.pickup_active_count!=len(state.collection.death.records)
+            or len(state.pickup_storage56)!=state.collection.death.capacity):
+        raise PendingHeadless135('Resource pickup physical/semantic ownership differs')
+    vector=OpeningVector135(56,tuple(tuple(cells135(row,56))for row in state.pickup_storage56),state.pickup_active_count)
+    result=step_resource_spawn135(ResourceSpawnInput135(state.zone,level.stats.now_bits,
+        state.next_resource2444_bits,state.collection.player_xyz,state.velocity_xy,
+        level.rng_words,state.collection.death.spawn_counter,vector),state.world)
+    records=tuple(pickup_semantics135(row)for row in result.pickups.storage[:result.pickups.count])
+    collection=replace(state.collection,level=replace(level,rng_words=result.rng_words),
+        death=replace(state.collection.death,records=records,capacity=result.pickups.capacity,spawn_counter=result.counter))
+    return replace(state,collection=collection,pickup_storage56=tuple(encode_row(row)for row in result.pickups.storage),
+        pickup_active_count=result.pickups.count,next_resource2444_bits=result.next_resource2444_bits,
+        produced_packets=state.produced_packets+tuple((169,x.payload169_hex)for x in result.creates))
+
+
 def step_frame(state, dt_bits):
     """Controlled full single-state tail, not880front/party/transport orboot.
 
@@ -617,7 +650,7 @@ def step_frame(state, dt_bits):
         return state, (), 'pending_selected_ability'
     now = f.add(level.stats.now_bits, dt_bits)
     words = dict(state.initial_scalars)
-    if any(f.to_float(now) >= f.to_float(words[o]) for o in (2424, 2440, 2444, 2448)):
+    if any(f.to_float(now) >= f.to_float(words[o]) for o in (2424, 2440, 2448)):
         return state, (), 'pending_due_event'
     state = replace(state, collection=replace(state.collection,
         level=replace(level, stats=replace(level.stats, now_bits=now))), frames=state.frames + 1)
@@ -659,6 +692,7 @@ def step_frame(state, dt_bits):
         unit_storage=_store_prefix(state.unit_storage, spawned.unit_records,stride=424,allow_growth=state.allow_unknown_storage_growth),
         budget_bits=spawned.budget_bits, velocity_xy=spawned.velocity_xy,
         previous_player_xyz=state.collection.player_xyz if level.stats.flag2574==0 else state.previous_player_xyz)
+    state=_resource_phase(state)
     stages.append(('spawn', state))
     state = _tail_phase(state, 'special', dt_bits); stages.append(('special', state))
     state = _tail_phase(state, 'terminal', dt_bits); stages.append(('terminal', state))
@@ -706,7 +740,7 @@ def projection(state):
         return hashlib.sha256(b''.join(bytes.fromhex(row)if isinstance(row,str)else known_bytes(row)for row in storage)).hexdigest()
     result.update(records=list(state.records), racial_record_hex=state.racial.to_bytes().hex(),
         owned_records_hex=[x.record.to_bytes().hex() for x in state.collection.level.choice_inputs.owned],
-        timer1628_bits=state.melee_timer_bits, budget_bits=state.budget_bits,
+        timer1628_bits=state.melee_timer_bits, budget_bits=state.budget_bits,next_resource2444_bits=state.next_resource2444_bits,
         velocity_xy=list(state.velocity_xy), previous_player_xyz=list(state.previous_player_xyz), now_bits=state.collection.level.stats.now_bits,
         unit_storage_sha256=storage_sha(state.unit_storage),
         area_records=list(state.areas), area_capacity=len(state.area_storage),

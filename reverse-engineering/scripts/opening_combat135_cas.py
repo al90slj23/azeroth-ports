@@ -47,7 +47,7 @@ def _loads(raw):
 
 def _string(value):
     _require(SURROGATE.search(value) is None, 'Unpaired UTF16 in CAS string')
-    return json.dumps(value, ensure_ascii=False, separators=(',', ':'))
+    return json.encoder.encode_basestring(value)
 
 
 def _json(value):

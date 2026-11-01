@@ -1,0 +1,563 @@
+{
+  "version": "0.137.0",
+  "actual_build": "d171b8f9f",
+  "original_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+  "status": "passed_complete1420_resource345_declared_component_domain",
+  "kind": "independent_implementation_and_fresh_full_original_component_differential",
+  "evidence": "evidence/resource-pickup0137-oracle-20261101T182737.085717Z/comparison.json",
+  "comparison_sha256": "1e9a748dd96d9c12b239c874067c943a344f96e9fb0eb94c8c3f42510690dba2",
+  "cases": 90,
+  "full1420_calls": 90,
+  "differences": 0,
+  "comparison": {
+    "compared_known_values": 17418,
+    "explicit_unknown_cells": 8884,
+    "unchanged_game_bytes_outside_admitted_ranges": 733320,
+    "observed_changed_game_bytes": 2181,
+    "packets": 90,
+    "packet_bytes": 9269
+  },
+  "groups": {
+    "all12-zones-flat-world-centre": 36,
+    "all12-zones-flat-world-outside-clamp": 36,
+    "independent451-query-world-input": 12,
+    "explicit-primary-direct-height": 3,
+    "explicit-primary-nearest-success": 3
+  },
+  "source_files": 36,
+  "source_unchanged": true,
+  "artifacts_unchanged": true,
+  "world_unchanged": true,
+  "entry": {
+    "index": 1420,
+    "signature": [
+      "7f7f7f7f",
+      ""
+    ],
+    "body_start": 9578690,
+    "body_end": 9583773,
+    "body_sha256": "5d9f5c8a129a1f74a86b0fd9c57179efbecc0b3daa61123ef6b3d3e923fcd5be",
+    "wat_sha256": "05398ae6ad7157b7b7e139650d0849f1d4e43d02f07abadbb730e13338bf29f0"
+  },
+  "private_module_sha256": "3b03b60859bd1a286efeb9ee22b72464de1907d61ea9bc657c90566dd47c6299",
+  "only_changed_section": 7,
+  "private_exports": [
+    [
+      "research137_resource_pickup1420",
+      0,
+      1420
+    ],
+    [
+      "research137_resource_pickup_stack0",
+      3,
+      0
+    ]
+  ],
+  "production_file": "reconstruction/core_spec/resource_pickup137.py",
+  "production_sha256": "f008d587399ff8e333f08be07a8e7430f78867705ff005e634f6cfed991fb17f",
+  "api": {
+    "input": "ResourcePickupInput137(zone,kind,amount,position_bits,now_bits,rng_words,counter,pickups)",
+    "function": "produce_resource_pickup137(value,world)",
+    "output": [
+      "complete physical56B vector and all inactive backing",
+      "shared RNG words and wrapping counter",
+      "resolved XYZ and clamped flag",
+      "full logical creates/169 payloads and angle draw count"
+    ]
+  },
+  "rules": {
+    "kind_map": [
+      [
+        3,
+        9006,
+        5931
+      ],
+      [
+        4,
+        9007,
+        5995
+      ],
+      [
+        5,
+        9008,
+        5991
+      ]
+    ],
+    "position": "XY clamp at max(f32(radius-2),1), then query world; original inputZ is replaced by height/fallback/nearest height",
+    "clamp_queries": "On clamp path execute first height query and optional nearest query before repeating common resource-height query",
+    "primary_absent_fallback": "world fallback116 when height misses and primary56 absent",
+    "primary_present_nearest_miss": "Pending; kind argument used as low-address base+116 in original, not invented as fallback0",
+    "actor": "Shared pure actor primitive revalidated against new1371420: visual/display, scale1, kind21=5, flags9=0, counter+1 wrapping, GUID and angle RNG, full169",
+    "pickup_fields": {
+      "0": "marker0",
+      "4": "preserve previous/unwritten cells exactly",
+      "8": "kind",
+      "12": "opaque uint32 amount unchanged",
+      "16": "actorGUID u64",
+      "24": "auxCapacity0",
+      "28": "auxPointer8",
+      "32": "auxCount0",
+      "36": "visual",
+      "40/44/48": "resolved XYZ",
+      "52": "now"
+    },
+    "vector_growth": "append independently of caller resource cap; grow max(4,2*old_capacity) only when full, preserve old bytes, mark new unwritten bytes None",
+    "amount": "Copied unchanged, including0/ffffffff/deadbeef/89abcdef; no XP/coin interpretation",
+    "message_sequence": "G2412 unchanged; complete single-create169 enqueued to separate packet vector",
+    "zone_geometry": "All12 centreXY/radius raw words re-read from137 relocated152B table1665968 at104/108/120 and exactly match reused independent constants"
+  },
+  "process": {
+    "pid": 97273,
+    "pgid": 97273,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.1793592080066446,
+    "error": null
+  },
+  "runtime": {
+    "version": "0.137.0",
+    "build": "d171b8f9f",
+    "cases": 90,
+    "functions": {
+      "1420": 90
+    },
+    "fresh_instances": 90,
+    "max_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "original_function_bodies_unchanged": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_memory_snapshot_read": false
+  },
+  "game_preservation": "All8192 fixture Game bytes outside RNG1720:1736, pickup-vector1868:1880, output-packet-vector1880:1892, counter2408:2412 unchanged",
+  "world_inputs": {
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5"
+  },
+  "pure_model_refusals": [
+    "unsupported-kind",
+    "absent-world",
+    "primary-present-nearest-miss-remains-pending"
+  ],
+  "static_migration": {
+    "report": "reports/2026-11-02-resource-migration0137-static.md",
+    "evidence": "evidence/resource-migration0137-static-20261101T182241.791715Z/mapping.json",
+    "sha256": "59b088cea0c3a7e1779cd3283c80ec864bcea603b20740dcade59bbbedff2e65",
+    "scope": "Complementary static source/callee/Windows evidence; not dynamic acceptance of all callees or native execution"
+  },
+  "input_limitations": [
+    "Synthetic Game8192 fixture, not original Game constructor",
+    "World124 manually packed query-equivalent fixture, not original World constructor",
+    "451 asset query artifacts retain135 provenance; supplied as137 controlled inputs, not latest137 asset boot"
+  ],
+  "pending": [
+    "Resource947 scheduler/ordinary432 domain integration",
+    "Resource collection/effects",
+    "Primary-present nearest-miss low-address read",
+    "137 full world/boot/game/UI/network"
+  ],
+  "full947_calls": 0,
+  "full880_frames": 0,
+  "native_windows_execution": false,
+  "complete_games": 0,
+  "goal_complete": false,
+  "pilot": {
+    "evidence": "evidence/resource-pickup0137-oracle-20261101T182308.142922Z/comparison.json",
+    "cases": 6,
+    "counts_not_added_to_final90": true
+  },
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "owner": "world_placements135",
+    "report": "reports/2026-11-02-resource-pickup0137-independent-review.json",
+    "receipt": "evidence/resource-pickup0137-independent-review-20261101T183500.844507Z/review.json",
+    "receipt_sha256": "e175290ea37ebd87c64b8d73067cc264b952e8bcc94c60d50eff6cac72478ef4",
+    "reviewer_sha256": "11f6ec20ce019720f2ee6c5f04e1f17422ba879f475652776747357030e9666e",
+    "scope": "Full1420 resource345 declared fixture domain; complete backing/precise unknown masks/RNG/GUID/169/Game guard/source/module/ownership proof. No full947,137world constructor,native/fullgame acceptance.",
+    "new_original_cases": 0,
+    "new_model_validation_cases": 0,
+    "new_full880_frames": 0
+  },
+  "local_source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_scaling.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_scaling.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_pickup137.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_pickup137.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_pickup137.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_pickup137.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_pickup137.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_pickup137.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/enemy_scaling.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/spawn_math135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/build_combat137_oracle.py",
+      "scripts/wasm137_profile.py"
+    ],
+    [
+      "scripts/build_resource_pickup137_oracle.py",
+      "scripts/build_combat137_oracle.py"
+    ],
+    [
+      "scripts/build_resource_pickup137_oracle.py",
+      "scripts/wasm137_profile.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "reconstruction/core_spec/initial_state135_data.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "reconstruction/core_spec/resource_pickup137.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "scripts/ai_world135_inputs.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "scripts/build_resource_pickup137_oracle.py"
+    ],
+    [
+      "scripts/check_resource_pickup137.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/run_resource_pickup137_oracle.mjs",
+      "scripts/ai_world135_packing.mjs"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm137_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm137_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "historical_diagnostic90": {
+    "evidence": "evidence/resource-pickup0137-oracle-20261101T182323.787663Z/comparison.json",
+    "sha256": "8d957fdd974b2c71dd4cca8ddbb95e6e829fdec8fe6129928771dfc1ea5251b0",
+    "cases": 90,
+    "reason": "Read-only review found checker-only initial_state135_data.py missing from35-source freeze; preserved, not final complete-source-freeze evidence and counts not added",
+    "fresh_rerun_after_fix": true
+  },
+  "source_closure": "All36 declared files checked for local Python AST and JS relative import closure before model generation; checker-only ZONE_ENTRIES data and all package initializers included"
+}

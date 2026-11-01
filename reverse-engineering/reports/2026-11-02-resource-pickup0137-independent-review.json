@@ -1,0 +1,135 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "version": "0.137.0",
+  "build": "d171b8f9f",
+  "comparison": "evidence/resource-pickup0137-oracle-20261101T182737.085717Z/comparison.json",
+  "comparison_sha256": "1e9a748dd96d9c12b239c874067c943a344f96e9fb0eb94c8c3f42510690dba2",
+  "reviewer_sha256": "11f6ec20ce019720f2ee6c5f04e1f17422ba879f475652776747357030e9666e",
+  "source_count": 36,
+  "local_import_edges": 91,
+  "source_before_after_snapshot_current_verified": true,
+  "source_inputs_and_reviewer_hashes_unchanged_across_review": true,
+  "binary": {
+    "nonexport_sections_byte_identical": true,
+    "private_two_exports_only": true,
+    "no_start_section": true,
+    "all_original_callees_preserved": true,
+    "original_imported_functions": 878,
+    "functions": {
+      "1420": {
+        "start": 9578690,
+        "end": 9583773,
+        "sha256": "5d9f5c8a129a1f74a86b0fd9c57179efbecc0b3daa61123ef6b3d3e923fcd5be"
+      },
+      "1827": {
+        "start": 12200177,
+        "end": 12203807,
+        "sha256": "28d0c7e50a34d9ddb8c5012c981757ac89a5edcf2d9674902c372dd460ca5c6d"
+      }
+    }
+  },
+  "independent_comparison_counts": {
+    "compared_known_values": 17418,
+    "explicit_unknown_cells": 8884,
+    "height_independent_controlled_cases": 78,
+    "unchanged_game_bytes_outside_admitted_ranges": 733320,
+    "observed_changed_game_bytes": 2181,
+    "packets": 90,
+    "packet_bytes": 9269,
+    "semantic_actor_fields": 1440,
+    "exact_yaw_RNG_GUID_cases": 90,
+    "retained_input_physical_bytes": 11992,
+    "height_explicit135_artifact_cases": 12
+  },
+  "groups": {
+    "all12-zones-flat-world-centre": 36,
+    "all12-zones-flat-world-outside-clamp": 36,
+    "independent451-query-world-input": 12,
+    "explicit-primary-direct-height": 3,
+    "explicit-primary-nearest-success": 3
+  },
+  "negative_control_rejections": [
+    {
+      "name": "mask_known_kind_byte",
+      "rejected": true
+    },
+    {
+      "name": "RNG_word_corruption",
+      "rejected": true
+    },
+    {
+      "name": "Game_unallowed_byte",
+      "rejected": true
+    },
+    {
+      "name": "physical_unknown_input_not_preserved",
+      "rejected": true
+    }
+  ],
+  "expected_frozen_before_original": true,
+  "original_runner_never_reads_expected": true,
+  "all_world4_inputs_frozen": true,
+  "world_provenance": "135 independently produced query artifacts passed as controlled137 inputs, or explicit synthetic World124; not137 world bootstrap",
+  "unknown_mask_scope": "Exactly old producer cells plus uninitialized growth; no known byte masked; retained input None poison explicitly checked.",
+  "old35_source_batch": {
+    "receipt": "evidence/resource-pickup0137-oracle-20261101T182323.787663Z/comparison.json",
+    "sha256": "8d957fdd974b2c71dd4cca8ddbb95e6e829fdec8fe6129928771dfc1ea5251b0",
+    "missing": "reconstruction/core_spec/initial_state135_data.py",
+    "same_input_expected_module_WAT": {
+      "input.json": true,
+      "expected.json": true,
+      "labels.json": true,
+      "refusals.json": true,
+      "resource-pickup137-original-exports.wasm": true,
+      "1420.wat": true
+    },
+    "not_added_to_case_count": true
+  },
+  "original_owned_terminal": {
+    "pid": 97273,
+    "pgid": 97273,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.1793592080066446,
+    "error": null
+  },
+  "all_stack_returns_restored": true,
+  "actual_host_calls": 0,
+  "archived_model_refusals": [
+    "unsupported-kind",
+    "absent-world",
+    "primary-present-nearest-miss-remains-pending"
+  ],
+  "refusals_rerun_by_reviewer": false,
+  "cases": 90,
+  "original1420_calls": 90,
+  "full947_calls": 0,
+  "new_original_cases": 0,
+  "new_model_validation_cases": 0,
+  "new_full880_frames": 0,
+  "model_checker_or_original_executed_by_reviewer": false,
+  "Windows_executed": false,
+  "complete_games": 0,
+  "limits": [
+    "8192-byte Game and World124 are explicit controlled fixtures, not complete constructors or ownership.",
+    "78 controlled heights checked independently;12 real artifact terrain heights are expected/original comparison with explicit135 provenance, not a reimplementation of terrain queries.",
+    "Exact yaw/RNG/GUID/packet bytes and schemas checked; quaternion sin/cos additionally checked with finite f32 tolerance, not a new exact trig model.",
+    "Resource scheduler947, collection, other kinds,primary nearest miss,full137world/game/UI/network/native execution remain outside scope."
+  ],
+  "seconds": 0.4615293329989072,
+  "review_receipt": "evidence/resource-pickup0137-independent-review-20261101T183500.844507Z/review.json",
+  "review_receipt_sha256": "e175290ea37ebd87c64b8d73067cc264b952e8bcc94c60d50eff6cac72478ef4",
+  "reviewer_script": "scripts/review_resource_pickup137.py",
+  "review_process": {
+    "pid": 10105,
+    "pgid": 10105,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 0.5455690000089817,
+    "deadline_seconds": 60,
+    "error": null
+  },
+  "primary_report": "reports/2026-11-02-resource-pickup0137.md"
+}

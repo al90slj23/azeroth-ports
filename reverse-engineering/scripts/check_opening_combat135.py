@@ -32,6 +32,27 @@ from core_spec.pickup_record_cells135 import pickup_words135
 def map_sha(values):return hashlib.sha256(b''.join(struct.pack('<H',x)for x in values)).hexdigest()
 
 
+def resource_create_packets169(packets):
+    """Retain every single-create actor packet with a resource-entry GUID.
+
+    Other wire messages remain outside this composition's semantic coverage;
+    resource packets compare exact payload, count and queue order.
+    """
+    result=[]
+    for opcode,payload in packets:
+        if opcode!=169:continue
+        raw=bytes.fromhex(payload)
+        if len(raw)<7 or raw[:6]!=b'\x01\x00\x00\x00\x00\x02':continue
+        mask=raw[6];offset=7;guid=0
+        for i in range(8):
+            if mask>>i&1:
+                if offset>=len(raw):raise ValueError('Truncated resource create GUID')
+                guid|=raw[offset]<<(8*i);offset+=1
+        if guid>>48==0xf110 and (guid>>24)&0xffffff in(9006,9007,9008):
+            result.append(dict(guid=str(guid),payload169_hex=payload))
+    return result
+
+
 def wanted(state):
     level=state.collection.level;tail=state.tail;path=state.distance_map
     if (state.effect_records120 or state.delayed_records56 or state.queued_hits
@@ -69,6 +90,8 @@ def wanted(state):
         last_hit_bits=state.incoming.last_hit_1648_bits,absorbed740_bits=state.incoming.absorbed_740_bits,maximum_shield744_bits=state.incoming.maximum_shield_744_bits,
         candidates=[asdict(c)for c in level.candidates],selection_kind2585=level.selection_kind2585,generation_counter2400=level.generation_counter2400,
         field1092=state.special_field1092,mode2582=state.special_mode2582,
+        next_resource2444_bits=state.next_resource2444_bits,
+        resource_create_packets169=resource_create_packets169(state.produced_packets),
         guardian_cooldowns=[dict(unit_index=x.unit_index,guid=str(x.guid),capacity=x.capacity,timers_bits=list(x.timers_bits),
             ability_pointer=x.ability_pointer,header_pointer=x.header_pointer,ability_records44_hex=list(x.ability_records44_hex),
             header28_hex=x.header28_hex)for x in state.guardian_cooldowns],
@@ -86,7 +109,9 @@ def original_view(raw,expected):
     def subset(want,value):
         if isinstance(want,dict):return{k:subset(v,value[k])for k,v in want.items()}
         return value
-    projection=subset(expected['projection'],raw['projection']);vectors={}
+    raw_projection=dict(raw['projection'])
+    raw_projection['resource_create_packets169']=resource_create_packets169((p['opcode'],p['payload_hex'])for p in raw['packets']['active'])
+    projection=subset(expected['projection'],raw_projection);vectors={}
     for name,want in expected['vectors'].items():
         value=raw['vectors'][name];v={}
         for key in want:

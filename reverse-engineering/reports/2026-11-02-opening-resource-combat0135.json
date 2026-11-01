@@ -1,0 +1,495 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "kind": "independent_opening_combat_resource_continuation_declared_projection_differential",
+  "status": "matched_requested_budget_scoped_independent_review_passed",
+  "evidence": "evidence/opening-combat0135-oracle-20261101T181700.263141Z/comparison.json",
+  "comparison_sha256": "2ce0181ba4f9303213d6038e9e0f5001c361dcddb771086b609ca96ff356dd71",
+  "cases": 1,
+  "frames": 500,
+  "selections": 4,
+  "stages": 7004,
+  "original_entry_calls": 7006,
+  "differences": 0,
+  "source_files": 99,
+  "production_files": 86,
+  "comparison": {
+    "compared_leaves": 31918511,
+    "unwritten_pickup_arrivals": 14541,
+    "declared_unknown_cells": 26583383
+  },
+  "runtime": {
+    "kind": "real_opening_then_controlled14_tail_original_observation",
+    "schema_version": 5,
+    "output_protocol": "bounded_stage_cas_jsonl_gzip",
+    "cases": 1,
+    "original_entry_calls": 7006,
+    "completed_controlled_tail_frames": 500,
+    "completed_stages": 7004,
+    "boundaries": 0,
+    "case_receipts": [
+      {
+        "id": 0,
+        "completed_stages": 7004,
+        "boundary": null
+      }
+    ],
+    "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "module_sha256": "bf1dda28b386e1394c0f811c533745801f285460c7a76d70937591126d24a572",
+    "input_sha256": "eda7b4bec2aafa8e67101fe1129125a3563ad4f8bddf7494eb5b4ff951b34b15",
+    "memory_page_cap": 4096,
+    "peak_memory_bytes": 166395904,
+    "denied_imports": 878,
+    "host_imports_throw": true,
+    "stage_entries": [
+      {
+        "kind": "player",
+        "role": "player_tick",
+        "index": 2088
+      },
+      {
+        "kind": "extra",
+        "role": "auto_cast",
+        "index": 916
+      },
+      {
+        "kind": "owned_effects",
+        "role": "owned_effect_tick",
+        "index": 975
+      },
+      {
+        "kind": "hits",
+        "role": "process_hits",
+        "index": 1754
+      },
+      {
+        "kind": "area",
+        "role": "area_tick",
+        "index": 3757
+      },
+      {
+        "kind": "effects",
+        "role": "effect_tick",
+        "index": 915
+      },
+      {
+        "kind": "deadline",
+        "role": "deadline_tick",
+        "index": 38007
+      },
+      {
+        "kind": "secondary",
+        "role": "secondary_hits",
+        "index": 2602
+      },
+      {
+        "kind": "ai",
+        "role": "update_units",
+        "index": 921
+      },
+      {
+        "kind": "collect",
+        "role": "collect_pickups",
+        "index": 2862
+      },
+      {
+        "kind": "claims",
+        "role": "claim_tick",
+        "index": 2573
+      },
+      {
+        "kind": "spawn",
+        "role": "spawn_tick",
+        "index": 947
+      },
+      {
+        "kind": "special",
+        "role": "special_tick",
+        "index": 2376
+      },
+      {
+        "kind": "terminal",
+        "role": "terminal_tick",
+        "index": 49037
+      }
+    ],
+    "selection_entry": {
+      "role": "select_ability",
+      "index": 1072,
+      "signature": "(G:i32,input_index:i32)->void",
+      "advances_clock": false
+    },
+    "budgets": {
+      "cases": 1,
+      "actions_per_case": 600,
+      "controlled_frames_per_case": 500,
+      "logical_record_bytes": 2097152,
+      "logical_output_bytes": 8589934592,
+      "index_record_bytes": 2097152,
+      "index_uncompressed_bytes": 1073741824,
+      "compressed_output_bytes": 268435456,
+      "blob_bytes": 16777216,
+      "unique_blob_bytes": 536870912,
+      "blob_files": 65536,
+      "blob_index_record_bytes": 2097152,
+      "blob_index_bytes": 268435456,
+      "blob_references_bytes": 33554432,
+      "encoding_depth": 128,
+      "encoding_nodes_per_record": 1048576,
+      "write_concurrency": 16,
+      "string_cache_bytes": 67108864,
+      "string_cache_entries": 8192,
+      "owned_deadline_seconds": 60
+    },
+    "js_heap_cap_mib": 512,
+    "output_compression": {
+      "format": "gzip",
+      "members": 1,
+      "level": 6,
+      "all_capture_fields_preserved": true,
+      "content_addressed": true
+    },
+    "actual_opening_phase_used": true,
+    "constructor_phase_overwritten": false,
+    "preallocated_zero128_storage": false,
+    "world_rc_forged": false,
+    "locale_once_injected": false,
+    "locale_source": "Preserved initialized genuine snapshot; prestate index bound to explicit input.",
+    "controlled_clock_scheduler": "explicit_external_f32_add_G2352_not_original880",
+    "full880_called": false,
+    "new_full880_frames": 0,
+    "independent_model_validation_cases": 0,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "output_bytes": 2428120,
+    "uncompressed_output_bytes": 2428120,
+    "compressed_output_bytes": 620140,
+    "output_records": 7508,
+    "max_record_uncompressed_bytes": 514,
+    "output_sha256": "1c3dee509edd73fc923133b409e712a1873ded352c0266fe5c62c734e34e2f7b",
+    "uncompressed_sha256": "531ff8ad7b364385b1e0f92c0d784213a87102f28996f6fbad631c9e55c6e125",
+    "logical_output_bytes": 2437042742,
+    "logical_output_sha256": "1d3cf9e46f594e2b27932c41f1c4e42cc5e8155bd6666a078e0430ff7529f715",
+    "maximum_logical_record_bytes": 930431,
+    "capture_cas": {
+      "protocol": "opening-combat135-cas-v1",
+      "encoding": "bottom_up_JSON_nodes_original_logical_size_at_least512B",
+      "marker": "$cas135_blob_v1",
+      "blob_directory": "cas-blobs",
+      "blob_index_file": "blob-index.jsonl",
+      "blob_references_file": "blob-references.jsonl",
+      "records": 7508,
+      "logical_bytes": 2437042742,
+      "logical_sha256": "1d3cf9e46f594e2b27932c41f1c4e42cc5e8155bd6666a078e0430ff7529f715",
+      "maximum_logical_record_bytes": 930431,
+      "index_uncompressed_bytes": 2428120,
+      "index_uncompressed_sha256": "531ff8ad7b364385b1e0f92c0d784213a87102f28996f6fbad631c9e55c6e125",
+      "compressed_bytes": 620140,
+      "compressed_sha256": "1c3dee509edd73fc923133b409e712a1873ded352c0266fe5c62c734e34e2f7b",
+      "maximum_index_record_bytes": 514,
+      "unique_blobs": 20696,
+      "unique_blob_bytes": 123298206,
+      "maximum_blob_bytes": 906364,
+      "total_logical_blob_references": 1476054,
+      "blob_index_bytes": 19272384,
+      "blob_index_sha256": "82b67956b041551e9345370737d2b3bcdf4965842adcd64159b9414ca3dc791a",
+      "maximum_blob_index_record_bytes": 19523,
+      "blob_references_bytes": 3536552,
+      "blob_references_sha256": "dfdd33e731333a82df177f0793bc710844f48df589de13e61923dfabf60dd18e",
+      "limits": {
+        "cases": 1,
+        "actions_per_case": 600,
+        "controlled_frames_per_case": 500,
+        "logical_record_bytes": 2097152,
+        "logical_output_bytes": 8589934592,
+        "index_record_bytes": 2097152,
+        "index_uncompressed_bytes": 1073741824,
+        "compressed_output_bytes": 268435456,
+        "blob_bytes": 16777216,
+        "unique_blob_bytes": 536870912,
+        "blob_files": 65536,
+        "blob_index_record_bytes": 2097152,
+        "blob_index_bytes": 268435456,
+        "blob_references_bytes": 33554432,
+        "encoding_depth": 128,
+        "encoding_nodes_per_record": 1048576,
+        "write_concurrency": 16,
+        "string_cache_bytes": 67108864,
+        "string_cache_entries": 8192,
+        "owned_deadline_seconds": 60
+      },
+      "original_reserved_marker_rejected_before_encoding": true,
+      "unpaired_UTF16_rejected": true,
+      "all_original_capture_fields_preserved": true,
+      "property_order_and_Number_values_preserved": true,
+      "blob_files_uncompressed": true,
+      "child_refs_are_direct_encoded_edges": true,
+      "logical_reference_counts_include_expanded_blob_edges": true
+    },
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_opening_combat135_cas_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T181700.263141Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T181700.263141Z/config.json"
+    ],
+    "pid": 78734,
+    "pgid": 78734,
+    "exit_code": 0,
+    "seconds": 127.61588637500245,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "process_seconds_include_parent_verification": true,
+  "original_process_terminal": {
+    "pid": 78734,
+    "pgid": 78734,
+    "exit_code": 0,
+    "deadline_exceeded": false
+  },
+  "capture_cas": {
+    "records": 7508,
+    "logical_bytes": 2437042742,
+    "logical_sha256": "1d3cf9e46f594e2b27932c41f1c4e42cc5e8155bd6666a078e0430ff7529f715",
+    "maximum_logical_record_bytes": 930431,
+    "unique_blobs": 20696,
+    "unique_blob_bytes": 123298206,
+    "maximum_blob_bytes": 906364,
+    "index_uncompressed_bytes": 2428120,
+    "index_uncompressed_sha256": "531ff8ad7b364385b1e0f92c0d784213a87102f28996f6fbad631c9e55c6e125",
+    "maximum_index_record_bytes": 514,
+    "maximum_blob_index_record_bytes": 19523,
+    "total_logical_blob_references": 1476054,
+    "blob_index_bytes": 19272384,
+    "blob_index_sha256": "82b67956b041551e9345370737d2b3bcdf4965842adcd64159b9414ca3dc791a",
+    "blob_references_bytes": 3536552,
+    "blob_references_sha256": "dfdd33e731333a82df177f0793bc710844f48df589de13e61923dfabf60dd18e",
+    "all_blobs_and_occurrences_verified": true,
+    "decoder_cache_bytes": 8385150
+  },
+  "original_context": {
+    "snapshot_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_begin1089.memory",
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "externref_VM_restoration": false,
+    "fresh_bootstraps": 0
+  },
+  "world_input": {
+    "kind": "independently_produced_preparsed_world_query_artifacts",
+    "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+    "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+    "artifacts": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/inputs.json": "603bd691eb614f4c0ae932401c2d790761c9b18b38951922c2fa9757bd4d7b80"
+    }
+  },
+  "first_resource": {
+    "frame_one_based": 401,
+    "frame_zero_based": 400,
+    "now_bits": 1109419612,
+    "now_seconds": 40.09996032714844,
+    "old_deadline_bits": 1109393408,
+    "old_deadline_seconds": 40.0,
+    "next_deadline_bits": 1118450478,
+    "next_deadline_seconds": 85.09996032714844,
+    "records": [
+      {
+        "marker": 0,
+        "arrival_bits": 1109270289,
+        "kind": 5,
+        "amount": 3146146168,
+        "guid": 17370383913897164969,
+        "aux_capacity": 0,
+        "aux_pointer": 8,
+        "aux_count": 0,
+        "visual_id": 9008,
+        "x_bits": 3323116698,
+        "y_bits": 3289787621,
+        "height_bits": 1116246366,
+        "spawn_time_bits": 1109419612
+      }
+    ],
+    "packets169": [
+      {
+        "guid": "17370383913897164969",
+        "payload169_hex": "010000000002d9a9302310f105509abc12c6e52c16c45e918842215c5b4001000000011ff33700a9000030230010f121000000302300000000803f671700000000000082637d3fb2e211be010000009abc12c6e52c16c45e918842215c5b402300000005000000"
+      }
+    ]
+  },
+  "final_projection": {
+    "progression": {
+      "level": 5,
+      "xp": 20,
+      "pending_upgrades": 0
+    },
+    "now_bits": 1112014798,
+    "next_resource2444_bits": 1118450478,
+    "gold": 64,
+    "earned": 64,
+    "spawn_counter": 196,
+    "message_sequence": 455,
+    "rng_words": [
+      3819624987,
+      4053344310,
+      3007427681,
+      3458647144
+    ],
+    "current_hp_bits": 1132432188
+  },
+  "raw_asset_modelselfcheck": {
+    "evidence": "evidence/asset-combat500-owned-20261101T181719.658025Z/model500/receipt.json",
+    "sha256": "562309d015a695934f02344daeea1c9d6d54b4313ed5a2c55522c001e1ffef7a",
+    "frames": 500,
+    "selections": 4,
+    "source_count": 93,
+    "loaded_assets": 451,
+    "decoded_bytes": 67281330,
+    "source_stable": true,
+    "assets_stable": true,
+    "world_artifacts": {
+      "terrain": {
+        "file": "terrain-query.bin",
+        "bytes": 4022968,
+        "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+        "projection": "tilecount:u32,each(bounds:4u32,chunkcount:u32,each(holes:u16,vertexcount:u32,XYZ:3u32[]))"
+      },
+      "navigation": {
+        "file": "navigation.bin",
+        "bytes": 78400,
+        "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+        "origin_xy_bits": [
+          3323265024,
+          3292610560
+        ],
+        "width": 280
+      },
+      "secondary": {
+        "file": "secondary-height.u32le",
+        "bytes": 1254400,
+        "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+        "origin_xy_bits": [
+          3323265024,
+          3292610560
+        ],
+        "width": 560
+      }
+    },
+    "original_memory_read": false,
+    "preparsed_world_input_read": false,
+    "owned_terminal": {
+      "pid": 78574,
+      "pgid": 78574,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "deadline_seconds": 300,
+      "seconds": 179.79565349999757,
+      "error": null
+    },
+    "projection_bridge": "evidence/asset-combat500-owned-20261101T181719.658025Z/projection-bridge.json",
+    "projection_bridge_sha256": "3fe02192f59ec50a7101236ae1d182b20524c297cc017f1b10da786f2be6577d",
+    "projection_bridge_checks": 44,
+    "projection_bridge_passed": true,
+    "new_original_cases": 0
+  },
+  "pure_model_boundary": {
+    "evidence": "evidence/opening-resource135-model-boundary-20261101T182112.106492Z/receipt.json",
+    "sha256": "8a4d3d8c3585afda86283bc03698b4df31a3848a15b828ef846f59186327e71f",
+    "frames": 600,
+    "selections": 5,
+    "boundary": "pending_due_event",
+    "due_unimplemented_offsets": [
+      2424,
+      2448
+    ],
+    "original_cases": 0,
+    "preparsed_independent_world_input": true,
+    "source_stable": true,
+    "seconds": 8.66115970799001,
+    "not_original_differential_after500": true
+  },
+  "codec_review": {
+    "evidence": "evidence/opening-cas-codec135-review-20261101T181343.524929Z/review.json",
+    "sha256": "fa66c3ba5a9aa13e118ec04fc694ed63cffae5efbba5391c76d3ec63410795d3",
+    "negative_count": 26,
+    "rejected_count": 26,
+    "decoder_sha256": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+    "one_line_optimization_from_verified_benchmark": true
+  },
+  "resource_component_review": {
+    "evidence": "evidence/resource-spawn135-independent-review-20261101T180953.939397Z/review.json",
+    "sha256": "4b28ac7f2c381a1d12b854eb70708e6d3f24b33e7da91000df1200cb3ec48347",
+    "cases": 64,
+    "original1417_calls": 12,
+    "original947_calls": 52,
+    "not_added_to_continuous_case": true
+  },
+  "failed_history": [
+    {
+      "directory": "evidence/opening-combat0135-oracle-20261101T181407.153529Z",
+      "reason": "Root integration passed list physical rows to tuple-only pickup semantics; TypeError during expected-first generation, before original invocation",
+      "new_original_cases": 0
+    },
+    {
+      "directory": "evidence/asset-combat500-owned-20261101T181501.107923Z",
+      "reason": "Owned pure-model run intentionally stopped after confirming same integration type error, before source correction",
+      "owned_terminal": {
+        "pid": 70051,
+        "pgid": 70051,
+        "exit_code": -15,
+        "pid_missing": true,
+        "pgid_missing": true,
+        "deadline_seconds": 300,
+        "seconds": 75.64605170799769,
+        "error": null
+      },
+      "not_observation_timeout": true
+    }
+  ],
+  "latest_metadata_check": {
+    "evidence": "evidence/official-latest-goalcheck-20261101T181528.650406Z/receipt.json",
+    "sha256": "ae2f5d9dcf8eefae0723399f5d64808fbdb13f0503a6c02245a1db6f4eb7e2be",
+    "checked_at_utc": "2026-11-01T18:15:28.650406+00:00",
+    "official_version": "0.137.0",
+    "matches_pinned137": true,
+    "binary_redownloaded": false
+  },
+  "limitations": [
+    "Single human warrior/Elwynn/seed0 stationary/navigationFalse policy; not all classes/maps/actions.",
+    "Original side retains declared historical linear-memory snapshot/initialized world/locale and external controlled f32 scheduler, no full880.",
+    "Independent continuous comparison uses pre-parsed independent world; raw451 producer is separately validated and bridged.",
+    "G2444 resource branch is integrated only while other947 due branches remain inactive; next60s G2424/G2448 remain pending.",
+    "Only single-create resource169 packets are predicted exactly; all other captured wire messages retain observation-only status.",
+    "Kind3..5 nearby collection effects remain pending; amount is post-kind RNG state0, not assumed XP/currency.",
+    "No native Windows execution or independent full game; fixed135 results do not transfer to137."
+  ],
+  "full880_frames": 0,
+  "native_windows_executed": false,
+  "complete_games": 0,
+  "goal_complete": false,
+  "legacy_headless_regression": {
+    "evidence": "evidence/full0135-oracle-20261101T182527.169824Z/headless135-comparison.json",
+    "sha256": "9d43e6c8e7ae2050e90711cbe36ce72381682c3beaac7c6ed3358305bfeb52df",
+    "cases": 8,
+    "frames": 1614,
+    "stages": 22607,
+    "selections": 11,
+    "differences": 0,
+    "new_deadline_field_compared": true,
+    "counts_not_added": true
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-opening-resource-combat0135-independent-review.json",
+    "receipt": "evidence/resource500-independent-review-owned-20261101T182704.730013Z/review/review.json",
+    "receipt_sha256": "cd9b122b6f004552c84d2efde8f8d61b313af9fb102cd010e8ee5887911d92e7",
+    "original_or_model_executed": false
+  }
+}
