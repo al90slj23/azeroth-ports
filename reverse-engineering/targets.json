@@ -5,11 +5,24 @@
     "web_reference_key": "web_official_latest_snapshot",
     "windows_reference_key": "windows_official_latest_reference",
     "selected_by": "User latest-version direction; live official manifest rechecked2026-11-01 UTC",
-    "status": "originals_acquired_identity_verified_semantic_migration_pending",
+    "status": "complete_static_profile_and_partial_original_runtime_differentials_passed",
     "fixed_research_baseline": "fixed_research_baseline",
     "version_policy": "Freeze each acquired version/build/SHA for repeatable experiments; migrate differences within the same project",
     "installation_packages_updated": false,
-    "version_support": "reconstruction/version-support.json"
+    "version_support": "reconstruction/version-support.json",
+    "analysis_profile": {
+      "report": "reports/2026-11-01-wasm0135-profile.json",
+      "source_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+      "complete_wat": "evidence/wasm0135-profile-20261101T031028.877964Z/official-0.135.1-full.wat",
+      "wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+      "index": "evidence/wasm0135-profile-20261101T031028.877964Z/index.sqlite",
+      "index_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0"
+    },
+    "migration_report": "reports/2026-11-01-migration0135.json",
+    "runtime_acceptance_reports": [
+      "reports/2026-11-01-stats0135-spec.json",
+      "reports/2026-11-01-game-loop0135.json"
+    ]
   },
   "web_core": {
     "version": "0.126.0",
@@ -126,11 +139,12 @@
     "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=f31d0e03e3ac",
     "local_snapshot": "originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
     "report": "reports/2026-11-01-official-0135-acquisition.json",
-    "role": "active_latest_web_target; acquired_not_instantiated",
+    "role": "active_fixed_latest_web_target; complete_static_profile_and_scoped_original_runtime_differentials",
     "limitations": [
       "Version/build identified from static menu branding; SHA computed locally from saved HTTPS bytes, not a publisher digest.",
-      "Semantic migration and differential acceptance pending; 0.134.0 results do not count as 0.135.1 verification.",
+      "Partial0.135.1 runtime validation is separately recorded in reconstruction/version-support.json; no whole-game equivalence or transfer of0.134.0 results.",
       "All existing installed apps, saves and fixed oracle inputs preserved."
-    ]
+    ],
+    "analysis_profile_report": "reports/2026-11-01-wasm0135-profile.json"
   }
 }

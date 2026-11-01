@@ -1,12 +1,14 @@
 {
   "active_target": {
     "version": "0.135.1",
-    "status": "originals_acquired_identity_verified_semantic_migration_pending",
+    "status": "complete_static_profile_and_partial_original_runtime_differentials_passed",
     "official_native_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
     "official_manifest": "https://wow.aethus.pl/exe/latest.json",
     "web_build": "0898d5e3",
     "web_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
-    "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json"
+    "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
+    "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
+    "migration_report": "../reports/2026-11-01-migration0135.json"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -116,7 +118,8 @@
       "report": "../reports/2026-11-01-progression0134-spec.json",
       "source_checkpoint": "08c4a937ba4f8f2bba5e729e79be3afa6c9021c5",
       "validated_version": "0.134.0",
-      "validated_web_build": "983346a7"
+      "validated_web_build": "983346a7",
+      "scope_note": "The2197-case arithmetic projection keeps its original limits. Per-level stats/heal/kind0 choice composition is separately validated by level_cycle134, without changing this corpus."
     },
     {
       "module": "core_spec.incoming134",
@@ -287,7 +290,7 @@
         "actual modifier/equipment/talent producers",
         "BTree existing-item update special corpus",
         "packetbytes/external delivery",
-        "integration of per-level1513 into ordinary pipeline",
+        "integration of level_cycle134 into ordinary pickup/death pipeline",
         "complete game scheduling"
       ],
       "report": "../reports/2026-11-01-stats0134-spec.json",
@@ -317,7 +320,7 @@
         "kind1/2",
         "seed initialization",
         "actual reroll action",
-        "XP-to-candidate natural composition",
+        "pickup-to-XP-to-choice natural scheduling; XP consumer composition is separately verified in level_cycle134",
         "UI and full scheduling"
       ],
       "report": "../reports/2026-11-01-candidates0134-spec.json",
@@ -394,6 +397,44 @@
       "report": "../reports/2026-11-01-new-ability0134-spec.json",
       "validated_version": "0.134.0",
       "validated_web_build": "983346a7"
+    },
+    {
+      "module": "core_spec.level_cycle134",
+      "api": [
+        "gain_xp",
+        "from_dict",
+        "projection"
+      ],
+      "status": "explicit_source_xp_per_level_stats_heal_kind0_choice_projection_complete_original_differential_passed",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7",
+      "original_function": 4630,
+      "unchanged_original_callees": [
+        1513,
+        10847,
+        1453,
+        2159
+      ],
+      "cases": 1151,
+      "stateful_entry_calls": 3450,
+      "mismatches": 0,
+      "model_level_iterations": 12203,
+      "internal_per_level_original_snapshots": false,
+      "fields_compared": [
+        "level/XP/pending and six logical player keys",
+        "all22 derived words/currentHP/five auxiliary words/speed",
+        "four-word RNG/candidate metadata/phase/kind/counter"
+      ],
+      "domain": "Explicit seven-source snapshots; level-up cause0 and G387 half-heal, original mode1 choice world guard; each full4630 return compared in stateful sequences.",
+      "independent_review": "passed",
+      "remaining": [
+        "wire level_cycle134 into ordinary pickup/death/currency/selection-application controller",
+        "real stat producers, world/presentation/physical queues and accounting logs",
+        "general nonzero-cause healing",
+        "0.135.1 layout and original differential migration",
+        "full frame scheduling"
+      ],
+      "report": "../reports/2026-11-01-level-cycle0134.json"
     }
   ],
   "other_modules": [
@@ -428,13 +469,13 @@
     }
   ],
   "full_game_remaining": [
-    "initial state and main loop",
+    "initial state and complete main-loop scheduling beyond accepted clock/pause projections",
     "enemy generation and AI",
     "all skill effects",
     "state producer and event ordering",
     "drops and progression",
     "complete choice generation",
-    "maps and resources",
+    "maps, latest asset completeness, resource loaders and renderers",
     "saves",
     "UI and input",
     "all multiplayer behavior",
@@ -445,7 +486,137 @@
   "verified_research_target": {
     "version": "0.134.0",
     "web_build": "983346a7",
-    "web_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52"
+    "web_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "role": "fixed_0.134.0_regression_reference; latest0.135.1 acceptance is separately recorded in latest_verified_domains"
   },
-  "current_verified_domains_scope": "All entries below belong to fixed0.134.0; none is a0.135.1 differential acceptance."
+  "current_verified_domains_scope": "Legacy key current_verified_domains contains fixed0.134.0 domains only. Separate latest_verified_domains records0.135.1 original differentials; resource_verified_domains records base-format evidence without claiming latest asset equivalence.",
+  "latest_verified_domains": [
+    {
+      "module": "core_spec.derived_stats135",
+      "api": [
+        "recalculate",
+        "armor_cap_bits"
+      ],
+      "status": "23_word_stat_projection_complete_original_function_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "original_function": 1512,
+      "cases": 10569,
+      "mismatches": 0,
+      "derived_word_count": 23,
+      "derived_offsets": [
+        1536,
+        1540,
+        1544,
+        1548,
+        1552,
+        1556,
+        1560,
+        1564,
+        1568,
+        1572,
+        1576,
+        1580,
+        1584,
+        1588,
+        1592,
+        1596,
+        1600,
+        1604,
+        1608,
+        1612,
+        1616,
+        1620,
+        1624
+      ],
+      "fields_compared": [
+        "all23 derived words, including retained armor cap1572",
+        "currentHP1440/auxiliary1444,1448,1348,768",
+        "logical object keys22,28,1109",
+        "speed1648/sequence1644/movement queue count"
+      ],
+      "actual_original_movement_packets_queued": 1537,
+      "actual_original_fresh_tree_insertions": 31707,
+      "domain": "Synthetic explicit scalar/source snapshots; original allocator91941 and internal callees retained; fresh three-key trees.",
+      "independent_review": "passed",
+      "remaining": [
+        "real equipment/talent/effect producer snapshots",
+        "existing-key/deep-tree update coverage and movement packet bytes/external delivery",
+        "per-level growth/pickup/selection natural composition in0.135.1",
+        "all other game fields/scheduling"
+      ],
+      "report": "../reports/2026-11-01-stats0135-spec.json"
+    },
+    {
+      "module": "core_spec.loop135",
+      "runtime_validated_apis": [
+        "project_tick_clock",
+        "apply_pause_command"
+      ],
+      "static_only_apis": [
+        "aggregate_party_phase",
+        "continue_endless",
+        "victory_phase"
+      ],
+      "status": "clock_and_pause_phase_projection_complete_original_entries_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "original_functions": {
+        "tick": 880,
+        "command": 1371
+      },
+      "cases": 6558,
+      "command_cases": 5400,
+      "tick_cases": 1158,
+      "mismatches": 0,
+      "fields_compared": [
+        "previous-marker and binary64 timestamp/simulation-clock word",
+        "pause-command phase/global-phase plus preserved clock fields",
+        "zero original host calls"
+      ],
+      "not_compared": [
+        "tick post-scheduler phase and other game state",
+        "delta_bits as an independently returned original field"
+      ],
+      "domain": "Zero queues/actors, positiveHP/level120, real skip-spawn guard2579, original transport/vtable and emptyRefCell; serialized snapshot current and initial terminal callback already handled.",
+      "remaining": [
+        "actual world/spawn/constructor/incoming-command producers/full scheduler",
+        "fresh terminal aggregation and account-save host dependency",
+        "party aggregation/victory/Endless runtime acceptance",
+        "all post-clock fields and packet/save/UI behavior"
+      ],
+      "game_scheduler_reconstructed": false,
+      "report": "../reports/2026-11-01-game-loop0135.json",
+      "independent_review": "passed"
+    }
+  ],
+  "resource_verified_domains": [
+    {
+      "modules": [
+        "resource_spec.mpq",
+        "resource_spec.dbc"
+      ],
+      "status": "base_mpq_reader_and_dbc_container_differential_passed",
+      "base_archive_program_version": "0.102.3",
+      "asset_version_equivalence_to_latest_proven": false,
+      "physical_archives": 7,
+      "asset_paths_excluding_internal_listfiles": 29595,
+      "real_named_blocks_including_internal_listfiles": 29602,
+      "real_decoded_bytes_compared": 1636167198,
+      "real_payload_mismatches": 0,
+      "dbc_containers": 154,
+      "dbc_rows": 171225,
+      "dbc_bytes": 28041880,
+      "synthetic_format_cases": 90,
+      "synthetic_cases_are_gameplay_cases": false,
+      "reference": "fixed official StormLib v9.40, commit6bb1882bd00ddbc3729cac5dac0fda81a61e5514",
+      "static_latest_consumer_trace_only": true,
+      "remaining": [
+        "latest asset completeness and actual loader/path aliases/lifetimes",
+        "DBC column semantics and game IDs",
+        "M2/BLP/WMO/terrain/effect/audio interpretation and rendering"
+      ],
+      "report": "../reports/2026-11-01-resource-index-base.json"
+    }
+  ]
 }

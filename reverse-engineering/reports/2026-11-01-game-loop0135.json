@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-01",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "clock_and_pause_projections_controlled_full_original_differential_passed",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "static_evidence": {
+    "directory": "evidence/game-loop0135-20261101T032940.328902Z",
+    "manifest_sha256": "f9ed0de40f1957ccbd2264483f6e78b61dd1578cc486a9381aa212eb0ec2a452",
+    "complete_functions": 20,
+    "continuous_instruction_guards": 34,
+    "structured_branches": 7,
+    "complete_wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+    "index_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0",
+    "bindings": {
+      "tick": 880,
+      "command": 1371,
+      "game_view_in_tick_context": 16,
+      "previous_marker": 0,
+      "previous_f64": 8,
+      "game_clock": 2352,
+      "mode": 2582,
+      "phase": 2587,
+      "global_phase": 2588,
+      "start_flag": 2575,
+      "global_start_extra_flag": 2583,
+      "player_stride": 2000,
+      "player_phase": 1996,
+      "swap": 2080,
+      "endless_flag": 2568,
+      "endless_deadline": 2460
+    },
+    "transport_vtable": {
+      "memory_address": 1495776,
+      "file_offset": 78180317,
+      "bytes_hex": "b90600001800000008000000ba060000bb060000bc060000bd060000be060000",
+      "sha256": "b6299b459d440e52a9e2eb896ff1fd8cabaf208d271c72d9dcc7a40f8eebf855",
+      "size": 24,
+      "alignment": 8,
+      "queue_drain_vtable_offset": 20,
+      "table_slot": 1724,
+      "original_function": 45626,
+      "constructor_function4253_executed": false
+    },
+    "static_target_executed": false
+  },
+  "independent_module": "reconstruction/core_spec/loop135.py",
+  "api": {
+    "project_tick_clock": "Wall timestamps and guarded f32 simulation clock, after incoming commands and run-start status have been resolved.",
+    "apply_pause_command": "Rawtag7 payload+4 and game/mode/phase gates; phase projection plus explicit pending movement/notification effects.",
+    "aggregate_party_phase": "Static-derived terminal aggregation block only; not a complete multi-state scheduler.",
+    "continue_endless": "Static-derived phase/flag/300-second deadline only.",
+    "victory_phase": "Static-derived field400/phase/endless guards only; field400 producer remains unknown."
+  },
+  "runtime_comparison": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "phase": "full",
+    "case_count": 6558,
+    "result_count": 6558,
+    "mismatch_cases": 0,
+    "groups": {
+      "pilot_pause_transitions": 8,
+      "pilot_tick_modes": 5,
+      "all_mode_bytes_pause_guards": 5376,
+      "game_discriminant_gate": 16,
+      "binary64_delta_binary32_clock": 936,
+      "single_and_multi_phase_clock_gate": 181,
+      "paused_and_initial_timestamp_still_updated": 36
+    },
+    "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "module_sha256": "4f6999417b98dbdfb80a087de039e5a03f4c9f443ba290bf9b91d8daa1ed9b84",
+    "builder_manifest_sha256": "78db9e7ddfe0b718851c482347f0424b74f1772bedc1e72571377b4813303b4d",
+    "full_module_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T031638.961817Z",
+    "runtime_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T033113.756890Z",
+    "runtime": {
+      "case_count": 6558,
+      "tick_calls": 1158,
+      "command_calls": 5400,
+      "fresh_instances": 205,
+      "fresh_instance_every": 32,
+      "maximum_memory_bytes": 21037056,
+      "memory_page_cap": 512,
+      "actual_host_calls": 0,
+      "denied_function_imports": 878,
+      "original_entries": {
+        "tick": 880,
+        "command": 1371
+      },
+      "original_internal_callees_unchanged": true,
+      "application_start_called": false,
+      "full_game_started": false,
+      "user_saves_accessed": false,
+      "network_used": false,
+      "fixture_scope": "Synthetic zero queues/units, positive health, level120, real2579 skip-spawn guard; absent outer session/optional transport and original queue implementation; serialized snapshot current, initial end callback already handled."
+    },
+    "process": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=512",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_loop135_full_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T031638.961817Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T033113.756890Z/cases.json"
+      ],
+      "pid": 85264,
+      "pgid": 85264,
+      "deadline_seconds": 60,
+      "exit_code": 0,
+      "elapsed_seconds": 4.181,
+      "runtime_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0"
+    },
+    "source_sha256": {
+      "scripts/check_loop135_spec.py": "91add3a4b28c5c6eec30aacd877fec349c40380bec3267388ab2eb2ccef225d5",
+      "scripts/run_loop135_full_oracle.mjs": "30ba51ae46cfd38ec2dc69e40735eadbc84f9426d709dc3f960e55bf7fc7b505",
+      "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+      "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+      "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+      "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+    },
+    "source_freeze_before_after": true,
+    "artifacts": {
+      "cases.json": "3b78569f6babc33b25b33a684413d02d314f63cd1acf9c29f1f94dda3029c9e0",
+      "original-results.jsonl": "ec06c0b79c54d3c31bd3a182f5c681857388145e4514a254b892d893a4e0cad7",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "process.json": "d05778fed3809707640e670605cb665d356c0130948a04cc16613bbe9535e53f"
+    },
+    "comparison_policy": "Float32/f64 NaN classification only; all other compared words exact. Fulltick output phase beyondclock is observed but not independently compared.",
+    "pending_original_domains": [
+      "Multi-state terminal aggregation reaches unresolved account-save host dependency.",
+      "Initial run construction, incoming commands, full world/spawn and complete scheduler behavior.",
+      "Party aggregation, victory and Endless independent projections are static-derived; not differential-accepted here."
+    ],
+    "game_scheduler_reconstructed": false,
+    "installation_or_saves_modified": false
+  },
+  "receipt": {
+    "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T033113.756890Z/comparison.json",
+    "sha256": "e0340191baf99ead1911ad62a793cc2d5e58300f17e0fb81ac5e7b309eec65b6"
+  },
+  "compared_fields": {
+    "tick880": [
+      "context previous-marker u64",
+      "context previous-time f64",
+      "G simulation-clock f32",
+      "host-call count0"
+    ],
+    "command1371": [
+      "unchanged previous-marker/time/simulation-clock",
+      "G phase",
+      "G global_phase",
+      "host-call count0"
+    ]
+  },
+  "controlled_domain": {
+    "zero_incoming_commands": true,
+    "zero_unit_vectors": true,
+    "zero_live_effect_vectors": true,
+    "positive_current_and_max_hp_bits": "0x42c80000",
+    "hp_fields": {
+      "current": 1440,
+      "maximum": 1536
+    },
+    "level_field": 1432,
+    "level": 120,
+    "start_request_flag2575": 0,
+    "single_spawn_skip_flag2579": 1,
+    "direct_calls_skipped_by_that_guard": [
+      947,
+      2376
+    ],
+    "outer_absent_session_role_context2608": 2,
+    "outer_absent_optional_transport_context4748": -1,
+    "original_transport_vtable": 1495776,
+    "original_transport_drain_function": 45626,
+    "transport_object_bytes": 24,
+    "synthetic_backing_cell_bytes": 64,
+    "original_empty_queue_vec_words": [
+      0,
+      8,
+      0
+    ],
+    "post_tick_snapshot_context4840": "Initialized to current now_f64; the0.2-second serialized snapshot branch is not due.",
+    "last_delivered_effective_phase_context5166": "Initialized to effective initial phase; an already-terminal state has already delivered its one-shot callback.",
+    "multi_running_domain": "No newly terminal transition: current participant phase1 or2 when global_phase1, with no additional player records."
+  },
+  "model_and_runner_unchanged_from_intermediate032901": true,
+  "final_checker_hardening": [
+    "Pre-import production source freeze and compare at main.",
+    "Snapshot copy hashes verified before original launch.",
+    "Original source/research module/builder manifest revalidated after run.",
+    "Unexpected extra original rows rejected."
+  ],
+  "earlier_exploration_receipts_not_added_to_coverage": [
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T031912.126438Z/comparison.json",
+      "cases": 13,
+      "rows": 9,
+      "mismatches": 5,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "ee1ce0676eb5a62c560d7aecab4a5196db7c5f3ec8a4ad919c4dc5e59c0f6a0f",
+        "scripts/run_loop135_full_oracle.mjs": "a621d72ff38eb3bca8cbf371e68d429e04658fa94d93f19382332abbf0a13376",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T031941.941960Z/comparison.json",
+      "cases": 13,
+      "rows": 9,
+      "mismatches": 5,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "ee1ce0676eb5a62c560d7aecab4a5196db7c5f3ec8a4ad919c4dc5e59c0f6a0f",
+        "scripts/run_loop135_full_oracle.mjs": "ba495bed6737789756c8e6b7e9b0116b0c819af0c0687ec4f1b82acf0e2a9e07",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032134.816451Z/comparison.json",
+      "cases": 13,
+      "rows": 9,
+      "mismatches": 5,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "ee1ce0676eb5a62c560d7aecab4a5196db7c5f3ec8a4ad919c4dc5e59c0f6a0f",
+        "scripts/run_loop135_full_oracle.mjs": "dc6ece9b968caea0c3253d0656c1a0ed290ee1c3a654964e52543d2d31488baf",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032225.558718Z/comparison.json",
+      "cases": 13,
+      "rows": 9,
+      "mismatches": 5,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "ee1ce0676eb5a62c560d7aecab4a5196db7c5f3ec8a4ad919c4dc5e59c0f6a0f",
+        "scripts/run_loop135_full_oracle.mjs": "0eea7d5be944835c1825d2c139e077436d77d58e69ccbe8e65ca777004c8a6f1",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032429.041791Z/comparison.json",
+      "cases": 13,
+      "rows": 13,
+      "mismatches": 1,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "ee1ce0676eb5a62c560d7aecab4a5196db7c5f3ec8a4ad919c4dc5e59c0f6a0f",
+        "scripts/run_loop135_full_oracle.mjs": "ada7e1e93fea18173e16139b5c2263ae961593038e9a53f3200d0743da903eae",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032556.069127Z/comparison.json",
+      "cases": 13,
+      "rows": 13,
+      "mismatches": 0,
+      "exit_code": 0,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "00d98f9d911082b03e646fe3d43d91eba0257a4f8c6c4c122895e01d0260a049",
+        "scripts/run_loop135_full_oracle.mjs": "ada7e1e93fea18173e16139b5c2263ae961593038e9a53f3200d0743da903eae",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032600.754164Z/comparison.json",
+      "cases": 6558,
+      "rows": 5510,
+      "mismatches": 1049,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "00d98f9d911082b03e646fe3d43d91eba0257a4f8c6c4c122895e01d0260a049",
+        "scripts/run_loop135_full_oracle.mjs": "ada7e1e93fea18173e16139b5c2263ae961593038e9a53f3200d0743da903eae",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032739.255573Z/comparison.json",
+      "cases": 13,
+      "rows": 13,
+      "mismatches": 0,
+      "exit_code": 0,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "00d98f9d911082b03e646fe3d43d91eba0257a4f8c6c4c122895e01d0260a049",
+        "scripts/run_loop135_full_oracle.mjs": "4b18afd196a2d6c96667d9efbaa24e07b467bd1701227b373e85f2fd06e52d61",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032742.514791Z/comparison.json",
+      "cases": 6558,
+      "rows": 6370,
+      "mismatches": 189,
+      "exit_code": 1,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "00d98f9d911082b03e646fe3d43d91eba0257a4f8c6c4c122895e01d0260a049",
+        "scripts/run_loop135_full_oracle.mjs": "4b18afd196a2d6c96667d9efbaa24e07b467bd1701227b373e85f2fd06e52d61",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032857.842471Z/comparison.json",
+      "cases": 13,
+      "rows": 13,
+      "mismatches": 0,
+      "exit_code": 0,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "00d98f9d911082b03e646fe3d43d91eba0257a4f8c6c4c122895e01d0260a049",
+        "scripts/run_loop135_full_oracle.mjs": "30ba51ae46cfd38ec2dc69e40735eadbc84f9426d709dc3f960e55bf7fc7b505",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T032901.276862Z/comparison.json",
+      "cases": 6558,
+      "rows": 6558,
+      "mismatches": 0,
+      "exit_code": 0,
+      "source_sha256": {
+        "scripts/check_loop135_spec.py": "00d98f9d911082b03e646fe3d43d91eba0257a4f8c6c4c122895e01d0260a049",
+        "scripts/run_loop135_full_oracle.mjs": "30ba51ae46cfd38ec2dc69e40735eadbc84f9426d709dc3f960e55bf7fc7b505",
+        "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+        "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+        "scripts/full135_host.mjs": "d9f4c4630f83d7690b4780a5d2b7dbb37eab7ae52f397d254dc727d6e586f05d",
+        "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+        "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+      }
+    }
+  ],
+  "limitations": [
+    "No original application entry or full game started; all878 host imports throw and final actual host count is0.",
+    "Only declared clock/phase words are compared; complete original entry execution is not complete scheduler-model equivalence.",
+    "The original queue implementation is selected by original constructor/table bytes; no callee is replaced. Its complete UI/protocol behavior is not independently implemented.",
+    "Fresh terminal callbacks and the serialized-snapshot branch reached denied host dependencies during exploration; they remain pending.",
+    "Party aggregation, victory, Endless and revive/start/choice paths have static evidence; only clock/pause projections are runtime-accepted by this report.",
+    "ClockState is a resolved projection boundary: pending incoming commands/run start cannot be silently treated as empty/finished.",
+    "World creation, enemy spawning, skill scheduler and a complete independent run remain incomplete.",
+    "NaN floating payloads are not compared; NaN classification only. All other declared numeric words are exact."
+  ],
+  "complete_independent_game": false,
+  "installed_apps_or_saves_modified": false,
+  "independent_review": {
+    "status": "passed_readonly_fixture_regeneration_and_original_identity_review",
+    "path": "evidence/full0135-oracle-20261101T031638.961817Z/loop135-20261101T033113.756890Z/independent-readonly-review.json",
+    "sha256": "3d7e4e7a171eacea2c2bb180e1fbd755ff66645aca7585d390b5c2348015f702",
+    "original_WASM_reexecuted_by_review": false,
+    "regenerated_cases": 6558,
+    "recomputed_mismatches": 0
+  }
+}

@@ -1,6 +1,16 @@
 # 当前核心还原图
 
-**功能对齐目标采用本次核实的官方最新0.135.1；本页已定位和差分的固定研究基线为0.134.0，Web build983346a7。** 0.135.1[原件身份已验收](reports/2026-11-01-official-0135-acquisition.md)，语义迁移待完成，不能继承下列验证通过的结论。本页分别列出0.134.0主干与**历史Web0.126.0 / 3e72472a**依据；历史部分的编号和字段不能套到新版。Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[0.134原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
+**功能对齐目标固定为0.135.1 / Web0898d5e3**，完整profile、角色/布局映射及局部原件差分已完成；0.134.0 / 983346a7局部模型与组合另作固定研究基线，结果不转记为新版验收。本页分别列出0.134.0主干与**历史Web0.126.0 / 3e72472a**依据；历史部分的编号和字段不能套到新版。Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[0.134原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
+
+## 固定0.135.1已定位与已验范围
+
+[完整profile](reports/2026-11-01-wasm0135-profile.md)覆盖175317个defined函数；[本版映射](reports/2026-11-01-migration0135.md)重新绑定选卡1072、属性1512、受伤1073、tick880/命令1371等17个批准角色，旧版编号/布局不能直接套用。
+
+[完整1512属性投影](reports/2026-11-01-stats0135-spec.md)已重新执行10569例，23个派生词、HP/4辅助字段/对象键/速度与移动队列数量0差异，只读复核通过。G1572是护甲上限，并非未夹取护甲；有效护甲27375及其他战斗/成长/自然调度仍待独立连接。受控builder/host使用原malloc91941，只增导出、拒绝878宿主导入，不调用应用入口。
+
+[tick880/命令1371](reports/2026-11-01-game-loop0135.md)的6558例（5400命令＋1158tick）完整原件对照0差异。独立层只验证暂停phase与wall-clock→binary32模拟时钟投影，包括单人phase1；无单位/空队列并经原guard跳过生成，tick其他phase/完整调度以及fresh终局保存仍未验收。party聚合、胜利与Endless只保留静态派生规则，不计运行通过。
+
+[基础资源索引与读取器](reports/2026-11-01-resource-index-base.md)已完成29602命名块/1636167198B对照与154份DBC容器读取；它们来自含旧0.102.3程序的基础RAR，不自动构成新版完整资产或M2/BLP渲染管线。
 
 ## 固定0.134.0已重新定位的技能主干
 
@@ -30,9 +40,9 @@ flowchart LR
 
 [完整1417/2862的345例基线](reports/2026-11-01-pickups0134-spec.md)后，现已扩展为[382例拾取与367例普通死亡组合对照](reports/2026-11-01-ordinary-pipeline0134.md)，均0差异。首次吸取与到期到账分开，45闲置上限会合并；普通flag0金币成功/失败的RNG已接入组合。其他奖励分支、属性/候选副作用和完整主循环仍未恢复到可玩层级。
 
-[新1513独立数值投影10569例对照](reports/2026-11-01-stats0134-spec.md)已通过；下一步需按原4630每次升级的顺序接入属性刷新，而不是只重算最终等级。对应modifier producer、所有包字节和完整调度仍未完成。
+[1513独立数值投影10569例对照](reports/2026-11-01-stats0134-spec.md)后，新增[level_cycle组合1151序列/3450原4630入口调用](reports/2026-11-01-level-cycle0134.md)已按每级属性→升级治疗→下一阈值→kind0候选顺序0差异。真实来源producer、普通死亡/拾取控制器接入、消息/world与完整调度仍未完成；不是0.135.1验收。
 
-[完整2159的kind0候选metadata4126例](reports/2026-11-01-candidates0134-spec.md)与独立模型0差异，覆盖实际出现的103个职业kit新能力ID、114个owned升级ID、四字RNG和3个控制字段。展示payload、world/通知、kind1/2、实际reroll及XP→候选自然组合仍pending。
+[完整2159的kind0候选metadata4126例](reports/2026-11-01-candidates0134-spec.md)与独立模型0差异，覆盖实际出现的103个职业kit新能力ID、114个owned升级ID、四字RNG和3个控制字段。展示payload、world/通知、kind1/2、实际reroll及拾取→XP→候选自然调度仍pending；XP消费者的限定组合已另验。
 
 [完整2862的金币收取1030例](reports/2026-11-01-currency0134-spec.md)0差异，含578次warmup共1608原入口调用；局内金币/累计、key1176、队列、剩余记录及despawn已对照，账号持久化/网络交付与自然死亡→金币收取组合未因此完成。
 
