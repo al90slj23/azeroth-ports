@@ -42,6 +42,8 @@ from .movement_pause135 import moving_sequence_delta
 from .player_update135 import prepare_player_update
 from .resource_player_update135 import prepare_resource_player_update135
 from .headless_player135 import PlayerSources135
+from .headless_motion135 import HeadlessMotionOwner135
+from .player_motion135 import MotionWorld135, MotionMap135, consume_motion_payload135
 from .live_owner135 import retain_live135, resume_live1020_135, append_live135, ScratchAuxiliaryWord135
 from .pickups134 import encode_record56
 from .racial_cast135 import RacialDefinition135, RACIALS, cast_self_buff
@@ -133,6 +135,7 @@ class HeadlessState135:
     pending_banner_events: tuple = ()
     player_sources: PlayerSources135|None = None
     rune_notifications: tuple = ()
+    player_motion_owner: HeadlessMotionOwner135|None = None
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
@@ -186,7 +189,7 @@ def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
 
 
 def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,event_locale=None,banner_locale=None,
-        app_notification_next_id=None,resource_locale=None):
+        app_notification_next_id=None,resource_locale=None,motion_enabled=False):
     """Consume the real independent opening; retain all physical owners.
 
     This installs neither a synthetic phase nor an original memory image.
@@ -225,7 +228,47 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,even
         sources = PlayerSources135.empty(notification_next_id14340336=app_notification_next_id,
             locale_code=resource_locale)
         state = replace(state,player_sources=sources)
+    if type(motion_enabled)is not bool:raise ValueError('Explicit motion preference required')
+    if motion_enabled:
+        state=replace(state,player_motion_owner=HeadlessMotionOwner135.from_empty_constructor(state.zone))
     return state
+
+
+def move_player135(state,opcode,payload24):
+    """Canonical24→local968 core segment→2328 on the canonical Game state.
+
+    This is not full968/App routing,17726 registration or rebroadcast. The
+    default no-primary world is independently produced; other primary/aux
+    sources need their actual producer. Unrestored correction queue storage
+    remains unknown rather than receiving a made-up capacity.
+    """
+    owner=state.player_motion_owner
+    if owner is None or state.opening_handoff is None or state.world is None:
+        raise PendingHeadless135('Independent opening and explicit motion owner required')
+    if state.collection.level.phase2587!=1:
+        raise PendingHeadless135('Movement outside the admitted running phase requires its input policy')
+    if state.special_mode2582 or state.collection.currency.mode or state.collection.currency.local_peer:
+        raise PendingHeadless135('Remote/multiplayer movement routing remains separate')
+    if state.world.primary is not None:
+        raise PendingHeadless135('Primary-present movement requires independently produced auxiliary raster')
+    level=state.collection.level
+    cells=owner.bind(player_xyz=state.collection.player_xyz,now_bits=level.stats.now_bits,
+        source_id=state.source_id,action_sequence1644=state.action_sequence1644,
+        player_action_tag416=state.player_action_tag416,phase2587=level.phase2587,
+        local_peer2528=state.collection.currency.local_peer,
+        flags2583=dict(state.opening_handoff.initial.initial_byte_flags)[2583])
+    result=consume_motion_payload135(cells,opcode,payload24,MotionWorld135(state.world,None),
+        MotionMap135.fixed_zone(state.zone))
+    if result is None:return state,'motion_payload_rejected'
+    if not result.complete2328 or result.begin_run_required:
+        raise PendingHeadless135('Actual phase0 begin1089 continuation is not supplied here')
+    owner=owner.adopt(result.game_bytes)
+    xyz=tuple(u32(result.game_bytes,o,'2328 resulting position')for o in(1416,1420,1424))
+    return replace(state,player_motion_owner=owner,
+        collection=replace(state.collection,player_xyz=xyz),
+        action_sequence1644=u32(result.game_bytes,1644,'2328 action sequence'),
+        player_action_tag416=u32(result.game_bytes,416,'2328 correction state'),
+        produced_packets=state.produced_packets+result.packets),'motion_core_projection'
 
 
 def _adopt_player_context135(state, context, collection, *, packets=(),notifications=(),live_owner=None):

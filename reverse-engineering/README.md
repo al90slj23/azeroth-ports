@@ -1,13 +1,12 @@
 # REA 逆向研究
 
-官方metadata本轮核对至 **2026-11-01T22:49:11Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](evidence/official-goal-phase-network-check-20261101T224908.715662Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
+官方元数据本轮核对至 **2026-11-01T23:29:51Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](evidence/official-goal-phase-network-check-20261101T232949.996711Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。现有安装包与存档未替换。
 
+本轮固定135的[移动→战斗→真实符文拾取](reports/2026-11-02-opening-moving-rune0135.md)完成新460帧／4选卡／44次完整968输入／6488阶段／6490原件入口，0声明差异，[独审通过](reports/2026-11-02-opening-moving-rune0135-independent-review.md)。第444帧（raw索引443）消费实际刷出的kind5符文，停止移动后继续16帧；恢复请求133，但当时满血266，故只证明cap、移除与通知链，不称非零回血增量。117源／100production、snapshot／独立预解析world／部分类型App和外部clock边界明确。
 
-当前功能目标已更新为**官方0.138.0**，Windows/Web原件均在4T另档并完成大小、哈希及采集前后部署一致性核对，见[138采集与版本状态](reports/2026-11-02-latest0138-state.md)。新版静态与动态证据单独登记；固定135连续流程、137局部组件的结果均不转记138。现有安装包和存档未替换。
+[移动2328的38组／完整968本地输入33组](reports/2026-11-02-player-motion0135.md)和[校正确认199的88组](reports/2026-11-02-player-correction0135.md)均各自独审通过。真实键盘／摇杆生产、自然App／完整880、远端同步仍未接通；ACK组件尚未作为连续流程动作接线。135结果不转记138，Windows原生执行与独立完整一局均为0。
 
-当前[完整玩家效果所有者→750帧连续闭环](reports/2026-11-02-opening-player-sources0135.md)固定135：完整live32／Aura48、选卡1020保护、self增益、到期和单次回血接入同一状态，新采集750帧／6select／10,506阶段／10,508原件入口，0声明差异，[全量独审通过](reports/2026-11-02-opening-player-combat0135-independent-review.md)。114源／98production；4份922辅助词的caller值未预测，只按显式来源核写入与复制继承。仍是snapshot／独立预解析world／外部clock的14尾阶段，0自然近身符文消费、完整880／Windows执行／独立一局均为0。先前[750数值闭环](reports/2026-11-02-opening-demo-combat0135.md)保留原范围，计数不相加。
-
-[原始资源独立入口750帧](reports/2026-11-02-raw-physical7500135.md)已完成451实际文件／67,281,330B→world→opening→物理玩家状态→750帧／6select，105源／102production及资产不变，不读原件memory／WASM／预解析world。74项终态模型组合比较、98份共同production与9份完整owner一致；这是模型自检／终态组合层，0新增原件case。清单453项中的两份未加载DBC另记。下一实际缺口为真实玩家移动／地形校正→自然靠近拾取及后续Boss、终局。以下较早收据保持各自历史范围。
+历史[静止玩家750帧物理状态闭环](reports/2026-11-02-opening-player-sources0135.md)及[raw451资源→750帧模型入口](reports/2026-11-02-raw-physical7500135.md)保持各自范围，本批没有重跑raw451生产，也不将两批计数相加。后续纯模型探路到920帧／7选／level8，停在玩家致死受伤边界，**新增原件case为0**；下一步恢复死亡／复活、冻结运动和失败recap，再做连续原件验证。以下较早收据保持各自历史范围。
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 

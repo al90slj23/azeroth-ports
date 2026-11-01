@@ -51,6 +51,8 @@ def build_opening_combat135(directory=None):
     roles={'cached_construct':WORLD_ROLES['cached_construct'],'begin_run':WORLD_ROLES['begin_run']}
     for _,role in STAGES:roles[role]=(*CORE_ROLES[role],APPROVED_BODY_SHA[role])
     roles['select_ability']=(*CORE_ROLES['select_ability'],APPROVED_BODY_SHA['select_ability'])
+    roles['motion_dispatch']=(968,b'\x7f'*6,b'',
+        'ae8aedaaa5ca805c5a4e35009e03bbe542fa23c5294f9ab8dadfe4b7e3b7aa97')
     additions=b'';details=[]
     for role,(index,params,results,expected)in sorted(roles.items()):
         assert types[decl[index-len(imports)]]==(params,results)

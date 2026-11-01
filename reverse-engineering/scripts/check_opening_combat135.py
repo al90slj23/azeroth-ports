@@ -18,7 +18,7 @@ from production_closure135 import production_sources135
 from check_opening_handoff135 import load_independent_world,DEFAULT_WORLD
 sys.path.insert(0,str(ROOT/'reconstruction'))
 from core_spec import binary32 as f
-from core_spec.headless135 import from_opening_handoff,step_frame,select,PendingHeadless135
+from core_spec.headless135 import from_opening_handoff,step_frame,select,move_player135,PendingHeadless135
 from core_spec.opening135 import EmptyOpeningInput135
 from core_spec.opening_handoff135 import initialize_absent_companion_handoff
 from core_spec.profile_companions135 import EmptyCompanionProfile135
@@ -30,6 +30,7 @@ from core_spec.event_wave135 import EventWaveLocale135
 from opening_pickup_provenance135 import PickupAddressVerifier135
 from opening_npc_aura135 import npc_aura_updates169
 from opening_live_auxiliary135 import LiveAuxiliaryVerifier135
+from motion_route135 import FirstRuneRoute135
 
 
 @lru_cache(maxsize=16)
@@ -150,6 +151,11 @@ def wanted(state):
             notification_next_id14340336=state.player_sources.notification_next_id14340336,
             player_speed226_packets=[payload for opcode,payload in state.produced_packets if opcode==226],
             rune_notifications=rune_notifications135(state.rune_notifications))
+    if state.player_motion_owner is not None:
+        from core_spec.headless_motion135 import MOTION_WORDS135
+        from core_spec.record_cells135 import u32
+        projection['motion_scalar_words']={str(o):u32(state.player_motion_owner.cells,o,'motion known word')
+            for o in MOTION_WORDS135 if None not in state.player_motion_owner.cells[o:o+4]}
     result=dict(projection=projection,vectors=vectors,
         opaque_pickup_amount_origins=[asdict(origin)for origin in state.opaque_pickup_amount_origins])
     if state.player_sources is not None:
@@ -213,13 +219,15 @@ def compare(want,actual,path,errors,counts,*,opaque_pickup_indices=()):
             if len(errors)<80:errors.append(dict(field=path,expected=want,actual=actual))
 
 
-def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False):
+def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False,motion_route=False):
     value=EmptyOpeningInput135(1,1,0,seed,42)
     handoff=initialize_absent_companion_handoff(value,world,companion_profile=EmptyCompanionProfile135(()),
         title_utf8=b'Elwynn Forest',subtitle_utf8='The Defias Uprising — survive the onslaught!'.encode('utf8'))
     state=from_opening_handoff(handoff,navigation_enabled=False,special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),
         event_locale=EventWaveLocale135(0),banner_locale='en',
+        motion_enabled=motion_route,
         **(dict(app_notification_next_id=1,resource_locale='en')if physical_player_sources else{}))
+    route=FirstRuneRoute135()if motion_route else None
     actions=[];boundary='frame_budget';stage_count=0;expected_bytes=0
     with gzip.open(expected_path,'wb',compresslevel=1)as stream:
         def emit(value):
@@ -231,6 +239,15 @@ def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False):
             stream.write(raw)
         emit(dict(record_kind='opening',expected=wanted(state)))
         for _ in range(frames):
+            if route is not None:
+                for motion in route.before_frame(state,dt):
+                    if len(actions)>=800:raise ValueError('Controlled motion/action budget exceeded')
+                    state,status=move_player135(state,motion['opcode'],bytes.fromhex(motion['payload24_hex']))
+                    if status!='motion_core_projection':raise ValueError('Controlled motion unexpectedly rejected')
+                    action_index=len(actions);actions.append(motion)
+                    emit(dict(record_kind='stage',stage_index=stage_count,action_index=action_index,
+                        kind='motion',expected=wanted(state)))
+                    stage_count+=1
             try:new,stages,status=step_frame(state,dt)
             except (NotImplementedError,UnknownRecordRead135)as error:
                 boundary=type(error).__name__+': '+str(error);break
@@ -256,7 +273,9 @@ def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False):
     return json.loads(json.dumps(dict(id=0,input=raw,actions=actions,stage_count=stage_count,boundary=boundary,
         independent_frames=state.frames,independent_selections=state.selections,final_level=state.collection.level.progression.level,
         expected_uncompressed_bytes=expected_bytes,
-        **(dict(physical_player_sources=True,explicit_App_notification_counter=1)if physical_player_sources else{}))))
+        **(dict(physical_player_sources=True,explicit_App_notification_counter=1)if physical_player_sources else{}),
+        **(dict(motion_route='first_spawned_rune',motion_route_events=route.events,
+            motion_actions=sum(a['kind']=='motion'for a in actions))if route is not None else{}))))
 
 
 def main():
@@ -264,6 +283,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--phase',choices=('pilot','full'),default='pilot')
     parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int)
     parser.add_argument('--physical-player-sources',action='store_true')
+    parser.add_argument('--motion-route',choices=('first-rune',))
     parser.add_argument('--capture-format',choices=('gzip','cas'),default='gzip');args=parser.parse_args()
     frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
     if not 1<=frames<=750:raise ValueError('Bounded controlled frame corpus required')
@@ -272,7 +292,7 @@ def main():
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
         'scripts/build_world_snapshot135_oracle.py','scripts/build_full135_oracle.py','scripts/build_upgrade134_oracle.py',
         'scripts/trace_coop.py','scripts/wasm_index.py','scripts/opening_pickup_provenance135.py','scripts/opening_npc_aura135.py',
-        'scripts/opening_live_auxiliary135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
+        'scripts/opening_live_auxiliary135.py','scripts/motion_route135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
     before={p:sha(ROOT/p)for p in files};world,world_receipt,world_inputs=load_independent_world(DEFAULT_WORLD)
     world_inputs.update({str(path):sha(path)for path in(DEFAULT_WORLD/'receipt.json',DEFAULT_WORLD/'inputs.json')})
     out,manifest=build_opening_combat135();source=out/'source-snapshot'
@@ -280,12 +300,15 @@ def main():
         target=source/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((ROOT/p).read_bytes());assert sha(target)==h
     expectations=out/'stage-expectations.jsonl.gz'
     row=corpus(world,args.seed,frames,f.from_float(.025 if args.phase=='pilot'else.1),expectations,
-        physical_player_sources=args.physical_player_sources)
+        physical_player_sources=args.physical_player_sources,motion_route=args.motion_route is not None)
     fixtures=out/'fixtures.json';fixtures.write_text(json.dumps(row,separators=(',',':'))+'\n')
     inputs=out/'inputs.json';inputs.write_text(json.dumps([{k:row[k]for k in('id','input','actions')}],separators=(',',':'))+'\n')
     config=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,app_pointer=14549000,world_pointer=26204808,
         input_path=str(inputs),input_sha256=sha(inputs),clock_scheduler='explicit_external_f32_add_G2352_not_original880',
         locale=dict(kind='preserve_initialized_snapshot',expected_language_index=0))
+    if args.motion_route is not None:
+        if not args.physical_player_sources:raise ValueError('Motion route requires canonical physical player sources')
+        config['app_game_domain']='typed_partial_inline_fixture_not_naturalApp'
     cfg=out/'config.json';cfg.write_text(json.dumps(config,indent=2)+'\n')
     frozen_paths=(fixtures,expectations,inputs,cfg,out/'manifest.json',out/manifest['module_file'])
     frozen={p.name:sha(p)for p in frozen_paths}
@@ -393,6 +416,7 @@ def main():
             total_seconds_including_verification=time.monotonic()-began,deadline_seconds=deadline_seconds,**terminal),
         model_expected_before_original=True,original_input_contains_no_expectations=True,
         physical_player_sources=args.physical_player_sources,
+        motion_route=args.motion_route,
         world_input=dict(kind='independently_produced_preparsed_world_query_artifacts',receipt=str(DEFAULT_WORLD/'receipt.json'),receipt_sha256=sha(DEFAULT_WORLD/'receipt.json'),artifacts=world_inputs),
         original_context=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,externref_VM_restoration=False,fresh_bootstraps=0),
         full880_frames=0,native_Windows_execution=False,playable_replacement=False,

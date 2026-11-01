@@ -1,13 +1,12 @@
 # 版本与平台基线
 
-官方metadata本轮核对至 **2026-11-01T22:49:11Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](evidence/official-goal-phase-network-check-20261101T224908.715662Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
+官方元数据本轮核对至 **2026-11-01T23:29:51Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](evidence/official-goal-phase-network-check-20261101T232949.996711Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。现有安装包与存档未替换。
 
+本轮固定135的[移动→战斗→真实符文拾取](reports/2026-11-02-opening-moving-rune0135.md)完成新460帧／4选卡／44次完整968输入／6488阶段／6490原件入口，0声明差异，[独审通过](reports/2026-11-02-opening-moving-rune0135-independent-review.md)。第444帧（raw索引443）消费实际刷出的kind5符文，停止移动后继续16帧；恢复请求133，但当时满血266，故只证明cap、移除与通知链，不称非零回血增量。117源／100production、snapshot／独立预解析world／部分类型App和外部clock边界明确。
 
-当前功能目标已更新为**官方0.138.0**，Windows/Web原件均在4T另档并完成大小、哈希及采集前后部署一致性核对，见[138采集与版本状态](reports/2026-11-02-latest0138-state.md)。新版静态与动态证据单独登记；固定135连续流程、137局部组件的结果均不转记138。现有安装包和存档未替换。
+[移动2328的38组／完整968本地输入33组](reports/2026-11-02-player-motion0135.md)和[校正确认199的88组](reports/2026-11-02-player-correction0135.md)均各自独审通过。真实键盘／摇杆生产、自然App／完整880、远端同步仍未接通；ACK组件尚未作为连续流程动作接线。135结果不转记138，Windows原生执行与独立完整一局均为0。
 
-当前[完整玩家效果所有者→750帧连续闭环](reports/2026-11-02-opening-player-sources0135.md)固定135：完整live32／Aura48、选卡1020保护、self增益、到期和单次回血接入同一状态，新采集750帧／6select／10,506阶段／10,508原件入口，0声明差异，[全量独审通过](reports/2026-11-02-opening-player-combat0135-independent-review.md)。114源／98production；4份922辅助词的caller值未预测，只按显式来源核写入与复制继承。仍是snapshot／独立预解析world／外部clock的14尾阶段，0自然近身符文消费、完整880／Windows执行／独立一局均为0。先前[750数值闭环](reports/2026-11-02-opening-demo-combat0135.md)保留原范围，计数不相加。
-
-[原始资源独立入口750帧](reports/2026-11-02-raw-physical7500135.md)已完成451实际文件／67,281,330B→world→opening→物理玩家状态→750帧／6select，105源／102production及资产不变，不读原件memory／WASM／预解析world。74项终态模型组合比较、98份共同production与9份完整owner一致；这是模型自检／终态组合层，0新增原件case。清单453项中的两份未加载DBC另记。下一实际缺口为真实玩家移动／地形校正→自然靠近拾取及后续Boss、终局。以下较早收据保持各自历史范围。
+历史[静止玩家750帧物理状态闭环](reports/2026-11-02-opening-player-sources0135.md)及[raw451资源→750帧模型入口](reports/2026-11-02-raw-physical7500135.md)保持各自范围，本批没有重跑raw451生产，也不将两批计数相加。后续纯模型探路到920帧／7选／level8，停在玩家致死受伤边界，**新增原件case为0**；下一步恢复死亡／复活、冻结运动和失败recap，再做连续原件验证。以下较早收据保持各自历史范围。
 
 核对日期：2026-11-02（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
 
@@ -20,7 +19,7 @@
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
 | latest Windows程序目标 | 官方更新EXE0.138.0，147995648B，SHA `eb5fd1c1…bf79e`，实际build `382771e6c` | 新目录已核官方大小/SHA及gzip CRC/ISIZE，未执行EXE；原生运行验收0。 |
-| latest Web目标 | Web0.138.0/`382771e6c`，90946299B，SHA `c60161d9…945b11b`，stamp `9552af247ddb` | coherent下载、9字节build、完整profile与限定非致死913的80组/125调用及独审通过；完整death/proc/native运行/fullgame未验收。 |
+| latest Web目标 | Web0.138.0/`382771e6c`，90946299B，SHA `c60161d9…945b11b`，stamp `9552af247ddb` | coherent下载、9字节build、完整profile；非致死913的80组/125调用与完整1512属性10569组/10569调用分别新验并独审；完整流程/death/proc/native/fullgame未验收。 |
 | 固定0.136静态迁移 | Web0.136.0/`fe24fb74c`，90927420B，SHA `48c3bce7…1eb2eef3`；native SHA `eb744751…c4d8947c` | [完整175319函数profile/RO索引与12入口候选](reports/2026-11-01-wasm0136-profile.md)保留；动态case0，不能转计137。 |
 | 固定0.135动态研究 | Web0.135.1/`90898d5e3`，90959080B，SHA `c62c85f5…0dc96e2`；历史alias `0898d5e3` | 原52-role与私有builder及既有收据继续绑定该SHA。后继真实开局/战斗/升级/选卡组合另记，旧082927等计数不合并，完整880、native与独立一局仍缺。 |
 | 固定0.135 Windows参照 | 官方EXE0.135.1，147797504B，SHA `71e5f176…bc59249` | 保留原采集身份，未执行EXE；Web结果不冒称native验收。 |

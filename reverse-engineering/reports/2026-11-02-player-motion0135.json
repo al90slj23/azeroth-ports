@@ -1,0 +1,131 @@
+{
+  "version": "0.135.1",
+  "build": "90898d5e3",
+  "status": "scoped_direct2328_and_full968_localroute_differentials_and_independent_review_passed",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "module_sha256": "3e4ca3759a3420de793dfd21bef573d63710ea45872cbb7cc5cf825e5e67c221",
+  "direct2328": {
+    "receipt": "reverse-engineering/evidence/player-motion135-oracle-20261101T231448.187735Z/comparison.json",
+    "sha256": "840a034fc87e98a1b537924c1c1c99835a5b7bd424ad233089b8f9157afabd3e",
+    "cases": 38,
+    "original_calls": 38,
+    "differences": 0,
+    "sources": 20,
+    "edges": 42,
+    "scope": "phase1 defaultElwynn policy0,physicalGame8192+return+packets",
+    "process": {
+      "pid": 7750,
+      "pgid": 7750,
+      "exit_code": 0,
+      "seconds": 3.896534875006182,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "no_detached_child": true
+    },
+    "independent_review": {
+      "report": {
+        "path": "reports/2026-11-02-player-motion0135-independent-review.json",
+        "sha256": "4ff4eb4a63b6ed8a626321d1336c082aab7caeeb1162469c46c4e2230af8b0ff"
+      },
+      "receipt": {
+        "path": "evidence/player-motion135-independent-review-owned-20261101T231757.215408Z/review/review.json",
+        "sha256": "9cf4dd7ad3cc8436d090efc558e1279fff15f08732eebd01738907b3cd1cdc22"
+      }
+    }
+  },
+  "full968": {
+    "receipt": "reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z/dispatch-comparison.json",
+    "sha256": "0513dc6d834df50dd845f032a417d6922accde21c575141a0e3c45516316349d",
+    "cases": 33,
+    "target_calls": 33,
+    "differences": 0,
+    "sources": 21,
+    "edges": 45,
+    "scope": "defaultlocalroute0peer0canonical24mode0typedpartialApp",
+    "setup_prestate_is_observed_explicit_input": true,
+    "independent_constructor_acceptance": false,
+    "natural1371App_install": false,
+    "process": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=4096",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_player_dispatch135_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z/cases-config.json",
+        "cases"
+      ],
+      "pid": 9921,
+      "pgid": 9921,
+      "exit_code": 0,
+      "seconds": 3.175119416991947,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "independent_review": {
+      "report": {
+        "path": "reports/2026-11-02-player-dispatch0135-independent-review.json",
+        "sha256": "679513ddb02f70c30c75a926090e2037c4cbd15c1b5d48791a2693099b557a38"
+      },
+      "receipt": {
+        "path": "evidence/player-dispatch135-independent-review-owned-20261101T232159.020182Z/review/review.json",
+        "sha256": "f94ace04d567b7c3f682998c8b281313212de2fd41aaf915f14ad820faa3e5bf"
+      }
+    },
+    "old_queue_prefix_and_world_scope": "Invariant asserted by frozen original runner; independent reader binds available prestate, not unavailable raw post-world bytes."
+  },
+  "static": {
+    "receipt": "evidence/player-motion135-static-20261101T230053.331930Z/trace.json",
+    "sha256": "56f5f29fe6c31786856f2599dfe4088ecb433a99466834fead81f72d4f4e7402",
+    "movement_opcodes25": [
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      200,
+      201,
+      202,
+      203,
+      218,
+      219,
+      238
+    ],
+    "auxiliary33324": "minimum5x5Rc60,notmaxandnotsecondaryRc92"
+  },
+  "report_markdown_sha256": "3f07333d3001b1da5fd5bf97a33002328685eb6faa1f2e7bbab7974e86c1dc35",
+  "old17source_batches_not_full_closure_acceptance": [
+    "player-motion135-oracle-20261101T230500.118292Z",
+    "player-motion135-oracle-20261101T230726.438946Z"
+  ],
+  "unknown": [
+    "Rawkeyboard/joystickupstreammotionproducer",
+    "NaturalApp4253/1371selectedprofile/install/oldGameownership",
+    "199ACKfullchain",
+    "mode1/ownerRoute1ECSandbroadcast",
+    "phase0actual1089continuation",
+    "PrimarypresentRc60producerandcontrolledaux/nav/polygon/ringdifferential",
+    "Heapallocations/backingaddressesandqueuegrowindependentproduction"
+  ],
+  "unexecuted_excluded_from_acceptance": [
+    "scripts/run_player_motion135_controlled_oracle.mjs"
+  ],
+  "no_existing_frozen_root_sources_modified": true,
+  "commit_or_push_performed": false,
+  "pre_review_author_report_sha256": "16b33e2aa7863d92ccb6154aaa3b20fc318e288c5929596d575620572b87c67f"
+}

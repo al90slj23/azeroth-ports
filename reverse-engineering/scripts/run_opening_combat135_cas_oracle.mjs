@@ -10,7 +10,7 @@ const STACK='research_opening_combat135_stack',PREFIX='research_opening_combat13
 const surface=Object.freeze({cached_construct:6730,begin_run:1089,player_tick:2088,auto_cast:916,
   owned_effect_tick:975,process_hits:1754,area_tick:3757,effect_tick:915,deadline_tick:38007,
   secondary_hits:2602,update_units:921,collect_pickups:2862,claim_tick:2573,spawn_tick:947,
-  special_tick:2376,terminal_tick:49037,select_ability:1072});
+  special_tick:2376,terminal_tick:49037,select_ability:1072,motion_dispatch:968});
 const stages=[['player','player_tick',true],['extra','auto_cast',true],['owned_effects','owned_effect_tick',true],
   ['hits','process_hits'],['area','area_tick'],['effects','effect_tick',true],['deadline','deadline_tick'],
   ['secondary','secondary_hits'],['ai','update_units',true],['collect','collect_pickups'],['claims','claim_tick'],
@@ -29,7 +29,8 @@ function exportsOf(raw,s){let[n,p]=leb(raw,s.begin);const a=[];for(let i=0;i<n;i
 if(!process.execArgv.includes('--wasm-max-mem-pages=4096'))throw Error('Explicit256MiB research cap');
 if(!process.execArgv.includes('--max-old-space-size=512'))throw Error('Explicit512MiB JS heap cap');
 const config=JSON.parse(await fs.readFile(configFile,'utf8'));
-exact(config,['snapshot_path','snapshot_sha256','app_pointer','world_pointer','input_path','input_sha256','clock_scheduler','locale'],'Config');
+exact(config,['snapshot_path','snapshot_sha256','app_pointer','world_pointer','input_path','input_sha256','clock_scheduler','locale',...(config.app_game_domain===undefined?[]:['app_game_domain'])],'Config');
+if(config.app_game_domain!==undefined&&config.app_game_domain!=='typed_partial_inline_fixture_not_naturalApp')throw Error('Explicit typed App domain');
 if(config.snapshot_sha256!==SNAPSHOT_SHA||config.app_pointer!==14549000||config.world_pointer!==26204808)throw Error('Admitted genuine snapshot binding');
 if(config.clock_scheduler!=='explicit_external_f32_add_G2352_not_original880')throw Error('Explicit controlled clock scheduler required');
 exact(config.locale,['kind','expected_language_index'],'Locale');
@@ -85,7 +86,10 @@ for(const c of cases){
     source:'Actual prestate; effective=(14384320!=0?14384324:14384328), fixed19964. No548 text read for expected.'};};
  const localeBefore=locale(),localeGuard=hash(Buffer.from(localeBefore.raw_once25_hex+localeBefore.map_headers32_hex.join(''),'hex'));
  const App=config.app_pointer,R=u(App+5116);if(R!==config.world_pointer)throw Error('Genuine cached world');
- const G=allocate(8192),r=o=>u(G+o);let lastPackets=[],lastNotifications=[];
+ const inlineAppFixture=config.app_game_domain==='typed_partial_inline_fixture_not_naturalApp';
+ const appFixtureBefore=inlineAppFixture?hex(App,5168):null;
+ if(inlineAppFixture){d().setBigUint64(App+16,2n,true);d().setBigUint64(App+2608,2n,true);}
+ const G=inlineAppFixture?App+16:allocate(8192),r=o=>u(G+o);let lastPackets=[],lastNotifications=[];
  const vector=(layout)=>{const[co,po,no,stride]=layout,capacity=r(co),pointer=r(po),count=r(no);if(count>capacity||capacity>4096)throw Error('Actual vector budget');
    return{stride,capacity,pointer,count,storage:Array.from({length:capacity},(_,j)=>hex(pointer+j*stride,stride)),storage_sha256:hash(span(pointer,capacity*stride))};};
  const queue=(base,stride,packets)=>{const capacity=r(base),pointer=r(base+4),count=r(base+8);if(count>capacity||capacity>4096)throw Error('Queue budget');
@@ -152,6 +156,7 @@ for(const c of cases){
      progression:{level:r(1432),xp:r(1436),pending_upgrades:r(2376)},current_hp_bits:r(1440),
      derived_bits:Object.fromEntries(Array.from({length:23},(_,i)=>[1536+i*4,r(1536+i*4)])),player_fields:keyed.fields,
      aura_initialized2569:byte(G+2569),notification_next_id14340336:u(14340336),
+     motion_scalar_words:Object.fromEntries([416,420,424,428,432,436,440,444,448,452,456,460,464,1428,1744,1748,1752,1756,1760,1764,1768,1772,1776,1780,2496,2500].map(o=>[o,r(o)])),
      racial_record_hex:hex(G+1256,80),owned_records_hex:vectors.owned80.storage.slice(0,vectors.owned80.count),
      records:vectors.units.storage.slice(0,vectors.units.count),area_records:vectors.areas.storage.slice(0,vectors.areas.count),
      unit_storage:vectors.units.storage,area_storage:vectors.areas.storage,pickup_storage:vectors.pickups.storage,
@@ -171,7 +176,7 @@ for(const c of cases){
  b()[App+3604]=255;b()[App+3612]=255;const declaredApp=hex(App,5168);
  const answer={id:c.id,locale_prestate:localeBefore,app_before_declared_hex:appBefore,app_after_declared_hex:declaredApp,
   navigation_context:{app_byte5165:navigationInput,source:'Fixed6730 App5165 -> temporary2916 -> outputGame2564; snapshot context, not menu-default production.'},
-  stage_count:0,boundary:null};
+  stage_count:0,boundary:null,typed_partial_inline_App_fixture:inlineAppFixture?{kind:config.app_game_domain,before_hex:appFixtureBefore,declared_tag_writes:[{offset:16,bits64:'2'},{offset:2608,bits64:'2'}],Game:G,natural1371_install_executed:false}:null};
  await emit({record_kind:'case_start',...answer});
  try{
   invoke('cached_construct',G,App);const constructor=capture();await emit({record_kind:'constructor',id:c.id,...constructor});if(constructor.projection.phase2587!==0||r(2348)!==R||u(R)!==refBefore+1)throw Error('Real constructor ownership/phase');
@@ -181,6 +186,16 @@ for(const c of cases){
   let frame=0;
   for(let actionIndex=0;actionIndex<c.actions.length;actionIndex++){
    const action=c.actions[actionIndex];
+   if(action.kind==='motion'){
+    if(!inlineAppFixture)throw Error('Motion requires typed inline App/Game context');
+    exact(action,['kind','opcode','payload24_hex'],'Motion action');uint(action.opcode);
+    if(typeof action.payload24_hex!=='string'||! /^[0-9a-f]{48}$/.test(action.payload24_hex))throw Error('Canonical24 payload');
+    const P=allocate(24),payload=Buffer.from(action.payload24_hex,'hex');b().set(payload,P);const clockBefore=r(2352);
+    invoke('motion_dispatch',App,0,0,action.opcode,P,24);const snapshot=capture();
+    if(r(2352)!==clockBefore)throw Error('968 unexpectedly advanced simulation clock');
+    await emit({record_kind:'stage',id:c.id,stage_index:answer.stage_count++,frame,action_index:actionIndex,kind:'motion',role:'motion_dispatch',entry_index:968,opcode:action.opcode,input_payload24_hex:action.payload24_hex,...snapshot});completedStages++;
+    continue;
+   }
    if(action.kind==='select'){
     exact(action,['kind','index'],'Selection action');uint(action.index);const clockBefore=r(2352);
     try{invoke('select_ability',G,action.index);const snapshot=capture();if(r(2352)!==clockBefore)throw Error('1072 unexpectedly advanced clock');

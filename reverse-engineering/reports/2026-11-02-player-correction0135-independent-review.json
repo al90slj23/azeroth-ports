@@ -1,0 +1,230 @@
+{
+  "status": "scoped_frozen_ACK199_full968_Game_App_independent_review_passed",
+  "version": "0.135.1",
+  "build": "90898d5e3",
+  "capture": "evidence/player-motion135-oracle-20261101T232552.862423Z/correction-comparison.json",
+  "capture_sha256": "463deadc49cb34222e92854de1a17116fbf16a78d0952d3f49ad0e14456415ea",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "cases": 88,
+  "frozen_full_original968_calls": 88,
+  "new_original_executions": 0,
+  "new_model_checker_builder_executions": 0,
+  "differences": 0,
+  "counts": {
+    "compared_raw_Game_App_bytes": 1365760,
+    "compared_world_record_bytes": 21824,
+    "queue_header_values": 528,
+    "retain": 60,
+    "different_GUID_clear": 15,
+    "unsigned_vs_signed_different_decision": 8,
+    "nonzero_GUID_cases": 35,
+    "packed_GUID_payload_bytes": 657,
+    "decoded_GUID_bytes": 704,
+    "decoded_u32_ACKs": 88,
+    "independent_unknown_cells_preserved": 227592,
+    "clear": 28,
+    "unknown416_refused_independently": 1,
+    "malformed_length_refused_independently": 4
+  },
+  "groups": {
+    "ack-older-retains": 1,
+    "ack-equal-clears": 1,
+    "tag-sequence-unsigned-matrix": 75,
+    "packedGUID-ignored-local": 11
+  },
+  "source_files": 17,
+  "production_files": 9,
+  "local_import_edges": 31,
+  "source_snapshot_current_equal": true,
+  "only_exports_changed": true,
+  "complete_original_callees_preserved": true,
+  "source_sha256": {
+    "scripts/check_player_correction135.py": "b058b966280ed1f7793702a3c2cc259713601262f014ee4eb99b7a48c820213e",
+    "scripts/build_player_dispatch135_oracle.py": "131aa0faf19096683d22d4c913c3e051fdc41ce65d9f34db72dc14fa8508c526",
+    "scripts/build_player_motion135_oracle.py": "62711891489c4dd9432fb6941d4882a9b9e05bdc10577ac0c15bfa35d6d6a044",
+    "scripts/run_player_correction135_oracle.mjs": "1e2819ae963c5bb0becf7ea05cad3bdfd68f8311d38720e1bf1c45fd17892182",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/player_correction135.py": "fd2b512963d3c32013e3105260daae171fd804ab83189eb8c8e7ab8774605b40",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "identities": {
+    "968": {
+      "index": 968,
+      "signature": [
+        "7f7f7f7f7f7f",
+        ""
+      ],
+      "body_start": 3881871,
+      "body_end": 3925465,
+      "body_bytes": 43594,
+      "body_sha256": "ae8aedaaa5ca805c5a4e35009e03bbe542fa23c5294f9ab8dadfe4b7e3b7aa97"
+    },
+    "1089": {
+      "index": 1089,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 5953495,
+      "body_end": 5965617,
+      "body_bytes": 12122,
+      "body_sha256": "08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb"
+    },
+    "2328": {
+      "index": 2328,
+      "signature": [
+        "7f7f7d",
+        "7f"
+      ],
+      "body_start": 14688224,
+      "body_end": 14693688,
+      "body_bytes": 5464,
+      "body_sha256": "8e456fb160c30e4c4275670d2f4c1d9a6691e4be791905364ea5ff34b008b84b"
+    },
+    "6730": {
+      "index": 6730,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 27040903,
+      "body_end": 27063384,
+      "body_bytes": 22481,
+      "body_sha256": "9aa867cf375c7e60bffcee15c07f77e1320f715f08a68af69bd439eedb8f61e8"
+    },
+    "17726": {
+      "index": 17726,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 42067436,
+      "body_end": 42068154,
+      "body_bytes": 718,
+      "body_sha256": "1c86831cdd5e191f195321433679e30c809b128ecb42529648dc5b55a34093b7"
+    }
+  },
+  "static_windows_sha256": "e24528460a7b3aa3996a490bca29ab6c42934206573f6da05414c8b12f65f377",
+  "setup_kind": "original-setup-observation-explicit-input-not-independent-constructor",
+  "setup_is_independent_constructor_validation": false,
+  "raw_Game_App_independent_recompute": true,
+  "queue_prefix": {
+    "count": 78,
+    "raw_rows_persisted": false,
+    "raw_payloads_independently_compared": false,
+    "evidence": "frozen runner asserted invariant; original local968 plus mode0 full17726 static no-write path"
+  },
+  "world_record_raw_before_after_compared": true,
+  "world_ranges": {
+    "count": 2318,
+    "declared_bytes": 5950608,
+    "hashes_persisted": false,
+    "evidence": "runner asserted invariant only; configured bounds and source-binding verified"
+  },
+  "canonical_None_domain": {
+    "author_guard_AST_verified_short_circuit": true,
+    "original_None_cells_exist": false,
+    "independent_reference_preservation": true,
+    "not_added_to_original_cases": true
+  },
+  "runtime": {
+    "phase": "cases",
+    "cases": 88,
+    "full6730_calls": 88,
+    "full1089_calls": 88,
+    "full968_calls": 88,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "memory_page_cap": 4096,
+    "max_memory_bytes": 166395904,
+    "snapshot_restored": true,
+    "original_bodies_modified": false,
+    "worldRc_forged": false,
+    "externref_forged": false,
+    "completeApp_producer": false,
+    "natural1371Game_install": false,
+    "target_opcode": 199,
+    "mode2582": 0,
+    "owner_route": 0,
+    "peer": 0,
+    "default_network_tag2608": 2,
+    "app_entry_called": false,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "setup_runtime": {
+    "phase": "setup",
+    "cases": 1,
+    "full6730_calls": 1,
+    "full1089_calls": 1,
+    "full968_calls": 0,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "memory_page_cap": 4096,
+    "max_memory_bytes": 166395904,
+    "snapshot_restored": true,
+    "original_bodies_modified": false,
+    "worldRc_forged": false,
+    "externref_forged": false,
+    "completeApp_producer": false,
+    "natural1371Game_install": false,
+    "target_opcode": 199,
+    "mode2582": 0,
+    "owner_route": 0,
+    "peer": 0,
+    "default_network_tag2608": 2,
+    "app_entry_called": false,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "artifacts_sha256": {
+    "correction-comparison.json": "463deadc49cb34222e92854de1a17116fbf16a78d0952d3f49ad0e14456415ea",
+    "fixtures.json": "aedad2a0a21b602cf27afd7aef76ee0bc78a3364b450baf7126698f3a30b042b",
+    "inputs.json": "98a20bbb666e1e400d1c118aa87131a43ba976c0f10035d809dece092a6c3f78",
+    "setup-context.json": "6d76e1279f9ec1ee348f1905bf8cede525a015086d5f08b70fcd484b5ddabc2e",
+    "setup-config.json": "b567e49a91d32ac5dc1ca4e1e7af9b3c1f6c3fb2f43313f29db29f2764c1cdd2",
+    "cases-config.json": "a9b28b98d2582e0a25c306be38016a8d22f5bb7848bef4c56734de4111de9c85",
+    "manifest.json": "2e693be59756a0a1d97b7c3230f3e5d0f38981ef30f103070de711bf7f487647",
+    "setup-runtime.json": "52b378b4a4af309d092b6c45e7f55cfd6a609fdb39ee081b1c6917b4c4756afa",
+    "cases-runtime.json": "9037b4407cc621d9a8382b9af2d80d45ee277ea6c138d75be6098eda7a08d328",
+    "setup-terminal.json": "0fd732851453b98777acfaf3ba1d37812c99dedebd2f14e660370fa040c458d1",
+    "cases-terminal.json": "bc3d344d682027464d1309e179cf2402aea9403a83899bfbc23ff7bd44e2528c",
+    "cases-results.jsonl": "bab7d3c70d79d5e12146d53dd6f20bdbefa2a9478aac6760ea914e5c13eff45d",
+    "setup-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cases-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "auditor_source": "scripts/review_player_correction135.py",
+  "auditor_sha256": "6929cc3e1dd335e88f1c0fdbb0e881338d3f16c360b50b99b0fd862549beb684",
+  "auditor_utilities": {
+    "scripts/review_stats138.py": "3ba425adcad46139b553fa3c7c40ca1608211639af3d271505d75b5a1b908e2b"
+  },
+  "owned_audit_process": {
+    "pid": 35823,
+    "pgid": 35823,
+    "expected_terminal_file": "owned-terminal.json"
+  },
+  "full880_frames": 0,
+  "complete_games": 0,
+  "native_executions": 0,
+  "elapsed_seconds": 0.435,
+  "limitations": [
+    "Observed6730/1089 setup prestate is input, not independent constructor acceptance.",
+    "Only local ownerRoute0 peer0 mode0 phase1 exact packedGUID+u32 ACK domain.",
+    "GUID bytes are consumed but local scalar branch does not authenticate/compare GUID.",
+    "No persisted prefix raw rows/payloads or world-range before/after hashes; those remain runner asserted invariants plus static path evidence.",
+    "None unknown-cell preservation and four malformed rejections are independent model/static checks, not new original differential cases.",
+    "Remote route1,mode1 forwarding,truncated/defaulting parser behavior,wraparound sequence policy and sameGame915 continuation remain outside this capture."
+  ],
+  "evidence": "evidence/player-correction135-independent-review-20261101T233318.201210Z",
+  "review_sha256": "22ab28b103c33db87e05e151b4a939eb5a16b53607885ff76d5cab6b4eb1f1db"
+}

@@ -1,0 +1,560 @@
+{
+  "status": "scoped_player_motion135_read_only_independent_review_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231448.187735Z/comparison.json",
+  "comparison_sha256": "840a034fc87e98a1b537924c1c1c99835a5b7bd424ad233089b8f9157afabd3e",
+  "cases": 38,
+  "full_original_calls": 38,
+  "source_files": 20,
+  "production_files": 13,
+  "source_sha256": {
+    "scripts/check_player_motion135.py": "622c6c116a343864ef22a07fa6353b6dc0dbe403a3867bba0be98b92379837b4",
+    "scripts/build_player_motion135_oracle.py": "62711891489c4dd9432fb6941d4882a9b9e05bdc10577ac0c15bfa35d6d6a044",
+    "scripts/run_player_motion135_oracle.mjs": "92caba86e3f10fb9d5c3438a2b55f3988bc5d6a5d35c54d9b095676c76d5930e",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/player_motion135.py": "3e4ca3759a3420de793dfd21bef573d63710ea45872cbb7cc5cf825e5e67c221",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "source_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/build_full135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/build_player_motion135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_player_motion135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "reconstruction/core_spec/player_motion135.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "scripts/build_player_motion135_oracle.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_player_motion135.py",
+      "scripts/source_closure137.py"
+    ]
+  ],
+  "independent_counts": {
+    "unchanged_input": 30,
+    "all_game_bytes_strict": 311296,
+    "unchanged_game_bytes_outside_writes": 309936,
+    "corrections": 6,
+    "action_wraps": 3,
+    "cleared_pending": 4,
+    "pending_rejections": 2,
+    "circle_clamps": 3
+  },
+  "groups": {
+    "same-real-position": 1,
+    "real-small-xy": 1,
+    "real-terrain-accepted": 21,
+    "z-threshold-inclusive": 3,
+    "z-below-threshold-correction": 3,
+    "pending-distance-time-boundaries": 6,
+    "outside-circle-real-terrain": 3
+  },
+  "new_packet_opcodes": {
+    "199": 6,
+    "150": 3
+  },
+  "changed_byte_offsets": {
+    "1428": 36,
+    "1429": 36,
+    "1430": 36,
+    "1417": 24,
+    "1431": 32,
+    "2502": 29,
+    "2503": 29,
+    "1424": 32,
+    "1425": 33,
+    "1426": 28,
+    "1421": 8,
+    "1422": 19,
+    "416": 10,
+    "421": 6,
+    "422": 6,
+    "423": 6,
+    "425": 6,
+    "426": 6,
+    "427": 6,
+    "428": 6,
+    "429": 6,
+    "430": 6,
+    "431": 6,
+    "432": 6,
+    "433": 3,
+    "434": 3,
+    "435": 3,
+    "1644": 6,
+    "1645": 3,
+    "1646": 3,
+    "1647": 3,
+    "1888": 6,
+    "1418": 4,
+    "2500": 1,
+    "2501": 1,
+    "1416": 2,
+    "438": 3,
+    "439": 3,
+    "1423": 1,
+    "420": 1,
+    "424": 1,
+    "1420": 1
+  },
+  "scalar_write_counts": {
+    "448": 42,
+    "456": 42,
+    "1744": 42,
+    "2500": 36,
+    "1428": 36,
+    "1424": 36,
+    "1420": 36,
+    "1416": 36,
+    "1644": 6,
+    "1888": 9,
+    "432": 6,
+    "428": 6,
+    "424": 6,
+    "420": 6,
+    "416": 10,
+    "436": 6
+  },
+  "independently_recomputed_canonical_masks": {
+    "unknown_bytes_preserved": 309086,
+    "known_bytes": 2210,
+    "cases": 38,
+    "unknown_read464_rejected": 1
+  },
+  "world_input": {
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "bytes": 166395904,
+    "range_count": 2318,
+    "combined_ranges_sha256": "7fa12ad91aa26ddfcecf1f8ac320e42b01775ab22d7a1209c228bbfe7e006012",
+    "after_geometry_invariance": "Frozen original runner asserted hashes for all2318 ranges; reviewer independently binds prestate ranges, not unavailable fullpostmemory"
+  },
+  "static_proofs_sha256": "d7af2c2d56d264a3a595dcb5973d205468923966d23940bf5708ca32363ec986",
+  "controller_static_review_sha256": "242e5f70b4a53a0df8e6e84bc4bcf3dbfc38d770fcabdc3eb7b359b23dfd6984",
+  "artifacts_sha256": {
+    "comparison.json": "840a034fc87e98a1b537924c1c1c99835a5b7bd424ad233089b8f9157afabd3e",
+    "fixtures.json": "be2483ecb03cfe8f63574ff52b1b3cd0fc6051f86c8d5bcbebb51ee6d7166644",
+    "inputs.json": "e8896aa625c581768e69d1e4e9a046ba9d6f6a87877e6051e623084083612150",
+    "config.json": "c406908ba25fc682ef60bc66867215238f953377913532bb98bd605eef9f2f4c",
+    "results.jsonl": "4cd24b5d54968526f5f54266aa512bf185b901d6950d90809f3654427c21364e",
+    "manifest.json": "22233d5f1f179c1b237eb465132dc46a2bc0ad7f9fd845ae845235c7ed84eee8",
+    "terminal.json": "b9ca4146b407656c0483e0e4dd92547d191b203e65a113550e741ad7af66124f",
+    "runtime.json": "6149d5e8fa46dc668750d19e453531cbe83a174e2521e1dc9088d41af38edd1f"
+  },
+  "original_process": {
+    "pid": 7750,
+    "pgid": 7750,
+    "exit_code": 0,
+    "seconds": 3.896534875006182,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "no_detached_child": true
+  },
+  "runtime": {
+    "cases": 38,
+    "original_calls": 38,
+    "original_function": 2328,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "memory_page_cap": 4096,
+    "max_memory_bytes": 166395904,
+    "snapshot_restored": true,
+    "freshGame": false,
+    "worldRc_forged": false,
+    "original_body_modified": false,
+    "app_entry_called": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "node": "v22.23.4"
+  },
+  "reviewer_sha256": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+  "elapsed_seconds": 0.47602237499086186,
+  "new_original_executions": 0,
+  "production_model_executions": 0,
+  "checker_executions": 0,
+  "builder_executions": 0,
+  "full880_frames": 0,
+  "native_executions": 0,
+  "complete_games": 0,
+  "limitations": [
+    "Inputs include historicalsnapshotGame/world, with declared scalar patches; this is consumer validation, not independentconstructor/worldproduction.",
+    "DefaultElwynn nonpolicycircle and all queried height-present branches only; no primary/aux/nav/polygon/timer/radius12/ring-rescue acceptance.",
+    "Direct2328 only; exporting968 does not execute/validate its decoder,17726dispatch,broadcast orpeerstate handling.",
+    "Phase1 only; phase0actual1089 continuation, inputproducer and completeApp/mainloop remainunverified.",
+    "Existingqueueprefix unchanged is a frozenrunner assertion plus knownsnapshotprefix; fullpostqueuebacking is not exported for independentre-read.",
+    "Canonicalmask recomputation is reviewer-only static-consumer replay and does not add38originalcases."
+  ],
+  "review_evidence_directory": "evidence/player-motion135-independent-review-owned-20261101T231757.215408Z/review",
+  "review_receipt_sha256": "9cf4dd7ad3cc8436d090efc558e1279fff15f08732eebd01738907b3cd1cdc22",
+  "review_owned_terminal": {
+    "pid": 12127,
+    "pgid": 12127,
+    "exit_code": 0,
+    "seconds": 0.6015245829912601,
+    "deadline_seconds": 60,
+    "timed_out": false,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "review_owned_terminal_sha256": "3833d3325f57dd04ed36598f2596db2e89b8f5a62cec4a51a056870d2920e8f0",
+  "controller_static_review": {
+    "kind": "separate_read_only_static_controller_review_not_new_original_validation",
+    "source_sha256": {
+      "headless_motion135.py": "a8b1bfa5b4b7b6c57a675f8475068809d968401512aaaf1776df83d273460423",
+      "headless135.py": "006267aa623020427cd4fedc7be522d047277a8cd2854175b6e956f65c8b9240",
+      "record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+      "initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415"
+    },
+    "motion_persistent_words": [
+      416,
+      420,
+      424,
+      428,
+      432,
+      436,
+      440,
+      444,
+      448,
+      452,
+      456,
+      460,
+      464,
+      1428,
+      1744,
+      1748,
+      1752,
+      1756,
+      1760,
+      1764,
+      1768,
+      1772,
+      1776,
+      1780,
+      2496,
+      2500
+    ],
+    "constructor_zero_words": [
+      416,
+      440,
+      448,
+      456,
+      464,
+      1744,
+      1764,
+      2496,
+      2500
+    ],
+    "zone_heading_words": [
+      1070386381,
+      0,
+      1070134723,
+      1070386381,
+      1082130432,
+      1086429594,
+      0,
+      0,
+      1065353216,
+      1070386381,
+      1078523331,
+      0
+    ],
+    "constructor_proofs": {
+      "zone_entry_pointer": {
+        "first_line": 205,
+        "last_line": 220,
+        "text": "                local.get 6\n                i32.load offset=40\n                local.set 5\n                local.get 3\n                local.get 6\n                i32.load offset=44\n                local.tee 7\n                i32.store offset=2716\n                local.get 3\n                local.get 5\n                i32.store offset=2712\n                i32.const 152\n                i32.mul\n                i32.const 5456016\n                i32.add\n                local.set 8",
+        "sha256": "768be0b1f22ab72a890a37dc1b86271529bb27462c7368975c4d97d250484e7e"
+      },
+      "entry_heading_load": {
+        "first_line": 530,
+        "last_line": 532,
+        "text": "          local.get 8\n          f32.load offset=116\n          local.set 33",
+        "sha256": "10cd38c0538c0a35ad324d3da5a5f16c3079e61b1d8688850e7497c6a76e5c2c"
+      },
+      "heading_store": {
+        "first_line": 707,
+        "last_line": 709,
+        "text": "                  local.get 3\n                  local.get 33\n                  f32.store offset=1516",
+        "sha256": "e25ecdc86f0dfad0dd4c0ea47d547de321019254db9ea7d46f6591b4968381fb"
+      },
+      "constructor_zero_stores": {
+        "first_line": 1209,
+        "last_line": 1235,
+        "text": "                  local.get 3\n                  i64.const 0\n                  i64.store offset=2584\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=544\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=536\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=528\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=504\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=2592\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=1852\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=1832\n                  local.get 3\n                  i32.const 0\n                  i32.store offset=552",
+        "sha256": "6de0cccc8254f49a7bbfe010ef45255af3e514d16df8fdcdacc0be787113cf2c"
+      },
+      "game_copy": {
+        "first_line": 2741,
+        "last_line": 2753,
+        "text": "                  local.get 3\n                  i32.const 88\n                  i32.add\n                  local.tee 1\n                  call 1512\n                  local.get 3\n                  local.get 3\n                  f32.load offset=1624\n                  f32.store offset=1528\n                  local.get 0\n                  local.get 1\n                  i32.const 2592\n                  memory.copy",
+        "sha256": "880c7c99015ccd92c7fbd51aede4a5e377debe6c6c28c8199ee5cebf4ae3e6d1"
+      }
+    },
+    "unknown_backing_preserved": true,
+    "canonical_binding_fields": [
+      1336,
+      1340,
+      1416,
+      1420,
+      1424,
+      1644,
+      2352,
+      2528,
+      2583,
+      2587
+    ],
+    "queue1880_1884_1888_not_manufactured": true,
+    "action416_owner_equality_enforced": true,
+    "effects_active416_guard_preserved": true,
+    "mode0_phase1_no_primary_only": true,
+    "full968_17726_broadcast_not_implemented": true,
+    "production_executions": 0,
+    "new_original_cases": 0
+  },
+  "retained_failed_reader_attempts": [
+    {
+      "directory": "evidence/player-motion135-independent-review-owned-20261101T231341.357648Z",
+      "reason": "Reviewer parser attempted Python AST on frozen MJS; corrected reader only.",
+      "terminal": {
+        "pid": 5755,
+        "pgid": 5755,
+        "exit_code": 1,
+        "seconds": 0.12538641699939035,
+        "deadline_seconds": 60,
+        "timed_out": false,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "stderr_sha256": "141004aa221ca7283d1b72b9ef578c97a71308702a92ae60b073aefaab5a87eb"
+    },
+    {
+      "directory": "evidence/player-motion135-independent-review-owned-20261101T231347.558086Z",
+      "reason": "Real author-source closure gap: terrain135 imported entry_resources135/dbc outside frozen17; old batch rejected, author rebuilt fresh20.",
+      "terminal": {
+        "pid": 5895,
+        "pgid": 5895,
+        "exit_code": 1,
+        "seconds": 0.07028625000384636,
+        "deadline_seconds": 60,
+        "timed_out": false,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "stderr_sha256": "8e916d896f14b000af4f121cf1e9574b77fc6491645e3205d1ff290aa5b67975"
+    },
+    {
+      "directory": "evidence/player-motion135-independent-review-owned-20261101T231542.971390Z",
+      "reason": "Reviewer bounded-WAT guard rejected5MB968; reader now captures64KiB968 header and hashes full original body.",
+      "terminal": {
+        "pid": 8832,
+        "pgid": 8832,
+        "exit_code": 1,
+        "seconds": 0.7788169999985257,
+        "deadline_seconds": 60,
+        "timed_out": false,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "stderr_sha256": "2ad9cec855a0dbfb715f2890c14720e590f3c79160cb5d058981a92cc966fbb4"
+    },
+    {
+      "directory": "evidence/player-motion135-independent-review-owned-20261101T231617.943581Z",
+      "reason": "Reviewer byte/None inspection bug; corrected reader only.",
+      "terminal": {
+        "pid": 9518,
+        "pgid": 9518,
+        "exit_code": 1,
+        "seconds": 1.9457621250039665,
+        "deadline_seconds": 60,
+        "timed_out": false,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "stderr_sha256": "d18082b9c2d30916d35c8c8ab79125f993b6c8aca4d9de5b351459bb0c91ba4b"
+    }
+  ],
+  "old17_source_batch": {
+    "directory": "evidence/player-motion135-oracle-20261101T230726.438946Z",
+    "comparison_sha256": "6a1f1f8cd9532d68d421ed65a8c74373b2edca891aeb45a50979728685fe1921",
+    "disposition": "not admitted as complete source closure; no historical hash patched in"
+  },
+  "authorship": {
+    "reviewer": "motion38_review; not motion implementation author",
+    "reviewer_writes": [
+      "scripts/review_player_motion135.py",
+      "reports/2026-11-02-player-motion0135-independent-review.json",
+      "reports/2026-11-02-player-motion0135-independent-review.md"
+    ],
+    "production_sources_modified": false
+  }
+}

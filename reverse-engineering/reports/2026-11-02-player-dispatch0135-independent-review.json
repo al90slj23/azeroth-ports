@@ -1,0 +1,400 @@
+{
+  "status": "passed_scoped_read_only_full968_localroute_review",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z/dispatch-comparison.json",
+  "comparison_sha256": "0513dc6d834df50dd845f032a417d6922accde21c575141a0e3c45516316349d",
+  "source_sha256": {
+    "scripts/check_player_dispatch135.py": "f66d10b7b3683605e4bf8bba42087a2ac830c32cbd62880fde1d4aeead53950c",
+    "scripts/build_player_dispatch135_oracle.py": "131aa0faf19096683d22d4c913c3e051fdc41ce65d9f34db72dc14fa8508c526",
+    "scripts/build_player_motion135_oracle.py": "62711891489c4dd9432fb6941d4882a9b9e05bdc10577ac0c15bfa35d6d6a044",
+    "scripts/run_player_dispatch135_oracle.mjs": "5bfee8be9bc59c379f4406a894857ae2f528c2d6393bd6072dcffbc130f2992b",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/player_motion135.py": "3e4ca3759a3420de793dfd21bef573d63710ea45872cbb7cc5cf825e5e67c221",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "source_files": 21,
+  "production_files": 13,
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_motion135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/build_full135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/build_player_dispatch135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_player_dispatch135_oracle.py",
+      "scripts/build_player_motion135_oracle.py"
+    ],
+    [
+      "scripts/build_player_dispatch135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/build_player_motion135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_player_motion135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "reconstruction/core_spec/player_motion135.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "scripts/build_player_dispatch135_oracle.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_player_dispatch135.py",
+      "scripts/source_closure137.py"
+    ]
+  ],
+  "artifacts_sha256": {
+    "fixtures.json": "50b258514c7d73866a261d703c054bf446e0f4e476ca09c576b97daec7dd5594",
+    "inputs.json": "de16f5b23ce1da1e2a656734630f797879ee285d6cebd1e6b88feec66f5b3d9f",
+    "cases-config.json": "42f956d935cd7dfc300ab150e08d6d86765cb1da83f6682f9e0777648d8f214d",
+    "setup-config.json": "b567e49a91d32ac5dc1ca4e1e7af9b3c1f6c3fb2f43313f29db29f2764c1cdd2",
+    "setup-context.json": "6d76e1279f9ec1ee348f1905bf8cede525a015086d5f08b70fcd484b5ddabc2e",
+    "cases-results.jsonl": "176697d81aa8ddb65ff39c4c951f33986959f54eace548cbb8483ea5614a5db0",
+    "cases-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup-terminal.json": "d94e976fba164903923c4a43e829923a0c9449ea09b3a6d48df57516fe839685",
+    "cases-terminal.json": "e77fb5c77f507305b94b026c4e5cdb38fa9611d7401aa3e83c34e05eb6957c61",
+    "manifest.json": "2e693be59756a0a1d97b7c3230f3e5d0f38981ef30f103070de711bf7f487647",
+    "dispatch-comparison.json": "0513dc6d834df50dd845f032a417d6922accde21c575141a0e3c45516316349d",
+    "setup-runtime.json": "6fdbffc860e5b6d40c7f174891a26b23580980748f17df5af5b706a51673b581",
+    "cases-runtime.json": "1df0ab51d02e11dd03073fb54947a894cfe52d176d481b33f8c325377b616ed6",
+    "setup-results.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "setup-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "cases": 33,
+  "target968_original_calls": 33,
+  "target2328_finite_calls": 21,
+  "target2328_nonfinite_skips": 12,
+  "setup6730_calls_separate": 34,
+  "setup1089_calls_separate": 34,
+  "setup_observation_cases_not_target_cases": 1,
+  "callee_call_count_evidence_layer": "2328/17726 finite21 calls inferred from actual canonical inputs and original968 static branch; not separately instrumented counter",
+  "counts": {
+    "finite_inputs": 21,
+    "unchanged_input": 15,
+    "strict_game_bytes": 85536,
+    "strict_app_bytes": 170544,
+    "unassigned_Game_bytes_unchanged": 84476,
+    "corrections": 5,
+    "action_wraps": 5,
+    "circle_clamps": 2,
+    "cleared_pending": 2,
+    "pending_rejections": 1,
+    "nonfinite_before_mutation_rejections": 12,
+    "nonfinite_field_0": 3,
+    "nonfinite_field_1": 3,
+    "nonfinite_field_2": 3,
+    "nonfinite_field_3": 3
+  },
+  "groups": {
+    "local238-same-real-position": 1,
+    "local181-real-move": 1,
+    "opcode-family-finite": 11,
+    "full968-real-correction": 5,
+    "full968-pending-correction": 3,
+    "nonfinite-before-mutation": 12
+  },
+  "opcode_counts": {
+    "238": 22,
+    "181": 1,
+    "182": 1,
+    "183": 1,
+    "185": 1,
+    "193": 1,
+    "198": 1,
+    "200": 1,
+    "201": 1,
+    "203": 1,
+    "218": 1,
+    "219": 1
+  },
+  "new_packet_opcodes": {
+    "199": 5,
+    "150": 2
+  },
+  "motion_branches": {
+    "unchanged-input": 15,
+    "corrected": 5,
+    "pending-correction-rejected": 1
+  },
+  "unmodified_App": {
+    "outside_inline_Game_bytes": 85008
+  },
+  "scalar_write_counts": {
+    "2496": 21,
+    "440": 42,
+    "444": 21,
+    "448": 25,
+    "456": 25,
+    "1744": 25,
+    "2500": 20,
+    "1428": 20,
+    "1424": 20,
+    "1420": 20,
+    "1416": 20,
+    "1644": 5,
+    "1888": 7,
+    "432": 5,
+    "428": 5,
+    "424": 5,
+    "420": 5,
+    "416": 7,
+    "436": 5
+  },
+  "setup_input_provenance": {
+    "context_sha256": "6d76e1279f9ec1ee348f1905bf8cede525a015086d5f08b70fcd484b5ddabc2e",
+    "kind": "original-setup-observation-explicit-input-not-independent-constructor",
+    "App": 14549000,
+    "G": 14549016,
+    "world_pointer": 26204808,
+    "network_tag": 2,
+    "Game_pre6730_tag": 2,
+    "independent_constructor_validation": false,
+    "natural_App1371": false
+  },
+  "static_proofs_sha256": "d0a48e0092759ff3c158b43886646f8b24684251f3061ae04989992e3152a582",
+  "prior_motion_review_sha256": "4ff4eb4a63b6ed8a626321d1336c082aab7caeeb1162469c46c4e2230af8b0ff",
+  "prior_2328_independent_reader_reused_not_second_restoration": true,
+  "reviewer_source_sha256": {
+    "scripts/review_player_dispatch135.py": "e24085e2836c14494a8cf63a45ec4cb97c082a1c5a0104314bcec2b42750d548",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2"
+  },
+  "original_processes": {
+    "setup": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=4096",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_player_dispatch135_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z/setup-config.json",
+        "setup"
+      ],
+      "pid": 9920,
+      "pgid": 9920,
+      "exit_code": 0,
+      "seconds": 0.3410086250078166,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "cases": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=4096",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_player_dispatch135_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-motion135-oracle-20261101T231626.255308Z/cases-config.json",
+        "cases"
+      ],
+      "pid": 9921,
+      "pgid": 9921,
+      "exit_code": 0,
+      "seconds": 3.175119416991947,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true
+    }
+  },
+  "new_original_executions": 0,
+  "production_model_executions": 0,
+  "builder_executions": 0,
+  "checker_executions": 0,
+  "full880_frames": 0,
+  "complete_games": 0,
+  "native_executions": 0,
+  "seconds": 0.8931164579989854,
+  "limitations": [
+    "Typedpartial App setup observation is explicit pre968 input, not independent6730/1089 validation or natural4253/1371 App installation.",
+    "Canonical exact24,ownerroute0,peer0,mode0,phase1,12 distinct movement opcodes of25 only.",
+    "Full17726 executes its mode0 early return; no nonempty transport/register/broadcast/peer sync acceptance.",
+    "Setup world geometry and existingqueueprefix postbytes are not exported; their target invariance is a frozen originalrunner hash/prefix assertion, not independent fullpostmemory reread.",
+    "No malformed/truncatedpayload,unknownopcode,199ACK,phase0 begin,UI/joystick inputproducer,network route or complete game."
+  ],
+  "review_evidence_directory": "evidence/player-dispatch135-independent-review-owned-20261101T232159.020182Z/review",
+  "review_receipt_sha256": "f94ace04d567b7c3f682998c8b281313212de2fd41aaf915f14ad820faa3e5bf",
+  "review_owned_terminal": {
+    "pid": 17700,
+    "pgid": 17700,
+    "exit_code": 0,
+    "seconds": 1.03805495800043,
+    "deadline_seconds": 60,
+    "timed_out": false,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "review_owned_terminal_sha256": "d5cfaca35049b266e6630de505f5959dd3f25f9b6bf7fc6d082d7dd5e4ead28a",
+  "authorship": {
+    "reviewer": "motion38_review; not motion/dispatch implementation author",
+    "reused_independent_helper": "scripts/review_player_motion135.py explicitly reused, no second independent recovery claimed",
+    "production_sources_modified": false
+  }
+}

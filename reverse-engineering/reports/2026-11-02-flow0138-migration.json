@@ -1,0 +1,207 @@
+{
+  "status": "bounded_static_mapping_and_executable_admission_guards_not_runtime_acceptance",
+  "version": "0.138.0",
+  "actual_build": "382771e6c",
+  "core_mapping": "evidence/flow135-to138-core-static-20261101T230745.455530Z/mapping.json",
+  "core_mapping_sha256": "038eea903cd28433582e7c6d92f5dd686828aa62fedfd13930175f842ac535b9",
+  "consumer_mapping": "evidence/flow138-consumers-static-20261101T230740.134611Z/mapping.json",
+  "consumer_mapping_sha256": "78793903582b10ad7455bfc0853eb182872bb64bdd4ef1b9900fbd03ecb7944e",
+  "core_roles": [
+    {
+      "role": "constructor",
+      "old135": 1560,
+      "new138": 1571,
+      "signature": {
+        "params_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      "old_body_bytes": 7242,
+      "new_body_bytes": 7069,
+      "new_body_sha256": "37447d2eef76c4d93a5e2d2b5c0143ff8ef591e13fded44ee84e06bcb8d9a43e",
+      "opcode_sequence_equal": false,
+      "remaining_diagnostic_changes": 66
+    },
+    {
+      "role": "cached_world_construct",
+      "old135": 6730,
+      "new138": 6760,
+      "signature": {
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      "old_body_bytes": 22481,
+      "new_body_bytes": 15613,
+      "new_body_sha256": "0cd6bdf5580660906a96fa8157e146c362d4743a1c3195ca2254151012628e28",
+      "opcode_sequence_equal": false,
+      "remaining_diagnostic_changes": 1220
+    },
+    {
+      "role": "opening",
+      "old135": 1089,
+      "new138": 1087,
+      "signature": {
+        "params_hex": "7f",
+        "results_hex": ""
+      },
+      "old_body_bytes": 12122,
+      "new_body_bytes": 12114,
+      "new_body_sha256": "ef47a74c810f0fe7c3cfc62ca1918adfcee260dfa06909775c543738d6f73c33",
+      "opcode_sequence_equal": false,
+      "remaining_diagnostic_changes": 271
+    },
+    {
+      "role": "stats",
+      "old135": 1512,
+      "new138": 1512,
+      "signature": {
+        "params_hex": "7f",
+        "results_hex": ""
+      },
+      "old_body_bytes": 4756,
+      "new_body_bytes": 4756,
+      "new_body_sha256": "eed155e8b241316d7c129b174b20a1ae9627504f851231f3c81071b32f41bbae",
+      "opcode_sequence_equal": true,
+      "remaining_diagnostic_changes": 4
+    },
+    {
+      "role": "player_tick",
+      "old135": 2088,
+      "new138": 2086,
+      "signature": {
+        "params_hex": "7f7d",
+        "results_hex": ""
+      },
+      "old_body_bytes": 3276,
+      "new_body_bytes": 3276,
+      "new_body_sha256": "2c8dffa5a1749a5ebc2d407b27e62ca6c07bcde3a911cbc5d687da4400e7013e",
+      "opcode_sequence_equal": true,
+      "remaining_diagnostic_changes": 2
+    },
+    {
+      "role": "owned_tick",
+      "old135": 1076,
+      "new138": 1232,
+      "signature": {
+        "params_hex": "7f7d",
+        "results_hex": ""
+      },
+      "old_body_bytes": 9730,
+      "new_body_bytes": 7133,
+      "new_body_sha256": "e90d6463e66aab155f2efd662cc8ae3f231f782dab0ba6904108d5d71f9fe287",
+      "opcode_sequence_equal": false,
+      "remaining_diagnostic_changes": 427
+    },
+    {
+      "role": "cast",
+      "old135": 922,
+      "new138": 916,
+      "signature": {
+        "params_hex": "7f7f",
+        "results_hex": "7f"
+      },
+      "old_body_bytes": 23288,
+      "new_body_bytes": 25177,
+      "new_body_sha256": "77fd21222a8c50b526f0b429df7fc1bdad0c0d88a0da161416880e6b8361eb7a",
+      "opcode_sequence_equal": false,
+      "remaining_diagnostic_changes": 1508
+    },
+    {
+      "role": "auto_cast",
+      "old135": 916,
+      "new138": 917,
+      "signature": {
+        "params_hex": "7f7d",
+        "results_hex": ""
+      },
+      "old_body_bytes": 20504,
+      "new_body_bytes": 20504,
+      "new_body_sha256": "e227b1c29b046bd8b144ac88e280bd2e353998d31d44a450f0acbb72c124bb43",
+      "opcode_sequence_equal": true,
+      "remaining_diagnostic_changes": 155
+    },
+    {
+      "role": "player_aura",
+      "old135": 1202,
+      "new138": 1155,
+      "signature": {
+        "params_hex": "7f",
+        "results_hex": ""
+      },
+      "old_body_bytes": 6561,
+      "new_body_bytes": 7112,
+      "new_body_sha256": "a74385c6e5579e68f34a606a30656fe87b9c32725c22b72e88ab0a5f9e29a07a",
+      "opcode_sequence_equal": false,
+      "remaining_diagnostic_changes": 467
+    }
+  ],
+  "consumer_roles": [
+    {
+      "update_units": 919
+    },
+    {
+      "spawn_tick": 946
+    },
+    {
+      "collect_pickups": 2862
+    },
+    {
+      "select_ability": 1072
+    }
+  ],
+  "executable_guard": "evidence/flow138-contract-guard-20261101T231438.634673Z/guard.json",
+  "executable_guard_sha256": "b94e37029c093a73c410da24b0ceba781227a3f68243573a3ccbea8fb169f456",
+  "WAT_read_bytes": 6048028,
+  "full_WAT_read": false,
+  "stats_data_identity": {
+    "class_scalar_data_equal": true,
+    "race_modifier_data_equal": true,
+    "class_pointer_stride138": 88,
+    "native_unique_scalar_locations_step": 144,
+    "native_scope": "Only exactHP/armor scalar8 unique locations, not nativeclasslayout/functionABI or runtime"
+  },
+  "real_layout_changes": {
+    "stats_timed_pointer": {
+      "135": 600,
+      "138": 596
+    },
+    "stats_timed_count": {
+      "135": 604,
+      "138": 600
+    },
+    "reserve_pool": {
+      "135": 768,
+      "138": 764
+    },
+    "player_pool_decay": {
+      "135": 756,
+      "138": 752
+    },
+    "Unit_stride": {
+      "135": 424,
+      "138": 432
+    },
+    "definition_tag_thresholds": {
+      "135": [
+        55,
+        54
+      ],
+      "138": [
+        59,
+        58
+      ]
+    }
+  },
+  "original_executions_from_static_mapping": 0,
+  "old_acceptance_transferred": false,
+  "next_actual_flow_blockers": [
+    "Constructor1571 selectedprofile input layout/default field additions must be recovered before6730-era fixtures are reused.",
+    "Cachedworld6760 changed instruction/data flow considerably; old135 snapshot/WASM memory cannot initialize138.",
+    "Owned1232 moved from a208B to224B frame and body9730→7133; oldperception/cooldown/classprelude scheduler needs semantic review.",
+    "Aura1155 body6561→7112 and sourcebranches changed;1350/8/1020cache rules not automatically138 support.",
+    "Unit432 layout changes affectallspawn/AI/death/recordstorage adapters.",
+    "Selection36B definition enum nowthresholds59/58; old55/54testdomains cannot be blindly reused.",
+    "Full138App/worldbootstrap,input/14tailintegration andnativeWindows runtime remain unverified."
+  ],
+  "retained_preparation_failure": "evidence/flow135-to138-core-static-20261101T230730.663255Z/failure.json",
+  "new_files_only": true
+}
