@@ -1,0 +1,372 @@
+{
+  "old_version": "0.134.0",
+  "new_version": "0.135.1",
+  "new_build": "0898d5e3",
+  "original_sha256": [
+    "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2"
+  ],
+  "new_only_roles": [
+    {
+      "role": "tick",
+      "index": 880,
+      "body_start": 1152222,
+      "body_end": 1291445,
+      "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58",
+      "wat_sha256": "aa61c76f491ba39bb756426e71a6a5ce1e8c1a4da8b57e6a36ba57a7d82c16a6",
+      "parameters_hex": "7f7c",
+      "results_hex": ""
+    },
+    {
+      "role": "command",
+      "index": 1371,
+      "body_start": 9110896,
+      "body_end": 9136547,
+      "body_sha256": "fe613365e0c9b6520201f744a7c4c187e07e3d6010b074e65ef57179bef660cd",
+      "wat_sha256": "4e75be767cd3e28abd943ef6765590c82111bc8918ffa794e7a7ab30192058ff",
+      "parameters_hex": "7f7f",
+      "results_hex": ""
+    },
+    {
+      "role": "effective_armor",
+      "index": 27375,
+      "body_start": 51325205,
+      "body_end": 51325675,
+      "body_sha256": "e45b81dd82d055b9baff0a5bcbdf7461568882656922c250b8a6a6c9cd2f3d2a",
+      "wat_sha256": "e5ca5c2bf401668729d533a4b60ce0c5a9f93b3fbec55a06ef7ef379950156d6",
+      "parameters_hex": "7f",
+      "results_hex": "7d"
+    }
+  ],
+  "source_sha256": {
+    "scripts/trace_migration135.py": "2fa790d16a8cf5a86199d38fcc612b7aeb7d160ee0bc49538572ea55b11d8aeb",
+    "scripts/build_full135_oracle.py": "e181d3ef917c58eb0ebaa980563e8bd76fadf1be5e4619e71a9ad7df3eb992a7",
+    "scripts/build_full134_oracle.py": "34dae3f74c8628a0f5593af0d01fea72bf4201cac6c97a1ada9b9f90c72be735",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368"
+  },
+  "target_executed": false,
+  "conclusions": [
+    "G layout is reordered: derived1360->1536, level1520->1432, currentHP1528->1440, clock2344->2352.",
+    "New1512 adds G1572 armor-cap store from local24, distinct from capped armorG1568.",
+    "New1073 incoming damage calls effective-armor27375 instead of loading old1392 directly.",
+    "Aligned offset pairs are instruction sites, not a universal mapping of every structure."
+  ],
+  "limitations": [
+    "Structural normalization masks integer constants/call destinations/field offsets solely to find candidate correspondences.",
+    "Changed table content, caller state and all side effects require separate validation.",
+    "This static receipt is not runtime or whole-game acceptance."
+  ],
+  "evidence_directory": "evidence/migration0135-20261101T032427.747654Z",
+  "receipt_sha256": "163a3a775a27f7a7f8d7c2d9f8dedd7b873f2bb61909f15867a5ff9d7987e6a2",
+  "functions": [
+    {
+      "role": "select_ability",
+      "old": {
+        "index": 1073,
+        "body_start": 5741770,
+        "body_end": 5758218,
+        "body_sha256": "264e7ce32add4bcd3695a8429c1b342c392aa83091b76a37c5f99c646b267d02",
+        "wat_sha256": "35335e0501e0bcbd2da985bec83287901aa35c08cbb59349f6fdae64360147d1",
+        "parameters_hex": "7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 1072,
+        "body_start": 5729442,
+        "body_end": 5745890,
+        "body_sha256": "2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01",
+        "wat_sha256": "32ce8baf8bb31d2c76fbfaab16fb1fcaa6f291e256169c04468169a54adcc952",
+        "parameters_hex": "7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": false
+    },
+    {
+      "role": "recalculate_stats",
+      "old": {
+        "index": 1513,
+        "body_start": 10230025,
+        "body_end": 10234773,
+        "body_sha256": "e978d8b2c80f495f3c669c957444b4392368fe87dc92104b297482163c3b419e",
+        "wat_sha256": "fa23c1db25f897b78a48e1d2c0779c8d32bc3da39f7829bd188d3cce16dd6909",
+        "parameters_hex": "7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 1512,
+        "body_start": 10196165,
+        "body_end": 10200921,
+        "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+        "wat_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3",
+        "parameters_hex": "7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": false
+    },
+    {
+      "role": "finish_selection",
+      "old": {
+        "index": 4600,
+        "body_start": 21989210,
+        "body_end": 21991198,
+        "body_sha256": "0cd48de295a6655883329710fbb6dccec6921d66794390f7424c6d9fb07ebe09",
+        "wat_sha256": "586116a0c7897222c0c6157b6fd310a44326fde7112e83f4bcdd4562f37e0171",
+        "parameters_hex": "7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 4600,
+        "body_start": 21989348,
+        "body_end": 21991336,
+        "body_sha256": "55b714430f81a1440d38cdeede434a677b8e4cbcce331cbe8266104281329acd",
+        "wat_sha256": "bb3ab2da31595cea2be45a3558c886e3c16fd791a033b5e8d7bde7a1d86d69df",
+        "parameters_hex": "7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "resolve_owned_ability",
+      "old": {
+        "index": 22287,
+        "body_start": 46535632,
+        "body_end": 46536271,
+        "body_sha256": "73fc6d3c329749d4f73a59c1b4f7b84937f1fd6eb3398cb75429a196268b916f",
+        "wat_sha256": "2a18c23e324216cf671f43125f8c1a7cfffb75785ca3e21712a46b81699564dd",
+        "parameters_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 22287,
+        "body_start": 46535762,
+        "body_end": 46536401,
+        "body_sha256": "2809d38e9e5b3bf6ac302e790d591c19447804b1e9ae1345a9403233468306fb",
+        "wat_sha256": "6a5503c7124ffa49b63212eb1463a6df8aaef8be44e7d82471affe948f99c2c8",
+        "parameters_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "auto_cast",
+      "old": {
+        "index": 916,
+        "body_start": 2442141,
+        "body_end": 2462645,
+        "body_sha256": "dfbd9abf42058398be721c23f4ba4bd448c988fee97933bb64f7332d8e0a21b0",
+        "wat_sha256": "c0bd6c8aa202f01542318f07ca1ddfb28e4c712c5d18dc0f81667520406e9ab0",
+        "parameters_hex": "7f7d",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 916,
+        "body_start": 2442157,
+        "body_end": 2462661,
+        "body_sha256": "a358136ba7f5f35bc5a33968b35624d5a788f6fabcbc017c01e2a3652caa4bdf",
+        "wat_sha256": "f06b78a6beaaab11d69785d0a7405d0050e2527c25aa69895fe56ac51738eb3c",
+        "parameters_hex": "7f7d",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "cast",
+      "old": {
+        "index": 922,
+        "body_start": 2623140,
+        "body_end": 2646428,
+        "body_sha256": "c20ff5249a260e150399cd272dbc7f1868dd5537c86020484f662cbc8be37182",
+        "wat_sha256": "defb9acf71e59f353359d89fe2eb7a65f30fa7c95fe3f621a4d37abdae09b07a",
+        "parameters_hex": "7f7f",
+        "results_hex": "7f"
+      },
+      "new": {
+        "index": 922,
+        "body_start": 2623156,
+        "body_end": 2646444,
+        "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80",
+        "wat_sha256": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940",
+        "parameters_hex": "7f7f",
+        "results_hex": "7f"
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "damage",
+      "old": {
+        "index": 914,
+        "body_start": 2394946,
+        "body_end": 2421283,
+        "body_sha256": "5beb09c77e81990305a5f71d961fed8fa25d979259c8bd9bcb9a1c51ef659e2f",
+        "wat_sha256": "40c5bd3b5cfc0f2ef7c0822b1a710b4119fbe130a1046ebb368332402873723b",
+        "parameters_hex": "7f7e7d7f7f7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 914,
+        "body_start": 2394962,
+        "body_end": 2421299,
+        "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+        "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a",
+        "parameters_hex": "7f7e7d7f7f7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "gain_experience",
+      "old": {
+        "index": 4630,
+        "body_start": 22064250,
+        "body_end": 22066251,
+        "body_sha256": "4bd68b70d90f63e0a25b63378f10a9a68adcaf275fdffd489462aa7541d1a110",
+        "wat_sha256": "339a175d8474e28db66f12ce06ad2b5468d470772ac0ca24e36eec3a8485e91d",
+        "parameters_hex": "7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 4630,
+        "body_start": 22064388,
+        "body_end": 22066389,
+        "body_sha256": "828722a8f200878b4bdcf5ac59df4d95f1021df6ca42044a6419c216a405fd21",
+        "wat_sha256": "2bf5be8331ebb2d8cd75448daf220d211eeeb76750072b900e86f90d8e29c03c",
+        "parameters_hex": "7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "incoming_damage",
+      "old": {
+        "index": 1063,
+        "body_start": 5601777,
+        "body_end": 5614102,
+        "body_sha256": "e6ea2aaca5f6d402fe5969f637e1b2cad398f2e2b3250b18c4fd0950d3ac59bf",
+        "wat_sha256": "c916ae5af9d5cd3d9e9acb4645cc63816052157377a120bbc5d94a13693a7808",
+        "parameters_hex": "7f7d7e7f7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 1073,
+        "body_start": 5745892,
+        "body_end": 5757845,
+        "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+        "wat_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+        "parameters_hex": "7f7d7e7f7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": false
+    },
+    {
+      "role": "spawn_pickup",
+      "old": {
+        "index": 1417,
+        "body_start": 9571309,
+        "body_end": 9576395,
+        "body_sha256": "22263d2e42d74ce26922ec8dac69a3f7dc4c8d3bedbdef679dcedb201f5b7c12",
+        "wat_sha256": "e1e6117046e25ad60ec3f761efb783a8f5638be98d605d8f99ed32563f4f03f7",
+        "parameters_hex": "7f7f7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 1417,
+        "body_start": 9570935,
+        "body_end": 9576021,
+        "body_sha256": "4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342",
+        "wat_sha256": "7e9ae77a571bce628dc9202237f928772e8199b3c583bd7d9dd1a47755abdc33",
+        "parameters_hex": "7f7f7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "collect_pickups",
+      "old": {
+        "index": 2862,
+        "body_start": 16965489,
+        "body_end": 16968668,
+        "body_sha256": "502221f3e34228e0a37970e55505d1506f323d2c5f81510b707d8d8e414122ef",
+        "wat_sha256": "046411c6939d535cc7dc81aed61448107f28b5528cbc4832c39cc949c5eaf1df",
+        "parameters_hex": "7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 2862,
+        "body_start": 16965627,
+        "body_end": 16968806,
+        "body_sha256": "5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a",
+        "wat_sha256": "d35875f18df4e8c24d30759376434ba21ef83e4f5605d5a099efaf6a0b4ff1eb",
+        "parameters_hex": "7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "attract_all_xp",
+      "old": {
+        "index": 21779,
+        "body_start": 46199997,
+        "body_end": 46200603,
+        "body_sha256": "abd873258fb218aa346ac0d5e27fad8b4bc72c260659d25afee5f07d8258e020",
+        "wat_sha256": "63d9f13893e5d6741014bc3c4345a09fea8167e44616b796b1bce2717ae91692",
+        "parameters_hex": "7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 21779,
+        "body_start": 46200127,
+        "body_end": 46200733,
+        "body_sha256": "08a1fc041396675a27f577af12436433a72256c79958008fd129ddf59b7a17b6",
+        "wat_sha256": "4cf6176550cb8a087e923c2f20fd96fefcc22af535981716addbbcb9bf6f39dd",
+        "parameters_hex": "7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "generate_choices",
+      "old": {
+        "index": 2159,
+        "body_start": 13966606,
+        "body_end": 13970983,
+        "body_sha256": "555c0ff77e67864d3af4b149f1fb3d24f82e96a777d6537c32c6170ade8398dd",
+        "wat_sha256": "f8f57db6a906c5e34abc9690397641b819c65410c3372720e05e2bfe435e1008",
+        "parameters_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      "new": {
+        "index": 2159,
+        "body_start": 13966745,
+        "body_end": 13971122,
+        "body_sha256": "413d98654b02253f255eb0cf54bcdc06309fb7aea5c9079fb73a20a9b6a98bcc",
+        "wat_sha256": "8bdfb49dcb9973f4bf8ebaf361ac73f4c51e1b2b933f00dea1da0718cc957445",
+        "parameters_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      "discovery_normalized_equal": true
+    },
+    {
+      "role": "upgrade_value",
+      "old": {
+        "index": 25368,
+        "body_start": 49645485,
+        "body_end": 49646105,
+        "body_sha256": "1469599a6ddc00f4a9c958d2c1e0db6d70d2c658fa89a2bfe3587b1d693376bf",
+        "wat_sha256": "e02b043fa9601d08102f91e3b6bf6015481e5ec1d25d19248bbb22b8889ca44c",
+        "parameters_hex": "7f7f7f",
+        "results_hex": "7d"
+      },
+      "new": {
+        "index": 25368,
+        "body_start": 49645657,
+        "body_end": 49646277,
+        "body_sha256": "bd939e6a7a535282fef1ac6d6e476183a8666298880371c24aba497b580ec68e",
+        "wat_sha256": "dbd5b9fe61cbf596963b1402ad7a82a4d369ae43ce7d7a252a7c26fc8468117d",
+        "parameters_hex": "7f7f7f",
+        "results_hex": "7d"
+      },
+      "discovery_normalized_equal": true
+    }
+  ],
+  "runtime_acceptance": false
+}

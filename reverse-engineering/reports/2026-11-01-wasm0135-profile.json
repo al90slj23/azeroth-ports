@@ -1,0 +1,742 @@
+{
+  "status": "complete",
+  "target_version": "0.135.1",
+  "build": "0898d5e3",
+  "role": "fixed latest-version full static navigation profile; not gameplay acceptance",
+  "source_bytes": 90959080,
+  "profile": {
+    "target_version": "0.135.1",
+    "embedded_build": "0898d5e3",
+    "official_stamp": "f31d0e03e3ac",
+    "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "original_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
+    "wat_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/official-0.135.1-full.wat",
+    "wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+    "index_schema": "azeroth-ports-local-wasm135-index-v1",
+    "local_tool_sources": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm135_profile.py": "10f6c8215a4d27a12db3bcc7c50a9a50bc42d440214474ebdbbd46700c386c49",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    },
+    "wabt_version": "1.0.42",
+    "direct_call_kinds": [
+      "call",
+      "return_call"
+    ],
+    "integer_constant_kinds": [
+      "i32.const",
+      "i64.const"
+    ],
+    "memory_scope": "scalar/vector/atomic load/store instructions; static offset immediate only",
+    "terminal_parentheses_supported": true,
+    "target_executed": false,
+    "method": "local full-WAT lexical instruction index; not runtime or stock REA",
+    "counts": {
+      "functions": 175317,
+      "calls": 824549,
+      "iconsts": 5196596,
+      "memops": 5540103
+    },
+    "direct_call_counts": {
+      "call": 824549
+    },
+    "terminal_parenthesis_counts": {
+      "call": 5585,
+      "return_call": 0,
+      "iconst": 2493,
+      "memop": 73793
+    },
+    "wat_lines": 34382668,
+    "sqlite_integrity_check": "ok",
+    "index_elapsed_seconds": 62.882,
+    "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z",
+    "database_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/index.sqlite",
+    "database_bytes": 642973696,
+    "database_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0",
+    "binary_identity_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/binary-identity.json",
+    "binary_identity_sha256": "4bc0a8828d7d3c8673c8b527c32b13796f329c843b033ba26aac7a1d647dc1d0",
+    "full_module_validated": true,
+    "function_imports": 878,
+    "defined_functions": 175317,
+    "wat_bytes": 1326886095,
+    "identities_preserved": true,
+    "elapsed_seconds": 84.078
+  },
+  "verification": {
+    "status": "passed",
+    "target_version": "0.135.1",
+    "build": "0898d5e3",
+    "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "database_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0",
+    "wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+    "read_only_sqlite": true,
+    "function_headers_and_binary_ranges_checked": 175317,
+    "counts": {
+      "functions": 175317,
+      "calls": 824549,
+      "iconsts": 5196596,
+      "memops": 5540103
+    },
+    "call_instruction_counts": {
+      "call": 824549
+    },
+    "integer_instruction_counts": {
+      "i32.const": 4448288,
+      "i64.const": 748308
+    },
+    "all_sections_hash_checked": 12,
+    "all_data_payloads_hash_checked": 28471,
+    "exports": 36,
+    "selected_function_readback": [
+      {
+        "idx": 878,
+        "wat_line": 1339,
+        "wat_start": 110401,
+        "wat_end": 67976264,
+        "body_start": 897233,
+        "body_end": 1075680,
+        "body_bytes": 178447,
+        "body_sha256": "2caf8aa3e7a4a41c0b2c8c77f172d6b7cf2275171cec216cf82450f540e38ef7",
+        "header": "  (func (;878;) (type 2) (param i32 i32 i32 i32)"
+      },
+      {
+        "idx": 879,
+        "wat_line": 85911,
+        "wat_start": 67976264,
+        "wat_end": 69404549,
+        "body_start": 1075683,
+        "body_end": 1152219,
+        "body_bytes": 76536,
+        "body_sha256": "8b7340695a5dbb4562ce09562e2c827da36f4c8bfbb0b4c007970fca4bda1e15",
+        "header": "  (func (;879;) (type 33) (param i32 i32 i32 i32 i32 i32 i32 i32 i32 i32)"
+      },
+      {
+        "idx": 880,
+        "wat_line": 122345,
+        "wat_start": 69404549,
+        "wat_end": 73451705,
+        "body_start": 1152222,
+        "body_end": 1291445,
+        "body_bytes": 139223,
+        "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58",
+        "header": "  (func (;880;) (type 46) (param i32 f64)"
+      },
+      {
+        "idx": 1073,
+        "wat_line": 2177451,
+        "wat_start": 223040626,
+        "wat_end": 223217705,
+        "body_start": 5745892,
+        "body_end": 5757845,
+        "body_bytes": 11953,
+        "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+        "header": "  (func (;1073;) (type 273) (param i32 f32 i64 i32 i32 i32)"
+      },
+      {
+        "idx": 1513,
+        "wat_line": 4181375,
+        "wat_start": 331395880,
+        "wat_end": 332631070,
+        "body_start": 10200924,
+        "body_end": 10234407,
+        "body_bytes": 33483,
+        "body_sha256": "c74f3501da950255cb57397b322e59102cc890dfafbc69076ca63af4229c6276",
+        "header": "  (func (;1513;) (type 0) (param i32 i32)"
+      },
+      {
+        "idx": 2159,
+        "wat_line": 5891097,
+        "wat_start": 404726566,
+        "wat_end": 404792305,
+        "body_start": 13966745,
+        "body_end": 13971122,
+        "body_bytes": 4377,
+        "body_sha256": "413d98654b02253f255eb0cf54bcdc06309fb7aea5c9079fb73a20a9b6a98bcc",
+        "header": "  (func (;2159;) (type 1) (param i32 i32 i32)"
+      },
+      {
+        "idx": 2862,
+        "wat_line": 7264299,
+        "wat_start": 459443249,
+        "wat_end": 459490392,
+        "body_start": 16965627,
+        "body_end": 16968806,
+        "body_bytes": 3179,
+        "body_sha256": "5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a",
+        "header": "  (func (;2862;) (type 3) (param i32)"
+      },
+      {
+        "idx": 35877,
+        "wat_line": 25915664,
+        "wat_start": 1058415651,
+        "wat_end": 1058419627,
+        "body_start": 57999296,
+        "body_end": 57999660,
+        "body_bytes": 364,
+        "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+        "header": "  (func (;35877;) (type 55) (param f32) (result f32)"
+      },
+      {
+        "idx": 85719,
+        "wat_line": 32844898,
+        "wat_start": 1264351856,
+        "wat_end": 1264352507,
+        "body_start": 73839975,
+        "body_end": 73840043,
+        "body_bytes": 68,
+        "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+        "header": "  (func (;85719;) (type 55) (param f32) (result f32)"
+      },
+      {
+        "idx": 95997,
+        "wat_line": 33224608,
+        "wat_start": 1272229081,
+        "wat_end": 1272229517,
+        "body_start": 74741476,
+        "body_end": 74741522,
+        "body_bytes": 46,
+        "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432",
+        "header": "  (func (;95997;) (type 107) (param f32 f32) (result f32)"
+      },
+      {
+        "idx": 95998,
+        "wat_line": 33224630,
+        "wat_start": 1272229517,
+        "wat_end": 1272229953,
+        "body_start": 74741523,
+        "body_end": 74741569,
+        "body_bytes": 46,
+        "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18",
+        "header": "  (func (;95998;) (type 107) (param f32 f32) (result f32)"
+      },
+      {
+        "idx": 176194,
+        "wat_line": 34354155,
+        "wat_start": 1299590745,
+        "wat_end": 1299590811,
+        "body_start": 77735223,
+        "body_end": 77735225,
+        "body_bytes": 2,
+        "body_sha256": "f09a7a12954169ae595d12d870e69a4c0092003157d72523d626d2a3990241e2",
+        "header": "  (func (;176194;) (type 12) (param i32 i32 i32 i32 i32 i32 i32))"
+      }
+    ],
+    "call_readback_samples": [
+      {
+        "caller": 878,
+        "callee": 57313,
+        "wat_line": 4273,
+        "instruction": "call 57313"
+      },
+      {
+        "caller": 878,
+        "callee": 41374,
+        "wat_line": 4403,
+        "instruction": "call 41374"
+      },
+      {
+        "caller": 878,
+        "callee": 83832,
+        "wat_line": 5561,
+        "instruction": "call 83832"
+      },
+      {
+        "caller": 19905,
+        "callee": 45834,
+        "wat_line": 19745404,
+        "instruction": "call 45834"
+      },
+      {
+        "caller": 176176,
+        "callee": 121918,
+        "wat_line": 34354132,
+        "instruction": "call 121918"
+      },
+      {
+        "caller": 176179,
+        "callee": 121918,
+        "wat_line": 34354138,
+        "instruction": "call 121918"
+      }
+    ],
+    "memop_readback_samples": [
+      {
+        "function_idx": 878,
+        "wat_line": 1348,
+        "operation": "i32.load",
+        "encoded_offset": 4
+      },
+      {
+        "function_idx": 15127,
+        "wat_line": 17434547,
+        "operation": "i64.load",
+        "encoded_offset": 0
+      },
+      {
+        "function_idx": 176106,
+        "wat_line": 34353991,
+        "operation": "i64.load32_u",
+        "encoded_offset": 280
+      }
+    ],
+    "constant_readback_samples": [
+      {
+        "function_idx": 878,
+        "wat_line": 1342,
+        "instruction": "i32.const 1984"
+      },
+      {
+        "function_idx": 16869,
+        "wat_line": 18329499,
+        "instruction": "i32.const 8703188"
+      },
+      {
+        "function_idx": 176181,
+        "wat_line": 34354142,
+        "instruction": "i32.const 42"
+      }
+    ],
+    "target_executed": false,
+    "network_used": false,
+    "installed_app_or_save_writes": false,
+    "scope": "Static range/header/hash and sampled indexed-instruction readback; not gameplay or runtime proof",
+    "elapsed_seconds": 13.84,
+    "verification_script_sha256": "e2ed4f35ea01e8fc8fd3f46b49e3eb4c52cfb59686004da0cb7662924046e80d"
+  },
+  "known_leaf_mappings": {
+    "old_version": "0.134.0",
+    "old_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "new_version": "0.135.1",
+    "new_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "exact_body_mappings": [
+      {
+        "old": 35876,
+        "new": 35877,
+        "body_bytes": 364,
+        "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+        "equal": true
+      },
+      {
+        "old": 85718,
+        "new": 85719,
+        "body_bytes": 68,
+        "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+        "equal": true
+      },
+      {
+        "old": 95996,
+        "new": 95997,
+        "body_bytes": 46,
+        "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432",
+        "equal": true
+      },
+      {
+        "old": 95997,
+        "new": 95998,
+        "body_bytes": 46,
+        "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18",
+        "equal": true
+      }
+    ]
+  },
+  "binary_identity_summary": {
+    "type_count": 459,
+    "function_imports": 878,
+    "defined_functions": 175317,
+    "export_count": 36,
+    "exports": [
+      {
+        "name": "memory",
+        "kind": 2,
+        "index": 0
+      },
+      {
+        "name": "start",
+        "kind": 0,
+        "index": 4253,
+        "type_index": 9,
+        "params_hex": "",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbg_get_streamconfig_buffer_size",
+        "kind": 0,
+        "index": 95118,
+        "type_index": 59,
+        "params_hex": "7f",
+        "results_hex": "7c"
+      },
+      {
+        "name": "__wbg_get_streamconfig_channels",
+        "kind": 0,
+        "index": 97363,
+        "type_index": 5,
+        "params_hex": "7f",
+        "results_hex": "7f"
+      },
+      {
+        "name": "__wbg_get_streamconfig_sample_rate",
+        "kind": 0,
+        "index": 97364,
+        "type_index": 5,
+        "params_hex": "7f",
+        "results_hex": "7f"
+      },
+      {
+        "name": "__wbg_set_streamconfig_buffer_size",
+        "kind": 0,
+        "index": 95119,
+        "type_index": 46,
+        "params_hex": "7f7c",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbg_set_streamconfig_channels",
+        "kind": 0,
+        "index": 97654,
+        "type_index": 0,
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbg_set_streamconfig_sample_rate",
+        "kind": 0,
+        "index": 97655,
+        "type_index": 0,
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbg_streamconfig_free",
+        "kind": 0,
+        "index": 56432,
+        "type_index": 0,
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue__core_ed718c3d60ebd546___result__Result_____wasm_bindgen_98522a9d8f8d72e2___JsError___true_",
+        "kind": 0,
+        "index": 97349,
+        "type_index": 454,
+        "params_hex": "7f7f6f",
+        "results_hex": "7f7f"
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___js_sys_c604bd7a2a49160___Array__web_sys_dd87023bf4539867___features__gen_ResizeObserver__ResizeObserver______true_",
+        "kind": 0,
+        "index": 100283,
+        "type_index": 237,
+        "params_hex": "7f7f6f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___js_sys_c604bd7a2a49160___Function_fn_wasm_bindgen_98522a9d8f8d72e2___JsValue_____wasm_bindgen_98522a9d8f8d72e2___sys__Undefined___js_sys_c604bd7a2a49160___Function_fn_wasm_bindgen_98522a9d8f8d72e2___JsValue_____wasm_bindgen_98522a9d8f8d72e2___sys__Undefined_______true_",
+        "kind": 0,
+        "index": 100284,
+        "type_index": 237,
+        "params_hex": "7f7f6f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__1_",
+        "kind": 0,
+        "index": 135252,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true_",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__4",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___web_sys_dd87023bf4539867___features__gen_CloseEvent__CloseEvent______true_",
+        "kind": 0,
+        "index": 135254,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___web_sys_dd87023bf4539867___features__gen_CloseEvent__CloseEvent______true__6",
+        "kind": 0,
+        "index": 135254,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__7",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__8",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__9",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___web_sys_dd87023bf4539867___features__gen_CloseEvent__CloseEvent______true__10",
+        "kind": 0,
+        "index": 135254,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__11",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__12",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___wasm_bindgen_98522a9d8f8d72e2___JsValue______true__13",
+        "kind": 0,
+        "index": 135253,
+        "type_index": 132,
+        "params_hex": "7f7f6f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke___core_ed718c3d60ebd546___option__Option_web_sys_dd87023bf4539867___features__gen_Blob__Blob_______true_",
+        "kind": 0,
+        "index": 98067,
+        "type_index": 1,
+        "params_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke_______true_",
+        "kind": 0,
+        "index": 104471,
+        "type_index": 0,
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "wasm_bindgen_98522a9d8f8d72e2___convert__closures_____invoke_______true__1_",
+        "kind": 0,
+        "index": 105393,
+        "type_index": 0,
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbindgen_malloc",
+        "kind": 0,
+        "index": 91941,
+        "type_index": 6,
+        "params_hex": "7f7f",
+        "results_hex": "7f"
+      },
+      {
+        "name": "__wbindgen_realloc",
+        "kind": 0,
+        "index": 95052,
+        "type_index": 16,
+        "params_hex": "7f7f7f7f",
+        "results_hex": "7f"
+      },
+      {
+        "name": "__externref_table_alloc",
+        "kind": 0,
+        "index": 39250,
+        "type_index": 11,
+        "params_hex": "",
+        "results_hex": "7f"
+      },
+      {
+        "name": "__wbindgen_externrefs",
+        "kind": 1,
+        "index": 1
+      },
+      {
+        "name": "__wbindgen_exn_store",
+        "kind": 0,
+        "index": 166048,
+        "type_index": 3,
+        "params_hex": "7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbindgen_free",
+        "kind": 0,
+        "index": 135229,
+        "type_index": 1,
+        "params_hex": "7f7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbindgen_destroy_closure",
+        "kind": 0,
+        "index": 95051,
+        "type_index": 0,
+        "params_hex": "7f7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__externref_table_dealloc",
+        "kind": 0,
+        "index": 69208,
+        "type_index": 3,
+        "params_hex": "7f",
+        "results_hex": ""
+      },
+      {
+        "name": "__wbindgen_start",
+        "kind": 0,
+        "index": 176107,
+        "type_index": 9,
+        "params_hex": "",
+        "results_hex": ""
+      }
+    ],
+    "data_segment_count": 28471,
+    "implicit_start_section": false,
+    "menu_branding": {
+      "context_start": 78096180,
+      "build_offset": 78096229,
+      "version_offset": 78096237,
+      "build": "0898d5e3",
+      "version": "0.135.1"
+    }
+  },
+  "execution": {
+    "profile_shell_session_id": 93006,
+    "profile_pid": 14643,
+    "profile_exit_code_observed": 0,
+    "deadline_seconds": 900,
+    "profile_run_state": {
+      "status": "complete",
+      "pid": 14643,
+      "finished_utc": "2026-11-01T03:11:52.662811+00:00",
+      "elapsed_seconds": 84.078
+    },
+    "commands": [
+      {
+        "arguments": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/rea-wasm-profile/wabt/wabt-1.0.42/bin/wasm-validate",
+          "--enable-all",
+          "--ignore-custom-section-errors",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm"
+        ],
+        "started_utc": "2026-11-01T03:10:28.984362+00:00",
+        "stdout_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/validate.stdout.txt",
+        "stderr_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/validate.stderr.txt",
+        "deadline_seconds": 899.6,
+        "pid": 14673,
+        "process_group_id": 14673,
+        "exit_code": 0,
+        "finished_utc": "2026-11-01T03:10:34.461077+00:00",
+        "elapsed_seconds": 5.477
+      },
+      {
+        "arguments": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/rea-wasm-profile/wabt/wabt-1.0.42/bin/wasm-objdump",
+          "-h",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm"
+        ],
+        "started_utc": "2026-11-01T03:10:34.461812+00:00",
+        "stdout_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/headers.stdout.txt",
+        "stderr_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/headers.stderr.txt",
+        "deadline_seconds": 894.123,
+        "pid": 14753,
+        "process_group_id": 14753,
+        "exit_code": 0,
+        "finished_utc": "2026-11-01T03:10:34.537487+00:00",
+        "elapsed_seconds": 0.076
+      },
+      {
+        "arguments": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/rea-wasm-profile/wabt/wabt-1.0.42/bin/wasm2wat",
+          "--enable-all",
+          "--ignore-custom-section-errors",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
+          "-o",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/official-0.135.1-full.wat"
+        ],
+        "started_utc": "2026-11-01T03:10:34.537934+00:00",
+        "stdout_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/decode.stdout.txt",
+        "stderr_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/decode.stderr.txt",
+        "deadline_seconds": 894.047,
+        "pid": 14754,
+        "process_group_id": 14754,
+        "exit_code": 0,
+        "finished_utc": "2026-11-01T03:10:47.219380+00:00",
+        "elapsed_seconds": 12.682
+      }
+    ],
+    "verification_shell_session_id": 48386,
+    "verification_exit_code_observed": 0,
+    "target_executed": false
+  },
+  "evidence_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z",
+  "source_sha256": {
+    "scripts/wasm135_profile.py": "10f6c8215a4d27a12db3bcc7c50a9a50bc42d440214474ebdbbd46700c386c49",
+    "scripts/verify_wasm135_profile.py": "e2ed4f35ea01e8fc8fd3f46b49e3eb4c52cfb59686004da0cb7662924046e80d",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "receipt_sha256": {
+    "manifest.json": "762d2d4c82b22492b4be25d5ceb3deb6d8f7c9f083dcfc724e14c38e80c4ea48",
+    "verification.json": "872d77b0bb26280224dcbc126f5141a4136f14dd4a761b3d44b3851046358091",
+    "binary-identity.json": "4bc0a8828d7d3c8673c8b527c32b13796f329c843b033ba26aac7a1d647dc1d0",
+    "execution-receipt.json": "c041c6204c071244f43f7d157c8386d9d2cc3e19fbc99c99df666c7a1fdd11f9",
+    "known-leaf-mappings.json": "4b324e8179adaf366e2d0d740b03668076d3f9538b808cb40da8bbba563cb262",
+    "identity-before.json": "bcc2883f51faa31c924ebb335ce076195d812b28a03838bf893de6c99e5003ad",
+    "identity-after.json": "9917f3c138247a05a96ae7bac09fee50b7b03d092e8403b24a0ed6f67e7adf49"
+  },
+  "preservation": {
+    "old_0134_and_0126_guards_modified": false,
+    "old_profile_inputs_overwritten": false,
+    "original_module_instantiated": false,
+    "network_used": false,
+    "installed_app_or_save_writes": false,
+    "android_wip_touched": false,
+    "git_actions": false
+  },
+  "limitations": [
+    "Static full WABT validation and lexical index only; not recovered Rust source or a playable independent core.",
+    "Call index records direct call and return_call instructions only; runtime indirect targets are not inferred.",
+    "Actual source has no return_call sites; parser support is inherited unchanged from the previously tested index helper.",
+    "field_offset is the encoded memory immediate, not an automatically recovered structure field.",
+    "Four exact leaf-body identities do not establish caller layouts or whole-game equivalence."
+  ]
+}
