@@ -1558,6 +1558,35 @@
       "new_original_cases_from_review": 0,
       "full880_frames": 0,
       "native_execution": false
+    },
+    "resource_player_update135_checkpoint": {
+      "module": "core_spec.resource_player_update135",
+      "status": "scoped_component_differential_and_independent_read_only_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "reports/2026-11-02-resource-player0135.json",
+      "report_sha256": "142cd1b0088aa6350f949b85d6aeaed7b9a4c8ac39e5e5edbf8f92c675c6106d",
+      "receipt": "evidence/resource-player0135-oracle-20261101T214934.226082Z/comparison.json",
+      "receipt_sha256": "82719c31ea3de180d1a4b0c036d1a6764bd1518f3a1cdea17e3a627b6d85024d",
+      "cases": 38,
+      "original_entry_calls": 56,
+      "original_functions": {
+        "2088": 56
+      },
+      "differences": 0,
+      "source_files": 37,
+      "production_files": 30,
+      "independent_review": "reports/2026-11-02-resource-player0135-independent-review.json",
+      "review_receipt": "evidence/resource-player135-independent-review-owned-20261101T215955.300921Z/review/review.json",
+      "review_receipt_sha256": "8d3159228fe880c3f9153b08a3e36adb8226bd7c5c82ca309b5e8f0429b5de10",
+      "dirty_recalculations": 49,
+      "unique_speed226": 35,
+      "scope": "Controlled full2088/manualGameWorld prefix, kind0resource23451/23505 and positive unique8; full live32 backing/48Aura/keyed state/226/HP and zero1620 regen. Learned empty/basic and class timerInfinity isolate1076. Nonzero1620/1020kind12/mixednatural flow/1453 logging/full880/native pending.",
+      "headless_integrated": false,
+      "case_counts_not_additive": true,
+      "new_original_cases_from_review": 0,
+      "full880_frames": 0,
+      "native_execution": false
     }
   },
   "fixed_static_migration_target_0136": {

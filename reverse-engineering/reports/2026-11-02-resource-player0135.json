@@ -1,0 +1,245 @@
+{
+  "schema": "azeroth-ports-resource-player0135-primary-v1",
+  "status": "fresh_expected_first_full2088_resource_prefix_and_independent_review_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "comparison": {
+    "path": "evidence/resource-player0135-oracle-20261101T214934.226082Z/comparison.json",
+    "sha256": "82719c31ea3de180d1a4b0c036d1a6764bd1518f3a1cdea17e3a627b6d85024d",
+    "cases": 38,
+    "full_original2088_calls": 56,
+    "differences": 0,
+    "source_files": 37,
+    "local_import_edges": 124,
+    "known_values": 23309,
+    "unknown_physical_bytes": 30416
+  },
+  "api": {
+    "module": "reconstruction/core_spec/resource_player_update135.py",
+    "function": "prepare_resource_player_update135",
+    "canonical_owner": "LevelCycleState HP/derived/time/RNG; MixedResourceContext135 only live/aura/GUID/action/App notification owner",
+    "arguments": [
+      "level",
+      "context",
+      "now_bits",
+      "dt_bits",
+      "last_hit_bits",
+      "periodic_input=()",
+      "explicit_other_sources_absent=True"
+    ],
+    "returns": [
+      "level",
+      "context",
+      "expired_spell_ids",
+      "recalculated",
+      "regen_request_bits",
+      "heal_delta_bits",
+      "events",
+      "packets",
+      "pending"
+    ]
+  },
+  "rules": {
+    "dirty": "Any now>=expiry triggers; NaN alone does not trigger",
+    "retain": "On dirty pass retain strictly now<expiry in original stable order, co-removing NaN; preserve entire32B backing including inactive tail and None",
+    "rebuild": "1512 numeric recalc then1202 full48-slot cache and keyed delta; speed226 is produced inside1512 before1202",
+    "regen": "After rebuild clamp pool1448=minnum(1444,1448), half gate387>4, extra maxHP*1620 at elapsed>=3, f32 dt then half multiplication, HP keys22/28 only if oldHP<maxHP",
+    "notification": "Prefix consumes no banner owner id; explicit App14340336 id and action1644 stay same except actual speed226 increments action modulo2^32"
+  },
+  "accepted_domain": {
+    "live": [
+      "kind0 spell23451",
+      "kind0 spell23505",
+      "unique finite positive kind8"
+    ],
+    "explicit_empty_other_sources": true,
+    "shield_or_conditional_owner_absent": true,
+    "finite_now_dt_last_hit": true,
+    "periodic_budget_plus28_signed_zero_only": true,
+    "physical_None": "kind0 +12..19,kind8 +16..19 remain caller-owned unknown cells; no original values fed to model",
+    "oracle_setup": "Controlled manual Game8192/World128; learned-owned empty, genuine cleave80 futureInfinity and classpreludeInfinity preserve complete1076 callee but isolate prefix",
+    "locale": "English cold module; actual1453 naturally initializes Once0→3 without state injection; complete locale producer not independently reconstructed"
+  },
+  "counts": {
+    "dirty_recalculations": 49,
+    "expiry_ids": {
+      "23451": 35,
+      "23505": 13,
+      "6673": 7
+    },
+    "unique_speed226": 35,
+    "stack_guards": 221,
+    "allocator_guards": 165,
+    "full2088_guards": 56,
+    "pure_model_refusals": 7
+  },
+  "source_sha256": {
+    "scripts/check_resource_player135.py": "4ceec93cb44ee1e5f7c7716777bebbffe750bceb9a58953c6052275c550d8a3e",
+    "scripts/build_resource_player135_oracle.py": "c626ee7cbcd6774dedd9e24a2b8e20141c602c080dec38520718a58bbef30151",
+    "scripts/run_resource_player135_oracle.mjs": "1bc7a718c5a7efb23d1b0b56b15e80e19db3e6c7d1c31be18df606fabc4fa454",
+    "reconstruction/core_spec/resource_player_update135.py": "6b5fc34afc4049347320767ff55339d6aa6f12d66fd866e5709b12441c868ea5"
+  },
+  "all37_sources_frozen_before_after_current_equal": true,
+  "original_functions": {
+    "2088": {
+      "body_sha256": "a20643b34a3be2898101856d84102ba9e7964b6846b0345510306fd500ffa77a",
+      "wat_sha256": "02ca0590c09f7a727cda54c086270ad9a9e8d437cdc92f2db5f8f4ed0b871f9c"
+    },
+    "1512": {
+      "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+      "wat_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3"
+    },
+    "1202": {
+      "body_sha256": "55a6163b90ac8e373c9d0d1e42c2a6fe829f2124029b48fe19ec62bf159d7652",
+      "wat_sha256": "93c1a53a759d54514a5142e17e88c5542aac1864aaf1d5770f0205dcac1d035e"
+    },
+    "1453": {
+      "body_sha256": "c589e5ba436bb50792aff3491506e464c2e486551985d579df7c09b206efd3f3",
+      "wat_sha256": "403c668a39c8809539e5738398d05973004d6513960f674d479bbfdc89440ad8"
+    },
+    "1076": {
+      "body_sha256": "3dbb7ab4e94cbe5fdacce3f544419951c84bc056a969703835f83586d5076777",
+      "wat_sha256": "15b5cd2f7e988237a5886f795bac89b7742578fbd37937d8d5c2c26d35612526"
+    },
+    "10529": {
+      "body_sha256": "964d28a7b04ff4c53d0a8ddd32fd2b8da3053bfef34493f2b733d2faa9f3891d",
+      "wat_sha256": "ef2c9f65b5c239b299675ca221d68575e1f9b7fad3e43bfb47085f0b2d16be5c"
+    },
+    "29537": {
+      "body_sha256": "e0c5851c5e859dc79ac8939e7da3994e890b5d234944907903e25c56a6774b01",
+      "wat_sha256": "029f1f393fc24c7d65645ded0ad69d62855a8490f94552110efdb072348c64bb"
+    }
+  },
+  "only_export_section7_changed": true,
+  "all_original_callees_preserved": true,
+  "original_process": {
+    "pid": 75587,
+    "pgid": 75587,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 3.148874916994828,
+    "error": null
+  },
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "historical_build_alias": "0898d5e3",
+    "cases": 38,
+    "completed_cases": 38,
+    "full_original_calls": {
+      "2088": 56
+    },
+    "fresh_instances": 38,
+    "max_memory_bytes": 20578304,
+    "output_bytes": 1207982,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "original_function_bodies_unchanged": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_memory_snapshot_read": false,
+    "once_or_locale_state_injected": false,
+    "error": null
+  },
+  "budgets": {
+    "owned_seconds": 60,
+    "wasm_memory_bytes": 33554432,
+    "node_heap_mib": 512,
+    "stdout_bytes": 4194304,
+    "input_expected_each_bytes": 4194304,
+    "denied_imports": 878
+  },
+  "comparison_scope": [
+    "Complete23 derived words/HP/pools/speed/RNG/action/App counters",
+    "Full32B live capacity/backing, all known byte cells and strict poison preservation of physical None cells",
+    "Full48Aura cache: active fields strict, inactive tag0 known with12 allocation bytes explicitly None",
+    "All keyed field entries including66Aura keys when written",
+    "Complete packet226 bytes and action wrap; original other packets/1453 effects retained as raw observations"
+  ],
+  "not_predictions": [
+    "1453 account/presentation/statistics payload and all non226 packets",
+    "FullGame8192 and allocator/BTree/queue addresses"
+  ],
+  "pilot": {
+    "path": "evidence/resource-player0135-oracle-20261101T214835.306386Z/comparison.json",
+    "sha256": "7dd7a42c35300021977a867acaabc21562d48b71229f252d4ef33e079ea50a86",
+    "cases": 5,
+    "calls": 11,
+    "differences": 0,
+    "not_added_to_final_counts": true,
+    "source_note": "Pilot predates seven pure model refusal checks; old receipt and source snapshots preserved"
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-resource-player0135-independent-review.json",
+    "report_sha256": "3c7b37f3ccb55a4e2fd60025d157e189ba85270d1762d8b1fca235570d021fc1",
+    "receipt": "evidence/resource-player135-independent-review-owned-20261101T215955.300921Z/review/review.json",
+    "receipt_sha256": "8d3159228fe880c3f9153b08a3e36adb8226bd7c5c82ca309b5e8f0429b5de10",
+    "production_model_executed": false,
+    "new_original_executions": 0,
+    "checker_executed": false
+  },
+  "full880_frames": 0,
+  "complete_games": 0,
+  "native_executions": 0,
+  "pending": [
+    "1076 actual owned/basic/racial scheduling",
+    "Other live/periodic/shield/proc/aura source families",
+    "Full1453 healaccount logging",
+    "CompleteGame/mainloop/native",
+    "Nonzero derived1620 extra regeneration at3s requires additional controlled source tests; current boundary fixtures have1620=0.",
+    "NaN1512 versus1202 activity difference is static/initialfixture evidence here, not a new dynamic call-domain acceptance."
+  ],
+  "registry_registration": "Registered scoped0/8resource component; headless integration remains pending.",
+  "own_source_sha256": {
+    "scripts/check_resource_player135.py": "4ceec93cb44ee1e5f7c7716777bebbffe750bceb9a58953c6052275c550d8a3e",
+    "scripts/build_resource_player135_oracle.py": "c626ee7cbcd6774dedd9e24a2b8e20141c602c080dec38520718a58bbef30151",
+    "scripts/run_resource_player135_oracle.mjs": "1bc7a718c5a7efb23d1b0b56b15e80e19db3e6c7d1c31be18df606fabc4fa454",
+    "reconstruction/core_spec/resource_player_update135.py": "6b5fc34afc4049347320767ff55339d6aa6f12d66fd866e5709b12441c868ea5"
+  },
+  "all_source_sha256": {
+    "scripts/check_resource_player135.py": "4ceec93cb44ee1e5f7c7716777bebbffe750bceb9a58953c6052275c550d8a3e",
+    "scripts/build_resource_player135_oracle.py": "c626ee7cbcd6774dedd9e24a2b8e20141c602c080dec38520718a58bbef30151",
+    "scripts/run_resource_player135_oracle.mjs": "1bc7a718c5a7efb23d1b0b56b15e80e19db3e6c7d1c31be18df606fabc4fa454",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/resource_player_update135.py": "6b5fc34afc4049347320767ff55339d6aa6f12d66fd866e5709b12441c868ea5",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  }
+}

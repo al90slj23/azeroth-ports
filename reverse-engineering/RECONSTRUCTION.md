@@ -38,6 +38,8 @@
 
 同版[raw资产独立入口](reports/2026-11-01-opening-combat0135.md)另以451文件／67,281,330B、9tiles直接生产world/opening并推进120帧／1select；87源前后相同，无production closure逃逸，原memory／预解析world／WASM读取均false。三个world产物SHA与已验证query产物一致，最终level2／XP6／gold7。此收据为独立入口层，不增加原件差分case或完整880计数。
 
+[符文消费130组／244调用](reports/2026-11-02-resource-consumer0135.md)、[混合拾取60组／61调用](reports/2026-11-02-mixed-pickup0135.md)及[逐帧到期38组／56完整2088](reports/2026-11-02-resource-player0135.md)分别独审通过；恢复资源效果、同一RNG下逆序奖励、完整live32／Aura48和速度归还。三批计数各自独立，未接自然资源拾取；选卡1020保护共存、完整物理live producer和单次回血调度是当前接线前置项。
+
 ## 固定0.135.1动态研究的迁移与验收
 
 | 范围 | 当前证据 | 下一步 |
