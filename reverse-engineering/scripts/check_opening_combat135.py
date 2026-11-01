@@ -8,7 +8,7 @@ explicit external scheduler. This is not a full880 or fresh App/VM bootstrap.
 from pathlib import Path
 from dataclasses import asdict
 from functools import lru_cache
-import argparse,hashlib,json,os,re,signal,struct,subprocess,sys,time
+import argparse,gzip,hashlib,json,os,re,signal,struct,subprocess,sys,time
 
 sys.dont_write_bytecode=True
 from build_full135_oracle import ROOT,SOURCE,SOURCE_SHA
@@ -68,6 +68,10 @@ def wanted(state):
         outgoing_total_hex=struct.pack('>d',state.outgoing_total).hex(),incoming_total_hex=struct.pack('>d',state.incoming.incoming_total_992).hex(),
         last_hit_bits=state.incoming.last_hit_1648_bits,absorbed740_bits=state.incoming.absorbed_740_bits,maximum_shield744_bits=state.incoming.maximum_shield_744_bits,
         candidates=[asdict(c)for c in level.candidates],selection_kind2585=level.selection_kind2585,generation_counter2400=level.generation_counter2400,
+        field1092=state.special_field1092,mode2582=state.special_mode2582,
+        guardian_cooldowns=[dict(unit_index=x.unit_index,guid=str(x.guid),capacity=x.capacity,timers_bits=list(x.timers_bits),
+            ability_pointer=x.ability_pointer,header_pointer=x.header_pointer,ability_records44_hex=list(x.ability_records44_hex),
+            header28_hex=x.header28_hex)for x in state.guardian_cooldowns],
         special=dict(selected392=tail.special_selected392,target396=tail.special_target396,navigation2564=tail.special_navigation2564,
             announced2565=tail.special_announced2565,announcement_time2392_bits=tail.special_clock2392_bits),
         effect=dict(clock2364_bits=state.effect_clock2364_bits,effect_counter2356=state.effect_counter2356,
@@ -117,57 +121,76 @@ def compare(want,actual,path,errors,counts):
             if len(errors)<80:errors.append(dict(field=path,expected=want,actual=actual))
 
 
-def corpus(world,seed,frames,dt):
+def corpus(world,seed,frames,dt,expected_path):
     value=EmptyOpeningInput135(1,1,0,seed,42)
     handoff=initialize_absent_companion_handoff(value,world,companion_profile=EmptyCompanionProfile135(()),
         title_utf8=b'Elwynn Forest',subtitle_utf8=b'')
     state=from_opening_handoff(handoff,navigation_enabled=False,special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES))
-    opening=wanted(state);actions=[];expected=[];boundary='frame_budget'
-    for _ in range(frames):
-        try:new,stages,status=step_frame(state,dt)
-        except (NotImplementedError,UnknownRecordRead135)as error:
-            boundary=type(error).__name__+': '+str(error);break
-        if status!='ordered_frame_projection':boundary=status;break
-        action_index=len(actions);actions.append(dict(kind='controlled_tail_frame',dt_bits=dt));state=new
-        expected.extend(dict(action_index=action_index,kind=kind,expected=wanted(snapshot))for kind,snapshot in stages)
-        while state.collection.level.phase2587==2:
-            cards=state.collection.level.candidates;index=next((i for i,c in enumerate(cards)if c.variant=='upgrade'),0)
-            selected,status=select(state,index)
-            if status not in('running','choice_regenerated'):
-                boundary='selection_status: '+status;break
-            state=selected
-            action_index=len(actions);actions.append(dict(kind='select',index=index))
-            expected.append(dict(action_index=action_index,kind='select',expected=wanted(state)))
+    actions=[];boundary='frame_budget';stage_count=0;expected_bytes=0
+    with gzip.open(expected_path,'wb',compresslevel=1)as stream:
+        def emit(value):
+            nonlocal expected_bytes
+            raw=(json.dumps(value,separators=(',',':'))+'\n').encode()
+            expected_bytes+=len(raw)
+            if len(raw)>2*1024*1024 or expected_bytes>1024*1024*1024:
+                raise ValueError('Bounded independent expectation stream exceeded')
+            stream.write(raw)
+        emit(dict(record_kind='opening',expected=wanted(state)))
+        for _ in range(frames):
+            try:new,stages,status=step_frame(state,dt)
+            except (NotImplementedError,UnknownRecordRead135)as error:
+                boundary=type(error).__name__+': '+str(error);break
+            if status!='ordered_frame_projection':boundary=status;break
+            if len(actions)>=600:raise ValueError('Controlled action budget exceeded')
+            action_index=len(actions);actions.append(dict(kind='controlled_tail_frame',dt_bits=dt));state=new
+            for kind,snapshot in stages:
+                emit(dict(record_kind='stage',stage_index=stage_count,action_index=action_index,kind=kind,expected=wanted(snapshot)))
+                stage_count+=1
+            choices=0
+            while state.collection.level.phase2587==2:
+                if choices>=64 or len(actions)>=600:raise ValueError('Controlled selection/action budget exceeded')
+                cards=state.collection.level.candidates;index=next((i for i,c in enumerate(cards)if c.variant=='upgrade'),0)
+                selected,status=select(state,index)
+                if status not in('running','choice_regenerated'):
+                    boundary='selection_status: '+status;break
+                state=selected;choices+=1
+                action_index=len(actions);actions.append(dict(kind='select',index=index))
+                emit(dict(record_kind='stage',stage_index=stage_count,action_index=action_index,kind='select',expected=wanted(state)))
+                stage_count+=1
+            if boundary!='frame_budget':break
     raw=asdict(value);raw['app_lcg_seed_u64']=str(value.app_lcg_seed_u64);raw['object_id_u64']=str(value.object_id_u64);raw['companion_tags']=[255,255]
-    return json.loads(json.dumps(dict(id=0,input=raw,actions=actions,opening=opening,stages=expected,boundary=boundary,
-        independent_frames=state.frames,independent_selections=state.selections,final_level=state.collection.level.progression.level)))
+    return json.loads(json.dumps(dict(id=0,input=raw,actions=actions,stage_count=stage_count,boundary=boundary,
+        independent_frames=state.frames,independent_selections=state.selections,final_level=state.collection.level.progression.level,
+        expected_uncompressed_bytes=expected_bytes)))
 
 
 def main():
     from collections import Counter
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--phase',choices=('pilot','full'),default='pilot')
     parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int);args=parser.parse_args()
-    frames=args.frames or(1 if args.phase=='pilot'else 120)
-    if not 1<=frames<=190:raise ValueError('Bounded controlled frame corpus required')
+    frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
+    if not 1<=frames<=500:raise ValueError('Bounded controlled frame corpus required')
     files=tuple(dict.fromkeys(('scripts/check_opening_combat135.py','scripts/production_closure135.py',
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
         'scripts/build_world_snapshot135_oracle.py','scripts/build_full135_oracle.py','scripts/build_upgrade134_oracle.py',
         'scripts/trace_coop.py','scripts/wasm_index.py')+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
     before={p:sha(ROOT/p)for p in files};world,world_receipt,world_inputs=load_independent_world(DEFAULT_WORLD)
     world_inputs.update({str(path):sha(path)for path in(DEFAULT_WORLD/'receipt.json',DEFAULT_WORLD/'inputs.json')})
-    row=corpus(world,args.seed,frames,f.from_float(.025 if args.phase=='pilot'else.1))
     out,manifest=build_opening_combat135();source=out/'source-snapshot'
     for p,h in before.items():
         target=source/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((ROOT/p).read_bytes());assert sha(target)==h
+    expectations=out/'stage-expectations.jsonl.gz'
+    row=corpus(world,args.seed,frames,f.from_float(.025 if args.phase=='pilot'else.1),expectations)
     fixtures=out/'fixtures.json';fixtures.write_text(json.dumps(row,separators=(',',':'))+'\n')
     inputs=out/'inputs.json';inputs.write_text(json.dumps([{k:row[k]for k in('id','input','actions')}],separators=(',',':'))+'\n')
     config=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,app_pointer=14549000,world_pointer=26204808,
         input_path=str(inputs),input_sha256=sha(inputs),clock_scheduler='explicit_external_f32_add_G2352_not_original880',
         locale=dict(kind='preserve_initialized_snapshot',expected_language_index=0))
     cfg=out/'config.json';cfg.write_text(json.dumps(config,indent=2)+'\n')
-    frozen={p.name:sha(p)for p in(fixtures,inputs,cfg,out/'manifest.json',out/manifest['module_file'])}
+    frozen_paths=(fixtures,expectations,inputs,cfg,out/'manifest.json',out/manifest['module_file'])
+    frozen={p.name:sha(p)for p in frozen_paths}
     assert sha(SOURCE)==SOURCE_SHA and sha(NODE)==NODE_SHA
-    results=out/'results.jsonl';stderr=out/'stderr.log';command=[str(NODE),'--max-old-space-size=512','--wasm-max-mem-pages=4096',str(ROOT/'scripts/run_opening_combat135_oracle.mjs'),str(out),str(cfg)]
+    results=out/'results.jsonl.gz';stderr=out/'stderr.log';command=[str(NODE),'--max-old-space-size=512','--wasm-max-mem-pages=4096',str(ROOT/'scripts/run_opening_combat135_oracle.mjs'),str(out),str(cfg)]
     began=time.monotonic()
     deadline_exceeded=False
     with results.open('wb')as stdout,stderr.open('wb')as err:
@@ -187,47 +210,58 @@ def main():
         except ProcessLookupError:return True
         return False
     terminal=dict(pid_missing=missing(),pgid_missing=missing(True));errors=[];counts=Counter();observed_stages=0
+    raw_digest=hashlib.sha256();raw_bytes=0;max_line=0
     if child.returncode==0:
         record_counts=Counter()
-        with results.open()as stream:
-            for line in stream:
+        assert results.stat().st_size<=256*1024*1024
+        with gzip.open(results,'rb')as stream,gzip.open(expectations,'rt')as expected_stream:
+            while line:=stream.readline(2*1024*1024+1):
+                if len(line)>2*1024*1024 or not line.endswith(b'\n'):raise ValueError('Original record budget/truncation')
+                raw_bytes+=len(line);max_line=max(max_line,len(line));raw_digest.update(line)
+                if raw_bytes>1024*1024*1024:raise ValueError('Original uncompressed stream budget exceeded')
                 raw=json.loads(line);kind=raw['record_kind'];record_counts[kind]+=1
                 assert raw['id']==0
-                if kind=='opening':compare(row['opening'],original_view(raw,row['opening']),'opening',errors,counts)
-                elif kind=='stage':
-                    i=observed_stages;assert raw['stage_index']==i and i<len(row['stages'])
-                    wanted_stage=row['stages'][i]
-                    for key in('action_index','kind'):compare(wanted_stage[key],raw[key],f'stage[{i}].{key}',errors,counts)
-                    compare(wanted_stage['expected'],original_view(raw,wanted_stage['expected']),f'stage[{i}]',errors,counts)
-                    observed_stages+=1
+                if kind in('opening','stage'):
+                    wanted_stage=json.loads(next(expected_stream));assert wanted_stage['record_kind']==kind
+                    if kind=='stage':
+                        i=observed_stages;assert raw['stage_index']==i==wanted_stage['stage_index'] and i<row['stage_count']
+                        for key in('action_index','kind'):compare(wanted_stage[key],raw[key],f'stage[{i}].{key}',errors,counts)
+                        observed_stages+=1
+                    path='opening'if kind=='opening'else f'stage[{observed_stages-1}]'
+                    compare(wanted_stage['expected'],original_view(raw,wanted_stage['expected']),path,errors,counts)
                 elif kind=='case_end':
                     assert raw['boundary']is None and raw['host_calls']==[]
-                    assert raw['stage_count']==len(row['stages'])
+                    assert raw['stage_count']==row['stage_count']
+            assert next(expected_stream,None)is None
         assert all(record_counts[k]==1 for k in('case_start','constructor','opening','case_end'))
         assert record_counts['clock_control']==row['independent_frames']
-        assert observed_stages==len(row['stages'])
+        assert observed_stages==row['stage_count']
     else:errors.append(dict(field='original_exit',exit_code=child.returncode));counts['differences']+=1
     (out/'differences.json').write_text(json.dumps(errors,indent=2)+'\n')
-    after={p:sha(ROOT/p)for p in files};assert before==after and frozen=={p.name:sha(p)for p in(fixtures,inputs,cfg,out/'manifest.json',out/manifest['module_file'])}
+    after={p:sha(ROOT/p)for p in files};assert before==after and frozen=={p.name:sha(p)for p in frozen_paths}
     assert all(sha(Path(p))==h for p,h in world_inputs.items())
     assert sha(SOURCE)==SOURCE_SHA and sha(NODE)==NODE_SHA and sha(SNAPSHOT)==SNAPSHOT_SHA
     runtime_path=out/'opening-combat135-runtime.json';runtime=json.loads(runtime_path.read_text())if runtime_path.exists()else None
     if child.returncode==0:
         assert runtime is not None,'Missing original runtime receipt'
         assert runtime['boundaries']==0 and runtime['cases']==1
-        assert runtime['completed_stages']==len(row['stages'])
+        assert runtime['completed_stages']==row['stage_count']
         assert runtime['completed_controlled_tail_frames']==row['independent_frames']
         assert runtime['original_wasm_sha256']==SOURCE_SHA
         assert runtime['input_sha256']==sha(inputs)
         assert runtime['module_sha256']==manifest['module_sha256']
         assert runtime['denied_imports']==878 and runtime['host_imports_throw']is True
+        assert runtime['schema_version']==4 and runtime['output_protocol']=='bounded_stage_jsonl_gzip'
+        assert runtime['compressed_output_bytes']==results.stat().st_size and runtime['output_sha256']==sha(results)
+        assert runtime['uncompressed_output_bytes']==raw_bytes and runtime['uncompressed_sha256']==raw_digest.hexdigest()
     report=dict(version='0.135.1',actual_build='90898d5e3',historical_build_alias='0898d5e3',kind='independent_opening_plus_controlled14_tail_declared_projection_differential',
         original_sha256=SOURCE_SHA,cases=1,independent_frames=row['independent_frames'],independent_selections=row['independent_selections'],
         requested_frames=frames,completed_requested_budget=row['independent_frames']==frames and row['boundary']=='frame_budget',
         status=('matched_requested_budget'if row['independent_frames']==frames and row['boundary']=='frame_budget'else'matched_prefix_with_pending')if counts['differences']==0 else'failed_preserved',
         compared_stages=observed_stages,final_level=row['final_level'],boundary=row['boundary'],differences=counts['differences'],comparison=dict(counts),
         source_files=len(files),source_sha256_before=before,source_sha256_after=after,
-        inputs_sha256=sha(inputs),expectations_sha256=sha(fixtures),original_results_sha256=sha(results),runtime=runtime,
+        inputs_sha256=sha(inputs),expectations_sha256=sha(expectations),fixtures_sha256=sha(fixtures),original_results_sha256=sha(results),runtime=runtime,
+        original_uncompressed_bytes=raw_bytes,maximum_original_record_bytes=max_line,expected_uncompressed_bytes=row['expected_uncompressed_bytes'],
         process=dict(command=command,pid=child.pid,pgid=child.pid,exit_code=child.returncode,seconds=time.monotonic()-began,deadline_seconds=60,**terminal),
         model_expected_before_original=True,original_input_contains_no_expectations=True,
         world_input=dict(kind='independently_produced_preparsed_world_query_artifacts',receipt=str(DEFAULT_WORLD/'receipt.json'),receipt_sha256=sha(DEFAULT_WORLD/'receipt.json'),artifacts=world_inputs),
@@ -241,7 +275,7 @@ def main():
             'Original initialized locale is preserved, not reconstructed; model receives explicit static English names.'])
     (out/'comparison.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'directory':str(out),'differences':counts['differences'],'frames':row['independent_frames'],'selections':row['independent_selections'],
-        'compared_stages':len(row['stages']),'boundary':row['boundary'],'source_files':len(files),'exit_code':child.returncode,'terminal':terminal}))
+        'compared_stages':row['stage_count'],'boundary':row['boundary'],'source_files':len(files),'exit_code':child.returncode,'terminal':terminal}))
     if counts['differences']or not all(terminal.values()):raise SystemExit(1)
 
 

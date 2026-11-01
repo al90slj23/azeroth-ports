@@ -107,6 +107,14 @@ class HeadlessState135:
     boundary_count: int = 0
     special_locale: object|None = None
     produced_packets: tuple = ()
+    guardian_cooldowns: tuple = ()
+    #Empty-profile1560 writes the packed1092 counter to0;404 is unwritten.
+    #The current gameplay domain has no producer that changes1092. Its raw
+    #value is compared at every stage rather than inferred from player level.
+    special_field1092: int = 0
+    special_endless_start404_bits: int|None = None
+    special_mode2582: int = 0
+    special_members2540: int|None = None
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
@@ -394,7 +402,17 @@ def _ai_phase(state, dt):
         barrier_1536_bits=stats.pool1536_bits, shield_source_1344=stats.conditional1344_id,
         shield_source_remaining_1348_bits=stats.conditional1348_bits, reserve_768_bits=stats.pool768_bits,
         buffs=buffs, modifiers=())
-    indices = [j for j, raw in enumerate(state.records) if u32(raw,0,'Headless AI live marker') == 0]
+    owners={owner.guid:owner for owner in state.guardian_cooldowns}
+    if len(owners)!=len(state.guardian_cooldowns):raise PendingHeadless135('Duplicate guardian timer owners')
+    guardian_indices=[];indices=[];seen=set()
+    for j,raw in enumerate(state.records):
+        guid=u64(raw,112,'Headless AI owner GUID')
+        if guid in owners:
+            guardian_indices.append(j);seen.add(guid)
+        elif u32(raw,64,'Headless AI timer family')!=f.MASK:
+            raise PendingHeadless135('Nonordinary AI family lacks an independent timer owner')
+        elif u32(raw,0,'Headless AI live marker')==0:indices.append(j)
+    if seen!=set(owners):raise PendingHeadless135('Guardian timer owner missing its physical unit')
     ai_input=AiFrame135(tuple(state.records[j]for j in indices),stats.now_bits,dt,
         state.collection.player_xyz,incoming,incoming_item_effects=(),other_incoming_sources_absent=True)
     if state.world is None:result=update_ordinary_units(ai_input)
@@ -407,8 +425,24 @@ def _ai_phase(state, dt):
         result=update_world_ordinary_units135(ai_input,state.world,distance_map=state.distance_map)
     records = list(state.records)
     for j, raw in zip(indices, result.records): records[j] = raw
+    guardian_owners=[];guardian_movements=[]
+    if guardian_indices:
+        from .guardian_ai135 import GuardianContext135,step_guardian_unit135,guardian_cleanup_admitted135
+        context=GuardianContext135(stats.now_bits,dt,state.collection.player_xyz,
+            state.tail.special40_storage,state.tail.special40_count,state.world,
+            mode=state.special_mode2582,local_peer=state.collection.currency.local_peer,
+            phase2587=level.phase2587,other_sources_absent=True)
+        for j in guardian_indices:
+            guid=u64(records[j],112,'Headless guardian owner GUID')
+            planned=step_guardian_unit135(records[j],owners[guid],context,unit_index=j)
+            if planned.attacks or planned.planned_actions or planned.pending:
+                raise PendingHeadless135('Guardian actions require canonical ordered910/incoming drain')
+            if not guardian_cleanup_admitted135(planned.record,planned.cooldowns,context):
+                raise PendingHeadless135('Guardian lifecycle requires an explicit resource consumer')
+            records[j]=planned.record;guardian_owners.append(planned.cooldowns)
+            guardian_movements.extend(planned.movements)
     storage = _store_prefix(state.unit_storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth)
-    cleanup = cleanup_ordinary_corpses(tuple(records), stats.now_bits, mode=stats.flag2574,
+    cleanup = cleanup_ordinary_corpses(tuple(raw for j,raw in enumerate(records)if j not in guardian_indices), stats.now_bits, mode=stats.flag2574,
         local_peer=state.collection.currency.local_peer, explicit_other_sources_absent=True)
     #39635 removes every matching GUID with memory.copy on each removal.
     #Retain the resulting inactive tail, including repeated shifted records.
@@ -421,7 +455,10 @@ def _ai_phase(state, dt):
                 count-=1
             else:index+=1
     storage=tuple(backing)
-    records = list(cleanup.records)
+    removed=set(cleanup.removed_guids)
+    records=[row for row in records if u64(row,112,'Headless post-cleanup GUID')not in removed]
+    relocated={u64(row,112,'Headless guardian relocation GUID'):j for j,row in enumerate(records)}
+    guardian_owners=tuple(replace(owner,unit_index=relocated[owner.guid])for owner in guardian_owners)
     current = result.incoming
     stats = replace(stats, current_hp_bits=current.hp_1528_bits, pool1532_bits=current.shield_1532_bits,
         pool1536_bits=current.barrier_1536_bits, conditional1344_id=current.shield_source_1344,
@@ -444,9 +481,10 @@ def _ai_phase(state, dt):
     if remaining: raise PendingHeadless135('Incoming produced an unresolved new live source')
     level = replace(level, sources=replace(level.sources, live_effects=tuple(semantic)))
     death = replace(state.collection.death,
-        message_sequence=(state.collection.death.message_sequence + len(result.movements)) & f.MASK)
+        message_sequence=(state.collection.death.message_sequence + len(result.movements)+len(guardian_movements)) & f.MASK)
     return replace(state, records=tuple(records), incoming=current,
         unit_storage=_store_prefix(storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth),
+        guardian_cooldowns=guardian_owners,
         live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)),
         collection=replace(state.collection, level=level, death=death))
 
@@ -521,6 +559,27 @@ def _tail_phase(state, kind, dt):
                 tail.special_announced2565,tail.special_selected392,tail.special_target396,tail.special_clock2392_bits)
             try:result=tick_special2376_135(special)
             except UnknownSpecial2376_135 as error:
+                if str(error).startswith('Due inactive special'):
+                    from .special2376_spawn135 import SpecialSpawnInput135,tick_special_spawn135
+                    from .opening_npc_pickups135 import OpeningVector135
+                    spawned=tick_special_spawn135(SpecialSpawnInput135(special,
+                        OpeningVector135(424,state.unit_storage,len(state.records)),level.rng_words,
+                        state.collection.death.spawn_counter,state.collection.player_xyz,state.source_id,
+                        level.progression.level,dict(state.initial_scalars)[2516],level.heal_gate387,
+                        state.special_mode2582,state.special_members2540,
+                        state.special_field1092,tail.field400,tail.flag2568,
+                        state.special_endless_start404_bits,zone=state.zone),locale=state.special_locale)
+                    updated=spawned.units
+                    state=replace(state,records=tuple(encode_row(row)for row in updated.storage[:updated.count]),
+                        unit_storage=tuple(encode_row(row)for row in updated.storage),
+                        guardian_cooldowns=state.guardian_cooldowns+spawned.cooldowns,
+                        collection=replace(state.collection,level=replace(level,rng_words=spawned.rng_words),
+                            death=replace(state.collection.death,spawn_counter=spawned.counter)),
+                        produced_packets=state.produced_packets+spawned.packets)
+                    s=spawned.special
+                    tail=replace(tail,special40_storage=s.storage,special_selected392=s.selected392,special_target396=s.target396,
+                        special_navigation2564=s.navigation2564,special_announced2565=s.announced2565,special_clock2392_bits=s.announcement_time2392_bits)
+                    return replace(state,tail=tail)
                 if not str(error).startswith('Selected-target localized548'):raise
                 if state.special_locale is None:raise PendingHeadless135('Explicit initialized special locale names required')
                 result=tick_special2376_notify135(special,state.zone,state.special_locale)
@@ -673,6 +732,9 @@ def projection(state):
             'distance_map':None if path is None else dict(start_index=path.start_index,reachable=path.field24,
                 values_sha256=hashlib.sha256(b''.join(struct.pack('<H',v)for v in path.values_u16)).hexdigest()),
             'distance_map_updated_at_bits':state.distance_map_updated_at_bits,
+            'guardian_cooldowns':[dict(unit_index=x.unit_index,guid=str(x.guid),capacity=x.capacity,
+                timers_bits=list(x.timers_bits),ability_pointer=x.ability_pointer,header_pointer=x.header_pointer,
+                ability_records44_hex=list(x.ability_records44_hex),header28_hex=x.header28_hex)for x in state.guardian_cooldowns],
             'produced_packets':[list(x)for x in state.produced_packets],
             'new_mainloop_is_full880':False}
     return result

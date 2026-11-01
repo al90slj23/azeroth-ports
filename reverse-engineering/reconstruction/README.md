@@ -1,6 +1,12 @@
 # 独立核心的可执行规格
 
-本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标的latest现为0.137.0 / `d171b8f9f`，仅身份/采集；0.136.0 / `fe24fb74c`只有静态profile/迁移候选，两版动态验收0**。本目录进行中的动态实验继续锁定**0.135.1 / `90898d5e3`**；旧`0898d5e3`是历史截短alias，不改旧收据或原件。0.134.0 / 983346a7与更旧模型按其固定版本保留，各自范围见[版本支持清单](version-support.json)和[最新版本状态](../reports/2026-11-01-latest-version-state.md)，不能自动转计新版本通过。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标latest0.137.0 / `d171b8f9f`已有完整静态profile和非致死伤害80组/125调用0差异；0.136.0 / `fe24fb74c`只有静态profile/迁移候选、动态验收0**。本目录开局/同状态主循环组合实验继续锁定**0.135.1 / `90898d5e3`**；旧`0898d5e3`是历史截短alias，不改旧收据或原件。0.134.0 / 983346a7与更旧模型按其固定版本保留，各自范围见[版本支持清单](version-support.json)和[先前身份采集状态](../reports/2026-11-01-latest-version-state.md)，不能自动转计新版本通过。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+
+收尾metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](../evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
+
+固定135的[250帧守卫出生组合](../reports/2026-11-02-opening-guardian-combat0135.md)完成250受控帧／3select／3503stage／3505原件调用、0差异，94源/84 production；跨20秒4守卫出生并继续50帧，U68地址保持None、timer所有者按GUID严格核payload。该限定投影已通过[最终只读独审](../reports/2026-11-02-opening-combat0135-250frame-independent-review.md)（receipt SHA `556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7`），仍是预解析world、原件snapshot及外部clock域；旧120收据保持原身份，不相加。
+
+另有[raw451资产→world→opening→250帧](../evidence/asset-combat250-owned-20261101T163850.979737Z/model250/receipt.json)的纯modelselfcheck：67,281,330B、91源前后不变，不读原memory/预解析world/WASM，250帧／3select至level4／XP3。复用同一world的[后继纯模型](../evidence/asset-combat250-owned-20261101T163850.979737Z/continuation/receipt.json)继续至379帧／4select，第380帧因实际选到battle_shout停止；没有重抽卡。379是模型边界，原件差分验收仍只到250，完整880/native/一局仍为0。
 
 固定135的新[opening/combat/升级选卡组合](../reports/2026-11-01-opening-combat0135.md)在独立预解析world／原件snapshot／外部clock的明确域内完成120帧、1select、1681stage、1683入口0差异（90源/80 production）；level2实际index0 thunder_clap后续33帧。另一个raw451资产入口（67,281,330B、9tiles、87源不变）未读原memory/预解析world/WASM，独立完成同样120帧／1select至level2／XP6／gold7，三个world SHA与既有query一致。两层证据不增加彼此的原件case，不是完整880/native/一局；下列旧checkpoint计数仍按原收据保留。 该限定投影已通过[只读独审](../reports/2026-11-02-opening-combat0135-independent-review.md)，receipt SHA `2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d`；原packet payload语义仍只观察。
 
@@ -23,6 +29,7 @@
 - `core_spec/derived_stats.py`：22派生属性、当前HP、四套tag及32B实时效果；输出对象字段和移动更新决策，未实现真实modifier生成方。
 - `core_spec/ability_state.py`：80B拥有能力、真实升级顺序、新tier0初始化与选卡控制投影；未实现后处理显式pending，未知新tier明确拒绝。
 - `core_spec/combat.py`：命中基数/暴击、伤害加区/上限、HP/统计/死亡主字段；完整死亡XP/loot/RNG和触发仍未闭包。
+- `core_spec/combat137.py`：[固定137非致死数值域](../reports/2026-11-02-combat0137.md)，独立实现真实913，80组/125调用0差异；432B记录、school/U372分支、HP/f64/RNG，空proc源显式。不是完整137战斗、死亡或Windows运行，[限定数值域独审通过](../reports/2026-11-02-combat0137-independent-review.md)。
 - `core_spec/combat134.py`：新版424B单位状态、M加区/新T36B rawtag50/51/阶段系数、HP/有效伤害/死亡主字段的独立投影；保持`amount*(M+T)*P`的逐步f32顺序。不是完整施法、触发或死亡管线。
 - `core_spec/incoming134.py`：新版玩家减伤/盾消费与barrier替换标量规则的前缀；所有未实现回调显式pending。139例非致死空状态的选定最终字段与完整原1063一致，盾耗尽、复活/死亡、完整施法未验收。
 - `core_spec/binary32_sqrt.py`：用精确有理数和平方中点比较得到binary32最近偶数平方根，NaN载荷不保证；没有依赖host libm。

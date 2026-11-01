@@ -3,6 +3,9 @@
 import fs from 'node:fs/promises';
 import {writeSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {createGzip} from 'node:zlib';
+import {Writable} from 'node:stream';
+import {pipeline} from 'node:stream/promises';
 const [directory,configFile]=process.argv.slice(2),hash=x=>createHash('sha256').update(x).digest('hex');
 const SOURCE_SHA='c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2';
 const SNAPSHOT_SHA='23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf';
@@ -27,6 +30,7 @@ function leb(raw,p){let n=0,s=0;while(p<raw.length&&s<=28){const b=raw[p++];n+=(
 function sections(raw){if(raw.subarray(0,8).toString('hex')!=='0061736d01000000')throw Error('WASM');const a=[];let p=8;while(p<raw.length){const start=p,k=raw[p++],[n,begin]=leb(raw,p);p=begin+n;if(p>raw.length)throw Error('Section');a.push({k,start,begin,end:p});}return a;}
 function exportsOf(raw,s){let[n,p]=leb(raw,s.begin);const a=[];for(let i=0;i<n;i++){const[l,b]=leb(raw,p);p=b+l;const name=raw.subarray(b,p).toString('utf8'),kind=raw[p++],[index,e]=leb(raw,p);p=e;a.push({name,kind,index});}if(p!==s.end)throw Error('Exports');return a;}
 if(!process.execArgv.includes('--wasm-max-mem-pages=4096'))throw Error('Explicit256MiB research cap');
+if(!process.execArgv.includes('--max-old-space-size=512'))throw Error('Explicit512MiB JS heap cap');
 const config=JSON.parse(await fs.readFile(configFile,'utf8'));
 exact(config,['snapshot_path','snapshot_sha256','app_pointer','world_pointer','input_path','input_sha256','clock_scheduler','locale'],'Config');
 if(config.snapshot_sha256!==SNAPSHOT_SHA||config.app_pointer!==14549000||config.world_pointer!==26204808)throw Error('Admitted genuine snapshot binding');
@@ -49,10 +53,29 @@ const stackExport=added.at(-1);if(stackExport.kind!==3||stackExport.index!==0||s
 const snapshot=await fs.readFile(config.snapshot_path);if(snapshot.length%65536||snapshot.length>268435456||hash(snapshot)!==SNAPSHOT_SHA)throw Error('Snapshot hash/domain');
 const module=await WebAssembly.compile(changed),imports=WebAssembly.Module.imports(module),cases=JSON.parse(inputRaw);
 if(imports.length!==878||imports.some(v=>v.kind!=='function')||cases.length!==1)throw Error('878/exactly one controlled case');
-let outputBytes=0,callsTotal=0,completedFrames=0,completedStages=0,peakMemory=0,boundaries=0;const caseReceipts=[];
-function emit(value){const text=JSON.stringify(value)+'\n';outputBytes+=Buffer.byteLength(text);if(outputBytes>268435456)throw Error('256MiB output cap');writeSync(1,text);}
+const limits=Object.freeze({cases:1,actions_per_case:600,controlled_frames_per_case:500,
+ record_uncompressed_bytes:2097152,uncompressed_output_bytes:1073741824,compressed_output_bytes:268435456});
+let outputBytes=0,compressedOutputBytes=0,maxRecordBytes=0,outputRecords=0,outputFailure=null;
+let callsTotal=0,completedFrames=0,completedStages=0,peakMemory=0,boundaries=0;const caseReceipts=[];
+const uncompressedHash=createHash('sha256'),compressedHash=createHash('sha256');
+// One gzip member; serial awaited writes preserve the existing JSONL record
+// order and provide backpressure. No capture field is removed or deduplicated.
+const gzip=createGzip({level:6}),sink=new Writable({write(chunk,encoding,done){
+ try{if(compressedOutputBytes+chunk.length>limits.compressed_output_bytes)throw Error('256MiB compressed output cap');
+  let offset=0;while(offset<chunk.length){const n=writeSync(1,chunk,offset,chunk.length-offset);if(n<=0)throw Error('stdout write made no progress');offset+=n;}
+  compressedOutputBytes+=chunk.length;compressedHash.update(chunk);done();
+ }catch(error){done(error);}}});
+const outputDone=pipeline(gzip,sink);outputDone.catch(error=>{outputFailure=error;});
+async function emit(value){if(outputFailure)throw outputFailure;const raw=Buffer.from(JSON.stringify(value)+'\n');
+ if(raw.length>limits.record_uncompressed_bytes)throw Error('2MiB uncompressed JSONL record cap');
+ if(outputBytes+raw.length>limits.uncompressed_output_bytes)throw Error('1GiB uncompressed output cap');
+ await new Promise((resolve,reject)=>gzip.write(raw,error=>error?reject(error):resolve()));
+ outputBytes+=raw.length;outputRecords++;maxRecordBytes=Math.max(maxRecordBytes,raw.length);uncompressedHash.update(raw);
+ if(outputFailure)throw outputFailure;
+}
 for(const c of cases){
- exact(c,['id','input','actions'],'Case');if(c.id!==caseReceipts.length||!Array.isArray(c.actions)||c.actions.length>200)throw Error('Case/action bounds');
+ exact(c,['id','input','actions'],'Case');if(c.id!==caseReceipts.length||!Array.isArray(c.actions)||c.actions.length>limits.actions_per_case)throw Error('Case/action bounds');
+ if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('500 controlled frame cap');
  exact(c.input,['class_byte','race_byte','region_index','app_lcg_seed_u64','object_id_u64','companion_tags'],'Opening input');
  const s=c.input;uint(s.class_byte,8);uint(s.race_byte,8);if(s.region_index!==0||JSON.stringify(s.companion_tags)!=='[255,255]')throw Error('Explicit Elwynn absent slots');
  for(const n of[s.app_lcg_seed_u64,s.object_id_u64])if(typeof n!=='string'||!/^[0-9]+$/.test(n)||BigInt(n)>=1n<<64n)throw Error('Explicit uint64 decimal');
@@ -110,13 +133,39 @@ for(const c of cases){
    return{rc_pointer:pointer,raw_header28_hex,strong_count:u(pointer),weak_count:u(pointer+4),capacity,values_pointer,count,
     start_index:u(pointer+20),field24:u(pointer+24),reachable:u(pointer+24),values_sha256,values_u16le_sha256:values_sha256,
     backing_u16le_sha256,updated2372_bits:r(2372)};};
- const capture=()=>{const vectors=Object.fromEntries(Object.entries(layouts).map(([n,l])=>[n,vector(l)])),packets=queue(1880,16,true),notifications=queue(1892,12,false),keyed=fields();
+ // Fixed135 three-ability guardian declarations, already recovered in1525.
+ // Physical timer ownership stays observational; comparison binds by GUID.
+ const guardianDeclarations=new Map([[5484048,5477460],[5484076,5477592],[5484104,5477724]]);
+ const unitCooldowns=()=>{const pointer=r(1788),count=r(1792),observations=[],guardians=[],timerPointers=new Set();
+  for(let j=0;j<count;j++){const at=pointer+j*424,capacity=u(at+64),guid=d().getBigUint64(at+112,true).toString();
+   const owner={unit_index:j,guid,tag64:capacity,raw_unit_header64_100_hex:hex(at+64,36)};
+   if(capacity===0xffffffff){observations.push({...owner,variant:'none',pointer_dereferenced:false});continue;}
+   const timerPointer=u(at+68),length=u(at+72),abilityPointer=u(at+76),abilityCount=u(at+80),
+    abilitySlicePointer=u(at+84),abilitySliceCount=u(at+88),headerPointer=u(at+96);
+   if(length>capacity||capacity>4096||!timerPointer||timerPointer%4||timerPointers.has(timerPointer))throw Error('Owned unit cooldown Vec bounds/ownership');
+   const backing=span(timerPointer,capacity*4);timerPointers.add(timerPointer);
+   if(timerPointer<pointer+r(1784)*424&&timerPointer+capacity*4>pointer)throw Error('Owned cooldown backing aliases unit Vec');
+   if(abilityCount>4096||abilitySliceCount>4096)throw Error('Static unit ability slice bounds');
+   const timers_bits=Array.from({length},(_,k)=>u(timerPointer+k*4)),ability_records44_hex=Array.from({length:abilityCount},(_,k)=>hex(abilityPointer+k*44,44));
+   const header28_hex=hex(headerPointer,28);
+   observations.push({...owner,variant:'timers',capacity,pointer:timerPointer,count:length,pointer_dereferenced:true,
+    raw_timer_vec12_hex:hex(at+64,12),timers_bits,backing_hex:Buffer.from(backing).toString('hex'),backing_sha256:hash(backing),
+    ability_pointer:abilityPointer,ability_count:abilityCount,ability_records44_hex,
+    ability_slice_pointer:abilitySlicePointer,ability_slice_count:abilitySliceCount,
+    ability_slice_records44_hex:Array.from({length:abilitySliceCount},(_,k)=>hex(abilitySlicePointer+k*44,44)),
+    header_pointer:headerPointer,header28_hex});
+   if(capacity!==3||length!==3||abilityCount!==3||abilitySliceCount!==3||abilitySlicePointer!==abilityPointer||guardianDeclarations.get(headerPointer)!==abilityPointer)
+    throw Error('Unrecovered active unit cooldown family; no payload mask admission');
+   guardians.push({unit_index:j,guid,capacity,timers_bits,ability_pointer:abilityPointer,header_pointer:headerPointer,ability_records44_hex,header28_hex});
+  }
+  return{observations,guardians};};
+ const capture=()=>{const vectors=Object.fromEntries(Object.entries(layouts).map(([n,l])=>[n,vector(l)])),packets=queue(1880,16,true),notifications=queue(1892,12,false),keyed=fields(),cooldowns=unitCooldowns();
    const pa=packets.active.map(x=>({opcode:x.opcode,payload_hex:x.payload_hex})),na=notifications.active.map(x=>x.payload_hex),newPackets=delta(lastPackets,pa),newNotifications=delta(lastNotifications,na);lastPackets=pa;lastNotifications=na;
    if(r(2348)!==R||u(App+5116)!==R)throw Error('Real world owner changed');
    const map=Buffer.from(span(r(184),r(188),128)).toString('utf8');
-   return{raw_game2592_hex:hex(G,2592),vectors,packets,notifications,new_packets:newPackets,new_notifications:newNotifications,
-    player_keyed_tree:keyed,projection:{phase2587:byte(G+2587),selection_kind2585:byte(G+2585),generation_counter2400:r(2400),
-     candidates:candidates(),now_bits:r(2352),rng_words:[0,1,2,3].map(i=>r(1720+i*4)),
+   return{raw_game2592_hex:hex(G,2592),vectors,unit_cooldowns:cooldowns.observations,packets,notifications,new_packets:newPackets,new_notifications:newNotifications,
+    player_keyed_tree:keyed,projection:{phase2587:byte(G+2587),selection_kind2585:byte(G+2585),generation_counter2400:r(2400),field1092:r(1092),mode2582:byte(G+2582),
+     candidates:candidates(),guardian_cooldowns:cooldowns.guardians,now_bits:r(2352),rng_words:[0,1,2,3].map(i=>r(1720+i*4)),
      spawn_counter:r(2408),message_sequence:r(2412),kill_cost_bits:r(2420),source_id:d().getBigUint64(G+1336,true).toString(),
      map_id_utf8:map,player_xyz:[r(1416),r(1420),r(1424)],velocity_xy:[r(1736),r(1740)],previous_player_xyz:[r(2428),r(2432),r(2436)],
      progression:{level:r(1432),xp:r(1436),pending_upgrades:r(2376)},current_hp_bits:r(1440),
@@ -140,19 +189,19 @@ for(const c of cases){
  const answer={id:c.id,locale_prestate:localeBefore,app_before_declared_hex:appBefore,app_after_declared_hex:declaredApp,
   navigation_context:{app_byte5165:navigationInput,source:'Fixed6730 App5165 -> temporary2916 -> outputGame2564; snapshot context, not menu-default production.'},
   stage_count:0,boundary:null};
- emit({record_kind:'case_start',...answer});
+ await emit({record_kind:'case_start',...answer});
  try{
-  invoke('cached_construct',G,App);const constructor=capture();emit({record_kind:'constructor',id:c.id,...constructor});if(constructor.projection.phase2587!==0||r(2348)!==R||u(R)!==refBefore+1)throw Error('Real constructor ownership/phase');
+  invoke('cached_construct',G,App);const constructor=capture();await emit({record_kind:'constructor',id:c.id,...constructor});if(constructor.projection.phase2587!==0||r(2348)!==R||u(R)!==refBefore+1)throw Error('Real constructor ownership/phase');
   if(byte(G+244)!==255||byte(G+252)!==255)throw Error('Actual absent companion tags were not preserved');
   for(const name of['companions','units','pickups','special','windows','boundaries'])if(constructor.vectors[name].count||constructor.vectors[name].capacity)throw Error('Genuine empty constructor vectors');
-  invoke('begin_run',G);const opening=capture();emit({record_kind:'opening',id:c.id,...opening});if(opening.projection.phase2587!==1||opening.projection.map_id_utf8!=='elwynn')throw Error('Real opening phase/map');
+  invoke('begin_run',G);const opening=capture();await emit({record_kind:'opening',id:c.id,...opening});if(opening.projection.phase2587!==1||opening.projection.map_id_utf8!=='elwynn')throw Error('Real opening phase/map');
   let frame=0;
   for(let actionIndex=0;actionIndex<c.actions.length;actionIndex++){
    const action=c.actions[actionIndex];
    if(action.kind==='select'){
     exact(action,['kind','index'],'Selection action');uint(action.index);const clockBefore=r(2352);
     try{invoke('select_ability',G,action.index);const snapshot=capture();if(r(2352)!==clockBefore)throw Error('1072 unexpectedly advanced clock');
-     emit({record_kind:'stage',id:c.id,stage_index:answer.stage_count++,frame,action_index:actionIndex,kind:'select',role:'select_ability',entry_index:1072,input_index:action.index,...snapshot});completedStages++;}
+     await emit({record_kind:'stage',id:c.id,stage_index:answer.stage_count++,frame,action_index:actionIndex,kind:'select',role:'select_ability',entry_index:1072,input_index:action.index,...snapshot});completedStages++;}
     catch(error){answer.boundary={frame,action_index:actionIndex,kind:'select',role:'select_ability',entry_index:1072,input_index:action.index,error:String(error),stack:stack.value,host_calls:hostCalls};try{answer.boundary.capture=capture();}catch(captureError){answer.boundary.capture_error=String(captureError);}throw error;}
     continue;
    }
@@ -160,9 +209,9 @@ for(const c of cases){
    const scratch=new DataView(new ArrayBuffer(4));scratch.setUint32(0,action.dt_bits,true);const dt=scratch.getFloat32(0,true);
    if(!Number.isFinite(dt)||dt<0||dt>.1000000015||byte(G+2587)!==1)throw Error('Controlled finite/running delta');
    const oldBits=r(2352);d().setFloat32(G+2352,d().getFloat32(G+2352,true)+dt,true);
-   emit({record_kind:'clock_control',id:c.id,frame,action_index:actionIndex,kind:config.clock_scheduler,entry:'host_controlled_tail_scheduler',old_bits:oldBits,dt_bits:action.dt_bits,new_bits:r(2352),original880_called:false,only_external_game_write_offset:2352});
+   await emit({record_kind:'clock_control',id:c.id,frame,action_index:actionIndex,kind:config.clock_scheduler,entry:'host_controlled_tail_scheduler',old_bits:oldBits,dt_bits:action.dt_bits,new_bits:r(2352),original880_called:false,only_external_game_write_offset:2352});
    for(const[kind,role,timed]of stages){
-    try{if(timed)invoke(role,G,dt);else invoke(role,G);const snapshot=capture();emit({record_kind:'stage',id:c.id,stage_index:answer.stage_count++,frame,action_index:actionIndex,kind,role,entry_index:surface[role],...snapshot});completedStages++;}
+    try{if(timed)invoke(role,G,dt);else invoke(role,G);const snapshot=capture();await emit({record_kind:'stage',id:c.id,stage_index:answer.stage_count++,frame,action_index:actionIndex,kind,role,entry_index:surface[role],...snapshot});completedStages++;}
     catch(error){answer.boundary={frame,action_index:actionIndex,kind,role,entry_index:surface[role],error:String(error),stack:stack.value,host_calls:hostCalls};try{answer.boundary.capture=capture();}catch(captureError){answer.boundary.capture_error=String(captureError);}throw error;}
    }
    completedFrames++;frame++;
@@ -171,18 +220,21 @@ for(const c of cases){
  const localeAfter=locale();if(hash(Buffer.from(localeAfter.raw_once25_hex+localeAfter.map_headers32_hex.join(''),'hex'))!==localeGuard)throw Error('Preserved locale headers mutated');
  answer.locale_after=localeAfter;answer.locale_writes=0;answer.calls=calls;answer.host_calls=hostCalls;
  answer.snapshot={path:config.snapshot_path,sha256:SNAPSHOT_SHA,bytes:snapshot.length,initial_memory_bytes:initialMemory,restored:true,externref_table_restored:false,stack_initial:1048576};
- peakMemory=Math.max(peakMemory,memory.buffer.byteLength);caseReceipts.push({id:c.id,completed_stages:answer.stage_count,boundary:answer.boundary?{kind:answer.boundary.kind,error:answer.boundary.error}:null});emit({record_kind:'case_end',...answer});
+ peakMemory=Math.max(peakMemory,memory.buffer.byteLength);caseReceipts.push({id:c.id,completed_stages:answer.stage_count,boundary:answer.boundary?{kind:answer.boundary.kind,error:answer.boundary.error}:null});await emit({record_kind:'case_end',...answer});
 }
-const runtime={kind:'real_opening_then_controlled14_tail_original_observation',schema_version:3,output_protocol:'bounded_stage_jsonl',cases:cases.length,original_entry_calls:callsTotal,
+gzip.end();await outputDone;
+const runtime={kind:'real_opening_then_controlled14_tail_original_observation',schema_version:4,output_protocol:'bounded_stage_jsonl_gzip',cases:cases.length,original_entry_calls:callsTotal,
  completed_controlled_tail_frames:completedFrames,completed_stages:completedStages,boundaries,case_receipts:caseReceipts,
  original_wasm_sha256:SOURCE_SHA,module_sha256:manifest.module_sha256,input_sha256:config.input_sha256,
  memory_page_cap:4096,peak_memory_bytes:peakMemory,denied_imports:878,host_imports_throw:true,
  stage_entries:stages.map(([kind,role])=>({kind,role,index:surface[role]})),
  selection_entry:{role:'select_ability',index:1072,signature:'(G:i32,input_index:i32)->void',advances_clock:false},
- budgets:{cases:1,actions_per_case:200,output_bytes:268435456},
+ budgets:limits,js_heap_cap_mib:512,output_compression:{format:'gzip',members:1,level:6,all_capture_fields_preserved:true},
  actual_opening_phase_used:true,constructor_phase_overwritten:false,preallocated_zero128_storage:false,
  world_rc_forged:false,locale_once_injected:false,locale_source:'Preserved initialized genuine snapshot; prestate index bound to explicit input.',
  controlled_clock_scheduler:config.clock_scheduler,full880_called:false,new_full880_frames:0,
- independent_model_validation_cases:0,network_used:false,user_saves_accessed:false,output_bytes:outputBytes,node:process.version};
+ independent_model_validation_cases:0,network_used:false,user_saves_accessed:false,output_bytes:outputBytes,
+ uncompressed_output_bytes:outputBytes,compressed_output_bytes:compressedOutputBytes,output_records:outputRecords,max_record_uncompressed_bytes:maxRecordBytes,
+ output_sha256:compressedHash.digest('hex'),uncompressed_sha256:uncompressedHash.digest('hex'),node:process.version};
 await fs.writeFile(directory+'/opening-combat135-runtime.json',JSON.stringify(runtime,null,2)+'\n');
 if(boundaries)process.exitCode=2;

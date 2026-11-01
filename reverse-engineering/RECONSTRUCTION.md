@@ -1,6 +1,12 @@
 # 独立重造的工作基线
 
-目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。功能目标持续跟随官方最新稳定版，每轮固定版本与SHA：**latest0.137.0 / `d171b8f9f`仅完成身份与采集；固定0.136.0 / `fe24fb74c`完成静态profile及迁移候选，两版动态验收均为0**。持续动态组合研究保持**固定0.135.1 / `90898d5e3`**及原SHA，旧`0898d5e3`为历史截短alias，旧收据和输入不覆写；0.134.0 / 983346a7与0.126.0 / 3e72472a继续作各自固定历史参照。任何旧通过均不自动转记新版。完整身份及分工见[targets.json](targets.json)、[最新版本状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。工具、原件与分析产物留在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
+目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。功能目标持续跟随官方最新稳定版，每轮固定版本与SHA：**latest0.137.0 / `d171b8f9f`已有完整静态profile与非致死伤害80组/125调用0差异；固定0.136.0 / `fe24fb74c`仅静态profile/迁移候选，动态验收0**。持续动态组合研究保持**固定0.135.1 / `90898d5e3`**及原SHA，旧`0898d5e3`为历史截短alias，旧收据和输入不覆写；0.134.0 / 983346a7与0.126.0 / 3e72472a继续作各自固定历史参照。任何旧通过均不自动转记新版。完整身份及分工见[targets.json](targets.json)、[先前身份采集状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。工具、原件与分析产物留在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
+
+收尾metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
+
+固定135的[250帧守卫出生组合](reports/2026-11-02-opening-guardian-combat0135.md)完成250受控帧／3select／3503stage／3505原件调用、0差异，94源/84 production；跨20秒4守卫出生并继续50帧，U68地址保持None、timer所有者按GUID严格核payload。该限定投影已通过[最终只读独审](reports/2026-11-02-opening-combat0135-250frame-independent-review.md)（receipt SHA `556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7`），仍是预解析world、原件snapshot及外部clock域；旧120收据保持原身份，不相加。
+
+另有[raw451资产→world→opening→250帧](evidence/asset-combat250-owned-20261101T163850.979737Z/model250/receipt.json)的纯modelselfcheck：67,281,330B、91源前后不变，不读原memory/预解析world/WASM，250帧／3select至level4／XP3。复用同一world的[后继纯模型](evidence/asset-combat250-owned-20261101T163850.979737Z/continuation/receipt.json)继续至379帧／4select，第380帧因实际选到battle_shout停止；没有重抽卡。379是模型边界，原件差分验收仍只到250，完整880/native/一局仍为0。
 
 这里的“完成”需要覆盖行为、状态变化和结果，而不是只有函数地址、解码文本或一份大关系图。原作Rust变量名和源文件原文没有恢复；重造不以逐字找回这些标识符为验收条件。
 
@@ -8,7 +14,7 @@
 
 | 版本域 | 当前事实 | 验收边界 |
 |---|---|---|
-| latest0.137.0 | 官方manifest、匹配SHA的Windows EXE与coherent Web WASM已另档；实际9字节build `d171b8f9f` | 尚无全量profile或动态验收；136/135结果不外推。 |
+| latest0.137.0 | [175327函数完整profile/RO索引](reports/2026-11-02-wasm0137-profile.md)；[非致死/no-proc damage913：80组/125完整调用0差异](reports/2026-11-02-combat0137.md)，11源、全432B记录/f64/RNG | [限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)；完整death/proc/137开局/Windows ABI及运行/一局未验收。12个原生NPC声明仅静态互证，135/136结果不外推。 |
 | 固定0.136.0静态迁移 | [175319函数完整profile/RO索引、12入口候选和引用审查](reports/2026-11-01-wasm0136-profile.md)；实际9字节build `fe24fb74c` | 动态case0；候选同形与callee/数据等价分开验证。 |
 | 固定0.135.1动态研究 | 既有与进行中的独立资源、opening、combat、XP/选卡实验保持原始SHA；实际build `90898d5e3` | 下表计数仍属于各自冻结135收据；新组合另记，不倒填历史或转记136/137。 |
 

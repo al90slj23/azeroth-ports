@@ -1,0 +1,300 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T163251.935471Z/comparison.json",
+  "comparison_sha256": "53fbae6e607171f2038dc675f658c343e4e26d336355a0a569a13458e660b675",
+  "reviewer_script_sha256": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+  "schema_version": 4,
+  "source_files": 94,
+  "production_files": 84,
+  "frozen_AST_import_closure_exact": true,
+  "all_frozen_sources_verified": true,
+  "all_current_and_frozen_sources_verified": true,
+  "current_source_drift": [],
+  "historical_frozen_source_mode": false,
+  "production_direct_IO_calls": [],
+  "nonexport_sections_unchanged": true,
+  "strict_stream_order": true,
+  "stream_record_counts": {
+    "case_start": 1,
+    "constructor": 1,
+    "opening": 1,
+    "clock_control": 250,
+    "stage": 3503,
+    "case_end": 1
+  },
+  "original_stream": {
+    "file_bytes": 99283327,
+    "file_sha256": "2e8508389e8042963b613ef7b92a24bf7c7760a28efe73051ecd86848d54d5ea",
+    "uncompressed_bytes": 785896500,
+    "uncompressed_sha256": "199a5e636ad1b778edf22fa8677b49e4fb9bdabdaa32d6b4898a1000a530bf5a",
+    "maximum_record_bytes": 477556,
+    "records": 3757,
+    "gzip": true,
+    "single_member": true
+  },
+  "expected_stream": {
+    "file_bytes": 11123945,
+    "file_sha256": "a3faa17c2a8fe3014a8435f882ecc59e9684314786d28152bbea521ddb43cc88",
+    "uncompressed_bytes": 117402696,
+    "uncompressed_sha256": "8df20065e4a757db5af24a3ad5b9f91e6b0a2425e926db19cfb9433f4aedfa3c",
+    "maximum_record_bytes": 37374,
+    "records": 3504,
+    "gzip": true,
+    "single_member": true
+  },
+  "declared_projection_recompared": true,
+  "comparison_counts": {
+    "projection_leaves": 434000,
+    "unwritten_pickup_arrival_words": 7197,
+    "vector_shape_fields": 70080,
+    "strict_record_bytes": 13656156,
+    "unknown_cells": 13983204,
+    "unknown_cells_nonzero_original": 8873226,
+    "stage_identity_leaves": 7006,
+    "guardian_physical_pointer_unknown_bytes": 11248
+  },
+  "declared_comparison_leaf_total_reconciled": 14167242,
+  "active_unknown_masks_restricted_to_recovered_write_sets": true,
+  "omitted_payload_max_counts": {
+    "effects120": 0,
+    "delayed56": 0,
+    "hits112": 0,
+    "active84": 0,
+    "timed12": 0,
+    "deadline32": 0,
+    "secondary112": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "observed_vector_max_counts": {
+    "companions": 0,
+    "units": 11,
+    "areas": 0,
+    "effects120": 0,
+    "delayed56": 0,
+    "deadline32": 0,
+    "hits112": 0,
+    "secondary112": 0,
+    "pickups": 7,
+    "candidates80": 3,
+    "special": 4,
+    "windows": 2,
+    "boundaries": 69,
+    "owned80": 2,
+    "live32": 2,
+    "timed12": 0,
+    "active84": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "independent_dijkstra_distance_map": {
+    "count": 78400,
+    "start_index": 39340,
+    "field24": 72660,
+    "values_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+  },
+  "selections": [
+    {
+      "action_index": 87,
+      "frame": 87,
+      "clock_bits": 1091253040,
+      "candidates": [
+        {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "thunder_clap",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        },
+        {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "battle_shout",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        },
+        {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "bloodthirst",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        }
+      ],
+      "selected_index": 0,
+      "selected_id": "thunder_clap",
+      "phase_after": 1
+    },
+    {
+      "action_index": 131,
+      "frame": 130,
+      "clock_bits": 1095761934,
+      "candidates": [
+        {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "mortal_strike",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        },
+        {
+          "variant": "new",
+          "tier": 2,
+          "ability_id": "execute",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        },
+        {
+          "variant": "upgrade",
+          "tier": 1,
+          "ability_id": "thunder_clap",
+          "owned_index": 1,
+          "kinds": [
+            0
+          ],
+          "gold": 0
+        }
+      ],
+      "selected_index": 2,
+      "selected_id": "thunder_clap",
+      "phase_after": 1
+    },
+    {
+      "action_index": 216,
+      "frame": 214,
+      "clock_bits": 1101738827,
+      "candidates": [
+        {
+          "variant": "new",
+          "tier": 1,
+          "ability_id": "battle_shout",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        },
+        {
+          "variant": "upgrade",
+          "tier": 0,
+          "ability_id": "cleave",
+          "owned_index": 0,
+          "kinds": [
+            1
+          ],
+          "gold": 0
+        },
+        {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "mortal_strike",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        }
+      ],
+      "selected_index": 1,
+      "selected_id": "cleave",
+      "phase_after": 1
+    }
+  ],
+  "first_selection": {
+    "action_index": 87,
+    "frame": 87,
+    "clock_bits": 1091253040,
+    "candidates": [
+      {
+        "variant": "new",
+        "tier": 0,
+        "ability_id": "thunder_clap",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      {
+        "variant": "new",
+        "tier": 0,
+        "ability_id": "battle_shout",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      {
+        "variant": "new",
+        "tier": 0,
+        "ability_id": "bloodthirst",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      }
+    ],
+    "selected_index": 0,
+    "selected_id": "thunder_clap",
+    "phase_after": 1
+  },
+  "first_guardian": {
+    "frame": 199,
+    "action_index": 201,
+    "kind": "special",
+    "stage_index": 2800,
+    "count": 4,
+    "clock_bits": 1101004821
+  },
+  "distinct_guardian_GUIDs": [
+    "17379390972240068726",
+    "17379390972240068729",
+    "17379390972256845943",
+    "17379390972273623160"
+  ],
+  "guardian_owner_captures": 703,
+  "guardian_payload_comparisons": 2812,
+  "guardian_owner_corruption_checks": [
+    "cross_unit_guid_rejected",
+    "projection_owner_omission_rejected",
+    "timer_payload_backing_mismatch_rejected",
+    "expected_timer_bit_mismatch_rejected",
+    "guardian_nonpointer_written_byte_mask_rejected"
+  ],
+  "guardian_static_declaration_source": "Original WASM initial zero memory plus all active data segments overlaid in module order; no snapshot or model literal fallback.",
+  "final_progression": {
+    "level": 4,
+    "xp": 3,
+    "pending_upgrades": 0
+  },
+  "final_gold": 14,
+  "observed_packet_count_max": 565,
+  "packet_payloads_claimed_compared": false,
+  "all_packet_payloads_preserved_as_observations": true,
+  "terminal": {
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "original_program_executed_by_reviewer": false,
+  "model_producer_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "elapsed_seconds": 34.73271054199722,
+  "limitations": [
+    "One seed/class/race/navigationFalse/stationary250 controlled frames; no broader input or full-game acceptance.",
+    "Preparsed independent world/original snapshot/external clock remain declared inputs.",
+    "Raw nonempty packet payloads remain observations; their unmodeled semantics are not claimed compared.",
+    "Guardian timers/static records strictly match expected owners; only their four physical pointer bytes remain unknown.",
+    "No original, model producer or checker was rerun."
+  ],
+  "static_memory_proofs": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-independent-review-20261101T164522.842290Z/static-memory-proofs.json",
+  "static_memory_proofs_sha256": "7de582e380375be8cab0ea0e2bdbf49b3b87772fb9109b6f474de35195cb81b5",
+  "review_receipt": "evidence/opening-combat0135-independent-review-20261101T164522.842290Z/review.json",
+  "review_receipt_sha256": "556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7",
+  "protocol_guard_receipt": "evidence/opening-combat0135-independent-review-20261101T164522.842290Z/protocol-guard-checks.json",
+  "protocol_guard_receipt_sha256": "9efef85cb914ad0ef92b25e19cbf630c65c9053d4dc27cbec6d94a9cfd0d63ca",
+  "historical_schema3_review_receipt": "evidence/opening-combat0135-independent-review-20261101T164545.326307Z/review.json",
+  "historical_schema3_review_receipt_sha256": "2f386940452b169dc719a034a7f4bee8b2ebc52de01bd9436a2d628cd14813b9",
+  "superseded_intermediate_review": {
+    "receipt": "evidence/opening-combat0135-independent-review-20261101T164121.884802Z/review.json",
+    "sha256": "be1f9c92081005f799f4c039ae3e7c781d4ad0ae82b3bf0cadf923f732d6df46",
+    "reason": "Incorrect single-segment assumption led to a frozen model literal AST fallback. Final review reconstructs the original static image from initial zero memory plus all ordered active segments; fallback removed. Intermediate artifact retained, not final proof."
+  }
+}

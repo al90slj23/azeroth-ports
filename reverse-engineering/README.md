@@ -2,7 +2,13 @@
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 
-最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。功能目标持续跟随官方最新稳定版；每轮检查后固定版本/SHA。**当前latest为0.137.0 / `d171b8f9f`，仅身份/采集，动态验收0**；0.136.0 / `fe24fb74c`保留静态profile与候选映射，动态验收0；持续动态实验仍锁定0.135.1 / `90898d5e3`。旧`0898d5e3`为历史截短alias，收据不覆写，见[最新版本状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。
+固定135的[250帧守卫出生组合](reports/2026-11-02-opening-guardian-combat0135.md)完成250受控帧／3select／3503stage／3505原件调用、0差异，94源/84 production；跨20秒4守卫出生并继续50帧，U68地址保持None、timer所有者按GUID严格核payload。该限定投影已通过[最终只读独审](reports/2026-11-02-opening-combat0135-250frame-independent-review.md)（receipt SHA `556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7`），仍是预解析world、原件snapshot及外部clock域；旧120收据保持原身份，不相加。
+
+另有[raw451资产→world→opening→250帧](evidence/asset-combat250-owned-20261101T163850.979737Z/model250/receipt.json)的纯modelselfcheck：67,281,330B、91源前后不变，不读原memory/预解析world/WASM，250帧／3select至level4／XP3。复用同一world的[后继纯模型](evidence/asset-combat250-owned-20261101T163850.979737Z/continuation/receipt.json)继续至379帧／4select，第380帧因实际选到battle_shout停止；没有重抽卡。379是模型边界，原件差分验收仍只到250，完整880/native/一局仍为0。
+
+最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。功能目标持续跟随官方最新稳定版；每轮检查后固定版本/SHA。**当前latest0.137.0 / `d171b8f9f`已完成[完整静态profile](reports/2026-11-02-wasm0137-profile.md)与[非致死伤害80组/125调用0差异](reports/2026-11-02-combat0137.md)，局部动态[限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)，完整游戏/native运行仍为0**；0.136.0 / `fe24fb74c`保留静态profile与候选映射，动态验收0；开局组合动态实验仍锁定0.135.1 / `90898d5e3`。旧`0898d5e3`为历史截短alias，收据不覆写，见[先前身份采集状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。
+
+收尾metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
 
 固定135的[历史14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异；其6未知技能/2预算边界、显式phase1与初始zero槽保留为旧批范围。后继真实开局/战斗/升级/选卡另出135收据，不能倒填旧批，也不转记136/137通过。旧072329/11309、064308/9695、061901/5473及0.134.0/0.126.0结果各自保留，不相加；详见[覆盖清单](RECONSTRUCTION.md)。
 
@@ -28,7 +34,7 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 
 ### latest与固定研究分工
 
-- latest0.137.0：官方manifest／native／Web采集和实际9字节build身份已核；全量profile、动态规则验收仍为0。
+- latest0.137.0：[175327函数完整profile/RO索引](reports/2026-11-02-wasm0137-profile.md)与[新独立非致死伤害913：80组/125完整调用0差异](reports/2026-11-02-combat0137.md)已完成，11源/0host；[限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)。Unit432字段按137重映射，完整death/proc/Windows ABI及运行/fullgame仍缺，135/136次数不转记。
 - 固定0.136.0：[全量WAT/RO SQLite与12入口候选](reports/2026-11-01-wasm0136-profile.md)已完成；静态同形及地址/table slot迁移不等于运行通过。
 - 固定0.135.1：既有和进行中的独立资源→opening→combat→XP/选卡实验继续锁定原SHA；52-role与各私有builder仍按各自版本准入。
 
@@ -146,7 +152,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 目标 | 状态与下一步 |
 |---|---|
 | 原版 JS 启动层、资源路径、存档／插件桥 | 已跑通 REA 静态分析；动态值须进一步追踪或运行观测。 |
-| latest0.137.0 / 90,941,108B WASM | 官方身份与原件采集已核，实际build `d171b8f9f`；完整profile和动态验收0，旧版结果不转入。 |
+| latest0.137.0 / 90,941,108B WASM | 完整175327函数profile/RO索引及非致死damage913的80组/125完整调用0差异，实际build `d171b8f9f`；[限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)，完整death/proc/native运行/fullgame未验收，旧版结果不转入。 |
 | 固定0.136.0 / 90,927,420B WASM | 完整静态profile与12入口候选、实际build `fe24fb74c`已核；动态验收0。 |
 | 固定动态研究0.135.1 / 90,959,080B WASM | 082927历史14尾8/1614/22607/11/22615等收据各自保留，后继真实开局/战斗/升级/选卡组合另记。451资源查询world、组件与原件观察分别验收；完整物理world/App/880和独立一局未通过。 |
 | 固定0.134.0 / 90,953,762B WASM | 完整验证/解码/独立索引，多个规则投影已做限定域原件差分；完整游戏未实现。REA原版大小限制未修改，本地扩展单列。 |

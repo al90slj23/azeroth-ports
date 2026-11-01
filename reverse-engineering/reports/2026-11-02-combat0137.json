@@ -1,0 +1,139 @@
+{
+  "version": "0.137.0",
+  "build": "d171b8f9f",
+  "status": "nonlethal_numeric_component_passed_scoped_independent_review",
+  "source_identity": {
+    "wasm_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+    "Windows_sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8"
+  },
+  "final_evidence": {
+    "directory": "evidence/combat0137-oracle-20261101T163523.434970Z",
+    "comparison_sha256": "d6a8a3e4ea448f933f8e01b871193e597ca42f52549df1471d4dcb68cdb1c72c",
+    "prepared_sha256": "aa2840f12987e76b125fb45955445253dfb465e78fdbc385e5637ec81036ff7d",
+    "pending_checks_sha256": "efa164e1d47c8eb5a6bec16c3f4ca573962aaf878f9186ef7ba9dc99825d776f"
+  },
+  "verification": {
+    "cases": 80,
+    "full_original913_calls": 125,
+    "mismatch_cases": 0,
+    "source_files": 11,
+    "source_before": {
+      "scripts/check_combat137.py": "dd4034fed393f7844546b4002fc9a1e60884535900c613487437cf7886d9ae27",
+      "scripts/build_combat137_oracle.py": "01f5b739329a1ce0faef0e0dbad38ed9e73b2417218cf7d41af0d95576b236f2",
+      "scripts/run_combat137_oracle.mjs": "5a1503881049e5c11756a537da03bf65ebe5a21f44bc694f36e37a6022aa96ac",
+      "scripts/wasm137_profile.py": "617a8aaf5d5de2f6b8089e2be7f258b3d6613a1719f095860b661668fbd84d02",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/combat137.py": "206e6e7260893018e514eb8fe4f04123a059b4219c88412d3792ce92909b0587",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+    },
+    "source_after": {
+      "scripts/check_combat137.py": "dd4034fed393f7844546b4002fc9a1e60884535900c613487437cf7886d9ae27",
+      "scripts/build_combat137_oracle.py": "01f5b739329a1ce0faef0e0dbad38ed9e73b2417218cf7d41af0d95576b236f2",
+      "scripts/run_combat137_oracle.mjs": "5a1503881049e5c11756a537da03bf65ebe5a21f44bc694f36e37a6022aa96ac",
+      "scripts/wasm137_profile.py": "617a8aaf5d5de2f6b8089e2be7f258b3d6613a1719f095860b661668fbd84d02",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/combat137.py": "206e6e7260893018e514eb8fe4f04123a059b4219c88412d3792ce92909b0587",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+    },
+    "full432B_record_comparison": true,
+    "f64_G984_and_RNG": true,
+    "host_calls": 0,
+    "peak_memory_bytes": 20578304,
+    "process": {
+      "pid": 76087,
+      "pgid": 76087,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 2.346972500003176,
+      "launcher_error": null
+    },
+    "stack_all_restored": true
+  },
+  "migration": {
+    "old135_entry": 914,
+    "old136_entry": 914,
+    "real137_entry": 913,
+    "wrong137_index914_signature": "i32,i32,i32,i32,i32,i32→void",
+    "Unit_stride": 432,
+    "old_stride": 424,
+    "mapping_receipt": "evidence/combat0137-static-map-20261101T163558.137571Z/mapping.json",
+    "mapping_sha256": "4a5e955f245e7c28335cf5ddd3cf157bd83f306afd88fc833b6b594eefe0210f",
+    "exact_static_direct_helpers_135_to137": 4,
+    "exact_static_direct_helpers_136_to137": 4,
+    "dynamic_helper_cases_not_claimed": true,
+    "field_map": {
+      "Game": {
+        "now": 2352,
+        "phase": 2587,
+        "unit_capacity": 1784,
+        "unit_pointer": 1788,
+        "unit_count": 1792,
+        "total_f64": 984,
+        "item_ptr": 2028,
+        "item_count": 2032,
+        "spell_ptr": 2052,
+        "spell_count": 2056
+      },
+      "Unit": {
+        "stride": 432,
+        "guid": 112,
+        "hp": 288,
+        "maxhp": 292,
+        "control124": 124,
+        "old_control380": 388,
+        "old_control388": 396,
+        "old_phase408": 416,
+        "old_phase412": 420,
+        "old_elite416": 424,
+        "additive368": 368,
+        "new_school_bonus_clock": 372
+      },
+      "unknown_new_unit_words": [
+        380,
+        384
+      ]
+    },
+    "new137_school_bonus": "(school&254)==2 and U372>now adds0.1 before phase multiplier; absent from135/136 damage sources"
+  },
+  "native_reference": {
+    "report": "evidence/native0137-declaration-20261101T164138.951728Z/correspondence.json",
+    "sha256": "a9b93703997e970ac23e12bf3e7a0126876e2971534b77c5d1a5283982498f28",
+    "matched_NPC_declarations": 12,
+    "exact_scalar_bytes_per_declaration": 45,
+    "wasm_stride": 72,
+    "native_stride": 80,
+    "scope": "Static NPC scalar/UTF8-name mapping only; Windows Unit/Game ABI,damage address and runtime remain unknown",
+    "preliminary_88_stride_hypothesis_rejected_by_actual_measurements": true
+  },
+  "independent_api": "core_spec.combat137: DamageState137(units432,now_bits,phase2587,accounted_total_bits,rng_words,EmptyDamageSources137((),(),True));resolve_damage137",
+  "limitations": [
+    "Only nonlethal/no-proc numeric432B projection; full original913 and its actual callees unchanged.",
+    "Per-spell statistics/packet/visual allocations are observed side effects, not independently predicted.",
+    "Death/XP/loot/new Shaman proc producers and Windows gameplay ABI/runtime remain pending; no135/136 cases transferred.",
+    "Only fully known controlled432B records; no137 constructor/opening/unknown-cell integration.",
+    "Four pure pending checks are0 new original calls.",
+    "Pilot4/5 is included in80/125 and not summed; no135/136 counts transferred."
+  ],
+  "independent_review": {
+    "report": "reports/2026-11-02-combat0137-independent-review.md",
+    "receipt": "evidence/combat0137-independent-review-20261101T165245.268006Z/review.json",
+    "sha256": "ed989d9ed22a20bbc9ae173432bdf8c3b2a1151fb424073cc51bc2d2107b2d33",
+    "passed": true,
+    "new_original_cases": 0,
+    "original_or_model_executed": false,
+    "manual_phase_fixture_not_valid_timer_owner": true
+  },
+  "independent_fullgame": false,
+  "independent_full880_frames": 0,
+  "native_executed": false,
+  "playable_replacement": false
+}

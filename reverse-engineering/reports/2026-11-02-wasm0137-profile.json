@@ -1,0 +1,80 @@
+{
+  "version": "0.137.0",
+  "build": "d171b8f9f",
+  "status": "complete_static_profile_independent_review_pending",
+  "original_wasm_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+  "official_latest_recheck": "evidence/official-latest137-recheck-20261101T162115.396819Z/receipt.json",
+  "official_latest_recheck_sha256": "576b6056bbe2e05b5322785c81b61eb1b2c562b690fbba8a1b6ae411c81c846b",
+  "profile_manifest": "evidence/wasm0137-profile-20261101T162221.947222Z/manifest.json",
+  "profile_manifest_sha256": "d2370cc52637d96b1635ce8ebb75b798a411eeb5b7682a75867f5b1e0fc9565a",
+  "launch_receipt": "evidence/wasm0137-profile-launch-20261101T162221.463125Z/receipt.json",
+  "launch_receipt_sha256": "e10a8ee4d209fde337b102a4c945b2c6947d87daeec3a66988e26a17bde6ba91",
+  "profile": {
+    "target_version": "0.137.0",
+    "embedded_build": "d171b8f9f",
+    "official_stamp": "c628fd68823e",
+    "original_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+    "original_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261101T154517.001467Z/latest-wenilla_bg.wasm",
+    "wat_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0137-profile-20261101T162221.947222Z/official-0.137.0-full.wat",
+    "wat_sha256": "277088bdc1496d646b10a883cd9ff715b6f401b3abc60e97f17db2a13ac12ceb",
+    "index_schema": "azeroth-ports-local-wasm137-index-v1",
+    "local_tool_sources": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm137_profile.py": "617a8aaf5d5de2f6b8089e2be7f258b3d6613a1719f095860b661668fbd84d02",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    },
+    "wabt_version": "1.0.42",
+    "direct_call_kinds": [
+      "call",
+      "return_call"
+    ],
+    "integer_constant_kinds": [
+      "i32.const",
+      "i64.const"
+    ],
+    "memory_scope": "scalar/vector/atomic load/store instructions; static offset immediate only",
+    "terminal_parentheses_supported": true,
+    "target_executed": false,
+    "method": "local full-WAT lexical instruction index; not runtime or stock REA",
+    "counts": {
+      "functions": 175327,
+      "calls": 824576,
+      "iconsts": 5193343,
+      "memops": 5536899
+    },
+    "direct_call_counts": {
+      "call": 824576
+    },
+    "terminal_parenthesis_counts": {
+      "call": 5586,
+      "return_call": 0,
+      "iconst": 2491,
+      "memop": 73814
+    },
+    "wat_lines": 34363587,
+    "sqlite_integrity_check": "ok",
+    "index_elapsed_seconds": 45.673,
+    "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0137-profile-20261101T162221.947222Z",
+    "database_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0137-profile-20261101T162221.947222Z/index.sqlite",
+    "database_bytes": 642613248,
+    "database_sha256": "2bddfbc87a6649d21a6576e606a60b0d101d32ff4286a6e9cedd7533f8463856",
+    "binary_identity_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0137-profile-20261101T162221.947222Z/binary-identity.json",
+    "binary_identity_sha256": "67c77b1f119999a75e27dd8027ec97a86ae7ff5fa7e8761efe447d1c8526a805",
+    "full_module_validated": true,
+    "function_imports": 878,
+    "defined_functions": 175327,
+    "wat_bytes": 1326012299,
+    "identities_preserved": true,
+    "database_mode": "0444; query URI mode=ro",
+    "deployment_identity_sha256": "73b492845092cabf7a4ec3d5ffc103e2ab56510867de444d2dba7dba44482118",
+    "elapsed_seconds": 72.54
+  },
+  "latest_target_executed_by_profile": false,
+  "Windows_EXE_executed": false,
+  "profile_source_sha256": "617a8aaf5d5de2f6b8089e2be7f258b3d6613a1719f095860b661668fbd84d02",
+  "runtime_acceptance_separate": "reports/2026-11-02-combat0137.json",
+  "independent_review": {
+    "status": "pending"
+  },
+  "scope": "Static full-module WAT/index only; neither175327 functions nor their behavior independently reconstructed"
+}

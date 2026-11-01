@@ -18,7 +18,7 @@ from .spawn_heading135 import atan2_bits
 from .opening_entities135 import BASE_SPEEDS,LogicalCreate135,unit_create169
 from .opening_npc_pickups135 import OpeningVector135,npc_create_fields,_reserve_row
 from .record_cells135 import cells135,u32,u64,put_u32,put_u64,encode_row
-from .special2376_135 import SpecialState2376_135,UnknownSpecial2376_135
+from .special2376_135 import SpecialState2376_135,UnknownSpecial2376_135,tick_special2376_135
 from .special2376_notify135 import tick_special2376_notify135
 from .special2376_spawn135_data import (ELWYNN_SPECIAL_SKILLS135,
     special_ability_records135,special_header135)
@@ -36,11 +36,11 @@ class SpecialSpawnInput135:
     zone_multiplier_bits:int
     difficulty:int
     mode:int
-    members:int
+    members:int|None
     field1092:int
     victory400:int
     endless_flag2568:int
-    endless_start404_bits:int
+    endless_start404_bits:int|None
     zone:int=0
 
 
@@ -124,11 +124,20 @@ def tick_special_spawn135(value,*,locale=None):
         raise UnknownSpecial2376_135('Fixed135 first-expiry Elwynn input required')
     if type(value.player_xyz_bits)is not tuple or len(value.player_xyz_bits)!=3 or type(value.rng_words)is not tuple or len(value.rng_words)!=4:
         raise ValueError('Explicit XYZ and four RNG words required')
-    for word in (*value.player_xyz_bits,value.zone_multiplier_bits,value.special.now_bits,value.endless_start404_bits):_finite(word)
+    for word in (*value.player_xyz_bits,value.zone_multiplier_bits,value.special.now_bits):_finite(word)
+    #1560 leaves404 unwritten. The producer reads it only in this endless
+    #branch; absence must not be replaced by an invented zero timestamp.
+    if value.victory400==1 and value.endless_flag2568&1:
+        if value.endless_start404_bits is None:
+            raise UnknownSpecial2376_135('Endless scaling requires its actual404 producer timestamp')
+        _finite(value.endless_start404_bits)
     if not 0<=f.to_float(value.special.now_bits):raise ValueError('Admitted nonnegative game clock required')
     for n,bits in ((value.counter,32),(value.player_guid,64),(value.level1432,32),(value.difficulty,8),
-            (value.mode,8),(value.members,32),(value.field1092,32),(value.victory400,32),(value.endless_flag2568,8)):
+            (value.mode,8),(value.field1092,32),(value.victory400,32),(value.endless_flag2568,8)):
         if type(n)is not int or not 0<=n<1<<bits:raise ValueError('Explicit unsigned scalar required')
+    if value.mode==1:
+        if value.members is None:raise UnknownSpecial2376_135('Party scaling requires actual G2540 member producer')
+        if type(value.members)is not int or not 0<=value.members<=f.MASK:raise ValueError('Explicit member u32 required')
     state=value.special;rows=[cells135(row,40)for row in state.storage];vector=value.units
     words=tuple(value.rng_words);counter=value.counter;creates=[];cooldowns=[];packets=[];draws=0
     if not state.protection2576:
@@ -172,7 +181,11 @@ def tick_special_spawn135(value,*,locale=None):
             vector=OpeningVector135(424,tuple(storage),vector.count+1)
             put_u64(row,0,1);put_u64(row,8,guid);state=replace(state,selected392=0)
     state=replace(state,storage=tuple(encode_row(row)for row in rows))
-    follow=tick_special2376_notify135(state,value.zone,locale)
+    try:follow=tick_special2376_135(state)
+    except UnknownSpecial2376_135 as error:
+        if not str(error).startswith('Selected-target localized548'):raise
+        if locale is None:raise UnknownSpecial2376_135('Selected-target localized548 requires explicit initialized names')
+        follow=tick_special2376_notify135(state,value.zone,locale)
     packets.extend((opcode,payload)for opcode,capacity,payload in follow.packets)
     return SpecialSpawnResult135(follow.state,vector,words,counter,draws,tuple(creates),tuple(cooldowns),tuple(packets),
         'special_first_expiry_numeric_create_projection')

@@ -1,15 +1,17 @@
 # 版本与平台基线
 
-核对日期：2026-11-01（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
+核对日期：2026-11-02（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
 
-**功能目标持续对齐官方最新稳定版；2026-11-01T15:43:19Z核实的latest已是0.137.0 / `d171b8f9f`，目前仅身份和采集，动态验收0。固定0.136.0 / `fe24fb74c`保留静态profile与迁移候选，动态验收0；持续动态实验仍锁定0.135.1 / `90898d5e3`。** 每轮先固定版本、SHA与资源输入，不能把浮动latest换入正在运行的实验，或把静态同形当新版通过。旧`0898d5e3`是实际9字节Web build的历史截短alias，原收据不覆写；0.134.0与0.126.0也保留各自身份。详见[最新版本状态](reports/2026-11-01-latest-version-state.md)。
+**功能目标持续对齐官方最新稳定版；2026-11-01T16:21Z核实latest仍为0.137.0 / `d171b8f9f`，现有[完整175327函数profile](reports/2026-11-02-wasm0137-profile.md)及[非致死伤害80组/125原件调用0差异](reports/2026-11-02-combat0137.md)，局部动态[限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)。固定0.136.0 / `fe24fb74c`保留静态profile与迁移候选，动态验收0；开局组合动态实验仍锁定0.135.1 / `90898d5e3`。** 每轮先固定版本、SHA与资源输入，不能把浮动latest换入正在运行的实验，或把静态同形当新版通过。旧`0898d5e3`是实际9字节Web build的历史截短alias，原收据不覆写；0.134.0与0.126.0也保留各自身份。详见[先前身份采集状态](reports/2026-11-01-latest-version-state.md)。
+
+收尾metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
 
 ## 目标与固定参照
 
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
 | latest Windows程序目标 | 官方更新EXE0.137.0，147844608B，SHA `aa6b254f…3a10dc8`，实际build `d171b8f9f` | 新目录已核官方大小/SHA及gzip CRC/ISIZE，未执行EXE；原生/游戏语义验收0。 |
-| latest Web目标 | Web0.137.0/`d171b8f9f`，90941108B，SHA `20ec9a2b…3fe1c8`，stamp `c628fd68823e` | coherent下载及真实pointer/len9 guard通过；全量profile和动态验收0。 |
+| latest Web目标 | Web0.137.0/`d171b8f9f`，90941108B，SHA `20ec9a2b…3fe1c8`，stamp `c628fd68823e` | coherent下载及真实pointer/len9 guard通过；完整profile及913局部非致死80/125动态0差异。完整death/proc/native运行/fullgame仍未验收。 |
 | 固定0.136静态迁移 | Web0.136.0/`fe24fb74c`，90927420B，SHA `48c3bce7…1eb2eef3`；native SHA `eb744751…c4d8947c` | [完整175319函数profile/RO索引与12入口候选](reports/2026-11-01-wasm0136-profile.md)保留；动态case0，不能转计137。 |
 | 固定0.135动态研究 | Web0.135.1/`90898d5e3`，90959080B，SHA `c62c85f5…0dc96e2`；历史alias `0898d5e3` | 原52-role与私有builder及既有收据继续绑定该SHA。后继真实开局/战斗/升级/选卡组合另记，旧082927等计数不合并，完整880、native与独立一局仍缺。 |
 | 固定0.135 Windows参照 | 官方EXE0.135.1，147797504B，SHA `71e5f176…bc59249` | 保留原采集身份，未执行EXE；Web结果不冒称native验收。 |
@@ -80,3 +82,7 @@ macOS可直接用Ghidra/REA和PE解析器静态分析x86-64 Windows程序，无�
 程序、WASM、RAR、完整反编译及工具产物均为ignored本地研究资料，不进入Git。提交的是可复现脚本、独立实现和结论；封装优化继续使用各自固定版本和回归流程。
 
 白名单扩展的只读保守性核对还确认：使用同一旧角色集合时，tick/command与1512统计research模块逐字节保持原SHA，证据`evidence/builder135-extension-review-20261101T040956.409250Z/`。新builder来源hash不追溯替代旧收据；新旧输入和原件身份继续按各自快照核对。
+
+固定135的[250帧守卫出生组合](reports/2026-11-02-opening-guardian-combat0135.md)完成250受控帧／3select／3503stage／3505原件调用、0差异，94源/84 production；跨20秒4守卫出生并继续50帧，U68地址保持None、timer所有者按GUID严格核payload。该限定投影已通过[最终只读独审](reports/2026-11-02-opening-combat0135-250frame-independent-review.md)（receipt SHA `556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7`），仍是预解析world、原件snapshot及外部clock域；旧120收据保持原身份，不相加。
+
+另有[raw451资产→world→opening→250帧](evidence/asset-combat250-owned-20261101T163850.979737Z/model250/receipt.json)的纯modelselfcheck：67,281,330B、91源前后不变，不读原memory/预解析world/WASM，250帧／3select至level4／XP3。复用同一world的[后继纯模型](evidence/asset-combat250-owned-20261101T163850.979737Z/continuation/receipt.json)继续至379帧／4select，第380帧因实际选到battle_shout停止；没有重抽卡。379是模型边界，原件差分验收仍只到250，完整880/native/一局仍为0。

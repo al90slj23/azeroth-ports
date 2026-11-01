@@ -5,31 +5,79 @@
     "actual_build_length": 9,
     "web_reference_key": "web_official_latest_snapshot",
     "windows_reference_key": "windows_official_latest_reference",
-    "selected_by": "Official manifest and Web stamp rechecked 2026-11-01T15:55:17.363331+00:00; full coherent137 acquisition frozen separately.",
-    "status": "official_identity_and_acquisition_only_no_dynamic_acceptance",
+    "selected_by": "Official manifest/page freshly rechecked 2026-11-01T16:21Z; fixed137 source and coherent acquisition retained.",
+    "status": "complete_static_profile_and_nonlethal_damage_partial_dynamic_reviewed",
     "version_policy": "Align the product goal to verified latest137; freeze every experiment. Retain separate fixed136 static and fixed135 dynamic lanes without transferring acceptance.",
     "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0135",
     "fixed_static_migration_target_key": "fixed_static_migration_target_0136",
     "fixed_research_baseline": "fixed_research_baseline",
     "installation_packages_updated": false,
     "version_support": "reconstruction/version-support.json",
-    "version_support_scope": "Existing version-bound validation registry, not137 acceptance.",
+    "version_support_scope": "Existing version-bound135 validation registry remains historical;137 partial component is separately registered here.",
     "analysis_profile": {
-      "report": "reports/2026-11-01-latest-version-state.json",
+      "report": "reports/2026-11-02-wasm0137-profile.json",
       "source_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
-      "full_static_profile_produced": false,
-      "complete_wat": null,
-      "index": null
+      "full_static_profile_produced": true,
+      "complete_wat": "evidence/wasm0137-profile-20261101T162221.947222Z/official-0.137.0-full.wat",
+      "wat_sha256": "277088bdc1496d646b10a883cd9ff715b6f401b3abc60e97f17db2a13ac12ceb",
+      "index": "evidence/wasm0137-profile-20261101T162221.947222Z/index.sqlite",
+      "index_sha256": "2bddfbc87a6649d21a6576e606a60b0d101d32ff4286a6e9cedd7533f8463856",
+      "defined_functions": 175327,
+      "function_imports": 878
     },
     "build_identity_sidecar": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
     "build_identity_sidecar_sha256": "f93884e6798bce704b4d565be88627bb2dd54259589fd531f7609d472b1251f3",
-    "latest_check_report": "reports/2026-11-01-latest-version-state.json",
-    "runtime_acceptance_reports": [],
+    "latest_check_report": "reports/2026-11-02-wasm0137-profile.json",
+    "runtime_acceptance_reports": [
+      "reports/2026-11-02-combat0137.json"
+    ],
     "approved_research_role_count": 0,
-    "new_original_runtime_cases": 0,
+    "new_original_runtime_cases": 80,
     "full_mainloop_frames": 0,
-    "scope_note": "137 official bytes and actual9-byte build are admitted for future static migration only. No137 EXE/WASM execution, full profile, gameplay validation or installation update;135/136 results remain version-bound.",
-    "latest_metadata_recheck": "evidence/official-latest-final-check-20261101T155515.017487Z/check.json"
+    "scope_note": "Fixed137 full175327-function static profile and a new independent nonlethal/no-proc432B damage913 numeric projection:80cases/125originalcalls0diff. Scoped read-only independent review passed; numeric fixtures do not prove full timer owner validity. Windows remains primary native reference but only12NPC declaration layouts matched statically; no Windows execution/Game ABI proof. Death/proc/full137opening/full880/fullgame remain unaccepted; no135/136 cases transferred.",
+    "latest_metadata_recheck": "evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json",
+    "historical_identity_only_report": "reports/2026-11-01-latest-version-state.json",
+    "latest_metadata_recheck_sha256": "423c67ffd40d2d668df3f907f75d8fd0fe0ae51e49c2862499ece6a9813003e8",
+    "new_original_entry_calls": 125,
+    "partial_damage_checkpoint": {
+      "report": "reports/2026-11-02-combat0137.json",
+      "receipt": "evidence/combat0137-oracle-20261101T163523.434970Z/comparison.json",
+      "receipt_sha256": "d6a8a3e4ea448f933f8e01b871193e597ca42f52549df1471d4dcb68cdb1c72c",
+      "cases": 80,
+      "original_entry_calls": 125,
+      "mismatches": 0,
+      "source_files": 11,
+      "original_function": 913,
+      "Unit_stride": 432,
+      "independent_review": "passed_scoped_read_only_review",
+      "new_full880_frames": 0,
+      "Windows_executed": false,
+      "complete_game": false,
+      "independent_review_report": "reports/2026-11-02-combat0137-independent-review.md",
+      "independent_review_receipt_sha256": "ed989d9ed22a20bbc9ae173432bdf8c3b2a1151fb424073cc51bc2d2107b2d33"
+    },
+    "native_declaration_static_correspondence": {
+      "receipt": "evidence/native0137-declaration-20261101T164138.951728Z/correspondence.json",
+      "receipt_sha256": "a9b93703997e970ac23e12bf3e7a0126876e2971534b77c5d1a5283982498f28",
+      "matched_declarations": 12,
+      "wasm_stride": 72,
+      "native_stride": 80,
+      "Windows_Game_Unit_ABI_verified": false,
+      "Windows_runtime_cases": 0
+    },
+    "previous_latest_metadata_recheck": {
+      "receipt": "evidence/official-latest137-recheck-20261101T162115.396819Z/receipt.json",
+      "sha256": "576b6056bbe2e05b5322785c81b61eb1b2c562b690fbba8a1b6ae411c81c846b"
+    },
+    "latest_metadata_recheck_utc": "2026-11-01T16:51:39.999468+00:00",
+    "latest_metadata_recheck_scope": "Only official manifest andHTML stamp; still137 same EXESHA/stamp. No binary redownload, original execution or fixed sample replacement.",
+    "combat137_independent_review": {
+      "report": "reports/2026-11-02-combat0137-independent-review.md",
+      "receipt": "evidence/combat0137-independent-review-20261101T165245.268006Z/review.json",
+      "sha256": "ed989d9ed22a20bbc9ae173432bdf8c3b2a1151fb424073cc51bc2d2107b2d33",
+      "scope": "Scoped nonlethal numeric fixture review, not valid full owner/runtime/native acceptance",
+      "new_original_cases": 0
+    }
   },
   "fixed_dynamic_research_target_0135": {
     "version": "0.135.1",
@@ -758,6 +806,92 @@
       "new_original_cases": 0,
       "full880_frames": 0,
       "scope": "Separate independent raw-asset producer receipt; three world query SHA match prior output; not an extra original differential case."
+    },
+    "real_opening_guardian_combat_checkpoint": {
+      "report": "reports/2026-11-02-opening-guardian-combat0135.json",
+      "receipt": "evidence/opening-combat0135-oracle-20261101T163251.935471Z/comparison.json",
+      "receipt_sha256": "53fbae6e607171f2038dc675f658c343e4e26d336355a0a569a13458e660b675",
+      "cases": 1,
+      "frames": 250,
+      "selections": 3,
+      "stages": 3503,
+      "original_entry_calls": 3505,
+      "differences": 0,
+      "source_files": 94,
+      "production_files": 84,
+      "new_guardians": 4,
+      "post_birth_frames": 50,
+      "timer_owner": "GUID-bound strict payload;physical U68 remainsNone",
+      "independent_review": "reports/2026-11-02-opening-combat0135-250frame-independent-review.json",
+      "full880_frames": 0,
+      "Windows_executed": false,
+      "complete_games": 0,
+      "historical120_not_added": true,
+      "legacy_regressions": [
+        {
+          "receipt": "evidence/full0135-oracle-20261101T163603.219680Z/headless135-comparison.json",
+          "cases": 8,
+          "frames": 1614,
+          "stages": 22607,
+          "selections": 11,
+          "differences": 0
+        },
+        {
+          "directory": "evidence/full0135-oracle-20261101T163530.186164Z",
+          "cases": 204,
+          "mismatches": 0
+        }
+      ],
+      "independent_review_receipt": "evidence/opening-combat0135-independent-review-20261101T164522.842290Z/review.json",
+      "independent_review_receipt_sha256": "556693d5bac9b86545dd89a57b042bdb54823e49d4f845b5547a3a978d7158c7",
+      "independent_review_status": "passed_scoped_read_only_review",
+      "raw_asset250_checkpoint_key": "raw_asset_guardian_combat250_entry"
+    },
+    "raw_asset_guardian_combat250_entry": {
+      "receipt": "evidence/asset-combat250-owned-20261101T163850.979737Z/model250/receipt.json",
+      "receipt_sha256": "d6c46c50baaf2adf5afb2b15ae0fee5fd29ff5e13b45208361b3f57f0c3edff8",
+      "mode": "modelselfcheck",
+      "frames": 250,
+      "selections": 3,
+      "final_level": 4,
+      "final_xp": 3,
+      "source_files": 91,
+      "asset_files": 451,
+      "decoded_asset_bytes": 67281330,
+      "original_memory_read": false,
+      "preparsed_world_read": false,
+      "original_WASM_read": false,
+      "new_original_cases": 0,
+      "full880_frames": 0,
+      "terminal": "evidence/asset-combat250-owned-20261101T163850.979737Z/terminal.json",
+      "terminal_sha256": "624515920078b071f63a331d5141f09b6d2da93d56e6c655aca93e57f89ae63e",
+      "process": {
+        "pid": 81217,
+        "pgid": 81217,
+        "exit_code": 0,
+        "pid_missing": true,
+        "pgid_missing": true,
+        "seconds": 224.09515637499862,
+        "deadline_seconds": 300
+      },
+      "scope": "Raw assets independent producer; not a second original-side differential case"
+    },
+    "same_world_model379_boundary": {
+      "receipt": "evidence/asset-combat250-owned-20261101T163850.979737Z/continuation/receipt.json",
+      "receipt_sha256": "0542e348868665e22884b60e194cf0f2508f9683c46a218e6bc23e67f8ad616b",
+      "mode": "modelselfcheck",
+      "world_reparsed": false,
+      "same_world_object": true,
+      "total_frames": 379,
+      "additional_frames": 129,
+      "total_selections": 4,
+      "boundary": "pending_selected_ability",
+      "attempted_next_frame": 380,
+      "selected_pending_ability": "battle_shout",
+      "new_original_cases": 0,
+      "original_side_accepted_frames": 250,
+      "full880_frames": 0,
+      "scope": "Continuation of the same built world only; not379 original differential frames"
     }
   },
   "fixed_static_migration_target_0136": {
@@ -954,12 +1088,14 @@
     "local_acquisition": "originals/official-acquisition-20261101T154517.001467Z/windows-0.137.0/AzerothSurvivors.exe",
     "report": "reports/2026-11-01-latest-version-state.json",
     "build_identity_sidecar": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
-    "role": "active_latest_native_identity_only_acquired_not_executed",
+    "role": "active_latest_native_primary_reference_static_NPC_correspondence_not_executed",
     "limitations": [
       "Publisher size/SHA and gzip CRC/ISIZE verified; actual build pointer/length guarded.",
       "No137 native runtime or gameplay acceptance; historical addresses/data not transferred.",
       "Installed Mac/Android/native packages and user saves unchanged."
-    ]
+    ],
+    "static_NPC_correspondence": "evidence/native0137-declaration-20261101T164138.951728Z/correspondence.json",
+    "static_scope": "Twelve NPC scalar/name declarations only; measured native spacing80 versusWASM72. Windows damage address/Game/Unit ABI/runtime unverified."
   },
   "web_official_latest_snapshot": {
     "version": "0.137.0",
@@ -972,12 +1108,15 @@
     "local_snapshot": "originals/official-acquisition-20261101T154517.001467Z/latest-wenilla_bg.wasm",
     "report": "reports/2026-11-01-latest-version-state.json",
     "build_identity_sidecar": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
-    "role": "active_latest_web_identity_only_no_profile_or_runtime_acceptance",
+    "role": "active_latest_web_complete_profile_partial_nonlethal_damage_dynamic_review_pending",
     "limitations": [
       "Fresh coherent HTTPS bytes, stable manifest/stamp and actual9B build pointer/length guard.",
-      "No137 full static profile, original runtime cases or independent gameplay acceptance.",
+      "Full137 static profile exists; new80cases/125calls validate only explicit nonlethal/no-proc432B damage913 projection. Independent review pending; full137game remains incomplete.",
       "Fixed136 static candidates and135 dynamic passes are not137 validation.",
       "No original EXE/WASM executed during latest acquisition; no installations or saves changed."
-    ]
+    ],
+    "report_scope": "Historical identity/acquisition report retained; current profile and runtime projections are separate reports below.",
+    "static_profile_report": "reports/2026-11-02-wasm0137-profile.json",
+    "nonlethal_damage_report": "reports/2026-11-02-combat0137.json"
   }
 }
