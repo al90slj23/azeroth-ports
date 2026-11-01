@@ -299,5 +299,7 @@
     "report": "2026-11-01-gameplay135-independent-review.json",
     "local_receipt": "evidence/cross135-readonly-review-20261101T044702.684177Z/review.json",
     "sha256": "e86b1da9e917cdc8654d249a56d0d9b015b0e1b62625708bd1ee1953cea0b0b9"
-  }
+  },
+  "later_old12_resolution": "2026-11-01-proc-events0135.json: kind27zero16Bgate,explicitnonfatal/context0. Oldfailed receipts remain unchanged; fatalpost-lootproc isnotproved.",
+  "later_composition_not_added_to_this_batch": "2026-11-01-headless-area0135.json"
 }

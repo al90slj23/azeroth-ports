@@ -89,7 +89,7 @@ def _validate(raw,now):
             raise ValueError('Finite ordinary AI fixture required')
 
 
-def update_ordinary_units(state:AiFrame135):
+def update_ordinary_units(state:AiFrame135, *, trig_sin_bits=sin_bits, trig_cos_bits=cos_bits):
     """Original order: update every entity, then apply queued contact attacks.
 
     This API supports finite ordinary melee records and flat terrain, with no
@@ -129,8 +129,8 @@ def update_ordinary_units(state:AiFrame135):
         if _float(raw,348)>now_value:continue
         angle=f.add(_get(raw,396),0x3e19999a);_put(raw,396,angle)
         radius=_maximum(f.mul(_get(raw,308),0x3f4ccccd),0x3fc00000)
-        dest=(f.add(state.player_xyz_bits[0],f.mul(radius,cos_bits(angle))),
-              f.add(state.player_xyz_bits[1],f.mul(radius,sin_bits(angle))),state.player_xyz_bits[2])
+        dest=(f.add(state.player_xyz_bits[0],f.mul(radius,trig_cos_bits(angle))),
+              f.add(state.player_xyz_bits[1],f.mul(radius,trig_sin_bits(angle))),state.player_xyz_bits[2])
         length=_distance(pos,dest)
         if f.to_float(length)>14:
             factor=f.div(0x41600000,length)

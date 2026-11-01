@@ -51,7 +51,15 @@ ROLES = {'select_ability': (1072, b'\x7f\x7f', b''),
  'atan_heading': (34787, b'}', b'}'),
  'update_units': (921, b'\x7f}', b''),
  'owned_tick': (1076, b'\x7f}', b''),
- 'player_tick': (2088, b'\x7f}', b'')}
+ 'player_tick': (2088, b'\x7f}', b''),
+ 'proc_event': (984, b'\x7f\x7f\x7f', b''),
+ 'proc_gate': (8157, b'\x7f\x7f\x7f', b'\x7f'),
+ 'sin_angle': (11428, b'}', b'}'),
+ 'cos_angle': (11503, b'}', b'}'),
+ 'initial_game': (1560, b'\x7f\x7f\x7f', b''),
+ 'begin_run': (1089, b'\x7f', b''),
+ 'move_player': (2328, b'\x7f\x7f}', b'\x7f'),
+ 'area_tick': (3757, b'\x7f', b'')}
 
 APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01',
  'recalculate_stats': '31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748',
@@ -84,7 +92,15 @@ APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273d
  'atan_heading': '01ed1cbceddf892890336caa312038ca20b55e0c0f84521218c998c095e8b345',
  'update_units': '5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37',
  'owned_tick': '3dbb7ab4e94cbe5fdacce3f544419951c84bc056a969703835f83586d5076777',
- 'player_tick': 'a20643b34a3be2898101856d84102ba9e7964b6846b0345510306fd500ffa77a'}
+ 'player_tick': 'a20643b34a3be2898101856d84102ba9e7964b6846b0345510306fd500ffa77a',
+ 'proc_event': 'f9e1b5fb843e275626d1cef0d554014e304a24c1e6fbe1e2b0ed21dcdb48b5fe',
+ 'proc_gate': 'eb826c0e86dceff28ec3d14bc7afb4ffca376411a8e2c1a4c921cce8ebb37c51',
+ 'sin_angle': '67188c5a196f2538d8d29d0de23b30935d4adcdefd6cc563d393888b03e2aeeb',
+ 'cos_angle': 'e6b1b35466a69bf778e1a26a23296457144510ca9c825e00eccd22e48a012d99',
+ 'initial_game': '064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe',
+ 'begin_run': '08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb',
+ 'move_player': '8e456fb160c30e4c4275670d2f4c1d9a6691e4be791905364ea5ff34b008b84b',
+ 'area_tick': 'e976ee48b3f0ad4117bfa98c81538fa88bf4607c4a9ca15c1a5a040c1c4477f5'}
 
 def require(condition, message):
     if not condition:

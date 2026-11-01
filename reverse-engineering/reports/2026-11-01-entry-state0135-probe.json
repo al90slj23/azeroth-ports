@@ -1,0 +1,331 @@
+{
+  "title": "0.135.1 phase entry1089/2328: real original probe and unresolved asset-root context",
+  "target": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2"
+  },
+  "status": "Partial movement tested; whole entry not independently restored and is blocked in this controlled probe by denied original host dependency",
+  "probe": {
+    "receipt": "evidence/full0135-oracle-20261101T055220.684137Z/entry135-probe-receipt.json",
+    "receipt_sha256": "8ca49dbf61017f07ac9827b23005b5ca5c87382e1791c91ffb8bed0362342b86",
+    "kind": "observational_host_throw_probe_not_verified_entry_model",
+    "cases": 4,
+    "outcomes": {
+      "denied_host": 2,
+      "returned": 2
+    },
+    "constructor_before_model_matches": 4,
+    "runtime": {
+      "cases": 4,
+      "fresh_instances": 4,
+      "fresh_every": 1,
+      "max_memory_bytes": 20578304,
+      "denied_host_attempts": 2,
+      "entry_failures": 2,
+      "denied_function_imports": 878,
+      "original_allocator": 91941,
+      "memory_page_cap": 512,
+      "full_original_constructor": 1560,
+      "full_original_entry": 1089,
+      "full_original_movement": 2328,
+      "application_start_called": false,
+      "full_game_started": false,
+      "user_saves_accessed": false,
+      "network_used": false,
+      "node": "v22.23.4"
+    },
+    "process": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=512",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/probe_entry135.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T055220.684137Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T055220.684137Z/entry135-probe-fixtures.jsonl"
+      ],
+      "pid": 21935,
+      "pgid": 21935,
+      "exit_code": 0,
+      "deadline_seconds": 60,
+      "seconds": 0.344
+    },
+    "sources": {
+      "scripts/probe_entry135.py": "a92eeaa50d0f0effa35d39c3e9b5dc27273aa4a4ec39c35d17c088ccff4c8ad4",
+      "scripts/probe_entry135.mjs": "c21e573a3052862d47a5c032a91424f099ed3495a03f09c8e3c614dba6f72ba3"
+    },
+    "older_probe": "053826 and054018 receipts retained.055220 is an interface regression after adding initial740/744/1652 actual reads; same2denied/2returned, no new entry claims."
+  },
+  "cases": [
+    {
+      "id": 0,
+      "operation": "begin",
+      "outcome": "denied_host",
+      "returned": null,
+      "denied_imports": [
+        "./wenilla_bg.js.__wbg_static_accessor_SELF_4c59f6c7ea29a144"
+      ],
+      "after": {
+        "phase2587": 1,
+        "rng_words": [
+          1914558698,
+          1309681245,
+          4164656265,
+          779669058
+        ],
+        "current_hp_bits": 1129775104,
+        "player_xyz": [
+          3323121664,
+          3290316800,
+          0
+        ],
+        "player_facing_bits": 1070386381,
+        "candidate_count": 0,
+        "owned_count": 1,
+        "unit_count": 0,
+        "source_counts": {
+          "definitions": 0,
+          "live_effects": 0,
+          "timed_records": 0
+        },
+        "game_tag": "0"
+      }
+    },
+    {
+      "id": 1,
+      "operation": "move",
+      "outcome": "returned",
+      "returned": 1,
+      "denied_imports": [],
+      "after": {
+        "phase2587": 0,
+        "rng_words": [
+          1914558698,
+          1309681245,
+          4164656265,
+          779669058
+        ],
+        "current_hp_bits": 1129775104,
+        "player_xyz": [
+          3323121664,
+          3290316800,
+          0
+        ],
+        "player_facing_bits": 1070386381,
+        "candidate_count": 0,
+        "owned_count": 1,
+        "unit_count": 0,
+        "source_counts": {
+          "definitions": 0,
+          "live_effects": 0,
+          "timed_records": 0
+        },
+        "game_tag": "0"
+      }
+    },
+    {
+      "id": 2,
+      "operation": "move",
+      "outcome": "returned",
+      "returned": 1,
+      "denied_imports": [],
+      "after": {
+        "phase2587": 0,
+        "rng_words": [
+          1914558698,
+          1309681245,
+          4164656265,
+          779669058
+        ],
+        "current_hp_bits": 1129775104,
+        "player_xyz": [
+          3323121562,
+          3290316800,
+          0
+        ],
+        "player_facing_bits": 1070386381,
+        "candidate_count": 0,
+        "owned_count": 1,
+        "unit_count": 0,
+        "source_counts": {
+          "definitions": 0,
+          "live_effects": 0,
+          "timed_records": 0
+        },
+        "game_tag": "0"
+      }
+    },
+    {
+      "id": 3,
+      "operation": "move",
+      "outcome": "denied_host",
+      "returned": null,
+      "denied_imports": [
+        "./wenilla_bg.js.__wbg_static_accessor_SELF_4c59f6c7ea29a144"
+      ],
+      "after": {
+        "phase2587": 1,
+        "rng_words": [
+          1914558698,
+          1309681245,
+          4164656265,
+          779669058
+        ],
+        "current_hp_bits": 1129775104,
+        "player_xyz": [
+          3323120640,
+          3290316800,
+          0
+        ],
+        "player_facing_bits": 1070386381,
+        "candidate_count": 0,
+        "owned_count": 1,
+        "unit_count": 0,
+        "source_counts": {
+          "definitions": 0,
+          "live_effects": 0,
+          "timed_records": 0
+        },
+        "game_tag": "0"
+      }
+    }
+  ],
+  "denied_chain": {
+    "stack_indices": [
+      1089,
+      4546,
+      95986,
+      23171,
+      50449,
+      96127,
+      67826,
+      19179,
+      122098,
+      827
+    ],
+    "import827": "./wenilla_bg.js.__wbg_static_accessor_SELF_4c59f6c7ea29a144",
+    "actual_stack": "Error: Original host call denied\n    at bindings.<computed>.<computed> (file:///Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/full135_host.mjs:53:59)\n    at wasm://wasm/15afb4e2:wasm-function[122098]:0x4829a97\n    at wasm://wasm/15afb4e2:wasm-function[19179]:0x298fb13\n    at wasm://wasm/15afb4e2:wasm-function[67826]:0x425a3d1\n    at wasm://wasm/15afb4e2:wasm-function[96127]:0x474999a\n    at wasm://wasm/15afb4e2:wasm-function[50449]:0x3e09555\n    at wasm://wasm/15afb4e2:wasm-function[23171]:0x2d454ac\n    at wasm://wasm/15afb4e2:wasm-function[95986]:0x47474e7\n    at wasm://wasm/15afb4e2:wasm-function[4546]:0x14d6a23\n    at wasm://wasm/15afb4e2:wasm-function[1089]:0x5ad842\n    at file:///Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/probe_entry135.mjs:25:37",
+    "cause": "Whole1089 writes phase1 first, then4546 starts data-context lazy initialization.23171 prepares the19B property key__wenilla_data_base and50449/96127 try to acquire JS global SELF before reading that property. The strict host denies this access; no asset/network read proceeds.",
+    "not_a_success": "Denied cases have phase1 in rawG, but function did not finish. That partial write is not legal completed entry evidence."
+  },
+  "official_js_provenance": {
+    "file": "originals/official-acquisition-20261101T030310.926207Z/official-rogue.js",
+    "sha256": "7644df9f61fdca9865d20b9995ff3f57c51223de53ae9d926c5c539ac739a515",
+    "line433": "window.__wenilla_data_base = new URL('./data', location.href).href;",
+    "boot_file": "originals/official-acquisition-20261101T030310.926207Z/official-boot.js",
+    "boot_sha256": "268a698dd5b550d46229c300156cca6120847fe4644cd374ba653b4dfb12ea79",
+    "boot_line156": "const base = String(window.__wenilla_data_base || new URL('/data', location.href).href);"
+  },
+  "static_movement_entry_rule": {
+    "function": 2328,
+    "signature": "(G:i32,requestedXYZ:i32,facing:f32)->i32",
+    "third_parameter": "The f32 is stored toG1428 facing/orientation, not dt.",
+    "entry_guard": "old phase2587==0, squared XY movement>.04, G2528==0 and!(G2583&1) ->call1089.",
+    "probe": "No motion and.1 motion returned1/phase0;1unit motion reached real1089 and the same denied SELF path."
+  },
+  "unexecuted_default_entry_tail": [
+    "G2576=0 from constructor skips1089 all-skills branch16..1214;5boss2785 calls are inside that nondefault branch.",
+    "After asset/config and presentation work,1089 calls1744, then invokes5736 four times for ordinary initial enemy generation.",
+    "Defaultmode0 then uses count2: each iteration calls13516(G,18,50) and1417(G,kind2,amount=count,placement), with amounts2then1. Kind2 consumption remains outside the existing kind0/1 pickup model.",
+    "1089 subsequently draws a count from static range1588344/1588348 and builds laterG1964/G1972 event plans. Exact plan producer still needs reconstruction.",
+    "These tail facts are static. The denied probe stopped near the start of1089 and did not verify those spawn/event side effects."
+  ],
+  "boundaries": [
+    "1560 numeric initialization remains separately verified strict151 and independently reviewed; this failure does not invalidate that constructor result.",
+    "No JS global return stub, cache-state forgery, original callee/body rewrite, application start, EXE, network or user-save access was used.",
+    "Asset-root/VFS/archive resource initialization and full world-entry side effects remain unknown and must be restored or supplied through a proven real resource context.",
+    "Headless composition must preserve explicit unresolved-entry status; hand-writingphase1, leaving zero enemies or substituting an easier racial is not accepted completion."
+  ],
+  "original_functions": [
+    {
+      "index": 1089,
+      "body_sha256": "08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb",
+      "body_start": 5953495,
+      "body_end": 5965617,
+      "wat_start": 226954244,
+      "wat_end": 227135103,
+      "wat_line": 2269778
+    },
+    {
+      "index": 2328,
+      "body_sha256": "8e456fb160c30e4c4275670d2f4c1d9a6691e4be791905364ea5ff34b008b84b",
+      "body_start": 14688224,
+      "body_end": 14693688,
+      "wat_start": 416598208,
+      "wat_end": 416675360,
+      "wat_line": 6223937
+    },
+    {
+      "index": 4546,
+      "body_sha256": "073d44f43e2a1a3ebb31ad697f20516f07128a866eb8c7c40c2eb1fbcca2e00f",
+      "body_start": 21850469,
+      "body_end": 21855042,
+      "wat_start": 543805792,
+      "wat_end": 543915883,
+      "wat_line": 9518841
+    },
+    {
+      "index": 95986,
+      "body_sha256": "d93a67b5fd5b31244c802b9d9c3ef680ddc0a6a6d03b641fa3a4bf59cdde0034",
+      "body_start": 74740881,
+      "body_end": 74740934,
+      "wat_start": 1272224307,
+      "wat_end": 1272224734,
+      "wat_line": 33224341
+    },
+    {
+      "index": 23171,
+      "body_sha256": "409bb27ce70f961d11132c3459eccf4d04b7aca40ea4f984c03c1ecacaee6970",
+      "body_start": 47469636,
+      "body_end": 47470294,
+      "wat_start": 919609306,
+      "wat_end": 919617509,
+      "wat_line": 21169742
+    },
+    {
+      "index": 50449,
+      "body_sha256": "977861c4d996eb6fb30150259be7f2cd33f84d366626f5da5f36c8eb534d8e13",
+      "body_start": 65049844,
+      "body_end": 65050074,
+      "wat_start": 1148935322,
+      "wat_end": 1148937533,
+      "wat_line": 29016197
+    },
+    {
+      "index": 96127,
+      "body_sha256": "1fefa7c1d0b763e08661d71580014b3a239c0c8379e8a8cbc78486bf94960ba1",
+      "body_start": 74750279,
+      "body_end": 74750334,
+      "wat_start": 1272310550,
+      "wat_end": 1272310996,
+      "wat_line": 33228403
+    },
+    {
+      "index": 67826,
+      "body_sha256": "294b6524bfa35e360ec2f5bb310dea985110f776458a92ea78fcf89e44784672",
+      "body_start": 69575495,
+      "body_end": 69575639,
+      "wat_start": 1212659551,
+      "wat_end": 1212660517,
+      "wat_line": 31010707
+    },
+    {
+      "index": 19179,
+      "body_sha256": "0f8bda70f0361b37af60f86c924877707aa1e149047faaa06db82e44ae79596e",
+      "body_start": 43580034,
+      "body_end": 43580684,
+      "wat_start": 867226870,
+      "wat_end": 867233670,
+      "wat_line": 19421699
+    },
+    {
+      "index": 122098,
+      "body_sha256": "0fac1221588116bb240f3e017d8564ff9c6b09552691422085e5279e9d0e8992",
+      "body_start": 75668034,
+      "body_end": 75668058,
+      "wat_start": 1280108204,
+      "wat_end": 1280108402,
+      "wat_line": 33577586
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "status": "ValidatedNPC movement sequence consumer; auxiliary/claim families remain unknown",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "receipt": "evidence/full0135-oracle-20261101T061549.649714Z/movement-pause135-comparison.json",
+  "receipt_sha256": "c3469bbceda0acd31080f63ddafbf8a7d71811c4417f242959aa761b983c5b74",
+  "static_evidence": "evidence/movement-pause0135-static-20261101T061650.605238Z/movement-pause135-static.json",
+  "static_evidence_sha256": "4aed4cf0d96de7cffaaabb1b26edb99924f585cfe91d8952978d7e073f578ac2",
+  "source_sha256": {
+    "scripts/check_movement_pause135.py": "6f85ef9db160ee61b2b31b4d567a9ad666f69797f7d0cef4ebb1c3da138cc234",
+    "scripts/run_movement_pause135_oracle.mjs": "0309479fa2afc6f27d69db7e2bbc0d66351759307ba1b1b48bd1e8da4a66ac22",
+    "scripts/build_full135_oracle.py": "3940346ae143547a7b88deec5d9d31b114db17bb969e8c6fba3c650d78352975",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "623a41f39ef8d805e4749a08ab50ada8e467f6333b160c476d4f26008f760a1a",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/loop135.py": "58488f755cb16af131251ece006d10343e7d177449d796986787ed3bdc43a9ff",
+    "reconstruction/core_spec/movement_pause135.py": "16bdf3abac3740ed172f612558fc642246466575d38c1d9badd4bb513f8594ad"
+  },
+  "trace_source_sha256": "da74b4632a3091dac48d76e709e1de9f37e63ebf570192d36e4f0ffbb956968b",
+  "cases": 396,
+  "stages": 1136,
+  "movement_packets": 604,
+  "mismatch_cases": 0,
+  "rejected_cases": 7,
+  "groups": {
+    "basic-one-moving": 1,
+    "zero-moving": 1,
+    "stable-order-duplicate-guids": 1,
+    "predicate-marker-duration-end": 180,
+    "command-mode-phase-payload-guards": 144,
+    "game-discriminant-gate": 5,
+    "exact-end-and-NaN-now": 7,
+    "packed-guid-byte-positions": 8,
+    "f32-end-rounding": 1,
+    "seeded-vector-order-and-count": 48
+  },
+  "runtime": {
+    "cases": 396,
+    "command1371_calls": 1136,
+    "movement221_packets": 604,
+    "original_callees": [
+      35514,
+      25472,
+      26200,
+      45845,
+      27457,
+      15916,
+      45628
+    ],
+    "original_callees_unchanged": true,
+    "original_allocator": 91941,
+    "fresh_instances": 17,
+    "max_memory_bytes": 14876672,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "memory_page_cap": 512,
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "body_guards": [
+    {
+      "index": 1371,
+      "parameters_hex": "7f7f",
+      "results_hex": "",
+      "body_sha256": "fe613365e0c9b6520201f744a7c4c187e07e3d6010b074e65ef57179bef660cd",
+      "body_start": 9110896,
+      "body_end": 9136547,
+      "body_bytes": 25651
+    },
+    {
+      "index": 35514,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "b63b5546dce15768b153a58d8e87eeb44b18066ce704d6ba8c9f035a18b4d9df",
+      "body_start": 57734168,
+      "body_end": 57734528,
+      "body_bytes": 360
+    },
+    {
+      "index": 25472,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "83f9ab98548b78e3cfd9edfc5a802cbf80a974b471ecf7c9a4e676450c7b752b",
+      "body_start": 49723036,
+      "body_end": 49723564,
+      "body_bytes": 528
+    },
+    {
+      "index": 26200,
+      "parameters_hex": "7f7f",
+      "results_hex": "",
+      "body_sha256": "dfd9f441f44d2cb3e1b7ae805d652e7bb688b47684febcf60fc4e05812770f74",
+      "body_start": 50479243,
+      "body_end": 50482217,
+      "body_bytes": 2974
+    },
+    {
+      "index": 45845,
+      "parameters_hex": "7f7e7f7f",
+      "results_hex": "",
+      "body_sha256": "c6502e4033836dcb50eb72024a9ae6418ccbd3c93c72270f07da8eb6a35aa947",
+      "body_start": 63248366,
+      "body_end": 63248630,
+      "body_bytes": 264
+    },
+    {
+      "index": 27457,
+      "parameters_hex": "7f7e7f7f7f7f",
+      "results_hex": "",
+      "body_sha256": "d5828588e28f348d87604edfd0bae6afc3717b4b60b48cf0c048844634927f99",
+      "body_start": 51382730,
+      "body_end": 51383202,
+      "body_bytes": 472
+    },
+    {
+      "index": 15916,
+      "parameters_hex": "7e7f",
+      "results_hex": "",
+      "body_sha256": "b616d3b4ee6503812fecd72b255821cce06871a83c48c7dbe08225b0d9147c12",
+      "body_start": 40026159,
+      "body_end": 40026936,
+      "body_bytes": 777
+    },
+    {
+      "index": 45628,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_sha256": "4a664ae3b391919b5b35998204aa081bf3adbfa02a9c12458c59a3301084893e",
+      "body_start": 63156693,
+      "body_end": 63156964,
+      "body_bytes": 271
+    }
+  ],
+  "api": "moving_sequence_delta(records,now_bits,*,auxiliary_motions=None,claims=None)->MovementSequence135(count,guids)",
+  "restored": [
+    "26200collects NPC marker0 duration344>0 and f32(duration344+start340)>now2352 invectororder; duplicateGUIDs retained",
+    "35514and25472 eachincrementwrappingG2412 oncepercollectedsnapshot, append221stop/resume event",
+    "NPC424B/RNGunchanged;1371rawtag7phase1\u21943/mode&1/game_tag2 gates/noticecount validated"
+  ],
+  "strict_comparisons": [
+    "Complete424B records byteforbyte, no masks orpointer normalization",
+    "GUIDu64string, sequenceu32, stopflagbyte, phasebyte,packetcount,notificationcount,RNGu32 andempty-sourcecounts",
+    "604original221payload GUID/sequence/stopflag independently decoded; rawpayloads retainedunmodified"
+  ],
+  "pending": [
+    "NonemptyG660/664stride112auxiliary motions andG2112/2116stride88claims explicitly rejected",
+    "Terrain correctedpacketpositions/durationserialization not reconstructed;fullraw221payload nottreatedasfullymodeled",
+    "Naturalchoicephase1\u21922 andselectionresume invoke same unchanged35514/25472 callees;root same-G integration acceptance separate",
+    "Complete880/game/productionsource discovery remains incomplete"
+  ]
+}

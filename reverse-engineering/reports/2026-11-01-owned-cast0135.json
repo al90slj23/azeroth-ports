@@ -91,7 +91,7 @@
   ],
   "distinctions": [
     "1076 is the learned80B main path via2088;916 separately consumes extra84B records.",
-    "Kind1 class prelude precedes learned entries; basicG1256 follows learned entries.",
+    "Kind1 class prelude precedes learned entries; effect0isolationfixture intheG1256slot follows learned entries;actualG1256isracial80.",
     "Counts are resolved-state entry-stage comparisons, not full880 ticks or whole-game acceptance."
   ],
   "limitations": [
@@ -102,7 +102,7 @@
     "Only declared float fields use NaN classification equality; integer fields are strict.",
     "Death callback exists but this639-case suite is nonlethal; death/pickup204 is a separate earlier composition.",
     "Cooldown-event payload descriptors and physical packet bytes are not included in this comparison.",
-    "True initial basic-record constructor and complete2088/1202/880 producer state remain unresolved."
+    "This639resolved-statebatch doesnotverifygenuineG1256racial initialization/execution; later151/720/headless evidence isseparate."
   ],
   "independent_review": {
     "status": "passed scoped readonly recomputation",
@@ -111,5 +111,12 @@
     "report": "2026-11-01-owned-cast0135-independent-review.json",
     "compared_leaf_values": 541566,
     "NaN_classification_only_differences": 60
-  }
+  },
+  "terminology_erratum": "G1256 isracial80inreal1560. This639casebatch puts25effect0definitions inthat slot asbasicisolationfixtures; genuine racial initialization/execution areseparate151/720/headless proofs.",
+  "later_work_not_added_to_this_batch": [
+    "2026-11-01-initial-state0135.json",
+    "2026-11-01-racial-cast0135.json",
+    "2026-11-01-headless-area0135.json",
+    "2026-11-01-default-extension0135-regression.json"
+  ]
 }

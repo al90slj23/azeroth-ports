@@ -1,0 +1,105 @@
+{
+  "title": "Optional extensions default-call regression",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "batches": [
+    {
+      "module": "owned-cast135",
+      "receipt": {
+        "path": "evidence/full0135-oracle-20261101T055718.108039Z/owned-cast135-comparison.json",
+        "sha256": "fd6f82160e146ba2ebcef8c364e62a60fc7abb6d40eb5579e19d0a76e171bb2c"
+      },
+      "prior_receipt": {
+        "path": "evidence/full0135-oracle-20261101T045930.365818Z/owned-cast135-comparison.json",
+        "sha256": "c12f30bac911f59e9380311676e441373919311e4e589c182562c27147628cf9"
+      },
+      "cases": 639,
+      "stages": 5924,
+      "accepted_hits": 4923,
+      "compared_words": null,
+      "mismatches": 0,
+      "source_files": 33,
+      "fixtures_including_expected_byte_identical": true,
+      "fixture_sha256": "b1f6b005dc58462fd3dfb00d542fdbe7593e28cf59c288ea98fa3ea4dcdf8272",
+      "results_byte_identical_to_prior": true,
+      "module_sha256": "582b2019614425ddb971e3cf556d6aaf78fdeb1545bd0e0bdf7f776d4ca1db2b",
+      "runtime": {
+        "cases": 639,
+        "entry_calls": 5924,
+        "fresh_instances": 54,
+        "fresh_every": 12,
+        "max_memory_bytes": 20643840,
+        "actual_host_calls": 0,
+        "denied_function_imports": 878,
+        "original_allocator": 91941,
+        "original_full_entries": [
+          1076,
+          1754
+        ],
+        "unchanged_callees": true,
+        "memory_page_limit": 512,
+        "application_start_called": false,
+        "full_game_started": false,
+        "user_saves_accessed": false,
+        "network_used": false,
+        "node": "v22.23.4"
+      },
+      "limitations": [
+        "Resolved-state1076/1754 phases; complete2088/player producers and880 scheduling remain pending.",
+        "Empty item/definition/proc snapshots, G1596=0/G908=0/G772=0, nonlethal ordinary targets.",
+        "Main cast supports25 effect0 execution0/2 definitions; other effects require independent recovery.",
+        "Physical packet bytes/metadata/account heal logs/complete game remain pending.",
+        "Only declared float fields use NaN classification equality; integer fields are strict."
+      ]
+    },
+    {
+      "module": "spawn-motion135",
+      "receipt": {
+        "path": "evidence/full0135-oracle-20261101T061408.239242Z/spawn-motion135-comparison.json",
+        "sha256": "51514b262899637de59dee59bb330ec0d03d3e4085bb60688d019c373d8bdcb8"
+      },
+      "prior_receipt": {
+        "path": "evidence/full0135-oracle-20261101T043006.290228Z/spawn-motion135-comparison.json",
+        "sha256": "f6f2dc77025474001b672b18341877c56520138be811bac8ab7fb55da652fa3a"
+      },
+      "cases": 5068,
+      "stages": null,
+      "accepted_hits": null,
+      "compared_words": 1299237,
+      "mismatches": 0,
+      "source_files": 26,
+      "fixtures_including_expected_byte_identical": true,
+      "fixture_sha256": "3af3bd8acf0362290e9cc820449f904ca13baca8443fcd078f4647cc6e8137a3",
+      "results_byte_identical_to_prior": true,
+      "module_sha256": "06a1b0f5ebcc1faf050d96d55c7f514b78d941a4a3d8bab74baf4fa72c938ce5",
+      "runtime": {
+        "cases": 5068,
+        "functions": [
+          34787,
+          42475,
+          8751,
+          947
+        ],
+        "original_internal_callees_unchanged": true,
+        "host_calls": 0,
+        "denied_imports": 878,
+        "fresh_instances": 317,
+        "max_memory_bytes": 15597568,
+        "original_allocator": 91941,
+        "application_start_called": false,
+        "full_game_started": false,
+        "network_used": false,
+        "user_saves_accessed": false
+      },
+      "limitations": [
+        "Flat-height/absentgrid/pathfinding only; fallback and other timed947 events remain pending.",
+        "No application start, native EXE, network, user save or installed-app write."
+      ]
+    }
+  ],
+  "not_additional_coverage": true,
+  "reason": "Optional cast dispatch and destination_slots backing added for composition; unchanged default inputs and expected outputs remain equivalent.",
+  "g1256_fixture_scope": "Owned639 basic80 is an effect0 isolation record in the G1256 slot; not genuine racial constructor/scheduling validation.",
+  "original_receipts_modified": false
+}

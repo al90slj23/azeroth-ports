@@ -140,5 +140,16 @@
     "identity-and-recomparison.json": "2396f68eeb7fc131bf5a50a16ab43fb1b316dc95be3db8ad58539083f40a7cb2"
   },
   "evidence_directory": "evidence/owned-cast0135-independent-review-20261101T045826.625090Z",
-  "review_sha256": "c9eaeca5d656ec8e496d2b703ccf2d589d29cd16200838c73f66da87b71efd23"
+  "review_sha256": "c9eaeca5d656ec8e496d2b703ccf2d589d29cd16200838c73f66da87b71efd23",
+  "later_scope_erratum": {
+    "text": "embeddedbasic80 means aneffect0isolationfixture intheG1256slot;real1560laterprovedG1256isracial80. Historical639review doesnotverifyrealracial initialization/execution.",
+    "later_separate_reports": [
+      "2026-11-01-initial0135-independent-review.json",
+      "2026-11-01-racial-cast0135-independent-review.json",
+      "2026-11-01-headless-area0135.json"
+    ],
+    "old_review_source_or_evidence_modified": false,
+    "new_original_execution": false,
+    "new_old_source_review_claimed": false
+  }
 }

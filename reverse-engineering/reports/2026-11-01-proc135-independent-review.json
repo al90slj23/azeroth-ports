@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-01",
+  "version": "0.135.1",
+  "review_evidence": "evidence/proc135-independent-review-final-20261101T060304.789265Z/review.json",
+  "review_sha256": "d8202bf2a3e8fe0318b9d574133f65ce81e3d0f9adb0f7085f6ccef15d0c3cd2",
+  "receipt": "evidence/full0135-oracle-20261101T060138.356947Z/proc135-comparison.json",
+  "receipt_sha256": "92b84ed2ef7588776e510cdda2ffaacfbfe8b18c4b08c983d4fbe9c8f6da1bae",
+  "status": "Independent scoped review passed after context/nonfatal guard fixes",
+  "model_sha256": "f181d5a9043e7792726ecf8976314dc41e01a493a27421962e433266f2df0e13",
+  "cases": 855,
+  "stages": 1004,
+  "stages_by_kind": {
+    "gate8157": 512,
+    "event984": 300,
+    "damage914": 144,
+    "cast_and_empty_collect": 48
+  },
+  "model_replay_mismatches": 0,
+  "original_comparison_mismatches": 0,
+  "nan_classified_differences": 64,
+  "source_snapshots": 36,
+  "current_source_drift": [],
+  "legacy12_full_stages_explained": 48,
+  "rejection_cases_replayed": 16,
+  "findings": [
+    {
+      "id": "PROC-CONTEXT774-GUARD",
+      "status": "Resolved",
+      "original_problem": "Old after_accepted_damage could not reject unknown/nonzero original context774.",
+      "resolution": "Final f181d5... addscontext774=None; exact int0 required before mutation. Unknown and1/2/255 all independently rejected."
+    },
+    {
+      "id": "PROC-LETHAL-CALLBACK-ORDER",
+      "status": "Resolved by explicit supported-domain guard; lethal implementation remains pending",
+      "original_problem": "Combined predeath callback would run984 before1417 loot on lethal hits, unlike original914.",
+      "resolution": "Final API addsnonfatal=None; only exactTrue accepted, unknown/False rejected before selfheal/mutation. Source order retained as a known boundary, not falsely implemented."
+    }
+  ],
+  "original_executed_by_reviewer": false,
+  "author_sources_changed_by_reviewer": false
+}

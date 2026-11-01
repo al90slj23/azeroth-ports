@@ -1,0 +1,107 @@
+{
+  "title": "Fixed135 medium-angle trigonometry and ordinary AI",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "batches": [
+    {
+      "kind": "trig",
+      "receipt": {
+        "path": "evidence/full0135-oracle-20261101T052531.940851Z/trig-motion135-comparison.json",
+        "sha256": "6f318f66ff3d3c7260fdbc6efc7feeb33aefde287463ee249f5af290d68f5cf1"
+      },
+      "cases": 6726,
+      "original_calls": 13452,
+      "mismatches": 0,
+      "source_files": 24,
+      "runtime": {
+        "cases": 6726,
+        "original_entries": [
+          11428,
+          11503
+        ],
+        "original_entry_calls": 13452,
+        "original_internal_callees_preserved": true,
+        "host_calls": 0,
+        "denied_host_imports": 878,
+        "max_memory_bytes": 14548992,
+        "application_start_called": false,
+        "full_game_started": false,
+        "user_saves_accessed": false,
+        "network_used": false,
+        "node": "v22.23.4"
+      }
+    },
+    {
+      "kind": "ai",
+      "receipt": {
+        "path": "evidence/full0135-oracle-20261101T052540.021901Z/ai-motion135-comparison.json",
+        "sha256": "cf775b24db686ec71968115cfc08eaca7b5008bfadac0dfc5b7155c06f7abbb2"
+      },
+      "cases": 429,
+      "steps": 3423,
+      "mismatches": 0,
+      "source_files": 24,
+      "runtime": {
+        "case_count": 429,
+        "steps": 3423,
+        "original_function": 921,
+        "original_internal_callees_unchanged": true,
+        "original_allocator": 91941,
+        "fresh_instances": 18,
+        "fresh_every": 24,
+        "max_memory_bytes": 20709376,
+        "actual_host_calls": 0,
+        "denied_function_imports": 878,
+        "memory_page_cap": 512,
+        "node": "v22.23.4",
+        "application_start_called": false,
+        "full_game_started": false,
+        "user_saves_accessed": false,
+        "network_used": false
+      }
+    }
+  ],
+  "independent_review": {
+    "path": "reports/2026-11-01-ai-motion0135-independent-review.json",
+    "sha256": "5497edcfa8e0675c16069bc778fa7651a8432b3c064ab60c9b242bcf28e76c05"
+  },
+  "trig_nan_payload_sign_differences_accepted_as_classification": 2,
+  "ai_record_bytes_strict": 4526200,
+  "prior416_replayed_exactly": true,
+  "medium_maximum_finite_angle": 421657408,
+  "long_trajectories": [
+    {
+      "id": 426,
+      "units": 1,
+      "frames": 800,
+      "max_abs_angle": 22.07756996154785,
+      "attacks": 0,
+      "movements": 110
+    },
+    {
+      "id": 427,
+      "units": 3,
+      "frames": 800,
+      "max_abs_angle": 22.268165588378906,
+      "attacks": 0,
+      "movements": 330
+    },
+    {
+      "id": 428,
+      "units": 8,
+      "frames": 800,
+      "max_abs_angle": 22.253149032592773,
+      "attacks": 0,
+      "movements": 880
+    }
+  ],
+  "long_trajectory_contact_attacks": 0,
+  "limitations": [
+    "Finite trig beyond421657408 requires unrecovered1814; nonfinite trig compares NaN category.",
+    "AI retains ordinary124-melee/local-owner/flat-world/source-producer/nonfatal restrictions.",
+    "Original921 is tested directly; complete880/constructor/frame integration and full game are not established.",
+    "Three800-frame trajectories prove replanning/orbit beyond2pi, not80seconds of continuous contact damage.",
+    "Headless uses this component under a separately verified restricted composition; full880 is not established."
+  ]
+}

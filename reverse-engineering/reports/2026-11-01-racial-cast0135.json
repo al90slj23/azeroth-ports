@@ -1,0 +1,182 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "model": "reconstruction/core_spec/racial_cast135.py",
+  "model_sha256": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+  "receipt": "evidence/full0135-oracle-20261101T053609.059221Z/racial-cast135-comparison.json",
+  "receipt_sha256": "ef836f166aaaf8f7f092cb64cdc163072d1e31382b58b6a3263105afcf35539e",
+  "cases": 720,
+  "success": 693,
+  "rejected": 27,
+  "mismatch_fields": 0,
+  "per_racial": {
+    "perception": {
+      "cases": 120,
+      "success": 117,
+      "rejected": 3
+    },
+    "blood_fury": {
+      "cases": 120,
+      "success": 117,
+      "rejected": 3
+    },
+    "stoneform": {
+      "cases": 120,
+      "success": 114,
+      "rejected": 6
+    },
+    "shadowmeld": {
+      "cases": 120,
+      "success": 114,
+      "rejected": 6
+    },
+    "will_of_the_forsaken": {
+      "cases": 120,
+      "success": 114,
+      "rejected": 6
+    },
+    "berserking": {
+      "cases": 120,
+      "success": 117,
+      "rejected": 3
+    }
+  },
+  "groups": {
+    "base-six-racials": 6,
+    "hp-activation-boundaries": 36,
+    "class-race-stat-rebuild": 432,
+    "entry-gates": 24,
+    "same-spell-owner-expiry-order": 36,
+    "existing-protection12": 18,
+    "owned-duration-magnitude": 120,
+    "direct922-does-not-own-cooldown": 18,
+    "target30-activation-guard": 30
+  },
+  "source_snapshots": 28,
+  "transitive_source_missing": [],
+  "live_records_compared": 801,
+  "explicitly_unspecified_live_words": 465,
+  "unwritten_word_policy": "Only newly appended effect7/8/9 +16 from unwritten stack scratch; retained old words strict. Type12 value12/aux16 are explicitly copied from definition.",
+  "runtime": {
+    "cases": 720,
+    "entry_calls": 720,
+    "full_original_function": 922,
+    "unchanged_callees": [
+      1512,
+      1202,
+      29983,
+      44446
+    ],
+    "racial_owned_actual_address": "G+1256",
+    "fresh_instances": 45,
+    "max_memory_bytes": 14811136,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "seconds": 0.8576217500012717,
+  "trace": "evidence/racial-cast135-trace-20261101T053521.296694Z/trace.json",
+  "trace_sha256": "99304e16521fa48d70dd89ff1dcde80d329db46e98d94e88e4a45c996cf7282b",
+  "functions": [
+    {
+      "function": 922,
+      "wat_start": 131203095,
+      "wat_end": 131607070,
+      "body_start": 2623156,
+      "body_end": 2646444,
+      "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80",
+      "wat_sha256": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940",
+      "header": "  (func (;922;) (type 6) (param i32 i32) (result i32)"
+    },
+    {
+      "function": 1512,
+      "wat_start": 331333364,
+      "wat_end": 331395880,
+      "body_start": 10196165,
+      "body_end": 10200921,
+      "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+      "wat_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3",
+      "header": "  (func (;1512;) (type 3) (param i32)"
+    },
+    {
+      "function": 1202,
+      "wat_start": 265604115,
+      "wat_end": 265702236,
+      "body_start": 7625236,
+      "body_end": 7631797,
+      "body_sha256": "55a6163b90ac8e373c9d0d1e42c2a6fe829f2124029b48fe19ec62bf159d7652",
+      "wat_sha256": "93c1a53a759d54514a5142e17e88c5542aac1864aaf1d5770f0205dcac1d035e",
+      "header": "  (func (;1202;) (type 3) (param i32)"
+    },
+    {
+      "function": 29983,
+      "wat_start": 1008809919,
+      "wat_end": 1008815004,
+      "body_start": 53876892,
+      "body_end": 53877296,
+      "body_sha256": "7e4c63a355f96a924de1d815858f62148f6df27d2c2584793532275690ac48e1",
+      "wat_sha256": "20e036540dfb4c76cf74dbeaa39f0b35134a4433bdf60a5d573aebe9f7ae1ecd",
+      "header": "  (func (;29983;) (type 0) (param i32 i32)"
+    },
+    {
+      "function": 44446,
+      "wat_start": 1121210824,
+      "wat_end": 1121213910,
+      "body_start": 62695410,
+      "body_end": 62695668,
+      "body_sha256": "d36e6762c8702e9d668a7550fb0a8ddfacf1dffe2063a8a01215b9f35a9ec7e5",
+      "wat_sha256": "1915c455778ed77dca1b48798b77419bccf6a19edd81c0411faa340625f73c61",
+      "header": "  (func (;44446;) (type 0) (param i32 i32)"
+    },
+    {
+      "function": 4600,
+      "wat_start": 545940732,
+      "wat_end": 545963692,
+      "body_start": 21989348,
+      "body_end": 21991336,
+      "body_sha256": "55b714430f81a1440d38cdeede434a677b8e4cbcce331cbe8266104281329acd",
+      "wat_sha256": "bb3ab2da31595cea2be45a3558c886e3c16fd791a033b5e8d7bde7a1d86d69df",
+      "header": "  (func (;4600;) (type 0) (param i32 i32)"
+    }
+  ],
+  "rules": [
+    "922 passes realG1256 80B racial record through its execution-kind9 branch; direct cast does not inspect or reset remaining cooldown.",
+    "Effect8/9 first requires27562 query to find a valid enemy within30. Value=owned76*definition4; duration=maxNumeric(.1,((definition68*1.4)*owned28)*owned68).",
+    "Effect8/9: cast message, remove same-spell ownerGUID0 records stably, append live32B, actual1512, actual1202. Other owners remain.",
+    "Effect7: any same-spell live record blocks including expired/nonzero-owner; otherwise shield update, message, append,1202 without1512.",
+    "Effect12: require currentHP<=.35*maximumHP and no active kind12. Append without deleting expired same-spell entries;1202 without1512.",
+    "busy488 or context908&1 gates only third attempt ledgerG732/G736. First two ledgersG672/G676 andG684/G688 still append and cast itself proceeds."
+  ],
+  "unwritten_words": {
+    "922 new kind7/8/9 live+16": "Copied from unwritten stack scratch. Canonical zero in independent record with explicit unspecified offset16; never silently treated as original zero.",
+    "922 new kind12 live+12/+16": "Both copied from definition4/8 and explicitly zero for these two racials.",
+    "4600 spell1020 live+12/+16": "Both remain unwritten. Owner0,kind12,spell1020,expiry now+1,trailing28=0 are explicit. Inactive type12 magnitude words must not be interpreted."
+  },
+  "api": "cast_self_buff(cast,level,RacialDefinition135(pointer,id,raw88hex),owned,live_records=raw32tuple,busy488=0,unspecified_live_words=(),attempted_spell_sets=None)",
+  "api_notes": [
+    "Returns cast,level,success,canonical live_records,unspecified_live_words,callback events,pending andthree separate attempted_spell_sets.",
+    "Raw live records and level semantic sources must agree; inactive kind12 value12 is never treated as an active magnitude.",
+    "For defaultbusy0/context&1==0,commonCastState IDs are compatible. Gated calls require three explicit prior ledgers. LegacyCastState keeps first ledger only; result retains allthree.",
+    "New live+16 forkind7/8/9 is explicit unspecified scratch, not an invented original zero; old unknown masks are remapped during stable replacement."
+  ],
+  "limitations": [
+    "Six fixedracial kind9 definitions and explicitly resolved source snapshots only.",
+    "Stat keys22/28/1109 and numeric derived/HP/pools are compared;1202 aura/display keyed fields and packet payloads remain pending.",
+    "Direct922 ignores cooldown; actualG1256 initialization/owned1076 scheduling belongs to separate producer validation."
+  ],
+  "independent_review": "Pending agent readonly review.",
+  "retained_failures": [
+    "052747 six-case pilot exposed30-radius enemy gate and no1512 forkind12.",
+    "052935 first720-case full exposed overstrict busy/context cast guard and falsekind12 old-record removal.",
+    "053217 expanded-ledger run retained18 differences proving onlythird attempt ledger is gated.",
+    "Earlier passing samples are not added to final720 coverage."
+  ],
+  "errata": [
+    "The frozen checker/receipt and trace contain a textual reference to8157 scheduling.8157 is the proc event gate, not the owned scheduler; read this boundary asG1256 constructor and1076-owned scheduling. No model, receipt byte or numerical result was changed."
+  ]
+}

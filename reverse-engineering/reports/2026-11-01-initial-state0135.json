@@ -1,0 +1,548 @@
+{
+  "title": "0.135.1 real1560 constructor: class learned starter, embedded racial80, seeded stats and phase0",
+  "target": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2"
+  },
+  "status": "Validated scoped whole-constructor projection; upstream profile/account creation and world-entry remain incomplete",
+  "new_sources": {
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "scripts/trace_initial135.py": "c3c7c568cf41d5ea2559c593616853f54b0528468fa9947990223587562ae076",
+    "scripts/check_initial135.py": "cbb4db3283c5976d7033204c19fe6f79d0b0f559733a551ad9b588f696c31888",
+    "scripts/run_initial135_oracle.mjs": "43e53a05f57ad5ee4cc7a39e5c8629ed7f1f1c37a488064681ce574a1f0d5257"
+  },
+  "verification": {
+    "receipt": "evidence/full0135-oracle-20261101T055136.418672Z/initial135-comparison.json",
+    "receipt_sha256": "f19963db365d60021f4d547a464622bbc5eebb69ba42e9f4ff55237de1457649",
+    "cases": 151,
+    "mismatch_cases": 0,
+    "groups": {
+      "pilot-class8-human-real-starters": 1,
+      "pilot-class1-orc": 1,
+      "pilot-class4-gnome": 1,
+      "all-class-race-constructor-domain": 72,
+      "all-zone-flat-entry-seeded": 36,
+      "seed-matrix": 40
+    },
+    "runtime": {
+      "cases": 151,
+      "fresh_instances": 10,
+      "fresh_every": 16,
+      "max_memory_bytes": 20578304,
+      "actual_host_calls": 0,
+      "denied_function_imports": 878,
+      "original_allocator": 91941,
+      "memory_page_cap": 512,
+      "full_original_constructor": 1560,
+      "application_start_called": false,
+      "full_game_started": false,
+      "user_saves_accessed": false,
+      "network_used": false,
+      "node": "v22.23.4"
+    },
+    "process": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=512",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_initial135_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T055136.418672Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T055136.418672Z/initial135-fixtures.jsonl"
+      ],
+      "pid": 20420,
+      "pgid": 20420,
+      "exit_code": 0,
+      "deadline_seconds": 60,
+      "seconds": 0.544
+    },
+    "source_package_entry_included": true,
+    "source_frozen_before_production_imports": true,
+    "source_before_after_identical": true,
+    "independent_expected_before_original": true,
+    "all2592_output_bytes_preserved": "initial135-original-results.jsonl includes raw_g2592_hex, including unprojected physical fields",
+    "strict_comparison": "All projected raw integer and binary32 words are strict, no wildcards.",
+    "candidate_count": "Runner reads actualG1912 and asserts0 before emitting empty candidate metadata."
+  },
+  "older_attempts": [
+    {
+      "directory": "evidence/full0135-oracle-20261101T052347.653831Z",
+      "cases": 3,
+      "mismatches": 0,
+      "note": "Initial pilot before package-entry/pre-import hash guard improvement; retained, not final receipt."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T052406.537165Z",
+      "cases": 151,
+      "mismatches": 0,
+      "note": "Initial full before package-entry/pre-import hash guard improvement; retained, superseded by052508."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T052508.605338Z",
+      "cases": 151,
+      "mismatches": 0,
+      "note": "First strict package/pre-import-hash suite; superseded after independent static review found one missingOR in rare seed fallback guard and root requested more initial raw scalar outputs."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T053304.361395Z",
+      "cases": 151,
+      "mismatches": 0,
+      "note": "Budget/timer/flag revision passed all projected fields. Superseded after root headless found its Incoming default0 did not match previously unprojected initialG1652=-10; new producer fields740/744/1652 added and strict151 rerun."
+    }
+  ],
+  "pure_boundary": {
+    "original_function": 1560,
+    "signature": "(outG:i32, selectedProfile376:i32, world:i32)->void",
+    "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+    "whole_function_and_callees_preserved": true,
+    "output_size_bytes": 2592,
+    "caller_context": "App/resource function6730 assembles selected-profile376 and invokes1560, then registers application/render resources.880 has an additional1560 call for a stored profile+world descriptor. Neither application entry nor6730 was executed."
+  },
+  "corrected_meaning": {
+    "G1256": "Embedded racial ability80, selected from race-table+24/28 ID; not the class starter and not an inert dummy basic record.",
+    "G1660": "Learned/owned80 vector; initial single record is class-table+40/44 starter ID.",
+    "initial_cooldown": "Both records rank1, remaining=.5, baseline/additional multipliers1, targets/life-damage/upgrade-counts0 in this empty-profile domain.",
+    "phase": "1560 returns phase2587=0. Entering phase1 is a separate original event path."
+  },
+  "class_starters": [
+    {
+      "class_byte": 1,
+      "starter_id": "cleave",
+      "starter_definition": 5467428,
+      "hp_bits": 1130758144
+    },
+    {
+      "class_byte": 2,
+      "starter_id": "consecration",
+      "starter_definition": 5468396,
+      "hp_bits": 1131741184
+    },
+    {
+      "class_byte": 3,
+      "starter_id": "auto_shot",
+      "starter_definition": 5469364,
+      "hp_bits": 1131413504
+    },
+    {
+      "class_byte": 4,
+      "starter_id": "sinister_strike",
+      "starter_definition": 5470332,
+      "hp_bits": 1128136704
+    },
+    {
+      "class_byte": 5,
+      "starter_id": "smite",
+      "starter_definition": 5471300,
+      "hp_bits": 1126825984
+    },
+    {
+      "class_byte": 7,
+      "starter_id": "lightning_bolt",
+      "starter_definition": 5472268,
+      "hp_bits": 1128464384
+    },
+    {
+      "class_byte": 8,
+      "starter_id": "fireball",
+      "starter_definition": 5473324,
+      "hp_bits": 1129775104
+    },
+    {
+      "class_byte": 9,
+      "starter_id": "shadow_bolt",
+      "starter_definition": 5474468,
+      "hp_bits": 1126498304
+    },
+    {
+      "class_byte": 11,
+      "starter_id": "wrath",
+      "starter_definition": 5475524,
+      "hp_bits": 1129119744
+    }
+  ],
+  "race_abilities": [
+    {
+      "race_byte": 1,
+      "racial_id": "perception",
+      "racial_definition": 5476580,
+      "execution_kind": 9,
+      "effect_tag": 8
+    },
+    {
+      "race_byte": 2,
+      "racial_id": "blood_fury",
+      "racial_definition": 5476668,
+      "execution_kind": 9,
+      "effect_tag": 8
+    },
+    {
+      "race_byte": 3,
+      "racial_id": "stoneform",
+      "racial_definition": 5476756,
+      "execution_kind": 9,
+      "effect_tag": 7
+    },
+    {
+      "race_byte": 4,
+      "racial_id": "shadowmeld",
+      "racial_definition": 5476844,
+      "execution_kind": 9,
+      "effect_tag": 12
+    },
+    {
+      "race_byte": 5,
+      "racial_id": "will_of_the_forsaken",
+      "racial_definition": 5476932,
+      "execution_kind": 9,
+      "effect_tag": 12
+    },
+    {
+      "race_byte": 6,
+      "racial_id": "war_stomp",
+      "racial_definition": 5477020,
+      "execution_kind": 2,
+      "effect_tag": 3
+    },
+    {
+      "race_byte": 7,
+      "racial_id": "escape_artist",
+      "racial_definition": 5477108,
+      "execution_kind": 2,
+      "effect_tag": 2
+    },
+    {
+      "race_byte": 8,
+      "racial_id": "berserking",
+      "racial_definition": 5477196,
+      "execution_kind": 9,
+      "effect_tag": 9
+    }
+  ],
+  "initial_state_rules": [
+    "Class and race are read from selectedProfile+344/+345. Class+40/44 and race+24/28 each resolve independently against the114 immutable88B ability definitions.",
+    "No earned gear and no talent ranks produces all9 modeled source vectors empty through real25765/9868/9480/20420/34902 producers. Appearance10319/18669 still emits default visual equipment; it is distinct from purchased-gear numeric sources.",
+    "1560 expands selectedProfile+184 u64 seed into4PCG-derived xoshiro words, with original fallback guard retained. In the controlled empty domain no later constructor RNG draw changes that state.",
+    "Initial level1, XP0, pending-choice0, phase0, candidate-kind255, candidate-counter0, class-melee-timer1628=0, spawn-counter2408=10, message-sequence2412=1, ordinary-cost2420=0; units/pickups0.",
+    "Flat-world entry XYZ uses fixed region+104/+108 and supplied flat height. Whole1512 rebuilds all23 attributes; constructor then writes HP1440=maxHP1536.",
+    "No original application start, game loop, EXE, network or user save was invoked."
+  ],
+  "empty_selected_profile_layout": {
+    "bytes": 376,
+    "appearance_overrides_0_151": "19 presence/value pairs, all absent",
+    "talents_152_163": "Vec8B cap0/ptr4/len0",
+    "region_168_175": "fixed zone ID pointer/length",
+    "object_id176": "u64",
+    "seed184": "u64",
+    "purchased_equipment260": "19 zero u32 IDs",
+    "class344": "u8",
+    "race345": "u8",
+    "enabled_equipment352": "19 zero bytes",
+    "difficulty371": "0",
+    "other_profile_fields": "Zero controlled input in this validated constructor domain; upstream canonical menu/profile assembly is not claimed."
+  },
+  "upstream_seed_rule": {
+    "function": 6730,
+    "rule": "App.u64(4928)=wrap64(old*6364136223846793005+1442695040888963407); new value is selectedProfile.seed184. selectedProfile.object176 is copied fromApp3552.",
+    "original_function_executed": false,
+    "initial_app_entropy_source": "Unresolved; caller must retain explicit input provenance."
+  },
+  "entry_phase_chain": {
+    "function2328": "After accepted movement, oldphase0 plus squared movement>.04, localpeer2528==0 and!(flags2583&1) invokes1089.",
+    "function1089": "Starts by phase2587=1, then performs skill/effect/run registration and single/multiplayer work.",
+    "status": "Static call/guard established, full entry effects not yet reconstructed or differential-tested in this report. No manual phase1 assignment is accepted as proof."
+  },
+  "static_evidence": {
+    "directory": "evidence/initial135-data-20261101T052637.184067Z",
+    "data_sha256": "2c460bfbe5d7da7e065e5eaf6bb79045739460ecb772e0c780f4640103f30f83",
+    "function_manifest_sha256": "fc5d6fb462b7227fb9318ecd05f4427dba001fb39c56e96ea1a94881d54b53cc",
+    "constructor1560": {
+      "index": 1560,
+      "wat_start": 340832142,
+      "wat_end": 340924857,
+      "wat_line": 4332172,
+      "wat_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109",
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "callees": [
+        32246,
+        38323,
+        106891,
+        65335,
+        25765,
+        82066,
+        29631,
+        23181,
+        172317,
+        10319,
+        9480,
+        54802,
+        107843,
+        65327,
+        71889,
+        26967,
+        84193,
+        20420,
+        34902,
+        1512,
+        90675
+      ]
+    },
+    "ordered_call_sites1560": [
+      {
+        "callee": 32246,
+        "wat_line": 4332249
+      },
+      {
+        "callee": 38323,
+        "wat_line": 4332256
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4332288
+      },
+      {
+        "callee": 65335,
+        "wat_line": 4332337
+      },
+      {
+        "callee": 38323,
+        "wat_line": 4332370
+      },
+      {
+        "callee": 25765,
+        "wat_line": 4332375
+      },
+      {
+        "callee": 82066,
+        "wat_line": 4332409
+      },
+      {
+        "callee": 82066,
+        "wat_line": 4332472
+      },
+      {
+        "callee": 29631,
+        "wat_line": 4332496
+      },
+      {
+        "callee": 23181,
+        "wat_line": 4332523
+      },
+      {
+        "callee": 172317,
+        "wat_line": 4332535
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4332709
+      },
+      {
+        "callee": 10319,
+        "wat_line": 4332761
+      },
+      {
+        "callee": 9480,
+        "wat_line": 4332769
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4333780
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4333911
+      },
+      {
+        "callee": 54802,
+        "wat_line": 4333977
+      },
+      {
+        "callee": 107843,
+        "wat_line": 4334025
+      },
+      {
+        "callee": 82066,
+        "wat_line": 4334080
+      },
+      {
+        "callee": 65327,
+        "wat_line": 4334107
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334145
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4334197
+      },
+      {
+        "callee": 82066,
+        "wat_line": 4334305
+      },
+      {
+        "callee": 26967,
+        "wat_line": 4334361
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334389
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334416
+      },
+      {
+        "callee": 84193,
+        "wat_line": 4334445
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334459
+      },
+      {
+        "callee": 84193,
+        "wat_line": 4334480
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334494
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4334524
+      },
+      {
+        "callee": 20420,
+        "wat_line": 4334545
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334573
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334595
+      },
+      {
+        "callee": 34902,
+        "wat_line": 4334620
+      },
+      {
+        "callee": 106891,
+        "wat_line": 4334652
+      },
+      {
+        "callee": 82066,
+        "wat_line": 4334781
+      },
+      {
+        "callee": 26967,
+        "wat_line": 4334837
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334872
+      },
+      {
+        "callee": 71889,
+        "wat_line": 4334899
+      },
+      {
+        "callee": 1512,
+        "wat_line": 4334916
+      },
+      {
+        "callee": 172317,
+        "wat_line": 4334933
+      },
+      {
+        "callee": 172317,
+        "wat_line": 4334938
+      },
+      {
+        "callee": 107843,
+        "wat_line": 4334943
+      },
+      {
+        "callee": 107843,
+        "wat_line": 4334948
+      },
+      {
+        "callee": 90675,
+        "wat_line": 4334961
+      },
+      {
+        "callee": 107843,
+        "wat_line": 4334966
+      },
+      {
+        "callee": 90675,
+        "wat_line": 4334982
+      }
+    ]
+  },
+  "api": {
+    "input": "ConstructorInput135(class_byte,race_byte,region_index,seed_u64,object_id_u64,flat_height_bits)",
+    "producer": "initialize_empty_profile(input)->InitialState135",
+    "result": "LevelCycleState with real starters/attributes/RNG, owned tuple, racial80, playerXYZ/sourceID, timer1628 and pickup counters. Production reads no original data or files. Also game_tag/member_count and immutable initial_scalar_words/initial_byte_flags offset/value tuples; these are initial construction facts, not additional independent mutable HP/time/RNG owners.",
+    "integration_warning": "Do not replace racial80 with a convenient supported spell, set its timerInf or manually forcephase1 to bypass unresolved racial/entry behavior."
+  },
+  "unknowns": [
+    "Upstream account creation, character48 parsing/creation, selected-profile376 menu assembly and initial App entropy are not fully recovered.",
+    "Full asset/world/resource registration outside1560, including6730 host callback context.",
+    "Racial abilities all have nonzero effects and require further922 dispatcher recovery; current25 effect0 cast set cannot execute a genuine complete opening by itself.",
+    "Nonempty owned talent/equipment sources, appearance visual heap objects, and all physical packet/tree/resource bytes beyond the declared numeric projection.",
+    "Constructor class/race byte fallback outside the tested9×8 domain and UI restrictions on combinations are not accepted as tested support."
+  ],
+  "review_corrections": [
+    "Independent reviewer ai_incoming135 found1560 seed guard needs outer|ab before&255. Corrected exact stack operation; old151 suite did not expose it.",
+    "Actual candidate count is now read and asserted0, rather than relying on a literal empty projection.",
+    "Additional start budget/member/game-tag/timer/flag fields added with1560 constant-store provenance, then strict151 rerun.",
+    "Root headless pilot exposed unprojected last-hit initial value:1560 stack1736i64 encodes speedG1648=7.0 andlast-hitG1652=-10.0. G740/G744 are also explicitly zero. New fields are compared as actual original words, not Incoming defaults."
+  ],
+  "initial_raw_control": {
+    "game_tag_u64": 0,
+    "member_count_u32": 1,
+    "u32_words": {
+      "488": 0,
+      "2416": 1077936128,
+      "2424": 1114636288,
+      "2428": 0,
+      "2432": 0,
+      "2436": 0,
+      "2440": 1131413504,
+      "2444": 1109393408,
+      "2448": 1114636288,
+      "2452": 20,
+      "2456": 0,
+      "2460": 0,
+      "2464": 0,
+      "2468": 0,
+      "2472": 0,
+      "2516": 1065353216,
+      "740": 0,
+      "744": 0,
+      "1652": 3240099840
+    },
+    "u8_flags": {
+      "772": 0,
+      "2568": 0,
+      "2572": 0,
+      "2573": 0,
+      "2576": 0,
+      "2578": 0,
+      "2581": 0,
+      "2583": 0
+    },
+    "rules": [
+      "Constructor stack base+88 maps toG; stack2504i64 lowword=3f/highword=0 produces budget2416=3 andkillcost2420=0.",
+      "stack2512=60 produces main-event2424=60.947 compares2424<=now before dispatch, so first main-event is now>=60, not first frame.",
+      "Previous-player2428/2432/2436 copy cleared temp2880/2888 and are0, distinct from entryXYZ.",
+      "stack2528i64 encodes240f/40f; stack2536=60f; stack2540=20 for difficulty0,25 ifdifficulty>2.",
+      "2456 is subsequently read withi32.load and compared to5 in947; retain raw-word role instead of calling every field a timer.",
+      "stack2604=1f setsG2516global multiplier; stack2624i64 gives localpeer2528=0/membercount2540=1.",
+      "1560 stack1736 i64=-4530621224046297088 has upperu32=0xc1200000, coveringG1652. stack824 and832 each i64zero coverG740 andG744. All151 raw snapshots verify these values."
+    ]
+  }
+}

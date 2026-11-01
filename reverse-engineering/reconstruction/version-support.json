@@ -1,7 +1,7 @@
 {
   "active_target": {
     "version": "0.135.1",
-    "status": "complete_static_profile_and_partial_original_runtime_differentials_passed",
+    "status": "partial_components_and_controlled_same_state_gameplay_slice_original_differentials_passed",
     "official_native_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
     "official_manifest": "https://wow.aethus.pl/exe/latest.json",
     "web_build": "0898d5e3",
@@ -9,7 +9,8 @@
     "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
     "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
     "migration_report": "../reports/2026-11-01-migration0135.json",
-    "approved_research_roles": 32
+    "approved_research_roles": 40,
+    "latest_same_state_report": "../reports/2026-11-01-headless-area0135.json"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -470,17 +471,18 @@
     }
   ],
   "full_game_remaining": [
-    "initial state and complete main-loop scheduling beyond accepted clock/pause projections",
-    "remaining event/special generation, ranged/Boss AI, terrain and pathfinding",
-    "all skill effects",
-    "state producer and event ordering",
-    "nonordinary drops/procs and natural skill-death-progression-selection composition",
-    "maps, latest asset completeness, resource loaders and renderers",
-    "saves",
+    "upstream account/character/profile producers, initial App entropy and real1089/2328 phase entry blocked atSELF/data",
+    "complete880/915/3757 scheduling and global/final state beyond the controlled entry sequence",
+    "Unobserved915domains: G2364 delayednotification; G1820/1824/1828 stride56delayed-effect; G1808/1812/1816 stride120projectile/geometry. Producer910 iscalledby921/915. Thisbatch doesnotreadthemback:0projectiondiff cannotproveempty/no gameplayeffects; real915plusflag/vecreadback isrequired.",
+    "remaining timed/special generation, ranged/Boss/pet AI, real terrain/navigation",
+    "all remaining skill effects/gates; selected unsupported cards stop before mutation",
+    "nonfatal context0kind27 is recovered, but fatal loot/post-proc and other event producers/order remain unknown",
+    "nonordinary drops, physical entity/aura/account/message payloads and unmodeled keyed state",
+    "latest asset completeness, resource loaders, M2/BLP/terrain/audio rendering",
+    "saves and terminal rewards/revival",
     "UI and input",
-    "all multiplayer behavior",
-    "independent full-run acceptance",
-    "all specialchoice metadata/realproducer/keyedstate and natural XP-selection-world scheduling"
+    "all multiplayer behavior and cross-platform delivery",
+    "independent complete-run acceptance; controlledphase1/zero-initial-storage inputs are not real boot"
   ],
   "native_windows_execution_validated": false,
   "installed_apps_or_saves_modified": false,
@@ -854,7 +856,9 @@
           "atan_bits",
           "atan2_bits"
         ]
-      }
+      },
+      "default_extension_regression": "../reports/2026-11-01-default-extension0135-regression.json",
+      "backing_extension_scope": "DefaultNone reproduces prior zero-slot fixture domain; explicit actual backing is separately validated inheadless061901."
     },
     {
       "module": "core_spec.spawn_boss_schedule135",
@@ -942,13 +946,14 @@
       "source_rejection_checks": 8,
       "remaining": [
         "ranged/Boss AI",
-        "large-angle trig reduction",
-        "terrain/pathfinding",
-        "status producers",
-        "wire bytes",
-        "fatal incoming"
+        "extreme finite-angle1814 beyond421657408",
+        "realterrain/pathfinding",
+        "unrestored status/proc producers",
+        "physical wire bytes",
+        "fatal incoming/revival"
       ],
-      "independent_review": "passed scoped readonly review"
+      "independent_review": "passed scoped readonly review",
+      "medium_angle_extension": "core_spec.ai_motion135; old416cases are replayed inside429, not added"
     },
     {
       "module": "core_spec.death_pickup135",
@@ -966,16 +971,23 @@
       "stages": 871,
       "ordinary_deaths": 376,
       "choice_phase_cases": 136,
-      "retained_unresolved_negative_cases": 12,
       "domain": "Unflagged ordinary death/mixed XP+coin consumers,explicit flat placement,limited source snapshots.",
       "remaining": [
-        "nonempty definitions→984 sources",
-        "world placement producer",
-        "mode0 movement-stop",
-        "physical entities/packets",
-        "full natural loop"
+        "fatal/nonzero-context andother984producers",
+        "nonordinary death families",
+        "realterrain/navigation",
+        "physical entity/packet outputs",
+        "full880/natural run"
       ],
-      "independent_review": "passed scoped readonly review"
+      "independent_review": "passed scoped readonly review",
+      "retained_original_failure_cases": 12,
+      "old12_resolution": "../reports/2026-11-01-proc-events0135.json",
+      "old12_resolution_scope": "New855cases restore zero16B-gate kind27 under explicit nonfatal context0; old failures retained, fatal post-lootproc still unknown.",
+      "connected_composition": "../reports/2026-11-01-headless0135.json",
+      "placement_and_pause_modules": [
+        "core_spec.ordinary_placement135",
+        "core_spec.movement_pause135"
+      ]
     },
     {
       "module": "core_spec.owned_cast135",
@@ -990,12 +1002,11 @@
       "report": "../reports/2026-11-01-owned-cast0135.json",
       "stages": 5924,
       "accepted_hits": 4923,
-      "domain": "Real1076 learned80B+basic80B and class-kind1 prelude,25 effect0 execution0/2 definitions,empty proc/item/definitions,G1596/G908/G772=0,nonlethal.",
+      "domain": "Real1076 learned80B/class-kind1 prelude plus effect0 basic isolation fixture inG1256 slot;25effect0/execution0,2;emptyproc/item/definitions;G1596/G908/G772=0;nonfatal.",
       "remaining": [
-        "2088/880 producers and scheduling",
-        "true new-game/basic initializer",
-        "other effects",
-        "lethal continuation in this new chain",
+        "all880/915 scheduling and remaining sourceproducers",
+        "other skill effects",
+        "fatal nonemptyproc continuation",
         "physical packet bytes"
       ],
       "independent_review": "passed scoped readonly recomputation",
@@ -1007,7 +1018,262 @@
           "cast_ability",
           "process_hits"
         ]
-      }
+      },
+      "g1256_identity": "ActualG1256 isracial80;639basic fixture must not be relabeled as genuine racial.",
+      "constructor_racial_and_gameplay_are_separate_domains": [
+        "core_spec.initial_state135",
+        "core_spec.racial_cast135",
+        "core_spec.headless135"
+      ],
+      "default_extension_regression": "../reports/2026-11-01-default-extension0135-regression.json"
+    },
+    {
+      "module": "core_spec.initial_state135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 151,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-initial-state0135.json",
+      "domain": "Explicit empty376Bselected-profile/full1560;real learned starter/racial80,stats/HP/RNG/budget/timers/flags,phase0;no upstream profile/Appentropy/world boot.",
+      "receipt": "../evidence/full0135-oracle-20261101T055136.418672Z/initial135-comparison.json",
+      "independent_review": "../reports/2026-11-01-initial0135-independent-review.json",
+      "g1256_identity": "racial80",
+      "remaining": [
+        "upstream account/profile/Appentropy",
+        "nonempty gear/talents",
+        "realphase entry1089/assets"
+      ]
+    },
+    {
+      "module": "core_spec.ordinary_placement135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 924,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-ordinary-placement0135.json",
+      "domain": "12zones;prehit424B interpolation,XP/coin separateclamp,flat/base-heightfallback;complete1417and914lethal.",
+      "direct1417_cases": 396,
+      "lethal914_cases": 528,
+      "independent_review": "../reports/2026-11-01-ordinary-placement0135-independent-review.json",
+      "remaining": [
+        "realterrain/grid/navigation",
+        "nonordinary deaths",
+        "physical objects/packets"
+      ]
+    },
+    {
+      "module": "core_spec.racial_cast135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 720,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-racial-cast0135.json",
+      "domain": "Six fixedkind9racial definitions,realG1256record,full922/live32/derived/HP/shield/3attemptledgers.",
+      "successful_casts": 693,
+      "game_guard_rejections": 27,
+      "explicit_unwritten_live16_words": 465,
+      "independent_review": "../reports/2026-11-01-racial-cast0135-independent-review.json",
+      "remaining": [
+        "war_stomp/escape_artist",
+        "physical1202aura/displaykeys/packets"
+      ]
+    },
+    {
+      "module": "core_spec.proc_events135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 855,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-proc-events0135.json",
+      "domain": "kind27/zero16Bgate,explicitnonfatal=Trueandcontext774int0;full984/8157/914afterhit restoresold12differencecause.",
+      "stages": 1004,
+      "old_failed_cases_explained": 12,
+      "independent_review": "../reports/2026-11-01-proc135-independent-review.json",
+      "remaining": [
+        "fatal loot/post-procordering",
+        "nonzero context/othergates/producers",
+        "nonemptydefinition1076integration"
+      ]
+    },
+    {
+      "module": "core_spec.ai_trig135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 6726,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-ai-motion0135.json",
+      "domain": "Independent medium-angle11428/11503;nohosttrig/no f32tau modulo;finiteabsangle<=421657408.",
+      "original_calls": 13452,
+      "nan_payload_sign_differences_accepted_as_classification": 2,
+      "independent_review": "../reports/2026-11-01-ai-motion0135-independent-review.json",
+      "remaining": [
+        "extreme finiteangle1814"
+      ]
+    },
+    {
+      "module": "core_spec.ai_motion135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 429,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-ai-motion0135.json",
+      "domain": "Ordinary124melee/localowner0/flat/emptyproducer/nonfatal;old416included;three800frameorbit/replanning trajectories cross2pi withoutresetingU396.",
+      "steps": 3423,
+      "full_record_bytes_strict": 4526200,
+      "long_trajectory_contact_attacks": 0,
+      "independent_review": "../reports/2026-11-01-ai-motion0135-independent-review.json",
+      "remaining": [
+        "ranged/Boss",
+        "realterrain",
+        "fatal/revival",
+        "unrestoredsourceproducers"
+      ]
+    },
+    {
+      "module": "core_spec.player_update135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 285,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-player-update0135.json",
+      "domain": "250playercases/409full2088calls+35corpsecases/full921;explicitemptyperiodic/stat/proc;live7/8/9/12;isolated racialperceptionCDInf/emptylearned.",
+      "stages": 444,
+      "related_modules": {
+        "core_spec.ai_lifecycle135": [
+          "cleanup_ordinary_corpses"
+        ]
+      },
+      "independent_review": "../reports/2026-11-01-gameplay-phase0135-independent-review.json",
+      "remaining": [
+        "periodic/nonempty sources/11426",
+        "physical1453/1202/account"
+      ]
+    },
+    {
+      "module": "core_spec.movement_pause135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 396,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-movement-pause0135.json",
+      "domain": "Full1371command7->35514/25472->26200;stable movingNPC order,complete424Bunchanged;explicitemptyaux112/claim88.",
+      "stages": 1136,
+      "movement221_packets": 604,
+      "independent_review": "../reports/2026-11-01-gameplay-phase0135-independent-review.json",
+      "remaining": [
+        "nonemptyaux112/claim88",
+        "packetgeometry/nonflatterrain",
+        "fullscheduler"
+      ]
+    },
+    {
+      "module": "core_spec.headless135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 8,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-headless-area0135.json",
+      "domain": "Realemptyprofile1560;explicitresearchphase1+initialzero128unit424B/128area88Bslots;sharedHP/RNG2088->1754->3757->921->2862->947/1072;fixedfirstupgradeelsefirstselection.",
+      "frames": 1614,
+      "stages": 9695,
+      "selections": 11,
+      "original_entry_calls": 9703,
+      "boundaries": {
+        "pending_selected_ability": 6,
+        "frame_budget": 2
+      },
+      "keys_compared": [
+        22,
+        28,
+        34,
+        716,
+        717,
+        1109,
+        1176
+      ],
+      "unmodeled_keyed_state_retained": true,
+      "standalone_receipt": "../evidence/headless-area135-standalone-20261101T064619.877910Z/receipt.json",
+      "remaining": [
+        "real915andreadback2364/1820vec56/1808vec120;cannotassumeempty",
+        "real1089/SELF/dataentry+4NPC/2kind2",
+        "all880/915andremaining3757scheduling",
+        "sixselectedunsupportedskills",
+        "unmodeledkeys/physicaloutputs",
+        "completegame"
+      ],
+      "area3757_included": true,
+      "complete_game": false,
+      "source_files": 64,
+      "core_init_files": 57,
+      "zeroed_unit_slots": 128,
+      "zeroed_area_slots": 128,
+      "independent_review": "../reports/2026-11-01-headless-area0135-independent-review.json",
+      "seed1_and6_frames": 400,
+      "seed3_frames": 257,
+      "seed3_post_first_selection_compared_frames": 152,
+      "previous_checkpoint": {
+        "report": "../reports/2026-11-01-headless0135.json",
+        "frames": 1093,
+        "stages": 5473,
+        "selections": 8,
+        "independent_review": "../reports/2026-11-01-headless0135-independent-review.json",
+        "not_added_to_current_counts": true
+      },
+      "unobserved_915_domains": {
+        "G2364": "delayednotification",
+        "G1820_1824_1828": "stride56delayed-effect",
+        "G1808_1812_1816": "stride120projectile/geometry",
+        "producer910_from_921_915": true,
+        "read_back_in_this_batch": false
+      },
+      "independent_review_receipt": "../evidence/headless-area0135-independent-review-20261101T064609.019436Z/review.json",
+      "independent_review_sha256": "bbb99ba4014f970658c65c10414ba2b985ef0bff17289724dc16b2cb9e480131",
+      "full_unit_backing_bytes_independently_reconstructed": 526167040,
+      "full_area_backing_bytes_independently_reconstructed": 109204480,
+      "formerly_used_unit_slot_reuses": 52,
+      "nonzero_unit_unwritten_bytes_preserved": 416,
+      "area_slot_reuses": 4,
+      "area_nonzero_unwritten_reuse": 0,
+      "nontrivial_area_expiry_memmove_count": 0,
+      "area_births": 6,
+      "area_due_ticks": 34,
+      "area_deaths": 1,
+      "area_slow_writes": 151,
+      "area_death_scope": "Onlyflamestrikeeffect0;blizzard151slowsbut0death.Component144effect1deathsarenotthisbatch.",
+      "counter_increment": 199,
+      "final_counter_sum": 279,
+      "budget_next_pure_model_status": "pending_due_event"
+    },
+    {
+      "module": "core_spec.area_effects135",
+      "status": "scoped_complete_original_entry_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 693,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-area-effects0135.json",
+      "domain": "Sevenkind3definitions/full922/3757limitedflat/sourceabsentdomain;regular525+death168;currentheadless actually exercisesflamestrike/blizzard.",
+      "stages": 5495,
+      "successful_original_casts": 1013,
+      "independent_review": "../reports/2026-11-01-area-effects0135-independent-review.json",
+      "headless_integrated": true,
+      "remaining": [
+        "915/global3757",
+        "realterrain/navigation",
+        "modifiers36/49/frosttrap",
+        "nonemptyproc",
+        "physicalvisual/ECS/packets"
+      ],
+      "headless_integration_report": "../reports/2026-11-01-headless-area0135.json"
     }
   ],
   "resource_verified_domains": [
@@ -1052,11 +1318,39 @@
     "all_ability_behaviors_implemented": false
   },
   "approved_role_extension_conservatism": {
-    "current_role_count": 32,
-    "previous_tick_command_and_stats_module_bytes_unchanged": true,
-    "receipt": "evidence/builder135-role32-review-20261101T050645.687659Z/review.json",
-    "sha256": "c04b466bb9bf83c4296be8ce2460c350939200be4580060cab32a2edb19d42bf",
+    "current_role_count": 40,
+    "current_builder_sha256": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306",
+    "current_host_sha256": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a",
+    "new_roles_have_individual_body_and_signature_guards": true,
     "old_evidence_remains_bound_to_original_source_snapshots": true,
-    "new_roles_have_individual_body_and_signature_guards": true
+    "prior_role32_review": {
+      "current_role_count": 32,
+      "previous_tick_command_and_stats_module_bytes_unchanged": true,
+      "receipt": "evidence/builder135-role32-review-20261101T050645.687659Z/review.json",
+      "sha256": "c04b466bb9bf83c4296be8ce2460c350939200be4580060cab32a2edb19d42bf",
+      "old_evidence_remains_bound_to_original_source_snapshots": true,
+      "new_roles_have_individual_body_and_signature_guards": true
+    },
+    "receipt": "evidence/builder135-role40-review-20261101T064717.549128Z/review.json",
+    "sha256": "35947831120430e841bf0f7860a39c553b6043a5b014452c8d056de90071d2d2",
+    "current40_rebuilds_old_requests_byte_identical": true,
+    "rebuild_request_count": 3,
+    "original_executed": false,
+    "added_cases": 0,
+    "previous_7entry_review": "../reports/2026-11-01-headless0135-independent-review.json",
+    "current_same_state_8entry_review": "../reports/2026-11-01-headless-area0135-independent-review.json"
+  },
+  "default_extension_regressions": "../reports/2026-11-01-default-extension0135-regression.json",
+  "effect_system915_static_inventory": {
+    "report": "../reports/2026-11-01-effect-system0135-static.json",
+    "status": "complete_static_control_inventory_only; runtime_and_independent_model_pending",
+    "original_body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6",
+    "independent_review": "../reports/2026-11-01-effect-system0135-static-review.json",
+    "independent_review_receipt": "evidence/effect-system0135-static-review-20261101T070036.663383Z/review.json",
+    "independent_review_receipt_sha256": "9bad3b91870a5a20e0178449003461a4a30e6f11858613bc42319d12c2f8fac2",
+    "raw915_executed": false,
+    "same_state_three_effect_domains_observed": false,
+    "added_original_runtime_cases": 0,
+    "next_step": "Observe actual clock/vec56/vec120 and execute unchanged915 between3757 and921 without overriding its real queues."
   }
 }

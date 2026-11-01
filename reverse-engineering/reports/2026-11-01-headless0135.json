@@ -1,0 +1,520 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "cases": 8,
+  "frames": 1093,
+  "stages": 5473,
+  "selections": 8,
+  "differences": 0,
+  "boundaries": {
+    "pending_selected_ability": 7,
+    "frame_budget": 1
+  },
+  "runtime": {
+    "cases": 8,
+    "original_entry_calls": 5481,
+    "original_functions": [
+      1560,
+      2088,
+      1754,
+      921,
+      2862,
+      947,
+      1072
+    ],
+    "host_calls": 0,
+    "denied_imports": 878,
+    "max_memory_bytes": 20578304,
+    "memory_page_limit": 512,
+    "original_allocator": 91941,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "full_game_started": false,
+    "controlled_phase1_boundary": true,
+    "zeroed_unit_storage_capacity": 128
+  },
+  "limitations": [
+    "Explicit phase1 research resolution;1089/resource boot is incomplete and real entry has additional spawns/kind2 objects.",
+    "Unit destination memory explicitly pre-reserved as128 zeroed424B slots;live allocator padding determinism is not claimed.",
+    "Same-G controlled entry sequence;complete880/915/3757 scheduling not established;2088 within declared source domain.",
+    "Only declared unwritten pickup arrival and inactive live words may be unspecified;all other compared data strict.",
+    "Unknown selected abilities and due event clocks stop before another frame;all seeds and boundaries retained.",
+    "Unmodeled player object keys retained separately, not assumed cosmetic;whole game incomplete.",
+    "Unobserved915domains: G2364 delayednotification; G1820/1824/1828 stride56delayed-effect; G1808/1812/1816 stride120projectile/geometry. Producer910 iscalledby921/915. Thisbatch doesnotreadthemback:0projectiondiff cannotproveempty/no gameplayeffects; real915plusflag/vecreadback isrequired."
+  ],
+  "source_sha256_before": {
+    "scripts/check_headless135.py": "07e821bd554bfc63fefbe6fba72bdb812882ddad98242b5dde8d164f2cccf2d6",
+    "scripts/run_headless135_oracle.mjs": "433b5e95b86a48ec5b563d7d4ddb34bd4b38244cc7652577478e49db43114c27",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306",
+    "scripts/full135_host.mjs": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/extract_cast_catalogue135.py": "7526cb3db14583a503ad3bbcfda40bfccde08de51001e55347fab115f8d9ad8b",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai135.py": "9986656e9bf6fab4339dd53d8cec4ad84786a95760a40d180c7ceebea63fce27",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_lifecycle135.py": "85d12c3808baf37bff5de9aa5acdc320a5befb9f412a352e1ccb1634946e6ac4",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "21c46816ca34320c0c755f84e3f77406d7556ec873ec59d9d31d037f898eebca",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "f531b948b723b19ff6853edabf59a7beb4d01dde2a92b38bf81879bfadd09d56",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/headless135.py": "4130da1028229cfd72fabb25fb3c594bc567ce9c0c06bcf37ec411e8d46f17b5",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/movement_pause135.py": "16bdf3abac3740ed172f612558fc642246466575d38c1d9badd4bb513f8594ad",
+    "reconstruction/core_spec/ordinary_placement135.py": "247cf4060ab8668699d7eaa1a600f4396c6acd4830f5bf2ce7ac5d4f7a6690c4",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "ba37ceefabc706b5c630e95461073b373e0da50d59d4f5dcbb8d7371fed5b387",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_frame_motion135.py": "24fec058762f231fa1808e4e91df6fe0d778edac1b3d69cf0db88dfb38f496c9",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_position_motion135.py": "3dc4cfc848670c530245c4f6e1edbff761387ffafb2d6d33d18da605ee35b5c1",
+    "reconstruction/core_spec/spawn_schedule135.py": "8e19632a8514b8c374111686ae1dfca6e36bab28746f29312ef336c8649cf27c",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "title": "Fixed135 same-state ordinary gameplay research slice",
+  "receipt": {
+    "path": "evidence/full0135-oracle-20261101T061901.289048Z/headless135-comparison.json",
+    "sha256": "290316a7d613a334ee62a73a906027ae2a4259590a54efd29dc93ee3b03a82de"
+  },
+  "independent_review": {
+    "path": "evidence/headless0135-independent-review-20261101T062623.110673Z/review.json",
+    "sha256": "5e01db3ac72d34aaf0a827cd6d1f24d3d3a875b052b6f3c58f5e226fc6309096"
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original_entry_calls": 5481,
+  "source_files": 63,
+  "core_init_files": 56,
+  "per_seed": [
+    {
+      "id": 0,
+      "seed": 0,
+      "frames": 97,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "selection_frames": [
+        97
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 486,
+      "full_backing_bytes_checked": 26376192,
+      "active_record_bytes_checked": 1071024,
+      "delta_words": 1201,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_slots": 16,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3
+    },
+    {
+      "id": 1,
+      "seed": 1,
+      "frames": 143,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 9,
+      "selection_frames": [
+        143
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 716,
+      "full_backing_bytes_checked": 38858752,
+      "active_record_bytes_checked": 1851608,
+      "delta_words": 1903,
+      "previously_used_unit_slot_reuses": 3,
+      "nonzero_unwritten_bytes_in_reused_slots": 24,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3
+    },
+    {
+      "id": 2,
+      "seed": 2,
+      "frames": 143,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 9,
+      "selection_frames": [
+        143
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 716,
+      "full_backing_bytes_checked": 38858752,
+      "active_record_bytes_checked": 1851608,
+      "delta_words": 1852,
+      "previously_used_unit_slot_reuses": 3,
+      "nonzero_unwritten_bytes_in_reused_slots": 24,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3
+    },
+    {
+      "id": 3,
+      "seed": 3,
+      "frames": 250,
+      "selections": 1,
+      "boundary": "frame_budget",
+      "final_level": 2,
+      "max_active_units": 11,
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_last_selection": 145,
+      "next_model_status": "ordered_frame_projection",
+      "next_frame_original_executed": false,
+      "stages": 1251,
+      "full_backing_bytes_checked": 67894272,
+      "active_record_bytes_checked": 3889776,
+      "delta_words": 3718,
+      "previously_used_unit_slot_reuses": 7,
+      "nonzero_unwritten_bytes_in_reused_slots": 56,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 2,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 2
+    },
+    {
+      "id": 4,
+      "seed": 4,
+      "frames": 107,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "selection_frames": [
+        107
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 536,
+      "full_backing_bytes_checked": 29089792,
+      "active_record_bytes_checked": 1272000,
+      "delta_words": 1329,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_slots": 16,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3
+    },
+    {
+      "id": 5,
+      "seed": 5,
+      "frames": 105,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 526,
+      "full_backing_bytes_checked": 28547072,
+      "active_record_bytes_checked": 1231720,
+      "delta_words": 1300,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_slots": 16,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3
+    },
+    {
+      "id": 6,
+      "seed": 6,
+      "frames": 143,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 9,
+      "selection_frames": [
+        143
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 716,
+      "full_backing_bytes_checked": 38858752,
+      "active_record_bytes_checked": 1853728,
+      "delta_words": 1914,
+      "previously_used_unit_slot_reuses": 3,
+      "nonzero_unwritten_bytes_in_reused_slots": 24,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 2,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 2
+    },
+    {
+      "id": 7,
+      "seed": 7,
+      "frames": 105,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "stages": 526,
+      "full_backing_bytes_checked": 28547072,
+      "active_record_bytes_checked": 1231720,
+      "delta_words": 1305,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_slots": 16,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3
+    }
+  ],
+  "unwritten_words": 8623,
+  "backing_bytes_independently_reconstructed": 297030656,
+  "formerly_used_slot_reuses": 24,
+  "nonzero_unwritten_bytes_retained": 192,
+  "standalone": {
+    "receipt": {
+      "path": "evidence/headless135-standalone-20261101T062449.694779Z/receipt.json",
+      "sha256": "866aad90d0aa21a5135d2312fec468a518333bef3d1bd01d481a29c686ad6f0f"
+    },
+    "scope": "independent model run, NOT original differential",
+    "runs": [
+      {
+        "name": "phase0",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/headless135-standalone-20261101T062449.694779Z/verify_standalone.py",
+          "--seed",
+          "1"
+        ],
+        "exit_code": 0,
+        "pid": 16239,
+        "output_sha256": "63cc87c8f3bc4aed25a33a43350ad2359ce45ea332c43861b3ad86c8f664924f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": false,
+          "boundary": "pending_real_phase_entry",
+          "frames": 0,
+          "simulation_seconds": 0.0,
+          "level": 1,
+          "xp": 0,
+          "hp": 215.0,
+          "selections": 0,
+          "gold": 0,
+          "learned": [
+            "fireball"
+          ],
+          "events": []
+        }
+      },
+      {
+        "name": "seed3",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/headless135-standalone-20261101T062449.694779Z/verify_standalone.py",
+          "--seed",
+          "3",
+          "--frames",
+          "250",
+          "--research-resolved-entry"
+        ],
+        "exit_code": 0,
+        "pid": 16253,
+        "output_sha256": "ff4e7b0045cce79418ac2b1b44def41d3908f808da94fc97686c92591610a096",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": true,
+          "boundary": "frame_budget",
+          "frames": 250,
+          "simulation_seconds": 25.000059127807617,
+          "level": 2,
+          "xp": 7,
+          "hp": 87.6524429321289,
+          "selections": 1,
+          "gold": 0,
+          "learned": [
+            "fireball"
+          ],
+          "events": [
+            {
+              "frame": 104,
+              "time": 10.500003814697266,
+              "level": 2,
+              "chosen_index": 2,
+              "variant": "upgrade",
+              "ability": "fireball",
+              "kinds": [
+                0
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "seed1",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/headless135-standalone-20261101T062449.694779Z/verify_standalone.py",
+          "--seed",
+          "1",
+          "--frames",
+          "250",
+          "--research-resolved-entry"
+        ],
+        "exit_code": 0,
+        "pid": 16257,
+        "output_sha256": "76fe7da09666d4e86800ce9d544cf202cb49ff861d10d0270b5f9aef9dcaa349",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": true,
+          "boundary": "pending_selected_ability",
+          "frames": 143,
+          "simulation_seconds": 14.300018310546875,
+          "level": 2,
+          "xp": 1,
+          "hp": 211.53884887695312,
+          "selections": 1,
+          "gold": 0,
+          "learned": [
+            "fireball",
+            "flamestrike"
+          ],
+          "events": [
+            {
+              "frame": 142,
+              "time": 14.300018310546875,
+              "level": 2,
+              "chosen_index": 0,
+              "variant": "new",
+              "ability": "flamestrike",
+              "kinds": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "entry_sequence": [
+    1560,
+    2088,
+    1754,
+    921,
+    2862,
+    947,
+    1072
+  ],
+  "g1256_identity": "real racial80; class starter is learned80[0]",
+  "player_keys_compared": [
+    22,
+    28,
+    34,
+    716,
+    717,
+    1109,
+    1176
+  ],
+  "additional_coverage_limitations": [
+    "24formerly used spawn slots retain192nonzero unwritten bytes; none reuses a nonzero death-time U4 word.",
+    "Seed3 has145original-compared frames after its selection at frame105; the next model frame after budget250 is still supported but has no original output in this batch.",
+    "The other7seeds stop immediately after selection; the independently probed next model frame returns pending_selected_ability without mutation."
+  ],
+  "area3757_included": false,
+  "real_phase_entry_implemented": false,
+  "complete_game": false,
+  "unobserved_915_domains": {
+    "notification_flag": 2364,
+    "delayed_effect_vector": [
+      1820,
+      1824,
+      1828,
+      56
+    ],
+    "projectile_geometry_vector": [
+      1808,
+      1812,
+      1816,
+      120
+    ],
+    "producer": 910,
+    "producer_callers": [
+      921,
+      915
+    ],
+    "read_back_in_this_batch": false,
+    "cannot_infer_empty_or_no_gameplay_effects": true
+  }
+}

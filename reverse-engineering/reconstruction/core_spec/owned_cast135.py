@@ -74,7 +74,7 @@ def _milliseconds(bits):
 
 def tick_owned(state, entries, basic, dt_bits, *, sources,
                class_byte, timer1628_bits, refresh_flag772=0,
-               after_hit=None, after_death=None):
+               after_hit=None, after_death=None, cast_dispatch=cast_ability):
     """Forward learned entries, then basic attack; preserve HP/RNG hit order.
 
     Owned countdown uses ``not >0``; basic countdown uses ``<=0``. Consequently
@@ -102,7 +102,7 @@ def tick_owned(state, entries, basic, dt_bits, *, sources,
         if not f.to_float(remaining) > 0:
             #1076 writes infinity before copying the80B record into922.
             casting = replace(entry.record, remaining_cooldown_bits=f.INF)
-            result = cast_ability(state, entry.definition, casting,
+            result = cast_dispatch(state, entry.definition, casting,
                 after_hit=after_hit, after_death=after_death)
             state = result.state
             remaining = _floor_cooldown(state, entry) if result.success else 0x3e4ccccd
@@ -113,7 +113,7 @@ def tick_owned(state, entries, basic, dt_bits, *, sources,
     remaining = f.sub(basic.record.remaining_cooldown_bits, dt_bits)
     basic_result = None
     if f.to_float(remaining) <= 0:
-        basic_result = cast_ability(state, basic.definition,
+        basic_result = cast_dispatch(state, basic.definition,
             replace(basic.record, remaining_cooldown_bits=remaining),
             after_hit=after_hit, after_death=after_death)
         state = basic_result.state

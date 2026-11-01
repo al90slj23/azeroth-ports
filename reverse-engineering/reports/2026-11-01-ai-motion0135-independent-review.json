@@ -1,0 +1,258 @@
+{
+  "status": "pass within medium-angle ordinaryAI controlled domain",
+  "reviewer": "independent ai_incoming135 agent",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "trig_cases": 6726,
+  "trig_original_calls": 13452,
+  "ai_cases": 429,
+  "ai_steps": 3423,
+  "prior416_inputs_and_expected_replayed_exactly": true,
+  "model_fixture_mismatch_cases": [],
+  "original_result_mismatch_cases": [],
+  "trig_nan_payload_sign_differences_accepted_as_classification": 2,
+  "ai_record_bytes_strictly_compared": 4526200,
+  "source_snapshots_per_batch": 24,
+  "base_ai_diff_exactly_two_default_DI_parameters_and_two_calls": true,
+  "production_closure_including_package_init": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ai135.py",
+    "reconstruction/core_spec/ai135_data.py",
+    "reconstruction/core_spec/ai_motion135.py",
+    "reconstruction/core_spec/ai_trig135.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/enemy_scaling.py",
+    "reconstruction/core_spec/incoming134.py",
+    "reconstruction/core_spec/incoming135.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/spawn135.py",
+    "reconstruction/core_spec/spawn135_data.py",
+    "reconstruction/core_spec/spawn_geometry135.py",
+    "reconstruction/core_spec/spawn_math135.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": [],
+  "all_nonexport_sections_original_bytes_identical": true,
+  "huge_angle_guard_checks": [
+    {
+      "function": "sin_bits",
+      "bits": 1305022427,
+      "rejected": true,
+      "reason": "Finite Payne-Hanek1814 reduction remains unresolved"
+    },
+    {
+      "function": "sin_bits",
+      "bits": 3452506075,
+      "rejected": true,
+      "reason": "Finite Payne-Hanek1814 reduction remains unresolved"
+    },
+    {
+      "function": "sin_bits",
+      "bits": 2139095039,
+      "rejected": true,
+      "reason": "Finite Payne-Hanek1814 reduction remains unresolved"
+    },
+    {
+      "function": "cos_bits",
+      "bits": 1305022427,
+      "rejected": true,
+      "reason": "Finite Payne-Hanek1814 reduction remains unresolved"
+    },
+    {
+      "function": "cos_bits",
+      "bits": 3452506075,
+      "rejected": true,
+      "reason": "Finite Payne-Hanek1814 reduction remains unresolved"
+    },
+    {
+      "function": "cos_bits",
+      "bits": 2139095039,
+      "rejected": true,
+      "reason": "Finite Payne-Hanek1814 reduction remains unresolved"
+    }
+  ],
+  "long_frame_trajectories": [
+    {
+      "id": 426,
+      "units": 1,
+      "frames": 800,
+      "max_abs_angle": 22.07756996154785,
+      "attacks": 0,
+      "movements": 110
+    },
+    {
+      "id": 427,
+      "units": 3,
+      "frames": 800,
+      "max_abs_angle": 22.268165588378906,
+      "attacks": 0,
+      "movements": 330
+    },
+    {
+      "id": 428,
+      "units": 8,
+      "frames": 800,
+      "max_abs_angle": 22.253149032592773,
+      "attacks": 0,
+      "movements": 880
+    }
+  ],
+  "long_frame_scope": "Each800-frame path intentionally keeps player moving far away;all3 havezero contact attacks. They prove accumulated-angle repathing, not80s sustained incomingcombat.",
+  "batches": [
+    {
+      "kind": "trig",
+      "final_receipt": "evidence/full0135-oracle-20261101T052531.940851Z/trig-motion135-comparison.json",
+      "receipt_sha256": "6f318f66ff3d3c7260fdbc6efc7feeb33aefde287463ee249f5af290d68f5cf1",
+      "cases": 6726,
+      "source_snapshots": 24,
+      "production_closure_including_package_init": [
+        "reconstruction/core_spec/__init__.py",
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/ai135_data.py",
+        "reconstruction/core_spec/ai_motion135.py",
+        "reconstruction/core_spec/ai_trig135.py",
+        "reconstruction/core_spec/binary32.py",
+        "reconstruction/core_spec/binary32_sqrt.py",
+        "reconstruction/core_spec/enemy_scaling.py",
+        "reconstruction/core_spec/incoming134.py",
+        "reconstruction/core_spec/incoming135.py",
+        "reconstruction/core_spec/progression134.py",
+        "reconstruction/core_spec/rng.py",
+        "reconstruction/core_spec/spawn135.py",
+        "reconstruction/core_spec/spawn135_data.py",
+        "reconstruction/core_spec/spawn_geometry135.py",
+        "reconstruction/core_spec/spawn_math135.py",
+        "reconstruction/core_spec/upgrade_values.py"
+      ],
+      "current_source_drift": [],
+      "artifacts_rehashed": 7,
+      "original_nonexport_sections_byte_identical": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        12,
+        10,
+        11,
+        0
+      ],
+      "original_result_mismatches": [],
+      "nan_payload_sign_differences": 2,
+      "strict_record_bytes_compared": 0,
+      "original_roles": [
+        {
+          "role": "cos_angle",
+          "index": 11503,
+          "export": "research135_cos_angle",
+          "type_index": 55,
+          "parameters_hex": "7d",
+          "results_hex": "7d",
+          "body_start": 34971934,
+          "body_end": 34973231,
+          "body_bytes": 1297,
+          "body_sha256": "e6b1b35466a69bf778e1a26a23296457144510ca9c825e00eccd22e48a012d99"
+        },
+        {
+          "role": "sin_angle",
+          "index": 11428,
+          "export": "research135_sin_angle",
+          "type_index": 55,
+          "parameters_hex": "7d",
+          "results_hex": "7d",
+          "body_start": 34874656,
+          "body_end": 34875993,
+          "body_bytes": 1337,
+          "body_sha256": "67188c5a196f2538d8d29d0de23b30935d4adcdefd6cc563d393888b03e2aeeb"
+        }
+      ],
+      "steps": 0
+    },
+    {
+      "kind": "ai",
+      "final_receipt": "evidence/full0135-oracle-20261101T052540.021901Z/ai-motion135-comparison.json",
+      "receipt_sha256": "cf775b24db686ec71968115cfc08eaca7b5008bfadac0dfc5b7155c06f7abbb2",
+      "cases": 429,
+      "source_snapshots": 24,
+      "production_closure_including_package_init": [
+        "reconstruction/core_spec/__init__.py",
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/ai135_data.py",
+        "reconstruction/core_spec/ai_motion135.py",
+        "reconstruction/core_spec/ai_trig135.py",
+        "reconstruction/core_spec/binary32.py",
+        "reconstruction/core_spec/binary32_sqrt.py",
+        "reconstruction/core_spec/enemy_scaling.py",
+        "reconstruction/core_spec/incoming134.py",
+        "reconstruction/core_spec/incoming135.py",
+        "reconstruction/core_spec/progression134.py",
+        "reconstruction/core_spec/rng.py",
+        "reconstruction/core_spec/spawn135.py",
+        "reconstruction/core_spec/spawn135_data.py",
+        "reconstruction/core_spec/spawn_geometry135.py",
+        "reconstruction/core_spec/spawn_math135.py",
+        "reconstruction/core_spec/upgrade_values.py"
+      ],
+      "current_source_drift": [],
+      "artifacts_rehashed": 7,
+      "original_nonexport_sections_byte_identical": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        12,
+        10,
+        11,
+        0
+      ],
+      "original_result_mismatches": [],
+      "nan_payload_sign_differences": 0,
+      "strict_record_bytes_compared": 4526200,
+      "original_roles": [
+        {
+          "role": "update_units",
+          "index": 921,
+          "export": "research135_update_units",
+          "type_index": 37,
+          "parameters_hex": "7f7d",
+          "results_hex": "",
+          "body_start": 2600015,
+          "body_end": 2623153,
+          "body_bytes": 23138,
+          "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37"
+        }
+      ],
+      "steps": 3423,
+      "prior416_fixtures_and_expected_exactly_replayed": true,
+      "base_ai_diff_exactly_two_default_DI_parameters_and_two_calls": true
+    }
+  ],
+  "reviewed_rules": [
+    "11428sin/11503cos use originalorderedf64 quotient rounding and splitpi/2 reduction; no hostsin/cos orroundedf32tau reduction.",
+    "Small directpolynomial branches extend through actual1088565718 threshold before medium reduction;maxfinite fastword1305022426.",
+    "AI wrapper injects only trig callbacks;original source/owner/terrain/death/proc guards andrecordlogic preserved.",
+    "U396 orbitword retains actualf32 accumulation and isneverwrapped/reset tofit smallangle domain."
+  ],
+  "limitations": [
+    "Finite absangles>421657408 still require1814 and explicitlyreject. Nonfinite trig onlyNaN classification.",
+    "Ordinary124melee,localowner,flatworld,emptyunmodeledsources andnonfatalincoming domain remain unchanged.",
+    "Boss/ranged/terrain/full880constructor/wholeframe andgame integration are notestablished."
+  ],
+  "original_executed_by_reviewer": false,
+  "production_sources_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "trig-model-recomputation.json": "398f2b1f6c0597ad5fa5fe4cfba892d0a308722c794a30b00293160ce8c0af12",
+    "verify.py": "9ecff044fdf46e937d1084693729102089db79877c01dec474d10033f536076e",
+    "recompute.py": "0981c8963f5d1f9ebc393d475afedbefc63a44b2081c02e8db696898f88240ee",
+    "identity-and-comparison.json": "b3b6c274ddfa2d8f28f84bc061caff96a78fba83c458ad1410d831e91c64d129",
+    "ai-model-recomputation.json": "9bda2a93750a975d76aa81aff59a458e6ea8e3ffbf31747a1cea7b80d138ccb5"
+  },
+  "evidence_directory": "evidence/ai-motion0135-independent-review-20261101T052828.647905Z",
+  "review_sha256": "468ebbc271b9ac90e4f1068cac6db4ae41024bd5efbcbadfdea7aca9ca99dd1a"
+}

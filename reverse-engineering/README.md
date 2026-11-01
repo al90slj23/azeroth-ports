@@ -2,7 +2,7 @@
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 
-最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。**功能对齐目标固定为本次取得的官方0.135.1 / Web0898d5e3**，已完成[完整静态profile](reports/2026-11-01-wasm0135-profile.md)、[函数/布局迁移](reports/2026-11-01-migration0135.md)和[完整原1512属性投影差分](reports/2026-11-01-stats0135-spec.md)。0.134.0 / 983346a7保留为有局部差分的研究基线；新版结果重新采集，旧版次数不转记为新版通过。见[版本策略](VERSION_STRATEGY.md)、[官方原生身份](reports/2026-11-01-official-windows-0134-static.md)和[0.134原生定向反编译](reports/2026-11-01-latest-native-focused.md)。当前仍未形成可玩替代核心，进度与验收见[重造覆盖清单](RECONSTRUCTION.md)。
+最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。**功能对齐目标固定为本次取得的官方0.135.1 / Web0898d5e3**。当前已有[持续范围技能同状态切片](reports/2026-11-01-headless-area0135.md)：真实空profile构造后的普通生成/施法、3757持续范围、死亡/拾取/升级选择，在8种子1614帧9695阶段、11次选择的原件对照中0差异。前阶段[061901/独审062623](reports/2026-11-01-headless0135-independent-review.md)单独保留，不重复相加。phase1仍为显式研究输入，尚非完整独立游戏。0.134.0 / 983346a7保留固定局部结果，0.126.0保留历史回归；不把旧次数转记为新版通过。平台角色和完整验收边界见[版本策略](VERSION_STRATEGY.md)及[重造覆盖清单](RECONSTRUCTION.md)。
 
 此前0.126.0已恢复主循环主干、9职业/113能力定义、选卡/施法/伤害、12区域及账号存档主干，并建立若干独立模型。它们保留为历史验证和新版迁移参考，不能直接计为0.134.0已支持；[核心还原图](CORE_MAP.md)明确区分两者。
 
@@ -15,7 +15,7 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 ### 固定0.135.1与基础资源
 
 - 固定0.135.1：[完整WASM profile](reports/2026-11-01-wasm0135-profile.md)覆盖175317个defined函数、824549条直接调用；全量函数header/body范围和28471个data payload哈希读回通过。这是静态导航基础，不等于所有逻辑已恢复。
-- 固定0.135.1：[初批17个角色的布局迁移](reports/2026-11-01-migration0135.md)分别绑定本版body/签名；本轮builder允许的研究角色增至32个，原分配器仍为91941。新版builder/host只增加研究导出、保留全部原callee并拒绝878个宿主导入；受控内部函数对照不调用应用start。
+- 固定0.135.1：[初批17个角色的布局迁移](reports/2026-11-01-migration0135.md)保留，现builder的40个研究角色分别绑定本版body/签名，含area_tick3757，原分配器91941不变。builder/host只增导出、保留原callee并拒绝878宿主导入；应用start不调用，各批绑定自己的冻结快照。
 - 固定0.135.1：[完整原1512属性差分](reports/2026-11-01-stats0135-spec.md)10569例、0字段差异；比较23派生词、HP、4辅助字段、3对象键、速度和队列数量，新增G1572护甲上限已恢复。独立只读复核通过；真实producer、已有树项更新、包字节和自然组合仍待接入。
 - 固定0.135.1：[暂停命令与tick时钟投影](reports/2026-11-01-game-loop0135.md)在完整原1371/880中重做6558例（5400命令＋1158tick），0差异。比较暂停phase及上次时间/模拟时钟字段；tick其余phase和完整调度未独立比较。状态为空队列/无单位并走原skip-spawn守卫，fresh终局保存、完整刷怪与多人终态仍pending。
 - 固定0.135.1：[114能力/9职业重新提取](reports/2026-11-01-catalogue0135.md)确认kit不变，但rockbiter与stormstrike的伤害/冷却/范围有实际平衡变化；新版并非只改UI。所有新pointer均由本版指令和data重建。
@@ -24,10 +24,15 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 - 固定0.135.1：[选怪/衰减/普通与精英生成4021例](reports/2026-11-01-spawn0135-spec.md)与三个真实原入口0差异，覆盖12地图/148定义及424B记录和RNG；实际成功生成1211例。位置/owner是明确已解析输入，完整947位置调度另列，Boss/特殊调度、真实terrain仍未完成。
 - 固定0.135.1：[完整947普通帧→8751位置→5736单位](reports/2026-11-01-spawn-frame0135.md)1580例（1275帧＋305位置）0差异，实际自然创建9360份单位记录；这是组合内记录数，不算额外9360用例。限定flat terrain、静止/四轴heading、owner0，其他event/Boss deadlines未来；此前8个非轴heading已由[任意运动扩展5068例](reports/2026-11-01-spawn-motion0135.md)补齐；grid/pathfinding/fallback仍未验收，5068包含旧1580重放。
 - 固定0.135.1：[额外84B计时施法/直接施法/延迟命中1314序列、3626调用](reports/2026-11-01-cast0135-spec.md)0未声明差异。实际25个effect-tag0、execution-kind0/2定义，比较目标、HP、RNG、待命中与冷却；空proc且无致死语料，其余执行/效果、死亡loot与完整技能行为仍pending。
-- 固定0.135.1：[真正已学80B主自动施法639组/5924阶段](reports/2026-11-01-owned-cast0135.md)0差异，包含职业前置近战、真实基础记录、25定义、逐hit最小伤害自疗与延迟命中。它对应2088→1076，和上述916额外84B系统分开；真实开局、完整880/2088、致死自然调度未因此通过。
+- 固定0.135.1：[已学80B主自动施法639组/5924阶段](reports/2026-11-01-owned-cast0135.md)0差异，包含职业近战、25定义、逐hit自疗与延迟命中；与916额外84B系统分开。旧basic80是G1256槽中的effect0隔离fixture，不是1560真实racial；真实racial由下列独立批和headless另验。[可选接口默认回归](reports/2026-11-01-default-extension0135-regression.md)原样重放639组及5068组生成，不计新增覆盖。
 - 固定0.135.1：[Boss871例](reports/2026-11-01-spawn-boss0135.md)、[精英549例](reports/2026-11-01-spawn-elite0135.md)各自完整原件调度域通过，实际751次Boss/340次精英生成；真实terrain、其它event/2376、完整AI与全调度仍待恢复。
-- 固定0.135.1：[普通死亡/混合拾取204组871阶段](reports/2026-11-01-death-pickup0135.md)0声明差异，376次死亡、136组进入候选；12组非空definitions→984差异保留为未知，不计通过。
+- 固定0.135.1：[普通死亡/混合拾取204组871阶段](reports/2026-11-01-death-pickup0135.md)0声明差异，376次死亡、136组进入候选。旧12组非空definitions失败证据保留，[新855组/1004阶段](reports/2026-11-01-proc-events0135.md)在kind27/zero16B gate、显式非致死context0域解释并重验通过；致死post-proc和其它gate仍未知。
 - 固定0.135.1：[有效护甲/受伤2107例](reports/2026-11-01-incoming0135.md)、[普通近战AI416组1013步](reports/2026-11-01-ai0135.md)在限定域0差异，后者覆盖124定义与完整424B记录；远程/Boss AI、反击producer、真实地形、死亡复活仍缺。
+- 固定0.135.1：[真实空profile构造151组](reports/2026-11-01-initial0135-independent-review.md)来自最终055136收据，恢复class starter/真实G1256 racial、属性/HP/RNG、预算/timer和phase0；上游账号/profile及完整资源进入未恢复。[死亡placement924](reports/2026-11-01-ordinary-placement0135.md)覆盖12地图和pre-hit移动插值；[六种racial720](reports/2026-11-01-racial-cast0135.md)验完整922的live32/属性/HP/盾和三份attempt ledger。
+- 固定0.135.1：[trig6726/长期AI429组3423步](reports/2026-11-01-ai-motion0135.md)补中角归约和跨2π轨迹；三条800帧轨迹无接触攻击，极大角1814、远程/Boss/真实地形仍缺。[玩家更新/尸体285组444阶段](reports/2026-11-01-player-update0135.md)、[移动暂停396组1136阶段/604条221消息](reports/2026-11-01-movement-pause0135.md)通过，见[两辅助批独审](reports/2026-11-01-gameplay-phase0135-independent-review.md)；暂停/恢复会逐移动NPC推进序号。
+- 固定0.135.1：[headless061901](reports/2026-11-01-headless0135.md)有8次自然选择；seed3选卡后继续145个原件对照帧至250，另7个在未支持技能前停。63源含56份core/init，完整128槽无损delta独立复原，24次旧槽复用保留192非零未写字节。只有7个numeric keys已比，其它keyed state全部另存；phase1与初始zeroed128槽为显式研究输入，1089仍被SELF/data阻断并缺4NPC/2kind2开局生产。
+- 固定0.135.1：[持续AoE693组5495阶段独审通过](reports/2026-11-01-area-effects0135-independent-review.md)，继而接入[064308同状态切片](reports/2026-11-01-headless-area0135.md)：8seed/1614帧/9695阶段/11select/9703调用，0差异且[新独审通过](reports/2026-11-01-headless-area0135-independent-review.md)；seed1/6各400帧到预算，seed3到257帧选cone_of_cold后停止，其余未知保留。新增128槽88B范围backing与原单位backing均保留无损delta。3757七定义限定分支已接，915/完整880/其它3757、真实地形、物理包、存档/UI/联机和完整一局仍未完成。
+- 915的G2364延迟通知、56B delayed-effect及120B projectile/geometry来源尚未在same-G读回，producer910来自921/915；不能用0差异推断这些来源为空或915无玩法副作用。下一批须接真实915和相应flag/vec。
 - 新批分别经过[生成模块](reports/2026-11-01-spawn135-independent-review.md)、[死亡/受伤/AI](reports/2026-11-01-gameplay135-independent-review.md)及[主施法](reports/2026-11-01-owned-cast0135-independent-review.md)独立只读复核；未执行原件的复算不另计新增原件案例。旧批冻结列出的源码集合，新主施法补入包入口共33源，旧证据完整性不追溯扩大。
 - 基础资源：[独立MPQ读取器与索引](reports/2026-11-01-resource-index-base.md)对29602个命名块/1636167198B与固定StormLib逐字节一致；154份DBC已按容器读出。基础RAR仍关联旧0.102.3，不自动作为新版完整资产；尚无M2/BLP渲染器或完整资源管线。
 
@@ -103,7 +108,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 目标 | 状态与下一步 |
 |---|---|
 | 原版 JS 启动层、资源路径、存档／插件桥 | 已跑通 REA 静态分析；动态值须进一步追踪或运行观测。 |
-| 固定目标0.135.1 / 90,959,080B WASM | 完整profile/布局、属性/时钟、候选/选卡/成长组合、普通/精英生成及25定义施法投影已重新差分；模块范围分别记录，完整死亡/自然调度和一局仍未通过。 |
+| 固定目标0.135.1 / 90,959,080B WASM | 真实构造、racial、普通生成/AI/持续范围/死亡placement、拾取与选择已接受控同状态切片8seed/1614帧/9695阶段；真实phase进入、全部调度及完整一局仍未通过。 |
 | 固定0.134.0 / 90,953,762B WASM | 完整验证/解码/独立索引，多个规则投影已做限定域原件差分；完整游戏未实现。REA原版大小限制未修改，本地扩展单列。 |
 | 历史0.126.0 / 90,116,970B WASM | 保留完整WAT和已验证局部模型作迁移/回归参考；WAT不是原始Rust源码。 |
 | 原生 Windows EXE 的导入表／Rust 元数据 | 已运行无目标执行的 REA 检查；元数据不是函数实现或源码。 |

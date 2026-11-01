@@ -1,0 +1,130 @@
+{
+  "status": "pass within explicit empty selected-profile376 constructor projection",
+  "reviewer": "independent ai_incoming135 agent",
+  "final_receipt": "evidence/full0135-oracle-20261101T055136.418672Z/initial135-comparison.json",
+  "receipt_sha256": "f19963db365d60021f4d547a464622bbc5eebb69ba42e9f4ff55237de1457649",
+  "cases": 151,
+  "model_fixture_and_original_mismatch_cases": [],
+  "source_snapshot_count": 19,
+  "production_closure_including_package_init": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ability_state.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/candidates135.py",
+    "reconstruction/core_spec/derived_stats134.py",
+    "reconstruction/core_spec/derived_stats135.py",
+    "reconstruction/core_spec/initial_state135.py",
+    "reconstruction/core_spec/initial_state135_data.py",
+    "reconstruction/core_spec/level_cycle135.py",
+    "reconstruction/core_spec/progression.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "production_source_drift": [],
+  "shared_control_current_drift": [],
+  "shared_control_drift_context": "Current39-role builder/host match thislatest151snapshot; prior053304review retained separately.",
+  "all_original_nonexport_sections_byte_identical": true,
+  "original_role": {
+    "role": "initial_game",
+    "index": 1560,
+    "export": "research135_initial_game",
+    "type_index": 1,
+    "parameters_hex": "7f7f7f",
+    "results_hex": "",
+    "body_start": 10536186,
+    "body_end": 10543428,
+    "body_bytes": 7242,
+    "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe"
+  },
+  "static_data_checks": {
+    "class_starters": 9,
+    "racial_abilities": 8,
+    "zones": 12,
+    "ability_declarations": 114
+  },
+  "strict_projection_masks": [],
+  "nan_relaxation": false,
+  "raw2592_readback_checks": 5436,
+  "raw2592_total_bytes_preserved": 391392,
+  "two80B_records_strict_bytes_compared": 24160,
+  "object_ids_above_JSsafeinteger": 40,
+  "boundary_checks": [
+    {
+      "case": "class-not-byte",
+      "rejected": true,
+      "reason": "Explicit uint8 required"
+    },
+    {
+      "case": "race-negative",
+      "rejected": true,
+      "reason": "Explicit uint8 required"
+    },
+    {
+      "case": "region-not-fixed",
+      "rejected": true,
+      "reason": "Explicit fixed region index required"
+    },
+    {
+      "case": "seed-over-u64",
+      "rejected": true,
+      "reason": "Explicit uint64 required"
+    },
+    {
+      "case": "object-negative",
+      "rejected": true,
+      "reason": "Explicit uint64 required"
+    }
+  ],
+  "resolved_findings": [
+    {
+      "finding": "PCG fallback guard source expression omitted ab in final lowbyte OR.",
+      "resolution": "Author confirmed originalWAT stack and restored|ab, then reran final151; no triggering64bit inputseed is claimed from this review.",
+      "abstract_witness": {
+        "abstract_words": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "old_guard": 0,
+        "original_and_corrected_guard": 1,
+        "concrete_triggering_seed": "Not established;issue found by exact originalWAT stack transcripton review, not by a failing151seed."
+      }
+    },
+    {
+      "finding": "Candidateempty projection used literal[] without sourcecount guard.",
+      "resolution": "Runner now asserts actualG1912==0;independentraw2592 readback verifies actualzero for all151."
+    }
+  ],
+  "reviewed_scope": [
+    "Real classlearned80 fromG1660 versus real racialembedded80 atG1256; neither replaced by dummycast.",
+    "Class/race9x8 rawconstructor domain,12zones,64bitseed/objectID samples;notUIeligibility proof.",
+    "Exact23stats/HP/keyednumericstate,phase0,sourcecounts,counters,timers/budget/game_tag/member/flags;full2592raw retained separately.",
+    "Seedexpansion operation order/staticconstants and fixedclass/race/region tables checked againstoriginaldata;producer above376profile remains unknown.",
+    "Latest151explicitG740/G744zero andG1652lastHit-10 checked against preserved originalraw2592; older151receiptsunchanged."
+  ],
+  "limitations": [
+    "Actual raw2592 includes unprojectedphysical pointers;391392preservedbytes are not all independently reconstructed or compared to model.",
+    "Upstream account/character48/selectedprofile376 assembly andinitialApp entropy unproved.",
+    "World/asset registration andphase0->1 entry not established by1560;manualphase1 cannot close thisboundary.",
+    "Racial/nonzeroeffect execution,nonempty equipment/talents/appearance andwholegame remain separate.",
+    "Class/racefallback outside tested9x8 remains statically modeled butnotcounted as151differential support."
+  ],
+  "original_executed_by_reviewer": false,
+  "author_sources_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "identity-data-and-comparison.json": "c8c36540bf2933d7c2945f2f9e431c73ffb89c074de664341805f98ea1498787",
+    "model-and-raw-recomputation.json": "d779a0885755d75521d58a591798679eee1236d3f618376db9131b414a8fb05c",
+    "verify.py": "142db7d031387c7faf0c50bf2bf50cfc8d1e4811e9c766b6935da8a82f4d6e9c",
+    "recompute.py": "f7d3b53d68ac09c70dae848e409a04c1abba6e0733922b29551bfeff2d32ea4c"
+  },
+  "previous_review": "evidence/initial0135-independent-review-20261101T053415.925507Z/review.json",
+  "added_scalar_checks": {
+    "740": 0,
+    "744": 0,
+    "1652": 3240099840
+  },
+  "evidence_directory": "evidence/initial0135-independent-review-20261101T060233.402311Z",
+  "review_sha256": "48e18503f17b298d295c476a1d07b2b066a3f4740e35c054cbf8c513b870b5fb"
+}

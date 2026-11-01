@@ -1,0 +1,467 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "full_wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+  "script_sha256": "c8bc0054ed2fac25822bcf3adc899366cbb9bf30129937a4ee30751f0fe412e1",
+  "complete915": {
+    "lines": 9666,
+    "body_bytes": 20852,
+    "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6",
+    "control_counts": {
+      "(func": 1,
+      "(local": 1,
+      "global.get": 4,
+      "i32.const": 928,
+      "i32.sub": 102,
+      "local.tee": 483,
+      "global.set": 8,
+      "local.get": 3000,
+      "f32.load": 213,
+      "f32.store": 70,
+      "block": 202,
+      "f32.const": 151,
+      "f32.gt": 33,
+      "i32.eqz": 127,
+      "br_if": 254,
+      "f32.le": 35,
+      "i32.store": 206,
+      "i32.load": 608,
+      "i32.add": 503,
+      "i64.load": 158,
+      "call": 292,
+      "i32.eq": 98,
+      "if": 213,
+      "end": 446,
+      "i32.shl": 57,
+      "i64.store": 152,
+      "local.set": 435,
+      "loop": 31,
+      "i32.xor": 3,
+      "i32.mul": 30,
+      "i32.load8_u": 25,
+      "drop": 10,
+      "i64.ne": 3,
+      "br": 118,
+      "i32.le_u": 6,
+      "i32.store8": 27,
+      "i32.load16_u": 1,
+      "memory.copy": 30,
+      "i32.wrap_i64": 11,
+      "i64.eq": 4,
+      "i32.and": 26,
+      "i32.ne": 43,
+      "i32.gt_u": 35,
+      "select": 57,
+      "br_table": 10,
+      "i32.store16": 3,
+      "f32.sub": 78,
+      "f32.div": 12,
+      "f32.lt": 25,
+      "f32.mul": 72,
+      "f32.add": 78,
+      "f32.reinterpret_i32": 2,
+      "f32.sqrt": 3,
+      "f32.ne": 17,
+      "i32.trunc_sat_f32_u": 1,
+      "i32.ge_u": 12,
+      "f32.ge": 20,
+      "i32.lt_u": 7,
+      "unreachable": 15,
+      "i32.extend8_s": 4,
+      "i32.shr_s": 4,
+      "i32.shr_u": 2,
+      "i32.or": 4,
+      "f32.convert_i32_s": 4,
+      "i32.lt_s": 2,
+      "i64.const": 14,
+      "f32.abs": 11,
+      "f64.convert_i32_u": 4,
+      "f64.promote_f32": 19,
+      "else": 1,
+      "return": 1,
+      "unreachable)": 1
+    },
+    "branches": 595,
+    "control_nodes": 446,
+    "calls": 292,
+    "distinct_callees": 44,
+    "inventory": "915-control-inventory.json",
+    "all_control_targets_resolved": true
+  },
+  "global_inputs": {
+    "clock2352": "read at entry",
+    "2364": "positive due deadline\u2192clear0,1644++,54811 message",
+    "1820/1824/1828": "cap/pointer/length stride56 pending target/action records",
+    "1808/1812/1816": "cap/pointer/length stride120 effect/projectile/geometry records",
+    "1784/1788/1792": "ordinary424B entity vector",
+    "2348": "world height/navigation",
+    "1880/1884/1888": "16B physical message queue",
+    "1892/1896/1900": "12B owned serialized payload/string queue",
+    "2582": "mode/owner routing with2528",
+    "2587": "phase guard",
+    "387/2568": "incoming damage scaling/protection-related gates",
+    "1416/1420/1424": "playerXYZ",
+    "2496/1428/1648/2500": "movement flags/heading/speed/previous-input clock prediction",
+    "1644": "player movement/action sequence",
+    "2412": "unit movement sequence; delayed35 may increment",
+    "416..436": "player position/action state written by delayed36"
+  },
+  "phases": [
+    {
+      "lines": [
+        0,
+        73
+      ],
+      "name": "positive-due2364",
+      "guard": "2364>0 &&2364<=now",
+      "behavior": "clear2364, increment1644,54811,append16B message"
+    },
+    {
+      "lines": [
+        74,
+        1246
+      ],
+      "name": "pending56",
+      "guard": "G1828>0",
+      "behavior": "ordered due/owner test, delete56 via memory.copy;tag255 skip;tag35 movement;36 phase1 player relocation;37 aura removal;default910"
+    },
+    {
+      "lines": [
+        1247,
+        9655
+      ],
+      "name": "effects120-entire-region",
+      "guard": "G1816!=0 (br1252 targets block1248 end9655)",
+      "behavior": "large whole region skipped only when actual120vector is empty"
+    },
+    {
+      "lines": [
+        1253,
+        1791
+      ],
+      "name": "player-world-prediction-and-temporaries",
+      "guard": "nonempty120",
+      "behavior": "height/nav lookup, movement2496/heading/trig prediction and temporary vectors"
+    },
+    {
+      "lines": [
+        1800,
+        4475
+      ],
+      "name": "record120-source-follow/shape/type",
+      "guard": "nonempty120 per record",
+      "behavior": "resolve sourceGUID24;mode-owner filtering;116 follow-unit;104+117 homing;40 shape/8 type collision;aggregate incoming or enqueue spawn/outgoing/aux effects"
+    },
+    {
+      "lines": [
+        4476,
+        5112
+      ],
+      "name": "temporary-index/intersection-resolution",
+      "guard": "temporary records",
+      "behavior": "geometry overlap/shape tests and index selection; large formatting/allocation helpers also occur"
+    },
+    {
+      "lines": [
+        5113,
+        7369
+      ],
+      "name": "visual-initialization-and-serialization",
+      "guard": "record visualGUID32 sentinel-1 and temp updates",
+      "behavior": "maycall2825,updates32,builds serialized current effect descriptors;all branches inventoried"
+    },
+    {
+      "lines": [
+        7370,
+        8553
+      ],
+      "name": "ordered-expiry/delete-and-payload-emission",
+      "guard": "temp removal indices/serialized output",
+      "behavior": "reverse selected120 removals/memory.copy,170despawn plus12B serialized payload queue"
+    },
+    {
+      "lines": [
+        8554,
+        8595
+      ],
+      "name": "incoming1073",
+      "guard": "accumulatedlocal30>0",
+      "behavior": "wave/protection-relatedfactor then1073;not cosmetic"
+    },
+    {
+      "lines": [
+        8596,
+        8856
+      ],
+      "name": "player-action-message",
+      "guard": "phase2587==1 &&local19",
+      "behavior": "increment1644 andemit action/movement packet"
+    },
+    {
+      "lines": [
+        8857,
+        8924
+      ],
+      "name": "deferred-spawn5736",
+      "guard": "temporary16B descriptors",
+      "behavior": "callsactual5736;may create entities andconsumeRNG"
+    },
+    {
+      "lines": [
+        8925,
+        9419
+      ],
+      "name": "deferred-outgoing914",
+      "guard": "temporary24B descriptors",
+      "behavior": "spatial collect IDs\u2192914 damage with literal school2,critical0/context0;death may consume RNG"
+    },
+    {
+      "lines": [
+        9420,
+        9630
+      ],
+      "name": "deferred-per-unit-aux24296",
+      "guard": "temporary16B descriptors",
+      "behavior": "unit lookup/message and24296;semantic continuation stillunknown"
+    },
+    {
+      "lines": [
+        9631,
+        9665
+      ],
+      "name": "temporary-free-and-return",
+      "guard": "allocation flags",
+      "behavior": "free owned temporary buffers;restore stack;allocationfailuretrap retained"
+    }
+  ],
+  "record56": {
+    "0": "targetGUID u64",
+    "8": "due=now+delay f32",
+    "12..51": "40B copied action descriptor",
+    "49": "descriptor+37 rawtag byte",
+    "52..55": "unwritten tail from63687"
+  },
+  "record120": {
+    "0": "variant/tag u32",
+    "4..7": "unwritten by34693",
+    "8..23": "four-word type/state payload copied by34693",
+    "24": "sourceGUID u64",
+    "32": "visualGUID u64,maystart-1",
+    "40/44/48": "shape tag and2geometry floats",
+    "52": "G2356-generated identifier",
+    "56/60/64": "XYZ",
+    "68": "angle",
+    "72": "starttime",
+    "76": "deadline",
+    "80": "player-attach window",
+    "84": "spell/action id",
+    "88": "damage/magnitude",
+    "92/96/100": "aux deadlines/magnitudes;full variants not restored",
+    "104": "movement speed",
+    "108/112": "aux state/previous radius",
+    "116/117/118": "independent gating bytes;names not yet established",
+    "119": "unwritten by34693"
+  },
+  "constructor_proof": {
+    "function": 1560,
+    "copy_line": 2752,
+    "source_base": "scratch+88",
+    "copied_bytes": 2592,
+    "stores": [
+      {
+        "line": 858,
+        "scratch": 1904,
+        "G": 1816,
+        "value": 0
+      },
+      {
+        "line": 873,
+        "scratch": 1896,
+        "G": 1808,
+        "low_cap": 0,
+        "high_ptr": 8
+      },
+      {
+        "line": 879,
+        "scratch": 2452,
+        "G": 2364,
+        "value": 0
+      },
+      {
+        "line": 882,
+        "scratch": 1908,
+        "G": 1820,
+        "low_cap": 0,
+        "high_ptr": 8
+      },
+      {
+        "line": 885,
+        "scratch": 1916,
+        "G": 1828,
+        "value": 0
+      }
+    ],
+    "meaning": "Initial empty vectors/deadline are explicit constructor writes, not an assumption about malloc. Their later persistence is NOT observed by current same-G projection."
+  },
+  "eight_seed_scope": {
+    "player": "Mage/human fireball/perception;new flamestrike/blizzard/pyroblast per original unchangedpolicy",
+    "established_static": "Complete922 has no910 edge; known common/racial/area player producers use other vectors.910 direct callers are only921,915,self.",
+    "expected_but_unproved": "124 known melee definitions have prefix tag0; root AI validator limits current units, suggesting NPC action queue may stay empty. Existing receipts do NOT read1828/1816/2364, so actual persistence cannot be claimed.",
+    "next_required": "Retain8actual seeds/actions. Add full915 between3757and921; capture actual2364andbothvectors before/afterevery producer and915, includingraw56/raw120/backing as applicable;no external zero/absence overwrite."
+  },
+  "status": "static reconnaissance only; no executable915productionmodel or fresh915oracle coverage",
+  "original_executed": false,
+  "host_called": false,
+  "application_start_called": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "evidence_directory": "evidence/effect-system0135-static-20261101T065628.336717Z",
+  "artifacts": {
+    "effect-system135-static.json": "f88087a56768964ad5498c5897d9e0d39491be49a70ad7b80c1cfef50a5b1ecd",
+    "915-control-inventory.json": "3aa0f921811204a9f98ac4708f990fac6fb9970e065ce8836b3d9b1ff4a65068",
+    "910-producer-inventory.json": "317ecd4e4e283b9af8c92ed7cb480ae67774a79053a0558faf6d177224fc9e0f",
+    "offset-scan-candidates.json": "89b0d4148ef7a9e234ed8dab33d51c632174736bb08cbc534325d70cc599f2cc"
+  },
+  "functions": [
+    {
+      "index": 915,
+      "signature": "(func (;915;) (type 37) (param i32 f32)",
+      "body_bytes": 20852,
+      "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6"
+    },
+    {
+      "index": 910,
+      "signature": "(func (;910;) (type 1) (param i32 i32 i32)",
+      "body_bytes": 21590,
+      "body_sha256": "2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae"
+    },
+    {
+      "index": 63687,
+      "signature": "(func (;63687;) (type 447) (param i32 f32 i64 i32)",
+      "body_bytes": 132,
+      "body_sha256": "f0091ed4244a43b327bb1efe763595c76eb297e1b24a15f6e584e3113c3e12f8"
+    },
+    {
+      "index": 34693,
+      "signature": "(func (;34693;) (type 415) (param i32 i64 i32 f32 f32 f32 f32 i32 f32 i32) (result i32)",
+      "body_bytes": 395,
+      "body_sha256": "10cdfbc68a514447755dfd458a8f2def9d60b7bffd5220871bf94ed9b619b0dd"
+    },
+    {
+      "index": 1560,
+      "signature": "(func (;1560;) (type 1) (param i32 i32 i32)",
+      "body_bytes": 7242,
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe"
+    },
+    {
+      "index": 880,
+      "signature": "(func (;880;) (type 46) (param i32 f64)",
+      "body_bytes": 139223,
+      "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58"
+    },
+    {
+      "index": 921,
+      "signature": "(func (;921;) (type 37) (param i32 f32)",
+      "body_bytes": 23138,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37"
+    },
+    {
+      "index": 922,
+      "signature": "(func (;922;) (type 6) (param i32 i32) (result i32)",
+      "body_bytes": 23288,
+      "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80"
+    },
+    {
+      "index": 54811,
+      "signature": "(func (;54811;) (type 30) (param i32 i64 i32)",
+      "body_bytes": 187,
+      "body_sha256": "d8c63e8bd253fcf92c0def707c2d63b99fb455ad373ee873173803d95bb2b504"
+    },
+    {
+      "index": 29219,
+      "signature": "(func (;29219;) (type 226) (param i32 i64 i32 i32 f32)",
+      "body_bytes": 452,
+      "body_sha256": "f3f0b39b3b4edca24dbf8b59ad1fe84280200939d413230a59abc866f808d493"
+    },
+    {
+      "index": 5736,
+      "signature": "(func (;5736;) (type 2) (param i32 i32 i32 i32)",
+      "body_bytes": 1776,
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671"
+    },
+    {
+      "index": 914,
+      "signature": "(func (;914;) (type 267) (param i32 i64 f32 i32 i32 i32 i32)",
+      "body_bytes": 26337,
+      "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc"
+    },
+    {
+      "index": 1073,
+      "signature": "(func (;1073;) (type 273) (param i32 f32 i64 i32 i32 i32)",
+      "body_bytes": 11953,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076"
+    },
+    {
+      "index": 24296,
+      "signature": "(func (;24296;) (type 386) (param i32 i64 f32 i32)",
+      "body_bytes": 559,
+      "body_sha256": "34d4324fd1cc3f6ae98f4c88f0f663b6205a77408058bee81e5110d1d172613e"
+    }
+  ],
+  "producer_summary": {
+    "normalization": "rawDescriptor37<=2 ?29 :((rawDescriptor37-3)&255)",
+    "true_edges": {
+      "910": [
+        63687,
+        34693
+      ],
+      "63687": "G1820/1824/1828 push56",
+      "34693": "G1808/1812/1816 push120",
+      "921": "dynamic44B NPC action queue\u2192910",
+      "915": "due56 default\u2192910"
+    },
+    "exact_clock_site": {
+      "raw_descriptor37_tag": 34,
+      "normalized_tag": 31,
+      "line": 1371
+    },
+    "delayed_special_tags": [
+      {
+        "raw_producer_tag": 7,
+        "normalized": 4,
+        "scheduled_tag49": 35,
+        "push_line": 5759
+      },
+      {
+        "raw_producer_tag": 20,
+        "normalized": 17,
+        "scheduled_tag49": 36,
+        "push_line": 3985
+      },
+      {
+        "raw_producer_tag": 23,
+        "normalized": 20,
+        "scheduled_tag49": 37,
+        "push_line": 2952
+      }
+    ],
+    "scope_note": "Nearest lexical case entry is a navigation hint, not a proof of all control guards or dynamic reachability"
+  },
+  "next_implementation": [
+    "Keep shared40roles and existing final receipts unchanged for this checkpoint.",
+    "Next source freeze add effect_tick915 role(i32,f32)->void with exact20852B/bodySHA guard; preserve every internal callee and full host denial.",
+    "On each same-G original seed capture constructor values2364/1644/2356, bothvec cap/ptr/len and raw56/raw120; before/after2088/1754/3757/915/921/2862/947/1072 capture their changes.",
+    "Do not write0 or set absence fixture to these original fields. Execute original915 after3757 and before921 with realclamped dt.",
+    "If fresh readback confirms empty vectors and no positive due2364, implement exact guarded empty path as a bounded model; if any record/clock is active, retain it and recover actual producer/consumer before resuming.",
+    "Include1644,2412,playerXYZ/416..436,RNG,HP/shields,totalincoming/outgoing,units,shared2408,1892serialized queue and1880physical messages in projection or explicitunknown receipts.",
+    "Do not infer no RNG from915 lacking direct1720 loads:910/5736/914/2825 internal continuations can change state and/or randomness.",
+    "Keep unsolved8seed stops/choices and full915state; no card replacement, forcedemptyqueues, fake resources,stubhost or body replacement."
+  ],
+  "limitations": [
+    "Static control inventory resolves all structured branch targets; it is not an executable semantic implementation of595 branches.",
+    "112-function global offset scan is lexical candidate discovery only; aliases/copies/deserialization/indirectcall provenance need separate confirmation.",
+    "Only exact helper layouts and selected producer branches are named. Unrestored120B type/shape families retain numeric tags and fullsource.",
+    "Current same-G0diff excludes915 and never observed its3entrydomains; no actual8seed915coverage is claimed."
+  ]
+}

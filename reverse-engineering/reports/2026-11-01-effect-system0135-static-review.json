@@ -1,0 +1,141 @@
+{
+  "status": "pass static identities and syntacticcontrol/direct-call inventory only",
+  "reviewed_source_sha256": {
+    "scripts/trace_effect_system135.py": "c8bc0054ed2fac25822bcf3adc899366cbb9bf30129937a4ee30751f0fe412e1",
+    "reports/2026-11-01-effect-system0135-static.json": "c84f053c75b8b0238fd00165a9bc00c8c743206ecc98130df7ec8ab7bd2101f8",
+    "reports/2026-11-01-effect-system0135-static.md": "31444aa415d7514979ea159fe016dba339f6bf0f3d16b767d8cabfc30fd2d27a"
+  },
+  "evidence_report_sha256": "f88087a56768964ad5498c5897d9e0d39491be49a70ad7b80c1cfef50a5b1ecd",
+  "functions": [
+    {
+      "index": 915,
+      "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6",
+      "body_bytes": 20852,
+      "wat_sha256": "153f1608b702bfb5214eff4ae7f348e04b9226a1b1384bdd20f001f3fd60046a"
+    },
+    {
+      "index": 910,
+      "body_sha256": "2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae",
+      "body_bytes": 21590,
+      "wat_sha256": "e065d83d1c3a89b0da2ad8848eb621de991353cb5fce92ecfcd924ada9fe207e"
+    },
+    {
+      "index": 63687,
+      "body_sha256": "f0091ed4244a43b327bb1efe763595c76eb297e1b24a15f6e584e3113c3e12f8",
+      "body_bytes": 132,
+      "wat_sha256": "13456bfd2e0b510c8a5405dc399199612220825f6bcfb35dedd27fc484f5ef8a"
+    },
+    {
+      "index": 34693,
+      "body_sha256": "10cdfbc68a514447755dfd458a8f2def9d60b7bffd5220871bf94ed9b619b0dd",
+      "body_bytes": 395,
+      "wat_sha256": "46775f8e698b761ab93f2b1a1004061b32b2154b84078154750477c69bcf598e"
+    },
+    {
+      "index": 1560,
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "body_bytes": 7242,
+      "wat_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109"
+    },
+    {
+      "index": 880,
+      "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58",
+      "body_bytes": 139223,
+      "wat_sha256": "aa61c76f491ba39bb756426e71a6a5ce1e8c1a4da8b57e6a36ba57a7d82c16a6"
+    },
+    {
+      "index": 921,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37",
+      "body_bytes": 23138,
+      "wat_sha256": "20fb6cb14a8000c408185e4a8ee911ed32229b21dc695867bbd398acc9ceaf1f"
+    },
+    {
+      "index": 922,
+      "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80",
+      "body_bytes": 23288,
+      "wat_sha256": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940"
+    },
+    {
+      "index": 54811,
+      "body_sha256": "d8c63e8bd253fcf92c0def707c2d63b99fb455ad373ee873173803d95bb2b504",
+      "body_bytes": 187,
+      "wat_sha256": "f899297045c787d144aa47cf7b48eac78c15e973b8b0858cf177cf44ef50d05c"
+    },
+    {
+      "index": 29219,
+      "body_sha256": "f3f0b39b3b4edca24dbf8b59ad1fe84280200939d413230a59abc866f808d493",
+      "body_bytes": 452,
+      "wat_sha256": "e7605ae3ac1ec5a81f8a7286fee58dcc4970a41df0bab82fa8c928236274902d"
+    },
+    {
+      "index": 5736,
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671",
+      "body_bytes": 1776,
+      "wat_sha256": "462e196ee49c6304433bd5692b41bb4fc23c9e9fa386ada39574c03dc3662d16"
+    },
+    {
+      "index": 914,
+      "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+      "body_bytes": 26337,
+      "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a"
+    },
+    {
+      "index": 1073,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+      "body_bytes": 11953,
+      "wat_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62"
+    },
+    {
+      "index": 24296,
+      "body_sha256": "34d4324fd1cc3f6ae98f4c88f0f663b6205a77408058bee81e5110d1d172613e",
+      "body_bytes": 559,
+      "wat_sha256": "7b18b88771ec7d4383e290eb2caff3be7148d543bb2726d9f090cc73219db3f9"
+    }
+  ],
+  "complete915": {
+    "lines": 9666,
+    "body_bytes": 20852,
+    "control_nodes": 446,
+    "branches": 595,
+    "direct_call_sites": 292,
+    "distinct_callees": 44,
+    "br_table": 10,
+    "all_structural_branch_targets_recomputed": true
+  },
+  "direct_callers": {
+    "915": [
+      880
+    ],
+    "910": [
+      910,
+      915,
+      921
+    ],
+    "63687": [
+      910
+    ],
+    "34693": [
+      910
+    ]
+  },
+  "graph_limit": "WholeWAT lexical direct-call scan only; call_indirect/tabletarget/alias/serialization reachability not exhausted, so noexclusive dynamic-producer or runtime-nonexecution claim.",
+  "helper_layouts": {
+    "63687": "stride56 targetGUID0,due8,descriptor12..51,52..55unwritten",
+    "34693": "stride120,4..7/119unwritten;2356increments;append1816"
+  },
+  "constructor_initialization": "scratch1904/1916/2452 zero ->G1816/1828/2364; scratch1896/1908 cap0/ptr8; final2592Bcopy fromscratch+88",
+  "raw_tag_mapping": {
+    "34": "normalized31 ->2364",
+    "7": "normalized4 ->delayed35",
+    "20": "normalized17 ->delayed36",
+    "23": "normalized20 ->delayed37"
+  },
+  "same_G_boundary": "064308sameG hasno915entry role andno2364/1816/1828projection; cannot infer thosefields remainempty during8seeds fromconstructorzero or922directedge absence.",
+  "semantics_limit": "All595syntacticbranches inventoried, notall executableguardsemantics or producer variants restored; no executable915model or fresh915oracle coverage.",
+  "original_executed": false,
+  "author_source_modified": false,
+  "evidence_directory": "evidence/effect-system0135-static-review-20261101T070036.663383Z",
+  "review_sha256": "9bad3b91870a5a20e0178449003461a4a30e6f11858613bc42319d12c2f8fac2",
+  "reviewer_source_sha256": "68d142827ae9d892f211a55d19b10d4537ec83df33a5348fc259873ab1917d24",
+  "melee124_note": "ai135_data.MELEE_DEFINITIONS has124 definitionpointers; itisnot anactiondescriptorrawtag."
+}

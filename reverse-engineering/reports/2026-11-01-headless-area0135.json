@@ -1,0 +1,985 @@
+{
+  "title": "Fixed135 same-state persistent-area gameplay extension",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": {
+    "path": "evidence/full0135-oracle-20261101T064308.759593Z/headless135-comparison.json",
+    "sha256": "f1c85d6d64798afdd5e7b8a13a4fa50ef9a52d6901cd4be1b5321e6d82fb7b6c"
+  },
+  "cases": 8,
+  "frames": 1614,
+  "stages": 9695,
+  "selections": 11,
+  "original_entry_calls": 9703,
+  "differences": 0,
+  "boundaries": {
+    "pending_selected_ability": 6,
+    "frame_budget": 2
+  },
+  "runtime": {
+    "cases": 8,
+    "original_entry_calls": 9703,
+    "original_functions": [
+      1560,
+      2088,
+      1754,
+      3757,
+      921,
+      2862,
+      947,
+      1072
+    ],
+    "host_calls": 0,
+    "denied_imports": 878,
+    "max_memory_bytes": 20578304,
+    "memory_page_limit": 512,
+    "original_allocator": 91941,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "full_game_started": false,
+    "controlled_phase1_boundary": true,
+    "zeroed_unit_storage_capacity": 128,
+    "zeroed_area_storage_capacity": 128
+  },
+  "source_files": 64,
+  "source_sha256": {
+    "scripts/check_headless135.py": "53e11cabb12b72345f147656da5fe00ec8d3456b434e2bc844b872f06060200a",
+    "scripts/run_headless135_oracle.mjs": "5e5c7d85607f83feff3a55157cda4f876c7868cfce142835cf2b3eafa7337d0b",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306",
+    "scripts/full135_host.mjs": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/extract_cast_catalogue135.py": "7526cb3db14583a503ad3bbcfda40bfccde08de51001e55347fab115f8d9ad8b",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai135.py": "9986656e9bf6fab4339dd53d8cec4ad84786a95760a40d180c7ceebea63fce27",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_lifecycle135.py": "85d12c3808baf37bff5de9aa5acdc320a5befb9f412a352e1ccb1634946e6ac4",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/area_effects135.py": "ac0c8976776232d1a7627835feb96d67f707008a808c43dcfe3aaf5973c8833f",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "21c46816ca34320c0c755f84e3f77406d7556ec873ec59d9d31d037f898eebca",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "f531b948b723b19ff6853edabf59a7beb4d01dde2a92b38bf81879bfadd09d56",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/headless135.py": "d978c0b0fca345bc3bf2a9ecf3e283dcb1a506bb152dbd8f5b8937ce4bff6f28",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/movement_pause135.py": "16bdf3abac3740ed172f612558fc642246466575d38c1d9badd4bb513f8594ad",
+    "reconstruction/core_spec/ordinary_placement135.py": "247cf4060ab8668699d7eaa1a600f4396c6acd4830f5bf2ce7ac5d4f7a6690c4",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "ba37ceefabc706b5c630e95461073b373e0da50d59d4f5dcbb8d7371fed5b387",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_frame_motion135.py": "24fec058762f231fa1808e4e91df6fe0d778edac1b3d69cf0db88dfb38f496c9",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_position_motion135.py": "3dc4cfc848670c530245c4f6e1edbff761387ffafb2d6d33d18da605ee35b5c1",
+    "reconstruction/core_spec/spawn_schedule135.py": "8e19632a8514b8c374111686ae1dfca6e36bab28746f29312ef336c8649cf27c",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "frames": 97,
+      "selections": 1,
+      "selection_frames": [
+        97
+      ],
+      "original_compared_frames_after_each_selection": [
+        0
+      ],
+      "level": 2,
+      "learned_abilities": [
+        "fireball",
+        "arcane_missiles"
+      ],
+      "boundary": "pending_selected_ability"
+    },
+    {
+      "seed": 1,
+      "frames": 400,
+      "selections": 2,
+      "selection_frames": [
+        143,
+        257
+      ],
+      "original_compared_frames_after_each_selection": [
+        257,
+        143
+      ],
+      "level": 3,
+      "learned_abilities": [
+        "fireball",
+        "flamestrike"
+      ],
+      "boundary": "frame_budget"
+    },
+    {
+      "seed": 2,
+      "frames": 143,
+      "selections": 1,
+      "selection_frames": [
+        143
+      ],
+      "original_compared_frames_after_each_selection": [
+        0
+      ],
+      "level": 2,
+      "learned_abilities": [
+        "fireball",
+        "ice_barrier"
+      ],
+      "boundary": "pending_selected_ability"
+    },
+    {
+      "seed": 3,
+      "frames": 257,
+      "selections": 2,
+      "selection_frames": [
+        105,
+        257
+      ],
+      "original_compared_frames_after_each_selection": [
+        152,
+        0
+      ],
+      "level": 3,
+      "learned_abilities": [
+        "fireball",
+        "cone_of_cold"
+      ],
+      "boundary": "pending_selected_ability"
+    },
+    {
+      "seed": 4,
+      "frames": 107,
+      "selections": 1,
+      "selection_frames": [
+        107
+      ],
+      "original_compared_frames_after_each_selection": [
+        0
+      ],
+      "level": 2,
+      "learned_abilities": [
+        "fireball",
+        "blast_wave"
+      ],
+      "boundary": "pending_selected_ability"
+    },
+    {
+      "seed": 5,
+      "frames": 105,
+      "selections": 1,
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_each_selection": [
+        0
+      ],
+      "level": 2,
+      "learned_abilities": [
+        "fireball",
+        "polymorph"
+      ],
+      "boundary": "pending_selected_ability"
+    },
+    {
+      "seed": 6,
+      "frames": 400,
+      "selections": 2,
+      "selection_frames": [
+        143,
+        257
+      ],
+      "original_compared_frames_after_each_selection": [
+        257,
+        143
+      ],
+      "level": 3,
+      "learned_abilities": [
+        "fireball",
+        "blizzard",
+        "pyroblast"
+      ],
+      "boundary": "frame_budget"
+    },
+    {
+      "seed": 7,
+      "frames": 105,
+      "selections": 1,
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_each_selection": [
+        0
+      ],
+      "level": 2,
+      "learned_abilities": [
+        "fireball",
+        "frostbolt"
+      ],
+      "boundary": "pending_selected_ability"
+    }
+  ],
+  "explicit_unwritten_words": 10919,
+  "entry_sequence": [
+    1560,
+    2088,
+    1754,
+    3757,
+    921,
+    2862,
+    947,
+    1072
+  ],
+  "physical_player_keys_compared": [
+    22,
+    28,
+    34,
+    716,
+    717,
+    1109,
+    1176
+  ],
+  "unmodeled_keyed_state_retained": true,
+  "independent_review_status": "passed_with_explicit_coverage_limits",
+  "area_component_review": "../reports/2026-11-01-area-effects0135-independent-review.json",
+  "previous_checkpoint": "../reports/2026-11-01-headless0135.json",
+  "previous_checkpoint_not_added_to_counts": true,
+  "limitations": [
+    "Explicit phase1 research resolution;1089/resource boot is incomplete and real entry has additional spawns/kind2 objects.",
+    "Unit and area destination memory explicitly pre-reserved as128 zeroed424B/88B slots;live allocator padding determinism is not claimed.",
+    "Same-G controlled2088/1754/3757/921/2862/947 sequence;complete880/915 scheduling not established;2088 and3757 within declared source domains.",
+    "Seven persistent-area definitions;modifiers36/49,hostile/following areas and other effects remain pending.",
+    "Only declared unwritten pickup arrival and inactive live words may be unspecified;all other compared data strict.",
+    "Unknown selected abilities and due event clocks stop before another frame;all seeds and boundaries retained.",
+    "Unmodeled player object keys retained separately, not assumed cosmetic;whole game incomplete.",
+    "Unobserved915domains: G2364 delayednotification; G1820/1824/1828 stride56delayed-effect; G1808/1812/1816 stride120projectile/geometry. Producer910 iscalledby921/915. Thisbatch doesnotreadthemback:0projectiondiff cannotproveempty/no gameplayeffects; real915plusflag/vecreadback isrequired."
+  ],
+  "complete_game": false,
+  "real_phase_entry_implemented": false,
+  "standalone": {
+    "receipt": {
+      "path": "evidence/headless-area135-standalone-20261101T064619.877910Z/receipt.json",
+      "sha256": "a0c893f84161fa6a411ee47ff8c12d715e9f21aae35518b1d37153f271b86a51"
+    },
+    "scope": "Independent copied production model execution; not a new original differential.",
+    "copied_source_files": 58,
+    "runs": [
+      {
+        "label": "real-entry-boundary",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "-c",
+          "import runpy,sys;sys.argv_output=sys.argv[1];runpy.run_path('verify_standalone.py',run_name='__main__')",
+          "real-entry-boundary-modules.json"
+        ],
+        "exit_code": 0,
+        "seconds": 2.3422448330020416,
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": false,
+          "boundary": "pending_real_phase_entry",
+          "frames": 0,
+          "simulation_seconds": 0.0,
+          "level": 1,
+          "xp": 0,
+          "hp": 215.0,
+          "selections": 0,
+          "gold": 0,
+          "learned": [
+            "fireball"
+          ],
+          "events": []
+        },
+        "module_receipt": "real-entry-boundary-modules.json",
+        "module_receipt_sha256": "047a03e0d49f719dde7ba4e4ddcaa295d010f2457a121d5e6185beff26338fd9",
+        "stdout_sha256": "63cc87c8f3bc4aed25a33a43350ad2359ce45ea332c43861b3ad86c8f664924f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "flamestrike",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "-c",
+          "import runpy,sys;sys.argv_output=sys.argv[1];runpy.run_path('verify_standalone.py',run_name='__main__')",
+          "flamestrike-modules.json",
+          "--seed",
+          "1",
+          "--frames",
+          "400",
+          "--research-resolved-entry"
+        ],
+        "exit_code": 0,
+        "seconds": 12.649169290998543,
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": true,
+          "boundary": "frame_budget",
+          "frames": 400,
+          "simulation_seconds": 39.999961853027344,
+          "level": 3,
+          "xp": 13,
+          "hp": 16.270689010620117,
+          "selections": 2,
+          "gold": 4,
+          "learned": [
+            "fireball",
+            "flamestrike"
+          ],
+          "events": [
+            {
+              "frame": 142,
+              "time": 14.300018310546875,
+              "level": 2,
+              "chosen_index": 0,
+              "variant": "new",
+              "ability": "flamestrike",
+              "kinds": []
+            },
+            {
+              "frame": 256,
+              "time": 25.700061798095703,
+              "level": 3,
+              "chosen_index": 0,
+              "variant": "upgrade",
+              "ability": "fireball",
+              "kinds": [
+                1
+              ]
+            }
+          ]
+        },
+        "module_receipt": "flamestrike-modules.json",
+        "module_receipt_sha256": "047a03e0d49f719dde7ba4e4ddcaa295d010f2457a121d5e6185beff26338fd9",
+        "stdout_sha256": "7434fecc9e707c9d1676b99a09f0c3f201ba8051017a98e62e6f209712ca019c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "blizzard",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "-c",
+          "import runpy,sys;sys.argv_output=sys.argv[1];runpy.run_path('verify_standalone.py',run_name='__main__')",
+          "blizzard-modules.json",
+          "--seed",
+          "6",
+          "--frames",
+          "400",
+          "--research-resolved-entry"
+        ],
+        "exit_code": 0,
+        "seconds": 12.32082229200023,
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": true,
+          "boundary": "frame_budget",
+          "frames": 400,
+          "simulation_seconds": 39.999961853027344,
+          "level": 3,
+          "xp": 12,
+          "hp": 3.719393014907837,
+          "selections": 2,
+          "gold": 6,
+          "learned": [
+            "fireball",
+            "blizzard",
+            "pyroblast"
+          ],
+          "events": [
+            {
+              "frame": 142,
+              "time": 14.300018310546875,
+              "level": 2,
+              "chosen_index": 0,
+              "variant": "new",
+              "ability": "blizzard",
+              "kinds": []
+            },
+            {
+              "frame": 256,
+              "time": 25.700061798095703,
+              "level": 3,
+              "chosen_index": 0,
+              "variant": "new",
+              "ability": "pyroblast",
+              "kinds": []
+            }
+          ]
+        },
+        "module_receipt": "blizzard-modules.json",
+        "module_receipt_sha256": "047a03e0d49f719dde7ba4e4ddcaa295d010f2457a121d5e6185beff26338fd9",
+        "stdout_sha256": "f234400f55fb465b51539ef04b82c6199dd62ec1b49cc42e743f8f9e22998a59",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "unsupported-next-choice",
+        "command": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-E",
+          "-s",
+          "-c",
+          "import runpy,sys;sys.argv_output=sys.argv[1];runpy.run_path('verify_standalone.py',run_name='__main__')",
+          "unsupported-next-choice-modules.json",
+          "--seed",
+          "3",
+          "--frames",
+          "400",
+          "--research-resolved-entry"
+        ],
+        "exit_code": 0,
+        "seconds": 8.343782084004488,
+        "result": {
+          "version": "0.135.1",
+          "build": "0898d5e3",
+          "implementation": "independent Python arithmetic; no original runtime loaded",
+          "scope": "flat-world ordered-entry research composition; complete game is not reconstructed",
+          "controlled_phase1": true,
+          "boundary": "pending_selected_ability",
+          "frames": 257,
+          "simulation_seconds": 25.700061798095703,
+          "level": 3,
+          "xp": 0,
+          "hp": 138.03199768066406,
+          "selections": 2,
+          "gold": 0,
+          "learned": [
+            "fireball",
+            "cone_of_cold"
+          ],
+          "events": [
+            {
+              "frame": 104,
+              "time": 10.500003814697266,
+              "level": 2,
+              "chosen_index": 2,
+              "variant": "upgrade",
+              "ability": "fireball",
+              "kinds": [
+                0
+              ]
+            },
+            {
+              "frame": 256,
+              "time": 25.700061798095703,
+              "level": 3,
+              "chosen_index": 0,
+              "variant": "new",
+              "ability": "cone_of_cold",
+              "kinds": []
+            }
+          ]
+        },
+        "module_receipt": "unsupported-next-choice-modules.json",
+        "module_receipt_sha256": "047a03e0d49f719dde7ba4e4ddcaa295d010f2457a121d5e6185beff26338fd9",
+        "stdout_sha256": "261849aab907809a50e92059822ded11d2ba62f039aad5bae39dea959d043175",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "not_an_original_differential": true
+  },
+  "builder40_conservatism": {
+    "receipt": "evidence/builder135-role40-review-20261101T064717.549128Z/review.json",
+    "sha256": "35947831120430e841bf0f7860a39c553b6043a5b014452c8d056de90071d2d2",
+    "old_requested_modules_rebuilt_byte_identical": 3,
+    "no_new_original_execution": true
+  },
+  "unobserved_915_domains": {
+    "notification_flag": 2364,
+    "delayed_effect_vector": [
+      1820,
+      1824,
+      1828,
+      56
+    ],
+    "projectile_geometry_vector": [
+      1808,
+      1812,
+      1816,
+      120
+    ],
+    "producer": 910,
+    "producer_callers": [
+      921,
+      915
+    ],
+    "read_back_in_this_batch": false,
+    "cannot_infer_empty_or_no_gameplay_effects": true
+  },
+  "observed_gameplay_and_storage_totals": {
+    "next_frame_original_executed": 0,
+    "full_area_backing_bytes_checked": 109204480,
+    "pickup_births_player": 0,
+    "stages": 9695,
+    "full_unit_backing_bytes_checked": 526167040,
+    "active_unit_record_bytes_checked": 30148944,
+    "pickup_births_hits": 70,
+    "area_expirations": 4,
+    "pickup_births_area": 1,
+    "unit_delta_words": 25483,
+    "npc_births": 122,
+    "counter_changes_spawn": 98,
+    "rng_changes_spawn": 98,
+    "rng_changes_player": 90,
+    "counter_changes_hits": 59,
+    "rng_changes_hits": 59,
+    "deaths_hits": 59,
+    "previously_used_unit_slot_reuses": 52,
+    "nonzero_unwritten_bytes_in_reused_unit_slots": 416,
+    "rng_changes_collect": 11,
+    "natural_choice_pauses": 11,
+    "moving_npcs_at_choice_pause": 31,
+    "choice_resumes": 11,
+    "moving_npcs_at_choice_resume": 31,
+    "area_delta_words": 121,
+    "area_births": 6,
+    "area_unwritten_append_bytes_checked": 114,
+    "counter_changes_player": 6,
+    "area_due_ticks": 34,
+    "rng_changes_area": 34,
+    "counter_changes_area": 1,
+    "deaths_area": 1,
+    "area_death_slow_fields_preserved": 1,
+    "previously_used_area_slot_reuses": 4,
+    "area_reused_nonzero_unwritten_bytes": 0,
+    "area_slow_writes": 151
+  },
+  "observed_same_state_coverage_caveats": [
+    "Onlyflamestrikeeffect0causes1area death;blizzardeffect1has151slowwritesandnodeaths. Component144effect1deathcases arenotheadlesscoverage.",
+    "All4areaexpirations removefinalslot;nontrivialmemmove=0inthiscorpus.",
+    "All19unwrittenbytes in4reusedareaslots arezero;nonzerounwrittenareareuse=0.",
+    "Both400framebudgetcases returnpending_due_eventonthenextpuremodelstep;noextraoriginalstepwasrun."
+  ],
+  "actual_area_spell_ids_observed": [
+    10,
+    2120
+  ],
+  "independent_review": {
+    "path": "evidence/headless-area0135-independent-review-20261101T064609.019436Z/review.json",
+    "sha256": "bbb99ba4014f970658c65c10414ba2b985ef0bff17289724dc16b2cb9e480131",
+    "report": "reports/2026-11-01-headless-area0135-independent-review.json"
+  },
+  "independent_review_comparison": {
+    "nodes": 1223800,
+    "explicit_unwritten_words": 10919,
+    "author_wrapper_node_difference": 19398
+  },
+  "independently_reviewed_core_init_files": 57,
+  "per_seed_independent_observations": [
+    {
+      "id": 0,
+      "seed": 0,
+      "frames": 97,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "max_active_areas": 0,
+      "area_spell_ids": [],
+      "selection_frames": [
+        97
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 6566912,
+      "pickup_births_player": 0,
+      "stages": 583,
+      "full_unit_backing_bytes_checked": 31640576,
+      "active_unit_record_bytes_checked": 1284720,
+      "pickup_births_hits": 5,
+      "area_expirations": 0,
+      "pickup_births_area": 0,
+      "unit_delta_words": 1201,
+      "npc_births": 9,
+      "counter_changes_spawn": 6,
+      "rng_changes_spawn": 6,
+      "rng_changes_player": 5,
+      "counter_changes_hits": 3,
+      "rng_changes_hits": 3,
+      "deaths_hits": 3,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 16,
+      "rng_changes_collect": 1,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3,
+      "original_compared_frames_after_first_selection": 0
+    },
+    {
+      "id": 1,
+      "seed": 1,
+      "frames": 400,
+      "selections": 2,
+      "boundary": "frame_budget",
+      "final_level": 3,
+      "max_active_units": 11,
+      "max_active_areas": 1,
+      "area_spell_ids": [
+        2120
+      ],
+      "selection_frames": [
+        143,
+        257
+      ],
+      "original_compared_frames_after_last_selection": 143,
+      "next_model_status": "pending_due_event",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 27056128,
+      "pickup_births_player": 0,
+      "stages": 2402,
+      "full_unit_backing_bytes_checked": 130361344,
+      "active_unit_record_bytes_checked": 8502472,
+      "pickup_births_hits": 18,
+      "area_expirations": 2,
+      "pickup_births_area": 1,
+      "unit_delta_words": 7077,
+      "npc_births": 28,
+      "counter_changes_spawn": 25,
+      "rng_changes_spawn": 25,
+      "rng_changes_player": 22,
+      "counter_changes_hits": 17,
+      "rng_changes_hits": 17,
+      "deaths_hits": 17,
+      "previously_used_unit_slot_reuses": 17,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 136,
+      "rng_changes_collect": 2,
+      "natural_choice_pauses": 2,
+      "moving_npcs_at_choice_pause": 6,
+      "choice_resumes": 2,
+      "moving_npcs_at_choice_resume": 6,
+      "area_delta_words": 47,
+      "area_births": 3,
+      "area_unwritten_append_bytes_checked": 57,
+      "counter_changes_player": 3,
+      "area_due_ticks": 11,
+      "rng_changes_area": 11,
+      "counter_changes_area": 1,
+      "deaths_area": 1,
+      "area_death_slow_fields_preserved": 1,
+      "previously_used_area_slot_reuses": 2,
+      "area_reused_nonzero_unwritten_bytes": 0,
+      "original_compared_frames_after_first_selection": 257
+    },
+    {
+      "id": 2,
+      "seed": 2,
+      "frames": 143,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 9,
+      "max_active_areas": 0,
+      "area_spell_ids": [],
+      "selection_frames": [
+        143
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 9675776,
+      "pickup_births_player": 0,
+      "stages": 859,
+      "full_unit_backing_bytes_checked": 46619648,
+      "active_unit_record_bytes_checked": 2220912,
+      "pickup_births_hits": 7,
+      "area_expirations": 0,
+      "pickup_births_area": 0,
+      "unit_delta_words": 1852,
+      "npc_births": 12,
+      "counter_changes_spawn": 9,
+      "rng_changes_spawn": 9,
+      "rng_changes_player": 8,
+      "counter_changes_hits": 4,
+      "rng_changes_hits": 4,
+      "deaths_hits": 4,
+      "previously_used_unit_slot_reuses": 3,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 24,
+      "rng_changes_collect": 1,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3,
+      "original_compared_frames_after_first_selection": 0
+    },
+    {
+      "id": 3,
+      "seed": 3,
+      "frames": 257,
+      "selections": 2,
+      "boundary": "pending_selected_ability",
+      "final_level": 3,
+      "max_active_units": 11,
+      "max_active_areas": 0,
+      "area_spell_ids": [],
+      "selection_frames": [
+        105,
+        257
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 17391616,
+      "pickup_births_player": 0,
+      "stages": 1544,
+      "full_unit_backing_bytes_checked": 83795968,
+      "active_unit_record_bytes_checked": 4867944,
+      "pickup_births_hits": 8,
+      "area_expirations": 0,
+      "pickup_births_area": 0,
+      "unit_delta_words": 3820,
+      "npc_births": 18,
+      "counter_changes_spawn": 15,
+      "rng_changes_spawn": 15,
+      "rng_changes_player": 14,
+      "counter_changes_hits": 8,
+      "rng_changes_hits": 8,
+      "deaths_hits": 8,
+      "previously_used_unit_slot_reuses": 7,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 56,
+      "rng_changes_collect": 2,
+      "natural_choice_pauses": 2,
+      "moving_npcs_at_choice_pause": 5,
+      "choice_resumes": 2,
+      "moving_npcs_at_choice_resume": 5,
+      "original_compared_frames_after_first_selection": 152
+    },
+    {
+      "id": 4,
+      "seed": 4,
+      "frames": 107,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "max_active_areas": 0,
+      "area_spell_ids": [],
+      "selection_frames": [
+        107
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 7242752,
+      "pickup_births_player": 0,
+      "stages": 643,
+      "full_unit_backing_bytes_checked": 34896896,
+      "active_unit_record_bytes_checked": 1525552,
+      "pickup_births_hits": 4,
+      "area_expirations": 0,
+      "pickup_births_area": 0,
+      "unit_delta_words": 1329,
+      "npc_births": 9,
+      "counter_changes_spawn": 6,
+      "rng_changes_spawn": 6,
+      "rng_changes_player": 6,
+      "counter_changes_hits": 3,
+      "rng_changes_hits": 3,
+      "deaths_hits": 3,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 16,
+      "rng_changes_collect": 1,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3,
+      "original_compared_frames_after_first_selection": 0
+    },
+    {
+      "id": 5,
+      "seed": 5,
+      "frames": 105,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "max_active_areas": 0,
+      "area_spell_ids": [],
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 7107584,
+      "pickup_births_player": 0,
+      "stages": 631,
+      "full_unit_backing_bytes_checked": 34245632,
+      "active_unit_record_bytes_checked": 1477216,
+      "pickup_births_hits": 4,
+      "area_expirations": 0,
+      "pickup_births_area": 0,
+      "unit_delta_words": 1300,
+      "npc_births": 9,
+      "counter_changes_spawn": 6,
+      "rng_changes_spawn": 6,
+      "rng_changes_player": 6,
+      "counter_changes_hits": 3,
+      "rng_changes_hits": 3,
+      "deaths_hits": 3,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 16,
+      "rng_changes_collect": 1,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3,
+      "original_compared_frames_after_first_selection": 0
+    },
+    {
+      "id": 6,
+      "seed": 6,
+      "frames": 400,
+      "selections": 2,
+      "boundary": "frame_budget",
+      "final_level": 3,
+      "max_active_units": 11,
+      "max_active_areas": 1,
+      "area_spell_ids": [
+        10
+      ],
+      "selection_frames": [
+        143,
+        257
+      ],
+      "original_compared_frames_after_last_selection": 143,
+      "next_model_status": "pending_due_event",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 27056128,
+      "pickup_births_player": 0,
+      "stages": 2402,
+      "full_unit_backing_bytes_checked": 130361344,
+      "active_unit_record_bytes_checked": 8792912,
+      "pickup_births_hits": 20,
+      "area_expirations": 2,
+      "pickup_births_area": 0,
+      "unit_delta_words": 7599,
+      "npc_births": 28,
+      "counter_changes_spawn": 25,
+      "rng_changes_spawn": 25,
+      "rng_changes_player": 23,
+      "counter_changes_hits": 18,
+      "rng_changes_hits": 18,
+      "deaths_hits": 18,
+      "previously_used_unit_slot_reuses": 17,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 136,
+      "rng_changes_collect": 2,
+      "natural_choice_pauses": 2,
+      "moving_npcs_at_choice_pause": 5,
+      "choice_resumes": 2,
+      "moving_npcs_at_choice_resume": 5,
+      "area_delta_words": 74,
+      "area_births": 3,
+      "area_unwritten_append_bytes_checked": 57,
+      "counter_changes_player": 3,
+      "area_due_ticks": 23,
+      "rng_changes_area": 23,
+      "area_slow_writes": 151,
+      "previously_used_area_slot_reuses": 2,
+      "area_reused_nonzero_unwritten_bytes": 0,
+      "original_compared_frames_after_first_selection": 257
+    },
+    {
+      "id": 7,
+      "seed": 7,
+      "frames": 105,
+      "selections": 1,
+      "boundary": "pending_selected_ability",
+      "final_level": 2,
+      "max_active_units": 7,
+      "max_active_areas": 0,
+      "area_spell_ids": [],
+      "selection_frames": [
+        105
+      ],
+      "original_compared_frames_after_last_selection": 0,
+      "next_model_status": "pending_selected_ability",
+      "next_frame_original_executed": false,
+      "full_area_backing_bytes_checked": 7107584,
+      "pickup_births_player": 0,
+      "stages": 631,
+      "full_unit_backing_bytes_checked": 34245632,
+      "active_unit_record_bytes_checked": 1477216,
+      "pickup_births_hits": 4,
+      "area_expirations": 0,
+      "pickup_births_area": 0,
+      "unit_delta_words": 1305,
+      "npc_births": 9,
+      "counter_changes_spawn": 6,
+      "rng_changes_spawn": 6,
+      "rng_changes_player": 6,
+      "counter_changes_hits": 3,
+      "rng_changes_hits": 3,
+      "deaths_hits": 3,
+      "previously_used_unit_slot_reuses": 2,
+      "nonzero_unwritten_bytes_in_reused_unit_slots": 16,
+      "rng_changes_collect": 1,
+      "natural_choice_pauses": 1,
+      "moving_npcs_at_choice_pause": 3,
+      "choice_resumes": 1,
+      "moving_npcs_at_choice_resume": 3,
+      "original_compared_frames_after_first_selection": 0
+    }
+  ],
+  "review_source_drift": {},
+  "next_effect_system_static_inventory": "2026-11-01-effect-system0135-static.json",
+  "counter_check": {
+    "increment": 199,
+    "npc_births": 122,
+    "area_births": 6,
+    "pickup_births": 71,
+    "constructor_initial_counter_sum": 80,
+    "final_counter_sum": 279
+  }
+}

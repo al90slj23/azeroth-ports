@@ -1,0 +1,144 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "model": "reconstruction/core_spec/ordinary_placement135.py",
+  "model_sha256": "247cf4060ab8668699d7eaa1a600f4396c6acd4830f5bf2ce7ac5d4f7a6690c4",
+  "receipt": "evidence/full0135-oracle-20261101T052411.434992Z/ordinary-placement135-comparison.json",
+  "receipt_sha256": "49def1217c03905bad0fcefaab63ae1ab195528905b965c30ef5d0290665209e",
+  "cases": 924,
+  "kinds": {
+    "direct": 396,
+    "death": 528
+  },
+  "mismatch_cases": 0,
+  "groups": {
+    "zone-center-boundary-outside": 96,
+    "moving-boundary": 12,
+    "nonzero-base-height-fallback": 48,
+    "clamp-threshold-height": 324,
+    "moving-clock-clamp": 216,
+    "currency-offset-before-clamp": 108,
+    "seeded-spatial-mixed": 120
+  },
+  "drop_counts": {
+    "xp_records": 726,
+    "currency_records": 542,
+    "dual_drop_cases": 344,
+    "different_xp_currency_xy_cases": 335,
+    "drop_height_differs_from_death_z_cases": 516
+  },
+  "runtime": {
+    "cases": 924,
+    "functions": [
+      1417,
+      914
+    ],
+    "real_internal_callees_unchanged": true,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "fresh_instances": 58,
+    "max_memory_bytes": 20709376,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "seconds": 2.0707512920016597,
+  "strict_comparison": "Complete56B pickup records, explicit prior arrival+A5 word, no masks/NaN relaxation; reward RNG/counters/messages/kill cost and deathXYZ/endpoints/U340/U344 also compared.",
+  "pure_guard_tests": {
+    "cases": 8,
+    "artifact": "evidence/full0135-oracle-20261101T051624.567996Z/ordinary-placement135-rejected-inputs.json",
+    "sha256": "eb0ac156a4ad5a37974e5e24a8a64aa7ff65b0c40efabd72298285cb3ee3c1aa",
+    "counted_as_original_cases": false
+  },
+  "trace": "evidence/ordinary-placement135-trace-20261101T051503.578117Z/trace.json",
+  "trace_sha256": "c03d63673866afb90442f452e4ad80df7899f3f24e94a7c9fb8648b2e6577a8a",
+  "function_source_identity": [
+    {
+      "function": 914,
+      "wat_start": 126751708,
+      "wat_end": 127132114,
+      "body_start": 2394962,
+      "body_end": 2421299,
+      "body_bytes": 26337,
+      "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+      "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a",
+      "header": "  (func (;914;) (type 267) (param i32 i64 f32 i32 i32 i32 i32)"
+    },
+    {
+      "function": 1417,
+      "wat_start": 318560368,
+      "wat_end": 318633040,
+      "body_start": 9570935,
+      "body_end": 9576021,
+      "body_bytes": 5086,
+      "body_sha256": "4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342",
+      "wat_sha256": "7e9ae77a571bce628dc9202237f928772e8199b3c583bd7d9dd1a47755abdc33",
+      "header": "  (func (;1417;) (type 2) (param i32 i32 i32 i32)"
+    },
+    {
+      "function": 1821,
+      "wat_start": 370109404,
+      "wat_end": 370153836,
+      "body_start": 12169862,
+      "body_end": 12173492,
+      "body_bytes": 3630,
+      "body_sha256": "fbb21ae4ebb683d34bf3e62eb96f50571b16fb7d8053e980c6fd45cfcb3575db",
+      "wat_sha256": "4697c24b865487c92a1d1a1aa4adaeb1cf9a8129c885dc8797cc1524e6aeb43f",
+      "header": "  (func (;1821;) (type 196) (param i32 i32 i32 i32 i32) (result i64)"
+    },
+    {
+      "function": 49503,
+      "wat_start": 1145532491,
+      "wat_end": 1145534976,
+      "body_start": 64722650,
+      "body_end": 64722881,
+      "body_bytes": 231,
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "wat_sha256": "2f883dd1b06c4808fddcf64c5bd8c9d89d3b5ec4f517d5120b4963f226c6b589",
+      "header": "  (func (;49503;) (type 107) (param f32 f32) (result f32)"
+    },
+    {
+      "function": 29631,
+      "wat_start": 1004619467,
+      "wat_end": 1004624257,
+      "body_start": 53548889,
+      "body_end": 53549297,
+      "body_bytes": 408,
+      "body_sha256": "26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650",
+      "wat_sha256": "a6bff26a5ae98d6e3a8180f4ac0e457b1ea8564b7ed1c9f8cd51b81326a7c941",
+      "header": "  (func (;29631;) (type 40) (param i32 i32 f32 f32)"
+    },
+    {
+      "function": 23181,
+      "wat_start": 919711317,
+      "wat_end": 919718447,
+      "body_start": 47477583,
+      "body_end": 47478077,
+      "body_bytes": 494,
+      "body_sha256": "a46874e377eac8590d923753e6a5e26289b8388144a0241b6b29cc1f77640666",
+      "wat_sha256": "aa0d23287a9217f4db3b5344ab2521913fffc702999eb37cb221ac4f5206af8f",
+      "header": "  (func (;23181;) (type 40) (param i32 i32 f32 f32)"
+    }
+  ],
+  "api": "project_from_record(zone, now_bits, pre_hit_record_hex, flat_height_bits, *, terrain_grid_absent=True, navigation_absent=True) -> death_xyz, xp_placement, currency_placement, movement_message",
+  "rules": [
+    "914 reads pre-hit U316/320/324,U328/332/336,U340,U344 and current G2352; ratio clamp0..1 with exact per-op f32.",
+    "914 freezes both endpoints to interpolatedXYZ, writes U340=now,U344=0; reward requests use that pre-hit point.",
+    "XP1417 receives deathXYZ; ordinary coin1417 receives(deathX+.8,deathY+.8,deathZ), with offsets rounded before clamp.",
+    "1417 reads zone+104/+108 center and zone+120radius; limit=maxNumeric(1,radius-2), exact hypot49503.",
+    "If distance>limit, axis=center+(((axis-center)/distance)*limit); resulting XY queried through29631 then optional23181.",
+    "Final XP/coin record height is world query/default V116, not deathZ. With flat enabled and absent terrain/nav, it is exactly V116.",
+    "1821 generates kind1 entity counter/GUID/angle; it receives already-resolvedXYZ and does not apply another zone clamp."
+  ],
+  "limitations": [
+    "Flat/base V116 height, absent terrain/grid/navigation only; real world mesh/height fields remain pending.",
+    "Unflagged ordinary death source and empty existing pickup/proc vectors; existing merge/cap logic is reused but not newly validated here.",
+    "Placement consumes no RNG; full1417 kind1 and full914 reward/entity RNG are compared through pre-existing independent arithmetic."
+  ],
+  "independent_review": "Pending readonly parent/agent review.",
+  "retained_previous_run": "876/0 prior full remains in full0135-oracle-20261101T051624.567996Z;924 replaces it as final suite, not additive coverage.",
+  "source_freeze_note": "Final924 includes core_spec/__init__.py and its upgrade_values import; original924 and876 receipts retained, not additive coverage."
+}

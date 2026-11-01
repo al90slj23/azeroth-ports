@@ -1,0 +1,107 @@
+{
+  "status": "pass within fixed-zone absent-terrain/navigation ordinary placement domain",
+  "reviewer": "independent ai_incoming135 agent",
+  "final_receipt": "evidence/full0135-oracle-20261101T052411.434992Z/ordinary-placement135-comparison.json",
+  "final_receipt_sha256": "49def1217c03905bad0fcefaab63ae1ab195528905b965c30ef5d0290665209e",
+  "cases": 924,
+  "direct1417_cases": 396,
+  "ordinary_death914_cases": 528,
+  "model_fixture_mismatch_cases": [],
+  "original_result_mismatch_cases": [],
+  "source_snapshot_count": 21,
+  "production_dependency_closure_including_package_init": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/death_loot134.py",
+    "reconstruction/core_spec/enemy_scaling.py",
+    "reconstruction/core_spec/ordinary_placement135.py",
+    "reconstruction/core_spec/pickup_entity134.py",
+    "reconstruction/core_spec/pickups134.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/spawn135.py",
+    "reconstruction/core_spec/spawn135_data.py",
+    "reconstruction/core_spec/spawn_geometry135.py",
+    "reconstruction/core_spec/spawn_math135.py",
+    "reconstruction/core_spec/spawn_position135_data.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": [],
+  "pickup_records": 1268,
+  "pickup_record_bytes_strictly_compared": 71008,
+  "arrival_A5_words_checked": 1268,
+  "masks": [],
+  "nan_relaxation": false,
+  "actual_original_geometry_tables_checked": 12,
+  "original_nonexport_sections_byte_identical": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    12,
+    10,
+    11,
+    0
+  ],
+  "source_freeze_finding": {
+    "finding": "Initial924 snapshot omitted core_spec/__init__.py and its executed upgrade_values import.",
+    "resolution": "Author added both sources and reran final924 under052411.434992Z; older924/876 retained but not additive."
+  },
+  "boundary_checks": [
+    {
+      "case": "missing-world-declaration",
+      "rejected": true,
+      "reason": "Real terrain/grid/navigation pickup placement remains unresolved"
+    },
+    {
+      "case": "terrain-present",
+      "rejected": true,
+      "reason": "Real terrain/grid/navigation pickup placement remains unresolved"
+    },
+    {
+      "case": "navigation-present",
+      "rejected": true,
+      "reason": "Real terrain/grid/navigation pickup placement remains unresolved"
+    },
+    {
+      "case": "record-not424B",
+      "rejected": true,
+      "reason": "Full pre-hit424B record required"
+    },
+    {
+      "case": "dead-record",
+      "rejected": true,
+      "reason": "Live ordinary tags required; alternate death families unresolved"
+    },
+    {
+      "case": "nonfinite-height",
+      "rejected": true,
+      "reason": "Finite binary32 word required"
+    }
+  ],
+  "reviewed_rules": [
+    "Pre-hit U316..336 interpolation with U340/U344 and clamp0..1;death freezes endpoints andU340,clearsU344.",
+    "Separate XP atdeathXYZ and coin atdeathX+.8/deathY+.8 before each1417 zone clamp.",
+    "Circular limit=max(1,radius-2), orderedper-opf32 andactual49503 hypot;finalV116flat/base height independentof deathZ.",
+    "Actual1417 kind1/1821 entity RNG and914 ordinary reward RNG/counters/messages/killcost retained in comparisons."
+  ],
+  "limitations": [
+    "Explicitly flat/baseV116, absent terrain/grid/navigation; no real world mesh/pathfinding recovery.",
+    "Ordinary unflagged fixed-zone source; empty existingpickup/proc vectors; existing merge/cap logic not newlyvalidated.",
+    "Full deathcombat/UI/network/accounting behavior and complete game not proved by geometry batch."
+  ],
+  "original_executed_by_reviewer": false,
+  "author_sources_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "model-recomputation.json": "5fc74a042a4ee67c91a6def71a2e15514f930b22bf9c430cc9ecca4d40955ab0",
+    "verify.py": "5ecde3e4f7a2396f35955b266719ab48e151a602983cf8d0efc4a854418dc589",
+    "recompute.py": "d321f39d4b05de7ddf1209f3fcc8a4b2c3b093281a7b2c0f4151d1af3b744f7d",
+    "identity-and-comparison.json": "e51d365ee868c2232c816413d28e9770768f4796ca09e83e5cfa471e3e20fc59"
+  },
+  "evidence_directory": "evidence/ordinary-placement0135-independent-review-20261101T052541.411145Z",
+  "review_sha256": "97aee5eaf38e5ae792848f10b2056b4f177b1f968caf14c03beedc18d5b92cd4"
+}

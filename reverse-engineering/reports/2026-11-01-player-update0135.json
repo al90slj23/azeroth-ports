@@ -1,0 +1,87 @@
+{
+  "status": "Validated limited2088 prefix and ordinary corpse cleanup; complete880 remains incomplete",
+  "receipt": "evidence/full0135-oracle-20261101T060633.862339Z/player-update135-comparison.json",
+  "receipt_sha256": "bf9ea27d2a52dbf4a99bfd1afb22dd0d7e7adf720e9ac8b556450940f711a334",
+  "cases": 285,
+  "steps": 444,
+  "mismatch_fields": 0,
+  "runtime": {
+    "cases": 285,
+    "full2088_calls": 409,
+    "full921_calls": 35,
+    "unchanged_callees": true,
+    "original_allocator": 91941,
+    "fresh_instances": 24,
+    "max_memory_bytes": 20578304,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "source_sha256": {
+    "scripts/check_level_cycle135.py": "ccf2323a1af7e33eae002870b610f50800845a821ef2702f956870d841a49ed8",
+    "scripts/run_level_cycle135_oracle.mjs": "ccb1d066fc8ad3c4d89248756f694e531479fc24b373f02b0b75fd1ef6a3cc94",
+    "scripts/build_full135_oracle.py": "3940346ae143547a7b88deec5d9d31b114db17bb969e8c6fba3c650d78352975",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "623a41f39ef8d805e4749a08ab50ada8e467f6333b160c476d4f26008f760a1a",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/ai_lifecycle135.py": "85d12c3808baf37bff5de9aa5acdc320a5befb9f412a352e1ccb1634946e6ac4",
+    "scripts/check_player_update135.py": "fd718fb93e4cf18475ddba7dfb12f11342aa71c3ff25b7a07340301abfdb7eb7",
+    "scripts/run_player_update135_oracle.mjs": "44cd3bf442c24afbf647b0ff4a6be4b2bf42f27b7830f6540437d67551d6b5d3"
+  },
+  "rejected_sources": [
+    {
+      "name": "default-source-guard",
+      "error": "Explicit empty other/periodic source snapshots required"
+    },
+    {
+      "name": "nonfinite-dt",
+      "error": "Finite dt required; nonfinite1076 scheduler continuation not restored in prefix isolation"
+    },
+    {
+      "name": "periodic-source",
+      "error": "Explicit empty other/periodic source snapshots required"
+    },
+    {
+      "name": "corpse-default-source-guard",
+      "error": "Explicit ordinary corpse source domain required"
+    },
+    {
+      "name": "missing-periodic-snapshot",
+      "error": "Explicit empty other/periodic source snapshots required"
+    }
+  ],
+  "static_evidence": "evidence/player-phase0135-static-20261101T054400Z",
+  "restored": [
+    "2088 live32 expiration before1076; stable now<expiry filter,1512 only when expiration IDs nonempty",
+    "Shield-source expiration subtraction/clear,barrier ordered min,total regen andkeys22/28",
+    "921 corpse age strictf32>1.2, owner gating,39635 stable removal of all matchingGUIDs,170GUID packet count; RNG/sequence unchanged"
+  ],
+  "unknown": [
+    "Nonzero periodic budgets andother live families; special11426 shield expiry",
+    "Physical1202 aura/message/1453account/39635deallocation metadata",
+    "Other915/3757 timed-source branches; complete880 scheduling",
+    "Nonfinite dt continuation changes genuine1076 scheduler and is rejected in isolatedprefix API"
+  ],
+  "historical_failures_preserved": [
+    "evidence/full0135-oracle-20261101T055732.816220Z (runner packet reader layout error)",
+    "evidence/full0135-oracle-20261101T055801.728065Z (nonfinite dt invalidates isolated1076 no-op domain)"
+  ],
+  "scope": "Corpse helper is a cleanup stage after alive AI; dedicated full921 comparisons use dead records only. Younger corpses remain and must not enter alive-only ai135.",
+  "source_freeze_before_production_import": true,
+  "periodic_source_guard": "periodic_input defaultsNone; absent snapshot rejected even when other_sources explicitlyTrue; caller must supply()",
+  "controlled_racial_isolation": "Everyisolating2088fixtureuses genuinehumanperception pointer5476580 withremaining+Infinity, regardless statclass/race; itisnottestedraceproducer oropeningcastschedule."
+}

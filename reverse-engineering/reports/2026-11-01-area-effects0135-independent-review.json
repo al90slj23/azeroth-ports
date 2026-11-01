@@ -1,0 +1,254 @@
+{
+  "status": "pass within explicit seven-definition finite/empty-source area projection",
+  "reviewer": "independent ai_incoming135 agent",
+  "final_receipts": [
+    {
+      "path": "evidence/full0135-oracle-20261101T062917.025429Z/area-effects135-comparison.json",
+      "sha256": "e7d4895dbda0db43dd99f696f415cfc06a90afd037a2767ebafd12ac15aaa645"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T062939.812946Z/area-effects135-comparison.json",
+      "sha256": "f6cc58c2174643aefbe64575c852b7eed8156ab633e6347beff8b9d2128a8f3e"
+    }
+  ],
+  "cases": 693,
+  "stages": 5495,
+  "successful_casts": 1013,
+  "model_fixture_and_original_mismatch_cases": [],
+  "source_snapshot_count_per_batch": 34,
+  "production_closure_including_package_init": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ability_state.py",
+    "reconstruction/core_spec/area_effects135.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/candidates135.py",
+    "reconstruction/core_spec/cast135.py",
+    "reconstruction/core_spec/cast_events135.py",
+    "reconstruction/core_spec/combat134.py",
+    "reconstruction/core_spec/combat135.py",
+    "reconstruction/core_spec/currency134.py",
+    "reconstruction/core_spec/death_loot134.py",
+    "reconstruction/core_spec/death_pickup135.py",
+    "reconstruction/core_spec/derived_stats134.py",
+    "reconstruction/core_spec/derived_stats135.py",
+    "reconstruction/core_spec/level_cycle135.py",
+    "reconstruction/core_spec/ordinary_placement135.py",
+    "reconstruction/core_spec/pickup_entity134.py",
+    "reconstruction/core_spec/pickups134.py",
+    "reconstruction/core_spec/progression.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/radius.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/spawn135_data.py",
+    "reconstruction/core_spec/spawn_geometry135.py",
+    "reconstruction/core_spec/spawn_position135_data.py",
+    "reconstruction/core_spec/unit_records135.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": [],
+  "all_original_nonexport_sections_byte_identical": true,
+  "original_start_section_absent": true,
+  "definition_bytes_equal_original_data": {
+    "consecration": 5468396,
+    "volley": 5469716,
+    "immolation_trap": 5470068,
+    "blizzard": 5473764,
+    "flamestrike": 5473852,
+    "rain_of_fire": 5474820,
+    "hurricane": 5475788
+  },
+  "strict_comparisons": {
+    "area_record_rows_strict": 6782,
+    "area_strict_bytes": 596816,
+    "pickup_record_rows_strict": 2688,
+    "pickup_strict_bytes": 150528,
+    "unit_words_strict": 1851520
+  },
+  "unit_comparison_scope": "32returned u32words perunit (not full424B); includeHP/death/position/control120/124 and selected status/timers.",
+  "comparison_masks": [],
+  "nan_relaxation": false,
+  "producer_append_unwritten19B_preserved_bytes": 19247,
+  "expiry_due_overlap_precedence_checks": 301,
+  "due_area_rows": 2625,
+  "death_events": 504,
+  "pickups_spawned": 672,
+  "effect1_dead_slow_suppressed_hits": 144,
+  "shared_counter_verified_death_stages": 1008,
+  "independent_missing_source_and_unknown_guards": [
+    {
+      "name": "omitted-terrain_grid_absent",
+      "rejected": true,
+      "reason": "Terrain/navigation or nonempty area modifier sources remain pending"
+    },
+    {
+      "name": "omitted-navigation_absent",
+      "rejected": true,
+      "reason": "Terrain/navigation or nonempty area modifier sources remain pending"
+    },
+    {
+      "name": "omitted-area_modifiers_absent",
+      "rejected": true,
+      "reason": "Terrain/navigation or nonempty area modifier sources remain pending"
+    },
+    {
+      "name": "nonbool-absence",
+      "rejected": true,
+      "reason": "Terrain/navigation or nonempty area modifier sources remain pending"
+    },
+    {
+      "name": "tick-default-source-unknown",
+      "rejected": true,
+      "reason": "Following/effect-override sources must be explicitly absent"
+    },
+    {
+      "name": "tick-nonbool-absence",
+      "rejected": true,
+      "reason": "Following/effect-override sources must be explicitly absent"
+    },
+    {
+      "name": "hostile-area-source",
+      "rejected": true,
+      "reason": "Hostile/alternate area variants and other status effects remain pending"
+    },
+    {
+      "name": "unrestored-effect2",
+      "rejected": true,
+      "reason": "Hostile/alternate area variants and other status effects remain pending"
+    },
+    {
+      "name": "unknown-spell",
+      "rejected": true,
+      "reason": "Unknown area spell/follow behavior remains pending"
+    },
+    {
+      "name": "nonfinite-now",
+      "rejected": true,
+      "reason": "Nonfinite area arithmetic remains outside this bounded slice"
+    },
+    {
+      "name": "incomplete-area-record",
+      "rejected": true,
+      "reason": "Complete88B area record required"
+    },
+    {
+      "name": "missing-hit-callback",
+      "rejected": true,
+      "reason": "Each accepted hit requires an explicit player/proc consumer"
+    },
+    {
+      "name": "nonfinite-duration",
+      "rejected": true,
+      "reason": "Nonfinite area arithmetic remains outside this bounded slice"
+    },
+    {
+      "name": "unknown-height",
+      "rejected": true,
+      "reason": "Nonfinite area arithmetic remains outside this bounded slice"
+    }
+  ],
+  "static_findings": {
+    "body_identities": [
+      {
+        "index": 922,
+        "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80",
+        "wat_sha256": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940"
+      },
+      {
+        "index": 3757,
+        "body_sha256": "e976ee48b3f0ad4117bfa98c81538fa88bf4607c4a9ca15c1a5a040c1c4477f5",
+        "wat_sha256": "b8d56b8489f24b8fc0be48af57e6c355c85a6a8772379b28575e31b7d28fdf23"
+      },
+      {
+        "index": 13151,
+        "body_sha256": "2ed3acb588007e712a00e5a3ff32998185066f7c4c457f397b0fe6928efa04ca",
+        "wat_sha256": "997c750e64830a15781af32c1b634f0cdda8e6d8818b6aca0fa69428ec32fb5d"
+      },
+      {
+        "index": 2825,
+        "body_sha256": "aa886e283047dab55ccd6e51e180ced2e870e069e8e9e41feb2edcea1dc4d446",
+        "wat_sha256": "44c0b52c10ba95a833d66435ab96101d066d40faf34e8598eecea8b4eaf774b8"
+      },
+      {
+        "index": 85719,
+        "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+        "wat_sha256": "0d68bef0836f5ce0c7d6c92b74e136b325ef7c496bef652dc16e4107d108756a"
+      },
+      {
+        "index": 2244,
+        "body_sha256": "30192e9a1c26b5e718b31582831bb65699148fc38b48fd696b9bf6bb4dbaadfd",
+        "wat_sha256": "26eacf4c9cff2b0ba32ac93f66920f2c1a0535f0e4373b67d872468e5646b5bc"
+      },
+      {
+        "index": 914,
+        "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+        "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a"
+      }
+    ],
+    "expiry_precedes_due": true,
+    "damage_and_ordinarydeath_before2244": true,
+    "effect1_lookup_skips_marker1_before_slow124write": true,
+    "producer_unknown_bytes": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      85,
+      86,
+      87
+    ],
+    "notes": [
+      "3757remaining72 decreasesonce;next64addsinterval68 once,withoutcatch-up loop.",
+      "2244effect1 defaultbranch writes120/124 only aftermatchingGUIDwithmarker!=1;override49 source would alter extra356 andisrejected.",
+      "922productionwritesall other69B andpreserves19B caller-owned append-slot input.",
+      "No frontend/packet-rendering equivalence claimed."
+    ]
+  },
+  "accepted_boundaries": [
+    "Seven fixed922execution3 definitions, onlyeffect0/1, flat terrain/navigation absence andempty proc/item/follow36/override49 sources explicitlydeclared.",
+    "PlayerHP deliberately atmax; after_hit identity is valid onlythis empty-sourcecappedHP domain.",
+    "Actualfull3757\u2192914ordinarydeath\u21922244 ordering;shared2408 counter andRNG carried throughmulti-target/multi-area hits.",
+    "Stablearea88 filtering, atmostoneduetick perentry percall; stored76damage vs currenttickcriticalprofile.",
+    "Caller-ownedappend-slot bytes8..23/85..87 retained strict, nozeroassumption ormask."
+  ],
+  "limitations": [
+    "Unknownhostile/effect2/frosttrap/follow36/override49/terrain source branches rejected, not counted asrecovered.",
+    "Physicalvisual/packet/ECS bytes,allocatorcapacity,fullunit424 bytes andcomplete skill rendering not proved bynumeric/sourceconsumer comparisons.",
+    "Area is notyetintegrated intoroot headless; new same-G originals required beforeextendingpriorcheckpoint.",
+    "Complete880 scheduler, allabilities andwholegame reconstruction remain incomplete."
+  ],
+  "original_executed_by_reviewer": false,
+  "author_production_sources_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "static-3757.wat": "b8d56b8489f24b8fc0be48af57e6c355c85a6a8772379b28575e31b7d28fdf23",
+    "guards.py": "03e39cd26a97e0087029301ab6f20cc9131c0e4d7ce9f7df503ca9b2aa325e58",
+    "static-914.wat": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a",
+    "recompute-full0135-oracle-20261101T062917.025429Z.json": "2d6bdc781dcc516ac2f0152c323b106f08cbdb59001242d81329f36adb1cad5a",
+    "static-2825.wat": "44c0b52c10ba95a833d66435ab96101d066d40faf34e8598eecea8b4eaf774b8",
+    "static-922.wat": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940",
+    "recompute-full0135-oracle-20261101T062939.812946Z.json": "b638c82c939ed629d239bcd7f97956264964768f1e002de7fedebc857a245c91",
+    "static.py": "3262df1be49566e836aee16626f2f0ede04aa8ad8ec1d54d1440640cdc736cd0",
+    "verify.py": "226f37c154074616c9e89f4d9c6d2eb08eda808a5e70b677a96157a913c7689a",
+    "recompute.py": "73d617ac851424ca98d27609e014de8c2da0dfad1ddff8fbd29e85256b666573",
+    "static-85719.wat": "0d68bef0836f5ce0c7d6c92b74e136b325ef7c496bef652dc16e4107d108756a",
+    "independent-guards.json": "03c689a5ee9cef551d13cf250ea21c042a8500a2c8f52a503aa4b36e62c81e9d",
+    "static-2244.wat": "26eacf4c9cff2b0ba32ac93f66920f2c1a0535f0e4373b67d872468e5646b5bc",
+    "static-13151.wat": "997c750e64830a15781af32c1b634f0cdda8e6d8818b6aca0fa69428ec32fb5d",
+    "identity-and-comparison.json": "1b9cb70b9df6b9a28c7dfbcb0795b912c6a0f9e86191d1b3052229a74b9f58f6",
+    "static-review.json": "796d78a2cc7aa6067171735021558dee57795a2c73364b8549da7e9efa025609"
+  },
+  "evidence_directory": "evidence/area-effects0135-independent-review-20261101T063449.578641Z",
+  "review_sha256": "ab35d1463b834e17594f8882ab92811fcf29a6b8252512e6bba257f8bc201f53"
+}

@@ -1,0 +1,94 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "bounded-independent-kind3-area-slice-differential-pass-full-game-incomplete",
+  "source": {
+    "reconstruction/core_spec/area_effects135.py": "ac0c8976776232d1a7627835feb96d67f707008a808c43dcfe3aaf5973c8833f",
+    "scripts/check_area_effects135.py": "9720309069b51a566a6ecdd9d86adfbe3998ce2192f29fc5895e0e0e046407e7",
+    "scripts/run_area_effects135_oracle.mjs": "e627d347c9e27e419af134fc769e8a2163fdbf7c930c1bb61357936524bc3363",
+    "scripts/trace_area_effects135.py": "cecdae984968e4b9edda9d38ef8c778ed5ca98051aa8423df1058523b2493ca3"
+  },
+  "static_trace": {
+    "path": "evidence/area-effects135-chain-20261101T063051.134421Z/trace.json",
+    "sha256": "71f16cd39b88fb6d9fc89c0b070a7da0a24e9e620ca7f4b1ce042e075e51d53d"
+  },
+  "receipts": [
+    {
+      "path": "evidence/full0135-oracle-20261101T062917.025429Z/area-effects135-comparison.json",
+      "sha256": "e7d4895dbda0db43dd99f696f415cfc06a90afd037a2767ebafd12ac15aaa645",
+      "cases": 525,
+      "stages": 4487,
+      "mismatch_cases": 0,
+      "guards_rejected": 13,
+      "sources": 34,
+      "successes": 677,
+      "area_bytes_strict": 442640,
+      "pickup_bytes_strict": 0
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T062939.812946Z/area-effects135-comparison.json",
+      "sha256": "f6cc58c2174643aefbe64575c852b7eed8156ab633e6347beff8b9d2128a8f3e",
+      "cases": 168,
+      "stages": 1008,
+      "mismatch_cases": 0,
+      "guards_rejected": 13,
+      "sources": 34,
+      "successes": 336,
+      "area_bytes_strict": 154176,
+      "pickup_bytes_strict": 150528
+    }
+  ],
+  "totals": {
+    "cases": 693,
+    "stages": 5495,
+    "successful_casts": 1013,
+    "mismatches": 0,
+    "area_bytes_strict": 596816,
+    "pickup_bytes_strict": 150528,
+    "masks": 0,
+    "nan_equivalence_exceptions": 0
+  },
+  "implemented": [
+    "922 execution3 for seven fixed actual88B definitions: consecration/volley/immolation_trap/blizzard/flamestrike/rain_of_fire/hurricane",
+    "13151 first24-candidate maximum density center, all-live neighbours including outside cast range, later ties; no RNG",
+    "Flat-height producer, radius compression, duration/actual ticks via85719, base-tick damage denominator, full32 visualGUID/counter",
+    "Complete88B normal record preserves caller-supplied unwritten append-slot bytes8..23 and85..87",
+    "3757 ordered expiry/removal, exactly one due tick per call per entry, original-deadline-plus-interval and empty-query decrement",
+    "Per-target current critical chance/multiplier, sorted-target RNG\u2192914\u21922244 ordering with explicit accepted-hit/death continuation",
+    "2244 default effect0 and effect1 slow U120/U124, skipped for marker1 after lethal914, no modifier49",
+    "Ordinary death with interpolated pre-hitXYZ, zone clamp/coin+.8/height placements, real XP/coin RNG continuation and shared G2408"
+  ],
+  "api": {
+    "AreaDefinition135": "(pointer, ability_id bytes, raw88_hex)",
+    "AreaState135": "(records tuple complete88Bhex, spawn_counter u32)",
+    "produce_area": "(cast, areas, definition, owned, flat_height_bits, *, append_slot_hex, terrain_grid_absent=True, navigation_absent=True, area_modifiers_absent=True, busy488=0, attempted_spell_sets=None) -> AreaCastResult135(cast,areas,success,center_xyz,attempted_spell_sets,pending)",
+    "tick_areas": "(cast, areas, now_bits, *, after_hit, after_death=None, area_modifiers_absent=True) -> AreaTickResult135(cast,areas,hits,expired_visual_guids,effect_writes,pending)"
+  },
+  "integration": [
+    "Do not substitute a queued projectile for persistent areas. Main880 standard suffix is2088\u21921754\u21923757\u2192915\u2192921\u21922862\u2192947.",
+    "Pass explicit actual absence of modifier36-follow/49-override/other item-proc producers; a guessed True is not full-game evidence.",
+    "Every accepted hit requires player/proc callback before optional death callback, then effect1 status writes happen after full914 continuation.",
+    "Apply effect_writes to raw424 U120; modeled U124 is already synchronized in CastState. Existing unit_records135 adapter does not own U120.",
+    "G2408 is a single shared counter: produce_area increments it; death.context may increment it during tick. Synchronize returned death counter back to AreaState before next cast.",
+    "Area visualGUID uses all32counter bits; keep distinct from pickup GUID encoder rules.",
+    "Append slot bytes are explicit independent allocation state, not a claim that original malloc returns zero. Original fixture preallocates A5/5A and all88B compare strict."
+  ],
+  "evidence_scope": [
+    "693 independent fixtures were generated before original, with current34-file snapshots and readback/hash receipts. Prior pilot7/full521/death168 receipts retained but not additive.",
+    "Full original922/3757 and real internal13151/27562/2825/85719/914/2244/1417/1821 run unchanged; only export section7 changed.",
+    "Pinned Node22.23.4, max memory512pages, heap512MiB, owned process60s, all878 host imports deny, no appstart/EXE/network/saves.",
+    "Ordinary deaths cover7 definitions\u00d712zones\u00d7static/moving; each has2real area producers and3real death recipients. Full suite covers radius/duration/RNG/upgrades/density24 cap/exact deadlines/dynamic critical profiles.",
+    "Unit output is the listed32-word semantic/status/movement projection, not full424B pointer/ECS equality. Area88B and pickup56B bytes strict. Player HP is initially capped; per-hit healing magnitude is reused, not newly tested here."
+  ],
+  "pending": [
+    "915 complete unit/periodic phase and full880 composition",
+    "frost_trap effect2 and other nonzero effects",
+    "Modifier36 following areas and modifier49 per-spell status overrides",
+    "Non-flat terrain/grid/navigation height production",
+    "Nonempty984 proc sources and other death families",
+    "Physical2825 visual entities,10529 cast packets,170despawn/wire/keyed state and allocator capacity lifecycle",
+    "Complete playable reconstruction, real user input/render/UI/save/network integration"
+  ],
+  "independent_review": "requested; not yet counted as complete"
+}

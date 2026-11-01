@@ -1,0 +1,93 @@
+{
+  "status": "pass within sixfixedkind9 racial numeric/live-record domain",
+  "reviewer": "independent ai_incoming135 agent",
+  "final_receipt": "evidence/full0135-oracle-20261101T053609.059221Z/racial-cast135-comparison.json",
+  "receipt_sha256": "ef836f166aaaf8f7f092cb64cdc163072d1e31382b58b6a3263105afcf35539e",
+  "cases": 720,
+  "success": 693,
+  "game_guard_failures": 27,
+  "model_fixture_mismatch_cases": [],
+  "original_result_mismatch_fields": [],
+  "source_snapshot_count": 28,
+  "production_closure_including_package_init": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ability_state.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/candidates135.py",
+    "reconstruction/core_spec/cast135.py",
+    "reconstruction/core_spec/combat134.py",
+    "reconstruction/core_spec/combat135.py",
+    "reconstruction/core_spec/derived_stats134.py",
+    "reconstruction/core_spec/derived_stats135.py",
+    "reconstruction/core_spec/level_cycle135.py",
+    "reconstruction/core_spec/progression.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/racial_cast135.py",
+    "reconstruction/core_spec/radius.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": [],
+  "all_nonexport_sections_original_bytes_identical": true,
+  "fixed_definition_raw88_checked_all_cases": true,
+  "actualG1256_owned80_bytes_strictly_compared": 57600,
+  "live_record_rows": 801,
+  "live_record_bytes_strictly_compared": 23772,
+  "explicitly_unspecified_new7_8_9_scratch16_words": 465,
+  "actual_scratch_word_differences": 0,
+  "old_record_masks": 0,
+  "type12_value12_aux16_masks": 0,
+  "nan_relaxation": false,
+  "three_attempt_ledgers_compared": true,
+  "boundary_checks": [
+    {
+      "case": "mismatched-owned-pointer",
+      "rejected": true,
+      "reason": "Racial pointer/clock/shared RNG snapshots disagree"
+    },
+    {
+      "case": "mismatched-clock",
+      "rejected": true,
+      "reason": "Racial pointer/clock/shared RNG snapshots disagree"
+    },
+    {
+      "case": "mismatched-RNG",
+      "rejected": true,
+      "reason": "Racial pointer/clock/shared RNG snapshots disagree"
+    },
+    {
+      "case": "busy-without-explicit-three-ledgers",
+      "rejected": true,
+      "reason": "Three explicit attempt ledgers required when only set3 is gated"
+    },
+    {
+      "case": "three-ledger-first-disagreement",
+      "rejected": true,
+      "reason": "Three attempt ledgers and CastState first ledger must agree"
+    }
+  ],
+  "reviewed_rules": [
+    "Effect8/9 requires actualtarget query within30,stablyremovesonlymatchingownerGUID0,appendslive32 then1512 then1202.",
+    "Effect7anysame-spellrecord blocks includingexpired/nonzeroowner;otherwisewritesShield thenappend/1202,noimmediate1512.",
+    "Effect12requiresHPnotgreaterthan.35max andnoactivekind12;retains expiredsame-spell,appendsexplicitdefinition12/16words,noimmediate1512.",
+    "busy488/context908lowbitgateonlythirdattemptledger;firsttwo stillappend.",
+    "Direct922preserves actualG1256full80B cooldown/record;real1076 scheduling remains separate."
+  ],
+  "limitations": [
+    "New7/8/9word16isnotwrittenbyoriginalbranch;all465werezero inthisrun,butthatdoesnotproveuniversalzerobits.",
+    "Numericstatkeys22/28/1109only;1202aura/displaykeysandwire/accountmetadata remainunmodeled.",
+    "The6racials exclude taurenswar_stomp andgnomeescape_artist executionkind2 effects.",
+    "Nonemptyproducer acquisition,cooldown/scheduler/phaseentry/wholegame remainsseparate."
+  ],
+  "original_executed_by_reviewer": false,
+  "author_sources_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "model-recomputation.json": "440df1038c5cc4b02f6411e90cac00707ca93c8bddc5dde57c3d78e156234ecb",
+    "verify.py": "0e2483d78226a3371d4f44251fad91ecbf5c06452e0f6fc2bb8735052cad63bc",
+    "recompute.py": "ddf126c9e24d8d8d1b3101aa5f2cafa7fc9a8717781bb9c73031366a4e159452",
+    "identity-and-comparison.json": "8522de19d34512badff652232b06d0e14f011c4c74b674422e6155b562deeca2"
+  },
+  "evidence_directory": "evidence/racial-cast0135-independent-review-20261101T054128.724568Z",
+  "review_sha256": "ef59500f125a0701e910802af1b78f564e28a9d81bd754331342e5ec12e48427"
+}

@@ -18,14 +18,18 @@ from build_full135_oracle import ROOT,SOURCE,SOURCE_SHA,build,parse_source
 from build_upgrade134_oracle import sha,source_memory
 import hashlib
 import struct
+from source_closure135 import core_sources
+PRE_PRODUCTION = core_sources(ROOT,'spawn_frame_motion135.py','spawn_heading135.py')
+PRE_HASHES = {p:sha(ROOT/p) for p in PRE_PRODUCTION}
 from check_spawn_frame135 import SOURCE_FILES as BASE_SOURCES,FLOAT_FIELDS
 
 SOURCE_FILES=tuple(dict.fromkeys((*BASE_SOURCES,'scripts/check_spawn_frame135.py',
  'scripts/check_spawn_motion135.py','scripts/run_spawn_motion135_oracle.mjs',
  'reconstruction/core_spec/spawn_heading135.py',
  'reconstruction/core_spec/spawn_position_motion135.py',
- 'reconstruction/core_spec/spawn_frame_motion135.py')))
+ 'reconstruction/core_spec/spawn_frame_motion135.py','scripts/source_closure135.py',*PRE_PRODUCTION)))
 IMPORT_HASHES={p:sha(ROOT/p)for p in SOURCE_FILES}
+assert all(IMPORT_HASHES[p]==h for p,h in PRE_HASHES.items())
 sys.path.insert(0,str(ROOT/'reconstruction'))
 from core_spec import binary32 as f
 from core_spec.spawn_heading135 import atan_bits,atan2_bits,HI,LO,INF_QUADRANTS,XINF_QUADRANTS

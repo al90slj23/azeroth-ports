@@ -1,0 +1,90 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "batches": [
+    {
+      "batch": "evidence/full0135-oracle-20261101T060633.862339Z",
+      "receipt_sha256": "bf9ea27d2a52dbf4a99bfd1afb22dd0d7e7adf720e9ac8b556450940f711a334",
+      "cases": 285,
+      "source_files": 20,
+      "core_init_import_closure": [
+        "reconstruction/core_spec/__init__.py",
+        "reconstruction/core_spec/ability_state.py",
+        "reconstruction/core_spec/ai_lifecycle135.py",
+        "reconstruction/core_spec/binary32.py",
+        "reconstruction/core_spec/candidates135.py",
+        "reconstruction/core_spec/derived_stats134.py",
+        "reconstruction/core_spec/derived_stats135.py",
+        "reconstruction/core_spec/level_cycle135.py",
+        "reconstruction/core_spec/player_update135.py",
+        "reconstruction/core_spec/progression.py",
+        "reconstruction/core_spec/progression134.py",
+        "reconstruction/core_spec/rng.py",
+        "reconstruction/core_spec/upgrade_values.py"
+      ],
+      "current_drift": {
+        "scripts/build_full135_oracle.py": {
+          "frozen": "3940346ae143547a7b88deec5d9d31b114db17bb969e8c6fba3c650d78352975",
+          "current": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306"
+        },
+        "scripts/full135_host.mjs": {
+          "frozen": "623a41f39ef8d805e4749a08ab50ada8e467f6333b160c476d4f26008f760a1a",
+          "current": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a"
+        }
+      },
+      "fixture_regenerated_from_snapshotted_models": true,
+      "all_stored_results_strictly_equal": true,
+      "no_mask_or_nan_tolerance": true,
+      "all_nonexport_sections_identical": true,
+      "body_guards_recomputed": 2,
+      "stages": 444,
+      "player_calls": 409,
+      "corpse_calls": 35,
+      "full_live_record_bytes": 7168,
+      "full_corpse_record_bytes": 32648
+    },
+    {
+      "batch": "evidence/full0135-oracle-20261101T061549.649714Z",
+      "receipt_sha256": "c3469bbceda0acd31080f63ddafbf8a7d71811c4417f242959aa761b983c5b74",
+      "cases": 396,
+      "source_files": 10,
+      "core_init_import_closure": [
+        "reconstruction/core_spec/__init__.py",
+        "reconstruction/core_spec/binary32.py",
+        "reconstruction/core_spec/loop135.py",
+        "reconstruction/core_spec/movement_pause135.py",
+        "reconstruction/core_spec/upgrade_values.py"
+      ],
+      "current_drift": {
+        "scripts/build_full135_oracle.py": {
+          "frozen": "3940346ae143547a7b88deec5d9d31b114db17bb969e8c6fba3c650d78352975",
+          "current": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306"
+        },
+        "scripts/full135_host.mjs": {
+          "frozen": "623a41f39ef8d805e4749a08ab50ada8e467f6333b160c476d4f26008f760a1a",
+          "current": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a"
+        }
+      },
+      "fixture_regenerated_from_snapshotted_models": true,
+      "all_stored_results_strictly_equal": true,
+      "no_mask_or_nan_tolerance": true,
+      "all_nonexport_sections_identical": true,
+      "body_guards_recomputed": 9,
+      "stages": 1136,
+      "independently_decoded_packets": 604,
+      "full_record_bytes": 1034560,
+      "packet_guid_occurrences_above_2pow53": 504
+    }
+  ],
+  "reviewer_script_sha256": "8738bcda26101167e79eba168ce4ae0f6ccc90e96238ba2d80f0ed2d6aa9d1f2",
+  "original_executed": false,
+  "author_source_modified": false,
+  "pending": [
+    "Player2088 isolation uses actual racial record with Inf cooldown and empty learned vector; it is not a legal opening schedule.",
+    "Physical heal/aura/account outputs and unmodeled player keys remain outside helper projection.",
+    "Movement packet GUID/sequence/flag and complete NPC preservation are independently proven; packet geometry/terrain and nonempty112B auxiliary/88B claims remain unresolved.",
+    "Command1371 tests pause1\u21943; natural choice pause1\u21942 and actual headless integration need their separate same-state receipt.",
+    "Current builder/host may have coordinated additional exports; each reviewed batch is bound to its own intact snapshotted sources."
+  ]
+}
