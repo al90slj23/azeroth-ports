@@ -1,21 +1,15 @@
 {
   "active_reconstruction_target": {
-    "version": "0.134.0",
-    "web_build": "983346a7",
-    "web_reference_key": "web_current_comparison_snapshot",
-    "windows_reference_key": "windows_official_current_reference",
-    "selected_by": "User latest-version direction on2026-11-01",
-    "previous_verified_reference": "web_core0.126.0/3e72472a retained only for regression/equivalence mapping",
+    "version": "0.135.1",
+    "web_build": "0898d5e3",
+    "web_reference_key": "web_official_latest_snapshot",
+    "windows_reference_key": "windows_official_latest_reference",
+    "selected_by": "User latest-version direction; live official manifest rechecked2026-11-01 UTC",
+    "status": "originals_acquired_identity_verified_semantic_migration_pending",
+    "fixed_research_baseline": "fixed_research_baseline",
+    "version_policy": "Freeze each acquired version/build/SHA for repeatable experiments; migrate differences within the same project",
     "installation_packages_updated": false,
-    "version_support": "reconstruction/version-support.json",
-    "analysis_profile": {
-      "report": "reports/2026-11-01-wasm0134-profile.json",
-      "source_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
-      "complete_wat": "evidence/wasm0134-profile-20261101T001728.222975Z/official-0.134.0-full.wat",
-      "wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
-      "index": "evidence/wasm0134-profile-20261101T001728.222975Z/index.sqlite",
-      "index_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9"
-    }
+    "version_support": "reconstruction/version-support.json"
   },
   "web_core": {
     "version": "0.126.0",
@@ -69,7 +63,7 @@
       "EXE acquired and statically inspected; full resource RAR has separate completion and identity receipts.",
       "Old0.102.3 and WASM offsets must not be transferred without mapping."
     ],
-    "role": "active_reconstruction_native_target; original Windows semantics cross-check"
+    "role": "fixed_0.134.0_native_research_reference; legacy key retained for provenance"
   },
   "web_current_comparison_snapshot": {
     "version": "0.134.0",
@@ -84,6 +78,59 @@
       "SHA computed locally from HTTPS download; not a separately published official WASM digest.",
       "Existing fixed0.126.0 source files, installation packages and saves remain unchanged."
     ],
-    "role": "active_reconstruction_web_target; latest-specific semantics and runtime verification in progress"
+    "role": "fixed_0.134.0_web_research_reference; legacy key retained for provenance"
+  },
+  "fixed_research_baseline": {
+    "version": "0.134.0",
+    "web_build": "983346a7",
+    "web_reference_key": "web_current_comparison_snapshot",
+    "windows_reference_key": "windows_official_current_reference",
+    "selected_by": "User latest-version direction on2026-11-01",
+    "previous_verified_reference": "web_core0.126.0/3e72472a retained only for regression/equivalence mapping",
+    "installation_packages_updated": false,
+    "version_support": "reconstruction/version-support.json",
+    "analysis_profile": {
+      "report": "reports/2026-11-01-wasm0134-profile.json",
+      "source_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+      "complete_wat": "evidence/wasm0134-profile-20261101T001728.222975Z/official-0.134.0-full.wat",
+      "wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
+      "index": "evidence/wasm0134-profile-20261101T001728.222975Z/index.sqlite",
+      "index_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9"
+    },
+    "role": "Version-bound completed partial models and differential evidence; not latest-version acceptance"
+  },
+  "windows_official_latest_reference": {
+    "version": "0.135.1",
+    "build": null,
+    "filename": "AzerothSurvivors.exe",
+    "format": "PE32+ x86-64 GUI",
+    "bytes": 147797504,
+    "sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
+    "retrieval_date": "2026-11-01 UTC",
+    "local_acquisition": "originals/official-acquisition-20261101T030310.926207Z/windows-0.135.1/AzerothSurvivors.exe",
+    "report": "reports/2026-11-01-official-0135-acquisition.json",
+    "role": "active_latest_native_target; acquired_not_executed",
+    "limitations": [
+      "Publisher size/SHA and gzip CRC/ISIZE verified; native semantic migration pending.",
+      "No native short build ID identified; use official SHA.",
+      "No original EXE executed; historical addresses cannot be transferred without mapping."
+    ]
+  },
+  "web_official_latest_snapshot": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "stamp": "f31d0e03e3ac",
+    "bytes": 90959080,
+    "sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=f31d0e03e3ac",
+    "local_snapshot": "originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
+    "report": "reports/2026-11-01-official-0135-acquisition.json",
+    "role": "active_latest_web_target; acquired_not_instantiated",
+    "limitations": [
+      "Version/build identified from static menu branding; SHA computed locally from saved HTTPS bytes, not a publisher digest.",
+      "Semantic migration and differential acceptance pending; 0.134.0 results do not count as 0.135.1 verification.",
+      "All existing installed apps, saves and fixed oracle inputs preserved."
+    ]
   }
 }

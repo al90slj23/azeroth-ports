@@ -1,0 +1,81 @@
+{
+  "archive_bytes": 754921096,
+  "archive_sha256": "6cf1108db4e8bd7f55e214e24e976a6f24ab657a3eed86c16743ff76e6b85671",
+  "files": 8,
+  "expanded_bytes": 1777452318,
+  "mpq_files": 7,
+  "base_exe_version": "0.102.3",
+  "base_exe_build": "f78e6fab",
+  "base_exe_sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
+  "source_kind": "user_provided_existing_complete_rar",
+  "source_preserved": true,
+  "copy_sha256_matches_original": true,
+  "whole_archive_downloaded_this_session": false,
+  "local_entire_crc_verified": true,
+  "official_partial_bytes_matched_including_tail": 289411072,
+  "official_independent_full_archive_sha_published": false,
+  "targets_executed": false,
+  "date": "2026-11-01",
+  "status": "complete_local_crc_and_partial_official_byte_match",
+  "official_url": "https://wow.aethus.pl/download/AzerothSurvivorsWindowsNew.rar",
+  "official_etag": "\"6ad660ef-2cff2e88\"",
+  "extracted_file_manifest": [
+    {
+      "path": "AzerothSurvivors/AzerothSurvivors.exe",
+      "kind": "file",
+      "bytes": 139691008,
+      "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch-2.MPQ",
+      "kind": "file",
+      "bytes": 4690878,
+      "sha256": "366edee41642a5dda22ed90cc252b543ee375755b7e8bee81e2a6cd59fd7b286"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch-3.MPQ",
+      "kind": "file",
+      "bytes": 2580491,
+      "sha256": "75c35ca5b8075197252581e301e8900143007fdf37b493ad271ae1bd39f95a29"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch-4.MPQ",
+      "kind": "file",
+      "bytes": 22769233,
+      "sha256": "2e895e0e0ff6a4781d0e0aaa6ea7d32ed1fe36841e17806fe1855cb880d18865"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch-5.MPQ",
+      "kind": "file",
+      "bytes": 267019039,
+      "sha256": "5008e56873718b468fa5ae1b697dcbe4f5da9ffe6c793f3ef9939dbd7716f3d8"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch-6.MPQ",
+      "kind": "file",
+      "bytes": 212228,
+      "sha256": "cad6ff59b5df028a507581befb836fce07894057e15fe63d9fdc553a95b7ceb5"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch-7.MPQ",
+      "kind": "file",
+      "bytes": 276649,
+      "sha256": "f5fb15b181cf01cc6b5cf2ee9948a27ecc4ba27bab9a8bec584df4381932aae6"
+    },
+    {
+      "path": "AzerothSurvivors/Data/patch.MPQ",
+      "kind": "file",
+      "bytes": 1340212792,
+      "sha256": "6828b191789acdf61b0b8749327cfaed726bea7f015f8be4cc9b0abbfcb696f4"
+    }
+  ],
+  "resource_pipeline_reconstructed": false,
+  "newest_client_version_proven_by_archive": false,
+  "receipts": {
+    "originals/official-acquisition-20261031T235700.049192Z/rar-completion-summary.json": "1cddc75a9965c387ecd8323999b25c7a54772e02a1d0926fd924b46c4cfdd752",
+    "originals/official-acquisition-20261031T235700.049192Z/rar-resource-manifest.json": "2f88bd128b9cbaad7e4b9e267c04220f3230b9f5c860df8733397971754754f2",
+    "originals/official-acquisition-20261031T235700.049192Z/rar-local-final-verification.json": "5057759d060d8101207ce3e39a9a2dd2e64e12c6a07ee06865b5716008816bcf",
+    "originals/official-acquisition-20261031T235700.049192Z/rar-local-existing-comparison.json": "614102f5c875338dd463ad86a9e410e818b8985ed96eaf267840c4a3f0a445c2",
+    "originals/official-acquisition-20261031T235700.049192Z/rar-local-official-tail-comparison.json": "380174fb62177ae676d41b82a6af8769865ce8e217e29b0a2a3250173fbf7b24"
+  }
+}

@@ -1,22 +1,24 @@
 # 独立重造的工作基线
 
-目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。按用户最新方向，**主目标已切到官方0.134.0**：Web build`983346a7`，Windows官方SHA单独固定。此前0.126.0 / 3e72472a作为历史验证与复用参考保留，不再作为继续扩展的主目标。完整原件身份见[targets.json](targets.json)，迁移原则见[版本策略](VERSION_STRATEGY.md)。工具安装、原始游戏、WAT和原件函数测试模块均保存在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
+目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。按用户最新方向，**功能对齐目标采用官方最新0.135.1**；当前已采集并完成下列局部差分的固定研究基线为**0.134.0**：Web build`983346a7`，Windows官方SHA单独固定。0.135.1已独立采集并核验身份，语义差异验收仍待完成，既有0.134.0验证不会自动转记新版。此前0.126.0 / 3e72472a作为历史验证与复用参考保留，不再作为继续扩展的主目标。完整原件身份见[targets.json](targets.json)，迁移原则见[版本策略](VERSION_STRATEGY.md)。工具安装、原始游戏、WAT和原件函数测试模块均保存在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
 
 这里的“完成”需要覆盖行为、状态变化和结果，而不是只有函数地址、解码文本或一份大关系图。原作Rust变量名和源文件原文没有恢复；重造不以逐字找回这些标识符为验收条件。
 
-## 0.134.0迁移状态
+## 固定0.134.0研究基线的覆盖状态
 
 | 范围 | 当前证据 | 下一步 |
 |---|---|---|
-| 官方原件 | Windows更新EXE通过官方大小/SHA；同版Web快照完成身份提取；[新版完整WAT/独立索引完成](reports/2026-11-01-wasm0134-profile.md) | 资源RAR仍单独下载/验收；按新版索引恢复消费者。 |
+| 官方原件 | 固定0.134.0 Windows更新EXE通过官方大小/SHA；同版Web完成身份提取和[完整WAT/独立索引](reports/2026-11-01-wasm0134-profile.md)；用户原有4T RAR经[CRC/提取哈希验收](reports/2026-11-01-resource-acquisition.md)，8文件含7个MPQ可用 | 包内旧0.102.3 EXE与更新程序分别建档；0.135.1语义迁移、MPQ索引/加载和消费者关联仍pending。 |
 | 原生同源核对 | 本版PE重新定位五表、两原生函数；五路升级结构与历史规格相符 | 继续在当前原生消费者中核对行为；Web结果不冒称原生执行结果。 |
 | 目录与差异 | [114能力、9职业的新表](reports/2026-11-01-catalogue0134.md)；新增stormstrike/rockbiter、移除call_of_flame，stoneform参数变化 | 新定义/职业kit不等于所有技能、天赋行为已实现。 |
 | 升级数值 | [新原25368的11560例对照，0差异](reports/2026-11-01-upgrade0134-spec.md)，现有独立数值模型可复用 | 四个逐字节匹配的其他helper尚待新版上下文与执行验收。 |
-| 选卡与施法状态链 | [16完整新函数、29条guard](reports/2026-11-01-selection0134-chain.md)；[完整新1073的779例，0差异](reports/2026-11-01-selection0134-spec.md) | 已验完整80B+5标量；共享后处理、属性输出与完整选卡控制API仍未独立迁移。 |
+| 选卡与施法状态链 | [16完整新函数、29条guard](reports/2026-11-01-selection0134-chain.md)；[完整新1073的779例](reports/2026-11-01-selection0134-spec.md)，及[新能力初始化2781例](reports/2026-11-01-new-ability0134-spec.md)，均0差异 | 新初始化覆盖114定义×tier0..4、额外tier5 helper表项及显式modifier快照；未知producer拒绝。共享后处理、属性刷新与完整选择控制仍待接入；两份语料不合并计覆盖。 |
+| kind0候选生成 | [完整原2159与独立metadata模型4126例，0差异](reports/2026-11-01-candidates0134-spec.md)；103个职业kit新能力ID、114个owned升级ID实际出现，四字RNG及3控制字段一致 | 仅metadata域；展示payload、world/通知、kind1/2、实际reroll、XP→候选自然组合仍pending。 |
 | 敌人扣血 | [424B单位、36B新加区与55条guard](reports/2026-11-01-combat0134-chain.md)；[独立combat134与完整新914的454例，0差异](reports/2026-11-01-combat0134-spec.md) | 缺完整触发/掉落/死亡RNG；玩家incoming1063与IceBarrier另行恢复。 |
-| 经验与成长 | [12完整函数/28条guard](reports/2026-11-01-progression0134-chain.md)，确认新版120级上限；[独立progression134与完整新4630的2197例，0差异](reports/2026-11-01-progression0134-spec.md) | phase3只验level/XP/pending/phase；拾取几何、消息/治疗独立实现和2159候选生成仍缺。 |
+| 经验与成长 | [12完整函数/28条guard](reports/2026-11-01-progression0134-chain.md)，确认120级上限；[独立progression134与完整新4630的2197例，0差异](reports/2026-11-01-progression0134-spec.md) | phase3只验level/XP/pending/phase；地图拾取几何、消息/治疗独立实现及2159自然串联仍缺，候选metadata单模块另列。 |
 | 玩家受伤/护盾 | [9完整函数/33段guard与barrier CFG](reports/2026-11-01-incoming0134-chain.md)；[完整新1063的139例非致死字段对照，0差异](reports/2026-11-01-incoming0134-spec.md) | 独立模型仍是显式pending的前缀；盾耗尽、复活/死亡、反击/事件、完整IceBarrier施法未执行验收。 |
 | 死亡与经验拾取 | [25完整函数/31条guard/15窗口](reports/2026-11-01-death-xp0134-chain.md)；[最新拾取382例、普通死亡组合367例×4阶段，均0差异](reports/2026-11-01-ordinary-pipeline0134.md) | flag0普通单目标/空辅助状态/已解析平地placement；金币消费者RNG已组合验证。可收取外来kind、地图/完整调度、候选及属性刷新仍有明确pending。 |
+| 金币收取 | [完整原2862与独立currency134的1030例，0差异](reports/2026-11-01-currency0134-spec.md)；含578次warmup共1608入口调用，比较局内金币/累计、key1176、队列、记录和despawn | 空claim/aux、规范marker域；账号转移/持久化、wire/网络交付、混合XP/金币自然调度与深树均未验收。 |
 | 属性重算 | [完整原1513与新独立模型10569例，0差异](reports/2026-11-01-stats0134-spec.md)；22派生字段、HP/4辅助池/3对象字段/速度与队列已对照 | 数值输入来源、已有树项更新/包字节/整场调度未验收；尚未接入组合的每级刷新。 |
 | 其他独立模型 | 下表所列模型有0.126.0依据；未自动计入0.134.0完成度，逐项范围见[版本支持清单](reconstruction/version-support.json) | 刷怪、施法基数/暴击、存档、UI与协议继续迁移和连接。 |
 | 完整游戏 | 尚无新版或旧版的独立完整一局验收 | 按状态→生成→施法→伤害/死亡→经验→选卡拼出闭环。 |
@@ -59,7 +61,7 @@
 
 ## 当前独立实现
 
-`core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**为升级值11560例、有序拥有记录/中性tier0初始化779例、新`combat134`扣血主字段454例、`progression134`经验四字段2197例，以及`incoming134`前缀的139例非致死字段对照，各自范围和未实现项见上表与版本支持清单。后四类完整原模块确实被实例化、内部callee保持原样；未调用应用start，所有宿主导入拒绝且实际调用0次。
+`core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**包括升级值、有序拥有记录、伤害/受伤投影、经验与拾取、限定普通死亡组合、属性数值、kind0候选metadata、金币收取和新能力初始化；各自例数、输入域和未实现项见上表与[版本支持清单](reconstruction/version-support.json)，不同层级的计数不合并为完整游戏覆盖。完整原模块对照保留内部callee；未调用应用start，所有878宿主导入拒绝且实际调用0次。候选、金币和新能力等单模块通过，不表示已接入普通死亡组合或自然主循环。
 
 以下是**0.126.0历史规格与对照**，不能把其次数转记为新版结果：
 
@@ -75,7 +77,7 @@
 | `combat` | 原933/934连续片段及完整原933有限样例 | 9153片段、32份完整933核心字段一致；完整死亡loot/RNG仍未实现。 |
 
 ```sh
-# 当前0.134.0；需要已固定的新原件及本机证据输入。
+# 固定研究基线0.134.0；需要对应原件及本机证据输入，不能转计0.135.1。
 python3 reverse-engineering/scripts/check_upgrade134_spec.py
 python3 reverse-engineering/scripts/check_selection134_full_spec.py
 python3 reverse-engineering/scripts/check_combat134_full_spec.py
@@ -84,6 +86,10 @@ python3 reverse-engineering/scripts/check_incoming134_nonfatal_spec.py
 python3 reverse-engineering/scripts/check_pickups134_full_spec.py
 python3 reverse-engineering/scripts/check_ordinary_pipeline134.py
 python3 reverse-engineering/scripts/check_stats134_full_spec.py
+python3 reverse-engineering/scripts/check_candidates134_full_spec.py
+python3 reverse-engineering/scripts/check_currency134_full_spec.py
+# 先pilot获取full_module_directory，再按报告运行full。
+python3 reverse-engineering/scripts/check_new_ability134_full_spec.py --phase pilot
 
 # 历史0.126.0，保留回归入口。
 python3 reverse-engineering/scripts/check_upgrade_spec.py

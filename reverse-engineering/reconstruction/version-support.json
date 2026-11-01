@@ -1,8 +1,12 @@
 {
   "active_target": {
-    "version": "0.134.0",
-    "web_build": "983346a7",
-    "web_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52"
+    "version": "0.135.1",
+    "status": "originals_acquired_identity_verified_semantic_migration_pending",
+    "official_native_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
+    "web_build": "0898d5e3",
+    "web_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -17,7 +21,9 @@
       "mismatches": 0,
       "domain": "Kinds0..4/tiers0..4, counter/float edges and raw bits; invalid tiers-1/5 compare substituted panic trap category only.",
       "report": "../reports/2026-11-01-upgrade0134-spec.json",
-      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8"
+      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.ability_state",
@@ -41,7 +47,10 @@
         "nonzero new-ability tiers"
       ],
       "report": "../reports/2026-11-01-selection0134-spec.json",
-      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8"
+      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7",
+      "scope_note": "This779-case report remains limited to its original record projection. Nonzero new-ability tiers are now validated separately by core_spec.ability_state134, not retroactively added here."
     },
     {
       "module": "core_spec.combat134",
@@ -73,7 +82,9 @@
         "death RNG continuation"
       ],
       "report": "../reports/2026-11-01-combat0134-spec.json",
-      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8"
+      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.progression134",
@@ -103,7 +114,9 @@
       ],
       "card_choice_eligible_status": "static_guard_projection_only_true_branch_not_executed",
       "report": "../reports/2026-11-01-progression0134-spec.json",
-      "source_checkpoint": "08c4a937ba4f8f2bba5e729e79be3afa6c9021c5"
+      "source_checkpoint": "08c4a937ba4f8f2bba5e729e79be3afa6c9021c5",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.incoming134",
@@ -133,7 +146,9 @@
         "complete incoming1063 and cast922"
       ],
       "report": "../reports/2026-11-01-incoming0134-spec.json",
-      "source_checkpoint": "f6a1625613255757e133fcd47a74749115fb874f"
+      "source_checkpoint": "f6a1625613255757e133fcd47a74749115fb874f",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.pickups134",
@@ -172,7 +187,9 @@
         "cases": 345,
         "report": "../reports/2026-11-01-pickups0134-spec.json"
       },
-      "report_section": "mixed_pickup_run"
+      "report_section": "mixed_pickup_run",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.death_loot134",
@@ -190,7 +207,9 @@
         "U244/U64 routes",
         "items/procs/other death effects"
       ],
-      "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.pickup_entity134",
@@ -210,7 +229,9 @@
         "messages",
         "other kinds"
       ],
-      "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.ordinary_pipeline134",
@@ -232,12 +253,14 @@
       "pure_contract_original_wasm_cases": 0,
       "remaining": [
         "independent full stat rebuild integration",
-        "2159 candidate generation",
+        "integration of independent2159 candidate metadata",
         "boss/special/flagged rewards",
         "full terrain/skill/frame scheduling",
         "messages/entities/saves/UI/network"
       ],
-      "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     },
     {
       "module": "core_spec.derived_stats134",
@@ -267,7 +290,110 @@
         "integration of per-level1513 into ordinary pipeline",
         "complete game scheduling"
       ],
-      "report": "../reports/2026-11-01-stats0134-spec.json"
+      "report": "../reports/2026-11-01-stats0134-spec.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
+    },
+    {
+      "module": "core_spec.candidates134",
+      "api": "generate_kind0_metadata",
+      "status": "kind0_metadata_rng_projection_full_original_function_differential_passed",
+      "original_function": 2159,
+      "cases": 4126,
+      "mismatches": 0,
+      "domain": "Mode2574=1/flag2558=0, explicit owned/effect/summon/modifier snapshots; ordinary kind0 metadata only.",
+      "fields_compared": [
+        "candidate count/new-upgrade-gold variant/ID/tier/owned index/kind bytes/gold",
+        "final four-word RNG",
+        "phase2579/kind2577/counter2392"
+      ],
+      "actual_output_definition_coverage": {
+        "new_class_kit_ids": 103,
+        "owned_upgrade_ids": 114
+      },
+      "remaining": [
+        "candidate presentation payload+0..59",
+        "world and notification behavior",
+        "kind1/2",
+        "seed initialization",
+        "actual reroll action",
+        "XP-to-candidate natural composition",
+        "UI and full scheduling"
+      ],
+      "report": "../reports/2026-11-01-candidates0134-spec.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
+    },
+    {
+      "module": "core_spec.currency134",
+      "api": "apply_currency",
+      "status": "kind1_currency_projection_full_original_pickup_function_differential_passed",
+      "original_function": 2862,
+      "cases": 1030,
+      "mismatches": 0,
+      "entry_calls": 1608,
+      "warmup_calls": 578,
+      "domain": "Empty claims/aux, canonical marker0/1; complete2862 collection gates, reverse removal and original31731/28795 retained. Modes0/1/2/7/255 and explicit resolved region for mode1.",
+      "fields_compared": [
+        "current-run gold1544/earned1100",
+        "key1176 value",
+        "currency queue capacity/count/peer/base amount/order",
+        "remaining56B records and order",
+        "despawn170 length8/GUID/order",
+        "unchanged four-word RNG and phase"
+      ],
+      "tree_depths_observed": [
+        0
+      ],
+      "existing_key_update_cases": 578,
+      "missing_key_insert_cases": 438,
+      "remaining": [
+        "account earned-currency transfer/persistence",
+        "wire flush and network delivery",
+        "queue consumption/transport",
+        "deep multi-key BTree behavior",
+        "other pickup kinds and claims",
+        "natural death/XP/currency/stat/choice composition"
+      ],
+      "report": "../reports/2026-11-01-currency0134-spec.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
+    },
+    {
+      "module": "core_spec.ability_state134",
+      "api": [
+        "initialize_ability",
+        "modifier_additional_bytes",
+        "accept_new_ability_selection"
+      ],
+      "status": "new_ability_record_and_limited_control_projection_full_original_function_differential_passed",
+      "original_function": 1073,
+      "original_helpers": [
+        26967,
+        26591,
+        85718
+      ],
+      "cases": 2781,
+      "mismatches": 0,
+      "domain": "All114 definitions at tier0..4; extra tier5 helper table items, ordered explicit modifier snapshots and declared kind0 success/other-kind entry rejection controls.",
+      "fields_compared": [
+        "complete80B owned record",
+        "declared entry/append/control projection"
+      ],
+      "real_definition_tier0_to4_cases": 570,
+      "extra_tier5_helper_cases": 114,
+      "modifier_context": "Explicit snapshot required; None is rejected as unresolved, including tier0. Empty tuple is only a known-empty snapshot.",
+      "remaining": [
+        "modifier/equipment/talent producers",
+        "shared talent/equipment/notification postprocessing",
+        "independent1513 and4600 integration",
+        "successful kind1/2 control tails",
+        "other pending queues and next candidate generation",
+        "natural choice/main-loop composition"
+      ],
+      "report": "../reports/2026-11-01-new-ability0134-spec.json",
+      "validated_version": "0.134.0",
+      "validated_web_build": "983346a7"
     }
   ],
   "other_modules": [
@@ -315,5 +441,11 @@
     "independent full-run acceptance"
   ],
   "native_windows_execution_validated": false,
-  "installed_apps_or_saves_modified": false
+  "installed_apps_or_saves_modified": false,
+  "verified_research_target": {
+    "version": "0.134.0",
+    "web_build": "983346a7",
+    "web_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52"
+  },
+  "current_verified_domains_scope": "All entries below belong to fixed0.134.0; none is a0.135.1 differential acceptance."
 }

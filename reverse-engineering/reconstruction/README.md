@@ -1,6 +1,6 @@
 # 独立核心的可执行规格
 
-本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**当前主目标为官方0.134.0**；升级值、80B拥有记录更新的限定域、新扣血和120级经验投影已经过新版原件对照，其余历史模型正逐项迁移。各自确切范围见[版本支持清单](version-support.json)，不能直接视为新版全部行为。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能对齐目标采用官方最新0.135.1；本目录已验收的新版固定研究基线为0.134.0 / 983346a7**。0.135.1已采集并核验身份，差分迁移尚待完成；下列局部结果均不能直接转记为0.135.1已通过。各自确切范围见[版本支持清单](version-support.json)，不能直接视为新版全部行为。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
 
 - `core_spec/binary32.py`：精确有理数运算后按IEEE binary32 nearest-even逐步舍入；NaN载荷不保证保留。
 - `core_spec/upgrade_values.py`：五种升级值计算，输入为明确的状态字段/原始浮点位，输出为binary32位。不会读取或执行原游戏。
@@ -20,10 +20,13 @@
 - `core_spec/death_loot134.py`、`pickup_entity134.py`：普通死亡XP/金币的直接抽样，以及kind1消费者的额外随机角度抽样、counter/GUID投影；flagged/kind2和完整实体树/视觉仍pending。
 - `core_spec/ordinary_pipeline134.py`：将上述规格接成受控普通单目标死亡→拾取→XP投影，367例×4阶段与原件一致。遇选卡或未恢复属性立即返回pending，升级后dirty状态阻止跨调用复用旧倍率；不是独立完整主循环。
 - `core_spec/derived_stats134.py`：新版22派生字段、HP、辅助池、对象字段和速度更新决策；完整原1513的10569例对照0差异。真实modifier来源和组合中每次升级的刷新仍需接入，不能用API默认空值代替未知数据。
+- `core_spec/candidates134.py`：kind0候选metadata、权重筛选、tier/kinds和四字RNG的独立投影；完整原2159的4126例0差异，103个职业kit新能力ID与114个owned升级ID实际出现。展示payload、kind1/2、实际reroll及XP→候选自然组合未验收。
+- `core_spec/currency134.py`：kind1局内金币/累计、key1176和原base amount队列；完整原2862的1030例0差异，共1608入口调用含578warmup，覆盖记录移除/despawn和既有键更新。账号持久化、深树及网络交付/自然混合调度仍pending。
+- `core_spec/ability_state134.py`：114定义的新能力80B记录初始化、28B额外字段与tier调整；完整原1073的2781例0差异，覆盖全部114×tier0..4及额外tier5 helper表项。必须显式提供modifier快照，未知producer拒绝；共享后处理、统计/收尾与其他pending队列尚未独立连接。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
 ```sh
-# 新版0.134.0的实际原件差分。
+# 固定研究基线0.134.0的实际原件差分，不能转计0.135.1。
 python3 reverse-engineering/scripts/check_upgrade134_spec.py
 python3 reverse-engineering/scripts/check_selection134_full_spec.py
 python3 reverse-engineering/scripts/check_combat134_full_spec.py
@@ -32,6 +35,10 @@ python3 reverse-engineering/scripts/check_incoming134_nonfatal_spec.py
 python3 reverse-engineering/scripts/check_pickups134_full_spec.py
 python3 reverse-engineering/scripts/check_ordinary_pipeline134.py
 python3 reverse-engineering/scripts/check_stats134_full_spec.py
+python3 reverse-engineering/scripts/check_candidates134_full_spec.py
+python3 reverse-engineering/scripts/check_currency134_full_spec.py
+# 先pilot取得full_module_directory，再按报告运行full。
+python3 reverse-engineering/scripts/check_new_ability134_full_spec.py --phase pilot
 
 # 历史0.126.0的隔离数值对照。
 python3 reverse-engineering/scripts/check_upgrade_spec.py

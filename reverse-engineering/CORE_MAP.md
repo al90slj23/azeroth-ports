@@ -1,8 +1,8 @@
 # 当前核心还原图
 
-**主目标已切到官方0.134.0，Web build983346a7。** 本页分别列出新版主干与**历史Web0.126.0 / 3e72472a**依据；历史部分的编号和字段不能套到新版。新版Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[新版原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
+**功能对齐目标采用本次核实的官方最新0.135.1；本页已定位和差分的固定研究基线为0.134.0，Web build983346a7。** 0.135.1[原件身份已验收](reports/2026-11-01-official-0135-acquisition.md)，语义迁移待完成，不能继承下列验证通过的结论。本页分别列出0.134.0主干与**历史Web0.126.0 / 3e72472a**依据；历史部分的编号和字段不能套到新版。Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[0.134原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
 
-## 当前0.134.0已重新定位的技能主干
+## 固定0.134.0已重新定位的技能主干
 
 ```mermaid
 flowchart LR
@@ -24,13 +24,19 @@ flowchart LR
 
 这是新版原指令的静态数据流，不是已可玩的独立闭环。新版[升级值11560例](reports/2026-11-01-upgrade0134-spec.md)、[完整1073的779例](reports/2026-11-01-selection0134-spec.md)、[完整914的454例](reports/2026-11-01-combat0134-spec.md)对照通过；其余箭头未因此自动获得执行验收。实际状态字段、调用点和新版新增伤害T加区见[选卡状态链](reports/2026-11-01-selection0134-chain.md)与[伤害链](reports/2026-11-01-combat0134-chain.md)。
 
-新版[完整4630另完成2197例经验四字段对照](reports/2026-11-01-progression0134-spec.md)，确认120级上限。该phase3运行域没有执行2159；2862拾取、候选生成和死亡到XP的完整时序仍待独立实现与连接。
+新版[完整4630另完成2197例经验四字段对照](reports/2026-11-01-progression0134-spec.md)，确认120级上限。该phase3运行域没有执行2159；2862拾取、候选metadata后续单模块虽有对照，死亡到XP再到候选的完整自然时序仍待连接。
 
 玩家受伤另由新1063处理，[139例非致死字段对照](reports/2026-11-01-incoming0134-spec.md)通过。独立实现仍是显式pending的标量前缀；盾耗尽、复活/死亡、完整IceBarrier施法与事件侧效未完成。
 
 [完整1417/2862的345例基线](reports/2026-11-01-pickups0134-spec.md)后，现已扩展为[382例拾取与367例普通死亡组合对照](reports/2026-11-01-ordinary-pipeline0134.md)，均0差异。首次吸取与到期到账分开，45闲置上限会合并；普通flag0金币成功/失败的RNG已接入组合。其他奖励分支、属性/候选副作用和完整主循环仍未恢复到可玩层级。
 
 [新1513独立数值投影10569例对照](reports/2026-11-01-stats0134-spec.md)已通过；下一步需按原4630每次升级的顺序接入属性刷新，而不是只重算最终等级。对应modifier producer、所有包字节和完整调度仍未完成。
+
+[完整2159的kind0候选metadata4126例](reports/2026-11-01-candidates0134-spec.md)与独立模型0差异，覆盖实际出现的103个职业kit新能力ID、114个owned升级ID、四字RNG和3个控制字段。展示payload、world/通知、kind1/2、实际reroll及XP→候选自然组合仍pending。
+
+[完整2862的金币收取1030例](reports/2026-11-01-currency0134-spec.md)0差异，含578次warmup共1608原入口调用；局内金币/累计、key1176、队列、剩余记录及despawn已对照，账号持久化/网络交付与自然死亡→金币收取组合未因此完成。
+
+[完整1073的新能力初始化2781例](reports/2026-11-01-new-ability0134-spec.md)0差异，覆盖114定义×tier0..4、额外tier5 helper表项及显式modifier快照；独立模型不再只接受中性tier0。未知producer仍拒绝，共享后处理、1513/4600和其他pending队列显式保留。以上局部验证尚未串成图示完整闭环。
 
 ## 历史0.126.0一局游戏的核心主干
 

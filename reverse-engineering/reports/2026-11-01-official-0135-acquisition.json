@@ -1,0 +1,122 @@
+{
+  "at_utc": "2026-11-01T03:05:00.603484+00:00",
+  "status": "official_0135_1_snapshot_acquired_identity_verified_migration_pending",
+  "acquisition_directory": "originals/official-acquisition-20261101T030310.926207Z",
+  "official_manifest_url": "https://wow.aethus.pl/exe/latest.json",
+  "windows": {
+    "version": "0.135.1",
+    "bytes": 147797504,
+    "sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+    "local_path": "originals/official-acquisition-20261101T030310.926207Z/windows-0.135.1/AzerothSurvivors.exe",
+    "official_published_size_and_sha_matched": true,
+    "gzip_crc_isize_verified": true,
+    "format": "PE32+ x86-64",
+    "notes": "Fixes the character pane, which showed an error and none of the run's numbers in 0.135.0.",
+    "build": null,
+    "target_executed": false
+  },
+  "web": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "bytes": 90959080,
+    "sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "local_path": "originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
+    "source_url": "https://wow.aethus.pl/wenilla_bg.wasm?v=f31d0e03e3ac",
+    "stamp": "f31d0e03e3ac",
+    "stamp_before_after_equal": true,
+    "menu_branding_file_offset": 78096180,
+    "identity_source": "Static Aethus menu branding in downloaded WASM, not a live game run",
+    "sha256_origin": "Locally computed from saved HTTPS download; no independently published official WASM SHA obtained",
+    "module_instantiated": false,
+    "application_start_called": false
+  },
+  "downloaded_parts_compressed_bytes": 49806762,
+  "whole_resource_rar_downloaded_again": false,
+  "all_artifacts_on_external_volume": true,
+  "existing_0134_or_0126_inputs_overwritten": false,
+  "installation_packages_or_user_saves_modified": false,
+  "readback_artifacts": [
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/windows-latest.json",
+      "bytes": 430,
+      "sha256": "fa03bb1b84f4caf156a1f1eebca9ee0df75718eaa4d1bc6b597cf2a3737c82be",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/windows-update-parts/part-000.bin",
+      "bytes": 20971520,
+      "sha256": "28a20fe1fd6dfdda7bc69101713cdc35e21f2885fabe40931856f35ec8ca49f8",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/windows-update-parts/part-001.bin",
+      "bytes": 20971520,
+      "sha256": "f4115177c874e482bc61867d365e63ecd8d649198eedb590bd3b7f029f20e9f9",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/windows-update-parts/part-002.bin",
+      "bytes": 7863722,
+      "sha256": "89e5b478912aa1d51499cb55acfb2ca51f7d3ab0bfa0702da57b549798c6d4f2",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/official-index.html",
+      "bytes": 1640,
+      "sha256": "c934726069c25d313b571dd1ca2c632bc7444c26e851f1863e89ad8fa6c03a1c",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/official-index-after.html",
+      "bytes": 1640,
+      "sha256": "c934726069c25d313b571dd1ca2c632bc7444c26e851f1863e89ad8fa6c03a1c",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/official-rogue.js",
+      "bytes": 24224,
+      "sha256": "7644df9f61fdca9865d20b9995ff3f57c51223de53ae9d926c5c539ac739a515",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/official-boot.js",
+      "bytes": 14453,
+      "sha256": "268a698dd5b550d46229c300156cca6120847fe4644cd374ba653b4dfb12ea79",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/official-wenilla.js",
+      "bytes": 187006,
+      "sha256": "636bcd5acba01a31c4b40234969243e964cc8e7e7610adf0817e3494d92c9945",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
+      "bytes": 90959080,
+      "sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+      "readback_passed": true
+    },
+    {
+      "path": "originals/official-acquisition-20261101T030310.926207Z/windows-0.135.1/AzerothSurvivors.exe",
+      "bytes": 147797504,
+      "sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+      "readback_passed": true
+    }
+  ],
+  "source_sha256": {
+    "scripts/acquire_official_snapshot.py": "73728082b1fd4f3342cf1813ced3d6b317481768efbbfbb9f49f167381502fb0"
+  },
+  "evidence_receipts": {
+    "originals/official-acquisition-20261101T030310.926207Z/windows-latest.json": "fa03bb1b84f4caf156a1f1eebca9ee0df75718eaa4d1bc6b597cf2a3737c82be",
+    "originals/official-acquisition-20261101T030310.926207Z/windows-acquisition.json": "ff884c5f36bcee55212e5a03d663879bcf5dc84a3cfdfbd87fc10ccedde1ce91",
+    "originals/official-acquisition-20261101T030310.926207Z/web-acquisition.json": "5c4c77e4f41cd1436771fa4d11bf0103158f45a7a297ba5acccdbaeb5fd9d53e"
+  },
+  "limitations": [
+    "Acquisition and binary identity only; no0.135.1 gameplay differential validation performed.",
+    "0.134.0 oracle function indices, layouts and expected values are not declared valid for0.135.1.",
+    "Official latest.json note covers0.135.1 fix versus0.135.0; it is not a complete0.134.0-to0.135.1 change list.",
+    "Same version number does not establish Windows/Web behavioral equivalence.",
+    "Native eight-hex build fingerprint remains unknown; use official full SHA.",
+    "Website can release another version later; these artifacts remain fixed by digest."
+  ]
+}
