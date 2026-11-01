@@ -17,6 +17,7 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 - 新版[114能力/9职业目录](reports/2026-11-01-catalogue0134.md)已从原件初始内存提取，并与旧版逐字段核对；新增stormstrike/rockbiter、移除call_of_flame，stoneform参数变化。定义计数不代表全部效果已实现。
 - 新版独立实现对照：[升级原25368](reports/2026-11-01-upgrade0134-spec.md)11560例、[完整选卡原1073](reports/2026-11-01-selection0134-spec.md)779例、[完整扣血原914](reports/2026-11-01-combat0134-spec.md)454例均0差异。后两者保留完整原件内部callee、仅增加研究导出；所有878宿主导入拒绝且实际调用0次，未启动完整游戏。选卡比较80B+5标量，扣血比较HP/有效统计/死亡主字段；完整后处理、触发与掉落仍未实现。
 - 新版[选卡→拥有记录→施法→扣血](reports/2026-11-01-selection0134-chain.md)已重新定位；[实际伤害链](reports/2026-11-01-combat0134-chain.md)确认单位改为424B，并新增按技能ID和目标状态累加的36B记录。新`combat134`独立实现该加区，旧`combat.py`仍只作历史参考。各模型的版本范围见[支持清单](reconstruction/version-support.json)。
+- 新版[拾取XP→等级→候选入口](reports/2026-11-01-progression0134-chain.md)已定位，新版自然上限为120级；独立`progression134`与[完整新4630的2197例对照](reports/2026-11-01-progression0134-spec.md)0差异。phase3只由原末尾守卫跳过2159，属性/消息/治疗原callee仍执行；只验4字段，不称完整成长/候选生成已实现。
 - 以下0.126.0结果是历史已验证参考；正按新版profile逐项迁移，不继续把旧版当主目标扩展。
 - 原版网页核心 **0.126.0 / 3e72472a**：REA 已静态解析七个原版 JS 文件并保留完整 Evidence 和摘要。动态导入、WASM 内部行为与部分语义仍未知，不能把关系图称为完整源码。
 - 首轮完整WASM解码：官方WABT验证并解码得到约1.3GB WAT；最初保留八个完整函数，关联原件范围和哈希，并使用REA Evidence库校验记录，定位 `presence` 发送实现。原版REA大小限制保持不变，历史快照见[WASM报告](reports/2026-11-01-wasm-deep.md)，后续函数与逻辑见核心还原图。

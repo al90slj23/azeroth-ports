@@ -80,7 +80,7 @@
     "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=d1eb6005e172",
     "local_snapshot": "originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm",
     "limitations": [
-      "Partial0.134.0 numeric/owned-record/damage-projection acceptance is recorded separately in reconstruction/version-support.json; not whole-game equivalence.",
+      "Partial0.134.0 numeric/owned-record/damage/XP projection acceptance is recorded separately in reconstruction/version-support.json; not whole-game equivalence.",
       "SHA computed locally from HTTPS download; not a separately published official WASM digest.",
       "Existing fixed0.126.0 source files, installation packages and saves remain unchanged."
     ],

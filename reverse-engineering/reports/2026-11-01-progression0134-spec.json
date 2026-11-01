@@ -1,0 +1,96 @@
+{
+  "version": "0.134.0",
+  "build": "983346a7",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "module_sha256": "eaa7867fcf9ac6cbb3d124d7f51c5e899fa736d3680abbe2b4309f28fec99161",
+  "original_function": 4630,
+  "original_full_function_executed": true,
+  "case_count": 2197,
+  "mismatch_count": 0,
+  "level_cap": 120,
+  "fields_compared": [
+    "u32 level1520",
+    "u32 XP1524",
+    "u32 pending2368",
+    "phase2579"
+  ],
+  "groups": {
+    "XP_wrap_and_cap_boundaries": 72,
+    "held_XP_amount0_pending_wrap": 384,
+    "multilevel_cumulative_boundaries": 357,
+    "seeded_balances_levels_pending": 1000,
+    "threshold_neighbors": 384
+  },
+  "seed": "0xa2e04630",
+  "runtime": {
+    "case_count": 2197,
+    "original_function": 4630,
+    "original_full_function_executed": true,
+    "original_internal_callees_unchanged": true,
+    "original_allocator": 91940,
+    "dependency_shims": [],
+    "fresh_instances": 69,
+    "fresh_instance_every": 32,
+    "max_memory_bytes": 21299200,
+    "memory_limit_pages": 512,
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "node": "v22.23.4",
+    "fixture_phase": 3,
+    "next_choice2159_executed": false,
+    "full_game_started": false,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "only_changed_source_section": 7,
+  "dependency_shims": [],
+  "source_sha256": {
+    "scripts/build_full134_oracle.py": "4c25ac9eb3708e7bba1482794a4e691e666c37b24d7c9eb4af4dc2185cf031ae",
+    "scripts/full134_host.mjs": "ddb439209b4f9e23aab3a28753b3f5cc616867ff96bf607494929d6f110c5817",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/run_progression134_full_oracle.mjs": "e3c86c51343427cdefba29fe50c8d64aa57d26c5bd24360cdbfe192cde6e3c9c",
+    "scripts/check_progression134_full_spec.py": "54616ba199712a7b3750f758fed2a6acb51f965bf3ef47ceec6bcf3ac6d9148d",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "artifact_sha256": {
+    "progression134-cases.jsonl": "0d0404bfb82f58e2ab961f91a684c37d2e691e8bb30347ce85e0e23fa3618b35",
+    "progression134-original-results.jsonl": "8b09d9a68c7d044f9195d6e866dbf6af3cfca77379afe11eac0409a6537f7114",
+    "progression134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "progression134-runtime.json": "da99e45d495cf29f5ba153fe02f1f6fdf1c153a3b84d15201b2bf8a53733a840"
+  },
+  "limitations": [
+    "Synthetic warrior/human phase3, empty auxiliary state, original allocator91940-owned5000B game state.",
+    "Original1513/10847/1453 and reached message/tree helpers execute if reached; only4 reported fields compared.",
+    "Independent attribute/healing/message side effects and original2159 next-choice generation are not implemented by this model.",
+    "Other phases, card-eligibility true branch, networking, UI and complete game not accepted by this corpus."
+  ],
+  "date": "2026-11-01",
+  "run_directory": "evidence/full0134-oracle-20261101T010259.227108Z",
+  "original_body": {
+    "role": "gain_experience",
+    "index": 4630,
+    "export": "research134_gain_experience",
+    "type_index": 0,
+    "parameters_hex": "7f7f",
+    "results_hex": "",
+    "body_start": 22064250,
+    "body_end": 22066251,
+    "body_bytes": 2001,
+    "body_sha256": "4bd68b70d90f63e0a25b63378f10a9a68adcaf275fdffd489462aa7541d1a110"
+  },
+  "original_exports_preserved": 36,
+  "research_exports_added": 1,
+  "independent_review_file": "independent-review.json",
+  "independent_review_sha256": "995107036d3e1bd2caa89c59995cbd59903d97b6cefe3abee6b96a98a61b6232",
+  "review_executed_wasm": false,
+  "receipt_sha256": {
+    "manifest.json": "46de33151413854a146d565135086c1fc1efec470bb7cda6bc0c62374b7a3a87",
+    "progression134-comparison.json": "99e0c800f92b79765c1bdc11282f47579166e59f50e88f427aee81fadf037bb8",
+    "independent-review.json": "995107036d3e1bd2caa89c59995cbd59903d97b6cefe3abee6b96a98a61b6232"
+  },
+  "full_game_started": false,
+  "native_windows_execution": false,
+  "installed_game_modified": false
+}

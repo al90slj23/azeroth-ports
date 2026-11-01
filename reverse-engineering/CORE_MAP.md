@@ -13,11 +13,16 @@ flowchart LR
     Tick --> Cast[922 技能执行]
     Cast --> Damage[914 敌人扣血]
     Damage --> HP[424B单位 HP288]
+    Pickup[2862 拾取XP] --> XP[4630 等级/XP/pending]
+    XP --> Choices[2159 候选入口]
+    Choices --> Select
     Select --> Stats[1513 属性重算]
     Select --> Finish[4600 选卡收尾]
 ```
 
 这是新版原指令的静态数据流，不是已可玩的独立闭环。新版[升级值11560例](reports/2026-11-01-upgrade0134-spec.md)、[完整1073的779例](reports/2026-11-01-selection0134-spec.md)、[完整914的454例](reports/2026-11-01-combat0134-spec.md)对照通过；其余箭头未因此自动获得执行验收。实际状态字段、调用点和新版新增伤害T加区见[选卡状态链](reports/2026-11-01-selection0134-chain.md)与[伤害链](reports/2026-11-01-combat0134-chain.md)。
+
+新版[完整4630另完成2197例经验四字段对照](reports/2026-11-01-progression0134-spec.md)，确认120级上限。该phase3运行域没有执行2159；2862拾取、候选生成和死亡到XP的完整时序仍待独立实现与连接。
 
 ## 历史0.126.0一局游戏的核心主干
 

@@ -20,40 +20,132 @@
     },
     {
       "module": "core_spec.ability_state",
-      "api": ["apply_upgrade_card", "initialize_ability", "neutral_additional_bytes"],
+      "api": [
+        "apply_upgrade_card",
+        "initialize_ability",
+        "neutral_additional_bytes"
+      ],
       "status": "limited_record_projection_full_original_differential_passed",
       "original_function": 1073,
       "cases": 779,
       "mismatches": 0,
       "domain": "Synthetic cleave/warrior/human level1, all ordered kind sequences length1..3 and tiers0..4;4 boundaries incl neutral new-tier0.",
       "fields_compared": "Full80B owned record and5 scalars. Actual original tail runs; independent postprocessing remains pending.",
-      "not_migrated": ["historical high-level selection API/state codec", "shared postprocessing", "complete derived-stat output", "other pending queues", "next choice generation", "nonzero new-ability tiers"],
+      "not_migrated": [
+        "historical high-level selection API/state codec",
+        "shared postprocessing",
+        "complete derived-stat output",
+        "other pending queues",
+        "next choice generation",
+        "nonzero new-ability tiers"
+      ],
       "report": "../reports/2026-11-01-selection0134-spec.json"
     },
     {
       "module": "core_spec.combat134",
-      "api": ["resolve_damage", "damage_modifier_bits", "spell_modifier_bits", "damage_phase_bits"],
+      "api": [
+        "resolve_damage",
+        "damage_modifier_bits",
+        "spell_modifier_bits",
+        "damage_phase_bits"
+      ],
       "status": "limited_core_field_projection_full_original_differential_passed",
       "original_function": 914,
       "cases": 454,
       "mismatches": 0,
       "domain": "Ordinary unique424B target; controlled item/debuff/phase and36B rawtag50/51 spell-modifier state, spell0/133/845.",
       "fields_compared": "Return completion, HP288, marker0, duration344, afflicted240, death4/movement340 and f64 accounted total984.",
-      "not_runtime_covered": ["special kind3", "linked targets", "gated missing-ID panic", "player incoming1063"],
-      "not_independently_implemented": ["per-spell statistics", "procs", "healing", "packets", "loot", "XP", "death RNG continuation"],
+      "not_runtime_covered": [
+        "special kind3",
+        "linked targets",
+        "gated missing-ID panic",
+        "player incoming1063"
+      ],
+      "not_independently_implemented": [
+        "per-spell statistics",
+        "procs",
+        "healing",
+        "packets",
+        "loot",
+        "XP",
+        "death RNG continuation"
+      ],
       "report": "../reports/2026-11-01-combat0134-spec.json"
+    },
+    {
+      "module": "core_spec.progression134",
+      "api": [
+        "apply_xp",
+        "xp_threshold",
+        "xp_threshold_bits"
+      ],
+      "status": "limited_arithmetic_projection_full_original_differential_passed",
+      "original_function": 4630,
+      "cases": 2197,
+      "mismatches": 0,
+      "domain": "Synthetic warrior/human, original-allocator5000B game state, paused phase3, level0..127 threshold boundaries,120 cap, multi-level and u32-wrap inputs.",
+      "level_cap": 120,
+      "fields_compared": "u32 level1520,XP1524,pending2368 and phase2579. Actual original internal stat/heal/message callees retained.",
+      "not_runtime_covered": [
+        "phase1 eligible branch",
+        "next-choice generation2159",
+        "pickup2862 complete behavior"
+      ],
+      "not_independently_implemented": [
+        "attribute rebuild",
+        "messages",
+        "keyed state",
+        "healing callbacks",
+        "actual choice generation"
+      ],
+      "card_choice_eligible_status": "static_guard_projection_only_true_branch_not_executed",
+      "report": "../reports/2026-11-01-progression0134-spec.json"
     }
   ],
   "other_modules": [
-    {"module": "core_spec.binary32", "status": "shared_independent_numeric_primitive_exercised_by_current_domains", "whole_library_proof": false},
-    {"module": "core_spec.enemy_scaling", "status": "historical_only_pending_current_context_and_execution"},
-    {"module": "core_spec.radius", "status": "historical_only_pending_current_context_and_execution"},
-    {"module": "core_spec.progression", "status": "historical_only_pending_current_context_and_execution"},
-    {"module": "core_spec.rng", "status": "historical_sampler_only_current_rng_states_observed_not_complete_rng_acceptance"},
-    {"module": "core_spec.derived_stats", "status": "historical_model_new1513_tail_executed_but_outputs_not_differentially_verified"},
-    {"module": "core_spec.combat", "status": "historical0126_projection_does_not_implement_new_T_or_unit_layout"}
+    {
+      "module": "core_spec.binary32",
+      "status": "shared_independent_numeric_primitive_exercised_by_current_domains",
+      "whole_library_proof": false
+    },
+    {
+      "module": "core_spec.enemy_scaling",
+      "status": "historical_only_pending_current_context_and_execution"
+    },
+    {
+      "module": "core_spec.radius",
+      "status": "historical_only_pending_current_context_and_execution"
+    },
+    {
+      "module": "core_spec.progression",
+      "status": "historical_only_pending_current_context_and_execution"
+    },
+    {
+      "module": "core_spec.rng",
+      "status": "historical_sampler_only_current_rng_states_observed_not_complete_rng_acceptance"
+    },
+    {
+      "module": "core_spec.derived_stats",
+      "status": "historical_model_new1513_tail_executed_but_outputs_not_differentially_verified"
+    },
+    {
+      "module": "core_spec.combat",
+      "status": "historical0126_projection_does_not_implement_new_T_or_unit_layout"
+    }
   ],
-  "full_game_remaining": ["initial state and main loop", "enemy generation and AI", "all skill effects", "state producer and event ordering", "drops and progression", "complete choice generation", "maps and resources", "saves", "UI and input", "all multiplayer behavior", "independent full-run acceptance"],
+  "full_game_remaining": [
+    "initial state and main loop",
+    "enemy generation and AI",
+    "all skill effects",
+    "state producer and event ordering",
+    "drops and progression",
+    "complete choice generation",
+    "maps and resources",
+    "saves",
+    "UI and input",
+    "all multiplayer behavior",
+    "independent full-run acceptance"
+  ],
   "native_windows_execution_validated": false,
   "installed_apps_or_saves_modified": false
 }
