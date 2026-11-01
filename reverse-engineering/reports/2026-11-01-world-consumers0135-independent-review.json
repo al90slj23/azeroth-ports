@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "snapshot_sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+  "snapshot_bytes": 117440512,
+  "query": {
+    "receipt": "evidence/world-snapshot0135-oracle-20261101T100514.012707Z/world-query135-comparison.json",
+    "receipt_sha256": "24427929f2419ed3343f05e3bbcb35ed19cc3df3bf7062bc3018abc58159a720",
+    "source_count": 16,
+    "source_identity_verified": true,
+    "artifact_count": 10,
+    "all_nonexport_bytes_identical": true,
+    "unique_mutable_global0": 1048576,
+    "roles": [
+      23181,
+      18670,
+      29631
+    ],
+    "original_callees_preserved": true,
+    "process_pid": 20645,
+    "process_exit": 0,
+    "process_confirmed_missing": true,
+    "status": "passed",
+    "counts": {
+      "height": 899,
+      "legal_height_misses": 47,
+      "real_secondary_lifts": 96,
+      "nearest": 60,
+      "nearest_bounds_traps": 1
+    },
+    "original_calls": 1858,
+    "independently_checked_nearest_cases": 60,
+    "world_input_ranges": 2318,
+    "separate_local_navigation_replay": 79,
+    "local_navigation_new_original_calls": 0,
+    "snapshot_input_adapter_not_producer": true,
+    "full_snapshot_restored_instances": 2,
+    "expected_bounds_trap_instance_discarded": true
+  },
+  "position": {
+    "receipt": "evidence/world-snapshot0135-oracle-20261101T102145.966200Z/world-position135-comparison.json",
+    "receipt_sha256": "583fc27a56155963d25e90d49da031bddda1df009fbecada6200b0846f81c1eb",
+    "source_count": 30,
+    "source_identity_verified": true,
+    "artifact_count": 9,
+    "all_nonexport_bytes_identical": true,
+    "unique_mutable_global0": 1048576,
+    "roles": [
+      13516,
+      8751
+    ],
+    "original_callees_preserved": true,
+    "process_pid": 69100,
+    "process_exit": 0,
+    "process_confirmed_missing": true,
+    "status": "passed",
+    "counts": {
+      "real": 58,
+      "controlled": 38
+    },
+    "original_calls": 96,
+    "all_raw_game_bytes_compared": 248832,
+    "only_mutable_game_offsets": [
+      1720,
+      1724,
+      1728,
+      1732
+    ],
+    "controlled_array_payload_hashes_rederived": 62,
+    "controlled_array_postcall_integrity": "frozen original runner rehash assertion; postcall payloads not separately dumped",
+    "production_import_closure_verified": true,
+    "fixture_generator_unfrozen_imports": [],
+    "full_seed_fixture_regenerated_without_original": true,
+    "source_closure_correction": {
+      "path": "evidence/world-snapshot0135-oracle-20261101T102145.966200Z/source-closure-correction.json",
+      "sha256": "4e40c6dffd44af1a86395c61089de7d23363a0197d36d0a65fa40d356e70f23e",
+      "old_receipt_sha256": "df810825f678e26c8b3307d41e8274fdf46e96b2eb516cca53049221eb43bd36",
+      "old_sources": 21,
+      "new_sources": 30,
+      "four_artifacts_independently_byte_equal": true,
+      "counts_not_added": true
+    },
+    "nearest_supplies_only_z": true,
+    "nav_predicates_distinct": true,
+    "path_field24_threshold": 401,
+    "model_replay_is_not_new_original_cases": true,
+    "snapshot_input_not_independent_world_producer": true
+  },
+  "indexed_original_wat": {
+    "6730": {
+      "start": 627206949,
+      "end": 627768424,
+      "sha256": "8d8ff56b1b836550d0db3ef0ce1f9b2b8e9d778f39d0d451a9504be08d65ecbb",
+      "lines": 10792
+    },
+    "23181": {
+      "start": 919711317,
+      "end": 919718447,
+      "sha256": "aa0d23287a9217f4db3b5344ab2521913fffc702999eb37cb221ac4f5206af8f",
+      "lines": 269
+    },
+    "8751": {
+      "start": 673112028,
+      "end": 673133509,
+      "sha256": "baa264137b2175aed3c29d32dff851a297a513e9ec3138cdb7212fc4f6a454d3",
+      "lines": 649
+    },
+    "13516": {
+      "start": 787173337,
+      "end": 787183155,
+      "sha256": "d5559ab0a9d3924ccf442ee37a7635b4386e5f58566b89e1c14482d42440789a",
+      "lines": 424
+    }
+  },
+  "reviewer_source_sha256": {
+    "scripts/review_world_consumers135.py": "0c48d031241ed41935c10865c7b769502017ebcd4f5458ce1626c36a58d8f2e6"
+  },
+  "reviewed_source_sha256": {
+    "scripts/check_world_query135.py": "f06325013ff708305a88768f6d30aa186d169a96bb5237b2dd727339810d7b19",
+    "scripts/run_world_query135_oracle.mjs": "f11e448ecc67969c00c629563cd0dcc4995ac5eccffa50e0215bdd1e62c3bdf6",
+    "scripts/trace_world_query135.py": "8e31b90c27c8f234b54b3a766fa911c28b4b8405c766f4e5ff3e6b1c034a59bd",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/check_world_position135.py": "5f2d1a5a8c21d5a0392cb6f1c2ce778cf334c30347e9e44d5b43f5abe7356bb7",
+    "scripts/run_world_position135_oracle.mjs": "f9d05100ac2ff22ba51d606208954202b13728821cee05b2b7ec3e8f9145f910",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "additional_current_seed_generator_sources": {},
+  "original_executed": false,
+  "new_original_cases": 0,
+  "source_files_modified": false,
+  "scope": [
+    "Read-only existing original receipts and independent frozen-spec replay.",
+    "Neither snapshot adapter nor controlled component fixture is a world producer.",
+    "Game full2592 bytes are independently rechecked from raw; arrays have input SHA plus frozen runner postcall rehash, not separate postcall full-memory capture.",
+    "No main-slice integration, new bootstrap, complete game or global restoration claim."
+  ],
+  "evidence": "evidence/world-consumers0135-independent-review-20261101T102452.631588Z/review.json",
+  "evidence_sha256": "02a38bc9c6750064a3fb65b3dfce2b1ab7c978671280aef767637c61e2369932",
+  "review_kind": "read-only independent review of frozen original batches; no new original execution"
+}

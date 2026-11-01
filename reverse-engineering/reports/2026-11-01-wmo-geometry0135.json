@@ -1,0 +1,214 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "phase": "full",
+  "status": "passed",
+  "cases": 425,
+  "completed_cases": 425,
+  "differences": 0,
+  "source_before": {
+    "scripts/check_wmo_geometry135.py": "256a79b8a14868d75dbc4e3a48946b4112ec66562c975955e7feb1aea34a3e65",
+    "scripts/run_wmo_geometry135_oracle.mjs": "a71b73c5435351a5cb49c4831001bb00022f2c3663b7aa7762d510a331521d73",
+    "scripts/trace_wmo_geometry135.py": "f6540db4d5f69650dd8bbcd7e30d41d8a566c4770caa1fba3c6242f7f7533e5c",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/wmo_geometry135.py": "e2d7748f455679d4b4073a89b3dcb9cbc6d71b8b960c931b412a4779add39de7"
+  },
+  "source_after": {
+    "scripts/check_wmo_geometry135.py": "256a79b8a14868d75dbc4e3a48946b4112ec66562c975955e7feb1aea34a3e65",
+    "scripts/run_wmo_geometry135_oracle.mjs": "a71b73c5435351a5cb49c4831001bb00022f2c3663b7aa7762d510a331521d73",
+    "scripts/trace_wmo_geometry135.py": "f6540db4d5f69650dd8bbcd7e30d41d8a566c4770caa1fba3c6242f7f7533e5c",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/wmo_geometry135.py": "e2d7748f455679d4b4073a89b3dcb9cbc6d71b8b960c931b412a4779add39de7"
+  },
+  "source_count": 7,
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "expected_before_original": true,
+  "input_only": true,
+  "frozen_artifacts": {
+    "inputs.json": "4fadbdc549c20b3a84bb8ac0054f331acb30ca18ef84eb9ca8b7b1fc46234a49",
+    "expected.json": "7aac59ab68d71a80312d598807018961b44d7a1adbf8ce8431c13bc72f95deff",
+    "asset-provenance.json": "dc13a86873bdce87cf4a84235aa419ce902c4e90b9a9fc773cdd569d50b01cd2",
+    "manifest.json": "35fd7c373aa9c39d724c95ea25961779d5ee735fc4a3c39a26b640c2d4fa8719",
+    "wmo-geometry135.wasm": "c9e39ca4aa4bbd98f24688c3c534b1ad1b8819d6a964eb455cc1f653e22bb647"
+  },
+  "artifacts": {
+    "inputs.json": "4fadbdc549c20b3a84bb8ac0054f331acb30ca18ef84eb9ca8b7b1fc46234a49",
+    "expected.json": "7aac59ab68d71a80312d598807018961b44d7a1adbf8ce8431c13bc72f95deff",
+    "asset-provenance.json": "dc13a86873bdce87cf4a84235aa419ce902c4e90b9a9fc773cdd569d50b01cd2",
+    "results.jsonl": "c7230f9f71cfbca1b4377c093ff93de5d56d09d11a68202ee87ba8ce54082ad5",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "wmo-geometry135-runtime.json": "f05aa024aa182a9fa13e8ffa153e7663523b5c856f0e95fd8df15c2310036f35"
+  },
+  "runtime": {
+    "cases": 425,
+    "calls": 830,
+    "parse_entries": 426,
+    "append_entries": 404,
+    "fresh_instances": 425,
+    "max_memory_bytes": 19202048,
+    "allocator_calls": 2130,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "memory_page_cap": 512,
+    "original_functions": [
+      1510,
+      4464
+    ],
+    "all_callees_unchanged": true,
+    "hash_initialization_original": true,
+    "snapshot_input_used": false,
+    "world_or_once_injected": false,
+    "appstart_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "node": "v22.23.4"
+  },
+  "actual_unique_files": 410,
+  "actual_roots": 23,
+  "actual_groups": 387,
+  "process": {
+    "pid": 20841,
+    "pgid": 20841,
+    "exit_code": 0,
+    "pid_confirmed_missing": true,
+    "process_group_confirmed_missing": true,
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_wmo_geometry135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wmo-geometry0135-20261101T103753.433490Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wmo-geometry0135-20261101T103753.433490Z/inputs.json"
+    ],
+    "seconds": 6.102668125000491,
+    "deadline_seconds": 60
+  },
+  "comparison": {
+    "strict_geometry_bytes": 30932188,
+    "allocator_unknown_tail_bytes": 14196304,
+    "nonzero_unknown_tail_bytes": 832181
+  },
+  "limitations": [
+    "Canonical version17 realWMO collision projections,notcomplete160B WMO record/material/BSP/doodad/renderer/error recovery.",
+    "1510 realroot groupcount andgroup3geometry arrays/flags;4464 realcomplete parser/hash/dedup/filtercallee retained.",
+    "Activegeometry andknownprefix bytes strict;unusedallocatorbacking captured raw andcountedunknown,notzeroassumed.",
+    "Pointers andunmodeled160B metadata savedraw,notindependentlypredicted;root23pathplanning isnot9513/VFS differential.",
+    "Freshoriginalhashinitialization,all878denied,32MiB;no originalworld/cache/Once/snapshot fixture.",
+    "OldWindowsMPQ bytes have exactactualrequest provenance;latest135fullasset equivalence remainsunknown.",
+    "No fullworld/6730/1089/main-slice/fullgame acceptance."
+  ],
+  "evidence_directory": "evidence/wmo-geometry0135-20261101T103753.433490Z",
+  "evidence_receipt_sha256": "331886a6b0a720966b17c8a5338ed4257b8900f910d1a64f2cf7919ac1c1bd18",
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-wmo-geometry0135-independent-review.json",
+    "review_path": "evidence/wmo-geometry0135-independent-review-20261101T104559.989694Z/review.json",
+    "review_sha256": "b1fa07cccbc87cd424bd48f810660705938a005806f47a3a923b8d352c8d4af9",
+    "original_reexecuted": false
+  },
+  "pilot": {
+    "receipt": "evidence/wmo-geometry0135-20261101T103722.377829Z/wmo-geometry135-comparison.json",
+    "sha256": "22405d09f27af6679710fc4c2c6d6e5704256206cfc24a461c69546720b2333d",
+    "cases": 7,
+    "original_calls": 13,
+    "differences": 0,
+    "not_added_to_full": true
+  },
+  "actual_geometry": {
+    "raw_vertices": 987600,
+    "raw_u16_indices": 3168786,
+    "raw_triangles": 1056262,
+    "filtered_vertices": 459261,
+    "filtered_u32_indices": 1051449,
+    "filtered_triangles": 350483
+  },
+  "parser_projection": {
+    "root_output160": {
+      "0": "root tag0xffffffff",
+      "40": "group count"
+    },
+    "group_output160": {
+      "0/4/8": "XYZ12 Vec capacity/pointer/count",
+      "48/52/56": "u16 source indices Vec",
+      "72/76/80": "MOPY two-byte attribute Vec",
+      "152": "group flags",
+      "156": "liquid type"
+    },
+    "full_record_unmodeled": "Other vectors/materials/BSP/lighting/doodads/pointer ownership,allocator addresses,unwritten160B record bytes and error enums remain raw/unknown."
+  },
+  "model_interfaces": [
+    "parse_wmo_collision(data)",
+    "append_group_collision(group,mesh,exclude_flags=4,required_flags=0)",
+    "root_group_paths(root_path,root)"
+  ],
+  "controlled_cases": [
+    {
+      "id": 410,
+      "label": "controlled-flags:0:0"
+    },
+    {
+      "id": 411,
+      "label": "controlled-flags:1:0"
+    },
+    {
+      "id": 412,
+      "label": "controlled-flags:4:0"
+    },
+    {
+      "id": 413,
+      "label": "controlled-flags:255:0"
+    },
+    {
+      "id": 414,
+      "label": "controlled-flags:0:1"
+    },
+    {
+      "id": 415,
+      "label": "controlled-flags:4:1"
+    },
+    {
+      "id": 416,
+      "label": "controlled-flags:0:32"
+    },
+    {
+      "id": 417,
+      "label": "controlled-flags:4:32"
+    },
+    {
+      "id": 418,
+      "label": "controlled-flags:0:64"
+    },
+    {
+      "id": 419,
+      "label": "controlled-flags:4:64"
+    },
+    {
+      "id": 420,
+      "label": "controlled-flags:4:256"
+    },
+    {
+      "id": 421,
+      "label": "controlled-flags:256:0"
+    },
+    {
+      "id": 422,
+      "label": "same-group-append-reset-map"
+    },
+    {
+      "id": 423,
+      "label": "two-distinct-group-append-order"
+    },
+    {
+      "id": 424,
+      "label": "u32-destination-index-not-u16"
+    }
+  ],
+  "complete_world_producer": false,
+  "main_slice_case_count_changed": false,
+  "full_game_goal_complete": false
+}

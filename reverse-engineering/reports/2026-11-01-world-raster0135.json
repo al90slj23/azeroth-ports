@@ -1,0 +1,153 @@
+{
+  "title": "Fixed135 independent collision mesh/height candidates/navigation raster producers",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "passed_scoped_independent_original_function_differential",
+  "kind": "expected_first_independent_executable_producer_differential",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": "evidence/world-raster0135-20261101T100905.801350Z/world-raster135-comparison.json",
+  "receipt_sha256": "29cebe9b405f71a86ad0e673a126fdcfb1b6e8e2f809adcfe9273b4086ad9bf9",
+  "production_model": "reconstruction/resource_spec/world_raster135.py",
+  "production_sha256": "c0ee61f43fd127175ca4c4f0f374f1a65c4e1cd4e4f822f893a6d0c337f8025a",
+  "source_files": 14,
+  "source_before_after_equal": true,
+  "cases": 114,
+  "mismatch_fields": 0,
+  "original_explicit_entry_calls": 1477,
+  "original_call_breakdown": {
+    "canonical_actualM2_parse14947": 31,
+    "transform18572": 114,
+    "triangle_height_candidates12375": 1218,
+    "complete_navigation9328": 114
+  },
+  "runtime_stage_counter_scope": "1332 counts1218candidate+114nav;31parse+114transformoutputs arealso strictlycompared,notincludedinthisstagecounter",
+  "actual_assets": {
+    "files": 31,
+    "nonempty_collision_meshes": 23,
+    "collision_vertices": 670,
+    "collision_indices": 3339,
+    "triangles": 1113,
+    "inventory": "evidence/entry-world0135-probe-20261101T092959.623703Z/actual-assets-inventory.json",
+    "inventory_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c",
+    "all_payload_SHA_match_prior_StormLib_reference": true,
+    "format_domain": "MD20/version256 canonicalvalidcollisionarrays,notfullM2",
+    "raw_header_words": {
+      "236": "u16indexcount",
+      "240": "indexbyteoffset",
+      "244": "vertexcount",
+      "248": "vertexbyteoffset"
+    }
+  },
+  "strict_outputs": {
+    "transformed_vertex_bytes": 11028,
+    "navigation_full_backing_bytes": 329854,
+    "navigation_changed_cases": 28,
+    "navigation_changed_cells": 101,
+    "candidate_strict_known_backing_words": 10762,
+    "candidate_allocator_unknown_words": 1044,
+    "candidate_nonzero_allocator_unknown_words": 731,
+    "new_appended_height_pairs": 258,
+    "height_entry_calls_with_new_pairs": 46,
+    "candidate_stage_raw_values_preserved": true,
+    "NaN_or_float_tolerance_used": false,
+    "old_candidate_inactive_slots_preserved": true,
+    "nav_tail7_bytes_preserved": true
+  },
+  "production_scope": {
+    "parse_classic_m2_collision": "Independentcanonicalarrayreader,current31actualfilescheckedagainstfull14947/1104callee.",
+    "transform_mesh": "Orderedbinary32original18572basis/Eulerrotation/scale/translation,allXYZwordsstrict;existingindependenttrig/sqrt.",
+    "height_candidates": "Full12375finitevalidtriangle;0.5mcenters,barycentric1e-4bounds,normal/magnitudeandceilingfilters;row-majorindex/heightpairs.",
+    "append_height_candidates": "Exactcapacitygrowth/orderedappend,knownfulloldslotsstrict;newallocatorunwrittenwordsremainNone.",
+    "mark_navigation": "Full9328includingitsunchanged18572callee;1mnavcells,verticalnormalfilter,.4mtriangularsamplingcap400,strictground+.35<z<ground+2.4."
+  },
+  "controlled_boundaries": {
+    "actual_shape_case_count": 4,
+    "nav_width": 280,
+    "height_candidate_width": 560,
+    "origin_xy": [
+      -9536,
+      -773
+    ],
+    "geometry_coordinate_domain": "FiniteboundedXYZ/rotation/scale;sourceandtransformedgeometrywithin1e6. Otherdomainsreject explicitly.",
+    "ground": "Explicitresolvedsame-indexgroundwords;NaN/Infinityincluded,but6730groundproducerunmodeled.",
+    "cap400_proof": "evidence/world-raster0135-20261101T100905.801350Z/cap400-coverage-proof.json",
+    "cap400_proof_sha256": "5e0de3c4d16cce6e10a5c98d9cf9530e2b36e9e1a0cfa36d222331974c1a9bfa",
+    "cap400_case": 103,
+    "cap400_changed_cells": [
+      1,
+      5,
+      6,
+      10
+    ],
+    "cap400_proof_kind": "Staticunchangedfunction+actualtransformedverticesextent+actualnavchanges;notinstrumentedsamplecounter"
+  },
+  "runtime": {
+    "cases": 114,
+    "calls": 1477,
+    "stages": 1332,
+    "max_memory_bytes": 15073280,
+    "fresh_instances": 114,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "original_functions": [
+      14947,
+      18572,
+      12375,
+      9328
+    ],
+    "all_callees_unchanged": true,
+    "appstart_called": false,
+    "snapshot_input_used": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "node": "v22.23.4"
+  },
+  "process": {
+    "pid": 28178,
+    "pgid": 28178,
+    "exit_code": 0,
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_world_raster135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-raster0135-20261101T100905.801350Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-raster0135-20261101T100905.801350Z/inputs.json"
+    ],
+    "seconds": 1.9327507089983555,
+    "deadline_seconds": 60
+  },
+  "final_original_PID_missing": true,
+  "expected_before_original": true,
+  "input_only_id_input": true,
+  "snapshot_derived_input_used": false,
+  "private_four_exports_do_not_extend_shared52_role_whitelist": true,
+  "historical_batches": {
+    "pilot11": "evidence/world-raster0135-20261101T100250.701399Z",
+    "earlier_full114": "evidence/world-raster0135-20261101T100525.599907Z",
+    "earlier_coverage_gap": "Longedgecase103wasAABB-excluded,soitslabeldidnotprove400cap.Newfinalchangesonlyoriginmargin6->2;other113inputs/expectedunchanged,modulebyteidentical."
+  },
+  "secondary_reduce_static_only": {
+    "function": 6730,
+    "lines": [
+      10204,
+      10295
+    ],
+    "observation": "At0.5mcellcenterquery18670terrain;acceptterrain+.1<z<=terrain+3;retainhighestz;initialNaN. Notexecutedindependentmodeldifferential."
+  },
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-world-raster0135-independent-review.json",
+    "review_path": "evidence/world-raster0135-independent-review-20261101T101715.426937Z/review.json",
+    "review_sha256": "4cb342e8792fb779742cf5532f62ead2b8624145a34b781eb3bf30cfb98a752a",
+    "original_reexecuted": false
+  },
+  "whole_world_complete": false,
+  "entry_composition_complete": false,
+  "remaining": [
+    "WMOroot/groupdecoder,objectselectionandactualsceneplacementsunmodeled.",
+    "Complete6730candidatesort/merge/groundproducer,fullsecondaryheightcacheandworldownershipnotindependentlyrestored.",
+    "InvalidM2/errorrecovery,nonfinite/extremegeometry,arbitrarymissing/ambiguousassetsnotrestored.",
+    "Actualworldproducer/1089/headlessintegrationandcompleteplayablegame remainunfinished."
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "source_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "component_differential_and_scoped_read_only_review_passed",
+  "scope": "Complete original1744/1821 component projection; inlined1089 windows/special/boundaries/banner implemented but not counted as complete1089 validation.",
+  "differential": {
+    "receipt": "evidence/world-snapshot0135-oracle-20261101T101743.010880Z/opening-entities135-comparison.json",
+    "receipt_sha256": "132de5b5e8fd59a6f74ecb3b34859f8677b291122f5fa1aacb9c2fbd41cd2499",
+    "cases": 27,
+    "full_original_calls": 116,
+    "differences": 0,
+    "by_kind": {
+      "companions": {
+        "cases": 18,
+        "original_calls": 25,
+        "unique_final_packets": 44,
+        "unique_final_packet_bytes": 6618
+      },
+      "world_actor": {
+        "cases": 9,
+        "original_calls": 91,
+        "unique_final_packets": 91,
+        "unique_final_packet_bytes": 9372
+      }
+    },
+    "comparison": {
+      "strict_record_bytes": 8415,
+      "unknown_unwritten_bytes": 4785,
+      "unknown_nonzero_bytes": 3780,
+      "stages": 116,
+      "packet_observation_bytes": 262209
+    },
+    "unique_final_packet_count": 135,
+    "unique_final_packet_bytes": 15990,
+    "packet_observation_bytes_are_repeated_cumulative_snapshots": true,
+    "process": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=4096",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_opening_entities135_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T101743.010880Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T101743.010880Z/opening-entities135-config.json"
+      ],
+      "pid": 52920,
+      "pgid": 52920,
+      "exit_code": 0,
+      "deadline_seconds": 60,
+      "seconds": 2.104711749998387
+    },
+    "runtime": {
+      "cases": 27,
+      "stages": 116,
+      "original1744_1821_calls": 116,
+      "full_snapshot_restores": 27,
+      "max_memory_bytes": 117440512,
+      "memory_cap_bytes": 268435456,
+      "denied_imports": 878,
+      "host_calls": 0,
+      "all_original_callees_preserved": true,
+      "appstart_called": false,
+      "network_used": false,
+      "user_saves_accessed": false,
+      "snapshot_bootstrap_reexecuted": false
+    },
+    "expected_before_original": true,
+    "input_exact_keys": [
+      "id",
+      "kind",
+      "input",
+      "ops"
+    ],
+    "expected_in_original_input": false,
+    "frozen_source_count": 23,
+    "source_sha256": {
+      "scripts/check_opening_entities135.py": "98eaba7242d3b4999c2443f62877c35e743ec0a3baebbdc4f632eafbc718a4ff",
+      "scripts/run_opening_entities135_oracle.mjs": "2eb3e1a92154f5b035b52efa0d06efc3fe2d588237fcaba1bf39173e6d9f5da3",
+      "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+      "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+      "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+      "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+      "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+      "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+      "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+      "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+      "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+      "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+      "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+      "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+      "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+      "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+      "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0"
+    },
+    "source_snapshots": true
+  },
+  "source_snapshot": {
+    "path": "evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_world6730.memory",
+    "bytes": 117440512,
+    "sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+    "memory_restored_exactly": true,
+    "once_overwritten": false,
+    "world_rc_forged": false,
+    "fresh_bootstrap_reexecuted": false
+  },
+  "component_rules": {
+    "1744": {
+      "inline_slots": {
+        "offsets": [
+          240,
+          248
+        ],
+        "bytes": 8,
+        "tag_offsets": [
+          244,
+          252
+        ],
+        "excluded_tag": 255,
+        "index_after_filter": true,
+        "profile_menu_producer": "unknown; explicit inputs only"
+      },
+      "protection_guard_byte": 2576,
+      "counter_offset": 2408,
+      "counter_increment_per_create": 1,
+      "counter_arithmetic": "u32 wrapping; GUID retains low24",
+      "guid_prefix": "F130",
+      "definition_fields": {
+        "display": 32,
+        "scale_f32": 36,
+        "entry": 40
+      },
+      "position": "f32 playerXY + 2*(cos,sin)(heading + f32((index*0.35+1.15)*pi)); world height/nearestZ/fallback",
+      "rng_draws": 0,
+      "backing_stride": 88,
+      "unwritten_offsets": [
+        [
+          8,
+          15
+        ],
+        [
+          21,
+          23
+        ]
+      ],
+      "initial_capacity": 4,
+      "growth": "double",
+      "full_backing_retained": true,
+      "unknown_allocator_bytes": "None, never predicted zero",
+      "unit169": "complete10823->50798 bytes for objectType3/selfFlag0 fixed movement variant",
+      "speed_base_bits": [
+        1075838976,
+        1088421888,
+        1083179008,
+        1083645041,
+        1075838976,
+        1078530011
+      ],
+      "speed1": "maxNumeric(1,G1556) * ((f32(G273 byte)*0.2+1)*14), ordered f32; G273 semantic rank not established"
+    },
+    "1821": {
+      "guid_prefix": "F110",
+      "counter_increment_per_create": 1,
+      "angle": "actual high23 uniform0..2pi endpoint-reject sampler, G1720..1732 updated",
+      "heading": "f32(angle+0)",
+      "quaternion_fields": "sin/cos f32(heading*.5)",
+      "full169": "complete26970->50798 objectType5 fixed0x50 movement variant",
+      "kind2_arguments": [
+        9005,
+        259,
+        1065353216,
+        "XYZ",
+        3,
+        0
+      ],
+      "boundary_arguments": [
+        9013,
+        4831,
+        1065353216,
+        "XYZ",
+        5,
+        16
+      ]
+    },
+    "1089_inlined": {
+      "fresh_complete1089_validation": "Outside this component receipt; later16case32entry opening0135 independently validated;0 added to this27/116 receipt",
+      "windows": {
+        "stride": 8,
+        "vector_header_offsets": [
+          1964,
+          1968,
+          1972
+        ],
+        "count_source_data_addresses": [
+          1588344,
+          1588348
+        ],
+        "count_range_inclusive": [
+          2,
+          3
+        ],
+        "integer_sampler": "multiply by2, accept low32<=0x7fffffff, value=2+high32; includes actual rejection",
+        "duration_source": "fifth boss row+48 minutes *60",
+        "end_fraction": "f32 uniform[0.6,1)",
+        "absolute_time_no_now_offset": true,
+        "consumes_rng": true,
+        "increments_counter": false
+      },
+      "special": {
+        "stride": 40,
+        "vector_header_offsets": [
+          1916,
+          1920,
+          1924
+        ],
+        "count": 4,
+        "normal_eligibility": "definition+68 byte1 and finite+64 float",
+        "naxx_explicit_ids": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "angle": "f32(f32(i*TAU)*.25)+f32(zoneFacing+pi/4)",
+        "radius": "tag0 ? maprow+4 float : radius+120",
+        "candidate_fractions": [
+          0.7,
+          0.62,
+          0.54,
+          0.46,
+          0.38
+        ],
+        "height_rule": "height success and abs(candidateZ-centerZ)<30 strict",
+        "nav_rule": "25 cells dx outer(-2..2),dy inner(-2..2); first==1,next12!=0,last12&1",
+        "fallback": "half radius with height/nearestZ/fallback",
+        "unwritten_offsets": [
+          [
+            8,
+            15
+          ],
+          [
+            36,
+            39
+          ]
+        ],
+        "rng_draws": 0,
+        "counter_increments": 0
+      },
+      "boundaries": {
+        "vector_stride": 8,
+        "vector_header_offsets": [
+          2120,
+          2124,
+          2128
+        ],
+        "circle_count": "ceil(f32(f32((radius+10)*TAU)/12))",
+        "polygon_zones": [
+          2,
+          7
+        ],
+        "polygon_segments": "ceil(length/12) min1; exclude segment endpoint",
+        "flag148": "height failure skips; one-unit inward inbounds nav nonzero skips",
+        "elwynn_count": 69,
+        "per_accepted_actor": "full1821 consumes angle sampler and counter"
+      },
+      "banner150": "full17979 strings; English Elwynn83B; separate start JSON16B is root composition"
+    }
+  },
+  "historical_observation": {
+    "receipt": "evidence/opening0135-historical-replay-20261101T102107.100725Z/replay.json",
+    "sha256": "b3e5da3aaf3cb1d4e9f5ff516f2f2f4af9929f249d79292bdaff2fc88ee8409b",
+    "new_original_calls": 0,
+    "new_independent_main_frames": 0,
+    "inverse_derived_boundary_rng_input": true,
+    "cannot_establish_prior_npc_pickup_rng_prefix": true,
+    "observed_counter_before": 10,
+    "observed_counter_after": 87,
+    "counter_increments": {
+      "companions": 2,
+      "npc": 4,
+      "kind2": 2,
+      "boundaries": 69
+    }
+  },
+  "retained_failed_pilot": {
+    "receipt": "evidence/world-snapshot0135-oracle-20261101T101558.662294Z/opening-entities135-comparison.json",
+    "sha256": "8536197b500380f5b71470df6dd24a935de1f2a4528aa691e74a5ae74b241e99",
+    "differences": 4,
+    "cause": "JS signed i64 textual representation; rawrecords, payloads, RNG already matched. Fixed only adapter u64 canonicalization; signed raw return separately retained.",
+    "passing_pilot_receipt": "evidence/world-snapshot0135-oracle-20261101T101648.716833Z/opening-entities135-comparison.json",
+    "passing_pilot_sha256": "536bea3a5f3a3cc59907767a601a2b0e3b45380addf8086da0795ca97ed862ce"
+  },
+  "rejected_rng_hypothesis": "evidence/opening0135-static-20261101T095130.390606Z/rng-suffix-hypothesis-rejected.json",
+  "limitations": [
+    "Full1744 and1821 only;inline1089 special40/windows8/boundary geometry require completeopening differential separately.",
+    "Snapshot-derived realworld consumer;not independentworld producer/freshbootstrap.Originalfullmemory restored, no Once/Rc state forged.",
+    "Companion definition pointer normalization onlyfor explicitfixture prototypes, fullrawbacking/maps retained;unwritten11Bpernew88slot preserved orunknown.",
+    "All169 activepayload bytes compared;metadata physicalallocation/retainedfullG are observations,not wholeGame equivalence.",
+    "Defaultmode/explicitprofile/realworldpositiondomain;realmenu,sourceproducer,multiplayer,full880/fullgame remainincomplete.",
+    "G273 semantic meaning, real profile/menu producer and world producer remain separate unknowns.",
+    "Whole1089, full880, saves, UI, multiplayer and independently complete game remain unverified.",
+    "Primary 27/116 is separate from main8/1614/22607/11/22615 counters and from historical0-call observation.",
+    "No declaration of complete reverse engineering or independent playable reconstruction."
+  ],
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-opening-entities0135-independent-review.json",
+    "review_path": "evidence/opening-entities0135-independent-review-20261101T104031.518712Z/review.json",
+    "review_sha256": "a489d812eaea8e68fed6c6bb41f730750335f35d3160efb91b33533ca1e897e6",
+    "original_reexecuted": false
+  },
+  "separate_followup_opening": "reports/2026-11-01-opening0135.json",
+  "followup_scope": "Separate16case32entry complete1089 composition;not retroactively counted in this27/116 component."
+}

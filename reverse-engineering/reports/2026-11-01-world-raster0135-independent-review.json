@@ -1,0 +1,78 @@
+{
+  "status": "passed_scoped_independent_read_only_review",
+  "receipt": "evidence/world-raster0135-20261101T100905.801350Z/world-raster135-comparison.json",
+  "receipt_sha256": "29cebe9b405f71a86ad0e673a126fdcfb1b6e8e2f809adcfe9273b4086ad9bf9",
+  "reviewer_sha256": "295de547cfa548733d2e9c8d683042139426f4c8fd3b1ff7e0179c7496f0e12f",
+  "reviewer_common_numeric_sources": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "author_sources": 14,
+  "source_before_equals_after": true,
+  "original_or_browser_executed": false,
+  "frozen_artifact_SHA_verified": true,
+  "original_nonexport_and_exportprefix_identical": true,
+  "original_callee_bodies_preserved": true,
+  "expected_only_in_python_artifact": true,
+  "input_original_keyset": [
+    "id",
+    "input"
+  ],
+  "counts": {
+    "strict_transform_bytes": 11028,
+    "matrix_wat_instructions": 28272,
+    "transforms": 114,
+    "strict_candidate_backing_words": 10762,
+    "allocator_unknown_candidate_words": 1044,
+    "nonzero_unknown_candidate_words": 731,
+    "candidate_stages": 1218,
+    "candidate_pairs_appended": 258,
+    "strict_navigation_bytes": 329854,
+    "navigation_tail_bytes": 798,
+    "navigation_stages": 114,
+    "actual_m2": 31,
+    "nonempty_m2": 23,
+    "real_m2_vertices": 670,
+    "real_m2_triangles": 1113
+  },
+  "original_cases_added": 0,
+  "original_actual_calls": 1477,
+  "original_stages1332": "1218candidate+114navigation;31parse+114transform are additional explicit original entries,not included in1332",
+  "transform_recomputed_from_original_WAT_prefix": true,
+  "original_WAT_crosschecked_against_pinned_profile_index": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0",
+  "candidate_and_navigation_recomputed_without_author_model": true,
+  "real_m2_raw_archive_payloads_reread": true,
+  "index_sha256": "a3f219f6e76e1d87e50b0790b757f999091e2b479d3b1d40ac2c101aa8680cf4",
+  "inventory_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c",
+  "updated_cap_case103_verified": true,
+  "cap_branch_evidence": "Source+independentuncapped451ish>400/AABBintersect/sampledchangedcells;notdynamicinstructioncounter",
+  "four_280_560_grid_origin_cases_are_declared_inputs_not_world_producer": true,
+  "old100525_scope_retained": true,
+  "runtime": {
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "memory_cap_bytes": 33554432,
+    "actual_max_memory_bytes": 15073280,
+    "pid": 28178,
+    "exit_code": 0,
+    "pid_verified_missing": true
+  },
+  "evidence_files": {
+    "nav-recomputation.json": "9668e35ea0640075985df564373595df3d8860fdd6c4c95d21ac9e0783a43902",
+    "real-m2-provenance.json": "f141788bf5f42cecd2d4281c9bee8a210e20ec79fe1958d21a6b3bed0a3ab20d",
+    "reviewer-source.py": "295de547cfa548733d2e9c8d683042139426f4c8fd3b1ff7e0179c7496f0e12f"
+  },
+  "limitations": [
+    "Sharedbinary32/sqrt/trigprimitivesarepreviouslyvalidateddependencies;thisreadonlyreviewdoesnotreprovealltheirinputs.",
+    "WATprefixinterpreterandPythonrecomputationarenotneworiginalexecution;original1477callsremainauthorreceiptcoverage.",
+    "OnlycanonicalvalidMD20collisionarrays+declaredtransforms/ground/grids;full1104,M2rendering,WMOdecoderandcomplete6730rasterproducerarenotrestored.",
+    "Onlynewunwritteninactivecandidatecapacityunknown;active/oldknownrowsandnavigationtailstrict;unknownrawwordsretained,notpredictedzero.",
+    "BaseMPQassetreadprovenanceisnotlatest135completeassetequivalence,completeworldconstructionorfullgamecompletion."
+  ],
+  "review_path": "evidence/world-raster0135-independent-review-20261101T101715.426937Z/review.json",
+  "review_sha256": "4cb342e8792fb779742cf5532f62ead2b8624145a34b781eb3bf30cfb98a752a"
+}

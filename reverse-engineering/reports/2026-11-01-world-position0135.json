@@ -1,0 +1,148 @@
+{
+  "title": "固定0.135.1真实世界8751/13516位置消费者独立实现",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "receipt": "evidence/world-snapshot0135-oracle-20261101T102145.966200Z/world-position135-comparison.json",
+  "receipt_sha256": "583fc27a56155963d25e90d49da031bddda1df009fbecada6200b0846f81c1eb",
+  "cases": 96,
+  "original_entry_calls": 96,
+  "differences": 0,
+  "source_files": 30,
+  "source_sha256": {
+    "scripts/check_world_position135.py": "5f2d1a5a8c21d5a0392cb6f1c2ce778cf334c30347e9e44d5b43f5abe7356bb7",
+    "scripts/run_world_position135_oracle.mjs": "f9d05100ac2ff22ba51d606208954202b13728821cee05b2b7ec3e8f9145f910",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_before_after_equal": true,
+  "snapshot_sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+  "snapshot_bytes": 117440512,
+  "expected_before_original": true,
+  "input_contains_expected": false,
+  "groups": {
+    "real-world-still": 9,
+    "real-world-random": 9,
+    "real-world-moving-bias": 24,
+    "real-world-edge-retry": 8,
+    "real-world-edge-random": 8,
+    "controlled-nav-byte": 10,
+    "controlled-distance-map": 24,
+    "low-radius-fallback": 2,
+    "controlled-world-fallback-z": 1,
+    "controlled-nearest-only-z": 1
+  },
+  "modeled_branches": {
+    "sampled": 68,
+    "fallback13516_sampled": 2,
+    "fallback13516_unclamped_height": 20,
+    "unclamped_height": 4,
+    "unclamped_world_fallback_z": 1,
+    "unclamped_nearest_primary_z": 1
+  },
+  "runtime": {
+    "cases": 96,
+    "original_calls": 96,
+    "allocator_calls": 220,
+    "max_memory_bytes": 117440512,
+    "game_bytes_invariance_checked": 248832,
+    "host_calls": 0,
+    "denied_function_imports": 878,
+    "memory_page_cap": 4096,
+    "snapshot_restore_domain": true,
+    "real_bootstrap_reexecuted": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "stack_value": 1048576,
+    "original_functions": [
+      8751,
+      13516
+    ],
+    "input_exact_keys": [
+      "group",
+      "id",
+      "input",
+      "kind",
+      "world"
+    ],
+    "input_contains_expected": false,
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_world_position135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T102145.966200Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T102145.966200Z/world-position135-config.json"
+    ],
+    "pid": 69100,
+    "pgid": 69100,
+    "exit_code": 0,
+    "seconds": 5.797716332999698,
+    "deadline_seconds": 60
+  },
+  "pid_missing_after_exit": true,
+  "input_exact_keys": [
+    "id",
+    "group",
+    "kind",
+    "input",
+    "world"
+  ],
+  "initial_world_input": "G14554176/Rc26204808 from genuine preentry117440512B memory;all original linear memory restored,no bootstrap/externref reconstruction",
+  "helper_source_sha256": {
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a"
+  },
+  "limitations": [
+    "Snapshot-derived explicit world input,not independently producedworld or anewbootstrap.",
+    "Full8751/13516 XYZ/RNG andall2592G mutation domain compared;only declared fixture setup patches precede original.",
+    "Controlled geometry/path inputs are component fixtures,not naturally observedworldstates.",
+    "Finite positions/ranges and existing trig domain;malformedgrid/path bounds traps remain separate.",
+    "No entities,full1089/880/saves/UI/multiplayer or independentcompletegame acceptance."
+  ],
+  "independent_world_producer": false,
+  "headless_frames_added": 0,
+  "whole_game_completed": false,
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-world-consumers0135-independent-review.json",
+    "review_path": "evidence/world-consumers0135-independent-review-20261101T102452.631588Z/review.json",
+    "review_sha256": "02a38bc9c6750064a3fb65b3dfce2b1ab7c978671280aef767637c61e2369932",
+    "original_reexecuted": false
+  },
+  "source_closure_correction": {
+    "evidence": "evidence/world-snapshot0135-oracle-20261101T102145.966200Z/source-closure-correction.json",
+    "sha256": "4e40c6dffd44af1a86395c61089de7d23363a0197d36d0a65fa40d356e70f23e",
+    "previous21_did_not_include_fixture_seed_import_closure": true,
+    "new30_covers_fixture_generator_imports": true,
+    "all_input_expected_result_and_original_module_bytes_unchanged": true
+  }
+}

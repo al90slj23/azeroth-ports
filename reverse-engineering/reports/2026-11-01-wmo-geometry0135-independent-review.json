@@ -1,0 +1,62 @@
+{
+  "status": "passed_scoped_independent_read_only_review",
+  "receipt": "evidence/wmo-geometry0135-20261101T103753.433490Z/wmo-geometry135-comparison.json",
+  "receipt_sha256": "331886a6b0a720966b17c8a5338ed4257b8900f910d1a64f2cf7919ac1c1bd18",
+  "reviewer_sha256": "357ef1949d222d33849d22ca3fb328dbfb3caf8914ae8693de483c9e564c00ae",
+  "source_closure_exact": 7,
+  "current_and_frozen_sources_verified": true,
+  "cases": 425,
+  "original_explicit_calls": 830,
+  "new_original_cases": 0,
+  "original_or_browser_executed_by_reviewer": false,
+  "author_model_executed_by_reviewer": false,
+  "counts": {
+    "actual_roots": 23,
+    "actual_groups": 387,
+    "source_vertices": 987600,
+    "source_u16_indices": 3168786,
+    "default_filtered_vertices": 459261,
+    "default_filtered_u32_indices": 1051449,
+    "raw160_bytes_retained": 68160,
+    "parse_entries": 426,
+    "strict_geometry_bytes": 30932188,
+    "cases": 425,
+    "allocator_unknown_tail_bytes": 14196304,
+    "nonzero_unknown_tail_bytes": 832181,
+    "append_entries": 404
+  },
+  "mpq_header_tables_payloads_independently_verified": true,
+  "asset_inventory_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c",
+  "resource_index_sha256": "a3f219f6e76e1d87e50b0790b757f999091e2b479d3b1d40ac2c101aa8680cf4",
+  "original_WAT_SQLite_profile_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0",
+  "section7_only_original_bodies_signatures_preserved": true,
+  "expected_separate_from_original_inputs": true,
+  "raw160_predicted_scope": "Root tag/count(+0,+40);group three Vec headers+active arrays and+152/+156 flags/type internally crosschecked. Pointer values/other160B bytes retained observations,not independently predicted.",
+  "collision_recomputed": "Raw XYZ words;MOPY first-byte mask filtering;first-use source-index ordering and group-local map reset;fullu32 destination indices;prefix65537 retained.",
+  "original_hash_initialization": "425fresh states0->1;original60913/60916->81334 retained;runner has no state/snapshot injection. Seed values observed,not independently predicted.",
+  "runtime": {
+    "pid": 20841,
+    "pgid": 20841,
+    "exit_code": 0,
+    "pid_and_group_missing": true,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "memory_cap_bytes": 33554432,
+    "actual_max_memory_bytes": 19202048
+  },
+  "evidence_files": {
+    "original-wat-identities.json": "1442e72f3f0d6576e3d2fb626f9849c4df26a2c82659343bff6b58c87ae3ae00",
+    "asset-source-recheck.json": "f9206bf85b09b061be8961beb701dbac1848d7c4bbdd7870a4a93dc1a1004767",
+    "reviewer-source.py": "357ef1949d222d33849d22ca3fb328dbfb3caf8914ae8693de483c9e564c00ae",
+    "case-recomputation.json": "cc3f20622a110c488c063b89d711951d61a480e5183b332c2b46f5fd59bf13c7"
+  },
+  "limitations": [
+    "CanonicalactualREVM17 collisionprojections only;not full160B WMO parser/material/BSP/doodad/render/error handling.",
+    "Rootgroup path/count planning is local pure computation,not9513/VFS/original aggregate loader differential.",
+    "Original830calls remainauthorreceiptcoverage;this review adds0 originalcases.",
+    "OldWindowsMPQ sourceproof isnot latest135completeassetequivalence,independentworldproduction,6730/1089/fullgame acceptance.",
+    "Allocator unusedtails,physicaladdresses andunmodeled160B fields remainraw observations,notzero expectations."
+  ],
+  "review_path": "evidence/wmo-geometry0135-independent-review-20261101T104559.989694Z/review.json",
+  "review_sha256": "b1fa07cccbc87cd424bd48f810660705938a005806f47a3a923b8d352c8d4af9"
+}

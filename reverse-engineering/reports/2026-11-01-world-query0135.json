@@ -1,0 +1,216 @@
+{
+  "title": "固定0.135.1真实世界查询消费者",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "receipt": "evidence/world-snapshot0135-oracle-20261101T100514.012707Z/world-query135-comparison.json",
+  "receipt_sha256": "24427929f2419ed3343f05e3bbcb35ed19cc3df3bf7062bc3018abc58159a720",
+  "cases": 959,
+  "original_calls": 1858,
+  "differences": 0,
+  "kinds": {
+    "height": 899,
+    "nearest": 60
+  },
+  "groups": {
+    "real-opening-center": 1,
+    "outside-all-terrain": 1,
+    "nearest-current-cell": 1,
+    "nearest-tie-preserves-first": 1,
+    "nearest-no-valid-keeps-payload": 1,
+    "nearest-short-count-trap": 1,
+    "real-nine-tile-geography": 400,
+    "cache-boundary-half-cell": 49,
+    "real-model-raster-nonNaN": 96,
+    "real-model-raster-NaN": 96,
+    "real-local-nonflat-world": 256,
+    "nearest-edges-and-outside": 20,
+    "nearest-positive-infinity-valid": 1,
+    "nearest-negative-infinity-valid": 1,
+    "nearest-radius20-inclusive": 1,
+    "nearest-radius21-excluded": 1,
+    "nearest-seeded-score-and-order": 32
+  },
+  "exact_case_scope": {
+    "true_snapshot_height_points": 899,
+    "each_height_point_original_functions": [
+      18670,
+      29631
+    ],
+    "controlled_nearest23181": 60,
+    "expected_bounds_traps": 1,
+    "secondary_raises_terrain": 96,
+    "terrain_and_world_misses": 47,
+    "strict_return_buffer_bytes": 29728,
+    "all_output_padding_declared_poison_compared": true
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "source_files": 16,
+  "source_sha256": {
+    "scripts/check_world_query135.py": "f06325013ff708305a88768f6d30aa186d169a96bb5237b2dd727339810d7b19",
+    "scripts/run_world_query135_oracle.mjs": "f11e448ecc67969c00c629563cd0dcc4995ac5eccffa50e0215bdd1e62c3bdf6",
+    "scripts/trace_world_query135.py": "8e31b90c27c8f234b54b3a766fa911c28b4b8405c766f4e5ff3e6b1c034a59bd",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "input_contains_expected": false,
+  "expected_before_original": true,
+  "input_exact_keys": [
+    "snapshot_path",
+    "snapshot_sha256",
+    "world_rc",
+    "queries"
+  ],
+  "snapshot_input": {
+    "path": "evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_world6730.memory",
+    "sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+    "bytes": 117440512,
+    "world_rc": 26204808,
+    "source": "Actual6730 output from prior truebrowserprobe;this batch restores the entire linear memory,not an independently constructed world."
+  },
+  "world_input": {
+    "tiles": 9,
+    "chunks": 2304,
+    "terrain_vertices": 334080,
+    "primary_present": false,
+    "secondary_width": 560,
+    "nav_width": 280,
+    "nav_bytes": {
+      "0": 72996,
+      "1": 5404
+    },
+    "fallback_height_bits": 1116209152,
+    "flat": false
+  },
+  "query_model": {
+    "path": "reconstruction/resource_spec/world_query135.py",
+    "interfaces": [
+      "decode_world_snapshot(memory_bytes,rc_pointer)",
+      "WorldQueries135.height(x_bits,y_bits)",
+      "WorldQueries135.nav_probe(x_bits,y_bits)",
+      "WorldQueries135.nearest_primary(x_bits,y_bits)",
+      "WorldQueries135.fallback_height_bits"
+    ],
+    "height_reuses": "terrain135.sample_world/sample_terrain;existing145triangleandhalf-unitcache logic not rewritten/recounted as newrules",
+    "nav_contract": "Rc32tag/36ptr/40len/44originX/48originY/52width;finite displacement then trunc_sat_u/index;raw byte preserved,caller-specific predicates remain separate",
+    "primary_contract": "Rc56tag/72ptr/76len/80originX/84originY/88width",
+    "secondary_contract": "Rc92tag/96ptr/100len/104originX/108originY/112width",
+    "nearest_contract": "23181 firstnonemptyChebyshevring0..20;withinringstrictsquaredoffsetscore,tiepreservesascendingYthenX;output cellcenter origin+(index+.5)*.5",
+    "snapshot_adapter_scope": "Canonical145 active terrain and explicit nav/raster consumers only;other vectors/ownership/geometry production unknown"
+  },
+  "nav_local_contract_replay": {
+    "cases": 79,
+    "new_original_calls": 0,
+    "artifact": "evidence/world-snapshot0135-oracle-20261101T100514.012707Z/world-query135-nav-local-replay.json",
+    "deferred_actual_inline_consumer": "Separate8751/13516 position tests;this report does not count JS/port/localreplay as originalnavdifferential"
+  },
+  "source_range_integrity": {
+    "ranges_per_instance": 2318,
+    "bytes_per_instance": 5950608,
+    "verified_instances": 2,
+    "all_query_instances_verified_before_discard": true
+  },
+  "helper": {
+    "builder": "scripts/build_world_snapshot135_oracle.py",
+    "builder_sha256": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "host": "scripts/world_snapshot135_host.mjs",
+    "host_sha256": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+    "separate_memory_page_cap": 4096,
+    "separate_memory_bytes": 268435456,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "original_export_prefix_preserved": true,
+    "only_changed_section": 7,
+    "query_roles_actually_exported": [
+      "nearest_height23181",
+      "terrain_height18670",
+      "world_height29631"
+    ],
+    "additional_helper_admission_not_query_coverage": [
+      "spawn_position8751",
+      "random_position13516",
+      "cached_construct6730",
+      "begin_run1089",
+      "companions1744",
+      "world_actor1821"
+    ],
+    "stack_global_count": 1,
+    "stack_initial": 1048576,
+    "all_normal_returns_stack": 1048576,
+    "expected_trap_stack": 1048448,
+    "trap_instance_discarded_and_full_restore": true,
+    "externref_state_not_restored": true,
+    "original_allocator_state_restored_in_full_memory": true,
+    "smoke_receipt": "evidence/world-snapshot0135-oracle-20261101T100017.638465Z/snapshot-helper-smoke-receipt.json",
+    "smoke_receipt_sha256": "af14cbf18ac915538d53d0be5fa2991182ab49d5ebe2b5fe9f7cc2d5d43d9c7d"
+  },
+  "static_trace": "evidence/world-query0135-static-20261101T095649.749787Z/trace.json",
+  "static_trace_sha256": "0f8c5db82122d6a82334249ae99a708d4388f4e544d6f3c31f25bb26d8d58f22",
+  "runtime": {
+    "original_functions": [
+      18670,
+      29631,
+      23181
+    ],
+    "fresh_instances": 2,
+    "max_memory_bytes": 117440512,
+    "actual_host_calls": 0,
+    "memory_cap_bytes": 268435456,
+    "bootstrap_reexecuted": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "process": {
+    "pid": 20645,
+    "pgid": 20645,
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=768",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_world_query135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T100514.012707Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T100514.012707Z/world-query135-inputs.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.6736770829957095,
+    "deadline_seconds": 60
+  },
+  "process_terminal_pid_verified_missing": true,
+  "pilot": {
+    "receipt": "evidence/world-snapshot0135-oracle-20261101T100440.325533Z/world-query135-comparison.json",
+    "receipt_sha256": "b3d0a90c045098ab5ea032d3a6bfb951714869857a321d3207f62061359385c3",
+    "cases": 6,
+    "original_calls": 8,
+    "differences": 0,
+    "source_unchanged_between_pilot_and_full": true
+  },
+  "corpus_label_caveat": "The group real-opening-center denotes declarednearby point(-9386,-623),not exactsnapshot G center(-9396,-633);helper smoke separatelysamples exact G center.",
+  "unknowns": [
+    "Snapshot-derived trueworld consumer input,not an independent world producer or freshbootstrap.",
+    "Complete29631/18670 and23181 run unchanged; actualnavigation predicate isinline8751/13516 and only locallyreplayed here,positionconsumer differentialseparate.",
+    "Actualsnapshot primaryabsent;nearest23181 is controlledexplicitraster,not falselyrelabelled trueworldprimarycoverage.",
+    "Canonical145 snapshot terrainadapter only; othermodel/objectvectors,ownership/lifetime and allresourceproducer semantics areunknown.",
+    "All878imports denied,actual0;separate256MiBrestoredmemoryhost,notshared32MiBNodehost;externrefs/JSstate notrestored,nocalls required inthisdomain.",
+    "Fullsnapshotincludesallocatorstate;oneglobal0initial1048576andoriginal6730onlynormalreturnrestorestaticproof plusactualquerystackreadback;notexhaustiveallgameglobalrestorationproof.",
+    "No complete8751/13516bodyormain880/headless/fullgame completion claimed."
+  ],
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-world-consumers0135-independent-review.json",
+    "review_path": "evidence/world-consumers0135-independent-review-20261101T102452.631588Z/review.json",
+    "review_sha256": "02a38bc9c6750064a3fb65b3dfce2b1ab7c978671280aef767637c61e2369932",
+    "original_reexecuted": false
+  },
+  "original_installs_or_saves_modified": false,
+  "goal_complete": false
+}

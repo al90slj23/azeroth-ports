@@ -4,6 +4,8 @@
 
 最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。功能目标固定为官方0.135.1 / Web0898d5e3。当前[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异；6未知技能/2预算边界不替换，phase1与初始zero槽仍为研究输入，尚非完整880或独立游戏。旧072329/11309、064308/9695、061901/5473按历史身份保留，不相加。0.134.0/0.126.0的结果不转记为新版验收；见[版本策略](VERSION_STRATEGY.md)与[覆盖清单](RECONSTRUCTION.md)。
 
+新增[独立默认开局](reports/2026-11-01-opening0135.md)完成16组／32次完整6730缓存命中构造与1089、0差异，[独审通过](reports/2026-11-01-opening0135-independent-review.md)；以已解析真实world输入接通附属对象、4NPC、2kind2、事件窗口与69个边界对象。它与旧14阶段切片尚未整合。M2／WMO碰撞、候选／导航producer及world查询消费者分别验收，不能据此宣称完整world或真实地形战斗循环已恢复。
+
 此前0.126.0已恢复主循环主干、9职业/113能力定义、选卡/施法/伤害、12区域及账号存档主干，并建立若干独立模型。它们保留为历史验证和新版迁移参考，不能直接计为0.134.0已支持；[核心还原图](CORE_MAP.md)明确区分两者。
 
 HP对象更新经主机发送、客人解码、事件通道和注册系统到客户端字段写入已静态追通，见[事件投递](reports/2026-11-01-ecs-delivery.md)、[伤害计算](reports/2026-11-01-damage-core.md)和[合作同步](reports/2026-11-01-coop-sync.md)。该静态路径和离线codec尚未经过真实跨端联机验收。
@@ -36,11 +38,15 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 - 新批分别经过[生成模块](reports/2026-11-01-spawn135-independent-review.md)、[死亡/受伤/AI](reports/2026-11-01-gameplay135-independent-review.md)及[主施法](reports/2026-11-01-owned-cast0135-independent-review.md)独立只读复核；未执行原件的复算不另计新增原件案例。旧批冻结列出的源码集合，新主施法补入包入口共33源，旧证据完整性不追溯扩大。
 - 基础资源：[独立MPQ读取器与索引](reports/2026-11-01-resource-index-base.md)对29602个命名块/1636167198B与固定StormLib逐字节一致；154份DBC已按容器读出。基础RAR仍关联旧0.102.3，不自动作为新版完整资产；尚无M2/BLP渲染器或完整资源管线。
 
-- [NPC/880静态清单](reports/2026-11-01-npc-effect-producer0135-static.md)保留148normal/60boss/290原始动作声明，计数不等于已验行为。14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、独立world/1089及4NPC/2kind2生产、未知技能/AI/存档/UI/联机与完整独立一局仍未验收。
+- [NPC/880静态清单](reports/2026-11-01-npc-effect-producer0135-static.md)保留148normal/60boss/290原始动作声明，计数不等于已验行为。14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、独立world生产、开局与主切片整合、未知技能/AI/存档/UI/联机及完整独立一局仍未验收。
 - [真实进场资源静态规格](reports/2026-11-01-entry-resources0135-static.md)核对39函数、116份已有资产/170383346B和12区首层路径；[独立静态复核](reports/2026-11-01-entry-resources0135-static-review.md)通过；该静态批未执行VFS/world/1089，不新增玩法用例，后继原件真实进入另列。
 - [五阶段组件573/944](reports/2026-11-01-frame-systems0135.md)、[真实胜利终态416/832及416构造](reports/2026-11-01-terminal-transition0135.md)、[107完整ADT/18413调用](reports/2026-11-01-terrain0135.md)、[真实Boss矩形390](reports/2026-11-01-effect-geometry0135.md)分别验收，不与主切片相加。[真实浏览器资源链](reports/2026-11-01-browser-resources0135.md)另以原生SELF/XHR完成3组phase1命中/15已恢复投影；17资源绑定允许、861拒绝、128MiB，区别于纯Node878全拒绝/32MiB。来源容器/keyed/proc完整尾部仍缺；history后继组件单列。 [浏览器独审](reports/2026-11-01-browser-resources0135-independent-review.md)通过，未重跑原件。
 - [受伤history组件](reports/2026-11-01-incoming-history0135.md)完成164组/924次完整1073、0声明字段差异，[独审通过](reports/2026-11-01-incoming-history0135-independent-review.md)；限无单位/sourceGUID0/spell0 fallback、空proc/非致死或minimum-one。后继[真实DBC history组合](reports/2026-11-01-browser-history0135.md)9fresh/37次1073同样0声明字段差异，冷加载、完整姓名/图标路径与环形搬移另验，[组合独审通过](reports/2026-11-01-browser-history0135-independent-review.md)。完整来源容器/keyed/proc仍未知，未接headless。
-- [真实世界与开局观察](reports/2026-11-01-entry-world0135-probe.md)在1个显式空selected-profile下执行原2902→6959→6730→1089，真实非平地Rc同状态phase0→1、4NPC/2kind2；453MPQ/83,632,785B、561GET全部200，4整memory/319,029,248B，[独审通过](reports/2026-11-01-entry-world0135-probe-independent-review.md)。独立world/entry模型、菜单/profile producer与主切片整合仍未完成，新增独立模型case0。该宿主24允许/854拒绝、256MiB，与history/资源browser17允许/861拒绝、128MiB及纯Node878全拒绝/32MiB分别记录。
+- [真实世界与开局观察](reports/2026-11-01-entry-world0135-probe.md)在1个显式空selected-profile下执行原2902→6959→6730→1089，真实非平地Rc同状态phase0→1、4NPC/2kind2；453MPQ/83,632,785B、561GET全部200，4整memory/319,029,248B，[独审通过](reports/2026-11-01-entry-world0135-probe-independent-review.md)。这是历史原件观察、独立模型case0；后继独立开局不倒记为该批覆盖。宿主24允许/854拒绝、256MiB，与history/资源browser17允许/861拒绝、128MiB分开保留。
+- [world查询959组/1858调用](reports/2026-11-01-world-query0135.md)与[新位置96组/96调用、30源闭包](reports/2026-11-01-world-position0135.md)通过[联合独审](reports/2026-11-01-world-consumers0135-independent-review.md)：真实高度／secondary及受控nearest、8751／13516完整回退、原字节nav／距离图和RNG均按声明域验证。它们读取已解析snapshot，尚非world producer；旧21源位置批保留，不与新96例相加。
+- [M2碰撞／变换／高度候选／导航生产114组/1477调用](reports/2026-11-01-world-raster0135.md)覆盖实际31份M2，[最终100905独审](reports/2026-11-01-world-raster0135-independent-review.md)通过；[WMO碰撞425组/830调用](reports/2026-11-01-wmo-geometry0135.md)覆盖实际readset的23root／387group共410文件，[独审通过](reports/2026-11-01-wmo-geometry0135-independent-review.md)。均为fresh实例、32MiB／878deny；碰撞解析不包含材质、动画或渲染。
+- [1744／1821组件27组/116调用](reports/2026-11-01-opening-entities0135-independent-review.md)独审通过；后继[完整默认开局16组/32入口](reports/2026-11-01-opening0135.md)冻结39源，六vector、1248包／16条start逐字相符，[独审通过](reports/2026-11-01-opening0135-independent-review.md)。每局2附属、4NPC、2kind2、4special、2或3窗口、69边界，counter10→87；已解析world仍是输入边界，未接旧主切片。
+- snapshot查询／位置／开局使用独立256MiB／878deny与栈1048576；M2／WMO fresh域为32MiB／878deny。共享52role保持，9role snapshot helper和私有4／2role只按各实验准入，不是恢复百分比。本轮新bootstrap0、headless帧0；完整asset→instances／transform／secondary merge／cache／nav／所有权／VFS生产、菜单/profile、其它地图模式、非空装备天赋及完整一局仍未知。
 - 真实14尾阶段[080624观测](evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json)为3038帧/42550快照/18选择/42558调用，6预算、seed3第353帧与seed5第285帧进入phase4；这是原件观测，不是独立模型验收，不与当前1614帧相加。 [观测独审](reports/2026-11-01-main-tail0135-probe-independent-review.md)通过；2521个execution11快照不计新模型能力。
 
 ### 固定0.134.0的局部结果
@@ -115,7 +121,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 目标 | 状态与下一步 |
 |---|---|
 | 原版 JS 启动层、资源路径、存档／插件桥 | 已跑通 REA 静态分析；动态值须进一步追踪或运行观测。 |
-| 固定目标0.135.1 / 90,959,080B WASM | 当前082927独立14尾8/1614/22607/11/22615、67源60core16角色0差异；history164/924与browser9/37组件另列。原6730→1089真实world/4NPC2kind2观察已通；独立进场/活跃队列/完整880/一局仍未通过。 |
+| 固定目标0.135.1 / 90,959,080B WASM | 主切片仍为082927的14尾8/1614/22607/11/22615；另有已解析world上的独立开局16/32、M2／WMO碰撞与query／position组件。各层分验，独立world生产、开局接主切片、完整880和一局仍未通过。 |
 | 固定0.134.0 / 90,953,762B WASM | 完整验证/解码/独立索引，多个规则投影已做限定域原件差分；完整游戏未实现。REA原版大小限制未修改，本地扩展单列。 |
 | 历史0.126.0 / 90,116,970B WASM | 保留完整WAT和已验证局部模型作迁移/回归参考；WAT不是原始Rust源码。 |
 | 原生 Windows EXE 的导入表／Rust 元数据 | 已运行无目标执行的 REA 检查；元数据不是函数实现或源码。 |
@@ -123,7 +129,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 真实战斗数值 | 已追到一条完整命中与敌人HP/死亡，以及玩家受伤主干；反伤、全部技能和逐帧一致性尚未恢复。 |
 | 独立重建 | 历史0.126.0已有升级、成长、半径、RNG、经验、属性、选卡与战斗投影模型；现按0.135.1逐项迁移，0.134.0局部组合与结果分开保留；尚不能独立完成一局。 |
 | 合作同步 | 已追通HP结果到客户端对象字段写入的静态路径；同一事件通道、注册表和系统回调已闭合。真实送达、渲染和全部权限/异常仍待验证。 |
-| 模型／特效 | 基础MPQ独立索引/读取与154份DBC容器通过；最新资产完备性、M2/BLP解释和实际渲染仍未完成。 |
+| 模型／特效 | 基础MPQ／154份DBC、实际31份M2碰撞及410份WMO碰撞投影各有组件证据；最新资产完备性、动画、材质、特效与实际渲染仍未完成。 |
 
 依据固定发行包中的 `dist/wasm/WabtRelease.js`、匹配工作流及 [官方 WASM 指南](https://github.com/morluto/rea/blob/main/docs/wasm-artifacts.md)。说明文档 main 可能领先发行包，执行以本地 6.8.0 的 `--help` 和实际结果为准。
 

@@ -1,0 +1,538 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "complete_default_opening_in_resolved_world_differential_and_review_passed",
+  "scope": "Complete original6730 cached construction and1089 over explicit resolved realworld input; independent logical opening projection, not independentworld or completegame.",
+  "receipt": "evidence/world-snapshot0135-oracle-20261101T103934.606037Z/opening135-comparison.json",
+  "receipt_sha256": "91de74157f822199071a0998d02b40354de124fe9a823ff4d688da47b6520b72",
+  "cases": 16,
+  "full_original6730_calls": 16,
+  "full_original1089_calls": 16,
+  "original_calls": 32,
+  "differences": 0,
+  "input_groups": {
+    "default-eight-seeds": 8,
+    "class-race-guid-matrix": 8
+  },
+  "case_inputs": [
+    {
+      "id": 0,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "0",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "1442695040888963407"
+    },
+    {
+      "id": 1,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 8,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "1",
+        "object_id_u64": "42"
+      },
+      "expected_constructor_seed": "7806831264735756412"
+    },
+    {
+      "id": 2,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "1",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "7806831264735756412"
+    },
+    {
+      "id": 3,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "2",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "14170967488582549417"
+    },
+    {
+      "id": 4,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "3",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "2088359638719790806"
+    },
+    {
+      "id": 5,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "7",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "9098160460397411210"
+    },
+    {
+      "id": 6,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "31",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "14263477243044030402"
+    },
+    {
+      "id": 7,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "255",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "983953635380637474"
+    },
+    {
+      "id": 8,
+      "group": "default-eight-seeds",
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": "81985529216486895",
+        "object_id_u64": "0"
+      },
+      "expected_constructor_seed": "3234478586633078098"
+    },
+    {
+      "id": 9,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 2,
+        "race_byte": 3,
+        "region_index": 0,
+        "app_lcg_seed_u64": "2",
+        "object_id_u64": "4294967296"
+      },
+      "expected_constructor_seed": "14170967488582549417"
+    },
+    {
+      "id": 10,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 3,
+        "race_byte": 4,
+        "region_index": 0,
+        "app_lcg_seed_u64": "7",
+        "object_id_u64": "18446744073709551615"
+      },
+      "expected_constructor_seed": "9098160460397411210"
+    },
+    {
+      "id": 11,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 4,
+        "race_byte": 5,
+        "region_index": 0,
+        "app_lcg_seed_u64": "3",
+        "object_id_u64": "4294967297"
+      },
+      "expected_constructor_seed": "2088359638719790806"
+    },
+    {
+      "id": 12,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 7,
+        "race_byte": 6,
+        "region_index": 0,
+        "app_lcg_seed_u64": "31",
+        "object_id_u64": "1311768467463790320"
+      },
+      "expected_constructor_seed": "14263477243044030402"
+    },
+    {
+      "id": 13,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 9,
+        "race_byte": 8,
+        "region_index": 0,
+        "app_lcg_seed_u64": "255",
+        "object_id_u64": "42"
+      },
+      "expected_constructor_seed": "983953635380637474"
+    },
+    {
+      "id": 14,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 11,
+        "race_byte": 7,
+        "region_index": 0,
+        "app_lcg_seed_u64": "81985529216486895",
+        "object_id_u64": "9223372036854775807"
+      },
+      "expected_constructor_seed": "3234478586633078098"
+    },
+    {
+      "id": 15,
+      "group": "class-race-guid-matrix",
+      "input": {
+        "class_byte": 5,
+        "race_byte": 2,
+        "region_index": 0,
+        "app_lcg_seed_u64": "0",
+        "object_id_u64": "18446462598732840961"
+      },
+      "expected_constructor_seed": "1442695040888963407"
+    }
+  ],
+  "comparison": {
+    "strict_backing_bytes": 33936,
+    "strict_active_bytes": 33936,
+    "active_unwritten_bytes": 9504,
+    "active_unwritten_nonzero_bytes": 8228,
+    "inactive_allocator_bytes": 12368,
+    "inactive_allocator_nonzero_bytes": 9731,
+    "opening_packets": 1248,
+    "opening_packet_bytes": 134560,
+    "notifications": 16,
+    "constructor_prefix_packets": 1
+  },
+  "full_vector_backing_observation_bytes": 55808,
+  "vectors": {
+    "companions": {
+      "capacities": [
+        4
+      ],
+      "counts": [
+        2
+      ],
+      "raw_backing_bytes": 5632
+    },
+    "units": {
+      "capacities": [
+        4
+      ],
+      "counts": [
+        4
+      ],
+      "raw_backing_bytes": 27136
+    },
+    "pickups": {
+      "capacities": [
+        4
+      ],
+      "counts": [
+        2
+      ],
+      "raw_backing_bytes": 3584
+    },
+    "special": {
+      "capacities": [
+        4
+      ],
+      "counts": [
+        4
+      ],
+      "raw_backing_bytes": 2560
+    },
+    "windows": {
+      "capacities": [
+        4
+      ],
+      "counts": [
+        2,
+        3
+      ],
+      "raw_backing_bytes": 512
+    },
+    "boundaries": {
+      "capacities": [
+        128
+      ],
+      "counts": [
+        69
+      ],
+      "raw_backing_bytes": 16384
+    }
+  },
+  "opening_packet_counts_by_opcode": {
+    "150": 16,
+    "169": 1232
+  },
+  "opening_packet_count": 1248,
+  "opening_packet_bytes": 134560,
+  "opening_start_notification_count": 16,
+  "constructor_packet_prefixes": [
+    {
+      "id": 10,
+      "packets": [
+        {
+          "opcode": 226,
+          "payload_hex": "ffffffffffffffffff0100000086ebf140"
+        }
+      ]
+    }
+  ],
+  "state_rules": {
+    "counter_before": 10,
+    "counter_after": 87,
+    "counter_increments": {
+      "companions": 2,
+      "npcs": 4,
+      "kind2": 2,
+      "boundaries": 69
+    },
+    "phase_before": 0,
+    "phase_after": 1,
+    "heading": "1560 reads zone152+116 -> G1428; same heading feeds1744",
+    "rng_order": [
+      "AppLCG update",
+      "1560 seed_rng_words",
+      "1744 noRNG",
+      "4*(8751 position then5736 yaw/jitter)",
+      "2*(13516 position then1417/1821 actor angle)",
+      "window count inclusive2..3 with rejection thenN fractions[.6,1)",
+      "special noRNG",
+      "69 boundary1821 angle samplers"
+    ],
+    "no_output_inversion_for_this_differential": true
+  },
+  "snapshots": {
+    "original": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_begin1089.memory",
+      "sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+      "bytes": 166395904
+    },
+    "model": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_world6730.memory",
+      "sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+      "bytes": 117440512
+    },
+    "world_input_parity_receipt": "evidence/world-snapshot0135-oracle-20261101T103934.606037Z/opening135-world-input-parity.json",
+    "world_input_parity_sha256": "1a4e84b49c60e5ad5d13ac91bee65c5f69b3c2191666007d9cadb74c4b8da5d6",
+    "world_input_parity": true,
+    "raw_consumer_ranges_equal": 2318,
+    "raw_consumer_range_bytes": 5950600,
+    "excluded_world_ownership_bytes": 8,
+    "heap_splicing": false,
+    "once_written": false,
+    "rc_forged": false
+  },
+  "source_closure_count": 39,
+  "source_sha256_before": {
+    "scripts/check_opening135.py": "cc250fbbd0f98a00acc70fe68bc3f1e1f71c6229834f9e620647d2d3b2090d04",
+    "scripts/run_opening135_oracle.mjs": "eec11a3780185892fba524e7b76247b5db3de1dca8708d1737d2a404a089749e",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0"
+  },
+  "source_sha256_after": {
+    "scripts/check_opening135.py": "cc250fbbd0f98a00acc70fe68bc3f1e1f71c6229834f9e620647d2d3b2090d04",
+    "scripts/run_opening135_oracle.mjs": "eec11a3780185892fba524e7b76247b5db3de1dca8708d1737d2a404a089749e",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/world_snapshot135_host.mjs": "1c42eb331aac4d275e1e1c6166655adafa3902e9f6b4b480cacd7919f951b18a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0"
+  },
+  "source_snapshots": true,
+  "expected_before_original": true,
+  "expected_in_original_input": false,
+  "input_exact_keys": [
+    "id",
+    "input"
+  ],
+  "input_exact_fields": [
+    "class_byte",
+    "race_byte",
+    "region_index",
+    "app_lcg_seed_u64",
+    "object_id_u64"
+  ],
+  "source_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original_export_changes": "Only section7 adds exactfull6730/full1089 exports plus global0 stack; all original nonexport bytes and callees remain intact.",
+  "runtime": {
+    "cases": 16,
+    "full_original6730_calls": 16,
+    "full_original1089_calls": 16,
+    "original_calls": 32,
+    "full_snapshot_restores": 16,
+    "opening_packet_count": 1248,
+    "opening_notification_count": 16,
+    "max_memory_bytes": 166395904,
+    "memory_cap_bytes": 268435456,
+    "denied_imports": 878,
+    "host_calls": 0,
+    "original_callees_preserved": true,
+    "only_export_section_changed": true,
+    "appstart_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "fresh_bootstraps": 0,
+    "new_mainloop_frames": 0,
+    "once_written": false,
+    "world_rc_forged": false
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_opening135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T103934.606037Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/world-snapshot0135-oracle-20261101T103934.606037Z/opening135-config.json"
+    ],
+    "pid": 22524,
+    "pgid": 22524,
+    "exit_code": 0,
+    "timed_out": false,
+    "deadline_seconds": 60,
+    "seconds": 1.985947708999447
+  },
+  "artifact_sha256": {
+    "opening135-fixtures.json": "60f195fbebf29bc68c12b632b26b074c1e2ec28b194f8654dbc875752407d257",
+    "opening135-inputs.json": "b697b8ba86493e1b8251ae7968d9cb153ee4be81a7b8614c2799217fd15c8ece",
+    "opening135-config.json": "b0ef8d2807f7e790821da3824973355d8efd3205ff8e318093641508e7df6c5d",
+    "opening135-results.jsonl": "48200513b97ac635737d6e7e4c406d87bf8a35ec335cd2b8b960af305986cf68",
+    "opening135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "opening135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "manifest.json": "8475cf49baf85fa2e2425a092c150288bd0d835ee819e3695fafe5b70f468b66",
+    "world-snapshot135-exports.wasm": "61edd4db15e0c27a5ccde30be7a46ed530261fb50859c99e8a4b08c41489a19e",
+    "opening135-runtime.json": "592d549cacd42b9c4ec2094b761fc99858c8eedd8c80fb6e942e32113740e381"
+  },
+  "pilot": {
+    "receipt": "evidence/world-snapshot0135-oracle-20261101T103913.827862Z/opening135-comparison.json",
+    "receipt_sha256": "1eb2ddacc7ad5a9b310ce40f7145efb9878d89c412f523698e00d03f08c3ae5d",
+    "cases": 2,
+    "original_calls": 4,
+    "differences": 0,
+    "same_frozen_source": true
+  },
+  "none_domain": {
+    "companions_active": [
+      "8..15",
+      "21..23"
+    ],
+    "units_active": "129B complement of written[0..3,8..11,16..19,40..43,64..67,112..247,280..418]",
+    "pickups_active": [
+      "4..7"
+    ],
+    "special_active": [
+      "8..15",
+      "36..39"
+    ],
+    "windows_active": [],
+    "boundaries_active": [],
+    "inactive": "New allocation backing only; fullrawbytes retained; never assumed zero"
+  },
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-opening0135-independent-review.json",
+    "review_path": "evidence/opening0135-independent-review-20261101T104856.729179Z/review.json",
+    "review_sha256": "9a7e780a7ce22cb83a747ccc4bfeeb0386826590fda43400923d0a9d7e25d19c",
+    "original_reexecuted": false
+  },
+  "fresh_bootstraps": 0,
+  "new_mainloop_frames": 0,
+  "main_slice_counters_unchanged": true,
+  "limitations": [
+    "Full6730 cached construction then complete1089 with all callees retained; originalworld already resolved and supplied, not independently produced.",
+    "Zero freshbootstraps and zero additional mainloop frames. No full880, saves, UI, multiplayer or independentcompletegame claim.",
+    "Emptyselectedprofile/mode0/protection0/Elwynn/English only; other equipment, talents, regions, modes and locales remain separate.",
+    "Six vector fullbacking: knownbytes strict; None only statically unwritten active offsets or freshallocator inactive slots; allrawbytes retained.",
+    "Constructor queue prefixes retained separately; only appended opening169/150 and start JSON are modeled here.",
+    "Rawcomplete2592G/5168App/124worldRc and completequeue metadata/payloadbacking are observations; unprojectedbytes are not asserted cosmetic or equal.",
+    "All16 cases use Elwynn region0 and English title/subtitle, not all12 maps or locale resolution.",
+    "Known logical fields and rawbyte projections only; unknown wholeGame/App/keyed-tree/lifetimes must not be relabeled cosmetic.",
+    "No complete independentgame workflow or exhaustive module/logic coverage achieved."
+  ]
+}
