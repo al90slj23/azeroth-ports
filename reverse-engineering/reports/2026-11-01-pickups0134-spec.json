@@ -1,0 +1,129 @@
+{
+  "version": "0.134.0",
+  "build": "983346a7",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "module_sha256": "6362ccea8f8e1280388f1cbff3e612250c2ccbd2743d86e5705a24f8eb417511",
+  "original_full_functions": [
+    1417,
+    2862
+  ],
+  "case_count": 345,
+  "mismatch_count": 0,
+  "operation_cases": {
+    "append": 56,
+    "step": 289
+  },
+  "groups": {
+    "XP_round_min_sat": 28,
+    "age6_strict_boundary": 4,
+    "attracting_records_do_not_count_as_idle": 4,
+    "distance_radius_and_due_markers": 48,
+    "idle_count_growth_merge": 48,
+    "nearest_first_tie_and_amount_wrap": 1,
+    "reverse_dispatch_observable_via_wrap": 1,
+    "same_invocation_arrival_rounds_to_now": 2,
+    "seeded_records": 200,
+    "spawn_counter_wrap_and_guid_low24": 3,
+    "stored_arrival_boundary": 6
+  },
+  "fields_compared": [
+    "capacity",
+    "count",
+    "spawn_counter",
+    "message_sequence",
+    "level",
+    "xp",
+    "pending",
+    "phase",
+    "rng",
+    "records_words"
+  ],
+  "unwritten_arrival_policy": "Known old/prior slot words exact; only newly allocated unknown append arrival masked.",
+  "runtime": {
+    "case_count": 345,
+    "actual_original_functions": [
+      1417,
+      2862
+    ],
+    "reached_original_callees_unchanged": true,
+    "original_allocator": 91940,
+    "fresh_instances": 11,
+    "fresh_instance_every": 32,
+    "max_memory_bytes": 14942208,
+    "memory_limit_pages": 512,
+    "denied_function_imports": 878,
+    "actual_host_calls": 0,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "source_sha256": {
+    "scripts/build_full134_oracle.py": "c902cac2ec5494c1be2184a850b3efa790ac012915bce986c39fd259f05a6f88",
+    "scripts/full134_host.mjs": "ddf6c4ef4f5049e30dbb80dc6c1ca126c7c51b8876df3254a9b4a3b0e314726e",
+    "scripts/check_pickups134_full_spec.py": "924e3bfb5662d6da1885cd245eefd6d2a2149823c17386d68709947f739a7653",
+    "scripts/run_pickups134_full_oracle.mjs": "7d32d01292cfdc97c533243870af86a5a5114ae70384acffac6bae44c51c3147",
+    "reconstruction/core_spec/pickups134.py": "b9cd6a520452aa476d1215f5b214b0ba1507405d045007cc3e1c8fa848e0c777",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+  },
+  "artifact_sha256": {
+    "pickups134-cases.json": "c1c07ad58868dbece85dbb298010879d4d9415d325dbc52d2356f703da7933b1",
+    "pickups134-original-results.jsonl": "cd4d308a2f7ebb09d75f27d9bdd3f0468f79700de24eb08d7fde3f459c258131",
+    "pickups134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "pickups134-runtime.json": "02e041be021316faa62b4b1d79ba4fc7d5f9deb16a8e1a686a118dfbfbb9bde2"
+  },
+  "limitations": [
+    "Kind0 only,mode0,empty claims/aux vectors,resolved region0 placement inside clamp radius and flat terrain.",
+    "All complete original internal callees retained. Other state/message/visual fields not compared.",
+    "World clamp/full terrain,other kinds,noncanonical marker,mode/claims and full scheduling remain pending.",
+    "Model pending serialization/physical allocation/4630 full side effects remain pending."
+  ],
+  "date": "2026-11-01",
+  "run_directory": "evidence/full0134-oracle-20261101T013822.809873Z",
+  "original_bodies": [
+    {
+      "role": "collect_pickups",
+      "index": 2862,
+      "export": "research134_collect_pickups",
+      "type_index": 3,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_start": 16965489,
+      "body_end": 16968668,
+      "body_bytes": 3179,
+      "body_sha256": "502221f3e34228e0a37970e55505d1506f323d2c5f81510b707d8d8e414122ef"
+    },
+    {
+      "role": "spawn_pickup",
+      "index": 1417,
+      "export": "research134_spawn_pickup",
+      "type_index": 2,
+      "parameters_hex": "7f7f7f7f",
+      "results_hex": "",
+      "body_start": 9571309,
+      "body_end": 9576395,
+      "body_bytes": 5086,
+      "body_sha256": "22263d2e42d74ce26922ec8dac69a3f7dc4c8d3bedbdef679dcedb201f5b7c12"
+    }
+  ],
+  "original_exports_preserved": 36,
+  "research_exports_added": 2,
+  "independent_review_file": "independent-review.json",
+  "independent_review_sha256": "40da407eedaf350c6c01d4c9b7f953dc5efdd3ea7e1878303a27070e1fafc101",
+  "receipt_sha256": {
+    "manifest.json": "2fe178821fa9a4551d0da64dafe3e5bbf0dbf4bf7f454ceaeff3f3d1656fb881",
+    "pickups134-comparison.json": "4f13181a7fd14b92fee697c974b7a9e337916dde6e900277c82d331c9dc31bd1",
+    "independent-review.json": "40da407eedaf350c6c01d4c9b7f953dc5efdd3ea7e1878303a27070e1fafc101"
+  },
+  "model_comparison": "Independent production pickup model; complete original1417/2862 with reached original callees retained.",
+  "separate_combined_probe": {
+    "run": "evidence/full0134-oracle-20261101T013349.741359Z",
+    "case_count": 1,
+    "model_comparison": false,
+    "outcome": "Actual914 death ->2862 attraction ->2862 at stored arrival ->4630 XP2;kind1 amount4 remains idle.",
+    "receipt_sha256": "ae8d2fafccd75feb38e61a9515b26389ff6fa60a1157b96f15be58985f4b38df"
+  }
+}

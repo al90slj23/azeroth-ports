@@ -133,6 +133,37 @@
         "complete incoming1063 and cast922"
       ],
       "report": "../reports/2026-11-01-incoming0134-spec.json"
+    },
+    {
+      "module": "core_spec.pickups134",
+      "api": [
+        "append_xp",
+        "step_pickups",
+        "encode_record56",
+        "decode_record56"
+      ],
+      "status": "limited_kind0_projection_full_original_differential_passed",
+      "original_functions": [
+        1417,
+        2862
+      ],
+      "cases": 345,
+      "mismatches": 0,
+      "operation_cases": {
+        "append": 56,
+        "step": 289
+      },
+      "domain": "Kind0-only,mode0,empty claims/aux,canonical markers,resolved region0 in-radius flat placement;level120 except phase3 reverse-order boundary.",
+      "fields_compared": "capacity/count,counters,56B known words,level/XP/pending/phase/RNG. Only15 newly allocated unwritten arrival words masked.",
+      "not_independently_implemented": [
+        "world placement/terrain",
+        "binary messages",
+        "physical allocation addresses",
+        "other pickup kinds",
+        "claims/modes",
+        "complete4630 side effects"
+      ],
+      "report": "../reports/2026-11-01-pickups0134-spec.json"
     }
   ],
   "other_modules": [

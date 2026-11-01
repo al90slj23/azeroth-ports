@@ -1,6 +1,6 @@
 # 当前核心还原图
 
-**主目标已切到官方0.134.0，Web build983346a7。** 下文图和函数编号保留已验证的**历史Web0.126.0 / 3e72472a**依据，不能套到新版。新版Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[新版原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
+**主目标已切到官方0.134.0，Web build983346a7。** 本页分别列出新版主干与**历史Web0.126.0 / 3e72472a**依据；历史部分的编号和字段不能套到新版。新版Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[新版原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
 
 ## 当前0.134.0已重新定位的技能主干
 
@@ -13,6 +13,8 @@ flowchart LR
     Tick --> Cast[922 技能执行]
     Cast --> Damage[914 敌人扣血]
     Damage --> HP[424B单位 HP288]
+    HP -->|死亡奖励分支| SpawnXP[1417 奖励创建/经验合并]
+    SpawnXP --> Pickup
     Pickup[2862 拾取XP] --> XP[4630 等级/XP/pending]
     XP --> Choices[2159 候选入口]
     Choices --> Select
@@ -25,6 +27,8 @@ flowchart LR
 新版[完整4630另完成2197例经验四字段对照](reports/2026-11-01-progression0134-spec.md)，确认120级上限。该phase3运行域没有执行2159；2862拾取、候选生成和死亡到XP的完整时序仍待独立实现与连接。
 
 玩家受伤另由新1063处理，[139例非致死字段对照](reports/2026-11-01-incoming0134-spec.md)通过。独立实现仍是显式pending的标量前缀；盾耗尽、复活/死亡、完整IceBarrier施法与事件侧效未完成。
+
+[完整1417/2862另有345例独立拾取模型对照](reports/2026-11-01-pickups0134-spec.md)，0差异。首次吸取与到期到账分开，45闲置上限会触发合并。原件914→2862→4630只先做过一次组合观测；普通死亡RNG、全部奖励分支和独立整段流程尚未因此完成。
 
 ## 历史0.126.0一局游戏的核心主干
 
