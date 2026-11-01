@@ -1,0 +1,272 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "cases": 134,
+  "differences": 0,
+  "comparison": {
+    "known_leaves": 9476,
+    "explicit_unknown_words": 162,
+    "nonzero_unknown_words_observed": 18
+  },
+  "groups": {
+    "direct-new-learned-effect8": 1,
+    "target30-empty-failure-still-records-attempts": 1,
+    "repeated-owner0-stable-reset-other-owner-retained": 1,
+    "1076-initial-half-second-real-countdown": 1,
+    "2088-exact-expiry-before-at-after": 1,
+    "1076-retry-0point2-without-target": 1,
+    "all-class-race-23derived-rebuild": 72,
+    "owned-duration-magnitude": 25,
+    "actual-target30-distance-boundary": 4,
+    "three-independent-attempt-ledgers": 8,
+    "same-spell-expiry-and-full-ownerGUID": 9,
+    "direct922-retains-all80-owned-bytes": 4,
+    "1076-effective-CD-and-repeat-reset": 3,
+    "2088-expire-then-later1076-recast": 1,
+    "actual379-fourth-card-direct922": 1,
+    "actual-selected80-isolated1076-real-countdown": 1
+  },
+  "pure_model_refusals": 9,
+  "expected_before_original": true,
+  "source_files": 94,
+  "source_unchanged": true,
+  "artifacts_unchanged": true,
+  "world_unchanged": true,
+  "process": {
+    "pid": 30375,
+    "pgid": 30375,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 5.112514916996588,
+    "launcher_error": null
+  },
+  "full880_frames": 0,
+  "component_scope": "Battle Shout effect8 numeric/self-buff/learned cooldown/expiry only",
+  "pending": [
+    "1202 physical aura/display keys and encoded packet bytes",
+    "Nonempty external stat/item/talent/proc sources",
+    "Actual379 direct cast input is independent replay, not a new379-frame original acceptance; isolated1076 suppresses other learned/basic/prelude work"
+  ],
+  "core_sha256": "a6ce932dfcc3271bdd8583094f4765b5cd5e50df8a41700716abd05dfa4f661a",
+  "definition": {
+    "pointer": 5467956,
+    "ability_id": "battle_shout",
+    "execution": 9,
+    "effect": 8,
+    "spell_id": 6673,
+    "school": 0,
+    "strength_base": 0.4,
+    "duration_base": 8,
+    "cooldown_base": 16,
+    "definition88_sha256": "8c11d5b18081fcdba0d591ab4add6e0ef4290e0df8fc77b639e79deab7f865d7"
+  },
+  "api": {
+    "definition": "BattleShoutDefinition135(pointer=5467956,ability_id=b'battle_shout',raw88_hex=RAW88_HEX)",
+    "cast": "cast_battle_shout135(cast,level,definition,owned,*,live_records,unspecified_live_words=(),busy488=0,attempted_spell_sets=None,explicit_other_sources_absent=False)",
+    "cast_result": [
+      "cast",
+      "level",
+      "success",
+      "live_records",
+      "unspecified_live_words",
+      "callbacks",
+      "pending",
+      "attempted_spell_sets"
+    ],
+    "expiry": "expire_battle_shout135(level,live_records,unspecified_live_words,now_bits,dt_bits,last_hit_bits,*,explicit_other_sources_absent=False)",
+    "scheduler_ownership": "Direct922 leaves learned80 unchanged; existing1076 owns decrement/infinity/retry/effective cooldown.2088 prefix still requires ordered1076 composition."
+  },
+  "runtime": {
+    "cases": 134,
+    "fresh_instances": 134,
+    "full_original_calls": {
+      "922": 129,
+      "1076": 37,
+      "2088": 5
+    },
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "peak_memory_bytes": 20578304,
+    "memory_page_cap": 512,
+    "stack_all_restored": true,
+    "original_callees_replaced": false,
+    "original_application_start": false,
+    "original_snapshot_loaded": false
+  },
+  "functions": [
+    {
+      "index": 922,
+      "wat_start": 131203095,
+      "wat_end": 131607070,
+      "body_start": 2623156,
+      "body_end": 2646444,
+      "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80",
+      "wat_sha256": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940"
+    },
+    {
+      "index": 1076,
+      "wat_start": 223568390,
+      "wat_end": 223714224,
+      "body_start": 5778232,
+      "body_end": 5787962,
+      "body_sha256": "3dbb7ab4e94cbe5fdacce3f544419951c84bc056a969703835f83586d5076777",
+      "wat_sha256": "15b5cd2f7e988237a5886f795bac89b7742578fbd37937d8d5c2c26d35612526"
+    },
+    {
+      "index": 2088,
+      "wat_start": 399435810,
+      "wat_end": 399475232,
+      "body_start": 13667044,
+      "body_end": 13670320,
+      "body_sha256": "a20643b34a3be2898101856d84102ba9e7964b6846b0345510306fd500ffa77a",
+      "wat_sha256": "02ca0590c09f7a727cda54c086270ad9a9e8d437cdc92f2db5f8f4ed0b871f9c"
+    },
+    {
+      "index": 1512,
+      "wat_start": 331333364,
+      "wat_end": 331395880,
+      "body_start": 10196165,
+      "body_end": 10200921,
+      "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+      "wat_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3"
+    },
+    {
+      "index": 1202,
+      "wat_start": 265604115,
+      "wat_end": 265702236,
+      "body_start": 7625236,
+      "body_end": 7631797,
+      "body_sha256": "55a6163b90ac8e373c9d0d1e42c2a6fe829f2124029b48fe19ec62bf159d7652",
+      "wat_sha256": "93c1a53a759d54514a5142e17e88c5542aac1864aaf1d5770f0205dcac1d035e"
+    },
+    {
+      "index": 27562,
+      "wat_start": 973670349,
+      "wat_end": 973674730,
+      "body_start": 51451052,
+      "body_end": 51451500,
+      "body_sha256": "bfbeab0a322ceecda316c34b4cf6097c8dbce7a90b211946996b9fe24ac57344",
+      "wat_sha256": "5b454ce84854902d1b2b8d651f836eeab0b6cb61b456c4f5d5a7e09d7943c08a"
+    },
+    {
+      "index": 29983,
+      "wat_start": 1008809919,
+      "wat_end": 1008815004,
+      "body_start": 53876892,
+      "body_end": 53877296,
+      "body_sha256": "7e4c63a355f96a924de1d815858f62148f6df27d2c2584793532275690ac48e1",
+      "wat_sha256": "20e036540dfb4c76cf74dbeaa39f0b35134a4433bdf60a5d573aebe9f7ae1ecd"
+    },
+    {
+      "index": 44446,
+      "wat_start": 1121210824,
+      "wat_end": 1121213910,
+      "body_start": 62695410,
+      "body_end": 62695668,
+      "body_sha256": "d36e6762c8702e9d668a7550fb0a8ddfacf1dffe2063a8a01215b9f35a9ec7e5",
+      "wat_sha256": "1915c455778ed77dca1b48798b77419bccf6a19edd81c0411faa340625f73c61"
+    }
+  ],
+  "rules": [
+    "922 execution9/effect8 enters the real generic self-buff branch; spell6673/school0.",
+    "Append attempts before target30 eligibility; busy488 or context908 bit0 gates only ledger3.",
+    "Strength=owned76*definition4; duration=maxNumeric(.1,((definition68*1.4)*owned28)*owned68).",
+    "Stable-remove only same6673 ownerGUID0 rows; append32B kind8, actual1512 then actual1202.",
+    "1076 owns initial countdown, pre-call infinity, retry.2 and successCD=max(.25,(((16*1.4)*owned16)*owned56)*G1544).",
+    "2088 expiry precedes1512/1202, shield clamp/regen and1076; expiry does not itself recast."
+  ],
+  "actual_selection_input": {
+    "frames": 379,
+    "selections": [
+      {
+        "frame": 87,
+        "index": 0,
+        "card": {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "thunder_clap",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        }
+      },
+      {
+        "frame": 130,
+        "index": 2,
+        "card": {
+          "variant": "upgrade",
+          "tier": 1,
+          "ability_id": "thunder_clap",
+          "owned_index": 1,
+          "kinds": [
+            0
+          ],
+          "gold": 0
+        }
+      },
+      {
+        "frame": 214,
+        "index": 1,
+        "card": {
+          "variant": "upgrade",
+          "tier": 0,
+          "ability_id": "cleave",
+          "owned_index": 0,
+          "kinds": [
+            1
+          ],
+          "gold": 0
+        }
+      },
+      {
+        "frame": 379,
+        "index": 0,
+        "card": {
+          "variant": "new",
+          "tier": 1,
+          "ability_id": "battle_shout",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        }
+      }
+    ],
+    "battle_owned80_hex": "346f5300010000000000003f0000803f7b146e3f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+    "pre_component_boundary": "pending_selected_ability",
+    "input_kind": "deterministic independent opening/gameplay replay, never original observation",
+    "isolation": "Direct922 retains full learned vector;1076 case retains selected Battle Shout80 and suppresses other casts with absent learned slots/infinite genuine basic/prelude timers."
+  },
+  "comparison_scope": [
+    "Ordered live32 records, every known word; newly written effect8+16 and inherited declared unknown type12 words retain explicit masks.",
+    "Full learned80 vector and real inactive basic80 bytes; direct922 leaves countdown unchanged.",
+    "HP,23 derived words1536..1624, auxiliary pools/source/speed, keys22/28/1109,RNG,three independently initialized attempt ledgers.",
+    "Message2412/action1644/effect2356 sequence counters and timer1628; full wire/aura object keys remain pending."
+  ],
+  "production_changes": [
+    "New core_spec/battle_shout135.py only; reused existing self-buff mechanism under a new exact learned definition and strict source guards."
+  ],
+  "old_frozen_sources_modified": [],
+  "whole_game_complete": false,
+  "local_evidence": {
+    "directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T170642.056245Z",
+    "receipt_sha256": "df8d400630d16afdeb917d7a0b988ff8e9ac81e42ad856edde653d3d1452a740",
+    "expected_sha256": "9eb3b4b2bc80cf2b176ee941d451a9586020b28c791aefd466e30b47ae19fb6e",
+    "input_sha256": "e0255c6cf7cd4a7ff2b6ab0cda4d6f22455c51d80937b4e94ab9643082f071db",
+    "output_sha256": "362beb91d9f50e64d52a976e13940686442b37b2fe748f3dffc73d01acbd854a",
+    "static_sha256": "4538c4a4d3a4db7f4c9db22561f7797cdf011aedd849f10964b39d81a09ccbc7",
+    "selection_input_sha256": "b0a713b0c92962650ef56d44f92ed67c327ef72ad9609379c981104e74d8a2bb",
+    "refusals_sha256": "458de11d7ee429993b7d7c6532586263a87fbe12dbd3a2fa321ebc3acd34dc97",
+    "source_snapshot": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T170642.056245Z/source-snapshot",
+    "source_and_artifact_hashes_in": "battle-shout135-comparison.json",
+    "first_full_before_pending_wording_fix": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T170400.958795Z"
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-battle-shout0135-independent-review.md",
+    "receipt": "evidence/battle-shout135-independent-review-20261101T173350.218015Z/review.json",
+    "sha256": "7f035a8d9bc7ceca0a936ba067e9a9a7cc9eddb61383ea872f4ed8e38529ed26",
+    "new_original_cases": 0,
+    "passed": true
+  }
+}

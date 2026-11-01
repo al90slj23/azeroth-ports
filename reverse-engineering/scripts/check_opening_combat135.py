@@ -167,13 +167,15 @@ def corpus(world,seed,frames,dt,expected_path):
 def main():
     from collections import Counter
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--phase',choices=('pilot','full'),default='pilot')
-    parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int);args=parser.parse_args()
+    parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int)
+    parser.add_argument('--capture-format',choices=('gzip','cas'),default='gzip');args=parser.parse_args()
     frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
     if not 1<=frames<=500:raise ValueError('Bounded controlled frame corpus required')
+    cas_files=('scripts/run_opening_combat135_cas_oracle.mjs','scripts/opening_combat135_cas.mjs','scripts/opening_combat135_cas.py')if args.capture_format=='cas'else()
     files=tuple(dict.fromkeys(('scripts/check_opening_combat135.py','scripts/production_closure135.py',
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
         'scripts/build_world_snapshot135_oracle.py','scripts/build_full135_oracle.py','scripts/build_upgrade134_oracle.py',
-        'scripts/trace_coop.py','scripts/wasm_index.py')+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
+        'scripts/trace_coop.py','scripts/wasm_index.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
     before={p:sha(ROOT/p)for p in files};world,world_receipt,world_inputs=load_independent_world(DEFAULT_WORLD)
     world_inputs.update({str(path):sha(path)for path in(DEFAULT_WORLD/'receipt.json',DEFAULT_WORLD/'inputs.json')})
     out,manifest=build_opening_combat135();source=out/'source-snapshot'
@@ -190,7 +192,9 @@ def main():
     frozen_paths=(fixtures,expectations,inputs,cfg,out/'manifest.json',out/manifest['module_file'])
     frozen={p.name:sha(p)for p in frozen_paths}
     assert sha(SOURCE)==SOURCE_SHA and sha(NODE)==NODE_SHA
-    results=out/'results.jsonl.gz';stderr=out/'stderr.log';command=[str(NODE),'--max-old-space-size=512','--wasm-max-mem-pages=4096',str(ROOT/'scripts/run_opening_combat135_oracle.mjs'),str(out),str(cfg)]
+    runner='run_opening_combat135_cas_oracle.mjs'if args.capture_format=='cas'else'run_opening_combat135_oracle.mjs'
+    results=out/('results.cas.jsonl.gz'if args.capture_format=='cas'else'results.jsonl.gz');stderr=out/'stderr.log'
+    command=[str(NODE),'--max-old-space-size=512','--wasm-max-mem-pages=4096',str(ROOT/'scripts'/runner),str(out),str(cfg)]
     began=time.monotonic()
     deadline_exceeded=False
     with results.open('wb')as stdout,stderr.open('wb')as err:
@@ -210,16 +214,20 @@ def main():
         except ProcessLookupError:return True
         return False
     terminal=dict(pid_missing=missing(),pgid_missing=missing(True));errors=[];counts=Counter();observed_stages=0
-    raw_digest=hashlib.sha256();raw_bytes=0;max_line=0
+    raw_digest=hashlib.sha256();raw_bytes=0;max_line=0;cas_decoder=None
     if child.returncode==0:
         record_counts=Counter()
         assert results.stat().st_size<=256*1024*1024
+        if args.capture_format=='cas':
+            from opening_combat135_cas import CaptureCAS135
+            cas_decoder=CaptureCAS135(out)
         with gzip.open(results,'rb')as stream,gzip.open(expectations,'rt')as expected_stream:
             while line:=stream.readline(2*1024*1024+1):
                 if len(line)>2*1024*1024 or not line.endswith(b'\n'):raise ValueError('Original record budget/truncation')
                 raw_bytes+=len(line);max_line=max(max_line,len(line));raw_digest.update(line)
                 if raw_bytes>1024*1024*1024:raise ValueError('Original uncompressed stream budget exceeded')
-                raw=json.loads(line);kind=raw['record_kind'];record_counts[kind]+=1
+                raw=cas_decoder.decode_line(line)if cas_decoder is not None else json.loads(line)
+                kind=raw['record_kind'];record_counts[kind]+=1
                 assert raw['id']==0
                 if kind in('opening','stage'):
                     wanted_stage=json.loads(next(expected_stream));assert wanted_stage['record_kind']==kind
@@ -241,7 +249,8 @@ def main():
     after={p:sha(ROOT/p)for p in files};assert before==after and frozen=={p.name:sha(p)for p in frozen_paths}
     assert all(sha(Path(p))==h for p,h in world_inputs.items())
     assert sha(SOURCE)==SOURCE_SHA and sha(NODE)==NODE_SHA and sha(SNAPSHOT)==SNAPSHOT_SHA
-    runtime_path=out/'opening-combat135-runtime.json';runtime=json.loads(runtime_path.read_text())if runtime_path.exists()else None
+    runtime_path=out/('opening-combat135-cas-runtime.json'if args.capture_format=='cas'else'opening-combat135-runtime.json')
+    runtime=json.loads(runtime_path.read_text())if runtime_path.exists()else None;cas_verification=None
     if child.returncode==0:
         assert runtime is not None,'Missing original runtime receipt'
         assert runtime['boundaries']==0 and runtime['cases']==1
@@ -251,7 +260,10 @@ def main():
         assert runtime['input_sha256']==sha(inputs)
         assert runtime['module_sha256']==manifest['module_sha256']
         assert runtime['denied_imports']==878 and runtime['host_imports_throw']is True
-        assert runtime['schema_version']==4 and runtime['output_protocol']=='bounded_stage_jsonl_gzip'
+        if cas_decoder is not None:
+            assert runtime['schema_version']==5 and runtime['output_protocol']=='bounded_stage_cas_jsonl_gzip'
+            cas_verification=cas_decoder.finish(runtime['capture_cas'])
+        else:assert runtime['schema_version']==4 and runtime['output_protocol']=='bounded_stage_jsonl_gzip'
         assert runtime['compressed_output_bytes']==results.stat().st_size and runtime['output_sha256']==sha(results)
         assert runtime['uncompressed_output_bytes']==raw_bytes and runtime['uncompressed_sha256']==raw_digest.hexdigest()
     report=dict(version='0.135.1',actual_build='90898d5e3',historical_build_alias='0898d5e3',kind='independent_opening_plus_controlled14_tail_declared_projection_differential',
@@ -261,6 +273,7 @@ def main():
         compared_stages=observed_stages,final_level=row['final_level'],boundary=row['boundary'],differences=counts['differences'],comparison=dict(counts),
         source_files=len(files),source_sha256_before=before,source_sha256_after=after,
         inputs_sha256=sha(inputs),expectations_sha256=sha(expectations),fixtures_sha256=sha(fixtures),original_results_sha256=sha(results),runtime=runtime,
+        capture_format=args.capture_format,capture_cas_verification=cas_verification,
         original_uncompressed_bytes=raw_bytes,maximum_original_record_bytes=max_line,expected_uncompressed_bytes=row['expected_uncompressed_bytes'],
         process=dict(command=command,pid=child.pid,pgid=child.pid,exit_code=child.returncode,seconds=time.monotonic()-began,deadline_seconds=60,**terminal),
         model_expected_before_original=True,original_input_contains_no_expectations=True,

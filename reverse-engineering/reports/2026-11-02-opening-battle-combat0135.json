@@ -1,0 +1,641 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "kind": "independent_opening_guardian_battle_shout_controlled_composition",
+  "status": "matched_requested_budget",
+  "evidence": "evidence/opening-combat0135-oracle-20261101T173256.931310Z",
+  "comparison_sha256": "b5d9c546789401d738b43cc58cac1d7aeb117c94753ed4d63f60d923224520a7",
+  "cases": 1,
+  "frames": 400,
+  "selections": 4,
+  "stages": 5604,
+  "original_entry_calls": 5606,
+  "differences": 0,
+  "source_files": 98,
+  "production_files": 85,
+  "final_projection": {
+    "phase2587": 1,
+    "now_bits": 1109393398,
+    "rng_words": [
+      439472053,
+      2230120789,
+      2593883740,
+      626745240
+    ],
+    "spawn_counter": 168,
+    "message_sequence": 353,
+    "kill_cost_bits": 1094093360,
+    "source_id": "42",
+    "map_id_utf8": "elwynn",
+    "player_xyz": [
+      3323121664,
+      3290316800,
+      1116212265
+    ],
+    "velocity_xy": [
+      0,
+      0
+    ],
+    "previous_player_xyz": [
+      3323121664,
+      3290316800,
+      1116212265
+    ],
+    "progression": {
+      "level": 5,
+      "xp": 6,
+      "pending_upgrades": 0
+    },
+    "current_hp_bits": 1132713783,
+    "derived_bits": {
+      "1536": 1132789760,
+      "1540": 1069715292,
+      "1544": 1065353216,
+      "1548": 1028443341,
+      "1552": 1073741824,
+      "1556": 1065353216,
+      "1560": 1091567616,
+      "1564": 1067030938,
+      "1568": 1046562734,
+      "1572": 1058642330,
+      "1576": 1066359849,
+      "1580": 1065353216,
+      "1584": 0,
+      "1588": 1067030938,
+      "1592": 0,
+      "1596": 0,
+      "1600": 0,
+      "1604": 0,
+      "1608": 0,
+      "1612": 0,
+      "1616": 0,
+      "1620": 0,
+      "1624": 0
+    },
+    "player_fields": {
+      "22": 264,
+      "28": 266,
+      "34": 5,
+      "716": 6,
+      "717": 27,
+      "1109": 1084227584,
+      "1176": 530000
+    },
+    "racial_record_hex": "e4905300010000007c6726400000803f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+    "owned_records_hex": [
+      "246d5300020000004c62a03fb81e853f7b146e3f000000000000803f0000803f00000000010000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+      "d46d5300020000006b6696406666a63f0000803f000000000000803f0000803f01000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+      "346f530001000000eda79a410000803f7b146e3f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f"
+    ],
+    "pickup_words": [
+      [
+        0,
+        null,
+        2,
+        2,
+        754974735,
+        4044357667,
+        0,
+        8,
+        0,
+        9005,
+        3323157399,
+        3290588645,
+        1115958150,
+        0
+      ],
+      [
+        0,
+        null,
+        2,
+        1,
+        754974736,
+        4044357667,
+        0,
+        8,
+        0,
+        9005,
+        3323098068,
+        3290992095,
+        1116242010,
+        0
+      ]
+    ],
+    "timer1628_bits": 1054280245,
+    "budget_bits": 1049084343,
+    "gold": 53,
+    "earned": 53,
+    "outgoing_total_hex": "40a94c4ebb800000",
+    "incoming_total_hex": "405ef22415000000",
+    "last_hit_bits": 1109288542,
+    "absorbed740_bits": 0,
+    "maximum_shield744_bits": 0,
+    "candidates": [],
+    "selection_kind2585": 255,
+    "generation_counter2400": 4,
+    "field1092": 0,
+    "mode2582": 0,
+    "guardian_cooldowns": [
+      {
+        "unit_index": 0,
+        "guid": "17379390972240068726",
+        "capacity": 3,
+        "timers_bits": [
+          1083179008,
+          1084227584,
+          1089470464
+        ],
+        "ability_pointer": 5477460,
+        "header_pointer": 5484048,
+        "ability_records44_hex": [
+          "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041",
+          "8500000003000000000060400000e040cdcccc3f9a99993f000000000000000000000000000a000000002041",
+          "0400000000000000000000000000000000000000000000000000000000000000000000000005000000007041"
+        ],
+        "header28_hex": "54945300030000000400000000000000040000000000000061020000"
+      },
+      {
+        "unit_index": 1,
+        "guid": "17379390972256845943",
+        "capacity": 3,
+        "timers_bits": [
+          1085276160,
+          1080033280,
+          1090519040
+        ],
+        "ability_pointer": 5477592,
+        "header_pointer": 5484076,
+        "ability_records44_hex": [
+          "eccb520002000000cdcccc3f0000000000000000000000000000000000000000000000000012000000003041",
+          "b43b00000000e0400000b4420000803f3333b33f00000000000000000000000000000000000800000000e040",
+          "0300000000000000000000000000000000000000000000000000000000000000000000000005000000008041"
+        ],
+        "header28_hex": "d8945300030000000400000000000000040000000000000062020000"
+      },
+      {
+        "unit_index": 2,
+        "guid": "17379390972273623160",
+        "capacity": 3,
+        "timers_bits": [
+          1083179008,
+          1086324736,
+          1083179008
+        ],
+        "ability_pointer": 5477724,
+        "header_pointer": 5484104,
+        "ability_records44_hex": [
+          "455000000000e0406666a63f0000404100000000000000000000000000000000000000000013000000001041",
+          "7c190000000000000000a04000000000cdcccc3f9a99993f0000c0409a99993e00000000000b000000004041",
+          "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041"
+        ],
+        "header28_hex": "5c955300030000000400000000000000f89553000100000063020000"
+      },
+      {
+        "unit_index": 3,
+        "guid": "17379390972240068729",
+        "capacity": 3,
+        "timers_bits": [
+          1083179008,
+          1084227584,
+          1089470464
+        ],
+        "ability_pointer": 5477460,
+        "header_pointer": 5484048,
+        "ability_records44_hex": [
+          "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041",
+          "8500000003000000000060400000e040cdcccc3f9a99993f000000000000000000000000000a000000002041",
+          "0400000000000000000000000000000000000000000000000000000000000000000000000005000000007041"
+        ],
+        "header28_hex": "54945300030000000400000000000000040000000000000061020000"
+      }
+    ],
+    "special": {
+      "selected392": 1,
+      "target396": 2,
+      "navigation2564": 0,
+      "announced2565": 0,
+      "announcement_time2392_bits": 0
+    },
+    "effect": {
+      "clock2364_bits": 0,
+      "effect_counter2356": 0,
+      "action_sequence1644": 1,
+      "player_action_tag416": 0
+    },
+    "tail_flags": {
+      "field400": 0,
+      "protection2576": 0,
+      "flag2568": 0,
+      "gate2579": 0
+    },
+    "distance_map": {
+      "count": 78400,
+      "start_index": 39340,
+      "field24": 72660,
+      "values_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+    },
+    "distance_map_updated_at_bits": 1036831949
+  },
+  "final_vector_counts": {
+    "units": {
+      "capacity": 16,
+      "count": 12
+    },
+    "areas": {
+      "capacity": 0,
+      "count": 0
+    },
+    "pickups": {
+      "capacity": 8,
+      "count": 2
+    },
+    "special": {
+      "capacity": 4,
+      "count": 4
+    },
+    "companions": {
+      "capacity": 0,
+      "count": 0
+    },
+    "windows": {
+      "capacity": 4,
+      "count": 2
+    },
+    "boundaries": {
+      "capacity": 128,
+      "count": 69
+    },
+    "live32": {
+      "count": 1
+    },
+    "effects120": {
+      "count": 0
+    },
+    "delayed56": {
+      "count": 0
+    },
+    "hits112": {
+      "count": 0
+    },
+    "active84": {
+      "count": 0
+    },
+    "timed12": {
+      "count": 0
+    }
+  },
+  "runtime": {
+    "kind": "real_opening_then_controlled14_tail_original_observation",
+    "schema_version": 5,
+    "output_protocol": "bounded_stage_cas_jsonl_gzip",
+    "cases": 1,
+    "original_entry_calls": 5606,
+    "completed_controlled_tail_frames": 400,
+    "completed_stages": 5604,
+    "boundaries": 0,
+    "case_receipts": [
+      {
+        "id": 0,
+        "completed_stages": 5604,
+        "boundary": null
+      }
+    ],
+    "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "module_sha256": "bf1dda28b386e1394c0f811c533745801f285460c7a76d70937591126d24a572",
+    "input_sha256": "59cdc16e36bb402f97f312fafcfb4fcbcc6319dfcf64f3d20207e0c47a4cf12b",
+    "memory_page_cap": 4096,
+    "peak_memory_bytes": 166395904,
+    "denied_imports": 878,
+    "host_imports_throw": true,
+    "stage_entries": [
+      {
+        "kind": "player",
+        "role": "player_tick",
+        "index": 2088
+      },
+      {
+        "kind": "extra",
+        "role": "auto_cast",
+        "index": 916
+      },
+      {
+        "kind": "owned_effects",
+        "role": "owned_effect_tick",
+        "index": 975
+      },
+      {
+        "kind": "hits",
+        "role": "process_hits",
+        "index": 1754
+      },
+      {
+        "kind": "area",
+        "role": "area_tick",
+        "index": 3757
+      },
+      {
+        "kind": "effects",
+        "role": "effect_tick",
+        "index": 915
+      },
+      {
+        "kind": "deadline",
+        "role": "deadline_tick",
+        "index": 38007
+      },
+      {
+        "kind": "secondary",
+        "role": "secondary_hits",
+        "index": 2602
+      },
+      {
+        "kind": "ai",
+        "role": "update_units",
+        "index": 921
+      },
+      {
+        "kind": "collect",
+        "role": "collect_pickups",
+        "index": 2862
+      },
+      {
+        "kind": "claims",
+        "role": "claim_tick",
+        "index": 2573
+      },
+      {
+        "kind": "spawn",
+        "role": "spawn_tick",
+        "index": 947
+      },
+      {
+        "kind": "special",
+        "role": "special_tick",
+        "index": 2376
+      },
+      {
+        "kind": "terminal",
+        "role": "terminal_tick",
+        "index": 49037
+      }
+    ],
+    "selection_entry": {
+      "role": "select_ability",
+      "index": 1072,
+      "signature": "(G:i32,input_index:i32)->void",
+      "advances_clock": false
+    },
+    "budgets": {
+      "cases": 1,
+      "actions_per_case": 600,
+      "controlled_frames_per_case": 500,
+      "logical_record_bytes": 2097152,
+      "logical_output_bytes": 8589934592,
+      "index_record_bytes": 2097152,
+      "index_uncompressed_bytes": 1073741824,
+      "compressed_output_bytes": 268435456,
+      "blob_bytes": 16777216,
+      "unique_blob_bytes": 536870912,
+      "blob_files": 65536,
+      "blob_index_record_bytes": 2097152,
+      "blob_index_bytes": 268435456,
+      "blob_references_bytes": 33554432,
+      "encoding_depth": 128,
+      "encoding_nodes_per_record": 1048576,
+      "write_concurrency": 16,
+      "string_cache_bytes": 67108864,
+      "string_cache_entries": 8192,
+      "owned_deadline_seconds": 60
+    },
+    "js_heap_cap_mib": 512,
+    "output_compression": {
+      "format": "gzip",
+      "members": 1,
+      "level": 6,
+      "all_capture_fields_preserved": true,
+      "content_addressed": true
+    },
+    "actual_opening_phase_used": true,
+    "constructor_phase_overwritten": false,
+    "preallocated_zero128_storage": false,
+    "world_rc_forged": false,
+    "locale_once_injected": false,
+    "locale_source": "Preserved initialized genuine snapshot; prestate index bound to explicit input.",
+    "controlled_clock_scheduler": "explicit_external_f32_add_G2352_not_original880",
+    "full880_called": false,
+    "new_full880_frames": 0,
+    "independent_model_validation_cases": 0,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "output_bytes": 1942720,
+    "uncompressed_output_bytes": 1942720,
+    "compressed_output_bytes": 496272,
+    "output_records": 6008,
+    "max_record_uncompressed_bytes": 514,
+    "output_sha256": "9762cb63c7746b07d27f77fe7a2ae1841906afb86c6b474174855e1b9ff363c9",
+    "uncompressed_sha256": "55f159c3c74fb9db6401348ae18ab39e263f9020c6e26cb18338207680303d6a",
+    "logical_output_bytes": 1662490742,
+    "logical_output_sha256": "814cdb65300a5bd66d80e3801efda5b1f8cf97c260f1e92124b5e6a03712fb8f",
+    "maximum_logical_record_bytes": 749331,
+    "capture_cas": {
+      "protocol": "opening-combat135-cas-v1",
+      "encoding": "bottom_up_JSON_nodes_original_logical_size_at_least512B",
+      "marker": "$cas135_blob_v1",
+      "blob_directory": "cas-blobs",
+      "blob_index_file": "blob-index.jsonl",
+      "blob_references_file": "blob-references.jsonl",
+      "records": 6008,
+      "logical_bytes": 1662490742,
+      "logical_sha256": "814cdb65300a5bd66d80e3801efda5b1f8cf97c260f1e92124b5e6a03712fb8f",
+      "maximum_logical_record_bytes": 749331,
+      "index_uncompressed_bytes": 1942720,
+      "index_uncompressed_sha256": "55f159c3c74fb9db6401348ae18ab39e263f9020c6e26cb18338207680303d6a",
+      "compressed_bytes": 496272,
+      "compressed_sha256": "9762cb63c7746b07d27f77fe7a2ae1841906afb86c6b474174855e1b9ff363c9",
+      "maximum_index_record_bytes": 514,
+      "unique_blobs": 16316,
+      "unique_blob_bytes": 83331346,
+      "maximum_blob_bytes": 725264,
+      "total_logical_blob_references": 1085989,
+      "blob_index_bytes": 14683526,
+      "blob_index_sha256": "2687d29b758cae3994ca57d396b828aa84585599f149823737f9a78ef6c76067",
+      "maximum_blob_index_record_bytes": 16723,
+      "blob_references_bytes": 2786850,
+      "blob_references_sha256": "084178821a4cff0176505577a5a0086c240ae4ba40f82387734ed049d1ad4981",
+      "limits": {
+        "cases": 1,
+        "actions_per_case": 600,
+        "controlled_frames_per_case": 500,
+        "logical_record_bytes": 2097152,
+        "logical_output_bytes": 8589934592,
+        "index_record_bytes": 2097152,
+        "index_uncompressed_bytes": 1073741824,
+        "compressed_output_bytes": 268435456,
+        "blob_bytes": 16777216,
+        "unique_blob_bytes": 536870912,
+        "blob_files": 65536,
+        "blob_index_record_bytes": 2097152,
+        "blob_index_bytes": 268435456,
+        "blob_references_bytes": 33554432,
+        "encoding_depth": 128,
+        "encoding_nodes_per_record": 1048576,
+        "write_concurrency": 16,
+        "string_cache_bytes": 67108864,
+        "string_cache_entries": 8192,
+        "owned_deadline_seconds": 60
+      },
+      "original_reserved_marker_rejected_before_encoding": true,
+      "unpaired_UTF16_rejected": true,
+      "all_original_capture_fields_preserved": true,
+      "property_order_and_Number_values_preserved": true,
+      "blob_files_uncompressed": true,
+      "child_refs_are_direct_encoded_edges": true,
+      "logical_reference_counts_include_expanded_blob_edges": true
+    },
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_opening_combat135_cas_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T173256.931310Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T173256.931310Z/config.json"
+    ],
+    "pid": 72778,
+    "pgid": 72778,
+    "exit_code": 0,
+    "seconds": 161.86499570900924,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "process_seconds_include_parent_verification": true,
+  "original_process_terminal": {
+    "pid": 72778,
+    "pgid": 72778,
+    "exit_code": 0,
+    "deadline_exceeded": false
+  },
+  "capture_codec": {
+    "records": 6008,
+    "logical_bytes": 1662490742,
+    "logical_sha256": "814cdb65300a5bd66d80e3801efda5b1f8cf97c260f1e92124b5e6a03712fb8f",
+    "maximum_logical_record_bytes": 749331,
+    "unique_blobs": 16316,
+    "unique_blob_bytes": 83331346,
+    "maximum_blob_bytes": 725264,
+    "index_uncompressed_bytes": 1942720,
+    "index_uncompressed_sha256": "55f159c3c74fb9db6401348ae18ab39e263f9020c6e26cb18338207680303d6a",
+    "maximum_index_record_bytes": 514,
+    "maximum_blob_index_record_bytes": 16723,
+    "total_logical_blob_references": 1085989,
+    "blob_index_bytes": 14683526,
+    "blob_index_sha256": "2687d29b758cae3994ca57d396b828aa84585599f149823737f9a78ef6c76067",
+    "blob_references_bytes": 2786850,
+    "blob_references_sha256": "084178821a4cff0176505577a5a0086c240ae4ba40f82387734ed049d1ad4981",
+    "all_blobs_and_occurrences_verified": true,
+    "decoder_cache_bytes": 8324759
+  },
+  "comparison": {
+    "compared_leaves": 24443084,
+    "unwritten_pickup_arrivals": 11615,
+    "declared_unknown_cells": 21862027
+  },
+  "original_context": {
+    "snapshot_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_begin1089.memory",
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "externref_VM_restoration": false,
+    "fresh_bootstraps": 0
+  },
+  "world_input": {
+    "kind": "independently_produced_preparsed_world_query_artifacts",
+    "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+    "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+    "artifacts": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/inputs.json": "603bd691eb614f4c0ae932401c2d790761c9b18b38951922c2fa9757bd4d7b80"
+    }
+  },
+  "raw_asset_modelselfcheck": {
+    "receipt": "evidence/asset-combat400-owned-20261101T174254.757426Z/model400/receipt.json",
+    "sha256": "9015386c3de810f2493622fe619b22b425162c4e1d710ce0f6930a58d4f80c94",
+    "frames": 400,
+    "selections": 4,
+    "source_files": 92,
+    "loaded_asset_files": 451,
+    "decoded_asset_bytes": 67281330,
+    "original_cases": 0,
+    "bridge": "evidence/asset-combat400-owned-20261101T174254.757426Z/projection-bridge.json",
+    "bridge_sha256": "e82377dbe9e5d4bbec9c094cc1dfb7290846842bfb1a43f9677f002d006e6412",
+    "checks": 35
+  },
+  "battle_shout_component": {
+    "report": "reports/2026-11-02-battle-shout0135.md",
+    "cases": 134,
+    "original_calls": 171,
+    "receipt": "evidence/full0135-oracle-20261101T170642.056245Z/battle-shout135-comparison.json",
+    "sha256": "df8d400630d16afdeb917d7a0b988ff8e9ac81e42ad856edde653d3d1452a740",
+    "independent_review": "reports/2026-11-02-battle-shout0135-independent-review.md"
+  },
+  "codec_review": {
+    "report": "reports/2026-11-02-opening-combat0135-cas-codec-review.md",
+    "receipt": "evidence/opening-cas-codec135-review-20261101T173151.174099Z/review.json",
+    "sha256": "5e27cf0fd619a8a5c315ac00bb4e8d803ba17c89ca8e5ba9af19c42a7b543839",
+    "negatives_rejected": 26,
+    "original_cases": 0
+  },
+  "historical_400_attempt": {
+    "directory": "evidence/opening-combat0135-oracle-20261101T171633.375141Z",
+    "reason": "Initial parser perimeter/hash contract incomplete; superseded by new strict decoder fresh400 batch; not added to accepted count"
+  },
+  "next_boundary": {
+    "model_evidence": "evidence/opening-combat135-battle-model-boundary-20261101T173110.117328Z/receipt.json",
+    "completed_model_frames": 400,
+    "next_frame": 401,
+    "reason": "pending_due_event:G2444 resource deadline40s",
+    "original_cases": 0,
+    "resource_component": "reports/2026-11-02-resource-spawn0135.md",
+    "resource_component_cases": 64,
+    "integrated": false
+  },
+  "limitations": [
+    "Controlled external f32 time scheduler and14 component entries,not880 front/party/transport.",
+    "World is independently produced canonical query input; this check does not rerun451-asset parser.",
+    "Independent state retains None only from producer/consumer write sets; original buffers remain concrete.",
+    "Original full raw captures retained. Only declared state projection/known record cells compared; unrelated allocator bytes/keyed fields/runtime packet producers remain unknown.",
+    "Navigation preferenceFalse corresponds to declared snapshot App5165=0; actual menu defaults are another input domain.",
+    "Original initialized locale is preserved, not reconstructed; model receives explicit static English names.",
+    "Resource spawn2444 at40s, other due schedules, guardian engage/actions/death, full880/native/render/UI/save/network remain incomplete.",
+    "CAS does not omit logical captures. Wire stream is retained but not independently predicted.",
+    "This is fixed135;137nonlethal432B projection has its separate80/125 domain."
+  ],
+  "full880_frames": 0,
+  "native_windows_executed": false,
+  "complete_games": 0,
+  "goal_complete": false,
+  "independent_review": {
+    "report": "reports/2026-11-02-opening-combat0135-400frame-independent-review.md",
+    "receipt": "evidence/opening-combat135-cas-independent-review-20261101T175230.239980Z/review.json",
+    "sha256": "376b09cd9ce10da25396d815824432e48eb456dbb1aeaea9674db95d25aa6482",
+    "passed": true,
+    "new_original_cases": 0,
+    "model_or_original_or_checker_executed": false,
+    "private_fast_transport_equivalence": "evidence/cas-decoder-benchmark-20261101T174102.421114Z/benchmark.json"
+  },
+  "legacy_headless_regression": {
+    "evidence": "evidence/full0135-oracle-20261101T180102.862909Z/headless135-comparison.json",
+    "sha256": "2b8a230bba04d0429e1a618423ccb904a23830288ba9a8ae1cf21653588f6cbd",
+    "cases": 8,
+    "frames": 1614,
+    "stages": 22607,
+    "selections": 11,
+    "differences": 0,
+    "counts_not_added": true,
+    "historical_build_alias": "0898d5e3"
+  }
+}

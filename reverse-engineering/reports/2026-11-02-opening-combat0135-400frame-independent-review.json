@@ -1,0 +1,313 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T173256.931310Z/comparison.json",
+  "comparison_sha256": "b5d9c546789401d738b43cc58cac1d7aeb117c94753ed4d63f60d923224520a7",
+  "source_files": 98,
+  "production_files": 85,
+  "current_and_frozen_sources_verified": true,
+  "reviewer_script_sha256": "d65b449185ea0ab448ce34ecdcb64942e25badba42e04009e3bf4ee3261d45e3",
+  "transport": {
+    "source": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/cas-decoder-benchmark-20261101T174102.421114Z/decoder_fast.py",
+    "sha256": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+    "frozen_root_decoder_sha256": "16ca91ea52fdb107988d2f9c0c7b8d3b069d21df13f5a1b6091dd8ddb1199049",
+    "private_fast_only_one_string_quoting_line_changed": true,
+    "independent_26negative_review_sha256": "5e27cf0fd619a8a5c315ac00bb4e8d803ba17c89ca8e5ba9af19c42a7b543839",
+    "each_logical_SHA_and_all_occurrences_verified": true,
+    "full_finish": {
+      "records": 6008,
+      "logical_bytes": 1662490742,
+      "logical_sha256": "814cdb65300a5bd66d80e3801efda5b1f8cf97c260f1e92124b5e6a03712fb8f",
+      "maximum_logical_record_bytes": 749331,
+      "unique_blobs": 16316,
+      "unique_blob_bytes": 83331346,
+      "maximum_blob_bytes": 725264,
+      "index_uncompressed_bytes": 1942720,
+      "index_uncompressed_sha256": "55f159c3c74fb9db6401348ae18ab39e263f9020c6e26cb18338207680303d6a",
+      "maximum_index_record_bytes": 514,
+      "maximum_blob_index_record_bytes": 16723,
+      "total_logical_blob_references": 1085989,
+      "blob_index_bytes": 14683526,
+      "blob_index_sha256": "2687d29b758cae3994ca57d396b828aa84585599f149823737f9a78ef6c76067",
+      "blob_references_bytes": 2786850,
+      "blob_references_sha256": "084178821a4cff0176505577a5a0086c240ae4ba40f82387734ed049d1ad4981",
+      "all_blobs_and_occurrences_verified": true,
+      "decoder_cache_bytes": 8324759
+    },
+    "one_complete_gzip_member": true
+  },
+  "stream_record_counts": {
+    "case_start": 1,
+    "constructor": 1,
+    "opening": 1,
+    "clock_control": 400,
+    "stage": 5604,
+    "case_end": 1
+  },
+  "expected_stream": {
+    "file_bytes": 19991124,
+    "file_sha256": "d5b5973d7b4d421e9f31c4ceff978c82415d1764a8ddee3a96f21a35aeec9f01",
+    "uncompressed_bytes": 193142479,
+    "uncompressed_sha256": "1486c084e8fbe1d8161880f199c7ece8052dde137a1dacaef4763432951fd19a",
+    "maximum_record_bytes": 37374,
+    "records": 5605,
+    "gzip": true,
+    "single_member": true
+  },
+  "comparison_counts": {
+    "projection_leaves": 781515,
+    "unwritten_pickup_arrival_words": 11615,
+    "vector_shape_fields": 112100,
+    "strict_record_bytes": 23538261,
+    "unknown_cells": 21862027,
+    "unknown_cells_nonzero_original": 13824115,
+    "stage_identity_leaves": 11208,
+    "guardian_physical_pointer_unknown_bytes": 44864
+  },
+  "reconciled_known_leaves": 24443084,
+  "nonexport_sections_identical": true,
+  "full_declared_projection_recompared": true,
+  "omitted_payload_max_counts": {
+    "effects120": 0,
+    "delayed56": 0,
+    "hits112": 0,
+    "active84": 0,
+    "timed12": 0,
+    "deadline32": 0,
+    "secondary112": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "observed_vector_max_counts": {
+    "companions": 0,
+    "units": 12,
+    "areas": 0,
+    "effects120": 0,
+    "delayed56": 0,
+    "deadline32": 0,
+    "hits112": 0,
+    "secondary112": 0,
+    "pickups": 7,
+    "candidates80": 3,
+    "special": 4,
+    "windows": 2,
+    "boundaries": 69,
+    "owned80": 3,
+    "live32": 2,
+    "timed12": 0,
+    "active84": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "first_guardian": {
+    "frame": 199,
+    "stage_index": 2800,
+    "count": 4
+  },
+  "guardian_distinct_GUIDs": [
+    "17379390972240068726",
+    "17379390972240068729",
+    "17379390972256845943",
+    "17379390972273623160"
+  ],
+  "guardian_owner_captures": 2804,
+  "guardian_payload_comparisons": 11216,
+  "guardian_corruption_checks": [
+    "cross_unit_guid_rejected",
+    "projection_owner_omission_rejected",
+    "timer_payload_backing_mismatch_rejected",
+    "expected_timer_bit_mismatch_rejected",
+    "guardian_nonpointer_written_byte_mask_rejected"
+  ],
+  "selections": [
+    {
+      "frame": 87,
+      "action_index": 87,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 0,
+        "ability_id": "thunder_clap",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 130,
+      "action_index": 131,
+      "index": 2,
+      "card": {
+        "variant": "upgrade",
+        "tier": 1,
+        "ability_id": "thunder_clap",
+        "owned_index": 1,
+        "kinds": [
+          0
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 214,
+      "action_index": 216,
+      "index": 1,
+      "card": {
+        "variant": "upgrade",
+        "tier": 0,
+        "ability_id": "cleave",
+        "owned_index": 0,
+        "kinds": [
+          1
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 379,
+      "action_index": 382,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 1,
+        "ability_id": "battle_shout",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    }
+  ],
+  "battle_first_actual_buff": {
+    "frame": 384,
+    "stage_index": 5380,
+    "player_ticks_since_selection": 6,
+    "clock_bits": 1109000188,
+    "remaining_cooldown_bits": 1101441008,
+    "live_record_hex": "000000000000000008000000cdcccc3e8f000058111a0000c9cc464200000000",
+    "damage_multiplier_bits": 1069715292
+  },
+  "battle_player_countdown": [
+    {
+      "frame": 379,
+      "remaining_bits": 1053609165
+    },
+    {
+      "frame": 380,
+      "remaining_bits": 1050253722
+    },
+    {
+      "frame": 381,
+      "remaining_bits": 1045220558
+    },
+    {
+      "frame": 382,
+      "remaining_bits": 1036831951
+    },
+    {
+      "frame": 383,
+      "remaining_bits": 847249408
+    },
+    {
+      "frame": 384,
+      "remaining_bits": 1101441008
+    },
+    {
+      "frame": 385,
+      "remaining_bits": 1101388579
+    },
+    {
+      "frame": 386,
+      "remaining_bits": 1101336150
+    },
+    {
+      "frame": 387,
+      "remaining_bits": 1101283721
+    },
+    {
+      "frame": 388,
+      "remaining_bits": 1101231292
+    },
+    {
+      "frame": 389,
+      "remaining_bits": 1101178863
+    },
+    {
+      "frame": 390,
+      "remaining_bits": 1101126434
+    },
+    {
+      "frame": 391,
+      "remaining_bits": 1101074005
+    },
+    {
+      "frame": 392,
+      "remaining_bits": 1101021576
+    },
+    {
+      "frame": 393,
+      "remaining_bits": 1100969147
+    },
+    {
+      "frame": 394,
+      "remaining_bits": 1100916718
+    },
+    {
+      "frame": 395,
+      "remaining_bits": 1100864289
+    },
+    {
+      "frame": 396,
+      "remaining_bits": 1100811860
+    },
+    {
+      "frame": 397,
+      "remaining_bits": 1100759431
+    },
+    {
+      "frame": 398,
+      "remaining_bits": 1100707002
+    },
+    {
+      "frame": 399,
+      "remaining_bits": 1100654573
+    }
+  ],
+  "Battle_effect8_owner0_payload_and_CD_independently_checked": true,
+  "independent_Dijkstra": {
+    "count": 78400,
+    "start_index": 39340,
+    "field24": 72660,
+    "values_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+  },
+  "final_progression": {
+    "level": 5,
+    "xp": 6,
+    "pending_upgrades": 0
+  },
+  "final_gold": 53,
+  "observed_packet_max": 905,
+  "packets_payload_semantics_claimed_compared": false,
+  "original_process_terminal": {
+    "pid": 72778,
+    "pgid": 72778,
+    "exit_code": 0,
+    "deadline_exceeded": false
+  },
+  "original_wait60s_did_not_timeout": true,
+  "parent_process_seconds_including_recomparison": 161.86499570900924,
+  "actual_Node_seconds_not_inferred_from_parent_total": true,
+  "original_or_model_or_checker_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "scope": "One human warrior seed0/navFalse stationary400 controlled14-tail frames, realphase1/ownedcapacity/None; independent preparsedworld/originalsnapshot/externalclock, not full880/native/wholegame.",
+  "elapsed_seconds": 100.30054549999477,
+  "static_image_reads_sha256": "031c9c7da47af53d7ec51485595185d3e0eff323675ea7879bad1c4f49e3b71c",
+  "review_receipt": "evidence/opening-combat135-cas-independent-review-20261101T175230.239980Z/review.json",
+  "review_receipt_sha256": "376b09cd9ce10da25396d815824432e48eb456dbb1aeaea9674db95d25aa6482",
+  "reviewer_source_provenance": "evidence/opening-combat135-cas-independent-review-20261101T175230.239980Z/reviewer-source-provenance.json",
+  "reviewer_source_provenance_sha256": "85ed1fc2e6d550ea78a7783a79a48031dcb5682d986d578bcbc74c24d4e89c97",
+  "benchmark_only_old_archive_not_counted": true
+}

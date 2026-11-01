@@ -1,0 +1,212 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "verified_component_only",
+  "source_sha256": {
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3",
+    "scripts/check_resource_spawn135.py": "e134e84111583a2b9ec52bf7c95aa82dfec03edc66ac4868681d5228baf3ddb5",
+    "scripts/run_resource_spawn135_oracle.mjs": "7795b14d6a3503fd1e18780d63133d22c9d4461a314bd5ce7900a9ecd9be4fe2",
+    "scripts/trace_resource_spawn135.py": "6070df69abf375f55beee1a51ab576847b38db8cb43f314d493cb39cee68d36a"
+  },
+  "scope": {
+    "zone": "elwynn",
+    "resource_clock": 2444,
+    "complete_original_functions": {
+      "1417": 12,
+      "947": 52
+    },
+    "full880_frames": 0,
+    "natural40_second_runs": 0,
+    "original_memory_snapshot_read": false,
+    "input": "Independent451-asset world + independent absent-companion opening; typed fixture into fresh original; explicit~40 single947, actual ordinary then resource"
+  },
+  "acceptance": {
+    "cases": 64,
+    "differences": 0,
+    "comparison": {
+      "equal_known_values": 122748,
+      "explicit_unknown_cells": 71736,
+      "packets": 196,
+      "packet_bytes": 32043
+    },
+    "source_files": 58,
+    "source_unchanged": true,
+    "world_unchanged": true,
+    "artifacts_unchanged": true,
+    "expected_before_original": true,
+    "selection_rejection_cases": 5,
+    "real_world_13th_unclamped_cases": 2,
+    "refusals": [
+      "1417-other-kind",
+      "1417-no-world",
+      "947-active-kind-unknown",
+      "947-future-does-not-read-kind-or-world",
+      "947-cap-does-not-read-world-or-draw-rng"
+    ]
+  },
+  "process": {
+    "pid": 6261,
+    "pgid": 6261,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 1.6132842079969123,
+    "launcher_error": null
+  },
+  "runtime": {
+    "cases": 64,
+    "functions": {
+      "947": 52,
+      "1417": 12
+    },
+    "fresh_instances": 64,
+    "max_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "original_function_bodies_unchanged": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_memory_snapshot_read": false
+  },
+  "api": {
+    "scheduler": "step_resource_spawn135(ResourceSpawnInput135(zone,now_bits,next_resource2444_bits,player_xyz_bits,velocity_xy,rng_words,counter,pickups),world)",
+    "producer": "produce_resource_pickup135(ResourcePickupInput135(zone,kind,amount,position_bits,now_bits,rng_words,counter,pickups),world)",
+    "ownership": "pickups is complete OpeningVector135(stride56,storage,count); retain None and inactive backing; thread returned rng/counter/deadline and creates in947 order after ordinary work",
+    "statuses": [
+      "resource2444_future",
+      "resource2444_cap",
+      "resource2444_spawned"
+    ]
+  },
+  "rules": [
+    "947 due G2352>=G2444 writes G2444=now+45 before active pickup56 kind3..5 combined cap2; marker ignored.",
+    "Inlined xoshiro128++ multiply3 rejects (lowProduct&0xc0000000)==0xc0000000; accepted highProduct selects kind3/4/5.",
+    "1417 amount argument is post-selection local2/state0, before13516 advances shared RNG.",
+    "13516 samples actual world at radius15..40, then1417 clamp radius-2 and final world height.",
+    "1417 kinds3/4/5: visual9006/9007/9008, display5931/5995/5991, scale1, actor kind21=5 flags9=0.",
+    "1821 uses shared counter, xoshiro yaw, GUID F110|entry<<24|counter; exact169 via26970/50798.",
+    "Append56 writes0,8..55 only; +4 and prior backing retained; aux Vec(cap0,ptr8,len0)."
+  ],
+  "functions": [
+    {
+      "index": 947,
+      "wat_start": 165734621,
+      "wat_end": 166104083,
+      "wat_line": 1166769,
+      "wat_sha256": "7cb256d48c90e0dc3f3fed81fc9b1e7ca263b9074444ef8f4bb9320c189a65e7",
+      "body_start": 3513924,
+      "body_end": 3531974,
+      "body_sha256": "8eafc61592944f9083c7542177928d582672300323e367fd0c7b343d777c1c76"
+    },
+    {
+      "index": 1417,
+      "wat_start": 318560368,
+      "wat_end": 318633040,
+      "wat_line": 3893741,
+      "wat_sha256": "7e9ae77a571bce628dc9202237f928772e8199b3c583bd7d9dd1a47755abdc33",
+      "body_start": 9570935,
+      "body_end": 9576021,
+      "body_sha256": "4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342"
+    },
+    {
+      "index": 13516,
+      "wat_start": 787173337,
+      "wat_end": 787183155,
+      "wat_line": 16667841,
+      "wat_sha256": "d5559ab0a9d3924ccf442ee37a7635b4386e5f58566b89e1c14482d42440789a",
+      "body_start": 37528176,
+      "body_end": 37529065,
+      "body_sha256": "58ff93447950538f3b0f4df4bbed8a1cef1fda89a7b6cbc182340d0926299c5e"
+    },
+    {
+      "index": 1821,
+      "wat_start": 370109404,
+      "wat_end": 370153836,
+      "wat_line": 5073943,
+      "wat_sha256": "4697c24b865487c92a1d1a1aa4adaeb1cf9a8129c885dc8797cc1524e6aeb43f",
+      "body_start": 12169862,
+      "body_end": 12173492,
+      "body_sha256": "fbb21ae4ebb683d34bf3e62eb96f50571b16fb7d8053e980c6fd45cfcb3575db"
+    },
+    {
+      "index": 29631,
+      "wat_start": 1004619467,
+      "wat_end": 1004624257,
+      "wat_line": 23923867,
+      "wat_sha256": "a6bff26a5ae98d6e3a8180f4ac0e457b1ea8564b7ed1c9f8cd51b81326a7c941",
+      "body_start": 53548889,
+      "body_end": 53549297,
+      "body_sha256": "26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650"
+    },
+    {
+      "index": 23181,
+      "wat_start": 919711317,
+      "wat_end": 919718447,
+      "wat_line": 21173613,
+      "wat_sha256": "aa0d23287a9217f4db3b5344ab2521913fffc702999eb37cb221ac4f5206af8f",
+      "body_start": 47477583,
+      "body_end": 47478077,
+      "body_sha256": "a46874e377eac8590d923753e6a5e26289b8388144a0241b6b29cc1f77640666"
+    },
+    {
+      "index": 26970,
+      "wat_start": 969091965,
+      "wat_end": 969095974,
+      "wat_line": 22804070,
+      "wat_sha256": "da1404298ac6e6d249976ccf16f39e2218d5225ee9a508c3928f97996775658a",
+      "body_start": 51052826,
+      "body_end": 51053323,
+      "body_sha256": "e0af16e23a09bfb2aac7f75885522926488384baa775f826baf3fd68ecd4fc21"
+    },
+    {
+      "index": 50798,
+      "wat_start": 1156256582,
+      "wat_end": 1156258626,
+      "wat_line": 29168132,
+      "wat_sha256": "410f45b41a72b571108acc23fd968eb56d60b8c3a86dd4611f0349585ad3e97e",
+      "body_start": 65388225,
+      "body_end": 65388441,
+      "body_sha256": "b9c1ce4d590247d695f871f63320c6665883e10f43395523b1acd44c4e1ee43d"
+    },
+    {
+      "index": 65337,
+      "wat_start": 1209190328,
+      "wat_end": 1209191227,
+      "wat_line": 30854603,
+      "wat_sha256": "101d36c0a307e9428850c0a2b0ccd7653c2dc9cb493c9e3880676e2af344f246",
+      "body_start": 69212334,
+      "body_end": 69212443,
+      "body_sha256": "d848ebfc217a5e3a1dce7ad506d62e27f31d5cf0ab6ab4289440036e1f468079"
+    }
+  ],
+  "pending": [
+    "1417 other kinds and kind6 auxiliary objects.",
+    "1417 primary-present nearest-miss low-address fallback.",
+    "Resource kind3..5 collection and gameplay effects.",
+    "947 G2424/G2440/G2448/Boss due consumers are not this component.",
+    "Explicit40 single947 is not natural40-second full880 acceptance."
+  ],
+  "world_inputs": {
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+  },
+  "evidence": {
+    "primary_receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-spawn135-comparison.json",
+    "receipt_sha256": "85b5c088e80e33d059b880275e59aa6f2a3613344fc887f2886566130fdde005",
+    "static_trace": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-spawn135-static.json",
+    "input": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-input.json",
+    "expected": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-expected.json",
+    "original_results": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-results.jsonl",
+    "differences": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-differences.json",
+    "labels": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-labels.json",
+    "owned_process": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-owned-process.json",
+    "terminal": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/resource-process-terminal.json",
+    "frozen_source_closure": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T174727.123299Z/source-snapshot"
+  }
+}

@@ -20,6 +20,7 @@ from .cast135 import CastState, CastResult, UnresolvedCast
 from .cast_events135 import cast_ability, process_hits
 from .cleave135 import cast_cleave135
 from .thunder_clap135 import cast_thunder_clap135
+from .battle_shout135 import BattleShoutDefinition135,cast_battle_shout135
 from .cast_catalogue135 import definition, RAW_BY_POINTER
 from .combat135 import CombatState, encoded_hp
 from .currency134 import CurrencyState
@@ -194,7 +195,8 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None):
 def supported(pointer):
     d = definition(pointer)
     return (d.effect_tag == 0 and d.execution_kind in (0, 2) or d.ability_id==b'cleave' and d.effect_tag==0 and d.execution_kind==5
-        or d.ability_id==b'thunder_clap' and d.effect_tag==1 and d.execution_kind==2 or d.ability_id in RACIALS
+        or d.ability_id==b'thunder_clap' and d.effect_tag==1 and d.execution_kind==2
+        or d.ability_id==b'battle_shout' and d.effect_tag==8 and d.execution_kind==9 or d.ability_id in RACIALS
         or d.execution_kind == 3 and d.ability_id in AREAS)
 
 
@@ -322,6 +324,14 @@ def _cast_phase(state, dt, *, phase='owned'):
             result=cast_thunder_clap135(cast,d,owned,**callbacks)
             effect_writes+=result.effect_writes
             return result
+        if d.ability_id==b'battle_shout':
+            level=replace(collection.level,rng_words=cast.rng_words,
+                stats=replace(collection.level.stats,now_bits=cast.combat.now_bits))
+            result=cast_battle_shout135(cast,level,BattleShoutDefinition135(),owned,
+                live_records=live,unspecified_live_words=unknown,busy488=0,explicit_other_sources_absent=True)
+            collection=replace(collection,level=result.level)
+            live,unknown=result.live_records,result.unspecified_live_words
+            return CastResult(result.cast,result.success,(),0,0,())
         if d.ability_id not in RACIALS:
             return cast_ability(cast, d, owned, **callbacks)
         level = replace(collection.level, rng_words=cast.rng_words,

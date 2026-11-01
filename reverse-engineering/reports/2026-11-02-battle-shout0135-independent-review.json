@@ -1,0 +1,141 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T170642.056245Z/battle-shout135-comparison.json",
+  "comparison_sha256": "df8d400630d16afdeb917d7a0b988ff8e9ac81e42ad856edde653d3d1452a740",
+  "reviewer_sources": {
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449"
+  },
+  "frozen_sources": 94,
+  "production_AST_closure_files": 85,
+  "all_frozen_SHA_verified": true,
+  "current_source_drift": [
+    "reconstruction/core_spec/headless135.py"
+  ],
+  "all_94_current_sources_claimed": false,
+  "critical_component_racial_player_owned_stats_helpers_current_unchanged": true,
+  "nonexport_sections_identical": true,
+  "private_exports_only": true,
+  "learned_not_racial_catalogue": true,
+  "definition88_static_image_verified": true,
+  "cases": 134,
+  "external_original_calls": {
+    "922": 129,
+    "1076": 37,
+    "2088": 5
+  },
+  "comparison_counts": {
+    "known_leaves": 9476,
+    "explicit_unknown_words": 162,
+    "nonzero_unknown_words_observed": 18
+  },
+  "independent_semantic_checks": {
+    "entry_cast": 129,
+    "actual_inner_or_direct_cast_attempts": 142,
+    "successful_buff_appends": 136,
+    "strict_live_words": 1278,
+    "strict_owned_bytes": 13840,
+    "strict_basic_bytes": 13680,
+    "strict_derived_words": 3933,
+    "target30_failed_after_ledgers": 6,
+    "owner0_same_spell_rows_replaced": 12,
+    "entry_owned": 37,
+    "entry_player": 5,
+    "expiry_passes": 2,
+    "expired_rows": 2
+  },
+  "class_race_matrix_cases": 72,
+  "nine_refusals_observed_not_rerun": true,
+  "source_gate_audit": "Explicit absent declaration; six empty nonlive vectors; exact live ownership; supported families; no inherited context beyond bit0; icebarrier continuation pending.",
+  "actual379_provenance": {
+    "frames": 379,
+    "selections": [
+      {
+        "frame": 87,
+        "index": 0,
+        "card": {
+          "variant": "new",
+          "tier": 0,
+          "ability_id": "thunder_clap",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        }
+      },
+      {
+        "frame": 130,
+        "index": 2,
+        "card": {
+          "variant": "upgrade",
+          "tier": 1,
+          "ability_id": "thunder_clap",
+          "owned_index": 1,
+          "kinds": [
+            0
+          ],
+          "gold": 0
+        }
+      },
+      {
+        "frame": 214,
+        "index": 1,
+        "card": {
+          "variant": "upgrade",
+          "tier": 0,
+          "ability_id": "cleave",
+          "owned_index": 0,
+          "kinds": [
+            1
+          ],
+          "gold": 0
+        }
+      },
+      {
+        "frame": 379,
+        "index": 0,
+        "card": {
+          "variant": "new",
+          "tier": 1,
+          "ability_id": "battle_shout",
+          "owned_index": 0,
+          "kinds": [],
+          "gold": 0
+        }
+      }
+    ],
+    "battle_owned80_hex": "346f5300010000000000003f0000803f7b146e3f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+    "pre_component_boundary": "pending_selected_ability",
+    "input_kind": "deterministic independent opening/gameplay replay, never original observation",
+    "isolation": "Direct922 retains full learned vector;1076 case retains selected Battle Shout80 and suppresses other casts with absent learned slots/infinite genuine basic/prelude timers."
+  },
+  "actual379_is_independent_input_not379_original_acceptance": true,
+  "isolated1076_first_cast_on_sixth_f32_tick": true,
+  "full23_stats_compared": true,
+  "all_80B_owned_and_basic_bytes_compared": true,
+  "unknown_mask_scope": "Only original input-declared type12 +12/+16 and newkind8 +16; exact stable filter/expiry remapping independently reconstructed.",
+  "process": {
+    "pid": 30375,
+    "pgid": 30375,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 5.112514916996588,
+    "launcher_error": null
+  },
+  "host_calls": 0,
+  "stack_all_restored": true,
+  "model_or_original_or_checker_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "pending": [
+    "1202 aura/display keys and packet encoding",
+    "nonempty external/proc sources",
+    "Whole379-frame/400-frame original acceptance is separate evidence"
+  ],
+  "elapsed_seconds": 10.302597665999201,
+  "static_image_reads_sha256": "dcb278ab24781bc5cadcfca417b84341a4e822ca0ce6fddbfe5c993c6fa66dd3",
+  "review_receipt": "evidence/battle-shout135-independent-review-20261101T173350.218015Z/review.json",
+  "review_receipt_sha256": "7f035a8d9bc7ceca0a936ba067e9a9a7cc9eddb61383ea872f4ed8e38529ed26",
+  "primary_report": "reports/2026-11-02-battle-shout0135.md"
+}

@@ -1,0 +1,316 @@
+{
+  "status": "passed_read_only_codec_review",
+  "scope": "Read-only small-file CAS codec review, not game/model differential",
+  "evidence": "evidence/opening-cas-codec135-review-20261101T173151.174099Z",
+  "review_sha256": "5e27cf0fd619a8a5c315ac00bb4e8d803ba17c89ca8e5ba9af19c42a7b543839",
+  "sources": {
+    "scripts/check_opening_combat135_cas_codec.py": "32da4cf9dfc724029e46d5580bf96d6656c2b0c3f674a0ae534556748dd36bf0",
+    "scripts/opening_combat135_cas.py": "16ca91ea52fdb107988d2f9c0c7b8d3b069d21df13f5a1b6091dd8ddb1199049",
+    "scripts/opening_combat135_cas.mjs": "179e9044f935f6442d9f3a32ba15a881f1ff98b388f35dabb9d6892ffd0ae927",
+    "scripts/run_opening_combat135_cas_oracle.mjs": "77fca2532d920ab720b28c7c8faf143f7a679564fe00a4e784f51cc80088424d"
+  },
+  "sources_unchanged_during_review": true,
+  "all_original_inputs_unchanged_during_review": true,
+  "same_checker_and_inputs_as_preserved_failed_batch": true,
+  "positive": {
+    "pilot": {
+      "records": 19,
+      "logical_bytes": 1408160,
+      "logical_sha256": "ecbde62106b836fd20c217a1cedb9f4b1c05290dfc1a37a7fc530dff008ba49f",
+      "logical_values_equal_external_truth": true,
+      "per_line_SHA_equal_external_truth": true,
+      "compressed_and_index_SHA_checked_independently": true,
+      "root_decoder_checks": {
+        "records": 19,
+        "logical_bytes": 1408160,
+        "logical_sha256": "ecbde62106b836fd20c217a1cedb9f4b1c05290dfc1a37a7fc530dff008ba49f",
+        "maximum_logical_record_bytes": 103531,
+        "unique_blobs": 159,
+        "unique_blob_bytes": 250146,
+        "maximum_blob_bytes": 18657,
+        "index_uncompressed_bytes": 6031,
+        "index_uncompressed_sha256": "7c26b7208019bf18b63b3f3b560ed6560d8dcc9467c4be033e765472d98b5563",
+        "maximum_index_record_bytes": 498,
+        "maximum_blob_index_record_bytes": 8119,
+        "total_logical_blob_references": 1646,
+        "blob_index_bytes": 74085,
+        "blob_index_sha256": "bb4266070f6c41ec9b3d18fe7bcbb280e8c2b478ca1e81a4717ab57a61fbfb20",
+        "blob_references_bytes": 26405,
+        "blob_references_sha256": "4c27af5004270cfa31a28c80c9edd1e23402e7f08e33084f6a7c8cd21a4774a7",
+        "all_blobs_and_occurrences_verified": true,
+        "decoder_cache_bytes": 250146
+      }
+    },
+    "saved_Node": {
+      "records": 2,
+      "logical_bytes": 74143,
+      "logical_sha256": "1e50b3ccf4d15b3c922a6e9a83c7ff257e2740c4e8f76125a754bdd5d222ce72",
+      "logical_values_equal_external_truth": true,
+      "per_line_SHA_equal_external_truth": true,
+      "compressed_and_index_SHA_checked_independently": true,
+      "root_decoder_checks": {
+        "records": 2,
+        "logical_bytes": 74143,
+        "logical_sha256": "1e50b3ccf4d15b3c922a6e9a83c7ff257e2740c4e8f76125a754bdd5d222ce72",
+        "maximum_logical_record_bytes": 37078,
+        "unique_blobs": 4,
+        "unique_blob_bytes": 5652,
+        "maximum_blob_bytes": 4098,
+        "index_uncompressed_bytes": 619,
+        "index_uncompressed_sha256": "0f979464f4008f0bf0a5444c75b3ea70b34839327039f931c7cf668f8892060e",
+        "maximum_index_record_bytes": 310,
+        "maximum_blob_index_record_bytes": 418,
+        "total_logical_blob_references": 22,
+        "blob_index_bytes": 1373,
+        "blob_index_sha256": "f39c0bab18666ec63b2761f2173fc983f2ac2199e409003b5440faefba072e5d",
+        "blob_references_bytes": 658,
+        "blob_references_sha256": "af57aba3ac9b7a29a4aaf4eb08b402229613899f5e7a45cf947f2580bd00465b",
+        "all_blobs_and_occurrences_verified": true,
+        "decoder_cache_bytes": 5652
+      }
+    }
+  },
+  "negative_count": 26,
+  "rejected_count": 26,
+  "unexpected_acceptances": [],
+  "negative_cases": [
+    {
+      "name": "corrupt_blob_same_length",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS blob SHA mismatch",
+      "seconds": 0.01063258400245104
+    },
+    {
+      "name": "missing_blob",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS missing/unindexed blob files",
+      "seconds": 0.01463320899347309
+    },
+    {
+      "name": "wrong_blob_declared_bytes",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS reference metadata mismatch",
+      "seconds": 0.0028755410021403804
+    },
+    {
+      "name": "wrong_reference_bytes",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS reference byte mismatch",
+      "seconds": 0.004048957998747937
+    },
+    {
+      "name": "legal_blob_wrong_cross_reference",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS logical identity",
+      "seconds": 0.2397542910039192
+    },
+    {
+      "name": "duplicate_blob_index_identity",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS duplicate/invalid blob SHA",
+      "seconds": 0.0004554999904939905
+    },
+    {
+      "name": "wrong_child_count_with_updated_metadata_SHA",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS actual child edges differ from index",
+      "seconds": 0.006176916998811066
+    },
+    {
+      "name": "index_self_cycle",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS child must precede parent, once",
+      "seconds": 0.0006160839984659106
+    },
+    {
+      "name": "index_forward_dependency",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS child must precede parent, once",
+      "seconds": 0.00029075000202283263
+    },
+    {
+      "name": "relative_path_traversal",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS blob path",
+      "seconds": 0.0003839999990304932
+    },
+    {
+      "name": "single_blob_symlink_escape",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS nonregular or symlink blob",
+      "seconds": 0.0023232919920701534
+    },
+    {
+      "name": "blob_index_symlink_escape",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS blob index escaped experiment",
+      "seconds": 0.00021166700753383338
+    },
+    {
+      "name": "reference_index_symlink_escape",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS reference metadata escaped experiment",
+      "seconds": 0.0010934159945463762
+    },
+    {
+      "name": "whole_blob_directory_symlink_escape",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS blob directory escaped experiment",
+      "seconds": 8.179100404959172e-05
+    },
+    {
+      "name": "duplicate_envelope_record_index",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS envelope order/protocol",
+      "seconds": 0.0047110419982345775
+    },
+    {
+      "name": "swapped_envelopes_original_indices",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS envelope order/protocol",
+      "seconds": 0.0043288339948048815
+    },
+    {
+      "name": "prior_equal_size_record_replayed_late_valid_blobs",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS runtime differs: logical_sha256",
+      "seconds": 0.09564220800530165
+    },
+    {
+      "name": "wrong_logical_line_SHA",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS reconstructed logical line mismatch",
+      "seconds": 0.008439125012955628
+    },
+    {
+      "name": "wrong_runtime_logical_SHA",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS runtime differs: logical_sha256",
+      "seconds": 0.1665120840043528
+    },
+    {
+      "name": "wrong_runtime_record_count",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS runtime differs: records",
+      "seconds": 0.13857512500544544
+    },
+    {
+      "name": "envelope_bool_id_false_not_integer0",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS id must be a nonnegative safe integer, never bool",
+      "seconds": 0.007519542006775737
+    },
+    {
+      "name": "logical_same_envelope_lexeme_changed_index_SHA",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS runtime differs: index_uncompressed_bytes",
+      "seconds": 0.0903454170038458
+    },
+    {
+      "name": "reference_reserved_shape_extra_key",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS reference shape",
+      "seconds": 0.003977958011091687
+    },
+    {
+      "name": "missing_stream_line_newline",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS stream record budget",
+      "seconds": 0.0045293340081116185
+    },
+    {
+      "name": "unindexed_blob_file",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS missing/unindexed blob files",
+      "seconds": 0.004243207993567921
+    },
+    {
+      "name": "wrong_occurrence_count_with_updated_metadata_SHA",
+      "rejected": true,
+      "error_class": "CaptureCAS135Error",
+      "reason": "CAS occurrence metadata mismatch",
+      "seconds": 0.08334716699027922
+    }
+  ],
+  "corrected_contracts": [
+    "Reject symlink or escape at cas-blobs directory, blob-index, references metadata and individual blob boundaries.",
+    "Require envelope id to be a nonnegative safe integer, never bool, and record_kind to be a string; logical identity remains strict.",
+    "Accumulate raw envelope stream bytes/SHA/maximum record and require runtime agreement in finish."
+  ],
+  "static_reading_boundaries": [
+    "Regex UTF16 surrogate rejection matches the old per-character exclusion; saved UTF8 sample still round-trips.",
+    "This is a bounded closed-directory fixture contract review, not a concurrent filesystem race adversary audit.",
+    "The outer driver separately validates gzip/index SHA; negative decoder acceptance in the old batch does not establish damaged original captures."
+  ],
+  "preserved_failed_batch": {
+    "evidence": "evidence/opening-cas-codec135-review-20261101T172237.434592Z",
+    "review_sha256": "5a84f1d120a1ee2e949b51d671f38ac892bd2fe832809c29a7770104dcc9e503",
+    "decoder_sha256": "f64afeb450c25e856608ae8c7151aa1be048d980478a1e6b8dacf793a450c33c",
+    "negative_count": 26,
+    "rejected_count": 21,
+    "unexpected_acceptances": [
+      "blob_index_symlink_escape",
+      "reference_index_symlink_escape",
+      "whole_blob_directory_symlink_escape",
+      "envelope_bool_id_false_not_integer0",
+      "logical_same_envelope_lexeme_changed_index_SHA"
+    ],
+    "owned_process": {
+      "pid": 50471,
+      "pgid": 50471,
+      "exit_code": 1,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "deadline_seconds": 60,
+      "seconds": 6.704942124997615,
+      "error": null
+    },
+    "reason": "Historical failed contract review preserved; not added to final negative count."
+  },
+  "copied_small_data_bytes": 9116536,
+  "large_WASM_copied": false,
+  "owned_process": {
+    "pid": 68084,
+    "pgid": 68084,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "deadline_seconds": 60,
+    "seconds": 4.434155292008654,
+    "error": null
+  },
+  "new_original_cases": 0,
+  "new_model_validation_cases": 0,
+  "new_full880_frames": 0,
+  "limitations": [
+    "Does not validate a400/500-frame gameplay projection or recover any new game logic.",
+    "Index cycle/forward-edge cases test malformed metadata rejection; a cryptographically self-consistent content-hash cycle was not fabricated.",
+    "Saved Node codec rejects are independently reread; this checker never reruns their generator or any original."
+  ],
+  "final_pass_claimed": true
+}
