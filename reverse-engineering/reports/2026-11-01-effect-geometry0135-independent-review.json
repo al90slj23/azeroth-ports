@@ -1,0 +1,123 @@
+{
+  "kind": "effect-geometry",
+  "receipt_sha256": "94cbbfaf8d629037ac4739b334e1b6eda6642f4485467218d29a4d66508177b8",
+  "receipt": "evidence/full0135-oracle-20261101T080844.947484Z/effect-geometry135-comparison.json",
+  "sources": 28,
+  "production_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ai135.py",
+    "reconstruction/core_spec/ai135_data.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/effect_geometry135.py",
+    "reconstruction/core_spec/enemy_scaling.py",
+    "reconstruction/core_spec/incoming134.py",
+    "reconstruction/core_spec/incoming135.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/spawn135.py",
+    "reconstruction/core_spec/spawn135_data.py",
+    "reconstruction/core_spec/spawn_boss135.py",
+    "reconstruction/core_spec/spawn_boss135_data.py",
+    "reconstruction/core_spec/spawn_geometry135.py",
+    "reconstruction/core_spec/spawn_heading135.py",
+    "reconstruction/core_spec/spawn_math135.py",
+    "reconstruction/core_spec/spawn_position135.py",
+    "reconstruction/core_spec/spawn_position135_data.py",
+    "reconstruction/core_spec/spawn_position_motion135.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": {},
+  "roles": [
+    {
+      "role": "effect_tick",
+      "index": 915,
+      "export": "research135_effect_tick",
+      "type_index": 37,
+      "parameters_hex": "7f7d",
+      "results_hex": "",
+      "body_start": 2421302,
+      "body_end": 2442154,
+      "body_bytes": 20852,
+      "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6"
+    },
+    {
+      "role": "npc_action",
+      "index": 910,
+      "export": "research135_npc_action",
+      "type_index": 1,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 2283656,
+      "body_end": 2305246,
+      "body_bytes": 21590,
+      "body_sha256": "2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae"
+    },
+    {
+      "role": "spawn_boss",
+      "index": 2785,
+      "export": "research135_spawn_boss",
+      "type_index": 15,
+      "parameters_hex": "7f7f7d",
+      "results_hex": "",
+      "body_start": 16655245,
+      "body_end": 16658986,
+      "body_bytes": 3741,
+      "body_sha256": "2b8d07e32cdde3d22724bb7f1992812be8cc165d22c5092cff2f64eed2ef0a76"
+    }
+  ],
+  "cases": 390,
+  "normal_completed_cases": 277,
+  "expected_host_denial_prefix_cases": 113,
+  "totals": {
+    "strict_storage_bytes": 22128144,
+    "initial_boss_JSON_prefixes": 390,
+    "stages": 2883,
+    "unit_bytes_compared": 1222392,
+    "scratch_observation_bytes": 13296,
+    "nonzero_scratch_bytes": 3324,
+    "hp_changed_prefixes": 98
+  },
+  "packet_delta_opcodes": {
+    "221": 522,
+    "305": 522,
+    "306": 477
+  },
+  "initial_boss_packet_prefixes": {
+    "169": 390,
+    "150": 1170,
+    "722": 649
+  },
+  "effect_json_events": {
+    "hz": 498,
+    "hzt": 1224,
+    "hzend": 477
+  },
+  "denied_host_calls": {
+    "./wenilla_bg.js.__wbg_static_accessor_SELF_4c59f6c7ea29a144": 113
+  },
+  "guards": 11,
+  "fixture_regeneration": "strict exact all390 fromfrozenproduction",
+  "limitations": [
+    "Only three genuine raw9 Boss declarations/normal0,type0,shape2; actual2785 initializes Boss then actual910 creates every active120 record, never injected synthetic120.",
+    "Full120 storage strict except exact4 copied unspecified scratch bytes+20..23 per produced physical slot; actual bytes preserved separately, never read to generate expected. Slot+4..7/+119 strict.",
+    "Unit248 allocator pointer canonicalized; all424 other bytes and full ability timers strict. Finite flat world and stationary player flags0; remote ownership, terrain/collision/navigation unresolved.",
+    "Normal miss/phaseguard completion is distinct from phase1 accepted incoming: real1073 writes scalar HP/shield/G992 then4546 tries real Spell.dbc through SELF, denied by host. Expected host-denial prefixes stop immediately and never count as complete915 success or resumable game state.",
+    "Nonfatal1073 scalar/shield/phase only, empty buffs/modifiers/item effects/other incoming producers; registry/history/aura and wire serialization remain pending.221/305/306 delta opcode and hz/hzend/hzt type/id/kind/shape order compared; full actual payload retained separately.",
+    "No app start/full880/gameflow/network/saves; no claim of full915 family coverage or ordinary NPC910 consumer closure.",
+    "113 denied prefixes and98HPchanges are not complete/resumable915 entries.",
+    "Complete wirebytes/JSON strings are sidecars;only exactopcodes andtype/id/kind/shape/order plus gameplayrecordgeometry compared.",
+    "Initial2785 banner/packetprefix is preserved byteforbyte acrosslaterstages;its wirecodec/JSON is not a newindependentgeometry assertion."
+  ],
+  "status": "passed_scoped_independent_read_only_review",
+  "reviewer_sha256": "4522742f2b1091e1cb1996a4c2f042e3383d7f092ec73da71a2546d3eb9e1546",
+  "original_runtime_reexecuted": false,
+  "author_sources_modified": false,
+  "review_path": "evidence/effect-geometry0135-independent-review-20261101T082802.603501Z/review.json",
+  "review_sha256": "9b0f1a3bd7332c4f571c07250241ddfd79081784cdac5aa5f775c61d0d326a3f",
+  "reviewer_source_snapshot": "evidence/effect-geometry0135-independent-review-20261101T082802.603501Z/reviewer-source.py",
+  "reviewer_history": {
+    "path": "evidence/effect-geometry0135-independent-review-20261101T082532.204492Z/reviewer-source.py",
+    "note": "First reviewer version stopped on retained initial2785packet/bannerprefix;updatedreviewer handlesit as preserved baseline;noauthorchange/nooriginalrerun."
+  }
+}

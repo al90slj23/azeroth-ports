@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 
 export const original135SHA = 'c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2';
 export const digest = value => createHash('sha256').update(value).digest('hex');
-const roleIndices = Object.freeze({"select_ability":1072,"recalculate_stats":1512,"finish_selection":4600,"resolve_owned_ability":22287,"auto_cast":916,"cast":922,"damage":914,"gain_experience":4630,"incoming_damage":1073,"spawn_pickup":1417,"collect_pickups":2862,"attract_all_xp":21779,"generate_choices":2159,"upgrade_value":25368,"tick":880,"command":1371,"effective_armor":27375,"spawn_tick":947,"special_tick":2376,"choose_spawn":20272,"spawn_normal":5736,"spawn_boss":2785,"spawn_position":8751,"spawn_decay":26361,"process_hits":1754,"query_targets":27562,"queue_hit":8295,"atan2_heading":42475,"atan_heading":34787,"update_units":921,"owned_tick":1076,"player_tick":2088,"proc_event":984,"proc_gate":8157,"sin_angle":11428,"cos_angle":11503,"initial_game":1560,"begin_run":1089,"move_player":2328,"area_tick":3757,"effect_tick":915});
+const roleIndices = Object.freeze({"select_ability":1072,"recalculate_stats":1512,"finish_selection":4600,"resolve_owned_ability":22287,"auto_cast":916,"cast":922,"damage":914,"gain_experience":4630,"incoming_damage":1073,"spawn_pickup":1417,"collect_pickups":2862,"attract_all_xp":21779,"generate_choices":2159,"upgrade_value":25368,"tick":880,"command":1371,"effective_armor":27375,"spawn_tick":947,"special_tick":2376,"choose_spawn":20272,"spawn_normal":5736,"spawn_boss":2785,"spawn_position":8751,"spawn_decay":26361,"process_hits":1754,"query_targets":27562,"queue_hit":8295,"atan2_heading":42475,"atan_heading":34787,"update_units":921,"owned_tick":1076,"player_tick":2088,"proc_event":984,"proc_gate":8157,"sin_angle":11428,"cos_angle":11503,"initial_game":1560,"begin_run":1089,"move_player":2328,"area_tick":3757,"effect_tick":915,"owned_effect_tick":975,"deadline_tick":38007,"secondary_hits":2602,"claim_tick":2573,"terminal_tick":49037,"npc_action":910,"world_height":29631,"terrain_height":18670,"chunk_height":5795,"tile_height":46295,"adt_parse":1446});
 const originalPath = new URL('../originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm',import.meta.url);
 function leb(raw,p) {
   let n=0,shift=0;
@@ -56,7 +56,7 @@ export async function prepareFull135(directory,requiredRoles) {
     if(!(memory instanceof WebAssembly.Memory)||typeof ex.__wbindgen_malloc!=='function'
        ||Object.values(roles).some(x=>typeof x!=='function'))throw new Error('Runtime role surface differs');
     return {roles,memory,hostCalls,allocate(size,alignment=8) {
-      if(!Number.isInteger(size)||size<1||size>1048576||![1,2,4,8,16].includes(alignment))throw new Error('Allocation input outside fixture budget');
+      if(!Number.isInteger(size)||size<1||size>4194304||![1,2,4,8,16].includes(alignment))throw new Error('Allocation input outside fixture budget');
       const p=ex.__wbindgen_malloc(size,alignment)>>>0;
       if(!p||p+size>memory.buffer.byteLength||memory.buffer.byteLength>32*1024*1024)throw new Error('Allocation outside memory budget');
       new Uint8Array(memory.buffer,p,size).fill(0);return p;

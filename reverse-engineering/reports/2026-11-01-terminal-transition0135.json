@@ -1,0 +1,261 @@
+{
+  "title": "0.135.1 true terminal49037 with complete ordered stop and victory wire data",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "passed_scoped_true_terminal_differential",
+  "comparison": "evidence/full0135-oracle-20261101T081314.600878Z/terminal-transition135-comparison.json",
+  "comparison_sha256": "59e37d45759f0ab9252b984534db2c5c516cd1d695ee5b9674430134a8ac4f5c",
+  "cases": 416,
+  "terminal_stages": 832,
+  "mismatch_cases": 0,
+  "stats": {
+    "true_terminal_cases": 315,
+    "nonempty_input_cases": 213,
+    "first_stage_packet_opcodes": {
+      "232": 315,
+      "221": 355,
+      "226": 19
+    },
+    "constructor_speed226_prefixes": 19,
+    "full_backing_bytes_compared": 2451456,
+    "first_stage_packet_wire_bytes_compared": 10608,
+    "first_stage_notification_bytes_compared": 71417,
+    "game_bytes_compared_per_stage": 2592
+  },
+  "body_guards": [
+    {
+      "index": 1560,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "body_start": 10536186,
+      "body_end": 10543428
+    },
+    {
+      "index": 49037,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "e972d7925d7cdeb7b3fa81cae73ff0ace5e819bb7c0277259669bcae9062efc7",
+      "body_start": 64576917,
+      "body_end": 64577174
+    },
+    {
+      "index": 17119,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "33b9a485e73d8f0e4c9e13cb1dce1b6ce3d022be1cf2906cadfd5978349bfad6",
+      "body_start": 41428570,
+      "body_end": 41429332
+    },
+    {
+      "index": 17217,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "904cef82c034dd51f03386943cec632629467cb54dbc6d6c332707faf3acb8df",
+      "body_start": 41518581,
+      "body_end": 41519323
+    },
+    {
+      "index": 16340,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "4e0bc9ee76b1df145b4b2a4fe4f6ae78aca3b17645515d4336a3ef30941982a7",
+      "body_start": 40530867,
+      "body_end": 40531645
+    },
+    {
+      "index": 54810,
+      "parameters_hex": "7f7e7f",
+      "results_hex": "",
+      "body_sha256": "a85f1112e21481fb61f4dcd79d14f458954212c8897c474252cb2f41f15d84fd",
+      "body_start": 66769006,
+      "body_end": 66769193
+    },
+    {
+      "index": 1938,
+      "parameters_hex": "7f7f7f7f",
+      "results_hex": "",
+      "body_sha256": "19b29713e276bb6aa10691160a2b478209278b4601136d9697409499d0457970",
+      "body_start": 12791913,
+      "body_end": 12795659
+    },
+    {
+      "index": 11735,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_sha256": "6385fb20ffe11d810bbf3a8b0eeaba6322e6705eb09767aeb7ade32594dccc1f",
+      "body_start": 35266695,
+      "body_end": 35267694
+    },
+    {
+      "index": 52241,
+      "parameters_hex": "7f7c",
+      "results_hex": "",
+      "body_sha256": "66e7def57750d98b02891599645deb68ca5055aef2f8c4cc02909f1244444504",
+      "body_start": 65912874,
+      "body_end": 65913095
+    },
+    {
+      "index": 44448,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_sha256": "66705d668a2d7aed4aef6d8672ee48319af5d6890cc6ce4cde54f5ab0f636c3d",
+      "body_start": 62695968,
+      "body_end": 62696240
+    },
+    {
+      "index": 15916,
+      "parameters_hex": "7e7f",
+      "results_hex": "",
+      "body_sha256": "b616d3b4ee6503812fecd72b255821cce06871a83c48c7dbe08225b0d9147c12",
+      "body_start": 40026159,
+      "body_end": 40026936
+    },
+    {
+      "index": 45845,
+      "parameters_hex": "7f7e7f7f",
+      "results_hex": "",
+      "body_sha256": "c6502e4033836dcb50eb72024a9ae6418ccbd3c93c72270f07da8eb6a35aa947",
+      "body_start": 63248366,
+      "body_end": 63248630
+    },
+    {
+      "index": 28732,
+      "parameters_hex": "7f7f",
+      "results_hex": "",
+      "body_sha256": "2e2b7e5aaf6fe2a9b3a29695e5bb0cd321c01e7417cb23683e488ce648f7b668",
+      "body_start": 52722223,
+      "body_end": 52722663
+    },
+    {
+      "index": 54802,
+      "parameters_hex": "7f7f7f7f7f",
+      "results_hex": "",
+      "body_sha256": "037e8ba64a2391ab1931c98c910d5d751ec39201d39215a315834291c0281307",
+      "body_start": 66765818,
+      "body_end": 66765993
+    },
+    {
+      "index": 19964,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_sha256": "8c52101d86b1c5a8108f9031702ecc7f99bc694533e8e0f194f36552f782e1e1",
+      "body_start": 44354873,
+      "body_end": 44355521
+    },
+    {
+      "index": 29631,
+      "parameters_hex": "7f7f7d7d",
+      "results_hex": "",
+      "body_sha256": "26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650",
+      "body_start": 53548889,
+      "body_end": 53549297
+    },
+    {
+      "index": 23181,
+      "parameters_hex": "7f7f7d7d",
+      "results_hex": "",
+      "body_sha256": "a46874e377eac8590d923753e6a5e26289b8388144a0241b6b29cc1f77640666",
+      "body_start": 47477583,
+      "body_end": 47478077
+    },
+    {
+      "index": 1512,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+      "body_start": 10196165,
+      "body_end": 10200921
+    },
+    {
+      "index": 48066,
+      "parameters_hex": "7f7e7f7d",
+      "results_hex": "",
+      "body_sha256": "a24384b59eb62926b3c857a40f0200d42b2a096bc754deb21614088e8ad21585",
+      "body_start": 64204905,
+      "body_end": 64205152
+    }
+  ],
+  "source_sha256": {
+    "scripts/check_terminal_transition135.py": "178922aff122a71d62d0772c849cced568537c2ce913912b695a05dbe061f613",
+    "scripts/run_terminal_transition135_oracle.mjs": "0c1ddcacec60705c83ea5c8805b30f996c78f7623f7c1d7f803af4087f7d7fce",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "53d18f34e2f6ce0ad93da5c655aeefd94ab265a4c9369f2ef8f46531c36aee73",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/terminal_transition135.py": "bc20eed7dbf4bd1e298ec5b1b6150c05de11a64b448a269e22e533f5906fc58b",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "runtime": {
+    "cases": 416,
+    "calls": 1248,
+    "fresh_instances": 52,
+    "max_memory_bytes": 20578304,
+    "original_functions": [
+      1560,
+      49037
+    ],
+    "all_callees_unchanged": true,
+    "denied_imports": 878,
+    "host_calls": 0,
+    "memory_page_cap": 512,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "rejected_cases": 5,
+  "static_evidence": "evidence/terminal-transition0135-static-20261101T075941.450411Z",
+  "labels_sha256": "4ab6b5bda29a498b530f708a1e19ee01395b941c7a0e270026ab81a66cc74587",
+  "ordered_behavior": [
+    "Setphase2587=5 beforestophelpers",
+    "17119 stop movingmarker0 NPC424 records andemit221 inrecordorder",
+    "17217 stop auxiliary112 andemit221 inrecordorder",
+    "16340 stop still-movingclaims88 andemit221 inrecordorder",
+    "54810 emit232 packedsourceGUID+oldactionsequence;1644++",
+    "1938 serializeentirevictorynotification;append1892vector"
+  ],
+  "input_domain": [
+    "Real1560 empty-profile constructor isexecuted everycase",
+    "Explicit finiteprocessedmovement in absentterrain/collision;flatenabled andfallbackheight bothcovered",
+    "OriginalEnglishfallback labels explicitlyrequired;all9classes8races12zonescompared",
+    "Completeu32stats,f64damage/taken,UTF8/controlhero,leftbyte,sequencewrap,nonfiniteJSONnumber handling",
+    "No clearedconstructorpackets: original1512 speedchange→48066 prefix226 independentlypredicted andpreserved"
+  ],
+  "historical_evidence": [
+    {
+      "path": "evidence/full0135-oracle-20261101T080227.520452Z/terminal-transition135-probe-receipt.json",
+      "kind": "observational3constructors/6terminals;notindependentmodelacceptance;oldrunnerretained"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T080958.210753Z",
+      "kind": "preservedfailedfull:assertioncaughtrealrace4constructor226beforeterminal;notaccepted;noqueuecleared"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T080939.214844Z/terminal-transition135-comparison.json",
+      "kind": "historical3casepilot;notaddedtofinal416"
+    }
+  ],
+  "old_initial151_evidence_upgraded": false,
+  "old_frame573_receipt_modified": false,
+  "full880_restored": false,
+  "real1089_completed": false,
+  "limitations": [
+    "True49037 with full three movement-stop consumers,complete221/232 payloads/capacities and1938victory notification including exactcapacity; default Englishfallback labels only.",
+    "Actual1560 constructs state; only declared control,summaryandvector fixtures are patched; original empty sourcecounts are assertedbeforepatch and never supplied asunverifiedabsence.",
+    "Processed moving geometry requires explicit absentterrain/collision and finite words; genuine terrainadapter andlocalized notifications remainunknown.",
+    "All2592 gamebytes compared aschanges, only knownpacket/notification heapaddresswords normalized; physicalraw preserved.",
+    "No appstart,account/world producer,1089 orfull880 completion isclaimed."
+  ]
+}

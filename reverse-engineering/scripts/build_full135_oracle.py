@@ -60,7 +60,18 @@ ROLES = {'select_ability': (1072, b'\x7f\x7f', b''),
  'begin_run': (1089, b'\x7f', b''),
  'move_player': (2328, b'\x7f\x7f}', b'\x7f'),
  'area_tick': (3757, b'\x7f', b''),
- 'effect_tick': (915, b'\x7f}', b'')}
+ 'effect_tick': (915, b'\x7f}', b''),
+ 'owned_effect_tick': (975, b'\x7f}', b''),
+ 'deadline_tick': (38007, b'\x7f', b''),
+ 'secondary_hits': (2602, b'\x7f', b''),
+ 'claim_tick': (2573, b'\x7f', b''),
+ 'terminal_tick': (49037, b'\x7f', b''),
+ 'npc_action': (910, b'\x7f\x7f\x7f', b''),
+ 'world_height': (29631, b'\x7f\x7f}}', b''),
+ 'terrain_height': (18670, b'\x7f\x7f}}', b''),
+ 'chunk_height': (5795, b'\x7f\x7f\x7f', b''),
+ 'tile_height': (46295, b'\x7f\x7f\x7f\x7f', b''),
+ 'adt_parse': (1446, b'\x7f\x7f\x7f', b'')}
 
 APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01',
  'recalculate_stats': '31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748',
@@ -102,7 +113,18 @@ APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273d
  'begin_run': '08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb',
  'move_player': '8e456fb160c30e4c4275670d2f4c1d9a6691e4be791905364ea5ff34b008b84b',
  'area_tick': 'e976ee48b3f0ad4117bfa98c81538fa88bf4607c4a9ca15c1a5a040c1c4477f5',
- 'effect_tick': '7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6'}
+ 'effect_tick': '7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6',
+ 'owned_effect_tick': '11ffc7a65f7f5703fa3bacca09f3a4e2614b610f74bc387e5e28ad6c3a6cdb7c',
+ 'deadline_tick': '970c6290bedabc686aa99221938e0fecb504442cb304bc808f9fad371808cd2b',
+ 'secondary_hits': 'badd383731d42ec76e01ba1d5b28e1da341a8a253767126101dec27b50d76b11',
+ 'claim_tick': '1d896b573277b55fa03a9fbeef1ae5e61c3e3997aea5fca6fc836abaaab89139',
+ 'terminal_tick': 'e972d7925d7cdeb7b3fa81cae73ff0ace5e819bb7c0277259669bcae9062efc7',
+ 'npc_action': '2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae',
+ 'world_height': '26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650',
+ 'terrain_height': 'e69b2fbf238393d43be83153dbbfa5ff310497d104691c829438e18be91cd0e5',
+ 'chunk_height': '36a4eecc46772f5f3b8995817711e8a9d136c86e1d72297b60a7c5ff3305503d',
+ 'tile_height': '97f7b0aa2a31b0a8c3b7d061c1b8f771bc1aed842697bc0279d13b4f1e6a0ed3',
+ 'adt_parse': 'dd4062cff80baa66cf84942dffbcc41a5e9a8a865de24f5a8cd5f7ffa0796c9a'}
 
 def require(condition, message):
     if not condition:

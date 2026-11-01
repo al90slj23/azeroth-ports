@@ -9,8 +9,8 @@
     "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
     "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
     "migration_report": "../reports/2026-11-01-migration0135.json",
-    "approved_research_roles": 41,
-    "latest_same_state_report": "../reports/2026-11-01-headless-effects0135.json"
+    "approved_research_roles": 52,
+    "latest_same_state_report": "../reports/2026-11-01-headless-tail0135.json"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -471,18 +471,17 @@
     }
   ],
   "full_game_remaining": [
-    "upstream account/character/profile producers, initial App entropy and real1089/2328 phase entry blocked atSELF/data",
-    "Full880needs916/975/38007/2602/2573/49037,2376specialeventsandfront/party/terminalorchestration;listnotexhaustive. Active915120/910andremaining3757familiespending.",
-    "Current8seedidle915actual-observedandindependentlymodeled:clock0,56/120cap0ptr8len0,1644=1,2356=0,416tag0. Active56component500separate;active56/120/910headlesscontinuationunknown. Inactive420..436/rawptr/facing90472wordsobservedonly,notpredictedzero.",
-    "remaining timed/special generation, ranged/Boss/pet AI, real terrain/navigation",
-    "Remaining skill effects/gates;unsupported selected abilities are retained, then nextframe stops before executing an unimplementedcast.",
-    "nonfatal context0kind27 is recovered, but fatal loot/post-proc and other event producers/order remain unknown",
-    "nonordinary drops, physical entity/aura/account/message payloads and unmodeled keyed state",
-    "latest asset completeness, resource loaders, M2/BLP/terrain/audio rendering",
-    "saves and terminal rewards/revival",
-    "UI and input",
-    "all multiplayer behavior and cross-platform delivery",
-    "independent complete-run acceptance; controlledphase1/zero-initial-storage inputs are not real boot"
+    "upstreamaccount/profileandtrue1089/2328worldentry+4NPC/2kind2;realDBCbrowserparsealoneisnotwholeentry",
+    "full880front/party/orchestrationandactive916/975execution11/2602/2573/2376;14guardedtailentriesarenotcomplete880",
+    "active56/120/ordinary910headlesscontinuation;other915families;geometry390277normal113hostprefixfrozen",
+    "remainingtimedgeneration/rangedBossPetAI/collision/navigation/cacheproduction",
+    "unsupportedselectedskillsretainedandstoppedbeforeunimplementedcast",
+    "nonfatalcontext0kind27separate;fatalpostlootprocs/retaliation/deathrevivalstillunknown",
+    "postDBChistory48/sourcecontainers/keyedHPfullproducersandwiremessages",
+    "latestassetcompleteness/M2BLP/audioandworldrenderer",
+    "saves/terminalrewards/phase4deathrecap/otherlocalizations",
+    "UI/input/allmultiplayer/crossplatformdelivery",
+    "independentcomplete-runacceptance;controlledphase1/zerostorageremainresearchinputs"
   ],
   "native_windows_execution_validated": false,
   "installed_apps_or_saves_modified": false,
@@ -1181,12 +1180,12 @@
       "validated_web_build": "0898d5e3",
       "cases": 8,
       "mismatches": 0,
-      "report": "../reports/2026-11-01-headless-effects0135.json",
-      "domain": "Real1560;controlledphase1+128zeroedunit424/area88slots;sharedHP/RNG/counter2088->1754->3757->actualidle915->921->2862->947/1072;fixedunchangedfirstupgradeelsefirstpolicy",
+      "report": "../reports/2026-11-01-headless-tail0135.json",
+      "domain": "Real1560;controlledphase1+128zeroedunit424/area88slots;actual14single-state-tail2088/916/975/1754/3757/915/38007/2602/921/2862/2573/947/2376/49037 plus1072;fixedfirstupgradeelsefirstpolicy",
       "frames": 1614,
-      "stages": 11309,
+      "stages": 22607,
       "selections": 11,
-      "original_entry_calls": 11317,
+      "original_entry_calls": 22615,
       "boundaries": {
         "pending_selected_ability": 6,
         "frame_budget": 2
@@ -1201,29 +1200,28 @@
         1176
       ],
       "unmodeled_keyed_state_retained": true,
-      "standalone_receipt": "../evidence/headless-effects135-standalone-20261101T072549.178656Z/receipt.json",
+      "standalone_receipt": "../evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json",
       "remaining": [
-        "remaining880entries916/975/38007/2602/2573/49037,2376specialevents;front/party/terminalalsopending,notexhaustive",
-        "active56/120/ordinary910headlesscontinuation",
-        "real1089/SELF/VFS/world+4NPC/2kind2",
+        "active916/975execution11/2602/2573/2376andother915families",
+        "front/party/true1089world+4NPC/2kind2",
         "sixselectedunsupportedskills",
         "unmodeledkeys/physicaloutputs",
         "completeindependentgame"
       ],
       "area3757_included": true,
       "complete_game": false,
-      "source_files": 65,
-      "core_init_files": 58,
+      "source_files": 67,
+      "core_init_files": 60,
       "zeroed_unit_slots": 128,
       "zeroed_area_slots": 128,
-      "independent_review": "../reports/2026-11-01-headless-effects0135-independent-review.json",
+      "independent_review": "../reports/2026-11-01-headless-tail0135-independent-review.json",
       "seed1_and6_frames": 400,
       "seed3_frames": 257,
       "seed3_post_first_selection_compared_frames": 152,
-      "independent_review_receipt": "../evidence/headless-effects0135-independent-review-20261101T072627.470924Z/review.json",
-      "independent_review_sha256": "466b8875ee910f9cbf7ae067a5be0042888dd8eadab58dc5beef866edab0a8f8",
-      "full_unit_backing_bytes_independently_reconstructed": 613762048,
-      "full_area_backing_bytes_independently_reconstructed": 127384576,
+      "independent_review_receipt": "../evidence/headless-tail0135-independent-review-20261101T083835.290797Z/review.json",
+      "independent_review_sha256": "538e2086544aee0f3f911dcb9b2fc612369c8880a20f0d2313add67a19069cae",
+      "full_unit_backing_bytes_independently_reconstructed": 1226927104,
+      "full_area_backing_bytes_independently_reconstructed": 254645248,
       "formerly_used_unit_slot_reuses": 52,
       "nonzero_unit_unwritten_bytes_preserved": 416,
       "area_slot_reuses": 4,
@@ -1232,7 +1230,7 @@
       "area_births": 6,
       "area_due_ticks": 34,
       "budget_next_pure_model_status": "pending_due_event",
-      "original_roles": 9,
+      "original_roles": 16,
       "effect915_idle_domain_included": true,
       "effect_domain": {
         "clock2364_bits": 0,
@@ -1249,11 +1247,10 @@
         "player_action416": 0,
         "raw_pointers_observed_not_predicted": true
       },
-      "unmodeled_effect_words_observed": 90472,
       "new_mask_count": 0,
-      "standalone_sha256": "ea2d151263e5af450070fe42c137a8528dca04a7bbe98d034a268782549c8525",
-      "standalone_files": 59,
-      "standalone_core_files": 58,
+      "standalone_sha256": "ad74e6f4e608d2e1f096d283a8b973aef1c9622960730c3e56eccd447cb72218",
+      "standalone_files": 61,
+      "standalone_core_files": 60,
       "standalone_is_original_differential": false,
       "historical_checkpoint_064308": {
         "module": "core_spec.headless135",
@@ -1334,7 +1331,178 @@
         "final_counter_sum": 279,
         "budget_next_pure_model_status": "pending_due_event"
       },
-      "counts_not_added_to_historical": true
+      "counts_not_added_to_historical": true,
+      "historical_checkpoint_072329": {
+        "module": "core_spec.headless135",
+        "status": "scoped_complete_original_entry_differential_passed",
+        "validated_version": "0.135.1",
+        "validated_web_build": "0898d5e3",
+        "cases": 8,
+        "mismatches": 0,
+        "report": "../reports/2026-11-01-headless-effects0135.json",
+        "domain": "Real1560;controlledphase1+128zeroedunit424/area88slots;sharedHP/RNG/counter2088->1754->3757->actualidle915->921->2862->947/1072;fixedunchangedfirstupgradeelsefirstpolicy",
+        "frames": 1614,
+        "stages": 11309,
+        "selections": 11,
+        "original_entry_calls": 11317,
+        "boundaries": {
+          "pending_selected_ability": 6,
+          "frame_budget": 2
+        },
+        "keys_compared": [
+          22,
+          28,
+          34,
+          716,
+          717,
+          1109,
+          1176
+        ],
+        "unmodeled_keyed_state_retained": true,
+        "standalone_receipt": "../evidence/headless-effects135-standalone-20261101T072549.178656Z/receipt.json",
+        "remaining": [
+          "remaining880entries916/975/38007/2602/2573/49037,2376specialevents;front/party/terminalalsopending,notexhaustive",
+          "active56/120/ordinary910headlesscontinuation",
+          "real1089/SELF/VFS/world+4NPC/2kind2",
+          "sixselectedunsupportedskills",
+          "unmodeledkeys/physicaloutputs",
+          "completeindependentgame"
+        ],
+        "area3757_included": true,
+        "complete_game": false,
+        "source_files": 65,
+        "core_init_files": 58,
+        "zeroed_unit_slots": 128,
+        "zeroed_area_slots": 128,
+        "independent_review": "../reports/2026-11-01-headless-effects0135-independent-review.json",
+        "seed1_and6_frames": 400,
+        "seed3_frames": 257,
+        "seed3_post_first_selection_compared_frames": 152,
+        "independent_review_receipt": "../evidence/headless-effects0135-independent-review-20261101T072627.470924Z/review.json",
+        "independent_review_sha256": "466b8875ee910f9cbf7ae067a5be0042888dd8eadab58dc5beef866edab0a8f8",
+        "full_unit_backing_bytes_independently_reconstructed": 613762048,
+        "full_area_backing_bytes_independently_reconstructed": 127384576,
+        "formerly_used_unit_slot_reuses": 52,
+        "nonzero_unit_unwritten_bytes_preserved": 416,
+        "area_slot_reuses": 4,
+        "area_nonzero_unwritten_reuse": 0,
+        "nontrivial_area_expiry_memmove_count": 0,
+        "area_births": 6,
+        "area_due_ticks": 34,
+        "budget_next_pure_model_status": "pending_due_event",
+        "original_roles": 9,
+        "effect915_idle_domain_included": true,
+        "effect_domain": {
+          "clock2364_bits": 0,
+          "action_sequence1644": 1,
+          "effect_counter2356": 0,
+          "delayed56": {
+            "capacity": 0,
+            "length": 0
+          },
+          "effects120": {
+            "capacity": 0,
+            "length": 0
+          },
+          "player_action416": 0,
+          "raw_pointers_observed_not_predicted": true
+        },
+        "unmodeled_effect_words_observed": 90472,
+        "new_mask_count": 0,
+        "standalone_sha256": "ea2d151263e5af450070fe42c137a8528dca04a7bbe98d034a268782549c8525",
+        "standalone_files": 59,
+        "standalone_core_files": 58,
+        "standalone_is_original_differential": false,
+        "historical_checkpoint_064308": {
+          "module": "core_spec.headless135",
+          "status": "scoped_complete_original_entry_differential_passed",
+          "validated_version": "0.135.1",
+          "validated_web_build": "0898d5e3",
+          "cases": 8,
+          "mismatches": 0,
+          "report": "../reports/2026-11-01-headless-area0135.json",
+          "domain": "Realemptyprofile1560;explicitresearchphase1+initialzero128unit424B/128area88Bslots;sharedHP/RNG2088->1754->3757->921->2862->947/1072;fixedfirstupgradeelsefirstselection.",
+          "frames": 1614,
+          "stages": 9695,
+          "selections": 11,
+          "original_entry_calls": 9703,
+          "boundaries": {
+            "pending_selected_ability": 6,
+            "frame_budget": 2
+          },
+          "keys_compared": [
+            22,
+            28,
+            34,
+            716,
+            717,
+            1109,
+            1176
+          ],
+          "unmodeled_keyed_state_retained": true,
+          "standalone_receipt": "../evidence/headless-area135-standalone-20261101T064619.877910Z/receipt.json",
+          "remaining": [
+            "real915andreadback2364/1820vec56/1808vec120;cannotassumeempty",
+            "real1089/SELF/dataentry+4NPC/2kind2",
+            "all880/915andremaining3757scheduling",
+            "sixselectedunsupportedskills",
+            "unmodeledkeys/physicaloutputs",
+            "completegame"
+          ],
+          "area3757_included": true,
+          "complete_game": false,
+          "source_files": 64,
+          "core_init_files": 57,
+          "zeroed_unit_slots": 128,
+          "zeroed_area_slots": 128,
+          "independent_review": "../reports/2026-11-01-headless-area0135-independent-review.json",
+          "seed1_and6_frames": 400,
+          "seed3_frames": 257,
+          "seed3_post_first_selection_compared_frames": 152,
+          "previous_checkpoint": {
+            "report": "../reports/2026-11-01-headless0135.json",
+            "frames": 1093,
+            "stages": 5473,
+            "selections": 8,
+            "independent_review": "../reports/2026-11-01-headless0135-independent-review.json",
+            "not_added_to_current_counts": true
+          },
+          "unobserved_915_domains": {
+            "G2364": "delayednotification",
+            "G1820_1824_1828": "stride56delayed-effect",
+            "G1808_1812_1816": "stride120projectile/geometry",
+            "producer910_from_921_915": true,
+            "read_back_in_this_batch": false
+          },
+          "independent_review_receipt": "../evidence/headless-area0135-independent-review-20261101T064609.019436Z/review.json",
+          "independent_review_sha256": "bbb99ba4014f970658c65c10414ba2b985ef0bff17289724dc16b2cb9e480131",
+          "full_unit_backing_bytes_independently_reconstructed": 526167040,
+          "full_area_backing_bytes_independently_reconstructed": 109204480,
+          "formerly_used_unit_slot_reuses": 52,
+          "nonzero_unit_unwritten_bytes_preserved": 416,
+          "area_slot_reuses": 4,
+          "area_nonzero_unwritten_reuse": 0,
+          "nontrivial_area_expiry_memmove_count": 0,
+          "area_births": 6,
+          "area_due_ticks": 34,
+          "area_deaths": 1,
+          "area_slow_writes": 151,
+          "area_death_scope": "Onlyflamestrikeeffect0;blizzard151slowsbut0death.Component144effect1deathsarenotthisbatch.",
+          "counter_increment": 199,
+          "final_counter_sum": 279,
+          "budget_next_pure_model_status": "pending_due_event"
+        },
+        "counts_not_added_to_historical": true
+      },
+      "actual14tail_included": true,
+      "inactive975_words_observed_not_predicted": 700817,
+      "tail_pointers_observed_not_predicted": 113035,
+      "tail_active_domains_rejected": true,
+      "unmodeled_effect_field_stage_occurrences": 22607,
+      "independent_review_addendum": "../evidence/headless-tail0135-independent-review-20261101T083835.290797Z/coverage-addendum.json",
+      "independent_review_addendum_sha256": "368e6e5130b1240b758753dd5a491322aa90f6a714920e7eeec3f641b6ff81f0",
+      "execution11_guard_checked_only_when975_executes": true,
+      "post_selection_nonexecuted_execution11_not_claimed": true
     },
     {
       "module": "core_spec.area_effects135",
@@ -1387,6 +1555,53 @@
         "physicalwireencoding",
         "full915/880"
       ]
+    },
+    {
+      "module": "core_spec.frame_systems135",
+      "status": "scoped_complete_original_differential_and_explicit_partial_boundaries",
+      "report": "../reports/2026-11-01-frame-systems0135.json",
+      "cases": 573,
+      "original_calls": 944,
+      "mismatches": 0,
+      "expected_original_exceptions": 23,
+      "independent_review": "../reports/2026-11-01-frame-systems0135-independent-review.json",
+      "review_receipt": "../evidence/frame-systems0135-independent-review-20261101T082346.241913Z/review.json",
+      "review_sha256": "1c980198bffb230796f787772aa4a4470ed62bcfe17ba8852f7b4e64720d80e8",
+      "scope": "975non11scan/38007fullqueuewire/2602expiryidleandprecisepending/2573guards/49037falsepredicates;notallactivecontinuations",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3"
+    },
+    {
+      "module": "core_spec.terminal_transition135",
+      "status": "bounded_true_victory_original_differential_passed",
+      "report": "../reports/2026-11-01-terminal-transition0135.json",
+      "cases": 416,
+      "terminal_calls": 832,
+      "real_constructor_calls": 416,
+      "true_terminal_cases": 315,
+      "mismatches": 0,
+      "independent_review": "../reports/2026-11-01-terminal-transition0135-independent-review.json",
+      "review_receipt": "../evidence/terminal-transition0135-independent-review-20261101T082346.275656Z/review.json",
+      "review_sha256": "32f198d80ae308bcac0675949945e3418462e2b285e3172cbb732e5701b6de75",
+      "scope": "finiteflatmovement/defaultlabels/phase5victory/complete232221notification;notphase4death/full880orentry/saves",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3"
+    },
+    {
+      "module": "core_spec.effect_geometry135",
+      "status": "bounded_producer_consumer_and_expected_resource_denial_prefix",
+      "report": "../reports/2026-11-01-effect-geometry0135.json",
+      "cases": 390,
+      "stages": 2883,
+      "normal_completed_cases": 277,
+      "expected_host_denial_prefix_cases": 113,
+      "mismatches": 0,
+      "independent_review": "../reports/2026-11-01-effect-geometry0135-independent-review.json",
+      "review_receipt": "../evidence/effect-geometry0135-independent-review-20261101T082802.603501Z/review.json",
+      "review_sha256": "9b0f1a3bd7332c4f571c07250241ddfd79081784cdac5aa5f775c61d0d326a3f",
+      "scope": "threegenuineBossraw9/type0/shape2;full120except4Bcopiedscratch;normalphase1hithaltsatrealDBC;pendingAPIfrozen",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3"
     }
   ],
   "resource_verified_domains": [
@@ -1416,6 +1631,20 @@
         "M2/BLP/WMO/terrain/effect/audio interpretation and rendering"
       ],
       "report": "../reports/2026-11-01-resource-index-base.json"
+    },
+    {
+      "module": "resource_spec.terrain135",
+      "status": "actual107completeADTproducer_and_height_differential_passed",
+      "report": "../reports/2026-11-01-terrain0135.json",
+      "files": 107,
+      "original_calls": 18413,
+      "MCNK": 27392,
+      "vertices": 3971840,
+      "mismatches": 0,
+      "independent_review": "../reports/2026-11-01-terrain0135-independent-review.json",
+      "review_receipt": "../evidence/terrain0135-independent-review-20261101T082110.575507Z/review.json",
+      "review_sha256": "c0babbe9f8802eb21a90afc26ed390f4d8c6907834e0ba2e44cd598087fdc4fe",
+      "scope": "baseactualassets;145XYZ+holes;4heightlayers;notall264B/world/cacheproduction/navigation/renderer/latestassetscomplete"
     }
   ],
   "latest_static_catalogue": {
@@ -1431,29 +1660,21 @@
     "all_ability_behaviors_implemented": false
   },
   "approved_role_extension_conservatism": {
-    "current_role_count": 41,
-    "current_builder_sha256": "3a339cc70f97ca3bd905172c091a9c471748f74e3c2b8c52047aa38e80fb5597",
-    "current_host_sha256": "ddc50164854ec74f2891e999c74342310e5a9392b4f33a2235040255c817e9c3",
-    "new_roles_have_individual_body_and_signature_guards": true,
-    "old_evidence_remains_bound_to_original_source_snapshots": true,
-    "prior_role32_review": {
-      "current_role_count": 32,
-      "previous_tick_command_and_stats_module_bytes_unchanged": true,
-      "receipt": "evidence/builder135-role32-review-20261101T050645.687659Z/review.json",
-      "sha256": "c04b466bb9bf83c4296be8ce2460c350939200be4580060cab32a2edb19d42bf",
-      "old_evidence_remains_bound_to_original_source_snapshots": true,
-      "new_roles_have_individual_body_and_signature_guards": true
-    },
-    "receipt": "evidence/builder135-role41-review-20261101T072424.422022Z/review.json",
-    "sha256": "3202722377bd73061ab2b3eba15219df6a19f9dacfdbe4f450dda48b1303e0a7",
+    "current_role_count": 52,
+    "current_builder_sha256": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "current_host_sha256": "53d18f34e2f6ce0ad93da5c655aeefd94ab265a4c9369f2ef8f46531c36aee73",
+    "receipt": "evidence/builder135-role52-review-20261101T083845.125766Z/review.json",
+    "sha256": "e318db4975077e6b7390aad8a23bae154282927a01603b15126b5346fae5e77c",
     "original_executed": false,
     "added_cases": 0,
-    "previous_7entry_review": "../reports/2026-11-01-headless0135-independent-review.json",
-    "previous_eight_role_module_byte_identical": true,
-    "prior_role40_review": {
-      "current_role_count": 40,
-      "current_builder_sha256": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306",
-      "current_host_sha256": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a",
+    "previous_nine_role_module_byte_identical": true,
+    "main_total_cap_bytes": 33554432,
+    "per_allocate_bytes": 4194304,
+    "old_evidence_remains_bound_to_original_source_snapshots": true,
+    "prior_role41_review": {
+      "current_role_count": 41,
+      "current_builder_sha256": "3a339cc70f97ca3bd905172c091a9c471748f74e3c2b8c52047aa38e80fb5597",
+      "current_host_sha256": "ddc50164854ec74f2891e999c74342310e5a9392b4f33a2235040255c817e9c3",
       "new_roles_have_individual_body_and_signature_guards": true,
       "old_evidence_remains_bound_to_original_source_snapshots": true,
       "prior_role32_review": {
@@ -1464,16 +1685,38 @@
         "old_evidence_remains_bound_to_original_source_snapshots": true,
         "new_roles_have_individual_body_and_signature_guards": true
       },
-      "receipt": "evidence/builder135-role40-review-20261101T064717.549128Z/review.json",
-      "sha256": "35947831120430e841bf0f7860a39c553b6043a5b014452c8d056de90071d2d2",
-      "current40_rebuilds_old_requests_byte_identical": true,
-      "rebuild_request_count": 3,
+      "receipt": "evidence/builder135-role41-review-20261101T072424.422022Z/review.json",
+      "sha256": "3202722377bd73061ab2b3eba15219df6a19f9dacfdbe4f450dda48b1303e0a7",
       "original_executed": false,
       "added_cases": 0,
       "previous_7entry_review": "../reports/2026-11-01-headless0135-independent-review.json",
-      "current_same_state_8entry_review": "../reports/2026-11-01-headless-area0135-independent-review.json"
+      "previous_eight_role_module_byte_identical": true,
+      "prior_role40_review": {
+        "current_role_count": 40,
+        "current_builder_sha256": "0942930f16b3fbb5a161fe6ee2a16cc39656da8823f9e750e6aded7e4adeb306",
+        "current_host_sha256": "8723180e5d6868059625c78143c450bf8bfffd1768edba6647e631b9d6e1d08a",
+        "new_roles_have_individual_body_and_signature_guards": true,
+        "old_evidence_remains_bound_to_original_source_snapshots": true,
+        "prior_role32_review": {
+          "current_role_count": 32,
+          "previous_tick_command_and_stats_module_bytes_unchanged": true,
+          "receipt": "evidence/builder135-role32-review-20261101T050645.687659Z/review.json",
+          "sha256": "c04b466bb9bf83c4296be8ce2460c350939200be4580060cab32a2edb19d42bf",
+          "old_evidence_remains_bound_to_original_source_snapshots": true,
+          "new_roles_have_individual_body_and_signature_guards": true
+        },
+        "receipt": "evidence/builder135-role40-review-20261101T064717.549128Z/review.json",
+        "sha256": "35947831120430e841bf0f7860a39c553b6043a5b014452c8d056de90071d2d2",
+        "current40_rebuilds_old_requests_byte_identical": true,
+        "rebuild_request_count": 3,
+        "original_executed": false,
+        "added_cases": 0,
+        "previous_7entry_review": "../reports/2026-11-01-headless0135-independent-review.json",
+        "current_same_state_8entry_review": "../reports/2026-11-01-headless-area0135-independent-review.json"
+      },
+      "current_same_state_9entry_review": "../reports/2026-11-01-headless-effects0135-independent-review.json"
     },
-    "current_same_state_9entry_review": "../reports/2026-11-01-headless-effects0135-independent-review.json"
+    "current_same_state_16role_review": "../reports/2026-11-01-headless-tail0135-independent-review.json"
   },
   "default_extension_regressions": "../reports/2026-11-01-default-extension0135-regression.json",
   "effect_system915_static_inventory": {
@@ -1555,5 +1798,66 @@
     "URL_contract_checks": 4,
     "rejected_unknown_inputs": 10,
     "static_review_passed": true
-  }
+  },
+  "browser_resource_embedding": {
+    "report": "../reports/2026-11-01-browser-resources0135.json",
+    "receipt": "../evidence/full0135-oracle-20261101T083300.201197Z/browser-resource135-comparison.json",
+    "receipt_sha256": "e9affcc1707f381334c8f007eec207ae52014ebbe926539a623909056c6563f7",
+    "cases": 3,
+    "known_projection_snapshots": 15,
+    "normal_original_returns": true,
+    "full_new_independent_model": false,
+    "allowed_resource_imports": 17,
+    "other_denied_imports": 861,
+    "memory_cap_bytes": 134217728,
+    "primary52_whitelist_unchanged": true,
+    "independent_review_status": "passed",
+    "new_main_case_count": 0,
+    "unmodeled_actual_G_domains": [
+      [
+        968,
+        972,
+        976,
+        980
+      ],
+      [
+        1112,
+        1120
+      ],
+      [
+        1196,
+        1200,
+        1204
+      ],
+      [
+        2476,
+        2480,
+        2484
+      ]
+    ],
+    "independent_review": "../reports/2026-11-01-browser-resources0135-independent-review.json",
+    "independent_review_receipt": "../evidence/browser-resources0135-independent-review-20261101T084320.657099Z/review.json",
+    "independent_review_sha256": "810135b220315dd30a04ba54d72cba71198306025da58d47f8ee6a29e049fcc8"
+  },
+  "main_tail_observational_probe": {
+    "report": "../reports/2026-11-01-main-tail0135-probe.json",
+    "receipt": "../evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json",
+    "sha256": "8746e6ac80407b1e6ab77dda65d4baabe4f55c566cbaf20a2fa9564be12825eb",
+    "frames": 3038,
+    "snapshots": 42550,
+    "selections": 18,
+    "original_calls": 42558,
+    "boundaries": {
+      "frame_budget": 6,
+      "phase4": 2
+    },
+    "independent_model": false,
+    "independent_review": "../reports/2026-11-01-main-tail0135-probe-independent-review.json",
+    "independent_review_receipt": "../evidence/main-tail0135-probe-independent-review-20261101T084812.188211Z/review.json",
+    "independent_review_sha256": "c71d450f61186e3539782ac39d2cff4066fc220202b7ff557dd090d65d4712d0",
+    "added_independent_frames": 0,
+    "observed_execution11_snapshots": 2521,
+    "execution11_model_support_claimed": false
+  },
+  "latest_verified_domains_scope": "Fixed135 component domains/current08292714-tail independentprefix/observationalfulltail/browserresourceembedding remain separate; no case counts summed or historicalscope retroactivelyexpanded."
 }

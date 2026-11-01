@@ -11,7 +11,7 @@ Aethus 原作游戏的非官方社区封装与逆向研究仓库。现有社区�
 
 `android/`、`macos/` 保留现有构建、签名和存档路径；研究区独立保存工具入口、目标版本、问题清单和分析结论。研究补丁经过对应版本验证后，才能进入封装版。REA 分析结果不等于已经恢复完整源码。
 
-逆向主目标固定为已取得的官方 **0.135.1 / Web0898d5e3**；0.134.0保留固定研究结果，0.126.0保留历史回归参考。当前[独立研究切片](reverse-engineering/reports/2026-11-01-headless-effects0135.md)已加入真实915及其空路径模型：8种子1614帧11309阶段、11次选择、11317次原件入口调用0差异，并经[独立复核](reverse-engineering/reports/2026-11-01-headless-effects0135-independent-review.md)。phase1仍需显式研究输入，6种子在未支持技能前停止，2种子达到400帧预算；尚非完整独立游戏。现有安装包不随研究目标自动更新，版本角色与边界见[版本策略](reverse-engineering/VERSION_STRATEGY.md)和[覆盖清单](reverse-engineering/RECONSTRUCTION.md)。
+逆向主目标固定为已取得的官方 **0.135.1 / Web0898d5e3**；0.134.0保留固定研究结果，0.126.0保留历史回归参考。当前[14阶段独立研究切片](reverse-engineering/reports/2026-11-01-headless-tail0135-independent-review.md)已完成8种子1614帧22607阶段、11次选择、22615次原件入口调用0差异（67源/60core/16角色）。[真实浏览器资源链](reverse-engineering/reports/2026-11-01-browser-resources0135.md)另完成DBC懒加载及3组正常命中返回；它不等于完整新独立模型。phase1仍为研究输入、6未知技能/2预算边界保留，尚非完整独立游戏。现有安装包不随研究目标自动更新，详见[版本策略](reverse-engineering/VERSION_STRATEGY.md)与[覆盖清单](reverse-engineering/RECONSTRUCTION.md)。
 
 [真实915观测](reverse-engineering/reports/2026-11-01-effect-system0135-probe.md)确认本批时钟和两类效果队列保持空；后继主切片使用独立模型重新生成预期，保留原始三域读回。非空延迟动作另有500组对照（383正常、117预期原版错误），不代表全部915。完整880还缺其他入口、2376特殊事件及前段/party/终态组合，完整自然帧和独立一局未完成。
 

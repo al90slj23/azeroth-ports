@@ -86,17 +86,26 @@ def main():
     p = argparse.ArgumentParser(); p.add_argument('--phase', choices=('pilot', 'full'), default='pilot'); args = p.parse_args()
     before = {name: sha(ROOT / name) for name in FILES}; assert before == IMPORTED
     rows = corpus(args.phase == 'pilot')
-    out, manifest = build(['initial_game', 'player_tick', 'process_hits', 'area_tick', 'effect_tick', 'update_units', 'collect_pickups', 'spawn_tick', 'select_ability'])
+    out, manifest = build(['initial_game', 'player_tick', 'auto_cast', 'owned_effect_tick', 'process_hits',
+        'area_tick', 'effect_tick', 'deadline_tick', 'secondary_hits', 'update_units', 'collect_pickups',
+        'claim_tick', 'spawn_tick', 'special_tick', 'terminal_tick', 'select_ability'])
     snapshots = out / 'source-snapshot'; snapshots.mkdir()
     for name in FILES:
         target = snapshots / name; target.parent.mkdir(parents=True, exist_ok=True); target.write_bytes((ROOT / name).read_bytes()); assert sha(target) == before[name]
     fixtures = out / 'headless135-fixtures.jsonl'; fixtures.write_text(''.join(json.dumps(c, separators=(',', ':')) + '\n' for c in rows))
     assert [json.loads(line) for line in fixtures.read_text().splitlines()] == rows
-    frozen = {p.name: sha(p) for p in (fixtures, out / 'manifest.json', out / manifest['module_file'])}
+    #Original code receives inputs only; independent expectations remain a
+    #separate immutable artifact and never enter its Node heap or API surface.
+    input_keys = ('id', 'input', 'region_id', 'controlled_phase1',
+        'zeroed_unit_capacity', 'zeroed_area_capacity', 'actions')
+    input_rows = [{key: c[key] for key in input_keys} for c in rows]
+    inputs = out / 'headless135-inputs.jsonl'; inputs.write_text(''.join(json.dumps(c, separators=(',', ':')) + '\n' for c in input_rows))
+    assert [json.loads(line) for line in inputs.read_text().splitlines()] == input_rows
+    frozen = {p.name: sha(p) for p in (fixtures, inputs, out / 'manifest.json', out / manifest['module_file'])}
     assert sha(RUNTIME) == RUNTIME_SHA
     assert subprocess.check_output([str(RUNTIME), '--version'], text=True).strip() == 'v22.23.4'
     command = [str(RUNTIME), '--max-old-space-size=512', '--wasm-max-mem-pages=512',
-        str(ROOT / 'scripts/run_headless135_oracle.mjs'), str(out), str(fixtures)]
+        str(ROOT / 'scripts/run_headless135_oracle.mjs'), str(out), str(inputs)]
     result, stderr = out / 'headless135-results.jsonl', out / 'headless135-stderr.log'; start = time.monotonic()
     with result.open('w') as stream, stderr.open('w') as err:
         child = subprocess.Popen(command, stdout=stream, stderr=err, start_new_session=True)
@@ -105,32 +114,36 @@ def main():
             os.killpg(child.pid, signal.SIGKILL); child.wait(); raise RuntimeError(f'Owned60s timeout:{out}')
     duration = time.monotonic() - start
     if code: raise RuntimeError(f'Original exit{code}: {out}')
-    actual = [json.loads(line) for line in result.read_text().splitlines()]
-    assert [a['id'] for a in actual] == list(range(len(rows)))
-    failures, counters, unmodeled, unmodeled_effects = [], Counter(), [], []
-    for case, observed in zip(rows, actual):
-        observations = [dict(kind=s['kind'], projection=s['projection']) for s in observed['stages']]
-        compare(case['expected'], observations, f'case{case["id"]}', failures, counters)
-        unmodeled.append(dict(id=case['id'], stages=[s['unmodeled_player_fields'] for s in observed['stages']]))
-        unmodeled_effects.append(dict(id=case['id'], stages=[s['unmodeled_effect_fields'] for s in observed['stages']]))
+    failures, counters, unmodeled, unmodeled_effects, unmodeled_tail = [], Counter(), [], [], []
+    with result.open() as stream:
+        for case in rows:
+            observed = json.loads(next(stream)); assert observed['id'] == case['id']
+            observations = [dict(kind=s['kind'], projection=s['projection']) for s in observed['stages']]
+            compare(case['expected'], observations, f'case{case["id"]}', failures, counters)
+            unmodeled.append(dict(id=case['id'], stages=[s['unmodeled_player_fields'] for s in observed['stages']]))
+            unmodeled_effects.append(dict(id=case['id'], stages=[s['unmodeled_effect_fields'] for s in observed['stages']]))
+            unmodeled_tail.append(dict(id=case['id'], stages=[s['unmodeled_tail_fields'] for s in observed['stages']]))
+        assert not stream.read().strip()
     mismatches = out / 'headless135-mismatches.json'; mismatches.write_text(json.dumps(failures, indent=2) + '\n')
     omitted = out / 'headless135-unmodeled-player-fields.json'; omitted.write_text(json.dumps(unmodeled, separators=(',', ':')) + '\n')
     omitted_effects = out / 'headless135-unmodeled-effect-fields.json'; omitted_effects.write_text(json.dumps(unmodeled_effects, separators=(',', ':')) + '\n')
+    omitted_tail = out / 'headless135-unmodeled-tail-fields.json'; omitted_tail.write_text(json.dumps(unmodeled_tail, separators=(',', ':')) + '\n')
     assert before == {name: sha(ROOT / name) for name in FILES}
     assert sha(SOURCE) == SOURCE_SHA and sha(RUNTIME) == RUNTIME_SHA
-    assert frozen == {p.name: sha(p) for p in (fixtures, out / 'manifest.json', out / manifest['module_file'])}
+    assert frozen == {p.name: sha(p) for p in (fixtures, inputs, out / 'manifest.json', out / manifest['module_file'])}
     runtime = out / 'headless135-runtime.json'
     receipt = dict(version='0.135.1', build='0898d5e3', cases=len(rows),
         stages=sum(len(c['expected']) for c in rows), frames=sum(c['independent_frames'] for c in rows),
         selections=sum(c['independent_selections'] for c in rows), boundaries=dict(Counter(c['boundary'] for c in rows)),
         comparison=dict(counters), differences=counters['differences'], source_sha256_before=before, source_sha256_after=before,
-        artifacts={p.name: sha(p) for p in (fixtures, result, stderr, mismatches, omitted, omitted_effects, runtime, out / 'manifest.json', out / manifest['module_file'])},
+        artifacts={p.name: sha(p) for p in (fixtures, inputs, result, stderr, mismatches, omitted, omitted_effects, omitted_tail, runtime, out / 'manifest.json', out / manifest['module_file'])},
         original_sha256=SOURCE_SHA, runtime=json.loads(runtime.read_text()),
         process=dict(command=command, pid=child.pid, pgid=child.pid, seconds=duration, exit_code=code, deadline_seconds=60),
         independent_expected_before_original=True, source_snapshots=True,
         limitations=['Explicit phase1 research resolution;1089/resource boot is incomplete and real entry has additional spawns/kind2 objects.',
             'Unit and area destination memory explicitly pre-reserved as128 zeroed424B/88B slots;live allocator padding determinism is not claimed.',
-            'Same-G controlled2088/1754/3757/915/921/2862/947 sequence;complete880 and other915 families not established.',
+            'Same-G14-entry single-state tail;not880front/party/transport/ortrueentry;inactive source domains are explicitly guarded.',
+            'Active916/975/2602/2573/2376/49037 producers and canonical packet integration remain boundaries despite separate component models.',
             '915 integrated with real-observed idle vectors;active56/120 headless continuation remains pending, separately modeled delayed56 component has its own receipt.',
             'Inactive player action payload420..436 and physical vec pointers retained separately, not assumed zero or cosmetic.',
             'Seven persistent-area definitions;modifiers36/49,hostile/following areas and other effects remain pending.',

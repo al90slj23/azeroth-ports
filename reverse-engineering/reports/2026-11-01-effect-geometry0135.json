@@ -1,0 +1,252 @@
+{
+  "title": "Fixed135 genuine Boss raw9 producer and rectangular120B effect consumer",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "bounded_producer_consumer_and_expected_resource_denial_prefix_not_full915",
+  "comparison": {
+    "path": "evidence/full0135-oracle-20261101T080844.947484Z/effect-geometry135-comparison.json",
+    "sha256": "94cbbfaf8d629037ac4739b334e1b6eda6642f4485467218d29a4d66508177b8",
+    "cases": 390,
+    "stages": 2883,
+    "mismatch_fields": 0,
+    "normal_completed_cases": 277,
+    "expected_host_denial_prefix_cases": 113,
+    "normal_stage_snapshots": 2770,
+    "interrupted_stage_snapshots": 113,
+    "guards": 11
+  },
+  "static_trace": {
+    "path": "evidence/effect-geometry0135-static-20261101T081015.075418Z/trace.json",
+    "sha256": "410864649c958166bf26b90a328b3c9b5931f545e43dd7b255f22737bcaaaa84",
+    "functions": 16,
+    "original_executed": false
+  },
+  "production": {
+    "path": "reconstruction/core_spec/effect_geometry135.py",
+    "sha256": "6639d200f6c27e27aa8a91d9377f583aa46ca1a3df11595b22f32a2b72b6c32a",
+    "checker_sha256": "b3554803da3590d39b3507d170ec857d1a19630b29278231828999a46eb3688b",
+    "runner_sha256": "79e8691aa079f881e5fd094692c84ca9d22a61206437f06cc3ac8314cbf0d9e5",
+    "source_closure_count": 28,
+    "source_closure_includes_package_init_and_transitive_data": true,
+    "source_snapshots": true
+  },
+  "original_chain": [
+    2785,
+    910,
+    915
+  ],
+  "declarations": [
+    {
+      "boss": "Tendris Warpwood",
+      "zone": 5,
+      "boss_pointer": 5434088,
+      "descriptor_pointer": 5433104
+    },
+    {
+      "boss": "Anub'Rekhan",
+      "zone": 11,
+      "boss_pointer": 5455432,
+      "descriptor_pointer": 5453396
+    },
+    {
+      "boss": "Patchwerk",
+      "zone": 11,
+      "boss_pointer": 5455576,
+      "descriptor_pointer": 5454132
+    }
+  ],
+  "producer": {
+    "raw_tag37": 9,
+    "normalized_tag": 6,
+    "body_branch": "910 relative669..734, common timing254..355",
+    "helpers": [
+      31733,
+      4865,
+      21024,
+      61441,
+      34693
+    ],
+    "family": {
+      "variant0": 0,
+      "type8": 0,
+      "shape40": 2,
+      "stride": 120
+    },
+    "effect_counter": "G2356 incremented, distinct from G2408 spawn/pickup counter",
+    "layout": {
+      "0": "normal variant0",
+      "4..7": "destination slot preserved",
+      "8": "type0",
+      "12": "predicted player Y, genuine reused4865 output",
+      "16": "predicted player Z",
+      "20..23": "copied unspecified scratch+444 word, explicitly marked",
+      "24..31": "source GUID",
+      "32..39": "visual GUID0",
+      "40": "shape2 rectangle",
+      "44/48": "length/width from declaration4/8",
+      "52": "G2356 new identifier",
+      "56/60/64": "source interpolatedX/Y and resolved flat/fallback height",
+      "68": "atan2 predicted player minus source",
+      "72": "now",
+      "76": "now+delay*(difficulty?0.85:1)",
+      "80": "zero",
+      "84": "spellID",
+      "88": "ordered weakness-adjusted Boss attack*factor",
+      "92": "positiveInfinity",
+      "96..118": "zero through overlapped writes",
+      "119": "destination slot preserved"
+    },
+    "stop_writes": "Interpolated XYZ to316/328,340=now,344=0;400=maxnum(old,now+delay),348=400,352=maxnum(old,delay+.3);268 maxnum(now+delay+.4) beforestop;2412 increments;221 then305"
+  },
+  "consumer": {
+    "family": "normal0/type0/shape2 only",
+    "timing": "118 preview mark; due now>=76; one attempt then removal evenmiss, never periodic",
+    "geometry": "inclusive forward in[0,length],abs(side)<=width/2; actual and predicted player points coincide for flags0",
+    "ordering": "validate supported state beforemutation; per-record sum;preview indices filtered against removedindices;logical306 impacts; reverse-index stable120B memorycopy/pop retaining tail;hzend thenhzt; positiveaggregate→one1073",
+    "initial_due_preview": "Mark118=1 but suppresshz for record alsoremoved thisentry; provenfirst-due1/3recordcases and full5237..5414 CFG",
+    "damage": "incoming1073(category2,critical0,lastHitGUID,lastHitSpell); multiplier1 iff2568==1&&difficulty<4,else3 ifdifficulty>3,else2; nonfatalHP/shield/armor/G992 prefix",
+    "rng": "No additional draws across supported910/915 prefix; actual complete4-word RNG compared after genuine2785 production"
+  },
+  "comparisons": {
+    "strict120_storage_bytes": 22128144,
+    "unspecified_scratch_bytes": 13296,
+    "unspecified_observed_nonzero_bytes": 3324,
+    "full424_bytes": 1222392,
+    "unit248": "Only canonical address mask; complete ability timer vector separately strict",
+    "packet_opcode_deltas": {
+      "221": 522,
+      "305": 522,
+      "306": 477
+    },
+    "effect_json_events": {
+      "hz": 498,
+      "hzt": 1224,
+      "hzend": 477
+    },
+    "JSON_fields_compared": [
+      "type",
+      "id whenpresent",
+      "kind/shape forhz"
+    ],
+    "JSON_fields_not_compared": [
+      "coordinates",
+      "timing numeric formatting",
+      "length/width numeric encoding",
+      "encodedstringbytes"
+    ],
+    "NaN_relaxations": 0,
+    "original_wire_payloads_preserved": true
+  },
+  "resource_boundary": {
+    "expected_denials": 113,
+    "denied_import": "./wenilla_bg.js.__wbg_static_accessor_SELF_4c59f6c7ea29a144",
+    "chain": [
+      915,
+      1073,
+      4546,
+      95986,
+      23171,
+      50449,
+      96127,
+      67826,
+      19179,
+      122098
+    ],
+    "actual_HP_changed_prefix_cases": 98,
+    "all_other_side_effects_after_boundary_unknown": true,
+    "normal_success_claimed": false,
+    "state_resumable": false,
+    "preserved_spellID": true,
+    "successful_host_calls": 0
+  },
+  "legal_browser_host_feasibility": {
+    "status": "static_proposal_not_executed",
+    "official_glue": "originals/official-acquisition-20261101T030310.926207Z/official-wenilla.js",
+    "official_glue_sha256": "636bcd5acba01a31c4b40234969243e964cc8e7e7610adf0817e3494d92c9945",
+    "forbidden_shortcut": "OfficialinitSync/defaultinit auto-finalize→176107→851+4253;4253 isappstart, soinitSync cannotbeusedfor no-appstart claim.",
+    "proposed_API": [
+      "Copy frozenofficialglue to newresearchbridge, append get_imports and bind-only exports; preserveall878 actualimportfunctions unchanged.",
+      "Compile/instantiate theexports-onlymodule manually withactualimports; bind wasmInstance/module/exports andclear memoryview caches without finalize.",
+      "Callonly actual __wbindgen_init_externref_table import(851 semantics), never176107/4253/start.",
+      "Run in realbrowser Window/SELF/XHR environment, localHTTP route with actualSpell.dbc,SpellIcon.dbc,real__index; actual __wenilla_data_base/layout/stamp config.",
+      "Permit only exactlocalresource requests, preserve404/notfound; freeze source/request/assetSHA andcomparepostDBCnormal915 againstprefix."
+    ],
+    "missing_validation": [
+      "Bridgeinstance binding/externref behavior hasnotrun.",
+      "NativeXHR get/response/error/realindex andOnce parsing notyet observed.",
+      "Browserresource budgets andlocalHTTP lifecycle mustbe independently constrained.",
+      "No globalOnce/cacheptr or fakeSELF/XmlHttpRequest is permitted."
+    ]
+  },
+  "failures_preserved": [
+    {
+      "path": "evidence/full0135-oracle-20261101T080006.085681Z",
+      "reason": "First real phase1 hit reachedhostdeny; boundary initiallynotcaught."
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T080249.642559Z",
+      "mismatch_fields": 206,
+      "reason": "4865 clampdivision/multiplication order and fixture2785 flat-enabled scope corrected."
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T080653.011565Z",
+      "mismatch_fields": 12,
+      "reason": "Same-entry firstpreview+due suppression; originalremoval-indexfilter restored."
+    }
+  ],
+  "limitations": [
+    "Only three genuine raw9 Boss declarations/normal0,type0,shape2; actual2785 initializes Boss then actual910 creates every active120 record, never injected synthetic120.",
+    "Full120 storage strict except exact4 copied unspecified scratch bytes+20..23 per produced physical slot; actual bytes preserved separately, never read to generate expected. Slot+4..7/+119 strict.",
+    "Unit248 allocator pointer canonicalized; all424 other bytes and full ability timers strict. Finite flat world and stationary player flags0; remote ownership, terrain/collision/navigation unresolved.",
+    "Normal miss/phaseguard completion is distinct from phase1 accepted incoming: real1073 writes scalar HP/shield/G992 then4546 tries real Spell.dbc through SELF, denied by host. Expected host-denial prefixes stop immediately and never count as complete915 success or resumable game state.",
+    "Nonfatal1073 scalar/shield/phase only, empty buffs/modifiers/item effects/other incoming producers; registry/history/aura and wire serialization remain pending.221/305/306 delta opcode and hz/hzend/hzt type/id/kind/shape order compared; full actual payload retained separately.",
+    "No app start/full880/gameflow/network/saves; no claim of full915 family coverage or ordinary NPC910 consumer closure."
+  ],
+  "runtime": {
+    "cases": 390,
+    "calls": 2883,
+    "producer_calls": 522,
+    "tick_calls": 1971,
+    "expected_host_boundaries": 113,
+    "functions": [
+      2785,
+      910,
+      915
+    ],
+    "all_callees_unchanged": true,
+    "fresh_instances": 136,
+    "max_memory_bytes": 21430272,
+    "denied_imports": 878,
+    "successful_host_calls": 0,
+    "attempted_host_calls": 113,
+    "original_allocator": 91941,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_effect_geometry135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T080844.947484Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T080844.947484Z/effect-geometry135-fixtures.json"
+    ],
+    "pid": 17366,
+    "pgid": 17366,
+    "exit_code": 0,
+    "seconds": 6.511808458002633,
+    "deadline_seconds": 60
+  },
+  "independent_review": {
+    "status": "passed",
+    "report": "2026-11-01-effect-geometry0135-independent-review.json",
+    "receipt": "evidence/effect-geometry0135-independent-review-20261101T082802.603501Z/review.json",
+    "sha256": "9b0f1a3bd7332c4f571c07250241ddfd79081784cdac5aa5f775c61d0d326a3f",
+    "original_reexecuted": false
+  }
+}

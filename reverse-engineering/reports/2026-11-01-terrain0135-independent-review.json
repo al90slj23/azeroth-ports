@@ -1,0 +1,127 @@
+{
+  "kind": "terrain",
+  "receipt_sha256": "45a2501da4ceef05fa66992bf45df30f5aaa2c4502e0dc9e22c94a12b8ca5be7",
+  "receipt": "evidence/full0135-oracle-20261101T080051.480589Z/terrain135-comparison.json",
+  "sources": 14,
+  "production_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/upgrade_values.py",
+    "reconstruction/resource_spec/__init__.py",
+    "reconstruction/resource_spec/dbc.py",
+    "reconstruction/resource_spec/entry_resources135.py",
+    "reconstruction/resource_spec/mpq.py",
+    "reconstruction/resource_spec/terrain135.py"
+  ],
+  "current_source_drift": {},
+  "roles": [
+    {
+      "role": "adt_parse",
+      "index": 1446,
+      "export": "research135_adt_parse",
+      "type_index": 1,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 9745198,
+      "body_end": 9761684,
+      "body_bytes": 16486,
+      "body_sha256": "dd4062cff80baa66cf84942dffbcc41a5e9a8a865de24f5a8cd5f7ffa0796c9a"
+    },
+    {
+      "role": "chunk_height",
+      "index": 5795,
+      "export": "research135_chunk_height",
+      "type_index": 1,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 24853209,
+      "body_end": 24854902,
+      "body_bytes": 1693,
+      "body_sha256": "36a4eecc46772f5f3b8995817711e8a9d136c86e1d72297b60a7c5ff3305503d"
+    },
+    {
+      "role": "terrain_height",
+      "index": 18670,
+      "export": "research135_terrain_height",
+      "type_index": 40,
+      "parameters_hex": "7f7f7d7d",
+      "results_hex": "",
+      "body_start": 43097257,
+      "body_end": 43097914,
+      "body_bytes": 657,
+      "body_sha256": "e69b2fbf238393d43be83153dbbfa5ff310497d104691c829438e18be91cd0e5"
+    },
+    {
+      "role": "tile_height",
+      "index": 46295,
+      "export": "research135_tile_height",
+      "type_index": 2,
+      "parameters_hex": "7f7f7f7f",
+      "results_hex": "",
+      "body_start": 63551874,
+      "body_end": 63552136,
+      "body_bytes": 262,
+      "body_sha256": "97f7b0aa2a31b0a8c3b7d061c1b8f771bc1aed842697bc0279d13b4f1e6a0ed3"
+    },
+    {
+      "role": "world_height",
+      "index": 29631,
+      "export": "research135_world_height",
+      "type_index": 40,
+      "parameters_hex": "7f7f7d7d",
+      "results_hex": "",
+      "body_start": 53548889,
+      "body_end": 53549297,
+      "body_bytes": 408,
+      "body_sha256": "26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650"
+    }
+  ],
+  "totals": {
+    "assets": 107,
+    "asset_bytes": 153802039,
+    "chunks": 27392,
+    "vertices": 3971840,
+    "vertex_bytes": 47662080,
+    "raw264_bytes": 7231488,
+    "nonzero_holes": 213,
+    "samples": 3650,
+    "matrix": 56,
+    "sample_found": 3586,
+    "sample_notfound": 64
+  },
+  "local_replay": {
+    "path": "evidence/terrain135-local-replay-20261101T080701.038206Z/replay.json",
+    "sha256": "dc7c40e881475db91de834e9832d4d1f0d678a8aa1562197ce0bd67bcd7e76d4",
+    "sources": 9,
+    "zone_count": 12,
+    "read_count": 120,
+    "unique_assets": 114,
+    "original_cases_added": 0
+  },
+  "limitations": [
+    "Only vertex145 XYZ+holes producer projection compared;complete264B geometry fields preserved as raw original sidecar,not independently reproduced.",
+    "World height inputs use explicit one-tile bounding box and absent raster caches;not the complete6730 world producer.",
+    "Current local base MPQ assets are not proof of complete latest135 assets. No SELF/VFS/Once/cache forged.",
+    "Real264B records are fully retained andchecked forvertexcount/holes,not semantically reproducedbeyonddeclared145XYZ projection.",
+    "Pure local replay center heights do not include M2/WMO floors,world cache producers orfull1089."
+  ],
+  "status": "passed_scoped_independent_read_only_review",
+  "reviewer_sha256": "7aa37cc711455e938728782675fa68e10748d920d72e11524034834b3a85b23d",
+  "original_runtime_reexecuted": false,
+  "author_sources_modified": false,
+  "review_path": "evidence/terrain0135-independent-review-20261101T082110.575507Z/review.json",
+  "review_sha256": "c0babbe9f8802eb21a90afc26ed390f4d8c6907834e0ba2e44cd598087fdc4fe",
+  "provenance_addendum": {
+    "path": "evidence/terrain0135-independent-review-20261101T082110.575507Z/provenance.json",
+    "sha256": "a6d8b850790736bd39cf1538bb2e6b7ddc45af9987748f141d23f682a8ec8173",
+    "real_assets_redecoded": 107,
+    "decoded_bytes": 153802039,
+    "manifest_and_module_match_receipt": true,
+    "archives": {
+      "patch.MPQ": "6828b191789acdf61b0b8749327cfaed726bea7f015f8be4cc9b0abbfcb696f4",
+      "patch-5.MPQ": "5008e56873718b468fa5ae1b697dcbe4f5da9ffe6c793f3ef9939dbd7716f3d8"
+    }
+  },
+  "reviewer_source_snapshot": "evidence/terrain0135-independent-review-20261101T082110.575507Z/reviewer-source.py",
+  "reviewer_current_script_note": "The exact source version for this review is retained in reviewer-source.py; subsequentgeometryreview addsbaselinehandling and explicitreceiptmanifest/moduleSHAchecks. TerrainartifactSHA andrealMPQreads additionallyverified byprovenance.py."
+}

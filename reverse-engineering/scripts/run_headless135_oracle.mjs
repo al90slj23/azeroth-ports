@@ -1,16 +1,19 @@
-// One real1560 constructor, then controlled2088/1754/3757/915/921/2862/947/1072.
+// One real1560 constructor and the complete controlled single-state tail.
 // Phase1 is an explicit research fixture boundary, NOT completed1089/resource boot.
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {prepareFull135} from './full135_host.mjs';
 const [directory, file] = process.argv.slice(2);
-const required = ['initial_game', 'player_tick', 'process_hits', 'area_tick', 'effect_tick', 'update_units', 'collect_pickups', 'spawn_tick', 'select_ability'];
+const required = ['initial_game', 'player_tick', 'auto_cast', 'owned_effect_tick', 'process_hits', 'area_tick', 'effect_tick',
+  'deadline_tick', 'secondary_hits', 'update_units', 'collect_pickups', 'claim_tick', 'spawn_tick', 'special_tick', 'terminal_tick', 'select_ability'];
 const prepared = await prepareFull135(directory, required);
 const text = await fs.readFile(file, 'utf8'); if (Buffer.byteLength(text) > 128 * 1024 * 1024) throw Error('Fixture bytes');
 const cases = text.trim().split('\n').map(JSON.parse); if (!cases.length || cases.length > 48) throw Error('Fixture count');
 let totalCalls = 0, maxMemory = 0;
 for (let index = 0; index < cases.length; index++) {
   const c = cases[index]; if (c.id !== index || c.controlled_phase1 !== true || c.zeroed_unit_capacity !== 128 || c.zeroed_area_capacity !== 128) throw Error('Explicit fixture boundaries');
+  const inputKeys = ['id','input','region_id','controlled_phase1','zeroed_unit_capacity','zeroed_area_capacity','actions'].sort();
+  if (JSON.stringify(Object.keys(c).sort()) !== JSON.stringify(inputKeys)) throw Error('Only whitelisted constructor/action inputs may reach original runner');
   const host = await prepared.fresh(), {roles, memory, allocate, hostCalls} = host;
   const d = () => new DataView(memory.buffer), bytes = () => new Uint8Array(memory.buffer);
   const w = (p, x) => d().setUint32(p, x >>> 0, true), r = p => d().getUint32(p, true), b = (p, x) => d().setUint8(p, x);
@@ -99,10 +102,16 @@ for (let index = 0; index < cases.length; index++) {
       auxiliary_motion_count: r(G + 664), claim_count: r(G + 2116),
       effect_state: {clock2364_bits: r(G + 2364), effect_counter2356: r(G + 2356), action_sequence1644: r(G + 1644),
         player_action_tag416: r(G + 416), player_xyz: [r(G + 1416), r(G + 1420), r(G + 1424)],
-        delayed56: effectVector(1820, 56), effects120: effectVector(1808, 120)}};
+        delayed56: effectVector(1820, 56), effects120: effectVector(1808, 120)},
+      timed916_count: r(G + 604),
+      tail_state: {active84: effectVector(644, 84), deadline32: effectVector(1832, 32), secondary112: effectVector(1856, 112),
+        claims88: effectVector(2108, 88), special40: effectVector(1916, 40), field400: r(G + 400),
+        flag2568: d().getUint8(G + 2568), gate2579: d().getUint8(G + 2579)}};
     const unmodeled_effect_fields = {inactive_action_payload_words: [420, 424, 428, 432, 436].map(o => r(G + o)),
       delayed_pointer: r(G + 1824), effect120_pointer: r(G + 1812), player_facing_bits: r(G + 1428)};
-    return {projection, unmodeled_player_fields, unmodeled_effect_fields, unit_storage_delta_words, area_storage_delta_words};
+    const unmodeled_tail_fields = {resource975_words: Array.from({length: 31}, (_, i) => r(G + 784 + i * 4)),
+      vector_pointers: Object.fromEntries([648, 1836, 1860, 2112, 1920].map(o => [o, r(G + o)]))};
+    return {projection, unmodeled_player_fields, unmodeled_effect_fields, unmodeled_tail_fields, unit_storage_delta_words, area_storage_delta_words};
   };
   const stages = [];
   const number = bits => {const v = new DataView(new ArrayBuffer(4)); v.setUint32(0, bits, true); return v.getFloat32(0, true);};
@@ -110,9 +119,12 @@ for (let index = 0; index < cases.length; index++) {
     if (action.kind === 'frame') {
       if (d().getUint8(G + 2587) !== 1) throw Error('Frame called outside running phase');
       d().setFloat32(G + 2352, d().getFloat32(G + 2352, true) + number(action.dt_bits), true);
-      for (const [kind, role] of [['player', 'player_tick'], ['hits', 'process_hits'], ['area', 'area_tick'], ['effects', 'effect_tick'], ['ai', 'update_units'], ['collect', 'collect_pickups'], ['spawn', 'spawn_tick']]) {
+      for (const [kind, role] of [['player','player_tick'],['extra','auto_cast'],['owned_effects','owned_effect_tick'],['hits','process_hits'],
+        ['area','area_tick'],['effects','effect_tick'],['deadline','deadline_tick'],['secondary','secondary_hits'],['ai','update_units'],
+        ['collect','collect_pickups'],['claims','claim_tick'],['spawn','spawn_tick'],['special','special_tick'],['terminal','terminal_tick']]) {
+        if ((kind === 'spawn' || kind === 'special') && d().getUint8(G + 2579)) throw Error('Unmodeled2579 gate');
         if (kind === 'collect' && (r(G + 664) || r(G + 2116))) throw Error('Unrestored auxiliary movement/claim producer');
-        if (kind === 'player' || kind === 'effects' || kind === 'ai' || kind === 'spawn') roles[role](G, number(action.dt_bits)); else roles[role](G);
+        if (['player','extra','owned_effects','effects','ai','spawn'].includes(kind)) roles[role](G, number(action.dt_bits)); else roles[role](G);
         totalCalls++; if (hostCalls.length) throw Error('Original host import attempted'); stages.push({kind, ...snapshot()});
       }
     } else if (action.kind === 'select') {if (r(G + 664) || r(G + 2116)) throw Error('Unrestored auxiliary movement/claim producer'); roles.select_ability(G, action.index); totalCalls++; stages.push({kind: 'select', ...snapshot()});}
@@ -122,7 +134,7 @@ for (let index = 0; index < cases.length; index++) {
   process.stdout.write(JSON.stringify({id: index, stages}) + '\n'); maxMemory = Math.max(maxMemory, memory.buffer.byteLength);
 }
 await fs.writeFile(`${directory}/headless135-runtime.json`, JSON.stringify({cases: cases.length, original_entry_calls: totalCalls,
-  original_functions: [1560, 2088, 1754, 3757, 915, 921, 2862, 947, 1072], host_calls: 0, denied_imports: 878,
+  original_functions: [1560,2088,916,975,1754,3757,915,38007,2602,921,2862,2573,947,2376,49037,1072], host_calls: 0, denied_imports: 878,
   max_memory_bytes: maxMemory, memory_page_limit: 512, original_allocator: 91941, node: process.version,
   application_start_called: false, network_used: false, user_saves_accessed: false, full_game_started: false,
   controlled_phase1_boundary: true, zeroed_unit_storage_capacity: 128, zeroed_area_storage_capacity: 128}, null, 2) + '\n');

@@ -1,0 +1,77 @@
+{
+  "receipt": "evidence/full0135-oracle-20261101T075536.007629Z/frame-systems135-comparison.json",
+  "receipt_sha256": "a32a6ff2fe5aa8fb8537200dccb303884f48b7568ac72a6f6866fef97b79a6ee",
+  "source_files": 10,
+  "core_package_init_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/frame_systems135.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "frozen_source_sha256": {
+    "scripts/check_frame_systems135.py": "2fc379dca2451e3c6e3c3050cfb2bce9929fb122ed7ec16f4ecd2a921dd52d0c",
+    "scripts/run_frame_systems135_oracle.mjs": "082f307487884ae7f4465df6e77c781b427666bc056a60cf2f892d3aff20ed32",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "2a39c62be896949e9414f63fb4c6c11972dabe5e743bc18bfcd8a31600a1495e",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/frame_systems135.py": "897ae44e60efb0afe6062da707a76fcce6bd0725824abe33ed55af93d9b90a2d",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "current_source_drift": {
+    "scripts/full135_host.mjs": {
+      "frozen": "2a39c62be896949e9414f63fb4c6c11972dabe5e743bc18bfcd8a31600a1495e",
+      "current": "53d18f34e2f6ce0ad93da5c655aeefd94ab265a4c9369f2ef8f46531c36aee73"
+    }
+  },
+  "body_guards_recomputed": 10,
+  "signature_guards_recomputed": 10,
+  "coordinated_host_difference_verified": [
+    "Only allocate per-block limit1MiB\u21924MiB;512page/32MiB total andall878deny unchanged. Frozen receipt still binds oldhost."
+  ],
+  "original_exports_preserved": true,
+  "approved_added_export_bindings_verified": true,
+  "all_nonexport_sections_identical": true,
+  "status": "passed within complete38007/2602expiryidle and three declared gate domains",
+  "cases": 573,
+  "stages": 944,
+  "rejections": 12,
+  "counts": {
+    "stages": 944,
+    "complete_backing_bytes": 770048,
+    "packets": 463,
+    "packet_payload_bytes": 14796,
+    "all2592_game_words_scanned_by_frozen_runner": 611712,
+    "removed_records": 498,
+    "GUIDs_above_2pow53": 281,
+    "post_pop_null_traps": 23,
+    "owned80_bytes": 20400,
+    "nontrivial_stable_compactions": 346
+  },
+  "regenerated_from_frozen_production": true,
+  "independent_queue_and_packet_replay": true,
+  "definition_pointer_normalization": "Controlled88B definition allocation maps to input explicit ID; all other80B bytes strict",
+  "game_state_evidence": "Frozen runner scans all648 words per2592B entry. This batch retains only exact change lists, not a full rawG sidecar.",
+  "masks": [],
+  "nan_relaxation": false,
+  "limitations": [
+    "Complete38007 arbitrary raw32 queue and10529 packet306 payload/capacity; opaque+28 physical byte preservation.",
+    "2602 expiry/idle plus expectednull-definition trap only; active due effect104+=108 returns explicit partial pending, not completedfunction.",
+    "975 allnon11 definitionbyte gates,2573 nonrunning/emptyclaim gates and49037 falseguard only; execution11/liveclaims/true-terminal remain explicit unknowns.",
+    "All2592B gameword changes and complete queuebackings/owned80 bytes compared; controlled definition pointers normalized to explicitfixtureID only.",
+    "This does not construct actual1089 entry, terrain or full880 front/multiplayer scheduler."
+  ],
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "reviewer_source_sha256": {
+    "scripts/review_main_tail135.py": "1c06b4b641198852d2867a7611b88b226a10b62730e8bc4ed9d2eec673c11783",
+    "scripts/review_gameplay_phase135.py": "8738bcda26101167e79eba168ce4ae0f6ccc90e96238ba2d80f0ed2d6aa9d1f2",
+    "scripts/extract_catalogue134.py": "4e465095731c6abc9775ce8445fdd6b96c11982300ec33be1c1b4bda0b8b709a"
+  },
+  "original_executed_by_reviewer": false,
+  "author_sources_modified_by_reviewer": false,
+  "evidence_directory": "evidence/frame-systems0135-independent-review-20261101T082346.241913Z",
+  "review_sha256": "1c980198bffb230796f787772aa4a4470ed62bcfe17ba8852f7b4e64720d80e8"
+}

@@ -2,7 +2,7 @@
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 
-最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。**功能对齐目标固定为本次取得的官方0.135.1 / Web0898d5e3**。当前[含真实915的同状态切片](reports/2026-11-01-headless-effects0135.md)对照8种子1614帧11309阶段、11次选择及11317次入口调用，0差异且[独审通过](reports/2026-11-01-headless-effects0135-independent-review.md)。旧064308/9695和061901/5473阶段按原身份保留，不与本批相加。phase1及初始zero槽仍为研究输入，尚非完整独立游戏。0.134.0与0.126.0保留各自历史/回归结果，不移作新版验收。完整边界见[版本策略](VERSION_STRATEGY.md)和[覆盖清单](RECONSTRUCTION.md)。
+最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。功能目标固定为官方0.135.1 / Web0898d5e3。当前[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异；6未知技能/2预算边界不替换，phase1与初始zero槽仍为研究输入，尚非完整880或独立游戏。旧072329/11309、064308/9695、061901/5473按历史身份保留，不相加。0.134.0/0.126.0的结果不转记为新版验收；见[版本策略](VERSION_STRATEGY.md)与[覆盖清单](RECONSTRUCTION.md)。
 
 此前0.126.0已恢复主循环主干、9职业/113能力定义、选卡/施法/伤害、12区域及账号存档主干，并建立若干独立模型。它们保留为历史验证和新版迁移参考，不能直接计为0.134.0已支持；[核心还原图](CORE_MAP.md)明确区分两者。
 
@@ -15,7 +15,7 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 ### 固定0.135.1与基础资源
 
 - 固定0.135.1：[完整WASM profile](reports/2026-11-01-wasm0135-profile.md)覆盖175317个defined函数、824549条直接调用；全量函数header/body范围和28471个data payload哈希读回通过。这是静态导航基础，不等于所有逻辑已恢复。
-- 固定0.135.1：[初批17角色映射](reports/2026-11-01-migration0135.md)保留，当前41个研究角色各自绑定body/签名，含area_tick3757与effect_tick915；原malloc91941、878拒绝导入、只增export不变。[41角色保守性证明](evidence/builder135-role41-review-20261101T072424.422022Z/review.json)重建旧8-role模块逐字节一致，仅静态构建，不新增运行用例。
+- 固定0.135.1：[初批映射](reports/2026-11-01-migration0135.md)保留，当前52角色各自body/签名guard；[52角色保守性证明](evidence/builder135-role52-review-20261101T083845.125766Z/review.json)重建旧9-role模块字节一致，0新增运行case。主Node878导入全拒绝/总32MiB；单块allocate从1升至4MiB用于完整ADT，总上限未变。
 - 固定0.135.1：[完整原1512属性差分](reports/2026-11-01-stats0135-spec.md)10569例、0字段差异；比较23派生词、HP、4辅助字段、3对象键、速度和队列数量，新增G1572护甲上限已恢复。独立只读复核通过；真实producer、已有树项更新、包字节和自然组合仍待接入。
 - 固定0.135.1：[暂停命令与tick时钟投影](reports/2026-11-01-game-loop0135.md)在完整原1371/880中重做6558例（5400命令＋1158tick），0差异。比较暂停phase及上次时间/模拟时钟字段；tick其余phase和完整调度未独立比较。状态为空队列/无单位并走原skip-spawn守卫，fresh终局保存、完整刷怪与多人终态仍pending。
 - 固定0.135.1：[114能力/9职业重新提取](reports/2026-11-01-catalogue0135.md)确认kit不变，但rockbiter与stormstrike的伤害/冷却/范围有实际平衡变化；新版并非只改UI。所有新pointer均由本版指令和data重建。
@@ -31,13 +31,15 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 - 固定0.135.1：[真实空profile构造151组](reports/2026-11-01-initial0135-independent-review.md)来自最终055136收据，恢复class starter/真实G1256 racial、属性/HP/RNG、预算/timer和phase0；上游账号/profile及完整资源进入未恢复。[死亡placement924](reports/2026-11-01-ordinary-placement0135.md)覆盖12地图和pre-hit移动插值；[六种racial720](reports/2026-11-01-racial-cast0135.md)验完整922的live32/属性/HP/盾和三份attempt ledger。
 - 固定0.135.1：[trig6726/长期AI429组3423步](reports/2026-11-01-ai-motion0135.md)补中角归约和跨2π轨迹；三条800帧轨迹无接触攻击，极大角1814、远程/Boss/真实地形仍缺。[玩家更新/尸体285组444阶段](reports/2026-11-01-player-update0135.md)、[移动暂停396组1136阶段/604条221消息](reports/2026-11-01-movement-pause0135.md)通过，见[两辅助批独审](reports/2026-11-01-gameplay-phase0135-independent-review.md)；暂停/恢复会逐移动NPC推进序号。
 - 固定0.135.1：[headless061901](reports/2026-11-01-headless0135.md)有8次自然选择；seed3选卡后继续145个原件对照帧至250，另7个在未支持技能前停。63源含56份core/init，完整128槽无损delta独立复原，24次旧槽复用保留192非零未写字节。只有7个numeric keys已比，其它keyed state全部另存；phase1与初始zeroed128槽为显式研究输入，1089仍被SELF/data阻断并缺4NPC/2kind2开局生产。
-- 固定0.135.1：[持续AoE693/5495组件](reports/2026-11-01-area-effects0135-independent-review.md)与历史[064308切片](reports/2026-11-01-headless-area0135.md)保留。当前[072329切片](reports/2026-11-01-headless-effects0135.md)以65源/58core、9入口独立预期对照8seed/1614帧/11309阶段/11select/11317调用0差异，[独审通过](reports/2026-11-01-headless-effects0135-independent-review.md)。seed1/6各400帧，seed3到257帧，其余未知选卡不替换；7numeric keys外的对象键另存，两个backing完整保留。
-- 915：[插入观测071318](reports/2026-11-01-effect-system0135-probe.md)真实执行1614次，三域保持clock0/两Vec cap0 ptr8 len0，1644=1、2356=0；没有向原件写入或替换三域状态。该观测复用旧预期，后继072329才用新独立模型验收idle915。独立[非空delayed56组件500/2121](reports/2026-11-01-effect-system0135.md)经[独审通过](reports/2026-11-01-effect-system0135-independent-review.md)，分列383正常与117预期255 pop后trap；普通910、120B效果和真实几何仍拒绝/待续，物理payload保留但wire codec未知。
+- 固定0.135.1：[持续AoE693/5495组件](reports/2026-11-01-area-effects0135-independent-review.md)保留；当前[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。完整128槽无损delta/字节/SHA与7个numeric keys对照；额外inactive payload/指针只观察，不预测零。旧阶段按各自快照保留。
+- 915：[500组/2121非空delayed56组件](reports/2026-11-01-effect-system0135.md)仍分383正常/117预期255 pop后trap；主切片接idle域。[Boss矩形390](reports/2026-11-01-effect-geometry0135.md)另分277正常/113SELF拒绝前缀；[真实浏览器DBC实验](reports/2026-11-01-browser-resources0135.md)已走通3组完整命中，但history/容器/proc尾部未形成完整新模型，旧prefix分类不倒改。
 - 新批分别经过[生成模块](reports/2026-11-01-spawn135-independent-review.md)、[死亡/受伤/AI](reports/2026-11-01-gameplay135-independent-review.md)及[主施法](reports/2026-11-01-owned-cast0135-independent-review.md)独立只读复核；未执行原件的复算不另计新增原件案例。旧批冻结列出的源码集合，新主施法补入包入口共33源，旧证据完整性不追溯扩大。
 - 基础资源：[独立MPQ读取器与索引](reports/2026-11-01-resource-index-base.md)对29602个命名块/1636167198B与固定StormLib逐字节一致；154份DBC已按容器读出。基础RAR仍关联旧0.102.3，不自动作为新版完整资产；尚无M2/BLP渲染器或完整资源管线。
 
-- [NPC/880静态清单](reports/2026-11-01-npc-effect-producer0135-static.md)及[独审](reports/2026-11-01-npc-effect-producer0135-static-review.md)核对148 normal、60 boss与290份完整40B动作声明；它们不是290种已验行为。完整880尚缺916/975/38007/2602/2573/49037等入口、2376特殊事件及前段/party/终态组合。
+- [NPC/880静态清单](reports/2026-11-01-npc-effect-producer0135-static.md)保留148normal/60boss/290原始动作声明，计数不等于已验行为。14个真实尾阶段已在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、真实1089世界与4NPC/2kind2、未知技能/AI/存档/UI/联机及完整独立一局仍未验收。
 - [真实进场资源静态规格](reports/2026-11-01-entry-resources0135-static.md)核对39函数、116份已有资产/170383346B和12区首层路径；[独立静态复核](reports/2026-11-01-entry-resources0135-static-review.md)通过，未执行真实VFS/world/1089，不新增玩法用例。
+- [五阶段组件573/944](reports/2026-11-01-frame-systems0135.md)、[真实胜利终态416/832及416构造](reports/2026-11-01-terminal-transition0135.md)、[107完整ADT/18413调用](reports/2026-11-01-terrain0135.md)、[真实Boss矩形390](reports/2026-11-01-effect-geometry0135.md)分别验收，不与主切片相加。[真实浏览器资源链](reports/2026-11-01-browser-resources0135.md)另以原生SELF/XHR完成3组phase1命中/15已恢复投影；17资源绑定允许、861拒绝、128MiB，区别于纯Node878全拒绝/32MiB。资源后的history/来源容器/keyed输出仍未独立恢复。 [浏览器独审](reports/2026-11-01-browser-resources0135-independent-review.md)通过，未重跑原件。
+- 真实14尾阶段[080624观测](evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json)为3038帧/42550快照/18选择/42558调用，6预算、seed3第353帧与seed5第285帧进入phase4；这是原件观测，不是独立模型验收，不与当前1614帧相加。 [观测独审](reports/2026-11-01-main-tail0135-probe-independent-review.md)通过；2521个execution11快照不计新模型能力。
 
 ### 固定0.134.0的局部结果
 
@@ -111,7 +113,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 目标 | 状态与下一步 |
 |---|---|
 | 原版 JS 启动层、资源路径、存档／插件桥 | 已跑通 REA 静态分析；动态值须进一步追踪或运行观测。 |
-| 固定目标0.135.1 / 90,959,080B WASM | 当前072329含真实idle915，同状态8seed/1614帧/11309阶段/11选择0差异且独审通过；真实phase进入、120/910、完整880/2376/前段/party/终态与完整一局仍未通过。 |
+| 固定目标0.135.1 / 90,959,080B WASM | 当前082927独立14尾8/1614/22607/11/22615、67源60core16角色0差异；真实14尾3038帧观测与browser3正常hit另列。完整进场/活跃队列/完整880/一局仍未通过。 |
 | 固定0.134.0 / 90,953,762B WASM | 完整验证/解码/独立索引，多个规则投影已做限定域原件差分；完整游戏未实现。REA原版大小限制未修改，本地扩展单列。 |
 | 历史0.126.0 / 90,116,970B WASM | 保留完整WAT和已验证局部模型作迁移/回归参考；WAT不是原始Rust源码。 |
 | 原生 Windows EXE 的导入表／Rust 元数据 | 已运行无目标执行的 REA 检查；元数据不是函数实现或源码。 |

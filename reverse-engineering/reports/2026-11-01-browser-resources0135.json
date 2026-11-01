@@ -1,0 +1,406 @@
+{
+  "title": "Fixed135 genuine browser resource embedding and complete original rectangle-hit returns",
+  "status": "real_resource_parse_and_normal_original_returns_with_known_projection_only",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": {
+    "path": "evidence/full0135-oracle-20261101T083300.201197Z/browser-resource135-comparison.json",
+    "sha256": "e9affcc1707f381334c8f007eec207ae52014ebbe926539a623909056c6563f7"
+  },
+  "scripts": {
+    "scripts/check_browser_resources135.py": "de610dddbf0b91f4e0942756d5e9cfbe75e135ad792d5da8f76a449836024b3e",
+    "scripts/run_browser_resources135.mjs": "9c42b5fe0191f90892df131a29b6e26205cd77586154304091e9e051cc7d22e0",
+    "scripts/browser_resource_case135.mjs": "e134977770093d8a33c55dcbdf86c04ee3a2057b85f4cf38d7013421883fd109"
+  },
+  "source_closure": {
+    "count": 33,
+    "before_equals_after": true,
+    "package_init_frozen": true,
+    "expected_before_original": true
+  },
+  "wasm": {
+    "only_changed_section": 7,
+    "approved_roles": [
+      2785,
+      910,
+      915
+    ],
+    "browser_only_extra4546_export": {
+      "name": "resource135_spell_record",
+      "index": 4546,
+      "body_sha256": "073d44f43e2a1a3ebb31ad697f20516f07128a866eb8c7c40c2eb1fbcca2e00f",
+      "signature": "(i32)->i32"
+    },
+    "all_nonexport_bytes_identical": true,
+    "import_count": 878
+  },
+  "official_glue": {
+    "path": "originals/official-acquisition-20261101T030310.926207Z/official-wenilla.js",
+    "sha256": "636bcd5acba01a31c4b40234969243e964cc8e7e7610adf0817e3494d92c9945",
+    "prefix_byte_identical": true,
+    "only_appended": [
+      "GetImports",
+      "BindOnly"
+    ],
+    "official_import_function_bodies_unchanged": true,
+    "binding": "manualWebAssembly.instantiate→bindonly→actualexternrefimport851;noinitSync/default/finalize",
+    "no_appstart_evidence": [
+      "originalWASMhasnosection8",
+      "explicitJSentryallowlist/42loggedcalls excludesstart4253/__wbindgen_start176107",
+      "bridgebindonly containsno finalize call",
+      "applicationnativeimports remain denied"
+    ],
+    "limits": "Explicitentry evidence andunchangedbodyidentity;hardcodedfalse flags alone arenot an internal dynamic-callgraph proof."
+  },
+  "host": {
+    "kind": "new native browser embedding, separatefrom all878-deniedNode",
+    "audited_allowed_imports": 17,
+    "other_denied_imports": 861,
+    "actual_calls": 111,
+    "actual_distinct_ids": [
+      523,
+      643,
+      644,
+      645,
+      658,
+      659,
+      660,
+      804,
+      827,
+      835,
+      845,
+      848,
+      851,
+      877
+    ],
+    "all_actual_calls_allowed": true,
+    "native_SELF": true,
+    "native_XHR": true,
+    "memory_cap_bytes": 134217728,
+    "actual_max_wasm_bytes": 92143616,
+    "page_cap": 2048,
+    "negative_2049page_constructor_rejected": true,
+    "main_Node_total_cap_unchanged": 33554432,
+    "main_Node_single_allocate_limit_unchanged": 4194304
+  },
+  "resources": {
+    "__index": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8",
+    "dbfilesclient/spell.dbc": "913d01c0376d88310ed4a44ea1115f30fd8be15af64ce304f4f17b6bc51cf15b",
+    "dbfilesclient/spellicon.dbc": "938e8c333fe914938994fc331c04655d7eb5719bc2d1b29eaf5fad4239abdfdc"
+  },
+  "resource_requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/__index",
+      "path": "/data/__index",
+      "at": 1793522010170,
+      "status": 200,
+      "bytes": 1699694,
+      "sha256": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/dbfilesclient/spell.dbc",
+      "path": "/data/dbfilesclient/spell.dbc",
+      "at": 1793522010200,
+      "status": 200,
+      "bytes": 16305013,
+      "sha256": "913d01c0376d88310ed4a44ea1115f30fd8be15af64ce304f4f17b6bc51cf15b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/dbfilesclient/spellicon.dbc",
+      "path": "/data/dbfilesclient/spellicon.dbc",
+      "at": 1793522010347,
+      "status": 200,
+      "bytes": 46442,
+      "sha256": "938e8c333fe914938994fc331c04655d7eb5719bc2d1b29eaf5fad4239abdfdc"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/__index",
+      "path": "/data/__index",
+      "at": 1793522010434,
+      "status": 200,
+      "bytes": 1699694,
+      "sha256": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/dbfilesclient/spell.dbc",
+      "path": "/data/dbfilesclient/spell.dbc",
+      "at": 1793522010464,
+      "status": 200,
+      "bytes": 16305013,
+      "sha256": "913d01c0376d88310ed4a44ea1115f30fd8be15af64ce304f4f17b6bc51cf15b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/dbfilesclient/spellicon.dbc",
+      "path": "/data/dbfilesclient/spellicon.dbc",
+      "at": 1793522010635,
+      "status": 200,
+      "bytes": 46442,
+      "sha256": "938e8c333fe914938994fc331c04655d7eb5719bc2d1b29eaf5fad4239abdfdc"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/__index",
+      "path": "/data/__index",
+      "at": 1793522010725,
+      "status": 200,
+      "bytes": 1699694,
+      "sha256": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/dbfilesclient/spell.dbc",
+      "path": "/data/dbfilesclient/spell.dbc",
+      "at": 1793522010753,
+      "status": 200,
+      "bytes": 16305013,
+      "sha256": "913d01c0376d88310ed4a44ea1115f30fd8be15af64ce304f4f17b6bc51cf15b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:49879/data/dbfilesclient/spellicon.dbc",
+      "path": "/data/dbfilesclient/spellicon.dbc",
+      "at": 1793522010901,
+      "status": 200,
+      "bytes": 46442,
+      "sha256": "938e8c333fe914938994fc331c04655d7eb5719bc2d1b29eaf5fad4239abdfdc"
+    }
+  ],
+  "probes": [
+    {
+      "case_id": 0,
+      "probe_when": "before_game_hit",
+      "before_once": 0,
+      "before_hit_once": 3,
+      "after_once": 3,
+      "records": [
+        {
+          "spell_id": 5568,
+          "name": "Trample",
+          "record24_hex": "070000004802e50007000000290000005802e50029000000"
+        },
+        {
+          "spell_id": 28308,
+          "name": "Hateful Strike",
+          "record24_hex": "0e000000401113010e000000140000005811130114000000"
+        },
+        {
+          "spell_id": 28783,
+          "name": "Impale",
+          "record24_hex": "060000000855130106000000200000001855130120000000"
+        }
+      ],
+      "memory_bytes": 86310912
+    },
+    {
+      "case_id": 3,
+      "probe_when": "after_cold_game_hit",
+      "before_once": 0,
+      "before_hit_once": 0,
+      "after_once": 3,
+      "records": [
+        {
+          "spell_id": 5568,
+          "name": "Trample",
+          "record24_hex": "0700000028480e01070000002900000018d23d0129000000"
+        },
+        {
+          "spell_id": 28308,
+          "name": "Hateful Strike",
+          "record24_hex": "0e00000008106e010e0000001400000020106e0114000000"
+        },
+        {
+          "spell_id": 28783,
+          "name": "Impale",
+          "record24_hex": "06000000d0536e010600000020000000e0536e0120000000"
+        }
+      ],
+      "memory_bytes": 92143616
+    },
+    {
+      "case_id": 6,
+      "probe_when": "after_cold_game_hit",
+      "before_once": 0,
+      "before_hit_once": 0,
+      "after_once": 3,
+      "records": [
+        {
+          "spell_id": 5568,
+          "name": "Trample",
+          "record24_hex": "07000000784d0e01070000002900000018d23d0129000000"
+        },
+        {
+          "spell_id": 28308,
+          "name": "Hateful Strike",
+          "record24_hex": "0e000000d80f6e010e00000014000000f00f6e0114000000"
+        },
+        {
+          "spell_id": 28783,
+          "name": "Impale",
+          "record24_hex": "06000000a0536e010600000020000000b0536e0120000000"
+        }
+      ],
+      "memory_bytes": 92143616
+    }
+  ],
+  "validation": {
+    "cases": 3,
+    "known_projection_snapshots": 15,
+    "mismatch_fields": 0,
+    "normal_original_calls": {
+      "resource135_spell_record": 9,
+      "__wbindgen_malloc": 18,
+      "research135_spawn_boss": 3,
+      "research135_npc_action": 3,
+      "research135_effect_tick": 9
+    },
+    "actual_game_entries": 15,
+    "fresh_instances": 3,
+    "direct4546_warm_case": 0,
+    "cold915_lazy_cases": [
+      3,
+      6
+    ],
+    "cold_proof": "SELF/XHR imports tagged research135_effect_tick withreturned=True;entryOnce0→3;realphase1/spell preserved",
+    "resource_completion_not_full_new_independent_model": true,
+    "geometry390_status_unchanged": "277normal+113hostdenialprefix;thisbrowserexecutiondoesnotrewriteoldreceiptsorpendingAPI",
+    "projection_mask": "Samegeometryunknownscratch+20..23 andphysicalunit248addressonly;fulltimers/known420unitbytes/known120/scalars/counters/RNG compared;post-boundarypacket/JSONsuffix mayremainobservedonly"
+  },
+  "raw_observations": {
+    "path": "evidence/full0135-oracle-20261101T083300.201197Z/browser-resource135-observations.json",
+    "sha256": "7f49ee459ec96282506106fa15f2616a5857efbce1ac702f48c4780c9c735c16",
+    "snapshot_byte_counts": {
+      "rawG2592": 38880,
+      "full128unit_backing": 814080,
+      "full64effect120_backing": 115200,
+      "timer_backing": 260
+    },
+    "all_packet_payloads_and_JSON_and_metadata_backing_retained": true,
+    "independently_predicted": false
+  },
+  "post4546_static": {
+    "complete_source": "evidence/effect-geometry0135-static-20261101T081015.075418Z/1073.wat",
+    "wat_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+    "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+    "path": [
+      "3133call4546→name/icon metadata",
+      "3269..3445 historyring48 pruning/grow/append",
+      "3446..3805 rawbuff13/item22 retaliation914 guardedbranches",
+      "3806..3875 two984 event producers withincallerCFG",
+      "3877rereadHP/minimum2578",
+      "3899..4990fatal/revival/racial922/modifier/live/message branches",
+      "4998..5414otherconditional914fanout",
+      "5435..5710ceilHP/maxHP keyed22/28 output"
+    ],
+    "unknown_fields": [
+      {
+        "offsets": [
+          968,
+          972,
+          976,
+          980
+        ],
+        "static": "1073 lines3269..3445 ring descriptor cap/ptr/head/len,48B rows; ownedname/icon+time/damage/shield/HP/classification writes",
+        "observed": "initial0→cap4,len1,allocatedptr;rawG captured",
+        "independent_model": "not restored;pointertarget payload not fully captured as independent semantic spec"
+      },
+      {
+        "offsets": [
+          1112,
+          1120
+        ],
+        "static": "1073 pre4546 lines1689 onward reaches keyed container anddynamic allocations; complete function retained",
+        "observed": "0→allocatedpointer/length1",
+        "independent_model": "opaque descriptor; not a cosmetic field or known-zero domain"
+      },
+      {
+        "offsets": [
+          1196,
+          1200,
+          1204
+        ],
+        "static": "1073 lines1374..1586 append4B value derivedfromsource declaration+32 afterdedupscan",
+        "observed": "0→cap4,ptr,length1",
+        "independent_model": "4B vector structural rule only;complete registry/lifecycle meaning unresolved"
+      },
+      {
+        "offsets": [
+          2476,
+          2480,
+          2484
+        ],
+        "static": "1073 lines5435..5710 uses3735 forkeys22/28 andceil/clampedHP+maxHP;mapheader changes",
+        "observed": "0→actualallocatedpointer,count2",
+        "independent_model": "fullkeyedcontainer implementation/byteidentity not restored"
+      }
+    ],
+    "fixture_domain": "positiveHP1m;nonfatal;emptylive/modifier/item/otherincomingproducer sources;phase1;one genuineBoss;flat world;not complete151/1089constructed game",
+    "not_claimed": [
+      "Historyring/fullsourcecontainers/keyedbyteproducers independentlyrestored",
+      "Nonemptyretaliation/proc/death/revival orpostresourcefullplayerbehavior",
+      "Fullwirecodec/extraUI/layout/rendering",
+      "Full880/worldentry/multiplayer orindependent complete915 model"
+    ]
+  },
+  "isolation": {
+    "loopback_only": "exactorigin route+CSP+deadloopbackproxy+DNS exclusions;allrecordedrequestsactual127.0.0.1",
+    "blocked_requests": [],
+    "browser_errors": [],
+    "fresh_temporary_profile_on4T": true,
+    "local_storage_keys": [],
+    "indexedDB": [],
+    "downloads": false,
+    "user_profile_used": false,
+    "user_saves_accessed": false
+  },
+  "terminal": {
+    "node_pid": 79922,
+    "browser_pid": 79938,
+    "node_exit_code": 0,
+    "browser_exit_event": [
+      {
+        "event": "browser_process_final",
+        "pid": 79938,
+        "exit_code": 0,
+        "signal_code": null
+      }
+    ],
+    "server_closed": true,
+    "outer_deadline_seconds": 120,
+    "browser_watchdog_seconds": 60,
+    "process_seconds": 3.021590374999505
+  },
+  "failures_preserved": [
+    {
+      "path": "evidence/full0135-oracle-20261101T082459.202257Z",
+      "reason": "sandboxlocalhostlistenEPERM;noBrowserstarted"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T082614.469136Z",
+      "reason": "DNSwildcardalso deniedloopback;Chrome62979closed"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T082707.408788Z",
+      "reason": "genuineglueauxsnippetmissing404;Chrome69002closed"
+    }
+  ],
+  "auxiliary_dependency": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/android/assets/latest-web-core/snippets/benilla-app-e11f90d5572a787b/inline0.js",
+    "url": "/snippets/benilla-app-e11f90d5572a787b/inline0.js",
+    "sha256": "a6d8b6cbe3ade99211ad4f01a4712c9996044e402975fc3d72e7f7b6d043f85b",
+    "scope": "Existing packaged dependency, no latest135 equivalence claim; begin/append imports denied and never invoked."
+  },
+  "independent_review": {
+    "status": "passed",
+    "report": "2026-11-01-browser-resources0135-independent-review.json",
+    "receipt": "evidence/browser-resources0135-independent-review-20261101T084320.657099Z/review.json",
+    "sha256": "810135b220315dd30a04ba54d72cba71198306025da58d47f8ee6a29e049fcc8",
+    "original_reexecuted": false
+  }
+}

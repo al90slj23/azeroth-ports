@@ -25,6 +25,9 @@ from .death_loot134 import OrdinaryDefinition
 from .death_pickup135 import (DeathContext135, CollectionState135, OrdinaryDeathBinding135,
     consume_ordinary_death, collect_pickups, apply_damage_lifesteal)
 from .effect_system135 import EffectSystemState135, step_effect_system
+from .frame_systems135 import (guard_owned_execution975, tick_scheduled_spells38007,
+    tick_secondary_areas2602, guard_claim_tick2573, guard_terminal_tick49037)
+from .headless_tail135 import TailDomains135, guard_extra916, guard_special2376, projection as tail_projection
 from .incoming135 import IncomingState135, BuffRecord
 from .initial_state135 import InitialState135
 from .initial_state135_data import ZONE_ENTRIES
@@ -84,6 +87,7 @@ class HeadlessState135:
     delayed_storage56: tuple = ()
     effect_records120: tuple = ()
     effect_capacity120: int = 0
+    tail: TailDomains135 = TailDomains135()
     frames: int = 0
     selections: int = 0
 
@@ -115,7 +119,8 @@ def from_initial(initial: InitialState135, *, flat_height_bits, zeroed_unit_stor
         IncomingState135(phase_2579=0, last_hit_1648_bits=words[1652],
             absorbed_740_bits=words[740], maximum_shield_744_bits=words[744]), (), (), (), words[2416], (0, 0),
         tuple(words[o] for o in (2428, 2432, 2436)), initial.region_index, flat_height_bits,
-        initial.source_id, initial.initial_scalar_words, initial.game_tag)
+        initial.source_id, initial.initial_scalar_words, initial.game_tag,
+        action_sequence1644=2 if abs(f.to_float(f.sub(initial.level.stats.previous_speed_bits, 0x40e00000))) > f.to_float(0x3c23d70a) else 1)
 
 
 def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
@@ -369,8 +374,39 @@ def _effects_phase(state, dt):
         delayed_records56=updated.delayed_records, delayed_storage56=updated.delayed_storage)
 
 
+def _tail_phase(state, kind, dt):
+    tail, level = state.tail, state.collection.level
+    if kind == 'extra':
+        guard_extra916(level.sources.timed_records, tail.active84_count)
+    elif kind == 'owned_effects':
+        guard_owned_execution975(tuple(x.record.to_bytes().hex() for x in level.choice_inputs.owned), RAW_BY_POINTER, dt)
+    elif kind == 'deadline':
+        result = tick_scheduled_spells38007(tail.deadline32_storage, tail.deadline32_count, level.stats.now_bits)
+        if result.status != 'scheduled_spells_complete': raise PendingHeadless135(result.status)
+        #A nonempty producer is not yet connected to the canonical message
+        #state. Keep it a boundary rather than losing its real packet stream.
+        if result.packets: raise PendingHeadless135('Active38007 packet producer needs canonical continuation')
+        tail = replace(tail, deadline32_storage=result.storage, deadline32_count=result.count)
+    elif kind == 'secondary':
+        result = tick_secondary_areas2602(tail.secondary112_storage, tail.secondary112_count, level.stats.now_bits)
+        if result.status != 'secondary_expiry_idle_complete' or result.packets:
+            raise PendingHeadless135('Active2602 continuation: ' + result.status)
+        tail = replace(tail, secondary112_storage=result.storage, secondary112_count=result.count)
+    elif kind == 'claims':
+        result = guard_claim_tick2573(tail.claims88_storage, tail.claims88_count, level.phase2587)
+        if result.status != 'claim_gate_complete': raise PendingHeadless135(result.status)
+        tail = replace(tail, claims88_storage=result.storage, claims88_count=result.count)
+    elif kind == 'special':
+        guard_special2376(tail.special40_count, level.flags2576)
+    elif kind == 'terminal':
+        guard_terminal_tick49037(tail.field400, level.phase2587, tail.flag2568)
+    else:
+        raise ValueError('Unknown main-tail stage')
+    return replace(state, tail=tail)
+
+
 def step_frame(state, dt_bits):
-    """Controlled ordered2088→1754→3757→915→921→2862→947 shared state.
+    """Controlled full single-state tail, not880front/party/transport orboot.
 
     Omitted880 phases and active915 continuation remain explicit boundaries.
     Unknown due timers or a selected unsupported ability stop before the frame.
@@ -392,9 +428,13 @@ def step_frame(state, dt_bits):
         live_records=prepared.live_records, unspecified_live_words=prepared.unspecified_live_words)
     stages = []
     state = _cast_phase(state, dt_bits); stages.append(('player', state))
+    state = _tail_phase(state, 'extra', dt_bits); stages.append(('extra', state))
+    state = _tail_phase(state, 'owned_effects', dt_bits); stages.append(('owned_effects', state))
     state = _cast_phase(state, dt_bits, phase='hits'); stages.append(('hits', state))
     state = _cast_phase(state, dt_bits, phase='area'); stages.append(('area', state))
     state = _effects_phase(state, dt_bits); stages.append(('effects', state))
+    state = _tail_phase(state, 'deadline', dt_bits); stages.append(('deadline', state))
+    state = _tail_phase(state, 'secondary', dt_bits); stages.append(('secondary', state))
     state = _ai_phase(state, dt_bits); stages.append(('ai', state))
     result = collect_pickups(state.collection, now)
     if result.status != 'core_projection': raise PendingHeadless135(result.status)
@@ -403,6 +443,9 @@ def step_frame(state, dt_bits):
         result = replace(result, state=replace(result.state, death=replace(result.state.death,
             message_sequence=(result.state.death.message_sequence + motion.count) & f.MASK)))
     state = replace(state, collection=result.state); stages.append(('collect', state))
+    state = _tail_phase(state, 'claims', dt_bits); stages.append(('claims', state))
+    if state.tail.gate2579:
+        raise PendingHeadless135('Alternate2579 spawn/special gate requires continuation')
     level = state.collection.level
     frame = FrameInput(state.zone, now, dt_bits, state.budget_bits, state.collection.death.kill_cost_bits,
         level.stats.flag2574, state.collection.currency.member_count, level.heal_gate387, words[2516],
@@ -417,6 +460,8 @@ def step_frame(state, dt_bits):
         budget_bits=spawned.budget_bits, velocity_xy=spawned.velocity_xy,
         previous_player_xyz=state.collection.player_xyz if level.stats.flag2574==0 else state.previous_player_xyz)
     stages.append(('spawn', state))
+    state = _tail_phase(state, 'special', dt_bits); stages.append(('special', state))
+    state = _tail_phase(state, 'terminal', dt_bits); stages.append(('terminal', state))
     return state, tuple(stages), 'ordered_frame_projection'
 
 
@@ -484,6 +529,7 @@ def projection(state):
         xp_queue_capacity=state.collection.xp_queue_capacity,
         currency_queue=[list(x) for x in state.collection.currency.queue], currency_queue_capacity=state.collection.currency.queue_capacity,
         game_tag=str(state.game_tag), auxiliary_motion_count=0, claim_count=0,
+        tail_state=tail_projection(state.tail), timed916_count=len(state.collection.level.sources.timed_records),
         effect_state=dict(clock2364_bits=state.effect_clock2364_bits,
             effect_counter2356=state.effect_counter2356, action_sequence1644=state.action_sequence1644,
             player_action_tag416=state.player_action_tag416, player_xyz=list(state.collection.player_xyz),

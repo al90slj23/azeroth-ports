@@ -1,0 +1,127 @@
+{
+  "title": "0.135.1 main-tail frame systems scoped executable reconstruction",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "passed_component_differential_scoped",
+  "comparison": "evidence/full0135-oracle-20261101T075536.007629Z/frame-systems135-comparison.json",
+  "comparison_sha256": "a32a6ff2fe5aa8fb8537200dccb303884f48b7568ac72a6f6866fef97b79a6ee",
+  "cases": 573,
+  "stages": 944,
+  "mismatch_cases": 0,
+  "kinds": {
+    "deadline": 110,
+    "secondary": 85,
+    "owned": 256,
+    "claim": 20,
+    "terminal": 102
+  },
+  "stats": {
+    "nonempty_input_cases": 201,
+    "nonempty_observed_stages": 338,
+    "full_backing_bytes_compared": 770048,
+    "full_packet_payload_bytes_compared": 14796,
+    "expected_null_definition_traps": 23
+  },
+  "body_guards": [
+    {
+      "index": 975,
+      "parameters_hex": "7f7d",
+      "results_hex": "",
+      "body_sha256": "11ffc7a65f7f5703fa3bacca09f3a4e2614b610f74bc387e5e28ad6c3a6cdb7c",
+      "body_start": 4085481,
+      "body_end": 4100448
+    },
+    {
+      "index": 38007,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "970c6290bedabc686aa99221938e0fecb504442cb304bc808f9fad371808cd2b",
+      "body_start": 59367183,
+      "body_end": 59367520
+    },
+    {
+      "index": 2602,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "badd383731d42ec76e01ba1d5b28e1da341a8a253767126101dec27b50d76b11",
+      "body_start": 15910803,
+      "body_end": 15913713
+    },
+    {
+      "index": 2573,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "1d896b573277b55fa03a9fbeef1ae5e61c3e3997aea5fca6fc836abaaab89139",
+      "body_start": 15777057,
+      "body_end": 15780080
+    },
+    {
+      "index": 49037,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_sha256": "e972d7925d7cdeb7b3fa81cae73ff0ace5e819bb7c0277259669bcae9062efc7",
+      "body_start": 64576917,
+      "body_end": 64577174
+    }
+  ],
+  "source_sha256": {
+    "scripts/check_frame_systems135.py": "2fc379dca2451e3c6e3c3050cfb2bce9929fb122ed7ec16f4ecd2a921dd52d0c",
+    "scripts/run_frame_systems135_oracle.mjs": "082f307487884ae7f4465df6e77c781b427666bc056a60cf2f892d3aff20ed32",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "2a39c62be896949e9414f63fb4c6c11972dabe5e743bc18bfcd8a31600a1495e",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/frame_systems135.py": "897ae44e60efb0afe6062da707a76fcce6bd0725824abe33ed55af93d9b90a2d",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "runtime": {
+    "cases": 573,
+    "calls": 944,
+    "expected_traps": 23,
+    "packets": 463,
+    "fresh_instances": 57,
+    "max_memory_bytes": 14745600,
+    "full_original_functions": [
+      975,
+      38007,
+      2602,
+      2573,
+      49037
+    ],
+    "all_callees_unchanged": true,
+    "denied_imports": 878,
+    "host_calls": 0,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "rejections": 12,
+  "scope": {
+    "975": "Complete first byte84 scan and noexecution11 gate; allopaqueowned80 preserved; resource784..904 unaccessed in this proven domain.",
+    "38007": "Complete arbitrary32B deadline queue removal, full raw-backed compaction and10529/306wire payload/capacity.",
+    "2602": "Complete expiry+idle domain, raw112 backing retained; removed row+0 null→expectedpanic80660 afterpop; pending live due records retain104+=108.",
+    "2573": "Exact nonphase1 orzero-count gate; running nonempty88B claims explicitly rejected.",
+    "49037": "Exact falsepredicate gate forfield400/phase/endlessbit0; true terminal path explicitly rejected."
+  },
+  "full880_restored": false,
+  "real1089_entry_completed": false,
+  "original_gameplay_app_started": false,
+  "all_original_callees_unchanged": true,
+  "unknowns": [
+    "975 execution11 full class resources/bloodrage-like ownedname branches and784..904 queues",
+    "2602 active due resolution, owned substitution, buffs34,914damage/1754queued hits and sharedRNG",
+    "2573 running nonempty88B claims, attraction, gainXP and collection notifications",
+    "49037 true terminal17119/17217/16340 movementstop,full232packet and1938notification sideeffects",
+    "Actual8seed source-domain observations and whole-tail integration are separate root batches; this receipt is controlled component evidence."
+  ],
+  "limitations": [
+    "Complete38007 arbitrary raw32 queue and10529 packet306 payload/capacity; opaque+28 physical byte preservation.",
+    "2602 expiry/idle plus expectednull-definition trap only; active due effect104+=108 returns explicit partial pending, not completedfunction.",
+    "975 allnon11 definitionbyte gates,2573 nonrunning/emptyclaim gates and49037 falseguard only; execution11/liveclaims/true-terminal remain explicit unknowns.",
+    "All2592B gameword changes and complete queuebackings/owned80 bytes compared; controlled definition pointers normalized to explicitfixtureID only.",
+    "This does not construct actual1089 entry, terrain or full880 front/multiplayer scheduler."
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "status": "passed_scoped_real_browser_embedding_review",
+  "receipt": "evidence/full0135-oracle-20261101T083300.201197Z/browser-resource135-comparison.json",
+  "receipt_sha256": "e9affcc1707f381334c8f007eec207ae52014ebbe926539a623909056c6563f7",
+  "sources": 33,
+  "production_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ai135.py",
+    "reconstruction/core_spec/ai135_data.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/effect_geometry135.py",
+    "reconstruction/core_spec/enemy_scaling.py",
+    "reconstruction/core_spec/incoming134.py",
+    "reconstruction/core_spec/incoming135.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/spawn135.py",
+    "reconstruction/core_spec/spawn135_data.py",
+    "reconstruction/core_spec/spawn_boss135.py",
+    "reconstruction/core_spec/spawn_boss135_data.py",
+    "reconstruction/core_spec/spawn_geometry135.py",
+    "reconstruction/core_spec/spawn_heading135.py",
+    "reconstruction/core_spec/spawn_math135.py",
+    "reconstruction/core_spec/spawn_position135.py",
+    "reconstruction/core_spec/spawn_position135_data.py",
+    "reconstruction/core_spec/spawn_position_motion135.py",
+    "reconstruction/core_spec/upgrade_values.py",
+    "reconstruction/resource_spec/__init__.py",
+    "reconstruction/resource_spec/dbc.py"
+  ],
+  "official_glue_sha256": "636bcd5acba01a31c4b40234969243e964cc8e7e7610adf0817e3494d92c9945",
+  "bridge_prefix_bytes": 187006,
+  "wasm_only_export_change": true,
+  "added_exports": [
+    [
+      "research135_effect_tick",
+      0,
+      915
+    ],
+    [
+      "research135_npc_action",
+      0,
+      910
+    ],
+    [
+      "research135_spawn_boss",
+      0,
+      2785
+    ],
+    [
+      "resource135_spell_record",
+      0,
+      4546
+    ]
+  ],
+  "approved_import_ids": [
+    0,
+    521,
+    523,
+    643,
+    644,
+    645,
+    658,
+    659,
+    660,
+    735,
+    804,
+    827,
+    835,
+    845,
+    848,
+    851,
+    877
+  ],
+  "allowed_imports": 17,
+  "denied_imports": 861,
+  "actual_import_calls": 111,
+  "actual_distinct_imports": 14,
+  "asset_hashes": {
+    "__index": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8",
+    "dbfilesclient/spell.dbc": "913d01c0376d88310ed4a44ea1115f30fd8be15af64ce304f4f17b6bc51cf15b",
+    "dbfilesclient/spellicon.dbc": "938e8c333fe914938994fc331c04655d7eb5719bc2d1b29eaf5fad4239abdfdc"
+  },
+  "data_request_counts": {
+    "__index": 3,
+    "dbfilesclient/spell.dbc": 3,
+    "dbfilesclient/spellicon.dbc": 3
+  },
+  "dbc_name_records": {
+    "5568": "Trample",
+    "28783": "Impale",
+    "28308": "Hateful Strike"
+  },
+  "cases": 3,
+  "known_stages": 15,
+  "explicit_entry_calls": 42,
+  "once_probes": [
+    {
+      "case_id": 0,
+      "probe_when": "before_game_hit",
+      "before_once": 0,
+      "before_hit_once": 3,
+      "after_once": 3,
+      "records": [
+        {
+          "spell_id": 5568,
+          "name": "Trample",
+          "record24_hex": "070000004802e50007000000290000005802e50029000000"
+        },
+        {
+          "spell_id": 28308,
+          "name": "Hateful Strike",
+          "record24_hex": "0e000000401113010e000000140000005811130114000000"
+        },
+        {
+          "spell_id": 28783,
+          "name": "Impale",
+          "record24_hex": "060000000855130106000000200000001855130120000000"
+        }
+      ],
+      "memory_bytes": 86310912
+    },
+    {
+      "case_id": 3,
+      "probe_when": "after_cold_game_hit",
+      "before_once": 0,
+      "before_hit_once": 0,
+      "after_once": 3,
+      "records": [
+        {
+          "spell_id": 5568,
+          "name": "Trample",
+          "record24_hex": "0700000028480e01070000002900000018d23d0129000000"
+        },
+        {
+          "spell_id": 28308,
+          "name": "Hateful Strike",
+          "record24_hex": "0e00000008106e010e0000001400000020106e0114000000"
+        },
+        {
+          "spell_id": 28783,
+          "name": "Impale",
+          "record24_hex": "06000000d0536e010600000020000000e0536e0120000000"
+        }
+      ],
+      "memory_bytes": 92143616
+    },
+    {
+      "case_id": 6,
+      "probe_when": "after_cold_game_hit",
+      "before_once": 0,
+      "before_hit_once": 0,
+      "after_once": 3,
+      "records": [
+        {
+          "spell_id": 5568,
+          "name": "Trample",
+          "record24_hex": "07000000784d0e01070000002900000018d23d0129000000"
+        },
+        {
+          "spell_id": 28308,
+          "name": "Hateful Strike",
+          "record24_hex": "0e000000d80f6e010e00000014000000f00f6e0114000000"
+        },
+        {
+          "spell_id": 28783,
+          "name": "Impale",
+          "record24_hex": "06000000a0536e010600000020000000b0536e0120000000"
+        }
+      ],
+      "memory_bytes": 92143616
+    }
+  ],
+  "totals": {
+    "strict_effect_bytes": 115152,
+    "stages": 15,
+    "raw_game_observation_bytes": 38880,
+    "unit_backing_observation_bytes": 814080,
+    "effect_backing_observation_bytes": 115200,
+    "timer_observation_bytes": 260,
+    "metadata_observation_bytes": 246624,
+    "explicit_unknown_scratch_bytes": 48
+  },
+  "unmodeled_extra_packet_opcodes": {},
+  "unmodeled_extra_JSON_types": {},
+  "max_memory_bytes": 92143616,
+  "engine_page_cap": 2048,
+  "cap2049_negative_checked": true,
+  "closed_node_pid": 79922,
+  "closed_browser_pid": 79938,
+  "process_check": [
+    {
+      "pid": 79922,
+      "present": false,
+      "method": "signal0 presence query, no signal sent"
+    },
+    {
+      "pid": 79938,
+      "present": false,
+      "method": "signal0 presence query, no signal sent"
+    }
+  ],
+  "reviewer_sha256": "48f67b713ae5341760daedfcc5a5174878b6186e528e51e0ef4e5a0dc83af4c6",
+  "helper_sha256": "4522742f2b1091e1cb1996a4c2f042e3383d7f092ec73da71a2546d3eb9e1546",
+  "original_or_browser_reexecuted": false,
+  "author_sources_modified": false,
+  "appstart_evidence": [
+    "Original module hasno implicitstartsection8.",
+    "Explicit JS callallowlist andall42entrylogs contain nostart/__wbindgen_start.",
+    "Officialglue prefix exact;appendonly BindOnly nevercallsinitSync/default/finalizer.",
+    "Original176107 directbody calls851then4253;4253 directcallindex only176107."
+  ],
+  "limitations": [
+    "Appstart false flags are harness declarations;explicitJS/static evidence isnot an exhaustive proof against every possible internalcall_indirect.",
+    "No externalrequest observed;exactloopback route/CSP/proxy/DNS policy andfreshprofile were audited,not packetlevelOSnetworktracing.",
+    "3normal originalentry returns and15knownprojections do not independently reconstruct resource-success history/registry/procs/keyedcontainer tails.",
+    "rawG2592/full128unit/effect/timer/metadata/payload sidecars include unknown state,not allindependent expected;known4scratchbytes+unit248address normalization remain explicit.",
+    "Three Spell names are independentlychecked;24Brecord pointers/icons andthe completeDBschema are not therebyreconstructed.",
+    "The17allowedresource-import/128MiB browser experiment isseparate from878-denied/32MiB Node mathbatches;old390pendingmodel notchanged.",
+    "Legacylocal assets/snippet are genuine readbytes,not complete latest135 assetequivalence orreal1089/world/app completion."
+  ],
+  "review_path": "evidence/browser-resources0135-independent-review-20261101T084320.657099Z/review.json",
+  "review_sha256": "810135b220315dd30a04ba54d72cba71198306025da58d47f8ee6a29e049fcc8",
+  "reviewer_source_snapshot": "evidence/browser-resources0135-independent-review-20261101T084320.657099Z/reviewer-source.py",
+  "reviewer_helper_snapshot": "evidence/browser-resources0135-independent-review-20261101T084320.657099Z/reviewer-helper.py",
+  "observations_crosscheck": {
+    "path": "evidence/browser-resources0135-independent-review-20261101T084320.657099Z/observations-check.json",
+    "sha256": "2f97f34d3e0ddc8852ce8512929fcd4ecd8c41687154c02761228b7a68ecc7e5",
+    "author_observations_sha256": "7f49ee459ec96282506106fa15f2616a5857efbce1ac702f48c4780c9c735c16",
+    "independent_tail_behavior_claimed": false
+  },
+  "unknown_tail_domains": [
+    968,
+    972,
+    976,
+    980,
+    1112,
+    1120,
+    1196,
+    1200,
+    1204,
+    2476,
+    2480,
+    2484
+  ],
+  "original_geometry390_pending_classification_changed": false
+}
