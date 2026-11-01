@@ -1,0 +1,502 @@
+{
+  "status": "passed_scoped_static_read_only_review",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "kind": "independent_static_review_not_new_original_differential",
+  "production_source_sha256": "34bdcd7116dcf25ec300d5ac028ca97122dba8b2be64e91324e03a37cf89a762",
+  "source_count": 15,
+  "source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/wmo_geometry135.py": "e2d7748f455679d4b4073a89b3dcb9cbc6d71b8b960c931b412a4779add39de7",
+    "reconstruction/resource_spec/world_cache135.py": "34bdcd7116dcf25ec300d5ac028ca97122dba8b2be64e91324e03a37cf89a762",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/world_raster135.py": "c0ee61f43fd127175ca4c4f0f374f1a65c4e1cd4e4f822f893a6d0c337f8025a",
+    "scripts/review_world_cache135.py": "9e774b60eedc7ff7cc6ce7d7f04566a0dad7a3c68d0605e939e4aae0098586b0"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/wmo_geometry135.py": "e2d7748f455679d4b4073a89b3dcb9cbc6d71b8b960c931b412a4779add39de7",
+    "reconstruction/resource_spec/world_cache135.py": "34bdcd7116dcf25ec300d5ac028ca97122dba8b2be64e91324e03a37cf89a762",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/world_raster135.py": "c0ee61f43fd127175ca4c4f0f374f1a65c4e1cd4e4f822f893a6d0c337f8025a",
+    "scripts/review_world_cache135.py": "9e774b60eedc7ff7cc6ce7d7f04566a0dad7a3c68d0605e939e4aae0098586b0"
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "sqlite_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0",
+  "full_wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+  "functions": [
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        6730
+      ],
+      "idx": 6730,
+      "wat_start": 627206949,
+      "wat_end": 627768424,
+      "wat_line": 11847806,
+      "body_start": 27040903,
+      "body_end": 27063384,
+      "body_bytes": 22481,
+      "wat_sha256": "8d8ff56b1b836550d0db3ef0ce1f9b2b8e9d778f39d0d451a9504be08d65ecbb",
+      "body_sha256": "9aa867cf375c7e60bffcee15c07f77e1320f715f08a68af69bd439eedb8f61e8"
+    },
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        15374
+      ],
+      "idx": 15374,
+      "wat_start": 810934101,
+      "wat_end": 810944467,
+      "wat_line": 17549391,
+      "body_start": 39471083,
+      "body_end": 39471898,
+      "body_bytes": 815,
+      "wat_sha256": "eefc917c238dee1f93b953bc23e9dcc584c6115543dfacfaa8c8ea4d24b36290",
+      "body_sha256": "567abbc1a110a1f5f1b465a030c186ef621b2dccfafe688f0f89c0a0086b7e5d"
+    },
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        9328
+      ],
+      "idx": 9328,
+      "wat_start": 687884012,
+      "wat_end": 687900886,
+      "wat_line": 13864093,
+      "body_start": 31519944,
+      "body_end": 31521059,
+      "body_bytes": 1115,
+      "wat_sha256": "77db228ac0d951abca8e8aa82846f164e9fa2bd3ee1217781858cf64e0968887",
+      "body_sha256": "a8e943e5af2103c6fd9c7d3d7e6e1d05dceb844eee84733fdcf540822b2d6179"
+    },
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        12375
+      ],
+      "idx": 12375,
+      "wat_start": 766081231,
+      "wat_end": 766090596,
+      "wat_line": 15976870,
+      "body_start": 36024653,
+      "body_end": 36025544,
+      "body_bytes": 891,
+      "wat_sha256": "7360e7bd197fc43a8cb70cb8a793ec943c7dd203754ea3d4034df1424d6f7476",
+      "body_sha256": "ad87b93e4482062ad563e9672ca279afc4cbb3000bb3be271f25f3dea815b3e5"
+    },
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        18572
+      ],
+      "idx": 18572,
+      "wat_start": 859356904,
+      "wat_end": 859365762,
+      "wat_line": 19147601,
+      "body_start": 42977546,
+      "body_end": 42978543,
+      "body_bytes": 997,
+      "wat_sha256": "c02bf8b52187ad2dcaeeac5a76852b18a5403ec78c37902b68837e552f63298b",
+      "body_sha256": "a82a1c8b0e230958331c9c8ef152086c33ab373a7edda7dcc2b61cce7c340983"
+    },
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        18670
+      ],
+      "idx": 18670,
+      "wat_start": 860842772,
+      "wat_end": 860851464,
+      "wat_line": 19200816,
+      "body_start": 43097257,
+      "body_end": 43097914,
+      "body_bytes": 657,
+      "wat_sha256": "63ddfa2b347afe79a040e16001818529df98ac4e57e941a95e05e0b082dc50c0",
+      "body_sha256": "e69b2fbf238393d43be83153dbbfa5ff310497d104691c829438e18be91cd0e5"
+    },
+    {
+      "query": "SELECT idx,wat_start,wat_end,wat_line,body_start,body_end,body_bytes FROM functions WHERE idx=?",
+      "query_parameters": [
+        84193
+      ],
+      "idx": 84193,
+      "wat_start": 1261016401,
+      "wat_end": 1261017090,
+      "wat_line": 32712036,
+      "body_start": 73528408,
+      "body_end": 73528474,
+      "body_bytes": 66,
+      "wat_sha256": "2fd1e4d1e1b5c8e58d4e84bd94f35df22b241b62db7ec3f832a39d597a7544ec",
+      "body_sha256": "e9f807812165022fc9fd1d4c127fdca87f9146ba55341d6df93cf1946eb368b6"
+    }
+  ],
+  "windows": [
+    {
+      "name": "zone_extent_primary_flag",
+      "function": 6730,
+      "line_start": 473,
+      "line_end": 505,
+      "file": "6730-473-505-zone_extent_primary_flag.wat",
+      "sha256": "b0abc1ca2262754336f9db3505d5ca952a514abe099dbed788b5a052a53a0c1a",
+      "required_tokens": [
+        "f32.load offset=120",
+        "f32.const 0x1.4p+4",
+        "i32.load8_u offset=148"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "nav_width",
+      "function": 6730,
+      "line_start": 6230,
+      "line_end": 6253,
+      "file": "6730-6230-6253-nav_width.wat",
+      "sha256": "f41390ae0cce38e90104604c0a4293af75533858ce948885bdccbdf677d90b05",
+      "required_tokens": [
+        "f32.add",
+        "f32.ceil",
+        "i32.trunc_sat_f32_u"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "origin",
+      "function": 6730,
+      "line_start": 6365,
+      "line_end": 6382,
+      "file": "6730-6365-6382-origin.wat",
+      "sha256": "b0f1b2d1e0de55abb0f6e0f3e267f2f41faa5bd5d95031804ba750579537ee39",
+      "required_tokens": [
+        "f32.sub",
+        "local.set 66",
+        "local.set 63"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "no_primary_ground",
+      "function": 6730,
+      "line_start": 6616,
+      "line_end": 6689,
+      "file": "6730-6616-6689-no_primary_ground.wat",
+      "sha256": "39f8b7af236e23d1a8fc056500abb42cd9cbf4c427179f53ad9f507995c08e81",
+      "required_tokens": [
+        "f32.const 0x1p-1",
+        "call 18670",
+        "f32.const nan"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "center_seed",
+      "function": 6730,
+      "line_start": 8249,
+      "line_end": 8305,
+      "file": "6730-8249-8305-center_seed.wat",
+      "sha256": "6c10a5d1768be5165df6c935545f2677a4013e89da11f6af526c92b85f47a8fa",
+      "required_tokens": [
+        "i32.trunc_sat_f32_u",
+        "i32.load8_u",
+        "i32.store"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "perimeter_iterator",
+      "function": 6730,
+      "line_start": 8330,
+      "line_end": 8785,
+      "file": "6730-8330-8785-perimeter_iterator.wat",
+      "sha256": "9ebf5513fe16daad7872be2c6d1a2dad0d3d8fa583e438fadc53c6a08bfb4841",
+      "required_tokens": [
+        "call 15374",
+        "i32.load8_u"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "four_neighbour_bfs",
+      "function": 6730,
+      "line_start": 9014,
+      "line_end": 9373,
+      "file": "6730-9014-9373-four_neighbour_bfs.wat",
+      "sha256": "b7d621c2dc17e2b00f235e646d0d8d1263a10f8fd9db3625627eee3a142eb7e7",
+      "required_tokens": [
+        "i32.div_u",
+        "i32.const 1",
+        "i32.sub",
+        "i32.add",
+        "i32.load8_u"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "final_raw_nav_or",
+      "function": 6730,
+      "line_start": 9374,
+      "line_end": 9403,
+      "file": "6730-9374-9403-final_raw_nav_or.wat",
+      "sha256": "b5292400b74fb4aace551a378d2ffbdd84c9dce6efc47fb09131c7f027607a1e",
+      "required_tokens": [
+        "i32.load8_u",
+        "i32.const 1",
+        "i32.xor",
+        "i32.or",
+        "i32.store8"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "secondary_width_and_geometry",
+      "function": 6730,
+      "line_start": 9720,
+      "line_end": 10000,
+      "file": "6730-9720-10000-secondary_width_and_geometry.wat",
+      "sha256": "748ccbc70e3c0b7d7cc5518e6346e84d38671d6e0e7a0b77dad930fcd7dfc89e",
+      "required_tokens": [
+        "f32.ceil",
+        "call 9513",
+        "call 18572",
+        "call 12375",
+        "0x1.fffffep+127"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "secondary_filter_and_max",
+      "function": 6730,
+      "line_start": 10204,
+      "line_end": 10295,
+      "file": "6730-10204-10295-secondary_filter_and_max.wat",
+      "sha256": "dd8b8347eafa6c0f9d44ba85e7648b3c35c0d1d14238bb159e4bb288fe3ce130",
+      "required_tokens": [
+        "call 18670",
+        "0x1.99999ap-4",
+        "0x1.8p+1",
+        "f32.gt",
+        "f32.le",
+        "f32.lt"
+      ],
+      "all_tokens_observed": true
+    },
+    {
+      "name": "secondary_absent_if_no_update",
+      "function": 6730,
+      "line_start": 10312,
+      "line_end": 10327,
+      "file": "6730-10312-10327-secondary_absent_if_no_update.wat",
+      "sha256": "53875411c1874b2ea610696b9aa67fd23d97d91afe677a847ca73c228b517aad",
+      "required_tokens": [
+        "local.get 23",
+        "i32.const -1",
+        "call 71889"
+      ],
+      "all_tokens_observed": true
+    }
+  ],
+  "zone": {
+    "address": 5456016,
+    "bytes152_hex": "0000000000000000c6a1520006000000cca152000d000000d9a1520013000000040000000000000004000000000000000400000000000000040000000000000094a252000c00000078ad520005000000e0ae520018000000f8ae520093000000000000000c00000000d012c600401ec400008842cdcccc3f0000f0420a000000000000000000000085eb513f000000000000000000000000",
+    "sha256": "aa7ace8cbc885786ee0752885198aa690e9482b91c77cdec6ebf0dee90828da7",
+    "active_segments": [
+      {
+        "index": 3347,
+        "segment_address": 5455429,
+        "segment_length": 712,
+        "segment_file_offset": 82109796,
+        "copied_zone_offsets": [
+          0,
+          125
+        ],
+        "copied_file_offsets": [
+          82110383,
+          82110508
+        ],
+        "copied_sha256": "eb09fc5966aecb544066e5c7ae4da87b87f8d163fe9377dfa9d4f9ad5b82202b"
+      },
+      {
+        "index": 3348,
+        "segment_address": 5456152,
+        "segment_length": 4,
+        "segment_file_offset": 82110516,
+        "copied_zone_offsets": [
+          136,
+          140
+        ],
+        "copied_file_offsets": [
+          82110516,
+          82110520
+        ],
+        "copied_sha256": "d9607ca2fd6cb4eaf225e80fc947e33366e40389197f2a8bed834fdee5a8d7dc"
+      }
+    ],
+    "initial_zero_gap_offsets": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151
+    ],
+    "map_id": 0,
+    "center_xy_bits": [
+      3323121664,
+      3290316800
+    ],
+    "fallback_z_bits": 1116209152,
+    "heading_bits": 1070386381,
+    "radius_bits": 1123024896,
+    "primary_enabled_byte148": 0,
+    "raw_polygon_length48": 4,
+    "selected_primary_polygon_length": 0,
+    "implicit_zero_is_module_initialization_not_runtime_guess": true
+  },
+  "actual_group_budget": {
+    "path": "actual387-group-budgets.json",
+    "sha256": "109031a1c47a479be1b869e9fd02639fe711995f2a0f4779d1e179d84cc71dd1",
+    "group_count": 387,
+    "max_vertices": 15452,
+    "max_indices": 30603
+  },
+  "reviewed_rules": [
+    {
+      "rule": "extent / width / origin",
+      "model_lines": [
+        56,
+        64
+      ],
+      "basis": "6730 zone120+20 roundedf32; diameter ceil; secondaryceil doublef32diameter; centre-extent"
+    },
+    {
+      "rule": "no-primary ground",
+      "model_lines": [
+        67,
+        76
+      ],
+      "basis": "6730 no-primary calls18670 per row-major one-unit cellcentre, canonicalNaN onmiss"
+    },
+    {
+      "rule": "connectivity",
+      "model_lines": [
+        79,
+        101
+      ],
+      "basis": "6730 plus15374 enumerate freecentre and allfourperimeter cells, floodonlyfree four-neighbours, thenoldbyte|(visited^1)"
+    },
+    {
+      "rule": "secondary max",
+      "model_lines": [
+        104,
+        132
+      ],
+      "basis": "6730 calls18670 at half-unit cellcentre; lowerstrict+.1 andupperinclusive+3, boundsafterfilters, replaceNaN/loweronly, absentifnoupdate"
+    },
+    {
+      "rule": "instance phases",
+      "model_lines": [
+        186,
+        209
+      ],
+      "basis": "Declared nav_m2 thennav_wmo thensecondary_wmo; independentlyrestored placement sourceorder retained"
+    }
+  ],
+  "group_split_equivalence": {
+    "premise": "Original4464 deduplicates source indices independently for each group and appends groups in rootindex order.",
+    "vertex_transform": "18572 computes fixedmatrix fromsamepose then eachvertex independently. Transform(concatenation)=concatenation(transform(group)).",
+    "navigation": "9328 pertriangle AABB/normal/edge-length400cap andsamplepositions dependonlythattriangle andsameground; effectsare nav[index]=1. No cross-trianglefloatreduction.",
+    "secondary": "12375 emits orderedcandidatepairs pertriangle; grouping preserves triangleorder and scalaroperations. Final6730 maxmerge retainsfirstequal.",
+    "supporting_functions": [
+      18572,
+      9328,
+      12375
+    ],
+    "actual_all387_groups_fit_frozen_mesh_budget": true,
+    "arithmetic_statement_is_static_reasoning_not_new_original_differential": true
+  },
+  "historical_world_comparison": {
+    "status": "pending_in_root_owned_run",
+    "reviewed": false,
+    "new_original_calls": 0,
+    "note": "A later separately hashed read-only wrapper must inspect terminal asset-world comparison receipt; this static review cannot mark it passed."
+  },
+  "original_executed": false,
+  "production_executed": false,
+  "snapshot_read": false,
+  "new_original_calls": 0,
+  "new_original_cases": 0,
+  "limitations": [
+    "Successful finite canonical nonflat/no-primary path only. Primary-present/polygon/flat world paths are outside review.",
+    "Fullarrayworld comparison, othermaps/modes, VFS/cache/Rc ownership andprofile/menu/rendering not established by static checks.",
+    "This reviewer binds evidence windows and exact current source; it is not a formal equivalence proof or completeworld differential."
+  ],
+  "files_sha256": {
+    "6730-8330-8785-perimeter_iterator.wat": "9ebf5513fe16daad7872be2c6d1a2dad0d3d8fa583e438fadc53c6a08bfb4841",
+    "9328.wat": "77db228ac0d951abca8e8aa82846f164e9fa2bd3ee1217781858cf64e0968887",
+    "18572.wat": "c02bf8b52187ad2dcaeeac5a76852b18a5403ec78c37902b68837e552f63298b",
+    "6730-10204-10295-secondary_filter_and_max.wat": "dd8b8347eafa6c0f9d44ba85e7648b3c35c0d1d14238bb159e4bb288fe3ce130",
+    "zone0-initial152.bin": "aa7ace8cbc885786ee0752885198aa690e9482b91c77cdec6ebf0dee90828da7",
+    "6730-6616-6689-no_primary_ground.wat": "39f8b7af236e23d1a8fc056500abb42cd9cbf4c427179f53ad9f507995c08e81",
+    "12375.wat": "7360e7bd197fc43a8cb70cb8a793ec943c7dd203754ea3d4034df1424d6f7476",
+    "18670.wat": "63ddfa2b347afe79a040e16001818529df98ac4e57e941a95e05e0b082dc50c0",
+    "6730.wat": "8d8ff56b1b836550d0db3ef0ce1f9b2b8e9d778f39d0d451a9504be08d65ecbb",
+    "6730-9374-9403-final_raw_nav_or.wat": "b5292400b74fb4aace551a378d2ffbdd84c9dce6efc47fb09131c7f027607a1e",
+    "6730-9014-9373-four_neighbour_bfs.wat": "b7d621c2dc17e2b00f235e646d0d8d1263a10f8fd9db3625627eee3a142eb7e7",
+    "6730-473-505-zone_extent_primary_flag.wat": "b0abc1ca2262754336f9db3505d5ca952a514abe099dbed788b5a052a53a0c1a",
+    "6730-6365-6382-origin.wat": "b0f1b2d1e0de55abb0f6e0f3e267f2f41faa5bd5d95031804ba750579537ee39",
+    "15374.wat": "eefc917c238dee1f93b953bc23e9dcc584c6115543dfacfaa8c8ea4d24b36290",
+    "6730-6230-6253-nav_width.wat": "f41390ae0cce38e90104604c0a4293af75533858ce948885bdccbdf677d90b05",
+    "6730-9720-10000-secondary_width_and_geometry.wat": "748ccbc70e3c0b7d7cc5518e6346e84d38671d6e0e7a0b77dad930fcd7dfc89e",
+    "84193.wat": "2fd1e4d1e1b5c8e58d4e84bd94f35df22b241b62db7ec3f832a39d597a7544ec",
+    "6730-8249-8305-center_seed.wat": "6c10a5d1768be5165df6c935545f2677a4013e89da11f6af526c92b85f47a8fa",
+    "actual387-group-budgets.json": "109031a1c47a479be1b869e9fd02639fe711995f2a0f4779d1e179d84cc71dd1",
+    "6730-10312-10327-secondary_absent_if_no_update.wat": "53875411c1874b2ea610696b9aa67fd23d97d91afe677a847ca73c228b517aad"
+  },
+  "review_path": "evidence/world-cache0135-independent-review-20261101T111914.481057Z/review.json",
+  "review_sha256": "a686b8a03b25b7954432c4765e2c14b26f472ad837123f1cfeb90f78d450fbb8",
+  "summary": {
+    "functions_reread": 7,
+    "instruction_windows": 11,
+    "source_closure": 15,
+    "actual_wmo_groups": 387,
+    "max_group_vertices": 15452,
+    "max_group_indices": 30603,
+    "original_calls": 0,
+    "historical_world_comparison": "pending_separate_root_receipt"
+  }
+}

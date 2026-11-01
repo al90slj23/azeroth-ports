@@ -2,14 +2,14 @@
 
 核对日期：2026-11-01（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
 
-**按用户方向，功能对齐采用本次已取得并固定SHA的官方0.135.1 / Web0898d5e3。Windows与Web原件均已核验；独立默认开局已在解析world输入上完成差分，旧主切片保持原范围。完整asset→world生产、开局接主切片、完整调度和独立一局尚未闭合。0.134.0保留固定局部结果；0.126.0仅保留历史验证与回归参考。**
+**按用户最新方向，功能目标持续对齐官方最新稳定版；每轮先核实发布身份，再固定版本、SHA与资源输入。本轮验证仍为已取得的官方0.135.1 / Web0898d5e3。** 新稳定版按同一项目增量迁移：已验证规则保留原版本身份，变化部分补规格/实现/差分，不能在一次实验中浮动替换原件。0.134.0与0.126.0均保留历史结果，不自动转记新版本。当前默认Elwynn已有451资产→查询world→开局的1历史case对照；物理所有权、完整调度和独立一局仍未闭合。
 
 ## 目标与固定参照
 
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
-| 最新Windows功能目标 | 官方更新EXE 0.135.1，147797504B，SHA `71e5f176…bc59249` | 官方大小/SHA与gzip CRC/ISIZE通过；未执行EXE，语义迁移待验。 |
-| 最新Web功能目标 | Web0.135.1/0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 共享52角色guard；主切片仍082927的8/1614/22607/11/22615、67源60core16角色。另有独立开局16/32与M2／WMO／查询／位置组件；完整world、开局接主切片、880和一局仍缺。 |
+| 本轮固定Windows程序目标 | 官方更新EXE 0.135.1，147797504B，SHA `71e5f176…bc59249` | 官方大小/SHA与gzip CRC/ISIZE通过；未执行EXE，语义迁移待验。 |
+| 本轮固定Web研究目标 | Web0.135.1/0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 共享52角色guard；主切片仍082927的8/1614/22607/11/22615、67源60core16角色。另有开局16/32、placement13/13、M2／WMO等组件，以及451资产→查询world→开局的1历史case；物理world所有权、旧主切片连接、880和一局仍缺。 |
 | 历史规则和差分参照 | Web 0.126.0 / 3e72472a，WASM SHA `06705937…b147c` | 保留所有既有规格、输入和证据作迁移/回归；固定版本工具继续拒绝其他原件，不再作主目标扩展。 |
 | 固定 Windows 原生研究基线 | 官方更新 EXE 0.134.0，147793408B，SHA `ed7dc687…1a3f6` | 核对原生离线发行、平台行为和同源游戏规则；每个原生地址重新定位。 |
 | 固定同版WASM研究基线 | Web 0.134.0 / 983346a7，90953762B，SHA `2e86455a…73d52` | 已建立若干局部独立实现/原件差分；不代表完整游戏实现，也不代表0.135.1验收。 |
@@ -45,11 +45,13 @@
 
 history的[164组/924调用组件](reports/2026-11-01-incoming-history0135-independent-review.md)与[真实DBC9fresh/37调用](reports/2026-11-01-browser-history0135-independent-review.md)分层保留；[真实world/1089观察](reports/2026-11-01-entry-world0135-probe-independent-review.md)的453MPQ／561GET仍是历史原件观察、独立模型case0，未因后继模型而改记。
 
-本轮独立world组件包括[query959/1858与新position96/96、30源闭包联合独审](reports/2026-11-01-world-consumers0135-independent-review.md)、[真实31M2／raster114/1477最终独审](reports/2026-11-01-world-raster0135-independent-review.md)，以及[实际410WMO碰撞425/830](reports/2026-11-01-wmo-geometry0135.md)（[独审通过](reports/2026-11-01-wmo-geometry0135-independent-review.md)）。[1744／1821组件27/116独审](reports/2026-11-01-opening-entities0135-independent-review.md)通过；[整条默认开局16/32](reports/2026-11-01-opening0135.md)冻结39源、六vector及1248包／16start逐字相符，[独审通过](reports/2026-11-01-opening0135-independent-review.md)。world仍为已解析snapshot输入，完整instances／placement／transform／secondary merge／cache／nav／VFS／所有权生产、渲染／动画以及开局接旧主切片未完成；本轮新bootstrap0、主切片帧0。
+本轮独立world组件包括[query959/1858与新position96/96、30源闭包联合独审](reports/2026-11-01-world-consumers0135-independent-review.md)、[真实31M2／raster114/1477最终独审](reports/2026-11-01-world-raster0135-independent-review.md)，以及[实际410WMO碰撞425/830](reports/2026-11-01-wmo-geometry0135.md)（[独审通过](reports/2026-11-01-wmo-geometry0135-independent-review.md)）。[1744／1821组件27/116独审](reports/2026-11-01-opening-entities0135-independent-review.md)通过；[整条默认开局16/32](reports/2026-11-01-opening0135.md)冻结39源、六vector及1248包／16start逐字相符，[独审通过](reports/2026-11-01-opening0135-independent-review.md)。该16组入口批world仍为显式解析输入；后继[placement13/13](reports/2026-11-01-world-placements0135.md)、[cache生产/静态独审](reports/2026-11-01-world-cache0135-independent-review.md)与[451资源组合](reports/2026-11-01-asset-world0135.md)独立生成默认Elwynn查询world并继续开局，1历史case、[整体独审通过](reports/2026-11-01-asset-world0135-independent-review.md)。不增加新原件case/bootstrap/主切片帧；物理App/Once/Rc/VFS所有权、其它地图、渲染／动画及接旧主切片仍缺。
 
 没有直接body匹配的函数也不能立即判定规则变化：call索引、静态地址、编译布局可能改变字节。需在语义、常量、输入输出与具体副作用层继续核对。当前仍以[全模块清单](RECONSTRUCTION.md)记录未知项，不将旧版验证次数移作新版验收。
 
-当前[独立复制运行](evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json)61文件=60core+CLI，默认0帧停真实进场边界，显式研究输入下seed1/6各400、seed3到257；纯模型自跑不新增原件case。新开局模块尚未接该CLI，旧phase1边界保持。活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、完整world／菜单profile／其它地图模式／非空装备天赋、全部技能AI／存档UI网络与独立完整一局仍缺。
+当前[独立复制运行](evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json)61文件=60core+CLI，默认0帧停真实进场边界，显式研究输入下seed1/6各400、seed3到257；纯模型自跑不新增原件case。新资产开局另有纯模型CLI，但尚未接该旧headless CLI，旧phase1边界保持。活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、完整物理world／菜单profile／其它地图模式／非空装备天赋、全部技能AI／存档UI网络与独立完整一局仍缺。
+
+[完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)仅增加前置布局/控制流依据；合法App/76B transport仍缺，不能因此宣称完整880或独立一局。未来每轮继续检查latest稳定版，新增版本只在新固定SHA批次迁移。
 
 ## Windows与WASM的分工
 
@@ -63,7 +65,7 @@ macOS可直接用Ghidra/REA和PE解析器静态分析x86-64 Windows程序，无�
 
 所有新下载和解压原件均保存在4T外盘的`reverse-engineering/originals/`，每次采集创建独立时间目录。原0.134.0采集位于`official-acquisition-20261031T235700.049192Z/`：三个官方更新分块拼成gzip流，解压CRC/ISIZE通过，得到匹配官方SHA的EXE。0.135.1另存，保留原研究输入。
 
-完整资源RAR已复用用户原有4T文件，完成全包CRC与8个提取文件SHA复核，含7个MPQ；对应官方已验证HTTP块及末尾共289411072B一致，没有把本地整包SHA说成官方发布的SHA。包内139691008B EXE仍与历史Windows0.102.3 / f78e6fab完全相同。官网RAR提供旧版基础程序/资源，新版程序须取官方更新清单，不能仅下载RAR就称为最新版。详见[资源验收](reports/2026-11-01-resource-acquisition.md)。基础资源的[MPQ索引/独立读取器及DBC容器](reports/2026-11-01-resource-index-base.md)已验收29602命名块/1636167198B与154份DBC。实际31M2／410WMO另完成碰撞投影，仍不证明基础包等于新版全部资产；完整场景加载、列/玩法ID关联、动画／材质／音画与渲染继续待恢复。
+完整资源RAR已复用用户原有4T文件，完成全包CRC与8个提取文件SHA复核，含7个MPQ；对应官方已验证HTTP块及末尾共289411072B一致，没有把本地整包SHA说成官方发布的SHA。包内139691008B EXE仍与历史Windows0.102.3 / f78e6fab完全相同。官网RAR提供旧版基础程序/资源，新版程序须取官方更新清单，不能仅下载RAR就称为最新版。详见[资源验收](reports/2026-11-01-resource-acquisition.md)。基础资源的[MPQ索引/独立读取器及DBC容器](reports/2026-11-01-resource-index-base.md)已验收29602命名块/1636167198B与154份DBC。实际31M2／410WMO及后继451资产已用于默认Elwynn查询world历史对照，仍不证明基础包等于新版全部资产；物理场景/VFS所有权、其它地图、列/玩法ID关联、动画／材质／音画与渲染继续待恢复。
 
 程序、WASM、RAR、完整反编译及工具产物均为ignored本地研究资料，不进入Git。提交的是可复现脚本、独立实现和结论；封装优化继续使用各自固定版本和回归流程。
 

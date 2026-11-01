@@ -1,10 +1,12 @@
 # 独立核心的可执行规格
 
-本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能对齐目标固定为0.135.1 / 0898d5e3**，`derived_stats135`已完成新版原件差分；0.134.0 / 983346a7的局部实现与组合保留为固定研究基线，结果按版本与域分别记录，不转记为新版通过。各自确切范围见[版本支持清单](version-support.json)，不能直接视为新版全部行为。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标持续对齐官方最新稳定版，每轮固定版本/SHA；本轮为0.135.1 / 0898d5e3**，`derived_stats135`已完成新版原件差分；0.134.0 / 983346a7的局部实现与组合保留为固定研究基线，结果按版本与域分别记录，不转记为新版通过。各自确切范围见[版本支持清单](version-support.json)，不能直接视为新版全部行为。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
 
 现有纯Python入口运行限定平地14尾阶段组合：真实空profile构造→显式phase1→普通生成/主施法/范围/idle效果与尾队列守卫→死亡奖励/自然选卡。当前[082927独审](../reports/2026-11-01-headless-tail0135-independent-review.md)：8/1614帧/22607阶段/11选择/22615调用，67源60core16角色0差异。6未知技能/2预算保留；旧072329/064308/061901仅历史，不相加，尚非完整880或独立一局。
 
-新增[纯独立默认开局](../reports/2026-11-01-opening0135.md)在显式已解析world上完成16组／32次完整原件入口差分，39源冻结、六vector及全部新增消息一致，[独审通过](../reports/2026-11-01-opening0135-independent-review.md)。它连续生成2附属、4NPC、2kind2、4special、2或3窗口、69边界，counter10→87；尚未接现有headless CLI。M2／WMO碰撞和query／position组件分别验证，完整asset→world生产及真实地形开局→战斗循环仍未闭合，本轮新增bootstrap／主切片帧均为0。
+新增[纯独立默认开局](../reports/2026-11-01-opening0135.md)在显式已解析world上完成16组／32次完整原件入口差分，39源冻结、六vector及全部新增消息一致，[独审通过](../reports/2026-11-01-opening0135-independent-review.md)。它连续生成2附属、4NPC、2kind2、4special、2或3窗口、69边界，counter10→87；尚未接现有headless CLI。M2／WMO碰撞和query／position组件分别验证；后继资产查询world组合另列，真实地形开局→战斗循环尚未连接，本轮新增bootstrap／主切片帧均为0。
+
+新增[451资源纯模型CLI](../reports/2026-11-01-asset-world0135.md)由真实WDT/九ADT、placement、M2/WMO、ground/nav/secondary生成默认Elwynn查询world，再执行同一开局；生产不读snapshot或原程序。[整体独审](../reports/2026-11-01-asset-world0135-independent-review.md)核37源、terrain4022968B/nav78400B/secondary1254400B及78包，与**1份历史原件case**一致，新增原件调用/案例0。原物理App/Once/Rc/VFS所有权、其它地图模式和独立一局仍缺。
 
 - `core_spec/binary32.py`：精确有理数运算后按IEEE binary32 nearest-even逐步舍入；NaN载荷不保证保留。
 - `core_spec/upgrade_values.py`：五种升级值计算，输入为明确的状态字段/原始浮点位，输出为binary32位。不会读取或执行原游戏。
@@ -53,13 +55,16 @@
 - `core_spec/area_effects135.py`：七kind3持续AoE，693/5495组件保留；当前14阶段接3757及idle915，完整backing与共享counter/RNG连续。全3757/915其余活跃域仍缺。
 - `core_spec/frame_systems135.py` / `headless_tail135.py`：五阶段573/944与14尾实际守卫；活跃2602精确partial不能当完成状态继续。
 - `core_spec/terminal_transition135.py`：416组/832真49037+416构造，315组phase5胜利、完整停步/232/victory通知；phase4死亡与完整保存仍缺。
-- `resource_spec/terrain135.py`：107完整ADT/18413调用，145XYZ/洞及四层高度采样；新增碰撞／候选／导航组件另列，完整世界生产与最终缓存合并仍缺，原件world生产曾在历史单例观察中走通。
+- `resource_spec/terrain135.py`：107完整ADT/18413调用，145XYZ/洞及四层高度采样；后继资产链组合已产生默认Elwynn的最终查询cache并作历史对照；其它264B字段、物理世界所有权和全部地图仍缺。
 - `resource_spec/world_query135.py`：[959输入/1858完整调用](../reports/2026-11-01-world-query0135.md)及[联合独审](../reports/2026-11-01-world-consumers0135-independent-review.md)通过，真实terrain／secondary查询及受控23181最近格规则恢复；snapshot adapter只解码显式输入，不生产world。
 - `core_spec/world_position135.py`：[新96输入/96完整8751／13516调用](../reports/2026-11-01-world-position0135.md)及[联合独审](../reports/2026-11-01-world-consumers0135-independent-review.md)通过，58真实world／38受控域、30源完整闭包，保留nav原字节／距离成本、13th fallback只取nearest Z及全部RNG；旧21源批不与新批相加。
-- `resource_spec/world_raster135.py`：[114组/1477调用与最终独审](../reports/2026-11-01-world-raster0135-independent-review.md)通过，实际31份M2碰撞数组、18572变换、12375候选与9328导航byte独立生产。ground／placement显式，完整场景／secondary合并／cache／渲染动画仍缺；旧case103提前排除的收据保留。
+- `resource_spec/world_raster135.py`：[114组/1477调用与最终独审](../reports/2026-11-01-world-raster0135-independent-review.md)通过，实际31份M2碰撞数组、18572变换、12375候选与9328导航byte独立生产。该114组组件ground／placement仍显式，后继cache组合补默认Elwynn查询world，完整物理场景／其它地图／渲染动画仍缺；旧case103提前排除的收据保留。
 - `resource_spec/wmo_geometry135.py`：[425组/830完整1510／4464调用](../reports/2026-11-01-wmo-geometry0135.md)覆盖实际readset全部410文件（23root／387group）、0差异，[独审通过](../reports/2026-11-01-wmo-geometry0135-independent-review.md)；只验碰撞投影／flags／首次顶点顺序／u32索引，未恢复完整160B解析对象、9513装载或全部WMO材质／动画／渲染。
+
+- `resource_spec/world_placements135.py`：[13组/13完整1446](../reports/2026-11-01-world-placements0135.md)及[独审](../reports/2026-11-01-world-placements0135-independent-review.md)，真实9ADT/4受控；三phase选择静态另列，保持244 navM2→14 navWMO→36 secondaryWMO。
+- `resource_spec/world_cache135.py`：[ground/nav/secondary生产](../reports/2026-11-01-world-cache0135.md)及[静态独审](../reports/2026-11-01-world-cache0135-independent-review.md)，provider(byteschain)读真实bytes，返回纯WorldQueries135；四邻可达性多封2254格，候选maxmerge得到460finite格。后继451资源整体历史对照另验，14本地契约不是新原件case。
 - `core_spec/opening_entities135.py`及data：[27组/116完整1744／1821调用独审](../reports/2026-11-01-opening-entities0135-independent-review.md)通过，88B附属记录、actor角度／GUID／169完整编码；未写区域和旧backing严格区分。内联window／special／boundary不倒记为116调用覆盖。
-- `core_spec/opening_npc_pickups135.py`、`opening135.py`：[完整默认开局16组/32次6730缓存构造→1089](../reports/2026-11-01-opening0135.md)冻结39源、六vector fullbacking、1248新增150／169包及16条start逐字一致，[独审通过](../reports/2026-11-01-opening0135-independent-review.md)。App LCG／1560种子与位置／实体／窗口／边界共享同一RNG；world仍是解析输入，菜单/profile、其它地图模式及非空装备天赋另待恢复。
+- `core_spec/opening_npc_pickups135.py`、`opening135.py`：[完整默认开局16组/32次6730缓存构造→1089](../reports/2026-11-01-opening0135.md)冻结39源、六vector fullbacking、1248新增150／169包及16条start逐字一致，[独审通过](../reports/2026-11-01-opening0135-independent-review.md)。App LCG／1560种子与位置／实体／窗口／边界共享同一RNG；该16组入口验证world仍是解析输入；后继资产CLI独立产生默认Elwynn查询world。菜单/profile、其它地图模式及非空装备天赋另待恢复。
 - `core_spec/effect_geometry135.py`：三真实Boss raw9矩形，390/2883分277正常113资源拒绝前缀，4Bscratch显式未知；真实browser3组完整返回另验，后继history组件另列、完整容器/proc仍缺，旧pending API不倒改，[browser独审](../reports/2026-11-01-browser-resources0135-independent-review.md)另验原件正常返回与known投影。
 - `core_spec/effect_system135.py`：时钟2364、延迟56B的35/36/37及255 pop后trap，500case/2121stage0diff（383正常117预期trap），完整56backing/424B严格。普通910、非空120和真实几何显式待续/拒绝；[组件报告](../reports/2026-11-01-effect-system0135.md)不等于完整915。主切片只接真实观察为空的域。
 - `resource_spec/entry_resources135.py`：[进场资源静态契约](../reports/2026-11-01-entry-resources0135-static.md)，39函数、116资产/170383346B和12区首层路径核对；[静态独审](../reports/2026-11-01-entry-resources0135-static-review.md)通过；该静态批不执行实际VFS/world/1089，不新增玩法用例。后继真实入口观察不等于本模块已实现world。
@@ -68,11 +73,13 @@
 - [真实world/entry探针](../reports/2026-11-01-entry-world0135-probe.md)及[独审](../reports/2026-11-01-entry-world0135-probe-independent-review.md)实际运行原2902→6959→6730→1089，phase0→1、4NPC/2kind2、453MPQ/561GET全部200。同world Rc/4整memory保留，仍是历史原件观察、独立模型case0；后继默认开局不倒改该批身份。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
-旧主切片必须显式提供phase1解析、128个初始全零424B单位槽和128个初始全零88B范围槽；之后保留清理后的尾槽，不重新清空复用。新开局独立模块已有真实world输入上的差分，但尚未接该切片；完整world producer仍缺，不能删除旧CLI的显式phase1边界。不宣称覆盖非零死亡时间U4复用；当前4次area过期均末槽删除，复用槽19B未写区全0，非平凡压缩和非零area未写复用也没有本批动态覆盖。真实分配器padding未证明恒定。
+旧主切片必须显式提供phase1解析、128个初始全零424B单位槽和128个初始全零88B范围槽；之后保留清理后的尾槽，不重新清空复用。新开局与后继资产查询world已有各自验证，但尚未接该旧切片；完整物理world所有权和其它地图仍缺，不能删除旧CLI的显式phase1边界。不宣称覆盖非零死亡时间U4复用；当前4次area过期均末槽删除，复用槽19B未写区全0，非平凡压缩和非零area未写复用也没有本批动态覆盖。真实分配器padding未证明恒定。
 
 对象键未知单列：headless只严格比较numeric player keys22/28/34/716/717/1109/1176，其余完整原件keyed状态另存为unmodeled，不能假定都是cosmetic。1202 aura/外观键、1453治疗/account输出、完整物理包和source获得链仍缺。完整880/915及3757其余分支调度、全部技能/AI、真实地形资源、终局/存档/UI/联网也没有整局验收。
 
-当前14尾独立切片已接916/975/38007/2602/2573/2376/49037的实际限定守卫，31个975 inactive词及5个pointer仅观察，活跃域仍拒绝。975只在实际执行该入口时检查execution11；终止选卡快照可含11，下一帧停止，不表示支持其执行。非空56、390矩形组件、browser资源及默认开局分别验收；前段/party、完整world、开局接主切片与完整880仍缺。旧071318/072329保留历史身份。
+当前14尾独立切片已接916/975/38007/2602/2573/2376/49037的实际限定守卫，31个975 inactive词及5个pointer仅观察，活跃域仍拒绝。975只在实际执行该入口时检查execution11；终止选卡快照可含11，下一帧停止，不表示支持其执行。非空56、390矩形组件、browser资源及默认开局分别验收；前段/party、完整物理world/其它地图、开局接主切片与完整880仍缺。旧071318/072329保留历史身份。
+
+[880上下文静态记录](../evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)尚未形成合法App/76B transport；asset→查询world→开局不是完整880自然帧或整局验收。
 
 当前[独立复制运行](../evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json)61文件=60core+CLI，不含原件/WAT/SQLite/资源/Node/WABT；默认0帧停真实进场边界，研究输入seed1/6各400、seed3到257。是模型自跑，不新增原件差分。
 

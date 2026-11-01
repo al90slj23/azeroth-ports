@@ -1,0 +1,58 @@
+{
+  "status": "passed_scoped_independent_read_only_review",
+  "reviewer_sha256": "3e200b123212f240a83475935fa0cf1a30d2c2c136d8d4c848d539f308e45c7d",
+  "receipt": "evidence/full0135-oracle-20261101T110558.641205Z/world-placements135-comparison.json",
+  "receipt_sha256": "b4225466e0a41e217d00c214415d42addb57bdf9d2a3e57ad3db74b9140c197a",
+  "historical_plan": "evidence/world-placements0135-plan-20261101T110820.988358Z/plan.json",
+  "historical_plan_sha256": "4a017d870c130ec0daa433b330d7f04a69e53b09281e91a7390759c0f0e72643",
+  "original_source_closure": 14,
+  "plan_source_closure": 10,
+  "current_and_frozen_sources_match": true,
+  "original_cases_reviewed": 13,
+  "original_calls_reviewed": 13,
+  "new_original_calls": 0,
+  "new_original6730_cases": 0,
+  "independent_chunk_record_float32_recomputation": true,
+  "raw44B_backing_rechecked": true,
+  "counts": {
+    "strict_scalar_string_bytes": 1181761,
+    "unwritten_tail_bytes": 254100,
+    "nonzero_unwritten_tail_bytes": 405,
+    "all_m2": 11649,
+    "all_wmo": 76
+  },
+  "actual_MPQ_files_independently_reread": 420,
+  "actual_ADT_files": 9,
+  "controlled_ADT_inputs_independently_reconstructed": 4,
+  "adt_order_independently_recomputed": true,
+  "selection_counts": {
+    "nav_m2": 244,
+    "nav_wmo": 14,
+    "secondary_wmo": 36
+  },
+  "first_request_counts": {
+    "m2": 31,
+    "wmo_roots": 23,
+    "wmo_all": 410
+  },
+  "exact_input_shape_expected_separated": true,
+  "only_original_export_section_changed": true,
+  "static_functions_rechecked": 7,
+  "production_model_imported_or_executed": false,
+  "original_program_executed": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "full_world_producer": false,
+  "new_mainloop_frames": 0,
+  "goal_complete": false,
+  "limitations": [
+    "1446 canonical placement projection only; names/pointer ownership and terrain are not newly fully modeled.",
+    "6730 placement selection is static plus historical read-set comparison; no fresh complete6730 differential.",
+    "Other maps/modes, malformed files, untested13850 branches, VFS/ownership/render/completeworld and fullgame remain outside this review."
+  ],
+  "evidence_files": {
+    "asset-recheck.json": "29f8ff49de240e67b02a1f2568a625bc623aaeb14bfb32664110894fad9839e0"
+  },
+  "review_path": "evidence/world-placements0135-independent-review-20261101T111800.115551Z/review.json",
+  "review_sha256": "341f3b3fccf1393fc6078f1864a4d0d5620d69b7359a4a3e1309792dcac562a1"
+}

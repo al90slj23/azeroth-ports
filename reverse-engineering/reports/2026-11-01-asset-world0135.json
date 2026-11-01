@@ -1,0 +1,271 @@
+{
+  "title": "Independent actual asset bundle to Elwynn query world and default opening",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "independent_asset_production_vs_one_historical_original_case_and_scoped_review_passed",
+  "kind": "independent_production_and_one_historical_original_behavior_comparison",
+  "production_runner": "scripts/run_asset_world135.py",
+  "production_runner_sha256": "aa782f1b9c1833d2348507d5aa50d4a4071a1b7c1b1030b6960a7c418ceae304",
+  "comparison_script": "scripts/check_asset_world135.py",
+  "comparison_script_sha256": "0cf2cc93b38e048515565ea4d12e0aa42806dd8fd052dbc41cd2935b1f96e596",
+  "independent_receipt": "evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+  "independent_receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+  "comparison_receipt": "evidence/asset-world0135-historical-comparison-20261101T112022.317639Z/comparison.json",
+  "comparison_receipt_sha256": "462e77e056e33c72609d55abac4fa2f4b4f2686706016a638dae6bd619d1f845",
+  "input": {
+    "opening": {
+      "class_byte": 1,
+      "race_byte": 1,
+      "region_index": 0,
+      "app_lcg_seed_u64": 0,
+      "object_id_u64": 0
+    },
+    "world": {
+      "map_id": 0,
+      "center_xy_bits": [
+        3323121664,
+        3290316800
+      ],
+      "radius_bits": 1123024896,
+      "fallback_height_bits": 1116209152
+    },
+    "asset_manifest": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/actual-assets-inventory.json",
+    "asset_manifest_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c"
+  },
+  "input_sha256": "603bd691eb614f4c0ae932401c2d790761c9b18b38951922c2fa9757bd4d7b80",
+  "production_source_files": 37,
+  "source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/wmo_geometry135.py": "e2d7748f455679d4b4073a89b3dcb9cbc6d71b8b960c931b412a4779add39de7",
+    "reconstruction/resource_spec/world_cache135.py": "34bdcd7116dcf25ec300d5ac028ca97122dba8b2be64e91324e03a37cf89a762",
+    "reconstruction/resource_spec/world_placements135.py": "9efd2fa67fe51a9d4973d56f46e819fd3e10a148e2176245a0a4bb1dbccdc402",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/world_raster135.py": "c0ee61f43fd127175ca4c4f0f374f1a65c4e1cd4e4f822f893a6d0c337f8025a",
+    "scripts/run_asset_world135.py": "aa782f1b9c1833d2348507d5aa50d4a4071a1b7c1b1030b6960a7c418ceae304"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/wmo_geometry135.py": "e2d7748f455679d4b4073a89b3dcb9cbc6d71b8b960c931b412a4779add39de7",
+    "reconstruction/resource_spec/world_cache135.py": "34bdcd7116dcf25ec300d5ac028ca97122dba8b2be64e91324e03a37cf89a762",
+    "reconstruction/resource_spec/world_placements135.py": "9efd2fa67fe51a9d4973d56f46e819fd3e10a148e2176245a0a4bb1dbccdc402",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "reconstruction/resource_spec/world_raster135.py": "c0ee61f43fd127175ca4c4f0f374f1a65c4e1cd4e4f822f893a6d0c337f8025a",
+    "scripts/run_asset_world135.py": "aa782f1b9c1833d2348507d5aa50d4a4071a1b7c1b1030b6960a7c418ceae304"
+  },
+  "asset_files": 451,
+  "decoded_asset_bytes": 67281330,
+  "terrain_tiles": 9,
+  "terrain_chunks": 2304,
+  "terrain_vertices": 334080,
+  "world_artifacts": {
+    "terrain": {
+      "file": "terrain-query.bin",
+      "bytes": 4022968,
+      "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "projection": "tilecount:u32,each(bounds:4u32,chunkcount:u32,each(holes:u16,vertexcount:u32,XYZ:3u32[]))"
+    },
+    "navigation": {
+      "file": "navigation.bin",
+      "bytes": 78400,
+      "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "origin_xy_bits": [
+        3323265024,
+        3292610560
+      ],
+      "width": 280
+    },
+    "secondary": {
+      "file": "secondary-height.u32le",
+      "bytes": 1254400,
+      "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "origin_xy_bits": [
+        3323265024,
+        3292610560
+      ],
+      "width": 560
+    }
+  },
+  "world_stats": {
+    "terrain_tiles": 9,
+    "ground_cells": 78400,
+    "nav_width": 280,
+    "secondary_width": 560,
+    "nav_mesh_batches": 293,
+    "nav_triangles": 32937,
+    "nav_m2_instances": 244,
+    "nav_wmo_instances": 14,
+    "nav_wall_cells_before_connectivity": 3150,
+    "nav_blocked_cells_after_connectivity": 5404,
+    "nav_additional_sealed_cells": 2254,
+    "secondary_mesh_batches": 417,
+    "secondary_triangles": 361298,
+    "secondary_wmo_instances": 36,
+    "candidate_pairs": 1224,
+    "secondary_terrain_queries": 929,
+    "eligible_candidate_pairs": 622,
+    "secondary_updates": 553,
+    "candidate_not_above_point1": 131,
+    "candidate_above_3": 471,
+    "secondary_finite_cells": 460,
+    "geometry_unique_root_or_m2": 54,
+    "geometry_resource_reads": 441
+  },
+  "world_comparison": {
+    "terrain": {
+      "independent_bytes": 4022968,
+      "original_bytes": 4022968,
+      "different_bytes": 0,
+      "independent_sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "original_sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e"
+    },
+    "navigation": {
+      "bytes": 78400,
+      "shape_equal": true,
+      "independent_sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "original_sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "different_bytes": 0,
+      "first_different_offsets": []
+    },
+    "secondary": {
+      "bytes": 1254400,
+      "shape_equal": true,
+      "independent_sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "original_sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "different_bytes": 0,
+      "first_different_offsets": []
+    }
+  },
+  "opening_comparison": {
+    "known_record_bytes": 2118,
+    "unwritten_or_inactive_record_bytes": 1370,
+    "packet_count": 78,
+    "packet_bytes": 8410,
+    "notification_count": 1,
+    "phase2587": 1,
+    "counter2408": 87,
+    "rng_words": [
+      3253128260,
+      1876369536,
+      2014361798,
+      3839958702
+    ],
+    "player_xyz": [
+      3323121664,
+      3290316800,
+      1116212265
+    ]
+  },
+  "mismatches": 0,
+  "historical_original_cases": 1,
+  "new_original_cases": 0,
+  "new_original_calls": 0,
+  "new_mainloop_frames": 0,
+  "original_program_executed_by_producer": false,
+  "original_memory_read_by_producer": false,
+  "comparison_reads_historical_original_memory": true,
+  "independent_outputs_frozen_before_capture_read": true,
+  "independent_query_world_producer": true,
+  "complete_world_and_ownership_producer": false,
+  "headless14_tail_integrated": false,
+  "elapsed_seconds": 155.86939308300498,
+  "process": {
+    "independent_unified_session_id": 95741,
+    "independent_exit_code": 0,
+    "comparison_unified_session_id": 16451,
+    "comparison_exit_code": 0,
+    "both_tool_handles_terminal": true
+  },
+  "physical_unknowns": "2118 written/retained opening bytes strict;1370 unwritten/inactive bytes retained as None, not assumed zero. Canonical terrain-query bytes do not reproduce raw heap pointers/allocator/world ownership.",
+  "previous_successful_build": {
+    "receipt": "evidence/asset-world0135-independent-20261101T111126.060879Z/receipt.json",
+    "comparison": "evidence/asset-world0135-historical-comparison-20261101T111601.387570Z/comparison.json",
+    "scope": "Same production models; runner subsequently gained explicit input identity and canonical terrain output. Historical builds do not add original cases.",
+    "navigation_secondary_and_opening_identical_to_final": true
+  },
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-asset-world0135-independent-review.json",
+    "review_path": "evidence/asset-world0135-independent-review-20261101T112315.146538Z/review.json",
+    "review_sha256": "a40dd8337c9a6d14a20dff7627ef65d40d795e8efa97eed90e006aa073a3ed69",
+    "original_reexecuted": false
+  },
+  "full880_context_static_prerequisites": {
+    "notes": "evidence/full880-context0135-static-20261101T111231.254023Z/notes.md",
+    "notes_sha256": "22904a1dae480527d6203fc11c5e06a93231fa12a93dc9495b4b115ce962f6f3",
+    "trace": "evidence/full880-context0135-static-20261101T111231.254023Z/trace.json",
+    "trace_sha256": "f9170a1bc5bf2d8d74160a91d9ffa11a044363787f08edb3eddfea54a65fd44c",
+    "original_calls": 0,
+    "valid_app_context_produced": false
+  },
+  "limitations": [
+    "Actual base asset bundle identity, not complete latest-version asset equivalence.",
+    "Fixed empty-profile Elwynn/class1/race1/Appseed0/GUID0/English/no-primary valid world path.",
+    "Name-to-file mapping supplied explicitly; independent MPQ container reader exists separately, full VFS priority/cache/Rc/drop ownership not composed.",
+    "No renderer/animations/materials/audio/other maps or modes acceptance.",
+    "Canonical terrain/nav/secondary query data and default opening outputs, not every field in original world/Game/App.",
+    "Physical App4253/76B transport/history/RandomState/startup ownership must be recovered before full880;partialA5context must not be passed as valid.",
+    "No integration with old14-tail/main loop, complete run, save/UI/multiplayer or native Windows runtime equivalence."
+  ],
+  "installed_apps_or_saves_modified": false,
+  "full_game_goal_complete": false
+}

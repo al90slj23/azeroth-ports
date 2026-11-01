@@ -11,7 +11,9 @@
     "migration_report": "../reports/2026-11-01-migration0135.json",
     "approved_research_roles": 52,
     "latest_same_state_report": "../reports/2026-11-01-headless-tail0135.json",
-    "latest_independent_opening_report": "../reports/2026-11-01-opening0135.json"
+    "latest_independent_opening_report": "../reports/2026-11-01-opening0135.json",
+    "version_policy": "Continuously align to verified official latest stable; each experiment freezes its own version/build/SHA; this round remains0.135.1/0898d5e3.",
+    "latest_independent_asset_world_report": "../reports/2026-11-01-asset-world0135.json"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -472,10 +474,10 @@
     }
   ],
   "full_game_remaining": [
-    "independent account/profile/menu/2328 and complete asset-to-world producer/ownership/cache lifecycle; default empty-profile Elwynn1089 opening from resolvedworld is now separately verified16cases/32entries, but not integrated into14-tail or fresh world startup",
+    "independent account/profile/menu/2328 and complete App4253/76Btransport/history/RandomState/ownership initialization; actual Elwynn asset-to-queryworld-to-defaultopening now matches1 historical original capture, but fullRc/VFS/world lifecycle/othermaps and integration into14-tail/full880 remain incomplete",
     "full880front/party/orchestrationandactive916/975execution11/2602/2573/2376;14guardedtailentriesarenotcomplete880",
     "active56/120/ordinary910headlesscontinuation;other915families;geometry390277normal113hostprefixfrozen",
-    "remainingtimedgeneration/rangedBossPetAI/collision/navigation/cacheproduction",
+    "remaining timedgeneration/rangedBossPetAI/collision/pathfinding and otherworld cache paths; Elwynn no-primary terrain/nav/secondary querycache production matched historical payloads separately",
     "unsupportedselectedskillsretainedandstoppedbeforeunimplementedcast",
     "nonfatalcontext0kind27separate;fatalpostlootprocs/retaliation/deathrevivalstillunknown",
     "matching-source history48,healing1848,registry/keyedHP producers,proc/death andwire;fallback164 and realSpell9 components passed separately",
@@ -1850,6 +1852,110 @@
       "inactive_allocator_bytes": 12368,
       "related_module": "core_spec.opening_npc_pickups135",
       "related_module_validation": "composition only; no separate helper-oracle cases"
+    },
+    {
+      "module": "resource_spec.world_placements135",
+      "status": "complete_original1446_projection_and_historical_selection_plan_independent_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-world-placements0135.json",
+      "receipt": "../evidence/full0135-oracle-20261101T110558.641205Z/world-placements135-comparison.json",
+      "receipt_sha256": "b4225466e0a41e217d00c214415d42addb57bdf9d2a3e57ad3db74b9140c197a",
+      "cases": 13,
+      "actual_ADT_cases": 9,
+      "controlled_cases": 4,
+      "original_calls": 13,
+      "mismatches": 0,
+      "source_files": 14,
+      "original_function": 1446,
+      "independent_review": "../reports/2026-11-01-world-placements0135-independent-review.json",
+      "review_receipt": "../evidence/world-placements0135-independent-review-20261101T111800.115551Z/review.json",
+      "review_sha256": "341f3b3fccf1393fc6078f1864a4d0d5620d69b7359a4a3e1309792dcac562a1",
+      "domain": "MDDF/MODF44B scalar/string placement projection,9 actualADTs+4 valid controlled inputs. Inline6730 ordered collision selection is a separate historical441-modelrequest plan, not13 freshworld cases.",
+      "historical_model_request_plan": {
+        "path": "../evidence/world-placements0135-plan-20261101T110820.988358Z/plan.json",
+        "sha256": "4a017d870c130ec0daa433b330d7f04a69e53b09281e91a7390759c0f0e72643",
+        "source_count": 10,
+        "production_inputs_contain_memory_snapshot": false,
+        "actual_ADT_count": 9,
+        "placement_counts": {
+          "m2": 8512,
+          "wmo": 45
+        },
+        "counts": {
+          "nav_m2": {
+            "instances": 244,
+            "unique_chains": 31
+          },
+          "nav_wmo": {
+            "instances": 14,
+            "unique_chains": 10
+          },
+          "secondary_wmo": {
+            "instances": 36,
+            "unique_chains": 23
+          }
+        },
+        "ordering": {
+          "m2_first31_order_equal": true,
+          "wmo_root_first23_order_equal": true,
+          "wmo_root_group_first410_order_equal": true
+        },
+        "new_original_calls": 0,
+        "new_original6730_selection_cases": 0,
+        "selection_rules": [
+          "All3x3 ADTs in restored WDT order; raw placements remain original file order.",
+          "nav_m2: strict absXY<extent+40*max(scale,1), then own unique-ID set; cached path lookup follows surviving instance order.",
+          "nav_wmo: strict absXY<extent+400, separate unique-ID set.",
+          "secondary_wmo: all source WMO, no XY range filter, separate unique-ID set.",
+          "M2 navigation pass precedes WMO navigation pass; secondary WMO pass follows.",
+          "A rejected outside instance does not reserve its UID. A later eligible duplicate can survive."
+        ],
+        "not_claimed": "Matching first-request order proves this historical read-set projection, not every instance effect or fresh complete6730 world equivalence."
+      },
+      "headless_integrated": false,
+      "complete_world_producer": false,
+      "new_mainloop_frames": 0
+    },
+    {
+      "modules": [
+        "resource_spec.world_cache135",
+        "resource_spec.world_placements135",
+        "core_spec.opening135"
+      ],
+      "status": "independent_asset_production_vs_one_historical_original_case_and_scoped_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-asset-world0135.json",
+      "receipt": "../evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+      "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+      "comparison_receipt": "../evidence/asset-world0135-historical-comparison-20261101T112022.317639Z/comparison.json",
+      "comparison_sha256": "462e77e056e33c72609d55abac4fa2f4b4f2686706016a638dae6bd619d1f845",
+      "production_source_files": 37,
+      "asset_files": 451,
+      "decoded_asset_bytes": 67281330,
+      "historical_original_cases": 1,
+      "new_original_cases": 0,
+      "new_original_calls": 0,
+      "new_mainloop_frames": 0,
+      "mismatches": 0,
+      "terrain_query_projection_bytes": 4022968,
+      "navigation_bytes": 78400,
+      "secondary_height_bytes": 1254400,
+      "known_opening_record_bytes": 2118,
+      "unknown_opening_record_bytes": 1370,
+      "opening_packets": 78,
+      "opening_packet_bytes": 8410,
+      "opening_notifications": 1,
+      "independent_query_world_producer": true,
+      "original_memory_read_by_producer": false,
+      "original_code_executed_by_producer": false,
+      "complete_world_ownership_producer": false,
+      "headless_integrated": false,
+      "domain": "Fixed Elwynn/class1/race1/seed0/GUID0/English/no-primary path. Resource bundle mapping is an explicit name-to-file input; genuine asset bytes independently parsed and assembled. Raw heap/Rc/VFS/App ownership,othermaps/rendering/full880/fullgame remain incomplete.",
+      "independent_review": "../reports/2026-11-01-asset-world0135-independent-review.json",
+      "review_receipt": "../evidence/asset-world0135-independent-review-20261101T112315.146538Z/review.json",
+      "review_sha256": "a40dd8337c9a6d14a20dff7627ef65d40d795e8efa97eed90e006aa073a3ed69"
     }
   ],
   "resource_verified_domains": [
@@ -1893,6 +1999,17 @@
       "review_receipt": "../evidence/terrain0135-independent-review-20261101T082110.575507Z/review.json",
       "review_sha256": "c0babbe9f8802eb21a90afc26ed390f4d8c6907834e0ba2e44cd598087fdc4fe",
       "scope": "baseactualassets;145XYZ+holes;4heightlayers;notall264B/world/cacheproduction/navigation/renderer/latestassetscomplete"
+    },
+    {
+      "module": "resource_spec.world_cache135",
+      "status": "scoped_static_contract_and_historical_asset_production_comparison_passed",
+      "report": "../reports/2026-11-01-world-cache0135.json",
+      "static_independent_review": "../reports/2026-11-01-world-cache0135-independent-review.json",
+      "static_review_receipt": "../evidence/world-cache0135-independent-review-20261101T111914.481057Z/review.json",
+      "static_review_sha256": "a686b8a03b25b7954432c4765e2c14b26f472ad837123f1cfeb90f78d450fbb8",
+      "independent_asset_production_report": "../reports/2026-11-01-asset-world0135.json",
+      "new_original_cases": 0,
+      "scope": "Terrain ground,geometry raster,four-neighbour reachable sealing,secondary strict terrain filter/max merge; no-primary Elwynn queryworld only. Fullworld physical ownership and latest asset completeness remain unproven."
     }
   ],
   "latest_static_catalogue": {
@@ -2108,7 +2225,7 @@
     "observed_execution11_snapshots": 2521,
     "execution11_model_support_claimed": false
   },
-  "latest_verified_domains_scope": "Fixed135 components and current08292714-tail remain separate. Six additional resolved-world/collision/default-opening domains have their own receipts and reviews; no case counts summed, no historical scope expanded. Default opening16/32 assumes resolved realworld input and adds0 freshworld bootstraps/0 mainloop frames. Earlier real6730/1089 observation still adds0 independent model cases.",
+  "latest_verified_domains_scope": "Fixed135 components and current08292714-tail remain separate. Six additional resolved-world/collision/default-opening domains have their own receipts and reviews; no case counts summed, no historical scope expanded. Default opening16/32 assumes resolved realworld input and adds0 freshworld bootstraps/0 mainloop frames. Earlier real6730/1089 observation still adds0 independent model cases. Placement13/13 is a fresh original1446 component differential. Independent451asset-to-queryworld-to-opening is a separate one-historical-case comparison with0neworiginalcalls/0mainframes; its byte counts and old main-slice counts are not added.",
   "entry_world_observational_probe": {
     "status": "original_true_world_and_entry_observed_not_independent_model",
     "validated_version": "0.135.1",

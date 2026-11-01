@@ -1,0 +1,203 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "kind": "independent_successful_elwynn_queryworld_cache_from_actual_asset_bytes",
+  "target_policy": "Follow lateststable;pin version andSHA separately for each research round;this evidence is135.1 only",
+  "production_source_sha256": "34bdcd7116dcf25ec300d5ac028ca97122dba8b2be64e91324e03a37cf89a762",
+  "trace": {
+    "path": "evidence/world-cache0135-static-20261101T111313.519959Z/trace.json",
+    "sha256": "aef80398a64c7a4f6f86fe288385443de8f29c30a7b30384b6df62b0a81fee90",
+    "original_calls": 0,
+    "snapshots_read": false
+  },
+  "local_contracts": {
+    "path": "evidence/world-cache0135-local-20261101T111430.974203Z/check.json",
+    "sha256": "d249a9496e13a62ba4c3dcbcf3001b9f19099cacd9f24b08986411f7eaf7afac",
+    "checks": 14,
+    "new_original_cases": 0
+  },
+  "static_independent_review": {
+    "status": "passed_scoped_static_read_only_review",
+    "path": "evidence/world-cache0135-independent-review-20261101T111914.481057Z/review.json",
+    "sha256": "a686b8a03b25b7954432c4765e2c14b26f472ad837123f1cfeb90f78d450fbb8",
+    "scope": "Scoped static no-primary/cache/geometry grouping review;not itself fullhistoricaloutput review"
+  },
+  "overall_pipeline_review": {
+    "status": "passed",
+    "report": "reports/2026-11-01-asset-world0135-independent-review.md",
+    "path": "evidence/asset-world0135-independent-review-20261101T112315.146538Z/review.json",
+    "sha256": "a40dd8337c9a6d14a20dff7627ef65d40d795e8efa97eed90e006aa073a3ed69",
+    "scope": "37-source/451-MPQ payload/3 logicalworld artifacts/defaultopening historical comparison;notfreshoriginalcases"
+  },
+  "pipeline": {
+    "receipt": "evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+    "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+    "source_count": 37,
+    "asset_files": 451,
+    "decoded_asset_bytes": 67281330,
+    "elapsed_seconds": 155.86939308300498,
+    "original_program_executed": false,
+    "original_memory_read": false,
+    "historical_comparison": "evidence/asset-world0135-historical-comparison-20261101T112022.317639Z/comparison.json",
+    "historical_comparison_sha256": "462e77e056e33c72609d55abac4fa2f4b4f2686706016a638dae6bd619d1f845",
+    "historical_original_cases": 1,
+    "new_original_cases": 0,
+    "new_original_calls": 0,
+    "fresh_original_bootstraps": 0,
+    "new_mainloop_frames": 0,
+    "inputs": {
+      "opening": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "region_index": 0,
+        "app_lcg_seed_u64": 0,
+        "object_id_u64": 0
+      },
+      "world": {
+        "map_id": 0,
+        "center_xy_bits": [
+          3323121664,
+          3290316800
+        ],
+        "radius_bits": 1123024896,
+        "fallback_height_bits": 1116209152
+      },
+      "asset_manifest": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/actual-assets-inventory.json",
+      "asset_manifest_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c"
+    },
+    "instances": {
+      "nav_m2": 244,
+      "nav_wmo": 14,
+      "secondary_wmo": 36
+    },
+    "world_artifacts": {
+      "terrain": {
+        "file": "terrain-query.bin",
+        "bytes": 4022968,
+        "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+        "projection": "tilecount:u32,each(bounds:4u32,chunkcount:u32,each(holes:u16,vertexcount:u32,XYZ:3u32[]))"
+      },
+      "navigation": {
+        "file": "navigation.bin",
+        "bytes": 78400,
+        "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+        "origin_xy_bits": [
+          3323265024,
+          3292610560
+        ],
+        "width": 280
+      },
+      "secondary": {
+        "file": "secondary-height.u32le",
+        "bytes": 1254400,
+        "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+        "origin_xy_bits": [
+          3323265024,
+          3292610560
+        ],
+        "width": 560
+      }
+    },
+    "world_stats": {
+      "terrain_tiles": 9,
+      "ground_cells": 78400,
+      "nav_width": 280,
+      "secondary_width": 560,
+      "nav_mesh_batches": 293,
+      "nav_triangles": 32937,
+      "nav_m2_instances": 244,
+      "nav_wmo_instances": 14,
+      "nav_wall_cells_before_connectivity": 3150,
+      "nav_blocked_cells_after_connectivity": 5404,
+      "nav_additional_sealed_cells": 2254,
+      "secondary_mesh_batches": 417,
+      "secondary_triangles": 361298,
+      "secondary_wmo_instances": 36,
+      "candidate_pairs": 1224,
+      "secondary_terrain_queries": 929,
+      "eligible_candidate_pairs": 622,
+      "secondary_updates": 553,
+      "candidate_not_above_point1": 131,
+      "candidate_above_3": 471,
+      "secondary_finite_cells": 460,
+      "geometry_unique_root_or_m2": 54,
+      "geometry_resource_reads": 441
+    },
+    "world_comparison": {
+      "terrain": {
+        "independent_bytes": 4022968,
+        "original_bytes": 4022968,
+        "different_bytes": 0,
+        "independent_sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+        "original_sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e"
+      },
+      "navigation": {
+        "bytes": 78400,
+        "shape_equal": true,
+        "independent_sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+        "original_sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+        "different_bytes": 0,
+        "first_different_offsets": []
+      },
+      "secondary": {
+        "bytes": 1254400,
+        "shape_equal": true,
+        "independent_sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+        "original_sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+        "different_bytes": 0,
+        "first_different_offsets": []
+      }
+    },
+    "opening_comparison": {
+      "known_record_bytes": 2118,
+      "unwritten_or_inactive_record_bytes": 1370,
+      "packet_count": 78,
+      "packet_bytes": 8410,
+      "notification_count": 1,
+      "phase2587": 1,
+      "counter2408": 87,
+      "rng_words": [
+        3253128260,
+        1876369536,
+        2014361798,
+        3839958702
+      ],
+      "player_xyz": [
+        3323121664,
+        3290316800,
+        1116212265
+      ]
+    }
+  },
+  "source_static_fields": {
+    "zone_address": 5456016,
+    "map_offset": 96,
+    "center_offsets": [
+      104,
+      108
+    ],
+    "fallback_offset": 112,
+    "radius_offset": 120,
+    "radius_bits": 1123024896,
+    "extent_bits": 1124859904,
+    "fallback_bits": 1116209152,
+    "nav_width": 280,
+    "secondary_width": 560,
+    "runtime_path": "zone112\u2192App3704\u21926730 temporaryworld108\u2192Rc116"
+  },
+  "interfaces": [
+    "cache_grid135(center_xy_bits,radius_bits)",
+    "ground_grid135(tiles,grid)",
+    "seal_unreachable_nav135(storage,grid)",
+    "merge_secondary135(tiles,grid,candidates)",
+    "produce_world_cache135(terrain_tiles,center_xy_bits,radius_bits,fallback_height_bits,nav_m2,nav_wmo,secondary_wmo,provider,progress=None)"
+  ],
+  "limitations": [
+    "Successful finite canonical nonflat/no-primary world path;other maps/modes/flat orprimary-present/cacheownership are separate.",
+    "Ordinary provider maps canonicalchain\u2192verifiedrealbytes;full original VFS/Once/Rc/App ownership not reproduced.",
+    "WMO grouping preservespervertex/pertriangle order andmath;full160Bparser/material/doodad/rendering not claimed.",
+    "Allbit equality isonehistoricaloriginalcase,notafreshfull6730bootstraporneworiginaldifferential.",
+    "Defaultopening notintegratedwithold14tail/headless/main880;unknownskills/saves/UI/multiplayer/fullgame remain."
+  ],
+  "whole_game_complete": false
+}
