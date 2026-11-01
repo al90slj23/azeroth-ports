@@ -1,0 +1,144 @@
+{
+  "reviewer": "independent ai_incoming135 agent",
+  "status": "pass within explicitly empty-producer nonlethal scalar/cast domain",
+  "final_receipt": "evidence/full0135-oracle-20261101T045930.365818Z/owned-cast135-comparison.json",
+  "final_receipt_sha256": "c12f30bac911f59e9380311676e441373919311e4e589c182562c27147628cf9",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "cases": 639,
+  "stages": 5924,
+  "accepted_hits": 4923,
+  "model_fixture_mismatch_cases": [],
+  "original_result_mismatch_fields": [],
+  "independently_compared_leaves": 541566,
+  "nan_payload_sign_differences_accepted_as_nan_classification": 60,
+  "source_snapshots_checked": 33,
+  "production_dependency_closure_including_package_init": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ability_state.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/candidates135.py",
+    "reconstruction/core_spec/cast135.py",
+    "reconstruction/core_spec/cast_events135.py",
+    "reconstruction/core_spec/combat134.py",
+    "reconstruction/core_spec/combat135.py",
+    "reconstruction/core_spec/currency134.py",
+    "reconstruction/core_spec/death_loot134.py",
+    "reconstruction/core_spec/death_pickup135.py",
+    "reconstruction/core_spec/derived_stats134.py",
+    "reconstruction/core_spec/derived_stats135.py",
+    "reconstruction/core_spec/level_cycle135.py",
+    "reconstruction/core_spec/owned_cast135.py",
+    "reconstruction/core_spec/owned_prelude135.py",
+    "reconstruction/core_spec/pickup_entity134.py",
+    "reconstruction/core_spec/pickups134.py",
+    "reconstruction/core_spec/progression.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/radius.py",
+    "reconstruction/core_spec/rng.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": [],
+  "artifacts_rehashed": 7,
+  "all_nonexport_sections_original_bytes_identical": true,
+  "added_original_function_roles": [
+    1076,
+    1754
+  ],
+  "comparison_masks": [],
+  "comparator_integer_and_GUID_checks": "Every owned80B/basic80B integer word, player keyed fields, GUID strings, RNG andf64hex strict;20 artificial NaN-word probes verify only declared float indices tolerate NaN payload changes.",
+  "callback_review": {
+    "order": "Per accepted914 core -> mandatory after_hit -> optional explicit death continuation",
+    "minimum_damage": "Four raw0/negative area fixtures pass1.0f damage to each of24 accepted-hit callbacks and playerHP changes each time.",
+    "repeated_guid": "Repeated singleGUID fixture retains8 accepted-hit callbacks; GUID never coalesces distinct hits.",
+    "queue_order": "Actual1754 first stable-partitions due<=now, then consumes due hits in original queue order;future order retained.",
+    "missing_after_hit": "Explicitly rejected after an accepted hit; verified pure-model negative.",
+    "guard_cases": [
+      {
+        "name": "accepted-hit-without-consumer",
+        "rejected": true,
+        "reason": "Each accepted hit requires an explicit player/proc consumer"
+      },
+      {
+        "name": "item-source",
+        "rejected": true,
+        "reason": "Item/prelude/proc source continuation remains unresolved"
+      },
+      {
+        "name": "definition-source",
+        "rejected": true,
+        "reason": "Item/prelude/proc source continuation remains unresolved"
+      },
+      {
+        "name": "absence-not-declared",
+        "rejected": true,
+        "reason": "Item/prelude/proc source continuation remains unresolved"
+      },
+      {
+        "name": "extra-cast1596",
+        "rejected": true,
+        "reason": "Item/prelude/proc source continuation remains unresolved"
+      },
+      {
+        "name": "refresh772",
+        "rejected": true,
+        "reason": "Requested26366 cooldown-refresh packet projection is unresolved"
+      },
+      {
+        "name": "context908",
+        "rejected": true,
+        "reason": "Inherited proc-cast context remains unresolved"
+      },
+      {
+        "name": "fatal-without-death-consumer",
+        "rejected": true,
+        "reason": "Need explicit death continuation before the next hit"
+      }
+    ],
+    "lethal_callback_order": [
+      "hit",
+      "death"
+    ]
+  },
+  "class_prelude": "256 rawclass bytes statically checked against actual initial memory table/fallback for all executedfields; actual gameplay differential covers9 classes plus fallback.",
+  "expected_generation": "Checker source corpus precedes originalPopen; independent replay reads fixture inputs with frozen pure production models, doesnot import original/oracle or use original results to generate expected. Historical wall-clock ordering is source/receipt evidence, not independently timestamp-proven.",
+  "resolved_findings": [
+    {
+      "finding": "Package initializer absent from32-file freeze",
+      "resolution": "Root added327B core_spec/__init__.py and reran full639 under final33-source receipt."
+    },
+    {
+      "finding": "Optional missing after_hit could omit class lifesteal",
+      "resolution": "Accepted hits now require explicit consumer; negative case and fullmin1/repeatedGUID HP comparisons pass."
+    }
+  ],
+  "not_claimed": [
+    "Complete2088/player producers or880 whole-frame scheduler",
+    "Nonempty item/definition/proc domains orG1596/G908/G772 continuation",
+    "Lethal target reward/RNG/death continuation as part of this639-case corpus",
+    "Complete112B hit envelope,physical network packet bytes,visual/account-heal log metadata",
+    "Whole-game or Windows/native equivalence"
+  ],
+  "old_package_init_provenance": {
+    "scope": "Earlier receipts and reviews retained unchanged",
+    "omitted_source": "reconstruction/core_spec/__init__.py",
+    "current_bytes": 327,
+    "current_sha256": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "current_behavior": "Imports UpgradeState and upgrade_value_bits from upgrade_values, whose module was already in the prior source lists.",
+    "historical_claim": "Earlier receipts freeze only their explicitly enumerated files. Their package initializer was not recorded, so those counts cannot be upgraded to the new33-source proof. This is a provenance limitation, not evidence of different past gameplay behavior.",
+    "new_proof": "evidence/full0135-oracle-20261101T045930.365818Z/owned-cast135-comparison.json includes package initializer and was rerun after adding it."
+  },
+  "original_executed_by_reviewer": false,
+  "production_sources_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "recompute_models.py": "b7e70057f575e24974860b985a370a6e0e19cb3651a8d36347866aa20fef1b02",
+    "previous-source-provenance-caveat.json": "40653319d888b9f706bd480c3be0a0423481179832e6134a46c45cef92ab2f0a",
+    "model-recomputation.json": "0dd7631c9df1813c6143dc806dacc4f159f5a7db6f5d2215b3bc3822053b8ca3",
+    "verify_receipt.py": "826734bb951709e32c1489fb348f32a796c34677b9c9a54664d089d7f8f5f3e4",
+    "prelude-static-data-check.json": "aa0e67cc58bd41e995e8812f431a00bfd73924b1268ef6ded0e23433cae53626",
+    "identity-and-recomparison.json": "2396f68eeb7fc131bf5a50a16ab43fb1b316dc95be3db8ad58539083f40a7cb2"
+  },
+  "evidence_directory": "evidence/owned-cast0135-independent-review-20261101T045826.625090Z",
+  "review_sha256": "c9eaeca5d656ec8e496d2b703ccf2d589d29cd16200838c73f66da87b71efd23"
+}

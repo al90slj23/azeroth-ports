@@ -9,17 +9,21 @@
 | 范围 | 当前证据 | 下一步 |
 |---|---|---|
 | 静态profile | [完整WABT/WAT/SQLite](reports/2026-11-01-wasm0135-profile.md)，175317个defined函数/824549条直接调用，完整函数范围和data payload读回通过 | 结构覆盖不代表全部逻辑已恢复；间接调用和运行时顺序需单独验收。 |
-| 函数与布局 | [14个既有角色及3个新增入口](reports/2026-11-01-migration0135.md)有本版body/签名guard；malloc91941，等级/HP/派生区重排，G1572为护甲上限 | 静态映射不直接计作原件运行验证；玩家受伤的有效护甲27375等变化需独立实现。 |
-| 受控原件入口 | `build_full135_oracle.py` / `full135_host.mjs`只修改export节并拒绝全部878宿主导入，保留原callee；实际测试不调用应用start | 每项差分限定自己的状态域，当前27个允许导出的角色分别绑定body/签名，导出能力不能推定全部通过运行验收。 |
+| 函数与布局 | [14个既有角色及3个新增入口](reports/2026-11-01-migration0135.md)有本版body/签名guard；malloc91941，等级/HP/派生区重排，G1572为护甲上限 | 静态映射不直接计作原件运行验证；有效护甲27375/玩家受伤1073和AI921已在下行按限定域另验。 |
+| 受控原件入口 | `build_full135_oracle.py` / `full135_host.mjs`只修改export节并拒绝全部878宿主导入，保留原callee；实际测试不调用应用start | 每项差分限定自己的状态域，当前32个允许导出的角色分别绑定body/签名，导出能力不能推定全部通过运行验收。 |
 | 属性1512 | [10569例完整原件差分](reports/2026-11-01-stats0135-spec.md)，23派生word、HP、4辅助字段、3对象键、速度/序号和队列数0差异；只读复核通过 | 真实来源producer、已有树项更新与包字节仍未验收；每级成长和选卡收尾的限定组合在下行另验。 |
 | tick与暂停命令 | [完整原880/1371的6558例](reports/2026-11-01-game-loop0135.md)，5400暂停命令＋1158tick，0差异；20个静态函数/34条guard另列 | 只独立比较暂停phase、上次时间/marker和模拟时钟；无单位/空队列/skip-spawn域。tick其他phase、完整调度、fresh终局保存及party/victory/Endless仍未运行验收。 |
 | 能力目录 | [114能力/9职业](reports/2026-11-01-catalogue0135.md)按本版指令/data重提；rockbiter/stormstrike平衡变化真实存在 | 表和kit不是全部执行效果/解锁/天赋producer验收。 |
 | 候选与记录应用 | [候选2159：4126例](reports/2026-11-01-candidates0135-spec.md)、[初始化1072：2781例](reports/2026-11-01-new-ability0135-spec.md)、[有序升级1072：3629例](reports/2026-11-01-selection0135-spec.md)，均0声明差异 | kind0 metadata/RNG与80B记录为各自域；kind1/2、展示payload、真实来源和全后处理未知。 |
-| XP消费者组合 | [完整4630：1151序列/3450调用](reports/2026-11-01-level-cycle0135.md)，逐级属性→治疗→阈值→kind0候选 | 来源明确但producer未还原，未接普通死亡/混合拾取的自然调度。 |
+| XP消费者组合 | [完整4630：1151序列/3450调用](reports/2026-11-01-level-cycle0135.md)，逐级属性→治疗→阈值→kind0候选 | 来源明确但producer未还原；普通死亡/混合拾取限定组合在下行另验，完整自然调度未完成。 |
 | 选卡收尾组合 | [完整1072：660序列/1090调用](reports/2026-11-01-selection-cycle0135.md)，new/upgrade/gold→属性→4600 XP扫取→下一kind0或phase1，0声明差异 | 只比7个已建模numeric player keys；其它原件keyed state完整另存，不能假定全部cosmetic。kind1/2 metadata、1202 aura/外观producer与全部消息仍pending。 |
 | 普通/精英生成基础 | [原20272/26361/5736共4021例](reports/2026-11-01-spawn0135-spec.md)，真实148定义/12地图、424B写入、两次RNG和GUID，0差异，1211例实际生成 | 位置/owner为解析输入；普通947/位置生产在下一行另验，Boss/特殊波次、terrain/AI与完整自然调度未完成。 |
-| 普通刷怪帧与位置 | [完整947/8751：1580例](reports/2026-11-01-spawn-frame0135.md)，1275普通帧＋305位置；实际9360新单位、1130005标量/record words，0差异 | 平地、静止/四轴heading、owner0，elite/event/Boss deadlines未来；8非轴heading输入pending不计通过，grid/pathfinding/fallback及完整调度仍缺。 |
-| 施法与命中 | [完整查询/922/916/1754：1314序列/3626调用](reports/2026-11-01-cast0135-spec.md)，25个tag0、execution0/2定义；目标/HP/RNG/延迟/冷却0未声明差异 | 空proc/普通目标，无致死语料；死亡消费者接口不是loot/RNG已验，其他效果与完整技能/资源显示仍pending。 |
+| 普通刷怪帧与位置 | [完整947/8751：1580例](reports/2026-11-01-spawn-frame0135.md)，1275普通帧＋305位置；实际9360新单位，0差异；[任意heading扩展5068例](reports/2026-11-01-spawn-motion0135.md)补齐此前8个非轴输入 | 仍限定平地/owner0；grid/pathfinding/fallback及完整调度缺失。5068含重放先前1580，不相加为新覆盖；80处NaN只比较分类。 |
+| Boss与精英调度 | [Boss871例](reports/2026-11-01-spawn-boss0135.md)：751次实际生成，60定义/全部timer payload、最终Boss附加和无尽；[精英549例](reports/2026-11-01-spawn-elite0135.md)：340次实际生成，难度配对与deadline | 两批各自平地、owner0和隔离的其它timer守卫；不是Boss/精英AI或全部947事件已完成。[事件2424/2376未知](reports/2026-11-01-spawn-events0135-pending.md)单列。 |
+| 额外计时施法与命中 | [完整查询/922/916/1754：1314序列/3626调用](reports/2026-11-01-cast0135-spec.md)，25个tag0、execution0/2定义；目标/HP/RNG/延迟/冷却0未声明差异 | 916消费额外84B计时记录，不能代替已学80B主路径；本份语料空proc、无致死，只验其声明字段。 |
+| 已学技能主自动施法 | [完整1076/1754：639组/5924阶段](reports/2026-11-01-owned-cast0135.md)，职业近战→已学80B→真实基础80B→延迟命中，4923次有效命中自疗，0差异 | 支持25个effect0/execution0/2，空item/definitions/proc；完整2088/880及真实开局producer、此新路径致死/拾取/选卡未接，独立复核通过。 |
+| 死亡与混合拾取消费者 | [204组/871阶段](reports/2026-11-01-death-pickup0135.md)，376次普通死亡、136组进入候选phase2；XP/coin续RNG、逆序奖励和最新倍率0声明差异 | 12组非空definitions→984副作用仍失败，原输出保留且不计通过；显式平地placement、物理实体/包和mode0停止移动未知。此组合与新1076主路径仍待连接。 |
+| 玩家受伤与近战AI | [27375/1073：2107例](reports/2026-11-01-incoming0135.md)；[完整921：416组/1013步](reports/2026-11-01-ai0135.md)，124种普通近战定义的424B记录、HP/盾和累计，0差异 | 非致死/特定min1保护域，AI显式拒绝未知反击/proc来源；远程/Boss AI、超出±2π角度、真实地形和状态producer、死亡/复活仍缺。 |
 | 完整游戏 | 尚无独立完整一局验收；0.134.0局部组合另列 | 新版刷怪、施法、拾取、选卡应用、存档、UI和联机继续连接与验证。 |
 
 基础资源属于另一层证据：[MPQ读取器/索引](reports/2026-11-01-resource-index-base.md)已对29602个命名块、1636167198B完成固定StormLib逐字节对照，154份DBC容器可独立读取。基础RAR包内程序仍是0.102.3，不能自动认定为0.135.1完整资产。最新资源完备性、实际加载/ID列语义、M2动画、BLP材质、地形/音画与渲染尚未完成。
@@ -82,7 +86,7 @@
 
 ## 当前独立实现
 
-**0.135.1已验范围**包括属性/时钟、候选metadata、80B新能力与升级记录、XP逐级成长/选卡收尾、普通精英生成和25定义施法投影，各域和计数见上表，均0声明差异；详见[版本支持清单](reconstruction/version-support.json)。完整模块仅增导出、保留原callee并拒绝全部878宿主导入。新布局必须逐项映射，不能统一平移字段或继承旧版结果。基础MPQ/DBC的独立格式实现与游戏版本域分开记录。
+**0.135.1已验范围**包括属性/时钟、候选metadata、80B初始化/升级、XP/选卡收尾、任意heading普通刷怪、Boss/精英调度、25定义额外与主施法、限定死亡拾取和普通近战AI；各域和计数见上表，不能合计为整局通过。详见[版本支持清单](reconstruction/version-support.json)及[独立交叉审查](reports/2026-11-01-gameplay135-independent-review.md)。完整模块仅增导出、保留原callee并拒绝全部878宿主导入。新布局必须逐项映射，不能统一平移字段或继承旧版结果。基础MPQ/DBC格式与游戏版本域分别记录。历史收据冻结当时列明的源码集合；新主施法另显式纳入包入口的33源快照，不追溯扩大旧收据的完整性声明。
 
 `core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**包括升级值、有序拥有记录、伤害/受伤投影、经验与拾取、限定普通死亡组合、属性数值、kind0候选metadata、金币收取和新能力初始化；各自例数、输入域和未实现项见上表与[版本支持清单](reconstruction/version-support.json)，不同层级的计数不合并为完整游戏覆盖。完整原模块对照保留内部callee；未调用应用start，所有878宿主导入拒绝且实际调用0次。另有`level_cycle134`把XP消费者、每级属性/治疗与kind0候选接成限定组合，但仍未接普通死亡/混合拾取、金币、选卡应用或自然主循环。
 
@@ -112,6 +116,13 @@ python3 reverse-engineering/scripts/check_selection_cycle135.py --phase full
 python3 reverse-engineering/scripts/check_spawn135_spec.py --phase full
 python3 reverse-engineering/scripts/check_spawn_frame135.py --phase full
 python3 reverse-engineering/scripts/check_cast135_full_spec.py --phase full
+python3 reverse-engineering/scripts/check_spawn_motion135.py --phase full
+python3 reverse-engineering/scripts/check_spawn_boss135.py --phase full
+python3 reverse-engineering/scripts/check_spawn_elite135.py --phase full
+python3 reverse-engineering/scripts/check_incoming135_spec.py --phase full
+python3 reverse-engineering/scripts/check_ai135_spec.py --phase full
+python3 reverse-engineering/scripts/check_death_pickup135.py --phase full
+python3 reverse-engineering/scripts/check_owned_cast135.py --phase full
 
 # 固定研究基线0.134.0；需要对应原件及本机证据输入，不能转计0.135.1。
 python3 reverse-engineering/scripts/check_upgrade134_spec.py

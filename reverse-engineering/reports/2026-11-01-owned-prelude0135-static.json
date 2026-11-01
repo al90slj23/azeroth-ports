@@ -1,0 +1,31 @@
+{
+  "target": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2"
+  },
+  "status": "scoped static trace complete; frozen; no new original run by this agent",
+  "trace": "evidence/owned-cast135-static-20261101T044900Z/trace.json",
+  "trace_sha256": "dc698b127066022ee87bad7f0f6436a80dc95ba9d48a85fbf4a1ab86053dcd46",
+  "owned_prelude135_sha256": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+  "findings": [
+    "26366 only clears772 and optionally emits3 packets per positive finite learned cooldown when old772==1; it never rewrites learned80 fields.",
+    "1076 entry prelude is real for warrior/paladin/rogue even with emptyitems. It precedes learned80 and embeddedbasic. Other6 valid classes leave1628 unchanged.",
+    "Learned0/2 effect0: decrement remaining once, ready writesInf before922, failure=.2, success=min(current remaining,max(name floor,scaled cooldown)). hellfire floor=.5; other supportedIDs floor=.25.",
+    "earth_shock is the only other special-name member of the25. Emptydefinitions takes a direct922 route equivalent to the normal tail; nonempty kind54 subtype2/3 is pending. rockbiter/stormstrike shared-state logic is outside the25.",
+    "Basic G1256/1264 runs after learned list: decrement, ready922, failure=.5, success writes scaled cooldown directly. Success adds2 local cooldown packets; learned success likewise2.26366 flush packets and922/914 packets are separate.",
+    "Emptydefinitions alone is insufficient: G1596>0 can produce extra casts/RNG. First ordinary scope must reject it and declareG908/G772 state. Caller must preserve880 pause/scheduler gates.",
+    "2088 calls1076 once after its own effect/regen/heal work;1076 has no phase guard. Only880 controls scheduling."
+  ],
+  "verification_reference": {
+    "root_owned_cast_receipt": "evidence/full0135-oracle-20261101T045712.346745Z/owned-cast135-comparison.json",
+    "sha256": "a3a624b8807745c7e95a6be557d6934020aab696fff8acfbefb69af91270b64e",
+    "note": "Root independently validated the integrated prelude/learned/basic model; this short static report does not replace that receipt."
+  },
+  "unknowns": [
+    "Nonempty proc definitions and extra-cast producer behaviors beyond declared guards.",
+    "2088 complete live-effect/regeneration scheduler.",
+    "Actual constructor writing class starter ID into initialG1256 basic80 remains untraced; class+40 starter strings alone are not new-game initialization proof.",
+    "Physical packet bytes and complete game remain pending."
+  ]
+}

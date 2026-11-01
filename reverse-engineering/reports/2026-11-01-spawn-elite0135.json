@@ -1,0 +1,41 @@
+{
+  "title": "0.135.1 due elite production",
+  "source_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": "evidence/full0135-oracle-20261101T043931.950246Z/spawn-elite135-comparison.json",
+  "receipt_sha256": "378829c8fd04e81b368448f8a64128b61e23f8b036dbcd7f7122f8d0f112a66c",
+  "cases": 549,
+  "successful_elites": 340,
+  "mismatch_fields": 0,
+  "compared_words": 331826,
+  "runtime": {
+    "cases": 549,
+    "functions": [
+      947
+    ],
+    "host_calls": 0,
+    "denied_imports": 878,
+    "fresh_instances": 46,
+    "max_memory_bytes": 21168128,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "scope": [
+    "Full947 ordinary phase followed by actually due G2440 elite timer.",
+    "Eligible elite definitions have byte68==1 and unlock64<=now/60. Bounded uniform index consumes RNG even with no candidates.",
+    "Nonzero difficulty appends same elite at first position+(2.5,1,0), respecting actual normal-unit cap.",
+    "Deadline is now+max(25,55-2.5*(now/60)); no multi-tick catchup."
+  ],
+  "limitations": [
+    "Flat/absent-grid/pathfinding placement and empty peer objects with resolved owner0.",
+    "All other event and Boss clocks are future; UI messages and object-registry side effects remain outside this projection."
+  ],
+  "independent_review": {
+    "status": "passed scoped readonly review",
+    "report": "2026-11-01-spawn135-independent-review.json",
+    "local_receipt": "evidence/spawn135-independent-review-20261101T044947.975435Z/review.json",
+    "sha256": "399e5cb6a8b4ad525b68396ff17f9307519e212156e3feff1babff0abc958ec0"
+  }
+}

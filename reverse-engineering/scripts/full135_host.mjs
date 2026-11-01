@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 
 export const original135SHA = 'c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2';
 export const digest = value => createHash('sha256').update(value).digest('hex');
-const roleIndices = Object.freeze({"select_ability":1072,"recalculate_stats":1512,"finish_selection":4600,"resolve_owned_ability":22287,"auto_cast":916,"cast":922,"damage":914,"gain_experience":4630,"incoming_damage":1073,"spawn_pickup":1417,"collect_pickups":2862,"attract_all_xp":21779,"generate_choices":2159,"upgrade_value":25368,"tick":880,"command":1371,"effective_armor":27375,"spawn_tick":947,"special_tick":2376,"choose_spawn":20272,"spawn_normal":5736,"spawn_boss":2785,"spawn_position":8751,"spawn_decay":26361,"process_hits":1754,"query_targets":27562,"queue_hit":8295});
+const roleIndices = Object.freeze({"select_ability":1072,"recalculate_stats":1512,"finish_selection":4600,"resolve_owned_ability":22287,"auto_cast":916,"cast":922,"damage":914,"gain_experience":4630,"incoming_damage":1073,"spawn_pickup":1417,"collect_pickups":2862,"attract_all_xp":21779,"generate_choices":2159,"upgrade_value":25368,"tick":880,"command":1371,"effective_armor":27375,"spawn_tick":947,"special_tick":2376,"choose_spawn":20272,"spawn_normal":5736,"spawn_boss":2785,"spawn_position":8751,"spawn_decay":26361,"process_hits":1754,"query_targets":27562,"queue_hit":8295,"atan2_heading":42475,"atan_heading":34787,"update_units":921,"owned_tick":1076,"player_tick":2088});
 const originalPath = new URL('../originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm',import.meta.url);
 function leb(raw,p) {
   let n=0,shift=0;

@@ -1,0 +1,53 @@
+{
+  "title": "Exact heading and arbitrary-motion spawn",
+  "fixed_version": "0.135.1",
+  "build": "0898d5e3",
+  "source_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": "evidence/full0135-oracle-20261101T043006.290228Z/spawn-motion135-comparison.json",
+  "receipt_sha256": "f6f2dc77025474001b672b18341877c56520138be811bac8ab7fb55da652fa3a",
+  "cases": 5068,
+  "kinds": {
+    "atan": 972,
+    "atan2": 2124,
+    "position": 505,
+    "tick": 1467
+  },
+  "mismatch_fields": 0,
+  "pending_not_counted": 0,
+  "compared_words": 1299237,
+  "runtime": {
+    "cases": 5068,
+    "functions": [
+      34787,
+      42475,
+      8751,
+      947
+    ],
+    "original_internal_callees_unchanged": true,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "fresh_instances": 317,
+    "max_memory_bytes": 15597568,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "details": [
+    "Restores 34787 atan and 42475 atan2 using exact binary32 operations and fixed declaration tables.",
+    "Composes full8751 flat-terrain sampling and full947 ordinary spawn frames for arbitrary moving directions.",
+    "Replays all prior1580 accepted inputs and resolves the eight previously pending nonaxis biased headings."
+  ],
+  "limitations": [
+    "Flat-height/absentgrid/pathfinding only; fallback and other timed947 events remain pending.",
+    "No application start, native EXE, network, user save or installed-app write."
+  ],
+  "independent_review": {
+    "status": "passed scoped readonly review",
+    "report": "2026-11-01-spawn135-independent-review.json",
+    "local_receipt": "evidence/spawn135-independent-review-20261101T044947.975435Z/review.json",
+    "sha256": "399e5cb6a8b4ad525b68396ff17f9307519e212156e3feff1babff0abc958ec0"
+  },
+  "floating_policy": "Finite values are bit exact;80 NaN sign/payload differences compare classification only."
+}

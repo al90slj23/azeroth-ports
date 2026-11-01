@@ -1,0 +1,127 @@
+{
+  "status": "validated bounded projection; complete game reconstruction remains open",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": "evidence/full0135-oracle-20261101T044817.224194Z/ai135-comparison.json",
+  "receipt_sha256": "1fa588a70feb605d0a4b4b6db8cad340f01023d7fa854fcc0f0415592617380c",
+  "cases": 416,
+  "steps": 1013,
+  "mismatch_fields": 0,
+  "groups": {
+    "pilot-contact-or-chase": 12,
+    "all124-melee-definitions": 248,
+    "timer-and-range-boundaries": 30,
+    "trig-and-xyz-movement": 27,
+    "movement-speed-slow-select": 45,
+    "attack-weakness-priority": 9,
+    "attack-haste-lock404": 3,
+    "movement-haste404": 3,
+    "skip-unit400": 3,
+    "stop-in-flight": 12,
+    "queued-multi-unit-armor": 12,
+    "contact-shield-cleanup": 4,
+    "incoming-phase": 3,
+    "party-mode": 2,
+    "continuous-ten-second-chase-attack": 3
+  },
+  "runtime": {
+    "case_count": 416,
+    "steps": 1013,
+    "original_function": 921,
+    "original_internal_callees_unchanged": true,
+    "original_allocator": 91941,
+    "fresh_instances": 18,
+    "fresh_every": 24,
+    "max_memory_bytes": 20643840,
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "memory_page_cap": 512,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "source_sha256": {
+    "scripts/check_ai135_spec.py": "f07ecccdad74e93b508a4027c4f944778b43c079e3a431823a5a7b63a4fff69b",
+    "scripts/run_ai135_oracle.mjs": "b6d67b940e6b6e52761e37acfbf491cf85056da07eb6060cc886e7b976a66c00",
+    "scripts/build_full135_oracle.py": "61775a4528134a2bedd501962aa0bfa77137e51ab8981eba1c1e10696511621e",
+    "scripts/full135_host.mjs": "f9ca05f8733fc5bd55e36e74e96d21dd2b53a07aa961aa074722e51bf50e1336",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/ai135.py": "41e219ec520ac022a1876fc3c9e90c1dda83382d61b17794e3404c7ba2d7a355",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd"
+  },
+  "limitations": [
+    "124 ordinary normal melee definitions, flat terrain, finite small trig angles[-2pi,2pi].",
+    "No alternate AI40/64/244, ranged/boss behavior, fear/stun/status producer queues, terrain or remote peer ownership.",
+    "Buffs only7/12,36B modifiers only54 variant1,8B item effects empty,explicit absence of other incoming sources required; unknown984/914 producers rejected.",
+    "Exact complete424B entity updates and scalar incoming HP/shields/totals; logical packets counted but encoded packet bytes and registry/aura/history remain pending.",
+    "Nonfatal/guarded incoming only; reserve callbacks, death/revival and proc producers remain unresolved."
+  ],
+  "static_evidence": "evidence/ai0135-static-20261101T044202.850584Z/ai135-static.json",
+  "covered_definition_count": 124,
+  "total_normal_definitions": 148,
+  "entry_api": "core_spec.ai135.AiFrame135 -> update_ordinary_units -> AiResult135",
+  "rejection_guard_evidence": "evidence/ai-incoming0135-work-20261101T042405.525882Z/ai135-rejection-guards.json",
+  "actual_chain": [
+    "880 ->921",
+    "921 entity interpolation,contact cooldown and movement planning",
+    "921 all-unit loop ->contact queue",
+    "921 queue ->1073 ->27375 ->scalar shields/HP"
+  ],
+  "fields": {
+    "game_world_pointer": 2348,
+    "unit_vector": [
+      1784,
+      1788,
+      1792
+    ],
+    "unit_stride": 424,
+    "now": 2352,
+    "player_xyz": [
+      1416,
+      1420,
+      1424
+    ],
+    "hp": 1440,
+    "armor": 1568,
+    "armor_cap": 1572
+  },
+  "discoveries": [
+    "G268 is not the world pointer:921 stack+268 stores G2348 temporarily.",
+    "All unit movement writes precede queued contact1073 invocations.",
+    "Ordinary movement uses target orbit angle+0.15,maximum14unit step and next update deadline clamped0.25..0.7seconds.",
+    "Contact attack resets352 from304 and uses69798 ordered weakness selection before1073."
+  ],
+  "rejected_source_cases": 8,
+  "producer_guard_evidence": "evidence/full0135-oracle-20261101T044817.224194Z/ai135-producer-guard-evidence.json",
+  "guard_test_evidence": "evidence/full0135-oracle-20261101T044817.224194Z/ai135-rejected-sources.json",
+  "independent_review": {
+    "status": "passed scoped readonly review",
+    "report": "2026-11-01-gameplay135-independent-review.json",
+    "local_receipt": "evidence/cross135-readonly-review-20261101T044702.684177Z/review.json",
+    "sha256": "e86b1da9e917cdc8654d249a56d0d9b015b0e1b62625708bd1ee1953cea0b0b9"
+  },
+  "package_init_provenance_caveat": {
+    "scope": "Earlier receipts and reviews retained unchanged",
+    "omitted_source": "reconstruction/core_spec/__init__.py",
+    "current_bytes": 327,
+    "current_sha256": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "current_behavior": "Imports UpgradeState and upgrade_value_bits from upgrade_values, whose module was already in the prior source lists.",
+    "historical_claim": "Earlier receipts freeze only their explicitly enumerated files. Their package initializer was not recorded, so those counts cannot be upgraded to the new33-source proof. This is a provenance limitation, not evidence of different past gameplay behavior.",
+    "new_proof": "evidence/full0135-oracle-20261101T045930.365818Z/owned-cast135-comparison.json includes package initializer and was rerun after adding it.",
+    "evidence": "evidence/owned-cast0135-independent-review-20261101T045826.625090Z/previous-source-provenance-caveat.json"
+  }
+}

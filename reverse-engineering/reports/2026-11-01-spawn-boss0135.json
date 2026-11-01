@@ -1,0 +1,48 @@
+{
+  "title": "Actual Boss production and due scheduling",
+  "fixed_version": "0.135.1",
+  "build": "0898d5e3",
+  "source_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": "evidence/full0135-oracle-20261101T043721.187841Z/spawn-boss135-comparison.json",
+  "receipt_sha256": "e6d1478a74e2ab06a066852a6be8bdc842ab9ea9542453b0ed34eb6a0c16c8c0",
+  "cases": 871,
+  "kinds": {
+    "boss": 475,
+    "tick": 396
+  },
+  "mismatch_fields": 0,
+  "pending_not_counted": 0,
+  "compared_words": 304278,
+  "runtime": {
+    "cases": 871,
+    "functions": [
+      2785,
+      947
+    ],
+    "host_calls": 0,
+    "denied_imports": 878,
+    "fresh_instances": 73,
+    "max_memory_bytes": 21168128,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "details": [
+    "Retains 60 Boss declarations, all ability cooldown tables and the two static-point maps.",
+    "Restores2785 HP/attack, shared RNG, position, GUID, full424B records and all ability timer payloads.",
+    "Composes real947 ordinary spawning with due scheduled Bosses, difficulty5 final-Boss extra0.6, and endless300s Bosses."
+  ],
+  "limitations": [
+    "Flat terrain, absent obstacle grid/pathfinding, resolved owner0 and empty peer objects only.",
+    "Object-registry allocations, UI/announcement queues, entry-specific spell-object side effects and other elite/event timers are not independently reconstructed.",
+    "Farthest-static-point fallback retained statically but unreachable in these finite fixed-map point fixtures."
+  ],
+  "independent_review": {
+    "status": "passed scoped readonly review",
+    "report": "2026-11-01-spawn135-independent-review.json",
+    "local_receipt": "evidence/spawn135-independent-review-20261101T044947.975435Z/review.json",
+    "sha256": "399e5cb6a8b4ad525b68396ff17f9307519e212156e3feff1babff0abc958ec0"
+  }
+}

@@ -15,15 +15,20 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 ### 固定0.135.1与基础资源
 
 - 固定0.135.1：[完整WASM profile](reports/2026-11-01-wasm0135-profile.md)覆盖175317个defined函数、824549条直接调用；全量函数header/body范围和28471个data payload哈希读回通过。这是静态导航基础，不等于所有逻辑已恢复。
-- 固定0.135.1：[初批17个角色的布局迁移](reports/2026-11-01-migration0135.md)分别绑定本版body/签名；本轮builder允许的研究角色增至27个，原分配器仍为91941。新版builder/host只增加研究导出、保留全部原callee并拒绝878个宿主导入；受控内部函数对照不调用应用start。
+- 固定0.135.1：[初批17个角色的布局迁移](reports/2026-11-01-migration0135.md)分别绑定本版body/签名；本轮builder允许的研究角色增至32个，原分配器仍为91941。新版builder/host只增加研究导出、保留全部原callee并拒绝878个宿主导入；受控内部函数对照不调用应用start。
 - 固定0.135.1：[完整原1512属性差分](reports/2026-11-01-stats0135-spec.md)10569例、0字段差异；比较23派生词、HP、4辅助字段、3对象键、速度和队列数量，新增G1572护甲上限已恢复。独立只读复核通过；真实producer、已有树项更新、包字节和自然组合仍待接入。
 - 固定0.135.1：[暂停命令与tick时钟投影](reports/2026-11-01-game-loop0135.md)在完整原1371/880中重做6558例（5400命令＋1158tick），0差异。比较暂停phase及上次时间/模拟时钟字段；tick其余phase和完整调度未独立比较。状态为空队列/无单位并走原skip-spawn守卫，fresh终局保存、完整刷怪与多人终态仍pending。
 - 固定0.135.1：[114能力/9职业重新提取](reports/2026-11-01-catalogue0135.md)确认kit不变，但rockbiter与stormstrike的伤害/冷却/范围有实际平衡变化；新版并非只改UI。所有新pointer均由本版指令和data重建。
 - 固定0.135.1：[kind0候选4126例](reports/2026-11-01-candidates0135-spec.md)、[新能力初始化2781例](reports/2026-11-01-new-ability0135-spec.md)、[有序升级3629例](reports/2026-11-01-selection0135-spec.md)均重新执行完整原2159/1072，0声明字段差异。前者只验metadata/RNG/控制，后两者覆盖完整80B记录与限定控制；kind1/2、真实producer和完整UI/世界副作用仍pending。
 - 固定0.135.1：[XP逐级成长组合1151序列/3450调用](reports/2026-11-01-level-cycle0135.md)完成每级属性→治疗→阈值→候选；[选卡收尾660序列/1090调用](reports/2026-11-01-selection-cycle0135.md)接通new/upgrade/gold→属性→XP扫取→kind0再生或phase1，均0声明字段差异。七组来源快照必须显式；选卡未建模的keyed state完整另存，不能视为全是显示字段，完整1072状态等价未宣称。
 - 固定0.135.1：[选怪/衰减/普通与精英生成4021例](reports/2026-11-01-spawn0135-spec.md)与三个真实原入口0差异，覆盖12地图/148定义及424B记录和RNG；实际成功生成1211例。位置/owner是明确已解析输入，完整947位置调度另列，Boss/特殊调度、真实terrain仍未完成。
-- 固定0.135.1：[完整947普通帧→8751位置→5736单位](reports/2026-11-01-spawn-frame0135.md)1580例（1275帧＋305位置）0差异，实际自然创建9360份单位记录；这是组合内记录数，不算额外9360用例。限定flat terrain、静止/四轴heading、owner0，其他event/Boss deadlines未来；8非轴heading pending及grid/pathfinding/fallback不计通过。
-- 固定0.135.1：[自动施法/直接施法/延迟命中1314序列、3626调用](reports/2026-11-01-cast0135-spec.md)0未声明差异。实际25个effect-tag0、execution-kind0/2定义，比较目标、HP、RNG、待命中与冷却；空proc且无致死语料，其余执行/效果、死亡loot与完整技能行为仍pending。
+- 固定0.135.1：[完整947普通帧→8751位置→5736单位](reports/2026-11-01-spawn-frame0135.md)1580例（1275帧＋305位置）0差异，实际自然创建9360份单位记录；这是组合内记录数，不算额外9360用例。限定flat terrain、静止/四轴heading、owner0，其他event/Boss deadlines未来；此前8个非轴heading已由[任意运动扩展5068例](reports/2026-11-01-spawn-motion0135.md)补齐；grid/pathfinding/fallback仍未验收，5068包含旧1580重放。
+- 固定0.135.1：[额外84B计时施法/直接施法/延迟命中1314序列、3626调用](reports/2026-11-01-cast0135-spec.md)0未声明差异。实际25个effect-tag0、execution-kind0/2定义，比较目标、HP、RNG、待命中与冷却；空proc且无致死语料，其余执行/效果、死亡loot与完整技能行为仍pending。
+- 固定0.135.1：[真正已学80B主自动施法639组/5924阶段](reports/2026-11-01-owned-cast0135.md)0差异，包含职业前置近战、真实基础记录、25定义、逐hit最小伤害自疗与延迟命中。它对应2088→1076，和上述916额外84B系统分开；真实开局、完整880/2088、致死自然调度未因此通过。
+- 固定0.135.1：[Boss871例](reports/2026-11-01-spawn-boss0135.md)、[精英549例](reports/2026-11-01-spawn-elite0135.md)各自完整原件调度域通过，实际751次Boss/340次精英生成；真实terrain、其它event/2376、完整AI与全调度仍待恢复。
+- 固定0.135.1：[普通死亡/混合拾取204组871阶段](reports/2026-11-01-death-pickup0135.md)0声明差异，376次死亡、136组进入候选；12组非空definitions→984差异保留为未知，不计通过。
+- 固定0.135.1：[有效护甲/受伤2107例](reports/2026-11-01-incoming0135.md)、[普通近战AI416组1013步](reports/2026-11-01-ai0135.md)在限定域0差异，后者覆盖124定义与完整424B记录；远程/Boss AI、反击producer、真实地形、死亡复活仍缺。
+- 新批分别经过[生成模块](reports/2026-11-01-spawn135-independent-review.md)、[死亡/受伤/AI](reports/2026-11-01-gameplay135-independent-review.md)及[主施法](reports/2026-11-01-owned-cast0135-independent-review.md)独立只读复核；未执行原件的复算不另计新增原件案例。旧批冻结列出的源码集合，新主施法补入包入口共33源，旧证据完整性不追溯扩大。
 - 基础资源：[独立MPQ读取器与索引](reports/2026-11-01-resource-index-base.md)对29602个命名块/1636167198B与固定StormLib逐字节一致；154份DBC已按容器读出。基础RAR仍关联旧0.102.3，不自动作为新版完整资产；尚无M2/BLP渲染器或完整资源管线。
 
 ### 固定0.134.0的局部结果

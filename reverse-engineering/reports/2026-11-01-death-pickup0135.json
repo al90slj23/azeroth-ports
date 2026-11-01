@@ -1,0 +1,303 @@
+{
+  "title": "0.135.1 ordinary cast/death/pickup/XP bridge and retained proc boundary",
+  "created_at": "2026-11-01T04:47:31.279026+00:00",
+  "target": {
+    "version": "0.135.1",
+    "web_build": "0898d5e3",
+    "wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "profile_index_sha256": "b1032d016b6ef43da115eb373a10f03ee2ddfae428cee7d988057d2caac773a0"
+  },
+  "status": "validated_scoped_projection; whole-game reconstruction incomplete",
+  "new_sources": {
+    "reconstruction/core_spec/death_pickup135.py": "f531b948b723b19ff6853edabf59a7beb4d01dde2a92b38bf81879bfadd09d56",
+    "scripts/check_death_pickup135.py": "83599e0c3672a618cb294ac2b4991c02feedccd26d0348f469cdc9f55a1357af",
+    "scripts/run_death_pickup135_oracle.mjs": "aaf47a9ad390a2efd5ab1a44adacdf1b8cd3973a3f6332f8ac601843b4a5ffed"
+  },
+  "passing_full": {
+    "receipt": "evidence/full0135-oracle-20261101T044443.961768Z/comparison.json",
+    "receipt_sha256": "29435ff5adf4c4633551b03bfbd353013da259f10aa71a072e444a3eadedf211",
+    "cases": 204,
+    "stages": 871,
+    "mismatch_cases": 0,
+    "groups": {
+      "pilot-real-cast-death-XP-choice": 4,
+      "pilot-moving-death-freezes-endpoints": 1,
+      "pilot-projectile-moving-death-freezes-endpoints": 1,
+      "real-cast-multiple-deaths-RNG-continuation": 128,
+      "mixed-entry-selection-latest-multiplier-reverse-awards": 12,
+      "all-class-base-lifesteal-and-half-gate": 26,
+      "nonlethal-lifesteal-source-order-item": 6,
+      "nonlethal-lifesteal-source-order-adjustment": 6,
+      "nonlethal-lifesteal-source-order-negative": 6,
+      "nonlethal-lifesteal-source-order-NaN": 6,
+      "lifesteal-HP-clamp-and-NaN": 8
+    },
+    "accepted_ordinary_deaths": 376,
+    "entered_choice_phase_cases": 136,
+    "death_continuation_rng_draw_counts": {
+      "2": 321,
+      "4": 42,
+      "5": 10,
+      "6": 3
+    },
+    "runtime": {
+      "case_count": 204,
+      "entry_calls": 871,
+      "full_original_functions": [
+        922,
+        1754,
+        914,
+        1417,
+        1821,
+        2862,
+        28796,
+        4630,
+        2159,
+        1512
+      ],
+      "fresh_instances": 13,
+      "fresh_every": 16,
+      "max_memory_bytes": 20709376,
+      "actual_host_calls": 0,
+      "denied_function_imports": 878,
+      "original_allocator": 91941,
+      "memory_page_cap": 512,
+      "node": "v22.23.4",
+      "application_start_called": false,
+      "full_game_started": false,
+      "user_saves_accessed": false,
+      "network_used": false
+    },
+    "process": {
+      "command": [
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=512",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_death_pickup135_oracle.mjs",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T044443.961768Z",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T044443.961768Z/death-pickup135-fixtures.jsonl"
+      ],
+      "pid": 16163,
+      "pgid": 16163,
+      "exit_code": 0,
+      "deadline_seconds": 60,
+      "seconds": 0.816
+    }
+  },
+  "pending_negative": {
+    "receipt": "evidence/full0135-oracle-20261101T044512.860275Z/comparison.json",
+    "receipt_sha256": "8994c2b5ad332dec0e4e47a4d1aa7608806a4662650b30c33ee6027c1e98f3b8",
+    "cases": 12,
+    "mismatch_cases": 12,
+    "original_exit_code": 0,
+    "outer_checker_exit_code": 1,
+    "status": "Known unresolved proc effects, excluded from passing full coverage",
+    "observed": "Nonempty definitions with timed modifiers cause HP, auxiliary pool and player-key1109 differences after original hits; original914 statically calls984, which can call1512. Exact responsible984 metadata/subbranch and raw post-hit source changes remain unknown."
+  },
+  "retained_attempts": [
+    {
+      "directory": "evidence/full0135-oracle-20261101T043635.378895Z",
+      "purpose": "Initial6-case pilot exposed per-hit18353 healing and moving-death message counter; preserved6 failures."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T043848.473428Z",
+      "purpose": "Corrected6-case pilot, zero mismatches."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T043900.897848Z",
+      "purpose": "146-case initial scoped passing suite."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T044019.658200Z",
+      "purpose": "216-case expansion,12 timed/mixed lethal effect mismatches retained."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T044220.267991Z",
+      "purpose": "216-case expansion,12 timed/mixed nonlethal effect mismatches retained; proved boundary is not limited to death."
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T044426.454428Z",
+      "purpose": "204-case strict full pass before comment-only runner correction."
+    }
+  ],
+  "contracts": {
+    "DeathContext135": "Only ordered56B pickup records/capacity, spawn counter2408, message sequence2412, ordinary kill cost2420; owns no RNG, time or HP.",
+    "OrdinaryDeathBinding135": "Explicit72B ordinary definition fields and pointer, separately resolved XP/coin placements, optional actual pre-hit interpolated death_xyz, explicit movement_message bool. Placements may be map-clamped and must not substitute for death_xyz.",
+    "consume_ordinary_death": "Accept only applied newly lethal ordinary hits; post-critical CastState RNG is input. Return updated CastState RNG/spatial endpoints, DeathContext, requests/draw count/death_xyz and explicit pending surfaces. Reject flagged/nonordinary routes.",
+    "OrdinaryDeathConsumer135": "Mutable adapter only for cast135 after_death callback; caller can instead thread pure consume_ordinary_death return values.",
+    "apply_damage_lifesteal": "Call separately for every accepted hit, before death continuation, with914 final minimum1 damage_bits, not target HP loss. LevelCycleState owns playerHP and numeric keys. Projects18353 coefficient and914 HP/key22/key28; does not execute984 or update proc source vectors.",
+    "CollectionState135": "LevelCycleState owns RNG/HP/time/stats. Explicit DeathContext, CurrencyState, playerXYZ, XP forwarding queue/capacity, and known-empty claims. No independent duplicate clock/RNG/HP.",
+    "collect_pickups": "Entry snapshots radius1560/playerXYZ/now; attract XP, preselect all eligible indices once, reverse ordered removal. Each XP/coin award reads latest multiplier after preceding awards/level-ups. Kind0/1 only; nonempty claims/auxiliary vectors or nearby other kinds return pending."
+  },
+  "recovered_spec": [
+    "922 consumes per-target critical RNG before applying914;1754 consumes queued damage in its ordered due-hit pass. Each lethal callback returns reward/entity RNG before the next target critical draw.",
+    "914 ordinary unflagged: add definition+60 to2420; scale baseXP by1.65, draw fractional-round RNG even for zero fraction, append nonzero XP before currency chance; probability.165; bounded3 rejection then amount+2; kind1 entity1821 consumes an additional high23 angle sample.",
+    "914 movement death: compute XYZ using ordered-clamped ratio (now-U340)/U344, then write both fromXYZ and toXYZ to the interpolated position, U344=0 and U340/U4=now. Active movement duration>0 && now<oldtime+duration increments2412 for stop message.",
+    "18353 coefficient adds timed kind27/modifier14, class-table+80, item tag14, adjustment tag18 in that order;914 applies damage*coefficient and half factor when387>4, NaN-aware maxHP clamp, ceil key22/key28 writes. All class base values and item/adjustment/negative/NaN/HP boundaries pass original914; timed interaction with984 remains pending.",
+    "2862 uses one entry eligibility selection; reverse removal can level up and update later multipliers without selecting newly nearby coins during the same invocation. Mode forwarding queues carry original base amount. XP minimum1 applies even to zero amounts.",
+    "Mode0 and1 numeric next-choice metadata is projected with actual original mode preserved. Original mode0 additionally invokes movement-stop35514, outside this scoped projection."
+  ],
+  "field_map": {
+    "pickup_vector": [
+      1868,
+      1872,
+      1876
+    ],
+    "player_xyz": [
+      1416,
+      1420,
+      1424
+    ],
+    "radius": 1560,
+    "xp_multiplier": 1564,
+    "coin_multiplier": 1588,
+    "rng": [
+      1720,
+      1724,
+      1728,
+      1732
+    ],
+    "spawn_counter": 2408,
+    "message_sequence": 2412,
+    "kill_cost": 2420,
+    "claims_ptr_len": [
+      2112,
+      2116
+    ],
+    "xp_forward_vector": [
+      2144,
+      2148,
+      2152
+    ],
+    "currency_forward_vector": [
+      2156,
+      2160,
+      2164
+    ],
+    "mode": 2582,
+    "clock": 2352,
+    "world": 2348,
+    "units_vector": [
+      1784,
+      1788,
+      1792
+    ]
+  },
+  "original_functions": {
+    "914": {
+      "body_start": 2394962,
+      "body_end": 2421299,
+      "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+      "wat_start": 126751708,
+      "wat_end": 127132114,
+      "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a"
+    },
+    "922": {
+      "body_start": 2623156,
+      "body_end": 2646444,
+      "body_sha256": "32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80",
+      "wat_start": 131203095,
+      "wat_end": 131607070,
+      "wat_sha256": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940"
+    },
+    "1417": {
+      "body_start": 9570935,
+      "body_end": 9576021,
+      "body_sha256": "4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342",
+      "wat_start": 318560368,
+      "wat_end": 318633040,
+      "wat_sha256": "7e9ae77a571bce628dc9202237f928772e8199b3c583bd7d9dd1a47755abdc33"
+    },
+    "1821": {
+      "body_start": 12169862,
+      "body_end": 12173492,
+      "body_sha256": "fbb21ae4ebb683d34bf3e62eb96f50571b16fb7d8053e980c6fd45cfcb3575db",
+      "wat_start": 370109404,
+      "wat_end": 370153836,
+      "wat_sha256": "4697c24b865487c92a1d1a1aa4adaeb1cf9a8129c885dc8797cc1524e6aeb43f"
+    },
+    "2862": {
+      "body_start": 16965627,
+      "body_end": 16968806,
+      "body_sha256": "5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a",
+      "wat_start": 459443249,
+      "wat_end": 459490392,
+      "wat_sha256": "d35875f18df4e8c24d30759376434ba21ef83e4f5605d5a099efaf6a0b4ff1eb"
+    },
+    "28796": {
+      "body_start": 52757053,
+      "body_end": 52757534,
+      "body_sha256": "467b18a46820e60bb4e7ac690ab2803c81e2ebfb9aa8bacd57bece3b76cd9e35",
+      "wat_start": 990978156,
+      "wat_end": 990983150,
+      "wat_sha256": "d8759e5009bcf17152c98abad8c6fdcce129d92520d155726fa1191fb92cc730"
+    },
+    "18353": {
+      "body_start": 42735222,
+      "body_end": 42735870,
+      "body_sha256": "46ea708c6b003774efaf4a6ac369809004caac97bec00e61e3344c49d0a75b30",
+      "wat_start": 855798968,
+      "wat_end": 855805712,
+      "wat_sha256": "a116729d59e7715f597eb1a3bde11ffcf1f168d4971ad9eca902e58e61c2fb7e"
+    },
+    "984": {
+      "body_start": 4280168,
+      "body_end": 4292023,
+      "body_sha256": "f9e1b5fb843e275626d1cef0d554014e304a24c1e6fbe1e2b0ed21dcdb48b5fe",
+      "wat_start": 190410447,
+      "wat_end": 190761810,
+      "wat_sha256": "b40e643de981586822daf2dee2920ce3b189b6c962472af37abbec7536347568"
+    },
+    "4630": {
+      "body_start": 22064388,
+      "body_end": 22066389,
+      "body_sha256": "828722a8f200878b4bdcf5ac59df4d95f1021df6ca42044a6419c216a405fd21",
+      "wat_start": 547108649,
+      "wat_end": 547131585,
+      "wat_sha256": "2bf5be8331ebb2d8cd75448daf220d211eeeb76750072b900e86f90d8e29c03c"
+    },
+    "1512": {
+      "body_start": 10196165,
+      "body_end": 10200921,
+      "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+      "wat_start": 331333364,
+      "wat_end": 331395880,
+      "wat_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3"
+    },
+    "2159": {
+      "body_start": 13966745,
+      "body_end": 13971122,
+      "body_sha256": "413d98654b02253f255eb0cf54bcdc06309fb7aea5c9079fb73a20a9b6a98bcc",
+      "wat_start": 404726566,
+      "wat_end": 404792305,
+      "wat_sha256": "8bdfb49dcb9973f4bf8ebaf361ac73f4c51e1b2b933f00dea1da0718cc957445"
+    }
+  },
+  "verification": {
+    "original_bodies_preserved": true,
+    "only_changed_wasm_section": 7,
+    "all878_function_imports_throw": true,
+    "pinned_node": "v22.23.4",
+    "max_node_heap_mb": 512,
+    "max_wasm_pages": 512,
+    "owned_process_deadline_seconds": 60,
+    "expectations_serialized_before_original": true,
+    "source_before_after_hashes_equal": true,
+    "source_snapshot": "evidence/full0135-oracle-20261101T044443.961768Z/source-snapshot",
+    "float_equality": "Strict raw bits, including integers and NaNs. Only a newly appended, unwritten pickup+4 word is unspecified until original writes it."
+  },
+  "limitations": [
+    "This is a controlled behavior slice, not a full game. Main owned tick1076/player2088 and whole scheduler composition are owned by the root task.",
+    "Death supports explicit ordinary unflagged definitions and no unresolved proc/item events; boss/special/flagged kind2 reward routes remain pending.",
+    "World placement is explicitly resolved flat zone0 within radius120, not terrain/collision reconstruction. Actual deathXYZ is separate and moving cases are validated.",
+    "Claims, auxiliary entity destruction, nearby kind>=2 pickups, physical ECS entities, wire bytes, presentation/heal accounting logs, and mode0 movement-stop35514 remain unknown.",
+    "Nonempty effect definitions can invoke984 after accepted hits and invalidate source snapshots; callers must stop or model that producer.12 negative cases are retained and excluded from passing coverage.",
+    "No application start, real EXE launch, network, installed packages or user saves were used or modified; no commit/push performed."
+  ],
+  "independent_review": {
+    "status": "passed scoped readonly review",
+    "report": "2026-11-01-gameplay135-independent-review.json",
+    "local_receipt": "evidence/cross135-readonly-review-20261101T044702.684177Z/review.json",
+    "sha256": "e86b1da9e917cdc8654d249a56d0d9b015b0e1b62625708bd1ee1953cea0b0b9"
+  }
+}

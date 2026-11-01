@@ -1,0 +1,90 @@
+{
+  "status": "validated bounded projection; complete game reconstruction remains open",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "receipt": "evidence/full0135-oracle-20261101T043254.410437Z/incoming135-comparison.json",
+  "receipt_sha256": "b2b1f7ffa6a495681ead18ee38af8bbeb95612900f9b910c6056d332b1ac2ede",
+  "cases": 2107,
+  "steps": 2107,
+  "mismatch_fields": 0,
+  "groups": {
+    "pilot-actual54cap": 8,
+    "pilot-actual54incoming": 8,
+    "pilot-shield": 3,
+    "pilot-source-registry": 2,
+    "all-ranks-armor-cap": 1536,
+    "first54variant-byte": 256,
+    "armor-select-nonfinite": 49,
+    "moving-nearby-armor-guard": 75,
+    "armor-shield-exhaustion": 80,
+    "party-map-member-wrap": 30,
+    "nearby-five-and54": 28,
+    "source-shield-cleanup": 18,
+    "phase-guard": 4,
+    "protection-guard": 3,
+    "active12-guard": 3,
+    "minimum-one-flag": 4
+  },
+  "runtime": {
+    "case_count": 2107,
+    "original_functions": [
+      27375,
+      1073
+    ],
+    "original_internal_callees_unchanged": true,
+    "original_allocator": 91941,
+    "fresh_instances": 66,
+    "fresh_every": 32,
+    "max_memory_bytes": 20709376,
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "memory_page_cap": 512,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "source_sha256": {
+    "scripts/check_incoming135_spec.py": "336389aae97abc44e98bd8e2049196533d65ed878fbe30cedcf9117cafc3c3df",
+    "scripts/run_incoming135_oracle.mjs": "62f8707228a0d4af6ed92a9026be85b4224ebf4a3464e7bc683ce1bc3069a0d1",
+    "scripts/build_full135_oracle.py": "dcd046d8128ac10d0b91aed454081ba160998c486b1c70d55bc96e53b0d64854",
+    "scripts/full135_host.mjs": "3a5d8b7eb787e7db5b783745cc37a313e7b3d5446c7d978c1b970b08b1944811",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "limitations": [
+    "Incoming is a scalar projection with explicit pending registry/events/aura metadata, nonfatal or minimum-one protected state only.",
+    "Empty proc/event producers; reserve spill callbacks and death/revival not accepted.",
+    "Unit position interpolation and armor54 near<=7 are real full27375 comparisons; world terrain and unit AI are separate."
+  ],
+  "coverage": {
+    "effective_armor27375": 1924,
+    "nonfatal_or_minimum_one_incoming1073": 183
+  },
+  "discoveries": [
+    "Kind54 variant1 contributes2*rank/100 to effectivearmor27375 only when at least one interpolated marker0 unit iswithin7.",
+    "Effective armor uses ordered min(max(base,cap),base+bonus); the old134 extra multiplicative54 reduction is absent from1073.",
+    "Shield source depletion/exhaustion zeroes both absorbed740 and maximum744 viaonei64store."
+  ],
+  "retained_failure": "evidence/full0135-oracle-20261101T043219.739676Z/incoming135-mismatches.json",
+  "independent_review": {
+    "status": "passed scoped readonly review",
+    "report": "2026-11-01-gameplay135-independent-review.json",
+    "local_receipt": "evidence/cross135-readonly-review-20261101T044702.684177Z/review.json",
+    "sha256": "e86b1da9e917cdc8654d249a56d0d9b015b0e1b62625708bd1ee1953cea0b0b9"
+  },
+  "package_init_provenance_caveat": {
+    "scope": "Earlier receipts and reviews retained unchanged",
+    "omitted_source": "reconstruction/core_spec/__init__.py",
+    "current_bytes": 327,
+    "current_sha256": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "current_behavior": "Imports UpgradeState and upgrade_value_bits from upgrade_values, whose module was already in the prior source lists.",
+    "historical_claim": "Earlier receipts freeze only their explicitly enumerated files. Their package initializer was not recorded, so those counts cannot be upgraded to the new33-source proof. This is a provenance limitation, not evidence of different past gameplay behavior.",
+    "new_proof": "evidence/full0135-oracle-20261101T045930.365818Z/owned-cast135-comparison.json includes package initializer and was rerun after adding it.",
+    "evidence": "evidence/owned-cast0135-independent-review-20261101T045826.625090Z/previous-source-provenance-caveat.json"
+  }
+}

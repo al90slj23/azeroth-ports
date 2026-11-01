@@ -1,0 +1,237 @@
+{
+  "reviewer": "/root/spawn_remaining135",
+  "mode": "independent static readonly review",
+  "status": "Scoped death/incoming/AI receipts independently verified; AI retaliation-domain guard fixed and rechecked",
+  "original_executed": false,
+  "author_sources_modified": false,
+  "audit_script_sha256": "b3ffaf8fdadd15c03c60b8d3c7e62ed2ffb7b71c00d168117e0c3045a24183f5",
+  "artifact_audit_sha256": "31f97ba66d5b64e19cb538a7dbf6cd1de92386131dbf2b55dc2843d7b8f6f78f",
+  "audit_results": [
+    {
+      "receipt": "evidence/full0135-oracle-20261101T044443.961768Z/comparison.json",
+      "receipt_sha256": "29435ff5adf4c4633551b03bfbd353013da259f10aa71a072e444a3eadedf211",
+      "kind": "death",
+      "cases": 204,
+      "steps": 871,
+      "recomputed_mismatches": [],
+      "source_snapshots_checked": 27,
+      "production_transitive_imports_unfrozen": [],
+      "production_io_calls": [],
+      "artifact_sha256_checked": {
+        "death-pickup135-fixtures.jsonl": "28710f1cdba77254cb06a71cf4a7bf29f94dc4086761377be25683b2cf4c41cb",
+        "death-pickup135-original-results.jsonl": "ba36db2b3ea00c1fdf0e1b5f3dfaed4f980d9c497eacdaf7cce0b6a6ebc79cd6",
+        "death-pickup135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "death-pickup135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "death-pickup135-runtime.json": "eaccdc961eab248e0fe10b3d077d291954a10c0a8aae075850f2f9581446c169"
+      },
+      "current_source_drift": [],
+      "changed_sections": [
+        7
+      ],
+      "original_exports_preserved": 36,
+      "research_exports": [
+        [
+          "research135_cast",
+          0,
+          922
+        ],
+        [
+          "research135_collect_pickups",
+          0,
+          2862
+        ],
+        [
+          "research135_process_hits",
+          0,
+          1754
+        ]
+      ],
+      "limitations": [
+        "Explicit empty item/proc/claim state; ordinary unflagged definition only; flat resolved placement within zone0.",
+        "Uninitialized new pickup+4 words alone permit unspecified comparison until first write.",
+        "Physical ECS/visual/wire bytes and full game scheduler remain pending; mode0 movement stop35514 pending.",
+        "Nonempty definitions dispatch984 and mutate timed sources/trigger1512 after each hit; pending-effects suite retains12 known-unresolved cases and is excluded from passing full coverage.",
+        "18353 timed-source coefficient is statically reconstructed but its interaction with984 is not independently complete."
+      ]
+    },
+    {
+      "receipt": "evidence/full0135-oracle-20261101T044512.860275Z/comparison.json",
+      "receipt_sha256": "8994c2b5ad332dec0e4e47a4d1aa7608806a4662650b30c33ee6027c1e98f3b8",
+      "kind": "death",
+      "cases": 12,
+      "steps": 48,
+      "recomputed_mismatches": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_snapshots_checked": 27,
+      "production_transitive_imports_unfrozen": [],
+      "production_io_calls": [],
+      "artifact_sha256_checked": {
+        "death-pickup135-fixtures.jsonl": "1e31801aa86e2e312e2deca24786f7f535560e215148b9b41c540d5ac762e0ca",
+        "death-pickup135-original-results.jsonl": "d57af2fd4980933ddbaa4223df9fb7e50fd6b8294eac20ef53e76453e81d2b4d",
+        "death-pickup135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "death-pickup135-mismatches.json": "fe8dba73b816a19d39cded1020c2df627e648a96dc1812edf26999a9f4201240",
+        "death-pickup135-runtime.json": "a4696dac6afbd703f893064b5d0261947917149e70861664fb3b1d23be12e223"
+      },
+      "current_source_drift": [],
+      "changed_sections": [
+        7
+      ],
+      "original_exports_preserved": 36,
+      "research_exports": [
+        [
+          "research135_cast",
+          0,
+          922
+        ],
+        [
+          "research135_collect_pickups",
+          0,
+          2862
+        ],
+        [
+          "research135_process_hits",
+          0,
+          1754
+        ]
+      ],
+      "limitations": [
+        "Explicit empty item/proc/claim state; ordinary unflagged definition only; flat resolved placement within zone0.",
+        "Uninitialized new pickup+4 words alone permit unspecified comparison until first write.",
+        "Physical ECS/visual/wire bytes and full game scheduler remain pending; mode0 movement stop35514 pending.",
+        "Nonempty definitions dispatch984 and mutate timed sources/trigger1512 after each hit; pending-effects suite retains12 known-unresolved cases and is excluded from passing full coverage.",
+        "18353 timed-source coefficient is statically reconstructed but its interaction with984 is not independently complete."
+      ]
+    },
+    {
+      "receipt": "evidence/full0135-oracle-20261101T043254.410437Z/incoming135-comparison.json",
+      "receipt_sha256": "b2b1f7ffa6a495681ead18ee38af8bbeb95612900f9b910c6056d332b1ac2ede",
+      "kind": "incoming",
+      "cases": 2107,
+      "steps": 2107,
+      "recomputed_mismatches": [],
+      "source_snapshots_checked": 8,
+      "production_transitive_imports_unfrozen": [],
+      "production_io_calls": [],
+      "artifact_sha256_checked": {
+        "incoming135-fixtures.jsonl": "3236ccb1520ea3e3620d7c2e16b82319b18284f8a2685542ed7adc7d8da80f62",
+        "incoming135-results.jsonl": "7c10fd73550567d341fd989bb3dc2280076fb52ca42bcd7e9d7b99e20016b778",
+        "incoming135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "incoming135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "incoming135-runtime.json": "d418eba9966c8a209cbe0ab68552750353151baaeb0b1aa85b839f34ea9aa74d"
+      },
+      "current_source_drift": [
+        "scripts/build_full135_oracle.py",
+        "scripts/full135_host.mjs"
+      ],
+      "changed_sections": [
+        7
+      ],
+      "original_exports_preserved": 36,
+      "research_exports": [
+        [
+          "research135_effective_armor",
+          0,
+          27375
+        ],
+        [
+          "research135_incoming_damage",
+          0,
+          1073
+        ]
+      ],
+      "limitations": [
+        "Incoming is a scalar projection with explicit pending registry/events/aura metadata, nonfatal or minimum-one protected state only.",
+        "Empty proc/event producers; reserve spill callbacks and death/revival not accepted.",
+        "Unit position interpolation and armor54 near<=7 are real full27375 comparisons; world terrain and unit AI are separate."
+      ]
+    },
+    {
+      "receipt": "evidence/full0135-oracle-20261101T044817.224194Z/ai135-comparison.json",
+      "receipt_sha256": "1fa588a70feb605d0a4b4b6db8cad340f01023d7fa854fcc0f0415592617380c",
+      "kind": "ai",
+      "cases": 416,
+      "steps": 1013,
+      "recomputed_mismatches": [],
+      "source_snapshots_checked": 18,
+      "production_transitive_imports_unfrozen": [],
+      "production_io_calls": [],
+      "artifact_sha256_checked": {
+        "ai135-fixtures.jsonl": "2670e389f721198bce82fd2f0dd7348987c6b0971f644bcf41076b44ecce3c0c",
+        "ai135-results.jsonl": "6a0fd6593b08d7ea1fd6de7d9563fbc95115405c2f5d215a740791b3731b4159",
+        "ai135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "ai135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "ai135-runtime.json": "fe6aa85cb39db57f317f3b00d2ed68d59f8ff05ed3f02fd76c15afccc619357b",
+        "ai135-rejected-sources.json": "31e1e99a4b25e0ccd9ca4ab9f783b1ddd62f130943dbdb7e2ec5b2c231e1b757"
+      },
+      "current_source_drift": [],
+      "changed_sections": [
+        7
+      ],
+      "original_exports_preserved": 36,
+      "research_exports": [
+        [
+          "research135_update_units",
+          0,
+          921
+        ]
+      ],
+      "limitations": [
+        "124 ordinary normal melee definitions, flat terrain, finite small trig angles[-2pi,2pi].",
+        "No alternate AI40/64/244, ranged/boss behavior, fear/stun/status producer queues, terrain or remote peer ownership.",
+        "Buffs only7/12,36B modifiers only54 variant1,8B item effects empty,explicit absence of other incoming sources required; unknown984/914 producers rejected.",
+        "Exact complete424B entity updates and scalar incoming HP/shields/totals; logical packets counted but encoded packet bytes and registry/aura/history remain pending.",
+        "Nonfatal/guarded incoming only; reserve callbacks, death/revival and proc producers remain unresolved."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "AI-RETALIATION-DOMAIN",
+      "severity": "P1 integration correctness",
+      "status": "Resolved for declared proven domain in AI SHA41e219ec520ac022a1876fc3c9e90c1dda83382d61b17794e3404c7ba2d7a355",
+      "finding": "AI accepted buff13 and effect sources outside proven incoming scalar domain, while claiming full entity record projection. Original1073 direct8B item22 and98436B event definitions can invoke914 and mutate enemy state/RNG/death.",
+      "required": "Reject nonempty8B item_effects and unmodeled source declarations, plus unsupported buff/modifier families, before accepting full AI result.",
+      "resolution": "New full416/1013step receipt044817 has0 differences; explicit absence flag defaultsFalse,8B item effects must beempty, buff families only7/12, modifier54 variant1 only. Independently exercised8 pure rejection cases and verified1073/984/914 source body SHAs. Absence declaration remains an input contract requiring real integrated-state proof."
+    },
+    {
+      "id": "PER-ACCEPTED-HIT-HEAL",
+      "severity": "Integration requirement",
+      "status": "Root acknowledged; owner callback bridge in progress",
+      "finding": "Death continuation runs only on newly lethal hits. apply_damage_lifesteal must run separately for every accepted hit, in order, using post-core minimum1 DamageResult.damage_bits. Do not deduplicate repeated target GUIDs.",
+      "validation": "204 suite covers lethal and nonlethal samples separately; no automatic all-hit hook exists in CastState at this frozen source."
+    },
+    {
+      "id": "EFFECT984-SOURCE-MUTATION",
+      "severity": "Known unsupported producer",
+      "status": "Correctly excluded; root must reject nonempty definitions",
+      "finding": "12 timed/mixed source fixtures reproduce12 mismatches after accepted nonlethal hits. Static914→984→1512 chain is present; responsible metadata/source mutation is not fully localized.",
+      "validation": "Negative suite hashes and12/12 differences independently recomputed. Not included in204 passing cases."
+    },
+    {
+      "id": "DEATH-SPATIAL-PROJECTION",
+      "severity": "Scope boundary",
+      "status": "Explicit resolved binding accepted, not world producer verification",
+      "finding": "Death binding uses pre-hit interpolated XYZ and explicit world-resolved XP/coin placements. UnitState stores2D spatial endpoints; DeathResult carries3D death_xyz for external serialization. Checker serializes death_xyz into expected endpoints, so this is not proof of an autonomous3D world mutation path.",
+      "required": "Root controller must apply explicit XYZ and movement-message condition once, without recomputing endpoints from post-core zero duration."
+    }
+  ],
+  "acceptance": "Do not call any result complete-game/full-state equivalence. Incoming remains pending scalar prefix; death requires explicit placements/owner/source gates and per-hit healing.",
+  "ai_guard_audit_sha256": "97b8c7ab197adbc8ad3ebf27a288784ba4447d079733fd1b9dc4c32cc6fcc195",
+  "ai_guard_rejection_cases": 8,
+  "review_conclusion": "Accept only each receipt declared projection and explicit guarded source domain; no remaining defect found within tested boundaries. Complete game flow, nonempty984 producer effects, native/world assets, full UI/network and fatal incoming remain unverified.",
+  "retained_local_review": "evidence/cross135-readonly-review-20261101T044702.684177Z/review.json",
+  "retained_local_review_sha256": "e86b1da9e917cdc8654d249a56d0d9b015b0e1b62625708bd1ee1953cea0b0b9",
+  "source_provenance_caveat": "Earlier listed source snapshots exclude core_spec/__init__.py; no claim that all executed package initialization was snapshotted. New owned-cast045930 separately freezes33 sources including the package entry. Historical counts and receipts remain unchanged."
+}

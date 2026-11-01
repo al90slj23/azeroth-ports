@@ -46,7 +46,12 @@ ROLES = {'select_ability': (1072, b'\x7f\x7f', b''),
  'spawn_decay': (26361, b'}', b'}'),
  'process_hits': (1754, b'\x7f', b''),
  'query_targets': (27562, b'\x7f\x7f\x7f}\x7f\x7f', b''),
- 'queue_hit': (8295, b'\x7f\x7f\x7f\x7f~}}\x7f', b'')}
+ 'queue_hit': (8295, b'\x7f\x7f\x7f\x7f~}}\x7f', b''),
+ 'atan2_heading': (42475, b'}}', b'}'),
+ 'atan_heading': (34787, b'}', b'}'),
+ 'update_units': (921, b'\x7f}', b''),
+ 'owned_tick': (1076, b'\x7f}', b''),
+ 'player_tick': (2088, b'\x7f}', b'')}
 
 APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01',
  'recalculate_stats': '31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748',
@@ -74,7 +79,12 @@ APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273d
  'spawn_decay': '867e5b613a355ed43c0395805ec4b11200177d5a29c6c13ac3365165cdb1b46f',
  'process_hits': '7a214558b394295d2bf84bee2db34163c5596ceb1c00c38ce4336eaef1dd9b89',
  'query_targets': 'bfbeab0a322ceecda316c34b4cf6097c8dbce7a90b211946996b9fe24ac57344',
- 'queue_hit': 'fe1c2b62706ac3f5f9b9edee25336d356fbad815272d58d84dd789b0d6557a7d'}
+ 'queue_hit': 'fe1c2b62706ac3f5f9b9edee25336d356fbad815272d58d84dd789b0d6557a7d',
+ 'atan2_heading': '5e81fe1b4ddc5f97b4ad5acca32430cbeac843302398a0f9afe88d4556a99fb5',
+ 'atan_heading': '01ed1cbceddf892890336caa312038ca20b55e0c0f84521218c998c095e8b345',
+ 'update_units': '5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37',
+ 'owned_tick': '3dbb7ab4e94cbe5fdacce3f544419951c84bc056a969703835f83586d5076777',
+ 'player_tick': 'a20643b34a3be2898101856d84102ba9e7964b6846b0345510306fd500ffa77a'}
 
 def require(condition, message):
     if not condition:

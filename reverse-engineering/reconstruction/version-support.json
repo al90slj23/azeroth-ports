@@ -9,7 +9,7 @@
     "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
     "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
     "migration_report": "../reports/2026-11-01-migration0135.json",
-    "approved_research_roles": 27
+    "approved_research_roles": 32
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -471,10 +471,10 @@
   ],
   "full_game_remaining": [
     "initial state and complete main-loop scheduling beyond accepted clock/pause projections",
-    "enemy generation and AI",
+    "remaining event/special generation, ranged/Boss AI, terrain and pathfinding",
     "all skill effects",
     "state producer and event ordering",
-    "drops and progression",
+    "nonordinary drops/procs and natural skill-death-progression-selection composition",
     "maps, latest asset completeness, resource loaders and renderers",
     "saves",
     "UI and input",
@@ -787,7 +787,8 @@
         "fataldeath/loot/RNGconsumer integration",
         "allotherkind/effect/proc/talentbehavior",
         "fullscheduler/rendering/network"
-      ]
+      ],
+      "scheduler_scope": "Original916 extra84B timed/proc activation; learned80B main1076 is separately verified by owned_cast135."
     },
     {
       "module": "core_spec.spawn_schedule135",
@@ -825,6 +826,188 @@
       "report": "../reports/2026-11-01-spawn-frame0135.json",
       "independent_review_receipt": "evidence/full0135-oracle-20261101T041142.272329Z/independent-cast-agent-review.json",
       "independent_review_sha256": "e735212cf6c3d9c126ebf0297ba934a3f8e06eecb98f2d54a34ccd7a878090f5"
+    },
+    {
+      "module": "core_spec.spawn_frame_motion135",
+      "api": [
+        "step_ordinary_frame"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 5068,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-spawn-motion0135.json",
+      "domain": "Flat terrain/absent grid/pathfinding,arbitrary heading; all8 prior nonaxis inputs resolved.",
+      "remaining": [
+        "terrain/navigation/fallback",
+        "other timed events",
+        "full natural scheduler"
+      ],
+      "floating_policy": "Finite bits exact;80 NaN sign/payload differences accept classification only.",
+      "independent_review": "passed scoped readonly review",
+      "related_modules": {
+        "core_spec.spawn_position_motion135": [
+          "sample_position"
+        ],
+        "core_spec.spawn_heading135": [
+          "atan_bits",
+          "atan2_bits"
+        ]
+      }
+    },
+    {
+      "module": "core_spec.spawn_boss_schedule135",
+      "api": [
+        "step_boss_frame"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 871,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-spawn-boss0135.json",
+      "actual_bosses": 751,
+      "domain": "All60 Boss declarations and timer payloads;flat placement/owner0,scheduled/final extra/endless.",
+      "remaining": [
+        "full registry/presentation",
+        "terrain/fallback",
+        "other event timers",
+        "complete Boss AI"
+      ],
+      "normalization": "OnlyU248 allocator address;timer payload independently compared in full.",
+      "independent_review": "passed scoped readonly review",
+      "related_modules": {
+        "core_spec.spawn_boss135": [
+          "spawn_boss"
+        ]
+      }
+    },
+    {
+      "module": "core_spec.spawn_elite135",
+      "api": [
+        "step_elite_frame"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 549,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-spawn-elite0135.json",
+      "actual_elites": 340,
+      "domain": "G2440 due elites,unlock filter,nonzero-difficulty paired spawn,deadline minimum25.",
+      "remaining": [
+        "terrain/registry",
+        "other event clocks",
+        "full scheduler"
+      ],
+      "independent_review": "passed scoped readonly review"
+    },
+    {
+      "module": "core_spec.incoming135",
+      "api": [
+        "effective_armor_bits",
+        "resolve_incoming_prefix"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 2107,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-incoming0135.json",
+      "armor_helper_cases": 1924,
+      "incoming_cases": 183,
+      "domain": "Complete27375 and scoped1073 scalar projection,nonfatal/minimum-one protected;actual rank54 cap and shields.",
+      "remaining": [
+        "registry/aura/events",
+        "retaliation/procs",
+        "death/revive",
+        "full incoming behavior"
+      ],
+      "independent_review": "passed scoped readonly review"
+    },
+    {
+      "module": "core_spec.ai135",
+      "api": [
+        "update_ordinary_units"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 416,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-ai0135.json",
+      "steps": 1013,
+      "domain": "124 ordinary melee definitions,small angle±2pi,local owner0,empty item sources,guarded1073/984 producer domain.",
+      "source_rejection_checks": 8,
+      "remaining": [
+        "ranged/Boss AI",
+        "large-angle trig reduction",
+        "terrain/pathfinding",
+        "status producers",
+        "wire bytes",
+        "fatal incoming"
+      ],
+      "independent_review": "passed scoped readonly review"
+    },
+    {
+      "module": "core_spec.death_pickup135",
+      "api": [
+        "consume_ordinary_death",
+        "collect_pickups",
+        "apply_damage_lifesteal"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 204,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-death-pickup0135.json",
+      "stages": 871,
+      "ordinary_deaths": 376,
+      "choice_phase_cases": 136,
+      "retained_unresolved_negative_cases": 12,
+      "domain": "Unflagged ordinary death/mixed XP+coin consumers,explicit flat placement,limited source snapshots.",
+      "remaining": [
+        "nonempty definitions→984 sources",
+        "world placement producer",
+        "mode0 movement-stop",
+        "physical entities/packets",
+        "full natural loop"
+      ],
+      "independent_review": "passed scoped readonly review"
+    },
+    {
+      "module": "core_spec.owned_cast135",
+      "api": [
+        "tick_owned"
+      ],
+      "status": "scoped_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 639,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-owned-cast0135.json",
+      "stages": 5924,
+      "accepted_hits": 4923,
+      "domain": "Real1076 learned80B+basic80B and class-kind1 prelude,25 effect0 execution0/2 definitions,empty proc/item/definitions,G1596/G908/G772=0,nonlethal.",
+      "remaining": [
+        "2088/880 producers and scheduling",
+        "true new-game/basic initializer",
+        "other effects",
+        "lethal continuation in this new chain",
+        "physical packet bytes"
+      ],
+      "independent_review": "passed scoped readonly recomputation",
+      "related_modules": {
+        "core_spec.owned_prelude135": [
+          "tick_class_prelude"
+        ],
+        "core_spec.cast_events135": [
+          "cast_ability",
+          "process_hits"
+        ]
+      }
     }
   ],
   "resource_verified_domains": [
@@ -869,10 +1052,11 @@
     "all_ability_behaviors_implemented": false
   },
   "approved_role_extension_conservatism": {
-    "current_role_count": 27,
+    "current_role_count": 32,
     "previous_tick_command_and_stats_module_bytes_unchanged": true,
-    "receipt": "evidence/builder135-extension-review-20261101T040956.409250Z/review.json",
-    "sha256": "831e0815856bd79773e11967b7205ece1d319e65fe7327113b87c240723f9ac1",
-    "old_evidence_remains_bound_to_original_source_snapshots": true
+    "receipt": "evidence/builder135-role32-review-20261101T050645.687659Z/review.json",
+    "sha256": "c04b466bb9bf83c4296be8ce2460c350939200be4580060cab32a2edb19d42bf",
+    "old_evidence_remains_bound_to_original_source_snapshots": true,
+    "new_roles_have_individual_body_and_signature_guards": true
   }
 }

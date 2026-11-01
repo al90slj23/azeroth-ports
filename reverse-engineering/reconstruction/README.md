@@ -31,8 +31,13 @@
 - `core_spec/level_cycle135.py`：严格显式来源，XP逐级属性/20%治疗/阈值/候选，1151序列/3450原件调用0差异；未接自然死亡/拾取调度。
 - `core_spec/selection_cycle135.py`：kind0 new/upgrade/gold→属性→收尾XP扫取→再生或phase1，660序列/1090完整1072调用通过。只比已独立定义的numeric player keys，其他原件keyed state全部另存为unmodeled，不假定全为cosmetic；kind1/2 metadata、aura/外观和真实producer仍pending。
 - `core_spec/spawn135.py`及其独立math/data：12地图/148定义的选怪、衰减和普通/精英424B生成，三个原入口4021例0差异；位置/owner必须显式解析，Boss/特殊调度/terrain另待恢复。
-- `core_spec/spawn_schedule135.py`、`spawn_position135.py`及geometry/data：普通947预算/最低密度→实际位置→单位记录的独立组合，1275帧＋305位置共1580例0差异，实际新记录9360。平地、静止/四轴heading、owner0与未来特殊deadlines明确；非轴atan2/grid/pathfinding/fallback和全部事件调度仍pending。
-- `core_spec/cast135.py`、`combat135.py`：25个tag0/execution0/2定义的目标、倍率/暴击、直接或延迟HP和自动冷却，1314序列/3626原入口调用通过；空proc且无致死语料，死亡消费者接口不代表loot已恢复。
+- `core_spec/spawn_schedule135.py`、`spawn_position135.py`及geometry/data：普通947预算/最低密度→实际位置→单位记录的独立组合，1275帧＋305位置共1580例0差异，实际新记录9360。平地、静止/四轴heading、owner0与未来特殊deadlines明确；非轴atan2已由新motion模块另验；grid/pathfinding/fallback和其它事件仍pending。
+- `core_spec/cast135.py`、`combat135.py`：25个tag0/execution0/2定义的目标、倍率/暴击、直接或延迟HP和额外84B的916自动冷却，1314序列/3626原入口调用通过；空proc且无致死语料，死亡消费者接口不代表loot已恢复。
+- `core_spec/spawn_heading135.py`、`spawn_position_motion135.py`、`spawn_frame_motion135.py`：任意heading5068例通过，含此前1580重放和8个非轴输入；80处NaN仅分类接受，地形/寻路仍缺。
+- `core_spec/spawn_boss135.py`、`spawn_boss_schedule135.py`、`spawn_elite135.py`：Boss871例/751次生成、精英549例/340次生成，各自完整原947调度域通过；全Boss AI、其它event/2376/地形仍pending。
+- `core_spec/death_pickup135.py`：普通死亡续RNG→XP/coin→逆序混合奖励→逐级属性/候选，204组871阶段通过；12组非空definitions/984未知明确保留。真实placement生产与物理实体另待恢复。
+- `core_spec/incoming135.py`、`ai135.py`：有效护甲/受伤2107例、124种普通近战AI416组1013步通过；反击/984来源守卫严格，远程/Boss/地形/大角归约和致死受伤未验收。
+- `core_spec/owned_cast135.py`、`owned_prelude135.py`、`cast_events135.py`：真正1076的职业近战→已学80B→真实基础80B→延迟命中与逐有效hit自疗，639组5924阶段通过。原916额外84B模型保留；此新组合非致死，未与死亡拾取/选择自然控制器连接。来源与accepted-hit consumer未解析时明确拒绝。
 - `resource_spec/mpq.py`、`dbc.py`：不依赖原游戏或StormLib的MPQ读取与有界WDBC容器实现。基础包29602命名块/1636167198B对照0差异、154份DBC可读取；90例合成格式对照单列。基础资源不自动等于新版全部资产，尚无M2/BLP解释渲染。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
@@ -48,6 +53,13 @@ python3 reverse-engineering/scripts/check_selection_cycle135.py --phase full
 python3 reverse-engineering/scripts/check_spawn135_spec.py --phase full
 python3 reverse-engineering/scripts/check_spawn_frame135.py --phase full
 python3 reverse-engineering/scripts/check_cast135_full_spec.py --phase full
+python3 reverse-engineering/scripts/check_spawn_motion135.py --phase full
+python3 reverse-engineering/scripts/check_spawn_boss135.py --phase full
+python3 reverse-engineering/scripts/check_spawn_elite135.py --phase full
+python3 reverse-engineering/scripts/check_incoming135_spec.py --phase full
+python3 reverse-engineering/scripts/check_ai135_spec.py --phase full
+python3 reverse-engineering/scripts/check_death_pickup135.py --phase full
+python3 reverse-engineering/scripts/check_owned_cast135.py --phase full
 
 # 固定研究基线0.134.0的实际原件差分，不能转计0.135.1。
 python3 reverse-engineering/scripts/check_upgrade134_spec.py
@@ -74,7 +86,7 @@ python3 reverse-engineering/scripts/check_rng_spec.py
 
 升级数值、敌人成长、半径等命令执行原件纯数值函数的隔离复制体，不启动完整游戏。这些复制体没有host imports、start、网络、时钟、图形或存档接口。升级模块保留函数索引，仅导出计算函数和固定内存，其他函数为trap；敌人成长模块只有两条无引用函数；半径模块保留单一helper和一页scratch内存。复制体均重解析并核对原体哈希，WABT验证后才交给Node。
 
-固定0.135.1使用`build_full135_oracle.py`和`full135_host.mjs`：当前27个角色分别校验本版完整body/签名，仅增加导出并保留全部原callee，原malloc91941和878个拒绝宿主导入固定。属性、时钟/暂停以及本轮候选/成长/选卡/生成/施法各域已分别重新执行，其他角色的导出能力不代表运行验收，tick通过也不代表完整调度已实现。
+固定0.135.1使用`build_full135_oracle.py`和`full135_host.mjs`：当前32个角色分别校验本版完整body/签名，仅增加导出并保留全部原callee，原malloc91941和878个拒绝宿主导入固定。属性、时钟/暂停以及本轮候选/成长/选卡/生成/施法各域已分别重新执行，其他角色的导出能力不代表运行验收，tick通过也不代表完整调度已实现。
 
 固定0.134.0完整选卡与扣血工具另用`build_full134_oracle.py`：只修改export节，保留所有原内部指令和callee。`full134_host.mjs`复核固定原件、原导出前缀及全部非export节；878宿主导入均拒绝，应用入口不调用。它们确实实例化完整官方模块，但只以原分配器构造的合成状态调用指定内部函数。选卡779例与扣血454例均0差异，宿主实际调用0次；前者生产后处理仍pending，后者未独立实现完整死亡loot/RNG。详见[新版选卡](../reports/2026-11-01-selection0134-spec.md)与[新版扣血](../reports/2026-11-01-combat0134-spec.md)。
 

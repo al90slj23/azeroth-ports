@@ -1,0 +1,138 @@
+{
+  "reviewer": "independent ai_incoming135 agent",
+  "status": "pass within declared bounded scalar/entity/timer scope",
+  "findings": [],
+  "original_version": "0.135.1 /0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "cases": 6488,
+  "model_fixture_mismatch_cases": 0,
+  "original_result_mismatch_fields_under_declared_comparison": 0,
+  "nan_policy": {
+    "motion_nan_payload_or_sign_differences": 80,
+    "acceptance": "NaN classification only; payload and sign not claimed bit exact"
+  },
+  "pointer_normalization": {
+    "boss_entity_offset248": "Original allocator address replaced by canonical zero; complete n*4B cooldown payload read back and compared separately. Original n/cap/ability pointer and every other entity word compared.",
+    "other_entity_masks": []
+  },
+  "expected_generation": {
+    "basis": "checker source order corpus/model generation before original Popen; production models import no original WASM or result/evidence data; frozen model recomputation reproduces all retained fixture expected outputs.",
+    "historical_wall_time_independently_proven": false
+  },
+  "identity": "All retained source snapshots and artifacts rehashed; original90,959,080B SHA pinned; all WASM sections except export7 byte identical; original exports retained and added roles/body SHA rechecked; no implicitstart;878 function imports.",
+  "scope_boundaries": [
+    "Flat constant-height world with absent obstacle grid/pathfinding; sampler explicitly pending otherwise/fallback.",
+    "Ordinary frame requires all unrelated event timers future; each Boss/elite wrapper owns only its explicit due clock.",
+    "Owner0/empty peer fixtures; object registry/UI announcements/entry-specific spell objects and network message bytes are outside comparison.",
+    "Boss fallback retained statically but not dynamically validated under finite fixed-map fixtures.",
+    "Boss and elite production are not Boss/elite AI behavior or complete gameplay reconstruction."
+  ],
+  "current_source_drift": "Motion builder and host changed after its accepted snapshot to extend approved exports; historical snapshot/bytes remain valid. Boss/elite current source lists match snapshots.",
+  "model_recomputations": [
+    {
+      "kind": "motion",
+      "cases": 5068,
+      "model_fixture_mismatch_ids": [],
+      "records": 12056,
+      "model_loaded_from_snapshot": true
+    },
+    {
+      "kind": "boss",
+      "cases": 871,
+      "model_fixture_mismatch_ids": [],
+      "records": 2819,
+      "model_loaded_from_snapshot": true
+    },
+    {
+      "kind": "elite",
+      "cases": 549,
+      "model_fixture_mismatch_ids": [],
+      "records": 3089,
+      "model_loaded_from_snapshot": true
+    }
+  ],
+  "boundary_checks": [
+    {
+      "name": "grid",
+      "status": "pending_grid_pathfinding"
+    },
+    {
+      "name": "pathfinding",
+      "status": "pending_grid_pathfinding"
+    },
+    {
+      "name": "far-away-fallback",
+      "status": "pending_fallback13516"
+    },
+    {
+      "name": "due-other-timer",
+      "status": "rejected"
+    },
+    {
+      "name": "nonfinite-time",
+      "status": "rejected"
+    },
+    {
+      "name": "malformed-record",
+      "status": "rejected"
+    }
+  ],
+  "batches": [
+    {
+      "kind": "motion",
+      "cases": 5068,
+      "independently_compared_words": 1299237,
+      "receipt": "evidence/full0135-oracle-20261101T043006.290228Z/spawn-motion135-comparison.json",
+      "receipt_sha256": "f6f2dc77025474001b672b18341877c56520138be811bac8ab7fb55da652fa3a",
+      "source_snapshots": 23,
+      "artifacts_rehashed": 6
+    },
+    {
+      "kind": "boss",
+      "cases": 871,
+      "independently_compared_words": 309680,
+      "receipt": "evidence/full0135-oracle-20261101T043721.187841Z/spawn-boss135-comparison.json",
+      "receipt_sha256": "e6d1478a74e2ab06a066852a6be8bdc842ab9ea9542453b0ed34eb6a0c16c8c0",
+      "source_snapshots": 29,
+      "artifacts_rehashed": 6
+    },
+    {
+      "kind": "elite",
+      "cases": 549,
+      "independently_compared_words": 333473,
+      "receipt": "evidence/full0135-oracle-20261101T043931.950246Z/spawn-elite135-comparison.json",
+      "receipt_sha256": "378829c8fd04e81b368448f8a64128b61e23f8b036dbcd7f7122f8d0f112a66c",
+      "source_snapshots": 32,
+      "artifacts_rehashed": 5
+    }
+  ],
+  "author_notified": [
+    "motion NaN payload/sign acceptance boundary sent to spawn_remaining135 before final review"
+  ],
+  "original_executed_by_reviewer": false,
+  "author_files_edited_by_reviewer": false,
+  "shared_builder_edited_by_reviewer": false,
+  "evidence_sha256": {
+    "recompute_models.py": "30fb5c0c357e4c09915473b8cf1e33aa5ad41241f7a3d8e7ac979d58a76bf9c6",
+    "verify_evidence.py": "b0c7ad8162753c7146ad017f741145653af60052a95e49df67da7074c9853868",
+    "check_boundaries.py": "7a2d12f136263d14b575237e9f0467b9da034e9953535035ad90152a05080b9c",
+    "original-947.wat": "7cb256d48c90e0dc3f3fed81fc9b1e7ca263b9074444ef8f4bb9320c189a65e7",
+    "model-recomputation.json": "078f2570b35bcf7ce37310cced543e6644b2a0164487701e3da258412ab07ff8",
+    "original-2785.wat": "2ceddd7da4eab9d0e2ec82c9dec4c1e6e871fd09514601b9dc4aa2a776702e1a",
+    "boundary-recomputation.json": "23c1c89aa8ceb3af86599059565b4a40363884da9a752d0755e3a0008b7717f3",
+    "original-8751.wat": "baa264137b2175aed3c29d32dff851a297a513e9ec3138cdb7212fc4f6a454d3",
+    "identity-and-recomparison.json": "6214efddf9b6c4b9b05bf3b4db3d54a7b5b901e57c47df9b4f31707aa3ec2459"
+  },
+  "evidence_directory": "evidence/spawn135-independent-review-20261101T044947.975435Z",
+  "review_sha256": "399e5cb6a8b4ad525b68396ff17f9307519e212156e3feff1babff0abc958ec0",
+  "package_init_provenance_caveat": {
+    "scope": "Earlier receipts and reviews retained unchanged",
+    "omitted_source": "reconstruction/core_spec/__init__.py",
+    "current_bytes": 327,
+    "current_sha256": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "current_behavior": "Imports UpgradeState and upgrade_value_bits from upgrade_values, whose module was already in the prior source lists.",
+    "historical_claim": "Earlier receipts freeze only their explicitly enumerated files. Their package initializer was not recorded, so those counts cannot be upgraded to the new33-source proof. This is a provenance limitation, not evidence of different past gameplay behavior.",
+    "new_proof": "evidence/full0135-oracle-20261101T045930.365818Z/owned-cast135-comparison.json includes package initializer and was rerun after adding it.",
+    "evidence": "evidence/owned-cast0135-independent-review-20261101T045826.625090Z/previous-source-provenance-caveat.json"
+  }
+}
