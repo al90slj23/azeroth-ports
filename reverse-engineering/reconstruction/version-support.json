@@ -8,7 +8,8 @@
     "web_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
     "acquisition_report": "../reports/2026-11-01-official-0135-acquisition.json",
     "analysis_profile": "../reports/2026-11-01-wasm0135-profile.json",
-    "migration_report": "../reports/2026-11-01-migration0135.json"
+    "migration_report": "../reports/2026-11-01-migration0135.json",
+    "approved_research_roles": 27
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -474,12 +475,12 @@
     "all skill effects",
     "state producer and event ordering",
     "drops and progression",
-    "complete choice generation",
     "maps, latest asset completeness, resource loaders and renderers",
     "saves",
     "UI and input",
     "all multiplayer behavior",
-    "independent full-run acceptance"
+    "independent full-run acceptance",
+    "all specialchoice metadata/realproducer/keyedstate and natural XP-selection-world scheduling"
   ],
   "native_windows_execution_validated": false,
   "installed_apps_or_saves_modified": false,
@@ -588,6 +589,242 @@
       "game_scheduler_reconstructed": false,
       "report": "../reports/2026-11-01-game-loop0135.json",
       "independent_review": "passed"
+    },
+    {
+      "module": "core_spec.candidates135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-candidates0135-spec.json",
+      "api": "generate_kind0_metadata",
+      "status": "kind0_metadata_rng_complete_original2159_differential_passed",
+      "original_function": 2159,
+      "cases": 4126,
+      "mismatches": 0,
+      "domain": "Explicit snapshots,mode2582=1/flag2566=0; actual114newdefinitions, all256classbytes;metadata/control/RNG only",
+      "fields_compared": [
+        "candidate count1912/variant/ID/tier/owned index/kinds/gold",
+        "fouru32RNG1720..1732",
+        "phase2587/kind2585/counter2400"
+      ],
+      "independent_review": "passed",
+      "remaining": [
+        "kind1/2",
+        "display payload/world/notifications/reroll/seed initialization",
+        "real producers and whole-game scheduling"
+      ]
+    },
+    {
+      "module": "core_spec.ability_state135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-new-ability0135-spec.json",
+      "api": [
+        "initialize_ability",
+        "modifier_additional_bytes",
+        "accept_new_ability_selection"
+      ],
+      "status": "new_record_and_limited_control_complete_original1072_differential_passed",
+      "original_function": 1072,
+      "cases": 2781,
+      "mismatches": 0,
+      "actual_definitions": 114,
+      "actual_definition_tier0_to4_cases": 570,
+      "extra_helper_tier5_cases": 114,
+      "fields_compared": [
+        "full80Bownedrecord and count1664",
+        "declared kind0 append/entry/control"
+      ],
+      "independent_review": "passed",
+      "domain": "Explicit20Bmodifier snapshots; all114definitions/tier0..4 plus helper tier5; unknownproducerNone rejected",
+      "remaining": [
+        "real modifier producers",
+        "successfulkind1/2/sharedworld and unmodeledkeyed-state producers",
+        "complete selection/game scheduler"
+      ]
+    },
+    {
+      "module": "core_spec.ability_upgrade135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-selection0135-spec.json",
+      "api": "apply_upgrade_card",
+      "status": "ordered_upgrade_record_complete_original1072_differential_passed",
+      "original_function": 1072,
+      "cases": 3629,
+      "mismatches": 0,
+      "actual_declaration_kind_tier_cases": 2850,
+      "ordered_cleave_kind_sequence_cases": 775,
+      "guard_cases": 4,
+      "domain": "level1/counts0 initial owned records; all114*5kind*5tier controlledinputs, not a claim every kind naturally eligible",
+      "fields_compared": [
+        "full80Bownedrecord",
+        "count1664/phase2587/kind2585/pending2376/candidatecount1912"
+      ],
+      "independent_review": "passed",
+      "remaining": [
+        "broaderinitialrecords",
+        "sharedproducer/world/fullstats-control integration is separately scoped inselection_cycle135",
+        "naturalcandidateeligibility and scheduler"
+      ]
+    },
+    {
+      "module": "core_spec.level_cycle135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-level-cycle0135.json",
+      "api": [
+        "gain_xp",
+        "from_dict",
+        "projection"
+      ],
+      "status": "xp_per_level_stats_heal_kind0_candidate_composition_full_original4630_passed",
+      "original_function": 4630,
+      "cases": 1151,
+      "stateful_entry_calls": 3450,
+      "mismatches": 0,
+      "fields_compared": [
+        "23derivedwords/HP/fiveaux/speed/playerkeys",
+        "level/XP/pending",
+        "RNG/candidate metadata/phase/kind/counter"
+      ],
+      "domain": "All seven source vectors explicit; each full4630 return compared; internal per-level snapshots not directly observed",
+      "model_level_iterations": 12203,
+      "independent_review": "passed",
+      "remaining": [
+        "naturalordinarydeath/mixedpickup/controller connection",
+        "realproducers/world/UI/physicalqueues",
+        "fullframe/game"
+      ]
+    },
+    {
+      "module": "core_spec.selection_cycle135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-selection-cycle0135.json",
+      "api": [
+        "select_card",
+        "projection"
+      ],
+      "status": "kind0_selection_stats_xpsweep_regeneration_or_running_projection_full_original1072_passed",
+      "original_function": 1072,
+      "cases": 660,
+      "stateful_entry_calls": 1090,
+      "mismatches": 0,
+      "numeric_player_keys_compared": [
+        22,
+        28,
+        34,
+        716,
+        717,
+        1109,
+        1176
+      ],
+      "unmodeled_keyed_state_all_retained_separately": true,
+      "unmodeled_fields_assumed_cosmetic": false,
+      "opaque_fresh_kind12_union_value_words_not_compared": 786,
+      "domain": "canonicalkind0 new/upgrade/gold; explicitstat/additional sources; initialtag0/emptylogicaltree; pickupmarkers0/1; specialpendingqueues0; region0",
+      "independent_review": "passed",
+      "remaining": [
+        "kind1/2metadata/RNG",
+        "1072equipment/appearance and1202aura/otherunmodeledkeyed-stateproducers",
+        "unwrittenkind12+12payloadrawbits",
+        "world/messages/realproducers/fullframe"
+      ],
+      "independent_review_receipt": "evidence/full0135-oracle-20261101T041538.274712Z/independent-cast-agent-review.json",
+      "independent_review_sha256": "d9f8a1a1e6123250ad2d432e1364b0cb031f87b8468a1d75081729fb2896cfee"
+    },
+    {
+      "module": "core_spec.spawn135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-spawn0135-spec.json",
+      "status": "weighted_selection_decay_normal_elite_record_complete_originals_passed",
+      "original_functions": [
+        20272,
+        26361,
+        5736
+      ],
+      "cases": 4021,
+      "mismatches": 0,
+      "actual_successful_spawn_cases": 1211,
+      "zones": 12,
+      "normal_and_elite_definitions": 148,
+      "boss_definitions_static_only": 60,
+      "full424Bslot_comparison": true,
+      "domain": "Resolvedposition/owner0; realnormal/elite HP/endless/party scaling, fullwritten/retainedslot bytes andRNG; rawunusedslot is explicitinput",
+      "remaining": [
+        "Boss/specialevents/actualterrain/ownerproducers",
+        "AI/fullnaturalframe",
+        "947ordinaryframe acceptance is a separate domain"
+      ]
+    },
+    {
+      "module": "core_spec.cast135",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "../reports/2026-11-01-cast0135-spec.json",
+      "status": "ordinarytarget_query_auto_direct_delayed_cast_full_originals_passed",
+      "original_functions": [
+        27562,
+        922,
+        916,
+        1754
+      ],
+      "cases": 1314,
+      "stateful_entry_calls": 3626,
+      "mismatches": 0,
+      "actual_definitions": 25,
+      "execution_kinds": [
+        0,
+        2
+      ],
+      "effect_tag": 0,
+      "area_definitions": 8,
+      "projectile_definitions": 17,
+      "domain": "ordinarytargets/emptyproc;1..6active records; realHP/RNG/delayedhit/cooldown; NO fatal originalcases",
+      "independent_review": "passed",
+      "remaining": [
+        "fataldeath/loot/RNGconsumer integration",
+        "allotherkind/effect/proc/talentbehavior",
+        "fullscheduler/rendering/network"
+      ]
+    },
+    {
+      "module": "core_spec.spawn_schedule135",
+      "api": [
+        "step_ordinary_frame",
+        "sample_position"
+      ],
+      "status": "controlled_natural_spawn_frame_position_full_original947_8751_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "original_functions": [
+        947,
+        8751
+      ],
+      "cases": 1580,
+      "full947_frames": 1275,
+      "full8751_positions": 305,
+      "mismatches": 0,
+      "naturally_created_units": 9360,
+      "record_count_is_not_extra_independent_case_count": true,
+      "compared_scalar_or_record_words": 1130005,
+      "domain": "flat29631guard/absentgridandpathfinding;stationary/fouraxisheading;explicitowner0;elite/event/Boss deadlinesfuture",
+      "pending_nonaxis_inputs_not_counted": 8,
+      "fields_compared": [
+        "947budget/decayedcost/counter/unitcount/RNG/velocity/all424Brecords",
+        "8751xyz/RNG"
+      ],
+      "independent_review": "passed",
+      "complete947_reconstruction": false,
+      "remaining": [
+        "nonaxisatan2/grid/pathfinding/fallback13516",
+        "elite/environment/Boss realdeadlines and actualowner/terrain/AI",
+        "wholeframe/skill/death/pickup/gameconnection"
+      ],
+      "report": "../reports/2026-11-01-spawn-frame0135.json",
+      "independent_review_receipt": "evidence/full0135-oracle-20261101T041142.272329Z/independent-cast-agent-review.json",
+      "independent_review_sha256": "e735212cf6c3d9c126ebf0297ba934a3f8e06eecb98f2d54a34ccd7a878090f5"
     }
   ],
   "resource_verified_domains": [
@@ -618,5 +855,24 @@
       ],
       "report": "../reports/2026-11-01-resource-index-base.json"
     }
-  ]
+  ],
+  "latest_static_catalogue": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "abilities": 114,
+    "classes": 9,
+    "report": "../reports/2026-11-01-catalogue0135.json",
+    "actual_changed_ids_from_0134": [
+      "rockbiter",
+      "stormstrike"
+    ],
+    "all_ability_behaviors_implemented": false
+  },
+  "approved_role_extension_conservatism": {
+    "current_role_count": 27,
+    "previous_tick_command_and_stats_module_bytes_unchanged": true,
+    "receipt": "evidence/builder135-extension-review-20261101T040956.409250Z/review.json",
+    "sha256": "831e0815856bd79773e11967b7205ece1d319e65fe7327113b87c240723f9ac1",
+    "old_evidence_remains_bound_to_original_source_snapshots": true
+  }
 }

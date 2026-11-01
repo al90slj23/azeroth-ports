@@ -21,8 +21,19 @@
     "migration_report": "reports/2026-11-01-migration0135.json",
     "runtime_acceptance_reports": [
       "reports/2026-11-01-stats0135-spec.json",
-      "reports/2026-11-01-game-loop0135.json"
-    ]
+      "reports/2026-11-01-game-loop0135.json",
+      "reports/2026-11-01-candidates0135-spec.json",
+      "reports/2026-11-01-new-ability0135-spec.json",
+      "reports/2026-11-01-selection0135-spec.json",
+      "reports/2026-11-01-level-cycle0135.json",
+      "reports/2026-11-01-selection-cycle0135.json",
+      "reports/2026-11-01-spawn0135-spec.json",
+      "reports/2026-11-01-cast0135-spec.json",
+      "reports/2026-11-01-spawn-frame0135.json"
+    ],
+    "approved_research_role_count": 27,
+    "catalogue_report": "reports/2026-11-01-catalogue0135.json",
+    "scope_note": "Separate scoped original differentials only; producer/world/keyed-state gaps and full independent game remain incomplete."
   },
   "web_core": {
     "version": "0.126.0",

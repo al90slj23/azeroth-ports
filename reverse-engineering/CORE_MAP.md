@@ -10,6 +10,10 @@
 
 [tick880/命令1371](reports/2026-11-01-game-loop0135.md)的6558例（5400命令＋1158tick）完整原件对照0差异。独立层只验证暂停phase与wall-clock→binary32模拟时钟投影，包括单人phase1；无单位/空队列并经原guard跳过生成，tick其他phase/完整调度以及fresh终局保存仍未验收。party聚合、胜利与Endless只保留静态派生规则，不计运行通过。
 
+本轮已进一步形成[候选2159](reports/2026-11-01-candidates0135-spec.md)、[新能力初始化/有序升级1072](reports/2026-11-01-selection0135-spec.md)、[XP逐级成长](reports/2026-11-01-level-cycle0135.md)与[4600选卡收尾](reports/2026-11-01-selection-cycle0135.md)的独立组合。最新目录仍114定义/9职业，但rockbiter/stormstrike数值有真实变化。XP与选卡组合分别1151序列/3450调用、660序列/1090调用通过；后者其它keyed state只保留原观测，aura/外观与未知producer未计已还原。
+
+[普通/精英生成](reports/2026-11-01-spawn0135-spec.md)的选怪/衰减/424B记录4021例通过，实际生成1211例；[25定义施法/命中](reports/2026-11-01-cast0135-spec.md)的1314序列/3626调用通过。不同模块之间的自然帧、死亡/loot、拾取与所有技能仍待连接；不能把这些局部通过画成完整可玩闭环。[完整947普通帧/8751位置](reports/2026-11-01-spawn-frame0135.md)随后另验1580例、9360份实际新记录；只在平地/四轴或静止heading/owner0且其它事件deadline未来的域成立，基础和组合计数不合并，仍不代替Boss/特殊波次/terrain。
+
 [基础资源索引与读取器](reports/2026-11-01-resource-index-base.md)已完成29602命名块/1636167198B对照与154份DBC容器读取；它们来自含旧0.102.3程序的基础RAR，不自动构成新版完整资产或M2/BLP渲染管线。
 
 ## 固定0.134.0已重新定位的技能主干

@@ -26,6 +26,13 @@
 - `core_spec/level_cycle134.py`：强制显式来源快照，将XP消费、每级属性/升级治疗、下一阈值与kind0候选接成组合。1151状态序列/3450完整原4630入口调用0差异；尚未接拾取/金币/选卡应用控制器，也不算0.135.1验收。
 - `core_spec/derived_stats135.py`：复用独立有序算术并显式映射新版字段，新增护甲上限G1572；完整原1512的10569例0差异。23派生词、HP/辅助字段/对象键/速度与移动队列已验，来源producer、已有树项更新、包字节和自然组合仍pending。
 - `core_spec/loop135.py`：时钟推进和暂停tag7的独立投影；完整原880/1371的6558例（5400命令＋1158tick）0差异。tick只比较marker/时间和模拟时钟，不宣称其余调度状态一致；空队列/无单位/skip-spawn，fresh终态保存与完整调度仍pending。party聚合/胜利/Endless接口仅静态派生，未运行验收。
+- `core_spec/candidates135.py`：本版114定义的kind0 metadata/RNG，完整原2159的4126例0差异；kind1/2、展示与真实producer仍pending。
+- `core_spec/ability_state135.py`、`ability_upgrade135.py`：新定义指针/数值下的初始化与有序升级，完整1072分别2781/3629例通过；记录之外共享producer不自动计已恢复，少量历史doc标签在报告中单独映射。
+- `core_spec/level_cycle135.py`：严格显式来源，XP逐级属性/20%治疗/阈值/候选，1151序列/3450原件调用0差异；未接自然死亡/拾取调度。
+- `core_spec/selection_cycle135.py`：kind0 new/upgrade/gold→属性→收尾XP扫取→再生或phase1，660序列/1090完整1072调用通过。只比已独立定义的numeric player keys，其他原件keyed state全部另存为unmodeled，不假定全为cosmetic；kind1/2 metadata、aura/外观和真实producer仍pending。
+- `core_spec/spawn135.py`及其独立math/data：12地图/148定义的选怪、衰减和普通/精英424B生成，三个原入口4021例0差异；位置/owner必须显式解析，Boss/特殊调度/terrain另待恢复。
+- `core_spec/spawn_schedule135.py`、`spawn_position135.py`及geometry/data：普通947预算/最低密度→实际位置→单位记录的独立组合，1275帧＋305位置共1580例0差异，实际新记录9360。平地、静止/四轴heading、owner0与未来特殊deadlines明确；非轴atan2/grid/pathfinding/fallback和全部事件调度仍pending。
+- `core_spec/cast135.py`、`combat135.py`：25个tag0/execution0/2定义的目标、倍率/暴击、直接或延迟HP和自动冷却，1314序列/3626原入口调用通过；空proc且无致死语料，死亡消费者接口不代表loot已恢复。
 - `resource_spec/mpq.py`、`dbc.py`：不依赖原游戏或StormLib的MPQ读取与有界WDBC容器实现。基础包29602命名块/1636167198B对照0差异、154份DBC可读取；90例合成格式对照单列。基础资源不自动等于新版全部资产，尚无M2/BLP解释渲染。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
@@ -33,6 +40,14 @@
 # 固定目标0.135.1的重新执行。
 python3 reverse-engineering/scripts/check_stats135_full_spec.py
 python3 reverse-engineering/scripts/check_loop135_spec.py --phase full
+python3 reverse-engineering/scripts/check_candidates135_full_spec.py --phase full
+python3 reverse-engineering/scripts/check_new_ability135_full_spec.py --phase pilot
+python3 reverse-engineering/scripts/check_selection135_full_spec.py --phase full
+python3 reverse-engineering/scripts/check_level_cycle135.py --phase full
+python3 reverse-engineering/scripts/check_selection_cycle135.py --phase full
+python3 reverse-engineering/scripts/check_spawn135_spec.py --phase full
+python3 reverse-engineering/scripts/check_spawn_frame135.py --phase full
+python3 reverse-engineering/scripts/check_cast135_full_spec.py --phase full
 
 # 固定研究基线0.134.0的实际原件差分，不能转计0.135.1。
 python3 reverse-engineering/scripts/check_upgrade134_spec.py
@@ -59,7 +74,7 @@ python3 reverse-engineering/scripts/check_rng_spec.py
 
 升级数值、敌人成长、半径等命令执行原件纯数值函数的隔离复制体，不启动完整游戏。这些复制体没有host imports、start、网络、时钟、图形或存档接口。升级模块保留函数索引，仅导出计算函数和固定内存，其他函数为trap；敌人成长模块只有两条无引用函数；半径模块保留单一helper和一页scratch内存。复制体均重解析并核对原体哈希，WABT验证后才交给Node。
 
-固定0.135.1使用`build_full135_oracle.py`和`full135_host.mjs`：17个角色分别校验本版完整body/签名，仅增加导出并保留全部原callee，原malloc91941和878个拒绝宿主导入固定。属性完整1512及完整880/1371的时钟/暂停投影已实际重新执行，其余角色的导出能力不代表已通过运行验收，tick通过也不代表完整调度已实现。
+固定0.135.1使用`build_full135_oracle.py`和`full135_host.mjs`：当前27个角色分别校验本版完整body/签名，仅增加导出并保留全部原callee，原malloc91941和878个拒绝宿主导入固定。属性、时钟/暂停以及本轮候选/成长/选卡/生成/施法各域已分别重新执行，其他角色的导出能力不代表运行验收，tick通过也不代表完整调度已实现。
 
 固定0.134.0完整选卡与扣血工具另用`build_full134_oracle.py`：只修改export节，保留所有原内部指令和callee。`full134_host.mjs`复核固定原件、原导出前缀及全部非export节；878宿主导入均拒绝，应用入口不调用。它们确实实例化完整官方模块，但只以原分配器构造的合成状态调用指定内部函数。选卡779例与扣血454例均0差异，宿主实际调用0次；前者生产后处理仍pending，后者未独立实现完整死亡loot/RNG。详见[新版选卡](../reports/2026-11-01-selection0134-spec.md)与[新版扣血](../reports/2026-11-01-combat0134-spec.md)。
 
