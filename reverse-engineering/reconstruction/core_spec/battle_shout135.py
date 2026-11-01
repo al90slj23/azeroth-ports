@@ -42,7 +42,7 @@ class BattleShoutCastResult135(RacialCastResult135):
     pass
 
 
-def _sources(level, live_records, explicit):
+def _sources(level, live_records, explicit, physical_live=None):
     if explicit is not True:
         raise PendingBattleShout135('Explicit absent external Battle Shout/proc sources required')
     if any(getattr(level.sources, name) for name in
@@ -50,7 +50,8 @@ def _sources(level, live_records, explicit):
         raise PendingBattleShout135('Nonempty external stat/item/talent/proc sources require continuation')
     if type(live_records) is not tuple or len(live_records) != len(level.sources.live_effects):
         raise ValueError('Complete raw32 and semantic live source ownership required')
-    if any(effect.kind not in (7, 8, 9, 12) for effect in level.sources.live_effects):
+    allowed = (0, 7, 8, 9, 12) if physical_live is not None else (7, 8, 9, 12)
+    if any(effect.kind not in allowed for effect in level.sources.live_effects):
         raise PendingBattleShout135('Unrestored live source family retained')
     if level.stats.conditional1344_id == 11426:
         raise PendingBattleShout135('Icebarrier source/aura cleanup remains separate')
@@ -58,7 +59,8 @@ def _sources(level, live_records, explicit):
 
 def cast_battle_shout135(cast, level, definition, owned, *, live_records,
         unspecified_live_words=(), busy488=0, attempted_spell_sets=None,
-        explicit_other_sources_absent=False):
+        explicit_other_sources_absent=False, physical_live=None,scratch_word16_bits=None,
+        scratch_word16_source=None):
     """922 effect8: attempt sets, target30, reset owner0, append,1512,1202.
 
     Direct922 preserves the entire owned80B record, including its countdown.
@@ -66,14 +68,15 @@ def cast_battle_shout135(cast, level, definition, owned, *, live_records,
     scheduler with this dispatcher. Success here covers the declared numeric
     projection; the returned pending list does not claim aura/wire completion.
     """
-    _sources(level, live_records, explicit_other_sources_absent)
+    _sources(level, live_records, explicit_other_sources_absent, physical_live)
     if not isinstance(definition, BattleShoutDefinition135):
         raise TypeError('Explicit learned BattleShoutDefinition135 required')
     if cast.context908 & ~1:
         raise PendingBattleShout135('Inherited proc-cast context beyond the known ledger bit remains pending')
     result = cast_self_buff(cast, level, definition, owned, live_records=live_records,
         unspecified_live_words=unspecified_live_words, busy488=busy488,
-        attempted_spell_sets=attempted_spell_sets)
+        attempted_spell_sets=attempted_spell_sets, physical_live=physical_live,
+        scratch_word16_bits=scratch_word16_bits,scratch_word16_source=scratch_word16_source)
     return BattleShoutCastResult135(**{**vars(result), 'pending': (
         '1202 physical aura/object keys and message packet bytes remain pending',
         '1076 owns the learned80 countdown/cooldown; the basic1256 record is separately owned')})

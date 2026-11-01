@@ -3,6 +3,8 @@
 LevelCycleState remains the only HP/derived/time/RNG owner. This context
 contains only physical live/aura and orthogonal wire counter/GUID sources.
 Its semantic live view is checked before and updated with every effect.
+The checked view preserves physical kind12/1020 and its unconsumed union bytes;
+semantic value0 does not assert that those physical words contain zeros.
 """
 from dataclasses import asdict, dataclass, fields, replace
 

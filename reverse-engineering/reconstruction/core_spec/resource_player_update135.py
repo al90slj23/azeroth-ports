@@ -1,6 +1,6 @@
 """Fixed135 resource-live2088 prefix on one canonical level/context owner.
 
-Only the explicit inert23451/23505 kind0 and unique positive kind8 source
+Only inert23451/23505 kind0, unique1020 kind12 and positive kind8 source
 families are admitted. Full2088 is the oracle; owned/basic1076 scheduling and
 1453's presentation/statistics remain the composition owner's next domains.
 """
@@ -47,11 +47,14 @@ def prepare_resource_player_update135(level,context,now_bits,dt_bits,last_hit_bi
         raise PendingResourcePlayerUpdate135('Finite now/dt/last-hit domain required')
     if explicit_other_sources_absent is not True or type(periodic_input)is not tuple or periodic_input:
         raise PendingResourcePlayerUpdate135('Explicit empty other/periodic source snapshots required')
-    if any(getattr(level.sources,k)for k in('passives','adjustments','item_modifiers','owned_skills','timed_records','definitions')):
+    if any(getattr(level.sources,k)for k in('adjustments','item_modifiers','owned_skills','timed_records','definitions')):
         raise PendingResourcePlayerUpdate135('External stat/aura/proc producers remain separate')
+    for entry in level.sources.passives:
+        if entry.tag!=13 or not math.isfinite(f.to_float(entry.value_bits))or f.to_float(entry.value_bits)<0:
+            raise PendingResourcePlayerUpdate135('Only explicit typed passive13 regen source restored; its grant producer remains separate')
     if level.stats.conditional1344_id or level.stats.conditional1348_bits:
         raise PendingResourcePlayerUpdate135('Shield/conditional owner cleanup remains a separate family')
-    seen=set();rows=[list(row)for row in context.live.storage]
+    seen=set();protection_seen=False;rows=[list(row)for row in context.live.storage]
     for row in rows[:context.live.count]:
         kind=u32(row,8,'2088 live kind');spell=u32(row,20,'2088 live spell')
         if kind==0:
@@ -61,6 +64,10 @@ def prepare_resource_player_update135(level,context,now_bits,dt_bits,last_hit_bi
             if not math.isfinite(f.to_float(magnitude))or not f.to_float(magnitude)>0 or spell in seen:
                 raise PendingResourcePlayerUpdate135('Only finite positive unique kind8 producers admitted')
             seen.add(spell)
+        elif kind==12:
+            if spell!=1020 or protection_seen:
+                raise PendingResourcePlayerUpdate135('Only unique producer1020 kind12 admitted')
+            protection_seen=True
         else:raise PendingResourcePlayerUpdate135('Other live family remains unresolved')
         if not f.is_zero(u32(row,28,'2088 periodic budget')):
             raise PendingResourcePlayerUpdate135('Nonzero periodic budget remains unresolved')

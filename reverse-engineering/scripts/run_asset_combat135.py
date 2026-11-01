@@ -112,6 +112,14 @@ def state_summary(state):
             reachable=path.field24, values_sha256=hashlib.sha256(
                 b''.join(struct.pack('<H', value) for value in path.values_u16)).hexdigest()),
         distance_map_updated_at_bits=state.distance_map_updated_at_bits)
+    if state.player_sources is not None:
+        sources=state.player_sources
+        result['owners']['live32']=owner(sources.live.storage,32,sources.live.count)
+        result['owners']['aura48']=owner(sources.aura.storage,16,sources.aura.count)
+        result['physical_player_sources']=dict(initialized2569=sources.aura.initialized2569,
+            notification_next_id14340336=sources.notification_next_id14340336,
+            auxiliary_origins=list(sources.live_auxiliary_origins),
+            rune_notifications=list(state.rune_notifications))
     result['summary_sha256'] = hashlib.sha256(
         json.dumps(result, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
     return result
@@ -128,11 +136,20 @@ def main():
     parser.add_argument('--object-id', type=lambda value: int(value, 0), default=42)
     parser.add_argument('--navigation', action='store_true',
                         help='Enable special-target announcements; default is disabled.')
+    parser.add_argument('--physical-player-sources',action='store_true',
+        help='Use complete live/Aura ownership and the resource/protection composition.')
+    parser.add_argument('--app-notification-next-id',type=int,
+        help='Explicit App notification context; its natural producer is not implied.')
     args = parser.parse_args()
     if not 1 <= args.frames <= 1000:
         parser.error('frames must be1..1000')
     if not 0 <= args.app_seed < 1 << 64 or not 0 <= args.object_id < 1 << 64:
         parser.error('app-seed and object-id must be uint64')
+    if args.physical_player_sources:
+        if args.app_notification_next_id is None or not 0<=args.app_notification_next_id<1<<32:
+            parser.error('Physical player sources require an explicit u32 --app-notification-next-id')
+    elif args.app_notification_next_id is not None:
+        parser.error('App notification context requires --physical-player-sources')
     manifest = external_path(args.asset_manifest)
     output = external_path(args.output or ROOT / 'evidence' / datetime.now(timezone.utc).strftime(
         'asset-combat0135-modelselfcheck-%Y%m%dT%H%M%S.%fZ'))
@@ -187,6 +204,8 @@ def main():
                 navigation_enabled=args.navigation, locale='explicit_static_Elwynn_English_names',
                 dt_bits=f.from_float(.1), requested_frames=args.frames,
                 selection_policy='first_upgrade_else_index0',
+                physical_player_sources=args.physical_player_sources,
+                explicit_App_notification_counter=args.app_notification_next_id,
                 asset_manifest=str(provider.path), asset_manifest_sha256=provider.manifest_sha256,
                 asset_inputs=asset_inputs,
                 world_input='raw_assets_only_no_preparsed_world_or_original_memory')
@@ -202,7 +221,9 @@ def main():
                 title_utf8=b'Elwynn Forest', subtitle_utf8='The Defias Uprising — survive the onslaught!'.encode('utf8'))
             write_json(output / 'opening.json', opening_projection(handoff))
             state = from_opening_handoff(handoff, navigation_enabled=args.navigation,
-                special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),event_locale=EventWaveLocale135(0),banner_locale='en')
+                special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),event_locale=EventWaveLocale135(0),banner_locale='en',
+                **(dict(app_notification_next_id=args.app_notification_next_id,resource_locale='en')
+                    if args.physical_player_sources else{}))
             emit('opening', state, action_index=None)
             for frame in range(args.frames):
                 execution_phase = 'frame'

@@ -1,6 +1,6 @@
 """Independent fixed1351202 live-only aura cache and logical-field projection.
 
-This slice admits inert kind0 lives, unique nonnegative kind8 lives, and no
+This slice admits inert kind0, unique1020 kind12, positive kind8 lives, and no
 other aura producers (kind7, timed definitions38, active shield/owned-kind12,
 or negative/control sources). The caller must establish that source domain;
 neither absent sources nor original allocation bytes are inferred here.
@@ -55,6 +55,7 @@ def _buffs(live_storage32, live_count, now_bits):
         raise ValueError('Explicit bounded physical32B live owner required')
     rows = [cells135(row, 32) for row in live_storage32]
     active = []
+    protection_seen = False
     for index, row in enumerate(rows[:live_count]):
         expiry = u32(row, 24, '1202 live expiry')
         # Ordered greater-than: NaN and already-expired rows contribute no aura
@@ -67,8 +68,12 @@ def _buffs(live_storage32, live_count, now_bits):
             value = u32(row, 12, '1202 kind8 magnitude')
             if value & 0x7fffffff >= f.INF or f.to_float(value) < 0:
                 raise PendingResourceAura135('Only finite nonnegative kind8 aura source restored')
+        elif kind == 12:
+            if spell != 1020 or protection_seen:
+                raise PendingResourceAura135('Only unique producer1020 kind12 aura source restored')
+            protection_seen = True
         elif kind != 0:
-            raise PendingResourceAura135('Only kind0 and unique nonnegative kind8 live aura sources restored')
+            raise PendingResourceAura135('Only kind0, protection1020 and unique nonnegative kind8 aura restored')
         active.append((index, kind, spell, expiry))
     by_spell = {}
     for _, kind, spell, expiry in active:
@@ -78,7 +83,7 @@ def _buffs(live_storage32, live_count, now_bits):
                 old[1] = old[1] if f.to_float(old[1]) > f.to_float(expiry) else expiry
                 old[2] = (old[2] + 1) & f.MASK
                 continue
-            if kind != 0 or old[3] != 0:
+            if kind not in (0, 12) or old[3] not in (0, 12):
                 raise PendingResourceAura135('Duplicate kind8 dominance/priority requires its full1202 continuation')
             # Ordinary kind0 duplicate effective magnitudes are both0. The
             # earliest unexpired row wins before the aggregation loop, so a

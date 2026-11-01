@@ -1,0 +1,293 @@
+{
+  "status": "scoped_explicit_source_physical_projection_and_independent_read_only_review_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/live-owner135-oracle-20261101T224420.333917Z/comparison.json",
+  "comparison_sha256": "85979898b212c591d45bc81dc3c3baf8311b861622e5687c6cefb6aa9965e695",
+  "cases": 109,
+  "full_original_calls": 109,
+  "entry_counts": {
+    "922": 43,
+    "1072": 33,
+    "4600": 33
+  },
+  "source_files": 51,
+  "production_files": 43,
+  "all_capture_sources_current_and_snapshots_match": true,
+  "artifacts": {
+    "input.json": "89a54fdc14844b06270233c550ec4bb43dd20c531906274c938e8d9789702ea0",
+    "expected.json": "9a161b9322e5b4f9e908b4be3a83540ceecbdb0d404b6a1f297e8e5d53f85c6c",
+    "labels.json": "fe9771326f9479acb7ae7602d1afb2c38d55dab5563faec10f5db3dda45c8219",
+    "manifest.json": "f58cca71a08604fe4ece6a5e4e5450b299d798f180982fa11cb1433cc5d332ee",
+    "live-owner135-original-exports.wasm": "be40256d03f3c4e3e10e5eca578a1fa39d91a953610bf6fd307c6e70e8167204",
+    "922.wat": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940",
+    "1072.wat": "32ce8baf8bb31d2c76fbfaab16fb1fcaa6f291e256169c04468169a54adcc952",
+    "4600.wat": "bb3ab2da31595cea2be45a3558c886e3c16fd791a033b5e8d7bde7a1d86d69df",
+    "65320.wat": "3fa6993cd4824bc04b8b9f5b9c1b588d3db307b2ed260863c598b8e312a69a51",
+    "1073.wat": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+    "2088.wat": "02ca0590c09f7a727cda54c086270ad9a9e8d437cdc92f2db5f8f4ed0b871f9c",
+    "comparison.json": "85979898b212c591d45bc81dc3c3baf8311b861622e5687c6cefb6aa9965e695",
+    "stdout.jsonl": "e897082d54e6a3c70fc2a1b55f61db8e8eca9fcab1b5369db577494ebfd699b2",
+    "runtime.json": "50fb8b0a0a0a0188750464c825e95e3c0f66b3ac9fd49e48e7f36a8380ec8089",
+    "process-terminal.json": "092006b3709a245434094c1259bb0ff864ded4960b266b1ea0f90078dad0b3a6",
+    "prepared.json": "ca3b3fdbe120a82a6b39651d251aeb21e80f227d14e6335dace6f030ff459177",
+    "owned-process.json": "d745f03ed75046b923defaf76a2921caf1a4bbb8e4fd6d50559a5ee07103a92d",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "counts": {
+    "cast_cases": 43,
+    "mechanical_known_values": 17215,
+    "expected_unknown_bytes": 2500,
+    "capacity_growths": 19,
+    "explicit_known_source_casts": 37,
+    "independent_known_physical_bytes": 12732,
+    "unwritten_new_allocation_bytes": 1504,
+    "removed_rows": 99,
+    "inherited_initial_None_poison_bytes": 980,
+    "resume_cases": 33,
+    "structural_null_success": 66,
+    "whole32_moves": 36,
+    "selection_or_resume_partial_append": 66,
+    "select_cases": 33,
+    "target_absent_no_append": 2,
+    "typed_unresolved_source_casts": 4,
+    "typed_source_unknown_bytes_companion_strict": 16
+  },
+  "controlled_source_words": {
+    "0": 12,
+    "2779096485": 10,
+    "1515870810": 9,
+    "1116319189": 10
+  },
+  "witnesses": [
+    {
+      "case": 0,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 0,
+      "slot": 0,
+      "observed_live_plus16": 0
+    },
+    {
+      "case": 1,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 2779096485,
+      "slot": 3,
+      "observed_live_plus16": 2779096485
+    },
+    {
+      "case": 4,
+      "caster": "berserking",
+      "source_unresolved_to_model": false,
+      "controlled_input": 0,
+      "slot": 4,
+      "observed_live_plus16": 0
+    },
+    {
+      "case": 5,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 2779096485,
+      "slot": 0,
+      "observed_live_plus16": 2779096485
+    },
+    {
+      "case": 6,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 1515870810,
+      "slot": 0,
+      "observed_live_plus16": 1515870810
+    },
+    {
+      "case": 7,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 1116319189,
+      "slot": 0,
+      "observed_live_plus16": 1116319189
+    },
+    {
+      "case": 8,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 0,
+      "slot": 0,
+      "observed_live_plus16": 0
+    },
+    {
+      "case": 9,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 2779096485,
+      "slot": 0,
+      "observed_live_plus16": 2779096485
+    },
+    {
+      "case": 10,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 1515870810,
+      "slot": 0,
+      "observed_live_plus16": 1515870810
+    },
+    {
+      "case": 11,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 1116319189,
+      "slot": 0,
+      "observed_live_plus16": 1116319189
+    },
+    {
+      "case": 12,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 0,
+      "slot": 0,
+      "observed_live_plus16": 0
+    },
+    {
+      "case": 13,
+      "caster": "battle_shout",
+      "source_unresolved_to_model": false,
+      "controlled_input": 2779096485,
+      "slot": 2,
+      "observed_live_plus16": 2779096485
+    }
+  ],
+  "static_proof": {
+    "922_effect8_lines": [
+      5748,
+      5757
+    ],
+    "922_effect9_lines": [
+      5759,
+      5768
+    ],
+    "922_default_only_assignment": [
+      5810,
+      5813
+    ],
+    "922_common_source_write": [
+      5982,
+      5986
+    ],
+    "4600_partial_append": [
+      669,
+      690
+    ],
+    "effect8_9_definition_plus8_source_claim": "contradicted_by_control_flow",
+    "actual_source": "922 scratch frame+48, unassigned by8/9 branch; historical output observes0 only",
+    "stack_frame_bytes": 240,
+    "stack_word_absolute_for_direct_entry": 1048384,
+    "precall_stack_word_captured": false,
+    "caller_producer_restoration": "pending",
+    "bounded_consumer_inspection": {
+      "1512": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/self-buffs0135-oracle-20261101T221510.852622Z/1512.wat",
+        "WAT_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3",
+        "bounded_lines": [
+          1282,
+          1523
+        ],
+        "finding": "live dominance and kind8/9 stats use kind8/magnitude12/spell20/expiry24; no live16 read"
+      },
+      "1202": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/self-buffs0135-oracle-20261101T221510.852622Z/1202.wat",
+        "WAT_sha256": "93c1a53a759d54514a5142e17e88c5542aac1864aaf1d5770f0205dcac1d035e",
+        "bounded_lines": [
+          17,
+          350
+        ],
+        "finding": "positive aggregation uses kind8/9 magnitude12/spell20/expiry24; negative loop onlykind7"
+      },
+      "2088": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/self-buffs0135-oracle-20261101T221510.852622Z/2088.wat",
+        "WAT_sha256": "02ca0590c09f7a727cda54c086270ad9a9e8d437cdc92f2db5f8f4ed0b871f9c",
+        "bounded_lines": [
+          23,
+          181
+        ],
+        "finding": "periodic budget28,expiry24,spell20,owner0; later retain copies complete32B"
+      },
+      "1073": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/live-owner135-oracle-20261101T224420.333917Z/1073.wat",
+        "WAT_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+        "bounded_lines": [
+          55,
+          96
+        ],
+        "finding": "incoming protection scan uses expiry24 and kind12; later retain consumeskind7/sourceSpell20"
+      }
+    },
+    "consumer_scope": "Admitted0/8/9/12,empty other sources,periodic budget0; no claim of whole-program non-observability"
+  },
+  "original_process": {
+    "pid": 39284,
+    "pgid": 39284,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 3.900888832999044,
+    "error": null
+  },
+  "runtime_identity": {
+    "cases": 109,
+    "fresh_instances": 109,
+    "full_calls": 109,
+    "entry_counts": {
+      "922": 43,
+      "1072": 33,
+      "4600": 33
+    },
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "peak_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "heap_mib": 512,
+    "output_bytes": 3838718,
+    "stack_all_restored": true,
+    "original_snapshot_loaded": false,
+    "application_start_called": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "original_bodies_unchanged": true,
+    "error": null
+  },
+  "reviewer_sources": {
+    "review_live_owner_source135.py": "e680fbed3bc3c6fdfbf08e94778861ff4c0adb38f21640b86913ae37a0f97306",
+    "review_live_owner135.py": "cd7a31d8ae61562c2fadb401a1738f34fdf308540f2c07a46c50608ffb1c4bc8"
+  },
+  "new_original_executions": 0,
+  "production_model_executions": 0,
+  "checker_executions": 0,
+  "builder_executions": 0,
+  "natural_caller_stack_producer_restored": false,
+  "numeric_scope": "Known numeric projection mechanically re-compared; physical retain/append/source writes independently reconstructed.",
+  "old105_general_source_claim_remains_contradicted": true,
+  "limitations": [
+    "Controlled entry frame+48 is explicitly written as fixture input, not natural1076 caller reconstruction.",
+    "Four opaque-source model cases do not predict+16; their companion explicit-source controlled input is independently compared separately.",
+    "Physical1202 cache/messages are raw observations here, not a new full Aura model.",
+    "No headless/App/full880/Windows/fullgame acceptance."
+  ],
+  "seconds": 0.6770161249878583,
+  "independent_review_receipt": "evidence/live-owner109-review-owned-20261101T224655.075582Z/review/review.json",
+  "independent_review_receipt_sha256": "d2fd7c367c173c4c09b59cd5a0cf9a8a586179a30ebc512f2c0e9c291c4efb0a",
+  "owned_terminal": {
+    "pid": 44132,
+    "pgid": 44132,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 0.9478464999992866,
+    "error": null
+  },
+  "owned_terminal_sha256": "b7f8820e514462dbf9eb5cd0158ffb4dc74216027cae35299a9a5e7d388bd3ec",
+  "primary_report": "reports/2026-11-02-live-owner0135.json",
+  "primary_report_sha256_at_review": "ce375c3ca0ee78bf7e889c4a6f62d2c9d0978afca10ed785de7216e11786784e",
+  "historical105_review": "reports/2026-11-02-live-owner0135-105-independent-review.json",
+  "historical105_review_sha256": "05c01a71382ed5ea9c81347a27961d68a0ec2f19a7515e668989a679f1f393c6"
+}

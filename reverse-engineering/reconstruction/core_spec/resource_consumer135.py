@@ -82,15 +82,20 @@ def _ceil_u(bits):
 
 def _semantics(live):
     effects=[]
+    protection_seen=False
     for row in live.storage[:live.count]:
         kind=u32(row,8,'Live kind');spell=u32(row,20,'Live spell');expires=u32(row,24,'Live expiry')
-        if kind not in(0,8):
-            raise PendingResourceConsumer135('Only effect0 and explicit positive Battlekind8 live sources restored')
-        magnitude=0 if kind==0 else u32(row,12,'Battle effect strength')
+        if kind not in(0,8,12):
+            raise PendingResourceConsumer135('Only effect0, positive kind8 and unique protection1020 restored')
+        if kind==12:
+            if spell!=1020 or protection_seen:
+                raise PendingResourceConsumer135('Only unique producer1020 kind12 live source restored')
+            protection_seen=True
+        magnitude=0 if kind in(0,12)else u32(row,12,'Battle effect strength')
         if kind==8:
             _finite(magnitude)
             if f.to_float(magnitude)<0:raise PendingResourceConsumer135('Negative kind8 aura domain remains separate')
-        #Kind0's loaded raw magnitude is not consumed by1512 or the admitted
+        #Kind0/1020's loaded raw magnitude is not consumed by1512 or the admitted
         #1202 dominance branch. Preserve its physical bytes, including None.
         effects.append(LiveEffect(kind,magnitude,spell,expires))
     return effects

@@ -29,6 +29,7 @@ from core_spec.pickup_record_cells135 import pickup_words135
 from core_spec.event_wave135 import EventWaveLocale135
 from opening_pickup_provenance135 import PickupAddressVerifier135
 from opening_npc_aura135 import npc_aura_updates169
+from opening_live_auxiliary135 import LiveAuxiliaryVerifier135
 
 
 @lru_cache(maxsize=16)
@@ -72,6 +73,17 @@ def resource_create_packets169(packets):
     return result
 
 
+def rune_notifications135(payloads):
+    result=[]
+    for payload in payloads:
+        raw=bytes.fromhex(payload)
+        try:value=json.loads(raw)
+        except (ValueError,UnicodeDecodeError):continue
+        if isinstance(value,dict)and value.get('type')=='banner'and value.get('kind')=='rune':
+            result.append(payload)
+    return result
+
+
 def wanted(state):
     level=state.collection.level;tail=state.tail;path=state.distance_map
     if (state.effect_records120 or state.delayed_records56 or state.queued_hits
@@ -95,6 +107,12 @@ def wanted(state):
         'active84':dict(count=tail.active84_count),
         'timed12':dict(count=len(level.sources.timed_records)),
     }
+    if state.player_sources is not None:
+        owner=state.player_sources
+        vectors['live32']=dict(capacity=owner.live.capacity,count=owner.live.count,
+            storage=backing(owner.live.storage,32))
+        vectors['aura48']=dict(capacity=owner.aura.capacity,count=owner.aura.count,
+            storage=backing(owner.aura.storage,16))
     values=dict(level.derived_bits);progress=asdict(level.progression)
     projection=dict(phase2587=level.phase2587,now_bits=level.stats.now_bits,rng_words=list(level.rng_words),
         spawn_counter=state.collection.death.spawn_counter,message_sequence=state.collection.death.message_sequence,
@@ -126,8 +144,18 @@ def wanted(state):
         tail_flags=dict(field400=tail.field400,protection2576=level.flags2576,flag2568=tail.flag2568,gate2579=tail.gate2579),
         distance_map=None if path is None else dict(count=len(path.values_u16),start_index=path.start_index,field24=path.field24,values_sha256=map_sha(path.values_u16)),
         distance_map_updated_at_bits=state.distance_map_updated_at_bits)
-    return dict(projection=projection,vectors=vectors,
+    if state.player_sources is not None:
+        projection['player_fields']={str(k):v for k,v in level.player_fields}
+        projection.update(aura_initialized2569=state.player_sources.aura.initialized2569,
+            notification_next_id14340336=state.player_sources.notification_next_id14340336,
+            player_speed226_packets=[payload for opcode,payload in state.produced_packets if opcode==226],
+            rune_notifications=rune_notifications135(state.rune_notifications))
+    result=dict(projection=projection,vectors=vectors,
         opaque_pickup_amount_origins=[asdict(origin)for origin in state.opaque_pickup_amount_origins])
+    if state.player_sources is not None:
+        result['unresolved_live_auxiliary_origins']=[dict(slot=i,source=list(origin))
+            for i,origin in enumerate(state.player_sources.live_auxiliary_origins)if origin is not None]
+    return result
 
 
 def original_view(raw,expected):
@@ -142,6 +170,9 @@ def original_view(raw,expected):
     raw_projection['banner150_packets']=[p['payload_hex']for p in raw['packets']['active']if p['opcode']==150]
     raw_projection['npc_aura_updates169']=npc_aura_updates169(
         (p['opcode'],p['payload_hex'])for p in raw['packets']['active'])
+    if 'player_speed226_packets'in expected['projection']:
+        raw_projection['player_speed226_packets']=[p['payload_hex']for p in raw['packets']['active']if p['opcode']==226]
+        raw_projection['rune_notifications']=rune_notifications135(p['payload_hex']for p in raw['notifications']['active'])
     projection=subset(expected['projection'],raw_projection);vectors={}
     for name,want in expected['vectors'].items():
         value=raw['vectors'][name];v={}
@@ -182,12 +213,13 @@ def compare(want,actual,path,errors,counts,*,opaque_pickup_indices=()):
             if len(errors)<80:errors.append(dict(field=path,expected=want,actual=actual))
 
 
-def corpus(world,seed,frames,dt,expected_path):
+def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False):
     value=EmptyOpeningInput135(1,1,0,seed,42)
     handoff=initialize_absent_companion_handoff(value,world,companion_profile=EmptyCompanionProfile135(()),
         title_utf8=b'Elwynn Forest',subtitle_utf8='The Defias Uprising — survive the onslaught!'.encode('utf8'))
     state=from_opening_handoff(handoff,navigation_enabled=False,special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),
-        event_locale=EventWaveLocale135(0),banner_locale='en')
+        event_locale=EventWaveLocale135(0),banner_locale='en',
+        **(dict(app_notification_next_id=1,resource_locale='en')if physical_player_sources else{}))
     actions=[];boundary='frame_budget';stage_count=0;expected_bytes=0
     with gzip.open(expected_path,'wb',compresslevel=1)as stream:
         def emit(value):
@@ -223,13 +255,15 @@ def corpus(world,seed,frames,dt,expected_path):
     raw=asdict(value);raw['app_lcg_seed_u64']=str(value.app_lcg_seed_u64);raw['object_id_u64']=str(value.object_id_u64);raw['companion_tags']=[255,255]
     return json.loads(json.dumps(dict(id=0,input=raw,actions=actions,stage_count=stage_count,boundary=boundary,
         independent_frames=state.frames,independent_selections=state.selections,final_level=state.collection.level.progression.level,
-        expected_uncompressed_bytes=expected_bytes)))
+        expected_uncompressed_bytes=expected_bytes,
+        **(dict(physical_player_sources=True,explicit_App_notification_counter=1)if physical_player_sources else{}))))
 
 
 def main():
     from collections import Counter
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--phase',choices=('pilot','full'),default='pilot')
     parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int)
+    parser.add_argument('--physical-player-sources',action='store_true')
     parser.add_argument('--capture-format',choices=('gzip','cas'),default='gzip');args=parser.parse_args()
     frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
     if not 1<=frames<=750:raise ValueError('Bounded controlled frame corpus required')
@@ -237,14 +271,16 @@ def main():
     files=tuple(dict.fromkeys(('scripts/check_opening_combat135.py','scripts/production_closure135.py',
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
         'scripts/build_world_snapshot135_oracle.py','scripts/build_full135_oracle.py','scripts/build_upgrade134_oracle.py',
-        'scripts/trace_coop.py','scripts/wasm_index.py','scripts/opening_pickup_provenance135.py','scripts/opening_npc_aura135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
+        'scripts/trace_coop.py','scripts/wasm_index.py','scripts/opening_pickup_provenance135.py','scripts/opening_npc_aura135.py',
+        'scripts/opening_live_auxiliary135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
     before={p:sha(ROOT/p)for p in files};world,world_receipt,world_inputs=load_independent_world(DEFAULT_WORLD)
     world_inputs.update({str(path):sha(path)for path in(DEFAULT_WORLD/'receipt.json',DEFAULT_WORLD/'inputs.json')})
     out,manifest=build_opening_combat135();source=out/'source-snapshot'
     for p,h in before.items():
         target=source/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((ROOT/p).read_bytes());assert sha(target)==h
     expectations=out/'stage-expectations.jsonl.gz'
-    row=corpus(world,args.seed,frames,f.from_float(.025 if args.phase=='pilot'else.1),expectations)
+    row=corpus(world,args.seed,frames,f.from_float(.025 if args.phase=='pilot'else.1),expectations,
+        physical_player_sources=args.physical_player_sources)
     fixtures=out/'fixtures.json';fixtures.write_text(json.dumps(row,separators=(',',':'))+'\n')
     inputs=out/'inputs.json';inputs.write_text(json.dumps([{k:row[k]for k in('id','input','actions')}],separators=(',',':'))+'\n')
     config=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,app_pointer=14549000,world_pointer=26204808,
@@ -286,6 +322,7 @@ def main():
         return False
     terminal=dict(pid_missing=missing(),pgid_missing=missing(True));errors=[];counts=Counter();observed_stages=0
     raw_digest=hashlib.sha256();raw_bytes=0;max_line=0;cas_decoder=None;pickup_address_verifier=PickupAddressVerifier135()
+    live_auxiliary_verifier=LiveAuxiliaryVerifier135()
     if child.returncode==0:
         record_counts=Counter()
         assert results.stat().st_size<=256*1024*1024
@@ -308,7 +345,9 @@ def main():
                         observed_stages+=1
                     path='opening'if kind=='opening'else f'stage[{observed_stages-1}]'
                     expected=wanted_stage['expected'];opaque_indices=pickup_address_verifier.observe(raw,expected)
-                    comparable={key:value for key,value in expected.items()if key!='opaque_pickup_amount_origins'}
+                    live_auxiliary_verifier.observe(raw,expected)
+                    comparable={key:value for key,value in expected.items()if key not in(
+                        'opaque_pickup_amount_origins','unresolved_live_auxiliary_origins')}
                     compare(comparable,original_view(raw,expected),path,errors,counts,opaque_pickup_indices=opaque_indices)
                 elif kind=='case_end':
                     assert raw['boundary']is None and raw['host_calls']==[]
@@ -348,10 +387,12 @@ def main():
         inputs_sha256=sha(inputs),expectations_sha256=sha(expectations),fixtures_sha256=sha(fixtures),original_results_sha256=sha(results),runtime=runtime,
         capture_format=args.capture_format,capture_cas_verification=cas_verification,
         pickup_address_proof=pickup_address_verifier.report(),
+        live_auxiliary_source_observations=live_auxiliary_verifier.report(),
         original_uncompressed_bytes=raw_bytes,maximum_original_record_bytes=max_line,expected_uncompressed_bytes=row['expected_uncompressed_bytes'],
         process=dict(command=command,pid=child.pid,pgid=child.pid,exit_code=child.returncode,seconds=child_seconds,
             total_seconds_including_verification=time.monotonic()-began,deadline_seconds=deadline_seconds,**terminal),
         model_expected_before_original=True,original_input_contains_no_expectations=True,
+        physical_player_sources=args.physical_player_sources,
         world_input=dict(kind='independently_produced_preparsed_world_query_artifacts',receipt=str(DEFAULT_WORLD/'receipt.json'),receipt_sha256=sha(DEFAULT_WORLD/'receipt.json'),artifacts=world_inputs),
         original_context=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,externref_VM_restoration=False,fresh_bootstraps=0),
         full880_frames=0,native_Windows_execution=False,playable_replacement=False,

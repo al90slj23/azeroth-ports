@@ -40,6 +40,9 @@ from .ordinary_placement135 import project_from_record
 from .owned_cast135 import OwnedEntry135, OwnedSources135, tick_owned
 from .movement_pause135 import moving_sequence_delta
 from .player_update135 import prepare_player_update
+from .resource_player_update135 import prepare_resource_player_update135
+from .headless_player135 import PlayerSources135
+from .live_owner135 import retain_live135, resume_live1020_135, append_live135, ScratchAuxiliaryWord135
 from .pickups134 import encode_record56
 from .racial_cast135 import RacialDefinition135, RACIALS, cast_self_buff
 from .selection_cycle135 import SelectionCycleState, select_card
@@ -128,6 +131,8 @@ class HeadlessState135:
     opaque_pickup_amount_origins: tuple = ()
     banner_locale: str|None = None
     pending_banner_events: tuple = ()
+    player_sources: PlayerSources135|None = None
+    rune_notifications: tuple = ()
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
@@ -141,6 +146,11 @@ class HeadlessState135:
             raise PendingHeadless135('Explicit real88B area backing required')
         if len(self.areas) > len(self.area_storage) or self.area_storage[:len(self.areas)] != self.areas:
             raise ValueError('Active area records and backing prefix disagree')
+        if self.player_sources is not None:
+            self.player_sources.validate_view(self.live_records, self.unspecified_live_words)
+            self.player_sources.context(self.collection.level, self.source_id, self.action_sequence1644)
+            if self.collection.resource_context is not None:
+                raise ValueError('Resource context must not persist between frame phases')
 
 
 def from_initial(initial: InitialState135, *, flat_height_bits, zeroed_unit_storage_resolved=False,
@@ -175,7 +185,8 @@ def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
         level=replace(state.collection.level, phase2587=1)))
 
 
-def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,event_locale=None,banner_locale=None):
+def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,event_locale=None,banner_locale=None,
+        app_notification_next_id=None,resource_locale=None):
     """Consume the real independent opening; retain all physical owners.
 
     This installs neither a synthetic phase nor an original memory image.
@@ -191,7 +202,7 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,even
         special40_storage=storage(o.special),special40_count=o.special.count,
         special_navigation2564=int(navigation_enabled))
     collection=replace(handoff.collection,claims_empty=o.companions.count==0)
-    return HeadlessState135(collection,tuple(encode_row(row)for row in handoff.records),
+    state = HeadlessState135(collection,tuple(encode_row(row)for row in handoff.records),
         storage(o.units),(),(),initial.racial,initial.timer1628_bits,(),0.0,
         IncomingState135(phase_2579=0,last_hit_1648_bits=words[1652],
             absorbed_740_bits=words[740],maximum_shield_744_bits=words[744]),(),(),(),words[2416],(0,0),
@@ -204,6 +215,33 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,even
         boundary_storage8=storage(o.boundaries),boundary_count=o.boundaries.count,
         special_locale=special_locale,produced_packets=o.packets,next_resource2444_bits=words[2444],
         next_event2424_bits=words[2424],next_supply2448_bits=words[2448],event_locale=event_locale,banner_locale=banner_locale)
+    if app_notification_next_id is not None or resource_locale is not None:
+        if app_notification_next_id is None or resource_locale is None:
+            raise ValueError('Both explicit App notification counter and resource locale required')
+        if collection.level.sources.live_effects:
+            raise PendingHeadless135('Empty-profile opening live producer required by this entry')
+        if banner_locale != resource_locale:
+            raise ValueError('Growth and rune presentation must use one explicit locale')
+        sources = PlayerSources135.empty(notification_next_id14340336=app_notification_next_id,
+            locale_code=resource_locale)
+        state = replace(state,player_sources=sources)
+    return state
+
+
+def _adopt_player_context135(state, context, collection, *, packets=(),notifications=(),live_owner=None):
+    """Commit one consumer's level and physical owners in the same replacement."""
+    if state.player_sources is None:
+        raise PendingHeadless135('Physical player-source owner was not installed at entry')
+    if context.player_guid != state.source_id:
+        raise ValueError('Resource consumer changed the player GUID owner')
+    sources=state.player_sources.adopt(context,live_owner=live_owner)
+    live,unknown=sources.active_view()
+    collection=replace(collection,resource_context=None)
+    return replace(state,collection=collection,player_sources=sources,
+        live_records=live,unspecified_live_words=unknown,
+        action_sequence1644=context.action_sequence1644,
+        produced_packets=state.produced_packets+tuple(packets),
+        rune_notifications=state.rune_notifications+tuple(notifications))
 
 
 def supported(pointer):
@@ -306,6 +344,37 @@ def _cast_phase(state, dt, *, phase='owned'):
     demo_owners = None
     indexed_effect_writes = ()
     aura_packets = ()
+    player_sources = state.player_sources
+    action_sequence = state.action_sequence1644
+
+    def accept_self_buff(result, previous_speed_bits):
+        nonlocal collection, live, unknown, player_sources, aura_packets, action_sequence
+        level=result.level
+        if player_sources is not None:
+            if result.physical_live is None:
+                raise PendingHeadless135('Self-buff lost the full physical live owner')
+            if result.physical_scratch_write is not None:
+                index,offset,source=result.physical_scratch_write
+                spell=u32(result.physical_live.storage[index],20,'922 auxiliary destination spell')
+                player_sources=player_sources.retain(lambda row:
+                    u32(row,20,'922 retain spell')!=spell or u64(row,0,'922 retain owner')!=0)
+                origin=('922.effect8or9.caller_frame+48',state.frames,spell,
+                    level.stats.now_bits,len(result.cast.attempted_spell_ids))
+                player_sources=player_sources.replace_live(result.physical_live,
+                    scratch_write=result.physical_scratch_write,origin=origin)
+            elif result.physical_live!=player_sources.live:
+                raise PendingHeadless135('Self-buff physical mutation lacks a declared producer')
+            if '1512' in result.callbacks and abs(f.to_float(f.sub(
+                    level.stats.previous_speed_bits,previous_speed_bits)))>f.to_float(0x3c23d70a):
+                from .opening_entities135 import packed_guid
+                aura_packets+=((226,(packed_guid(state.source_id)+struct.pack('<II',
+                    action_sequence,level.stats.previous_speed_bits)).hex()),)
+                action_sequence=(action_sequence+1)&f.MASK
+            if '1202' in result.callbacks:
+                level,player_sources=player_sources.refresh_aura(level)
+        collection=replace(collection,level=level)
+        live,unknown=result.live_records,result.unspecified_live_words
+        return CastResult(result.cast,result.success,(),0,0,())
 
     def on_hit(cast, damage):
         nonlocal collection
@@ -372,19 +441,19 @@ def _cast_phase(state, dt, *, phase='owned'):
             level=replace(collection.level,rng_words=cast.rng_words,
                 stats=replace(collection.level.stats,now_bits=cast.combat.now_bits))
             result=cast_battle_shout135(cast,level,BattleShoutDefinition135(),owned,
-                live_records=live,unspecified_live_words=unknown,busy488=0,explicit_other_sources_absent=True)
-            collection=replace(collection,level=result.level)
-            live,unknown=result.live_records,result.unspecified_live_words
-            return CastResult(result.cast,result.success,(),0,0,())
+                live_records=live,unspecified_live_words=unknown,busy488=0,explicit_other_sources_absent=True,
+                physical_live=None if player_sources is None else player_sources.live,
+                scratch_word16_source=None if player_sources is None else ScratchAuxiliaryWord135(None))
+            return accept_self_buff(result,level.stats.previous_speed_bits)
         if d.ability_id not in RACIALS:
             return cast_ability(cast, d, owned, **callbacks)
         level = replace(collection.level, rng_words=cast.rng_words,
             stats=replace(collection.level.stats, now_bits=cast.combat.now_bits))
         result = cast_self_buff(cast, level, RacialDefinition135(d.pointer, d.ability_id, RAW_BY_POINTER[d.pointer]),
-            owned, live_records=live, unspecified_live_words=unknown, busy488=0)
-        collection = replace(collection, level=result.level)
-        live, unknown = result.live_records, result.unspecified_live_words
-        return CastResult(result.cast, result.success, (), 0, 0, ())
+            owned, live_records=live, unspecified_live_words=unknown, busy488=0,
+            physical_live=None if player_sources is None else player_sources.live,
+            scratch_word16_source=None if player_sources is None else ScratchAuxiliaryWord135(None))
+        return accept_self_buff(result,level.stats.previous_speed_bits)
 
     cast = _cast_state(state)
     if phase == 'area':
@@ -443,12 +512,14 @@ def _cast_phase(state, dt, *, phase='owned'):
         racial=racial, melee_timer_bits=timer, queued_hits=cast.queued,
         outgoing_total=cast.combat.accounted_total, attempted_spells=cast.attempted_spell_ids,
         live_records=live, unspecified_live_words=unknown,
+        player_sources=player_sources,action_sequence1644=action_sequence,
         produced_packets=state.produced_packets+aura_packets))
 
 
 def _ai_phase(state, dt):
     level = state.collection.level; d = dict(level.derived_bits); stats = level.stats
-    if any(e.kind not in (7, 8, 9, 12) for e in level.sources.live_effects):
+    allowed_live=(0,7,8,9,12) if state.player_sources is not None else (7,8,9,12)
+    if any(e.kind not in allowed_live for e in level.sources.live_effects):
         raise PendingHeadless135('Unrestored incoming/retaliation source')
     #8/9 affect outgoing1512 only. Keep their canonical raw/semantic records;
     #the incoming scalar projection consumes the relevant7/12 subset.
@@ -532,22 +603,33 @@ def _ai_phase(state, dt):
     # Preserve outgoing8/9 records while reflecting the actually consumed7/12
     #records. Their physical owner/auxiliary words and unknown-word marks stay
     #attached to the surviving source, rather than being recreated from stats.
-    remaining = list(current.buffs); live = []; semantic = []; unknown = set()
+    remaining = list(current.buffs); live = []; semantic = []; unknown = set(); keep_flags=[]
     for i, (raw, effect) in enumerate(zip(state.live_records, level.sources.live_effects)):
         if effect.kind in (7, 12):
             expected = BuffRecord(effect.kind, effect.spell_id, effect.value_bits, effect.expires_bits)
-            if expected not in remaining: continue
+            if expected not in remaining:
+                keep_flags.append(False)
+                continue
             remaining.remove(expected)
+        keep_flags.append(True)
         j = len(live); live.append(raw); semantic.append(effect)
         unknown.update((j, offset) for row, offset in state.unspecified_live_words if row == i)
     if remaining: raise PendingHeadless135('Incoming produced an unresolved new live source')
     level = replace(level, sources=replace(level.sources, live_effects=tuple(semantic)))
+    player_sources=state.player_sources
+    if player_sources is not None:
+        flags=iter(keep_flags)
+        player_sources=player_sources.retain(lambda row:next(flags))
+        live,unknown=player_sources.active_view()
+        if not all(keep_flags):
+            level,player_sources=player_sources.refresh_aura(level)
     death = replace(state.collection.death,
         message_sequence=(state.collection.death.message_sequence + len(result.movements)+len(guardian_movements)) & f.MASK)
     return replace(state, records=tuple(records), incoming=current,
         unit_storage=_store_prefix(storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth),
         guardian_cooldowns=guardian_owners,
         live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)),
+        player_sources=player_sources,
         produced_packets=state.produced_packets+result.demo_aura_packets169,
         collection=replace(state.collection, level=level, death=death))
 
@@ -762,6 +844,62 @@ def _growth_banners(state, events):
     return replace(state,produced_packets=state.produced_packets+tuple(packets))
 
 
+def _resource_live_origins135(sources,effects,now_bits):
+    """Carry written scratch origins through10298's exact retain/partial append.
+
+    No source word is reconstructed from the returned original or a guessed
+    zero. Every modeled byte is cross-checked against the consumer's returned
+    physical owner when the context is adopted.
+    """
+    for effect in effects:
+        if effect.stage!='resource' or effect.pickup_kind==5:continue
+        if effect.pickup_kind not in(3,4):raise PendingHeadless135('Unknown resource live producer')
+        spell,duration=(23451,0x41200000)if effect.pickup_kind==3 else(23505,0x41700000)
+        sources=sources.retain(lambda row:u32(row,20,'10298 sameSpell retain')!=spell)
+        physical=append_live135(sources.live,((0,0),(4,0),(8,0),(20,spell),
+            (24,f.add(now_bits,duration)),(28,0)))
+        sources=sources.replace_live(physical)
+    return sources
+
+
+def _collect_phase135(state, now_bits):
+    """Bind the current live view only for2862, then commit all returned owners."""
+    collection=state.collection
+    if state.player_sources is not None:
+        context=state.player_sources.context(collection.level,state.source_id,state.action_sequence1644)
+        collection=replace(collection,resource_context=context)
+    result=collect_pickups(collection,now_bits)
+    if result.status!='core_projection':raise PendingHeadless135(result.status)
+    if (collection.level.stats.flag2574==0 and collection.level.phase2587==1
+            and result.state.level.phase2587==2):
+        motion=moving_sequence_delta(state.records,now_bits,auxiliary_motions=(),claims=())
+        result=replace(result,state=replace(result.state,death=replace(result.state.death,
+            message_sequence=(result.state.death.message_sequence+motion.count)&f.MASK)))
+    if state.player_sources is None:
+        state=_sync_pickup_owner(replace(state,collection=result.state),
+            pre_compaction_records=result.pre_compaction_records)
+        return _growth_banners(state,result.growth_events)
+    from .mixed_resource135 import project_mixed_pickup_storage135
+    from .opening_npc_pickups135 import OpeningVector135
+    vector=OpeningVector135(56,tuple(tuple(cells135(row,56))for row in state.pickup_storage56),
+        state.pickup_active_count)
+    physical=project_mixed_pickup_storage135(vector,collection.death.records,result)
+    packets=[];notifications=[]
+    for effect in result.ordered_effects:
+        if effect.stage=='despawn':
+            packets.append((170,struct.pack('<Q',effect.guid).hex()))
+        packets.extend(effect.packets)
+        notifications.extend(effect.notifications)
+    #Growth packets are already attached to each XP award in reverse
+    #consumption order. Appending growth_events again would duplicate150 and
+    #move it after a later rune/coin instead of preserving the original order.
+    state=_adopt_player_context135(state,result.state.resource_context,result.state,
+        packets=packets,notifications=notifications,
+        live_owner=_resource_live_origins135(state.player_sources,result.ordered_effects,now_bits))
+    return replace(state,pickup_storage56=tuple(encode_row(row)for row in physical.storage),
+        pickup_active_count=physical.count)
+
+
 def step_frame(state, dt_bits):
     """Controlled full single-state tail, not880front/party/transport orboot.
 
@@ -784,10 +922,20 @@ def step_frame(state, dt_bits):
         return state, (), 'pending_endless_boss'
     state = replace(state, collection=replace(state.collection,
         level=replace(level, stats=replace(level.stats, now_bits=now))), frames=state.frames + 1)
-    prepared = prepare_player_update(state.collection.level, state.live_records, state.unspecified_live_words,
-        now, dt_bits, state.incoming.last_hit_1648_bits, explicit_other_sources_absent=True, periodic_input=())
-    state = replace(state, collection=replace(state.collection, level=prepared.level),
-        live_records=prepared.live_records, unspecified_live_words=prepared.unspecified_live_words)
+    if state.player_sources is None:
+        prepared = prepare_player_update(state.collection.level, state.live_records, state.unspecified_live_words,
+            now, dt_bits, state.incoming.last_hit_1648_bits, explicit_other_sources_absent=True, periodic_input=())
+        state = replace(state, collection=replace(state.collection, level=prepared.level),
+            live_records=prepared.live_records, unspecified_live_words=prepared.unspecified_live_words)
+    else:
+        context=state.player_sources.context(state.collection.level,state.source_id,state.action_sequence1644)
+        prepared=prepare_resource_player_update135(state.collection.level,context,now,dt_bits,
+            state.incoming.last_hit_1648_bits,explicit_other_sources_absent=True,periodic_input=())
+        sources=state.player_sources
+        if prepared.recalculated:
+            sources=sources.retain(lambda row:f.to_float(now)<f.to_float(u32(row,24,'2088 retain expiry')))
+        state=_adopt_player_context135(state,prepared.context,
+            replace(state.collection,level=prepared.level),packets=prepared.packets,live_owner=sources)
     stages = []
     state = _cast_phase(state, dt_bits); stages.append(('player', state))
     state = _tail_phase(state, 'extra', dt_bits); stages.append(('extra', state))
@@ -798,14 +946,7 @@ def step_frame(state, dt_bits):
     state = _tail_phase(state, 'deadline', dt_bits); stages.append(('deadline', state))
     state = _tail_phase(state, 'secondary', dt_bits); stages.append(('secondary', state))
     state = _ai_phase(state, dt_bits); stages.append(('ai', state))
-    result = collect_pickups(state.collection, now)
-    if result.status != 'core_projection': raise PendingHeadless135(result.status)
-    if state.collection.level.stats.flag2574 == 0 and state.collection.level.phase2587 == 1 and result.state.level.phase2587 == 2:
-        motion = moving_sequence_delta(state.records, now, auxiliary_motions=(), claims=())
-        result = replace(result, state=replace(result.state, death=replace(result.state.death,
-            message_sequence=(result.state.death.message_sequence + motion.count) & f.MASK)))
-    state = _sync_pickup_owner(replace(state, collection=result.state),pre_compaction_records=result.pre_compaction_records)
-    state = _growth_banners(state,result.growth_events); stages.append(('collect', state))
+    state=_collect_phase135(state,now);stages.append(('collect',state))
     state = _tail_phase(state, 'claims', dt_bits); stages.append(('claims', state))
     if state.tail.gate2579:
         raise PendingHeadless135('Alternate2579 spawn/special gate requires continuation')
@@ -841,15 +982,26 @@ def select(state, index):
     if not result.accepted: return state, result.status
     selected = result.state
     records = selected.pickups
-    live = []; unknown = set()
-    for i, raw in enumerate(state.live_records):
-        if result.status == 'running' and struct.unpack_from('<I', bytes.fromhex(raw), 20)[0] == 1020: continue
-        j = len(live); live.append(raw)
-        unknown.update((j, offset) for row, offset in state.unspecified_live_words if row == i)
-    if result.status == 'running':
-        index = len(live); expiry = selected.level.sources.live_effects[-1].expires_bits
-        live.append(struct.pack('<8I', 0, 0, 12, 0, 0, 1020, expiry, 0).hex())
-        unknown.update(((index, 12), (index, 16)))
+    player_sources=state.player_sources
+    if player_sources is None:
+        live = []; unknown = set()
+        for i, raw in enumerate(state.live_records):
+            if result.status == 'running' and struct.unpack_from('<I', bytes.fromhex(raw), 20)[0] == 1020: continue
+            j = len(live); live.append(raw)
+            unknown.update((j, offset) for row, offset in state.unspecified_live_words if row == i)
+        if result.status == 'running':
+            index = len(live); expiry = selected.level.sources.live_effects[-1].expires_bits
+            live.append(struct.pack('<8I', 0, 0, 12, 0, 0, 1020, expiry, 0).hex())
+            unknown.update(((index, 12), (index, 16)))
+    else:
+        if result.status=='running':
+            player_sources=player_sources.retain(lambda row:u32(row,20,'4600 retain1020')!=1020)
+            physical=resume_live1020_135(player_sources.live,selected.level.stats.now_bits,
+                resumption_explicit=True)
+            player_sources=player_sources.replace_live(physical)
+            level,player_sources=player_sources.refresh_aura(selected.level)
+            selected=replace(selected,level=level)
+        live,unknown=player_sources.active_view()
     collection = replace(collection, level=selected.level, currency=selected.currency,
         death=replace(collection.death, records=records), xp_queue=selected.xp_queue,
         xp_queue_capacity=selected.xp_queue_capacity)
@@ -859,14 +1011,19 @@ def select(state, index):
         collection = replace(collection, death=replace(collection.death,
             message_sequence=(collection.death.message_sequence + motion.count) & f.MASK))
     state = _sync_pickup_owner(replace(state, collection=collection, game_tag=selected.game_tag,
-        live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)), selections=state.selections + 1),removal_order='forward')
+        live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)),
+        player_sources=player_sources,selections=state.selections + 1),removal_order='forward')
     return _growth_banners(state,result.growth_events),result.status
 
 
 def projection(state):
     result = level_projection(state.collection.level)
-    result['player_fields'] = {k: v for k, v in result['player_fields'].items() if int(k) in (22, 28, 34, 716, 717, 1109, 1176)}
-    live = [list(struct.unpack('<8I', bytes.fromhex(raw))) for raw in state.live_records]
+    if state.player_sources is None:
+        result['player_fields'] = {k: v for k, v in result['player_fields'].items() if int(k) in (22, 28, 34, 716, 717, 1109, 1176)}
+    live=[]
+    for raw in state.live_records:
+        row=cells135(raw,32)
+        live.append([None if None in row[o:o+4]else u32(row,o,'Player live projection')for o in range(0,32,4)])
     for index, offset in state.unspecified_live_words: live[index][offset // 4] = None
     pickups = [list(pickup_words135(p))for p in state.collection.death.records]
     def storage_sha(storage):
@@ -898,6 +1055,15 @@ def projection(state):
             player_action_tag416=state.player_action_tag416, player_xyz=list(state.collection.player_xyz),
             delayed56=dict(capacity=len(state.delayed_storage56), records_hex=list(state.delayed_records56)),
             effects120=dict(capacity=state.effect_capacity120, records_hex=list(state.effect_records120))))
+    if state.player_sources is not None:
+        sources=state.player_sources
+        result['player_source_owner']={
+            'live_capacity':sources.live.capacity,'live_count':sources.live.count,
+            'live_backing_cells':[list(row)for row in sources.live.storage],
+            'aura_capacity':sources.aura.capacity,'aura_initialized2569':sources.aura.initialized2569,
+            'aura_backing_cells':[list(row)for row in sources.aura.storage],
+            'notification_next_id14340336':sources.notification_next_id14340336,
+            'rune_notifications':list(state.rune_notifications)}
     if state.opening_handoff is not None:
         path=state.distance_map
         result['independent_opening_owner']={

@@ -1,13 +1,13 @@
 # REA 逆向研究
 
-官方metadata本轮核对至 **2026-11-01T21:51:57Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](evidence/official-goal-phase-network-check-20261101T215156.327710Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
+官方metadata本轮核对至 **2026-11-01T22:49:11Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](evidence/official-goal-phase-network-check-20261101T224908.715662Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
 
 
 当前功能目标已更新为**官方0.138.0**，Windows/Web原件均在4T另档并完成大小、哈希及采集前后部署一致性核对，见[138采集与版本状态](reports/2026-11-02-latest0138-state.md)。新版静态与动态证据单独登记；固定135连续流程、137局部组件的结果均不转记138。现有安装包和存档未替换。
 
-当前[750帧／六次选卡与挫志怒吼闭环](reports/2026-11-02-opening-demo-combat0135.md)固定135：真实opening→战斗→6次选卡→首波次及补给→Demo施放／受伤／减益到期→继续，10,506阶段／10,508原件入口、0声明差异；[完整只读独审通过](reports/2026-11-02-opening-combat0135-750frame-independent-review.md)。原件只执行一次，读取器修复后重比完整采集，重比／独审不增加原件case。110捕获源／111重比源含95production；仍为snapshot／独立预解析world／外部clock的14尾阶段，完整880／Windows执行／独立完整一局均为0。历史[650帧](reports/2026-11-02-opening-event-combat0135.md)保留原范围。
+当前[完整玩家效果所有者→750帧连续闭环](reports/2026-11-02-opening-player-sources0135.md)固定135：完整live32／Aura48、选卡1020保护、self增益、到期和单次回血接入同一状态，新采集750帧／6select／10,506阶段／10,508原件入口，0声明差异，[全量独审通过](reports/2026-11-02-opening-player-combat0135-independent-review.md)。114源／98production；4份922辅助词的caller值未预测，只按显式来源核写入与复制继承。仍是snapshot／独立预解析world／外部clock的14尾阶段，0自然近身符文消费、完整880／Windows执行／独立一局均为0。先前[750数值闭环](reports/2026-11-02-opening-demo-combat0135.md)保留原范围，计数不相加。
 
-[原始451资源独立入口](evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。此前665帧纯模型技能边界现由后继750原件组合闭合；raw650收据仍只代表650帧资产入口，没有新跑raw750。下一缺口是同一物理live/Aura所有者上的资源消费与选卡1020保护共存，继而继续完整一局。以下较早记录保持各自历史范围和计数。
+[原始资源独立入口750帧](reports/2026-11-02-raw-physical7500135.md)已完成451实际文件／67,281,330B→world→opening→物理玩家状态→750帧／6select，105源／102production及资产不变，不读原件memory／WASM／预解析world。74项终态模型组合比较、98份共同production与9份完整owner一致；这是模型自检／终态组合层，0新增原件case。清单453项中的两份未加载DBC另记。下一实际缺口为真实玩家移动／地形校正→自然靠近拾取及后续Boss、终局。以下较早收据保持各自历史范围。
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 

@@ -13,6 +13,10 @@ from .binary32_sqrt import sqrt_bits
 from .cast135 import CastState,query_targets
 from .derived_stats135 import LiveEffect,StatsInput,recalculate
 from .level_cycle135 import LevelCycleState
+from .record_cells135 import u32
+from .live_owner135 import (PendingLiveOwner135,live_view_cells135,live_active_view135,
+    live_semantics135,retain_owner0_spell_live135,append_live135,
+    ScratchAuxiliaryWord135,append_self_buff_scratch135)
 
 RACIALS={b'perception':(5476580,8,20600),b'blood_fury':(5476668,8,23234),
  b'stoneform':(5476756,7,20594),b'shadowmeld':(5476844,12,20580),
@@ -43,6 +47,8 @@ class RacialCastResult135:
     callbacks:tuple
     pending:tuple
     attempted_spell_sets:tuple
+    physical_live:object|None=None
+    physical_scratch_write:tuple|None=None
 
 
 def _maxnum(a,b):
@@ -58,12 +64,15 @@ def _rebuild(level):
             pool1532_bits=aux['1444'],pool1536_bits=aux['1448'],conditional1348_bits=aux['1348'],pool768_bits=aux['768']))
 
 
-def cast_self_buff(cast,level,definition,owned,*,live_records,busy488=0,unspecified_live_words=(),attempted_spell_sets=None):
+def cast_self_buff(cast,level,definition,owned,*,live_records,busy488=0,unspecified_live_words=(),attempted_spell_sets=None,physical_live=None,scratch_word16_bits=None,scratch_word16_source=None):
     if not isinstance(cast,CastState)or not isinstance(level,LevelCycleState)or not isinstance(owned,AbilityRecord):raise TypeError('Resolved cast/level/owned states required')
     if not isinstance(definition,RacialDefinition135):raise TypeError('Explicit88B racial definition required')
     w=definition.words();tag=w[0];spell=w[11];now=cast.combat.now_bits
     if owned.definition_pointer!=definition.pointer or now!=level.stats.now_bits or cast.rng_words!=level.rng_words:
         raise ValueError('Racial pointer/clock/shared RNG snapshots disagree')
+    if physical_live is not None:
+        return _cast_physical_self_buff135(cast,level,definition,owned,w,physical_live,live_records,
+            unspecified_live_words,busy488,attempted_spell_sets,scratch_word16_bits,scratch_word16_source)
     if type(live_records)is not tuple or len(live_records)!=len(level.sources.live_effects):raise ValueError('Explicit complete32B live records required')
     records=[struct.unpack('<8I',bytes.fromhex(h))for h in live_records]
     if any(len(bytes.fromhex(h))!=32 for h in live_records):raise ValueError('Live record length')
@@ -117,3 +126,61 @@ def cast_self_buff(cast,level,definition,owned,*,live_records,busy488=0,unspecif
             area_multiplier_bits=d[1580],cooldown_multiplier_bits=d[1544],extra_targets=d[1592])
     callbacks.append('1202')
     return result(1)
+
+
+def _cast_physical_self_buff135(cast,level,definition,owned,w,physical,view,unspecified,busy,attempted,scratch_word16_bits,scratch_word16_source):
+    """Explicit complete-backing922 effect8/9 path; legacy API is unchanged.
+
+    Effect8/9 writes scratch+40/+44, then jumps over the default branch's
+    scratch+48 initialization. The common append copies the prior scratch+48
+    into live+16. Its source must be explicit; it is not definition+8 or zero.
+    Other caster variants retain their legacy boundary until their physical
+    append write sets have separate original evidence.
+    """
+    tag,spell,now=w[0],w[11],cast.combat.now_bits
+    if tag not in(8,9):raise PendingLiveOwner135('Physical self-buff append currently admits effect8/9 only')
+    rows=live_view_cells135(physical,view,unspecified)
+    semantic=live_semantics135(physical,allowed_kinds=(0,7,8,9,12))
+    if semantic!=level.sources.live_effects:raise ValueError('Canonical physical/semantic live source mismatch')
+    for row in rows:
+        if u32(row,8,'922 physical kind')==0 and u32(row,20,'922 resource source')not in(23451,23505):
+            raise PendingLiveOwner135('Other payload-free live producer remains unresolved')
+    if attempted is None:
+        if busy or cast.context908&1:raise ValueError('Three explicit attempt ledgers required when only set3 is gated')
+        ledgers=(cast.attempted_spell_ids,)*3
+    else:
+        ledgers=tuple(tuple(row)for row in attempted)
+        if len(ledgers)!=3 or ledgers[0]!=cast.attempted_spell_ids:raise ValueError('Attempt ledger ownership mismatch')
+        if any(type(value)is not int or not 0<=value<=f.MASK for row in ledgers for value in row):raise ValueError('Explicit u32 attempt spell IDs required')
+    ledgers=tuple((row if spell in row else row+(spell,))if i<2 or(not busy and not cast.context908&1)else row for i,row in enumerate(ledgers))
+    cast=replace(cast,attempted_spell_ids=ledgers[0])
+    scratch_write=None
+    def result(success,callbacks):
+        active,marks=live_active_view135(physical)
+        pending=('1202 physical aura/object keys and message packet bytes remain pending',
+            'Physical append variants7/12 and original allocator addresses remain separate')
+        if scratch_write is not None and scratch_write[2].bits is None:
+            pending+=('Caller-stack source922.frame+48 copied into live+16 remains explicitly unresolved',)
+        return RacialCastResult135(cast,level,success,active,marks,callbacks,
+            pending,ledgers,physical,scratch_write)
+    if not query_targets(cast.spatial,cast.player_xy,0x41f00000,now):return result(0,())
+    if scratch_word16_bits is not None and scratch_word16_source is not None:
+        raise ValueError('Choose one explicit scratch word or typed source')
+    if scratch_word16_source is not None:
+        if not isinstance(scratch_word16_source,ScratchAuxiliaryWord135):
+            raise TypeError('Exact typed922 auxiliary source required')
+        scratch_source=scratch_word16_source
+    elif type(scratch_word16_bits)is int and 0<=scratch_word16_bits<=f.MASK:
+        scratch_source=ScratchAuxiliaryWord135(scratch_word16_bits)
+    else:
+        raise PendingLiveOwner135('922 effect8/9 scratch frame+48 source for live+16 requires an explicit u32')
+    duration=_maxnum(f.mul(f.mul(f.mul(w[17],0x3fb33333),owned.duration_bits),owned.additional_duration_bits),0x3dcccccd)
+    value=f.mul(owned.field76_bits,w[1])
+    physical=retain_owner0_spell_live135(physical,spell)
+    physical,scratch_write=append_self_buff_scratch135(physical,
+        ((0,0),(4,0),(8,tag),(12,value),(20,spell),(24,f.add(now,duration)),(28,0)),scratch_source)
+    level=replace(level,sources=replace(level.sources,live_effects=live_semantics135(physical,allowed_kinds=(0,7,8,9,12))))
+    level=_rebuild(level);d=dict(level.derived_bits)
+    cast=replace(cast,damage_multiplier_bits=d[1540],max_hp_bits=d[1536],critical_chance_bits=d[1548],critical_multiplier_bits=d[1552],
+        area_multiplier_bits=d[1580],cooldown_multiplier_bits=d[1544],extra_targets=d[1592])
+    return result(1,('cast-message','live-append','1512','1202'))

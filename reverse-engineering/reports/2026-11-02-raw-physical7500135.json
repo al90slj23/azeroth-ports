@@ -1,0 +1,291 @@
+{
+  "component": "raw451_physical_player750_terminal_model_bridge135",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "status": "pure_model_raw_asset_execution_and_terminal_model_composition_passed",
+  "receipt": "evidence/raw750-physical-owned-20261101T225139.986202Z/model750/receipt.json",
+  "receipt_sha256": "269e779b007e44737560abe6ad06a89d5e0c59b2fc3697522b7d1bea87342a05",
+  "bridge": "evidence/raw750-physical-owned-20261101T225139.986202Z/terminal-model-bridge-v2.json",
+  "bridge_sha256": "4d61eb0bf86e00ab147ab002f14a78fe22d287332f6e6594bbc49bac51d1679e",
+  "bridge_script": "scripts/bridge_asset_player_sources135.py",
+  "bridge_script_sha256": "741c2a0f0835a725de1dbdd7e591c578a0f426b0b510435ad0240eb5754d572a",
+  "process_terminal": "evidence/raw750-physical-owned-20261101T225139.986202Z/process-terminal.json",
+  "process_terminal_sha256": "6c448c6183d39f4a14e92740887f1566190d7b99688d154f8960bc9bfb931392",
+  "process": {
+    "pid": 63520,
+    "pgid": 63520,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 222.7431125830044,
+    "error": null,
+    "deadline_seconds": 480
+  },
+  "independent_frames": 750,
+  "selections": 6,
+  "stage_summaries": 10507,
+  "model_source_files": 105,
+  "model_production_files": 102,
+  "shared_differential_production_files": 98,
+  "source_unchanged": true,
+  "assets_unchanged": true,
+  "current_source_sha_rechecked": true,
+  "escaped_runtime_sources": [],
+  "manifest_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c",
+  "declared_asset_files": 453,
+  "actually_loaded_asset_files": 451,
+  "decoded_bytes": 67281330,
+  "unloaded_assets": [
+    "dbfilesclient\\spell.dbc",
+    "dbfilesclient\\spellicon.dbc"
+  ],
+  "world_artifacts": {
+    "terrain": {
+      "file": "terrain-query.bin",
+      "bytes": 4022968,
+      "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "projection": "tilecount:u32,each(bounds:4u32,chunkcount:u32,each(holes:u16,vertexcount:u32,XYZ:3u32[]))"
+    },
+    "navigation": {
+      "file": "navigation.bin",
+      "bytes": 78400,
+      "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "origin_xy_bits": [
+        3323265024,
+        3292610560
+      ],
+      "width": 280
+    },
+    "secondary": {
+      "file": "secondary-height.u32le",
+      "bytes": 1254400,
+      "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "origin_xy_bits": [
+        3323265024,
+        3292610560
+      ],
+      "width": 560
+    }
+  },
+  "final_progression": {
+    "level": 7,
+    "xp": 24,
+    "pending_upgrades": 0
+  },
+  "final_gold": 94,
+  "full_owner_count": 9,
+  "final_player_sources": {
+    "initialized2569": 1,
+    "notification_next_id14340336": 1,
+    "auxiliary_origins": [
+      [
+        "922.effect8or9.caller_frame+48",
+        594,
+        6673,
+        1114478914,
+        4
+      ],
+      [
+        "922.effect8or9.caller_frame+48",
+        427,
+        20600,
+        1110101176,
+        4
+      ],
+      null,
+      null
+    ],
+    "rune_notifications": []
+  },
+  "final_owner_fingerprints": {
+    "units424": {
+      "count": 26,
+      "capacity": 32,
+      "backing_sha256": "d96fb00279efadf57c3a9125ea482be26bb5f9ddc4d23d14a6456f507e7d02ef",
+      "unknown_backing_cells": 5738
+    },
+    "areas88": {
+      "count": 0,
+      "capacity": 0,
+      "backing_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unknown_backing_cells": 0
+    },
+    "pickups56": {
+      "count": 4,
+      "capacity": 16,
+      "backing_sha256": "9621a7eabc18233e0336ba76c847ca0842836385ecf9b19c65876307e51bb6f4",
+      "unknown_backing_cells": 408
+    },
+    "companions88": {
+      "count": 0,
+      "capacity": 0,
+      "backing_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unknown_backing_cells": 0
+    },
+    "special40": {
+      "count": 4,
+      "capacity": 4,
+      "backing_sha256": "114747eb81ffc1cb652e6760288372bba451ff8f251a250eef140fad853df649",
+      "unknown_backing_cells": 16
+    },
+    "windows8": {
+      "count": 2,
+      "capacity": 4,
+      "backing_sha256": "bbb1a666e37c1d2a247b3e6813b378d574e67f3e7431a42ce6e2a5180b88e255",
+      "unknown_backing_cells": 16
+    },
+    "boundaries8": {
+      "count": 69,
+      "capacity": 128,
+      "backing_sha256": "cdae2685cfb8e1a7bb685ace6d9973cbec219576ded6228e40f703cfcff00454",
+      "unknown_backing_cells": 472
+    },
+    "live32": {
+      "count": 0,
+      "capacity": 4,
+      "backing_sha256": "e0a4d1f54c35566efd3e22a9cdad74a597bd2707fa673ef50a80efb0901c9960",
+      "unknown_backing_cells": 72
+    },
+    "aura48": {
+      "count": 48,
+      "capacity": 48,
+      "backing_sha256": "4f3d3819f848dd4d11f36f4e6df918375673cba004674b9d05a6208b06ba3945",
+      "unknown_backing_cells": 576
+    }
+  },
+  "bridge_checks": {
+    "terminal.phase2587": true,
+    "terminal.now_bits": true,
+    "terminal.rng_words": true,
+    "terminal.spawn_counter": true,
+    "terminal.message_sequence": true,
+    "terminal.kill_cost_bits": true,
+    "terminal.velocity_xy": true,
+    "terminal.previous_player_xyz": true,
+    "terminal.progression": true,
+    "terminal.current_hp_bits": true,
+    "terminal.derived_bits": true,
+    "terminal.player_fields": true,
+    "terminal.racial_record_hex": true,
+    "terminal.owned_records_hex": true,
+    "terminal.pickup_words": true,
+    "terminal.timer1628_bits": true,
+    "terminal.budget_bits": true,
+    "terminal.gold": true,
+    "terminal.earned": true,
+    "terminal.outgoing_total_hex": true,
+    "terminal.incoming_total_hex": true,
+    "terminal.last_hit_bits": true,
+    "terminal.absorbed740_bits": true,
+    "terminal.maximum_shield744_bits": true,
+    "terminal.candidates": true,
+    "terminal.selection_kind2585": true,
+    "terminal.generation_counter2400": true,
+    "terminal.next_resource2444_bits": true,
+    "terminal.next_event2424_bits": true,
+    "terminal.last_event2586": true,
+    "terminal.next_supply2448_bits": true,
+    "full_owner.units": true,
+    "full_owner.areas": true,
+    "full_owner.pickups": true,
+    "full_owner.windows": true,
+    "full_owner.boundaries": true,
+    "full_owner.live32": true,
+    "full_owner.aura48": true,
+    "full_owner.special": true,
+    "full_owner.companions": true,
+    "guardian_cooldowns": true,
+    "special_serialized_fields": true,
+    "special_navigation_input": true,
+    "distance_map_serialized_projection": true,
+    "distance_map_clock": true,
+    "all_declared_actor169": true,
+    "resource_actor169": true,
+    "all_banner150": true,
+    "all_player226": true,
+    "npc_aura169": true,
+    "rune_notifications": true,
+    "player_aura_flag": true,
+    "App_notification_context": true,
+    "written_unknown_auxiliary_origins": true,
+    "opaque_pickup_origins": true,
+    "effect_controls": true,
+    "tail_controls": true,
+    "vector_count.effects120": true,
+    "vector_count.delayed56": true,
+    "vector_count.hits112": true,
+    "vector_count.active84": true,
+    "vector_count.timed12": true,
+    "frame_selection_budget": true,
+    "oracle_frame_selection_identity": true,
+    "opening_input_identity": true,
+    "raw451_inputs": true,
+    "loaded_asset_input_binding": true,
+    "all_assets_stable": true,
+    "model_sources_stable": true,
+    "shared_production_sources": true,
+    "no_original_or_preparsed_inputs": true,
+    "world.terrain-query.bin": true,
+    "world.navigation.bin": true,
+    "world.secondary-height.u32le": true
+  },
+  "bridge_check_count": 74,
+  "expected_terminal_stage_index": 10505,
+  "expected_terminal_action_index": 755,
+  "referenced_differential": "evidence/opening-combat0135-oracle-20261101T224816.309189Z/comparison.json",
+  "referenced_differential_sha256": "dc70b70714d05adbfded365abe954adf6d28a6447ebb09883f130935c5545f28",
+  "evidence_classification": {
+    "raw_execution": "model_selfcheck_only",
+    "bridge": "terminal_comparison_between_two_independent_model_runs",
+    "original_executions": 0,
+    "new_original_differential_cases": 0,
+    "per_stage_raw_asset_differential": false,
+    "caller_scratch_source_values_predicted": false,
+    "full880_frames": 0,
+    "native_windows_execution": false,
+    "complete_games": 0,
+    "playable_replacement": false
+  },
+  "failure_history": [
+    {
+      "path": "evidence/raw750-physical-owned-20261101T225139.986202Z/terminal-model-bridge.json",
+      "sha256": "a8b471c834a3f2b0cf50a7a98d010b7caeb186add32a46f9df34ff7bb062f8b7",
+      "script_snapshot": "evidence/raw750-physical-owned-20261101T225139.986202Z/bridge-v1.py",
+      "script_sha256": "df7640e74cb29e86a0d03ba904c807262f34fdeaae45163a0ad9fc5679ebe092",
+      "outcome": "73checks with only raw451_inputs false: bridge incorrectly expected declared=451; actual declared453 includes two unused DBC, loaded451/67281330B. Preserved first result. No model or original rerun."
+    }
+  ],
+  "not_direct_terminal_projection_keys": [
+    "source_id",
+    "map_id_utf8",
+    "player_xyz",
+    "field1092",
+    "mode2582",
+    "resource_create_packets169",
+    "explicit_actor_creates169",
+    "banner150_packets",
+    "npc_aura_updates169",
+    "guardian_cooldowns",
+    "special",
+    "effect",
+    "tail_flags",
+    "distance_map",
+    "distance_map_updated_at_bits",
+    "aura_initialized2569",
+    "notification_next_id14340336",
+    "player_speed226_packets",
+    "rune_notifications"
+  ],
+  "limitations": [
+    "Terminal comparison between two independent model runs; no new original execution or per-stage raw-asset differential.",
+    "The explicitly listed serialized projection, complete owners and output subsets are compared; absent serializer fields are not invented.",
+    "App notification context1 is an explicit input; caller scratch values remain typed unknown sources."
+  ],
+  "installed_packages_or_saves_changed": false,
+  "files_modified_by_this_task": [
+    "scripts/bridge_asset_player_sources135.py",
+    "reports/2026-11-02-raw-physical7500135.md",
+    "reports/2026-11-02-raw-physical7500135.json"
+  ],
+  "root_production_files_modified_by_this_task": false
+}

@@ -1,0 +1,316 @@
+{
+  "status": "passed_local_static_and_historical_observation_review_with_unresolved_indirect_boundary",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "trace": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-aura-origin0135-static-20261101T220416.107301Z/trace.json",
+  "trace_sha256": "4207c163c4d5ed12aaae6c31f5d2fecf36126b2255e3a9a5e73b30a952dbaf37",
+  "producer_sha256": "8b72e813a58a67282452af4ff8752f392723a3c8c543d3d636d09627c329a934",
+  "corrected_trace": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-aura-origin0135-static-20261101T220724.149178Z/trace.json",
+  "corrected_trace_sha256": "38254937fd50ca7aa6c440ed9fc4aa32d25c8d1cb1862499737779be744c7474",
+  "current_producer_sha256": "ca6810fd59c74ced7be46d4aa343ded688614b65987a7b14bbda30f1511e2c1c",
+  "old_trace_source_snapshot_available": false,
+  "reviewer_script_sha256": "e9398f237d8dbf4ca7e6611c07c64faa45b0e485ca8f73c2d2c8cc25d4a0a97c",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "bounded_WAT_functions": 243,
+  "bounded_WAT_bytes_read": 2953961,
+  "constructor_frame_offset": 88,
+  "constructor_local_writes": {
+    "aura_header": [
+      0,
+      4,
+      0
+    ],
+    "initialized2569": 0,
+    "output_copy_bytes": 2592,
+    "direct1512": true,
+    "direct1202": false
+  },
+  "conditional_direct_closures": [
+    {
+      "entry": 1560,
+      "functions": 103,
+      "direct_edges": 297,
+      "excluded_edges": [],
+      "no_known_target_in_conditional_direct_graph": true,
+      "unresolved_indirect_sites": [
+        {
+          "function": 22868,
+          "line": 29,
+          "instruction": "call_indirect (type 4)"
+        },
+        {
+          "function": 22868,
+          "line": 79,
+          "instruction": "call_indirect (type 6)"
+        },
+        {
+          "function": 22868,
+          "line": 92,
+          "instruction": "call_indirect (type 4)"
+        },
+        {
+          "function": 22868,
+          "line": 113,
+          "instruction": "call_indirect (type 4)"
+        },
+        {
+          "function": 22868,
+          "line": 246,
+          "instruction": "call_indirect (type 6)"
+        },
+        {
+          "function": 49502,
+          "line": 76,
+          "instruction": "call_indirect (type 0)"
+        },
+        {
+          "function": 49502,
+          "line": 98,
+          "instruction": "call_indirect (type 0)"
+        },
+        {
+          "function": 49502,
+          "line": 105,
+          "instruction": "call_indirect (type 0)"
+        },
+        {
+          "function": 172317,
+          "line": 27,
+          "instruction": "call_indirect (type 0)"
+        }
+      ],
+      "indirect_or_alias_complete_no_writer_proof": false
+    },
+    {
+      "entry": 1089,
+      "functions": 206,
+      "direct_edges": 670,
+      "excluded_edges": [
+        {
+          "caller": 1089,
+          "callee": 2785,
+          "reason": "G2576=0 firstdebugguard"
+        },
+        {
+          "caller": 1089,
+          "callee": 5745,
+          "reason": "G2576=0 seconddebugguard"
+        },
+        {
+          "caller": 10146,
+          "callee": 5745,
+          "reason": "G2056=0 definition traversal"
+        }
+      ],
+      "no_known_target_in_conditional_direct_graph": true,
+      "unresolved_indirect_sites": [
+        {
+          "function": 4546,
+          "line": 245,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 4546,
+          "line": 1830,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 4546,
+          "line": 1987,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 20468,
+          "line": 166,
+          "instruction": "call_indirect (type 5)"
+        },
+        {
+          "function": 20468,
+          "line": 243,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 22868,
+          "line": 29,
+          "instruction": "call_indirect (type 4)"
+        },
+        {
+          "function": 22868,
+          "line": 79,
+          "instruction": "call_indirect (type 6)"
+        },
+        {
+          "function": 22868,
+          "line": 92,
+          "instruction": "call_indirect (type 4)"
+        },
+        {
+          "function": 22868,
+          "line": 113,
+          "instruction": "call_indirect (type 4)"
+        },
+        {
+          "function": 22868,
+          "line": 246,
+          "instruction": "call_indirect (type 6)"
+        },
+        {
+          "function": 42177,
+          "line": 609,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 49502,
+          "line": 76,
+          "instruction": "call_indirect (type 0)"
+        },
+        {
+          "function": 49502,
+          "line": 98,
+          "instruction": "call_indirect (type 0)"
+        },
+        {
+          "function": 49502,
+          "line": 105,
+          "instruction": "call_indirect (type 0)"
+        },
+        {
+          "function": 63930,
+          "line": 58,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 67826,
+          "line": 23,
+          "instruction": "call_indirect (type 11)"
+        },
+        {
+          "function": 78412,
+          "line": 643,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 78412,
+          "line": 668,
+          "instruction": "call_indirect (type 3)"
+        },
+        {
+          "function": 172317,
+          "line": 27,
+          "instruction": "call_indirect (type 0)"
+        }
+      ],
+      "indirect_or_alias_complete_no_writer_proof": false
+    }
+  ],
+  "unresolved_indirect_site_count": 22,
+  "global_indirect_no1202_or_noIDwriter_proven": false,
+  "known_literal14340336_writer_functions": [
+    23581,
+    42920,
+    44447
+  ],
+  "arbitrary_computed_pointer_ID_alias_analysis_complete": false,
+  "historical_observation": {
+    "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/entry-world135-probe-receipt.json",
+    "receipt_sha256": "530f079d322365691ce897120ac0014be0da416eb048861b4d42ab988160556c",
+    "config_sha256": "0f8c9caa1cc85ef3c1b549c54fa2908b8cd6ea364eadc83d04284bbafd8765bf",
+    "runtime_sha256": "2bc097d95e16c4e5b18bd7fba25caa83e68ed5f0bca0abcdff8124206b2d3842",
+    "observations_sha256": "931d4d9990408f5a74cc8b55f1d2ea6c9767f5d2bb0b09687eb3f38384304061",
+    "selected_profile_input": {
+      "region_id": "elwynn",
+      "class_byte": 1,
+      "race_byte": 1,
+      "object_id_u64": "0",
+      "app_lcg_seed_u64": "0",
+      "live_bytes": 372,
+      "allocation_bytes": 376,
+      "basis": "Explicit empty376 selected-profile input previously verified with complete1560; App+3376 same live layout. This is not the complete menu/profile producer.",
+      "initial1560_receipt": "evidence/full0135-oracle-20261101T055136.418672Z/initial135-comparison.json",
+      "initial1560_receipt_sha256": "f19963db365d60021f4d547a464622bbc5eebb69ba42e9f4ff55237de1457649"
+    },
+    "snapshots": [
+      {
+        "label": "after_real_world6730",
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_world6730.memory",
+        "bytes": 117440512,
+        "sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+        "Game": 14554176,
+        "Aura2000_2004_2008": [
+          0,
+          4,
+          0
+        ],
+        "initialized2569": 0,
+        "flags2576": 0,
+        "definitions2056": 0,
+        "App14340336": 1
+      },
+      {
+        "label": "after_real_begin1089",
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_begin1089.memory",
+        "bytes": 166395904,
+        "sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+        "Game": 14554176,
+        "Aura2000_2004_2008": [
+          0,
+          4,
+          0
+        ],
+        "initialized2569": 0,
+        "flags2576": 0,
+        "definitions2056": 0,
+        "App14340336": 1
+      }
+    ],
+    "kind": "Existing controlled original observation, not new differential cases or a complete menu producer."
+  },
+  "correction": "Do not promote the conditional direct graph to complete indirect reachability. Historical object0 evidence supports only its stated input. Current object42 natural AppID producer needs corresponding captured evidence; controller may supply explicit typed1 input.",
+  "body_proofs_sha256": "6d1d1beaac095fe07b8578e170fee8120ce8b5202510b2ba3f9ffae09f18dec9",
+  "new_original_executions": 0,
+  "new_model_or_checker_executions": 0,
+  "new_original_cases": 0,
+  "new_mainloop_frames": 0,
+  "current_object42_natural_producer_verified": false,
+  "complete_profile_menu_producer": false,
+  "full_WAT_read": false,
+  "elapsed_seconds": 0.9674627919885097,
+  "review_receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-aura-origin135-independent-review-owned-20261101T221224.005426Z/review/review.json",
+  "review_receipt_sha256": "5511f8a811d71be384c2770f20073f147b3806eabd1831bd76269f4fe29d46b5",
+  "review_terminal": {
+    "pid": 319,
+    "pgid": 319,
+    "exit_code": 0,
+    "error": null,
+    "seconds": 1.167876833002083,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "review_terminal_sha256": "b8598e9218ed060259ec91033d3fb0ce2dccaeb38d606f06c7f4f2b90fc1e45b",
+  "review_owned_runner_sha256": "466a9e69b20b5de7482530fc8336b06a57e1d69b0be82d0a766ab746b7121d93",
+  "review_owned_process_sha256": "e2bf327a8c74c0be674510f876e4cae001ef80a9f6cc4b7c4e7ccb70f126ec80",
+  "admitted_direct_union_indirect_sites": 19,
+  "additional_ID_writer_body_indirect_sites": 3,
+  "failed_identity_check": {
+    "terminal": {
+      "pid": 99319,
+      "pgid": 99319,
+      "exit_code": 1,
+      "error": null,
+      "seconds": 0.12237850000383332,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "terminal_sha256": "fe53a22e3b10a736c74f3fd696a718318f08fff29fef3a5573c60dee59de6fde",
+    "stderr_sha256": "13ba549e1c928cb4bde73514edad68f0fca0a1e5318b59819e984b5ded856321",
+    "cause": "Old trace had producer8b72 without source snapshot; the author had already corrected current producer toca6810. First reader rejected its naive current==old assertion before target/model execution; old diagnostic and final corrected trace are now separate."
+  },
+  "production_or_primary_or_registry_modified_by_reviewer": false,
+  "staged_or_committed_by_reviewer": false,
+  "reviewer_sources_at_successful_completion": {
+    "scripts/review_player_aura_origin135.py": "e9398f237d8dbf4ca7e6611c07c64faa45b0e485ca8f73c2d2c8cc25d4a0a97c",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_resource_consumer137.py": "813de3c7d7478ea356a1a1ee89b5f37ca0ed65a88d6ed1e7b24f100755e8eada"
+  }
+}

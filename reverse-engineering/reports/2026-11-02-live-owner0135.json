@@ -1,0 +1,314 @@
+{
+  "component": "canonical_live_owner135",
+  "status": "scoped_explicit_scratch_source_and_full_live_owner_differential_and_independent_review_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "comparison": {
+    "path": "evidence/live-owner135-oracle-20261101T224420.333917Z/comparison.json",
+    "sha256": "85979898b212c591d45bc81dc3c3baf8311b861622e5687c6cefb6aa9965e695",
+    "cases": 109,
+    "full_original_calls": 109,
+    "original_functions": {
+      "922": 43,
+      "1072": 33,
+      "4600": 33
+    },
+    "differences": 0
+  },
+  "source_files": 51,
+  "production_files": 43,
+  "local_import_edges": 176,
+  "source_sha256_before": {
+    "scripts/check_live_owner135.py": "16be9e5810aba148b75d4905eab7f2bb08b6c675a0ff46a63934082b51d79a53",
+    "scripts/build_live_owner135_oracle.py": "a641702ce97581da4845d68170217e9dfd2fb82a3214c88c47f0d42ab36ba673",
+    "scripts/run_live_owner135_oracle.mjs": "99f2fad0aeab0469d8831cdc4360851be669808e47c603d1fef55e5e5916a591",
+    "scripts/wasm135_profile.py": "10f6c8215a4d27a12db3bcc7c50a9a50bc42d440214474ebdbbd46700c386c49",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/battle_shout135.py": "d64d68362320568b8c9b6eefb33f5b0281e85ce6bc5d52c553c022a242c98f13",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/live_owner135.py": "03fc25342890e391340337a4368ffc26fa94a9c0fc51b8267135aa30d8ef09db",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/pickup_record_cells135.py": "0dcd59577d03abc4e1003f8ccace76345f573beabaaa02016377a2ecabfc8af3",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "65c7c9f51872e876d46b7940d3d5efe9126c31a81a38b9b65905990410ae1a07",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "f93086c8bf46907123b779804fe6fa32ae37680d5aaac656904d7f741a4465bf",
+    "reconstruction/core_spec/resource_consumer135.py": "062bc3169906fdd165d825c0c90c994fc2711bbc6f923e2ae3c8187d267254d1",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "897de2d39ef5c8c032467a8fdeea6b11db33d288a59d57ffcb6cfce5789be9d4",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_sha256_after": {
+    "scripts/check_live_owner135.py": "16be9e5810aba148b75d4905eab7f2bb08b6c675a0ff46a63934082b51d79a53",
+    "scripts/build_live_owner135_oracle.py": "a641702ce97581da4845d68170217e9dfd2fb82a3214c88c47f0d42ab36ba673",
+    "scripts/run_live_owner135_oracle.mjs": "99f2fad0aeab0469d8831cdc4360851be669808e47c603d1fef55e5e5916a591",
+    "scripts/wasm135_profile.py": "10f6c8215a4d27a12db3bcc7c50a9a50bc42d440214474ebdbbd46700c386c49",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/battle_shout135.py": "d64d68362320568b8c9b6eefb33f5b0281e85ce6bc5d52c553c022a242c98f13",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/live_owner135.py": "03fc25342890e391340337a4368ffc26fa94a9c0fc51b8267135aa30d8ef09db",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/pickup_record_cells135.py": "0dcd59577d03abc4e1003f8ccace76345f573beabaaa02016377a2ecabfc8af3",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "65c7c9f51872e876d46b7940d3d5efe9126c31a81a38b9b65905990410ae1a07",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "f93086c8bf46907123b779804fe6fa32ae37680d5aaac656904d7f741a4465bf",
+    "reconstruction/core_spec/resource_consumer135.py": "062bc3169906fdd165d825c0c90c994fc2711bbc6f923e2ae3c8187d267254d1",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "897de2d39ef5c8c032467a8fdeea6b11db33d288a59d57ffcb6cfce5789be9d4",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_unchanged": true,
+  "counts": {
+    "known_values": 17215,
+    "explicit_unknown_bytes": 2500,
+    "structural_null_success": 66
+  },
+  "runtime": {
+    "cases": 109,
+    "fresh_instances": 109,
+    "full_calls": 109,
+    "entry_counts": {
+      "922": 43,
+      "1072": 33,
+      "4600": 33
+    },
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "peak_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "heap_mib": 512,
+    "output_bytes": 3838718,
+    "stack_all_restored": true,
+    "original_snapshot_loaded": false,
+    "application_start_called": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "original_bodies_unchanged": true,
+    "error": null
+  },
+  "stack_guard_count": 680,
+  "allocator_guard_count": 571,
+  "process": {
+    "pid": 39284,
+    "pgid": 39284,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 3.900888832999044,
+    "error": null
+  },
+  "expected_before_original": true,
+  "all_original_function_bodies_unchanged": true,
+  "private_export_surface": [
+    {
+      "name": "research135_live_cast922",
+      "kind": 0,
+      "index": 922
+    },
+    {
+      "name": "research135_live_select1072",
+      "kind": 0,
+      "index": 1072
+    },
+    {
+      "name": "research135_live_resume4600",
+      "kind": 0,
+      "index": 4600
+    },
+    {
+      "name": "research135_live_stack0",
+      "kind": 3,
+      "index": 0
+    }
+  ],
+  "snapshot_loaded": false,
+  "application_start_called": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "api": {
+    "owner": "core_spec.resource_consumer135.LiveVector135(storage,count), exact immutable byte-or-None full capacity rows",
+    "functions": [
+      "retain_live135(owner,predicate)",
+      "append_live135(owner,ordered_u32_word_writes)",
+      "resume_live1020_135(owner,now_bits,resumption_explicit=True)",
+      "live_semantics135(owner,allowed_kinds=...)",
+      "live_active_view135(owner)",
+      "live_view_cells135(owner,records,unspecified)"
+    ],
+    "cast": "cast_self_buff/cast_battle_shout135(...,physical_live=owner,scratch_word16_bits=explicit_u32) OR scratch_word16_source=ScratchAuxiliaryWord135(bits_or_explicitNone). Missing source raises Pending on successful8/9 append; target-none may return0. result.physical_scratch_write=(index,16,typedSource) must be carried by controller.",
+    "supported_physical_casters": "effect8/9 currently; caster7/12 and actual1073 cleanup remain Pending",
+    "typed_source": "ScratchAuxiliaryWord135(bits,source=\"922.effect8or9.caller_frame+48\") binds only this exact write. General append_live135 remains u32-only; append_self_buff_scratch135 alone may write explicit unresolvedsource+16=None and returns its provenance descriptor."
+  },
+  "rules": {
+    "retain": "Original forward retain copies every full32B retained row into holes, preserves inactive tail; predicate is consumer-specific.",
+    "growth": "When count==capacity, reserve max(4,2capacity); newly allocated physical bytes remainNone in independent owner, existing rows preserved.",
+    "resume1020": "4600 removes every spell1020, then appends kind12/1020 at now+1. Writes0/4/8/20/24/28 only; +12/+16 inherit the then-current append slot, possibly known orNone.",
+    "cast8or9": "922 effect8/9 initializes scratch+40(kind) and+44(magnitude), then branches over the default initializer of scratch+48. Common append really copies this prior scratch word to live+16. It is neither definition[2] nor the old destination slot. Explicit known u32 inputs are exact; natural caller scratch producer remains unresolved.",
+    "call_order": "1072 recalculates1512 before4600;4600 appends1020 then1202. Successful922 effect8/9 appends then1512 then1202."
+  },
+  "write_set_witnesses": {
+    "old_zero_fixture_witnesses": "evidence/live-owner135-oracle-20261101T223912.866284Z/write-set-witnesses.json",
+    "scope": "Selection49/81 destination inheritance remains a valid controlled witness. Cast17 wrote0 because the direct caller scratch word was0, not because definition[2] had proven origin.",
+    "new_scratch_readback": "evidence/live-owner135-oracle-20261101T224420.333917Z/scratch-source-readback.json",
+    "new_scratch_readback_sha256": "c801185a1466a35aded89059e6b0df5e162acd98a38a9386176a379ed5eecd24",
+    "controlled_cast_inputs": 43,
+    "successful_casts": 41,
+    "actual_declared_u32_words": [
+      0,
+      1116319189,
+      1515870810,
+      2779096485
+    ],
+    "typed_opaque_model_source_cases": 4,
+    "new_original_cases_from_readback": 0
+  },
+  "coverage": {
+    "cast_cases": 43,
+    "resume_cases": 33,
+    "select_cases": 33,
+    "patterns": "empty; single8;0/12;interleaved12/0/12/8;matching8 duplicates;resource0 and8 reorder;all1020;nonzeroowner8; no-target; caster9 berserking",
+    "known_and_nullable_initial_storage": true,
+    "fullcapacity_and_two_slack_rows": true,
+    "newly_allocated_unknown_bytes_not_original_poison_inputs": true,
+    "poisoned_unknown_input_words_strict_preservation": "Alongside byte-or-None projected comparison, concretized expected full backing is generated before original execution using declared A5/5A input poison and compared; allocator-new unknown bytes remain unknown.",
+    "explicit_known_entry_stack_words": true,
+    "unresolved_origin_projection_cases": 4
+  },
+  "correction_to_historical_reports": {
+    "issue": "The interim105 generalization that definition+8 initialized scratch+48 for caster8/9 was false. The real8/9 branch skips it; common append copies prior stack memory.",
+    "counterexample": "Root controlled opening120, stage70 perception firstcast, actuallive+16=0x4289add5 while interim model hardcoded0;6444 declared differences retained.",
+    "counterexample_receipt": "evidence/opening-combat0135-oracle-20261101T223938.000541Z/comparison.json",
+    "new_resolution": "This109 batch declares the entry scratch value as a controlled input, including distinct poison words. It proves exact copying into live+16 but does not recover the natural2088/1076 caller producer.",
+    "history_retained": "Old105 capture and its0diff limited projection remain unchanged; it cannot substantiate a universalword source. Oldracial/Battle unspecified masks are not retrospectively promoted.",
+    "natural_independent_gameplay_logic": "The admitted numeric/Aura model reads no live+16 value for0/8/1020; broader original consumers are not proved by this component. Typed unknown source remains pending and must track every physical copy/overwrite."
+  },
+  "history": [
+    {
+      "directory": "evidence/live-owner135-oracle-20261101T221218.974812Z",
+      "original_process": {
+        "pid": 332,
+        "pgid": 332,
+        "exit_code": 0,
+        "pid_missing": true,
+        "pgid_missing": true,
+        "seconds": 0.4582868339930428,
+        "error": null
+      },
+      "outcome": "Original4-call execution completed, runtime noerror/stackrestored; no comparison receipt exists. Parent interruption or tool disappearance is not called a validated pass."
+    },
+    {
+      "directory": "evidence/live-owner135-oracle-20261101T221616.304815Z",
+      "receipt_sha256": "d3e787a400ddd2bce51cb43261c1c0e040271ba3df693ff610cb4169e5416a48",
+      "outcome": "Pilot5 fresh calls/0differences; separate from final105 count, not added."
+    },
+    {
+      "directory": "evidence/live-owner135-oracle-20261101T223912.866284Z",
+      "receipt_sha256": "d152eb693fe6ab39410d4977ec0e9e12e290dbe73a19920e111f1664e44c0541",
+      "outcome": "105-controlledcold-entry inputs0diff; rejected as generalproof ofdefinition[2] origin after actualnaturalcaller counterexample."
+    },
+    {
+      "directory": "evidence/opening-combat0135-oracle-20261101T223938.000541Z",
+      "outcome": "Root120 completed capture finds6444 differences beginning live+16 atstage70; source branch assumption false. Capture not modified."
+    },
+    {
+      "directory": "evidence/live-owner135-oracle-20261101T224234.454444Z",
+      "receipt_sha256": "460f2d0edc39e089ff6250decff3176824dd0e4755472d9d1b9e2f105589341a",
+      "outcome": "Newexplicit u32 scratchpilot5/0diff, not added tofinal109."
+    }
+  ],
+  "limitations": [
+    "Physical1202 Aura cache and wire payloads retained raw by this component; not predicted here. Shared Aura coexisting0/8/1020 validation is a separate component.",
+    "Controlled manualGame8192/World128 and explicit source snapshots, not normal App/profile bootstrap.",
+    "Numerical comparison is known23 derived/HP/speed/RNG/7numeric keys/phase/owned/basic/action counters. Not every keyed field or UI/protocol semantic is predicted.",
+    "Original allocator addresses are observations, not independent physical source values.",
+    "Default legacy source path not rewritten; original old reports retain their limited masks. New fullbacking API must be explicitly selected by composition.",
+    "No new headless/full880/Windows/native/completegame/latest138 flow acceptance from this component.",
+    "4typed-unresolvedsource cases intentionally do not predict+16 bytes; explicit provenance differs from uninitialized allocator storage. A separately concretized knowninput companion checks raw controlled values.",
+    "Natural2088→1076→922 scratch prior writer not recovered by this109 batch; no reuse of root120 observed value as a naturalexpected result. Arbitrary0x4289add5 in this corpus is an explicit diagnostic input only."
+  ],
+  "independent_review": {
+    "report": "reports/2026-11-02-live-owner0135-independent-review.json",
+    "report_sha256": "c69053eb5a6ad4d946fe8b61a5e0d9b94ff37404c5cd6a7aadb4dc9059b428ff",
+    "receipt": "evidence/live-owner109-review-owned-20261101T224655.075582Z/review/review.json",
+    "receipt_sha256": "d2fd7c367c173c4c09b59cd5a0cf9a8a586179a30ebc512f2c0e9c291c4efb0a",
+    "new_original_calls": 0,
+    "production_model_or_checker_executed": false
+  },
+  "full880_frames": 0,
+  "complete_games": 0,
+  "native_executions": 0,
+  "headless_integrated_by_this_author": false,
+  "static_scratch_branch_proof": {
+    "path": "evidence/live-owner135-oracle-20261101T224420.333917Z/scratch-branch-proof.json",
+    "sha256": "189e1c6fb9a504e9b9b94b07770d70afb4150bbed79f73263d390ddf4e9cb767"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "status": "partial_physical_review_passed_general_caster_plus16_source_claim_contradicted",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/live-owner135-oracle-20261101T223912.866284Z/comparison.json",
+  "comparison_sha256": "d152eb693fe6ab39410d4977ec0e9e12e290dbe73a19920e111f1664e44c0541",
+  "source_files": 51,
+  "production_files": 43,
+  "frozen_sources_verified": true,
+  "current_source_drift": {
+    "scripts/check_live_owner135.py": {
+      "captured": "e926488acbdca5e6dc2783413e2c0dba9027d1cfe69156c2223d2b46187eee9f",
+      "current": "16be9e5810aba148b75d4905eab7f2bb08b6c675a0ff46a63934082b51d79a53"
+    },
+    "scripts/run_live_owner135_oracle.mjs": {
+      "captured": "f9ee47192e89ac91babf3e9843cfb43d5c8175c3e1ae68e375d7dc9a309aabf4",
+      "current": "99f2fad0aeab0469d8831cdc4360851be669808e47c603d1fef55e5e5916a591"
+    },
+    "reconstruction/core_spec/battle_shout135.py": {
+      "captured": "572b41b0fb7829ad9039255e505ca8d3f1c4ed8f89090861c09dce795f83ac10",
+      "current": "d64d68362320568b8c9b6eefb33f5b0281e85ce6bc5d52c553c022a242c98f13"
+    },
+    "reconstruction/core_spec/live_owner135.py": {
+      "captured": "b27a6449c234afea6b367cbe101bd561394637905de2361da986a725f435657e",
+      "current": "03fc25342890e391340337a4368ffc26fa94a9c0fc51b8267135aa30d8ef09db"
+    },
+    "reconstruction/core_spec/racial_cast135.py": {
+      "captured": "edba3427ac9fd1977c72a4ed8ff054c59a1c3d13a4d51fc933b1f5618ff795a8",
+      "current": "65c7c9f51872e876d46b7940d3d5efe9126c31a81a38b9b65905990410ae1a07"
+    }
+  },
+  "artifacts": {
+    "input.json": "a90641d189f9431dbf7ac3add03ccd91b23c33521581c2b7a3e1f8d7eb4191e9",
+    "expected.json": "12a10356d08e012c1503417726eda239639218f26bdb397f1904f8f974697f14",
+    "labels.json": "e115b3f32ec94242bf15c8387e4d2ed32d34826bd1de58ec738db2d6d5154eae",
+    "manifest.json": "d5c5df964ee6e2711d9b639d6823d09f2ece5a6ede0759bd77433dda8b644aff",
+    "live-owner135-original-exports.wasm": "be40256d03f3c4e3e10e5eca578a1fa39d91a953610bf6fd307c6e70e8167204",
+    "922.wat": "bba8a407db7886d886d2510afaeed67840c28bf7c13926601f4f793aee70f940",
+    "1072.wat": "32ce8baf8bb31d2c76fbfaab16fb1fcaa6f291e256169c04468169a54adcc952",
+    "4600.wat": "bb3ab2da31595cea2be45a3558c886e3c16fd791a033b5e8d7bde7a1d86d69df",
+    "65320.wat": "3fa6993cd4824bc04b8b9f5b9c1b588d3db307b2ed260863c598b8e312a69a51",
+    "1073.wat": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+    "2088.wat": "02ca0590c09f7a727cda54c086270ad9a9e8d437cdc92f2db5f8f4ed0b871f9c",
+    "comparison.json": "d152eb693fe6ab39410d4977ec0e9e12e290dbe73a19920e111f1664e44c0541",
+    "stdout.jsonl": "01082da9201af3f2e5a2b08128543e5bedbcc8ca47b4f857c0f0260ec63ad33e",
+    "runtime.json": "b0968bf9f649163207104648b075bc2ba339f961d1299867606ecdfc9223f4eb",
+    "process-terminal.json": "5dff44b2d81aa7c09bd7d775ce95e5c089c66221e8860dd2229905ef335e5a85",
+    "prepared.json": "f5dafa00632a997baf425ae86e0b810a53df42122e035fcb5fc206cc6857eb8a",
+    "owned-process.json": "60bc5c31e4bf045af380beb256ffb205cebec5198a5edc2820b2305b1020dc4d",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "mechanical_expected_original_comparison_complete": true,
+  "counts": {
+    "cast_cases": 39,
+    "mechanical_known_values": 16387,
+    "expected_unknown_bytes": 2388,
+    "capacity_growths": 18,
+    "independent_known_physical_bytes": 11928,
+    "unresolved_written_scratch_bytes": 148,
+    "unwritten_new_allocation_bytes": 1408,
+    "observed_zero_scratch_source_casts": 37,
+    "removed_rows": 97,
+    "inherited_initial_None_poison_bytes": 980,
+    "resume_cases": 33,
+    "structural_null_success": 66,
+    "whole32_moves": 36,
+    "independent_selection_or_resume_partial_appends": 66,
+    "selection_inherited_None_aux_words": 34,
+    "select_cases": 33
+  },
+  "witnesses": [
+    {
+      "case": 0,
+      "caster": "battle_shout",
+      "physical_slot": 0,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 1,
+      "caster": "battle_shout",
+      "physical_slot": 3,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 4,
+      "caster": "berserking",
+      "physical_slot": 4,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 5,
+      "caster": "battle_shout",
+      "physical_slot": 0,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 6,
+      "caster": "battle_shout",
+      "physical_slot": 0,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 7,
+      "caster": "battle_shout",
+      "physical_slot": 0,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 8,
+      "caster": "battle_shout",
+      "physical_slot": 0,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    },
+    {
+      "case": 9,
+      "caster": "battle_shout",
+      "physical_slot": 0,
+      "output_plus16_word": 0,
+      "precall_scratch_source_not_captured": true
+    }
+  ],
+  "static_proof": {
+    "922_effect8_lines": [
+      5748,
+      5757
+    ],
+    "922_effect9_lines": [
+      5759,
+      5768
+    ],
+    "922_default_only_assignment": [
+      5810,
+      5813
+    ],
+    "922_common_source_write": [
+      5982,
+      5986
+    ],
+    "4600_partial_append": [
+      669,
+      690
+    ],
+    "effect8_9_definition_plus8_source_claim": "contradicted_by_control_flow",
+    "actual_source": "922 scratch frame+48, unassigned by8/9 branch; historical output observes0 only",
+    "stack_frame_bytes": 240,
+    "stack_word_absolute_for_direct_entry": 1048384,
+    "precall_stack_word_captured": false,
+    "caller_producer_restoration": "pending",
+    "bounded_consumer_inspection": {
+      "1512": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/self-buffs0135-oracle-20261101T221510.852622Z/1512.wat",
+        "WAT_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3",
+        "bounded_lines": [
+          1282,
+          1523
+        ],
+        "finding": "live dominance and kind8/9 stats use kind8/magnitude12/spell20/expiry24; no live16 read"
+      },
+      "1202": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/self-buffs0135-oracle-20261101T221510.852622Z/1202.wat",
+        "WAT_sha256": "93c1a53a759d54514a5142e17e88c5542aac1864aaf1d5770f0205dcac1d035e",
+        "bounded_lines": [
+          17,
+          350
+        ],
+        "finding": "positive aggregation uses kind8/9 magnitude12/spell20/expiry24; negative loop onlykind7"
+      },
+      "2088": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/self-buffs0135-oracle-20261101T221510.852622Z/2088.wat",
+        "WAT_sha256": "02ca0590c09f7a727cda54c086270ad9a9e8d437cdc92f2db5f8f4ed0b871f9c",
+        "bounded_lines": [
+          23,
+          181
+        ],
+        "finding": "periodic budget28,expiry24,spell20,owner0; later retain copies complete32B"
+      },
+      "1073": {
+        "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/live-owner135-oracle-20261101T223912.866284Z/1073.wat",
+        "WAT_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+        "bounded_lines": [
+          55,
+          96
+        ],
+        "finding": "incoming protection scan uses expiry24 and kind12; later retain consumeskind7/sourceSpell20"
+      }
+    },
+    "consumer_scope": "Admitted0/8/9/12,empty other sources,periodic budget0; no claim of whole-program non-observability"
+  },
+  "parent_natural_prefix_counterexample": {
+    "capture": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T223938.000541Z",
+    "comparison_sha256": "abe672e1edf19b0ddd3bca121414cfc5b00657458e2ec1f3f7a3289225c596df",
+    "result_file_sha256": "ecc0ac484455697e283eb6466660fbb318162223fd3afa3bc25f1b088ff00e6e",
+    "evidence_decoder_sha256": "728b3ae0576d372b9b7467c484022ae3487e772b9a09c0172bfbcdcf29c1479f",
+    "observation": {
+      "stage": 70,
+      "kind": "player",
+      "effect_kind": 8,
+      "spell": 20600,
+      "physical_plus16_word": 1116319189,
+      "physical_plus16_hex": "d5ad8942",
+      "source_id": "42",
+      "envelopes_decoded": 80
+    },
+    "scope": "Bounded read-only prefix through stage70, per-line/blob verification; no completeCASfinish or all120-stage re-audit claimed."
+  },
+  "runtime_identity": {
+    "cases": 105,
+    "fresh_instances": 105,
+    "full_calls": 105,
+    "entry_counts": {
+      "922": 39,
+      "1072": 33,
+      "4600": 33
+    },
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "peak_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "heap_mib": 512,
+    "output_bytes": 3689566,
+    "stack_all_restored": true,
+    "original_snapshot_loaded": false,
+    "application_start_called": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "original_bodies_unchanged": true,
+    "error": null
+  },
+  "original_process": {
+    "pid": 28464,
+    "pgid": 28464,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 5.149782499996945,
+    "error": null
+  },
+  "source_failure": "Captured physical caster writes+16=definition[2]; effect8/9 skip that assignment and copy prior stack48. All direct fixtures happen to observe0, unlike natural parent composition.",
+  "general_caster_source_restoration_validated": false,
+  "selection_forward_retain_partial_append_validated": true,
+  "new_original_executions": 0,
+  "production_model_executions": 0,
+  "checker_executions": 0,
+  "builder_executions": 0,
+  "numerical_scope": "Full frozen known numeric projection mechanically re-compared; this audit independently reconstructs physical storage, not all1512 arithmetic.",
+  "limitations": [
+    "No precall scratch48 capture in105 fixtures; observed zero does not prove its source.",
+    "Caster8/9 general+16 source is an explicit unresolved write; selection1020+12/+16 inherited slot bytes are independently proved.",
+    "No headless/natural App/full880/Windows/fullgame acceptance."
+  ],
+  "reviewer_script_sha256": "cd7a31d8ae61562c2fadb401a1738f34fdf308540f2c07a46c50608ffb1c4bc8",
+  "seconds": 0.5578256250009872,
+  "independent_review_receipt": "evidence/live-owner105-review-owned-20261101T224434.323126Z/review/review.json",
+  "independent_review_receipt_sha256": "3e1df6d54b1464c4ab4a4bf483047eff3f7ceb4a73ff2da5c760ffc3ccc3ebe6",
+  "owned_terminal": {
+    "pid": 39384,
+    "pgid": 39384,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 0.6672522079898044,
+    "error": null
+  },
+  "owned_terminal_sha256": "f89c912f4eeb5d4ea464dc7547152c293b33be12ad744b4c22120185bc7f996d"
+}

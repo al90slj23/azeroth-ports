@@ -1,0 +1,51 @@
+{
+  "schema": "azeroth-ports-self-aura0135-static-plan-primary-v1",
+  "status": "static_rules_recovered_waiting_baseline_commit_before_minimal_expansion",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "trace": {
+    "path": "evidence/self-aura0135-static-plan-20261101T215808.011168Z/trace.json",
+    "sha256": "1d8451806b94ddf14fb2320406fb04e52160f23f7066b46f1acefd2af3a1618a"
+  },
+  "source": {
+    "path": "scripts/trace_self_aura135.py",
+    "sha256": "cae499c92c89bf029120487385bd49cc3e3dd0472de0e8fe727b3380fdced42f"
+  },
+  "rules": [
+    "4600 removes all existing spell1020 then appends unique kind12/1020 expiringnow+1; writes0..11,20..31 but doesnotwrite12..19",
+    "1202 live positive aggregation covers active kind12; its default dominance effective value0 ignores loaded raw union values",
+    "1202 separate negative live pass accepts onlykind7; owned-definition-kind12 is another source and remains absent",
+    "2088 expiry has no special kind12 dispatch:>=dirty,<stable retain,1512 then1202,thenregen",
+    "passive13 G1696/1700 provides nonzero1620 via1512 accumulator43; App/profile grant producer remains untraced"
+  ],
+  "plan": {
+    "wait_for_root_baseline_commit": true,
+    "no_duplicate_self_production_modules": true,
+    "minimum_existing_changes": [
+      "resource_consumer135._semantics:kind12 onlyspell1020 with semantic value0, retain physicalkind andNone",
+      "resource_aura135._buffs:admit inert1020 positive aggregation without numeric magnitude reads",
+      "mixed_resource135 validator:use expanded checked semantic view; one canonicalHP/RNG owner",
+      "resource_player_update135:allow verified1020 family without double prefix/regen"
+    ],
+    "new_fresh_validation": [
+      "Replay original0/8 domains under new frozen source; old receipts remain historical snapshot identities",
+      "Fresh full1202 and2088 coexistence:all orders of0speed/0berserker/8Battle/12protection,strict1s/10s/15s expiry and simultaneous expiry,full32backing/48Aura/None",
+      "Nonzero1620 typedpassive13 input:actual1512 computes derived;elapsed<3/=3/>3 withgate0/5 andHPclamp; do notinject arbitraryderived",
+      "Otherkind12 andunsupportedsource families remain explicitPending"
+    ],
+    "api": "Keep existing canonical LevelCycleState+MixedResourceContext135+resource prefix; no headless/racial/registry change by this task",
+    "passive13_scope": "Controlled valid typed vector consumer input only. Not proof of the profile/talent/App grant producer or natural trajectory."
+  },
+  "new_original_cases": 0,
+  "new_model_cases": 0,
+  "source_before_after_unchanged": true,
+  "full_WAT_read": false,
+  "WAT_function_bytes_read": 539183,
+  "database_file_mode": "0o644",
+  "SQLite_connection": "mode=ro,pragma query_only=on",
+  "baseline_commit": "7d26c325c780ce6dd4b32e578d64a164bfee213f",
+  "additional_gate": "Wait for completed existing37source independent review before modifying its production dependency closure",
+  "preparation_failure_history": [
+    "evidence/self-aura0135-static-plan-20261101T215754.984184Z"
+  ]
+}

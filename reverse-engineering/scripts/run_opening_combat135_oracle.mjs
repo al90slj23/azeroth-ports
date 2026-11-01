@@ -22,7 +22,7 @@ const layouts={companions:[2108,2112,2116,88],units:[1784,1788,1792,424],areas:[
   effects120:[1808,1812,1816,120],delayed56:[1820,1824,1828,56],deadline32:[1832,1836,1840,32],
   hits112:[1844,1848,1852,112],secondary112:[1856,1860,1864,112],pickups:[1868,1872,1876,56],
   candidates80:[1904,1908,1912,80],special:[1916,1920,1924,40],windows:[1964,1968,1972,8],
-  boundaries:[2120,2124,2128,8],owned80:[1656,1660,1664,80],live32:[1704,1708,1712,32],
+  aura48:[2000,2004,2008,16],boundaries:[2120,2124,2128,8],owned80:[1656,1660,1664,80],live32:[1704,1708,1712,32],
   timed12:[596,600,604,12],active84:[644,648,652,84],xp_queue8:[2144,2148,2152,8],currency_queue8:[2156,2160,2164,8]};
 const exact=(value,keys,label)=>{if(Object.keys(value).sort().join()!==[...keys].sort().join())throw Error(label+' exact keys');};
 const uint=(v,bits=32)=>{if(!Number.isInteger(v)||v<0||v>=2**bits)throw Error('Unsigned input');return v;};
@@ -88,7 +88,8 @@ for(const c of cases){
  const b=()=>new Uint8Array(memory.buffer),d=()=>new DataView(memory.buffer),u=p=>d().getUint32(p,true),byte=p=>d().getUint8(p);
  const span=(p,n,max=8388608)=>{if(!Number.isInteger(p)||!Number.isInteger(n)||p<0||n<0||n>max||p+n>memory.buffer.byteLength)throw Error('Physical capture bounds');return b().subarray(p,p+n);};
  const hex=(p,n,max)=>Buffer.from(span(p,n,max)).toString('hex');
- const invoke=(role,...args)=>{const item={role,index:surface[role],arguments:args,stack_before:stack.value};calls.push(item);callsTotal++;
+ let callerScratchBefore=null;
+ const invoke=(role,...args)=>{callerScratchBefore=u(1048080);const item={role,index:surface[role],arguments:args,stack_before:stack.value};calls.push(item);callsTotal++;
    if(stack.value!==1048576)throw Error('Precall stack');try{const result=ex[PREFIX+role](...args);item.returned=true;item.stack_after=stack.value;
     if(stack.value!==1048576||hostCalls.length||memory.buffer.byteLength>268435456)throw Error('Stack/host/memory after call');return result;
    }catch(e){item.returned=false;item.stack_after=stack.value;item.error=String(e);throw e;}};
@@ -170,6 +171,7 @@ for(const c of cases){
      map_id_utf8:map,player_xyz:[r(1416),r(1420),r(1424)],velocity_xy:[r(1736),r(1740)],previous_player_xyz:[r(2428),r(2432),r(2436)],
      progression:{level:r(1432),xp:r(1436),pending_upgrades:r(2376)},current_hp_bits:r(1440),
      derived_bits:Object.fromEntries(Array.from({length:23},(_,i)=>[1536+i*4,r(1536+i*4)])),player_fields:keyed.fields,
+     aura_initialized2569:byte(G+2569),notification_next_id14340336:u(14340336),
      racial_record_hex:hex(G+1256,80),owned_records_hex:vectors.owned80.storage.slice(0,vectors.owned80.count),
      records:vectors.units.storage.slice(0,vectors.units.count),area_records:vectors.areas.storage.slice(0,vectors.areas.count),
      unit_storage:vectors.units.storage,area_storage:vectors.areas.storage,pickup_storage:vectors.pickups.storage,
@@ -181,6 +183,7 @@ for(const c of cases){
      distance_map:distanceMap(),distance_map_updated_at_bits:r(2372),
      effect:{clock2364_bits:r(2364),effect_counter2356:r(2356),action_sequence1644:r(1644),player_action_tag416:r(416)},
      tail_flags:{field400:r(400),protection2576:byte(G+2576),flag2568:byte(G+2568),gate2579:byte(G+2579)}},
+    caller_scratch48_observation:{address:1048080,root_stack:1048576,before:callerScratchBefore,after:u(1048080),kind:'read_only_SP_minus496_not_model_input'},
     ownership:{App,G,game_world_pointer:r(2348),app_cache_pointer:u(App+5116),raw_world_rc124_hex:hex(R,124),world_refcount:u(R),
      raw_app5168_hex:hex(App,5168)},stack:stack.value,memory_bytes:memory.buffer.byteLength};};
  const appBefore=hex(App,5168),refBefore=u(R),navigationInput=byte(App+5165);d().setBigUint64(App+4928,BigInt(s.app_lcg_seed_u64),true);
