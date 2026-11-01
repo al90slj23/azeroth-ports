@@ -14,6 +14,7 @@ from .ai_trig135 import sin_bits, cos_bits
 from .distance_map135 import ProducedDistanceMap135, NEIGHBORS
 from .incoming135 import resolve_incoming_prefix
 from .record_cells135 import cells135, u64, encode_row
+from .demo_ai135 import demo_bindings135,begin_demo_expiry135,finish_demo_expiry135
 from resource_spec.world_query135 import WorldQueries135, probe_nav, QueryBoundsTrap135
 
 
@@ -169,13 +170,19 @@ def update_world_ordinary_units135(state: AiFrame135, world, *, distance_map=Non
     if any(not -1e20 < f.to_float(x) < 1e20 for x in (state.now_bits, state.dt_bits, *state.player_xyz_bits)):
         raise ValueError('Finite bounded frame inputs required')
     raws = [cells135(row) for row in state.records]
+    demo_bindings=demo_bindings135(raws,state.known_demo_statuses)
+    if demo_bindings and state.incoming.mode_2574:
+        raise ValueError('Demo AI remote-party target/owner selection remains unresolved')
     for raw in raws:
-        _validate(raw, state.now_bits)
+        _validate(raw, state.now_bits,known_demo=demo_bindings.get(u64(raw,112))if demo_bindings else None)
     if state.incoming.mode_2574 and any(_get(row, 280) != 0 for row in raws):
         raise ValueError('Only local owner0 routing is restored')
     now, attacks, movements, geometries, routing = state.now_bits, [], [], [], []
+    demo_removals=[]
     now_value = f.to_float(now)
     for raw in raws:
+        removal=begin_demo_expiry135(raw,demo_bindings.get(u64(raw,112))if demo_bindings else None,now)
+        if removal is not None:demo_removals.append(removal)
         if _float(raw, 400) > now_value:
             continue
         pos = position(raw, now)
@@ -219,5 +226,8 @@ def update_world_ordinary_units135(state: AiFrame135, world, *, distance_map=Non
         if result.stage not in ('scalar_nonfatal_projection', 'phase_guard', 'protection_guard', 'active_raw_buff12_guard'):
             raise ValueError('Incoming callback/death boundary: ' + result.stage)
         incoming = result.state
+    declarations,packets,fields=finish_demo_expiry135(raws,demo_bindings,demo_removals)
     return WorldAiResult135(tuple(encode_row(raw) for raw in raws), incoming, tuple(attacks), tuple(movements),
-        ('encoded_movement_and_hit_packets', 'incoming_registry_history_aura_metadata'), tuple(geometries), tuple(routing))
+        ('encoded_movement_and_hit_packets', 'incoming_registry_history_aura_metadata'),
+        movement_geometry=tuple(geometries),routing=tuple(routing),demo_expirations=tuple(demo_removals),
+        demo_aura_packets169=packets,demo_aura_fields=fields,demo_statuses=declarations)

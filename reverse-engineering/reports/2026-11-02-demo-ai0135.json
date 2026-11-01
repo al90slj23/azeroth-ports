@@ -1,0 +1,3256 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "cases": 58,
+  "stages": 66,
+  "compared_stages": 66,
+  "differences": 0,
+  "comparison_complete": true,
+  "groups": {
+    "pilot-primary-active-contact": 1,
+    "pilot-backup-active-at-primary-equality": 1,
+    "pilot-expired-contact-and-late169": 1,
+    "primary-backup-ordered-boundaries": 40,
+    "expiry-before-U400-freeze": 1,
+    "expiry-missing-Aura-emits-no-packet": 1,
+    "Aura-slot-field-mask-groups": 7,
+    "phase2-local-cleanup-and-incoming-guard": 1,
+    "movement-before-late-Aura-remove": 1,
+    "two-unit-independent-owner-late-remove": 1,
+    "continuous-primary-fallback-expiry": 1,
+    "live-primary-ignores-earlier-backup": 1,
+    "post-expiry-continuation-no-repeated169": 1
+  },
+  "source_files": 48,
+  "source_sha256_before": {
+    "scripts/check_demo_ai135.py": "bda8e9a0986f156f327e77fff6ff1611a7545c819184a461bf2617463ba55fd4",
+    "scripts/build_demo_ai135_oracle.py": "09e949a6e85d99dbf5ea74c05fac69c9584160cfd74f2e8e4337666a884ca16b",
+    "scripts/run_demo_ai135_oracle.mjs": "964cd388a8d1dd11a8034419387c047adaadab3787e7a9ac3545add91a4b06eb",
+    "scripts/demo_ai135_host.mjs": "70b462724f10e73e45ad40605aaa029dbc2ba2b6312ddc307a9cb6952cb7dcc6",
+    "scripts/ai_world135_packing.mjs": "7409e359bcb94422399d10e21fa8d816bdc39b88bc35475ad6d87d478e8e577a",
+    "scripts/build_distance_map135_oracle.py": "5160d31b3ebde9f8d033eed3e9b96cb3dce8754b1f3d053d566a1f3b3630bb12",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/ai_world135_inputs.py": "dade81393764b9a0f580a9ea041b1b7a6b1ca31c2d72f9edaff9339362ff0a41",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "ed30c5165b1af95b8b4002c0ce285c5da8f72709e701a90e25db25d2330cc69e",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "source_sha256_after": {
+    "scripts/check_demo_ai135.py": "bda8e9a0986f156f327e77fff6ff1611a7545c819184a461bf2617463ba55fd4",
+    "scripts/build_demo_ai135_oracle.py": "09e949a6e85d99dbf5ea74c05fac69c9584160cfd74f2e8e4337666a884ca16b",
+    "scripts/run_demo_ai135_oracle.mjs": "964cd388a8d1dd11a8034419387c047adaadab3787e7a9ac3545add91a4b06eb",
+    "scripts/demo_ai135_host.mjs": "70b462724f10e73e45ad40605aaa029dbc2ba2b6312ddc307a9cb6952cb7dcc6",
+    "scripts/ai_world135_packing.mjs": "7409e359bcb94422399d10e21fa8d816bdc39b88bc35475ad6d87d478e8e577a",
+    "scripts/build_distance_map135_oracle.py": "5160d31b3ebde9f8d033eed3e9b96cb3dce8754b1f3d053d566a1f3b3630bb12",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/ai_world135_inputs.py": "dade81393764b9a0f580a9ea041b1b7a6b1ca31c2d72f9edaff9339362ff0a41",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "ed30c5165b1af95b8b4002c0ce285c5da8f72709e701a90e25db25d2330cc69e",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "local_source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/ai135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_motion135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_motion135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_motion135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/combat134.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/demo_shout135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/owned_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/incoming134.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/owned_prelude135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/build_demo_ai135_oracle.py",
+      "scripts/build_distance_map135_oracle.py"
+    ],
+    [
+      "scripts/build_demo_ai135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_distance_map135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_distance_map135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/build_full135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/ai_world135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/demo_shout135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "scripts/ai_world135_inputs.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "scripts/build_demo_ai135_oracle.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_demo_ai135.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/run_demo_ai135_oracle.mjs",
+      "scripts/ai_world135_packing.mjs"
+    ],
+    [
+      "scripts/run_demo_ai135_oracle.mjs",
+      "scripts/demo_ai135_host.mjs"
+    ]
+  ],
+  "frozen_artifacts": {
+    "input.json": "cf81ea5bf73ecabe8eeaa865c3b4b4343c0273c60753fdbdc57ca1ae42f9abd8",
+    "expected.json": "228020242cb8a53341a7adf2c659e2a161a1f8a44598234d6a5c8de276fdf299",
+    "labels.json": "f0785552c953e47e6c5efe1a859c21faccf23d45e4902e08556654e4f7d2b319",
+    "refusals.json": "2d6368e1eac34f95aa7ec472fc076b43708c8f46c84a6b96dcea6dd2fa46b583",
+    "manifest.json": "d98761c418044d663bba550d9c23f7b87e4e204bbdbdc8ba8a2089a9a8191c69",
+    "research135-exports.wasm": "629bed1e09975fb30453c312fbfabd1bb24af416d97c302cf379c8d25b803698",
+    "demo-ai-921.wat": "20fb6cb14a8000c408185e4a8ee911ed32229b21dc695867bbd398acc9ceaf1f",
+    "demo-ai-4543.wat": "abf4ab4cf77bf5699411838837feae4456a9fe9c616713134edfb40263ef73d0",
+    "demo-ai-15511.wat": "c5be2cca7467c744b9a052bd5edf920e75052188e3cba6809f7c276fbbe8eb3f",
+    "demo-ai-13814.wat": "dc2e909a7d5157d14f91a506ba55cfd5648701f85416d89bbf50e8b71e1b7b0f",
+    "demo-ai-1073.wat": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+    "demo-ai-27375.wat": "e5ca5c2bf401668729d533a4b60ce0c5a9f93b3fbec55a06ef7ef379950156d6"
+  },
+  "expected_before_original": true,
+  "fixture_input": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T044817.224194Z/ai135-fixtures.jsonl",
+    "sha256": "2670e389f721198bce82fd2f0dd7348987c6b0971f644bcf41076b44ecce3c0c",
+    "scope": "Only first typed fixture input row/incoming read; no old original result is consumed"
+  },
+  "pure_model_refusals": [
+    "legacy-unbound360-remains-rejected",
+    "wrong-word-declaration",
+    "unsupported-spell",
+    "duplicate-GUID-declaration",
+    "unowned-other-Aura-pending",
+    "duplicate-Aura-needs-earlier-cleanup"
+  ],
+  "process": {
+    "pid": 81297,
+    "pgid": 81297,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.8240329999971436,
+    "error": null
+  },
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "historical_build_alias": "0898d5e3",
+    "cases": 58,
+    "fresh_instances": 58,
+    "entry_calls": 66,
+    "original_full_entries": [
+      921
+    ],
+    "all_original_bodies_and_callees_unchanged": true,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "memory_cap_bytes": 33554432,
+    "max_memory_bytes": 20578304,
+    "heap_mib": 512,
+    "output_bytes": 1210426,
+    "stack_checks": [
+      {
+        "case_id": 0,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 0,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 0,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 0,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 0,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 1,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 1,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 1,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 1,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 1,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 2,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 2,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 2,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 2,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 2,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 3,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 3,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 3,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 3,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 3,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 4,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 4,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 4,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 4,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 4,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 5,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 5,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 5,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 5,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 5,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 6,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 6,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 6,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 6,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 6,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 7,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 7,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 7,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 7,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 7,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 8,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 8,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 8,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 8,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 8,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 9,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 9,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 9,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 9,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 9,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 10,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 10,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 10,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 10,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 10,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 11,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 11,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 11,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 11,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 11,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 12,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 12,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 12,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 12,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 12,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 13,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 13,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 13,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 13,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 13,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 14,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 14,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 14,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 14,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 14,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 15,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 15,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 15,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 15,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 15,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 16,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 16,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 16,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 16,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 16,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 17,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 17,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 17,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 17,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 17,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 18,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 18,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 18,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 18,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 18,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 19,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 19,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 19,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 19,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 19,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 20,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 20,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 20,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 20,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 20,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 21,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 21,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 21,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 21,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 21,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 22,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 22,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 22,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 22,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 22,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 23,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 23,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 23,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 23,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 23,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 24,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 24,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 24,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 24,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 24,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 25,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 25,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 25,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 25,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 25,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 26,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 26,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 26,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 26,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 26,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 27,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 27,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 27,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 27,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 27,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 28,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 28,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 28,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 28,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 28,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 29,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 29,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 29,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 29,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 29,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 30,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 30,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 30,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 30,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 30,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 31,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 31,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 31,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 31,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 31,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 32,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 32,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 32,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 32,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 32,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 33,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 33,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 33,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 33,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 33,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 34,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 34,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 34,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 34,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 34,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 35,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 35,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 35,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 35,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 35,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 36,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 36,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 36,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 36,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 36,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 37,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 37,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 37,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 37,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 37,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 38,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 38,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 38,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 38,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 38,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 39,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 39,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 39,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 39,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 39,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 40,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 40,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 40,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 40,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 40,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 41,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 41,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 41,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 41,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 41,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 42,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 42,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 42,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 42,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 42,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 43,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 43,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 43,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 43,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 43,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 44,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 44,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 44,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 44,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 44,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 45,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 45,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 45,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 45,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 45,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 46,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 46,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 46,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 46,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 46,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 47,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 47,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 47,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 47,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 47,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 48,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 48,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 48,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 48,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 48,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 49,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 49,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 49,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 49,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 49,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 50,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 50,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 50,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 50,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 50,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 51,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 51,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 51,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 51,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 51,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 52,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 52,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 52,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 52,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 52,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 53,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 53,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 53,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 53,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 53,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 54,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 54,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 54,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 54,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 54,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 55,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 56,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "__wbindgen_malloc",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      },
+      {
+        "case_id": 57,
+        "role": "update_units",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true,
+        "entered": true
+      }
+    ],
+    "stack_all_restored": true,
+    "original_snapshot_loaded": false,
+    "application_start_called": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "error": null
+  },
+  "scope": "Fresh complete921 ordinary local-mode weakness/expiry/contact over explicit controlled flat world; physical424B/HP/incoming/late169 complete aura slots, fixed135 only",
+  "pending": [
+    "Original constructor/world resource ownership/full880 not executed",
+    "Other or duplicate NPC aura entries, nonempty44B NPC abilities, remote-party modes and other status/CC producers remain pending",
+    "Full movement and incoming-hit packet payloads observed; this scope predicts exact lateAura169, total packet count and order only"
+  ],
+  "full880_frames": 0,
+  "native_executions": 0,
+  "complete_games": 0,
+  "artifacts": {
+    "stdout.jsonl": "f4c72a01b3e7958e7f09322921242897196e20eea646bc79a254b163030733b1",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "prepared.json": "1f51466ceb79bab1a9fba146867805ae1f33e3081fff4193f999a06ae3aff1cc"
+  },
+  "status": "scoped_component_differential_and_independent_read_only_review_passed",
+  "comparison_receipt": "evidence/full0135-oracle-20261101T205618.153296Z/comparison.json",
+  "comparison_receipt_sha256": "01c93350943b0f20956298fdf1908ae7ee2b66c40d902b7eac817cdf2657b07e",
+  "dynamic_events": {
+    "contact_attacks": 61,
+    "status_expirations": 28,
+    "aura169_events": 27,
+    "movements": 1
+  },
+  "static_rule_provenance": {
+    "path": "evidence/demo-ai135-static-20261101T204408.226211Z/trace.json",
+    "sha256": "70288dcd289173828b2957b43ab54ec1aa4a7522fe0f046904d1653f0e3c65d3",
+    "local26": "G2582 & (G2587 ==2); admitted mode0 has local26=0. Remote owner U280!=G2528 branch precedes status; unknown remote selection is not bypassed.",
+    "order": "Per live local ordinary row: select132 if132>now else140; if360!=0 andselected<=now clear360 andqueue(GUID,spell). U128..140 and364 unchanged. Fear/stun andU400 guard follow. After all ordinary updates, movements andcontact incoming processing, late4543 removes first matching Aura slot and encodes169."
+  },
+  "default_regressions": [
+    {
+      "path": "evidence/full0135-oracle-20261101T205735.949915Z/ai-world135-comparison.json",
+      "sha256": "c19b3d1e512923bea71c1d9cc8d2f8ba864b6a4e78cd3ad0d6d206303f6de8e7",
+      "kind": "Fresh full921 world/navigation/height default known_demo_statuses=empty",
+      "cases": 20,
+      "stages": 45,
+      "differences": 0
+    },
+    {
+      "path": "evidence/ai-world0135-flat-regression-20261101T205733.699998Z/comparison.json",
+      "sha256": "6af72fb6db488221935e431455f2889221e667a22347ee72329d7f963ab56529",
+      "kind": "Historical frozen416-case input/expected model re-comparison, not new original",
+      "cases": 416,
+      "stages": 1013,
+      "differences": 0,
+      "new_original_calls": 0
+    }
+  ],
+  "prior_pilot": {
+    "path": "evidence/full0135-oracle-20261101T205403.577716Z/comparison.json",
+    "sha256": "8ece7d1a490199dc8d51b91ced5b4238fa7cd3365e3dc22760b25fe4a9ba025b",
+    "cases": 3,
+    "stages": 3,
+    "separate_scope_not_added": true
+  },
+  "failed_heap_batch": {
+    "path": "evidence/full0135-oracle-20261101T205455.500232Z/comparison.json",
+    "sha256": "5644cd52a281a443af772970165a67dae6f59e361d64ad7ce6c06eabd2a6cc4a",
+    "process": {
+      "pid": 78338,
+      "pgid": 78338,
+      "exit_code": -6,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 3.4961512919981033,
+      "error": null
+    },
+    "runtime": null,
+    "stderr_sha256": "db2fc17896b14ba28594a64221827c2ba8b71c94f238d9f97fb1b3e1032c56d8",
+    "reason": "Runner retained entire host objects while collecting host-call evidence, keeping every WASM dispatch table alive. Node512MiB heap aborted after34 result rows. Driver now retains only hostCalls arrays and explicitly collects unused instances; same58cases,66stages,expected labels and original module, no game model change or budget increase.",
+    "input_expected_labels_and_original_module_identical": true,
+    "not_positive": true,
+    "actual_host_calls": "unknown; no final runtime"
+  },
+  "API": {
+    "frame": "AiFrame135.known_demo_statuses:tuple[DemoDebuff135,...]=()",
+    "sparse_GUID_domain": "Only explicitly declared nonzero1160 statuses need binding; each provided declaration matches full128..140/360/364/16Aura/U240/GUID/marker. Unbound nonzero360 still rejects.",
+    "result": [
+      "demo_expirations",
+      "demo_aura_packets169",
+      "demo_aura_fields",
+      "demo_statuses"
+    ],
+    "legacy": "Empty declarations preserve old status guard; new inherited result fields default empty; WorldAiResult uses keyword geometry/routing to preserve positional meanings."
+  },
+  "aura_shared_producer": {
+    "module": "core_spec.demo_shout135._aura",
+    "source_sha256": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "component": "Frozen4543 empty-U240 first-remove/field encoder, cast component has its own180/207receipt and independent review separately; not newly self-reviewed as part of AI."
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-demo-ai0135-independent-review.json",
+    "receipt": "evidence/demo-ai135-independent-review-20261101T210610.715719Z/review.json",
+    "receipt_sha256": "8a1ad29df94cf2d0c53be6075fb4924da723a6fe9bae5f7846ae8b2859616795",
+    "new_original_cases": 0,
+    "model_or_original_or_checker_executed": false
+  },
+  "headless_code_integrated": true,
+  "headless_original_composition_validated": false
+}

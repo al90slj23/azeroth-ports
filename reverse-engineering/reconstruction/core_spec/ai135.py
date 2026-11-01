@@ -12,6 +12,8 @@ from .incoming135 import IncomingState135,UnitPosition,resolve_incoming_prefix
 from .ai135_data import MELEE_DEFINITIONS
 from .record_cells135 import (cells135, u32, u64, put_u32, encode_row,
                               optional_u32)
+from .demo_ai135 import (validate_demo_binding135,demo_bindings135,
+    begin_demo_expiry135,finish_demo_expiry135)
 
 
 @dataclass(frozen=True)
@@ -23,6 +25,7 @@ class AiFrame135:
     incoming:IncomingState135
     incoming_item_effects:tuple=()  # Actual G2028/G2032 8B item effects, not36B modifiers.
     other_incoming_sources_absent:bool=False
+    known_demo_statuses:tuple=()
 
 
 @dataclass(frozen=True)
@@ -32,6 +35,10 @@ class AiResult135:
     attacks:tuple
     movements:tuple
     pending:tuple
+    demo_expirations:tuple=()
+    demo_aura_packets169:tuple=()
+    demo_aura_fields:tuple=()
+    demo_statuses:tuple=()
 
 
 def _get(raw,offset):return u32(raw,offset,consumer='ai135')
@@ -75,12 +82,15 @@ def unit_position(raw):
         movement_time_bits=_get(raw,340),movement_duration_bits=_get(raw,344))
 
 
-def _validate(raw,now):
+def _validate(raw,now,*,known_demo=None):
     if len(raw)!=424:raise ValueError('A complete424-byte entity is required')
     if _get(raw,284)not in MELEE_DEFINITIONS:raise ValueError('Ranged/boss/unknown definition AI remains unresolved')
     if any(_get(raw,o)!=f.MASK for o in(40,64,244)):
         raise ValueError('Alternate AI families40/64/244 remain unresolved')
-    if any(_get(raw,o)for o in(0,8,16,240,360)):
+    if any(_get(raw,o)for o in(0,8,16,240)):
+        raise ValueError('Dead/pending/cast/status entity producer remains unresolved')
+    if known_demo is not None:validate_demo_binding135(raw,known_demo)
+    elif _get(raw,360):
         raise ValueError('Dead/pending/cast/status entity producer remains unresolved')
     if any(_get(raw,o)for o in(372,380,388)):
         raise ValueError('Fear/stun/expiry producers remain unresolved')
@@ -116,11 +126,16 @@ def update_ordinary_units(state:AiFrame135, *, trig_sin_bits=sin_bits, trig_cos_
     if any(not(-1e20<f.to_float(x)<1e20)for x in(state.now_bits,state.dt_bits,*state.player_xyz_bits)):
         raise ValueError('Finite bounded frame inputs required')
     raws=[cells135(x)for x in state.records]
-    for raw in raws:_validate(raw,state.now_bits)
+    demo_bindings=demo_bindings135(raws,state.known_demo_statuses)
+    if demo_bindings and state.incoming.mode_2574:
+        raise ValueError('Demo AI remote-party target/owner selection remains unresolved')
+    for raw in raws:_validate(raw,state.now_bits,known_demo=demo_bindings.get(u64(raw,112))if demo_bindings else None)
     if state.incoming.mode_2574 and any(_get(raw,280)!=0 for raw in raws):
         raise ValueError('Remote owner routing remains unresolved; local peer0 required')
-    now=state.now_bits;now_value=f.to_float(now);attacks=[];moves=[]
+    now=state.now_bits;now_value=f.to_float(now);attacks=[];moves=[];demo_removals=[]
     for raw in raws:
+        removal=begin_demo_expiry135(raw,demo_bindings.get(u64(raw,112))if demo_bindings else None,now)
+        if removal is not None:demo_removals.append(removal)
         if _float(raw,400)>now_value:continue
         pos=position(raw,now);timer=f.sub(_get(raw,352),state.dt_bits);_put(raw,352,timer)
         distance=_distance(pos,state.player_xyz_bits);guid=u64(raw,112,consumer='ai135.update.guid')
@@ -155,4 +170,7 @@ def update_ordinary_units(state:AiFrame135, *, trig_sin_bits=sin_bits, trig_cos_
         if result.stage not in('scalar_nonfatal_projection','phase_guard','protection_guard','active_raw_buff12_guard'):
             raise ValueError('Incoming callback/death boundary: '+result.stage)
         incoming=result.state
-    return AiResult135(tuple(encode_row(x)for x in raws),incoming,tuple(attacks),tuple(moves),tuple(sorted(pending)))
+    declarations,packets,fields=finish_demo_expiry135(raws,demo_bindings,demo_removals)
+    return AiResult135(tuple(encode_row(x)for x in raws),incoming,tuple(attacks),tuple(moves),tuple(sorted(pending)),
+        demo_expirations=tuple(demo_removals),demo_aura_packets169=packets,
+        demo_aura_fields=fields,demo_statuses=declarations)

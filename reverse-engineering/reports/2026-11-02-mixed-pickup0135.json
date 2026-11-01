@@ -1,0 +1,385 @@
+{
+  "component": "mixed_pickup135",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "declared_mixed_projection_differential_and_independent_review_passed",
+  "review": {
+    "report": "reports/2026-11-02-mixed-pickup0135-independent-review.json",
+    "report_sha256": "fa061a08a60099fcd8add810c9db8e85dbe5d4bbc882b63dfe5b050d08e8af42",
+    "receipt": "evidence/mixed-pickup135-independent-review-20261101T215029.875027Z/review.json",
+    "receipt_sha256": "5387f7daec547d6a65208f87640554d4942b2d629ea44b458f323fb5fa453089",
+    "new_original_executions": 0,
+    "production_model_executed": false,
+    "checker_executed": false
+  },
+  "final_comparison": {
+    "path": "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/comparison.json",
+    "sha256": "19e28a54b2dc6a306dca5fd6d3bd17f16e24524f858ccb1e9265829128e48e3e",
+    "cases": 60,
+    "complete2862_direct_calls": 61,
+    "differences": 0,
+    "source_files": 52,
+    "import_edges": 189,
+    "comparison": {
+      "known_values": 36342,
+      "explicit_unknown_physical_bytes": 31264,
+      "stages": 61
+    },
+    "groups": {
+      "pilot-resource-before-XP-growth": 1,
+      "pilot-XP-before-resource-growth": 1,
+      "pilot-paused-choice-still-finishes-selected-resources": 1,
+      "pilot-attraction-arrival-and-resource": 1,
+      "pilot-level15-DOT-with-resource": 1,
+      "pilot-XP-coin-only-compatibility": 1,
+      "all-resource-XP-coin-order-and-pause": 36,
+      "mixed-heal-gate-and-cap": 9,
+      "multiple-XP-resource-interleaving-single-choice": 1,
+      "entry-radius-cached-before-level-recalculation": 3,
+      "far-opaque-kind2-full56-preserved": 3,
+      "forwarding-queues-and-paused-phase-boundary": 2
+    }
+  },
+  "modified_existing_source": "reconstruction/core_spec/death_pickup135.py",
+  "own_source_sha256": {
+    "scripts/check_mixed_pickup135.py": "2386bc81b9464bf53fbdbbc9422a15be32518fd0d6b7c2c959ac902cd6639808",
+    "scripts/build_mixed_pickup135_oracle.py": "42ed2a1ccb31a03272e245dc10affbd5a358c52fd2f01aae217f2320585e3e91",
+    "scripts/run_mixed_pickup135_oracle.mjs": "8b912d5296a6b1cd44e27a506a0fca3cf8f32bb99d841fb881f921048abb7a99",
+    "reconstruction/core_spec/death_pickup135.py": "023d1cbb784611c8720c667d5764df1d4cc5165b8e32267a1fbc002332691623",
+    "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1"
+  },
+  "source_sha256_before": {
+    "scripts/check_mixed_pickup135.py": "2386bc81b9464bf53fbdbbc9422a15be32518fd0d6b7c2c959ac902cd6639808",
+    "scripts/build_mixed_pickup135_oracle.py": "42ed2a1ccb31a03272e245dc10affbd5a358c52fd2f01aae217f2320585e3e91",
+    "scripts/run_mixed_pickup135_oracle.mjs": "8b912d5296a6b1cd44e27a506a0fca3cf8f32bb99d841fb881f921048abb7a99",
+    "scripts/build_resource_consumer135_oracle.py": "ac5632d33422bbc2bb1d5d28cb86de46fd29a6b6eb3701e51690bd38190ea15a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "023d1cbb784611c8720c667d5764df1d4cc5165b8e32267a1fbc002332691623",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1",
+    "reconstruction/core_spec/opaque_pickup135.py": "29fe2a57532324ea12aabb4e5a03f8989b0aef1d3bbf20e6ac98d352e7073313",
+    "reconstruction/core_spec/opening135.py": "8fbc33f44cf13276091fabccc93c949c4781084741f985302e5bf6f77d27abb7",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_handoff135.py": "78b2ffae8cc7f803d670efd3476ae48fe41e6d235f47b665eb6a82e7f7297eb3",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/profile_companions135.py": "539aa9ab1e37f6ec95d93c77b1ceeb2111ab0af5cdf45b8626eed04bfb999571",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_sha256_after": {
+    "scripts/check_mixed_pickup135.py": "2386bc81b9464bf53fbdbbc9422a15be32518fd0d6b7c2c959ac902cd6639808",
+    "scripts/build_mixed_pickup135_oracle.py": "42ed2a1ccb31a03272e245dc10affbd5a358c52fd2f01aae217f2320585e3e91",
+    "scripts/run_mixed_pickup135_oracle.mjs": "8b912d5296a6b1cd44e27a506a0fca3cf8f32bb99d841fb881f921048abb7a99",
+    "scripts/build_resource_consumer135_oracle.py": "ac5632d33422bbc2bb1d5d28cb86de46fd29a6b6eb3701e51690bd38190ea15a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "023d1cbb784611c8720c667d5764df1d4cc5165b8e32267a1fbc002332691623",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1",
+    "reconstruction/core_spec/opaque_pickup135.py": "29fe2a57532324ea12aabb4e5a03f8989b0aef1d3bbf20e6ac98d352e7073313",
+    "reconstruction/core_spec/opening135.py": "8fbc33f44cf13276091fabccc93c949c4781084741f985302e5bf6f77d27abb7",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_handoff135.py": "78b2ffae8cc7f803d670efd3476ae48fe41e6d235f47b665eb6a82e7f7297eb3",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/profile_companions135.py": "539aa9ab1e37f6ec95d93c77b1ceeb2111ab0af5cdf45b8626eed04bfb999571",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_unchanged": true,
+  "artifacts_unchanged": true,
+  "artifacts_sha256": {
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/input.json": "4ee1892ba57d28c76d55743fc4ae9d8b8610272ea099ae809b43c39f60ead335",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/expected.json": "ff0f2da24be5c946cc439e7338275fd09b2ffb49a93365691e9fb27c561e89a8",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/labels.json": "e0d36b43f83498e2eb72d76e873f7efb48c8dd6df9045f4276d179ef919cfc0d",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/manifest.json": "602d60e5d9b4702013708f3d308ecffee7de783a9b61bce13b294a23855d47c5",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/mixed-static.json": "1813119b6ee3186054fb3f9e378c6fbf6f88aa8b614dca1133333c6f8fdb6ede",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/prepared.json": "ecbe13fac16ecbfe98953a882c3718f6a8efcf2a1399de1320c58b0959f5ced6",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/stdout.jsonl": "71d117516ae7e1891708eaf974dc667d1d38177fedbc5a76415e5f8254ff0ebe",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/owned-process.json": "dc48c847635d4ea901328bbdb367b71d6513f53f5aefbab73d691ca05e4c73e5",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/process-terminal.json": "cddfbae141334c37bcf936c2c38b2df390717e4e6348527c44414401f45a336a",
+    "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/mixed-pickup135-runtime.json": "9032e2f466399626a010af7fcce4943a1d78b4e39fe63f7c696bbe3569b93148"
+  },
+  "process": {
+    "pid": 94374,
+    "pgid": 94374,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.958962207994773,
+    "error": null
+  },
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "cases": 60,
+    "completed_cases": 60,
+    "full2862_calls": 61,
+    "fresh_instances": 60,
+    "max_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "output_bytes": 2442473,
+    "notification_counter_written_by_fixture": false,
+    "locale_Once_injected": false,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_function_bodies_unchanged": true,
+    "error": null
+  },
+  "stack_guard_count": 243,
+  "API": {
+    "collection": "CollectionState135(...,resource_context:MixedResourceContext135|None=None)",
+    "entry": "collect_pickups(state,now_bits)",
+    "bridge": "consume_mixed_resource135(level,spawn_counter,message_sequence,context,kind)",
+    "physical": "project_mixed_pickup_storage135(vector,initial_semantic_records,result)",
+    "ordered_outputs": "CollectionResult135.ordered_effects and consumption_order",
+    "resource_context_fields": [
+      "live full32B owner",
+      "aura full48x16 owner",
+      "player_guid",
+      "action_sequence1644",
+      "notification_next_id14340336",
+      "locale_code",
+      "aura_external_sources_absent"
+    ],
+    "ownership": "LevelCycleState is the sole persistentHP/derived/time/RNG owner; physical live has a verified semantic view in level.sources. Context owns only orthogonal sources. Every resource outcome immediately rewrites level and context before the next reverse-selected record.",
+    "root_contract": "Construct a typed context view at collect entry from the latest root physical sources/counters; atomically read back all outputs and detach CollectionState.resource_context=None outside collection to avoid duplicated/stale live owners. Root headless action1644 field must be checked against context at entry and rewritten atomically."
+  },
+  "order_rules": [
+    "Attraction producer writes all eligible XP marker/arrival first using entry player/radius/time snapshots.",
+    "Select all indices before rewards; process in strict reverse order with full56B stable memmoves.",
+    "For each selection emit despawn then immediately process XP,coin orresource; do not batch all XP before resources.",
+    "XP uses then-current multipliers, fullgain_xp, per-level growth events and owned-definition84 snapshot; encode growth150 at that point.",
+    "Resource uses currentHP/derived/time/RNG/counters and immediately updates semantic/physical live, aura,fields,action andnotification owners.",
+    "Choicephase2 does not terminate the current2862 selection list; later selected resource effects still execute. Moving actor35514 stop remains root hook; this experiment uses explicitly empty moving actors.",
+    "Coin uses then-current currency multiplier and pending fields; forwarding queues preserve cooperative peer/base records."
+  ],
+  "counts": {
+    "consumed_by_kind": {
+      "4": 30,
+      "1": 56,
+      "0": 63,
+      "5": 24,
+      "3": 16
+    },
+    "per_level_growth_events": 70,
+    "choice_notification_events": 31,
+    "unique_compared_packets": {
+      "170": 189,
+      "306": 70,
+      "150": 141,
+      "226": 16
+    },
+    "unique_notification_variants": {
+      "rune_raw": 70,
+      "choices_known": 31
+    }
+  },
+  "notification_comparison": {
+    "rune": "Complete English rune JSON bytes, including explicit sharedid and allUTF8 fields.",
+    "choices": "Every raw choices notification retained in original order, independently compare type/offer/why/level/gold/candidate kind/tier. Full candidate metadata separately checked through original80B vector projection and locked into ordered effect.",
+    "unknown": "Title/name/description/icon and remaining2159 presentation JSON are not predicted; ordered choice_notification_pending carries the known envelope and exact candidate snapshot. Raw fullnotification payloads remain in stdout.",
+    "all_records_retained": true,
+    "no_raw_original_used_in_expected": true,
+    "all150_payload_bytes_compared": true,
+    "other_packet_families_observation_only": [
+      "XP attraction221 and other unpredicted families"
+    ]
+  },
+  "notification_owner": {
+    "pointer": 14340336,
+    "initial_static_bytes": "01000000",
+    "cold_static_next_id": 1,
+    "Node_writes_original_global": false,
+    "exact_index_accesses": [
+      {
+        "function_idx": 23581,
+        "value": 14340336,
+        "wat_line": 21404092,
+        "wat_offset": 926543290
+      },
+      {
+        "function_idx": 23581,
+        "value": 14340336,
+        "wat_line": 21404093,
+        "wat_offset": 926543323
+      },
+      {
+        "function_idx": 42920,
+        "value": 14340336,
+        "wat_line": 27717861,
+        "wat_offset": 1114999885
+      },
+      {
+        "function_idx": 42920,
+        "value": 14340336,
+        "wat_line": 27717862,
+        "wat_offset": 1114999908
+      },
+      {
+        "function_idx": 44447,
+        "value": 14340336,
+        "wat_line": 27983213,
+        "wat_offset": 1121214798
+      },
+      {
+        "function_idx": 44447,
+        "value": 14340336,
+        "wat_line": 27983214,
+        "wat_offset": 1121214823
+      }
+    ],
+    "direct42920callers": [
+      880,
+      914,
+      947,
+      2785,
+      2862,
+      4401,
+      5620,
+      10298,
+      20660,
+      44447
+    ],
+    "producers": [
+      {
+        "index": 42920,
+        "owner": "Game notification"
+      },
+      {
+        "index": 23581,
+        "owner": "App notice direct branch"
+      },
+      {
+        "index": 44447,
+        "owner": "App notice; delegates42920 for nonvariant2, directUI path forvariant2"
+      }
+    ],
+    "default1089": "At function1089 L15..1214, optional5Boss calls2785 are inside if load8 G2576!=0; fixed default absent Game usesG2576=0. Prior16 complete1089 observations contain startJSON/type90/169 rather than type6. These support the cold/default controlled lane, not arbitrary priorApp notification history.",
+    "external_history": "Prior App23581/44447, boss/proc/UI producers can advance sameowner. Initial value must be explicit when rebuilding from a live App state, never reset per Game/frame/collect."
+  },
+  "static": {
+    "path": "evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/mixed-static.json",
+    "sha256": "1813119b6ee3186054fb3f9e378c6fbf6f88aa8b614dca1133333c6f8fdb6ede",
+    "functions": [
+      4630,
+      2159,
+      35514,
+      1089,
+      23581,
+      44447
+    ],
+    "full_WAT_read": false,
+    "SQLite_mode": "ro/query_only"
+  },
+  "input_scope": "Manually packed canonical empty-stat-source Game8192/BTree/vector fixtures, English rune locale, explicit no moving NPC/aux sources for choice pause. World/constructor/App history are not inferred. Mode0 and explicit cooperative queues tested; no network.",
+  "pending": [
+    "Nearbykind2/other kinds",
+    "Nonempty claims/aux and other external live/stat/aura producers",
+    "Moving NPC35514 pause producer must be interleaved by root owner",
+    "Non-English labels",
+    "CompleteGame/mainloop/native",
+    "2159 choice presentation JSON beyond known envelope/candidate metadata",
+    "XP1512 speed changes beyond existing per-level growth cache require an ordered owner hook",
+    "Complete physical allocator/BTree/queue identity/fullGame8192 write set"
+  ],
+  "history": [
+    {
+      "path": "evidence/mixed-pickup0135-oracle-20261101T210059.838553Z/comparison.json",
+      "sha256": "7aeef4016c1393b71d4bef048cfaa3441fb67d65e83b2e2104b62d8e7796a340",
+      "cases": 6,
+      "calls": 7,
+      "differences": 4,
+      "classification": "Four unexpected choices notification records exposed missing presentation. Numerical/state/full56/all150 projections matched. Revised policy explicitly retains choice variants and known independent envelope; raw choices strings remain pending, not deleted or copied intoexpected."
+    },
+    {
+      "path": "evidence/mixed-pickup0135-oracle-20261101T210310.265318Z/comparison.json",
+      "sha256": "0901aecb51929afaf7f8ad921dc51bffe5a1d18cf79b1f10dfb472c49af82212",
+      "cases": 6,
+      "calls": 7,
+      "differences": 0,
+      "classification": "Transparent typed choice notification pilot, not added to final60/61."
+    }
+  ],
+  "full880_frames": 0,
+  "natural_game_runs": 0,
+  "native_executions": 0,
+  "wrapper_or_user_save_changes": false
+}

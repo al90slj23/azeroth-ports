@@ -1,10 +1,13 @@
 # 独立重造的工作基线
 
+官方metadata本轮核对至 **2026-11-01T21:51:57Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](evidence/official-goal-phase-network-check-20261101T215156.327710Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
+
+
 当前功能目标已更新为**官方0.138.0**，Windows/Web原件均在4T另档并完成大小、哈希及采集前后部署一致性核对，见[138采集与版本状态](reports/2026-11-02-latest0138-state.md)。新版静态与动态证据单独登记；固定135连续流程、137局部组件的结果均不转记138。现有安装包和存档未替换。
 
-当前[650帧／60秒波次与补给闭环](reports/2026-11-02-opening-event-combat0135.md)固定135：真实opening→战斗→5次选卡→首波次及补给→继续，9105阶段／9107原件入口0声明差异，104源／90production；[只读独审通过](reports/2026-11-02-opening-combat0135-650frame-independent-review.md)。新增全部150与声明actor169字节、GUID绑定的kind2地址来源比较。仍是原件snapshot／独立预解析world／外部clock控制的14尾阶段，完整880／Windows执行／独立完整一局均为0。
+当前[750帧／六次选卡与挫志怒吼闭环](reports/2026-11-02-opening-demo-combat0135.md)固定135：真实opening→战斗→6次选卡→首波次及补给→Demo施放／受伤／减益到期→继续，10,506阶段／10,508原件入口、0声明差异；[完整只读独审通过](reports/2026-11-02-opening-combat0135-750frame-independent-review.md)。原件只执行一次，读取器修复后重比完整采集，重比／独审不增加原件case。110捕获源／111重比源含95production；仍为snapshot／独立预解析world／外部clock的14尾阶段，完整880／Windows执行／独立完整一局均为0。历史[650帧](reports/2026-11-02-opening-event-combat0135.md)保留原范围。
 
-[原始451资源独立入口](evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。下一纯模型到665帧自然选中demo_shout后停止，不能称665原件差分；继续恢复该技能、资源消费与完整一局。以下较早记录保持各自历史范围和计数。
+[原始451资源独立入口](evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。此前665帧纯模型技能边界现由后继750原件组合闭合；raw650收据仍只代表650帧资产入口，没有新跑raw750。下一缺口是同一物理live/Aura所有者上的资源消费与选卡1020保护共存，继而继续完整一局。以下较早记录保持各自历史范围和计数。
 
 目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。功能目标持续跟随官方最新稳定版，每轮固定版本与SHA：**latest0.137.0 / `d171b8f9f`已有完整静态profile与非致死伤害80组/125调用0差异；固定0.136.0 / `fe24fb74c`仅静态profile/迁移候选，动态验收0**。持续动态组合研究保持**固定0.135.1 / `90898d5e3`**及原SHA，旧`0898d5e3`为历史截短alias，旧收据和输入不覆写；0.134.0 / 983346a7与0.126.0 / 3e72472a继续作各自固定历史参照。任何旧通过均不自动转记新版。完整身份及分工见[targets.json](targets.json)、[先前身份采集状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。工具、原件与分析产物留在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
 
@@ -26,7 +29,8 @@
 
 | 版本域 | 当前事实 | 验收边界 |
 |---|---|---|
-| latest0.137.0 | [175327函数完整profile/RO索引](reports/2026-11-02-wasm0137-profile.md)；[资源1420新90例/90调用与独审](reports/2026-11-02-resource-pickup0137-independent-review.md)，36源、完整56B/169/Gguard；[非致死/no-proc damage913：80组/125完整调用0差异](reports/2026-11-02-combat0137.md)，11源、全432B记录/f64/RNG | [限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)；完整death/proc/137开局/Windows ABI及运行/一局未验收。12个原生NPC声明仅静态互证，135/136结果不外推。 |
+| latest0.138.0 | [完整profile](reports/2026-11-02-wasm0138-profile.md)；[非致死913：80组/125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md) | 只验限定无proc数值域；135连续流程与137结果不转计138。Windows运行与独立完整一局未验收。 |
+| 固定先前latest0.137.0 | [175327函数完整profile/RO索引](reports/2026-11-02-wasm0137-profile.md)；[资源1420新90例/90调用与独审](reports/2026-11-02-resource-pickup0137-independent-review.md)，36源、完整56B/169/Gguard；[非致死/no-proc damage913：80组/125完整调用0差异](reports/2026-11-02-combat0137.md)，11源、全432B记录/f64/RNG | [限定数值域独审通过](reports/2026-11-02-combat0137-independent-review.md)；完整death/proc/137开局/Windows ABI及运行/一局未验收。12个原生NPC声明仅静态互证，135/136结果不外推。 |
 | 固定0.136.0静态迁移 | [175319函数完整profile/RO索引、12入口候选和引用审查](reports/2026-11-01-wasm0136-profile.md)；实际9字节build `fe24fb74c` | 动态case0；候选同形与callee/数据等价分开验证。 |
 | 固定0.135.1动态研究 | 既有与进行中的独立资源、opening、combat、XP/选卡实验保持原始SHA；实际build `90898d5e3` | 下表计数仍属于各自冻结135收据；新组合另记，不倒填历史或转记136/137。 |
 

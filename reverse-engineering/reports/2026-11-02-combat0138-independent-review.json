@@ -1,0 +1,61 @@
+{
+  "schema": "azeroth-ports-combat0138-independent-review-v1",
+  "status": "passed_scoped_read_only_review",
+  "version": "0.138.0",
+  "build": "382771e6c",
+  "review": {
+    "path": "evidence/combat0138-independent-review-20261101T211907.648414Z/review.json",
+    "sha256": "a4098947aa8d671dfd757e4eeda026a8e1518f93c35b8966a5921cf78ee3dd94"
+  },
+  "reviewer": {
+    "path": "scripts/review_combat138.py",
+    "sha256": "67282c72c394c9aaeca74d3500657f037db6562bf604cc2d48f4f26cc545901c",
+    "execution": "Read-only stdlib evidence review; no target/model/checker/builder/toolchain execution"
+  },
+  "original_comparison": {
+    "path": "evidence/combat0138-oracle-20261101T205616.629599Z/comparison.json",
+    "sha256": "282e38ed4d2f14e87a12568cc9f0dbcca81c9641f63464936c9c08047278b7fa",
+    "fresh_original_cases": 80,
+    "full_original913_calls": 125,
+    "mismatch_cases": 0
+  },
+  "sources": {
+    "total": 11,
+    "production": 4,
+    "local_import_edges": 14,
+    "before_after_and_snapshot_current_match": true
+  },
+  "independent_numeric": {
+    "operations": 125,
+    "school372_bonus_evaluations": 3,
+    "accepted_nonlethal": 118,
+    "f64_total_differs_from_f32_accumulation": 17,
+    "phase_rejected": 5,
+    "dead_marker_rejected": 1,
+    "missing_target": 1
+  },
+  "strict_record_bytes_recompared": 55296,
+  "raw_game_records": 125,
+  "raw_game_scope": "8192B retained only; scalar total/RNG/phase/time/header/G1972 crosschecks, not all8192B independently predicted",
+  "accepted_scope": "Controlled complete432B unit inputs, phase gate, target lookup, nonlethal context0, explicit empty item/spell/proc sources, strict original HP write and exact f64 total",
+  "phase_fixture_scope": "U64=0/U68=0 explicit numeric fixtures; no timer/destructor consumption and no complete owner/constructor proof",
+  "new_helper_scope": "Static four-arg ABI only; all125 raw G1972=0. Nonempty producer behavior remains unverified.",
+  "native_scope": "One declaration scalar tail only; no Windows function/ABI/layout/runtime equivalence",
+  "new_original_cases": 0,
+  "new_fullgame_frames": 0,
+  "pending": [
+    "death/XP/loot",
+    "nonempty item/spell/proc sources",
+    "nonzero inherited context",
+    "Boss/kind3 accepted continuation",
+    "nonempty G1972/new helper68536",
+    "statistics/packet/visual payloads",
+    "full Game constructor/880/natural frames",
+    "Windows gameplay ABI/runtime",
+    "exhaustive IEEE754 proof"
+  ],
+  "first_review_history": {
+    "path": "evidence/combat0138-independent-review-20261101T211807.536110Z/review.json",
+    "status": "Earlier read-only pass retained; final additionally binds actual build/version bytes, native branding instruction bytes, stack role counts and expected-before-Popen AST lines; not added cases"
+  }
+}

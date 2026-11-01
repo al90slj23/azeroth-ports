@@ -1,0 +1,316 @@
+{
+  "reviewer_sources": {
+    "scripts/review_demo_ai135.py": "f7db9f68e1c60107330c8aabbbb64c491787ce7caa1e1ddd9fb5ca8c079edd1e",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_resource_consumer137.py": "813de3c7d7478ea356a1a1ee89b5f37ca0ed65a88d6ed1e7b24f100755e8eada",
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87"
+  },
+  "status": "passed_scoped_read_only_review",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T205618.153296Z/comparison.json",
+  "comparison_sha256": "01c93350943b0f20956298fdf1908ae7ee2b66c40d902b7eac817cdf2657b07e",
+  "cases": 58,
+  "stages": 66,
+  "new_original_cases": 0,
+  "original_model_checker_executed_by_reviewer": false,
+  "source_files": 48,
+  "production_files": 37,
+  "source_edges": 145,
+  "current_and_frozen_sources_match": true,
+  "source_hashes": {
+    "scripts/check_demo_ai135.py": "bda8e9a0986f156f327e77fff6ff1611a7545c819184a461bf2617463ba55fd4",
+    "scripts/build_demo_ai135_oracle.py": "09e949a6e85d99dbf5ea74c05fac69c9584160cfd74f2e8e4337666a884ca16b",
+    "scripts/run_demo_ai135_oracle.mjs": "964cd388a8d1dd11a8034419387c047adaadab3787e7a9ac3545add91a4b06eb",
+    "scripts/demo_ai135_host.mjs": "70b462724f10e73e45ad40605aaa029dbc2ba2b6312ddc307a9cb6952cb7dcc6",
+    "scripts/ai_world135_packing.mjs": "7409e359bcb94422399d10e21fa8d816bdc39b88bc35475ad6d87d478e8e577a",
+    "scripts/build_distance_map135_oracle.py": "5160d31b3ebde9f8d033eed3e9b96cb3dce8754b1f3d053d566a1f3b3630bb12",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/ai_world135_inputs.py": "dade81393764b9a0f580a9ea041b1b7a6b1ca31c2d72f9edaff9339362ff0a41",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "ed30c5165b1af95b8b4002c0ce285c5da8f72709e701a90e25db25d2330cc69e",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "only_export_section_changed": true,
+  "full921_and_callees_preserved": true,
+  "function_identities": {
+    "921": {
+      "index": 921,
+      "signature": [
+        "7f7d",
+        ""
+      ],
+      "body_start": 2600015,
+      "body_end": 2623153,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37"
+    },
+    "1073": {
+      "index": 1073,
+      "signature": [
+        "7f7d7e7f7f7f",
+        ""
+      ],
+      "body_start": 5745892,
+      "body_end": 5757845,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076"
+    },
+    "4543": {
+      "index": 4543,
+      "signature": [
+        "7f7e7f7f",
+        ""
+      ],
+      "body_start": 21844313,
+      "body_end": 21846101,
+      "body_sha256": "06c211dac173f277e0277b4071cf6e2dad2c744e7504625b0070d7dc06520a62"
+    },
+    "13814": {
+      "index": 13814,
+      "signature": [
+        "7f7e7e7f7f",
+        ""
+      ],
+      "body_start": 37914872,
+      "body_end": 37915734,
+      "body_sha256": "0d809fb5159d6cde52459eedfd66e4359a386f042f829becc9c29f2c6be51c48"
+    },
+    "15511": {
+      "index": 15511,
+      "signature": [
+        "7f7f",
+        "7f"
+      ],
+      "body_start": 39631247,
+      "body_end": 39631968,
+      "body_sha256": "30446f1aefc24637b1d16f4ae41b622f63498c1760663514cba78749408ad7ee"
+    },
+    "27375": {
+      "index": 27375,
+      "signature": [
+        "7f",
+        "7d"
+      ],
+      "body_start": 51325205,
+      "body_end": 51325675,
+      "body_sha256": "e45b81dd82d055b9baff0a5bcbdf7461568882656922c250b8a6a6c9cd2f3d2a"
+    }
+  },
+  "independent_AI_and_scalar_audit": {
+    "stages": 66,
+    "strict_known_values": 1507,
+    "weakness_primary": 24,
+    "incoming_scalar_applied": 60,
+    "contact_attacks": 61,
+    "expirations": 28,
+    "movements": 1,
+    "new169": 27,
+    "strict_record_bytes": 28408,
+    "weakness_backup": 10,
+    "weakness_none": 27,
+    "U400_frozen_rows": 1,
+    "incoming_phase_guard": 1
+  },
+  "strict_record_bytes": 28408,
+  "physical_unknown_bytes": 0,
+  "actual_changed_unit_byte_offsets": [
+    168,
+    169,
+    180,
+    181,
+    184,
+    185,
+    196,
+    197,
+    200,
+    201,
+    212,
+    213,
+    216,
+    217,
+    228,
+    229,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    360,
+    361,
+    396,
+    397,
+    398,
+    399
+  ],
+  "full_raw_game_and_queue_metadata_rebound": true,
+  "exact169_payloads_equal_frozen_expected": true,
+  "Aura_encoder_authorship_boundary": "Reviewer authored frozen demo_shout135._aura. This review independently verifies AI owner/expiry/contact/order and payload identity, not a second independent reconstruction of that encoder. Separate cast review referenced by primary.",
+  "static_proofs_sha256": "f3ff780b7c3c8e0c8895b3040133c57f958e8984137c34213dc0b0375d674d8b",
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "historical_build_alias": "0898d5e3",
+    "cases": 58,
+    "fresh_instances": 58,
+    "entry_calls": 66,
+    "original_full_entries": [
+      921
+    ],
+    "all_original_bodies_and_callees_unchanged": true,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "memory_cap_bytes": 33554432,
+    "max_memory_bytes": 20578304,
+    "heap_mib": 512,
+    "output_bytes": 1210426,
+    "stack_all_restored": true,
+    "original_snapshot_loaded": false,
+    "application_start_called": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "error": null
+  },
+  "stack_checks": 298,
+  "original_terminal": {
+    "pid": 81297,
+    "pgid": 81297,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.8240329999971436,
+    "error": null
+  },
+  "refusal_artifacts_observed": 6,
+  "refusals_not_rerun": true,
+  "default_world_regression": {
+    "receipt_sha256": "c19b3d1e512923bea71c1d9cc8d2f8ba864b6a4e78cd3ad0d6d206303f6de8e7",
+    "cases": 20,
+    "stages": 45,
+    "expected_all_equal": true,
+    "strict_values": 1450,
+    "independently_parsed_asset_world_hashes_verified": true,
+    "separate_batch_not_added": true
+  },
+  "flat_regression": {
+    "receipt_sha256": "6af72fb6db488221935e431455f2889221e667a22347ee72329d7f963ab56529",
+    "cases": 416,
+    "stages": 1013,
+    "new_original_calls": 0,
+    "separate_historical_layer": true
+  },
+  "failed_heap_batch": {
+    "receipt_sha256": "5644cd52a281a443af772970165a67dae6f59e361d64ad7ce6c06eabd2a6cc4a",
+    "retained_not_positive": true,
+    "actual_host_calls": "unknown; no runtime",
+    "input_expected_labels_module_identical": true,
+    "changed_execution_sources": [
+      "scripts/check_demo_ai135.py",
+      "scripts/run_demo_ai135_oracle.mjs"
+    ],
+    "stdout_partial_case_rows": 34
+  },
+  "limitations": [
+    "Original constructor/world resource ownership/full880 not executed",
+    "Other or duplicate NPC aura entries, nonempty44B NPC abilities, remote-party modes and other status/CC producers remain pending",
+    "Full movement and incoming-hit packet payloads observed; this scope predicts exact lateAura169, total packet count and order only"
+  ],
+  "reviewer_source_sha256": "f7db9f68e1c60107330c8aabbbb64c491787ce7caa1e1ddd9fb5ca8c079edd1e",
+  "seconds": 6.315847167003085,
+  "review_owned_terminal": {
+    "pid": 2978,
+    "pgid": 2978,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 6.466730165993795,
+    "deadline_seconds": 60,
+    "error": null
+  },
+  "primary_schema": "azeroth-ports-demo-ai135-independent-review-v1",
+  "review_receipt": "evidence/demo-ai135-independent-review-20261101T210610.715719Z/review.json",
+  "review_receipt_sha256": "8a1ad29df94cf2d0c53be6075fb4924da723a6fe9bae5f7846ae8b2859616795",
+  "reviewer_script": "scripts/review_demo_ai135.py",
+  "created_utc": "2026-11-01T21:07:25.916396+00:00",
+  "counts_not_added": true,
+  "primary_component_report": "reports/2026-11-02-demo-ai0135.md",
+  "cast_Aura_dependency": {
+    "production_source": "reconstruction/core_spec/demo_shout135.py",
+    "sha256": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "authored_by_this_reviewer": true,
+    "independent_cast_review": {
+      "path": "evidence/demo-shout135-independent-review-owned-20261101T210700.766545Z/review/review.json",
+      "sha256": "33211f76462dc3708d29df764da5cff006ac64d6fcfbb40e505be768069b0f0e",
+      "status": "passed_scoped_read_only_review",
+      "reviewer_is_AI_author_not_cast_author": true,
+      "source_matches_AI_frozen_source": true,
+      "scope": "Separate180/207 cast component review; not added to AI58/66 or independently reexecuted by this reviewer"
+    }
+  },
+  "prior_review_preparation": [
+    {
+      "path": "evidence/demo-ai135-independent-review-20261101T210419.550547Z",
+      "status": "strict review stopped on matching structural distance_map null in separate world regression; no original/model/checker execution",
+      "exit_code": 1
+    },
+    {
+      "path": "evidence/demo-ai135-independent-review-20261101T210458.655744Z",
+      "status": "passed; superseded by final receipt with reviewer-source snapshots and failed-batch source-delta audit",
+      "new_original_cases": 0
+    }
+  ]
+}

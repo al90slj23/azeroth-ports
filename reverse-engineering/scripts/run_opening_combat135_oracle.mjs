@@ -53,7 +53,7 @@ const stackExport=added.at(-1);if(stackExport.kind!==3||stackExport.index!==0||s
 const snapshot=await fs.readFile(config.snapshot_path);if(snapshot.length%65536||snapshot.length>268435456||hash(snapshot)!==SNAPSHOT_SHA)throw Error('Snapshot hash/domain');
 const module=await WebAssembly.compile(changed),imports=WebAssembly.Module.imports(module),cases=JSON.parse(inputRaw);
 if(imports.length!==878||imports.some(v=>v.kind!=='function')||cases.length!==1)throw Error('878/exactly one controlled case');
-const limits=Object.freeze({cases:1,actions_per_case:700,controlled_frames_per_case:650,
+const limits=Object.freeze({cases:1,actions_per_case:800,controlled_frames_per_case:750,
  record_uncompressed_bytes:2097152,uncompressed_output_bytes:1073741824,compressed_output_bytes:268435456});
 let outputBytes=0,compressedOutputBytes=0,maxRecordBytes=0,outputRecords=0,outputFailure=null;
 let callsTotal=0,completedFrames=0,completedStages=0,peakMemory=0,boundaries=0;const caseReceipts=[];
@@ -75,7 +75,7 @@ async function emit(value){if(outputFailure)throw outputFailure;const raw=Buffer
 }
 for(const c of cases){
  exact(c,['id','input','actions'],'Case');if(c.id!==caseReceipts.length||!Array.isArray(c.actions)||c.actions.length>limits.actions_per_case)throw Error('Case/action bounds');
- if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('650 controlled frame cap');
+ if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('750 controlled frame cap');
  exact(c.input,['class_byte','race_byte','region_index','app_lcg_seed_u64','object_id_u64','companion_tags'],'Opening input');
  const s=c.input;uint(s.class_byte,8);uint(s.race_byte,8);if(s.region_index!==0||JSON.stringify(s.companion_tags)!=='[255,255]')throw Error('Explicit Elwynn absent slots');
  for(const n of[s.app_lcg_seed_u64,s.object_id_u64])if(typeof n!=='string'||!/^[0-9]+$/.test(n)||BigInt(n)>=1n<<64n)throw Error('Explicit uint64 decimal');

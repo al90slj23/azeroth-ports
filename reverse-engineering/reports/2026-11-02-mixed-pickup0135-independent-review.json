@@ -1,0 +1,267 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/mixed-pickup0135-oracle-20261101T210401.228175Z/comparison.json",
+  "comparison_sha256": "19e28a54b2dc6a306dca5fd6d3bd17f16e24524f858ccb1e9265829128e48e3e",
+  "cases": 60,
+  "full2862_calls": 61,
+  "new_original_cases": 0,
+  "model_original_checker_builder_executed": false,
+  "source_files": 52,
+  "production_files": 44,
+  "source_edges": 189,
+  "current_and_frozen_sources_match": true,
+  "only_export_section_changed": true,
+  "all_original_bodies_and_callees_preserved": true,
+  "static_functions": [
+    {
+      "index": 10298,
+      "body_sha256": "9ae26d54db9cd50eeff57c39f05fe1803755d69f00101fd972ef333eb4098ca7",
+      "WAT_sha256": "4c16fc0aa6a67e9cb0efc5488f6d08c30e12c3703c651232efc8e22ecaf9a935"
+    },
+    {
+      "index": 2862,
+      "body_sha256": "5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a",
+      "WAT_sha256": "d35875f18df4e8c24d30759376434ba21ef83e4f5605d5a099efaf6a0b4ff1eb"
+    },
+    {
+      "index": 31732,
+      "body_sha256": "ccdc29ec4de0f98c3322103fae16ae2ca93a999a964d3f2e8b4fc895c6fca6b1",
+      "WAT_sha256": "aaeb005aa9f407273dd66074c6122642489d98d213d27d11cd16fed7f392588d"
+    },
+    {
+      "index": 1512,
+      "body_sha256": "31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748",
+      "WAT_sha256": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3"
+    },
+    {
+      "index": 1202,
+      "body_sha256": "55a6163b90ac8e373c9d0d1e42c2a6fe829f2124029b48fe19ec62bf159d7652",
+      "WAT_sha256": "93c1a53a759d54514a5142e17e88c5542aac1864aaf1d5770f0205dcac1d035e"
+    },
+    {
+      "index": 10847,
+      "body_sha256": "a2b7212d716abae3889cd5504dab5935a9c8b92e55e7fa6d6838c91b67ada4c5",
+      "WAT_sha256": "e76e24b13a7f542dd315bedac7bdea98788612bc56c31f5baacbedd566613bbe"
+    },
+    {
+      "index": 10529,
+      "body_sha256": "964d28a7b04ff4c53d0a8ddd32fd2b8da3053bfef34493f2b733d2faa9f3891d",
+      "WAT_sha256": "ef2c9f65b5c239b299675ca221d68575e1f9b7fad3e43bfb47085f0b2d16be5c"
+    },
+    {
+      "index": 29537,
+      "body_sha256": "e0c5851c5e859dc79ac8939e7da3994e890b5d234944907903e25c56a6774b01",
+      "WAT_sha256": "029f1f393fc24c7d65645ded0ad69d62855a8490f94552110efdb072348c64bb"
+    },
+    {
+      "index": 42920,
+      "body_sha256": "4e9ba7f2391f699c44e123b90a6758d66c9cb4dca1d44a070947ce16b61aaa7e",
+      "WAT_sha256": "24e2576726398c84697b5080cdef249f41cf46815ff1c00954e1f2f0ecda3fb6"
+    },
+    {
+      "index": 10434,
+      "body_sha256": "f2569c2102935f0c73bf775a5000ed4b9c4d65ba004b040a15245bd608020103",
+      "WAT_sha256": "9138cc51b8f5ee5917e0a5f99c0c61465919b5fb684f612572664d24be19f0d7"
+    },
+    {
+      "index": 15915,
+      "body_sha256": "3e570b33a27f56adf0edb73f028ecc6ab54d9e7e8db38f85120308ce2d2a457c",
+      "WAT_sha256": "d964fd29b236b8edbe4ab2f4073f902493236f6c95f841476ba3b41f4b7b7625"
+    },
+    {
+      "index": 22747,
+      "body_sha256": "de5b534cf3a0ff1cb5500dab12d61b41d49eb9512e1bf3584fd9f88467ddadae",
+      "WAT_sha256": "66e8c0be070bc7f724309f411ef49aadf58c432b60040f0409d78d84d535f3a2"
+    },
+    {
+      "index": 4630,
+      "body_sha256": "828722a8f200878b4bdcf5ac59df4d95f1021df6ca42044a6419c216a405fd21",
+      "WAT_sha256": "2bf5be8331ebb2d8cd75448daf220d211eeeb76750072b900e86f90d8e29c03c"
+    },
+    {
+      "index": 2159,
+      "body_sha256": "413d98654b02253f255eb0cf54bcdc06309fb7aea5c9079fb73a20a9b6a98bcc",
+      "WAT_sha256": "8bdfb49dcb9973f4bf8ebaf361ac73f4c51e1b2b933f00dea1da0718cc957445"
+    },
+    {
+      "index": 35514,
+      "body_sha256": "b63b5546dce15768b153a58d8e87eeb44b18066ce704d6ba8c9f035a18b4d9df",
+      "WAT_sha256": "acaa0df76deeb2f1cc6e685d311283d3daed32db5dc158245f3c3ded644e532c"
+    },
+    {
+      "index": 1089,
+      "body_sha256": "08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb",
+      "WAT_sha256": "9fa6c776a9e45cc8f64972bf1f44d02c2da362035f282566ebf9ceef9254a025"
+    },
+    {
+      "index": 23581,
+      "body_sha256": "a399f58bc42da4536f73b9aa26354103c5e8a67f42674ac98294253b464240a7",
+      "WAT_sha256": "40104fea4bdf07d9647c4af06448b99da585acf53a74693f0020ba68eb06c1a1"
+    },
+    {
+      "index": 44447,
+      "body_sha256": "b5fc7925c2d8d7d8bb35534bcef7718d0498c28f341d6c6abb6a265203298d0f",
+      "WAT_sha256": "32338862eb7dc5e93a77c3dc0c4575e63ee9919f7cea1b0621e8138423a2a313"
+    }
+  ],
+  "strict_comparison": {
+    "known_values": 36342,
+    "explicit_unknown_physical_bytes": 31264,
+    "unknown_original_nonzero_bytes": 8743,
+    "stages": 61
+  },
+  "independent_ordered_semantics": {
+    "consumed_4": 30,
+    "aura_rebuilds": 46,
+    "aura_key_writes": 2972,
+    "aura_forced66_initializations": 45,
+    "aura_valid_old48_comparisons": 1,
+    "resource_4": 30,
+    "consumed_1": 56,
+    "consumed_0": 63,
+    "growth_events": 70,
+    "choice_pause_events": 30,
+    "choice_events": 31,
+    "choice_RNG_steps": 186,
+    "independently_rebuilt_new_candidate_metadata": 93,
+    "physical_pickups_bytes": 17752,
+    "physical_live_bytes": 5888,
+    "physical_aura_bytes": 35328,
+    "actual_known_wire_new": 416,
+    "new_packet_170": 189,
+    "new_packet_bytes_170": 1512,
+    "new_packet_306": 70,
+    "new_packet_bytes_306": 1540,
+    "new_packet_150": 141,
+    "new_packet_bytes_150": 12927,
+    "consumed_5": 24,
+    "resource_5": 24,
+    "attraction_writes": 1,
+    "consumed_3": 16,
+    "resource_3": 16,
+    "new_packet_226": 16,
+    "new_packet_bytes_226": 160,
+    "DOT_events": 1
+  },
+  "notification_owner": {
+    "pointer": 14340336,
+    "cold_initial": 1,
+    "known_writer_functions": [
+      23581,
+      42920,
+      44447
+    ],
+    "writer_proof_sha256": "5f6096d6b91e8b69a0163bc39c44e959734b7799eb6769f0153e4c023bc15082",
+    "fixture_does_not_write": true,
+    "retained_across_operations": true,
+    "unknown_App_prehistory_pending": true
+  },
+  "candidate_scope": "93 new candidate metadata independently rebuilt with finite class1/default0-or1 cleave/rend pool, weighted selection and tier f32 sampling;186 RNG steps exact. Other upgrade/shuffle/gold branches and complete presentation JSON not accepted by this review.",
+  "physical_unknown_scope": "Exact independently inferred None mask for full56/live/aura backing; all inherited56B None bytes separately proven equal input nonzero poison after attraction and stable memmove. No None-to0 conversion.",
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "cases": 60,
+    "completed_cases": 60,
+    "full2862_calls": 61,
+    "fresh_instances": 60,
+    "max_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "output_bytes": 2442473,
+    "notification_counter_written_by_fixture": false,
+    "locale_Once_injected": false,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_function_bodies_unchanged": true,
+    "error": null
+  },
+  "stack_checks": 243,
+  "original_terminal": {
+    "pid": 94374,
+    "pgid": 94374,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.958962207994773,
+    "error": null
+  },
+  "static_image_proof_sha256": "b40bdc3d1284104c050ff6312859f45b20e1f6fe3eeaca1816fe424f491cfb70",
+  "reviewer_sources": {
+    "scripts/review_mixed_pickup135.py": "6648ee0cd581e52fc5998b50b1892e79ccb75e40c01ce986b5af20c94792cd3f",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_resource_consumer137.py": "813de3c7d7478ea356a1a1ee89b5f37ca0ed65a88d6ed1e7b24f100755e8eada",
+    "scripts/review_resource_consumer135.py": "483df3888a83dfa7e13b8432b994378a65049b2146bae4f9e6e56a6ce1688517",
+    "scripts/review_level_banner135.py": "3b4fad6e916dbc7633fe22d9d1d12e7104baef48b5d0b7a423e6f371f5df802d",
+    "scripts/review_resource_spawn135.py": "dc096f04085bbf96d016ebf0db0ada4cef62c7d1ed12b874071204fd00f13446",
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87"
+  },
+  "observed_artifact_sha256": {
+    "stdout.jsonl": "71d117516ae7e1891708eaf974dc667d1d38177fedbc5a76415e5f8254ff0ebe",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "prepared.json": "ecbe13fac16ecbfe98953a882c3718f6a8efcf2a1399de1320c58b0959f5ced6",
+    "process-terminal.json": "cddfbae141334c37bcf936c2c38b2df390717e4e6348527c44414401f45a336a",
+    "mixed-pickup135-runtime.json": "9032e2f466399626a010af7fcce4943a1d78b4e39fe63f7c696bbe3569b93148",
+    "owned-process.json": "dc48c847635d4ea901328bbdb367b71d6513f53f5aefbab73d691ca05e4c73e5",
+    "validator-owned.json": "4e0643eb89a7625d822529d5b72035cec0deee2dd0eb62c2a9ad6971630e3edd"
+  },
+  "artifact_scope": "Frozen original receipt seals input/expected/module; output/runtime/terminal hashes additionally bound at review time, not backdated",
+  "limitations": [
+    "Nearbykind2/other kinds",
+    "Nonempty claims/aux and other external live/stat/aura producers",
+    "Moving NPC35514 pause producer must be interleaved by root owner",
+    "Non-English labels",
+    "CompleteGame/mainloop/native",
+    "Other packet families including XP221 movement;2159 choice notification presentation JSON beyond known envelope/candidate metadata",
+    "FullGame8192 and allocator/BTree/queue addresses"
+  ],
+  "headless_resource_integration": "Not accepted by this component review or by unrelated static ContextNone750 trajectory",
+  "seconds": 1.2295862920000218,
+  "review_owned_terminal": {
+    "pid": 76518,
+    "pgid": 76518,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 1.398087082998245,
+    "deadline_seconds": 60,
+    "error": null
+  },
+  "schema": "azeroth-ports-mixed-pickup135-independent-review-v1",
+  "created_utc": "2026-11-01T21:54:43.651294+00:00",
+  "review_receipt": "evidence/mixed-pickup135-independent-review-20261101T215029.875027Z/review.json",
+  "review_receipt_sha256": "5387f7daec547d6a65208f87640554d4942b2d629ea44b458f323fb5fa453089",
+  "primary_component_report": "reports/2026-11-02-mixed-pickup0135.md",
+  "primary_MD_sha256": "0a2ebf2917d994cad7277a58c0967acf9e0f95cfce7de4b4740a27c1b9fec69e",
+  "scope_not_added_to_other_batches": true,
+  "prior_review_receipt": {
+    "path": "evidence/mixed-pickup135-independent-review-20261101T214802.500571Z/review.json",
+    "sha256": "07d3558676ac1d9d08e9da359a8b8e12fa6efaeabccb923cc074d55b49541eef",
+    "status": "Passed then superseded by final finite candidate/RNG reconstruction and three-writer proof, no new originals"
+  },
+  "integration_findings": {
+    "status": "read_only_proposal_pending_new_evidence",
+    "canonical_scalar_owner": "collection.level remains sole HP/derived/time/RNG owner; never copy these into resource context",
+    "current_source_views": {
+      "reconstruction/core_spec/headless135.py": "bc325e8b3d44be22677d3c5ca8b0f7342640f26902ef538883a251537589157e",
+      "reconstruction/core_spec/resource_player_update135.py": "6b5fc34afc4049347320767ff55339d6aa6f12d66fd866e5709b12441c868ea5",
+      "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1"
+    },
+    "requirements": [
+      "Canonical physical live32 capacity/count/full None-aware backing plus player48aura/initialized owner; current active-only legacy views are not enough to reconstruct prior inactive bytes. All old writers must update same owner before context views.",
+      "Construct temporary mixed context at each prefix/collect entry from current canonical physical owner/action/App nextID, validate semantic views, atomically write returned level/live/aura/action/App owner, then discard context.",
+      "Run one union2088 prefix before1076; never run old+new prefix consecutively or filter kind12 to bypass its current unsupported domain. World owns fresh0/8/12=1020 expansion.",
+      "Admit resource kind0 into incoming only through known23451/23505 physical provenance while retaining it; preserve old unsupported-family guard for everything else.",
+      "Consume ordered_effects at exact positions. Do not duplicate growth150 from aggregate growth_events or despawn170 from nested resource event; apply choice_pause actor owner changes in place before later selected consumers.",
+      "Supply retained App notification owner explicitly; cold data1 does not prove unknown App/menu/chat/Boss prehistory. Do not reset per frame or Game."
+    ],
+    "not_natural750_acceptance": true
+  }
+}

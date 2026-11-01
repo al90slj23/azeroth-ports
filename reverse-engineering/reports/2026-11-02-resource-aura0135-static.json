@@ -1,0 +1,65 @@
+{
+  "component": "resource_aura135",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "status": "static_projection_and_pure_model_selfcheck_only_original_differential_pending",
+  "original_calls": 0,
+  "native_executions": 0,
+  "original_differential_cases": 0,
+  "source_sha256": {
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "scripts/trace_resource_aura135.py": "2ab4fdbe3c37783e8139795df91996d4a7770d08db2ec799aedf58942ffc2ac3",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368"
+  },
+  "static_receipt": {
+    "path": "evidence/resource-aura0135-static-20261101T202129.769026Z/resource-aura135-static.json",
+    "sha256": "d0b94f68904d3c0be82436b4119a6a308e3a3b47a8685ea9213ba4b702d62e33"
+  },
+  "pure_model_selfcheck": {
+    "path": "evidence/resource-aura0135-static-20261101T202129.769026Z/local-selfcheck.json",
+    "sha256": "2a76fc098e395547d6734467e5c931f096e87598823a023f21a4f0a991d000ac",
+    "positive_checks": 7,
+    "explicit_refusals": 3,
+    "original_cases": 0,
+    "script": "evidence/resource-aura0135-static-20261101T202129.769026Z/aura-local-check.py",
+    "script_sha256": "d4df58732c13e6bc1fca65433294dbcac3a32208e859aa06db919ae0dfda0db9"
+  },
+  "API": {
+    "state": "ResourceAuraState135(storage:tuple[16B cell rows], initialized2569:u8)",
+    "function": "rebuild_resource_aura135(live_storage32, live_count, now_bits, previous, player_fields)",
+    "result": "ResourceAuraResult135(aura, player_fields, events, field_writes)",
+    "events_scope": "aura_field_write logical-write descriptors, not original queue/ECS packets"
+  },
+  "source_domain": [
+    "Live kind0, or unique finite nonnegative kind8; other aura producers must be absent by caller-established domain.",
+    "Physical old cache is empty or complete48-slot canonical0/1 tags; only bit0 of initialized2569 controls old comparisons."
+  ],
+  "rules": [
+    "Ordered live expiry>now precedes all kind/spell/magnitude reads; expired/NaN expiry contributes no aura.",
+    "Ordinary duplicate kind0 same-spell effective magnitudes tie at0: stable first wins before aggregation; it retains first expiry.",
+    "Spell774 bypasses dominance filtering and aggregates stack count with maximum expiry.",
+    "First32 selected aggregate buffs fill slots0..31; the separate16 negative/control slots are empty in this domain.",
+    "Each new slot initially receives only a zero u32 tag; inactive+4..15 remain unknown allocation storage.",
+    "An active16B slot is(tag1,spell,expiry_bits,stack_count) as four little-endian u32 words.",
+    "Old count!=48 resets comparison cache and initialized2569=0, forcing logical writes for slots/flags/applications.",
+    "Old48 and initialized2569 bit0 set only writes logical fields when their compared spelling/packed values change.",
+    "Logical spell keys47..94; flag keys95..100 use8 nibbles per field,9 buff/8 debuff for each present slot.",
+    "Application keys113..124 pack4 bytes per field: present stack_count>0 maps to min(count,255)-1; absent/zero count maps0.",
+    "No key101..112 is written by1202; final cache cap/count48 and initialized2569=1.",
+    "No original allocation pointer, full BTree layout or queue payload is predicted by this helper."
+  ],
+  "pending": [
+    "Duplicate kind8 dominance and negative/control sources",
+    "Nonempty external timed definitions38, active owned/shield kind12 and kind7 producers",
+    "Physical BTree/allocator identity and wire/UI effects",
+    "Full1202 beyond the declared live-only source domain"
+  ],
+  "WAT_read_bytes": 114472,
+  "full_WAT_read": false,
+  "existing_production_source_changed": false
+}

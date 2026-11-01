@@ -8,7 +8,7 @@ import {Writable} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
 export const CAS_PROTOCOL='opening-combat135-cas-v1';
 export const CAS_MARKER='$cas135_blob_v1';
-export const CAS_LIMITS=Object.freeze({cases:1,actions_per_case:700,controlled_frames_per_case:650,
+export const CAS_LIMITS=Object.freeze({cases:1,actions_per_case:800,controlled_frames_per_case:750,
  logical_record_bytes:2097152,logical_output_bytes:8589934592,index_record_bytes:2097152,
  index_uncompressed_bytes:1073741824,compressed_output_bytes:268435456,
  blob_bytes:16777216,unique_blob_bytes:536870912,blob_files:65536,

@@ -28,6 +28,7 @@ from core_spec.initial_state135_data import ZONE_ENTRIES
 from core_spec.pickup_record_cells135 import pickup_words135
 from core_spec.event_wave135 import EventWaveLocale135
 from opening_pickup_provenance135 import PickupAddressVerifier135
+from opening_npc_aura135 import npc_aura_updates169
 
 
 @lru_cache(maxsize=16)
@@ -114,6 +115,7 @@ def wanted(state):
         resource_create_packets169=resource_create_packets169(state.produced_packets),
         explicit_actor_creates169=explicit_create_packets169(state.produced_packets),
         banner150_packets=[payload for opcode,payload in state.produced_packets if opcode==150],
+        npc_aura_updates169=npc_aura_updates169(state.produced_packets),
         guardian_cooldowns=[dict(unit_index=x.unit_index,guid=str(x.guid),capacity=x.capacity,timers_bits=list(x.timers_bits),
             ability_pointer=x.ability_pointer,header_pointer=x.header_pointer,ability_records44_hex=list(x.ability_records44_hex),
             header28_hex=x.header28_hex)for x in state.guardian_cooldowns],
@@ -138,6 +140,8 @@ def original_view(raw,expected):
     raw_projection['explicit_actor_creates169']=explicit_create_packets169(
         ((p['opcode'],p['payload_hex'])for p in raw['packets']['active']),guids)
     raw_projection['banner150_packets']=[p['payload_hex']for p in raw['packets']['active']if p['opcode']==150]
+    raw_projection['npc_aura_updates169']=npc_aura_updates169(
+        (p['opcode'],p['payload_hex'])for p in raw['packets']['active'])
     projection=subset(expected['projection'],raw_projection);vectors={}
     for name,want in expected['vectors'].items():
         value=raw['vectors'][name];v={}
@@ -199,14 +203,14 @@ def corpus(world,seed,frames,dt,expected_path):
             except (NotImplementedError,UnknownRecordRead135)as error:
                 boundary=type(error).__name__+': '+str(error);break
             if status!='ordered_frame_projection':boundary=status;break
-            if len(actions)>=700:raise ValueError('Controlled action budget exceeded')
+            if len(actions)>=800:raise ValueError('Controlled action budget exceeded')
             action_index=len(actions);actions.append(dict(kind='controlled_tail_frame',dt_bits=dt));state=new
             for kind,snapshot in stages:
                 emit(dict(record_kind='stage',stage_index=stage_count,action_index=action_index,kind=kind,expected=wanted(snapshot)))
                 stage_count+=1
             choices=0
             while state.collection.level.phase2587==2:
-                if choices>=64 or len(actions)>=700:raise ValueError('Controlled selection/action budget exceeded')
+                if choices>=64 or len(actions)>=800:raise ValueError('Controlled selection/action budget exceeded')
                 cards=state.collection.level.candidates;index=next((i for i,c in enumerate(cards)if c.variant=='upgrade'),0)
                 selected,status=select(state,index)
                 if status not in('running','choice_regenerated'):
@@ -228,12 +232,12 @@ def main():
     parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int)
     parser.add_argument('--capture-format',choices=('gzip','cas'),default='gzip');args=parser.parse_args()
     frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
-    if not 1<=frames<=650:raise ValueError('Bounded controlled frame corpus required')
+    if not 1<=frames<=750:raise ValueError('Bounded controlled frame corpus required')
     cas_files=('scripts/run_opening_combat135_cas_oracle.mjs','scripts/opening_combat135_cas.mjs','scripts/opening_combat135_cas.py')if args.capture_format=='cas'else()
     files=tuple(dict.fromkeys(('scripts/check_opening_combat135.py','scripts/production_closure135.py',
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
         'scripts/build_world_snapshot135_oracle.py','scripts/build_full135_oracle.py','scripts/build_upgrade134_oracle.py',
-        'scripts/trace_coop.py','scripts/wasm_index.py','scripts/opening_pickup_provenance135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
+        'scripts/trace_coop.py','scripts/wasm_index.py','scripts/opening_pickup_provenance135.py','scripts/opening_npc_aura135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
     before={p:sha(ROOT/p)for p in files};world,world_receipt,world_inputs=load_independent_world(DEFAULT_WORLD)
     world_inputs.update({str(path):sha(path)for path in(DEFAULT_WORLD/'receipt.json',DEFAULT_WORLD/'inputs.json')})
     out,manifest=build_opening_combat135();source=out/'source-snapshot'

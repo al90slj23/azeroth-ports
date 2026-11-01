@@ -1,10 +1,13 @@
 # 独立核心的可执行规格
 
+官方metadata本轮核对至 **2026-11-01T21:51:57Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](../evidence/official-goal-phase-network-check-20261101T215156.327710Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](../reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
+
+
 当前功能目标已更新为**官方0.138.0**，Windows/Web原件均在4T另档并完成大小、哈希及采集前后部署一致性核对，见[138采集与版本状态](../reports/2026-11-02-latest0138-state.md)。新版静态与动态证据单独登记；固定135连续流程、137局部组件的结果均不转记138。现有安装包和存档未替换。
 
-当前[650帧／60秒波次与补给闭环](../reports/2026-11-02-opening-event-combat0135.md)固定135：真实opening→战斗→5次选卡→首波次及补给→继续，9105阶段／9107原件入口0声明差异，104源／90production；[只读独审通过](../reports/2026-11-02-opening-combat0135-650frame-independent-review.md)。新增全部150与声明actor169字节、GUID绑定的kind2地址来源比较。仍是原件snapshot／独立预解析world／外部clock控制的14尾阶段，完整880／Windows执行／独立完整一局均为0。
+当前[750帧／六次选卡与挫志怒吼闭环](../reports/2026-11-02-opening-demo-combat0135.md)固定135：真实opening→战斗→6次选卡→首波次及补给→Demo施放／受伤／减益到期→继续，10,506阶段／10,508原件入口、0声明差异；[完整只读独审通过](../reports/2026-11-02-opening-combat0135-750frame-independent-review.md)。原件只执行一次，读取器修复后重比完整采集，重比／独审不增加原件case。110捕获源／111重比源含95production；仍为snapshot／独立预解析world／外部clock的14尾阶段，完整880／Windows执行／独立完整一局均为0。历史[650帧](../reports/2026-11-02-opening-event-combat0135.md)保留原范围。
 
-[原始451资源独立入口](../evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](../evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。下一纯模型到665帧自然选中demo_shout后停止，不能称665原件差分；继续恢复该技能、资源消费与完整一局。以下较早记录保持各自历史范围和计数。
+[原始451资源独立入口](../evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](../evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。此前665帧纯模型技能边界现由后继750原件组合闭合；raw650收据仍只代表650帧资产入口，没有新跑raw750。下一缺口是同一物理live/Aura所有者上的资源消费与选卡1020保护共存，继而继续完整一局。以下较早记录保持各自历史范围和计数。
 
 本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标latest0.137.0 / `d171b8f9f`已有完整静态profile和非致死伤害80组/125调用0差异；0.136.0 / `fe24fb74c`只有静态profile/迁移候选、动态验收0**。本目录开局/同状态主循环组合实验继续锁定**0.135.1 / `90898d5e3`**；旧`0898d5e3`是历史截短alias，不改旧收据或原件。0.134.0 / 983346a7与更旧模型按其固定版本保留，各自范围见[版本支持清单](version-support.json)和[先前身份采集状态](../reports/2026-11-01-latest-version-state.md)，不能自动转计新版本通过。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
 

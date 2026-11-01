@@ -13,6 +13,13 @@ MARKER = '$cas135_blob_v1'
 PROTOCOL = 'opening-combat135-cas-v1'
 SHA = re.compile(r'[0-9a-f]{64}\Z')
 SURROGATE = re.compile(r'[\ud800-\udfff]')
+# The admitted one-case controller emits four boundary records, fourteen
+# stages per frame, and one record per action (clock or selection). With at
+# most750 frames/800 actions this is11304 records, indices0..11303. This does
+# not relax the independent byte/blob/depth/occurrence budgets.
+CAPTURE_RECORD_LIMIT = 4 + 14 * 750 + 800
+FRAGMENT_CACHE_WEIGHT_LIMIT = 16 * 1024 * 1024
+FRAGMENT_CACHE_ITEM_LIMIT = 1024 * 1024
 
 
 class CaptureCAS135Error(ValueError):
@@ -84,6 +91,8 @@ class CaptureCAS135:
         self.declared_refs = {}
         self.cache = OrderedDict()
         self.cache_bytes = 0
+        self.fragments = OrderedDict()
+        self.fragment_cache_weight = 0
         self.record_index = 0
         self.logical_bytes = 0
         self.logical_hash = hashlib.sha256()
@@ -115,7 +124,7 @@ class CaptureCAS135:
                 _require(type(h) is str and SHA.fullmatch(h) and h not in self.entries, 'CAS duplicate/invalid blob SHA')
                 n = _uint(row['bytes'], 16 * 1024 * 1024, 'CAS blob16MiB budget')
                 _require(n > 0 and row['file'] == 'cas-blobs/' + h + '.json', 'CAS blob path')
-                _uint(row['first_record_index'], 10000, 'CAS first record index')
+                _uint(row['first_record_index'], CAPTURE_RECORD_LIMIT - 1, 'CAS first record index')
                 _require(type(row['child_refs']) is list, 'CAS child-reference list')
                 seen = set()
                 for child in row['child_refs']:
@@ -143,7 +152,7 @@ class CaptureCAS135:
                 h = row['sha256']
                 _require(h in self.entries and h not in self.declared_refs, 'CAS reference metadata identity')
                 _require(row['bytes'] == self.entries[h]['bytes'] and row['first_record_index'] == self.entries[h]['first_record_index'], 'CAS reference metadata mismatch')
-                _uint(row['last_record_index'], 10000, 'CAS last record index')
+                _uint(row['last_record_index'], CAPTURE_RECORD_LIMIT - 1, 'CAS last record index')
                 _uint(row['total_logical_references'], 1 << 40, 'CAS logical ref count')
                 _require(row['total_logical_references'] > 0, 'CAS positive logical refs')
                 self.declared_refs[h] = row
@@ -210,7 +219,69 @@ class CaptureCAS135:
             return [self._expand(v, active, depth + 1, work) for v in value]
         return value
 
+    def _fragment_value(self, value, active):
+        """Canonical bytes plus exact transitive references/depth/work.
+
+        Cached bytes preserve every original field and numeric lexeme. The
+        reference footprint replaces repeated traversal, not its verification:
+        occurrence counts and first/last record bounds are still checked.
+        """
+        if type(value) is dict and MARKER in value:
+            _require(set(value) == {MARKER, 'bytes'}, 'CAS reference shape')
+            h = value[MARKER]
+            _require(type(h) is str and h in self.entries and h not in active, 'CAS unknown/cyclic reference')
+            row = self.entries[h]
+            _require(type(value['bytes']) is int and value['bytes'] == row['bytes'], 'CAS reference byte mismatch')
+            data, footprint, depth, work = self._fragment_hash(h, active)
+            refs = footprint.copy()
+            refs[h] += 1
+            _require(work + 1 <= 2097152, 'CAS expanded tree budget')
+            return data, refs, depth, work + 1
+        if type(value) not in (dict, list):
+            data = _json(value).encode('utf8')
+            _require(len(data) <= 2 * 1024 * 1024, 'CAS logical record budget')
+            return data, Counter(), 0, 1
+        parts, refs, depth, work, size = [], Counter(), 0, 1, 2
+        entries = value.items() if type(value) is dict else ((None, v) for v in value)
+        for key, item in entries:
+            data, child_refs, child_depth, child_work = self._fragment_value(item, active)
+            prefix = (_string(key).encode('utf8') + b':') if key is not None else b''
+            size += len(prefix) + len(data) + bool(parts)
+            depth = max(depth, child_depth + 1)
+            work += child_work
+            _require(depth <= 128 and work <= 2097152, 'CAS expanded tree budget')
+            _require(size <= 2 * 1024 * 1024, 'CAS logical record budget')
+            refs.update(child_refs)
+            parts.append(prefix + data)
+        if type(value) is dict:
+            data = b'{' + b','.join(parts) + b'}'
+        else:
+            data = b'[' + b','.join(parts) + b']'
+        return data, refs, depth, work
+
+    def _fragment_hash(self, h, active):
+        if h in self.fragments:
+            fragment, weight = self.fragments.pop(h)
+            self.fragments[h] = (fragment, weight)
+            return fragment
+        # _encoded checks file size/SHA, reserved shapes, exact direct edges
+        # and encoded depth, even if a logical fragment is not cacheable.
+        fragment = self._fragment_value(self._encoded(h), active | {h})
+        data, refs, _, _ = fragment
+        # Avoid filling the cache with unique whole-record roots. Weight also
+        # accounts conservatively for the reference-map entries; this is a
+        # cache accounting bound, not a claim about total Python RSS.
+        weight = len(data) + 160 * len(refs) + 512
+        if len(data) <= FRAGMENT_CACHE_ITEM_LIMIT and weight <= FRAGMENT_CACHE_WEIGHT_LIMIT:
+            while self.fragments and self.fragment_cache_weight + weight > FRAGMENT_CACHE_WEIGHT_LIMIT:
+                _, (_, old_weight) = self.fragments.popitem(last=False)
+                self.fragment_cache_weight -= old_weight
+            self.fragments[h] = (fragment, weight)
+            self.fragment_cache_weight += weight
+        return fragment
+
     def decode_line(self, raw):
+        _require(self.record_index < CAPTURE_RECORD_LIMIT, 'CAS capture record count budget')
         _require(len(raw) <= 2 * 1024 * 1024 and raw.endswith(b'\n'), 'CAS stream record budget')
         row = _loads(raw)
         _require(set(row) == {'cas_protocol', 'record_index', 'record_kind', 'id', 'logical_bytes', 'logical_sha256', 'capture'}, 'CAS envelope shape')
@@ -219,11 +290,19 @@ class CaptureCAS135:
         _uint(row['id'],(1<<53)-1,'CAS id must be a nonnegative safe integer, never bool')
         _uint(row['logical_bytes'], 2 * 1024 * 1024, 'CAS logical record budget')
         _require(type(row['logical_sha256']) is str and SHA.fullmatch(row['logical_sha256']), 'CAS logical SHA shape')
-        value = self._expand(row['capture'], set(), 0, [0])
+        data, refs, depth, work = self._fragment_value(row['capture'], set())
+        _require(depth <= 128 and work <= 2097152, 'CAS expanded tree budget')
+        for h in refs:
+            _require(self.entries[h]['first_record_index'] <= self.record_index, 'CAS reference precedes declaration')
+        logical = data + b'\n'
+        _require(len(logical) == row['logical_bytes'] and hashlib.sha256(logical).hexdigest() == row['logical_sha256'], 'CAS reconstructed logical line mismatch')
+        value = json.loads(logical)
         _require(type(value)is dict and type(value['record_kind'])is str and type(value['id'])is int
                  and value['record_kind']==row['record_kind']and value['id']==row['id'],'CAS logical identity')
-        logical = (_json(value) + '\n').encode('utf8')
-        _require(len(logical) == row['logical_bytes'] and hashlib.sha256(logical).hexdigest() == row['logical_sha256'], 'CAS reconstructed logical line mismatch')
+        self.actual_refs.update(refs)
+        for h in refs:
+            self.first_seen.setdefault(h, self.record_index)
+            self.last_seen[h] = self.record_index
         self.logical_bytes += len(logical)
         self.max_record = max(self.max_record, len(logical))
         _require(self.logical_bytes <= 8 * 1024 * 1024 * 1024, 'CAS logical8GiB budget')
@@ -233,7 +312,7 @@ class CaptureCAS135:
         self.max_stream_record=max(self.max_stream_record,len(raw))
         _require(self.stream_bytes<=1024*1024*1024,'CAS envelope stream1GiB budget')
         self.record_index += 1
-        return json.loads(logical)
+        return value
 
     def finish(self, receipt):
         _require(receipt['protocol'] == PROTOCOL and receipt['marker'] == MARKER, 'CAS runtime protocol')
@@ -254,4 +333,7 @@ class CaptureCAS135:
             _require(row['total_logical_references'] == self.actual_refs[h]
                      and row['first_record_index'] == self.first_seen[h]
                      and row['last_record_index'] == self.last_seen[h], 'CAS occurrence metadata mismatch')
-        return dict(checks, all_blobs_and_occurrences_verified=True, decoder_cache_bytes=self.cache_bytes)
+        return dict(checks, all_blobs_and_occurrences_verified=True, decoder_cache_bytes=self.cache_bytes,
+                    logical_fragment_cache_weight_bytes=self.fragment_cache_weight,
+                    logical_fragment_cache_weight_limit=FRAGMENT_CACHE_WEIGHT_LIMIT,
+                    logical_fragment_cache_item_limit=FRAGMENT_CACHE_ITEM_LIMIT)

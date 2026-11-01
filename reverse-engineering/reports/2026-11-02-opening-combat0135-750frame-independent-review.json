@@ -1,0 +1,3819 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat135-recomparison-20261101T213907.612742Z/comparison.json",
+  "comparison_sha256": "20a4e52795386b1b62ab50aa6ff33cda61d25549c10917a69cc7e68b285bf4d3",
+  "capture_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T210558.218894Z",
+  "source_files": 111,
+  "captured_source_files": 110,
+  "production_files": 95,
+  "current_and_frozen_sources_verified": true,
+  "only_decoder_changed": {
+    "scripts/opening_combat135_cas.py": {
+      "captured": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+      "current": "728b3ae0576d372b9b7467c484022ae3487e772b9a09c0172bfbcdcf29c1479f"
+    }
+  },
+  "reviewer_script_sha256": "9ce1059a2e262612ad39ed730ea0668e9b0fc469abe94d9cbece12bdc6abc66a",
+  "reviewer_sources": {
+    "scripts/review_opening_combat135_750.py": "9ce1059a2e262612ad39ed730ea0668e9b0fc469abe94d9cbece12bdc6abc66a",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_demo_shout135.py": "fbad5388cadde05b9c2185ce06f8c770f8cf107d4fc27a07911f67d7bbbb5213",
+    "scripts/review_event_wave135.py": "ae407088cf2e6e28340536fe76cb5d38387bd4d9536bf2f5e096811e037500eb",
+    "scripts/review_resource_spawn135.py": "dc096f04085bbf96d016ebf0db0ada4cef62c7d1ed12b874071204fd00f13446",
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87",
+    "scripts/review_resource_consumer137.py": "813de3c7d7478ea356a1a1ee89b5f37ca0ed65a88d6ed1e7b24f100755e8eada",
+    "scripts/review_opening_combat135_650.py": "b3c36711097cde31a684314eeefee27b8379fea3709414918902b361de861909"
+  },
+  "transport": {
+    "source": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat135-recomparison-20261101T213907.612742Z/source-snapshot/scripts/opening_combat135_cas.py",
+    "sha256": "728b3ae0576d372b9b7467c484022ae3487e772b9a09c0172bfbcdcf29c1479f",
+    "private_decoder_used": false,
+    "codec_review": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-cas-codec135-review-20261101T213703.164647Z/review.json",
+    "codec_review_sha256": "4af1be1b8d7491a85f54dffd133dc475b027c4d647135711d8ea5acf14ea4c4d",
+    "negative_cases": 28,
+    "full_finish": {
+      "records": 11260,
+      "logical_bytes": 5311244307,
+      "logical_sha256": "59cb1f46ae0d8c4f760d9d9b7b32b9eb8ab241d1af936865b1ad69493b03374a",
+      "maximum_logical_record_bytes": 1383432,
+      "unique_blobs": 33690,
+      "unique_blob_bytes": 303694282,
+      "maximum_blob_bytes": 1359364,
+      "index_uncompressed_bytes": 3643867,
+      "index_uncompressed_sha256": "62897c035f017a700e92b6ef65b60f2aa4d2d1e10c320ec7c0f6f1abac5c597d",
+      "maximum_index_record_bytes": 515,
+      "maximum_blob_index_record_bytes": 29624,
+      "total_logical_blob_references": 2778230,
+      "blob_index_bytes": 34765510,
+      "blob_index_sha256": "a8c6c22789d278da72f495e5fd21cc4eb7a954bff6c9e52642322d76ca200eff",
+      "blob_references_bytes": 5770176,
+      "blob_references_sha256": "a7f54ba06ea4678e80ce56bae27b60172c97a538a6ad7c343d61f8bace5b375b",
+      "all_blobs_and_occurrences_verified": true,
+      "decoder_cache_bytes": 7838059,
+      "logical_fragment_cache_weight_bytes": 16626799,
+      "logical_fragment_cache_weight_limit": 16777216,
+      "logical_fragment_cache_item_limit": 1048576
+    }
+  },
+  "stream_record_counts": {
+    "case_start": 1,
+    "constructor": 1,
+    "opening": 1,
+    "clock_control": 750,
+    "stage": 10506,
+    "case_end": 1
+  },
+  "expected_stream": {
+    "file_bytes": 97152445,
+    "file_sha256": "3d6ad3599ff674e0dd2a1b36844ccb62994156551b4f557b5eeedd9caf766510",
+    "uncompressed_bytes": 666746759,
+    "uncompressed_sha256": "c4da8236567fda52286a900aec7a83a2316e03bc06959cd4359ea23386a6aa8d",
+    "maximum_record_bytes": 92446,
+    "records": 10507,
+    "gzip": true,
+    "single_member": true
+  },
+  "regenerated_expectations_independently_hashed": {
+    "records": 10507,
+    "bytes": 666746759,
+    "sha256": "c4da8236567fda52286a900aec7a83a2316e03bc06959cd4359ea23386a6aa8d",
+    "file_sha256": "094e504a819ef236b9cc7f5aa43fb2c2387ee14fe316f6eda38613529f077cd6",
+    "file_bytes": 97152451,
+    "maximum_record_bytes": 92446,
+    "single_member": true
+  },
+  "comparison_counts": {
+    "projection_leaves": 3526519,
+    "unwritten_pickup_arrival_words": 21959,
+    "vector_shape_fields": 210140,
+    "strict_record_bytes": 57031389,
+    "unknown_cells": 44803715,
+    "unknown_cells_nonzero_original": 31280230,
+    "stage_identity_leaves": 21012,
+    "guardian_physical_pointer_unknown_bytes": 123296,
+    "verified_opaque_pickup_amount_words": 2090
+  },
+  "reconciled_known_leaves": 60789060,
+  "nonexport_sections_identical": true,
+  "full_declared_projection_recompared": true,
+  "omitted_payload_max_counts": {
+    "effects120": 0,
+    "delayed56": 0,
+    "hits112": 0,
+    "active84": 0,
+    "timed12": 0,
+    "deadline32": 0,
+    "secondary112": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "observed_vector_max_counts": {
+    "companions": 0,
+    "units": 26,
+    "areas": 0,
+    "effects120": 0,
+    "delayed56": 0,
+    "deadline32": 0,
+    "hits112": 0,
+    "secondary112": 0,
+    "pickups": 9,
+    "candidates80": 3,
+    "special": 4,
+    "windows": 2,
+    "boundaries": 69,
+    "owned80": 4,
+    "live32": 2,
+    "timed12": 0,
+    "active84": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "first_guardian": {
+    "frame": 199,
+    "stage_index": 2800,
+    "count": 4
+  },
+  "guardian_distinct_GUIDs": [
+    "17379390972240068726",
+    "17379390972240068729",
+    "17379390972256845943",
+    "17379390972273623160"
+  ],
+  "guardian_owner_captures": 7706,
+  "guardian_payload_comparisons": 30824,
+  "guardian_corruption_checks": [
+    "cross_unit_guid_rejected",
+    "projection_owner_omission_rejected",
+    "timer_payload_backing_mismatch_rejected",
+    "expected_timer_bit_mismatch_rejected",
+    "guardian_nonpointer_written_byte_mask_rejected"
+  ],
+  "selections": [
+    {
+      "frame": 87,
+      "action_index": 87,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 0,
+        "ability_id": "thunder_clap",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 130,
+      "action_index": 131,
+      "index": 2,
+      "card": {
+        "variant": "upgrade",
+        "tier": 1,
+        "ability_id": "thunder_clap",
+        "owned_index": 1,
+        "kinds": [
+          0
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 214,
+      "action_index": 216,
+      "index": 1,
+      "card": {
+        "variant": "upgrade",
+        "tier": 0,
+        "ability_id": "cleave",
+        "owned_index": 0,
+        "kinds": [
+          1
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 379,
+      "action_index": 382,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 1,
+        "ability_id": "battle_shout",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 525,
+      "action_index": 529,
+      "index": 1,
+      "card": {
+        "variant": "upgrade",
+        "tier": 0,
+        "ability_id": "cleave",
+        "owned_index": 0,
+        "kinds": [
+          0
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 665,
+      "action_index": 670,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 1,
+        "ability_id": "demo_shout",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    }
+  ],
+  "battle_first_actual_buff": {
+    "frame": 384,
+    "stage_index": 5380,
+    "player_ticks_since_selection": 6,
+    "clock_bits": 1109000188,
+    "remaining_cooldown_bits": 1101441008,
+    "live_record_hex": "000000000000000008000000cdcccc3e8f000058111a0000c9cc464200000000"
+  },
+  "battle_player_countdown": [
+    {
+      "frame": 379,
+      "remaining_bits": 1053609165
+    },
+    {
+      "frame": 380,
+      "remaining_bits": 1050253722
+    },
+    {
+      "frame": 381,
+      "remaining_bits": 1045220558
+    },
+    {
+      "frame": 382,
+      "remaining_bits": 1036831951
+    },
+    {
+      "frame": 383,
+      "remaining_bits": 847249408
+    },
+    {
+      "frame": 384,
+      "remaining_bits": 1101441008
+    },
+    {
+      "frame": 385,
+      "remaining_bits": 1101388579
+    },
+    {
+      "frame": 386,
+      "remaining_bits": 1101336150
+    },
+    {
+      "frame": 387,
+      "remaining_bits": 1101283721
+    },
+    {
+      "frame": 388,
+      "remaining_bits": 1101231292
+    },
+    {
+      "frame": 389,
+      "remaining_bits": 1101178863
+    },
+    {
+      "frame": 390,
+      "remaining_bits": 1101126434
+    },
+    {
+      "frame": 391,
+      "remaining_bits": 1101074005
+    },
+    {
+      "frame": 392,
+      "remaining_bits": 1101021576
+    },
+    {
+      "frame": 393,
+      "remaining_bits": 1100969147
+    },
+    {
+      "frame": 394,
+      "remaining_bits": 1100916718
+    },
+    {
+      "frame": 395,
+      "remaining_bits": 1100864289
+    },
+    {
+      "frame": 396,
+      "remaining_bits": 1100811860
+    },
+    {
+      "frame": 397,
+      "remaining_bits": 1100759431
+    },
+    {
+      "frame": 398,
+      "remaining_bits": 1100707002
+    },
+    {
+      "frame": 399,
+      "remaining_bits": 1100654573
+    },
+    {
+      "frame": 400,
+      "remaining_bits": 1100602144
+    },
+    {
+      "frame": 401,
+      "remaining_bits": 1100549715
+    },
+    {
+      "frame": 402,
+      "remaining_bits": 1100497286
+    },
+    {
+      "frame": 403,
+      "remaining_bits": 1100444857
+    },
+    {
+      "frame": 404,
+      "remaining_bits": 1100392428
+    },
+    {
+      "frame": 405,
+      "remaining_bits": 1100339999
+    },
+    {
+      "frame": 406,
+      "remaining_bits": 1100287570
+    },
+    {
+      "frame": 407,
+      "remaining_bits": 1100235141
+    },
+    {
+      "frame": 408,
+      "remaining_bits": 1100182712
+    },
+    {
+      "frame": 409,
+      "remaining_bits": 1100130283
+    },
+    {
+      "frame": 410,
+      "remaining_bits": 1100077854
+    },
+    {
+      "frame": 411,
+      "remaining_bits": 1100025425
+    },
+    {
+      "frame": 412,
+      "remaining_bits": 1099972996
+    },
+    {
+      "frame": 413,
+      "remaining_bits": 1099920567
+    },
+    {
+      "frame": 414,
+      "remaining_bits": 1099868138
+    },
+    {
+      "frame": 415,
+      "remaining_bits": 1099815709
+    },
+    {
+      "frame": 416,
+      "remaining_bits": 1099763280
+    },
+    {
+      "frame": 417,
+      "remaining_bits": 1099710851
+    },
+    {
+      "frame": 418,
+      "remaining_bits": 1099658422
+    },
+    {
+      "frame": 419,
+      "remaining_bits": 1099605993
+    },
+    {
+      "frame": 420,
+      "remaining_bits": 1099553564
+    },
+    {
+      "frame": 421,
+      "remaining_bits": 1099501135
+    },
+    {
+      "frame": 422,
+      "remaining_bits": 1099448706
+    },
+    {
+      "frame": 423,
+      "remaining_bits": 1099396277
+    },
+    {
+      "frame": 424,
+      "remaining_bits": 1099343848
+    },
+    {
+      "frame": 425,
+      "remaining_bits": 1099291419
+    },
+    {
+      "frame": 426,
+      "remaining_bits": 1099238990
+    },
+    {
+      "frame": 427,
+      "remaining_bits": 1099186561
+    },
+    {
+      "frame": 428,
+      "remaining_bits": 1099134132
+    },
+    {
+      "frame": 429,
+      "remaining_bits": 1099081703
+    },
+    {
+      "frame": 430,
+      "remaining_bits": 1099029274
+    },
+    {
+      "frame": 431,
+      "remaining_bits": 1098976845
+    },
+    {
+      "frame": 432,
+      "remaining_bits": 1098924416
+    },
+    {
+      "frame": 433,
+      "remaining_bits": 1098836326
+    },
+    {
+      "frame": 434,
+      "remaining_bits": 1098731468
+    },
+    {
+      "frame": 435,
+      "remaining_bits": 1098626610
+    },
+    {
+      "frame": 436,
+      "remaining_bits": 1098521752
+    },
+    {
+      "frame": 437,
+      "remaining_bits": 1098416894
+    },
+    {
+      "frame": 438,
+      "remaining_bits": 1098312036
+    },
+    {
+      "frame": 439,
+      "remaining_bits": 1098207178
+    },
+    {
+      "frame": 440,
+      "remaining_bits": 1098102320
+    },
+    {
+      "frame": 441,
+      "remaining_bits": 1097997462
+    },
+    {
+      "frame": 442,
+      "remaining_bits": 1097892604
+    },
+    {
+      "frame": 443,
+      "remaining_bits": 1097787746
+    },
+    {
+      "frame": 444,
+      "remaining_bits": 1097682888
+    },
+    {
+      "frame": 445,
+      "remaining_bits": 1097578030
+    },
+    {
+      "frame": 446,
+      "remaining_bits": 1097473172
+    },
+    {
+      "frame": 447,
+      "remaining_bits": 1097368314
+    },
+    {
+      "frame": 448,
+      "remaining_bits": 1097263456
+    },
+    {
+      "frame": 449,
+      "remaining_bits": 1097158598
+    },
+    {
+      "frame": 450,
+      "remaining_bits": 1097053740
+    },
+    {
+      "frame": 451,
+      "remaining_bits": 1096948882
+    },
+    {
+      "frame": 452,
+      "remaining_bits": 1096844024
+    },
+    {
+      "frame": 453,
+      "remaining_bits": 1096739166
+    },
+    {
+      "frame": 454,
+      "remaining_bits": 1096634308
+    },
+    {
+      "frame": 455,
+      "remaining_bits": 1096529450
+    },
+    {
+      "frame": 456,
+      "remaining_bits": 1096424592
+    },
+    {
+      "frame": 457,
+      "remaining_bits": 1096319734
+    },
+    {
+      "frame": 458,
+      "remaining_bits": 1096214876
+    },
+    {
+      "frame": 459,
+      "remaining_bits": 1096110018
+    },
+    {
+      "frame": 460,
+      "remaining_bits": 1096005160
+    },
+    {
+      "frame": 461,
+      "remaining_bits": 1095900302
+    },
+    {
+      "frame": 462,
+      "remaining_bits": 1095795444
+    },
+    {
+      "frame": 463,
+      "remaining_bits": 1095690586
+    },
+    {
+      "frame": 464,
+      "remaining_bits": 1095585728
+    },
+    {
+      "frame": 465,
+      "remaining_bits": 1095480870
+    },
+    {
+      "frame": 466,
+      "remaining_bits": 1095376012
+    },
+    {
+      "frame": 467,
+      "remaining_bits": 1095271154
+    },
+    {
+      "frame": 468,
+      "remaining_bits": 1095166296
+    },
+    {
+      "frame": 469,
+      "remaining_bits": 1095061438
+    },
+    {
+      "frame": 470,
+      "remaining_bits": 1094956580
+    },
+    {
+      "frame": 471,
+      "remaining_bits": 1094851722
+    },
+    {
+      "frame": 472,
+      "remaining_bits": 1094746864
+    },
+    {
+      "frame": 473,
+      "remaining_bits": 1094642006
+    },
+    {
+      "frame": 474,
+      "remaining_bits": 1094537148
+    },
+    {
+      "frame": 475,
+      "remaining_bits": 1094432290
+    },
+    {
+      "frame": 476,
+      "remaining_bits": 1094327432
+    },
+    {
+      "frame": 477,
+      "remaining_bits": 1094222574
+    },
+    {
+      "frame": 478,
+      "remaining_bits": 1094117716
+    },
+    {
+      "frame": 479,
+      "remaining_bits": 1094012858
+    },
+    {
+      "frame": 480,
+      "remaining_bits": 1093908000
+    },
+    {
+      "frame": 481,
+      "remaining_bits": 1093803142
+    },
+    {
+      "frame": 482,
+      "remaining_bits": 1093698284
+    },
+    {
+      "frame": 483,
+      "remaining_bits": 1093593426
+    },
+    {
+      "frame": 484,
+      "remaining_bits": 1093488568
+    },
+    {
+      "frame": 485,
+      "remaining_bits": 1093383710
+    },
+    {
+      "frame": 486,
+      "remaining_bits": 1093278852
+    },
+    {
+      "frame": 487,
+      "remaining_bits": 1093173994
+    },
+    {
+      "frame": 488,
+      "remaining_bits": 1093069136
+    },
+    {
+      "frame": 489,
+      "remaining_bits": 1092964278
+    },
+    {
+      "frame": 490,
+      "remaining_bits": 1092859420
+    },
+    {
+      "frame": 491,
+      "remaining_bits": 1092754562
+    },
+    {
+      "frame": 492,
+      "remaining_bits": 1092649704
+    },
+    {
+      "frame": 493,
+      "remaining_bits": 1092544846
+    },
+    {
+      "frame": 494,
+      "remaining_bits": 1092439988
+    },
+    {
+      "frame": 495,
+      "remaining_bits": 1092335130
+    },
+    {
+      "frame": 496,
+      "remaining_bits": 1092230272
+    },
+    {
+      "frame": 497,
+      "remaining_bits": 1092125414
+    },
+    {
+      "frame": 498,
+      "remaining_bits": 1092020556
+    },
+    {
+      "frame": 499,
+      "remaining_bits": 1091915698
+    },
+    {
+      "frame": 500,
+      "remaining_bits": 1091810840
+    },
+    {
+      "frame": 501,
+      "remaining_bits": 1091705982
+    },
+    {
+      "frame": 502,
+      "remaining_bits": 1091601124
+    },
+    {
+      "frame": 503,
+      "remaining_bits": 1091496266
+    },
+    {
+      "frame": 504,
+      "remaining_bits": 1091391408
+    },
+    {
+      "frame": 505,
+      "remaining_bits": 1091286550
+    },
+    {
+      "frame": 506,
+      "remaining_bits": 1091181692
+    },
+    {
+      "frame": 507,
+      "remaining_bits": 1091076834
+    },
+    {
+      "frame": 508,
+      "remaining_bits": 1090971976
+    },
+    {
+      "frame": 509,
+      "remaining_bits": 1090867118
+    },
+    {
+      "frame": 510,
+      "remaining_bits": 1090762260
+    },
+    {
+      "frame": 511,
+      "remaining_bits": 1090657402
+    },
+    {
+      "frame": 512,
+      "remaining_bits": 1090552544
+    },
+    {
+      "frame": 513,
+      "remaining_bits": 1090376333
+    },
+    {
+      "frame": 514,
+      "remaining_bits": 1090166618
+    },
+    {
+      "frame": 515,
+      "remaining_bits": 1089956903
+    },
+    {
+      "frame": 516,
+      "remaining_bits": 1089747188
+    },
+    {
+      "frame": 517,
+      "remaining_bits": 1089537473
+    },
+    {
+      "frame": 518,
+      "remaining_bits": 1089327758
+    },
+    {
+      "frame": 519,
+      "remaining_bits": 1089118043
+    },
+    {
+      "frame": 520,
+      "remaining_bits": 1088908328
+    },
+    {
+      "frame": 521,
+      "remaining_bits": 1088698613
+    },
+    {
+      "frame": 522,
+      "remaining_bits": 1088488898
+    },
+    {
+      "frame": 523,
+      "remaining_bits": 1088279183
+    },
+    {
+      "frame": 524,
+      "remaining_bits": 1088069468
+    },
+    {
+      "frame": 525,
+      "remaining_bits": 1087859753
+    },
+    {
+      "frame": 526,
+      "remaining_bits": 1087650038
+    },
+    {
+      "frame": 527,
+      "remaining_bits": 1087440323
+    },
+    {
+      "frame": 528,
+      "remaining_bits": 1087230608
+    },
+    {
+      "frame": 529,
+      "remaining_bits": 1087020893
+    },
+    {
+      "frame": 530,
+      "remaining_bits": 1086811178
+    },
+    {
+      "frame": 531,
+      "remaining_bits": 1086601463
+    },
+    {
+      "frame": 532,
+      "remaining_bits": 1086391748
+    },
+    {
+      "frame": 533,
+      "remaining_bits": 1086182033
+    },
+    {
+      "frame": 534,
+      "remaining_bits": 1085972318
+    },
+    {
+      "frame": 535,
+      "remaining_bits": 1085762603
+    },
+    {
+      "frame": 536,
+      "remaining_bits": 1085552888
+    },
+    {
+      "frame": 537,
+      "remaining_bits": 1085343173
+    },
+    {
+      "frame": 538,
+      "remaining_bits": 1085133458
+    },
+    {
+      "frame": 539,
+      "remaining_bits": 1084923743
+    },
+    {
+      "frame": 540,
+      "remaining_bits": 1084714028
+    },
+    {
+      "frame": 541,
+      "remaining_bits": 1084504313
+    },
+    {
+      "frame": 542,
+      "remaining_bits": 1084294598
+    },
+    {
+      "frame": 543,
+      "remaining_bits": 1084084883
+    },
+    {
+      "frame": 544,
+      "remaining_bits": 1083875168
+    },
+    {
+      "frame": 545,
+      "remaining_bits": 1083665453
+    },
+    {
+      "frame": 546,
+      "remaining_bits": 1083455738
+    },
+    {
+      "frame": 547,
+      "remaining_bits": 1083246023
+    },
+    {
+      "frame": 548,
+      "remaining_bits": 1083036308
+    },
+    {
+      "frame": 549,
+      "remaining_bits": 1082826593
+    },
+    {
+      "frame": 550,
+      "remaining_bits": 1082616878
+    },
+    {
+      "frame": 551,
+      "remaining_bits": 1082407163
+    },
+    {
+      "frame": 552,
+      "remaining_bits": 1082197448
+    },
+    {
+      "frame": 553,
+      "remaining_bits": 1081845034
+    },
+    {
+      "frame": 554,
+      "remaining_bits": 1081425604
+    },
+    {
+      "frame": 555,
+      "remaining_bits": 1081006174
+    },
+    {
+      "frame": 556,
+      "remaining_bits": 1080586744
+    },
+    {
+      "frame": 557,
+      "remaining_bits": 1080167314
+    },
+    {
+      "frame": 558,
+      "remaining_bits": 1079747884
+    },
+    {
+      "frame": 559,
+      "remaining_bits": 1079328454
+    },
+    {
+      "frame": 560,
+      "remaining_bits": 1078909024
+    },
+    {
+      "frame": 561,
+      "remaining_bits": 1078489594
+    },
+    {
+      "frame": 562,
+      "remaining_bits": 1078070164
+    },
+    {
+      "frame": 563,
+      "remaining_bits": 1077650734
+    },
+    {
+      "frame": 564,
+      "remaining_bits": 1077231304
+    },
+    {
+      "frame": 565,
+      "remaining_bits": 1076811874
+    },
+    {
+      "frame": 566,
+      "remaining_bits": 1076392444
+    },
+    {
+      "frame": 567,
+      "remaining_bits": 1075973014
+    },
+    {
+      "frame": 568,
+      "remaining_bits": 1075553584
+    },
+    {
+      "frame": 569,
+      "remaining_bits": 1075134154
+    },
+    {
+      "frame": 570,
+      "remaining_bits": 1074714724
+    },
+    {
+      "frame": 571,
+      "remaining_bits": 1074295294
+    },
+    {
+      "frame": 572,
+      "remaining_bits": 1073875864
+    },
+    {
+      "frame": 573,
+      "remaining_bits": 1073171043
+    },
+    {
+      "frame": 574,
+      "remaining_bits": 1072332182
+    },
+    {
+      "frame": 575,
+      "remaining_bits": 1071493321
+    },
+    {
+      "frame": 576,
+      "remaining_bits": 1070654460
+    },
+    {
+      "frame": 577,
+      "remaining_bits": 1069815599
+    },
+    {
+      "frame": 578,
+      "remaining_bits": 1068976738
+    },
+    {
+      "frame": 579,
+      "remaining_bits": 1068137877
+    },
+    {
+      "frame": 580,
+      "remaining_bits": 1067299016
+    },
+    {
+      "frame": 581,
+      "remaining_bits": 1066460155
+    },
+    {
+      "frame": 582,
+      "remaining_bits": 1065621294
+    },
+    {
+      "frame": 583,
+      "remaining_bits": 1064211650
+    },
+    {
+      "frame": 584,
+      "remaining_bits": 1062533928
+    },
+    {
+      "frame": 585,
+      "remaining_bits": 1060856206
+    },
+    {
+      "frame": 586,
+      "remaining_bits": 1059178484
+    },
+    {
+      "frame": 587,
+      "remaining_bits": 1057500762
+    },
+    {
+      "frame": 588,
+      "remaining_bits": 1054681473
+    },
+    {
+      "frame": 589,
+      "remaining_bits": 1051326030
+    },
+    {
+      "frame": 590,
+      "remaining_bits": 1047365174
+    },
+    {
+      "frame": 591,
+      "remaining_bits": 1040654288
+    },
+    {
+      "frame": 592,
+      "remaining_bits": 1023600038
+    },
+    {
+      "frame": 593,
+      "remaining_bits": 1101441008
+    },
+    {
+      "frame": 594,
+      "remaining_bits": 1101388579
+    },
+    {
+      "frame": 595,
+      "remaining_bits": 1101336150
+    },
+    {
+      "frame": 596,
+      "remaining_bits": 1101283721
+    },
+    {
+      "frame": 597,
+      "remaining_bits": 1101231292
+    },
+    {
+      "frame": 598,
+      "remaining_bits": 1101178863
+    },
+    {
+      "frame": 599,
+      "remaining_bits": 1101126434
+    },
+    {
+      "frame": 600,
+      "remaining_bits": 1101074005
+    },
+    {
+      "frame": 601,
+      "remaining_bits": 1101021576
+    },
+    {
+      "frame": 602,
+      "remaining_bits": 1100969147
+    },
+    {
+      "frame": 603,
+      "remaining_bits": 1100916718
+    },
+    {
+      "frame": 604,
+      "remaining_bits": 1100864289
+    },
+    {
+      "frame": 605,
+      "remaining_bits": 1100811860
+    },
+    {
+      "frame": 606,
+      "remaining_bits": 1100759431
+    },
+    {
+      "frame": 607,
+      "remaining_bits": 1100707002
+    },
+    {
+      "frame": 608,
+      "remaining_bits": 1100654573
+    },
+    {
+      "frame": 609,
+      "remaining_bits": 1100602144
+    },
+    {
+      "frame": 610,
+      "remaining_bits": 1100549715
+    },
+    {
+      "frame": 611,
+      "remaining_bits": 1100497286
+    },
+    {
+      "frame": 612,
+      "remaining_bits": 1100444857
+    },
+    {
+      "frame": 613,
+      "remaining_bits": 1100392428
+    },
+    {
+      "frame": 614,
+      "remaining_bits": 1100339999
+    },
+    {
+      "frame": 615,
+      "remaining_bits": 1100287570
+    },
+    {
+      "frame": 616,
+      "remaining_bits": 1100235141
+    },
+    {
+      "frame": 617,
+      "remaining_bits": 1100182712
+    },
+    {
+      "frame": 618,
+      "remaining_bits": 1100130283
+    },
+    {
+      "frame": 619,
+      "remaining_bits": 1100077854
+    },
+    {
+      "frame": 620,
+      "remaining_bits": 1100025425
+    },
+    {
+      "frame": 621,
+      "remaining_bits": 1099972996
+    },
+    {
+      "frame": 622,
+      "remaining_bits": 1099920567
+    },
+    {
+      "frame": 623,
+      "remaining_bits": 1099868138
+    },
+    {
+      "frame": 624,
+      "remaining_bits": 1099815709
+    },
+    {
+      "frame": 625,
+      "remaining_bits": 1099763280
+    },
+    {
+      "frame": 626,
+      "remaining_bits": 1099710851
+    },
+    {
+      "frame": 627,
+      "remaining_bits": 1099658422
+    },
+    {
+      "frame": 628,
+      "remaining_bits": 1099605993
+    },
+    {
+      "frame": 629,
+      "remaining_bits": 1099553564
+    },
+    {
+      "frame": 630,
+      "remaining_bits": 1099501135
+    },
+    {
+      "frame": 631,
+      "remaining_bits": 1099448706
+    },
+    {
+      "frame": 632,
+      "remaining_bits": 1099396277
+    },
+    {
+      "frame": 633,
+      "remaining_bits": 1099343848
+    },
+    {
+      "frame": 634,
+      "remaining_bits": 1099291419
+    },
+    {
+      "frame": 635,
+      "remaining_bits": 1099238990
+    },
+    {
+      "frame": 636,
+      "remaining_bits": 1099186561
+    },
+    {
+      "frame": 637,
+      "remaining_bits": 1099134132
+    },
+    {
+      "frame": 638,
+      "remaining_bits": 1099081703
+    },
+    {
+      "frame": 639,
+      "remaining_bits": 1099029274
+    },
+    {
+      "frame": 640,
+      "remaining_bits": 1098976845
+    },
+    {
+      "frame": 641,
+      "remaining_bits": 1098924416
+    },
+    {
+      "frame": 642,
+      "remaining_bits": 1098836326
+    },
+    {
+      "frame": 643,
+      "remaining_bits": 1098731468
+    },
+    {
+      "frame": 644,
+      "remaining_bits": 1098626610
+    },
+    {
+      "frame": 645,
+      "remaining_bits": 1098521752
+    },
+    {
+      "frame": 646,
+      "remaining_bits": 1098416894
+    },
+    {
+      "frame": 647,
+      "remaining_bits": 1098312036
+    },
+    {
+      "frame": 648,
+      "remaining_bits": 1098207178
+    },
+    {
+      "frame": 649,
+      "remaining_bits": 1098102320
+    },
+    {
+      "frame": 650,
+      "remaining_bits": 1097997462
+    },
+    {
+      "frame": 651,
+      "remaining_bits": 1097892604
+    },
+    {
+      "frame": 652,
+      "remaining_bits": 1097787746
+    },
+    {
+      "frame": 653,
+      "remaining_bits": 1097682888
+    },
+    {
+      "frame": 654,
+      "remaining_bits": 1097578030
+    },
+    {
+      "frame": 655,
+      "remaining_bits": 1097473172
+    },
+    {
+      "frame": 656,
+      "remaining_bits": 1097368314
+    },
+    {
+      "frame": 657,
+      "remaining_bits": 1097263456
+    },
+    {
+      "frame": 658,
+      "remaining_bits": 1097158598
+    },
+    {
+      "frame": 659,
+      "remaining_bits": 1097053740
+    },
+    {
+      "frame": 660,
+      "remaining_bits": 1096948882
+    },
+    {
+      "frame": 661,
+      "remaining_bits": 1096844024
+    },
+    {
+      "frame": 662,
+      "remaining_bits": 1096739166
+    },
+    {
+      "frame": 663,
+      "remaining_bits": 1096634308
+    },
+    {
+      "frame": 664,
+      "remaining_bits": 1096529450
+    },
+    {
+      "frame": 665,
+      "remaining_bits": 1096424592
+    },
+    {
+      "frame": 666,
+      "remaining_bits": 1096319734
+    },
+    {
+      "frame": 667,
+      "remaining_bits": 1096214876
+    },
+    {
+      "frame": 668,
+      "remaining_bits": 1096110018
+    },
+    {
+      "frame": 669,
+      "remaining_bits": 1096005160
+    },
+    {
+      "frame": 670,
+      "remaining_bits": 1095900302
+    },
+    {
+      "frame": 671,
+      "remaining_bits": 1095795444
+    },
+    {
+      "frame": 672,
+      "remaining_bits": 1095690586
+    },
+    {
+      "frame": 673,
+      "remaining_bits": 1095585728
+    },
+    {
+      "frame": 674,
+      "remaining_bits": 1095480870
+    },
+    {
+      "frame": 675,
+      "remaining_bits": 1095376012
+    },
+    {
+      "frame": 676,
+      "remaining_bits": 1095271154
+    },
+    {
+      "frame": 677,
+      "remaining_bits": 1095166296
+    },
+    {
+      "frame": 678,
+      "remaining_bits": 1095061438
+    },
+    {
+      "frame": 679,
+      "remaining_bits": 1094956580
+    },
+    {
+      "frame": 680,
+      "remaining_bits": 1094851722
+    },
+    {
+      "frame": 681,
+      "remaining_bits": 1094746864
+    },
+    {
+      "frame": 682,
+      "remaining_bits": 1094642006
+    },
+    {
+      "frame": 683,
+      "remaining_bits": 1094537148
+    },
+    {
+      "frame": 684,
+      "remaining_bits": 1094432290
+    },
+    {
+      "frame": 685,
+      "remaining_bits": 1094327432
+    },
+    {
+      "frame": 686,
+      "remaining_bits": 1094222574
+    },
+    {
+      "frame": 687,
+      "remaining_bits": 1094117716
+    },
+    {
+      "frame": 688,
+      "remaining_bits": 1094012858
+    },
+    {
+      "frame": 689,
+      "remaining_bits": 1093908000
+    },
+    {
+      "frame": 690,
+      "remaining_bits": 1093803142
+    },
+    {
+      "frame": 691,
+      "remaining_bits": 1093698284
+    },
+    {
+      "frame": 692,
+      "remaining_bits": 1093593426
+    },
+    {
+      "frame": 693,
+      "remaining_bits": 1093488568
+    },
+    {
+      "frame": 694,
+      "remaining_bits": 1093383710
+    },
+    {
+      "frame": 695,
+      "remaining_bits": 1093278852
+    },
+    {
+      "frame": 696,
+      "remaining_bits": 1093173994
+    },
+    {
+      "frame": 697,
+      "remaining_bits": 1093069136
+    },
+    {
+      "frame": 698,
+      "remaining_bits": 1092964278
+    },
+    {
+      "frame": 699,
+      "remaining_bits": 1092859420
+    },
+    {
+      "frame": 700,
+      "remaining_bits": 1092754562
+    },
+    {
+      "frame": 701,
+      "remaining_bits": 1092649704
+    },
+    {
+      "frame": 702,
+      "remaining_bits": 1092544846
+    },
+    {
+      "frame": 703,
+      "remaining_bits": 1092439988
+    },
+    {
+      "frame": 704,
+      "remaining_bits": 1092335130
+    },
+    {
+      "frame": 705,
+      "remaining_bits": 1092230272
+    },
+    {
+      "frame": 706,
+      "remaining_bits": 1092125414
+    },
+    {
+      "frame": 707,
+      "remaining_bits": 1092020556
+    },
+    {
+      "frame": 708,
+      "remaining_bits": 1091915698
+    },
+    {
+      "frame": 709,
+      "remaining_bits": 1091810840
+    },
+    {
+      "frame": 710,
+      "remaining_bits": 1091705982
+    },
+    {
+      "frame": 711,
+      "remaining_bits": 1091601124
+    },
+    {
+      "frame": 712,
+      "remaining_bits": 1091496266
+    },
+    {
+      "frame": 713,
+      "remaining_bits": 1091391408
+    },
+    {
+      "frame": 714,
+      "remaining_bits": 1091286550
+    },
+    {
+      "frame": 715,
+      "remaining_bits": 1091181692
+    },
+    {
+      "frame": 716,
+      "remaining_bits": 1091076834
+    },
+    {
+      "frame": 717,
+      "remaining_bits": 1090971976
+    },
+    {
+      "frame": 718,
+      "remaining_bits": 1090867118
+    },
+    {
+      "frame": 719,
+      "remaining_bits": 1090762260
+    },
+    {
+      "frame": 720,
+      "remaining_bits": 1090657402
+    },
+    {
+      "frame": 721,
+      "remaining_bits": 1090552544
+    },
+    {
+      "frame": 722,
+      "remaining_bits": 1090376333
+    },
+    {
+      "frame": 723,
+      "remaining_bits": 1090166618
+    },
+    {
+      "frame": 724,
+      "remaining_bits": 1089956903
+    },
+    {
+      "frame": 725,
+      "remaining_bits": 1089747188
+    },
+    {
+      "frame": 726,
+      "remaining_bits": 1089537473
+    },
+    {
+      "frame": 727,
+      "remaining_bits": 1089327758
+    },
+    {
+      "frame": 728,
+      "remaining_bits": 1089118043
+    },
+    {
+      "frame": 729,
+      "remaining_bits": 1088908328
+    },
+    {
+      "frame": 730,
+      "remaining_bits": 1088698613
+    },
+    {
+      "frame": 731,
+      "remaining_bits": 1088488898
+    },
+    {
+      "frame": 732,
+      "remaining_bits": 1088279183
+    },
+    {
+      "frame": 733,
+      "remaining_bits": 1088069468
+    },
+    {
+      "frame": 734,
+      "remaining_bits": 1087859753
+    },
+    {
+      "frame": 735,
+      "remaining_bits": 1087650038
+    },
+    {
+      "frame": 736,
+      "remaining_bits": 1087440323
+    },
+    {
+      "frame": 737,
+      "remaining_bits": 1087230608
+    },
+    {
+      "frame": 738,
+      "remaining_bits": 1087020893
+    },
+    {
+      "frame": 739,
+      "remaining_bits": 1086811178
+    },
+    {
+      "frame": 740,
+      "remaining_bits": 1086601463
+    },
+    {
+      "frame": 741,
+      "remaining_bits": 1086391748
+    },
+    {
+      "frame": 742,
+      "remaining_bits": 1086182033
+    },
+    {
+      "frame": 743,
+      "remaining_bits": 1085972318
+    },
+    {
+      "frame": 744,
+      "remaining_bits": 1085762603
+    },
+    {
+      "frame": 745,
+      "remaining_bits": 1085552888
+    },
+    {
+      "frame": 746,
+      "remaining_bits": 1085343173
+    },
+    {
+      "frame": 747,
+      "remaining_bits": 1085133458
+    },
+    {
+      "frame": 748,
+      "remaining_bits": 1084923743
+    },
+    {
+      "frame": 749,
+      "remaining_bits": 1084714028
+    }
+  ],
+  "demo": {
+    "selection": {
+      "frame": 665,
+      "completed_frames_before_selection": 665,
+      "stage_index": 9315,
+      "action_index": 670,
+      "card": {
+        "variant": "new",
+        "tier": 1,
+        "ability_id": "demo_shout",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "owned80_hex": "dc6e5300010000000000003f3e0a973f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+      "tier": 1,
+      "initial_countdown_bits": 1056964608
+    },
+    "countdown": [
+      {
+        "frame": 665,
+        "completed_frame_number": 666,
+        "stage_index": 9316,
+        "before_bits": 1056964608,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1053609165,
+        "after_bits": 1053609165
+      },
+      {
+        "frame": 666,
+        "completed_frame_number": 667,
+        "stage_index": 9330,
+        "before_bits": 1053609165,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1050253722,
+        "after_bits": 1050253722
+      },
+      {
+        "frame": 667,
+        "completed_frame_number": 668,
+        "stage_index": 9344,
+        "before_bits": 1050253722,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1045220558,
+        "after_bits": 1045220558
+      },
+      {
+        "frame": 668,
+        "completed_frame_number": 669,
+        "stage_index": 9358,
+        "before_bits": 1045220558,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1036831951,
+        "after_bits": 1036831951
+      },
+      {
+        "frame": 669,
+        "completed_frame_number": 670,
+        "stage_index": 9372,
+        "before_bits": 1036831951,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 847249408,
+        "after_bits": 847249408
+      },
+      {
+        "frame": 670,
+        "completed_frame_number": 671,
+        "stage_index": 9386,
+        "before_bits": 847249408,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 3184315595,
+        "after_bits": 1096810496
+      },
+      {
+        "frame": 671,
+        "completed_frame_number": 672,
+        "stage_index": 9400,
+        "before_bits": 1096810496,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096705638,
+        "after_bits": 1096705638
+      },
+      {
+        "frame": 672,
+        "completed_frame_number": 673,
+        "stage_index": 9414,
+        "before_bits": 1096705638,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096600780,
+        "after_bits": 1096600780
+      },
+      {
+        "frame": 673,
+        "completed_frame_number": 674,
+        "stage_index": 9428,
+        "before_bits": 1096600780,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096495922,
+        "after_bits": 1096495922
+      },
+      {
+        "frame": 674,
+        "completed_frame_number": 675,
+        "stage_index": 9442,
+        "before_bits": 1096495922,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096391064,
+        "after_bits": 1096391064
+      },
+      {
+        "frame": 675,
+        "completed_frame_number": 676,
+        "stage_index": 9456,
+        "before_bits": 1096391064,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096286206,
+        "after_bits": 1096286206
+      },
+      {
+        "frame": 676,
+        "completed_frame_number": 677,
+        "stage_index": 9470,
+        "before_bits": 1096286206,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096181348,
+        "after_bits": 1096181348
+      },
+      {
+        "frame": 677,
+        "completed_frame_number": 678,
+        "stage_index": 9484,
+        "before_bits": 1096181348,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1096076490,
+        "after_bits": 1096076490
+      },
+      {
+        "frame": 678,
+        "completed_frame_number": 679,
+        "stage_index": 9498,
+        "before_bits": 1096076490,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095971632,
+        "after_bits": 1095971632
+      },
+      {
+        "frame": 679,
+        "completed_frame_number": 680,
+        "stage_index": 9512,
+        "before_bits": 1095971632,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095866774,
+        "after_bits": 1095866774
+      },
+      {
+        "frame": 680,
+        "completed_frame_number": 681,
+        "stage_index": 9526,
+        "before_bits": 1095866774,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095761916,
+        "after_bits": 1095761916
+      },
+      {
+        "frame": 681,
+        "completed_frame_number": 682,
+        "stage_index": 9540,
+        "before_bits": 1095761916,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095657058,
+        "after_bits": 1095657058
+      },
+      {
+        "frame": 682,
+        "completed_frame_number": 683,
+        "stage_index": 9554,
+        "before_bits": 1095657058,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095552200,
+        "after_bits": 1095552200
+      },
+      {
+        "frame": 683,
+        "completed_frame_number": 684,
+        "stage_index": 9568,
+        "before_bits": 1095552200,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095447342,
+        "after_bits": 1095447342
+      },
+      {
+        "frame": 684,
+        "completed_frame_number": 685,
+        "stage_index": 9582,
+        "before_bits": 1095447342,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095342484,
+        "after_bits": 1095342484
+      },
+      {
+        "frame": 685,
+        "completed_frame_number": 686,
+        "stage_index": 9596,
+        "before_bits": 1095342484,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095237626,
+        "after_bits": 1095237626
+      },
+      {
+        "frame": 686,
+        "completed_frame_number": 687,
+        "stage_index": 9610,
+        "before_bits": 1095237626,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095132768,
+        "after_bits": 1095132768
+      },
+      {
+        "frame": 687,
+        "completed_frame_number": 688,
+        "stage_index": 9624,
+        "before_bits": 1095132768,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1095027910,
+        "after_bits": 1095027910
+      },
+      {
+        "frame": 688,
+        "completed_frame_number": 689,
+        "stage_index": 9638,
+        "before_bits": 1095027910,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094923052,
+        "after_bits": 1094923052
+      },
+      {
+        "frame": 689,
+        "completed_frame_number": 690,
+        "stage_index": 9652,
+        "before_bits": 1094923052,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094818194,
+        "after_bits": 1094818194
+      },
+      {
+        "frame": 690,
+        "completed_frame_number": 691,
+        "stage_index": 9666,
+        "before_bits": 1094818194,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094713336,
+        "after_bits": 1094713336
+      },
+      {
+        "frame": 691,
+        "completed_frame_number": 692,
+        "stage_index": 9680,
+        "before_bits": 1094713336,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094608478,
+        "after_bits": 1094608478
+      },
+      {
+        "frame": 692,
+        "completed_frame_number": 693,
+        "stage_index": 9694,
+        "before_bits": 1094608478,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094503620,
+        "after_bits": 1094503620
+      },
+      {
+        "frame": 693,
+        "completed_frame_number": 694,
+        "stage_index": 9708,
+        "before_bits": 1094503620,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094398762,
+        "after_bits": 1094398762
+      },
+      {
+        "frame": 694,
+        "completed_frame_number": 695,
+        "stage_index": 9722,
+        "before_bits": 1094398762,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094293904,
+        "after_bits": 1094293904
+      },
+      {
+        "frame": 695,
+        "completed_frame_number": 696,
+        "stage_index": 9736,
+        "before_bits": 1094293904,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094189046,
+        "after_bits": 1094189046
+      },
+      {
+        "frame": 696,
+        "completed_frame_number": 697,
+        "stage_index": 9750,
+        "before_bits": 1094189046,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1094084188,
+        "after_bits": 1094084188
+      },
+      {
+        "frame": 697,
+        "completed_frame_number": 698,
+        "stage_index": 9764,
+        "before_bits": 1094084188,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093979330,
+        "after_bits": 1093979330
+      },
+      {
+        "frame": 698,
+        "completed_frame_number": 699,
+        "stage_index": 9778,
+        "before_bits": 1093979330,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093874472,
+        "after_bits": 1093874472
+      },
+      {
+        "frame": 699,
+        "completed_frame_number": 700,
+        "stage_index": 9792,
+        "before_bits": 1093874472,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093769614,
+        "after_bits": 1093769614
+      },
+      {
+        "frame": 700,
+        "completed_frame_number": 701,
+        "stage_index": 9806,
+        "before_bits": 1093769614,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093664756,
+        "after_bits": 1093664756
+      },
+      {
+        "frame": 701,
+        "completed_frame_number": 702,
+        "stage_index": 9820,
+        "before_bits": 1093664756,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093559898,
+        "after_bits": 1093559898
+      },
+      {
+        "frame": 702,
+        "completed_frame_number": 703,
+        "stage_index": 9834,
+        "before_bits": 1093559898,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093455040,
+        "after_bits": 1093455040
+      },
+      {
+        "frame": 703,
+        "completed_frame_number": 704,
+        "stage_index": 9848,
+        "before_bits": 1093455040,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093350182,
+        "after_bits": 1093350182
+      },
+      {
+        "frame": 704,
+        "completed_frame_number": 705,
+        "stage_index": 9862,
+        "before_bits": 1093350182,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093245324,
+        "after_bits": 1093245324
+      },
+      {
+        "frame": 705,
+        "completed_frame_number": 706,
+        "stage_index": 9876,
+        "before_bits": 1093245324,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093140466,
+        "after_bits": 1093140466
+      },
+      {
+        "frame": 706,
+        "completed_frame_number": 707,
+        "stage_index": 9890,
+        "before_bits": 1093140466,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1093035608,
+        "after_bits": 1093035608
+      },
+      {
+        "frame": 707,
+        "completed_frame_number": 708,
+        "stage_index": 9904,
+        "before_bits": 1093035608,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092930750,
+        "after_bits": 1092930750
+      },
+      {
+        "frame": 708,
+        "completed_frame_number": 709,
+        "stage_index": 9918,
+        "before_bits": 1092930750,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092825892,
+        "after_bits": 1092825892
+      },
+      {
+        "frame": 709,
+        "completed_frame_number": 710,
+        "stage_index": 9932,
+        "before_bits": 1092825892,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092721034,
+        "after_bits": 1092721034
+      },
+      {
+        "frame": 710,
+        "completed_frame_number": 711,
+        "stage_index": 9946,
+        "before_bits": 1092721034,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092616176,
+        "after_bits": 1092616176
+      },
+      {
+        "frame": 711,
+        "completed_frame_number": 712,
+        "stage_index": 9960,
+        "before_bits": 1092616176,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092511318,
+        "after_bits": 1092511318
+      },
+      {
+        "frame": 712,
+        "completed_frame_number": 713,
+        "stage_index": 9974,
+        "before_bits": 1092511318,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092406460,
+        "after_bits": 1092406460
+      },
+      {
+        "frame": 713,
+        "completed_frame_number": 714,
+        "stage_index": 9988,
+        "before_bits": 1092406460,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092301602,
+        "after_bits": 1092301602
+      },
+      {
+        "frame": 714,
+        "completed_frame_number": 715,
+        "stage_index": 10002,
+        "before_bits": 1092301602,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092196744,
+        "after_bits": 1092196744
+      },
+      {
+        "frame": 715,
+        "completed_frame_number": 716,
+        "stage_index": 10016,
+        "before_bits": 1092196744,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1092091886,
+        "after_bits": 1092091886
+      },
+      {
+        "frame": 716,
+        "completed_frame_number": 717,
+        "stage_index": 10030,
+        "before_bits": 1092091886,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091987028,
+        "after_bits": 1091987028
+      },
+      {
+        "frame": 717,
+        "completed_frame_number": 718,
+        "stage_index": 10044,
+        "before_bits": 1091987028,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091882170,
+        "after_bits": 1091882170
+      },
+      {
+        "frame": 718,
+        "completed_frame_number": 719,
+        "stage_index": 10058,
+        "before_bits": 1091882170,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091777312,
+        "after_bits": 1091777312
+      },
+      {
+        "frame": 719,
+        "completed_frame_number": 720,
+        "stage_index": 10072,
+        "before_bits": 1091777312,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091672454,
+        "after_bits": 1091672454
+      },
+      {
+        "frame": 720,
+        "completed_frame_number": 721,
+        "stage_index": 10086,
+        "before_bits": 1091672454,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091567596,
+        "after_bits": 1091567596
+      },
+      {
+        "frame": 721,
+        "completed_frame_number": 722,
+        "stage_index": 10100,
+        "before_bits": 1091567596,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091462738,
+        "after_bits": 1091462738
+      },
+      {
+        "frame": 722,
+        "completed_frame_number": 723,
+        "stage_index": 10114,
+        "before_bits": 1091462738,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091357880,
+        "after_bits": 1091357880
+      },
+      {
+        "frame": 723,
+        "completed_frame_number": 724,
+        "stage_index": 10128,
+        "before_bits": 1091357880,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091253022,
+        "after_bits": 1091253022
+      },
+      {
+        "frame": 724,
+        "completed_frame_number": 725,
+        "stage_index": 10142,
+        "before_bits": 1091253022,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091148164,
+        "after_bits": 1091148164
+      },
+      {
+        "frame": 725,
+        "completed_frame_number": 726,
+        "stage_index": 10156,
+        "before_bits": 1091148164,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1091043306,
+        "after_bits": 1091043306
+      },
+      {
+        "frame": 726,
+        "completed_frame_number": 727,
+        "stage_index": 10170,
+        "before_bits": 1091043306,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090938448,
+        "after_bits": 1090938448
+      },
+      {
+        "frame": 727,
+        "completed_frame_number": 728,
+        "stage_index": 10184,
+        "before_bits": 1090938448,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090833590,
+        "after_bits": 1090833590
+      },
+      {
+        "frame": 728,
+        "completed_frame_number": 729,
+        "stage_index": 10198,
+        "before_bits": 1090833590,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090728732,
+        "after_bits": 1090728732
+      },
+      {
+        "frame": 729,
+        "completed_frame_number": 730,
+        "stage_index": 10212,
+        "before_bits": 1090728732,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090623874,
+        "after_bits": 1090623874
+      },
+      {
+        "frame": 730,
+        "completed_frame_number": 731,
+        "stage_index": 10226,
+        "before_bits": 1090623874,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090518993,
+        "after_bits": 1090518993
+      },
+      {
+        "frame": 731,
+        "completed_frame_number": 732,
+        "stage_index": 10240,
+        "before_bits": 1090518993,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090309278,
+        "after_bits": 1090309278
+      },
+      {
+        "frame": 732,
+        "completed_frame_number": 733,
+        "stage_index": 10254,
+        "before_bits": 1090309278,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1090099563,
+        "after_bits": 1090099563
+      },
+      {
+        "frame": 733,
+        "completed_frame_number": 734,
+        "stage_index": 10268,
+        "before_bits": 1090099563,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1089889848,
+        "after_bits": 1089889848
+      },
+      {
+        "frame": 734,
+        "completed_frame_number": 735,
+        "stage_index": 10282,
+        "before_bits": 1089889848,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1089680133,
+        "after_bits": 1089680133
+      },
+      {
+        "frame": 735,
+        "completed_frame_number": 736,
+        "stage_index": 10296,
+        "before_bits": 1089680133,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1089470418,
+        "after_bits": 1089470418
+      },
+      {
+        "frame": 736,
+        "completed_frame_number": 737,
+        "stage_index": 10310,
+        "before_bits": 1089470418,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1089260703,
+        "after_bits": 1089260703
+      },
+      {
+        "frame": 737,
+        "completed_frame_number": 738,
+        "stage_index": 10324,
+        "before_bits": 1089260703,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1089050988,
+        "after_bits": 1089050988
+      },
+      {
+        "frame": 738,
+        "completed_frame_number": 739,
+        "stage_index": 10338,
+        "before_bits": 1089050988,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1088841273,
+        "after_bits": 1088841273
+      },
+      {
+        "frame": 739,
+        "completed_frame_number": 740,
+        "stage_index": 10352,
+        "before_bits": 1088841273,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1088631558,
+        "after_bits": 1088631558
+      },
+      {
+        "frame": 740,
+        "completed_frame_number": 741,
+        "stage_index": 10366,
+        "before_bits": 1088631558,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1088421843,
+        "after_bits": 1088421843
+      },
+      {
+        "frame": 741,
+        "completed_frame_number": 742,
+        "stage_index": 10380,
+        "before_bits": 1088421843,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1088212128,
+        "after_bits": 1088212128
+      },
+      {
+        "frame": 742,
+        "completed_frame_number": 743,
+        "stage_index": 10394,
+        "before_bits": 1088212128,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1088002413,
+        "after_bits": 1088002413
+      },
+      {
+        "frame": 743,
+        "completed_frame_number": 744,
+        "stage_index": 10408,
+        "before_bits": 1088002413,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1087792698,
+        "after_bits": 1087792698
+      },
+      {
+        "frame": 744,
+        "completed_frame_number": 745,
+        "stage_index": 10422,
+        "before_bits": 1087792698,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1087582983,
+        "after_bits": 1087582983
+      },
+      {
+        "frame": 745,
+        "completed_frame_number": 746,
+        "stage_index": 10436,
+        "before_bits": 1087582983,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1087373268,
+        "after_bits": 1087373268
+      },
+      {
+        "frame": 746,
+        "completed_frame_number": 747,
+        "stage_index": 10450,
+        "before_bits": 1087373268,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1087163553,
+        "after_bits": 1087163553
+      },
+      {
+        "frame": 747,
+        "completed_frame_number": 748,
+        "stage_index": 10464,
+        "before_bits": 1087163553,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1086953838,
+        "after_bits": 1086953838
+      },
+      {
+        "frame": 748,
+        "completed_frame_number": 749,
+        "stage_index": 10478,
+        "before_bits": 1086953838,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1086744123,
+        "after_bits": 1086744123
+      },
+      {
+        "frame": 749,
+        "completed_frame_number": 750,
+        "stage_index": 10492,
+        "before_bits": 1086744123,
+        "subtract_dt_bits": 1036831949,
+        "subtracted_bits": 1086534408,
+        "after_bits": 1086534408
+      }
+    ],
+    "casts": [
+      {
+        "frame": 670,
+        "completed_frame_number": 671,
+        "stage_index": 9386,
+        "now_bits": 1116091128,
+        "player_ticks_since_selection": 6,
+        "radius_bits": 1096810496,
+        "strength_bits": 1051931443,
+        "duration_bits": 1086324736,
+        "deadline_bits": 1116877560,
+        "targets": [
+          "17379390972089073896",
+          "17379390972089073897",
+          "17379390972089073892",
+          "17379390972089073895",
+          "17379390972089073903",
+          "17379390972089073894",
+          "17379390972089073893",
+          "17379390972089073891",
+          "17379390972089073905",
+          "17379390972089073904",
+          "17379390972105851128",
+          "17379390972089073911"
+        ],
+        "query_target_count": 12,
+        "affected_target_count": 12,
+        "cooldown_bits": 1096810496,
+        "other_owned_countdowns": [
+          {
+            "definition_pointer": 5467428,
+            "before_bits": 1067475532,
+            "subtracted_bits": 1066636671
+          },
+          {
+            "definition_pointer": 5467604,
+            "before_bits": 1086534453,
+            "subtracted_bits": 1086324738
+          },
+          {
+            "definition_pointer": 5467956,
+            "before_bits": 1096005160,
+            "subtracted_bits": 1095900302
+          }
+        ],
+        "basic_subtracted_bits": 1099746560,
+        "class1_prelude_subtracted_bits": 1071393014,
+        "all_other_cast_timers_positive": true,
+        "all_query_targets_nonfatal": true,
+        "exact_whole_player_RNG_draws": 12
+      }
+    ],
+    "expirations": [
+      {
+        "guid": "17379390972089073905",
+        "frame": 731,
+        "completed_frame_number": 732,
+        "stage_index": 10248,
+        "now_bits": 1116890655,
+        "selected_expiry_bits": 0,
+        "primary_expiry_bits": 1116877560,
+        "backup_expiry_bits": 0,
+        "words128_140_preserved": true,
+        "duration364_preserved": true,
+        "slot": 0
+      },
+      {
+        "guid": "17379390972089073911",
+        "frame": 731,
+        "completed_frame_number": 732,
+        "stage_index": 10248,
+        "now_bits": 1116890655,
+        "selected_expiry_bits": 0,
+        "primary_expiry_bits": 1116877560,
+        "backup_expiry_bits": 0,
+        "words128_140_preserved": true,
+        "duration364_preserved": true,
+        "slot": 0
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 731,
+        "completed_frame_number": 732,
+        "stage_index": 10248,
+        "now_bits": 1116890655,
+        "selected_expiry_bits": 0,
+        "primary_expiry_bits": 1116877560,
+        "backup_expiry_bits": 0,
+        "words128_140_preserved": true,
+        "duration364_preserved": true,
+        "slot": 0
+      }
+    ],
+    "deaths": [
+      {
+        "guid": "17379390972089073892",
+        "frame": 682,
+        "stage": "player",
+        "stage_index": 9554,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073896",
+        "frame": 682,
+        "stage": "player",
+        "stage_index": 9554,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073897",
+        "frame": 682,
+        "stage": "player",
+        "stage_index": 9554,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073893",
+        "frame": 702,
+        "stage": "player",
+        "stage_index": 9834,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073894",
+        "frame": 702,
+        "stage": "player",
+        "stage_index": 9834,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073895",
+        "frame": 702,
+        "stage": "player",
+        "stage_index": 9834,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073891",
+        "frame": 722,
+        "stage": "player",
+        "stage_index": 10114,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073903",
+        "frame": 722,
+        "stage": "player",
+        "stage_index": 10114,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073904",
+        "frame": 722,
+        "stage": "player",
+        "stage_index": 10114,
+        "status_retained": true,
+        "spell360": 1160
+      },
+      {
+        "guid": "17379390972089073911",
+        "frame": 742,
+        "stage": "player",
+        "stage_index": 10394,
+        "status_retained": true,
+        "spell360": 0
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 742,
+        "stage": "player",
+        "stage_index": 10394,
+        "status_retained": true,
+        "spell360": 0
+      }
+    ],
+    "removals": [
+      {
+        "guid": "17379390972089073892",
+        "frame": 695,
+        "stage_index": 9744,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073896",
+        "frame": 695,
+        "stage_index": 9744,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073897",
+        "frame": 695,
+        "stage_index": 9744,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073893",
+        "frame": 715,
+        "stage_index": 10024,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073894",
+        "frame": 715,
+        "stage_index": 10024,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073895",
+        "frame": 715,
+        "stage_index": 10024,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073891",
+        "frame": 735,
+        "stage_index": 10304,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073903",
+        "frame": 735,
+        "stage_index": 10304,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      },
+      {
+        "guid": "17379390972089073904",
+        "frame": 735,
+        "stage_index": 10304,
+        "spell360": 1160,
+        "dead_rows_not_sent_to_live_AI": true
+      }
+    ],
+    "contact_timer_witnesses": [
+      {
+        "guid": "17379390972089073903",
+        "frame": 670,
+        "stage_index": 9394,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075409188
+      },
+      {
+        "guid": "17379390972089073905",
+        "frame": 674,
+        "stage_index": 9450,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075427930
+      },
+      {
+        "guid": "17379390972089073893",
+        "frame": 677,
+        "stage_index": 9492,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073892",
+        "frame": 678,
+        "stage_index": 9506,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073894",
+        "frame": 678,
+        "stage_index": 9506,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073891",
+        "frame": 679,
+        "stage_index": 9520,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073895",
+        "frame": 679,
+        "stage_index": 9520,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073896",
+        "frame": 679,
+        "stage_index": 9520,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 679,
+        "stage_index": 9520,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075457842
+      },
+      {
+        "guid": "17379390972089073897",
+        "frame": 681,
+        "stage_index": 9548,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073904",
+        "frame": 684,
+        "stage_index": 9590,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075418544
+      },
+      {
+        "guid": "17379390972089073903",
+        "frame": 686,
+        "stage_index": 9618,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075409188
+      },
+      {
+        "guid": "17379390972089073911",
+        "frame": 687,
+        "stage_index": 9632,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075448364
+      },
+      {
+        "guid": "17379390972089073905",
+        "frame": 690,
+        "stage_index": 9674,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075427930
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 692,
+        "stage_index": 9702,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075457842
+      },
+      {
+        "guid": "17379390972089073893",
+        "frame": 693,
+        "stage_index": 9716,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073894",
+        "frame": 694,
+        "stage_index": 9730,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073891",
+        "frame": 695,
+        "stage_index": 9744,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073895",
+        "frame": 695,
+        "stage_index": 9744,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073904",
+        "frame": 700,
+        "stage_index": 9814,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075418544
+      },
+      {
+        "guid": "17379390972089073903",
+        "frame": 702,
+        "stage_index": 9842,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075409188
+      },
+      {
+        "guid": "17379390972089073911",
+        "frame": 703,
+        "stage_index": 9856,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075448364
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 705,
+        "stage_index": 9884,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075457842
+      },
+      {
+        "guid": "17379390972089073905",
+        "frame": 706,
+        "stage_index": 9898,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075427930
+      },
+      {
+        "guid": "17379390972089073891",
+        "frame": 711,
+        "stage_index": 9968,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075401412
+      },
+      {
+        "guid": "17379390972089073904",
+        "frame": 716,
+        "stage_index": 10038,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075418544
+      },
+      {
+        "guid": "17379390972089073903",
+        "frame": 718,
+        "stage_index": 10066,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075409188
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 718,
+        "stage_index": 10066,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075457842
+      },
+      {
+        "guid": "17379390972089073911",
+        "frame": 719,
+        "stage_index": 10080,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075448364
+      },
+      {
+        "guid": "17379390972089073905",
+        "frame": 722,
+        "stage_index": 10122,
+        "weakness_bits": 1051931443,
+        "unmitigated_contact_bits": 1075427930
+      },
+      {
+        "guid": "17379390972105851128",
+        "frame": 731,
+        "stage_index": 10248,
+        "weakness_bits": 0,
+        "unmitigated_contact_bits": 1080898795
+      }
+    ],
+    "actual_Aura169_events": [
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073896",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e8580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073897",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e9580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073892",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e4580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073895",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e7580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073903",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9ef580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073894",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e6580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073893",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e5580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073891",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9e3580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073905",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f1580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073904",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f0580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972105851128",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f8590230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 670,
+        "stage": "player",
+        "stage_index": 9386,
+        "guid": "17379390972089073911",
+        "slot": 0,
+        "fields": {
+          "79": 1160,
+          "99": 2,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f7580230f10400000000000000000080000008000002880400000200000000000000"
+      },
+      {
+        "frame": 731,
+        "stage": "ai",
+        "stage_index": 10248,
+        "guid": "17379390972089073905",
+        "slot": 0,
+        "fields": {
+          "79": 0,
+          "99": 0,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f1580230f10400000000000000000080000008000002000000000000000000000000"
+      },
+      {
+        "frame": 731,
+        "stage": "ai",
+        "stage_index": 10248,
+        "guid": "17379390972089073911",
+        "slot": 0,
+        "fields": {
+          "79": 0,
+          "99": 0,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f7580230f10400000000000000000080000008000002000000000000000000000000"
+      },
+      {
+        "frame": 731,
+        "stage": "ai",
+        "stage_index": 10248,
+        "guid": "17379390972105851128",
+        "slot": 0,
+        "fields": {
+          "79": 0,
+          "99": 0,
+          "121": 0
+        },
+        "payload169_hex": "010000000000d9f8590230f10400000000000000000080000008000002000000000000000000000000"
+      }
+    ],
+    "counts": {
+      "stable_AI_compaction_batches": 51,
+      "nonconsumer_status_preservation_observations": 7140,
+      "active_AI_status_owner_observations": 471,
+      "dead_status_retained_until_compaction": 117,
+      "expiry_batches_after_all_other_AI_packets": 1
+    },
+    "all_targets_bound_to_original_physical_GUIDs": true,
+    "AI_independence": "This reviewer authored AI; independent AI component review by another author is a declared dependency. This is a composition/readback check, not a second independent AI reconstruction."
+  },
+  "demo_source_guard_checks": {
+    "typed_sparse_exact_physical_owner": true,
+    "no_temporary_zero_to_bypass_guard": true,
+    "dead_rows_excluded_from_live_AI": true,
+    "default_unbound_nonzero_status_guard_retained": true,
+    "expiry_before_U400_contact_and_Aura_after_attack_batch": true
+  },
+  "npc_Aura_parser_selfchecks": {
+    "positive_slots": 16,
+    "rejected": [
+      "wrong_opcode",
+      "truncated",
+      "extra_tail",
+      "wrong_GUID_class",
+      "wrong_slot_group",
+      "wrong_quartet",
+      "extra_key",
+      "wrong_block_kind",
+      "wrong_count"
+    ],
+    "scope": "Auditor parser selfchecks only; zero new original/model cases."
+  },
+  "independent_Dijkstra": {
+    "count": 78400,
+    "start_index": 39340,
+    "field24": 72660,
+    "values_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+  },
+  "world_context": {
+    "world_input": {
+      "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+      "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+      "artifacts": {
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/inputs.json": "603bd691eb614f4c0ae932401c2d790761c9b18b38951922c2fa9757bd4d7b80"
+      }
+    }
+  },
+  "final_progression": {
+    "level": 7,
+    "xp": 24,
+    "pending_upgrades": 0
+  },
+  "final_gold": 94,
+  "observed_packet_max": 2119,
+  "resource_events": [
+    {
+      "frame": 400,
+      "completed_frame_number": 401,
+      "action_index": 404,
+      "stage_index": 5615,
+      "clock_bits": 1109419612,
+      "clock_seconds": 40.09996032714844,
+      "old_deadline_bits": 1109393408,
+      "next_deadline_bits": 1118450478,
+      "next_deadline_seconds": 85.09996032714844,
+      "kind": 5,
+      "amount": 3146146168,
+      "guid": "17370383913897164969",
+      "counter_before": 168,
+      "counter_after": 169,
+      "rng_before": [
+        439472053,
+        2230120789,
+        2593883740,
+        626745240
+      ],
+      "rng_after": [
+        3299693657,
+        2490327808,
+        486997365,
+        4072383793
+      ],
+      "independent_draws": {
+        "kind": 1,
+        "position": 2,
+        "yaw": 1
+      },
+      "pickup_index": 2,
+      "pickup_capacity": 8,
+      "prior_arrival4_hex": "111f1e42",
+      "arrival_preserved": true,
+      "new56_hex": "00000000111f1e4205000000786186bba9000030230010f1000000000800000000000000302300009abc12c6e52c16c45e9188425c662042",
+      "packet169_hex": "010000000002d9a9302310f105509abc12c6e52c16c45e918842215c5b4001000000011ff33700a9000030230010f121000000302300000000803f671700000000000082637d3fb2e211be010000009abc12c6e52c16c45e918842215c5b402300000005000000",
+      "no_ordinary_unit_spawn_on_witness": true,
+      "expected_known_arrival_bytes_preserved": [
+        17,
+        31,
+        30,
+        66
+      ]
+    }
+  ],
+  "resource_context": "None for mixed resource consumer; no nearby3..5 natural consumption in this stationary trajectory.",
+  "all150_payloads_and_declared_GUID_actor169_and_shape_selected_NPC_Aura169_compared": true,
+  "other_packet_payload_semantics_claimed_compared": false,
+  "pickup_address_proof": {
+    "births": [
+      {
+        "guid": "17370383913846833387",
+        "frame": 600,
+        "stage_index": 8416,
+        "owner_pointer": 21189360,
+        "owner_count": 3,
+        "byte_addend": 176,
+        "original_amount": 21189536,
+        "independent_model_received_original_pointer": false
+      }
+    ],
+    "bound_words": 1,
+    "observations": 2090,
+    "all_birth_formulas_and_retained_bytes_verified": true,
+    "original_values_used_as_model_inputs": false,
+    "unsupported_domains": [
+      "simultaneousG2444_resource_andG2448_supply",
+      "mode0_empty_owner"
+    ]
+  },
+  "independent_growth_and_wave_supply_checks": {
+    "initial_banner_subtitle_verified": 1,
+    "growth_events": 6,
+    "wave_events": 1,
+    "wave_units": 8,
+    "wave_draws": 19,
+    "supply_events": 1,
+    "supply_draws": 3
+  },
+  "independent_growth_events": [
+    {
+      "frame": 86,
+      "stage_index": 1213,
+      "level": 2,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 129,
+      "stage_index": 1816,
+      "level": 3,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 213,
+      "stage_index": 2993,
+      "level": 4,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 378,
+      "stage_index": 5304,
+      "level": 5,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 524,
+      "stage_index": 7349,
+      "level": 6,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 664,
+      "stage_index": 9310,
+      "level": 7,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    }
+  ],
+  "independent_wave_supply_events": [
+    {
+      "frame": 600,
+      "stage_index": 8416,
+      "old_counter": 226,
+      "new_counter": 235,
+      "old_unit_count": 16,
+      "new_unit_count": 24,
+      "wave_style": 0,
+      "wave_definition": 0,
+      "wave_rng": [
+        861164204,
+        3615226568,
+        1841833356,
+        3262009105
+      ],
+      "final_rng": [
+        1324166826,
+        1156906973,
+        3709864032,
+        744815207
+      ],
+      "wave_independent_checks": {
+        "selection_rejection_draws": 1,
+        "geometry_probes": 8,
+        "independent_geometry_created": 8,
+        "independent_charge_bindings": 0,
+        "wave_draws": 19,
+        "style0": 1
+      },
+      "supply_GUID": "17370383913846833387",
+      "supply_original_amount": 21189536,
+      "new_opcodes": [
+        169,
+        169,
+        169,
+        169,
+        169,
+        169,
+        169,
+        169,
+        150,
+        169
+      ]
+    }
+  ],
+  "component_review_dependencies": [
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/event-wave0135-independent-review-20261101T192947.072998Z/review.json",
+      "sha256": "ac576e5668537ade78db54a2f45abebd1543aa8988c362ab4583f584c586f850",
+      "comparison_sha256": "b02fcbe303c2058fee848c00b47f3389832690138cb6b99ab6386f38adeab555",
+      "scope": "Previously independently reviewed component; not new original cases in this integration audit."
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/supply-kind2-135-independent-review-20261101T193915.933213Z/review.json",
+      "sha256": "bb56ba2213d54912521deb390f131db1205bf9fc7ad82adb51802c6131827c98",
+      "comparison_sha256": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+      "scope": "Previously independently reviewed component; not new original cases in this integration audit."
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/level-banner135-independent-review-20261101T195147.952310Z/review.json",
+      "sha256": "1b3014d52043a70f283709567f36d14b3ee14ae6b1b9621ec802165809e31f13",
+      "comparison_sha256": "4cd02d8adf74d4129e58040b3a81bd2dac1b96e2eed8ff4bb5c1e67a6561a4e3",
+      "scope": "Previously independently reviewed component; not new original cases in this integration audit."
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/demo-shout135-independent-review-owned-20261101T210700.766545Z/review/review.json",
+      "sha256": "33211f76462dc3708d29df764da5cff006ac64d6fcfbb40e505be768069b0f0e",
+      "comparison_sha256": "ab48f8c30461793af8f0b93579b53bc8f9abc30671f85a8c902575a58e9dbe95",
+      "scope": "Existing independently reviewed component, zero new original cases in this integration review."
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/demo-ai135-independent-review-20261101T210610.715719Z/review.json",
+      "sha256": "8a1ad29df94cf2d0c53be6075fb4924da723a6fe9bae5f7846ae8b2859616795",
+      "comparison_sha256": "01c93350943b0f20956298fdf1908ae7ee2b66c40d902b7eac817cdf2657b07e",
+      "scope": "Existing independently reviewed component, zero new original cases in this integration review."
+    }
+  ],
+  "opaque_negative_checks": [
+    "wrong_word",
+    "wrong_GUID_owner",
+    "wrong_producer",
+    "wrong_offset",
+    "wrong_addend",
+    "wrong_stage",
+    "empty_owner",
+    "simultaneous_resource",
+    "missing_declaration",
+    "partial_None_mask",
+    "bound_value_drift"
+  ],
+  "exact_known_mask_cache": {
+    "hits": 1716541,
+    "misses": 9089,
+    "maxsize": 16384,
+    "currsize": 9089
+  },
+  "exact_packet_item_cache": {
+    "hits": 9648376,
+    "misses": 2132,
+    "maxsize": 8192,
+    "currsize": 2132
+  },
+  "static_image_reads_sha256": "b406bc5f223d7de00d8fa0e117bba80a2a90c9ee9208eb386a977d50d5dbf87d",
+  "original_process_terminal": {
+    "pid": 3527,
+    "pgid": 3527,
+    "exit_code": 0,
+    "deadline_exceeded": false,
+    "deadline_seconds": 180,
+    "seconds": 109.78398633300094,
+    "child_cpu_user_seconds": 98.55997599999999,
+    "child_cpu_system_seconds": 14.276584999999999
+  },
+  "original_Node_seconds": 109.78398633300094,
+  "parent_reader_failure_preserved": {
+    "capture_parent_tool_session": 98934,
+    "capture_parent_exit_code": 1,
+    "phase": "CAS constructor before any stage comparison",
+    "error": "CAS first record index",
+    "captured_decoder_metadata_index_maximum": 10000,
+    "compared_stages": 0,
+    "original_wasm_process_exit_code": 0,
+    "original_completed_frames": 750,
+    "captured_records": 11260,
+    "repaired_record_count_maximum": 11304,
+    "source_of_failure": "Frozen capture decoder hard limit and observed parent traceback; game execution completed.",
+    "original_capture_overwritten": false
+  },
+  "new_original_executions": 0,
+  "new_original_cases": 0,
+  "new_original_entry_calls": 0,
+  "completed_recomparison_process": {
+    "terminal": {
+      "pid": 58721,
+      "pgid": 58721,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 195.96424750000006,
+      "error": null
+    },
+    "terminal_sha256": "23707bc25f6d7b2f775d48a83510cb424abf45b1cfeb59589d90637a2fc41dd2",
+    "process_sha256": "7cec81f1da32e3e6e355a021475c1347781b1c11984012bf9cf8c5b252e954fb"
+  },
+  "historical_partial_recomparison_timeout": {
+    "terminal": {
+      "pid": 22550,
+      "pgid": 22550,
+      "exit_code": -15,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 360.0216073329939,
+      "error": "TimeoutExpired(['python3', '/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/recompare_opening_combat135.py', '--capture-directory', '/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T210558.218894Z'], 360)"
+    },
+    "terminal_sha256": "36c2af13259671c8656cc638e1aa4afa22dd95842e74c626a2fbd4f2134fe636",
+    "stages_observed_before_timeout": 8000,
+    "accepted_complete": false
+  },
+  "referenced_original_executions": 1,
+  "referenced_original_entry_calls": 10508,
+  "original_model_or_checker_executed_by_reviewer": false,
+  "full880_frames": 0,
+  "native_Windows_execution": false,
+  "playable_replacement": false,
+  "scope": "One human warrior seed0/navFalse stationary750 controlled14-tail frames, real6730+1089, original initialized snapshot, independent preparsed world, externalf32 G2352 clock. Recomparison of the same capture, not a fresh second original run.",
+  "limitations": [
+    "No full880/native/fullgame/latest138 gameplay-flow acceptance.",
+    "Only declared projections/known physical bytes and the listed wire shapes are semantically compared.",
+    "Unknown/unwritten storage, allocator addresses, unsupported status/proc/multiplayer/UI remain explicit.",
+    "Independent cast and AI component reviews are dependencies; AI implementation authored by this reviewer."
+  ],
+  "elapsed_seconds": 246.2257740000059,
+  "review_receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening750-independent-review-owned-20261101T214548Z/review/review.json",
+  "review_receipt_sha256": "ef1a54b3302279dc8a734428776516f843b5e4cdc8884045e22f269b1bd8e31c",
+  "review_process_terminal": {
+    "pid": 70466,
+    "pgid": 70466,
+    "exit_code": 0,
+    "error": null,
+    "seconds": 246.97034045899636,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "review_process_terminal_sha256": "bf1008cab2ba99c6ae558969a57a07e1a36f0fc3228e809bae251251bff68025",
+  "review_owned_process_sha256": "f01e541a1a77f36c1b26f3c7447102ccc5a9ca6994e7f2578c51eb17320f75d8",
+  "review_owned_config_sha256": "522417582adf2e0b046392159de46b3221f6e903f425041865d3f3409bd69e36",
+  "review_owned_runner_sha256": "b369b7a4834581df6f33e7680fcdb694a823ba2029e66ab369bce1a4d603df69",
+  "reader_bound_audit": {
+    "captured_decoder_sha256": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+    "captured_metadata_maximum": 10000,
+    "repaired_maximum_records": 11304,
+    "first_invalid_first_record_index": [
+      10001,
+      "92ed19ece199193f55ab79abce32782492999c999e4ef1f34584f14a2e3cb729"
+    ],
+    "maximum_first_record_index": [
+      11259,
+      "7af0c1128c5ca64bd42136a10584963f10aac7d12a111a694941d3c9108f9ee4"
+    ],
+    "first_record_index_entries_above_old_bound": 4583,
+    "maximum_last_record_index": [
+      11259,
+      "b71aa1df494c43dc935bb877be4cffeb9ac32a1bfbfdefba31a8ad4217b22a0e"
+    ],
+    "last_record_index_entries_above_old_bound": 4939,
+    "static_conclusion": "Frozen old constructor necessarily rejects metadata before stage comparison; this audit did not execute that old decoder.",
+    "historical_error_record": "completed_original_capture_recomparison_after_decoder_record_bound_repair",
+    "traceback_source": "Parent observed tool failure, preserved in final prior-reader-failure.json; capture validation.stdout/stderr are empty and are not cited as traceback evidence.",
+    "original_capture_changed": false
+  },
+  "reader_bound_audit_sha256": "2a98cd54b53f4ad3f916f5cec79b078c621cd663b7821d2926658937f7894486",
+  "captured_source_sha256": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_lifecycle135.py": "c50bd06c68d557476d29982089426fe212992cdcd44b8d163df7ae8d4e9f50bf",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "ed30c5165b1af95b8b4002c0ce285c5da8f72709e701a90e25db25d2330cc69e",
+    "reconstruction/core_spec/area_effects135.py": "5d23790b090a89cf8515ab6670b921d0ae039061603ae33796e6f57d2f2c60a5",
+    "reconstruction/core_spec/battle_shout135.py": "a6ce932dfcc3271bdd8583094f4765b5cd5e50df8a41700716abd05dfa4f661a",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/cleave135.py": "32ca1bd03bd48cd4bd2059b154049a5b208b8789ac47afaffddab7a8789f9ad9",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "023d1cbb784611c8720c667d5764df1d4cc5165b8e32267a1fbc002332691623",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/effect_system135.py": "4c10f06ffbf601d323250dde348c611680c74f48a8435bac05df7821dd01bd24",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/event_wave135.py": "9c7c9bec1757df7717a9cbcf5b1be3b452fd1e1663978f22480b6f683314d0b6",
+    "reconstruction/core_spec/frame_systems135.py": "bfc0aee540698abab235fe0ad86540925a2d35605861c6b1a5d2c5b37be7bd83",
+    "reconstruction/core_spec/guardian_ai135.py": "fbf9fb16f6d58292986b1c84268b3c70bb36f4b31b59fc0c9a13fbf0c8199a16",
+    "reconstruction/core_spec/headless135.py": "bc325e8b3d44be22677d3c5ca8b0f7342640f26902ef538883a251537589157e",
+    "reconstruction/core_spec/headless_tail135.py": "debe8743115ce03f23207dc70c2b5c83a393d6897853a24fc385f4e51bda9976",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1",
+    "reconstruction/core_spec/movement_pause135.py": "fdf4b433e6d9b04eaf7fa1016dd9384538e7650e3731ea5750fa6193f1358dcd",
+    "reconstruction/core_spec/opaque_pickup135.py": "29fe2a57532324ea12aabb4e5a03f8989b0aef1d3bbf20e6ac98d352e7073313",
+    "reconstruction/core_spec/opening135.py": "8fbc33f44cf13276091fabccc93c949c4781084741f985302e5bf6f77d27abb7",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_handoff135.py": "78b2ffae8cc7f803d670efd3476ae48fe41e6d235f47b665eb6a82e7f7297eb3",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/ordinary_placement135.py": "68be244ce1af6f51624d9a6cdecd3e36ae2dacb4c9cfc21323b17043c850f47b",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickup_record_cells135.py": "0dcd59577d03abc4e1003f8ccace76345f573beabaaa02016377a2ecabfc8af3",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/profile_companions135.py": "539aa9ab1e37f6ec95d93c77b1ceeb2111ab0af5cdf45b8626eed04bfb999571",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "897de2d39ef5c8c032467a8fdeea6b11db33d288a59d57ffcb6cfce5789be9d4",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_boss135_data.py": "d243e8c9d4b140be9d3b959c0461b88c82b96265b2b2d1384b9e27a1339192ac",
+    "reconstruction/core_spec/spawn_frame_motion135.py": "088c80dfcf6deec267df9cacb60f1097e6a97276a901765eea7f2273319521f3",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_position_motion135.py": "3dc4cfc848670c530245c4f6e1edbff761387ffafb2d6d33d18da605ee35b5c1",
+    "reconstruction/core_spec/spawn_schedule135.py": "8d2f24d4709eb17e2859eacb05a571e5646691aba0827fc6f8c38113d4df4c98",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/special2376_135.py": "29a77bc01f29c56d3626163d688ae95276a0ffd4550e7bc1eab028a69e79d280",
+    "reconstruction/core_spec/special2376_notify135.py": "49f0fbdf76d3f731faf002d73b342c441949495bb68d95176bb680d02bc17b1e",
+    "reconstruction/core_spec/special2376_spawn135.py": "4cdcd9659829a19983ff1e949c37905a9903535a90bcf0456c6c5d6708ab5e5c",
+    "reconstruction/core_spec/special2376_spawn135_data.py": "d96d2281cbf8b309d9cf8beb28bbb6b270fc1158877ade86b7b0aa2b2d37300e",
+    "reconstruction/core_spec/supply_kind2_135.py": "e765fd68b5615a76a084e6f02b7f94ddbbc48dc944e2a3d323c0fbcbb5f2ae13",
+    "reconstruction/core_spec/thunder_clap135.py": "1aeadd63ceecdbaae1653cef97a9ff6f7ba42c9d103a8d9356dd0b0d2239bfa4",
+    "reconstruction/core_spec/unit_records135.py": "d7333639dad4e0da8a5df539c8406ec507af6fc12b91a541fcb19d59a748e326",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_opening_combat135_oracle.py": "0988e4eedc987d5a7d5d139b5f36f03edf3eb58f1d5797ac40f56ca659bacbee",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/check_opening_combat135.py": "a41c302db0fedaae2de4051ef5f8cc8889d49b46f67f942455936ab6b46d3772",
+    "scripts/check_opening_handoff135.py": "8631ebf0fd61cd994505b31bcaee1e3680b8ded67c18759bb64977c5f908bfbc",
+    "scripts/opening_combat135_cas.mjs": "f0bc14d3be5083592559d591cb9c9362265ed0f65a670552acb0003e30053bfe",
+    "scripts/opening_combat135_cas.py": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+    "scripts/opening_npc_aura135.py": "a036bd9559e1c2229d2cfc3a127d432e6b946a9584ff459d560f33829c7bf9b9",
+    "scripts/opening_pickup_provenance135.py": "ba20f755ea9915af63ed1b59705e321df9a4c0f8de47550ed05fbe551da7aa8e",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_opening_combat135_cas_oracle.mjs": "3558857a90e948be16192f2257f5e26296298f997f4a73ebfa2f7db3ccc28521",
+    "scripts/run_opening_combat135_oracle.mjs": "a53de38a10b111063fb286da0850a682cdbbc53b1a02eba24c4e90f9f2fcb9d9",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "current_comparison_source_sha256": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_lifecycle135.py": "c50bd06c68d557476d29982089426fe212992cdcd44b8d163df7ae8d4e9f50bf",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "ed30c5165b1af95b8b4002c0ce285c5da8f72709e701a90e25db25d2330cc69e",
+    "reconstruction/core_spec/area_effects135.py": "5d23790b090a89cf8515ab6670b921d0ae039061603ae33796e6f57d2f2c60a5",
+    "reconstruction/core_spec/battle_shout135.py": "a6ce932dfcc3271bdd8583094f4765b5cd5e50df8a41700716abd05dfa4f661a",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/cleave135.py": "32ca1bd03bd48cd4bd2059b154049a5b208b8789ac47afaffddab7a8789f9ad9",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "023d1cbb784611c8720c667d5764df1d4cc5165b8e32267a1fbc002332691623",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/effect_system135.py": "4c10f06ffbf601d323250dde348c611680c74f48a8435bac05df7821dd01bd24",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/event_wave135.py": "9c7c9bec1757df7717a9cbcf5b1be3b452fd1e1663978f22480b6f683314d0b6",
+    "reconstruction/core_spec/frame_systems135.py": "bfc0aee540698abab235fe0ad86540925a2d35605861c6b1a5d2c5b37be7bd83",
+    "reconstruction/core_spec/guardian_ai135.py": "fbf9fb16f6d58292986b1c84268b3c70bb36f4b31b59fc0c9a13fbf0c8199a16",
+    "reconstruction/core_spec/headless135.py": "bc325e8b3d44be22677d3c5ca8b0f7342640f26902ef538883a251537589157e",
+    "reconstruction/core_spec/headless_tail135.py": "debe8743115ce03f23207dc70c2b5c83a393d6897853a24fc385f4e51bda9976",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/mixed_resource135.py": "ab4b97e067bcb99d218cd38564e61096f3621625c1d4520c662eeaddcc210ea1",
+    "reconstruction/core_spec/movement_pause135.py": "fdf4b433e6d9b04eaf7fa1016dd9384538e7650e3731ea5750fa6193f1358dcd",
+    "reconstruction/core_spec/opaque_pickup135.py": "29fe2a57532324ea12aabb4e5a03f8989b0aef1d3bbf20e6ac98d352e7073313",
+    "reconstruction/core_spec/opening135.py": "8fbc33f44cf13276091fabccc93c949c4781084741f985302e5bf6f77d27abb7",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_handoff135.py": "78b2ffae8cc7f803d670efd3476ae48fe41e6d235f47b665eb6a82e7f7297eb3",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/ordinary_placement135.py": "68be244ce1af6f51624d9a6cdecd3e36ae2dacb4c9cfc21323b17043c850f47b",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickup_record_cells135.py": "0dcd59577d03abc4e1003f8ccace76345f573beabaaa02016377a2ecabfc8af3",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/profile_companions135.py": "539aa9ab1e37f6ec95d93c77b1ceeb2111ab0af5cdf45b8626eed04bfb999571",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "897de2d39ef5c8c032467a8fdeea6b11db33d288a59d57ffcb6cfce5789be9d4",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_boss135_data.py": "d243e8c9d4b140be9d3b959c0461b88c82b96265b2b2d1384b9e27a1339192ac",
+    "reconstruction/core_spec/spawn_frame_motion135.py": "088c80dfcf6deec267df9cacb60f1097e6a97276a901765eea7f2273319521f3",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_position_motion135.py": "3dc4cfc848670c530245c4f6e1edbff761387ffafb2d6d33d18da605ee35b5c1",
+    "reconstruction/core_spec/spawn_schedule135.py": "8d2f24d4709eb17e2859eacb05a571e5646691aba0827fc6f8c38113d4df4c98",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/special2376_135.py": "29a77bc01f29c56d3626163d688ae95276a0ffd4550e7bc1eab028a69e79d280",
+    "reconstruction/core_spec/special2376_notify135.py": "49f0fbdf76d3f731faf002d73b342c441949495bb68d95176bb680d02bc17b1e",
+    "reconstruction/core_spec/special2376_spawn135.py": "4cdcd9659829a19983ff1e949c37905a9903535a90bcf0456c6c5d6708ab5e5c",
+    "reconstruction/core_spec/special2376_spawn135_data.py": "d96d2281cbf8b309d9cf8beb28bbb6b270fc1158877ade86b7b0aa2b2d37300e",
+    "reconstruction/core_spec/supply_kind2_135.py": "e765fd68b5615a76a084e6f02b7f94ddbbc48dc944e2a3d323c0fbcbb5f2ae13",
+    "reconstruction/core_spec/thunder_clap135.py": "1aeadd63ceecdbaae1653cef97a9ff6f7ba42c9d103a8d9356dd0b0d2239bfa4",
+    "reconstruction/core_spec/unit_records135.py": "d7333639dad4e0da8a5df539c8406ec507af6fc12b91a541fcb19d59a748e326",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_opening_combat135_oracle.py": "0988e4eedc987d5a7d5d139b5f36f03edf3eb58f1d5797ac40f56ca659bacbee",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/build_world_snapshot135_oracle.py": "9526b4fee325009d4550af05ca2e8695c9686f2168d8301b04a8e2ec8d745b1c",
+    "scripts/check_opening_combat135.py": "a41c302db0fedaae2de4051ef5f8cc8889d49b46f67f942455936ab6b46d3772",
+    "scripts/check_opening_handoff135.py": "8631ebf0fd61cd994505b31bcaee1e3680b8ded67c18759bb64977c5f908bfbc",
+    "scripts/opening_combat135_cas.mjs": "f0bc14d3be5083592559d591cb9c9362265ed0f65a670552acb0003e30053bfe",
+    "scripts/opening_combat135_cas.py": "728b3ae0576d372b9b7467c484022ae3487e772b9a09c0172bfbcdcf29c1479f",
+    "scripts/opening_npc_aura135.py": "a036bd9559e1c2229d2cfc3a127d432e6b946a9584ff459d560f33829c7bf9b9",
+    "scripts/opening_pickup_provenance135.py": "ba20f755ea9915af63ed1b59705e321df9a4c0f8de47550ed05fbe551da7aa8e",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_opening_combat135_cas_oracle.mjs": "3558857a90e948be16192f2257f5e26296298f997f4a73ebfa2f7db3ccc28521",
+    "scripts/run_opening_combat135_oracle.mjs": "a53de38a10b111063fb286da0850a682cdbbc53b1a02eba24c4e90f9f2fcb9d9",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "scripts/recompare_opening_combat135.py": "807369f85597b53d2223e5c7ebc2c080b6ea204c03ca5e4df4e48a222e1a4e47"
+  },
+  "review_source_files_created": [
+    "scripts/review_opening_combat135_750.py",
+    "reports/2026-11-02-opening-combat0135-750frame-independent-review.md",
+    "reports/2026-11-02-opening-combat0135-750frame-independent-review.json"
+  ],
+  "production_source_changed_by_reviewer": false,
+  "staged_or_committed_by_reviewer": false,
+  "research_function_export_bindings": 17,
+  "added_stack_global_export_bindings": 1
+}

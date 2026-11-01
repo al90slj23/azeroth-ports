@@ -1,10 +1,13 @@
 # 版本与平台基线
 
+官方metadata本轮核对至 **2026-11-01T21:51:57Z**，manifest仍为0.138.0／同一147,995,648B EXE SHA，首页stamp仍为`9552af247ddb`；[只读核对收据](evidence/official-goal-phase-network-check-20261101T215156.327710Z/receipt.json)，未重取大二进制或替换实验样本。最新138的[非致死伤害80组／125完整调用及独审](reports/2026-11-02-combat0138-independent-review.md)只证明限定数值域，完整流程／native运行仍为0。
+
+
 当前功能目标已更新为**官方0.138.0**，Windows/Web原件均在4T另档并完成大小、哈希及采集前后部署一致性核对，见[138采集与版本状态](reports/2026-11-02-latest0138-state.md)。新版静态与动态证据单独登记；固定135连续流程、137局部组件的结果均不转记138。现有安装包和存档未替换。
 
-当前[650帧／60秒波次与补给闭环](reports/2026-11-02-opening-event-combat0135.md)固定135：真实opening→战斗→5次选卡→首波次及补给→继续，9105阶段／9107原件入口0声明差异，104源／90production；[只读独审通过](reports/2026-11-02-opening-combat0135-650frame-independent-review.md)。新增全部150与声明actor169字节、GUID绑定的kind2地址来源比较。仍是原件snapshot／独立预解析world／外部clock控制的14尾阶段，完整880／Windows执行／独立完整一局均为0。
+当前[750帧／六次选卡与挫志怒吼闭环](reports/2026-11-02-opening-demo-combat0135.md)固定135：真实opening→战斗→6次选卡→首波次及补给→Demo施放／受伤／减益到期→继续，10,506阶段／10,508原件入口、0声明差异；[完整只读独审通过](reports/2026-11-02-opening-combat0135-750frame-independent-review.md)。原件只执行一次，读取器修复后重比完整采集，重比／独审不增加原件case。110捕获源／111重比源含95production；仍为snapshot／独立预解析world／外部clock的14尾阶段，完整880／Windows执行／独立完整一局均为0。历史[650帧](reports/2026-11-02-opening-event-combat0135.md)保留原范围。
 
-[原始451资源独立入口](evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。下一纯模型到665帧自然选中demo_shout后停止，不能称665原件差分；继续恢复该技能、资源消费与完整一局。以下较早记录保持各自历史范围和计数。
+[原始451资源独立入口](evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json)亦完成650帧／5select／9106摘要，97源及67,281,330B资产不变，不读原memory／WASM／预解析world；[50项终态衔接](evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json)通过。这是模型自检／终态组合比较，不增加原件case。此前665帧纯模型技能边界现由后继750原件组合闭合；raw650收据仍只代表650帧资产入口，没有新跑raw750。下一缺口是同一物理live/Aura所有者上的资源消费与选卡1020保护共存，继而继续完整一局。以下较早记录保持各自历史范围和计数。
 
 核对日期：2026-11-02（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
 
@@ -16,8 +19,8 @@
 
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
-| latest Windows程序目标 | 官方更新EXE0.137.0，147844608B，SHA `aa6b254f…3a10dc8`，实际build `d171b8f9f` | 新目录已核官方大小/SHA及gzip CRC/ISIZE，未执行EXE；原生/游戏语义验收0。 |
-| latest Web目标 | Web0.137.0/`d171b8f9f`，90941108B，SHA `20ec9a2b…3fe1c8`，stamp `c628fd68823e` | coherent下载及真实pointer/len9 guard通过；完整profile及913局部非致死80/125动态0差异。完整death/proc/native运行/fullgame仍未验收。 |
+| latest Windows程序目标 | 官方更新EXE0.138.0，147995648B，SHA `eb5fd1c1…bf79e`，实际build `382771e6c` | 新目录已核官方大小/SHA及gzip CRC/ISIZE，未执行EXE；原生运行验收0。 |
+| latest Web目标 | Web0.138.0/`382771e6c`，90946299B，SHA `c60161d9…945b11b`，stamp `9552af247ddb` | coherent下载、9字节build、完整profile与限定非致死913的80组/125调用及独审通过；完整death/proc/native运行/fullgame未验收。 |
 | 固定0.136静态迁移 | Web0.136.0/`fe24fb74c`，90927420B，SHA `48c3bce7…1eb2eef3`；native SHA `eb744751…c4d8947c` | [完整175319函数profile/RO索引与12入口候选](reports/2026-11-01-wasm0136-profile.md)保留；动态case0，不能转计137。 |
 | 固定0.135动态研究 | Web0.135.1/`90898d5e3`，90959080B，SHA `c62c85f5…0dc96e2`；历史alias `0898d5e3` | 原52-role与私有builder及既有收据继续绑定该SHA。后继真实开局/战斗/升级/选卡组合另记，旧082927等计数不合并，完整880、native与独立一局仍缺。 |
 | 固定0.135 Windows参照 | 官方EXE0.135.1，147797504B，SHA `71e5f176…bc59249` | 保留原采集身份，未执行EXE；Web结果不冒称native验收。 |

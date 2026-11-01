@@ -1,0 +1,337 @@
+{
+  "schema": "azeroth-ports-combat0138-primary-v1",
+  "created_utc": "2026-11-01T20:59:04.019210+00:00",
+  "status": "scoped_nonlethal_damage_differential_and_independent_readonly_review_passed",
+  "version": "0.138.0",
+  "build": "382771e6c",
+  "original_wasm": {
+    "path": "originals/official-release-20261101T201508.341687Z/latest-wenilla_bg.wasm",
+    "bytes": 90946299,
+    "sha256": "c60161d991ce97a9a4a9d3866b5e629d9e38f0fab8364c051faae8d01945b11b"
+  },
+  "identity_sidecar": {
+    "path": "evidence/branding0138-identity-20261101T202528.536773Z/identity.json",
+    "sha256": "da6db208afd9669c8600205643ab6061d6c2d075c086c0759090838b053cef5d",
+    "consumed_build_bytes": 9
+  },
+  "comparison": {
+    "path": "evidence/combat0138-oracle-20261101T205616.629599Z/comparison.json",
+    "sha256": "282e38ed4d2f14e87a12568cc9f0dbcca81c9641f63464936c9c08047278b7fa",
+    "cases": 80,
+    "calls": 125,
+    "mismatch_cases": 0,
+    "fresh_instances": 80,
+    "expected_before_original": true
+  },
+  "static_mapping": {
+    "path": "evidence/combat0138-static-map-20261101T205516.792418Z/mapping.json",
+    "sha256": "35c31aaa6d075c8823b166951a86598c072206ae79df3c13cbb9e756986ebf50",
+    "defined_entry": 913,
+    "signature": [
+      "7f7e7d7f7f7f7f",
+      ""
+    ],
+    "type_index": 268,
+    "body_bytes": 26464,
+    "body_sha256": "917d3f833840d851b770fde86096ff6abbd56581d794abef01fd5b8f350eb892",
+    "wat_bytes": 381635,
+    "wat_sha256": "f53ae607d2e0a63976fcf58e5c17f606f752c8042cf547138b31984f9f7fd823",
+    "direct_call_occurrences": 255,
+    "distinct_direct_functions_including_self": 85,
+    "exact_body_signature_helpers": [
+      {
+        "old_index": 17939,
+        "new_candidates": [
+          17938
+        ],
+        "body_sha256": "db69cd11b1a94cba9c9fa4441d73f821611b89081c4d0f1ab6d2fcd7d806a7f1",
+        "signature": [
+          "7f7f7f7f7f",
+          ""
+        ]
+      },
+      {
+        "old_index": 35406,
+        "new_candidates": [
+          35439
+        ],
+        "body_sha256": "c810defd0dfd06428cc4b2cb5f91592ccdc8b0585258e8d54ba5dd65b804d9fa",
+        "signature": [
+          "7f7f",
+          ""
+        ]
+      },
+      {
+        "old_index": 38341,
+        "new_candidates": [
+          38359
+        ],
+        "body_sha256": "f46bb859465dd3cea7124b9efafe8e1530204a74c71ba98385839397f0f587d7",
+        "signature": [
+          "7f7f",
+          ""
+        ]
+      },
+      {
+        "old_index": 58027,
+        "new_candidates": [
+          58051
+        ],
+        "body_sha256": "448440ba9a1ee8f3d570dd4c4e9584b8f4621a865ba32bc8910f1207450bb231",
+        "signature": [
+          "7f7f7d",
+          ""
+        ]
+      },
+      {
+        "old_index": 82058,
+        "new_candidates": [
+          82150
+        ],
+        "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+        "signature": [
+          "7f7f7f",
+          "7f"
+        ]
+      }
+    ],
+    "actual_abi_change": {
+      "old_index": 68459,
+      "old_signature": [
+        "7f7f",
+        ""
+      ],
+      "new_index": 68536,
+      "new_signature": [
+        "7f7f7f7f",
+        ""
+      ],
+      "description": "Vec remove-first specialized two-arg helper becomes indexed four-arg helper;913 passes explicit index0 and panic location1590040. Nonempty G1972 domain remains pending."
+    },
+    "not_whole_function_equivalence": true
+  },
+  "private_module": {
+    "path": "evidence/combat0138-oracle-20261101T205616.629599Z/combat138-original-exports.wasm",
+    "sha256": "ac39d1a9ba46323631ade61ca6024081c8189aea6438d22af00375ffd769e1a0",
+    "only_changed_section": 7,
+    "added_exports": [
+      [
+        "research138_damage913",
+        0,
+        913
+      ],
+      [
+        "research138_stack0",
+        3,
+        0
+      ]
+    ],
+    "all_nonexport_sections_unchanged": true,
+    "all_original_callees_preserved": true,
+    "allocator_index": 92072,
+    "no_original_start": true,
+    "shared_52_roles_modified": false
+  },
+  "inputs": {
+    "origin": "All-known controlled manual Game8192/unit432 fixtures; not138 constructor/snapshot/natural trajectory",
+    "complete_unit_record_bytes": 432,
+    "explicit_empty_items2028": true,
+    "explicit_empty_spells2052": true,
+    "other_procs_absent": true,
+    "G1972_explicit_zero": true,
+    "context0": true,
+    "rng_words": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "ordinary_static_definition": {
+      "pointer": 1626160,
+      "name": "Kobold Vermin",
+      "raw72_hex": "0000000000000000000000000000000088cf18000d000000580200001a0000006666663f070000000000c04100004040cdcccc3f0000a040010000000000803f0000000000000000"
+    },
+    "physical_unknown_bytes": 0,
+    "phase_fixture_zero_ability_headers": 7,
+    "phase_fixture_scope": "numeric branch never consumes timer/destructor; U64=0/U68=0 inputs do not establish legal special-unit owner state",
+    "reuse": "Stimulus structure ported from137; every138 expected and every138 original call generated fresh; no old case transferred"
+  },
+  "projection": {
+    "all_record_bytes_strict": true,
+    "cumulative_record_bytes": 55296,
+    "actual_changed_unit_offsets": [
+      288,
+      289,
+      290,
+      291
+    ],
+    "allowed_numeric_write_offsets": [
+      288,
+      289,
+      290,
+      291
+    ],
+    "game_total": {
+      "offset": 984,
+      "kind": "f64",
+      "exact_bits": true,
+      "large_initial_total": 16777217
+    },
+    "school": {
+      "input_mask": "school &254 ==2",
+      "unit_clock_offset": 372,
+      "bonus_bits": 1036831949,
+      "strict_clock_gt": true,
+      "cases": 21
+    },
+    "rng_all_four_exact": true,
+    "raw_game_observations": {
+      "records": 125,
+      "bytes": 2060352,
+      "sha256": "972057211c94b3dd1bf506c636842fe3a6a17c8cfaaaa7761fea1843a7f7d944",
+      "strict_identity_crosschecks": [
+        "case and operation order",
+        "Game984 f64 bits",
+        "Game1720 RNG4",
+        "Game1784/1788/1792 Vec count/pointer/capacity",
+        "Game2352 now",
+        "Game2587 phase",
+        "Game1972 empty"
+      ],
+      "scope": "Full8192B Game saved only; statistics/visual/queue headers and pointers outside compared scalar fields are raw observation. Queue payloads are not claimed independently captured or predicted."
+    }
+  },
+  "groups": {
+    "pilot138-real913-ordinary-nonlethal": 1,
+    "pilot138-432stride-second-GUID": 1,
+    "pilot138-new-school372-bonus": 1,
+    "pilot138-phase-gate-keeps-full-record": 1,
+    "minimum1-and-f32-f64-accounting": 10,
+    "NaN-amount-minimum1": 2,
+    "finite-nonlethal-lowHP": 4,
+    "marker1-reject-othermarkers-accept": 3,
+    "nonrunning-full-byte-gate": 4,
+    "target-absent-does-not-write": 1,
+    "138-school-bitmask-and-U372-strict-gate": 21,
+    "ordered-status-additives-and-empty-item-controls": 24,
+    "138-moved-phase-gates-432record": 6,
+    "kind2-link-quarter-phase": 1
+  },
+  "source_freeze": {
+    "total": 11,
+    "production": 4,
+    "before": {
+      "scripts/check_combat138.py": "c97b9a20dbceb6f5bf8f0dc54bca8b6379e423f5f1bd87a528af7e59912e3ded",
+      "scripts/build_combat138_oracle.py": "5a6779cb656daa426296199e48f8f35aad191bca8253d5dbce5d54d74a2c93ef",
+      "scripts/run_combat138_oracle.mjs": "7f0033862ee9d732e6fdfc9b2f5b7d87585f15c77354c556dacb22363cc251a9",
+      "scripts/wasm138_profile.py": "634d5ba500286f0e16842132f52e566aef65a801ef524da62febe12b197a7d8a",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/combat138.py": "685a0dde8fc2465e7f6e6af929ec4ef961f21e3314aad991335ff07d826227ac",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+    },
+    "after": {
+      "scripts/check_combat138.py": "c97b9a20dbceb6f5bf8f0dc54bca8b6379e423f5f1bd87a528af7e59912e3ded",
+      "scripts/build_combat138_oracle.py": "5a6779cb656daa426296199e48f8f35aad191bca8253d5dbce5d54d74a2c93ef",
+      "scripts/run_combat138_oracle.mjs": "7f0033862ee9d732e6fdfc9b2f5b7d87585f15c77354c556dacb22363cc251a9",
+      "scripts/wasm138_profile.py": "634d5ba500286f0e16842132f52e566aef65a801ef524da62febe12b197a7d8a",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/combat138.py": "685a0dde8fc2465e7f6e6af929ec4ef961f21e3314aad991335ff07d826227ac",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+    },
+    "all_current_and_snapshots_match": true
+  },
+  "process": {
+    "pid": 81053,
+    "pgid": 81053,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 3.7253807920060353,
+    "launcher_error": null
+  },
+  "runtime": {
+    "version": "0.138.0",
+    "build": "382771e6c",
+    "cases": 80,
+    "full_original913_calls": 125,
+    "fresh_instances": 80,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "peak_memory_bytes": 20643840,
+    "raw_observation_bytes": 2060352,
+    "output_bytes": 123350,
+    "output_cap_bytes": 4194304,
+    "stack_all_restored": true,
+    "application_start_called": false,
+    "windows_exe_executed": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_full_callees_preserved": true,
+    "shared52_roles_changed": false
+  },
+  "stack_checks": 285,
+  "validator": {
+    "pid": 80620,
+    "pgid": 80620,
+    "exit_code": 0,
+    "pgid_missing": true,
+    "seconds": 15.436292375001358
+  },
+  "windows_static_reference": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-release-20261101T201508.341687Z/windows-0.138.0/AzerothSurvivors.exe",
+    "sha256": "eb5fd1c1b96e6180fcf5f3d685d90a61471af28d22e5f060c02b7b7663fbf79e",
+    "bytes": 147995648,
+    "scalar_tail45_hex": "580200001a0000006666663f070000000000c04100004040cdcccc3f0000a040010000000000803f0000000000",
+    "scalar_tail_file_matches": [
+      118538720
+    ],
+    "scope": "Exact declaration scalar-tail byte correspondence only; Windows gameplay ABI/913 function identity not established",
+    "executed": false
+  },
+  "budgets": {
+    "original_owned_seconds": 60,
+    "validator_owned_seconds": 45,
+    "wasm_bytes": 33554432,
+    "heap_mib": 512,
+    "input_expected_each_bytes": 4194304,
+    "raw_observations_bytes": 4194304,
+    "stdout_bytes": 4194304
+  },
+  "pilot": {
+    "path": "evidence/combat0138-oracle-20261101T205531.678613Z/comparison.json",
+    "sha256": "dee92a94e010300266c0e161a01b9aaf6f25ce7340219eb46566b93bc2f4895c",
+    "cases": 4,
+    "calls": 5,
+    "mismatch_cases": 0,
+    "superseded_by_full": true,
+    "not_added_to_final_counts": true,
+    "source_note": "Pilot preceded raw-output realtime budget/crosscheck addition; its frozen source retained"
+  },
+  "no_execution_preparation_failures": [
+    "trace138 initial syntax/import/fixed-version-parser preparation errors occurred before target execution; empty/partial timestamp directories retained, not positive cases"
+  ],
+  "limitations": [
+    "Nonlethal numerical/no-proc projection only; no full Game/constructor/880/headless natural frames.",
+    "Death/XP/loot, nonempty item/spell/proc producers, inherited nonzero damage context, Boss acceptance, kind3 spell-category lookup remain Pending.",
+    "The changed nonempty G1972 helper ABI is statically recorded but not dynamically accepted by this batch.",
+    "Packets/statistics/visual allocation payloads and Windows gameplay ABI/runtime are not independently predicted or accepted.",
+    "Finite fixture domain plus amount NaN cases; this is not an exhaustive IEEE754/NaN/signed-zero proof.",
+    "No135/136/137 case counts or behavioral approvals transferred; no Windows EXE, App start, user save or network execution."
+  ],
+  "independent_review": {
+    "report": "reports/2026-11-02-combat0138-independent-review.json",
+    "receipt": "evidence/combat0138-independent-review-20261101T211907.648414Z/review.json",
+    "receipt_sha256": "a4098947aa8d671dfd757e4eeda026a8e1518f93c35b8966a5921cf78ee3dd94",
+    "new_original_cases": 0,
+    "original_or_model_or_checker_executed": false
+  },
+  "registry_registration": "Left to root; this task changes no registries or entry documents"
+}

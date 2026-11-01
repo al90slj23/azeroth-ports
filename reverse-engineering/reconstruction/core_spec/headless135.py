@@ -21,6 +21,7 @@ from .cast_events135 import cast_ability, process_hits
 from .cleave135 import cast_cleave135
 from .thunder_clap135 import cast_thunder_clap135
 from .battle_shout135 import BattleShoutDefinition135,cast_battle_shout135
+from .demo_shout135 import DemoDebuff135,cast_demo_shout135
 from .cast_catalogue135 import definition, RAW_BY_POINTER
 from .combat135 import CombatState, encoded_hp
 from .currency134 import CurrencyState
@@ -209,8 +210,18 @@ def supported(pointer):
     d = definition(pointer)
     return (d.effect_tag == 0 and d.execution_kind in (0, 2) or d.ability_id==b'cleave' and d.effect_tag==0 and d.execution_kind==5
         or d.ability_id==b'thunder_clap' and d.effect_tag==1 and d.execution_kind==2
+        or d.ability_id==b'demo_shout' and d.effect_tag==11 and d.execution_kind==2
         or d.ability_id==b'battle_shout' and d.effect_tag==8 and d.execution_kind==9 or d.ability_id in RACIALS
         or d.execution_kind == 3 and d.ability_id in AREAS)
+
+
+def _demo_owner135(raw):
+    """Bind a typed effect/Aura owner to known bytes of this physical unit."""
+    return DemoDebuff135(u64(raw,112,'Demo physical GUID'),u32(raw,0,'Demo physical marker'),
+        tuple(u32(raw,o,'Demo physical weakness')for o in(128,132,136,140)),
+        u32(raw,360,'Demo physical spell'),u32(raw,364,'Demo physical duration'),
+        tuple(u32(raw,o,'Demo physical Aura slot')for o in range(168,232,4)),
+        u32(raw,240,'Demo physical ability count'))
 
 
 def _store_prefix(storage, records, *, stride=None,allow_growth=False):
@@ -292,6 +303,9 @@ def _cast_phase(state, dt, *, phase='owned'):
     original = {u64(raw,112,'Headless pre-hit GUID'): raw for raw in state.records}
     death_positions = {}
     effect_writes = ()
+    demo_owners = None
+    indexed_effect_writes = ()
+    aura_packets = ()
 
     def on_hit(cast, damage):
         nonlocal collection
@@ -316,6 +330,7 @@ def _cast_phase(state, dt, *, phase='owned'):
 
     def dispatch(cast, d, owned, **callbacks):
         nonlocal collection, live, unknown, areas, area_storage, effect_writes
+        nonlocal demo_owners, indexed_effect_writes, aura_packets
         if d.ability_id in AREAS:
             if state.world is not None:raise PendingHeadless135('Real-world area height producer requires continuation')
             if len(areas) >= len(area_storage):
@@ -336,6 +351,22 @@ def _cast_phase(state, dt, *, phase='owned'):
         if d.ability_id==b'thunder_clap':
             result=cast_thunder_clap135(cast,d,owned,**callbacks)
             effect_writes+=result.effect_writes
+            return result
+        if d.ability_id==b'demo_shout':
+            if demo_owners is None:
+                demo_owners=tuple(_demo_owner135(row)for row in state.records)
+            if len(demo_owners)!=len(cast.combat.units)or any(
+                    row.guid!=unit.target_id for row,unit in zip(demo_owners,cast.combat.units)):
+                raise PendingHeadless135('Demo indexed physical/semantic owners disagree')
+            # Earlier hits in this same owned phase may already have killed a
+            # target. The2244 scan observes that latest marker, never its entry
+            # snapshot; the raw debuff/Aura owner remains attached to its slot.
+            demo_owners=tuple(replace(row,marker=unit.marker)
+                for row,unit in zip(demo_owners,cast.combat.units))
+            result=cast_demo_shout135(cast,d,owned,debuffs=demo_owners,**callbacks)
+            demo_owners=result.debuffs
+            indexed_effect_writes+=result.effect_writes
+            aura_packets+=result.aura_packets
             return result
         if d.ability_id==b'battle_shout':
             level=replace(collection.level,rng_words=cast.rng_words,
@@ -399,6 +430,11 @@ def _cast_phase(state, dt, *, phase='owned'):
                 raise PendingHeadless135('Unrestored area status-write destination')
             j = indices[guid]; raw = cells135(records[j],424);put_u32(raw,offset,value)
             records[j] = raw
+    for index,guid,offset,value in indexed_effect_writes:
+        if (not 0<=index<len(records)or u64(records[index],112,'Demo write GUID')!=guid
+                or offset not in(128,132,136,140,360,364)and offset not in range(168,232,4)):
+            raise PendingHeadless135('Demo indexed write has no proven physical owner')
+        raw=cells135(records[index],424);put_u32(raw,offset,value);records[index]=raw
     collection = replace(collection, level=replace(collection.level, rng_words=cast.rng_words))
     serialized = tuple(encode_row(raw)for raw in records)
     return _sync_pickup_owner(replace(state, collection=collection, records=serialized,
@@ -406,7 +442,8 @@ def _cast_phase(state, dt, *, phase='owned'):
         areas=areas, area_storage=area_storage,
         racial=racial, melee_timer_bits=timer, queued_hits=cast.queued,
         outgoing_total=cast.combat.accounted_total, attempted_spells=cast.attempted_spell_ids,
-        live_records=live, unspecified_live_words=unknown))
+        live_records=live, unspecified_live_words=unknown,
+        produced_packets=state.produced_packets+aura_packets))
 
 
 def _ai_phase(state, dt):
@@ -437,7 +474,9 @@ def _ai_phase(state, dt):
         elif u32(raw,0,'Headless AI live marker')==0:indices.append(j)
     if seen!=set(owners):raise PendingHeadless135('Guardian timer owner missing its physical unit')
     ai_input=AiFrame135(tuple(state.records[j]for j in indices),stats.now_bits,dt,
-        state.collection.player_xyz,incoming,incoming_item_effects=(),other_incoming_sources_absent=True)
+        state.collection.player_xyz,incoming,incoming_item_effects=(),other_incoming_sources_absent=True,
+        known_demo_statuses=tuple(_demo_owner135(state.records[j])for j in indices
+            if u32(state.records[j],360,'AI typed demo spell')==1160))
     if state.world is None:result=update_ordinary_units(ai_input)
     else:
         from .distance_map135 import update_distance_map135
@@ -509,6 +548,7 @@ def _ai_phase(state, dt):
         unit_storage=_store_prefix(storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth),
         guardian_cooldowns=guardian_owners,
         live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)),
+        produced_packets=state.produced_packets+result.demo_aura_packets169,
         collection=replace(state.collection, level=level, death=death))
 
 

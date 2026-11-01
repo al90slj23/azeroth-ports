@@ -1,0 +1,369 @@
+{
+  "component": "resource_consumer135",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "scoped_component_differential_and_independent_read_only_review_passed",
+  "review": {
+    "status": "pending"
+  },
+  "final_comparison": {
+    "path": "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/comparison.json",
+    "sha256": "970e32ef5af326ffd665b488a43f949eb8bd9e3192d6ffd7e2c121b78636c963",
+    "cases": 130,
+    "stages": 244,
+    "complete10298_calls": 163,
+    "complete2862_calls": 81,
+    "differences": 0,
+    "source_files": 31,
+    "import_edges": 84,
+    "comparison": {
+      "known_values": 82981,
+      "explicit_unknown_physical_bytes": 101062,
+      "stages": 244,
+      "observed_packets": 840,
+      "observed_notifications": 346
+    },
+    "groups": {
+      "pilot-real-full10298-resource3": 1,
+      "pilot-real-full10298-resource4": 1,
+      "pilot-real-full10298-resource5": 1,
+      "pilot-full2862-near-resource3": 1,
+      "pilot-full2862-near-resource4": 1,
+      "pilot-full2862-near-resource5": 1,
+      "class-race-empty-source-stat-consumer": 36,
+      "stable-remove-all-owners-and-preserve-full-backing": 20,
+      "half-max-heal-cap-and-gate387": 16,
+      "capacity-growth-repeated-all-three": 4,
+      "resource-XY3-geometry-marker-and-destroy": 36,
+      "mixed-kind-reverse-order-full56B-compaction": 1,
+      "same-spell-reverse-refresh-valid-live-markers": 1,
+      "positive-Battle-kind8-with-all-resources": 3,
+      "prior48-aura-cache-conditional-writes-bit0": 3,
+      "inert-duplicates-first-and774-stack-max": 1,
+      "far-kind2-opaque-amount-retained": 1,
+      "actual-playerGUID306-packed-limits": 2
+    }
+  },
+  "source_sha256_before": {
+    "scripts/check_resource_consumer135.py": "75e344e5550572592d0188881cd731f9378ebdc94bf68f0b594a3cd549b61335",
+    "scripts/build_resource_consumer135_oracle.py": "ac5632d33422bbc2bb1d5d28cb86de46fd29a6b6eb3701e51690bd38190ea15a",
+    "scripts/run_resource_consumer135_oracle.mjs": "680124306e8e7ff9a9ab691f23b0022ea54266aa717a0ededb912004a10b63f4",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_sha256_after": {
+    "scripts/check_resource_consumer135.py": "75e344e5550572592d0188881cd731f9378ebdc94bf68f0b594a3cd549b61335",
+    "scripts/build_resource_consumer135_oracle.py": "ac5632d33422bbc2bb1d5d28cb86de46fd29a6b6eb3701e51690bd38190ea15a",
+    "scripts/run_resource_consumer135_oracle.mjs": "680124306e8e7ff9a9ab691f23b0022ea54266aa717a0ededb912004a10b63f4",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1"
+  },
+  "source_unchanged": true,
+  "artifacts_unchanged": true,
+  "own_execution_source_sha256": {
+    "scripts/check_resource_consumer135.py": "75e344e5550572592d0188881cd731f9378ebdc94bf68f0b594a3cd549b61335",
+    "scripts/build_resource_consumer135_oracle.py": "ac5632d33422bbc2bb1d5d28cb86de46fd29a6b6eb3701e51690bd38190ea15a",
+    "scripts/run_resource_consumer135_oracle.mjs": "680124306e8e7ff9a9ab691f23b0022ea54266aa717a0ededb912004a10b63f4",
+    "reconstruction/core_spec/resource_aura135.py": "4fc720ee1d13d931f2d9f94f271ea4c6bf44a11833cbe3701ddd5e3c86ec8536",
+    "reconstruction/core_spec/resource_consumer135.py": "c025ee4642d6130b3994dee7d3c9602797b11164f2bf02b30366b484dba1626e"
+  },
+  "static_aura_trace": {
+    "path": "scripts/trace_resource_aura135.py",
+    "sha256": "2ab4fdbe3c37783e8139795df91996d4a7770d08db2ec799aedf58942ffc2ac3",
+    "report": "reports/2026-11-02-resource-aura0135-static.md",
+    "report_sha256": "03e1ec1f9dc6d57e1cacdd33476e87be7304dffa590357405a16f0c8509d5244",
+    "scope": "Separate static provenance/pure selfcheck only; fresh dynamic acceptance is this consumer batch."
+  },
+  "artifacts_sha256": {
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/input.json": "905a841b012f88e0c32363fe03b8ed32f4d758aec02c2e0964a54f8ec35cce98",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/expected.json": "4203169926a1358b0b95d906640a9a5b6819219ecf8061849f1a0d2e0995a654",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/labels.json": "ce6f47df1d2b5821c0aba22819e71ee6585e8f77bcb7292f33284dda0c2abc8f",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/refusals.json": "7a2b31cb8b5144367787911b845b8508435d842149ba5290ede3026b7aa3d1f7",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/manifest.json": "da09bfead58a78bfa599d46a2363b15ad2f38d755b8e72732a2bcd9ba37d692b",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/resource-consumer135-original-exports.wasm": "458d03d0f9a091f8e6dfa8d96c779830e1c7790afab2f449508c65c41b4e52c0",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/stdout.jsonl": "24000a1b1410731cd7d0217f1d17b78775e450e32166c892706c34e6b60f2daa",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/prepared.json": "c80a8c965f5edb0c64aa73b2002b3c4983eb00551b1e91f25098cf4c7b56d31f",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/owned-process.json": "f9a5e4faa3c725b726b3f2eb7e9159c092bc2c92fbeb15351944ccb8bdb0f6ff",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/process-terminal.json": "d5a8ed8b8b6976e73d2090cc402b226acfcc9014f1fe4ec0f548fee297310d1b",
+    "evidence/resource-consumer0135-oracle-20261101T203315.893397Z/resource-consumer135-runtime.json": "9c2e99656ea9cefc41dd7f2ebc9bc58be1fcc41da25f97b2c2a860da99f3c012"
+  },
+  "process": {
+    "pid": 30502,
+    "pgid": 30502,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 3.958033875009278,
+    "error": null
+  },
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "historical_build_alias": "0898d5e3",
+    "cases": 130,
+    "completed_cases": 130,
+    "full_original_calls": {
+      "2862": 81,
+      "10298": 163
+    },
+    "fresh_instances": 130,
+    "max_memory_bytes": 20578304,
+    "output_bytes": 5433601,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "original_function_bodies_unchanged": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_memory_snapshot_read": false,
+    "once_or_locale_state_injected": false,
+    "error": null
+  },
+  "stack_guard_count": 578,
+  "inputs": {
+    "kind": "Explicit manually packed Game8192/BTree/live32/pickup56/aura16 owners, not full original constructor or a historical memory snapshot.",
+    "world_required": false,
+    "external_sources": "StatsInput passive/adjustment/item/ownedskill/timed sources explicitly empty; source proof assertion excludes owned/default-definition kind12, definition38/shield/other aura producers. Default original cleave declaration5467428 supplied instead of pointer0.",
+    "live_domain": "kind0 plus unique finite nonnegative kind8 Battle-compatible sources; physical expiry/magnitude owners explicit. Duplicates withkind8, negative and other live kinds pending.",
+    "locale": "Explicit English index0 original lookup; real cold Once unchanged. Other locales pending.",
+    "notification_id": "Explicit u32 owner14340336; original static initial1 verified; input can carry0 orFFFFFFFF and wrapping is independently predicted. Not a malloc pointer or assumed zero.",
+    "claims": "Only explicit empty claims and empty removed-pickup auxiliary ownership; resource-only near consumer. XP/coin and nearby other kinds pending; far livekind2 retained, including exact4None amount word."
+  },
+  "api": {
+    "effect": "consume_resource135(ResourceConsumerState135,kind)",
+    "collection": "collect_resources135(ResourceCollectionInput135)",
+    "aura": "rebuild_resource_aura135(live_storage32,live_count,now_bits,previous_aura,pending_fields)",
+    "outputs": [
+      "state with StatsInput/23derived/pending fields/live32/full aura48x16/RNG/counters/notification id",
+      "pickups full56B backing when collection",
+      "ordered170/306/226/150 packets",
+      "complete English notification JSON bytes",
+      "consumed events/aura writes/heal metadata"
+    ],
+    "integration": "Prefer effect dispatch inside a future unified2862 collector to preserve reverse selected-index order when other pickup kinds coexist. Do not run resource-only geometry over a vector containing XP/coins. Retain shared notification id across every other42920 producer; never reset it to1 per effect."
+  },
+  "rules": {
+    "chain": "1352862→31732→10298→1512/1202 or27960/10847;13731727/10291/1514/1151 are distinct indices and no137 dynamic result is credited here.",
+    "physical_aux_pool": "135G768, not137G764",
+    "geometry": "Entry XY snapshot; binary32 sqrt(dx²+dy²)<=3, independent ofZ/amount; selected indices processed in reverse and stable56B compaction preserves all backing.",
+    "kind3": {
+      "visual": 9006,
+      "name": "Speed Rune",
+      "spell": 23451,
+      "duration_bits": 1092616192,
+      "stat": "1512 active spell23451 adds0.6 to speed multiplier; existing upper cap remains2.2."
+    },
+    "kind4": {
+      "visual": 9007,
+      "name": "Berserker Rune",
+      "spell": 23505,
+      "duration_bits": 1097859072,
+      "stat": "1512 active spell23505 adds0.5 to damage multiplier."
+    },
+    "kind5": {
+      "visual": 9008,
+      "name": "Restoration Rune",
+      "spell": 23493,
+      "heal": "f32(maxHP*.5), then*.5 iff heal_gate387>4; actual10847 cap/logicalHP and source0 cause retained."
+    },
+    "refresh": "kinds3/4 stable-remove every matching spell regardless sourceGUID, retain complete inactive backing, append live32 kind0 with known0/4/8/20/24/28 and preserve12/16 unwritten bytes; capacity growth matches original.",
+    "aura": "1202 builds full48x16 cache. First32 positive buffs in order; remaining16 empty in domain. Ordinary duplicatekind0 stablefirst expiry,774 combinescount/maxexpiry; initialized bit0 controls conditional dirty-map writes. Inactive cache only zero tag known, other12bytesNone.",
+    "fields": "Aura47..94 spells,95..100 packed nibbles9/8,113..124 packed count-1; no101..112 writes. All returned fields compared, not just threeHP/speed keys."
+  },
+  "wire": {
+    "unique_packets": {
+      "306": 192,
+      "226": 42,
+      "150": 192,
+      "170": 29
+    },
+    "unique_notifications": 192,
+    "cumulative_packets": {
+      "306": 346,
+      "226": 93,
+      "150": 346,
+      "170": 55
+    },
+    "cumulative_packet_bytes": 39758,
+    "opcode170": "removedGUID u64le",
+    "opcode306": "caster packedGUID twice,spell u32,flags256,count1,targetGUID u64,miss0,targetflags0",
+    "opcode226": "packed playerGUID+old action1644 u32+new speed f32bits; counter increments iff speed changed",
+    "opcode150": "type6:u8,-1:u32,playerGUID:u64,len(UTF8 chat)+1:u32,AZSBANNER tab id=...;kind=rune;boss=0;name=...;text=...!,NUL,NUL",
+    "notification_JSON": "Ordered compact UTF8 object type,id,kind,text,name,boss, with u32 notification-id wrapping and constant English rune names.",
+    "sample_speed_rune_packets": [
+      {
+        "opcode": 306,
+        "payload_hex": "012a012a9b5b00000001012a00000000000000000000"
+      },
+      {
+        "opcode": 226,
+        "payload_hex": "012a0900000033333341"
+      },
+      {
+        "opcode": 150,
+        "payload_hex": "06ffffffff2a0000000000000041000000415a5342414e4e45520969643d313b6b696e643d72756e653b626f73733d303b6e616d653d53706565642052756e653b746578743d53706565642052756e65210000"
+      }
+    ],
+    "sample_JSON_hex": "7b2274797065223a2262616e6e6572222c226964223a312c226b696e64223a2272756e65222c2274657874223a2253706565642052756e6521222c226e616d65223a2253706565642052756e65222c22626f7373223a66616c73657d"
+  },
+  "static": {
+    "functions": [
+      10298,
+      2862,
+      31732,
+      1512,
+      1202,
+      10847,
+      10529,
+      29537,
+      42920,
+      10434,
+      15915,
+      22747
+    ],
+    "WAT_bytes": 279236,
+    "RO_SQLite_seek": true,
+    "full_WAT_read": false,
+    "default_ability_pointer": 5467428,
+    "default_ability_definition_kind": 0,
+    "English_labels": [
+      {
+        "visual": 9006,
+        "pointer": 5463838,
+        "bytes": 10,
+        "English": "Speed Rune"
+      },
+      {
+        "visual": 9007,
+        "pointer": 5463848,
+        "bytes": 14,
+        "English": "Berserker Rune"
+      },
+      {
+        "visual": 9008,
+        "pointer": 5463862,
+        "bytes": 16,
+        "English": "Restoration Rune"
+      }
+    ],
+    "notification_initial_next_id": 1
+  },
+  "pending": [
+    "Non-resource nearby2862 consumers, XP/coins and claims/auxiliary ownership",
+    "External/negative/duplicatekind8 aura sources and non-English notification label producers",
+    "Nonempty item/talent/timed/other live source domains",
+    "135 full world/boot/game/UI/network",
+    "Complete allocator/capacity/pointer identity for packet/notification/BTree owners",
+    "Full8192B Game write-set prediction beyond accepted fields",
+    "Mixed XP/coin/kind2 collection interleaving and main-loop integration"
+  ],
+  "observation_only": [
+    "Packet/notification owner allocation addresses and locale cache state",
+    "Full8192B Game after each call; physical BTree allocation identity"
+  ],
+  "prior_attempts": [
+    {
+      "path": "evidence/resource-consumer0135-oracle-20261101T202443.066884Z/comparison.json",
+      "sha256": "8d9fd9b5c7b7db4c91a1ac683c1dab79a3d6f785f72610be3594234fb6f2e6d7",
+      "cases": 6,
+      "operations": 6,
+      "differences": 0,
+      "classification": "6case pilot, old partial wire projection and stale0.135.0 metadata; not final/not added",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/resource-consumer0135-oracle-20261101T202714.236066Z/comparison.json",
+      "sha256": "0aa10ccbb7b5b668fc6e8365ab7bfd017613d76d7888acb70d7fc0a052be2e89",
+      "cases": 130,
+      "operations": 244,
+      "differences": 0,
+      "classification": "130/244 numeric/live/pickup/aura/all-keyed/170+306 passed, but stale0.135.0 metadata and unmodeled150/226/JSON; not final/not added",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/resource-consumer0135-oracle-20261101T202826.069881Z/comparison.json",
+      "sha256": "ccc01406b2ef95b5aede9bd4e2a8c5c3e18c926dfe55da6e286ca376a23e9c6b",
+      "cases": 130,
+      "operations": 244,
+      "differences": 0,
+      "classification": "130/244 partial wire projection with correct0.135.1 metadata; complete UI wire not yet predicted, not final/not added",
+      "included_in_final_count": false
+    }
+  ],
+  "full880_frames": 0,
+  "complete_independent_games": 0,
+  "native_executions": 0,
+  "wrapper_or_saves_modified": false,
+  "independent_review": {
+    "report": "reports/2026-11-02-resource-consumer0135-independent-review.json",
+    "receipt": "evidence/resource-consumer135-independent-review-owned-20261101T203921.645035Z/review/review.json",
+    "receipt_sha256": "e4fea3e425135d6db469e5261749ff843f1e86b3a19fe2a82a250e909a7a8036",
+    "new_original_cases": 0,
+    "model_or_original_or_checker_executed": false
+  },
+  "historical_marker2_evidence_scope": {
+    "original_1417_call_failed": true,
+    "original_trap_category_masked_by_old_finally_stack_assertion": true,
+    "new_2862_marker2_execution": false,
+    "compaction_and_panic_path_is_static_not_new_runtime_proof": true,
+    "failed_batch_host_calls_unknown": true
+  }
+}

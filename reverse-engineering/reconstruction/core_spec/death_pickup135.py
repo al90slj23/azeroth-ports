@@ -16,6 +16,9 @@ from .combat135 import DamageResult
 from .currency134 import CurrencyState, apply_currency, mode_multiplier_bits
 from .death_loot134 import OrdinaryDefinition, RewardSource, project_ordinary_rewards
 from .level_cycle135 import LevelCycleState, gain_xp
+from .level_banner135 import LevelBannerInput135, level_banners135
+from .mixed_resource135 import (MixedResourceContext135, consume_mixed_resource135,
+    validate_mixed_resource135, owned_execution_snapshot135)
 from .pickup_entity134 import project_kind1_entity
 from .pickups134 import (PickupRecord, PickupState, Placement, append_xp,
                          append_idle_currency, MessageProjection)
@@ -168,6 +171,7 @@ class CollectionState135:
     xp_queue: tuple
     xp_queue_capacity: int
     claims_empty: bool
+    resource_context: MixedResourceContext135 | None = None
 
     def __post_init__(self):
         if not isinstance(self.level, LevelCycleState) or not isinstance(self.death, DeathContext135):
@@ -182,6 +186,8 @@ class CollectionState135:
             _u(value)
         if type(self.claims_empty) is not bool:
             raise TypeError('Claim producer state must be explicitly resolved')
+        if self.resource_context is not None:
+            validate_mixed_resource135(self.level, self.resource_context)
         _u(self.xp_queue_capacity)
         if type(self.xp_queue) is not tuple or len(self.xp_queue) > self.xp_queue_capacity:
             raise ValueError('Explicit XP forwarding queue/capacity required')
@@ -190,6 +196,20 @@ class CollectionState135:
                 raise ValueError('XP queue rows must be peer/base pairs')
             for value in row:
                 _u(value)
+
+
+@dataclass(frozen=True)
+class OrderedPickupEffect135:
+    stage: str
+    index: int
+    pickup_kind: int
+    guid: int
+    message: MessageProjection | None = None
+    growth_events: tuple = ()
+    owned_definition84: tuple = ()
+    packets: tuple = ()
+    notifications: tuple = ()
+    metadata: tuple = ()
 
 
 @dataclass(frozen=True)
@@ -205,6 +225,8 @@ class CollectionResult135:
     #Physical owners need this ordered producer state, including removed rows.
     pre_compaction_records: tuple = ()
     growth_events: tuple = ()
+    ordered_effects: tuple = ()
+    consumption_order: tuple = ()
 
 
 # Actual18353 class-table+80, selected by the class byte before additive sources.
@@ -276,7 +298,7 @@ def _max_min_delay(bits):
 
 
 def collect_pickups(state, now_bits):
-    """Complete proven kind0/1 part of2862, with immediate XP side effects.
+    """Ordered2862 kind0/1 and explicit-context3/4/5 consumer composition.
 
     Radius/player/time and eligibility are entry snapshots. After reverse
     ordered removal, each award reads the latest1564 or1588 multiplier. A
@@ -297,9 +319,11 @@ def collect_pickups(state, now_bits):
     radius = dict(level.derived_bits)[1560]
     now = f.to_float(now_bits)
     # Do not partially consume a branch whose side effects are not modeled.
-    if any(r.kind >= 2 and f.to_float(_distance(r, state.player_xyz)) <= 3 for r in records):
+    if any((r.kind == 2 or r.kind > 5 or (r.kind >= 3 and state.resource_context is None))
+            and f.to_float(_distance(r, state.player_xyz)) <= 3 for r in records):
         return CollectionResult135(state, 'pending_other_kind', pending=('Nearby kind>=2 consumer is unresolved',))
     messages = []
+    ordered_effects = []
     sequence = state.death.message_sequence
     for index, record in enumerate(records):
         if record.kind or record.marker:
@@ -311,9 +335,11 @@ def collect_pickups(state, now_bits):
         delay = _max_min_delay(f.div(distance, 0x42000000 if age else 0x41c00000))
         records[index] = replace(record, marker=1, arrival_bits=f.add(now_bits, delay))
         sequence = (sequence + 1) & f.MASK
-        messages.append(MessageProjection('xp_attract', record.guid, sequence,
+        message = MessageProjection('xp_attract', record.guid, sequence,
             (record.x_bits, record.y_bits, record.height_bits), state.player_xyz,
-            delay, trunc_sat_u32(f.mul(delay, 0x447a0000))))
+            delay, trunc_sat_u32(f.mul(delay, 0x447a0000)))
+        messages.append(message)
+        ordered_effects.append(OrderedPickupEffect135('xp_attract', index, 0, record.guid, message=message))
     pre_compaction_records=tuple(records)
     eligible = []
     for index, record in enumerate(records):
@@ -325,6 +351,8 @@ def collect_pickups(state, now_bits):
             collect = f.to_float(_distance(record, state.player_xyz)) <= f.to_float(radius)
             collect = collect or (record.marker == 1 and record.arrival_bits is not None
                                   and f.to_float(record.arrival_bits) <= now)
+        elif record.kind in (3, 4, 5) and state.resource_context is not None:
+            collect = f.to_float(_distance(record, state.player_xyz)) <= 3
         else:
             collect = False
         if collect:
@@ -333,12 +361,21 @@ def collect_pickups(state, now_bits):
     xp_queue, capacity = state.xp_queue, state.xp_queue_capacity
     xp_awards, coin_awards, removed = [], [], []
     growth_events = []
+    consumption_order = []
+    resource_context = state.resource_context
+    spawn_counter = state.death.spawn_counter
     for index in reversed(eligible):
         record = records.pop(index)
+        consumption_order.append((index, record.kind, record.guid))
         removed.append(record.guid)
-        messages.append(MessageProjection('pickup_despawn', record.guid))
+        message = MessageProjection('pickup_despawn', record.guid)
+        messages.append(message)
+        ordered_effects.append(OrderedPickupEffect135('despawn', index, record.kind, record.guid, message=message))
         derived = dict(level.derived_bits)
         if record.kind == 0:
+            phase_before = level.phase2587
+            generation_before = level.generation_counter2400
+            owned_snapshot = owned_execution_snapshot135(level) if resource_context is not None else ()
             if currency.mode:
                 if len(xp_queue) == capacity:
                     capacity = max(4, capacity * 2)
@@ -354,6 +391,13 @@ def collect_pickups(state, now_bits):
             award = trunc_sat_u32(rounded)
             result = gain_xp(level, award)
             growth_events.extend(result.growth_events)
+            level_packets = []
+            if resource_context is not None:
+                for event in result.growth_events:
+                    banner = level_banners135(LevelBannerInput135(
+                        event['level_before'], event['level_after'], event['derived_before'],
+                        event['derived_after'], owned_snapshot, resource_context.locale_code))
+                    level_packets.extend(banner.packets)
             level = result.state
             if result.status == 'pending_choice_world':
                 # Actual2159 uses mode only after metadata/RNG generation:
@@ -373,7 +417,26 @@ def collect_pickups(state, now_bits):
             elif result.status != 'core_projection':
                 raise PendingDeathPickup135(str(result.pending))
             xp_awards.append(award)
-        else:
+            ordered_effects.append(OrderedPickupEffect135('xp', index, 0, record.guid,
+                growth_events=tuple(result.growth_events), owned_definition84=owned_snapshot,
+                packets=tuple(level_packets), metadata=(('base_amount', record.amount), ('award', award))))
+            if phase_before == 1 and level.phase2587 == 2 and not currency.mode:
+                ordered_effects.append(OrderedPickupEffect135('choice_pause', index, 0, record.guid,
+                    metadata=(('moving_actor_stop_owner_required', True),)))
+            if level.generation_counter2400 != generation_before:
+                #2159 presentation is an immediate consequence of this award,
+                #before later selected resources/coins. Retain the known
+                #envelope and exact candidate metadata without inventing its
+                #unrecovered title/description/icon JSON presentation.
+                envelope = dict(type='choices', offer=level.generation_counter2400,
+                    why='levelup', level=level.progression.level, gold=currency.gold,
+                    candidate_kinds=tuple(candidate.variant for candidate in level.candidates),
+                    candidate_tiers=tuple(candidate.tier for candidate in level.candidates))
+                ordered_effects.append(OrderedPickupEffect135('choice_notification_pending', index, 0,
+                    record.guid, owned_definition84=owned_snapshot,
+                    metadata=(('known_envelope', envelope), ('candidate_metadata', level.candidates),
+                        ('presentation_pending', True))))
+        elif record.kind == 1:
             currency = replace(currency, multiplier_bits=derived[1588], player_fields=level.player_fields)
             result = apply_currency(currency, record.amount)
             if result.status != 'core_projection':
@@ -381,12 +444,23 @@ def collect_pickups(state, now_bits):
             currency = result.state
             level = replace(level, player_fields=currency.player_fields)
             coin_awards.append(result.award)
+            ordered_effects.append(OrderedPickupEffect135('coin', index, 1, record.guid,
+                metadata=(('base_amount', record.amount), ('award', result.award))))
+        else:
+            consumed = consume_mixed_resource135(level, spawn_counter, sequence, resource_context, record.kind)
+            level, resource_context = consumed.level, consumed.context
+            spawn_counter, sequence = consumed.spawn_counter, consumed.message_sequence
+            ordered_effects.append(OrderedPickupEffect135('resource', index, record.kind, record.guid,
+                packets=consumed.packets, notifications=consumed.notifications,
+                metadata=(('events', consumed.events),)))
     currency = replace(currency, player_fields=level.player_fields,
                        multiplier_bits=dict(level.derived_bits)[1588])
-    death = replace(state.death, records=tuple(records), message_sequence=sequence)
+    death = replace(state.death, records=tuple(records), message_sequence=sequence, spawn_counter=spawn_counter)
     updated = replace(state, level=level, death=death, currency=currency,
-                      xp_queue=xp_queue, xp_queue_capacity=capacity)
+                      xp_queue=xp_queue, xp_queue_capacity=capacity, resource_context=resource_context)
     return CollectionResult135(updated, 'core_projection', tuple(xp_awards), tuple(coin_awards),
         tuple(removed), tuple(messages), ('Physical queues/visual entities/wire bytes and full frame scheduling remain unresolved',
-        'Mode0 next-choice35514 movement-stop effects are pending; numeric metadata/control is projected'),
-        pre_compaction_records=pre_compaction_records,growth_events=tuple(growth_events))
+        'Mode0 next-choice35514 movement-stop effects are pending; numeric metadata/control is projected',
+        '2159 choice notification known envelope/order/candidate metadata retained; presentation strings/JSON pending'),
+        pre_compaction_records=pre_compaction_records,growth_events=tuple(growth_events),
+        ordered_effects=tuple(ordered_effects),consumption_order=tuple(consumption_order))

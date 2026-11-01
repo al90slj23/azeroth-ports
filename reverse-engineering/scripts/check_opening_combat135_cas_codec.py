@@ -121,6 +121,15 @@ def negative_suite(out):
         rows=metadata(p/'blob-references.jsonl');rows[0]['total_logical_references']+=1;write_metadata(p/'blob-references.jsonl',rows)
         data=(p/'blob-references.jsonl').read_bytes();r['blob_references_bytes']=len(data);r['blob_references_sha256']=hashlib.sha256(data).hexdigest()
     add('wrong_occurrence_count_with_updated_metadata_SHA',wrong_occurrence)
+    from opening_combat135_cas import CAPTURE_RECORD_LIMIT
+    def index_overflow(p,l,r):
+        rows=metadata(p/'blob-index.jsonl');rows[0]['first_record_index']=CAPTURE_RECORD_LIMIT
+        write_metadata(p/'blob-index.jsonl',rows)
+    add('first_record_index_exceeds_controller_bound',index_overflow)
+    def last_overflow(p,l,r):
+        rows=metadata(p/'blob-references.jsonl');rows[0]['last_record_index']=CAPTURE_RECORD_LIMIT
+        write_metadata(p/'blob-references.jsonl',rows)
+    add('last_record_index_exceeds_controller_bound',last_overflow)
     results=[];copied=0
     for i,(name,mutation)in enumerate(cases):
         directory=out/'cases'/f'{i:02}-{name}';directory.mkdir(parents=True)
@@ -146,6 +155,9 @@ def worker(out):
     for row in decoded:assert row['utf8']=='你好😀'and row['negative_zero']==0 and' omitted'not in row and' ommitted'not in row and'omitted'not in row and row['array']==[None,None]and len(row['backing'])==8 and all(v==row['hex']for v in row['backing'])
     assert {x['label']for x in saved['rejects']}=={'reserved','surrogate','cycle','oversize'}
     negatives,copied=negative_suite(out);after={n:sha(ROOT/n)for n in SOURCES};assert sources==after and inputs==input_hashes()
+    for label,reason in(('first_record_index_exceeds_controller_bound','CAS first record index'),
+                        ('last_record_index_exceeds_controller_bound','CAS last record index')):
+        assert next(row for row in negatives if row['name']==label)['reason']==reason
     review=dict(status='passed_read_only_codec_review'if all(x['rejected']for x in negatives)else'negative_contract_failures_preserved',
         original_program_executed=False,new_original_cases=0,new_model_validation_cases=0,new_full880_frames=0,
         sources_before=sources,sources_after=after,input_sha256=inputs,pilot=pilot,Node_saved_codec_roundtrip=codec,
