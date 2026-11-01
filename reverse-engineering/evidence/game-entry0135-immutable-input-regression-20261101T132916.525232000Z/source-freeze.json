@@ -1,0 +1,13 @@
+{
+  "kind": "current_source_and_schema_freeze_after_immutable_owner_fix",
+  "sha256": {
+    "scripts/game_entry135_capture.py": "a71c5f71a7d92d2e4a3b73f767c4618d8774b9ff827bb70856aff3049c48bfc0",
+    "scripts/build_game_entry135_oracle.py": "4297ba67dc70192014b9bf8e2a7ec0f3f0bb034160f507522807ffb54c33b617",
+    "reports/2026-11-01-game-entry0135-capture-schema.md": "909e20a6c755135f6c97b2edfc1c5fa317f18a2cfc3bf7546e75f22c179109c0",
+    "evidence/game-entry0135-immutable-input-regression-20261101T132916.525232000Z/check_immutable_input.py": "a16f98ec8f6724989c7cb20e56c3e70674ad3e071bd9af2eb3ebc735e90b1439",
+    "evidence/game-entry0135-immutable-input-regression-20261101T132916.525232000Z/regression-checks.json": "1993f57468525994e85e1881d6223836c80f4e7b381d9b249e11522f6f2b75cf",
+    "evidence/game-entry0135-immutable-input-regression-20261101T132916.525232000Z/schema.json": "66ab26c53557440ac176ba44a5b735c8753612ad3400fc5d9a5e723832505042"
+  },
+  "original_calls": 0,
+  "old_evidence_overwritten": false
+}

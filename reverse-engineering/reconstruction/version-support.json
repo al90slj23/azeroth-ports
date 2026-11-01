@@ -13,7 +13,8 @@
     "latest_same_state_report": "../reports/2026-11-01-headless-tail0135.json",
     "latest_independent_opening_report": "../reports/2026-11-01-opening0135.json",
     "version_policy": "Continuously align to verified official latest stable; each experiment freezes its own version/build/SHA; this round remains0.135.1/0898d5e3.",
-    "latest_independent_asset_world_report": "../reports/2026-11-01-asset-world0135.json"
+    "latest_independent_asset_world_report": "../reports/2026-11-01-asset-world0135.json",
+    "last_official_manifest_check": "2026-11-01T13:26:11+00:00"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -474,8 +475,8 @@
     }
   ],
   "full_game_remaining": [
-    "independent completeApp/profile/menu/settings/preferences and ownership producers;quiet76Btransport43/220,emptyhistory24/96,and730Bctorprojection33input/697prediction verified separately. Real originalApp+8idle880 now observed,not independentApp/fullgame;addressseed words/remaining copiedlive producers retain explicit inputs.",
-    "real UI-entry/selected-profile/world-to-activeGame and full880 front/party/orchestration integration;natural8idle880 usesGame absent tag2 and adds0independentframes. Active916/975exec11/2602/2573/2376/fullskills/complete-run still missing.",
+    "Independent completeApp/profile/menu/settings/preferences/ownership producers; original naturalApp/UI/Game+8running880 is now observed, not independent App or full game. Quiet transport/history/partial ctor projections retain their own scopes.",
+    "Independent real input/movement, opening-to-combat handoff and full880 front/party/orchestration. Natural UI original observation is recorded separately; actual cleave exec5 and real capacity/unknown NPC bytes remain integration blockers.",
     "active56/120/ordinary910headlesscontinuation;other915families;geometry390277normal113hostprefixfrozen",
     "remaining timedgeneration/rangedBossPetAI/collision/pathfinding and otherworld cache paths; Elwynn no-primary terrain/nav/secondary querycache production matched historical payloads separately",
     "unsupportedselectedskillsretainedandstoppedbeforeunimplementedcast",
@@ -2431,5 +2432,28 @@
     "review_receipt": "../evidence/full-app0135-independent-review-20261101T124434.382127Z/review.json",
     "review_sha256": "cc3b2c00ad46e2283737728bcfe5bfe8ea0e8d1fbaba1e7025d3b7c3a1397be0",
     "scope": "Original4253 natural construction/callback path; not independent App,not activeGame/no phase1/fullrun. Linear memory only,not completeVM/externref restore. Observer callback lifetime/cutoff retained,shutdown ownership not validated. Earlier SwiftGPU and firstMetal researchtelemetry/font failures retained separately;not summed."
+  },
+  "natural_game_entry_observational_probe": {
+    "validated_version": "0.135.1",
+    "validated_web_build": "0898d5e3",
+    "status": "observed_natural_Game_running_complete880_returns",
+    "report": "../reports/2026-11-01-game-entry0135-probe.json",
+    "receipt": "../evidence/game-entry0135-probe-20261101T135403.797895Z/receipt.json",
+    "receipt_sha256": "1a388679c0418f2fa2746c91ca8d3f7e91428563d05c1935f73ca09425e5b49e",
+    "source_files": 12,
+    "observational_cases": 1,
+    "original_complete880_returns": 603,
+    "running_complete880_returns": 8,
+    "clock_advances": 7,
+    "snapshot_bytes": 1378877440,
+    "snapshot_sha256": "c461b2f5efb1399127d22c04fbe5efed15f8b8411ceeefe22a05b4dce45bfd15",
+    "independent_review": "../reports/2026-11-01-game-entry0135-independent-review.json",
+    "review_receipt": "../evidence/game-entry0135-independent-review-20261101T140010.137361Z/review.json",
+    "review_sha256": "279066728b8254cc3fffe630483a5162df45abfe7fb73f108dc303552703c1c5",
+    "new_independent_model_cases": 0,
+    "new_independent_mainloop_frames": 0,
+    "Start_button_command_tag_resolved": false,
+    "new_native_Windows_execution": false,
+    "full_game_completed": false
   }
 }

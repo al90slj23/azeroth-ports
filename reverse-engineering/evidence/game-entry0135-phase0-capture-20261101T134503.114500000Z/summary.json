@@ -1,0 +1,450 @@
+{
+  "kind": "real_coherent_phase0_snapshot_reader_check_not_running_game_acceptance",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/game_entry135_capture.py",
+    "--snapshot",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-probe-20261101T134058.996329Z/original_game.memory",
+    "--app",
+    "22624720",
+    "--output",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-phase0-capture-20261101T134503.114500000Z/capture.json"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.9069937909953296,
+  "input_receipt_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-probe-20261101T134058.996329Z/receipt.json",
+  "input_receipt_sha256": "55a66c3c055037659295158e762f81d5fcd60a506e5ab394c0ffc640f4cb72e2",
+  "snapshot_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-probe-20261101T134058.996329Z/original_game.memory",
+  "snapshot_bytes": 718995456,
+  "snapshot_sha256": "6a90ac8797c954d2a9f520228e5826a40111ad338f7231fa57d34675b90256e4",
+  "snapshot_identity_matches_receipt": true,
+  "source_sha256_before": "a71c5f71a7d92d2e4a3b73f767c4618d8774b9ff827bb70856aff3049c48bfc0",
+  "source_sha256_after": "a71c5f71a7d92d2e4a3b73f767c4618d8774b9ff827bb70856aff3049c48bfc0",
+  "source_unchanged": true,
+  "original_functions_executed_by_this_check": 0,
+  "new_original_cases": 0,
+  "new_independent_frames": 0,
+  "producer_receipt_status": "observed_before_active_Game_boundary",
+  "producer_running_returns": 0,
+  "producer_complete880_returns": 123,
+  "producer_same_frozen_header": {
+    "App": 22624720,
+    "Rc": 22624704,
+    "strong": 2,
+    "weak": 1,
+    "borrow": 0,
+    "stack_observed": 1048576,
+    "app_marker_u64": "1",
+    "app_previous_seconds": 28.953,
+    "game_tag_u64": "0",
+    "game_present": true,
+    "second_tag": 2,
+    "profile_tag": 0,
+    "transport_pointer": 14549552,
+    "transport_vtable": 1495776,
+    "world_cache": 285646856,
+    "app_lcg_u64": "6715492160904603495",
+    "memory_bytes": 718995456,
+    "game": {
+      "start_flag": 0,
+      "mode": 0,
+      "deny_flags": 0,
+      "phase": 0,
+      "global_phase": 0,
+      "start_block": 0,
+      "clock_bits": 0,
+      "clock": 0,
+      "world_rc": 285646856,
+      "xyz_bits": [
+        3323121664,
+        3290316800,
+        1116212265
+      ],
+      "heading_bits": 1070386380,
+      "units": 0,
+      "areas": 0,
+      "pickups": 0,
+      "candidates": 0,
+      "companions": 0
+    },
+    "running": false
+  },
+  "producer_asset_file_budget_failure_is_not_repaired_here": true,
+  "producer_renderer_boundary_is_not_repaired_here": true,
+  "capture_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-phase0-capture-20261101T134503.114500000Z/capture.json",
+  "capture_sha256": "241fee7fce6dd59f780a7cf5f49d25a562d414f009387330d2309032f04f6fb9",
+  "capture_json_bytes": 21200786,
+  "capture_status": "captured_declared_present_game_fields",
+  "capture_complete_for_declared_schema": true,
+  "capture_boundaries": [],
+  "reader_copied_source_bytes": 5959148,
+  "running_gate": {
+    "mode": 0,
+    "individual_phase": 0,
+    "global_phase": 0,
+    "phase_gate_allows_running": false,
+    "clock2352_bits": 0,
+    "actual_clock_advancement_not_proved_by_single_snapshot": true
+  },
+  "player": {
+    "class_byte": 1,
+    "race_byte": 1,
+    "source_guid_u64": "14443884",
+    "xyz_bits": [
+      3323121664,
+      3290316800,
+      1116212265
+    ],
+    "xyz": [
+      -9396.0,
+      -633.0,
+      68.02375030517578
+    ],
+    "level": 1,
+    "xp": 0,
+    "hp_bits": 1130758144,
+    "gold": 0,
+    "rng_words": [
+      6357172,
+      1109058815,
+      1712115677,
+      2824606320
+    ],
+    "keyed_tree": {
+      "root": 0,
+      "depth": 1,
+      "modeled_keys": {},
+      "node_count": 0,
+      "key_count": 0,
+      "unmodeled_key_ids": []
+    }
+  },
+  "vectors": {
+    "owned_skill_sources8": {
+      "capacity": null,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "unrestored; active rows only"
+    },
+    "timed12": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 12,
+      "capacity_semantics": "observed full capacity"
+    },
+    "active84": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 84,
+      "capacity_semantics": "observed full capacity"
+    },
+    "auxiliary_motion112": {
+      "capacity": null,
+      "pointer": 8,
+      "count": 0,
+      "stride": 112,
+      "capacity_semantics": "unrestored; active rows only"
+    },
+    "owned80": {
+      "capacity": 1,
+      "pointer": 243345496,
+      "count": 1,
+      "stride": 80,
+      "capacity_semantics": "observed full capacity"
+    },
+    "adjustments16": {
+      "capacity": null,
+      "pointer": 4,
+      "count": 0,
+      "stride": 16,
+      "capacity_semantics": "unrestored; active rows only"
+    },
+    "passives8": {
+      "capacity": null,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "unrestored; active rows only"
+    },
+    "live32": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 32,
+      "capacity_semantics": "observed full capacity"
+    },
+    "units424": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 424,
+      "capacity_semantics": "observed full capacity"
+    },
+    "areas88": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 88,
+      "capacity_semantics": "observed full capacity"
+    },
+    "effects120": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 120,
+      "capacity_semantics": "observed full capacity"
+    },
+    "delayed56": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 56,
+      "capacity_semantics": "observed full capacity"
+    },
+    "deadline32": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 32,
+      "capacity_semantics": "observed full capacity"
+    },
+    "hits112": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 112,
+      "capacity_semantics": "observed full capacity"
+    },
+    "secondary112": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 112,
+      "capacity_semantics": "observed full capacity"
+    },
+    "pickups56": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 56,
+      "capacity_semantics": "observed full capacity"
+    },
+    "packets16": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 16,
+      "capacity_semantics": "observed full capacity"
+    },
+    "notifications12": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 12,
+      "capacity_semantics": "observed full capacity"
+    },
+    "candidates80": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 80,
+      "capacity_semantics": "observed full capacity"
+    },
+    "special40": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 40,
+      "capacity_semantics": "observed full capacity"
+    },
+    "windows8": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "observed full capacity"
+    },
+    "item_modifiers8": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "observed full capacity"
+    },
+    "ability_modifiers20": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 20,
+      "capacity_semantics": "observed full capacity"
+    },
+    "definitions36": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 36,
+      "capacity_semantics": "observed full capacity"
+    },
+    "blocked_ids8": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "observed full capacity"
+    },
+    "banished_keys12": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 12,
+      "capacity_semantics": "observed full capacity"
+    },
+    "companions_claims88": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 88,
+      "capacity_semantics": "observed full capacity"
+    },
+    "boundaries8": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "observed full capacity"
+    },
+    "xp_queue8": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "observed full capacity"
+    },
+    "currency_queue8": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 8,
+      "capacity_semantics": "observed full capacity"
+    }
+  },
+  "world": {
+    "pointer": 285646856,
+    "app_cache_pointer": 285646856,
+    "strong_observed": 2,
+    "weak_observed": 1,
+    "fallback_bits": 1116209152,
+    "flat_byte": 0,
+    "tiles36": {
+      "capacity": 19,
+      "pointer": 194681856,
+      "count": 9,
+      "stride": 36,
+      "capacity_semantics": "observed full capacity"
+    },
+    "bounds16": {
+      "capacity": 9,
+      "pointer": 375887408,
+      "count": 9,
+      "stride": 16,
+      "capacity_semantics": "observed full capacity"
+    },
+    "nav": {
+      "capacity": 78400,
+      "pointer": 362974408,
+      "count": 78400,
+      "stride": 1,
+      "capacity_semantics": "observed full capacity",
+      "origin_xy_bits_width": [
+        3323265024,
+        3292610560,
+        280
+      ],
+      "raw_backing_hex_bytes": 78400
+    },
+    "primary": {
+      "present": false,
+      "sentinel": 4294967295
+    },
+    "secondary": {
+      "capacity": 313600,
+      "pointer": 333952920,
+      "count": 313600,
+      "stride": 4,
+      "capacity_semantics": "observed full capacity",
+      "origin_xy_bits_width": [
+        3323265024,
+        3292610560,
+        560
+      ],
+      "raw_backing_hex_bytes": 1254400
+    },
+    "terrain_tiles_observed": 9,
+    "terrain_chunk_capacities": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256
+    ],
+    "terrain_chunk_counts": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256
+    ],
+    "terrain_active_chunks_observed": 2304,
+    "terrain_vertex_counts_distinct": [
+      145
+    ],
+    "terrain_vertex_capacities_distinct": [
+      145
+    ]
+  },
+  "transport": {
+    "holder_pointer": 14549552,
+    "vtable": 1495776,
+    "cell_pointer": 14549824,
+    "optional_snapshot_and_rows_metadata_only": true,
+    "ring": {
+      "capacity": 4,
+      "pointer": 312970008,
+      "count": 0,
+      "head": 0,
+      "payload_count": 0
+    },
+    "commands232": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 232,
+      "capacity_semantics": "observed full capacity"
+    }
+  },
+  "ability_definitions": [
+    {
+      "definition_pointer": 5476580,
+      "ability_id_hex": "70657263657074696f6e",
+      "execution_kind": 9
+    },
+    {
+      "definition_pointer": 5467428,
+      "ability_id_hex": "636c65617665",
+      "execution_kind": 5
+    }
+  ],
+  "actual_running_game_validated": false
+}

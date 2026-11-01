@@ -1,0 +1,16 @@
+{
+  "receipt_sha256": "55a66c3c055037659295158e762f81d5fcd60a506e5ab394c0ffc640f4cb72e2",
+  "classification": "natural_UI_installed_Game_phase0_but_declared_2048_asset_file_budget_blocked_scene_loading",
+  "observed_complete880_returns": 123,
+  "running_returns": 0,
+  "asset_success_files": 2048,
+  "asset_success_bytes": 145840615,
+  "asset_budget_500_requests": 157,
+  "page_errors": 3,
+  "coherent_linear_memory_bytes": 718995456,
+  "not_full_VM_checkpoint": true,
+  "correction": "Separate new2GiB WASM/8192-file host; preserve512MiB decoded-assets cap; wait scene asset quiet, then focus canvas and holdW without unproven Enter binding.",
+  "original_receipt_retained": true,
+  "new_independent_cases": 0,
+  "complete_game": false
+}

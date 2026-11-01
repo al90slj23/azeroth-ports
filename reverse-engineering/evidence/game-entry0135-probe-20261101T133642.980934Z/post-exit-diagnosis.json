@@ -1,0 +1,13 @@
+{
+  "receipt_sha256": "572bd5ed885d2684beeff4de6ead4664d17df2aa91b85ee9c9d59f170bbfe779",
+  "classification": "owned_proxy_rejections_incorrectly_stopped_original_before_first_callback",
+  "new_independent_cases": 0,
+  "new_mainloop_frames": 0,
+  "original_App_constructed": true,
+  "original_complete880_returns": 0,
+  "original_page_errors": 0,
+  "proxy_forwarded_connections": 0,
+  "correction": "Keep all proxy denials and provenance as browser-process-unattributed; only passive game-context nonloopback requests set page network boundary. CSP/DNS/proxy remain enforced.",
+  "original_receipt_retained": true,
+  "owned_processes_terminal_confirmed": true
+}

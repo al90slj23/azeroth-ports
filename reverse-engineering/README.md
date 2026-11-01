@@ -10,6 +10,8 @@
 
 另有[自然原App/Metal观察](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)）：官方构造产生真实App，已显示正常中文角色选择页，8次idle880完整返回；999次HTTP全部200、0 page error，Game tag2仍在菜单、未进入一局。CSP阻止presence外发，保留真实联网尝试；前期SwiftShader失败与首Metal的observer/font边界不倒改。它是原程序观察，新增独立gameplay帧0，不代表独立App/880已经实现。
 
+本轮[真实菜单→运行态Game观察](reports/2026-11-01-game-entry0135-probe.md)已通过实际点击/W输入，603次完整880返回，其中8次running、7次clock推进；2418素材全部成功、0page error，全量1,378,877,440B coherent memory已核SHA，[独审通过](reports/2026-11-01-game-entry0135-independent-review.md)。这是原件观察，新增独立case/主切片帧0。真实默认Warrior的cleave execution5、输入/所有权/真实容量交接和完整独立一局仍缺，不能把原版进场等同独立实现。
+
 此前0.126.0已恢复主循环主干、9职业/113能力定义、选卡/施法/伤害、12区域及账号存档主干，并建立若干独立模型。它们保留为历史验证和新版迁移参考，不能直接计为0.134.0已支持；[核心还原图](CORE_MAP.md)明确区分两者。
 
 HP对象更新经主机发送、客人解码、事件通道和注册系统到客户端字段写入已静态追通，见[事件投递](reports/2026-11-01-ecs-delivery.md)、[伤害计算](reports/2026-11-01-damage-core.md)和[合作同步](reports/2026-11-01-coop-sync.md)。该静态路径和离线codec尚未经过真实跨端联机验收。
@@ -58,7 +60,7 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 - [76B transport六方法](reports/2026-11-01-transport0135.md)在43组/220次完整原件调用中0差异，[独审通过](reports/2026-11-01-transport0135-independent-review.md)。quiet flags/timer域、fresh32MiB/878deny、实际宿主0；flag日志/时钟、完整owner生命周期、receive→ECS及真实网络未验。
 - [空history/真实地址熵](reports/2026-11-01-app-history0135.md)24组/96入口、[独审通过](reports/2026-11-01-app-history0135-independent-review.md)：20个空12B头完整生成/析构，entropy仅已知408B投影，另384B地址词opaque；四map128B是typed-state静态规则，不是完整4253差分。
 - [App5168部分构造](reports/2026-11-01-app-state0135.md)32组静态重组/10源闭包，[独审通过](reports/2026-11-01-app-state0135-independent-review.md)，0新WASM调用；默认730已知/4438None，显式三块live-copy后1182/3986。[既有真实cast投影](reports/2026-11-01-app-state0135-capture.md)另以33B输入独立预测697B，全部730已知相同、[独审通过](reports/2026-11-01-app-state0135-capture-independent-review.md)，未把第一次观察的8idle返回或GPU panic算成投影验收。
-- [完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史前置依据；后继自然原App及8idle880观察已走通，但独立合法App/完整880生产、游戏内自然调度和完整一局仍未恢复。
+- [完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史前置依据；后继自然原App、8idle及真实菜单→8running880观察分开保存；独立合法App/完整880生产与完整一局仍未恢复。
 
 ### 固定0.134.0的局部结果
 

@@ -1,0 +1,430 @@
+{
+  "version": "0.135.1",
+  "web_build": "0898d5e3",
+  "kind": "controlled_original_natural_UI_to_running_Game_observation_not_independent_model",
+  "status": "observed_natural_Game_running_complete880_returns",
+  "official_version_check": {
+    "path": "evidence/official-version-check-20261101T132611.332454Z/receipt.json",
+    "sha256": "7975f2c4e32a421af80f4b88d90da5c84d06da9e82f26c38234182845e845d41",
+    "official_native_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+    "native_program_executed": false
+  },
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "observer_module_sha256": "0afef345401358710e1d08163721716cd61fb19c457821f6b30f1ce58aff23b9",
+  "module_change": "Only global0 export added; original function/table/memory/data sections unchanged. Host reads mutable global.value, does not write.",
+  "receipt": "evidence/game-entry0135-probe-20261101T135403.797895Z/receipt.json",
+  "receipt_sha256": "1a388679c0418f2fa2746c91ca8d3f7e91428563d05c1935f73ca09425e5b49e",
+  "config_sha256": "9cd10e07d834e1d2a99e699f5c3820178385f4cc5cea5212d9be01a4b2ac8a52",
+  "source_files": 12,
+  "source_sha256": {
+    "scripts/probe_game_entry135.py": "698a7cedade7734624dc190166b6382d9d9e67f647ce81eaa7d548797b63ca4f",
+    "scripts/run_game_entry135.mjs": "74c5a428665b8eaf6f661ac0e6c24c9cd1b6a4a25066faaa41b8a934ecfb09ae",
+    "scripts/browser_game_entry135.mjs": "382b422ab949f61beeaf1d41aef0bcc20ebeb5e71208e26a60c783867f588e54",
+    "scripts/build_game_entry135_oracle.py": "4297ba67dc70192014b9bf8e2a7ec0f3f0bb034160f507522807ffb54c33b617",
+    "scripts/probe_full_app135.py": "5600fdfd534760e18a5d875f450febdf049d42601344949c32faef9f07cdd628",
+    "scripts/probe_entry_world135.py": "ae3ce76eb6676fe452669b8415baef4927c2f169025c6154977d385696dfca79",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9"
+  },
+  "source_and_declared_input_identity_unchanged": true,
+  "observation": {
+    "controlled_original_app_starts": 1,
+    "original_complete880_returns": 603,
+    "running_complete880_returns": 8,
+    "running_frame_indices": [
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602
+    ],
+    "clock_advances": 7,
+    "running_clock_values": [
+      0.026000000536441803,
+      0.12600000202655792,
+      0.13950000703334808,
+      0.1664000153541565,
+      0.20080001652240753,
+      0.218500018119812,
+      0.2516000270843506,
+      0.26590001583099365
+    ],
+    "final_contexts": [
+      {
+        "App": 22624720,
+        "Rc": 22624704,
+        "strong": 2,
+        "weak": 1,
+        "borrow": 0,
+        "stack_observed": 1048576,
+        "app_marker_u64": "1",
+        "app_previous_seconds": 33.50669999999553,
+        "game_tag_u64": "0",
+        "game_present": true,
+        "second_tag": 2,
+        "profile_tag": 0,
+        "transport_pointer": 14549552,
+        "transport_vtable": 1495776,
+        "world_cache": 24229960,
+        "app_lcg_u64": "11942317344945828029",
+        "memory_bytes": 1378877440,
+        "game": {
+          "start_flag": 0,
+          "mode": 0,
+          "deny_flags": 0,
+          "phase": 1,
+          "global_phase": 0,
+          "start_block": 0,
+          "clock_bits": 1049109516,
+          "clock": 0.26590001583099365,
+          "world_rc": 24229960,
+          "xyz_bits": [
+            3323121773,
+            3290257218,
+            1116258005
+          ],
+          "heading_bits": 1070386380,
+          "units": 7,
+          "areas": 0,
+          "pickups": 2,
+          "candidates": 0,
+          "companions": 0
+        },
+        "running": true
+      }
+    ],
+    "checkpoints": [
+      {
+        "label": "natural_Game_install",
+        "frame": 16,
+        "header": {
+          "App": 22624720,
+          "Rc": 22624704,
+          "strong": 2,
+          "weak": 1,
+          "borrow": 0,
+          "stack_observed": 1048576,
+          "app_marker_u64": "1",
+          "app_previous_seconds": 4.08689999999851,
+          "game_tag_u64": "0",
+          "game_present": true,
+          "second_tag": 2,
+          "profile_tag": 0,
+          "transport_pointer": 14549552,
+          "transport_vtable": 1495776,
+          "world_cache": 24229960,
+          "app_lcg_u64": "11942317344945828029",
+          "memory_bytes": 476643328,
+          "game": {
+            "start_flag": 0,
+            "mode": 0,
+            "deny_flags": 0,
+            "phase": 0,
+            "global_phase": 0,
+            "start_block": 0,
+            "clock_bits": 0,
+            "clock": 0,
+            "world_rc": 24229960,
+            "xyz_bits": [
+              3323121664,
+              3290316800,
+              1116212265
+            ],
+            "heading_bits": 1070386381,
+            "units": 0,
+            "areas": 0,
+            "pickups": 0,
+            "candidates": 0,
+            "companions": 0
+          },
+          "running": false
+        }
+      },
+      {
+        "label": "first_running_callback_return",
+        "frame": 595,
+        "header": {
+          "App": 22624720,
+          "Rc": 22624704,
+          "strong": 2,
+          "weak": 1,
+          "borrow": 0,
+          "stack_observed": 1048576,
+          "app_marker_u64": "1",
+          "app_previous_seconds": 33.15679999999702,
+          "game_tag_u64": "0",
+          "game_present": true,
+          "second_tag": 2,
+          "profile_tag": 0,
+          "transport_pointer": 14549552,
+          "transport_vtable": 1495776,
+          "world_cache": 24229960,
+          "app_lcg_u64": "11942317344945828029",
+          "memory_bytes": 1378877440,
+          "game": {
+            "start_flag": 0,
+            "mode": 0,
+            "deny_flags": 0,
+            "phase": 1,
+            "global_phase": 0,
+            "start_block": 0,
+            "clock_bits": 1020591604,
+            "clock": 0.026000000536441803,
+            "world_rc": 24229960,
+            "xyz_bits": [
+              3323121773,
+              3290257218,
+              1116258005
+            ],
+            "heading_bits": 1070386380,
+            "units": 7,
+            "areas": 0,
+            "pickups": 2,
+            "candidates": 0,
+            "companions": 0
+          },
+          "running": true
+        }
+      }
+    ],
+    "observed_transport_tags": [
+      30,
+      31,
+      33,
+      11
+    ],
+    "Start_button_command_tag_resolved": false,
+    "trusted_input_events": [
+      {
+        "type": "pointerdown",
+        "isTrusted": true,
+        "key": null,
+        "code": null,
+        "x": 475,
+        "y": 490,
+        "button": 0,
+        "time": 3783.39999999851
+      },
+      {
+        "type": "pointerup",
+        "isTrusted": true,
+        "key": null,
+        "code": null,
+        "x": 475,
+        "y": 490,
+        "button": 0,
+        "time": 3783.7999999970198
+      },
+      {
+        "type": "click",
+        "isTrusted": true,
+        "key": null,
+        "code": null,
+        "x": 475,
+        "y": 490,
+        "button": 0,
+        "time": 3784
+      },
+      {
+        "type": "pointerdown",
+        "isTrusted": true,
+        "key": null,
+        "code": null,
+        "x": 480,
+        "y": 270,
+        "button": 0,
+        "time": 32597.10000000149
+      },
+      {
+        "type": "pointerup",
+        "isTrusted": true,
+        "key": null,
+        "code": null,
+        "x": 480,
+        "y": 270,
+        "button": 0,
+        "time": 32597.19999999553
+      },
+      {
+        "type": "click",
+        "isTrusted": true,
+        "key": null,
+        "code": null,
+        "x": 480,
+        "y": 270,
+        "button": 0,
+        "time": 32597.19999999553
+      },
+      {
+        "type": "keydown",
+        "isTrusted": true,
+        "key": "w",
+        "code": "KeyW",
+        "x": null,
+        "y": null,
+        "button": null,
+        "time": 32608.89999999851
+      },
+      {
+        "type": "keyup",
+        "isTrusted": true,
+        "key": "w",
+        "code": "KeyW",
+        "x": null,
+        "y": null,
+        "button": null,
+        "time": 34169.19999999553
+      }
+    ],
+    "page_errors": [],
+    "http_status_counts": {
+      "200": 4522,
+      "404": 2
+    },
+    "non200_requests": [
+      {
+        "path": "/favicon.ico",
+        "status": 404
+      },
+      {
+        "path": "/favicon.ico",
+        "status": 404
+      }
+    ],
+    "unique_MPQ_assets": 2418,
+    "decoded_asset_bytes": 164823373,
+    "CSP_violations": [
+      {
+        "blockedURI": "https://wow.aethus.pl/presence",
+        "effectiveDirective": "connect-src",
+        "disposition": "enforce"
+      },
+      {
+        "blockedURI": "https://wow.aethus.pl/presence",
+        "effectiveDirective": "connect-src",
+        "disposition": "enforce"
+      }
+    ],
+    "proxy_forwarded_connections": 0,
+    "proxy_rejections_are_process_unattributed_not_proof_of_game_origin": true
+  },
+  "snapshot": {
+    "bytes": 1378877440,
+    "sha256": "c461b2f5efb1399127d22c04fbe5efed15f8b8411ceeefe22a05b4dce45bfd15",
+    "complete": true,
+    "one_synchronous_unshared_copy": true,
+    "full_JS_externref_or_VM_snapshot": false,
+    "pre_upload_observation": {
+      "path": "evidence/game-entry0135-probe-20261101T135403.797895Z/observation-before-upload.json",
+      "bytes": 3375507,
+      "sha256": "751c4d251eeea95b6211069f295ac251ff9bb83cc78147255fcdb739f34071cb",
+      "persisted_before_bulk_memory_upload": true
+    },
+    "post_freeze_RAF_cancellation": {
+      "after_synchronous_memory_copy": true,
+      "original_import": 507,
+      "observed_handles_cancelled": 919,
+      "original_frames_before_copy_unchanged": true,
+      "shutdown_or_Rc_destructor_equivalence_claimed": false
+    }
+  },
+  "host_policy": {
+    "memory_page_cap": 32768,
+    "memory_cap_bytes": 2147483648,
+    "browser_heap_mib": 768,
+    "asset_file_budget": 8192,
+    "asset_decoded_byte_budget": 536870912,
+    "inner_deadline_seconds": 240,
+    "outer_deadline_seconds": 270,
+    "chrome_sha256": "cf864393a84aa983ba58feea2c24050748e39738591205ecaa54b2c1199ad28c",
+    "browser_version": "156.0.8078.74",
+    "node_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+    "playwright_version": "1.64.1",
+    "playwright_package_sha256": "313d23ce667d93962d3a1ab4be80908cefe840e4d9e48f1cd5863b91f65e8e39"
+  },
+  "host_budget_scope": "WASM cap and decoded-asset cap are separate; a full frozen ArrayBuffer adds up to another WASM-sized allocation. JS heap limit is not a total RSS bound. Playwright metadata hash is not a full tool/OS dependency closure.",
+  "process": {
+    "pid": 73463,
+    "pgid": 73463,
+    "exit_code": 0,
+    "seconds": 111.09856924999622,
+    "terminal": {
+      "owned_pids": {
+        "73464": true,
+        "73470": true,
+        "73463": true
+      },
+      "owned_pgids": {
+        "73470": true,
+        "73463": true
+      },
+      "events": [],
+      "all_owned_terminal": true
+    }
+  },
+  "independent_review": {
+    "report": "reports/2026-11-01-game-entry0135-independent-review.json",
+    "receipt": "evidence/game-entry0135-independent-review-20261101T140010.137361Z/review.json",
+    "sha256": "279066728b8254cc3fffe630483a5162df45abfe7fb73f108dc303552703c1c5"
+  },
+  "historical_attempts": [
+    {
+      "directory": "evidence/game-entry0135-probe-20261101T133642.980934Z",
+      "diagnosis_sha256": "b7fcbc88aa50decdf1399e9cfff7e552a4ac40cfaa68f0c49ba66aadef6d8cc0"
+    },
+    {
+      "directory": "evidence/game-entry0135-probe-20261101T133835.953686Z",
+      "diagnosis_sha256": "faeba079b4b7afb2a72980996af60e15601769e4734e3c6c891320fc77c573a7"
+    },
+    {
+      "directory": "evidence/game-entry0135-probe-20261101T134058.996329Z",
+      "diagnosis_sha256": "a56039dc2639fef421b7824ef8b18ef2e67bfce570c9c662f2b8d05e34c4bdff"
+    },
+    {
+      "directory": "evidence/game-entry0135-probe-20261101T134526.220975Z",
+      "diagnosis_sha256": "3030f2dd8443a52b69ea0d16f4179f002b93d21e5c82a6e386d91fa8c2adcc41"
+    }
+  ],
+  "new_independent_model_cases": 0,
+  "new_independent_mainloop_frames": 0,
+  "prior_shared52_roles_and_headless_checkpoint_unchanged": true,
+  "playable_replacement": false,
+  "native_windows_execution_validated": false,
+  "installed_apps_or_saves_modified": false,
+  "remaining": [
+    "Independent physical App/profile/ownership and full880 front/party/orchestration",
+    "Natural input movement and independent opening-to-combat handoff with real vector capacity/unknown bytes",
+    "Cleave execution5 and other unsupported abilities/AI/active consumers",
+    "Exact Start UI producer and peer protocol route not inferred from four observed tags",
+    "All maps/modes/save/UI/audio/renderer and genuine co-op/full independent run"
+  ],
+  "read_only_running_projection": {
+    "summary": "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/summary.json",
+    "summary_sha256": "7c35affad088682c7284f256cfccf4ac1eaa9a3e4c71e88a9b980f43b2593909",
+    "notes": "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/notes.md",
+    "capture_source_sha256": "a71c5f71a7d92d2e4a3b73f767c4618d8774b9ff827bb70856aff3049c48bfc0",
+    "schema_capture_complete": true,
+    "boundaries": [],
+    "captured_declared_bytes": 6120808,
+    "new_original_calls": 0,
+    "new_independent_model_cases": 0,
+    "real_handoff_blockers": [
+      "phase1 entry and real-capacity backing",
+      "cleave execution5 not integrated into headless",
+      "active4 special/protection0",
+      "real nonflat world not propagated through composed pipeline"
+    ],
+    "not_current_case_blockers": [
+      "companions/claims currently empty",
+      "effects/hits currently empty",
+      "2kind2 objects currently far from player"
+    ]
+  }
+}

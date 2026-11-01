@@ -1,0 +1,554 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "app_bytes": 5168,
+  "game_app_offset": 16,
+  "game_bytes": 2592,
+  "supported_present_game_tag": 0,
+  "menu_game_absent_tag": 2,
+  "u32_fields": {
+    "victory_field400": 400,
+    "action_tag416": 416,
+    "action_payload420_raw": 420,
+    "action_payload424_raw": 424,
+    "action_payload428_raw": 428,
+    "action_payload432_raw": 432,
+    "action_payload436_raw": 436,
+    "movement_gate440": 440,
+    "movement_time444_bits": 444,
+    "busy488": 488,
+    "absorbed740_bits": 740,
+    "maximum_shield744_bits": 744,
+    "aux756_bits": 756,
+    "reserve768_bits": 768,
+    "earned1100": 1100,
+    "source_aux1348_bits": 1348,
+    "player_x_bits": 1416,
+    "player_y_bits": 1420,
+    "player_z_bits": 1424,
+    "heading1428_bits": 1428,
+    "level1432": 1432,
+    "xp1436": 1436,
+    "hp1440_bits": 1440,
+    "aux1444_bits": 1444,
+    "aux1448_bits": 1448,
+    "gold1456": 1456,
+    "extra_cast1596_bits": 1596,
+    "timer1628_bits": 1628,
+    "action_sequence1644": 1644,
+    "speed1648_bits": 1648,
+    "last_hit1652_bits": 1652,
+    "velocity_x_bits": 1736,
+    "velocity_y_bits": 1740,
+    "world_rc2348": 2348,
+    "clock2352_bits": 2352,
+    "effect_counter2356": 2356,
+    "effect_clock2364_bits": 2364,
+    "distance_map2368": 2368,
+    "pending_upgrades2376": 2376,
+    "generation_counter2400": 2400,
+    "spawn_counter2408": 2408,
+    "message_sequence2412": 2412,
+    "spawn_budget2416_bits": 2416,
+    "kill_cost2420_bits": 2420,
+    "due2424_bits": 2424,
+    "previous_x_bits": 2428,
+    "previous_y_bits": 2432,
+    "previous_z_bits": 2436,
+    "due2440_bits": 2440,
+    "due2444_bits": 2444,
+    "due2448_bits": 2448,
+    "initial2452_bits": 2452,
+    "initial2456_bits": 2456,
+    "initial2460_bits": 2460,
+    "initial2464_bits": 2464,
+    "initial2468_bits": 2468,
+    "initial2472_bits": 2472,
+    "player_tree_root2476": 2476,
+    "player_tree_depth2480": 2480,
+    "zone_multiplier2516_bits": 2516,
+    "startblock_localpeer2528": 2528,
+    "members2540": 2540
+  },
+  "byte_fields": {
+    "rank273": 273,
+    "flag275": 275,
+    "class360": 360,
+    "race361": 361,
+    "heal_gate387": 387,
+    "flags772": 772,
+    "context908": 908,
+    "flag2568": 2568,
+    "flag2572": 2572,
+    "flag2573": 2573,
+    "mode_flag2574": 2574,
+    "start_bit2575": 2575,
+    "protection2576": 2576,
+    "flag2578": 2578,
+    "gate2579": 2579,
+    "flag2581": 2581,
+    "mode2582": 2582,
+    "deny2583": 2583,
+    "selection_kind2585": 2585,
+    "phase2587": 2587,
+    "global_phase2588": 2588
+  },
+  "derived23_offsets": [
+    1536,
+    1540,
+    1544,
+    1548,
+    1552,
+    1556,
+    1560,
+    1564,
+    1568,
+    1572,
+    1576,
+    1580,
+    1584,
+    1588,
+    1592,
+    1596,
+    1600,
+    1604,
+    1608,
+    1612,
+    1616,
+    1620,
+    1624
+  ],
+  "rng_offsets": [
+    1720,
+    1724,
+    1728,
+    1732
+  ],
+  "racial_offset": 1256,
+  "racial_stride": 80,
+  "source_guid_offset": 1336,
+  "outgoing_f64_offset": 984,
+  "incoming_f64_offset": 992,
+  "vectors": [
+    {
+      "name": "owned_skill_sources8",
+      "capacity_offset": null,
+      "pointer_offset": 172,
+      "count_offset": 176,
+      "stride": 8,
+      "evidence": "stats/level/racial oracle"
+    },
+    {
+      "name": "timed12",
+      "capacity_offset": 596,
+      "pointer_offset": 600,
+      "count_offset": 604,
+      "stride": 12,
+      "evidence": "proc/level/racial oracle"
+    },
+    {
+      "name": "active84",
+      "capacity_offset": 644,
+      "pointer_offset": 648,
+      "count_offset": 652,
+      "stride": 84,
+      "evidence": "headless/frame oracle"
+    },
+    {
+      "name": "auxiliary_motion112",
+      "capacity_offset": null,
+      "pointer_offset": 660,
+      "count_offset": 664,
+      "stride": 112,
+      "evidence": "movement pause count/pointer; capacity unresolved"
+    },
+    {
+      "name": "owned80",
+      "capacity_offset": 1656,
+      "pointer_offset": 1660,
+      "count_offset": 1664,
+      "stride": 80,
+      "evidence": "initial/headless oracle"
+    },
+    {
+      "name": "adjustments16",
+      "capacity_offset": null,
+      "pointer_offset": 1672,
+      "count_offset": 1676,
+      "stride": 16,
+      "evidence": "stats/level oracle; capacity unresolved"
+    },
+    {
+      "name": "passives8",
+      "capacity_offset": null,
+      "pointer_offset": 1696,
+      "count_offset": 1700,
+      "stride": 8,
+      "evidence": "stats/level oracle; capacity unresolved"
+    },
+    {
+      "name": "live32",
+      "capacity_offset": 1704,
+      "pointer_offset": 1708,
+      "count_offset": 1712,
+      "stride": 32,
+      "evidence": "initial/headless oracle"
+    },
+    {
+      "name": "units424",
+      "capacity_offset": 1784,
+      "pointer_offset": 1788,
+      "count_offset": 1792,
+      "stride": 424,
+      "evidence": "opening/headless oracle"
+    },
+    {
+      "name": "areas88",
+      "capacity_offset": 1796,
+      "pointer_offset": 1800,
+      "count_offset": 1804,
+      "stride": 88,
+      "evidence": "headless oracle"
+    },
+    {
+      "name": "effects120",
+      "capacity_offset": 1808,
+      "pointer_offset": 1812,
+      "count_offset": 1816,
+      "stride": 120,
+      "evidence": "headless/effect oracle"
+    },
+    {
+      "name": "delayed56",
+      "capacity_offset": 1820,
+      "pointer_offset": 1824,
+      "count_offset": 1828,
+      "stride": 56,
+      "evidence": "headless/effect oracle"
+    },
+    {
+      "name": "deadline32",
+      "capacity_offset": 1832,
+      "pointer_offset": 1836,
+      "count_offset": 1840,
+      "stride": 32,
+      "evidence": "headless/frame oracle"
+    },
+    {
+      "name": "hits112",
+      "capacity_offset": 1844,
+      "pointer_offset": 1848,
+      "count_offset": 1852,
+      "stride": 112,
+      "evidence": "headless oracle"
+    },
+    {
+      "name": "secondary112",
+      "capacity_offset": 1856,
+      "pointer_offset": 1860,
+      "count_offset": 1864,
+      "stride": 112,
+      "evidence": "headless/frame oracle"
+    },
+    {
+      "name": "pickups56",
+      "capacity_offset": 1868,
+      "pointer_offset": 1872,
+      "count_offset": 1876,
+      "stride": 56,
+      "evidence": "opening/headless oracle"
+    },
+    {
+      "name": "packets16",
+      "capacity_offset": 1880,
+      "pointer_offset": 1884,
+      "count_offset": 1888,
+      "stride": 16,
+      "evidence": "opening oracle; payload Vec0/4/8,opcode u16+12"
+    },
+    {
+      "name": "notifications12",
+      "capacity_offset": 1892,
+      "pointer_offset": 1896,
+      "count_offset": 1900,
+      "stride": 12,
+      "evidence": "opening oracle; byte Vec0/4/8"
+    },
+    {
+      "name": "candidates80",
+      "capacity_offset": 1904,
+      "pointer_offset": 1908,
+      "count_offset": 1912,
+      "stride": 80,
+      "evidence": "candidate/headless oracle"
+    },
+    {
+      "name": "special40",
+      "capacity_offset": 1916,
+      "pointer_offset": 1920,
+      "count_offset": 1924,
+      "stride": 40,
+      "evidence": "opening/headless oracle"
+    },
+    {
+      "name": "windows8",
+      "capacity_offset": 1964,
+      "pointer_offset": 1968,
+      "count_offset": 1972,
+      "stride": 8,
+      "evidence": "opening oracle"
+    },
+    {
+      "name": "item_modifiers8",
+      "capacity_offset": 2024,
+      "pointer_offset": 2028,
+      "count_offset": 2032,
+      "stride": 8,
+      "evidence": "stats/candidate/level oracle"
+    },
+    {
+      "name": "ability_modifiers20",
+      "capacity_offset": 2036,
+      "pointer_offset": 2040,
+      "count_offset": 2044,
+      "stride": 20,
+      "evidence": "new ability/selection cycle oracle"
+    },
+    {
+      "name": "definitions36",
+      "capacity_offset": 2048,
+      "pointer_offset": 2052,
+      "count_offset": 2056,
+      "stride": 36,
+      "evidence": "stats/proc/level oracle"
+    },
+    {
+      "name": "blocked_ids8",
+      "capacity_offset": 2084,
+      "pointer_offset": 2088,
+      "count_offset": 2092,
+      "stride": 8,
+      "evidence": "candidate oracle; pointer/length pairs"
+    },
+    {
+      "name": "banished_keys12",
+      "capacity_offset": 2096,
+      "pointer_offset": 2100,
+      "count_offset": 2104,
+      "stride": 12,
+      "evidence": "candidate oracle; String cap/ptr/len"
+    },
+    {
+      "name": "companions_claims88",
+      "capacity_offset": 2108,
+      "pointer_offset": 2112,
+      "count_offset": 2116,
+      "stride": 88,
+      "evidence": "opening companion; headless claim alias, not two vectors"
+    },
+    {
+      "name": "boundaries8",
+      "capacity_offset": 2120,
+      "pointer_offset": 2124,
+      "count_offset": 2128,
+      "stride": 8,
+      "evidence": "opening oracle"
+    },
+    {
+      "name": "xp_queue8",
+      "capacity_offset": 2144,
+      "pointer_offset": 2148,
+      "count_offset": 2152,
+      "stride": 8,
+      "evidence": "headless/selection cycle oracle"
+    },
+    {
+      "name": "currency_queue8",
+      "capacity_offset": 2156,
+      "pointer_offset": 2160,
+      "count_offset": 2164,
+      "stride": 8,
+      "evidence": "headless/selection cycle oracle"
+    }
+  ],
+  "unresolved_header1952": {
+    "capacity_word": 1952,
+    "pointer_word": 1956,
+    "count_word": 1960,
+    "stride": null
+  },
+  "unit424": {
+    "guid_u64": 112,
+    "definition_pointer": 284,
+    "hp_bits": 288,
+    "max_hp_bits": 292,
+    "marker_u32": 0,
+    "death_time_bits_conditional": 4,
+    "kind_i32_offsets": [
+      40,
+      64,
+      244
+    ],
+    "elite_byte": 416,
+    "from_xyz_bits": [
+      316,
+      320,
+      324
+    ],
+    "to_xyz_bits": [
+      328,
+      332,
+      336
+    ],
+    "movement_time_bits": 340,
+    "duration_bits": 344,
+    "priority_until_bits": 372
+  },
+  "pickup56": {
+    "marker": 0,
+    "arrival_bits_initially_unwritten": 4,
+    "kind": 8,
+    "amount": 12,
+    "guid_u64": 16,
+    "aux_header": [
+      24,
+      28,
+      32
+    ],
+    "visual_id": 36,
+    "xyz_bits": [
+      40,
+      44,
+      48
+    ],
+    "spawn_time_bits": 52
+  },
+  "transport": {
+    "app_holder_pointer": 4768,
+    "app_vtable": 4772,
+    "supported_vtable": 1495776,
+    "holder_bytes": 24,
+    "holder_cell_pointer": 16,
+    "cell_bytes": 76,
+    "ring_cap_ptr_head_count": [
+      12,
+      16,
+      20,
+      24
+    ],
+    "commands_cap_ptr_count": [
+      28,
+      32,
+      36
+    ],
+    "command_stride": 232
+  },
+  "player_tree": {
+    "root_offset": 2476,
+    "depth_offset": 2480,
+    "node_count_u16": 50,
+    "keys_u16": 52,
+    "values_u32": 4,
+    "children_u32": 76,
+    "max_keys": 11
+  },
+  "world": {
+    "game_pointer_offset": 2348,
+    "app_cache_pointer_offset": 5116,
+    "raw_rc_bytes": 124,
+    "tiles": [
+      8,
+      12,
+      16,
+      36
+    ],
+    "tile_bounds": [
+      20,
+      24,
+      28,
+      16
+    ],
+    "nav": [
+      32,
+      36,
+      40,
+      1
+    ],
+    "nav_origin_width": [
+      44,
+      48,
+      52
+    ],
+    "primary_tag": 56,
+    "primary_values_ptr_len": [
+      72,
+      76
+    ],
+    "primary_origin_width": [
+      80,
+      84,
+      88
+    ],
+    "secondary": [
+      92,
+      96,
+      100,
+      4
+    ],
+    "secondary_origin_width": [
+      104,
+      108,
+      112
+    ],
+    "fallback_bits": 116,
+    "flat_byte": 120,
+    "tile_chunks": [
+      0,
+      4,
+      8,
+      264
+    ],
+    "chunk_vertices": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "holes_u16": 260
+  },
+  "capture_contract": "One synchronous immutable linear-memory copy at a genuine original return boundary; no G/phase/Once/cache writes.",
+  "bytes_contract": "Active bytes and inactive capacity backing are observed separately; neither zero nor initialization is inferred.",
+  "opening_npc_constructor_written_ranges": [
+    [
+      0,
+      4
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      16,
+      4
+    ],
+    [
+      40,
+      4
+    ],
+    [
+      64,
+      4
+    ],
+    [
+      112,
+      136
+    ],
+    [
+      280,
+      139
+    ]
+  ],
+  "original_execution": false,
+  "independent_model": false
+}

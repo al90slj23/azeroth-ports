@@ -1,0 +1,153 @@
+{
+  "kind": "independent_small_synthetic_and_static_review",
+  "source_sha256_before": {
+    "scripts/game_entry135_capture.py": "a7820703787ce85b648a250f614990eaf76f6000f5a5356a615e6672118c8c93",
+    "scripts/build_game_entry135_oracle.py": "4297ba67dc70192014b9bf8e2a7ec0f3f0bb034160f507522807ffb54c33b617",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reports/2026-11-01-game-entry0135-capture-schema.md": "2e390e87e325a584cc2c28887102d9217e761e70834d92534fe504a84fb81e7b",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/headless_tail135.py": "6774ea33ad6a8c660740eb61fbc8acc82368d88176512d6fefb4abb4fee2e2c3",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45"
+  },
+  "source_sha256_after": {
+    "scripts/game_entry135_capture.py": "a7820703787ce85b648a250f614990eaf76f6000f5a5356a615e6672118c8c93",
+    "scripts/build_game_entry135_oracle.py": "4297ba67dc70192014b9bf8e2a7ec0f3f0bb034160f507522807ffb54c33b617",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reports/2026-11-01-game-entry0135-capture-schema.md": "2e390e87e325a584cc2c28887102d9217e761e70834d92534fe504a84fb81e7b",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/headless_tail135.py": "6774ea33ad6a8c660740eb61fbc8acc82368d88176512d6fefb4abb4fee2e2c3",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45"
+  },
+  "sources_unchanged": true,
+  "checks": {
+    "immutable_bytes_accepted_and_unchanged": true,
+    "synthetic_bytes": 131072,
+    "writable_input_rejected": true,
+    "menu_does_not_follow_game_pointers": true,
+    "bad_vector_is_explicit_boundary": true,
+    "readonly_alias_counterexample": {
+      "accepted": true,
+      "view_readonly": true,
+      "backing_owner_type": "bytearray",
+      "raw_game_clock_bits": 1065353216,
+      "running_gate_clock_bits": 1073741824,
+      "reported_capture_complete": true,
+      "scheduling_instrumentation": "hashlib.sha256 wrapper mutates only the caller-owned bytearray once"
+    },
+    "opening_handoff": {
+      "phase": 1,
+      "from_initial_error": "Constructor phase must be preserved",
+      "units_capacity": 4,
+      "units_count": 4,
+      "units_unwritten_bytes_first_active": 129,
+      "companions_count": 2,
+      "special_count": 4,
+      "windows_count": 2,
+      "boundaries_count": 69,
+      "headless_from_opening_exists": false
+    },
+    "builder_static_review": {
+      "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+      "original_bytes": 90959080,
+      "module_sha256": "0afef345401358710e1d08163721716cd61fb19c457821f6b30f1ce58aff23b9",
+      "module_bytes": 90959111,
+      "changed_section_ids": [
+        7
+      ],
+      "section_comparisons": [
+        {
+          "section_id": 1,
+          "old_bytes": 4382,
+          "new_bytes": 4382,
+          "identical": true
+        },
+        {
+          "section_id": 2,
+          "old_bytes": 48231,
+          "new_bytes": 48231,
+          "identical": true
+        },
+        {
+          "section_id": 3,
+          "old_bytes": 175740,
+          "new_bytes": 175740,
+          "identical": true
+        },
+        {
+          "section_id": 4,
+          "old_bytes": 15,
+          "new_bytes": 15,
+          "identical": true
+        },
+        {
+          "section_id": 5,
+          "old_bytes": 6,
+          "new_bytes": 6,
+          "identical": true
+        },
+        {
+          "section_id": 6,
+          "old_bytes": 11,
+          "new_bytes": 11,
+          "identical": true
+        },
+        {
+          "section_id": 7,
+          "old_bytes": 3067,
+          "new_bytes": 3098,
+          "identical": false
+        },
+        {
+          "section_id": 9,
+          "old_bytes": 665757,
+          "new_bytes": 665757,
+          "identical": true
+        },
+        {
+          "section_id": 12,
+          "old_bytes": 5,
+          "new_bytes": 5,
+          "identical": true
+        },
+        {
+          "section_id": 10,
+          "old_bytes": 76838003,
+          "new_bytes": 76838003,
+          "identical": true
+        },
+        {
+          "section_id": 11,
+          "old_bytes": 13223704,
+          "new_bytes": 13223704,
+          "identical": true
+        },
+        {
+          "section_id": 0,
+          "old_bytes": 151,
+          "new_bytes": 151,
+          "identical": true
+        }
+      ],
+      "exports_before": 36,
+      "exports_after": 37,
+      "exact_added_export": [
+        "research_game_entry135_stack",
+        3,
+        0
+      ],
+      "global0_mutable": true,
+      "readonly_is_host_policy_not_wasm_export_permission": true,
+      "wasm_validate_exit_code": 0,
+      "module_instantiated": false,
+      "original_functions_called": 0
+    }
+  },
+  "original_functions_called": 0,
+  "original_game_frames": 0,
+  "large_snapshots_read": 0,
+  "actual_active_game_snapshot_validated": false
+}

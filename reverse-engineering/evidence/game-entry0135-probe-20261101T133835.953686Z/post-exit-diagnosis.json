@@ -1,0 +1,13 @@
+{
+  "receipt_sha256": "f7cb43a385a0a85edf1e39ec606d65d71f60e847459cc5ee179fdd52656edd05",
+  "classification": "short_readonly_control_deadline_incorrectly_aborted_busy_but_live_original_startup",
+  "page_errors": [],
+  "partial_capture_bytes": 1048576,
+  "partial_capture_total": 419692544,
+  "partial_capture_is_not_valid_snapshot": true,
+  "correction": "Keep the same single control read pending under owned overall deadline; do not terminate original on short observation timeout.",
+  "original_receipt_retained": true,
+  "owned_processes_terminal_confirmed": true,
+  "new_independent_cases": 0,
+  "complete_game": false
+}

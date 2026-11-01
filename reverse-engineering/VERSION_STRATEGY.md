@@ -54,6 +54,8 @@ history的[164组/924调用组件](reports/2026-11-01-incoming-history0135-indep
 
 [完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留原历史身份；后继[transport43/220](reports/2026-11-01-transport0135.md)、[history24/96](reports/2026-11-01-app-history0135.md)、[App32组静态重组](reports/2026-11-01-app-state0135.md)及[真实cast730B投影](reports/2026-11-01-app-state0135-capture.md)分别独审通过，不新增主切片帧。[自然原App/Metal观察](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)）显示正常中文角色选择页并返回8次完整idle880，999HTTP200、0 page error；CSP拦截presence外发，不能说无联网尝试。早期SwiftShader真实GPU失败、首Metal研究observer达1M事件上限throw及字体404原样保留。这是单独的真实浏览器/GPU宿主域，不套旧32/128/256MiB或有限import政策；Game tag2未开局，0独立gameplay帧，完整独立App/880及一局仍缺。未来每轮继续核实latest稳定版，并在新固定版本/SHA批次增量迁移；这些0.135.1结果不外推到后续版本。
 
+2026-11-01T13:26:11Z再次核对官方manifest与本地Windows SHA，仍为0.135.1。后继[自然UI→运行态Game](reports/2026-11-01-game-entry0135-probe.md)及[独审](reports/2026-11-01-game-entry0135-independent-review.md)观察603次完整880，其中8running/7clock推进；全量coherent memory为1,378,877,440B。它使用独立2GiB WASM/512MiB解码资产/8192文件政策，原件行为观察不增44独立domain或主切片帧；不是原生Windows执行或独立一局。
+
 ## Windows与WASM的分工
 
 Windows原生版提供实际离线发行的程序、平台接口和资源组织。WASM同样是编译后的真实游戏核心；结构化控制流、完整指令解码和受控函数导出让规则恢复与原件差分更容易。两者应互证。此前的HTML/JS启动桥调查不代表只在分析浏览器界面；已有规则来自WASM内的真实计算和状态写入。

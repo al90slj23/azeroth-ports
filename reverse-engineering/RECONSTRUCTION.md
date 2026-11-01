@@ -59,6 +59,7 @@
 | App5168静态构造投影 | [32组静态重组/10源](reports/2026-11-01-app-state0135.md)及[独审](reports/2026-11-01-app-state0135-independent-review.md)，0新WASM调用，730已知/4438None；显式live-copy后1182/3986 | 不是完整合法App；旧7源依赖遗漏与补正历史保留，32组只动态覆盖4936 select条件0。 |
 | 真实cast部分投影 | [730B对照](reports/2026-11-01-app-state0135-capture.md)及[独审](reports/2026-11-01-app-state0135-capture-independent-review.md)，33B明确输入→697B独立预测，4438None，0差异 | 复用首SwiftShader原观察，0新原件调用/案例；8idle与GPU panic不算投影验收，不推断全部App/owner合法性。 |
 | 自然原App/Metal观察 | [官方构造、中文角色选择页及8次完整idle880返回](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)），999HTTP均200、0 page error | 原件观察，Game tag2未开局、0独立gameplay帧。CSP拦presence外发；早期SwiftShader真实GPU失败、首Metal研究observer达1M事件上限throw及字体404均保留，独立App/full880仍未恢复。 |
+| 自然UI→运行态Game | [603完整返回/8running/7clock推进](reports/2026-11-01-game-entry0135-probe.md)与[独审](reports/2026-11-01-game-entry0135-independent-review.md)：真实点击/W、2418素材、0page error、1,378,877,440B coherent memory；实际7units/2pickups | 原件观察、0独立case/主切片帧。首running已是1089后续状态；Start命令tag仍未定位。独立输入/所有权/容量交接、cleave exec5和完整一局仍缺。 |
 | 完整游戏 | 尚无独立完整一局验收；0.134.0局部组合另列 | 新版刷怪、施法、拾取、选卡应用、存档、UI和联机继续连接与验证。 |
 
 基础资源属于另一层证据：[MPQ读取器/索引](reports/2026-11-01-resource-index-base.md)已对29602个命名块、1636167198B完成固定StormLib逐字节对照，154份DBC容器可独立读取。基础RAR包内程序仍是0.102.3，不能自动认定为0.135.1完整资产。上表后继451资源链已独立产生默认Elwynn查询world并与历史输出逐字相符；完整物理App/Once/Rc/VFS所有权、其它地图模式、最新全部资产等价、动画／材质／音画及渲染仍未完成。
@@ -67,7 +68,7 @@
 
 ## 当前切片之外的明确边界
 
-- **独立真实进场**：默认开局16组/32入口及后继451资源→Elwynn查询world→开局的1历史case分别保留。查询world生产不读原memory；完整App/Once/Rc/VFS所有权、菜单/profile、其它地图模式、非空装备天赋、移动2328/full880及接旧主切片仍缺。[880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史边界；后继transport六方法和部分App投影已验，完整独立App/owner/调度仍缺。自然原App已实际构造并返回8次idle880，但未开局；旧独立切片显式phase1保持。
+- **独立真实进场**：默认开局16组/32入口及后继451资源→Elwynn查询world→开局的1历史case分别保留。查询world生产不读原memory；完整App/Once/Rc/VFS所有权、菜单/profile、其它地图模式、非空装备天赋、移动2328/full880及接旧主切片仍缺。[880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史边界；后继transport六方法和部分App投影已验，完整独立App/owner/调度仍缺。自然原App的8idle历史观察保持；后继真实菜单/移动已取得8running880，单独记录为原件观察。旧独立切片仍使用显式phase1，未因此获得自然开局能力。
 - **研究输入与内存**：phase1及128个初始zeroed424B/88B槽仍显式。[当前独审](reports/2026-11-01-headless-tail0135-independent-review.md)复原1226927104B单位与254645248B范围backing；52次单位复用保留416非零字节，area19B复用全0，非平凡压缩/allocator padding恒定未证明。
 - **对象键与物理输出**：headless严格比较numeric player keys22/28/34/716/717/1109/1176，其余原件keyed状态全部另存为unmodeled，不能归为纯显示。1202 aura/外观键、1453治疗/account输出、完整消息字节/交付与所有producer仍分别待还原。
 - **全部游戏流程**：14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、其它地图及物理world所有权、开局接主切片、全部技能/AI/存档/UI/联机与独立完整一局仍未验收。真胜利终态、history、默认开局与world原件观察分层记录，均不等于完整游戏。

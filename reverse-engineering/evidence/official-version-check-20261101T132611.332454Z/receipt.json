@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-01T13:26:11.430010+00:00",
+  "url": "https://wow.aethus.pl/exe/latest.json",
+  "final_url": "https://wow.aethus.pl/exe/latest.json",
+  "status": 200,
+  "sha256": "fa03bb1b84f4caf156a1f1eebca9ee0df75718eaa4d1bc6b597cf2a3737c82be",
+  "manifest": {
+    "version": "0.135.1",
+    "notes": "Fixes the character pane, which showed an error and none of the run's numbers in 0.135.0.",
+    "size": 147797504,
+    "sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+    "parts": [
+      {
+        "url": "0.135.1/part-000.bin",
+        "size": 20971520
+      },
+      {
+        "url": "0.135.1/part-001.bin",
+        "size": 20971520
+      },
+      {
+        "url": "0.135.1/part-002.bin",
+        "size": 7863722
+      }
+    ]
+  }
+}

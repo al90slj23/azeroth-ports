@@ -1,0 +1,902 @@
+{
+  "kind": "static_current_model_npc424_readset_not_full_original880_liveness",
+  "constructor_written_ranges": [
+    [
+      0,
+      4
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      16,
+      4
+    ],
+    [
+      40,
+      4
+    ],
+    [
+      64,
+      4
+    ],
+    [
+      112,
+      136
+    ],
+    [
+      280,
+      139
+    ]
+  ],
+  "constructor_unwritten_ranges": [
+    [
+      4,
+      4
+    ],
+    [
+      12,
+      4
+    ],
+    [
+      20,
+      20
+    ],
+    [
+      44,
+      20
+    ],
+    [
+      68,
+      44
+    ],
+    [
+      248,
+      32
+    ],
+    [
+      419,
+      5
+    ]
+  ],
+  "constructor_unwritten_bytes": 129,
+  "decoder_read_fields": [
+    {
+      "field": "hp_bits",
+      "offset": 288,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "max_hp_bits",
+      "offset": 292,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "control_until_124_bits",
+      "offset": 124,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "control_until_380_bits",
+      "offset": 380,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "control_until_388_bits",
+      "offset": 388,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "modifier_until_356_bits",
+      "offset": 356,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_144_bits",
+      "offset": 144,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_until_148_bits",
+      "offset": 148,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_152_bits",
+      "offset": 152,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_until_156_bits",
+      "offset": 156,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_160_bits",
+      "offset": 160,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_until_164_bits",
+      "offset": 164,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "additive_368_bits",
+      "offset": 368,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "phase_until_408_bits",
+      "offset": 408,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "phase_until_412_bits",
+      "offset": 412,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "movement_duration_344_bits",
+      "offset": 344,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "movement_time_340_bits",
+      "offset": 340,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "death_time_4_bits",
+      "offset": 4,
+      "width": 4,
+      "source": "unit_records135.decode_unit/FLOAT_FIELDS",
+      "constructor_unwritten_offsets": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "constructor_fully_written": false
+    },
+    {
+      "field": "target_id",
+      "offset": 112,
+      "width": 8,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "linked_id_32",
+      "offset": 32,
+      "width": 8,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "constructor_fully_written": false
+    },
+    {
+      "field": "marker",
+      "offset": 0,
+      "width": 4,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "kind_40",
+      "offset": 40,
+      "width": 4,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "kind_64",
+      "offset": 64,
+      "width": 4,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "elite_244",
+      "offset": 244,
+      "width": 4,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "elite_416",
+      "offset": 416,
+      "width": 1,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "afflicted_240",
+      "offset": 240,
+      "width": 4,
+      "source": "unit_records135.decode_unit",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "from_xy",
+      "offset": 316,
+      "width": 8,
+      "source": "unit_records135.decode_spatial",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "to_xy",
+      "offset": 328,
+      "width": 8,
+      "source": "unit_records135.decode_spatial",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    },
+    {
+      "field": "priority_until372_bits",
+      "offset": 372,
+      "width": 4,
+      "source": "unit_records135.decode_spatial",
+      "constructor_unwritten_offsets": [],
+      "constructor_fully_written": true
+    }
+  ],
+  "decoder_unwritten_intersection_ranges": [
+    [
+      4,
+      4
+    ],
+    [
+      32,
+      8
+    ]
+  ],
+  "decoder_unwritten_intersection_bytes": 12,
+  "unwritten_not_read_by_decoder_ranges": [
+    [
+      12,
+      4
+    ],
+    [
+      20,
+      12
+    ],
+    [
+      44,
+      20
+    ],
+    [
+      68,
+      44
+    ],
+    [
+      248,
+      32
+    ],
+    [
+      419,
+      5
+    ]
+  ],
+  "unwritten_not_read_by_decoder_bytes": 117,
+  "source_sha256_before": {
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/combat135.py": "21c46816ca34320c0c755f84e3f77406d7556ec873ec59d9d31d037f898eebca",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/area_effects135.py": "ac0c8976776232d1a7627835feb96d67f707008a808c43dcfe3aaf5973c8833f",
+    "reconstruction/core_spec/ai135.py": "9986656e9bf6fab4339dd53d8cec4ad84786a95760a40d180c7ceebea63fce27",
+    "reconstruction/core_spec/ai_lifecycle135.py": "85d12c3808baf37bff5de9aa5acdc320a5befb9f412a352e1ccb1634946e6ac4",
+    "reconstruction/core_spec/ordinary_placement135.py": "247cf4060ab8668699d7eaa1a600f4396c6acd4830f5bf2ce7ac5d4f7a6690c4",
+    "reconstruction/core_spec/effect_system135.py": "c00ead750a1eb8aa80a610d8745831d73c62eb9299caf023fac30779d03b1d3f",
+    "reconstruction/core_spec/movement_pause135.py": "16bdf3abac3740ed172f612558fc642246466575d38c1d9badd4bb513f8594ad"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/combat135.py": "21c46816ca34320c0c755f84e3f77406d7556ec873ec59d9d31d037f898eebca",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/area_effects135.py": "ac0c8976776232d1a7627835feb96d67f707008a808c43dcfe3aaf5973c8833f",
+    "reconstruction/core_spec/ai135.py": "9986656e9bf6fab4339dd53d8cec4ad84786a95760a40d180c7ceebea63fce27",
+    "reconstruction/core_spec/ai_lifecycle135.py": "85d12c3808baf37bff5de9aa5acdc320a5befb9f412a352e1ccb1634946e6ac4",
+    "reconstruction/core_spec/ordinary_placement135.py": "247cf4060ab8668699d7eaa1a600f4396c6acd4830f5bf2ce7ac5d4f7a6690c4",
+    "reconstruction/core_spec/effect_system135.py": "c00ead750a1eb8aa80a610d8745831d73c62eb9299caf023fac30779d03b1d3f",
+    "reconstruction/core_spec/movement_pause135.py": "16bdf3abac3740ed172f612558fc642246466575d38c1d9badd4bb513f8594ad"
+  },
+  "source_symbols": {
+    "reconstruction/core_spec/headless135.py:PendingHeadless135": {
+      "start": 48,
+      "end": 48
+    },
+    "reconstruction/core_spec/headless135.py:DispatchEntry135": {
+      "start": 52,
+      "end": 56
+    },
+    "reconstruction/core_spec/headless135.py:HeadlessState135": {
+      "start": 60,
+      "end": 101
+    },
+    "reconstruction/core_spec/headless135.py:from_initial": {
+      "start": 104,
+      "end": 123
+    },
+    "reconstruction/core_spec/headless135.py:resolve_controlled_entry": {
+      "start": 126,
+      "end": 132
+    },
+    "reconstruction/core_spec/headless135.py:supported": {
+      "start": 135,
+      "end": 138
+    },
+    "reconstruction/core_spec/headless135.py:_store_prefix": {
+      "start": 141,
+      "end": 143
+    },
+    "reconstruction/core_spec/headless135.py:_cast_state": {
+      "start": 146,
+      "end": 153
+    },
+    "reconstruction/core_spec/headless135.py:_area_expire_storage": {
+      "start": 156,
+      "end": 173
+    },
+    "reconstruction/core_spec/headless135.py:_cast_phase": {
+      "start": 176,
+      "end": 282
+    },
+    "reconstruction/core_spec/headless135.py:_ai_phase": {
+      "start": 285,
+      "end": 336
+    },
+    "reconstruction/core_spec/headless135.py:_effects_phase": {
+      "start": 339,
+      "end": 374
+    },
+    "reconstruction/core_spec/headless135.py:_tail_phase": {
+      "start": 377,
+      "end": 405
+    },
+    "reconstruction/core_spec/headless135.py:step_frame": {
+      "start": 408,
+      "end": 465
+    },
+    "reconstruction/core_spec/headless135.py:select": {
+      "start": 468,
+      "end": 499
+    },
+    "reconstruction/core_spec/headless135.py:projection": {
+      "start": 502,
+      "end": 538
+    },
+    "reconstruction/core_spec/unit_records135.py:_record": {
+      "start": 28,
+      "end": 31
+    },
+    "reconstruction/core_spec/unit_records135.py:decode_unit": {
+      "start": 34,
+      "end": 46
+    },
+    "reconstruction/core_spec/unit_records135.py:decode_spatial": {
+      "start": 49,
+      "end": 52
+    },
+    "reconstruction/core_spec/unit_records135.py:patch_unit": {
+      "start": 55,
+      "end": 71
+    },
+    "reconstruction/core_spec/unit_records135.py:patch_units": {
+      "start": 74,
+      "end": 82
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:UnknownOpeningNPCPickups135": {
+      "start": 23,
+      "end": 23
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:_u": {
+      "start": 26,
+      "end": 28
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:_finite": {
+      "start": 31,
+      "end": 34
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:OpeningVector135": {
+      "start": 38,
+      "end": 51
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:opening_vector_from_hex": {
+      "start": 54,
+      "end": 55
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:_reserve_row": {
+      "start": 58,
+      "end": 61
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:_write_row": {
+      "start": 64,
+      "end": 70
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:_ceil_u32": {
+      "start": 73,
+      "end": 77
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:npc_create_fields": {
+      "start": 80,
+      "end": 87
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:OpeningNPCResult135": {
+      "start": 91,
+      "end": 101
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:create_opening_npcs": {
+      "start": 104,
+      "end": 141
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:InitialKind2Result135": {
+      "start": 145,
+      "end": 156
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:_pickup_kind2_xyz": {
+      "start": 159,
+      "end": 176
+    },
+    "reconstruction/core_spec/opening_npc_pickups135.py:create_initial_kind2": {
+      "start": 179,
+      "end": 201
+    },
+    "reconstruction/core_spec/spawn135.py:definition": {
+      "start": 18,
+      "end": 20
+    },
+    "reconstruction/core_spec/spawn135.py:max_numeric": {
+      "start": 23,
+      "end": 25
+    },
+    "reconstruction/core_spec/spawn135.py:min_numeric": {
+      "start": 28,
+      "end": 30
+    },
+    "reconstruction/core_spec/spawn135.py:eligible_normals": {
+      "start": 33,
+      "end": 35
+    },
+    "reconstruction/core_spec/spawn135.py:SpawnChoice": {
+      "start": 39,
+      "end": 44
+    },
+    "reconstruction/core_spec/spawn135.py:choose_spawn": {
+      "start": 47,
+      "end": 63
+    },
+    "reconstruction/core_spec/spawn135.py:SpawnInput": {
+      "start": 67,
+      "end": 83
+    },
+    "reconstruction/core_spec/spawn135.py:SpawnResult": {
+      "start": 87,
+      "end": 96
+    },
+    "reconstruction/core_spec/spawn135.py:spawn_normal": {
+      "start": 99,
+      "end": 147
+    },
+    "reconstruction/core_spec/combat134.py:_bits": {
+      "start": 17,
+      "end": 20
+    },
+    "reconstruction/core_spec/combat134.py:ItemModifier": {
+      "start": 24,
+      "end": 31
+    },
+    "reconstruction/core_spec/combat134.py:AbilityReference": {
+      "start": 35,
+      "end": 43
+    },
+    "reconstruction/core_spec/combat134.py:SpellModifier": {
+      "start": 47,
+      "end": 59
+    },
+    "reconstruction/core_spec/combat134.py:AbilityLookupPanic": {
+      "start": 62,
+      "end": 63
+    },
+    "reconstruction/core_spec/combat134.py:UnitState": {
+      "start": 67,
+      "end": 101
+    },
+    "reconstruction/core_spec/combat134.py:CombatState": {
+      "start": 105,
+      "end": 126
+    },
+    "reconstruction/core_spec/combat134.py:_tag_sum": {
+      "start": 129,
+      "end": 134
+    },
+    "reconstruction/core_spec/combat134.py:damage_modifier_bits": {
+      "start": 137,
+      "end": 160
+    },
+    "reconstruction/core_spec/combat134.py:spell_modifier_bits": {
+      "start": 163,
+      "end": 184
+    },
+    "reconstruction/core_spec/combat134.py:damage_phase_bits": {
+      "start": 187,
+      "end": 197
+    },
+    "reconstruction/core_spec/combat134.py:cap_damage_bits": {
+      "start": 200,
+      "end": 204
+    },
+    "reconstruction/core_spec/combat134.py:encoded_hp": {
+      "start": 207,
+      "end": 211
+    },
+    "reconstruction/core_spec/combat134.py:DamageResult": {
+      "start": 215,
+      "end": 227
+    },
+    "reconstruction/core_spec/combat134.py:resolve_damage": {
+      "start": 230,
+      "end": 274
+    },
+    "reconstruction/core_spec/cast135.py:UnresolvedCast": {
+      "start": 21,
+      "end": 22
+    },
+    "reconstruction/core_spec/cast135.py:CastDeathBoundary": {
+      "start": 25,
+      "end": 37
+    },
+    "reconstruction/core_spec/cast135.py:CastDefinition": {
+      "start": 41,
+      "end": 52
+    },
+    "reconstruction/core_spec/cast135.py:SpatialUnit": {
+      "start": 56,
+      "end": 60
+    },
+    "reconstruction/core_spec/cast135.py:QueuedHit": {
+      "start": 64,
+      "end": 72
+    },
+    "reconstruction/core_spec/cast135.py:CastState": {
+      "start": 76,
+      "end": 107
+    },
+    "reconstruction/core_spec/cast135.py:CastResult": {
+      "start": 111,
+      "end": 118
+    },
+    "reconstruction/core_spec/cast135.py:_total_key": {
+      "start": 121,
+      "end": 122
+    },
+    "reconstruction/core_spec/cast135.py:position": {
+      "start": 125,
+      "end": 132
+    },
+    "reconstruction/core_spec/cast135.py:distance_squared": {
+      "start": 135,
+      "end": 137
+    },
+    "reconstruction/core_spec/cast135.py:query_targets": {
+      "start": 140,
+      "end": 150
+    },
+    "reconstruction/core_spec/cast135.py:projectile_targets": {
+      "start": 153,
+      "end": 184
+    },
+    "reconstruction/core_spec/cast135.py:base_damage": {
+      "start": 187,
+      "end": 194
+    },
+    "reconstruction/core_spec/cast135.py:_critical": {
+      "start": 197,
+      "end": 201
+    },
+    "reconstruction/core_spec/cast135.py:_updated_combat": {
+      "start": 204,
+      "end": 205
+    },
+    "reconstruction/core_spec/cast135.py:_apply_hit": {
+      "start": 208,
+      "end": 219
+    },
+    "reconstruction/core_spec/cast135.py:cast_ability": {
+      "start": 227,
+      "end": 269
+    },
+    "reconstruction/core_spec/cast135.py:process_hits": {
+      "start": 272,
+      "end": 289
+    },
+    "reconstruction/core_spec/cast135.py:auto_cast": {
+      "start": 292,
+      "end": 309
+    },
+    "reconstruction/core_spec/cast135.py:auto_cast_many": {
+      "start": 312,
+      "end": 322
+    },
+    "reconstruction/core_spec/cast_events135.py:apply_hit": {
+      "start": 20,
+      "end": 44
+    },
+    "reconstruction/core_spec/cast_events135.py:cast_ability": {
+      "start": 47,
+      "end": 92
+    },
+    "reconstruction/core_spec/cast_events135.py:process_hits": {
+      "start": 95,
+      "end": 115
+    },
+    "reconstruction/core_spec/area_effects135.py:_u": {
+      "start": 26,
+      "end": 29
+    },
+    "reconstruction/core_spec/area_effects135.py:_finite": {
+      "start": 32,
+      "end": 36
+    },
+    "reconstruction/core_spec/area_effects135.py:_raw": {
+      "start": 39,
+      "end": 43
+    },
+    "reconstruction/core_spec/area_effects135.py:AreaDefinition135": {
+      "start": 47,
+      "end": 62
+    },
+    "reconstruction/core_spec/area_effects135.py:AreaState135": {
+      "start": 66,
+      "end": 82
+    },
+    "reconstruction/core_spec/area_effects135.py:AreaCastResult135": {
+      "start": 86,
+      "end": 92
+    },
+    "reconstruction/core_spec/area_effects135.py:AreaTickResult135": {
+      "start": 96,
+      "end": 102
+    },
+    "reconstruction/core_spec/area_effects135.py:select_area_center": {
+      "start": 105,
+      "end": 121
+    },
+    "reconstruction/core_spec/area_effects135.py:_cast_finite": {
+      "start": 124,
+      "end": 137
+    },
+    "reconstruction/core_spec/area_effects135.py:produce_area": {
+      "start": 140,
+      "end": 196
+    },
+    "reconstruction/core_spec/area_effects135.py:tick_areas": {
+      "start": 199,
+      "end": 235
+    },
+    "reconstruction/core_spec/ai135.py:AiFrame135": {
+      "start": 17,
+      "end": 24
+    },
+    "reconstruction/core_spec/ai135.py:AiResult135": {
+      "start": 28,
+      "end": 33
+    },
+    "reconstruction/core_spec/ai135.py:_get": {
+      "start": 36,
+      "end": 36
+    },
+    "reconstruction/core_spec/ai135.py:_put": {
+      "start": 37,
+      "end": 37
+    },
+    "reconstruction/core_spec/ai135.py:_float": {
+      "start": 38,
+      "end": 38
+    },
+    "reconstruction/core_spec/ai135.py:_maximum": {
+      "start": 39,
+      "end": 39
+    },
+    "reconstruction/core_spec/ai135.py:_distance": {
+      "start": 40,
+      "end": 42
+    },
+    "reconstruction/core_spec/ai135.py:position": {
+      "start": 45,
+      "end": 52
+    },
+    "reconstruction/core_spec/ai135.py:_speed": {
+      "start": 55,
+      "end": 61
+    },
+    "reconstruction/core_spec/ai135.py:_attack": {
+      "start": 64,
+      "end": 67
+    },
+    "reconstruction/core_spec/ai135.py:unit_position": {
+      "start": 70,
+      "end": 74
+    },
+    "reconstruction/core_spec/ai135.py:_validate": {
+      "start": 77,
+      "end": 89
+    },
+    "reconstruction/core_spec/ai135.py:update_ordinary_units": {
+      "start": 92,
+      "end": 153
+    },
+    "reconstruction/core_spec/ai_lifecycle135.py:CorpseCleanup135": {
+      "start": 12,
+      "end": 16
+    },
+    "reconstruction/core_spec/ai_lifecycle135.py:cleanup_ordinary_corpses": {
+      "start": 19,
+      "end": 35
+    },
+    "reconstruction/core_spec/ordinary_placement135.py:_finite": {
+      "start": 16,
+      "end": 19
+    },
+    "reconstruction/core_spec/ordinary_placement135.py:_world_gate": {
+      "start": 22,
+      "end": 24
+    },
+    "reconstruction/core_spec/ordinary_placement135.py:clamp_pickup_position": {
+      "start": 27,
+      "end": 42
+    },
+    "reconstruction/core_spec/ordinary_placement135.py:OrdinaryPlacement135": {
+      "start": 46,
+      "end": 50
+    },
+    "reconstruction/core_spec/ordinary_placement135.py:project_from_record": {
+      "start": 53,
+      "end": 78
+    },
+    "reconstruction/core_spec/effect_system135.py:PendingEffectSystem135": {
+      "start": 17,
+      "end": 19
+    },
+    "reconstruction/core_spec/effect_system135.py:_u": {
+      "start": 22,
+      "end": 24
+    },
+    "reconstruction/core_spec/effect_system135.py:_raw": {
+      "start": 27,
+      "end": 30
+    },
+    "reconstruction/core_spec/effect_system135.py:_word": {
+      "start": 33,
+      "end": 33
+    },
+    "reconstruction/core_spec/effect_system135.py:_guid": {
+      "start": 34,
+      "end": 34
+    },
+    "reconstruction/core_spec/effect_system135.py:_put": {
+      "start": 35,
+      "end": 35
+    },
+    "reconstruction/core_spec/effect_system135.py:_finite": {
+      "start": 36,
+      "end": 39
+    },
+    "reconstruction/core_spec/effect_system135.py:_maxnum": {
+      "start": 42,
+      "end": 44
+    },
+    "reconstruction/core_spec/effect_system135.py:EffectSystemState135": {
+      "start": 48,
+      "end": 82
+    },
+    "reconstruction/core_spec/effect_system135.py:EffectSystemResult135": {
+      "start": 86,
+      "end": 92
+    },
+    "reconstruction/core_spec/effect_system135.py:_position": {
+      "start": 95,
+      "end": 102
+    },
+    "reconstruction/core_spec/effect_system135.py:step_effect_system": {
+      "start": 105,
+      "end": 182
+    },
+    "reconstruction/core_spec/movement_pause135.py:UnresolvedMovementPause135": {
+      "start": 12,
+      "end": 12
+    },
+    "reconstruction/core_spec/movement_pause135.py:MovementSequence135": {
+      "start": 16,
+      "end": 18
+    },
+    "reconstruction/core_spec/movement_pause135.py:moving_sequence_delta": {
+      "start": 21,
+      "end": 41
+    }
+  },
+  "sources_unchanged": true,
+  "checker_sha256": "ff38b64581ab00da586ec821087383e530fbd01703b9a726c470f0a10801a0ca",
+  "model_imports": 0,
+  "original_calls": 0,
+  "game_frames": 0,
+  "snapshots_read": 0
+}

@@ -1,0 +1,441 @@
+{
+  "kind": "actual_running_projection_details_and_static_handoff_inputs",
+  "snapshot_sha256": "c461b2f5efb1399127d22c04fbe5efed15f8b8411ceeefe22a05b4dce45bfd15",
+  "capture_sha256": "43cf55ee67df72ef588d6ae080646bda31900d1b33388b3cffd552183e937991",
+  "summary_sha256": "7c35affad088682c7284f256cfccf4ac1eaa9a3e4c71e88a9b980f43b2593909",
+  "units": [
+    {
+      "index": 0,
+      "guid_u64": "17379390972089073675",
+      "guid_low24": 11,
+      "marker": 0,
+      "death_time4_observed_bits": 266846152,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "7306371741941784943",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120064765,
+      "max_hp292_bits": 1120064765,
+      "movement344_bits": 1076538021,
+      "movement340_bits": 1042965700,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 106,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    },
+    {
+      "index": 1,
+      "guid_u64": "17379390972089073676",
+      "guid_low24": 12,
+      "marker": 0,
+      "death_time4_observed_bits": 0,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "7074702451537044850",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120064765,
+      "max_hp292_bits": 1120064765,
+      "movement344_bits": 1076538005,
+      "movement340_bits": 1040254501,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 87,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    },
+    {
+      "index": 2,
+      "guid_u64": "17379390972089073677",
+      "guid_low24": 13,
+      "marker": 0,
+      "death_time4_observed_bits": 1920098667,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "6661779828815387749",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120064765,
+      "max_hp292_bits": 1120064765,
+      "movement344_bits": 0,
+      "movement340_bits": 0,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 111,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    },
+    {
+      "index": 3,
+      "guid_u64": "17379390972089073678",
+      "guid_low24": 14,
+      "marker": 0,
+      "death_time4_observed_bits": 1968993132,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "7809855492613697645",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120064765,
+      "max_hp292_bits": 1120064765,
+      "movement344_bits": 1076537972,
+      "movement340_bits": 1048629688,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 112,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    },
+    {
+      "index": 4,
+      "guid_u64": "17379390972089073750",
+      "guid_low24": 86,
+      "marker": 0,
+      "death_time4_observed_bits": 46,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "893353197775",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120065319,
+      "max_hp292_bits": 1120065319,
+      "movement344_bits": 1076537839,
+      "movement340_bits": 1040254501,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 36,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    },
+    {
+      "index": 5,
+      "guid_u64": "17379390972089073751",
+      "guid_low24": 87,
+      "marker": 0,
+      "death_time4_observed_bits": 18,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "1159641170189",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120065319,
+      "max_hp292_bits": 1120065319,
+      "movement344_bits": 1076538071,
+      "movement340_bits": 1045274245,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 69,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    },
+    {
+      "index": 6,
+      "guid_u64": "17379390972089073752",
+      "guid_low24": 88,
+      "marker": 0,
+      "death_time4_observed_bits": 4757,
+      "death_time4_observed_is_finite": true,
+      "linked_id32_observed_u64": "20491288973988",
+      "kind40": -1,
+      "kind64": -1,
+      "elite244": -1,
+      "definition284": 5415572,
+      "hp288_bits": 1120065319,
+      "max_hp292_bits": 1120065319,
+      "movement344_bits": 1076538250,
+      "movement340_bits": 1049109516,
+      "priority372_bits": 0,
+      "constructor_unwritten_domain_observed_nonzero_bytes": 71,
+      "constructor_mask_is_not_claimed_to_be_later_liveness": true
+    }
+  ],
+  "pickups": [
+    {
+      "index": 0,
+      "guid_u64": "17370383913846833167",
+      "guid_low24": 15,
+      "marker": 0,
+      "arrival4_observed_bits": 1919251049,
+      "kind": 2,
+      "amount": 2,
+      "xyz_bits": [
+        3323114483,
+        3290779073,
+        1116335973
+      ],
+      "xy_distance_double_diagnostic": 32.637406588199816,
+      "note": "Distance diagnostic uses host double; no game/model step was executed."
+    },
+    {
+      "index": 1,
+      "guid_u64": "17370383913846833168",
+      "guid_low24": 16,
+      "marker": 0,
+      "arrival4_observed_bits": 1884511332,
+      "kind": 2,
+      "amount": 1,
+      "xyz_bits": [
+        3323152112,
+        3290222733,
+        1116253247
+      ],
+      "xy_distance_double_diagnostic": 29.702599036244614,
+      "note": "Distance diagnostic uses host double; no game/model step was executed."
+    }
+  ],
+  "running_frames": [
+    {
+      "index": 595,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33156.79999999702
+      ],
+      "before": {
+        "phase": 0,
+        "clock_bits": 0,
+        "units": 0,
+        "pickups": 0,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1020591604,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 596,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33366.79999999702
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1020591604,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1040254501,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 597,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33380.29999999702
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1040254501,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1041160471,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 598,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33407.19999999553
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1041160471,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1042965700,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 599,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33441.60000000149
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1042965700,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1045274245,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 600,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33459.29999999702
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1045274245,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1046462072,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 601,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33492.39999999851
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1046462072,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1048629688,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    },
+    {
+      "index": 602,
+      "returned": true,
+      "confirmed_complete880_return": true,
+      "original_now_values_ms": [
+        33506.69999999553
+      ],
+      "before": {
+        "phase": 1,
+        "clock_bits": 1048629688,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      },
+      "after": {
+        "phase": 1,
+        "clock_bits": 1049109516,
+        "units": 7,
+        "pickups": 2,
+        "companions": 0
+      }
+    }
+  ],
+  "counters": {
+    "spawn_counter2408": 88,
+    "message_sequence2412": 7,
+    "generation_counter2400": 0,
+    "spawn_budget2416_bits": 1041443813
+  },
+  "clock2352_bits": 1049109516,
+  "clock2352": 0.26590001583099365,
+  "rng_words": [
+    1410023936,
+    3514236404,
+    3278874267,
+    3096624426
+  ],
+  "distance_map": {
+    "present": true,
+    "pointer": 762892056,
+    "capacity": 78400,
+    "count": 78400,
+    "field24": 72660
+  },
+  "actual_companions_count": 0,
+  "actual_special_count": 4,
+  "actual_protection2576": 0,
+  "current_empty_domains": [
+    "owned_skill_sources8",
+    "timed12",
+    "active84",
+    "auxiliary_motion112",
+    "adjustments16",
+    "passives8",
+    "live32",
+    "areas88",
+    "effects120",
+    "delayed56",
+    "deadline32",
+    "hits112",
+    "secondary112",
+    "packets16",
+    "notifications12",
+    "candidates80",
+    "item_modifiers8",
+    "ability_modifiers20",
+    "definitions36",
+    "blocked_ids8",
+    "banished_keys12",
+    "companions_claims88",
+    "xp_queue8",
+    "currency_queue8"
+  ],
+  "source_sha256_before": {
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/headless_tail135.py": "6774ea33ad6a8c660740eb61fbc8acc82368d88176512d6fefb4abb4fee2e2c3",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/area_effects135.py": "ac0c8976776232d1a7627835feb96d67f707008a808c43dcfe3aaf5973c8833f",
+    "reconstruction/core_spec/death_pickup135.py": "f531b948b723b19ff6853edabf59a7beb4d01dde2a92b38bf81879bfadd09d56",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/headless_tail135.py": "6774ea33ad6a8c660740eb61fbc8acc82368d88176512d6fefb4abb4fee2e2c3",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/area_effects135.py": "ac0c8976776232d1a7627835feb96d67f707008a808c43dcfe3aaf5973c8833f",
+    "reconstruction/core_spec/death_pickup135.py": "f531b948b723b19ff6853edabf59a7beb4d01dde2a92b38bf81879bfadd09d56",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e"
+  },
+  "model_functions_executed": 0,
+  "original_functions_executed": 0,
+  "independent_state_was_not_produced_from_observation": true
+}

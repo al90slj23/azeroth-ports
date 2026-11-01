@@ -1,0 +1,15 @@
+{
+  "kind": "running_capture_read_only_evidence_freeze",
+  "sha256": {
+    "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/capture_and_check.py": "4409c9438766c76dc9460aace92c18824857e3c56b5eea39d56e165f5679fdc0",
+    "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/capture.json": "43cf55ee67df72ef588d6ae080646bda31900d1b33388b3cffd552183e937991",
+    "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/summary.json": "7c35affad088682c7284f256cfccf4ac1eaa9a3e4c71e88a9b980f43b2593909",
+    "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/summarize_entities.py": "70bd285c84f475bc2430de505793beeebf4b301233804d90408c12c1e1de1031",
+    "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/entity-details.json": "04a179e5f52420916ca7eefbe04a005d0c70ea8504414a4ef569326ac327a5bc",
+    "evidence/game-entry0135-running-capture-20261101T135831.387639000Z/notes.md": "ace09188ef3e714ce97e16672ed8505a57748f4a73365f20696c9c9569d955f7",
+    "scripts/game_entry135_capture.py": "a71c5f71a7d92d2e4a3b73f767c4618d8774b9ff827bb70856aff3049c48bfc0"
+  },
+  "original_functions_executed": 0,
+  "independent_model_functions_executed": 0,
+  "original_or_model_sources_modified": false
+}

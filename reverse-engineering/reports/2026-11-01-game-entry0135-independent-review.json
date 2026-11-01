@@ -1,0 +1,41 @@
+{
+  "status": "passed_scoped_original_observation_review",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "review": "evidence/game-entry0135-independent-review-20261101T140010.137361Z/review.json",
+  "review_sha256": "279066728b8254cc3fffe630483a5162df45abfe7fb73f108dc303552703c1c5",
+  "reviewer_script": "scripts/review_game_entry135.py",
+  "reviewer_script_sha256": "60929f20c5859b4db700ce80ec10d8984fcb4ec0684809c0149b5a623e91c486",
+  "original_receipt": "evidence/game-entry0135-probe-20261101T135403.797895Z/receipt.json",
+  "original_receipt_sha256": "1a388679c0418f2fa2746c91ca8d3f7e91428563d05c1935f73ca09425e5b49e",
+  "source_files": 12,
+  "complete_original_callback_returns": 603,
+  "running_original_callback_returns": 8,
+  "clock_advances": 7,
+  "snapshot_bytes": 1378877440,
+  "snapshot_sha256": "c461b2f5efb1399127d22c04fbe5efed15f8b8411ceeefe22a05b4dce45bfd15",
+  "pre_upload_observation_bytes": 3375507,
+  "pre_upload_observation_sha256": "751c4d251eeea95b6211069f295ac251ff9bb83cc78147255fcdb739f34071cb",
+  "raw232_tags_observed": [30, 31, 33, 11],
+  "Start_raw23_proven": false,
+  "manual_visual_review": {
+    "scene_before_movement": "evidence/game-entry0135-probe-20261101T135403.797895Z/scene-before-movement.png",
+    "scene_before_movement_sha256": "d48c01a049388a8af753a45c1872f6c71a5570ec5bbf38721e468f2b6275b13e",
+    "original_game": "evidence/game-entry0135-probe-20261101T135403.797895Z/original-game.png",
+    "original_game_sha256": "69bfbfa3521786562cf0662e1deac5e1ab16aff48d76995eb821c49fee4c2fbd",
+    "observation": "Actual original Elwynn scene, character and HUD; move-to-start prompt visible before movement and absent after movement. Not independent UI or performance validation."
+  },
+  "post_freeze_RAF_count": 919,
+  "individual_RAF_ids_persisted": false,
+  "owned_terminal_rechecked": true,
+  "new_original_executions_by_review": 0,
+  "new_independent_model_cases": 0,
+  "new_independent_mainloop_frames": 0,
+  "complete_game": false,
+  "open_boundaries": [
+    "Exact Start command producer and peer-to-ECS delivery chain",
+    "Independent complete880 and complete App ownership",
+    "Whole game progression, performance, saves and multiplayer",
+    "Whole JS/externref/GPU/VM restoration"
+  ]
+}

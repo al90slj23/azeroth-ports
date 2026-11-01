@@ -1,0 +1,16 @@
+{
+  "receipt_sha256": "aa8779e68a51a45ad59f28b0ae6b72133d0b38b78e0d357e644c4b95abeecfa8",
+  "classification": "natural_running_Game_observed_but_bulk_snapshot_upload_exceeded_owned_deadline",
+  "status_observed_running_returns": 8,
+  "status_observed_clock_advances": 7,
+  "observed_clock": 0.34790000319480896,
+  "page_errors": 0,
+  "partial_capture_bytes": 867172352,
+  "expected_capture_bytes": 1355153408,
+  "partial_capture_is_not_valid_snapshot": true,
+  "per_frame_results_not_persisted": true,
+  "correction": "Persist small observation before bulk upload; cancel original observed RAF handles only after synchronous frozen copy; separate240s/270s bounded host.",
+  "original_receipt_retained": true,
+  "new_independent_cases": 0,
+  "complete_game": false
+}

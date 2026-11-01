@@ -1,0 +1,35 @@
+{
+  "kind": "readonly_snapshot_schema_and_synthetic_reader_checks_not_original_differential",
+  "source_sha256": {
+    "scripts/game_entry135_capture.py": "a7820703787ce85b648a250f614990eaf76f6000f5a5356a615e6672118c8c93",
+    "scripts/run_opening135_oracle.mjs": "eec11a3780185892fba524e7b76247b5db3de1dca8708d1737d2a404a089749e",
+    "scripts/run_headless135_oracle.mjs": "91493c7089826be37ac09a862a63c718eea3ab953107ec864e460df1db4752a8",
+    "scripts/run_initial135_oracle.mjs": "43e53a05f57ad5ee4cc7a39e5c8629ed7f1f1c37a488064681ce574a1f0d5257",
+    "reconstruction/core_spec/headless135.py": "1d859b01ae6b7c56950b6416210cc127bb7b398a5d707e18e228230b6d71e92d",
+    "reconstruction/core_spec/headless_tail135.py": "6774ea33ad6a8c660740eb61fbc8acc82368d88176512d6fefb4abb4fee2e2c3",
+    "reconstruction/core_spec/opening135.py": "62a76f5c30da844c692ad36810717f424e513ab60ac5c8d210ec80b6d20f7fd5",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/unit_records135.py": "c1bbd6779ddcd7a18697dc09506f72fe35c001199eb6267d943963e2092fae45",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "schema_sha256": "83649e8006690d085fe767826fc53416889da6bd57039e374c6a7b9bde8ee05f",
+  "vector_specs": 30,
+  "checks": [
+    "menu_guard",
+    "present_not_running_phase_guard",
+    "raw_capacity_backing_and_inactive_tail",
+    "all_tree_keys_preserved",
+    "transport_ring_logical_wrap_and_inactive_slot_not_followed",
+    "candidate_payload_read",
+    "count_over_cap_boundary",
+    "writable_input_rejected",
+    "input_unchanged",
+    "78400byte_nav_and_313600f32_secondary_within_declared_world_budget"
+  ],
+  "synthetic_fixtures_are_not_legal_App_or_world_producers": true,
+  "new_original_calls": 0,
+  "new_original_cases": 0,
+  "new_independent_game_frames": 0,
+  "actual_new_active_Game_capture_validated": false,
+  "old_sources_changed": false
+}

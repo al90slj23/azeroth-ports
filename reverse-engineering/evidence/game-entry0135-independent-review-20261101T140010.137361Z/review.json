@@ -1,0 +1,716 @@
+{
+  "status": "passed_scoped_original_observation_review",
+  "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-probe-20261101T135403.797895Z/receipt.json",
+  "receipt_sha256": "1a388679c0418f2fa2746c91ca8d3f7e91428563d05c1935f73ca09425e5b49e",
+  "config_sha256": "9cd10e07d834e1d2a99e699f5c3820178385f4cc5cea5212d9be01a4b2ac8a52",
+  "source_closure": {
+    "files": 12,
+    "independently_walked_local_python_imports": [
+      "reconstruction/resource_spec/__init__.py",
+      "reconstruction/resource_spec/mpq.py",
+      "scripts/build_full135_oracle.py",
+      "scripts/build_game_entry135_oracle.py",
+      "scripts/build_upgrade134_oracle.py",
+      "scripts/probe_entry_world135.py",
+      "scripts/probe_full_app135.py",
+      "scripts/probe_game_entry135.py",
+      "scripts/trace_coop.py",
+      "scripts/wasm_index.py"
+    ],
+    "sha256": {
+      "scripts/probe_game_entry135.py": "698a7cedade7734624dc190166b6382d9d9e67f647ce81eaa7d548797b63ca4f",
+      "scripts/run_game_entry135.mjs": "74c5a428665b8eaf6f661ac0e6c24c9cd1b6a4a25066faaa41b8a934ecfb09ae",
+      "scripts/browser_game_entry135.mjs": "382b422ab949f61beeaf1d41aef0bcc20ebeb5e71208e26a60c783867f588e54",
+      "scripts/build_game_entry135_oracle.py": "4297ba67dc70192014b9bf8e2a7ec0f3f0bb034160f507522807ffb54c33b617",
+      "scripts/probe_full_app135.py": "5600fdfd534760e18a5d875f450febdf049d42601344949c32faef9f07cdd628",
+      "scripts/probe_entry_world135.py": "ae3ce76eb6676fe452669b8415baef4927c2f169025c6154977d385696dfca79",
+      "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+      "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+      "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+      "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+      "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9"
+    }
+  },
+  "tools_and_resource_identities": {
+    "original": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
+      "sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+      "bytes": 90959080
+    },
+    "module": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-probe-20261101T135403.797895Z/game-entry135-observer.wasm",
+      "sha256": "0afef345401358710e1d08163721716cd61fb19c457821f6b30f1ce58aff23b9",
+      "bytes": 90959111
+    },
+    "node": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+      "bytes": 113002944
+    },
+    "chrome": {
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "sha256": "cf864393a84aa983ba58feea2c24050748e39738591205ecaa54b2c1199ad28c",
+      "bytes": 367696
+    },
+    "python": {
+      "path": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "sha256": "f747d76c646dd07596d93698d63ac9b239e59bea224f2da77c4d788723ceeb90",
+      "bytes": 52640
+    },
+    "aux": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-full-app-support-20261101T114415.104930Z/inline0.js",
+      "sha256": "a6d8b6cbe3ade99211ad4f01a4712c9996044e402975fc3d72e7f7b6d043f85b",
+      "bytes": 1381
+    },
+    "font": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-full-app-font-20261101T122429.151414Z/azs_sc.ttf",
+      "sha256": "5499291b696324c10c3e7f2d3d89a5c490897319a629141ea5b40c85e62e6224",
+      "bytes": 1225412
+    },
+    "name_index": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/android/assets/latest-web-core/data/__index",
+      "sha256": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8",
+      "bytes": 1699694
+    },
+    "asset_index": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/resource-index-base-20261101T032320.856364Z/index.sqlite",
+      "sha256": "a3f219f6e76e1d87e50b0790b757f999091e2b479d3b1d40ac2c101aa8680cf4",
+      "bytes": 14479360
+    },
+    "observer_script": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/browser_game_entry135.mjs",
+      "sha256": "382b422ab949f61beeaf1d41aef0bcc20ebeb5e71208e26a60c783867f588e54",
+      "bytes": 15608
+    },
+    "playwright_package_metadata": {
+      "path": "/Users/al90slj23/.npm/_npx/e41f203b7505f1fb/node_modules/playwright/package.json",
+      "sha256": "313d23ce667d93962d3a1ab4be80908cefe840e4d9e48f1cd5863b91f65e8e39",
+      "version": "1.64.1"
+    }
+  },
+  "module": {
+    "only_export_changed": true,
+    "original_exports": 36,
+    "appended_global0_export": [
+      "research_game_entry135_stack",
+      3,
+      0
+    ],
+    "unchanged_sections": [
+      {
+        "section": 1,
+        "bytes": 4382,
+        "sha256": "c19237537c2fcf7cab791c5883716b65a471c8da6963b11adb34cabb7dc443cc"
+      },
+      {
+        "section": 2,
+        "bytes": 48231,
+        "sha256": "602251f37e1c78db23e87b6b0773440a3a63e5d82a3b9176302237cb7d4c120a"
+      },
+      {
+        "section": 3,
+        "bytes": 175740,
+        "sha256": "4b84c298de959fdae37f7086bbbedf1b4c86f92b4f11275d00363da603316308"
+      },
+      {
+        "section": 4,
+        "bytes": 15,
+        "sha256": "a3eba8f6201ad3e0ced8cd195db593ddc4538ab1720ebfb050f72998b6cca6b5"
+      },
+      {
+        "section": 5,
+        "bytes": 6,
+        "sha256": "35a24381212d8fb0f8073418b3acbbebbad372bf4a7f24e3b479aec055a5f860"
+      },
+      {
+        "section": 6,
+        "bytes": 11,
+        "sha256": "9f3cfe5176ae52746cd84164515877d028e9591e51c615e41f3a33b6c52e9608"
+      },
+      {
+        "section": 9,
+        "bytes": 665757,
+        "sha256": "f4b1b5bd64bcf846f95af533c2c1ef6af9b9170f8a9047829e71dee8c452115a"
+      },
+      {
+        "section": 12,
+        "bytes": 5,
+        "sha256": "548112a6773bdeb095b59c6203b4cb10d49a8f0ecdef44c56d3de03edb71d9ec"
+      },
+      {
+        "section": 10,
+        "bytes": 76838003,
+        "sha256": "b700cbd91f6bb70d5f8f8cb8030adab43fb795a3ab143890ab8b2bf2408833ee"
+      },
+      {
+        "section": 11,
+        "bytes": 13223704,
+        "sha256": "e0c5ab7dd793ca20bdc948c5eaf9a58bf8c19e6510d0265bceb72118b5892b1f"
+      },
+      {
+        "section": 0,
+        "bytes": 151,
+        "sha256": "32e109d01c5d3559542285182b3144ede855e6da942fc12714870127c9ca3bba"
+      }
+    ],
+    "selected_actual_imports": {
+      "507": {
+        "module": "./wenilla_bg.js",
+        "name": "__wbg_requestAnimationFrame_72bbc2f340fc7a29",
+        "kind": 0,
+        "type_index": 95
+      },
+      "517": {
+        "module": "./wenilla_bg.js",
+        "name": "__wbg_setInterval_ae27514ca815a798",
+        "kind": 0,
+        "type_index": 150
+      },
+      "681": {
+        "module": "./wenilla_bg.js",
+        "name": "__wbg_now_f565250295e2d180",
+        "kind": 0,
+        "type_index": 56
+      },
+      "867": {
+        "module": "./wenilla_bg.js",
+        "name": "__wbindgen_cast_0000000000000010",
+        "kind": 0,
+        "type_index": 41
+      }
+    }
+  },
+  "static_original_evidence": {
+    "file": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-independent-review-20261101T140010.137361Z/static-original-windows.json",
+    "sha256": "6646f7e3f15ee9138c4037e7d69d4e87233df7e5519b02f4c247bcb599febfe1",
+    "functions": 12,
+    "method": "SQLite mode=ro exact byte-range seek; no full WAT scan or original execution"
+  },
+  "confirmed_complete880_returns": 603,
+  "running_complete880_returns": 8,
+  "running_frame_indices": [
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602
+  ],
+  "clock_advances": 7,
+  "final_clock": 0.26590001583099365,
+  "profile": {
+    "tag": 0,
+    "raw376_sha256": "70c4760a0551fc940e88aed7549a4fa55d77d4e9d919cf9333a4b0e23a9ed8a2"
+  },
+  "world": {
+    "pointer": 24229960,
+    "raw124_hex": "020000000100000013000000804ab0120900000009000000d07c45160900000040320100c8b2650f40320100000015c6004041c418010000ffffffff1b000000b84002111b000000000000000000000000000000000000000000000000c90400c079491600c90400000015c6004041c4300200000000884200000000",
+    "tiles": {
+      "capacity": 19,
+      "pointer": 313543296,
+      "count": 9,
+      "stride": 36,
+      "active_sha256": "78b9d6067aacc3c30c9ad514cf9c3db9bbda2cad29378369fb658141e96462ff"
+    },
+    "nav": {
+      "present": true,
+      "width": 280,
+      "capacity": 78400,
+      "pointer": 258323144,
+      "count": 78400,
+      "stride": 1,
+      "active_sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79"
+    },
+    "secondary": {
+      "present": true,
+      "width": 560,
+      "capacity": 313600,
+      "pointer": 373914048,
+      "count": 313600,
+      "stride": 4,
+      "active_sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+    }
+  },
+  "entities": {
+    "units424": {
+      "capacity": 8,
+      "pointer": 1211580648,
+      "count": 7,
+      "stride": 424,
+      "active_sha256": "e74d511876c78b7e88fa6234ee9fc569be0802649d7453fe064f01ace3ae0dcf"
+    },
+    "areas88": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 88,
+      "active_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pickups56": {
+      "capacity": 4,
+      "pointer": 1211445784,
+      "count": 2,
+      "stride": 56,
+      "active_sha256": "30d28b17af5a4e40f046cf02af753f63cd63922f0b241e2c2ca499b2d6fd1ea4"
+    },
+    "packets16": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 16,
+      "active_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "candidates80": {
+      "capacity": 0,
+      "pointer": 4,
+      "count": 0,
+      "stride": 80,
+      "active_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "companions88": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 88,
+      "active_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "transport": {
+    "holder": 14549552,
+    "holder24_hex": "c002de0004000000ffffffff000000004003de0000000000",
+    "cell": 14549824,
+    "cell76_hex": "03000000010000000000000004000000c066e10f0000000000000000000000000800000000000000ffffffff68b3f72934020000ffffffff8091b70e0e000000ffffffff0000000000000000",
+    "commands232": {
+      "capacity": 0,
+      "pointer": 8,
+      "count": 0,
+      "stride": 232,
+      "active_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "historical_commands_not_negated_by_empty_final_queue": true
+  },
+  "raw_command_tag_counts": {
+    "30": 1,
+    "31": 1,
+    "33": 1,
+    "11": 1
+  },
+  "input_actions": [
+    {
+      "action": "mouse_click",
+      "x": 475,
+      "y": 490,
+      "elapsed_ms": 5104,
+      "before": {
+        "ready": true,
+        "App": 22624720,
+        "game_present": false,
+        "running": false,
+        "clock": null,
+        "callback_returns": 1,
+        "running_returns": 0,
+        "clock_advances": 0,
+        "finished": false,
+        "error": null,
+        "stopped": null,
+        "progress": [
+          {
+            "stage": "ready",
+            "time": 2604.5
+          },
+          {
+            "stage": "startup",
+            "time": 2646.2999999970198
+          }
+        ]
+      },
+      "injection": "Playwright mouse protocol; no WASM write or command injection"
+    },
+    {
+      "action": "mouse_click",
+      "x": 480,
+      "y": 270,
+      "elapsed_ms": 33935,
+      "purpose": "Focus real canvas after scene asset quiet"
+    },
+    {
+      "action": "keyboard_hold",
+      "key": "w",
+      "requested_duration_ms": 1500,
+      "elapsed_ms": 33940
+    }
+  ],
+  "trusted_input_events": [
+    {
+      "type": "pointerdown",
+      "isTrusted": true,
+      "key": null,
+      "code": null,
+      "x": 475,
+      "y": 490,
+      "button": 0,
+      "time": 3783.39999999851
+    },
+    {
+      "type": "pointerup",
+      "isTrusted": true,
+      "key": null,
+      "code": null,
+      "x": 475,
+      "y": 490,
+      "button": 0,
+      "time": 3783.7999999970198
+    },
+    {
+      "type": "click",
+      "isTrusted": true,
+      "key": null,
+      "code": null,
+      "x": 475,
+      "y": 490,
+      "button": 0,
+      "time": 3784
+    },
+    {
+      "type": "pointerdown",
+      "isTrusted": true,
+      "key": null,
+      "code": null,
+      "x": 480,
+      "y": 270,
+      "button": 0,
+      "time": 32597.10000000149
+    },
+    {
+      "type": "pointerup",
+      "isTrusted": true,
+      "key": null,
+      "code": null,
+      "x": 480,
+      "y": 270,
+      "button": 0,
+      "time": 32597.19999999553
+    },
+    {
+      "type": "click",
+      "isTrusted": true,
+      "key": null,
+      "code": null,
+      "x": 480,
+      "y": 270,
+      "button": 0,
+      "time": 32597.19999999553
+    },
+    {
+      "type": "keydown",
+      "isTrusted": true,
+      "key": "w",
+      "code": "KeyW",
+      "x": null,
+      "y": null,
+      "button": null,
+      "time": 32608.89999999851
+    },
+    {
+      "type": "keyup",
+      "isTrusted": true,
+      "key": "w",
+      "code": "KeyW",
+      "x": null,
+      "y": null,
+      "button": null,
+      "time": 34169.19999999553
+    }
+  ],
+  "isolated_storage": {
+    "empty_origin_checked_before_original_initialization": true,
+    "final_local_storage_keys": [
+      "benilla:/benilla-config/chat/Elwynn_Forest-Raldunos.txt",
+      "rogue.characters.backup.1",
+      "benilla:/benilla-config/once-buff-durations-on",
+      "benilla:/benilla-config/saved-variables.lua",
+      "benilla:/benilla-config/cache/Elwynn_Forest.tsv",
+      "rogue.characters",
+      "benilla:/benilla-config/config.toml",
+      "rogue.characters.backup-at"
+    ],
+    "final_session_storage_keys": [],
+    "final_indexeddb_databases": [],
+    "original_may_write_its_new_isolated_profile": true
+  },
+  "asset_quiet": {
+    "label": "scene_asset_quiet_observation",
+    "quiet": true,
+    "assets_in_flight": 0,
+    "quiet_ms": 3033,
+    "elapsed_ms": 33747
+  },
+  "capture": {
+    "bytes": 1378877440,
+    "sha256": "c461b2f5efb1399127d22c04fbe5efed15f8b8411ceeefe22a05b4dce45bfd15",
+    "stack": 1048576,
+    "live_memory_bytes_after_upload": 1378877440,
+    "coherent_copy_not_full_VM_snapshot": true
+  },
+  "pre_upload_observation": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/game-entry0135-probe-20261101T135403.797895Z/observation-before-upload.json",
+    "receipt": {
+      "bytes": 3375507,
+      "sha256": "751c4d251eeea95b6211069f295ac251ff9bb83cc78147255fcdb739f34071cb",
+      "persisted_before_bulk_memory_upload": true
+    },
+    "all_immutable_frame_command_header_fields_equal_final": true,
+    "metadata_itself_did_not_claim_bulk_completion": true
+  },
+  "post_freeze_RAF_cancellation": {
+    "receipt": {
+      "after_synchronous_memory_copy": true,
+      "original_import": 507,
+      "observed_handles_cancelled": 919,
+      "original_frames_before_copy_unchanged": true,
+      "shutdown_or_Rc_destructor_equivalence_claimed": false
+    },
+    "only_actual_import507_handles_source_verified": true,
+    "individual_handle_identity_list_persisted": false,
+    "per_handle_runtime_validation_claimed": false,
+    "static_order_copy_then_cancel_without_await": true,
+    "lifecycle_stop_not_additional_game_behavior": true
+  },
+  "http": {
+    "count": 4524,
+    "statuses": {
+      "200": 4522,
+      "404": 2
+    },
+    "nonasset404": [
+      {
+        "method": "GET",
+        "path": "/favicon.ico",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/favicon.ico",
+        "status": 404
+      }
+    ],
+    "memory_chunks": 1315,
+    "unique_asset_files_hashed": 2418,
+    "unique_asset_bytes_hashed": 164823373
+  },
+  "network": {
+    "passive_nonloopback": [],
+    "unattributed_proxy_rejections": [
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "www.gstatic.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 1073,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "update.googleapis.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 1073,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_http",
+        "url": "http://update.googleapis.com/service/update2/json?cup2key=ML-DSA-44-16:RoaDzEEtGiDUyjh4rMO6LQfBj8CYxm5-6KrXaWd25AU&cup2hreq=0b1381586ea7562e2526201c842bb93767408308c6101d988ae0299ad1ef2039",
+        "method": "POST",
+        "elapsed_ms": 1079,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "accounts.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 1118,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "www.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 1275,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "www.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 1331,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "www.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 1354,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "accounts.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 2041,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "accounts.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 4622,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "accounts.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 13226,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "accounts.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 40092,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "update.googleapis.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 61078,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "www.gstatic.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 61078,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_http",
+        "url": "http://update.googleapis.com/service/update2/json?cup2key=ML-DSA-44-16:MzYhYzQyymVFKiPa1HZI_cQFCsDM-NiLgAjrtSabTfA&cup2hreq=3615def55ca273868694ed5e7f8f2de87b76930b43530d09def201ad6321b200",
+        "method": "POST",
+        "elapsed_ms": 61079,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "www.google.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 108835,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      },
+      {
+        "kind": "owned_proxy_rejected_connect",
+        "url": "update.googleapis.com:443",
+        "method": "CONNECT",
+        "elapsed_ms": 108856,
+        "provenance": "browser_process_unattributed",
+        "forwarded": false,
+        "response": "owned_proxy_denied"
+      }
+    ],
+    "csp_violations": [
+      {
+        "blockedURI": "https://wow.aethus.pl/presence",
+        "effectiveDirective": "connect-src",
+        "disposition": "enforce"
+      },
+      {
+        "blockedURI": "https://wow.aethus.pl/presence",
+        "effectiveDirective": "connect-src",
+        "disposition": "enforce"
+      }
+    ],
+    "no_claim_that_blocked_presence_is_working_multiplayer": true
+  },
+  "screenshots": {
+    "menu-ready.png": {
+      "sha256": "8ae654c73566beb3f1ecbc252ae29920508e7a143b28c63eff21c45f1ae246de",
+      "bytes": 389025
+    },
+    "scene-before-movement.png": {
+      "sha256": "d48c01a049388a8af753a45c1872f6c71a5570ec5bbf38721e468f2b6275b13e",
+      "bytes": 886107
+    },
+    "after-move.png": {
+      "sha256": "6c9ed7ace111c3ca21e0fb4b0009078ee0704b31f3cde6936aa7fb92a29a6632",
+      "bytes": 842016
+    },
+    "original-game.png": {
+      "sha256": "69bfbfa3521786562cf0662e1deac5e1ab16aff48d76995eb821c49fee4c2fbd",
+      "bytes": 840734
+    }
+  },
+  "owned_terminal_rechecked": {
+    "pids": {
+      "73464": true,
+      "73470": true,
+      "73463": true
+    },
+    "groups": {
+      "73470": true,
+      "73463": true
+    }
+  },
+  "original_functions_executed_by_review": 0,
+  "new_original_cases": 0,
+  "independent_model_cases": 0,
+  "independent_mainloop_frames": 0,
+  "complete_game": false,
+  "limitations": [
+    "This is an original-program observation, not an independent complete880 implementation or gameplay differential test.",
+    "Only global0 export visibility changes; the original mutable global remains mutable and is read by research.",
+    "Raw232 commands are actual pre-poll bytes; nested payload pointers remain opaque, and temporal UI correlation is not a fully restored producer.",
+    "The coherent snapshot excludes JS objects, externrefs, browser/GPU state, and mutable globals except separately observed stack metadata.",
+    "Twelve project sources, listed binaries/resources, and package metadata are bound; all node_modules, Python stdlib, and OS implementation bytes are not frozen.",
+    "WASM2GiB, decoded assets512MiB, JS heap768MiB and a separate frozen copy are separate budgets, not a process RSS bound.",
+    "Proxy rejects are browser-process-unattributed; CSP presence intent is retained without claiming successful external connectivity.",
+    "Post-copy RAF cancellation has a count and verified source origin/order; individual cancelled handle IDs were not persisted or individually revalidated.",
+    "Eight running returns and clock advancement do not validate a complete run, performance, Windows execution, save recovery, or multiplayer."
+  ],
+  "reviewer_script": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/review_game_entry135.py",
+  "reviewer_script_sha256": "60929f20c5859b4db700ce80ec10d8984fcb4ec0684809c0149b5a623e91c486",
+  "reviewed_version": "0.135.1",
+  "reviewed_build": "0898d5e3",
+  "independent_review": true
+}
