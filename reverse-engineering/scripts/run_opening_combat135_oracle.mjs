@@ -53,7 +53,7 @@ const stackExport=added.at(-1);if(stackExport.kind!==3||stackExport.index!==0||s
 const snapshot=await fs.readFile(config.snapshot_path);if(snapshot.length%65536||snapshot.length>268435456||hash(snapshot)!==SNAPSHOT_SHA)throw Error('Snapshot hash/domain');
 const module=await WebAssembly.compile(changed),imports=WebAssembly.Module.imports(module),cases=JSON.parse(inputRaw);
 if(imports.length!==878||imports.some(v=>v.kind!=='function')||cases.length!==1)throw Error('878/exactly one controlled case');
-const limits=Object.freeze({cases:1,actions_per_case:600,controlled_frames_per_case:500,
+const limits=Object.freeze({cases:1,actions_per_case:700,controlled_frames_per_case:650,
  record_uncompressed_bytes:2097152,uncompressed_output_bytes:1073741824,compressed_output_bytes:268435456});
 let outputBytes=0,compressedOutputBytes=0,maxRecordBytes=0,outputRecords=0,outputFailure=null;
 let callsTotal=0,completedFrames=0,completedStages=0,peakMemory=0,boundaries=0;const caseReceipts=[];
@@ -75,7 +75,7 @@ async function emit(value){if(outputFailure)throw outputFailure;const raw=Buffer
 }
 for(const c of cases){
  exact(c,['id','input','actions'],'Case');if(c.id!==caseReceipts.length||!Array.isArray(c.actions)||c.actions.length>limits.actions_per_case)throw Error('Case/action bounds');
- if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('500 controlled frame cap');
+ if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('650 controlled frame cap');
  exact(c.input,['class_byte','race_byte','region_index','app_lcg_seed_u64','object_id_u64','companion_tags'],'Opening input');
  const s=c.input;uint(s.class_byte,8);uint(s.race_byte,8);if(s.region_index!==0||JSON.stringify(s.companion_tags)!=='[255,255]')throw Error('Explicit Elwynn absent slots');
  for(const n of[s.app_lcg_seed_u64,s.object_id_u64])if(typeof n!=='string'||!/^[0-9]+$/.test(n)||BigInt(n)>=1n<<64n)throw Error('Explicit uint64 decimal');
@@ -166,7 +166,7 @@ for(const c of cases){
    return{raw_game2592_hex:hex(G,2592),vectors,unit_cooldowns:cooldowns.observations,packets,notifications,new_packets:newPackets,new_notifications:newNotifications,
     player_keyed_tree:keyed,projection:{phase2587:byte(G+2587),selection_kind2585:byte(G+2585),generation_counter2400:r(2400),field1092:r(1092),mode2582:byte(G+2582),
      candidates:candidates(),guardian_cooldowns:cooldowns.guardians,now_bits:r(2352),rng_words:[0,1,2,3].map(i=>r(1720+i*4)),
-     spawn_counter:r(2408),message_sequence:r(2412),kill_cost_bits:r(2420),next_resource2444_bits:r(2444),source_id:d().getBigUint64(G+1336,true).toString(),
+     spawn_counter:r(2408),message_sequence:r(2412),kill_cost_bits:r(2420),next_resource2444_bits:r(2444),next_event2424_bits:r(2424),last_event2586:byte(G+2586),next_supply2448_bits:r(2448),source_id:d().getBigUint64(G+1336,true).toString(),
      map_id_utf8:map,player_xyz:[r(1416),r(1420),r(1424)],velocity_xy:[r(1736),r(1740)],previous_player_xyz:[r(2428),r(2432),r(2436)],
      progression:{level:r(1432),xp:r(1436),pending_upgrades:r(2376)},current_hp_bits:r(1440),
      derived_bits:Object.fromEntries(Array.from({length:23},(_,i)=>[1536+i*4,r(1536+i*4)])),player_fields:keyed.fields,

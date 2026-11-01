@@ -1,0 +1,173 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "receipt": "reverse-engineering/evidence/supply-kind2-135-independent-review-20261101T193915.933213Z/review.json",
+  "receipt_sha256": "bb56ba2213d54912521deb390f131db1205bf9fc7ad82adb51802c6131827c98",
+  "reviewer_source_provenance": "reverse-engineering/evidence/supply-kind2-135-independent-review-20261101T193915.933213Z/reviewer-source-provenance.json",
+  "reviewer_source_provenance_sha256": "9d507983b55fca850e8df99278109d9f1bae3230766efa29c4893759727b77bd",
+  "owned_process_terminal": "reverse-engineering/evidence/supply-kind2-135-review-owned-20261101T193915.807175Z/process-terminal.json",
+  "owned_process_terminal_sha256": "2ee7f391a735843bea0efe4c9630e4c76f66861b43264cfaf61132100eb4bd1d",
+  "reviewer_script": "reverse-engineering/scripts/review_supply_kind2_135.py",
+  "reviewer_script_sha256": "6028a522c34bd994e80ff9ef84d2dc538c8ba8e4ad934707a968ff2bc72b9bb3",
+  "independent_reviewer_was_not_component_author": true,
+  "reviewed_original_receipt_sha256": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+  "source_window": "All61 source files matched frozen and current SHA at both review boundaries before root resumed integration; no permanent current-source claim after that window.",
+  "review": {
+    "status": "passed_scoped_read_only_review",
+    "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T192704.946829Z/supply-kind2-comparison.json",
+    "comparison_sha256": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+    "reviewer_script_sha256": "6028a522c34bd994e80ff9ef84d2dc538c8ba8e4ad934707a968ff2bc72b9bb3",
+    "source_files": 61,
+    "production_files": 51,
+    "local_dependency_edges": 247,
+    "current_and_frozen_sources_verified": true,
+    "private_exports_only_and_all_original_bodies_callees_unchanged": true,
+    "original_build": "90898d5e3",
+    "historical_alias": "0898d5e3",
+    "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "static_proofs_sha256": "62024de59b564efa9711aa390742955e3c71924c5286cb9a5655ae0c3f01d01f",
+    "cases": 75,
+    "original_calls": {
+      "947": 60,
+      "1417": 15
+    },
+    "comparison_counts": {
+      "unchanged_Game_bytes_outside_allowed_ranges": 608460,
+      "known_values": 143945,
+      "unknown_cells": 86120,
+      "nonzero_unknown_original_cells": 34173,
+      "packets": 249,
+      "packet_bytes": 38376,
+      "opaque_amount_words_exact_owner_formula_checked": 40
+    },
+    "independent_semantic_checks": {
+      "direct1417": 15,
+      "physical_pickup_capacity_growths": 20,
+      "direct1417_clamp_cases": 6,
+      "known_amount_words": 19,
+      "preserved_known_padding4_bytes": 38,
+      "supply169_complete_semantic_payloads": 59,
+      "full56_stable_oldest_replacements": 10,
+      "oldest_nonmonotonic_last": 1,
+      "oldest_first_tie": 1,
+      "supply2448_spawned": 44,
+      "ordinary169_payload_semantic_bindings": 180,
+      "newGUID_exact_four_None_bytes_for_address_word": 160,
+      "resource40_mixed_count3_owner176": 4,
+      "supply2448_cap": 12,
+      "supply2448_future": 4,
+      "mode1_near_peer_cases": 24,
+      "mode1_original_NPC_near_peer_proofs": 96,
+      "mode1_underflow_cases": 4
+    },
+    "complete56B_active_inactive_compaction_and_None_source_rebuilt": true,
+    "exact40_GUID_bound_pre2448_owner_amount_words": true,
+    "all249_complete_packet_payloads_and_order_compared": true,
+    "ordinary_prefix_scope": "Frozen independent ordinary requests and draw count are explicit provenance; reviewer replays shared RNG and checks each ordinary packet/GUID/position and retained four NPCs. Terrain/ordinary model is not executed again.",
+    "height_scope": "Direct1417 finalXY clamp independently recomputed, finalXYZ/packets strictly compare frozen expected with original; static clamp/height order is verified. Query models are not rerun.",
+    "world_scope": "Four frozen independently parsed451-asset query inputs, manually packed known Game8192/Rc124 fields and complete backing, explicit unconsumed fixture zeros; no original snapshot or original constructor claim.",
+    "mode1_scope": "24 cases prove all four original NPCs are within55 of explicit finite16B peer rows bound to G2232/G2236; no missing-peer or far-relocation equivalence claim.",
+    "known_limits": [
+      "mode0 empty-vector local2 pending",
+      "marker2 real post-compaction panic pending; not a positive case or0host claim",
+      "nonempty aux ownership/drop pending",
+      "primary-present nearest-miss fallback pending",
+      "simultaneously due2444/2448 not exercised",
+      "fullkind2 consumer/UI effects pending"
+    ],
+    "historical_attempts_not_added": [
+      {
+        "path": "evidence/full0135-oracle-20261101T190005.927219Z/supply-kind2-comparison.json",
+        "sha256": "4f8d02ce08e0fd3b0ccca538090dadef50ff1c709cfa20bdcf8734ceaa5b51c4",
+        "classification": "Failed marker2 removal after compaction; old incomplete summary differences=0 was not a completed comparison; no final runtime/0host claim."
+      },
+      {
+        "path": "evidence/full0135-oracle-20261101T190451.503890Z/supply-kind2-comparison.json",
+        "sha256": "fd6833eed19bffd1c2e99335ec398c4cd3ee12d822b0f5d51ca90c1f73d5b890",
+        "classification": "Normal5 pilot, complete3 direct1417+2 full947; superseded, not additive."
+      },
+      {
+        "path": "evidence/full0135-oracle-20261101T190654.567162Z/supply-kind2-comparison.json",
+        "sha256": "8b6bc738e4feded330a84f92f3f16d07c74f4d3186dd398c8f79ee1bd62c1821",
+        "classification": "Normal69 original execution completed but5127 differences in24 mode1 cases: missing peer positions relocated four NPCs; not a passing result."
+      },
+      {
+        "path": "evidence/full0135-oracle-20261101T191339.072086Z/supply-kind2-comparison.json",
+        "sha256": "90718cd6c2ed0ca021d84ee71a8be1867bba37e06f91d264b95919d68cef8673",
+        "classification": "Legal explicit mode1 peers;69 passed; superseded, not additive."
+      },
+      {
+        "path": "evidence/full0135-oracle-20261101T191656.014890Z/supply-kind2-comparison.json",
+        "sha256": "8b8a75ba3be1400b8529a897590adb30d20254fcd272840c2040e4fe64cae5a0",
+        "classification": "71 passed with two meaningful oldest-selection cases; superseded, not additive."
+      },
+      {
+        "path": "evidence/full0135-oracle-20261101T192411.044270Z/supply-kind2-comparison.json",
+        "sha256": "43f16623f9d27b1c7203860720b60d71e66207f32e4232a6fbdccc55ff162943",
+        "classification": "75 passed with four independent resource40 fixture preparations; actual9byte build was already correct; superseded by alias-explicit source closure."
+      },
+      {
+        "path": "evidence/full0135-oracle-20261101T192619.679780Z/supply-kind2-comparison.json",
+        "sha256": "31042dafbf52154bf044d8f86acb3c9a6baa1e9d80dd753fb2a454ad929296dd",
+        "classification": "75 numerical pass but erroneous actual_build=8byte historical alias after author misread legacy builder manifest; retained as metadata-error history, not final."
+      }
+    ],
+    "process": {
+      "pid": 17171,
+      "pgid": 17171,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 1.8365484589885455,
+      "error": null
+    },
+    "actual_host_calls": 0,
+    "stack_checks": 2123,
+    "stack_all_restored": true,
+    "output_bytes": 3052607,
+    "world_inputs": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5"
+    },
+    "artifact_sha256": {
+      "supply-labels.json": "74886e241d82f316c4c18e16abeb363fb2492a00fa7632cebfba2b0cb29fef64",
+      "supply-refusals.json": "6cc9e7e226fe344d33aaf39d8a65ac07590f8f54134fea0227b6b3a3abccf3e2",
+      "supply-kind2-runtime.json": "5265d15496ddbdc92af0c86e0b0d1e0b6cf3d4489a200b70868c74ca11c35db1",
+      "resource-spawn135-static.json": "fb3e45e94acd6c04bef99a1f29e1f6d0a161eccb5a1815e7fe55e37835d4b43c",
+      "supply-prepared.json": "6a420624535a44f8958c1ef4f36a58a9af4889be63b0904bbf39f9aa16f6d8ed",
+      "supply-expected.json": "2350bf3ca136c261edbe7b92616977c659f821b2995b758e507915e16de25e68",
+      "supply-process-terminal.json": "ff7fecf9b2cbeac5bcaa07bb6ceb70765c0606a3a3ed77b3b47f91c17e5d1091",
+      "resource-validator-owned.json": "1a4bc4baff3b2b209cb47cee460c6f86fda3bbdd9ac34e7dda5ae3eb8ca85bae",
+      "manifest.json": "37cbc24807839dbec0de8e71edfe6295d4bf132e6229c8472f6a0ee7bad290c5",
+      "supply-input.json": "341d9dca2a6e6a604116dd5eb91219b8c07fdc46e125a319fb6a1951f6d6a86a",
+      "supply-differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "supply-kind2-comparison.json": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+      "supply-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "supply-owned-process.json": "fcc72ef5428ddd13cc6d72bfe49522d8108ba1b42d2589347c0009bebfb47191",
+      "supply-kind2-static.json": "4862937f5f31fb3bfe5f627670565f619e3d22348bc71fd23e3d9c3108a03beb",
+      "supply-results.jsonl": "01986ef57df1d0f6dfeed6c48f722714c8215e39595c658e362293db125efe65"
+    },
+    "model_or_original_or_checker_executed_by_reviewer": false,
+    "new_original_cases": 0,
+    "natural60_second_runs": 0,
+    "full880_frames": 0,
+    "native_executions": 0,
+    "elapsed_seconds": 1.2233787079894682
+  },
+  "reviewer_refinements_not_positive_original_cases": [
+    {
+      "owned_directory": "reverse-engineering/evidence/supply-kind2-135-review-owned-20261101T193834.802759Z",
+      "exit_code": 1,
+      "reason": "Independent packet decoder assertion initially omitted actor quaternion fields12/13; reviewer corrected exact key set, strict payload comparison remains unchanged."
+    },
+    {
+      "owned_directory": "reverse-engineering/evidence/supply-kind2-135-review-owned-20261101T193900.691002Z",
+      "exit_code": 1,
+      "reason": "Overbroad text guard rejected returned provenance expression pre_owner_base; changed to AST identifier/input guard. Core still never consumes malloc address."
+    }
+  ],
+  "independent_quaternion_scope": "All packet hex is strict frozen-expected/original equality. Reviewer separately checks fields12/13 against sin/cos within4e-7, rather than claiming a second bit-identical trig implementation.",
+  "new_original_cases": 0,
+  "model_original_checker_executed_by_review": false
+}

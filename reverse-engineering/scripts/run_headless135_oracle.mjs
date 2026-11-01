@@ -86,7 +86,7 @@ for (let index = 0; index < cases.length; index++) {
       records: Array.from({length: count}, (_, j) => Buffer.from(span(p + j * 424, 424, 424)).toString('hex')),
       racial_record_hex: Buffer.from(span(G + 1256, 80, 80)).toString('hex'),
       owned_records_hex: Array.from({length: on}, (_, j) => Buffer.from(span(op + j * 80, 80, 80)).toString('hex')),
-      timer1628_bits: r(G + 1628), budget_bits: r(G + 2416), next_resource2444_bits: r(G + 2444), velocity_xy: [r(G + 1736), r(G + 1740)], previous_player_xyz: [r(G + 2428), r(G + 2432), r(G + 2436)], now_bits: r(G + 2352),
+      timer1628_bits: r(G + 1628), budget_bits: r(G + 2416), next_resource2444_bits: r(G + 2444), next_event2424_bits: r(G + 2424), last_event2586: d().getUint8(G + 2586), next_supply2448_bits: r(G + 2448), velocity_xy: [r(G + 1736), r(G + 1740)], previous_player_xyz: [r(G + 2428), r(G + 2432), r(G + 2436)], now_bits: r(G + 2352),
       unit_storage_sha256: createHash('sha256').update(storage).digest('hex'),
       area_records: Array.from({length: an}, (_, j) => Buffer.from(span(ap + j * 88, 88, 88)).toString('hex')),
       area_storage_sha256: createHash('sha256').update(areaStorage).digest('hex'),

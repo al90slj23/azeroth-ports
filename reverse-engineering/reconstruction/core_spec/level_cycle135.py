@@ -119,6 +119,7 @@ class LevelCycleResult:
     level_events: tuple
     rng_draws: int
     pending: tuple
+    growth_events: tuple = ()
 
 
 def _max_zero(bits):
@@ -160,6 +161,7 @@ def gain_xp(state, amount):
     derived = dict(state.derived_bits)
     fields = dict(state.player_fields)
     events = []
+    growth_events = []
     while level < 120:
         needed = xp_threshold(level)
         if xp < needed:
@@ -168,8 +170,11 @@ def gain_xp(state, amount):
         xp = (xp - needed) & f.MASK
         pending = (pending + 1) & f.MASK
         fields[34] = level
+        previous_derived = tuple(sorted(derived.items()))
         result = recalculate(StatsInput(level=level, **asdict(stats), **state.sources.keywords()))
         derived = {int(k): v for k, v in result['derived_bits'].items()}
+        growth_events.append(dict(level_before=level-1,level_after=level,
+            derived_before=previous_derived,derived_after=tuple(sorted(derived.items()))))
         auxiliary = result['auxiliary_bits']
         before_heal = result['current_hp_bits']
         request = f.mul(derived[1536], 0x3e4ccccd)
@@ -198,7 +203,8 @@ def gain_xp(state, amount):
     if card_choice_eligible(pending, state.phase2587, state.flags2576, state.gate2572, state.flags2573):
         if stats.flag2574 != 1:
             return LevelCycleResult(updated, 'pending_choice_world', len(events), tuple(events), 0,
-                pending_effects + ('Mode0 world-side choice effects35514 or other mode behavior remain pending',))
+                pending_effects + ('Mode0 world-side choice effects35514 or other mode behavior remain pending',),
+                growth_events=tuple(growth_events))
         choices = state.choice_inputs
         generated = generate_kind0_metadata(rng_words=state.rng_words, class_byte=stats.class_byte,
             owned=choices.owned, level=level, luck_bits=derived[1584], cooldown_bits=derived[1544],
@@ -210,8 +216,10 @@ def gain_xp(state, amount):
                           phase2587=2, selection_kind2585=0,
                           generation_counter2400=(state.generation_counter2400 + 1) & f.MASK)
         return LevelCycleResult(updated, 'core_projection', len(events), tuple(events), generated.rng_draws,
-                                pending_effects + ('Candidate display payload, notifications and selection postprocessing',))
-    return LevelCycleResult(updated, 'core_projection', len(events), tuple(events), 0, pending_effects)
+                                pending_effects + ('Candidate display payload, notifications and selection postprocessing',),
+                                growth_events=tuple(growth_events))
+    return LevelCycleResult(updated, 'core_projection', len(events), tuple(events), 0, pending_effects,
+        growth_events=tuple(growth_events))
 
 
 def from_dict(raw):

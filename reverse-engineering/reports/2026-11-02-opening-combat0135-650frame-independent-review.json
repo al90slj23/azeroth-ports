@@ -1,0 +1,1577 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T200425.298468Z/comparison.json",
+  "comparison_sha256": "16a86a82820ee8f737b256a458b252546336b20b6cd887d3c45e755f9ba538b1",
+  "source_files": 104,
+  "production_files": 90,
+  "current_and_frozen_sources_verified": true,
+  "reviewer_script_sha256": "b3c36711097cde31a684314eeefee27b8379fea3709414918902b361de861909",
+  "transport": {
+    "source": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T200425.298468Z/source-snapshot/scripts/opening_combat135_cas.py",
+    "sha256": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+    "frozen_root_decoder_sha256": "f9ace95818b6384ad2663d293a07d036efc0aac52c8cd75fdabb3ec82065cd2c",
+    "private_fast_decoder_used": false,
+    "independent_26negative_review_sha256": "079deca782201acd886c713ce8a3eb462189f1d9ca16233d140a81a1edc42115",
+    "each_logical_SHA_and_all_occurrences_verified": true,
+    "full_finish": {
+      "records": 9759,
+      "logical_bytes": 3952877407,
+      "logical_sha256": "0c3b9edb71921634aed2c72cf3303050b5fe34e88f777ae49a0edfbfd49ea527",
+      "maximum_logical_record_bytes": 1202206,
+      "unique_blobs": 28155,
+      "unique_blob_bytes": 215567259,
+      "maximum_blob_bytes": 1178139,
+      "index_uncompressed_bytes": 3156544,
+      "index_uncompressed_sha256": "30169c0af40a03bcdff1386da7276740dda9ba97908f88d43f15ee05ce78caa5",
+      "maximum_index_record_bytes": 514,
+      "maximum_blob_index_record_bytes": 25523,
+      "total_logical_blob_references": 2182919,
+      "blob_index_bytes": 27803427,
+      "blob_index_sha256": "d23b8cfc50098e7d601a7b2757323953854c4bda004dfc139df284491f217701",
+      "blob_references_bytes": 4813187,
+      "blob_references_sha256": "1242d11d86720fd63306116d3e5075603b389a838f0690df646039f7f7e8c39e",
+      "all_blobs_and_occurrences_verified": true,
+      "decoder_cache_bytes": 7990894
+    },
+    "one_complete_gzip_member": true
+  },
+  "stream_record_counts": {
+    "case_start": 1,
+    "constructor": 1,
+    "opening": 1,
+    "clock_control": 650,
+    "stage": 9105,
+    "case_end": 1
+  },
+  "expected_stream": {
+    "file_bytes": 80710786,
+    "file_sha256": "694046ff86c887efa4ae4d6545f7db94aca60ce8ef9dc3442edf7745bb0dc417",
+    "uncompressed_bytes": 538358779,
+    "uncompressed_sha256": "0fe691c831c9460beeb2b0a3f755746d7526e0b004567c80466020f6f23a1216",
+    "maximum_record_bytes": 91050,
+    "records": 9106,
+    "gzip": true,
+    "single_member": true
+  },
+  "comparison_counts": {
+    "projection_leaves": 2940862,
+    "unwritten_pickup_arrival_words": 18986,
+    "vector_shape_fields": 182120,
+    "strict_record_bytes": 44639760,
+    "unknown_cells": 35198032,
+    "unknown_cells_nonzero_original": 23343519,
+    "stage_identity_leaves": 18210,
+    "guardian_physical_pointer_unknown_bytes": 100880,
+    "verified_opaque_pickup_amount_words": 689
+  },
+  "reconciled_known_leaves": 47780952,
+  "nonexport_sections_identical": true,
+  "full_declared_projection_recompared": true,
+  "omitted_payload_max_counts": {
+    "effects120": 0,
+    "delayed56": 0,
+    "hits112": 0,
+    "active84": 0,
+    "timed12": 0,
+    "deadline32": 0,
+    "secondary112": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "observed_vector_max_counts": {
+    "companions": 0,
+    "units": 24,
+    "areas": 0,
+    "effects120": 0,
+    "delayed56": 0,
+    "deadline32": 0,
+    "hits112": 0,
+    "secondary112": 0,
+    "pickups": 9,
+    "candidates80": 3,
+    "special": 4,
+    "windows": 2,
+    "boundaries": 69,
+    "owned80": 3,
+    "live32": 2,
+    "timed12": 0,
+    "active84": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "first_guardian": {
+    "frame": 199,
+    "stage_index": 2800,
+    "count": 4
+  },
+  "guardian_distinct_GUIDs": [
+    "17379390972240068726",
+    "17379390972240068729",
+    "17379390972256845943",
+    "17379390972273623160"
+  ],
+  "guardian_owner_captures": 6305,
+  "guardian_payload_comparisons": 25220,
+  "guardian_corruption_checks": [
+    "cross_unit_guid_rejected",
+    "projection_owner_omission_rejected",
+    "timer_payload_backing_mismatch_rejected",
+    "expected_timer_bit_mismatch_rejected",
+    "guardian_nonpointer_written_byte_mask_rejected"
+  ],
+  "selections": [
+    {
+      "frame": 87,
+      "action_index": 87,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 0,
+        "ability_id": "thunder_clap",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 130,
+      "action_index": 131,
+      "index": 2,
+      "card": {
+        "variant": "upgrade",
+        "tier": 1,
+        "ability_id": "thunder_clap",
+        "owned_index": 1,
+        "kinds": [
+          0
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 214,
+      "action_index": 216,
+      "index": 1,
+      "card": {
+        "variant": "upgrade",
+        "tier": 0,
+        "ability_id": "cleave",
+        "owned_index": 0,
+        "kinds": [
+          1
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 379,
+      "action_index": 382,
+      "index": 0,
+      "card": {
+        "variant": "new",
+        "tier": 1,
+        "ability_id": "battle_shout",
+        "owned_index": 0,
+        "kinds": [],
+        "gold": 0
+      },
+      "phase_after": 1
+    },
+    {
+      "frame": 525,
+      "action_index": 529,
+      "index": 1,
+      "card": {
+        "variant": "upgrade",
+        "tier": 0,
+        "ability_id": "cleave",
+        "owned_index": 0,
+        "kinds": [
+          0
+        ],
+        "gold": 0
+      },
+      "phase_after": 1
+    }
+  ],
+  "battle_first_actual_buff": {
+    "frame": 384,
+    "stage_index": 5380,
+    "player_ticks_since_selection": 6,
+    "clock_bits": 1109000188,
+    "remaining_cooldown_bits": 1101441008,
+    "live_record_hex": "000000000000000008000000cdcccc3e8f000058111a0000c9cc464200000000",
+    "damage_multiplier_bits": 1069715292
+  },
+  "battle_player_countdown": [
+    {
+      "frame": 379,
+      "remaining_bits": 1053609165
+    },
+    {
+      "frame": 380,
+      "remaining_bits": 1050253722
+    },
+    {
+      "frame": 381,
+      "remaining_bits": 1045220558
+    },
+    {
+      "frame": 382,
+      "remaining_bits": 1036831951
+    },
+    {
+      "frame": 383,
+      "remaining_bits": 847249408
+    },
+    {
+      "frame": 384,
+      "remaining_bits": 1101441008
+    },
+    {
+      "frame": 385,
+      "remaining_bits": 1101388579
+    },
+    {
+      "frame": 386,
+      "remaining_bits": 1101336150
+    },
+    {
+      "frame": 387,
+      "remaining_bits": 1101283721
+    },
+    {
+      "frame": 388,
+      "remaining_bits": 1101231292
+    },
+    {
+      "frame": 389,
+      "remaining_bits": 1101178863
+    },
+    {
+      "frame": 390,
+      "remaining_bits": 1101126434
+    },
+    {
+      "frame": 391,
+      "remaining_bits": 1101074005
+    },
+    {
+      "frame": 392,
+      "remaining_bits": 1101021576
+    },
+    {
+      "frame": 393,
+      "remaining_bits": 1100969147
+    },
+    {
+      "frame": 394,
+      "remaining_bits": 1100916718
+    },
+    {
+      "frame": 395,
+      "remaining_bits": 1100864289
+    },
+    {
+      "frame": 396,
+      "remaining_bits": 1100811860
+    },
+    {
+      "frame": 397,
+      "remaining_bits": 1100759431
+    },
+    {
+      "frame": 398,
+      "remaining_bits": 1100707002
+    },
+    {
+      "frame": 399,
+      "remaining_bits": 1100654573
+    },
+    {
+      "frame": 400,
+      "remaining_bits": 1100602144
+    },
+    {
+      "frame": 401,
+      "remaining_bits": 1100549715
+    },
+    {
+      "frame": 402,
+      "remaining_bits": 1100497286
+    },
+    {
+      "frame": 403,
+      "remaining_bits": 1100444857
+    },
+    {
+      "frame": 404,
+      "remaining_bits": 1100392428
+    },
+    {
+      "frame": 405,
+      "remaining_bits": 1100339999
+    },
+    {
+      "frame": 406,
+      "remaining_bits": 1100287570
+    },
+    {
+      "frame": 407,
+      "remaining_bits": 1100235141
+    },
+    {
+      "frame": 408,
+      "remaining_bits": 1100182712
+    },
+    {
+      "frame": 409,
+      "remaining_bits": 1100130283
+    },
+    {
+      "frame": 410,
+      "remaining_bits": 1100077854
+    },
+    {
+      "frame": 411,
+      "remaining_bits": 1100025425
+    },
+    {
+      "frame": 412,
+      "remaining_bits": 1099972996
+    },
+    {
+      "frame": 413,
+      "remaining_bits": 1099920567
+    },
+    {
+      "frame": 414,
+      "remaining_bits": 1099868138
+    },
+    {
+      "frame": 415,
+      "remaining_bits": 1099815709
+    },
+    {
+      "frame": 416,
+      "remaining_bits": 1099763280
+    },
+    {
+      "frame": 417,
+      "remaining_bits": 1099710851
+    },
+    {
+      "frame": 418,
+      "remaining_bits": 1099658422
+    },
+    {
+      "frame": 419,
+      "remaining_bits": 1099605993
+    },
+    {
+      "frame": 420,
+      "remaining_bits": 1099553564
+    },
+    {
+      "frame": 421,
+      "remaining_bits": 1099501135
+    },
+    {
+      "frame": 422,
+      "remaining_bits": 1099448706
+    },
+    {
+      "frame": 423,
+      "remaining_bits": 1099396277
+    },
+    {
+      "frame": 424,
+      "remaining_bits": 1099343848
+    },
+    {
+      "frame": 425,
+      "remaining_bits": 1099291419
+    },
+    {
+      "frame": 426,
+      "remaining_bits": 1099238990
+    },
+    {
+      "frame": 427,
+      "remaining_bits": 1099186561
+    },
+    {
+      "frame": 428,
+      "remaining_bits": 1099134132
+    },
+    {
+      "frame": 429,
+      "remaining_bits": 1099081703
+    },
+    {
+      "frame": 430,
+      "remaining_bits": 1099029274
+    },
+    {
+      "frame": 431,
+      "remaining_bits": 1098976845
+    },
+    {
+      "frame": 432,
+      "remaining_bits": 1098924416
+    },
+    {
+      "frame": 433,
+      "remaining_bits": 1098836326
+    },
+    {
+      "frame": 434,
+      "remaining_bits": 1098731468
+    },
+    {
+      "frame": 435,
+      "remaining_bits": 1098626610
+    },
+    {
+      "frame": 436,
+      "remaining_bits": 1098521752
+    },
+    {
+      "frame": 437,
+      "remaining_bits": 1098416894
+    },
+    {
+      "frame": 438,
+      "remaining_bits": 1098312036
+    },
+    {
+      "frame": 439,
+      "remaining_bits": 1098207178
+    },
+    {
+      "frame": 440,
+      "remaining_bits": 1098102320
+    },
+    {
+      "frame": 441,
+      "remaining_bits": 1097997462
+    },
+    {
+      "frame": 442,
+      "remaining_bits": 1097892604
+    },
+    {
+      "frame": 443,
+      "remaining_bits": 1097787746
+    },
+    {
+      "frame": 444,
+      "remaining_bits": 1097682888
+    },
+    {
+      "frame": 445,
+      "remaining_bits": 1097578030
+    },
+    {
+      "frame": 446,
+      "remaining_bits": 1097473172
+    },
+    {
+      "frame": 447,
+      "remaining_bits": 1097368314
+    },
+    {
+      "frame": 448,
+      "remaining_bits": 1097263456
+    },
+    {
+      "frame": 449,
+      "remaining_bits": 1097158598
+    },
+    {
+      "frame": 450,
+      "remaining_bits": 1097053740
+    },
+    {
+      "frame": 451,
+      "remaining_bits": 1096948882
+    },
+    {
+      "frame": 452,
+      "remaining_bits": 1096844024
+    },
+    {
+      "frame": 453,
+      "remaining_bits": 1096739166
+    },
+    {
+      "frame": 454,
+      "remaining_bits": 1096634308
+    },
+    {
+      "frame": 455,
+      "remaining_bits": 1096529450
+    },
+    {
+      "frame": 456,
+      "remaining_bits": 1096424592
+    },
+    {
+      "frame": 457,
+      "remaining_bits": 1096319734
+    },
+    {
+      "frame": 458,
+      "remaining_bits": 1096214876
+    },
+    {
+      "frame": 459,
+      "remaining_bits": 1096110018
+    },
+    {
+      "frame": 460,
+      "remaining_bits": 1096005160
+    },
+    {
+      "frame": 461,
+      "remaining_bits": 1095900302
+    },
+    {
+      "frame": 462,
+      "remaining_bits": 1095795444
+    },
+    {
+      "frame": 463,
+      "remaining_bits": 1095690586
+    },
+    {
+      "frame": 464,
+      "remaining_bits": 1095585728
+    },
+    {
+      "frame": 465,
+      "remaining_bits": 1095480870
+    },
+    {
+      "frame": 466,
+      "remaining_bits": 1095376012
+    },
+    {
+      "frame": 467,
+      "remaining_bits": 1095271154
+    },
+    {
+      "frame": 468,
+      "remaining_bits": 1095166296
+    },
+    {
+      "frame": 469,
+      "remaining_bits": 1095061438
+    },
+    {
+      "frame": 470,
+      "remaining_bits": 1094956580
+    },
+    {
+      "frame": 471,
+      "remaining_bits": 1094851722
+    },
+    {
+      "frame": 472,
+      "remaining_bits": 1094746864
+    },
+    {
+      "frame": 473,
+      "remaining_bits": 1094642006
+    },
+    {
+      "frame": 474,
+      "remaining_bits": 1094537148
+    },
+    {
+      "frame": 475,
+      "remaining_bits": 1094432290
+    },
+    {
+      "frame": 476,
+      "remaining_bits": 1094327432
+    },
+    {
+      "frame": 477,
+      "remaining_bits": 1094222574
+    },
+    {
+      "frame": 478,
+      "remaining_bits": 1094117716
+    },
+    {
+      "frame": 479,
+      "remaining_bits": 1094012858
+    },
+    {
+      "frame": 480,
+      "remaining_bits": 1093908000
+    },
+    {
+      "frame": 481,
+      "remaining_bits": 1093803142
+    },
+    {
+      "frame": 482,
+      "remaining_bits": 1093698284
+    },
+    {
+      "frame": 483,
+      "remaining_bits": 1093593426
+    },
+    {
+      "frame": 484,
+      "remaining_bits": 1093488568
+    },
+    {
+      "frame": 485,
+      "remaining_bits": 1093383710
+    },
+    {
+      "frame": 486,
+      "remaining_bits": 1093278852
+    },
+    {
+      "frame": 487,
+      "remaining_bits": 1093173994
+    },
+    {
+      "frame": 488,
+      "remaining_bits": 1093069136
+    },
+    {
+      "frame": 489,
+      "remaining_bits": 1092964278
+    },
+    {
+      "frame": 490,
+      "remaining_bits": 1092859420
+    },
+    {
+      "frame": 491,
+      "remaining_bits": 1092754562
+    },
+    {
+      "frame": 492,
+      "remaining_bits": 1092649704
+    },
+    {
+      "frame": 493,
+      "remaining_bits": 1092544846
+    },
+    {
+      "frame": 494,
+      "remaining_bits": 1092439988
+    },
+    {
+      "frame": 495,
+      "remaining_bits": 1092335130
+    },
+    {
+      "frame": 496,
+      "remaining_bits": 1092230272
+    },
+    {
+      "frame": 497,
+      "remaining_bits": 1092125414
+    },
+    {
+      "frame": 498,
+      "remaining_bits": 1092020556
+    },
+    {
+      "frame": 499,
+      "remaining_bits": 1091915698
+    },
+    {
+      "frame": 500,
+      "remaining_bits": 1091810840
+    },
+    {
+      "frame": 501,
+      "remaining_bits": 1091705982
+    },
+    {
+      "frame": 502,
+      "remaining_bits": 1091601124
+    },
+    {
+      "frame": 503,
+      "remaining_bits": 1091496266
+    },
+    {
+      "frame": 504,
+      "remaining_bits": 1091391408
+    },
+    {
+      "frame": 505,
+      "remaining_bits": 1091286550
+    },
+    {
+      "frame": 506,
+      "remaining_bits": 1091181692
+    },
+    {
+      "frame": 507,
+      "remaining_bits": 1091076834
+    },
+    {
+      "frame": 508,
+      "remaining_bits": 1090971976
+    },
+    {
+      "frame": 509,
+      "remaining_bits": 1090867118
+    },
+    {
+      "frame": 510,
+      "remaining_bits": 1090762260
+    },
+    {
+      "frame": 511,
+      "remaining_bits": 1090657402
+    },
+    {
+      "frame": 512,
+      "remaining_bits": 1090552544
+    },
+    {
+      "frame": 513,
+      "remaining_bits": 1090376333
+    },
+    {
+      "frame": 514,
+      "remaining_bits": 1090166618
+    },
+    {
+      "frame": 515,
+      "remaining_bits": 1089956903
+    },
+    {
+      "frame": 516,
+      "remaining_bits": 1089747188
+    },
+    {
+      "frame": 517,
+      "remaining_bits": 1089537473
+    },
+    {
+      "frame": 518,
+      "remaining_bits": 1089327758
+    },
+    {
+      "frame": 519,
+      "remaining_bits": 1089118043
+    },
+    {
+      "frame": 520,
+      "remaining_bits": 1088908328
+    },
+    {
+      "frame": 521,
+      "remaining_bits": 1088698613
+    },
+    {
+      "frame": 522,
+      "remaining_bits": 1088488898
+    },
+    {
+      "frame": 523,
+      "remaining_bits": 1088279183
+    },
+    {
+      "frame": 524,
+      "remaining_bits": 1088069468
+    },
+    {
+      "frame": 525,
+      "remaining_bits": 1087859753
+    },
+    {
+      "frame": 526,
+      "remaining_bits": 1087650038
+    },
+    {
+      "frame": 527,
+      "remaining_bits": 1087440323
+    },
+    {
+      "frame": 528,
+      "remaining_bits": 1087230608
+    },
+    {
+      "frame": 529,
+      "remaining_bits": 1087020893
+    },
+    {
+      "frame": 530,
+      "remaining_bits": 1086811178
+    },
+    {
+      "frame": 531,
+      "remaining_bits": 1086601463
+    },
+    {
+      "frame": 532,
+      "remaining_bits": 1086391748
+    },
+    {
+      "frame": 533,
+      "remaining_bits": 1086182033
+    },
+    {
+      "frame": 534,
+      "remaining_bits": 1085972318
+    },
+    {
+      "frame": 535,
+      "remaining_bits": 1085762603
+    },
+    {
+      "frame": 536,
+      "remaining_bits": 1085552888
+    },
+    {
+      "frame": 537,
+      "remaining_bits": 1085343173
+    },
+    {
+      "frame": 538,
+      "remaining_bits": 1085133458
+    },
+    {
+      "frame": 539,
+      "remaining_bits": 1084923743
+    },
+    {
+      "frame": 540,
+      "remaining_bits": 1084714028
+    },
+    {
+      "frame": 541,
+      "remaining_bits": 1084504313
+    },
+    {
+      "frame": 542,
+      "remaining_bits": 1084294598
+    },
+    {
+      "frame": 543,
+      "remaining_bits": 1084084883
+    },
+    {
+      "frame": 544,
+      "remaining_bits": 1083875168
+    },
+    {
+      "frame": 545,
+      "remaining_bits": 1083665453
+    },
+    {
+      "frame": 546,
+      "remaining_bits": 1083455738
+    },
+    {
+      "frame": 547,
+      "remaining_bits": 1083246023
+    },
+    {
+      "frame": 548,
+      "remaining_bits": 1083036308
+    },
+    {
+      "frame": 549,
+      "remaining_bits": 1082826593
+    },
+    {
+      "frame": 550,
+      "remaining_bits": 1082616878
+    },
+    {
+      "frame": 551,
+      "remaining_bits": 1082407163
+    },
+    {
+      "frame": 552,
+      "remaining_bits": 1082197448
+    },
+    {
+      "frame": 553,
+      "remaining_bits": 1081845034
+    },
+    {
+      "frame": 554,
+      "remaining_bits": 1081425604
+    },
+    {
+      "frame": 555,
+      "remaining_bits": 1081006174
+    },
+    {
+      "frame": 556,
+      "remaining_bits": 1080586744
+    },
+    {
+      "frame": 557,
+      "remaining_bits": 1080167314
+    },
+    {
+      "frame": 558,
+      "remaining_bits": 1079747884
+    },
+    {
+      "frame": 559,
+      "remaining_bits": 1079328454
+    },
+    {
+      "frame": 560,
+      "remaining_bits": 1078909024
+    },
+    {
+      "frame": 561,
+      "remaining_bits": 1078489594
+    },
+    {
+      "frame": 562,
+      "remaining_bits": 1078070164
+    },
+    {
+      "frame": 563,
+      "remaining_bits": 1077650734
+    },
+    {
+      "frame": 564,
+      "remaining_bits": 1077231304
+    },
+    {
+      "frame": 565,
+      "remaining_bits": 1076811874
+    },
+    {
+      "frame": 566,
+      "remaining_bits": 1076392444
+    },
+    {
+      "frame": 567,
+      "remaining_bits": 1075973014
+    },
+    {
+      "frame": 568,
+      "remaining_bits": 1075553584
+    },
+    {
+      "frame": 569,
+      "remaining_bits": 1075134154
+    },
+    {
+      "frame": 570,
+      "remaining_bits": 1074714724
+    },
+    {
+      "frame": 571,
+      "remaining_bits": 1074295294
+    },
+    {
+      "frame": 572,
+      "remaining_bits": 1073875864
+    },
+    {
+      "frame": 573,
+      "remaining_bits": 1073171043
+    },
+    {
+      "frame": 574,
+      "remaining_bits": 1072332182
+    },
+    {
+      "frame": 575,
+      "remaining_bits": 1071493321
+    },
+    {
+      "frame": 576,
+      "remaining_bits": 1070654460
+    },
+    {
+      "frame": 577,
+      "remaining_bits": 1069815599
+    },
+    {
+      "frame": 578,
+      "remaining_bits": 1068976738
+    },
+    {
+      "frame": 579,
+      "remaining_bits": 1068137877
+    },
+    {
+      "frame": 580,
+      "remaining_bits": 1067299016
+    },
+    {
+      "frame": 581,
+      "remaining_bits": 1066460155
+    },
+    {
+      "frame": 582,
+      "remaining_bits": 1065621294
+    },
+    {
+      "frame": 583,
+      "remaining_bits": 1064211650
+    },
+    {
+      "frame": 584,
+      "remaining_bits": 1062533928
+    },
+    {
+      "frame": 585,
+      "remaining_bits": 1060856206
+    },
+    {
+      "frame": 586,
+      "remaining_bits": 1059178484
+    },
+    {
+      "frame": 587,
+      "remaining_bits": 1057500762
+    },
+    {
+      "frame": 588,
+      "remaining_bits": 1054681473
+    },
+    {
+      "frame": 589,
+      "remaining_bits": 1051326030
+    },
+    {
+      "frame": 590,
+      "remaining_bits": 1047365174
+    },
+    {
+      "frame": 591,
+      "remaining_bits": 1040654288
+    },
+    {
+      "frame": 592,
+      "remaining_bits": 1023600038
+    },
+    {
+      "frame": 593,
+      "remaining_bits": 1101441008
+    },
+    {
+      "frame": 594,
+      "remaining_bits": 1101388579
+    },
+    {
+      "frame": 595,
+      "remaining_bits": 1101336150
+    },
+    {
+      "frame": 596,
+      "remaining_bits": 1101283721
+    },
+    {
+      "frame": 597,
+      "remaining_bits": 1101231292
+    },
+    {
+      "frame": 598,
+      "remaining_bits": 1101178863
+    },
+    {
+      "frame": 599,
+      "remaining_bits": 1101126434
+    },
+    {
+      "frame": 600,
+      "remaining_bits": 1101074005
+    },
+    {
+      "frame": 601,
+      "remaining_bits": 1101021576
+    },
+    {
+      "frame": 602,
+      "remaining_bits": 1100969147
+    },
+    {
+      "frame": 603,
+      "remaining_bits": 1100916718
+    },
+    {
+      "frame": 604,
+      "remaining_bits": 1100864289
+    },
+    {
+      "frame": 605,
+      "remaining_bits": 1100811860
+    },
+    {
+      "frame": 606,
+      "remaining_bits": 1100759431
+    },
+    {
+      "frame": 607,
+      "remaining_bits": 1100707002
+    },
+    {
+      "frame": 608,
+      "remaining_bits": 1100654573
+    },
+    {
+      "frame": 609,
+      "remaining_bits": 1100602144
+    },
+    {
+      "frame": 610,
+      "remaining_bits": 1100549715
+    },
+    {
+      "frame": 611,
+      "remaining_bits": 1100497286
+    },
+    {
+      "frame": 612,
+      "remaining_bits": 1100444857
+    },
+    {
+      "frame": 613,
+      "remaining_bits": 1100392428
+    },
+    {
+      "frame": 614,
+      "remaining_bits": 1100339999
+    },
+    {
+      "frame": 615,
+      "remaining_bits": 1100287570
+    },
+    {
+      "frame": 616,
+      "remaining_bits": 1100235141
+    },
+    {
+      "frame": 617,
+      "remaining_bits": 1100182712
+    },
+    {
+      "frame": 618,
+      "remaining_bits": 1100130283
+    },
+    {
+      "frame": 619,
+      "remaining_bits": 1100077854
+    },
+    {
+      "frame": 620,
+      "remaining_bits": 1100025425
+    },
+    {
+      "frame": 621,
+      "remaining_bits": 1099972996
+    },
+    {
+      "frame": 622,
+      "remaining_bits": 1099920567
+    },
+    {
+      "frame": 623,
+      "remaining_bits": 1099868138
+    },
+    {
+      "frame": 624,
+      "remaining_bits": 1099815709
+    },
+    {
+      "frame": 625,
+      "remaining_bits": 1099763280
+    },
+    {
+      "frame": 626,
+      "remaining_bits": 1099710851
+    },
+    {
+      "frame": 627,
+      "remaining_bits": 1099658422
+    },
+    {
+      "frame": 628,
+      "remaining_bits": 1099605993
+    },
+    {
+      "frame": 629,
+      "remaining_bits": 1099553564
+    },
+    {
+      "frame": 630,
+      "remaining_bits": 1099501135
+    },
+    {
+      "frame": 631,
+      "remaining_bits": 1099448706
+    },
+    {
+      "frame": 632,
+      "remaining_bits": 1099396277
+    },
+    {
+      "frame": 633,
+      "remaining_bits": 1099343848
+    },
+    {
+      "frame": 634,
+      "remaining_bits": 1099291419
+    },
+    {
+      "frame": 635,
+      "remaining_bits": 1099238990
+    },
+    {
+      "frame": 636,
+      "remaining_bits": 1099186561
+    },
+    {
+      "frame": 637,
+      "remaining_bits": 1099134132
+    },
+    {
+      "frame": 638,
+      "remaining_bits": 1099081703
+    },
+    {
+      "frame": 639,
+      "remaining_bits": 1099029274
+    },
+    {
+      "frame": 640,
+      "remaining_bits": 1098976845
+    },
+    {
+      "frame": 641,
+      "remaining_bits": 1098924416
+    },
+    {
+      "frame": 642,
+      "remaining_bits": 1098836326
+    },
+    {
+      "frame": 643,
+      "remaining_bits": 1098731468
+    },
+    {
+      "frame": 644,
+      "remaining_bits": 1098626610
+    },
+    {
+      "frame": 645,
+      "remaining_bits": 1098521752
+    },
+    {
+      "frame": 646,
+      "remaining_bits": 1098416894
+    },
+    {
+      "frame": 647,
+      "remaining_bits": 1098312036
+    },
+    {
+      "frame": 648,
+      "remaining_bits": 1098207178
+    },
+    {
+      "frame": 649,
+      "remaining_bits": 1098102320
+    }
+  ],
+  "Battle_effect8_owner0_payload_and_CD_independently_checked": true,
+  "independent_Dijkstra": {
+    "count": 78400,
+    "start_index": 39340,
+    "field24": 72660,
+    "values_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+  },
+  "final_progression": {
+    "level": 6,
+    "xp": 32,
+    "pending_upgrades": 0
+  },
+  "final_gold": 77,
+  "observed_packet_max": 1649,
+  "resource_events": [
+    {
+      "frame": 400,
+      "completed_frame_number": 401,
+      "action_index": 404,
+      "stage_index": 5615,
+      "clock_bits": 1109419612,
+      "clock_seconds": 40.09996032714844,
+      "old_deadline_bits": 1109393408,
+      "next_deadline_bits": 1118450478,
+      "next_deadline_seconds": 85.09996032714844,
+      "kind": 5,
+      "amount": 3146146168,
+      "guid": "17370383913897164969",
+      "counter_before": 168,
+      "counter_after": 169,
+      "rng_before": [
+        439472053,
+        2230120789,
+        2593883740,
+        626745240
+      ],
+      "rng_after": [
+        3299693657,
+        2490327808,
+        486997365,
+        4072383793
+      ],
+      "independent_draws": {
+        "kind": 1,
+        "position": 2,
+        "yaw": 1
+      },
+      "pickup_index": 2,
+      "pickup_capacity": 8,
+      "prior_arrival4_hex": "111f1e42",
+      "arrival_preserved": true,
+      "new56_hex": "00000000111f1e4205000000786186bba9000030230010f1000000000800000000000000302300009abc12c6e52c16c45e9188425c662042",
+      "packet169_hex": "010000000002d9a9302310f105509abc12c6e52c16c45e918842215c5b4001000000011ff33700a9000030230010f121000000302300000000803f671700000000000082637d3fb2e211be010000009abc12c6e52c16c45e918842215c5b402300000005000000",
+      "no_ordinary_unit_spawn_on_witness": true,
+      "expected_known_arrival_bytes_preserved": [
+        17,
+        31,
+        30,
+        66
+      ]
+    }
+  ],
+  "first_clock_crossing40": {
+    "frame": 400,
+    "old_bits": 1109393398,
+    "old_seconds": 39.999961853027344,
+    "new_bits": 1109419612,
+    "new_seconds": 40.09996032714844
+  },
+  "resource_packet_payloads": [
+    {
+      "guid": "17370383913897164969",
+      "payload169_hex": "010000000002d9a9302310f105509abc12c6e52c16c45e918842215c5b4001000000011ff33700a9000030230010f121000000302300000000803f671700000000000082637d3fb2e211be010000009abc12c6e52c16c45e918842215c5b402300000005000000"
+    }
+  ],
+  "resource_entry9006_9007_9008_full169_payloads_compared": true,
+  "all150_payloads_and_declared_GUID_actor169_payloads_compared": true,
+  "all_other_packet_payload_semantics_claimed_compared": false,
+  "pickup_address_proof": {
+    "births": [
+      {
+        "guid": "17370383913846833387",
+        "frame": 600,
+        "stage_index": 8416,
+        "owner_pointer": 21189360,
+        "owner_count": 3,
+        "byte_addend": 176,
+        "original_amount": 21189536,
+        "independent_model_received_original_pointer": false
+      }
+    ],
+    "bound_words": 1,
+    "observations": 689,
+    "all_birth_formulas_and_retained_bytes_verified": true,
+    "original_values_used_as_model_inputs": false,
+    "unsupported_domains": [
+      "simultaneousG2444_resource_andG2448_supply",
+      "mode0_empty_owner"
+    ]
+  },
+  "independent_growth_and_wave_supply_checks": {
+    "initial_banner_subtitle_verified": 1,
+    "growth_events": 5,
+    "wave_events": 1,
+    "wave_units": 8,
+    "wave_draws": 19,
+    "supply_events": 1,
+    "supply_draws": 3
+  },
+  "independent_growth_events": [
+    {
+      "frame": 86,
+      "stage_index": 1213,
+      "level": 2,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 129,
+      "stage_index": 1816,
+      "level": 3,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 213,
+      "stage_index": 2993,
+      "level": 4,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 378,
+      "stage_index": 5304,
+      "level": 5,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    },
+    {
+      "frame": 524,
+      "stage_index": 7349,
+      "level": 6,
+      "text": "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+      "payload150_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    }
+  ],
+  "independent_wave_supply_events": [
+    {
+      "frame": 600,
+      "stage_index": 8416,
+      "old_counter": 226,
+      "new_counter": 235,
+      "old_unit_count": 16,
+      "new_unit_count": 24,
+      "wave_style": 0,
+      "wave_definition": 0,
+      "wave_rng": [
+        861164204,
+        3615226568,
+        1841833356,
+        3262009105
+      ],
+      "final_rng": [
+        1324166826,
+        1156906973,
+        3709864032,
+        744815207
+      ],
+      "wave_independent_checks": {
+        "selection_rejection_draws": 1,
+        "geometry_probes": 8,
+        "independent_geometry_created": 8,
+        "independent_charge_bindings": 0,
+        "wave_draws": 19,
+        "style0": 1
+      },
+      "supply_GUID": "17370383913846833387",
+      "supply_original_amount": 21189536,
+      "new_opcodes": [
+        169,
+        169,
+        169,
+        169,
+        169,
+        169,
+        169,
+        169,
+        150,
+        169
+      ]
+    }
+  ],
+  "component_review_dependencies": [
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/event-wave0135-independent-review-20261101T192947.072998Z/review.json",
+      "sha256": "ac576e5668537ade78db54a2f45abebd1543aa8988c362ab4583f584c586f850",
+      "comparison_sha256": "b02fcbe303c2058fee848c00b47f3389832690138cb6b99ab6386f38adeab555",
+      "scope": "Previously independently reviewed component; not new original cases in this integration audit."
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/supply-kind2-135-independent-review-20261101T193915.933213Z/review.json",
+      "sha256": "bb56ba2213d54912521deb390f131db1205bf9fc7ad82adb51802c6131827c98",
+      "comparison_sha256": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+      "scope": "Previously independently reviewed component; not new original cases in this integration audit."
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/level-banner135-independent-review-20261101T195147.952310Z/review.json",
+      "sha256": "1b3014d52043a70f283709567f36d14b3ee14ae6b1b9621ec802165809e31f13",
+      "comparison_sha256": "4cd02d8adf74d4129e58040b3a81bd2dac1b96e2eed8ff4bb5c1e67a6561a4e3",
+      "scope": "Previously independently reviewed component; not new original cases in this integration audit."
+    }
+  ],
+  "opaque_negative_checks": [
+    "wrong_word",
+    "wrong_GUID_owner",
+    "wrong_producer",
+    "wrong_offset",
+    "wrong_addend",
+    "wrong_stage",
+    "empty_owner",
+    "simultaneous_resource",
+    "missing_declaration",
+    "partial_None_mask",
+    "bound_value_drift"
+  ],
+  "known_byte_and_unknown_mask_descriptor_cache": {
+    "hits": 1459825,
+    "misses": 7095,
+    "maxsize": 16384,
+    "currsize": 7095
+  },
+  "exact_packet_item_validation_cache": {
+    "hits": 6972577,
+    "misses": 1660,
+    "maxsize": 8192,
+    "currsize": 1660
+  },
+  "original_process_terminal": {
+    "pid": 80706,
+    "pgid": 80706,
+    "exit_code": 0,
+    "deadline_exceeded": false,
+    "deadline_seconds": 180,
+    "seconds": 63.704795833997196,
+    "child_cpu_user_seconds": 59.276069,
+    "child_cpu_system_seconds": 8.320611
+  },
+  "original_wait180s_did_not_timeout": true,
+  "original_Node_seconds": 63.704795833997196,
+  "parent_process_seconds_including_recomparison": 199.69058900000528,
+  "actual_Node_seconds_not_inferred_from_parent_total": true,
+  "original_or_model_or_checker_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "scope": "One human warrior seed0/navFalse stationary650 controlled14-tail frames, realphase1/ownedcapacity/None; independent preparsedworld/originalsnapshot/externalclock, not full880/native/wholegame.",
+  "elapsed_seconds": 166.85388587501075,
+  "static_image_reads_sha256": "1b81c01b9706af998d075f86b0216299d0ccfa8b9be0971b550bb49690d255b5",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "review_receipt": "evidence/opening650-independent-review-owned-20261101T201707.724375Z/review/review.json",
+  "review_receipt_sha256": "2800b894f8ebdb7decf5c9cc1443996d8d8d5594c843ff1d949ce5a04c7feeea",
+  "reviewer_source_provenance": "evidence/opening650-independent-review-owned-20261101T201707.724375Z/reviewer-source-provenance.json",
+  "reviewer_source_provenance_sha256": "e01bc50395f483ded9f22f1826e07390da6759c362a88dd131570226d557d0f4",
+  "reviewer_owned_terminal": "evidence/opening650-independent-review-owned-20261101T201707.724375Z/process-terminal.json",
+  "reviewer_owned_terminal_sha256": "59dd6268f34e3d94395eddec35fdd80a2ed232c871862e9306653d4267b542ec",
+  "reviewer_terminal": {
+    "pid": 99094,
+    "pgid": 99094,
+    "exit_code": 0,
+    "deadline_exceeded": false,
+    "seconds": 167.37590587500017,
+    "error": null,
+    "original_or_model_or_checker_executed": false,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "native_Windows_execution": false,
+  "raw_asset_producer_reexecuted_by_reviewer": false,
+  "source_identity_scope": "Exact104 frozen and current files were checked at both boundaries of the successful review; later authorized edits do not retroactively change this observation.",
+  "wire_scope": "Every opcode150 payload in the original cumulative queue is compared. Opcode169 full payloads are compared only for model-declared actor GUIDs (plus every9006/9007/9008 resource GUID); all original queue metadata/backing and deltas are verified, other payload semantics remain observational.",
+  "no_new_original_executions_or_cases": true
+}

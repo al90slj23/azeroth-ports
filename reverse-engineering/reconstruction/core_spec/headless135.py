@@ -48,6 +48,9 @@ from .spawn_schedule135 import FrameInput
 from .unit_records135 import decode_spatial, patch_units
 from .record_cells135 import cells135,u32,u64,put_u32,encode_row,known_bytes
 from .pickup_record_cells135 import pickup_words135,encode_pickup_cells135
+from .opaque_pickup135 import PickupAmountAddress135,pickup_semantics_with_origins135
+from .event_wave135 import CONSTRUCTOR_LAST_EVENT2586,EventWaveInput135,step_event_wave135
+from .spawn_boss135_data import BOSSES
 
 
 class PendingHeadless135(NotImplementedError): pass
@@ -117,6 +120,13 @@ class HeadlessState135:
     special_mode2582: int = 0
     special_members2540: int|None = None
     next_resource2444_bits: int|None = None
+    next_event2424_bits: int|None = None
+    last_event2586: int = CONSTRUCTOR_LAST_EVENT2586
+    next_supply2448_bits: int|None = None
+    event_locale: object|None = None
+    opaque_pickup_amount_origins: tuple = ()
+    banner_locale: str|None = None
+    pending_banner_events: tuple = ()
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
@@ -152,7 +162,7 @@ def from_initial(initial: InitialState135, *, flat_height_bits, zeroed_unit_stor
         tuple(words[o] for o in (2428, 2432, 2436)), initial.region_index, flat_height_bits,
         initial.source_id, initial.initial_scalar_words, initial.game_tag,
         action_sequence1644=2 if abs(f.to_float(f.sub(initial.level.stats.previous_speed_bits, 0x40e00000))) > f.to_float(0x3c23d70a) else 1,
-        next_resource2444_bits=words[2444])
+        next_resource2444_bits=words[2444],next_event2424_bits=words[2424],next_supply2448_bits=words[2448])
 
 
 def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
@@ -164,7 +174,7 @@ def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
         level=replace(state.collection.level, phase2587=1)))
 
 
-def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None):
+def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,event_locale=None,banner_locale=None):
     """Consume the real independent opening; retain all physical owners.
 
     This installs neither a synthetic phase nor an original memory image.
@@ -191,7 +201,8 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None):
         pickup_storage56=storage(o.pickups),pickup_active_count=o.pickups.count,
         window_storage8=storage(o.windows),window_count=o.windows.count,
         boundary_storage8=storage(o.boundaries),boundary_count=o.boundaries.count,
-        special_locale=special_locale,produced_packets=o.packets,next_resource2444_bits=words[2444])
+        special_locale=special_locale,produced_packets=o.packets,next_resource2444_bits=words[2444],
+        next_event2424_bits=words[2424],next_supply2448_bits=words[2448],event_locale=event_locale,banner_locale=banner_locale)
 
 
 def supported(pointer):
@@ -606,6 +617,29 @@ def _tail_phase(state, kind, dt):
     return replace(state, tail=tail)
 
 
+def _event_phase(state):
+    """947 G2424 after ordinary and the still-future G2440 branch."""
+    if state.next_event2424_bits is None:
+        raise PendingHeadless135('Event deadline has no explicit producer')
+    level=state.collection.level
+    if f.to_float(level.stats.now_bits)<f.to_float(state.next_event2424_bits):return state
+    if state.opening_handoff is None:
+        raise PendingHeadless135('Event wave requires actual opening unit/world ownership')
+    from .opening_npc_pickups135 import OpeningVector135
+    vector=OpeningVector135(424,tuple(tuple(cells135(row,424))for row in state.unit_storage),len(state.records))
+    result=step_event_wave135(EventWaveInput135(state.zone,level.stats.now_bits,state.next_event2424_bits,
+        state.last_event2586,state.collection.player_xyz,state.velocity_xy,level.rng_words,
+        state.collection.death.spawn_counter,state.collection.death.message_sequence,vector,state.source_id,
+        level.progression.level,dict(state.initial_scalars)[2516],level.heal_gate387,state.special_mode2582,
+        state.special_members2540,state.tail.field400,state.tail.flag2568,state.special_endless_start404_bits,
+        state.distance_map),state.world,locale=state.event_locale)
+    collection=replace(state.collection,level=replace(level,rng_words=result.rng_words),
+        death=replace(state.collection.death,spawn_counter=result.counter,message_sequence=result.message_sequence))
+    return replace(state,collection=collection,records=tuple(encode_row(row)for row in result.units.storage[:result.units.count]),
+        unit_storage=tuple(encode_row(row)for row in result.units.storage),next_event2424_bits=result.next_event2424_bits,
+        last_event2586=result.last_event2586,produced_packets=state.produced_packets+result.packets)
+
+
 def _resource_phase(state):
     """947 resource slice after ordinary work; other due branches are guarded.
 
@@ -615,7 +649,6 @@ def _resource_phase(state):
     """
     from .resource_spawn135 import ResourceSpawnInput135,step_resource_spawn135
     from .opening_npc_pickups135 import OpeningVector135
-    from .opening_handoff135 import pickup_semantics135
     if state.next_resource2444_bits is None:
         raise PendingHeadless135('Resource deadline has no explicit producer')
     level=state.collection.level
@@ -629,12 +662,64 @@ def _resource_phase(state):
     result=step_resource_spawn135(ResourceSpawnInput135(state.zone,level.stats.now_bits,
         state.next_resource2444_bits,state.collection.player_xyz,state.velocity_xy,
         level.rng_words,state.collection.death.spawn_counter,vector),state.world)
-    records=tuple(pickup_semantics135(row)for row in result.pickups.storage[:result.pickups.count])
+    records=tuple(pickup_semantics_with_origins135(row,state.opaque_pickup_amount_origins)
+        for row in result.pickups.storage[:result.pickups.count])
     collection=replace(state.collection,level=replace(level,rng_words=result.rng_words),
         death=replace(state.collection.death,records=records,capacity=result.pickups.capacity,spawn_counter=result.counter))
     return replace(state,collection=collection,pickup_storage56=tuple(encode_row(row)for row in result.pickups.storage),
         pickup_active_count=result.pickups.count,next_resource2444_bits=result.next_resource2444_bits,
         produced_packets=state.produced_packets+tuple((169,x.payload169_hex)for x in result.creates))
+
+
+def _supply_phase(state):
+    """947 G2448 after resource345; retain address provenance in kind2+12."""
+    from .opening_npc_pickups135 import OpeningVector135
+    from .supply_kind2_135 import SupplyTickInput135,step_supply_kind2_135
+    if state.next_supply2448_bits is None:
+        raise PendingHeadless135('Supply deadline has no explicit producer')
+    level=state.collection.level
+    if f.to_float(level.stats.now_bits)<f.to_float(state.next_supply2448_bits):return state
+    if state.opening_handoff is None or state.special_mode2582!=0:
+        raise PendingHeadless135('Supply composition currently requires actual local-mode opening ownership')
+    vector=OpeningVector135(56,tuple(tuple(cells135(row,56))for row in state.pickup_storage56),state.pickup_active_count)
+    if vector.count!=len(state.collection.death.records)or vector.capacity!=state.collection.death.capacity:
+        raise PendingHeadless135('Supply pickup physical/semantic ownership differs')
+    result=step_supply_kind2_135(SupplyTickInput135(state.zone,level.stats.now_bits,state.next_supply2448_bits,
+        state.collection.player_xyz,state.velocity_xy,level.rng_words,state.collection.death.spawn_counter,vector,
+        mode=0,party_count2140=0,excluded2548=0),state.world)
+    origins={origin.guid:origin for origin in state.opaque_pickup_amount_origins}
+    for item in result.opaque_word_provenance:
+        if item['owner_symbol']!='pickup56_owner_before2448'or item['offset']!=12 or item['bytes']!=4:
+            raise PendingHeadless135('Unrestored supply opaque-word producer')
+        guid=int(item['guid']);origins[guid]=PickupAmountAddress135(guid,1872,item['byte_delta'])
+    active={u64(row,16,'Supply active GUID')for row in result.pickups.storage[:result.pickups.count]}
+    origins=tuple(origin for guid,origin in origins.items()if guid in active)
+    records=tuple(pickup_semantics_with_origins135(row,origins)for row in result.pickups.storage[:result.pickups.count])
+    collection=replace(state.collection,level=replace(level,rng_words=result.rng_words),
+        death=replace(state.collection.death,records=records,capacity=result.pickups.capacity,spawn_counter=result.counter))
+    return replace(state,collection=collection,pickup_storage56=tuple(encode_row(row)for row in result.pickups.storage),
+        pickup_active_count=result.pickups.count,next_supply2448_bits=result.next_supply2448_bits,
+        opaque_pickup_amount_origins=origins,produced_packets=state.produced_packets+result.packets)
+
+
+def _growth_banners(state, events):
+    """Emit each4630 iteration's presentation from its actual old/new stats.
+
+    Numeric-only callers without a selected locale retain semantic events;
+    the complete banner-comparison lane must provide that context explicitly.
+    """
+    if not events:return state
+    if state.banner_locale is None:
+        return replace(state,pending_banner_events=state.pending_banner_events+tuple(events))
+    from .level_banner135 import LevelBannerInput135,level_banners135
+    kinds=tuple(definition(entry.record.definition_pointer).execution_kind
+        for entry in state.collection.level.choice_inputs.owned)
+    packets=[]
+    for event in events:
+        result=level_banners135(LevelBannerInput135(event['level_before'],event['level_after'],
+            event['derived_before'],event['derived_after'],kinds,state.banner_locale))
+        packets.extend(result.packets)
+    return replace(state,produced_packets=state.produced_packets+tuple(packets))
 
 
 def step_frame(state, dt_bits):
@@ -650,8 +735,13 @@ def step_frame(state, dt_bits):
         return state, (), 'pending_selected_ability'
     now = f.add(level.stats.now_bits, dt_bits)
     words = dict(state.initial_scalars)
-    if any(f.to_float(now) >= f.to_float(words[o]) for o in (2424, 2440, 2448)):
+    if f.to_float(now)>=f.to_float(words[2440]):
         return state, (), 'pending_due_event'
+    next_boss=words[2456]
+    if next_boss<5 and f.to_float(f.div(now,0x42700000))>=f.to_float(BOSSES[state.zone][next_boss][5]):
+        return state, (), 'pending_scheduled_boss'
+    if next_boss>=5 and state.tail.flag2568 and f.to_float(now)>=f.to_float(words[2460]):
+        return state, (), 'pending_endless_boss'
     state = replace(state, collection=replace(state.collection,
         level=replace(level, stats=replace(level.stats, now_bits=now))), frames=state.frames + 1)
     prepared = prepare_player_update(state.collection.level, state.live_records, state.unspecified_live_words,
@@ -674,7 +764,8 @@ def step_frame(state, dt_bits):
         motion = moving_sequence_delta(state.records, now, auxiliary_motions=(), claims=())
         result = replace(result, state=replace(result.state, death=replace(result.state.death,
             message_sequence=(result.state.death.message_sequence + motion.count) & f.MASK)))
-    state = _sync_pickup_owner(replace(state, collection=result.state),pre_compaction_records=result.pre_compaction_records); stages.append(('collect', state))
+    state = _sync_pickup_owner(replace(state, collection=result.state),pre_compaction_records=result.pre_compaction_records)
+    state = _growth_banners(state,result.growth_events); stages.append(('collect', state))
     state = _tail_phase(state, 'claims', dt_bits); stages.append(('claims', state))
     if state.tail.gate2579:
         raise PendingHeadless135('Alternate2579 spawn/special gate requires continuation')
@@ -692,7 +783,9 @@ def step_frame(state, dt_bits):
         unit_storage=_store_prefix(state.unit_storage, spawned.unit_records,stride=424,allow_growth=state.allow_unknown_storage_growth),
         budget_bits=spawned.budget_bits, velocity_xy=spawned.velocity_xy,
         previous_player_xyz=state.collection.player_xyz if level.stats.flag2574==0 else state.previous_player_xyz)
+    state=_event_phase(state)
     state=_resource_phase(state)
+    state=_supply_phase(state)
     stages.append(('spawn', state))
     state = _tail_phase(state, 'special', dt_bits); stages.append(('special', state))
     state = _tail_phase(state, 'terminal', dt_bits); stages.append(('terminal', state))
@@ -725,8 +818,9 @@ def select(state, index):
             auxiliary_motions=(), claims=())
         collection = replace(collection, death=replace(collection.death,
             message_sequence=(collection.death.message_sequence + motion.count) & f.MASK))
-    return _sync_pickup_owner(replace(state, collection=collection, game_tag=selected.game_tag,
-        live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)), selections=state.selections + 1),removal_order='forward'), result.status
+    state = _sync_pickup_owner(replace(state, collection=collection, game_tag=selected.game_tag,
+        live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)), selections=state.selections + 1),removal_order='forward')
+    return _growth_banners(state,result.growth_events),result.status
 
 
 def projection(state):
@@ -741,6 +835,7 @@ def projection(state):
     result.update(records=list(state.records), racial_record_hex=state.racial.to_bytes().hex(),
         owned_records_hex=[x.record.to_bytes().hex() for x in state.collection.level.choice_inputs.owned],
         timer1628_bits=state.melee_timer_bits, budget_bits=state.budget_bits,next_resource2444_bits=state.next_resource2444_bits,
+        next_event2424_bits=state.next_event2424_bits,last_event2586=state.last_event2586,next_supply2448_bits=state.next_supply2448_bits,
         velocity_xy=list(state.velocity_xy), previous_player_xyz=list(state.previous_player_xyz), now_bits=state.collection.level.stats.now_bits,
         unit_storage_sha256=storage_sha(state.unit_storage),
         area_records=list(state.areas), area_capacity=len(state.area_storage),

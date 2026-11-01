@@ -1,0 +1,2568 @@
+{
+  "status": "passed_read_only_frozen_wave25_review",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison_sha256": "b02fcbe303c2058fee848c00b47f3389832690138cb6b99ab6386f38adeab555",
+  "cases": 25,
+  "full947_calls": 25,
+  "original_executed_by_review": false,
+  "production_model_executed_by_review": false,
+  "checker_executed_by_review": false,
+  "frozen_sources_verified": 97,
+  "frozen_production_sources": 87,
+  "local_source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_upgrade135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/ai135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_lifecycle135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_lifecycle135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_lifecycle135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_motion135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_motion135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/area_effects135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/battle_shout135.py",
+      "reconstruction/core_spec/player_update135.py"
+    ],
+    [
+      "reconstruction/core_spec/battle_shout135.py",
+      "reconstruction/core_spec/racial_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_catalogue135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_catalogue135.py",
+      "reconstruction/core_spec/cast_catalogue135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/cleave135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cleave135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cleave135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/cleave135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/cleave135.py",
+      "reconstruction/core_spec/owned_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/combat134.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/currency134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/currency134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/currency134.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/death_loot134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/death_loot134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death_loot134.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/death_loot134.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/candidates135.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/currency134.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/death_loot134.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/pickup_entity134.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/pickups134.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickup135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats134.py",
+      "reconstruction/core_spec/progression.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats135.py",
+      "reconstruction/core_spec/derived_stats134.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/effect_system135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_scaling.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/event_wave135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_systems135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_systems135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_systems135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/ai_world135.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/special2376_spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/guardian_ai135.py",
+      "reconstruction/core_spec/special2376_spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/ai_lifecycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/ai_motion135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/ai_world135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/area_effects135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/battle_shout135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/cast_catalogue135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/cleave135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/currency134.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/death_loot134.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/death_pickup135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/effect_system135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/frame_systems135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/guardian_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/headless_tail135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/initial_state135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/initial_state135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/movement_pause135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/opening_handoff135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/ordinary_placement135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/owned_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/pickup_record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/pickups134.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/player_update135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/racial_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/resource_spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/selection_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/spawn_frame_motion135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/spawn_schedule135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/special2376_135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/special2376_notify135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/special2376_spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/thunder_clap135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless135.py",
+      "reconstruction/core_spec/unit_records135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless_tail135.py",
+      "reconstruction/core_spec/frame_systems135.py"
+    ],
+    [
+      "reconstruction/core_spec/headless_tail135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/incoming134.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/candidates135.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/initial_state135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/candidates135.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/movement_pause135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/movement_pause135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/movement_pause135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening135.py",
+      "reconstruction/core_spec/initial_state135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening135.py",
+      "reconstruction/core_spec/initial_state135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening135.py",
+      "reconstruction/core_spec/profile_companions135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_handoff135.py",
+      "reconstruction/core_spec/currency134.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_handoff135.py",
+      "reconstruction/core_spec/death_pickup135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_handoff135.py",
+      "reconstruction/core_spec/opening135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_handoff135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_handoff135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_handoff135.py",
+      "reconstruction/core_spec/pickups134.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_npc_pickups135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/pickups134.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_placement135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/owned_prelude135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/pickup_entity134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/pickup_entity134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/pickup_entity134.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/pickup_record_cells135.py",
+      "reconstruction/core_spec/pickups134.py"
+    ],
+    [
+      "reconstruction/core_spec/pickup_record_cells135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/pickups134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/pickups134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/pickups134.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/pickups134.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/profile_companions135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/racial_cast135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/resource_spawn135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/ability_state135.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/ability_upgrade135.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/candidates135.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/currency134.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/pickup_record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/pickups134.py"
+    ],
+    [
+      "reconstruction/core_spec/selection_cycle135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/enemy_scaling.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn135.py",
+      "reconstruction/core_spec/spawn_math135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn_math135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn_position_motion135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/spawn_schedule135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_frame_motion135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/spawn_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_position_motion135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/spawn_math135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/spawn_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule135.py",
+      "reconstruction/core_spec/spawn_schedule135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_notify135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_notify135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_notify135.py",
+      "reconstruction/core_spec/special2376_135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/spawn_boss135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/spawn_math135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/special2376_135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/special2376_notify135.py"
+    ],
+    [
+      "reconstruction/core_spec/special2376_spawn135.py",
+      "reconstruction/core_spec/special2376_spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap135.py",
+      "reconstruction/core_spec/owned_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/unit_records135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/unit_records135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/unit_records135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/ai_world135_inputs.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/build_event_wave135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_event_wave135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/build_full135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/event_wave135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/opening135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/opening_handoff135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/opening_npc_pickups135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/profile_companions135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/spawn135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/spawn_frame_motion135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "reconstruction/core_spec/spawn_schedule135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "scripts/ai_world135_inputs.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "scripts/build_event_wave135_oracle.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "scripts/prepare_event_wave135_prefix.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_event_wave135.py",
+      "scripts/trace_event_wave135.py"
+    ],
+    [
+      "scripts/prepare_event_wave135_prefix.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/prepare_event_wave135_prefix.py",
+      "reconstruction/core_spec/headless135.py"
+    ],
+    [
+      "scripts/prepare_event_wave135_prefix.py",
+      "reconstruction/core_spec/opening135.py"
+    ],
+    [
+      "scripts/prepare_event_wave135_prefix.py",
+      "reconstruction/core_spec/opening_handoff135.py"
+    ],
+    [
+      "scripts/prepare_event_wave135_prefix.py",
+      "reconstruction/core_spec/profile_companions135.py"
+    ],
+    [
+      "scripts/prepare_event_wave135_prefix.py",
+      "reconstruction/core_spec/special2376_notify135.py"
+    ],
+    [
+      "scripts/run_event_wave135_oracle.mjs",
+      "scripts/ai_world135_packing.mjs"
+    ],
+    [
+      "scripts/trace_event_wave135.py",
+      "scripts/build_full135_oracle.py"
+    ]
+  ],
+  "current_source_drift": [
+    "reconstruction/core_spec/headless135.py"
+  ],
+  "current_wave_core_sha256": "9c7c9bec1757df7717a9cbcf5b1be3b452fd1e1663978f22480b6f683314d0b6",
+  "all_nonexport_bytes_equal": true,
+  "counts": {
+    "equal_known_values": 87237,
+    "explicit_unknown_cells": 62137,
+    "unknown_nonzero_observed": 55567,
+    "packets": 194,
+    "packet_bytes": 31639
+  },
+  "semantic": {
+    "unchanged_game_bytes_outside_declared_mask": 62875,
+    "selection_rejection_draws": 69,
+    "geometry_probes": 157,
+    "independent_geometry_created": 145,
+    "independent_charge_bindings": 14,
+    "wave_draws": 433,
+    "style0": 10,
+    "full169_packet_bindings": 169,
+    "full150_packet_bindings": 25,
+    "style3": 10,
+    "style2": 3,
+    "style1": 2,
+    "guardian_full_payload_bindings": 4
+  },
+  "static_byte_proofs": {
+    "5456120:8": {
+      "memory_address": 5456120,
+      "bytes": 8,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3347,
+          "memory_start": 5456120,
+          "memory_end_exclusive": 5456128,
+          "original_file_start": 82110487,
+          "original_file_end_exclusive": 82110495
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "00d012c600401ec4",
+      "reconstructed_sha256": "cebfc7aa45e72319ef564f75221c55bf0c6356207704b6652483032b3af8a9ea"
+    },
+    "5456136:4": {
+      "memory_address": 5456136,
+      "bytes": 4,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3347,
+          "memory_start": 5456136,
+          "memory_end_exclusive": 5456140,
+          "original_file_start": 82110503,
+          "original_file_end_exclusive": 82110507
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "0000f042",
+      "reconstructed_sha256": "814e223b91cb65a962256b15f351f22ac7bcbb3c2b82d2a4b3ecf174db8de764"
+    },
+    "5415572:72": {
+      "memory_address": 5415572,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2882,
+          "memory_start": 5415588,
+          "memory_end_exclusive": 5415636,
+          "original_file_start": 82077183,
+          "original_file_end_exclusive": 82077231
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5415572,
+          5415588
+        ],
+        [
+          5415636,
+          5415644
+        ]
+      ],
+      "reconstructed_hex": "00000000000000000000000000000000eca152000d000000580200001a0000006666663f070000000000c04100004040cdcccc3f0000a040010000000000803f0000000000000000",
+      "reconstructed_sha256": "8109473b92431c97868c5386ea1cb2581f75e0c2ce2a497ade7ddbf05fd6b269"
+    },
+    "5415404:13": {
+      "memory_address": 5415404,
+      "bytes": 13,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415404,
+          "memory_end_exclusive": 5415417,
+          "original_file_start": 82077010,
+          "original_file_end_exclusive": 82077023
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "4b6f626f6c64205665726d696e",
+      "reconstructed_sha256": "2412cfe5c044a44a80a6b9843ab5e493ee72e5cddeb04780ffbc7fb048ec01cf"
+    },
+    "5415644:72": {
+      "memory_address": 5415644,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2883,
+          "memory_start": 5415660,
+          "memory_end_exclusive": 5415712,
+          "original_file_start": 82077239,
+          "original_file_end_exclusive": 82077291
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5415644,
+          5415660
+        ],
+        [
+          5415712,
+          5415716
+        ]
+      ],
+      "reconstructed_hex": "00000000000000000000000000000000f9a152000a00000059020000a50000003333333f0100000000009041000040406666a63fcdccec40010000000000803f0000003f00000000",
+      "reconstructed_sha256": "6ced79fdad349be205b31f895aefd0cda69187ce340d1c1efa2154ea9198453f"
+    },
+    "5415417:10": {
+      "memory_address": 5415417,
+      "bytes": 10,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415417,
+          "memory_end_exclusive": 5415427,
+          "original_file_start": 82077023,
+          "original_file_end_exclusive": 82077033
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "596f756e6720576f6c66",
+      "reconstructed_sha256": "ef5b8c5deaa96f10eddd150370f77632cd59afecba1eff4cb3bf1b82a7336f4c"
+    },
+    "5415716:72": {
+      "memory_address": 5415716,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2884,
+          "memory_start": 5415732,
+          "memory_end_exclusive": 5415788,
+          "original_file_start": 82077299,
+          "original_file_end_exclusive": 82077355
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5415716,
+          5415732
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000003a25200130000005a0200001f0000000000803f070000000000f04100008040cdcccc3f3333b340010000000000803f9a99993f00000000",
+      "reconstructed_sha256": "6eff17e31db65c852f2918603c798a249af7578df20145a2e5f89c7fc06aa7f0"
+    },
+    "5415427:19": {
+      "memory_address": 5415427,
+      "bytes": 19,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415427,
+          "memory_end_exclusive": 5415446,
+          "original_file_start": 82077033,
+          "original_file_end_exclusive": 82077052
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "4d75726c6f632053747265616d72756e6e6572",
+      "reconstructed_sha256": "d79df0c6d19ed95b2c83a789f08831c8ab7f7fc3be1a4a21e37f1a452ffeb4d3"
+    },
+    "5415788:72": {
+      "memory_address": 5415788,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2884,
+          "memory_start": 5415788,
+          "memory_end_exclusive": 5415856,
+          "original_file_start": 82077355,
+          "original_file_end_exclusive": 82077423
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5415856,
+          5415860
+        ]
+      ],
+      "reconstructed_hex": "0100000085000000000090416666e63f16a25200100000005b020000a30000000000803f070000000000f0410000c040cdcc4c400000a04002000000000000400000004000000000",
+      "reconstructed_sha256": "398ca8d892090d2e2d1b796cd3b1b9235ed579f97ea447a26b75034c885e674f"
+    },
+    "5415446:16": {
+      "memory_address": 5415446,
+      "bytes": 16,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415446,
+          "memory_end_exclusive": 5415462,
+          "original_file_start": 82077052,
+          "original_file_end_exclusive": 82077068
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "4b6f626f6c642047656f6d616e636572",
+      "reconstructed_sha256": "2b1762ee3eafeb64a8c13026c2c444e6eed110262a958abae9b97ac2d6b28cb3"
+    },
+    "5415860:72": {
+      "memory_address": 5415860,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2885,
+          "memory_start": 5415876,
+          "memory_end_exclusive": 5415928,
+          "original_file_start": 82077431,
+          "original_file_end_exclusive": 82077483
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5415860,
+          5415876
+        ],
+        [
+          5415928,
+          5415932
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000026a252000b0000005c020000130900000000803f07000000000030420000c0406666e63fcdccac40020000000000c03f0000404000000000",
+      "reconstructed_sha256": "db1877ab5bdc482d11b2f888728592fb691b44bea0e5b248261cc57da622bdfd"
+    },
+    "5415462:11": {
+      "memory_address": 5415462,
+      "bytes": 11,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415462,
+          "memory_end_exclusive": 5415473,
+          "original_file_start": 82077068,
+          "original_file_end_exclusive": 82077079
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "4465666961732054687567",
+      "reconstructed_sha256": "a23fb9f559b89ea6cdcc67e482cfa15242e26964a7df3ee74cfd8d2f1b66b16e"
+    },
+    "5415932:72": {
+      "memory_address": 5415932,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2886,
+          "memory_start": 5415948,
+          "memory_end_exclusive": 5416000,
+          "original_file_start": 82077491,
+          "original_file_end_exclusive": 82077543
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5415932,
+          5415948
+        ],
+        [
+          5416000,
+          5416004
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000031a252000e0000005d020000af000000cdcc8c3f070000000000f04200001041cdcc0c403333934004000000000040400000904000000000",
+      "reconstructed_sha256": "6466e46ab67b0a0cd6fb6f0c6c319578362b0b8ece5fc80e65cecdc61ad5c9a6"
+    },
+    "5415473:14": {
+      "memory_address": 5415473,
+      "bytes": 14,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415473,
+          "memory_end_exclusive": 5415487,
+          "original_file_start": 82077079,
+          "original_file_end_exclusive": 82077093
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "5269766572706177204272757465",
+      "reconstructed_sha256": "d6c1fb9452b5ddd90016c18f3f21735c3d9121284ad00466d2803307cf50a1cd"
+    },
+    "5416004:72": {
+      "memory_address": 5416004,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2887,
+          "memory_start": 5416020,
+          "memory_end_exclusive": 5416076,
+          "original_file_start": 82077551,
+          "original_file_end_exclusive": 82077607
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5416004,
+          5416020
+        ]
+      ],
+      "reconstructed_hex": "000000000000000000000000000000003fa25200070000005e020000840200006666a63f01000000000048420000e0406666a63f3333f340020000000000c03f0000c04000000000",
+      "reconstructed_sha256": "95da6ea190894ffba79d7926566c6ecab4a1f47d933d7a3fe466e7dc7db7dc30"
+    },
+    "5415487:7": {
+      "memory_address": 5415487,
+      "bytes": 7,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415487,
+          "memory_end_exclusive": 5415494,
+          "original_file_start": 82077093,
+          "original_file_end_exclusive": 82077100
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "50726f776c6572",
+      "reconstructed_sha256": "40a685abc281fc6338ab6088e6df7672758863f87f76d3df2b84677929e7af1b"
+    },
+    "5416076:72": {
+      "memory_address": 5416076,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2887,
+          "memory_start": 5416076,
+          "memory_end_exclusive": 5416144,
+          "original_file_start": 82077607,
+          "original_file_end_exclusive": 82077675
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5416144,
+          5416148
+        ]
+      ],
+      "reconstructed_hex": "010000007400000000009041cdcccc3f46a25200130000005f0200000b0900000000803f07000000000020420000e040cdcc4c400000a04003000000000000400000f04000000000",
+      "reconstructed_sha256": "60100ecf91e70bfb6ea01f64a54cffbb0bf559f5913e3efaa53c2f563cc34ab4"
+    },
+    "5415494:19": {
+      "memory_address": 5415494,
+      "bytes": 19,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415494,
+          "memory_end_exclusive": 5415513,
+          "original_file_start": 82077100,
+          "original_file_end_exclusive": 82077119
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "44656669617320526f6775652057697a617264",
+      "reconstructed_sha256": "3f421bfa7f4b9e90d3e2991b098dcaf12775c906d9de6865e3714f9ded0db8b9"
+    },
+    "5416148:72": {
+      "memory_address": 5416148,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2888,
+          "memory_start": 5416164,
+          "memory_end_exclusive": 5416216,
+          "original_file_start": 82077683,
+          "original_file_end_exclusive": 82077735
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5416148,
+          5416164
+        ],
+        [
+          5416216,
+          5416220
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000059a252000f00000060020000140900000000a03f0700000000002a4300004041cdcc0c409a99994004000000000040400000104100000000",
+      "reconstructed_sha256": "374b6c42db05ed2bd3ada80f26846ed147118f54b0b6b27e36abc84220dbd76e"
+    },
+    "5415513:15": {
+      "memory_address": 5415513,
+      "bytes": 15,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415513,
+          "memory_end_exclusive": 5415528,
+          "original_file_start": 82077119,
+          "original_file_end_exclusive": 82077134
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "44656669617320456e666f72636572",
+      "reconstructed_sha256": "86b0d936fd2afbbae7008712154ea434d102129fe93aa0349494a44c64d229d9"
+    },
+    "5416220:72": {
+      "memory_address": 5416220,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2889,
+          "memory_start": 5416236,
+          "memory_end_exclusive": 5416289,
+          "original_file_start": 82077743,
+          "original_file_end_exclusive": 82077796
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5416220,
+          5416236
+        ],
+        [
+          5416289,
+          5416292
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000068a252001100000061020000a300000085eb014007000000000016440000904100000040cdccac4019000000000040410000604001000000",
+      "reconstructed_sha256": "c97418aaf11ff1321714ec15370bebcc18a2ebf587104ab1cc4ea0a13f3cde7b"
+    },
+    "5415528:17": {
+      "memory_address": 5415528,
+      "bytes": 17,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415528,
+          "memory_end_exclusive": 5415545,
+          "original_file_start": 82077134,
+          "original_file_end_exclusive": 82077151
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "4b6f626f6c64205461736b6d6173746572",
+      "reconstructed_sha256": "606651e2ad79e81a56901b5c7343eaf4a6776e34a25a3d766b152a543bb4cb3d"
+    },
+    "5416292:72": {
+      "memory_address": 5416292,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2890,
+          "memory_start": 5416308,
+          "memory_end_exclusive": 5416361,
+          "original_file_start": 82077804,
+          "original_file_end_exclusive": 82077857
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5416292,
+          5416308
+        ],
+        [
+          5416361,
+          5416364
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000079a252000f00000062020000f6000000295ccf3f01000000000048440000b041cdcccc3f3333d3401c000000000050410000004101000000",
+      "reconstructed_sha256": "cf2347ab261617f6a21e5e15e227006610a338626716950b93955ddf7f0eb8a4"
+    },
+    "5415545:15": {
+      "memory_address": 5415545,
+      "bytes": 15,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415545,
+          "memory_end_exclusive": 5415560,
+          "original_file_start": 82077151,
+          "original_file_end_exclusive": 82077166
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "477275666620537769667462697465",
+      "reconstructed_sha256": "acf6a0102be20e2ac7b164a713ca35e27e094f896e1bb087856fd65f89dc0631"
+    },
+    "5416364:72": {
+      "memory_address": 5416364,
+      "bytes": 72,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2891,
+          "memory_start": 5416380,
+          "memory_end_exclusive": 5416436,
+          "original_file_start": 82077865,
+          "original_file_end_exclusive": 82077921
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5416364,
+          5416380
+        ]
+      ],
+      "reconstructed_hex": "0000000000000000000000000000000088a252000900000063020000790100007b143e400100000000007a440000d0419a9919400000a0401e000000000060410000504101000000",
+      "reconstructed_sha256": "f78dab0686a457b072522aa974445b1e3586ab87faf48482d2df4423faac7995"
+    },
+    "5415560:9": {
+      "memory_address": 5415560,
+      "bytes": 9,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 2881,
+          "memory_start": 5415560,
+          "memory_end_exclusive": 5415569,
+          "original_file_start": 82077166,
+          "original_file_end_exclusive": 82077175
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "42656c6c7967727562",
+      "reconstructed_sha256": "811f46122abc71264bdbb837b6fd92c960994c95f77e110b1342b3dca19a7382"
+    },
+    "5477460:132": {
+      "memory_address": 5477460,
+      "bytes": 132,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3570,
+          "memory_start": 5477460,
+          "memory_end_exclusive": 5477461,
+          "original_file_start": 82130205,
+          "original_file_end_exclusive": 82130206
+        },
+        {
+          "segment": 3571,
+          "memory_start": 5477497,
+          "memory_end_exclusive": 5477528,
+          "original_file_start": 82130214,
+          "original_file_end_exclusive": 82130245
+        },
+        {
+          "segment": 3572,
+          "memory_start": 5477541,
+          "memory_end_exclusive": 5477549,
+          "original_file_start": 82130253,
+          "original_file_end_exclusive": 82130261
+        },
+        {
+          "segment": 3573,
+          "memory_start": 5477585,
+          "memory_end_exclusive": 5477592,
+          "original_file_start": 82130269,
+          "original_file_end_exclusive": 82130276
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5477461,
+          5477497
+        ],
+        [
+          5477528,
+          5477541
+        ],
+        [
+          5477549,
+          5477585
+        ]
+      ],
+      "reconstructed_hex": "64000000000000000000000000000000000000000000000000000000000000000000000000070000000010418500000003000000000060400000e040cdcccc3f9a99993f000000000000000000000000000a0000000020410400000000000000000000000000000000000000000000000000000000000000000000000005000000007041",
+      "reconstructed_sha256": "6e50feac5bb2e6e68f543550563f822eaa32c4b56912c72f1db50ead4a887ed0"
+    },
+    "5484048:28": {
+      "memory_address": 5484048,
+      "bytes": 28,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3699,
+          "memory_start": 5484048,
+          "memory_end_exclusive": 5484076,
+          "original_file_start": 82134832,
+          "original_file_end_exclusive": 82134860
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "54945300030000000400000000000000040000000000000061020000",
+      "reconstructed_sha256": "25da78ece467d7a80045bfe45c00022c4f3a1989a111230125a2040beefba63c"
+    },
+    "5477592:132": {
+      "memory_address": 5477592,
+      "bytes": 132,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3573,
+          "memory_start": 5477592,
+          "memory_end_exclusive": 5477604,
+          "original_file_start": 82130276,
+          "original_file_end_exclusive": 82130288
+        },
+        {
+          "segment": 3574,
+          "memory_start": 5477629,
+          "memory_end_exclusive": 5477656,
+          "original_file_start": 82130296,
+          "original_file_end_exclusive": 82130323
+        },
+        {
+          "segment": 3575,
+          "memory_start": 5477673,
+          "memory_end_exclusive": 5477681,
+          "original_file_start": 82130331,
+          "original_file_end_exclusive": 82130339
+        },
+        {
+          "segment": 3576,
+          "memory_start": 5477717,
+          "memory_end_exclusive": 5477724,
+          "original_file_start": 82130347,
+          "original_file_end_exclusive": 82130354
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5477604,
+          5477629
+        ],
+        [
+          5477656,
+          5477673
+        ],
+        [
+          5477681,
+          5477717
+        ]
+      ],
+      "reconstructed_hex": "eccb520002000000cdcccc3f0000000000000000000000000000000000000000000000000012000000003041b43b00000000e0400000b4420000803f3333b33f00000000000000000000000000000000000800000000e0400300000000000000000000000000000000000000000000000000000000000000000000000005000000008041",
+      "reconstructed_sha256": "e4ce6cc38a6c4214eb960d7f546227407b58b96da7aec9c5d9e9c85eadef90d8"
+    },
+    "5484076:28": {
+      "memory_address": 5484076,
+      "bytes": 28,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3699,
+          "memory_start": 5484076,
+          "memory_end_exclusive": 5484104,
+          "original_file_start": 82134860,
+          "original_file_end_exclusive": 82134888
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "d8945300030000000400000000000000040000000000000062020000",
+      "reconstructed_sha256": "859a623d77f0ad22c36e3018d0a57809d128f4959fbf3082937c0512d56ca18e"
+    },
+    "5477724:132": {
+      "memory_address": 5477724,
+      "bytes": 132,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3576,
+          "memory_start": 5477724,
+          "memory_end_exclusive": 5477740,
+          "original_file_start": 82130354,
+          "original_file_end_exclusive": 82130370
+        },
+        {
+          "segment": 3577,
+          "memory_start": 5477761,
+          "memory_end_exclusive": 5477813,
+          "original_file_start": 82130378,
+          "original_file_end_exclusive": 82130430
+        },
+        {
+          "segment": 3578,
+          "memory_start": 5477849,
+          "memory_end_exclusive": 5477856,
+          "original_file_start": 82130438,
+          "original_file_end_exclusive": 82130445
+        }
+      ],
+      "implicit_initial_zero_intervals": [
+        [
+          5477740,
+          5477761
+        ],
+        [
+          5477813,
+          5477849
+        ]
+      ],
+      "reconstructed_hex": "455000000000e0406666a63f00004041000000000000000000000000000000000000000000130000000010417c190000000000000000a04000000000cdcccc3f9a99993f0000c0409a99993e00000000000b0000000040416400000000000000000000000000000000000000000000000000000000000000000000000007000000001041",
+      "reconstructed_sha256": "97efe94fab0eff80115003a72509fca9787489fc98cb41628c9775a03574fc43"
+    },
+    "5484104:28": {
+      "memory_address": 5484104,
+      "bytes": 28,
+      "initial_memory_bytes": 14548992,
+      "active_segment_overlaps_in_module_order": [
+        {
+          "segment": 3699,
+          "memory_start": 5484104,
+          "memory_end_exclusive": 5484132,
+          "original_file_start": 82134888,
+          "original_file_end_exclusive": 82134916
+        }
+      ],
+      "implicit_initial_zero_intervals": [],
+      "reconstructed_hex": "5c955300030000000400000000000000f89553000100000063020000",
+      "reconstructed_sha256": "e300746dfac245bf555122eed3cdced73a271cfd74386a9a3076073e5010becd"
+    }
+  },
+  "audited_artifact_sha256": {
+    "event-input.json": "a7e4437b70d47bbda107d3ce3697e87ba7f4d8eb598f3272aacb9f8a0b7f9396",
+    "event-expected.json": "3771b0610581b1867d0fb80420a2de2502b5887894b5227b342dbc54518a39cc",
+    "event-labels.json": "4ee643b7eca2b16265b6d45f57fa190f6de76d2bef4171d97181b5f3c91d320b",
+    "event-results.jsonl": "56c7aea2101cbb17ad6cfe91a813f05aca06107fd19b41a66e00567836a1b8dd",
+    "event-prepared.json": "cc71e26157ba63fcd940d18e0565945284283aabf493ef679f1e5cca579c39e4",
+    "event-process-terminal.json": "fca24aa0b608711bd4b27fe2efdd89cefca630ff32e0ff7d85a1d7812e12642c",
+    "event-owned-process.json": "dc12ad9ec46d816108ff121e426bfda5b7dfdad0df0e89ce9c90a441a688c2c7",
+    "event-wave135-runtime.json": "b8c3170f4ea329f8374d5b487d5f27ece77b86c2303bf21c9ed7f2731a3e49e4",
+    "event-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "event-wave135-comparison.json": "b02fcbe303c2058fee848c00b47f3389832690138cb6b99ab6386f38adeab555",
+    "manifest.json": "6f5a3b11f6cff3585f1ce681250a0e71752cc25df2e562bbf257f26c57813eaf",
+    "event-wave135-static.json": "9864df03e77770afbcc9b54b11a4bc9d265e04722148cfd2a9de8787dfe30933"
+  },
+  "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+  "world_inputs": {
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+  },
+  "original_process": {
+    "pid": 65024,
+    "pgid": 65024,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 7.0744458330009365,
+    "launcher_error": null
+  },
+  "current_pid_missing_probe": true,
+  "current_pgid_missing_probe": true,
+  "reviewer_source_sha256": {
+    "scripts/review_event_wave135.py": "ae407088cf2e6e28340536fe76cb5d38387bd4d9536bf2f5e096811e037500eb",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_resource_spawn135.py": "dc096f04085bbf96d016ebf0db0ada4cef62c7d1ed12b874071204fd00f13446",
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87"
+  },
+  "seconds": 1.7122684170026332,
+  "limitations": [
+    "Ordinary prefix draw/position metadata and independently produced600-frame context are explicit dependencies, not re-executed or newly validated full601",
+    "All25 inputs zone0,last2586=255,mode0; repeat-event exclusion, otherzones, noeligible/cheapfallback, noncanonicalnav and cap saturation not new dynamic acceptance",
+    "Original snapshot supplies initialized locale/allocator context; query-world124 manually packed independent451 assets; no independent fullWorld/App constructor",
+    "Defaultcase2448 intentionally future1000;0full880/0native/0fullgames; historical counters not added"
+  ],
+  "evidence": "evidence/event-wave0135-independent-review-20261101T192947.072998Z/review.json",
+  "review_sha256": "ac576e5668537ade78db54a2f45abebd1543aa8988c362ab4583f584c586f850",
+  "review_process": {
+    "pid": 22599,
+    "pgid": 22599,
+    "exit_code": 0,
+    "seconds": 1.927535666996846,
+    "deadline_seconds": 120,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "error": null,
+    "reviewer_sources_unchanged": true
+  },
+  "review_script": "scripts/review_event_wave135.py",
+  "review_script_sha256": "ae407088cf2e6e28340536fe76cb5d38387bd4d9536bf2f5e096811e037500eb",
+  "coverage_notes": [
+    "All157 independent reference world probes accepted their first candidate; no new rejected-height/nav/path or anchor/radius fallback dynamic coverage",
+    "World terrain/nav/secondary files are supplied independent query inputs; reviewer implements arithmetic/filters without importing resource_spec/core_spec",
+    "Ordinary prefix draw/request metadata and distance-map typed inputs are explicitly reused; reviewer does not run their production code or claim a new full600/601 replay",
+    "25all zone0/previous255/mode0; otherzone/previous-event/noeligible/cheapfallback/cap-saturation/party branches not dynamically accepted by these cases",
+    "Complete raw output/runtime/terminal now explicitly bound by this read-only audit; original comparison receipt not overwritten"
+  ],
+  "first_review_attempt": {
+    "directory": "evidence/event-wave0135-independent-review-20261101T192800.777173Z",
+    "status": "reviewer_count_assertion_failed",
+    "reason": "Reviewer originally omitted the25 verified case-id leaves in known-value tally; all per-case semantic checks had completed, but no passed receipt was issued; fixed and all checks rerun",
+    "new_original_cases": 0
+  }
+}

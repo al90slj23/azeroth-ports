@@ -1,0 +1,161 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "receipt": "reverse-engineering/evidence/level-banner135-independent-review-20261101T195147.952310Z/review.json",
+  "receipt_sha256": "1b3014d52043a70f283709567f36d14b3ee14ae6b1b9621ec802165809e31f13",
+  "reviewer_script": "reverse-engineering/scripts/review_level_banner135.py",
+  "reviewer_script_sha256": "3b4fad6e916dbc7633fe22d9d1d12e7104baef48b5d0b7a423e6f371f5df802d",
+  "reviewer_source_provenance": "reverse-engineering/evidence/level-banner135-independent-review-20261101T195147.952310Z/reviewer-source-provenance.json",
+  "reviewer_source_provenance_sha256": "2a2fa4ac69593bbfa09e4d27d55ef887f22944d2e026a567f4ccaf98a5098add",
+  "owned_process_terminal": "reverse-engineering/evidence/level-banner135-review-owned-20261101T195147.751309Z/process-terminal.json",
+  "owned_process_terminal_sha256": "009b5a1d27435dbd7d10184c5b8f9fc0786756e94edc572a2ec95980f12484c6",
+  "independent_reviewer_not_component_author": true,
+  "source_window": "All20 current and frozen SHAs matched at reviewer start/end. Root may resume integration after completion; this is not a perpetual-current claim.",
+  "review": {
+    "status": "passed_scoped_read_only_review",
+    "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/level-banner0135-oracle-20261101T194550.118916Z/comparison.json",
+    "comparison_sha256": "4cd02d8adf74d4129e58040b3a81bd2dac1b96e2eed8ff4bb5c1e67a6561a4e3",
+    "reviewer_script_sha256": "3b4fad6e916dbc7633fe22d9d1d12e7104baef48b5d0b7a423e6f371f5df802d",
+    "source_files": 20,
+    "production_files": 12,
+    "local_source_edges": 53,
+    "import_time_hash_readset_frozen": true,
+    "nonexecuted_old_JS_hash_inputs": [
+      "scripts/full135_host.mjs",
+      "scripts/run_level_cycle135_oracle.mjs"
+    ],
+    "source_current_and_frozen_SHA_verified_at_both_boundaries": true,
+    "all_original_nonexport_sections_and_callees_unchanged": true,
+    "static_proofs_sha256": "ad17a0a361548368c362b66512d9ea176aae2e0c3eb50baea1c91157f5d24dd6",
+    "cases": 93,
+    "entry_calls": 110,
+    "comparison_counts": {
+      "strict_known_values": 5696,
+      "entry_calls": 110,
+      "cumulative150_packets": 186,
+      "cumulative150_bytes": 16528
+    },
+    "independent_semantic_checks": {
+      "distinct_growth_texts": [
+        "You have gained +3% damage, +10 maximum health and +0.08 health per second.",
+        "You have gained +3% damage, +9 maximum health and +0.08 health per second.",
+        "你获得了+3%伤害、+10最大生命值和每秒+0.08生命值。",
+        "你获得了+3%伤害、+9最大生命值和每秒+0.08生命值。"
+      ],
+      "DOT_transition_levels": [
+        15,
+        30,
+        45
+      ],
+      "multilevel_calls": 14,
+      "no_level_calls": 4,
+      "new_packets": 172,
+      "growth_events": 146,
+      "locale_initialized_cases": 92,
+      "locale_en_cases": 47,
+      "DOT_events": 26,
+      "locale_zh_cases": 46,
+      "max120_calls": 2,
+      "locale_uninitialized_cases": 1,
+      "nonzero_choice_flags_still_growth_calls": 12,
+      "eligible_choice_calls": 2,
+      "choice_rng_draws_sequence_verified": 12
+    },
+    "independent_empty_source_numeric_replay": "All23 derived words from original static class/race data, XP wrap/thresholds/120cap, HP/heal/aux/speed and known keyed state recomputed. Candidates remain strict frozen expected/original metadata; eligible choice RNG sequence additionally checked.",
+    "independent_decimal_formatting": "Exact finite binary32 -> Decimal ties-to-even signed fixed0/0/2; checked actual146 transitions, not all Rust formatting edge cases.",
+    "no_None_or_wildcard_in_projected_expected": true,
+    "full_Game8192_and_non150_opcode_scope": "Captured observations; all Game writes, non150payloads, allocation and packet owner identities are not declared predicted.",
+    "locale": "Explicit en0/zh11 original static dictionaries and selector inputs, cold original Once0 ->3 on first growth; no Once/dictionary/snapshot injection.",
+    "historical18source_batch_superseded_not_added": {
+      "old_comparison": "evidence/level-banner0135-oracle-20261101T194337.291466Z/comparison.json",
+      "old_sha256": "b6131fff8dc9d32499f4bac7c2f623f072860e980e8cc62494a760fd9000c7a0",
+      "final_comparison": "evidence/level-banner0135-oracle-20261101T194550.118916Z/comparison.json",
+      "final_sha256": "4cd02d8adf74d4129e58040b3a81bd2dac1b96e2eed8ff4bb5c1e67a6561a4e3",
+      "reason": "Old fixture helper hashes its SOURCE_FILES at import time; two nonexecuted JavaScript files were read but absent from the18-source imported-code closure. Final20-source closure freezes both and asserts helper readset containment.",
+      "added_source_files": [
+        "scripts/full135_host.mjs",
+        "scripts/run_level_cycle135_oracle.mjs"
+      ],
+      "byte_identical": {
+        "input.jsonl": true,
+        "expected.json": true,
+        "labels.json": true,
+        "level-banner135-static.json": true,
+        "manifest.json": true,
+        "level-banner135-exports.wasm": true,
+        "results.jsonl": true
+      },
+      "production_model_runner_trace_unchanged": true,
+      "old_receipt_modified": false,
+      "cases_not_added": true
+    },
+    "process": {
+      "pid": 53737,
+      "pgid": 53737,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 4.285881040996173,
+      "error": null
+    },
+    "actual_host_calls": 0,
+    "stack_checks": 281,
+    "original_snapshot_inputs": false,
+    "model_original_checker_executed_by_reviewer": false,
+    "new_original_cases": 0,
+    "full880_frames": 0,
+    "native_executions": 0,
+    "all_artifact_sha256": {
+      "validator-terminal.json": "7e1cfa8c2cce4bec0dcad84f90dfefa033cbade51581ae7a733947a6fbe79845",
+      "level-banner-32246.wat": "ebace349367fcd1425e6cf467aed5d6deff0756a3a270114c09062e3390dd0bb",
+      "labels.json": "075066767fd5054196c6dfca5e03e34f43f7fbffa508418ce390a83b8c2e5c44",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "validation.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "level-banner135-runtime.json": "67fdfa3b9d515ca489512609c97451e339c0d4bd3a62eef7a862a766db72864d",
+      "expected.json": "7273b77c8fc9a24c3c36c926c8dd9de41eb13c7f2f9122d155bff89444f20b34",
+      "level-banner-8628.wat": "2d5a6fc7e40c6c11aedb550a9a145899dadbd68fd78fe18bfa724e5de6fe1c96",
+      "owned-process.json": "e3d8dde829e275bb21773406c9a36633695ba4ac10a730ce86cb6ff916bce5d6",
+      "level-banner-28964.wat": "9a2262c69eb5c80cd70ddc702407545ebd741d1e4ffb1e7bf0de1be5a5269a70",
+      "validator-owned.json": "45606e0f238419ae398fe80eed7318b5fe5db9ce31840b44f94e03725c813a19",
+      "prepared.json": "b6b91ec880f966f121fdcacee0fdb55d0ce9dedeccf1b166eec6b533fda6dfb6",
+      "validation.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "comparison.json": "4cd02d8adf74d4129e58040b3a81bd2dac1b96e2eed8ff4bb5c1e67a6561a4e3",
+      "level-banner135-static.json": "0ff787671902504fccab42fbdb07e46840f0539f7eee37f05a0d5e7733671101",
+      "level-banner135-exports.wasm": "c7a4869b20be4800334ed616f3b5dc78a2eab2e1a6b3e68b8c4512f24dd6c319",
+      "results.jsonl": "4eb0321904be172ba1375e2b58a38245d7f0c75ae772a3c98870baa3fabb05a7",
+      "input.jsonl": "ee56cb7dc637a66a7f73d5b2d67836a78cacededd2f3c87a02a3bc815e8777bf",
+      "process-terminal.json": "e0cdde494c9f8d020adfbc89c6fc2a5c37fb2912242c4adaab21f90f3745eca4",
+      "manifest.json": "8204b6429964d12f67850286e7390fb2e92f3ea8455c062769c40688698903ee",
+      "level-banner-1512.wat": "87ad87a9401496cfc87afc20bddc328796b75100f4a079b7a24ee55b8bf92dc3",
+      "level-banner-82070.wat": "9d514ba329a3efa8e6b0acafa5e9a38fa538d19b76b31a3e6e3cfedfbe238cd2",
+      "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "level-banner-4630.wat": "2bf5be8331ebb2d8cd75448daf220d211eeeb76750072b900e86f90d8e29c03c",
+      "source-closure-correction.json": "74b15b1bf5dffd7f5072b12351b6e96177a18f68166a902dcab670e35ee93454",
+      "level-banner-19964.wat": "22fb2fa849a083a594ee7a7447a117024d01906e494b19647dc891d23a656f9e"
+    },
+    "pending": [
+      "Other locales",
+      "Nonfinite Rustfloat formatting",
+      "Complete packet owner allocation identity and all Game writes",
+      "Main-loop integration/fullgame/native"
+    ],
+    "elapsed_seconds": 2.215078374996665
+  },
+  "all_opcode_cumulative_observations": {
+    "150": 186
+  },
+  "reviewer_assertion_refinements": [
+    {
+      "owned_directory": "reverse-engineering/evidence/level-banner135-review-owned-20261101T195115.729585Z",
+      "exit_code": 1,
+      "reason": "Static guard corrected: selector14384328 is read by19964, rather than82070."
+    },
+    {
+      "owned_directory": "reverse-engineering/evidence/level-banner135-review-owned-20261101T195130.345503Z",
+      "exit_code": 1,
+      "reason": "Expected-first source order assertion narrowed to main(); earlier textual Popen is WASM validator in builder, not original execution."
+    }
+  ],
+  "no_source_or_original_artifact_changed": true,
+  "new_original_cases": 0,
+  "model_original_checker_executed_by_reviewer": false
+}

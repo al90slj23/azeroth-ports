@@ -59,6 +59,7 @@ class SelectionCycleResult:
     awarded_xp: int=0
     next_kind: int|None=None
     pending: tuple=()
+    growth_events: tuple=()
 
 
 def _stat_rebuild(level):
@@ -111,7 +112,7 @@ def select_card(state,index,*,additional_modifiers):
         if record.kind==0 and (record.marker!=0 or f.to_float(distance)<=f.to_float(radius)):
             base=(base+record.amount)&f.MASK
         else:remaining.append(record)
-    award=0;xp_queue=state.xp_queue;xp_capacity=state.xp_queue_capacity
+    award=0;xp_queue=state.xp_queue;xp_capacity=state.xp_queue_capacity;growth_events=()
     if base:
         if currency.mode:
             if len(xp_queue)==xp_capacity:xp_capacity=max(4,2*xp_capacity)
@@ -122,7 +123,7 @@ def select_card(state,index,*,additional_modifiers):
         if f.is_nan(rounded)or not f.to_float(rounded)>1:rounded=0x3f800000
         award=trunc_sat_u32(rounded)
         # Phase2 prevents the XP consumer's own final choice generation.
-        level=gain_xp(level,award).state
+        gained=gain_xp(level,award);level=gained.state;growth_events=gained.growth_events
     next_kind=1 if state.pending_kind1 else 2 if state.pending_kind2 else None
     if next_kind is None and level.progression.pending_upgrades and (level.gate2572!=1 or level.flags2573&1):next_kind=0
     pending_effects=('Physical message/queue/tree allocation and source producers remain unresolved',
@@ -152,7 +153,7 @@ def select_card(state,index,*,additional_modifiers):
     updated=replace(state,level=level,pickups=tuple(remaining),currency=currency,
                     game_tag=0 if next_kind is None else state.game_tag,
                     xp_queue=xp_queue,xp_queue_capacity=xp_capacity)
-    return SelectionCycleResult(updated,True,status,base,award,next_kind,pending_effects)
+    return SelectionCycleResult(updated,True,status,base,award,next_kind,pending_effects,growth_events=growth_events)
 
 
 def projection(state):

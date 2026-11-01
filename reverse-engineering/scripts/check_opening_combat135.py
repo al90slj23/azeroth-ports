@@ -8,7 +8,7 @@ explicit external scheduler. This is not a full880 or fresh App/VM bootstrap.
 from pathlib import Path
 from dataclasses import asdict
 from functools import lru_cache
-import argparse,gzip,hashlib,json,os,re,signal,struct,subprocess,sys,time
+import argparse,gzip,hashlib,json,os,re,resource,signal,struct,subprocess,sys,time
 
 sys.dont_write_bytecode=True
 from build_full135_oracle import ROOT,SOURCE,SOURCE_SHA
@@ -26,10 +26,33 @@ from core_spec.record_cells135 import cells135,UnknownRecordRead135
 from core_spec.special2376_notify135 import SpecialLocale2376_135,ELWYNN_ENGLISH_NAMES
 from core_spec.initial_state135_data import ZONE_ENTRIES
 from core_spec.pickup_record_cells135 import pickup_words135
+from core_spec.event_wave135 import EventWaveLocale135
+from opening_pickup_provenance135 import PickupAddressVerifier135
 
 
 @lru_cache(maxsize=16)
 def map_sha(values):return hashlib.sha256(b''.join(struct.pack('<H',x)for x in values)).hexdigest()
+
+
+def create_guid169(payload):
+    raw=bytes.fromhex(payload)
+    if len(raw)<7 or raw[:5]!=b'\x01\x00\x00\x00\x00'or raw[5]not in(2,3):return None
+    mask=raw[6];offset=7;guid=0
+    for i in range(8):
+        if mask>>i&1:
+            if offset>=len(raw):raise ValueError('Truncated create GUID')
+            guid|=raw[offset]<<(8*i);offset+=1
+    return guid
+
+
+def explicit_create_packets169(packets,known_guids=None):
+    result=[]
+    for opcode,payload in packets:
+        if opcode!=169:continue
+        guid=create_guid169(payload)
+        if guid is not None and(known_guids is None or guid in known_guids):
+            result.append(dict(guid=str(guid),payload169_hex=payload))
+    return result
 
 
 def resource_create_packets169(packets):
@@ -41,13 +64,8 @@ def resource_create_packets169(packets):
     result=[]
     for opcode,payload in packets:
         if opcode!=169:continue
-        raw=bytes.fromhex(payload)
-        if len(raw)<7 or raw[:6]!=b'\x01\x00\x00\x00\x00\x02':continue
-        mask=raw[6];offset=7;guid=0
-        for i in range(8):
-            if mask>>i&1:
-                if offset>=len(raw):raise ValueError('Truncated resource create GUID')
-                guid|=raw[offset]<<(8*i);offset+=1
+        guid=create_guid169(payload)
+        if guid is None:continue
         if guid>>48==0xf110 and (guid>>24)&0xffffff in(9006,9007,9008):
             result.append(dict(guid=str(guid),payload169_hex=payload))
     return result
@@ -56,7 +74,7 @@ def resource_create_packets169(packets):
 def wanted(state):
     level=state.collection.level;tail=state.tail;path=state.distance_map
     if (state.effect_records120 or state.delayed_records56 or state.queued_hits
-            or tail.active84_count or level.sources.timed_records):
+            or tail.active84_count or level.sources.timed_records or state.pending_banner_events):
         raise PendingHeadless135('Nonempty unmodeled payload vector is outside this comparison domain')
     def backing(rows,size):return[cells135(row,size)for row in rows]
     live=backing(state.live_records,32)
@@ -91,7 +109,11 @@ def wanted(state):
         candidates=[asdict(c)for c in level.candidates],selection_kind2585=level.selection_kind2585,generation_counter2400=level.generation_counter2400,
         field1092=state.special_field1092,mode2582=state.special_mode2582,
         next_resource2444_bits=state.next_resource2444_bits,
+        next_event2424_bits=state.next_event2424_bits,last_event2586=state.last_event2586,
+        next_supply2448_bits=state.next_supply2448_bits,
         resource_create_packets169=resource_create_packets169(state.produced_packets),
+        explicit_actor_creates169=explicit_create_packets169(state.produced_packets),
+        banner150_packets=[payload for opcode,payload in state.produced_packets if opcode==150],
         guardian_cooldowns=[dict(unit_index=x.unit_index,guid=str(x.guid),capacity=x.capacity,timers_bits=list(x.timers_bits),
             ability_pointer=x.ability_pointer,header_pointer=x.header_pointer,ability_records44_hex=list(x.ability_records44_hex),
             header28_hex=x.header28_hex)for x in state.guardian_cooldowns],
@@ -102,7 +124,8 @@ def wanted(state):
         tail_flags=dict(field400=tail.field400,protection2576=level.flags2576,flag2568=tail.flag2568,gate2579=tail.gate2579),
         distance_map=None if path is None else dict(count=len(path.values_u16),start_index=path.start_index,field24=path.field24,values_sha256=map_sha(path.values_u16)),
         distance_map_updated_at_bits=state.distance_map_updated_at_bits)
-    return dict(projection=projection,vectors=vectors)
+    return dict(projection=projection,vectors=vectors,
+        opaque_pickup_amount_origins=[asdict(origin)for origin in state.opaque_pickup_amount_origins])
 
 
 def original_view(raw,expected):
@@ -111,6 +134,10 @@ def original_view(raw,expected):
         return value
     raw_projection=dict(raw['projection'])
     raw_projection['resource_create_packets169']=resource_create_packets169((p['opcode'],p['payload_hex'])for p in raw['packets']['active'])
+    guids={int(item['guid'])for item in expected['projection']['explicit_actor_creates169']}
+    raw_projection['explicit_actor_creates169']=explicit_create_packets169(
+        ((p['opcode'],p['payload_hex'])for p in raw['packets']['active']),guids)
+    raw_projection['banner150_packets']=[p['payload_hex']for p in raw['packets']['active']if p['opcode']==150]
     projection=subset(expected['projection'],raw_projection);vectors={}
     for name,want in expected['vectors'].items():
         value=raw['vectors'][name];v={}
@@ -122,23 +149,28 @@ def original_view(raw,expected):
     return dict(projection=projection,vectors=vectors)
 
 
-def compare(want,actual,path,errors,counts):
+def compare(want,actual,path,errors,counts,*,opaque_pickup_indices=()):
     if want is None and re.search(r'\.vectors\.[^.]+\.(storage|records)\[\d+\]\[\d+\]$',path):
         assert type(actual)is int and 0<=actual<=255;counts['declared_unknown_cells']+=1;return
     if want is None and re.search(r'\.projection\.pickup_words\[\d+\]\[1\]$',path):
         assert type(actual)is int and 0<=actual<=f.MASK;counts['unwritten_pickup_arrivals']+=1;return
+    if want is None:
+        match=re.search(r'\.projection\.pickup_words\[(\d+)\]\[3\]$',path)
+        if match and int(match.group(1))in opaque_pickup_indices:
+            assert type(actual)is int and 0<=actual<=f.MASK
+            counts['verified_opaque_pickup_amounts']+=1;return
     if type(want)is not type(actual):
         if len(errors)<80:errors.append(dict(field=path,expected=want,actual=actual))
         counts['differences']+=1;return
     if isinstance(want,dict):
         if set(want)!=set(actual):
             errors.append(dict(field=path,expected_keys=list(want),actual_keys=list(actual)));counts['differences']+=1;return
-        for k,v in want.items():compare(v,actual[k],path+'.'+str(k),errors,counts)
+        for k,v in want.items():compare(v,actual[k],path+'.'+str(k),errors,counts,opaque_pickup_indices=opaque_pickup_indices)
     elif isinstance(want,list):
         if len(want)!=len(actual):
             if len(errors)<80:errors.append(dict(field=path,expected_length=len(want),actual_length=len(actual)))
             counts['differences']+=1
-        for i,(a,b)in enumerate(zip(want,actual)):compare(a,b,path+f'[{i}]',errors,counts)
+        for i,(a,b)in enumerate(zip(want,actual)):compare(a,b,path+f'[{i}]',errors,counts,opaque_pickup_indices=opaque_pickup_indices)
     else:
         counts['compared_leaves']+=1
         if want!=actual:
@@ -149,8 +181,9 @@ def compare(want,actual,path,errors,counts):
 def corpus(world,seed,frames,dt,expected_path):
     value=EmptyOpeningInput135(1,1,0,seed,42)
     handoff=initialize_absent_companion_handoff(value,world,companion_profile=EmptyCompanionProfile135(()),
-        title_utf8=b'Elwynn Forest',subtitle_utf8=b'')
-    state=from_opening_handoff(handoff,navigation_enabled=False,special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES))
+        title_utf8=b'Elwynn Forest',subtitle_utf8='The Defias Uprising — survive the onslaught!'.encode('utf8'))
+    state=from_opening_handoff(handoff,navigation_enabled=False,special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),
+        event_locale=EventWaveLocale135(0),banner_locale='en')
     actions=[];boundary='frame_budget';stage_count=0;expected_bytes=0
     with gzip.open(expected_path,'wb',compresslevel=1)as stream:
         def emit(value):
@@ -166,14 +199,14 @@ def corpus(world,seed,frames,dt,expected_path):
             except (NotImplementedError,UnknownRecordRead135)as error:
                 boundary=type(error).__name__+': '+str(error);break
             if status!='ordered_frame_projection':boundary=status;break
-            if len(actions)>=600:raise ValueError('Controlled action budget exceeded')
+            if len(actions)>=700:raise ValueError('Controlled action budget exceeded')
             action_index=len(actions);actions.append(dict(kind='controlled_tail_frame',dt_bits=dt));state=new
             for kind,snapshot in stages:
                 emit(dict(record_kind='stage',stage_index=stage_count,action_index=action_index,kind=kind,expected=wanted(snapshot)))
                 stage_count+=1
             choices=0
             while state.collection.level.phase2587==2:
-                if choices>=64 or len(actions)>=600:raise ValueError('Controlled selection/action budget exceeded')
+                if choices>=64 or len(actions)>=700:raise ValueError('Controlled selection/action budget exceeded')
                 cards=state.collection.level.candidates;index=next((i for i,c in enumerate(cards)if c.variant=='upgrade'),0)
                 selected,status=select(state,index)
                 if status not in('running','choice_regenerated'):
@@ -195,12 +228,12 @@ def main():
     parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int)
     parser.add_argument('--capture-format',choices=('gzip','cas'),default='gzip');args=parser.parse_args()
     frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
-    if not 1<=frames<=500:raise ValueError('Bounded controlled frame corpus required')
+    if not 1<=frames<=650:raise ValueError('Bounded controlled frame corpus required')
     cas_files=('scripts/run_opening_combat135_cas_oracle.mjs','scripts/opening_combat135_cas.mjs','scripts/opening_combat135_cas.py')if args.capture_format=='cas'else()
     files=tuple(dict.fromkeys(('scripts/check_opening_combat135.py','scripts/production_closure135.py',
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
         'scripts/build_world_snapshot135_oracle.py','scripts/build_full135_oracle.py','scripts/build_upgrade134_oracle.py',
-        'scripts/trace_coop.py','scripts/wasm_index.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
+        'scripts/trace_coop.py','scripts/wasm_index.py','scripts/opening_pickup_provenance135.py')+cas_files+production_sources135(ROOT,'core_spec.headless135','core_spec.opening_handoff135')))
     before={p:sha(ROOT/p)for p in files};world,world_receipt,world_inputs=load_independent_world(DEFAULT_WORLD)
     world_inputs.update({str(path):sha(path)for path in(DEFAULT_WORLD/'receipt.json',DEFAULT_WORLD/'inputs.json')})
     out,manifest=build_opening_combat135();source=out/'source-snapshot'
@@ -220,26 +253,35 @@ def main():
     runner='run_opening_combat135_cas_oracle.mjs'if args.capture_format=='cas'else'run_opening_combat135_oracle.mjs'
     results=out/('results.cas.jsonl.gz'if args.capture_format=='cas'else'results.jsonl.gz');stderr=out/'stderr.log'
     command=[str(NODE),'--max-old-space-size=512','--wasm-max-mem-pages=4096',str(ROOT/'scripts'/runner),str(out),str(cfg)]
-    began=time.monotonic()
+    began=time.monotonic();deadline_seconds=180 if args.capture_format=='cas'else 60
+    child_usage_before=resource.getrusage(resource.RUSAGE_CHILDREN)
     deadline_exceeded=False
     with results.open('wb')as stdout,stderr.open('wb')as err:
         child=subprocess.Popen(command,stdout=stdout,stderr=err,start_new_session=True,env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
-        (out/'owned-process.json').write_text(json.dumps(dict(pid=child.pid,pgid=child.pid,command=command,deadline_seconds=60),indent=2)+'\n')
+        (out/'owned-process.json').write_text(json.dumps(dict(pid=child.pid,pgid=child.pid,command=command,deadline_seconds=deadline_seconds),indent=2)+'\n')
         try:
-            try:child.wait(timeout=60)
-            except subprocess.TimeoutExpired:deadline_exceeded=True
+            while child.poll()is None:
+                remaining=deadline_seconds-(time.monotonic()-began)
+                if remaining<=0:deadline_exceeded=True;break
+                try:child.wait(timeout=min(30,remaining))
+                except subprocess.TimeoutExpired:continue
         finally:
             if child.poll()is None:
                 os.killpg(child.pid,signal.SIGTERM)
                 try:child.wait(timeout=3)
                 except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.wait()
-            (out/'process-terminal.json').write_text(json.dumps(dict(pid=child.pid,pgid=child.pid,exit_code=child.returncode,deadline_exceeded=deadline_exceeded),indent=2)+'\n')
+            child_seconds=time.monotonic()-began
+            child_usage_after=resource.getrusage(resource.RUSAGE_CHILDREN)
+            (out/'process-terminal.json').write_text(json.dumps(dict(pid=child.pid,pgid=child.pid,exit_code=child.returncode,
+                deadline_exceeded=deadline_exceeded,deadline_seconds=deadline_seconds,seconds=child_seconds,
+                child_cpu_user_seconds=child_usage_after.ru_utime-child_usage_before.ru_utime,
+                child_cpu_system_seconds=child_usage_after.ru_stime-child_usage_before.ru_stime),indent=2)+'\n')
     def missing(group=False):
         try:(os.killpg if group else os.kill)(child.pid,0)
         except ProcessLookupError:return True
         return False
     terminal=dict(pid_missing=missing(),pgid_missing=missing(True));errors=[];counts=Counter();observed_stages=0
-    raw_digest=hashlib.sha256();raw_bytes=0;max_line=0;cas_decoder=None
+    raw_digest=hashlib.sha256();raw_bytes=0;max_line=0;cas_decoder=None;pickup_address_verifier=PickupAddressVerifier135()
     if child.returncode==0:
         record_counts=Counter()
         assert results.stat().st_size<=256*1024*1024
@@ -261,7 +303,9 @@ def main():
                         for key in('action_index','kind'):compare(wanted_stage[key],raw[key],f'stage[{i}].{key}',errors,counts)
                         observed_stages+=1
                     path='opening'if kind=='opening'else f'stage[{observed_stages-1}]'
-                    compare(wanted_stage['expected'],original_view(raw,wanted_stage['expected']),path,errors,counts)
+                    expected=wanted_stage['expected'];opaque_indices=pickup_address_verifier.observe(raw,expected)
+                    comparable={key:value for key,value in expected.items()if key!='opaque_pickup_amount_origins'}
+                    compare(comparable,original_view(raw,expected),path,errors,counts,opaque_pickup_indices=opaque_indices)
                 elif kind=='case_end':
                     assert raw['boundary']is None and raw['host_calls']==[]
                     assert raw['stage_count']==row['stage_count']
@@ -299,8 +343,10 @@ def main():
         source_files=len(files),source_sha256_before=before,source_sha256_after=after,
         inputs_sha256=sha(inputs),expectations_sha256=sha(expectations),fixtures_sha256=sha(fixtures),original_results_sha256=sha(results),runtime=runtime,
         capture_format=args.capture_format,capture_cas_verification=cas_verification,
+        pickup_address_proof=pickup_address_verifier.report(),
         original_uncompressed_bytes=raw_bytes,maximum_original_record_bytes=max_line,expected_uncompressed_bytes=row['expected_uncompressed_bytes'],
-        process=dict(command=command,pid=child.pid,pgid=child.pid,exit_code=child.returncode,seconds=time.monotonic()-began,deadline_seconds=60,**terminal),
+        process=dict(command=command,pid=child.pid,pgid=child.pid,exit_code=child.returncode,seconds=child_seconds,
+            total_seconds_including_verification=time.monotonic()-began,deadline_seconds=deadline_seconds,**terminal),
         model_expected_before_original=True,original_input_contains_no_expectations=True,
         world_input=dict(kind='independently_produced_preparsed_world_query_artifacts',receipt=str(DEFAULT_WORLD/'receipt.json'),receipt_sha256=sha(DEFAULT_WORLD/'receipt.json'),artifacts=world_inputs),
         original_context=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,externref_VM_restoration=False,fresh_bootstraps=0),

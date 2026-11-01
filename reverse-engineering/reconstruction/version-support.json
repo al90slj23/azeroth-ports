@@ -1,18 +1,37 @@
 {
   "active_target": {
-    "version": "0.137.0",
-    "web_build": "d171b8f9f",
-    "web_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
-    "official_native_sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8",
-    "status": "partial_nonlethal_damage913_and_resource1420_component_differentials_with_scoped_reviews_passed_not_fullgame",
+    "version": "0.138.0",
+    "web_build": "382771e6c",
+    "web_sha256": "c60161d991ce97a9a4a9d3866b5e629d9e38f0fab8364c051faae8d01945b11b",
+    "official_native_sha256": "eb5fd1c1b96e6180fcf5f3d685d90a61471af28d22e5f060c02b7b7663fbf79e",
+    "official_native_sha256_scope": "Saved138original bytes rehashed; publisher size/SHA matched and actual build pointer/length proven without target execution.",
+    "official_native_bytes": 147995648,
+    "status": "original_identity_and_full_static_profile_verified_runtime_unvalidated",
     "role": "functional_latest_target",
-    "latest_official_manifest_check_utc": "2026-11-01T18:15:28.650406+00:00",
-    "latest_official_manifest_check": "../evidence/official-latest-goalcheck-20261101T181528.650406Z/receipt.json",
-    "version_policy": "Align to verified official lateststable with frozen version/build/SHA per experiment; do not transfer135 validation or replace running inputs.",
+    "latest_official_manifest_check_utc": "2026-11-01T20:12:57.990618+00:00",
+    "latest_official_manifest_check": "../evidence/official-latest-goalcheck-20261101T201255.744327Z/receipt.json",
+    "latest_official_manifest_check_sha256": "10bc9fa5adcdd805b83f7f040fe342becc44c6535521834ff3e7345741c6901a",
+    "version_policy": "Freeze every experiment by actual version/build/SHA. Existing137 reviewed domains remain137; no135/137 acceptance transfers to138.",
+    "original_acquisition_complete": true,
     "installation_packages_updated": false,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
-    "complete_games": 0
+    "complete_games": 0,
+    "actual_build_length": 9,
+    "latest_version_state_report": "../reports/2026-11-02-latest0138-state.json",
+    "latest_version_state_report_sha256": "768d85afb1a72c3c003b8af2bfccd74c6bf33ccec23ffdb64188f701e3f5042b",
+    "acquisition_receipt": "../originals/official-release-20261101T201508.341687Z/release-acquisition.json",
+    "acquisition_receipt_sha256": "a4d5af63a32fb2956f3c3206026b95e2c0a895a0c787c86966e29dcd5edaa0a0",
+    "build_identity_sidecar": "../evidence/branding0138-identity-20261101T202528.536773Z/identity.json",
+    "build_identity_sidecar_sha256": "da6db208afd9669c8600205643ab6061d6c2d075c086c0759090838b053cef5d",
+    "analysis_profile": "../reports/2026-11-02-wasm0138-profile.json",
+    "analysis_profile_sha256": "3a9273500e050730dce956829befe0ef5aae8259c227946be147cc4fceb78d4e",
+    "full_static_profile_produced": true,
+    "defined_functions": 175576,
+    "function_imports": 878,
+    "new_runtime_cases": 0,
+    "new_independent_model_cases": 0,
+    "new_full880_frames": 0
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -439,6 +458,42 @@
         "full frame scheduling"
       ],
       "report": "../reports/2026-11-01-level-cycle0134.json"
+    },
+    {
+      "module": "core_spec.combat137",
+      "status": "scoped_component_differential_with_independent_review_passed",
+      "validated_version": "0.137.0",
+      "validated_web_build": "d171b8f9f",
+      "canonical_domain_registry": "verified_domains_0137",
+      "report": "../reports/2026-11-02-combat0137.json",
+      "independent_review": "../reports/2026-11-02-combat0137-independent-review.json",
+      "scope": "Nonlethal/noproc damage913only, full432B knownfixture, notdeath/fullgame.",
+      "registry_alias_counts_not_additive": true,
+      "does_not_validate_active_target_0138": true
+    },
+    {
+      "module": "core_spec.resource_pickup137",
+      "status": "scoped_component_differential_with_independent_review_passed",
+      "validated_version": "0.137.0",
+      "validated_web_build": "d171b8f9f",
+      "canonical_domain_registry": "verified_domains_0137",
+      "report": "../reports/2026-11-02-resource-pickup0137.json",
+      "independent_review": "../reports/2026-11-02-resource-pickup0137-independent-review.json",
+      "scope": "1420resource kinds3..5, explicitGame8192/Rc124 and controlledflat/primary or135asset-query input, full56B/169/RNG/counter/Gguard; not137assetboot/full947/native/fullgame.",
+      "registry_alias_counts_not_additive": true,
+      "does_not_validate_active_target_0138": true
+    },
+    {
+      "module": "core_spec.resource_consumer137",
+      "status": "scoped_component_differential_and_independent_read_only_review_passed",
+      "validated_version": "0.137.0",
+      "validated_web_build": "d171b8f9f",
+      "canonical_domain_registry": "verified_domains_0137",
+      "report": "../reports/2026-11-02-resource-consumer0137.json",
+      "independent_review": "../reports/2026-11-02-resource-consumer0137-independent-review.json",
+      "scope": "Full10291/2862 resource345 projection with empty external sources, manual Game/backing; exact live32/physical56B/170/HP/23derived/three known keyed fields. UI/aura/other wire are raw observations, marker2 failures excluded; no137constructor/fullgame/native.",
+      "registry_alias_counts_not_additive": true,
+      "does_not_validate_active_target_0138": true
     }
   ],
   "other_modules": [
@@ -491,9 +546,9 @@
     "version": "0.134.0",
     "web_build": "983346a7",
     "web_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
-    "role": "fixed134regression_reference; fixed135 legacyentries and recentdomains are separately scoped; functional137 acceptance is in verified_domains_0137."
+    "role": "fixed134regression_reference; fixed135 components and fixed137 verified_domains_0137 remain separately scoped. Functional138 original identity and full static profile verified; runtime acceptance pending."
   },
-  "current_verified_domains_scope": "Legacy current_verified_domains remains fixed134. Legacy latest_verified_domains remains fixed135 components, not floatinglatest. New135 combinations/components are separately registered in recent_verified_domains_0135;137 separately in verified_domains_0137. No historical counts reassigned.",
+  "current_verified_domains_scope": "All historical entries retain their explicit validated_version/build. New137 entries here are aliases of canonical verified_domains_0137, with no duplicate case totals. Fixed135 combinations/components remain separately in recent_verified_domains_0135. Active138 has metadata verification only; no historical acceptance transferred.",
   "latest_verified_domains": [
     {
       "module": "core_spec.derived_stats135",
@@ -2467,12 +2522,12 @@
     "approved_research_roles": 52,
     "latest_same_state_report": "../reports/2026-11-01-headless-tail0135.json",
     "latest_independent_opening_report": "../reports/2026-11-01-opening0135.json",
-    "version_policy": "Every135 experiment stays on its own originalSHA; functional target137 has separate acceptance.",
+    "version_policy": "Every135 experiment stays on its own originalSHA; functional latest target138 has separate acceptance.",
     "latest_independent_asset_world_report": "../reports/2026-11-01-asset-world0135.json",
     "last_official_manifest_check": "2026-11-01T13:26:11+00:00",
     "historical_web_build_alias": "0898d5e3",
     "role": "fixed135historical_and_current_controlled_dynamic_experiments_not_functional_latest",
-    "latest_controlled_opening_report": "../reports/2026-11-02-opening-resource-combat0135.json"
+    "latest_controlled_opening_report": "../reports/2026-11-02-opening-event-combat0135.json"
   },
   "recent_verified_domains_0135": [
     {
@@ -2514,6 +2569,108 @@
       "differences": 0,
       "independent_review": "../reports/2026-11-02-battle-shout0135-independent-review.json",
       "scope": "Learned effect8 selfbuff, selection/defaultsource domain; not allproc/aura/wire."
+    },
+    {
+      "module": "core_spec.event_wave135",
+      "status": "scoped_component_differential_and_independent_read_only_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "../reports/2026-11-02-event-wave0135.json",
+      "report_sha256": "3ab44083e86e3bb2528e0051a4ec227e0e05104aa85de686bb6a4b42c2f14370",
+      "cases": 25,
+      "original_calls": 25,
+      "original_functions": {
+        "947": 25
+      },
+      "differences": 0,
+      "source_files": 97,
+      "production_files": 87,
+      "independent_review": "../reports/2026-11-02-event-wave0135-independent-review.json",
+      "review_receipt": "../evidence/event-wave0135-independent-review-20261101T192947.072998Z/review.json",
+      "review_receipt_sha256": "ac576e5668537ade78db54a2f45abebd1543aa8988c362ab4583f584c586f850",
+      "scope": "Isolated G2424 four-style wave after ordinary prefix, explicit independent queryworld and legal locale snapshot; 145waveNPC positions/charge owners/full194packets, all sampled probes first-valid. G2448 isolated future; not a complete601-frame/full880/natural60s game acceptance.",
+      "case_counts_not_additive": true,
+      "new_original_cases_from_review": 0,
+      "new_full880_frames_from_review": 0,
+      "native_execution": false
+    },
+    {
+      "module": "core_spec.supply_kind2_135",
+      "status": "scoped_component_differential_and_independent_read_only_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "../reports/2026-11-02-supply-kind2-0135.json",
+      "report_sha256": "de7993c2fcfaf3d71fe44cc92132d8d620a6ad76a6d2cc0c6bcfd3f1afd6a464",
+      "cases": 75,
+      "original_calls": 75,
+      "original_functions": {
+        "1417": 15,
+        "947": 60
+      },
+      "differences": 0,
+      "source_files": 61,
+      "production_files": 51,
+      "independent_review": "../reports/2026-11-02-supply-kind2-0135-independent-review.json",
+      "review_receipt": "../evidence/supply-kind2-135-independent-review-20261101T193915.933213Z/review.json",
+      "review_receipt_sha256": "bb56ba2213d54912521deb390f131db1205bf9fc7ad82adb51802c6131827c98",
+      "scope": "Isolated G2448 kind2 supply/1417, full56B backing/170/169 and40 GUID-bound pre2448-owner amount words; manual Game/Rc124/queryworld and explicit near-peer mode1. Empty mode0/marker2 partialtrap/simultaneous2444-2448 pending; not natural60s/full880/native/fullgame.",
+      "case_counts_not_additive": true,
+      "new_original_cases_from_review": 0,
+      "new_full880_frames_from_review": 0,
+      "native_execution": false
+    },
+    {
+      "module": "core_spec.level_banner135",
+      "status": "scoped_component_differential_and_independent_read_only_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3",
+      "report": "../reports/2026-11-02-level-banner0135.json",
+      "report_sha256": "17c17631d385448abb645174b6974d1393feafdc650f41c3042ef81d41ec8e43",
+      "cases": 93,
+      "original_calls": 110,
+      "original_functions": {
+        "4630": 110
+      },
+      "differences": 0,
+      "source_files": 20,
+      "production_files": 12,
+      "independent_review": "../reports/2026-11-02-level-banner0135-independent-review.json",
+      "review_receipt": "../evidence/level-banner135-independent-review-20261101T195147.952310Z/review.json",
+      "review_receipt_sha256": "1b3014d52043a70f283709567f36d14b3ee14ae6b1b9621ec802165809e31f13",
+      "scope": "Complete4630 finite empty-source per-level growth/DOT type10 payloads and numeric projection, explicit EN/zh selectors and natural cold Once.146growth+26DOT actual events;186 cumulative packet observations. No all-f32-format/other-locale/fullGameowner/full880/native acceptance.",
+      "case_counts_not_additive": true,
+      "new_original_cases_from_review": 0,
+      "new_full880_frames_from_review": 0,
+      "native_execution": false
+    },
+    {
+      "report": "../reports/2026-11-02-opening-event-combat0135.json",
+      "report_sha256": "3db97fd9f8729413b466c4350d74ab26c5771c4d72ef969ff0822785b0fc520e",
+      "receipt": "../evidence/opening-combat0135-oracle-20261101T200425.298468Z/comparison.json",
+      "receipt_sha256": "16a86a82820ee8f737b256a458b252546336b20b6cd887d3c45e755f9ba538b1",
+      "version": "0.135.1",
+      "actual_build": "90898d5e3",
+      "cases": 1,
+      "frames": 650,
+      "selections": 5,
+      "stages": 9105,
+      "original_entry_calls": 9107,
+      "differences": 0,
+      "source_files": 104,
+      "production_files": 90,
+      "independent_review": "../reports/2026-11-02-opening-combat0135-650frame-independent-review.json",
+      "review_receipt": "../evidence/opening650-independent-review-owned-20261101T201707.724375Z/review/review.json",
+      "review_receipt_sha256": "2800b894f8ebdb7decf5c9cc1443996d8d8d5594c843ff1d949ce5a04c7feeea",
+      "scope": "Controlled14-tail after genuine6730/1089, independent preparsedworld, historical originalsnapshot, externalf32clock. Firstwave2424+supply2448/growth150 and declaredactor169 included;1opaque pickup+12 source-bound across689 observations. Not full880/native/fullgame.",
+      "case_counts_not_additive": true,
+      "full880_frames": 0,
+      "native_windows_execution": false,
+      "whole_game_complete": false,
+      "module": "core_spec.headless135",
+      "checkpoint": "opening_event650",
+      "status": "scoped_continuous_differential_and_independent_review_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "90898d5e3"
     }
   ],
   "raw_asset500_modelselfcheck": {
@@ -2556,6 +2713,32 @@
       "independent_review": "../reports/2026-11-02-resource-pickup0137-independent-review.json",
       "review_receipt_sha256": "e175290ea37ebd87c64b8d73067cc264b952e8bcc94c60d50eff6cac72478ef4",
       "scope": "1420resource kinds3..5, explicitGame8192/Rc124 and controlledflat/primary or135asset-query input, full56B/169/RNG/counter/Gguard; not137assetboot/full947/native/fullgame."
+    },
+    {
+      "module": "core_spec.resource_consumer137",
+      "status": "scoped_component_differential_and_independent_read_only_review_passed",
+      "validated_version": "0.137.0",
+      "validated_web_build": "d171b8f9f",
+      "report": "../reports/2026-11-02-resource-consumer0137.json",
+      "report_sha256": "e46ad0ac9c57f83573bf3a5578f2d82cd77728743d074c63fee3da2084c12430",
+      "cases": 156,
+      "original_calls": 250,
+      "original_functions": {
+        "10291": 171,
+        "2862": 79
+      },
+      "differences": 0,
+      "source_files": 32,
+      "production_files": 23,
+      "independent_review": "../reports/2026-11-02-resource-consumer0137-independent-review.json",
+      "review_receipt": "../evidence/resource-consumer137-independent-review-20261101T191616.444214Z/review.json",
+      "review_receipt_sha256": "ccffb6c554356e6cb6eeaa6b75ae3310812dfb819a2c9d9ec3629f8c8481b001",
+      "scope": "Full10291/2862 resource345 projection with empty external sources, manual Game/backing; exact live32/physical56B/170/HP/23derived/three known keyed fields. UI/aura/other wire are raw observations, marker2 failures excluded; no137constructor/fullgame/native.",
+      "case_counts_not_additive": true,
+      "new_original_cases_from_review": 0,
+      "new_full880_frames_from_review": 0,
+      "native_execution": false,
+      "stages": 250
     }
   ],
   "native_resource137_static_correspondence": {
@@ -2563,5 +2746,34 @@
     "native_stride": 72,
     "web_stride": 56,
     "native_runtime_validated": false
+  },
+  "raw_asset650_modelselfcheck": {
+    "receipt": "../evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json",
+    "receipt_sha256": "b2d3a745193f3e50f03a2b15ef83ff437479a1ec4b0e79dfd6c1314f306f0caa",
+    "frames": 650,
+    "selections": 5,
+    "stage_summaries": 9106,
+    "source_files": 97,
+    "asset_files": 451,
+    "asset_bytes": 67281330,
+    "original_or_preparsed_world_inputs_read": false,
+    "new_original_cases": 0,
+    "mode": "modelselfcheck",
+    "projection_bridge": "../evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json",
+    "projection_bridge_sha256": "d5dbf85cd624cf6cdfe666a573efca8455c15a7daf87ec072ff5e5445c2afb1a",
+    "terminal_bridge_checks": 50,
+    "all_terminal_bridge_checks_passed": true,
+    "per_stage_raw_asset_original_differential": false
+  },
+  "next_opening_combat_boundary_after650": {
+    "receipt": "../evidence/opening-event135-model-boundary-20261101T201809.896133Z/receipt.json",
+    "receipt_sha256": "7123b9c74c4e44a10681c61baf5f35fbd813d080860ad6a237f1f06882e6fb51",
+    "frames": 665,
+    "selections": 6,
+    "boundary": "pending_selected_ability",
+    "selected_ability": "demo_shout",
+    "selection_policy_unchanged": true,
+    "new_original_cases": 0,
+    "original_differential_frames_still": 650
   }
 }

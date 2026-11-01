@@ -204,6 +204,7 @@ class CollectionResult135:
     #2862 writes attraction markers/arrival words before31731 compaction.
     #Physical owners need this ordered producer state, including removed rows.
     pre_compaction_records: tuple = ()
+    growth_events: tuple = ()
 
 
 # Actual18353 class-table+80, selected by the class byte before additive sources.
@@ -331,6 +332,7 @@ def collect_pickups(state, now_bits):
     currency = state.currency
     xp_queue, capacity = state.xp_queue, state.xp_queue_capacity
     xp_awards, coin_awards, removed = [], [], []
+    growth_events = []
     for index in reversed(eligible):
         record = records.pop(index)
         removed.append(record.guid)
@@ -351,6 +353,7 @@ def collect_pickups(state, now_bits):
                 rounded = 0x3f800000
             award = trunc_sat_u32(rounded)
             result = gain_xp(level, award)
+            growth_events.extend(result.growth_events)
             level = result.state
             if result.status == 'pending_choice_world':
                 # Actual2159 uses mode only after metadata/RNG generation:
@@ -386,4 +389,4 @@ def collect_pickups(state, now_bits):
     return CollectionResult135(updated, 'core_projection', tuple(xp_awards), tuple(coin_awards),
         tuple(removed), tuple(messages), ('Physical queues/visual entities/wire bytes and full frame scheduling remain unresolved',
         'Mode0 next-choice35514 movement-stop effects are pending; numeric metadata/control is projected'),
-        pre_compaction_records=pre_compaction_records)
+        pre_compaction_records=pre_compaction_records,growth_events=tuple(growth_events))

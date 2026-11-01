@@ -1,0 +1,345 @@
+{
+  "component": "supply_kind2_135",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "actual_build_bytes": 9,
+  "historical_build_alias": "0898d5e3",
+  "status": "declared_domain_differential_and_independent_read_only_review_passed",
+  "review": {
+    "status": "passed_scoped_read_only_review",
+    "owner": "opening_handoff135",
+    "report": "reports/2026-11-02-supply-kind2-0135-independent-review.json",
+    "report_sha256": "ca170b9e84584ff491450676474dc4748295ee0ef61997e4de96839b6619f82b",
+    "report_md": "reports/2026-11-02-supply-kind2-0135-independent-review.md",
+    "report_md_sha256": "467d7100a61ecc8c5efcbf5eec8204c9f43d0441564c16dc5039374ed2d0ddf8",
+    "receipt": "evidence/supply-kind2-135-independent-review-20261101T193915.933213Z/review.json",
+    "receipt_sha256": "bb56ba2213d54912521deb390f131db1205bf9fc7ad82adb51802c6131827c98",
+    "reviewer_script": "scripts/review_supply_kind2_135.py",
+    "reviewer_script_sha256": "6028a522c34bd994e80ff9ef84d2dc538c8ba8e4ad934707a968ff2bc72b9bb3",
+    "scope": "Isolated G2448 kind2 supply/1417, full56B backing/170/169 and40 GUID-bound pre2448-owner amount words; manual Game/Rc124/queryworld and explicit near-peer mode1. Empty mode0/marker2 partialtrap/simultaneous2444-2448 pending; not natural60s/full880/native/fullgame.",
+    "new_original_cases": 0,
+    "new_full880_frames": 0,
+    "native_execution": false
+  },
+  "original_web_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "final_comparison": {
+    "path": "evidence/full0135-oracle-20261101T192704.946829Z/supply-kind2-comparison.json",
+    "sha256": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+    "cases": 75,
+    "complete1417_direct_calls": 15,
+    "complete947_direct_calls": 60,
+    "differences": 0,
+    "source_files": 61,
+    "comparison": {
+      "known_values": 143945,
+      "unknown_cells": 86120,
+      "unchanged_Game_bytes_outside_allowed_ranges": 608460,
+      "packets": 249,
+      "packet_bytes": 38376,
+      "opaque_amount_words_exact_owner_formula_checked": 40
+    },
+    "groups": {
+      "direct1417-kind2-append": 4,
+      "direct1417-kind2-cap-replacement": 9,
+      "direct1417-oldest-last-nonmonotonic": 1,
+      "direct1417-oldest-tie-first": 1,
+      "complete947-opening2-first60": 12,
+      "complete947-opening2-resource40-first60": 4,
+      "complete947-kind2-cap-boundaries": 20,
+      "complete947-cooperative": 24
+    },
+    "statuses": {
+      "direct_produce": 15,
+      "supply2448_spawned": 44,
+      "supply2448_cap": 12,
+      "supply2448_future": 4
+    }
+  },
+  "own_source_sha256": {
+    "reconstruction/core_spec/supply_kind2_135.py": "e765fd68b5615a76a084e6f02b7f94ddbbc48dc944e2a3d323c0fbcbb5f2ae13",
+    "scripts/check_supply_kind2_135.py": "069dc478ffc2cc5664c7eb8794358af8be8b837c9b0575d07ff5fcec5e08c0de",
+    "scripts/run_supply_kind2_135_oracle.mjs": "624c543144a41b2b652a0fb5c73ae910750d1aadcc025d23032cd11b4ba2b7bd",
+    "scripts/trace_supply_kind2_135.py": "b5627a61612fe3f01c83badf45d50b83554514707339ad7e891560ce88dc2865"
+  },
+  "artifacts_sha256": {
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-kind2-comparison.json": "716b3d327aa5fcc05ed85911b5da869fa6af3e2ee8c3e83056523f1c4d0f1c76",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-prepared.json": "6a420624535a44f8958c1ef4f36a58a9af4889be63b0904bbf39f9aa16f6d8ed",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-kind2-static.json": "4862937f5f31fb3bfe5f627670565f619e3d22348bc71fd23e3d9c3108a03beb",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-input.json": "341d9dca2a6e6a604116dd5eb91219b8c07fdc46e125a319fb6a1951f6d6a86a",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-expected.json": "2350bf3ca136c261edbe7b92616977c659f821b2995b758e507915e16de25e68",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-labels.json": "74886e241d82f316c4c18e16abeb363fb2492a00fa7632cebfba2b0cb29fef64",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-results.jsonl": "01986ef57df1d0f6dfeed6c48f722714c8215e39595c658e362293db125efe65",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-kind2-runtime.json": "5265d15496ddbdc92af0c86e0b0d1e0b6cf3d4489a200b70868c74ca11c35db1",
+    "evidence/full0135-oracle-20261101T192704.946829Z/supply-process-terminal.json": "ff7fecf9b2cbeac5bcaa07bb6ceb70765c0606a3a3ed77b3b47f91c17e5d1091",
+    "evidence/full0135-oracle-20261101T192704.946829Z/manifest.json": "37cbc24807839dbec0de8e71edfe6295d4bf132e6229c8472f6a0ee7bad290c5"
+  },
+  "identity_evidence": {
+    "path": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json",
+    "sha256": "be6c2874770470d160ca0d0cf0cb72c9be88f7be491be070c1a60d14b72190e5",
+    "statement": "Original135 consumes pointer1409996,length9:90898d5e3; builder manifest retains an8byte historical alias."
+  },
+  "process": {
+    "pid": 17171,
+    "pgid": 17171,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 1.8365484589885455,
+    "error": null
+  },
+  "runtime": {
+    "cases": 75,
+    "functions": {
+      "947": 60,
+      "1417": 15
+    },
+    "fresh_instances": 75,
+    "max_memory_bytes": 20578304,
+    "memory_cap_bytes": 33554432,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_all_restored": true,
+    "original_function_bodies_unchanged": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_memory_snapshot_read": false,
+    "output_bytes": 3052607,
+    "amount_pointer_used_as_model_input": false,
+    "failure": null
+  },
+  "stack_guard_count": 2123,
+  "world_inputs": {
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5"
+  },
+  "world_input_kind": "Explicit pre-parsed independent real451asset world; not rebuilt in this batch",
+  "constructor_scope": "Manually packed Game8192/World124/Rc fixture fields and full backing; no fullGame or Rc constructor/destructor proof",
+  "expected_before_original": true,
+  "source_unchanged": true,
+  "artifacts_unchanged": true,
+  "world_unchanged": true,
+  "api": {
+    "tick": "step_supply_kind2_135(SupplyTickInput135,world)",
+    "producer": "produce_kind2_pickup135(Kind2PickupInput135,world)",
+    "input_order": "After ordinary947 and G2444, before G2448; preserve all active and inactive backing and shared RNG/counter.",
+    "outputs": [
+      "status",
+      "next_supply2448_bits",
+      "pickups",
+      "rng_words",
+      "counter",
+      "packets",
+      "creates",
+      "opaque_word_provenance",
+      "position",
+      "position_draws",
+      "actor_draws"
+    ]
+  },
+  "state_rules": {
+    "initial_deadline_seconds": 60,
+    "mode0_factor_bits": 1065353216,
+    "deadline": "f32(now + f32(70/factor)) before cap count",
+    "cooperative_factor": "total=u32(G2140+1);rem=u32(total-G2548);guarded=rem if rem<=total else0;effective=max(1,guarded);factor=f32(1+f32(.5*f32(f32_from_u32(effective)-1)))",
+    "external_cap": "original85719(f32(3*factor)) then trunc_sat_u32",
+    "producer_cap": "original85719(f32(5*factor)) then trunc_sat_u32",
+    "rounding": "Exact positive85719 add0x3effffff and exponent-dependent integer masks, not generic ceil.",
+    "counting": "Active row+8==2, irrespective of marker; all rows preserved.",
+    "position": "13516 radial18..50 using post-ordinary shared RNG;1417 clamp(radius-2,max1)/terrain/nearest/fallback declared domain.",
+    "visual": 9005,
+    "display": 259,
+    "scale_bits": 1065353216,
+    "actor_kind": 3,
+    "actor_flags": 0,
+    "row56": {
+      "marker": 0,
+      "untouched_padding": 4,
+      "kind": 8,
+      "amount_word": 12,
+      "GUID": 16,
+      "empty_aux_capacity_pointer_length": [
+        24,
+        28,
+        32
+      ],
+      "visual": 36,
+      "XYZ": [
+        40,
+        44,
+        48
+      ],
+      "arrival_time": 52
+    },
+    "opaque_amount": "For pre2448 count n>0, amount=prePickupBase+(n%4?8+56*n:176+224*(n//4)) modulo2^32. Model keeps exactly the newGUID+12 four bytes None and returns GUID-bound provenance; real pointer is never a model input.",
+    "zero_count": "mode1 uses guarded remainder; mode0 retains earlier947 local2 and is pending.",
+    "oldest": "At internal cap choose smallest total-f32-order +52, stable first tie;31732 stablecompacts full56B, then appends; default-empty aux emits170(removedGUID) followed169(newactor).",
+    "marker2": "Original31732 branches into bounds-panic after compaction/decrement, not a normal return; partial-trap projection pending."
+  },
+  "comparison_scope": {
+    "full_backing": true,
+    "unknown_bytes_only": "Precisely existing None storage cells and newly written address word+12, not generic field masks.",
+    "Game_bytes": 8192,
+    "allowed_ranges_direct": [
+      [
+        1720,
+        1736
+      ],
+      [
+        1868,
+        1892
+      ],
+      [
+        2408,
+        2412
+      ]
+    ],
+    "additional_tick_allowed_ranges": [
+      [
+        1736,
+        1744
+      ],
+      [
+        1784,
+        1796
+      ],
+      [
+        2416,
+        2424
+      ],
+      [
+        2428,
+        2440
+      ],
+      [
+        2448,
+        2452
+      ]
+    ],
+    "notifications_count_compared": true,
+    "message_sequence_compared": true,
+    "packets_payload_compared": true,
+    "world_readonly_verified": true,
+    "controlled_other_timers_future": [
+      2424,
+      2440,
+      2444,
+      2456,
+      2460
+    ],
+    "mode1_prelude": "Explicit finite2232/2236 peer rows; independent fixture verifies all four retained NPCs within55 of at least one peer.",
+    "resource40": "Four fixtures independently create one kind3/4/5 at40 and feed real full56B+postresource RNG/counter into a complete947 call at60; not an original2444 or natural40s execution."
+  },
+  "static137_windows": {
+    "path": "evidence/supply-native137-static-review-20261101T192452.859278Z/review.json",
+    "sha256": "3a0ee60a70f5baaf3ba5c341b4376030ca895a073fc23f140fac319e2d8c0400",
+    "report": "evidence/supply-native137-static-review-20261101T192452.859278Z/review.md",
+    "original_calls": 0,
+    "native_executions": 0,
+    "model_calls": 0,
+    "G2448_window": "947 lines8059..8235;177 lines differ only85719→85702,13516→13502,1417→1420.",
+    "whole_producer": "2560 lines1417→1420 differ only recorded callee/data relocations; static correspondence only.",
+    "native_producer": "0x145ce99e0..0x145cea51d;kind2 jump0x145ce9b27,visual9005/display259/scale1/actor3/cap5/oldesttime64 verified.",
+    "native_record_stride": 72,
+    "native_scheduler_G2448_unknown": true,
+    "native_web32_overflow_equivalence_claimed": false,
+    "dynamic137_equivalence_claimed": false
+  },
+  "kind2_consumer_static": "1352862 kind2 branch exits before generic row+12 load;31732 reads marker/GUID/aux, not12. Default/admitted branch only; complete consumer effects not dynamically accepted here.",
+  "pure_model_refusals": [
+    "future_does_not_read_unknown_kind_or_world",
+    "cap_no_rng_or_world_read",
+    "mode0_empty_caller_local_amount_pending",
+    "marker2_original_post_compaction_trap_pending"
+  ],
+  "pending": [
+    "Mode0 empty-vector earlier947 local2 amount provenance",
+    "Removed marker2 partial trap state",
+    "Nonempty removed auxiliary ownership/drop",
+    "Primary-present nearest-miss low-address fallback",
+    "Mode1 far-NPC relocation prelude beyond explicit near-peer fixture",
+    "Simultaneously due2444/2448 integrated owner binding",
+    "Fullkind2 consumer effects/UI beyond static no+12 read",
+    "Natural60s/full880/native execution/fullgame"
+  ],
+  "prior_attempts": [
+    {
+      "path": "evidence/full0135-oracle-20261101T190005.927219Z/supply-kind2-comparison.json",
+      "sha256": "4f8d02ce08e0fd3b0ccca538090dadef50ff1c709cfa20bdcf8734ceaa5b51c4",
+      "cases": 6,
+      "exit_code": 1,
+      "differences": 0,
+      "comparison_complete": false,
+      "classification": "Failed marker2 removal after compaction; old incomplete summary differences=0 was not a completed comparison; no final runtime/0host claim.",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T190451.503890Z/supply-kind2-comparison.json",
+      "sha256": "fd6833eed19bffd1c2e99335ec398c4cd3ee12d822b0f5d51ca90c1f73d5b890",
+      "cases": 5,
+      "exit_code": 0,
+      "differences": 0,
+      "comparison_complete": true,
+      "classification": "Normal5 pilot, complete3 direct1417+2 full947; superseded, not additive.",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T190654.567162Z/supply-kind2-comparison.json",
+      "sha256": "8b6bc738e4feded330a84f92f3f16d07c74f4d3186dd398c8f79ee1bd62c1821",
+      "cases": 69,
+      "exit_code": 0,
+      "differences": 5127,
+      "comparison_complete": true,
+      "classification": "Normal69 original execution completed but5127 differences in24 mode1 cases: missing peer positions relocated four NPCs; not a passing result.",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T191339.072086Z/supply-kind2-comparison.json",
+      "sha256": "90718cd6c2ed0ca021d84ee71a8be1867bba37e06f91d264b95919d68cef8673",
+      "cases": 69,
+      "exit_code": 0,
+      "differences": 0,
+      "comparison_complete": true,
+      "classification": "Legal explicit mode1 peers;69 passed; superseded, not additive.",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T191656.014890Z/supply-kind2-comparison.json",
+      "sha256": "8b8a75ba3be1400b8529a897590adb30d20254fcd272840c2040e4fe64cae5a0",
+      "cases": 71,
+      "exit_code": 0,
+      "differences": 0,
+      "comparison_complete": true,
+      "classification": "71 passed with two meaningful oldest-selection cases; superseded, not additive.",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T192411.044270Z/supply-kind2-comparison.json",
+      "sha256": "43f16623f9d27b1c7203860720b60d71e66207f32e4232a6fbdccc55ff162943",
+      "cases": 75,
+      "exit_code": 0,
+      "differences": 0,
+      "comparison_complete": true,
+      "classification": "75 passed with four independent resource40 fixture preparations; actual9byte build was already correct; superseded by alias-explicit source closure.",
+      "included_in_final_count": false
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T192619.679780Z/supply-kind2-comparison.json",
+      "sha256": "31042dafbf52154bf044d8f86acb3c9a6baa1e9d80dd753fb2a454ad929296dd",
+      "cases": 75,
+      "exit_code": 0,
+      "differences": 0,
+      "comparison_complete": true,
+      "classification": "75 numerical pass but erroneous actual_build=8byte historical alias after author misread legacy builder manifest; retained as metadata-error history, not final.",
+      "included_in_final_count": false
+    }
+  ],
+  "independent_full_game_runs": 0,
+  "full880_frames": 0,
+  "natural60_second_runs": 0,
+  "native_executions": 0,
+  "wrapper_or_user_save_changes": false
+}

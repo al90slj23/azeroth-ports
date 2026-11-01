@@ -148,6 +148,7 @@ def main():
     from core_spec.opening_handoff135 import initialize_absent_companion_handoff, projection as opening_projection
     from core_spec.profile_companions135 import EmptyCompanionProfile135
     from core_spec.special2376_notify135 import SpecialLocale2376_135, ELWYNN_ENGLISH_NAMES
+    from core_spec.event_wave135 import EventWaveLocale135
 
     began = time.monotonic()
     provider = None
@@ -198,10 +199,10 @@ def main():
             execution_phase = 'opening'
             handoff = initialize_absent_companion_handoff(opening_input, built.world,
                 companion_profile=EmptyCompanionProfile135(()),
-                title_utf8=b'Elwynn Forest', subtitle_utf8=b'')
+                title_utf8=b'Elwynn Forest', subtitle_utf8='The Defias Uprising — survive the onslaught!'.encode('utf8'))
             write_json(output / 'opening.json', opening_projection(handoff))
             state = from_opening_handoff(handoff, navigation_enabled=args.navigation,
-                special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES))
+                special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),event_locale=EventWaveLocale135(0),banner_locale='en')
             emit('opening', state, action_index=None)
             for frame in range(args.frames):
                 execution_phase = 'frame'
@@ -247,6 +248,8 @@ def main():
     if state is not None:
         write_json(output / 'final-state.json', projection(state))
         write_json(output / 'final-summary.json', state_summary(state))
+        write_json(output / 'opaque-pickup-amount-origins.json',
+            [asdict(origin) for origin in state.opaque_pickup_amount_origins])
     after = {name: sha(ROOT / name) for name in files}
     runtime_local_sources = set()
     for module in tuple(sys.modules.values()):
@@ -269,6 +272,7 @@ def main():
     receipt = dict(kind='independent_raw_asset_to_world_opening_combat_modelselfcheck',
         model_version='0.135.1', model_actual_build='90898d5e3',
         mode='modelselfcheck', oracle_cases=0, new_original_differential_cases=0,
+        opaque_pickup_amount_origins_sha256=None if state is None else sha(output / 'opaque-pickup-amount-origins.json'),
         full880_frames=0, original_program_executed=False, original_memory_read=False,
         original_wasm_executed=False, preparsed_world_input_read=False,
         inputs_sha256=sha(output / 'inputs.json') if inputs is not None else None,

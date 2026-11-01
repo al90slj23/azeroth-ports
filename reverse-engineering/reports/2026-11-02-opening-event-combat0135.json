@@ -1,0 +1,357 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "kind": "independent_opening_combat_wave_supply_growth_continuation_declared_projection_differential",
+  "status": "matched_requested_budget_scoped_independent_review_passed",
+  "evidence": "evidence/opening-combat0135-oracle-20261101T200425.298468Z/comparison.json",
+  "comparison_sha256": "16a86a82820ee8f737b256a458b252546336b20b6cd887d3c45e755f9ba538b1",
+  "cases": 1,
+  "frames": 650,
+  "selections": 5,
+  "stages": 9105,
+  "original_entry_calls": 9107,
+  "differences": 0,
+  "source_files": 104,
+  "production_files": 90,
+  "comparison": {
+    "compared_leaves": 47780952,
+    "unwritten_pickup_arrivals": 18986,
+    "declared_unknown_cells": 35198032,
+    "verified_opaque_pickup_amounts": 689
+  },
+  "pickup_address_proof": {
+    "births": [
+      {
+        "guid": "17370383913846833387",
+        "frame": 600,
+        "stage_index": 8416,
+        "owner_pointer": 21189360,
+        "owner_count": 3,
+        "byte_addend": 176,
+        "original_amount": 21189536,
+        "independent_model_received_original_pointer": false
+      }
+    ],
+    "bound_words": 1,
+    "observations": 689,
+    "all_birth_formulas_and_retained_bytes_verified": true,
+    "original_values_used_as_model_inputs": false,
+    "unsupported_domains": [
+      "simultaneousG2444_resource_andG2448_supply",
+      "mode0_empty_owner"
+    ]
+  },
+  "runtime": {
+    "kind": "real_opening_then_controlled14_tail_original_observation",
+    "schema_version": 5,
+    "output_protocol": "bounded_stage_cas_jsonl_gzip",
+    "cases": 1,
+    "original_entry_calls": 9107,
+    "completed_controlled_tail_frames": 650,
+    "completed_stages": 9105,
+    "boundaries": 0,
+    "case_receipts": [
+      {
+        "id": 0,
+        "completed_stages": 9105,
+        "boundary": null
+      }
+    ],
+    "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "module_sha256": "bf1dda28b386e1394c0f811c533745801f285460c7a76d70937591126d24a572",
+    "input_sha256": "8a288dc72c2f62dada7a2263f63eb4e5982830fdfaaf1dcc896171eacecf7042",
+    "memory_page_cap": 4096,
+    "peak_memory_bytes": 166395904,
+    "denied_imports": 878,
+    "host_imports_throw": true,
+    "stage_entries": [
+      {
+        "kind": "player",
+        "role": "player_tick",
+        "index": 2088
+      },
+      {
+        "kind": "extra",
+        "role": "auto_cast",
+        "index": 916
+      },
+      {
+        "kind": "owned_effects",
+        "role": "owned_effect_tick",
+        "index": 975
+      },
+      {
+        "kind": "hits",
+        "role": "process_hits",
+        "index": 1754
+      },
+      {
+        "kind": "area",
+        "role": "area_tick",
+        "index": 3757
+      },
+      {
+        "kind": "effects",
+        "role": "effect_tick",
+        "index": 915
+      },
+      {
+        "kind": "deadline",
+        "role": "deadline_tick",
+        "index": 38007
+      },
+      {
+        "kind": "secondary",
+        "role": "secondary_hits",
+        "index": 2602
+      },
+      {
+        "kind": "ai",
+        "role": "update_units",
+        "index": 921
+      },
+      {
+        "kind": "collect",
+        "role": "collect_pickups",
+        "index": 2862
+      },
+      {
+        "kind": "claims",
+        "role": "claim_tick",
+        "index": 2573
+      },
+      {
+        "kind": "spawn",
+        "role": "spawn_tick",
+        "index": 947
+      },
+      {
+        "kind": "special",
+        "role": "special_tick",
+        "index": 2376
+      },
+      {
+        "kind": "terminal",
+        "role": "terminal_tick",
+        "index": 49037
+      }
+    ],
+    "selection_entry": {
+      "role": "select_ability",
+      "index": 1072,
+      "signature": "(G:i32,input_index:i32)->void",
+      "advances_clock": false
+    },
+    "budgets": {
+      "cases": 1,
+      "actions_per_case": 700,
+      "controlled_frames_per_case": 650,
+      "logical_record_bytes": 2097152,
+      "logical_output_bytes": 8589934592,
+      "index_record_bytes": 2097152,
+      "index_uncompressed_bytes": 1073741824,
+      "compressed_output_bytes": 268435456,
+      "blob_bytes": 16777216,
+      "unique_blob_bytes": 536870912,
+      "blob_files": 65536,
+      "blob_index_record_bytes": 2097152,
+      "blob_index_bytes": 268435456,
+      "blob_references_bytes": 33554432,
+      "encoding_depth": 128,
+      "encoding_nodes_per_record": 1048576,
+      "write_concurrency": 16,
+      "string_cache_bytes": 67108864,
+      "string_cache_entries": 8192,
+      "owned_deadline_seconds": 180
+    },
+    "js_heap_cap_mib": 512,
+    "output_compression": {
+      "format": "gzip",
+      "members": 1,
+      "level": 6,
+      "all_capture_fields_preserved": true,
+      "content_addressed": true
+    },
+    "actual_opening_phase_used": true,
+    "constructor_phase_overwritten": false,
+    "preallocated_zero128_storage": false,
+    "world_rc_forged": false,
+    "locale_once_injected": false,
+    "locale_source": "Preserved initialized genuine snapshot; prestate index bound to explicit input.",
+    "controlled_clock_scheduler": "explicit_external_f32_add_G2352_not_original880",
+    "full880_called": false,
+    "new_full880_frames": 0,
+    "independent_model_validation_cases": 0,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "output_bytes": 3156544,
+    "uncompressed_output_bytes": 3156544,
+    "compressed_output_bytes": 806177,
+    "output_records": 9759,
+    "max_record_uncompressed_bytes": 514,
+    "output_sha256": "684a3a13626827cee8b95d873ace859b7745dde3a4c03b3e556fbbf181e89351",
+    "uncompressed_sha256": "30169c0af40a03bcdff1386da7276740dda9ba97908f88d43f15ee05ce78caa5",
+    "logical_output_bytes": 3952877407,
+    "logical_output_sha256": "0c3b9edb71921634aed2c72cf3303050b5fe34e88f777ae49a0edfbfd49ea527",
+    "maximum_logical_record_bytes": 1202206,
+    "capture_cas": {
+      "protocol": "opening-combat135-cas-v1",
+      "encoding": "bottom_up_JSON_nodes_original_logical_size_at_least512B",
+      "marker": "$cas135_blob_v1",
+      "blob_directory": "cas-blobs",
+      "blob_index_file": "blob-index.jsonl",
+      "blob_references_file": "blob-references.jsonl",
+      "records": 9759,
+      "logical_bytes": 3952877407,
+      "logical_sha256": "0c3b9edb71921634aed2c72cf3303050b5fe34e88f777ae49a0edfbfd49ea527",
+      "maximum_logical_record_bytes": 1202206,
+      "index_uncompressed_bytes": 3156544,
+      "index_uncompressed_sha256": "30169c0af40a03bcdff1386da7276740dda9ba97908f88d43f15ee05ce78caa5",
+      "compressed_bytes": 806177,
+      "compressed_sha256": "684a3a13626827cee8b95d873ace859b7745dde3a4c03b3e556fbbf181e89351",
+      "maximum_index_record_bytes": 514,
+      "unique_blobs": 28155,
+      "unique_blob_bytes": 215567259,
+      "maximum_blob_bytes": 1178139,
+      "total_logical_blob_references": 2182919,
+      "blob_index_bytes": 27803427,
+      "blob_index_sha256": "d23b8cfc50098e7d601a7b2757323953854c4bda004dfc139df284491f217701",
+      "maximum_blob_index_record_bytes": 25523,
+      "blob_references_bytes": 4813187,
+      "blob_references_sha256": "1242d11d86720fd63306116d3e5075603b389a838f0690df646039f7f7e8c39e",
+      "limits": {
+        "cases": 1,
+        "actions_per_case": 700,
+        "controlled_frames_per_case": 650,
+        "logical_record_bytes": 2097152,
+        "logical_output_bytes": 8589934592,
+        "index_record_bytes": 2097152,
+        "index_uncompressed_bytes": 1073741824,
+        "compressed_output_bytes": 268435456,
+        "blob_bytes": 16777216,
+        "unique_blob_bytes": 536870912,
+        "blob_files": 65536,
+        "blob_index_record_bytes": 2097152,
+        "blob_index_bytes": 268435456,
+        "blob_references_bytes": 33554432,
+        "encoding_depth": 128,
+        "encoding_nodes_per_record": 1048576,
+        "write_concurrency": 16,
+        "string_cache_bytes": 67108864,
+        "string_cache_entries": 8192,
+        "owned_deadline_seconds": 180
+      },
+      "original_reserved_marker_rejected_before_encoding": true,
+      "unpaired_UTF16_rejected": true,
+      "all_original_capture_fields_preserved": true,
+      "property_order_and_Number_values_preserved": true,
+      "blob_files_uncompressed": true,
+      "child_refs_are_direct_encoded_edges": true,
+      "logical_reference_counts_include_expanded_blob_edges": true
+    },
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_opening_combat135_cas_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T200425.298468Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T200425.298468Z/config.json"
+    ],
+    "pid": 80706,
+    "pgid": 80706,
+    "exit_code": 0,
+    "seconds": 63.704795833997196,
+    "total_seconds_including_verification": 199.69058900000528,
+    "deadline_seconds": 180,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "capture_cas_verification": {
+    "records": 9759,
+    "logical_bytes": 3952877407,
+    "logical_sha256": "0c3b9edb71921634aed2c72cf3303050b5fe34e88f777ae49a0edfbfd49ea527",
+    "maximum_logical_record_bytes": 1202206,
+    "unique_blobs": 28155,
+    "unique_blob_bytes": 215567259,
+    "maximum_blob_bytes": 1178139,
+    "index_uncompressed_bytes": 3156544,
+    "index_uncompressed_sha256": "30169c0af40a03bcdff1386da7276740dda9ba97908f88d43f15ee05ce78caa5",
+    "maximum_index_record_bytes": 514,
+    "maximum_blob_index_record_bytes": 25523,
+    "total_logical_blob_references": 2182919,
+    "blob_index_bytes": 27803427,
+    "blob_index_sha256": "d23b8cfc50098e7d601a7b2757323953854c4bda004dfc139df284491f217701",
+    "blob_references_bytes": 4813187,
+    "blob_references_sha256": "1242d11d86720fd63306116d3e5075603b389a838f0690df646039f7f7e8c39e",
+    "all_blobs_and_occurrences_verified": true,
+    "decoder_cache_bytes": 7990894
+  },
+  "world_input": {
+    "kind": "independently_produced_preparsed_world_query_artifacts",
+    "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+    "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+    "artifacts": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/inputs.json": "603bd691eb614f4c0ae932401c2d790761c9b18b38951922c2fa9757bd4d7b80"
+    }
+  },
+  "original_context": {
+    "snapshot_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_begin1089.memory",
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "externref_VM_restoration": false,
+    "fresh_bootstraps": 0
+  },
+  "full880_frames": 0,
+  "native_Windows_execution": false,
+  "playable_replacement": false,
+  "whole_game_complete": false,
+  "limitations": [
+    "Controlled external f32 time scheduler and14 component entries,not880 front/party/transport.",
+    "World is independently produced canonical query input; this check does not rerun451-asset parser.",
+    "Independent state retains None only from producer/consumer write sets; original buffers remain concrete.",
+    "Original full raw captures retained. Only declared state projection/known record cells compared; unrelated allocator bytes/keyed fields/runtime packet producers remain unknown.",
+    "Navigation preferenceFalse corresponds to declared snapshot App5165=0; actual menu defaults are another input domain.",
+    "Original initialized locale is preserved, not reconstructed; model receives explicit static English names."
+  ],
+  "raw_asset_modelselfcheck": {
+    "path": "evidence/asset-combat650-owned-20261101T201232.800315Z/model650/receipt.json",
+    "sha256": "b2d3a745193f3e50f03a2b15ef83ff437479a1ec4b0e79dfd6c1314f306f0caa",
+    "frames": 650,
+    "selections": 5,
+    "stage_summaries": 9106,
+    "source_files": 97,
+    "asset_files": 451,
+    "asset_bytes": 67281330,
+    "source_and_asset_hashes_stable": true,
+    "new_original_cases": 0,
+    "full880_frames": 0,
+    "projection_bridge": {
+      "path": "evidence/asset-combat650-bridge-owned-20261101T202159.503837Z/projection-bridge.json",
+      "sha256": "d5dbf85cd624cf6cdfe666a573efca8455c15a7daf87ec072ff5e5445c2afb1a",
+      "checks": 50,
+      "new_original_cases": 0
+    }
+  },
+  "fresh_growth_regressions": "reports/2026-11-02-growth-integration0135-regressions.json",
+  "next_model_boundary": {
+    "path": "evidence/opening-event135-model-boundary-20261101T201809.896133Z/receipt.json",
+    "frames": 665,
+    "selections": 6,
+    "reason": "pending_selected_ability after naturally selecting demo_shout",
+    "new_original_cases": 0
+  },
+  "independent_review": {
+    "path": "evidence/opening650-independent-review-owned-20261101T201707.724375Z/review/review.json",
+    "sha256": "2800b894f8ebdb7decf5c9cc1443996d8d8d5594c843ff1d949ce5a04c7feeea",
+    "original_reexecuted": false,
+    "production_model_executed": false
+  }
+}

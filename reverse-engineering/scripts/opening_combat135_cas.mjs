@@ -8,13 +8,13 @@ import {Writable} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
 export const CAS_PROTOCOL='opening-combat135-cas-v1';
 export const CAS_MARKER='$cas135_blob_v1';
-export const CAS_LIMITS=Object.freeze({cases:1,actions_per_case:600,controlled_frames_per_case:500,
+export const CAS_LIMITS=Object.freeze({cases:1,actions_per_case:700,controlled_frames_per_case:650,
  logical_record_bytes:2097152,logical_output_bytes:8589934592,index_record_bytes:2097152,
  index_uncompressed_bytes:1073741824,compressed_output_bytes:268435456,
  blob_bytes:16777216,unique_blob_bytes:536870912,blob_files:65536,
  blob_index_record_bytes:2097152,blob_index_bytes:268435456,blob_references_bytes:33554432,
  encoding_depth:128,encoding_nodes_per_record:1048576,write_concurrency:16,
- string_cache_bytes:67108864,string_cache_entries:8192,owned_deadline_seconds:60});
+ string_cache_bytes:67108864,string_cache_entries:8192,owned_deadline_seconds:180});
 const digest=b=>createHash('sha256').update(b).digest('hex');
 const jsonBytes=value=>Buffer.from(JSON.stringify(value),'utf8');
 const assert=(condition,label)=>{if(!condition)throw Error(label);};
@@ -117,7 +117,7 @@ export async function createCaptureCASOutput(directory,limits=CAS_LIMITS){
   }catch(error){done(error);}}});
  const gzip=createGzip({level:6}),outputDone=pipeline(gzip,sink);let outputFailure=null;outputDone.catch(error=>{outputFailure=error;});
  async function emit(value){
-  assert(Date.now()-started<limits.owned_deadline_seconds*1000,'CAS60s elapsed budget');if(outputFailure)throw outputFailure;if(writeFailure)throw writeFailure;
+  assert(Date.now()-started<limits.owned_deadline_seconds*1000,'CAS180s elapsed budget');if(outputFailure)throw outputFailure;if(writeFailure)throw writeFailure;
   validateOriginal(value,limits);assert(value&&typeof value==='object'&&!Array.isArray(value),'CAS logical record object required');
   assert(typeof value.record_kind==='string'&&Number.isSafeInteger(value.id)&&value.id>=0,'CAS logical record identity');
   const raw=Buffer.concat([jsonBytes(value),Buffer.from('\n')]);assert(raw.length<=limits.logical_record_bytes&&logicalBytes+raw.length<=limits.logical_output_bytes,'CAS logical2MiB/8GiB budget');

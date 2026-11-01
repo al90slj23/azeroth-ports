@@ -1,0 +1,76 @@
+{
+  "version": "0.138.0",
+  "actual_build": "382771e6c",
+  "actual_build_length": 9,
+  "status": "complete_static_profile_not_runtime_validation",
+  "original_sha256": "c60161d991ce97a9a4a9d3866b5e629d9e38f0fab8364c051faae8d01945b11b",
+  "original_bytes": 90946299,
+  "original_path": "reverse-engineering/originals/official-release-20261101T201508.341687Z/latest-wenilla_bg.wasm",
+  "acquisition_receipt": "originals/official-release-20261101T201508.341687Z/release-acquisition.json",
+  "acquisition_receipt_sha256": "a4d5af63a32fb2956f3c3206026b95e2c0a895a0c787c86966e29dcd5edaa0a0",
+  "actual_build_identity": "evidence/branding0138-identity-20261101T202528.536773Z/identity.json",
+  "actual_build_identity_sha256": "da6db208afd9669c8600205643ab6061d6c2d075c086c0759090838b053cef5d",
+  "profile_manifest": "evidence/wasm0138-profile-20261101T202038.814151Z/manifest.json",
+  "profile_manifest_sha256": "b63506c88308bf99c2918ba0a8ce9d9076a2e624225fd9a4e500933bd6cdaf11",
+  "profile": {
+    "profile_manifest": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0138-profile-20261101T202038.814151Z/manifest.json",
+    "profile_manifest_sha256": "b63506c88308bf99c2918ba0a8ce9d9076a2e624225fd9a4e500933bd6cdaf11",
+    "profile_owned_terminal": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0138-profile-owned-20261101T202034.856715Z/process-terminal.json",
+    "profile_owned_terminal_sha256": "fed785e4d3b7a81c743bc6c590adeccab8c55d7d3262373ec83a1f13799c1b1c",
+    "profile_process": {
+      "pid": 14179,
+      "pgid": 14179,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 121.89989975000208,
+      "error": null
+    },
+    "defined_functions": 175576,
+    "function_imports": 878,
+    "counts": {
+      "functions": 175576,
+      "calls": 824482,
+      "iconsts": 5197206,
+      "memops": 5537581
+    },
+    "wat_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0138-profile-20261101T202038.814151Z/official-0.138.0-full.wat",
+    "wat_bytes": 1321739458,
+    "wat_sha256": "9d4f5bd88d28d5b4ec425420debb0a4de2d010fa2a5bf64fe8f8bd6caedb52ec",
+    "database_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0138-profile-20261101T202038.814151Z/index.sqlite",
+    "database_bytes": 642973696,
+    "database_sha256": "9466a6ca8880077c0a540b3a0fe0cfe86113838153abdacb37749b247af47697",
+    "database_mode": "0444",
+    "sqlite_integrity_check_from_producer": "ok",
+    "full_module_validated": true,
+    "root_profile_producer_only": true,
+    "no_second_profile_started": true,
+    "whole_WAT_or_database_rehashed_or_fully_read_by_this_pass": false,
+    "limited_branding_function_index": 1465,
+    "limited_branding_WAT_bytes": 206238,
+    "code_and_data_indexing_is_not_runtime_acceptance": true
+  },
+  "producer_sources": {
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm138_profile.py": "634d5ba500286f0e16842132f52e566aef65a801ef524da62febe12b197a7d8a",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "WABT_version": "1.0.42",
+  "comparison_to137_counts_only": {
+    "defined_functions137": 175327,
+    "defined_functions138": 175576,
+    "defined_function_delta": 249,
+    "not_a_function_mapping_or_behavior_equivalence": true
+  },
+  "new_original_runtime_cases": 0,
+  "new_independent_model_cases": 0,
+  "new_full_mainloop_frames": 0,
+  "native_target_executed": false,
+  "profile_not_restarted_by_identity_pass": true,
+  "large_WAT_and_SQLite_hashes_are_frozen_producer_receipt_references_not_second_full_read": true,
+  "pending": [
+    "137-to138 gameplay entry mapping and ABI/callee review",
+    "New addon world-coordinate API localization and numerical/visibility validation",
+    "Complete138 gameplay/world/boot/UI/native execution/fullgame"
+  ]
+}

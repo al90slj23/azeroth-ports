@@ -1,0 +1,5900 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "cases": 25,
+  "differences": 0,
+  "comparison": {
+    "equal_known_values": 87237,
+    "explicit_unknown_cells": 62137,
+    "packets": 194,
+    "packet_bytes": 31639
+  },
+  "events": {
+    "0": 10,
+    "3": 10,
+    "2": 3,
+    "1": 2
+  },
+  "source_sha256_before": {
+    "scripts/check_event_wave135.py": "a05f0e905ae4d486edc5c9f952d316abd54d6c825937ac22b437c5e5616d11ad",
+    "scripts/build_event_wave135_oracle.py": "63f4da863f61e701833f766d528f17c51b3d764b1c9d8fdb33e46a226ca0b328",
+    "scripts/run_event_wave135_oracle.mjs": "526acee356cd5a811f209720b5c36fb9f54f247a26f2b8421939258b493bf19c",
+    "scripts/trace_event_wave135.py": "e114dba13355241a9b55e491c7df66b05f21b3b1eb9fd36c9c82347124574b32",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/ai_world135_inputs.py": "dade81393764b9a0f580a9ea041b1b7a6b1ca31c2d72f9edaff9339362ff0a41",
+    "scripts/ai_world135_packing.mjs": "7409e359bcb94422399d10e21fa8d816bdc39b88bc35475ad6d87d478e8e577a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/prepare_event_wave135_prefix.py": "f77700dd60f202a4a2021a32791d7e7a7f7a6d0e9716c9f1c73fa34a60f90c0c",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai135.py": "17a4e7efdcb196c929fb63826179205af4d31504d6a1b957018795121e853c2b",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_lifecycle135.py": "c50bd06c68d557476d29982089426fe212992cdcd44b8d163df7ae8d4e9f50bf",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "35690623ed89a0a45f2ec23227dfd538ba40e16de3a432423e99ecfd2ba5e215",
+    "reconstruction/core_spec/area_effects135.py": "5d23790b090a89cf8515ab6670b921d0ae039061603ae33796e6f57d2f2c60a5",
+    "reconstruction/core_spec/battle_shout135.py": "a6ce932dfcc3271bdd8583094f4765b5cd5e50df8a41700716abd05dfa4f661a",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/cleave135.py": "32ca1bd03bd48cd4bd2059b154049a5b208b8789ac47afaffddab7a8789f9ad9",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "603679acb21b5d4c1c3f5c808c36abc6136f4cc2765cf9507520385a4197e2c0",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/effect_system135.py": "4c10f06ffbf601d323250dde348c611680c74f48a8435bac05df7821dd01bd24",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/event_wave135.py": "9c7c9bec1757df7717a9cbcf5b1be3b452fd1e1663978f22480b6f683314d0b6",
+    "reconstruction/core_spec/frame_systems135.py": "bfc0aee540698abab235fe0ad86540925a2d35605861c6b1a5d2c5b37be7bd83",
+    "reconstruction/core_spec/guardian_ai135.py": "fbf9fb16f6d58292986b1c84268b3c70bb36f4b31b59fc0c9a13fbf0c8199a16",
+    "reconstruction/core_spec/headless135.py": "1dd5889ad21931f9cda960e3aafdaa6ab68e200d3857598ff9b7ecb5e52772c3",
+    "reconstruction/core_spec/headless_tail135.py": "debe8743115ce03f23207dc70c2b5c83a393d6897853a24fc385f4e51bda9976",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/movement_pause135.py": "fdf4b433e6d9b04eaf7fa1016dd9384538e7650e3731ea5750fa6193f1358dcd",
+    "reconstruction/core_spec/opening135.py": "8fbc33f44cf13276091fabccc93c949c4781084741f985302e5bf6f77d27abb7",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_handoff135.py": "78b2ffae8cc7f803d670efd3476ae48fe41e6d235f47b665eb6a82e7f7297eb3",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/ordinary_placement135.py": "68be244ce1af6f51624d9a6cdecd3e36ae2dacb4c9cfc21323b17043c850f47b",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickup_record_cells135.py": "0dcd59577d03abc4e1003f8ccace76345f573beabaaa02016377a2ecabfc8af3",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/profile_companions135.py": "539aa9ab1e37f6ec95d93c77b1ceeb2111ab0af5cdf45b8626eed04bfb999571",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "83cc2833084c4b8712441078b1f9305f291561fcf9699ebd9b04f6fe31152602",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_boss135_data.py": "d243e8c9d4b140be9d3b959c0461b88c82b96265b2b2d1384b9e27a1339192ac",
+    "reconstruction/core_spec/spawn_frame_motion135.py": "088c80dfcf6deec267df9cacb60f1097e6a97276a901765eea7f2273319521f3",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_position_motion135.py": "3dc4cfc848670c530245c4f6e1edbff761387ffafb2d6d33d18da605ee35b5c1",
+    "reconstruction/core_spec/spawn_schedule135.py": "8d2f24d4709eb17e2859eacb05a571e5646691aba0827fc6f8c38113d4df4c98",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/special2376_135.py": "29a77bc01f29c56d3626163d688ae95276a0ffd4550e7bc1eab028a69e79d280",
+    "reconstruction/core_spec/special2376_notify135.py": "49f0fbdf76d3f731faf002d73b342c441949495bb68d95176bb680d02bc17b1e",
+    "reconstruction/core_spec/special2376_spawn135.py": "4cdcd9659829a19983ff1e949c37905a9903535a90bcf0456c6c5d6708ab5e5c",
+    "reconstruction/core_spec/special2376_spawn135_data.py": "d96d2281cbf8b309d9cf8beb28bbb6b270fc1158877ade86b7b0aa2b2d37300e",
+    "reconstruction/core_spec/thunder_clap135.py": "1aeadd63ceecdbaae1653cef97a9ff6f7ba42c9d103a8d9356dd0b0d2239bfa4",
+    "reconstruction/core_spec/unit_records135.py": "d7333639dad4e0da8a5df539c8406ec507af6fc12b91a541fcb19d59a748e326",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "source_sha256_after": {
+    "scripts/check_event_wave135.py": "a05f0e905ae4d486edc5c9f952d316abd54d6c825937ac22b437c5e5616d11ad",
+    "scripts/build_event_wave135_oracle.py": "63f4da863f61e701833f766d528f17c51b3d764b1c9d8fdb33e46a226ca0b328",
+    "scripts/run_event_wave135_oracle.mjs": "526acee356cd5a811f209720b5c36fb9f54f247a26f2b8421939258b493bf19c",
+    "scripts/trace_event_wave135.py": "e114dba13355241a9b55e491c7df66b05f21b3b1eb9fd36c9c82347124574b32",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/ai_world135_inputs.py": "dade81393764b9a0f580a9ea041b1b7a6b1ca31c2d72f9edaff9339362ff0a41",
+    "scripts/ai_world135_packing.mjs": "7409e359bcb94422399d10e21fa8d816bdc39b88bc35475ad6d87d478e8e577a",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/prepare_event_wave135_prefix.py": "f77700dd60f202a4a2021a32791d7e7a7f7a6d0e9716c9f1c73fa34a60f90c0c",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ai135.py": "17a4e7efdcb196c929fb63826179205af4d31504d6a1b957018795121e853c2b",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_lifecycle135.py": "c50bd06c68d557476d29982089426fe212992cdcd44b8d163df7ae8d4e9f50bf",
+    "reconstruction/core_spec/ai_motion135.py": "d6d52a378b84f2c62f647759c4d9d65fd939f52be14f38789429f9507cd1812b",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "35690623ed89a0a45f2ec23227dfd538ba40e16de3a432423e99ecfd2ba5e215",
+    "reconstruction/core_spec/area_effects135.py": "5d23790b090a89cf8515ab6670b921d0ae039061603ae33796e6f57d2f2c60a5",
+    "reconstruction/core_spec/battle_shout135.py": "a6ce932dfcc3271bdd8583094f4765b5cd5e50df8a41700716abd05dfa4f661a",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast_catalogue135.py": "c4f48f27a0d3e14922d9d0175389cfca4b4ce090d9ab3c914cc302984947aaed",
+    "reconstruction/core_spec/cast_catalogue135_data.py": "1ea674064c1640995b813fabd5819b467a604d23b1f31feebc0a19bfe0eb0f30",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/cleave135.py": "32ca1bd03bd48cd4bd2059b154049a5b208b8789ac47afaffddab7a8789f9ad9",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+    "reconstruction/core_spec/death_pickup135.py": "603679acb21b5d4c1c3f5c808c36abc6136f4cc2765cf9507520385a4197e2c0",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/effect_system135.py": "4c10f06ffbf601d323250dde348c611680c74f48a8435bac05df7821dd01bd24",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/event_wave135.py": "9c7c9bec1757df7717a9cbcf5b1be3b452fd1e1663978f22480b6f683314d0b6",
+    "reconstruction/core_spec/frame_systems135.py": "bfc0aee540698abab235fe0ad86540925a2d35605861c6b1a5d2c5b37be7bd83",
+    "reconstruction/core_spec/guardian_ai135.py": "fbf9fb16f6d58292986b1c84268b3c70bb36f4b31b59fc0c9a13fbf0c8199a16",
+    "reconstruction/core_spec/headless135.py": "1dd5889ad21931f9cda960e3aafdaa6ab68e200d3857598ff9b7ecb5e52772c3",
+    "reconstruction/core_spec/headless_tail135.py": "debe8743115ce03f23207dc70c2b5c83a393d6897853a24fc385f4e51bda9976",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "2af98f94ebb183123d4fadadb511fc70a8cd7e48f7c51f57a1076bf45d0b01f5",
+    "reconstruction/core_spec/movement_pause135.py": "fdf4b433e6d9b04eaf7fa1016dd9384538e7650e3731ea5750fa6193f1358dcd",
+    "reconstruction/core_spec/opening135.py": "8fbc33f44cf13276091fabccc93c949c4781084741f985302e5bf6f77d27abb7",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_handoff135.py": "78b2ffae8cc7f803d670efd3476ae48fe41e6d235f47b665eb6a82e7f7297eb3",
+    "reconstruction/core_spec/opening_npc_pickups135.py": "a94c911603c99ba6ffa1b965b15d643c1f253dd9c259a1faebbeba5755e73187",
+    "reconstruction/core_spec/ordinary_placement135.py": "68be244ce1af6f51624d9a6cdecd3e36ae2dacb4c9cfc21323b17043c850f47b",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+    "reconstruction/core_spec/pickup_record_cells135.py": "0dcd59577d03abc4e1003f8ccace76345f573beabaaa02016377a2ecabfc8af3",
+    "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+    "reconstruction/core_spec/player_update135.py": "0eb6c28a749b3cdb9a6a660251d10aa12dc3f49b5d8db6598d1d21cbdea9806f",
+    "reconstruction/core_spec/profile_companions135.py": "539aa9ab1e37f6ec95d93c77b1ceeb2111ab0af5cdf45b8626eed04bfb999571",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/racial_cast135.py": "b5943f9c92d77258df62df31c02deb3ff01567f2ef7d5522b202377f35b59054",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/resource_spawn135.py": "f142c219f60abc3b69ba645ef2fd87adec7728a0e034069e524d06b15c0b2aa3",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/selection_cycle135.py": "83cc2833084c4b8712441078b1f9305f291561fcf9699ebd9b04f6fe31152602",
+    "reconstruction/core_spec/spawn135.py": "7d7731861cd641f8ff803bc807b9d76dd312ce61afcca1263ab26ecb0324e893",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_boss135_data.py": "d243e8c9d4b140be9d3b959c0461b88c82b96265b2b2d1384b9e27a1339192ac",
+    "reconstruction/core_spec/spawn_frame_motion135.py": "088c80dfcf6deec267df9cacb60f1097e6a97276a901765eea7f2273319521f3",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_position_motion135.py": "3dc4cfc848670c530245c4f6e1edbff761387ffafb2d6d33d18da605ee35b5c1",
+    "reconstruction/core_spec/spawn_schedule135.py": "8d2f24d4709eb17e2859eacb05a571e5646691aba0827fc6f8c38113d4df4c98",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/special2376_135.py": "29a77bc01f29c56d3626163d688ae95276a0ffd4550e7bc1eab028a69e79d280",
+    "reconstruction/core_spec/special2376_notify135.py": "49f0fbdf76d3f731faf002d73b342c441949495bb68d95176bb680d02bc17b1e",
+    "reconstruction/core_spec/special2376_spawn135.py": "4cdcd9659829a19983ff1e949c37905a9903535a90bcf0456c6c5d6708ab5e5c",
+    "reconstruction/core_spec/special2376_spawn135_data.py": "d96d2281cbf8b309d9cf8beb28bbb6b270fc1158877ade86b7b0aa2b2d37300e",
+    "reconstruction/core_spec/thunder_clap135.py": "1aeadd63ceecdbaae1653cef97a9ff6f7ba42c9d103a8d9356dd0b0d2239bfa4",
+    "reconstruction/core_spec/unit_records135.py": "d7333639dad4e0da8a5df539c8406ec507af6fc12b91a541fcb19d59a748e326",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e"
+  },
+  "source_files": 97,
+  "frozen_artifacts": {
+    "event-input.json": "a7e4437b70d47bbda107d3ce3697e87ba7f4d8eb598f3272aacb9f8a0b7f9396",
+    "event-expected.json": "3771b0610581b1867d0fb80420a2de2502b5887894b5227b342dbc54518a39cc",
+    "event-labels.json": "4ee643b7eca2b16265b6d45f57fa190f6de76d2bef4171d97181b5f3c91d320b",
+    "manifest.json": "6f5a3b11f6cff3585f1ce681250a0e71752cc25df2e562bbf257f26c57813eaf",
+    "research135-exports.wasm": "f3854ec8c4845fa14b81e438fbeebadad94739318e2f52f8893c794dd0b211d9",
+    "event-wave135-static.json": "9864df03e77770afbcc9b54b11a4bc9d265e04722148cfd2a9de8787dfe30933"
+  },
+  "all_artifacts_and_world_inputs_unchanged": true,
+  "game_unchanged_outside_declared_byte_write_mask": true,
+  "world_inputs": {
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+    "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+  },
+  "context_snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+  "process": {
+    "pid": 65024,
+    "pgid": 65024,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 7.0744458330009365,
+    "launcher_error": null
+  },
+  "runtime": {
+    "cases": 25,
+    "functions": {
+      "947": 25
+    },
+    "fresh_instances": 25,
+    "max_memory_bytes": 166395904,
+    "memory_cap_bytes": 268435456,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "stack_checks": [
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 0,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 1,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 2,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 3,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 4,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 5,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 6,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 7,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 8,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 9,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 10,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 11,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 12,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 13,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 14,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 15,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 16,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 17,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 18,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 19,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 20,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 21,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 22,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 23,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 91941,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "case_id": 24,
+        "index": 947,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "stack_all_restored": true,
+    "original_function_bodies_unchanged": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_memory_snapshot_read": true,
+    "context_snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "locale_once_injected": false,
+    "locale_selected_input_explicit": true
+  },
+  "expected_before_original": true,
+  "full880_frames": 0,
+  "natural60_second_runs": 0,
+  "component_scope": "Independent opening typed single full947 at explicit60.1s; ordinary once thenG2424; otherdue branches declaredfuture; initializedsnapshot locale; actualqueryworld manuallypacked",
+  "status": "verified_component_only_with_independent_read_only_review",
+  "core_sha256": "9c7c9bec1757df7717a9cbcf5b1be3b452fd1e1663978f22480b6f683314d0b6",
+  "receipt": "evidence/full0135-oracle-20261101T190041.544885Z/event-wave135-comparison.json",
+  "receipt_sha256": "b02fcbe303c2058fee848c00b47f3389832690138cb6b99ab6386f38adeab555",
+  "production_files": 87,
+  "packet_opcodes": {
+    "169": 169,
+    "150": 25
+  },
+  "default601_prefix": {
+    "id": 24,
+    "kind": "actual_independent600_next_frame_prefix",
+    "natural_elapsed_frames": 600,
+    "original_elapsed_frames": 0,
+    "prior_now_bits": 1114636198,
+    "now_bits": 1114662412,
+    "selections": [
+      {
+        "frame": 86,
+        "index": 0,
+        "card": "thunder_clap"
+      },
+      {
+        "frame": 129,
+        "index": 2,
+        "card": "thunder_clap"
+      },
+      {
+        "frame": 213,
+        "index": 1,
+        "card": "cleave"
+      },
+      {
+        "frame": 378,
+        "index": 0,
+        "card": "battle_shout"
+      },
+      {
+        "frame": 524,
+        "index": 1,
+        "card": "cleave"
+      }
+    ],
+    "pre_ordinary_rng_words": [
+      1027899608,
+      3776791093,
+      3642823153,
+      3292832871
+    ],
+    "post_ordinary_rng_words": [
+      1027899608,
+      3776791093,
+      3642823153,
+      3292832871
+    ],
+    "ordinary_draws": 0,
+    "ordinary_requests": [],
+    "status": "event2424_complete",
+    "event": 0,
+    "definition_index": 0,
+    "requested": 8,
+    "successful": 8,
+    "wave_draws": 19,
+    "charged_guids": [],
+    "full601_original_validated": false,
+    "original_next2448_bits": 1114636288,
+    "isolated_next2448_bits": 1148846080,
+    "later_kind2_replenishment_explicitly_isolated": true
+  },
+  "default_component_result": {
+    "pickups": {
+      "capacity": 8,
+      "count": 3,
+      "storage": [
+        "000000005a5a5a5a02000000020000000f00002d230010f10000000008000000000000002d230000975b13c6e56522c4862b844200000000",
+        "000000005a5a5a5a02000000010000001000002d230010f10000000008000000000000002d230000d47312c6df8d28c45a80884200000000",
+        "00000000111f1e4205000000786186bba9000030230010f1000000000800000000000000302300009abc12c6e52c16c45e9188425c662042",
+        "01000000e3846c420000000002000000e0000029230030f100000000080000000000000029230000edc312c61c731ec4443e8842aaff6b42",
+        "01000000e3846c420000000002000000e0000029230030f100000000080000000000000029230000edc312c61c731ec4443e8842aaff6b42",
+        "010000008d535a420000000002000000d3000029230030f10000000008000000000000002923000043e312c6f60f1dc40e498842f0325942",
+        "01000000fdb935420000000002000000b9000029230030f1000000000800000000000000292300003fd812c670d91ec4f65a874214333542",
+        "000000005a5a5a5a0100000004000000ba00002c230010f10000000008000000000000002c2300000cd512c63da61ec43199874214333542"
+      ]
+    },
+    "rng_words": [
+      861164204,
+      3615226568,
+      1841833356,
+      3262009105
+    ],
+    "counter": 234,
+    "message_sequence": 587,
+    "packets": [
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e3580230f103700000000000000000006812c600401ec413aa8742db0f494000000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e3000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e4580230f103700000000000000000768612c660a719c4b5e98942e4cb16c000000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e4000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e5580230f10370000000000000000000d012c600c017c406bf8942db0fc9bf00000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e5000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e6580230f1037000000000000000008a1913c660a719c49fc98a42db0f49bf00000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e6000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e7580230f103700000000000000000003813c600401ec4eabc86420000000000000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e7000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e8580230f1037000000000000000008a1913c6a0d822c461cd8442db0f493f00000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e8000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9e9580230f10370000000000000000000d012c600c024c4a07d8842db0fc93f00000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200e9000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 169,
+        "payload_hex": "010000000003d9ea580230f103700000000000000000768612c6a0d822c437f08842e4cb164000000000000020400000e04000009040711c974000002040db0f494001000000051f0043101c40000000000000000000c0de000200ea000058020030f109000000580200006666663f2a000000000000007000000070000000060000000e0000000001000000000000d0070000d00700006666e63eccccac3f1a0000001a0000000000a040000020410000803f"
+      },
+      {
+        "opcode": 150,
+        "payload_hex": "5a000000000e0000004b6f626f6c64205665726d696e00000000000000000015000000537761726d20737572726f756e647320796f75210000"
+      }
+    ],
+    "notifications_count": 0,
+    "next_event2424_bits": 1122841024,
+    "last_event2586": 0,
+    "budget_bits": 1051071362,
+    "kill_cost_bits": 1096465453,
+    "velocity_xy": [
+      0,
+      0
+    ],
+    "previous_player_xyz": [
+      3323121664,
+      3290316800,
+      1116212265
+    ],
+    "units": {
+      "capacity": 32,
+      "count": 24,
+      "storage": [
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a030000008051430103000000549453000300000054945300030000000000000010ae53000000000000000000005a5a5a76000061020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a000000001ca55200a6147045a61470458181bb41cdccac40000000409da2af405a642f406dc413c637d70fc4979f86426dc413c637d70fc4979f86421500a041000000001500a04160661cc200000000000000000000000000000000000000000000000000000000000000000000000000000000c3c9383f000000000000000000000000000000000100005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0300000070e7430103000000d894530003000000d894530003000000010000002cae53000000000000000000005a5a5a77000062020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000064a55200c40da045c40da045822ce5413333d340cdcccc3f7c619a40cff70b408db613c6c9862dc467b87c428db613c6c9862dc467b87c421500a041000000001500a0412c331dc2000000000000000000000000000000000000000000000000000000000000000000000000000000002380b340000000000000000000000000000000000100005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0300000080e74301030000005c955300030000005c955300030000000200000048ae53000000000000000000005a5a5a78000063020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a00000000aca552003511c8453511c845c16b07420000a0409a991940645de040d34d804083f711c636032bc48d92884283f711c636032bc48d9288421500a041000000001500a04194991bc200000000000000000000000000000000000000000000000000000000000000000000000000000000104cad40000000000000000000000000000000000100005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0300000090e7430103000000549453000300000054945300030000000300000010ae53000000000000000000005a5a5a79000061020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a000000001ca55200a6147045a61470458181bb41cdccac40000000409da2af405a642f4073e911c637f90ec4fa538b4273e911c637f90ec4fa538b421500a041000000001500a04160661cc2000000000000000000000000000000000000000000000000000000000000000000000000000000005cf61940000000000000000000000000000000000100005a5a5a5a5a",
+        "0100000044996b42000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ace000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a25200602f0ac2471cda426c2169400000a840cdcccc3f86eb51406666663f9dc812c6cfa41dc4351688429dc812c6cfa41dc43516884244996b420000000017666842feff7f3f00000000000000000000000000000000000000000000000000000000000000000000000000000000195a893f000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5acf000058020030f10000003faaff77420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a25200db9c8242ca84da42496069400000a840cdcccc3f86eb51406666663f99d212c6b38f1dc41910884299d212c6b38f1dc419108842dc326d42000000008f5b6d42cacc4c3f00000000000000000000000000000000000000000000000000000000000000000000000000000000be33e83f000000000000000000000000000000000000005a5a5a5a5a",
+        "01000000aaff6b42000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ad0000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a25200f4ce0ac110eeda42609f69400000a840cdcccc3f86eb51406666663fedc312c61c731ec4a9118842edc312c61c731ec4a9118842aaff6b420000000015666a429999993f000000000000000000000000000000000000000000000000000000000000000000000000000000003fa0bc40000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ad4000058020030f10000003faaff77420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a252001a64af421158db42b3de69400000a840cdcccc3f86eb51406666663f3bc712c682c51dc443b088423bc712c682c51dc443b08842dc326d4200000000abff6d42cacc4c3f00000000000000000000000000000000000000000000000000000000000000000000000000000000d17f7640000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ad5000058020030f10000003faaff77420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a2520090bfaf4287b3db4229156a400000a840cdcccc3f86eb51406666663f4ab812c684f51ec43199874244da12c60c1d1ec4290c884242996d42ebe85e400f667042636686c000000000000000000000000000000000000000000000000000000000000000000000000000000000b3a43b40000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ad6000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a25200ef1edc42ef1edc42ef546a400000a840cdcccc3f86eb51406666663f95e412c6c3d21fc446ae84421acc12c611a41dc4290c8842a6ff6f422ff7014073cc7242fbff5fc0000000000000000000000000000000000000000000000000000000000000000000000000000000007a5f983f000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ad9000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a25200188bdc42188bdc42ee946a400000a840cdcccc3f86eb51406666663ffc9e12c6f9241bc4c6938a42a7cb12c666411dc4c6938a42da326f4245ab2a40a7ff7142313333c000000000000000000000000000000000000000000000000000000000000000000000000000000000d0432040000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ada000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a2520068e8dc4268e8dc42f8cb6a400000a840cdcccc3f86eb51406666663f319412c6b5601cc4a45b8942d4c112c6fa671ec4a45b89420e666e42a1aa2a40db327142cdcc0cc00000000000000000000000000000000000000000000000000000000000000000000000000000000079a2a340000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5adb000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a25200b265dd42b265dd42a3156b400000a840cdcccc3f86eb51406666663f466312c6bd641ec4e52289421d9b12c658a81ec4e522894274cc6e4242aa2a40419971423533b3bf000000000000000000000000000000000000000000000000000000000000000000000000000000000df69940000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5add000059020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a00000000dca252001b5fa6421b5fa64257566b40d7a3f8406666a63f5c8f42403333333fcd2513c63f1b1dc4d7ee894207ef12c6ccd51dc4d7ee89420e666e421da2e63fdb3271429b9959bf00000000000000000000000000000000000000000000000000000000000000000000000000000000ba6d3b40000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ae1000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a0000000094a252005a43de425a43de424a976b400000a840cdcccc3f86eb51406666663f1d5112c63c421cc4feab8842b38712c66d0a1dc4feab884242996d42e1ab2a400f667042000080b2000000000000000000000000000000000000000000000000000000000000000000000000000000001dd0f83e000000000000000000000000000000000000005a5a5a5a5a",
+        "000000005a5a5a5a000000005a5a5a5a000000005a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5affffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5ae2000059020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a00000000dca2520079faa64279faa64224cf6b40d7a3f8406666a63f5c8f42403333333f8aba12c6950017c4d7588942b8c712c66b671ac4d7588942a6ff6f42b8a1e63f73cc72426566e63e0000000000000000000000000000000000000000000000000000000000000000000000000000000081277040000000000000000000000000000000000000005a5a5a5a5a",
+        "00000000677265640000000029000000000000004066e3015c646f6f6d67756172645c646f6f6d67ffffffff2e6d323f580100003a0000006372656174757265ffffffff676f6e666f6f74736f6c646965725c647261676f6e666f6f74736f6c646965722e6d323e481000003a000000e3000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff6f6f74736f6c646965725c647261676f6e666f6f74736f6c64696572736b696e0000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f006812c600401ec413aa8742006812c600401ec413aa87420c667042000000000a237142cdcc4c3f00000000000000000000000000000000000000000000000000000000000000000000000000000000c9c45f3e00000000000000000000000000000000000000726b2e626c",
+        "0000000081000000000000008051ea0100000000676f6e666f6f74736f6c646965725c647261676fffffffff74736f6c64696572736b696e677265656e2e626cffffffff410000006086e701909be9015c647261676f6e666f6f74736f6c646965725c647261676f6e666f6f74736f6ce4000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff63726561747572655c647261676f6e666f6f74736f6c646965725c7265666c650000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f768612c660a719c4b5e98942768612c660a719c4b5e989420c66704200000000fa017142cdcc4c3f0000000000000000000000000000000000000000000000000000000000000000000000000000000072c7093d000000000000000000000000000000000000003f89000000",
+        "00000000a070420500000000676f6e73000000006361737465725c647261676f6e737061776e6361ffffffff626f6479736b696e626c61636b2e626c70cc4c3effffffff41000000a07ce801a08e55045c647261676f6e737061776e6361737465725c647261676f6e737061776e6361e5000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff73746572626f6479736b696e677265656e2e626c70f0023a480000004a0000000000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f00d012c600c017c406bf894200d012c600c017c406bf89420c66704200000000a4c97042cdcc4c3f00000000000000000000000000000000000000000000000000000000000000000000000000000000c5729540000000000000000000000000000000000000000140e16301",
+        "00000000676f6e730000000063617374000000007261676f6e737061776e636173746572626f6479ffffffff77686974652e626c7068713f4800000042000000ffffffff747572655c647261676f6e737061776e6361737465725c647261676f6e737061776e636173746572736b696ee6000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff400000004200000063726561747572655c647261676f6e737061776e636173740000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f8a1913c660a719c49fc98a428a1913c660a719c49fc98a420c667042000000000dc17042cdcc4c3f00000000000000000000000000000000000000000000000000000000000000000000000000000000e7ac223f0000000000000000000000000000000000000061776e6361",
+        "00000000736b696e00000000626c703f00000000410000002007420530da42055c647261676f6e73ffffffff6361737465725c647261676f6e737061776e6361ffffffff736b696e77686974652e626cd80200002a00000063726561747572655c647261676f6e7768656c705c647261e7000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff68656c705c647261676f6e7768656c70736b696e62726f6e7a652e626c701d3f0000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f003813c600401ec4eabc8642003813c600401ec4eabc86420c66704200000000097c7142cdcc4c3f000000000000000000000000000000000000000000000000000000000000000000000000000000007160bc4000000000000000000000000000000000000000705c647261",
+        "0000000068656c70000000006d65636800000000616c2e626c700000f9020000288e6301106c6301ffffffff00000000087de40102000000676f6e7768656c70ffffffff707572706c652e626c70e6be380000003200000063726561747572655c647261676f6e7768656c705c647261e8000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff63726561747572655c647261676f6e5c647261676f6e6e6566617269616e312e0000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f8a1913c6a0d822c461cd84428a1913c6a0d822c461cd84420c66704200000000d54d7142cdcc4c3f000000000000000000000000000000000000000000000000000000000000000000000000000000007fefc8400000000000000000000000000000000000000061676f6e5c",
+        "000000006f6e6f6e00000000312e626c0000000051000000103de901c8fee8015c647261676f6e5cffffffff6f6e6f6e79786961322e626c280000002a000000ffffffff747572655c647261676f6e5c647261676f6e6f6e79786961332e626cf0010000320000006372656174757265e9000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff647261676f6e736b696e3162726f6e7a652e626c707d7f3fdecf783f590000000000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f00d012c600c024c4a07d884200d012c600c024c4a07d88420c66704200000000528f7142cdcc4c3f00000000000000000000000000000000000000000000000000000000000000000000000000000000650b33400000000000000000000000000000000000000001b097e601",
+        "00000000676f6e5c000000006f6e736b0000000065642e6228000000320000006372656174757265ffffffff676f6e5c647261676f6e736b696e317461657261ffffffff700000c03333b33e3100000078c4e20160fd64015c647261676f6e5c647261676f6e736b696e32617a757265ea000058020030f100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000ffffffff300000003200000063726561747572655c647261676f6e5c647261676f6e736b0000000094a2520067c3de4267c3de42cbe16b400000a840cdcccc3f86eb51406666663f768612c6a0d822c437f08842768612c6a0d822c437f088420c66704200000000e41e7142cdcc4c3f0000000000000000000000000000000000000000000000000000000000000000000000000000000028cfd33f000000000000000000000000000000000000007265642e62",
+        "e00000003200000063726561747572655c647261676f6e5c647261676f6e736b696e327461657261722e626c7047dc3ec0d3733e0901000030dfe001c88fe60100000000000000000000000000000000696e33617a757265676f7a2e626c703f300000002a00000063726561747572655c647261676f6e5c647261676f6e736b696e33626c61636b2e626c70b100000018b9650180b3e1015c647261676f6e5c647261676f6e736b696e33626c75652e626c703f890000001077ec01e00743055c647261676f6e5c647261676f6e736b696e3362726f6e7a652e626c7012463f300000003200000063726561747572655c647261676f6e5c647261676f6e736b696e33656d65726973732e626c70723fcd09e23e29000000c0a8640110c363015c647261676f6e5c647261676f6e736b696e33677265656e180200003200000063726561747572655c647261676f6e5c647261676f6e736b696e336c6574686f6e2e626c70ee873fa69952be99000000f81ee50130efe4015c647261676f6e5c647261676f6e736b696e337265642e626c7078bd71000000b89e530430fd3f055c647261676f6e5c",
+        "647261676f6e736b696e337461657261722e626c70c2de3e300000002200000063726561747572655c647261676f6e5c6c6574686f6e2e6d3240823f2100000050c15304d01fec015c647261676f6e5c7461657261722e6de00200002200000063726561747572655c6472616b655c6472616b652e6d323fc602e33e4903000088044201989fea0100000000000000000000000003000000312e626c70fe10be280000002a00000063726561747572655c6472616b655c6472616b65736b696e322e626c709464bd69091c40290000009808e901c01165015c6472616b655c6472616b65736b696e332e626c702f7ebf780000002a00000063726561747572655c6472616b655c6472616b65736b696e626c61636b312e626c700340c9000000802ae701106f42055c6472616b655c6472616b65736b696e626c61636b322e626c70c83fa100000088f73f0588b4e2015c6472616b655c6472616b65736b696e626c61636b332e626c703140290000001043e90110c0e8015c6472616b655c6472616b65736b696e626c7565312e626c500000002a00000063726561747572655c6472616b655c64",
+        "72616b65736b696e626c7565322e626c70e73f4029000000e014e301f810e7015c6472616b655c6472616b65736b696e626c7565332e626c680100002a00000063726561747572655c6472616b655c6472616b65736b696e62726f6e7a65312e626c7040f100000070f96301988c64015c6472616b655c6472616b65736b696e62726f6e7a65322e626c7040c900000098a46501a89663015c6472616b655c6472616b65736b696e62726f6e7a65332e626c7040a1000000684fe401a082e7015c6472616b655c6472616b65736b696e677265656e312e62280000002a00000063726561747572655c6472616b655c6472616b65736b696e677265656e322e62500000002a00000063726561747572655c6472616b655c6472616b65736b696e677265656e332e62780000002a00000063726561747572655c6472616b655c6472616b65736b696e726564312e626c70800200002a00000063726561747572655c6472616b655c6472616b65736b696e726564322e626c707b14ae3e7900000028d3e201b08d64015c6472616b655c6472616b65736b696e726564332e626c70ae47013f29000000",
+        "20f963014828e7015c6472616b655c6472616b65736b696e7768697465312e62500000002a00000063726561747572655c6472616b655c6472616b65736b696e7768697465322e62200300002a00000063726561747572655c6472616b655c6472616b65736b696e7768697465332e62480600002a00000063726561747572655c6472616b655c6f72636472616b6572696465722e6d323fec51d83e3901000008c03f05309ce801000000000000000000000000000000006c6f72642e6d323d6666163f1101000030a66501b0c55504000000000000000000000000000000006c6f7264736b696e280000003200000063726561747572655c64726561646c6f72645c64726561646c6f7264736b696e677265656e2e626c580000003200000063726561747572655c64726561646c6f72645c64726561646c6f726477696e67736b696e2e626c70ae47013f61000000b860e30158073d015c64726561646c6f72645c64726561646c6f726477696e67736b696e677265656e2e626c702601bf7b14ae3e290000005856e301d8dd63015c6472756964626561725c6472756964626561722e6d323f",
+        "e80000002a00000063726561747572655c6472756964626561725c647275696462656172736b696ed02600003200000063726561747572655c6472756964626561725c64727569646265617274617572656e2e6d32f77f3f0000803f69210000807a3d01807a3d010000000000000000c0d7ec010a00000074617572656e62656172736b696e2e62300000003200000063726561747572655c647275696463617474617572656e5c647275696463617474617572656e2e6d600000003a00000063726561747572655c647275696463617474617572656e5c647275696463617474617572656e736b696e62726f776e2e626c703e29000000205b63016055ed015c64727569646361745c64727569646361742e6d3299993ec00000003200000063726561747572655c64727569646361745c6472756964636174657965676c6f772e626c7004563ff00000003200000063726561747572655c64727569646361745c6472756964636174736b696e626c61636b2e626c703eb55a2c3f610200003053e801588c3f0500000000000000000000000002000000656f666b617468756e652e6d327b3d01",
+        "300000003200000063726561747572655c6579656f666b617468756e655c6579656f666b617468756e65707572706c652e626c7059000000c0eae30110b353045c6579656f666b617468756e655c6579656f666b617468756e6579656c6c6f77300000002a00000063726561747572655c6579656f666b617468756e655c6579657265666c656374b80000002a00000063726561747572655c6579656f666b617468756e655c657965676c6f772e626c700298bd31000000f0bb4101c8513b015c6579656f666b617468756e655c657965676c6f77626c61636b2e626c700000100100004200000063726561747572655c656c656d656e74616c65617274685c6372797374616c656c656d656e74616c736b696e6f72616e67652e626c700000730095be11010000386dec016805e301000000000000000000000000000000006372797374616c656c656d656e74616c736b696e707572706c652e626c700000400000004200000063726561747572655c656c656d656e74616c65617274685c6372797374616c656c656d656e74616c736b696e77686974652e626c700000009a00cc3f91000000",
+        "c828e20170c6eb015c656c656d656e74616c65617274685c656c656d656e74616c65617274682e6d3200d53f29000000287d64014032e3015c656c656d656e74616c65617274685c70617274726f636b580000003a00000063726561747572655c656c656d656e74616c65617274685c726f636b656c656d656e74616c736b696e626c61636b2e62800300003a00000063726561747572655c656c656d656e74616c65617274685c726f636b656c656d656e74616c736b696e62726f776e2e626c706c3ae1020000300b5404a872e50100000000000000000000000002000000726f636b656c656d656e74616c736b696e62726f776e62726f776e2e626c703f400000003a00000063726561747572655c656c656d656e74616c65617274685c726f636b656c656d656e74616c736b696e677261792e626c780000003a00000063726561747572655c656c656d656e74616c65617274685c726f636b656c656d656e74616c736b696e6a6164652e626c7002c03f39010000309ce80120a2e80100000000000000000000000000000000726f636b656c656d656e74616c736b696e746563686e6f2e",
+        "626c703e410000007819ea01a872e5015c656e745c656e74180000002a00000063726561747572655c656e745c656e74736b696e62726f776e2e626c70000000780000002200000063726561747572655c656e745c656e74736b696e646561642e626c707100000080c4ec01988741055c656e745c656e74736b696e64697365617365642e626c701c00dc3f49000000806e420560a955045c656e745c656e74736b696e707572706c652e626c700000c9027f3f21000000402cec011056e3015c656e745c656e74736b696e7265642e080100003200000063726561747572655c666c657368676f6c656d5c666c657368676f6c656d736b696e67726179312ee80100003200000063726561747572655c666c657368676f6c656d5c666c657368676f6c656d736b696e67726179322e626c70bc6100000068b86401503a65015c66726f737473616272655c67656d7368696e65312e626c280000003a00000063726561747572655c66726f737473616272655c707670726964696e6766726f73747361627265736164646c652e626c780200003200000063726561747572655c66726f73747361"
+      ]
+    },
+    "other_clocks": {
+      "2440": 1131413504,
+      "2444": 1118450478,
+      "2448": 1148846080,
+      "2456": 0,
+      "2460": 0
+    },
+    "guardian_cooldowns": [
+      {
+        "unit_index": 0,
+        "guid": "17379390972240068726",
+        "capacity": 3,
+        "timers_bits": [
+          1083179008,
+          1084227584,
+          1089470464
+        ],
+        "ability_pointer": 5477460,
+        "header_pointer": 5484048,
+        "ability_records44_hex": [
+          "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041",
+          "8500000003000000000060400000e040cdcccc3f9a99993f000000000000000000000000000a000000002041",
+          "0400000000000000000000000000000000000000000000000000000000000000000000000005000000007041"
+        ],
+        "header28_hex": "54945300030000000400000000000000040000000000000061020000"
+      },
+      {
+        "unit_index": 1,
+        "guid": "17379390972256845943",
+        "capacity": 3,
+        "timers_bits": [
+          1085276160,
+          1080033280,
+          1090519040
+        ],
+        "ability_pointer": 5477592,
+        "header_pointer": 5484076,
+        "ability_records44_hex": [
+          "eccb520002000000cdcccc3f0000000000000000000000000000000000000000000000000012000000003041",
+          "b43b00000000e0400000b4420000803f3333b33f00000000000000000000000000000000000800000000e040",
+          "0300000000000000000000000000000000000000000000000000000000000000000000000005000000008041"
+        ],
+        "header28_hex": "d8945300030000000400000000000000040000000000000062020000"
+      },
+      {
+        "unit_index": 2,
+        "guid": "17379390972273623160",
+        "capacity": 3,
+        "timers_bits": [
+          1083179008,
+          1086324736,
+          1083179008
+        ],
+        "ability_pointer": 5477724,
+        "header_pointer": 5484104,
+        "ability_records44_hex": [
+          "455000000000e0406666a63f0000404100000000000000000000000000000000000000000013000000001041",
+          "7c190000000000000000a04000000000cdcccc3f9a99993f0000c0409a99993e00000000000b000000004041",
+          "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041"
+        ],
+        "header28_hex": "5c955300030000000400000000000000f89553000100000063020000"
+      },
+      {
+        "unit_index": 3,
+        "guid": "17379390972240068729",
+        "capacity": 3,
+        "timers_bits": [
+          1083179008,
+          1084227584,
+          1089470464
+        ],
+        "ability_pointer": 5477460,
+        "header_pointer": 5484048,
+        "ability_records44_hex": [
+          "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041",
+          "8500000003000000000060400000e040cdcccc3f9a99993f000000000000000000000000000a000000002041",
+          "0400000000000000000000000000000000000000000000000000000000000000000000000005000000007041"
+        ],
+        "header28_hex": "54945300030000000400000000000000040000000000000061020000"
+      }
+    ]
+  },
+  "constructor_last_event2586": {
+    "value": 255,
+    "source": "1560 local3 scratch2674 store8=255, Game copy scratch88 yields2586",
+    "constructor_function": {
+      "index": 1560,
+      "wat_start": 340832142,
+      "wat_end": 340924857,
+      "wat_line": 4332172,
+      "wat_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109",
+      "body_start": 10536186,
+      "body_end": 10543428,
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "direct_callees": [
+        1512,
+        9480,
+        10319,
+        20420,
+        23181,
+        25765,
+        26967,
+        29631,
+        32246,
+        34902,
+        38323,
+        54802,
+        65327,
+        65335,
+        71889,
+        82066,
+        84193,
+        90675,
+        106891,
+        107843,
+        172317
+      ]
+    }
+  },
+  "static_trace_sha256": "9864df03e77770afbcc9b54b11a4bc9d265e04722148cfd2a9de8787dfe30933",
+  "static_function_windows": [
+    {
+      "index": 947,
+      "wat_start": 165734621,
+      "wat_end": 166104083,
+      "wat_line": 1166769,
+      "wat_sha256": "7cb256d48c90e0dc3f3fed81fc9b1e7ca263b9074444ef8f4bb9320c189a65e7",
+      "body_start": 3513924,
+      "body_end": 3531974,
+      "body_sha256": "8eafc61592944f9083c7542177928d582672300323e367fd0c7b343d777c1c76",
+      "direct_callees": [
+        1417,
+        2785,
+        3735,
+        5736,
+        6592,
+        8751,
+        11428,
+        11503,
+        11735,
+        13516,
+        15916,
+        17979,
+        19964,
+        20272,
+        20664,
+        23181,
+        26361,
+        28889,
+        29631,
+        31520,
+        32246,
+        38323,
+        42475,
+        42920,
+        44448,
+        45845,
+        49503,
+        49504,
+        50798,
+        52241,
+        54802,
+        65323,
+        65324,
+        67828,
+        71889,
+        80660,
+        80663,
+        85719,
+        86866,
+        106891,
+        107843,
+        122101
+      ]
+    },
+    {
+      "index": 1560,
+      "wat_start": 340832142,
+      "wat_end": 340924857,
+      "wat_line": 4332172,
+      "wat_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109",
+      "body_start": 10536186,
+      "body_end": 10543428,
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "direct_callees": [
+        1512,
+        9480,
+        10319,
+        20420,
+        23181,
+        25765,
+        26967,
+        29631,
+        32246,
+        34902,
+        38323,
+        54802,
+        65327,
+        65335,
+        71889,
+        82066,
+        84193,
+        90675,
+        106891,
+        107843,
+        172317
+      ]
+    },
+    {
+      "index": 6730,
+      "wat_start": 627206949,
+      "wat_end": 627768424,
+      "wat_line": 11847806,
+      "wat_sha256": "8d8ff56b1b836550d0db3ef0ce1f9b2b8e9d778f39d0d451a9504be08d65ecbb",
+      "body_start": 27040903,
+      "body_end": 27063384,
+      "body_sha256": "9aa867cf375c7e60bffcee15c07f77e1320f715f08a68af69bd439eedb8f61e8",
+      "direct_callees": [
+        1446,
+        1560,
+        4826,
+        5111,
+        6777,
+        9328,
+        9513,
+        12375,
+        13196,
+        13850,
+        14947,
+        15374,
+        18572,
+        18670,
+        20037,
+        20468,
+        22634,
+        27059,
+        27961,
+        32246,
+        36678,
+        38323,
+        39632,
+        44449,
+        46295,
+        54802,
+        55800,
+        58682,
+        60416,
+        63933,
+        65327,
+        65341,
+        71889,
+        75442,
+        80663,
+        82066,
+        83803,
+        83804,
+        84193,
+        90403,
+        90675,
+        95986,
+        106891,
+        107843,
+        170436,
+        172317
+      ]
+    },
+    {
+      "index": 1089,
+      "wat_start": 226954244,
+      "wat_end": 227135103,
+      "wat_line": 2269778,
+      "wat_sha256": "9fa6c776a9e45cc8f64972bf1f44d02c2da362035f282566ebf9ceef9254a025",
+      "body_start": 5953495,
+      "body_end": 5965617,
+      "body_sha256": "08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb",
+      "direct_callees": [
+        1417,
+        1744,
+        1821,
+        1822,
+        2080,
+        2785,
+        4546,
+        5736,
+        5745,
+        8628,
+        10146,
+        11428,
+        11503,
+        11735,
+        13037,
+        13516,
+        17726,
+        17979,
+        19964,
+        23181,
+        24129,
+        26967,
+        28964,
+        29631,
+        32246,
+        35515,
+        38323,
+        44448,
+        45096,
+        45097,
+        49503,
+        54802,
+        60939,
+        65313,
+        65315,
+        65323,
+        65324,
+        65327,
+        65351,
+        65379,
+        71889,
+        80663,
+        82066,
+        85719,
+        90675,
+        106891,
+        107843,
+        122101,
+        170436
+      ]
+    },
+    {
+      "index": 5736,
+      "wat_start": 591099419,
+      "wat_end": 591116721,
+      "wat_line": 10802195,
+      "wat_sha256": "462e196ee49c6304433bd5692b41bb4fc23c9e9fa386ada39574c03dc3662d16",
+      "body_start": 24718522,
+      "body_end": 24720298,
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671",
+      "direct_callees": [
+        1525,
+        6449,
+        8751,
+        21454,
+        38323,
+        65342,
+        80663,
+        85719,
+        95997,
+        95998
+      ]
+    },
+    {
+      "index": 8751,
+      "wat_start": 673112028,
+      "wat_end": 673133509,
+      "wat_line": 13408805,
+      "wat_sha256": "baa264137b2175aed3c29d32dff851a297a513e9ec3138cdb7212fc4f6a454d3",
+      "body_start": 30512623,
+      "body_end": 30513986,
+      "body_sha256": "94147d4d71b3186ec42fa1b9012884441fb874563c5995527d04d35ab926e4d8",
+      "direct_callees": [
+        11428,
+        11503,
+        13516,
+        29631,
+        32653,
+        38323,
+        42475,
+        49503,
+        80663
+      ]
+    },
+    {
+      "index": 31520,
+      "wat_start": 1023357183,
+      "wat_end": 1023363460,
+      "wat_line": 24591827,
+      "wat_sha256": "c2b4931de47ed842b0157febaee3ebfb2627d344c419234fd0db6ab3d7a422f1",
+      "body_start": 55036917,
+      "body_end": 55037495,
+      "body_sha256": "1bf3add4ee58e04bd15b3f91b291ce1c594c0f5c94db5b65d4eb33c4c0f84d64",
+      "direct_callees": [
+        29631,
+        38323,
+        49503,
+        80663
+      ]
+    },
+    {
+      "index": 19964,
+      "wat_start": 877824800,
+      "wat_end": 877832185,
+      "wat_line": 19770839,
+      "wat_sha256": "22fb2fa849a083a594ee7a7447a117024d01906e494b19647dc891d23a656f9e",
+      "body_start": 44354873,
+      "body_end": 44355521,
+      "body_sha256": "8c52101d86b1c5a8108f9031702ecc7f99bc694533e8e0f194f36552f782e1e1",
+      "direct_callees": [
+        27372,
+        80663,
+        82066,
+        82070
+      ]
+    },
+    {
+      "index": 17979,
+      "wat_start": 851381998,
+      "wat_end": 851388473,
+      "wat_line": 18868831,
+      "wat_sha256": "34d066dd686d910f918dfbd4189f8ccf89d55e5735258250b2906a01d209289a",
+      "body_start": 42359805,
+      "body_end": 42360470,
+      "body_sha256": "3d03fbce1aa8b75c51dcfe0cb71498ed7b0f4a5f4e0dc4274b10fd6de9ade635",
+      "direct_callees": [
+        54802,
+        67828,
+        106891,
+        107843
+      ]
+    },
+    {
+      "index": 20272,
+      "wat_start": 881041415,
+      "wat_end": 881052796,
+      "wat_line": 19889272,
+      "wat_sha256": "d10d382e7d860ae2c4d4ce368bab0031bed204ff889be04d89368e937a306ee2",
+      "body_start": 44617638,
+      "body_end": 44618551,
+      "body_sha256": "a84d3dcb7bd37b23115b15898284e140817d80b8631c086c78bc3b08fc100aad",
+      "direct_callees": [
+        32653,
+        38323,
+        71889,
+        80663,
+        106891,
+        107843
+      ]
+    },
+    {
+      "index": 80447,
+      "wat_start": 1231011831,
+      "wat_end": 1231012561,
+      "wat_line": 31764528,
+      "wat_sha256": "88394c8838e7486bb4cfb5fa34a963ea8b1d9b9edf8e5b6e8ee37420cac2d4bd",
+      "body_start": 71261523,
+      "body_end": 71261610,
+      "body_sha256": "51fc8911c7d660d7d3fbb8f1c374257693f16fbfb80a07bddd82c71684ef91e6",
+      "direct_callees": []
+    }
+  ],
+  "static_wat_bytes_read": 1275542,
+  "api": {
+    "input": "EventWaveInput135",
+    "function": "step_event_wave135(value, world, locale=EventWaveLocale135(...))",
+    "ordering": "after ordinary947 and future G2440; before Boss2456/2460,G2444,G2448; never repeats ordinary",
+    "ownership": "retain complete physical units424 capacity/count/backing/None and all external guardian owners; thread returned RNG,counter,next2424,last2586,169/150;G2412 retained",
+    "locale": "Explicit selected dictionary input; EN values supplied before original, actual snapshot effective index0/Once3 preserved"
+  },
+  "rules": [
+    "Four styles0swarm,1stampede,2wall,3pack are not Boss.",
+    "G2586 initialized255; select uniform from0..3 excluding previous byte; reject when product low>n<<clz(n)-1.",
+    "Eligible normals by time; uniform definition from cost<=1.2 or fullpool fallback; stampede overrides fastestfield52 and pack overrides weightedchoice.",
+    "G2424 advances by max35,60−1.5*minute, including emptyeligible path.",
+    "Inline swarm/wall pathNone reject onlynav1;31520 pack/stampede rejects every nonzero inbounds nav.",
+    "Full169 creates then one150 locale announcement; stampede additional U16/U20/U24/U28/U348 bind returnedGUID."
+  ],
+  "pending": [
+    "Mode1/party ownership and event scaling validation",
+    "Subsequent event previous-style0..3 exclusion path (static recovered, final25 all begin255)",
+    "Other zones beyondElwynn dynamic coverage",
+    "No eligible and anchor-failure runtime branches not covered by final25",
+    "Stampede nonzeroU16 AI921 consumer: current ai135 rejects; requires target/deadline/move14/80447 continuation",
+    "G2448 kind2 replenish after wave is explicitly isolated in finaldefaultcase; root owns its separate integration",
+    "Full601-frame original14-entry chain not established by component25; full880/native/game/save remain0"
+  ],
+  "failed_and_preliminary": [
+    {
+      "directory": "evidence/full0135-oracle-20261101T185335.216839Z",
+      "kind": "one full947 diagnostic10differences, generic index rejection direction corrected; not finalacceptance"
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T185514.639417Z",
+      "kind": "24 earlier full9470diff, superseded by final25 frozen inputs/sources; do not sum"
+    },
+    {
+      "kind": "Pre-Popen trace512KiB guard/next2448 scopeguard/locale bytesJSON preparation failures",
+      "new_original_cases": 0
+    }
+  ],
+  "new_original_calls_claimed_by_this_report": 25,
+  "new_full880_frames": 0,
+  "native_Windows_execution": false,
+  "independent_review": {
+    "status": "passed_read_only_frozen_wave25_review",
+    "owner": "resource137_impl",
+    "report": "reports/2026-11-02-event-wave0135-independent-review.json",
+    "report_sha256": "6cff34bbd4f75f4f771c555179786c887121533d2a60742802a4cf243cdaf861",
+    "report_md": "reports/2026-11-02-event-wave0135-independent-review.md",
+    "report_md_sha256": "f6c4a85e33e7fccd575b52bfe500e18879a413fabc3f5beac07eddc19538b316",
+    "receipt": "evidence/event-wave0135-independent-review-20261101T192947.072998Z/review.json",
+    "receipt_sha256": "ac576e5668537ade78db54a2f45abebd1543aa8988c362ab4583f584c586f850",
+    "reviewer_script": "scripts/review_event_wave135.py",
+    "reviewer_script_sha256": "ae407088cf2e6e28340536fe76cb5d38387bd4d9536bf2f5e096811e037500eb",
+    "scope": "Isolated G2424 four-style wave after ordinary prefix, explicit independent queryworld and legal locale snapshot; 145waveNPC positions/charge owners/full194packets, all sampled probes first-valid. G2448 isolated future; not a complete601-frame/full880/natural60s game acceptance.",
+    "new_original_cases": 0,
+    "new_full880_frames": 0,
+    "native_execution": false
+  }
+}

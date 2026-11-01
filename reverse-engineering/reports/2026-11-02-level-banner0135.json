@@ -1,0 +1,266 @@
+{
+  "component": "level_banner135",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "declared_domain_differential_and_independent_read_only_review_passed",
+  "review": {
+    "status": "passed_scoped_read_only_review",
+    "owner": "opening_handoff135",
+    "report": "reports/2026-11-02-level-banner0135-independent-review.json",
+    "report_sha256": "66ca6b95848db2cb1a25fa088a4587b6d6e7ecfc7d729c1c492e89ff0fa60fa5",
+    "report_md": "reports/2026-11-02-level-banner0135-independent-review.md",
+    "report_md_sha256": "888db581794b516ac89db4b753ac5f9f72bcc2f579795a758d7cb75404a9eb63",
+    "receipt": "evidence/level-banner135-independent-review-20261101T195147.952310Z/review.json",
+    "receipt_sha256": "1b3014d52043a70f283709567f36d14b3ee14ae6b1b9621ec802165809e31f13",
+    "reviewer_script": "scripts/review_level_banner135.py",
+    "reviewer_script_sha256": "3b4fad6e916dbc7633fe22d9d1d12e7104baef48b5d0b7a423e6f371f5df802d",
+    "scope": "Complete4630 finite empty-source per-level growth/DOT type10 payloads and numeric projection, explicit EN/zh selectors and natural cold Once.146growth+26DOT actual events;186 cumulative packet observations. No all-f32-format/other-locale/fullGameowner/full880/native acceptance.",
+    "new_original_cases": 0,
+    "new_full880_frames": 0,
+    "native_execution": false
+  },
+  "comparison": {
+    "path": "evidence/level-banner0135-oracle-20261101T194550.118916Z/comparison.json",
+    "sha256": "4cd02d8adf74d4129e58040b3a81bd2dac1b96e2eed8ff4bb5c1e67a6561a4e3",
+    "cases": 93,
+    "complete4630_entry_calls": 110,
+    "differences": 0,
+    "source_files": 20,
+    "independent_per_level_transitions": 146,
+    "unique_growth_messages": 146,
+    "unique_DOTstack_messages": 26,
+    "cumulative150_comparisons": 186,
+    "cumulative150_bytes": 16528,
+    "groups": {
+      "pilot-no-level-single-and-multilevel": 2,
+      "pilot-dotstack-threshold": 2,
+      "pilot-max120-no-banner": 1,
+      "class-level-derived-growth-and-dot-gates": 72,
+      "choice-flags-do-not-suppress-growth": 12,
+      "dot-absent-threshold-negative-control": 2,
+      "dot-owned-without-threshold-negative-control": 2
+    }
+  },
+  "own_sources": {
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "scripts/check_level_banner135.py": "d605923fd6152e6c0e5866a7b4386f5b2380a1f62fb30db02f0bbfc6ea2443e4",
+    "scripts/run_level_banner135_oracle.mjs": "ce3ffeb53bb59d68c1e46fa1086223f7845d4f4c5074276bb1c71cb8033c542b",
+    "scripts/trace_level_banner135.py": "d14c87c7f6df21349b01f5f8a22e8ca84e14b260b4832826c07ab5e936c7e83e"
+  },
+  "source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_level_banner135.py": "d605923fd6152e6c0e5866a7b4386f5b2380a1f62fb30db02f0bbfc6ea2443e4",
+    "scripts/check_level_cycle135.py": "ccf2323a1af7e33eae002870b610f50800845a821ef2702f956870d841a49ed8",
+    "scripts/full135_host.mjs": "53d18f34e2f6ce0ad93da5c655aeefd94ab265a4c9369f2ef8f46531c36aee73",
+    "scripts/run_level_banner135_oracle.mjs": "ce3ffeb53bb59d68c1e46fa1086223f7845d4f4c5074276bb1c71cb8033c542b",
+    "scripts/run_level_cycle135_oracle.mjs": "ccb1d066fc8ad3c4d89248756f694e531479fc24b373f02b0b75fd1ef6a3cc94",
+    "scripts/trace_level_banner135.py": "d14c87c7f6df21349b01f5f8a22e8ca84e14b260b4832826c07ab5e936c7e83e"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/level_banner135.py": "5df523046bf3c9926f4161130256195006cd40dc838bd709a51057c2fea7a701",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_level_banner135.py": "d605923fd6152e6c0e5866a7b4386f5b2380a1f62fb30db02f0bbfc6ea2443e4",
+    "scripts/check_level_cycle135.py": "ccf2323a1af7e33eae002870b610f50800845a821ef2702f956870d841a49ed8",
+    "scripts/full135_host.mjs": "53d18f34e2f6ce0ad93da5c655aeefd94ab265a4c9369f2ef8f46531c36aee73",
+    "scripts/run_level_banner135_oracle.mjs": "ce3ffeb53bb59d68c1e46fa1086223f7845d4f4c5074276bb1c71cb8033c542b",
+    "scripts/run_level_cycle135_oracle.mjs": "ccb1d066fc8ad3c4d89248756f694e531479fc24b373f02b0b75fd1ef6a3cc94",
+    "scripts/trace_level_banner135.py": "d14c87c7f6df21349b01f5f8a22e8ca84e14b260b4832826c07ab5e936c7e83e"
+  },
+  "source_unchanged": true,
+  "artifacts_unchanged": true,
+  "artifact_sha256": {
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/input.jsonl": "ee56cb7dc637a66a7f73d5b2d67836a78cacededd2f3c87a02a3bc815e8777bf",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/expected.json": "7273b77c8fc9a24c3c36c926c8dd9de41eb13c7f2f9122d155bff89444f20b34",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/labels.json": "075066767fd5054196c6dfca5e03e34f43f7fbffa508418ce390a83b8c2e5c44",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/prepared.json": "b6b91ec880f966f121fdcacee0fdb55d0ce9dedeccf1b166eec6b533fda6dfb6",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/manifest.json": "8204b6429964d12f67850286e7390fb2e92f3ea8455c062769c40688698903ee",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/level-banner135-static.json": "0ff787671902504fccab42fbdb07e46840f0539f7eee37f05a0d5e7733671101",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/results.jsonl": "4eb0321904be172ba1375e2b58a38245d7f0c75ae772a3c98870baa3fabb05a7",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/process-terminal.json": "e0cdde494c9f8d020adfbc89c6fc2a5c37fb2912242c4adaab21f90f3745eca4",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/validator-terminal.json": "7e1cfa8c2cce4bec0dcad84f90dfefa033cbade51581ae7a733947a6fbe79845",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/level-banner135-runtime.json": "67fdfa3b9d515ca489512609c97451e339c0d4bd3a62eef7a862a766db72864d",
+    "evidence/level-banner0135-oracle-20261101T194550.118916Z/source-closure-correction.json": "74b15b1bf5dffd7f5072b12351b6e96177a18f68166a902dcab670e35ee93454"
+  },
+  "process": {
+    "pid": 53737,
+    "pgid": 53737,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 4.285881040996173,
+    "error": null
+  },
+  "runtime": {
+    "case_count": 93,
+    "entry_calls": 110,
+    "original_entry": 4630,
+    "unchanged_callees": true,
+    "fresh_instances": 93,
+    "maximum_memory_bytes": 20578304,
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "memory_page_cap": 512,
+    "output_bytes": 3746021,
+    "stack_all_restored": true,
+    "locale_Once_injected": false,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "failure": null
+  },
+  "stack_guard_count": 281,
+  "API": {
+    "input": "LevelBannerInput135(level_before,level_after,derived_before,derived_after,owned_definition84,locale)",
+    "function": "level_banners135",
+    "output": "LevelBannerResult135(packets,texts,damage_delta_percent_bits,maximum_health_delta_bits,regeneration_delta_bits,dot_stack_limit)",
+    "integration": "Call once per actual growth_events item, at each original1512 transition before heal/next level. No level increase emits no packet; endpoint-only multilevel input is refused."
+  },
+  "trigger_rules": {
+    "growth": "Every successful4630 level increment, immediately after original1512 and before27960/10847 heal; no phase/mode/difficulty/choice-flags gate.",
+    "damage": "f32(f32(newG1540-oldG1540)*100)",
+    "health": "f32(newG1536-oldG1536)",
+    "regeneration": "f32(newG1576-oldG1576)",
+    "formats": [
+      "signed fixed0",
+      "signed fixed0",
+      "signed fixed2"
+    ],
+    "dot": "If any active owned definition byte84==6 and newG1608>oldG1608, append min(newG1608,3)+1 stack limit message.",
+    "choice_flags": "4630 phase2587/flags2576/gate2572/flags2573 tests occur after the growth loop and gate2159 only."
+  },
+  "payload": {
+    "opcode": 150,
+    "type": 10,
+    "header_hex": "0a000000000000000000000000",
+    "length_word_offset": 13,
+    "length_word": "u32le(len(UTF8)+1)",
+    "text_offset": 17,
+    "tail_hex": "0000",
+    "total_bytes": "len(UTF8)+19",
+    "default_English_sample_observed_after_expected_frozen": {
+      "opcode": 150,
+      "payload_hex": "0a0000000000000000000000004b000000596f752068617665206761696e6564202b33252064616d6167652c202b39206d6178696d756d206865616c746820616e64202b302e3038206865616c746820706572207365636f6e642e0000"
+    }
+  },
+  "localization": {
+    "cold_original_path": "4630→19964→82070",
+    "Once_byte_pointer": 14384344,
+    "Once_injected": false,
+    "Once_initial": 0,
+    "Once_initialized": 3,
+    "default_locale_index_pointer": 14384328,
+    "override_flag_pointer": 14384320,
+    "override_index_pointer": 14384324,
+    "supported_explicit_locales": [
+      {
+        "index": 0,
+        "table_pointer": 5212184,
+        "table28_hex": "da5b1800020000006f5d180007000000765d18001a80030000000000",
+        "code": "en",
+        "label": "English",
+        "dictionary_pointer": 1596790,
+        "dictionary_bytes": 229402,
+        "dictionary_sha256": "31d040af25a6b5c694ea1ced644c37b6146f7b8bf930d6ac2c5b40131ace9659",
+        "growth": "You have gained {damage}% damage, {health} maximum health and {regen} health per second.",
+        "stacks": "Your damage over time spells now stack {n} times on one enemy."
+      },
+      {
+        "index": 11,
+        "table_pointer": 5212492,
+        "table28_hex": "d9f4430002000000dbf443000c000000e7f443005277030001000000",
+        "code": "zh",
+        "label": "简体中文",
+        "dictionary_pointer": 4453607,
+        "dictionary_bytes": 227154,
+        "dictionary_sha256": "cd0cca7176adc95e0f2e4464f2d083ce226dd0ba9f9d990c1ded900b4b4f7369",
+        "growth": "你获得了{damage}%伤害、{health}最大生命值和每秒{regen}生命值。",
+        "stacks": "你的持续伤害法术现在可以在一个敌人身上叠加{n}次。"
+      }
+    ],
+    "scope": "Only original English(index0) and Simplified Chinese(index11) templates are implemented and dynamically verified; menu locale-selection producer and other12 languages remain outside scope."
+  },
+  "expected_independence": "Existing frozen independent level/stats/choice models predict final state. Separate independent one-level stats/heal replays with ineligible phase produce each intermediate old/new derived pair; original4630 runs once per supplied XP amount with complete unchanged callees. Expected and label data are absent from original input file.",
+  "comparison_scope": "All cumulative opcode150 payload bytes and existing level-state projection (progression,23derived,HP,pools,speed,logicalfields,RNG,choices/phase/generation). Full8192B pre/post bytes are preserved as observation, not independently predicted in full. Packet owner cap/len/pointer bounds checked, allocation identity not predicted.",
+  "static": {
+    "receipt": "evidence/level-banner0135-oracle-20261101T194550.118916Z/level-banner135-static.json",
+    "sha256": "0ff787671902504fccab42fbdb07e46840f0539f7eee37f05a0d5e7733671101",
+    "functions": [
+      4630,
+      1512,
+      19964,
+      82070,
+      28964,
+      32246,
+      8628
+    ],
+    "WAT_bytes": 191208,
+    "full_WAT_read": false,
+    "index_mode": "ro/query_only",
+    "data_rows": "Locale table5212184 stride28; index0/11 dictionary/template bytes read from all active WASM segments with implicit-zero semantics."
+  },
+  "prior_attempts": [
+    {
+      "path": "evidence/level-banner0135-oracle-20261101T194311.238606Z/comparison.json",
+      "sha256": "3546bedaa7808866f9852b8495c298d9ee04e0255043ecee4cafef79674af4a7",
+      "cases": 5,
+      "calls": 10,
+      "role": "pilot only, not added"
+    },
+    {
+      "path": "evidence/level-banner0135-oracle-20261101T194337.291466Z/comparison.json",
+      "sha256": "b6131fff8dc9d32499f4bac7c2f623f072860e980e8cc62494a760fd9000c7a0",
+      "cases": 93,
+      "calls": 110,
+      "role": "Old18-source closure omitted two nonexecuted JS files hashed at fixture-helper import; final20 fresh replay supersedes. Input/expected/labels/static/module/manifest/results all byte-identical, no old receipt modified."
+    }
+  ],
+  "source_readset_correction": {
+    "path": "evidence/level-banner0135-oracle-20261101T194550.118916Z/source-closure-correction.json",
+    "sha256": "74b15b1bf5dffd7f5072b12351b6e96177a18f68166a902dcab670e35ee93454",
+    "added": [
+      "scripts/full135_host.mjs",
+      "scripts/run_level_cycle135_oracle.mjs"
+    ],
+    "execution": "Neither old JavaScript file is executed; inclusion binds Python fixture-helper import-time hash reads."
+  },
+  "pending": [
+    "Other locales",
+    "Nonfinite Rustfloat formatting",
+    "Complete packet owner allocation identity and all Game writes",
+    "Main-loop integration/fullgame/native",
+    "Menu locale selector producer",
+    "All possible finite/nonfinite float formatting inputs beyond explicit controlled cases"
+  ],
+  "full880_frames": 0,
+  "independent_full_game_runs": 0,
+  "native_executions": 0,
+  "existing_installers_or_saves_changed": false
+}

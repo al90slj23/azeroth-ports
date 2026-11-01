@@ -1,0 +1,262 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/resource-consumer0137-oracle-20261101T190800.110757Z/comparison.json",
+  "comparison_sha256": "5797efa62a4852134823656d80c92644b865234f975ab135ab456e217ba065b8",
+  "reviewer_script_sha256": "813de3c7d7478ea356a1a1ee89b5f37ca0ed65a88d6ed1e7b24f100755e8eada",
+  "source_files": 32,
+  "production_files": 23,
+  "local_dependency_edges": 82,
+  "current_and_frozen_sources_verified": true,
+  "nonexport_sections_and_all_callees_unchanged": true,
+  "static_functions": [
+    {
+      "index": 1151,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 6677158,
+      "body_end": 6684270,
+      "body_sha256": "e42ac722994e3ef352140fe62ce6a137eb650e8f709040d24982e1a4f13c3d47",
+      "wat_start": 243482063,
+      "wat_end": 243587587,
+      "wat_sha256": "3fbe2519f069e082f50aca0d17d0b8bb030870bbcf34c7f4c541db99c6886ad2"
+    },
+    {
+      "index": 1514,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 10197191,
+      "body_end": 10201947,
+      "body_sha256": "40978776a3e1f23f3eab27ee31d9fc8e4ea718fa9e47fb663d33888076a25120",
+      "wat_start": 331113260,
+      "wat_end": 331175776,
+      "wat_sha256": "0c14067a974e949ce0c2c68782d19c843dcc0461ff3a5ff657ea1b468e37d42a"
+    },
+    {
+      "index": 2862,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 16951516,
+      "body_end": 16954695,
+      "body_sha256": "f82b7798547602e90f285f947855ddc7880fb6d373488d6f800367a08a1dcafe",
+      "wat_start": 459318742,
+      "wat_end": 459365885,
+      "wat_sha256": "7df86504fff19cfa4272ff1ec1a72d0557cc54d48088ef7b1ab485f976c5cea7"
+    },
+    {
+      "index": 10291,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 33283221,
+      "body_end": 33284391,
+      "body_sha256": "dd3c34afebfb77acadba428885d65e48663cf889624d65d18eecbc113e4870b0",
+      "wat_start": 725531500,
+      "wat_end": 725544623,
+      "wat_sha256": "ce4a6189cf0525d242b56b72f8219be84d9a942ce5b195d8cd8253047a9997fb"
+    },
+    {
+      "index": 10520,
+      "signature": [
+        "7f7e7f7f7f7f7f",
+        ""
+      ],
+      "body_start": 33735062,
+      "body_end": 33736197,
+      "body_sha256": "3cbdf03e3f24e246e163473319507abb653c3e1e9d12e6e9ce417076e8d4dcbe",
+      "wat_start": 735981890,
+      "wat_end": 735993566,
+      "wat_sha256": "153132e9f5c446672404f123e2b0403d24000ebcb839b36b51539216250b5041"
+    },
+    {
+      "index": 10841,
+      "signature": [
+        "7f7d7f7f7f",
+        ""
+      ],
+      "body_start": 34185265,
+      "body_end": 34186315,
+      "body_sha256": "9899436eaa6fac955e0f04357d760a3b733cfe379fa3187c52e0c978a4d4ded1",
+      "wat_start": 742407295,
+      "wat_end": 742418762,
+      "wat_sha256": "5e8214bf64afd7a19d8f86bf4d725b56b27ef23bfb21ff8c37481dfe8e19e0b8"
+    },
+    {
+      "index": 19971,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 44374507,
+      "body_end": 44375155,
+      "body_sha256": "2c997b1b6b2190fea16a7c0580ddbafd98183a01a3dbb334fe6630f228129bc1",
+      "wat_start": 878124553,
+      "wat_end": 878131938,
+      "wat_sha256": "76add2727cb4e69c62ff631e9ee6f74388c282b303f1286a60f4155bc227be1e"
+    },
+    {
+      "index": 29528,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 53469557,
+      "body_end": 53470060,
+      "body_sha256": "c8a2b54da0ddd4f679168152890ac2a8c34fe5c025de1fb87cf387d17bdd85a3",
+      "wat_start": 1004439320,
+      "wat_end": 1004444372,
+      "wat_sha256": "51724b3a0f3b74b862cb226c88f27d125a72ff283cfcc176e37647cfe6b0ca03"
+    },
+    {
+      "index": 31727,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 55182888,
+      "body_end": 55183299,
+      "body_sha256": "fd6ac4460f3fe81613bd6de2bfc62e82fa307ced6938df528e1b4abbd61632d8",
+      "wat_start": 1026108568,
+      "wat_end": 1026113128,
+      "wat_sha256": "b7e81551cd4ebc7a961ca02573c0d128a424ecf77a1599ba3d184e6d056b5d33"
+    },
+    {
+      "index": 42926,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 62080108,
+      "body_end": 62080415,
+      "body_sha256": "db5cbc1d5f7b3281314f5baaa8ed1b7549fb2744113b3465b8f908dc894c128b",
+      "wat_start": 1115750654,
+      "wat_end": 1115753013,
+      "wat_sha256": "70f7548d8dcd1355953facdf86fa3c1b0f6fcadd7e27eeb192223a7a512e9b2d"
+    },
+    {
+      "index": 82064,
+      "signature": [
+        "",
+        ""
+      ],
+      "body_start": 71483525,
+      "body_end": 71486919,
+      "body_sha256": "b1753ee39d71f31c5f518bf12dd4f0dd6f6f3ab484c0c09fdab2a8a549aa8117",
+      "wat_start": 1233717066,
+      "wat_end": 1233787142,
+      "wat_sha256": "5a5aeef1ea0ca2ba6e52f213f4b1b6b52f73f043dad20ad23c16f6d45b9c759e"
+    }
+  ],
+  "cases": 156,
+  "stages": 250,
+  "external_original_calls": {
+    "2862": 79,
+    "10291": 171
+  },
+  "nested_consumed_resources": 27,
+  "comparison_counts": {
+    "known_values": 33127,
+    "explicit_unknown_physical_bytes": 13650,
+    "unknown_original_nonzero_bytes": 964,
+    "stages": 250,
+    "observed_packets": 789,
+    "observed_notifications": 318
+  },
+  "independent_semantic_checks": {
+    "direct10291": 171,
+    "actual_effects_including_nested": 198,
+    "effect_kind3": 75,
+    "live_capacity_growths": 97,
+    "speed_sequence_changes": 62,
+    "full32B_and_effect_owner_checks": 198,
+    "initialized_locale_cases": 138,
+    "effect_kind4": 74,
+    "effect_kind5": 49,
+    "heal_gate_halved": 16,
+    "heal_capped": 24,
+    "full2862": 79,
+    "nested_consumed": 27,
+    "near_markers0": 3,
+    "removed_same_spell_all_owners": 50,
+    "empty_collection_stages": 56,
+    "far_locale_untouched_cases": 18
+  },
+  "full32B_stable_all_owner_filter_and_full56B_reverse_compaction_independently_rebuilt": true,
+  "known12_16_and_original_unknown_masks_preserved": true,
+  "all23_derived_and_three_known_keyed_fields_rechecked": true,
+  "numeric_stat_scope": "Input baseline derived23 is an explicit typed dependency. Reviewer independently applies active unique spell23451 +.6 speed and23505 +.5damage; other baseline words remain fixed. Full original1514 freshly executes and complete23 words strictly match.",
+  "complete170_payloads_and_queue_order_compared": true,
+  "other_aura_all_keyed_wire_and_notifications_semantics_claimed_predicted": false,
+  "locale_original82064_initialization_without_injection": true,
+  "marker2_preserved_failures": [
+    {
+      "directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/resource-consumer0137-oracle-20261101T190314.173389Z",
+      "comparison_sha256": "dfc30d56c41d9f06494562afc317c2cba9033e04f4f010128e6b8ca9309d8606",
+      "stderr_sha256": "6591bd385a42b90d817c55d845864834aac2457de5d4d446d1f270e395b4c9bd",
+      "actual_host_calls": "unknown; no final runtime",
+      "not_a_positive_case": true
+    },
+    {
+      "directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/resource-consumer0137-oracle-20261101T190504.861930Z",
+      "comparison_sha256": "fb1d5cd06d0f193572e2ef23a93f0b30c8a3daf27b6cf948aafb4a2dbbbe2e29",
+      "stderr_sha256": "fd41a5c176b2b32d8edd4d402ad24fe6e8fbc3744f54232a1557ac0c04b0dc12",
+      "actual_host_calls": "unknown; no final runtime",
+      "not_a_positive_case": true
+    }
+  ],
+  "process": {
+    "pid": 75893,
+    "pgid": 75893,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 9.255903083991143,
+    "error": null
+  },
+  "host_calls": 0,
+  "stack_all_restored": true,
+  "model_or_original_or_checker_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "native_Windows_execution": false,
+  "scope": "Full10291 and2862 original calls; independently predicted effect345/live32/physical56B compaction/destroy170/HP/23derived/3keyed/aux/RNG/counter/sequence in empty external source domain",
+  "input_limitations": [
+    "Manual Game8192/empty source vectors/initial BTree/live backing fixtures, not original constructor",
+    "Shared135 independent stats numerical rules freshly checked only in declared137 consumer domain"
+  ],
+  "pending": [
+    "Non-resource nearby2862 consumers, XP/coins and claims/auxiliary ownership",
+    "Full aura/wire/localized notification independent semantics",
+    "Nonempty item/talent/timed/other live source domains",
+    "137 full world/boot/game/UI/network"
+  ],
+  "elapsed_seconds": 0.5841042079991894,
+  "review_receipt": "evidence/resource-consumer137-independent-review-20261101T191616.444214Z/review.json",
+  "review_receipt_sha256": "ccffb6c554356e6cb6eeaa6b75ae3310812dfb819a2c9d9ec3629f8c8481b001",
+  "primary_report": "reports/2026-11-02-resource-consumer0137.md",
+  "version": "0.137.0",
+  "actual_build": "d171b8f9f",
+  "reviewer_source_provenance": "evidence/resource-consumer137-independent-review-20261101T191616.444214Z/reviewer-source-provenance.json",
+  "reviewer_source_provenance_sha256": "7dd1695cec06dddfa50c5fded1c406adf859edea736394bcc3b66c5b1f0171b6",
+  "reviewer_owned_terminal": "evidence/resource-consumer137-review-owned-20261101T191616.364174Z/process-terminal.json",
+  "reviewer_owned_terminal_sha256": "a1e20fbb1b0a7525f30e4d112460931e5337ce2a62eca55aa1a5f270e8334ecd",
+  "reviewer_terminal": {
+    "pid": 96190,
+    "pgid": 96190,
+    "exit_code": 0,
+    "deadline_exceeded": false,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 0.7088842910015956,
+    "original_or_model_executed": false
+  },
+  "static_wat_total_bytes_read": 340881,
+  "all_observed_queue_counts_are_cumulative_snapshots": true,
+  "independent_stat_baseline_is_explicit_input_not137_constructor": true
+}
