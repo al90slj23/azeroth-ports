@@ -1,0 +1,105 @@
+{
+  "version": "0.134.0",
+  "build": "983346a7",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "module_sha256": "5d7b6bf3a0d3b7e0afd37cb52f042b91e3e6bcff91b6b3f3f755fff9298e2531",
+  "original_function": 1063,
+  "original_full_function_executed": true,
+  "case_count": 139,
+  "mismatch_count": 0,
+  "fields_compared": [
+    "armor_1392_bits",
+    "hp_1528_bits",
+    "shield_1532_bits",
+    "barrier_1536_bits",
+    "shield_source_1344",
+    "shield_source_remaining_1348_bits",
+    "reserve_768_bits",
+    "absorbed_740_bits",
+    "maximum_shield_744_bits",
+    "last_hit_1648_bits",
+    "incoming_total_992_bits",
+    "phase2579"
+  ],
+  "groups": {
+    "armor_and_nonexhausting_shield": 60,
+    "mode_map_wave_scaling": 72,
+    "phase_guard": 4,
+    "protection_guard": 3
+  },
+  "production_model_kind": "explicitly_partial_scalar_prefix_with_pending_stages",
+  "runtime": {
+    "case_count": 139,
+    "original_function": 1063,
+    "original_full_function_executed": true,
+    "original_internal_callees_unchanged": true,
+    "original_allocator": 91940,
+    "fresh_instances": 5,
+    "fresh_instance_every": 32,
+    "max_memory_bytes": 20578304,
+    "denied_function_imports": 878,
+    "actual_host_calls": 0,
+    "memory_limit_pages": 512,
+    "node": "v22.23.4",
+    "full_game_started": false,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "only_changed_source_section": 7,
+  "dependency_shims": [],
+  "source_sha256": {
+    "scripts/build_full134_oracle.py": "a7b9fc5c6948323df25a23e1e2cd3bb8bfef203cf5503b91f16726672ea5412e",
+    "scripts/full134_host.mjs": "589e0e198a197788ac2eaf5754ed96752416c611ed92c09c011f32896af54012",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_incoming134_nonfatal_spec.py": "a283b6f7f435ac13d19dcfeac462ce4612aeeb3db64c17a049bbcb4946a32c59",
+    "scripts/run_incoming134_full_oracle.mjs": "0f32b039846ff06f30bfc6fadddcd0b97e6d5f3f37cd7ae9cfd6b306713fbd94",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "artifact_sha256": {
+    "incoming134-cases.json": "ce1cc6325a1763fd9e577912795464dc06619320362703216a282e999e7e6950",
+    "incoming134-original-results.jsonl": "b59a361633762425cd4b0a3fcf489fe07eccfd6b9006f627550f97d1f27cef1d",
+    "incoming134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "incoming134-runtime.json": "db1c83c70c265dd484401d04c2b08b3cb66e4535fd86cb7780d50a4a9ecb8180"
+  },
+  "limitations": [
+    "Nonfatal HP1000/maxHP1000, sourceGUID0, empty units/items/buffs/modifiers, reserve0/sourceSpell0; finite nonnegative amounts.",
+    "Shield cases do not exhaust total shield; cleanup1202/reserve callbacks and revival/death not independently implemented.",
+    "Comparison accepts selected final scalar fields only on this domain; prefix-model pending stages remain pending.",
+    "Nearby unit reductions, rawtag54, activebuff12 and cast922 barrier replacement are static/model-only, not this runtime corpus.",
+    "Full original internal callees run if reached; independent statistics/history/events/packets and complete incoming behavior remain missing."
+  ],
+  "date": "2026-11-01",
+  "run_directory": "evidence/full0134-oracle-20261101T012001.650569Z",
+  "original_body": {
+    "role": "incoming_damage",
+    "index": 1063,
+    "export": "research134_incoming_damage",
+    "type_index": 273,
+    "parameters_hex": "7f7d7e7f7f7f",
+    "results_hex": "",
+    "body_start": 5601777,
+    "body_end": 5614102,
+    "body_bytes": 12325,
+    "body_sha256": "e6ea2aaca5f6d402fe5969f637e1b2cad398f2e2b3250b18c4fd0950d3ac59bf"
+  },
+  "model_stage_counts": {
+    "core_hp_write_L1793": 132,
+    "phase_guard": 4,
+    "protection_guard": 3
+  },
+  "original_exports_preserved": 36,
+  "research_exports_added": 1,
+  "independent_review_file": "independent-review.json",
+  "independent_review_sha256": "005b59c215e0d1872c0c11402e8ff03a1b5704d1748e1462c84b1a8c8fd79ae6",
+  "review_executed_wasm": false,
+  "receipt_sha256": {
+    "manifest.json": "9b2966d4a87825c43b9910d8795d3728c491e9490ad9ad1dd08f77a2d7cebb76",
+    "incoming134-comparison.json": "b14ab158c879bcbab86748bed488e34d0ef5e372f7476807130e0c17844445e2",
+    "independent-review.json": "005b59c215e0d1872c0c11402e8ff03a1b5704d1748e1462c84b1a8c8fd79ae6"
+  },
+  "full_game_started": false,
+  "native_windows_execution": false,
+  "installed_game_modified": false
+}

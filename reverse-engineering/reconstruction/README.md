@@ -13,6 +13,7 @@
 - `core_spec/ability_state.py`：80B拥有能力、真实升级顺序、新tier0初始化与选卡控制投影；未实现后处理显式pending，未知新tier明确拒绝。
 - `core_spec/combat.py`：命中基数/暴击、伤害加区/上限、HP/统计/死亡主字段；完整死亡XP/loot/RNG和触发仍未闭包。
 - `core_spec/combat134.py`：新版424B单位状态、M加区/新T36B rawtag50/51/阶段系数、HP/有效伤害/死亡主字段的独立投影；保持`amount*(M+T)*P`的逐步f32顺序。不是完整施法、触发或死亡管线。
+- `core_spec/incoming134.py`：新版玩家减伤/盾消费与barrier替换标量规则的前缀；所有未实现回调显式pending。139例非致死空状态的选定最终字段与完整原1063一致，盾耗尽、复活/死亡、完整施法未验收。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
 ```sh
@@ -21,6 +22,7 @@ python3 reverse-engineering/scripts/check_upgrade134_spec.py
 python3 reverse-engineering/scripts/check_selection134_full_spec.py
 python3 reverse-engineering/scripts/check_combat134_full_spec.py
 python3 reverse-engineering/scripts/check_progression134_full_spec.py
+python3 reverse-engineering/scripts/check_incoming134_nonfatal_spec.py
 
 # 历史0.126.0的隔离数值对照。
 python3 reverse-engineering/scripts/check_upgrade_spec.py

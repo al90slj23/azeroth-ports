@@ -28,6 +28,7 @@ ROLES = {'select_ability': (1073, b'\x7f\x7f', b''),
          'cast': (922, b'\x7f\x7f', b'\x7f'),
          'damage': (914, b'\x7f\x7e\x7d\x7f\x7f\x7f\x7f', b''),
          'gain_experience': (4630, b'\x7f\x7f', b''),
+         'incoming_damage': (1063, b'\x7f\x7d\x7e\x7f\x7f\x7f', b''),
          'upgrade_value': (25368, b'\x7f\x7f\x7f', b'\x7d')}
 
 

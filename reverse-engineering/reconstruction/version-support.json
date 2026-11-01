@@ -16,7 +16,8 @@
       "cases": 11560,
       "mismatches": 0,
       "domain": "Kinds0..4/tiers0..4, counter/float edges and raw bits; invalid tiers-1/5 compare substituted panic trap category only.",
-      "report": "../reports/2026-11-01-upgrade0134-spec.json"
+      "report": "../reports/2026-11-01-upgrade0134-spec.json",
+      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8"
     },
     {
       "module": "core_spec.ability_state",
@@ -39,7 +40,8 @@
         "next choice generation",
         "nonzero new-ability tiers"
       ],
-      "report": "../reports/2026-11-01-selection0134-spec.json"
+      "report": "../reports/2026-11-01-selection0134-spec.json",
+      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8"
     },
     {
       "module": "core_spec.combat134",
@@ -70,7 +72,8 @@
         "XP",
         "death RNG continuation"
       ],
-      "report": "../reports/2026-11-01-combat0134-spec.json"
+      "report": "../reports/2026-11-01-combat0134-spec.json",
+      "source_checkpoint": "202b1d1a4340e8ff2d3df2bdc092013d329556f8"
     },
     {
       "module": "core_spec.progression134",
@@ -99,7 +102,37 @@
         "actual choice generation"
       ],
       "card_choice_eligible_status": "static_guard_projection_only_true_branch_not_executed",
-      "report": "../reports/2026-11-01-progression0134-spec.json"
+      "report": "../reports/2026-11-01-progression0134-spec.json",
+      "source_checkpoint": "08c4a937ba4f8f2bba5e729e79be3afa6c9021c5"
+    },
+    {
+      "module": "core_spec.incoming134",
+      "api": "resolve_incoming_prefix",
+      "status": "limited_prefix_scalar_fields_compared_to_complete_original_final_fields",
+      "original_function": 1063,
+      "cases": 139,
+      "mismatches": 0,
+      "domain": "Nonfatal HP/maxHP1000,sourceGUID0,empty units/items/buffs/modifiers,reserve0/sourceSpell0;finite armor/mode-map-wave scaling and nonexhausting shield cases,phase/protection guards.",
+      "fields_compared": "10 scalar fields (incl unchanged armor/source fields),incoming f64 total992 and phase2579.",
+      "production_model_remains": "explicit scalar prefix; all pending callbacks remain pending",
+      "not_runtime_covered": [
+        "total shield exhaustion",
+        "reserve/source callbacks",
+        "nearby units",
+        "rawtag54",
+        "activebuff12",
+        "retaliation",
+        "revival/death",
+        "cast922 barrier replacement"
+      ],
+      "not_independently_implemented": [
+        "complete source registry/statistics",
+        "history/events/packets",
+        "complete shield cleanup",
+        "revival/death",
+        "complete incoming1063 and cast922"
+      ],
+      "report": "../reports/2026-11-01-incoming0134-spec.json"
     }
   ],
   "other_modules": [
