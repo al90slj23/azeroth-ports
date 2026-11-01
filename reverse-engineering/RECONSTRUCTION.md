@@ -16,7 +16,7 @@
 | 敌人扣血 | [424B单位、36B新加区与55条guard](reports/2026-11-01-combat0134-chain.md)；[独立combat134与完整新914的454例，0差异](reports/2026-11-01-combat0134-spec.md) | 缺完整触发/掉落/死亡RNG；玩家incoming1063与IceBarrier另行恢复。 |
 | 经验与成长 | [12完整函数/28条guard](reports/2026-11-01-progression0134-chain.md)，确认新版120级上限；[独立progression134与完整新4630的2197例，0差异](reports/2026-11-01-progression0134-spec.md) | phase3只验level/XP/pending/phase；拾取几何、消息/治疗独立实现和2159候选生成仍缺。 |
 | 玩家受伤/护盾 | [9完整函数/33段guard与barrier CFG](reports/2026-11-01-incoming0134-chain.md)；[完整新1063的139例非致死字段对照，0差异](reports/2026-11-01-incoming0134-spec.md) | 独立模型仍是显式pending的前缀；盾耗尽、复活/死亡、反击/事件、完整IceBarrier施法未执行验收。 |
-| 死亡与经验拾取 | [25完整函数/31条guard/15窗口](reports/2026-11-01-death-xp0134-chain.md)；[完整1417/2862与独立拾取模型345例，0差异](reports/2026-11-01-pickups0134-spec.md)；另一次914→2862→4630原件组合观测 | kind0/模式0/空claim/已解析平地placement域；普通死亡全部RNG、混合kind、地图求解及独立整段流程继续补齐。 |
+| 死亡与经验拾取 | [25完整函数/31条guard/15窗口](reports/2026-11-01-death-xp0134-chain.md)；[最新拾取382例、普通死亡组合367例×4阶段，均0差异](reports/2026-11-01-ordinary-pipeline0134.md) | flag0普通单目标/空辅助状态/已解析平地placement；金币消费者RNG已组合验证。可收取外来kind、地图/完整调度、候选及属性刷新仍有明确pending。 |
 | 其他独立模型 | 下表所列模型有0.126.0依据；未自动计入0.134.0完成度，逐项范围见[版本支持清单](reconstruction/version-support.json) | 刷怪、施法基数/暴击、属性、存档、UI与协议继续迁移和连接。 |
 | 完整游戏 | 尚无新版或旧版的独立完整一局验收 | 按状态→生成→施法→伤害/死亡→经验→选卡拼出闭环。 |
 
@@ -81,6 +81,7 @@ python3 reverse-engineering/scripts/check_combat134_full_spec.py
 python3 reverse-engineering/scripts/check_progression134_full_spec.py
 python3 reverse-engineering/scripts/check_incoming134_nonfatal_spec.py
 python3 reverse-engineering/scripts/check_pickups134_full_spec.py
+python3 reverse-engineering/scripts/check_ordinary_pipeline134.py
 
 # 历史0.126.0，保留回归入口。
 python3 reverse-engineering/scripts/check_upgrade_spec.py

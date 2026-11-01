@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-01",
+  "version": "0.134.0",
+  "build": "983346a7",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "mixed_pickup_run": {
+    "version": "0.134.0",
+    "build": "983346a7",
+    "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "module_sha256": "6362ccea8f8e1280388f1cbff3e612250c2ccbd2743d86e5705a24f8eb417511",
+    "original_full_functions": [
+      1417,
+      2862
+    ],
+    "case_count": 382,
+    "mismatch_count": 0,
+    "operation_cases": {
+      "append": 56,
+      "currency": 32,
+      "step": 294
+    },
+    "groups": {
+      "XP_round_min_sat": 28,
+      "age6_strict_boundary": 4,
+      "attracting_records_do_not_count_as_idle": 4,
+      "distance_radius_and_due_markers": 48,
+      "idle_count_growth_merge": 48,
+      "idle_foreign_outside_collect_guard": 5,
+      "kind1_entity_counter_rng_append": 30,
+      "kind1_guid_counter_wrap": 2,
+      "nearest_first_tie_and_amount_wrap": 1,
+      "reverse_dispatch_observable_via_wrap": 1,
+      "same_invocation_arrival_rounds_to_now": 2,
+      "seeded_records": 200,
+      "spawn_counter_wrap_and_guid_low24": 3,
+      "stored_arrival_boundary": 6
+    },
+    "fields_compared": [
+      "capacity",
+      "count",
+      "spawn_counter",
+      "message_sequence",
+      "level",
+      "xp",
+      "pending",
+      "phase",
+      "rng",
+      "records_words"
+    ],
+    "unwritten_arrival_policy": "Known old/prior slot words exact; only newly allocated unknown append arrival masked.",
+    "runtime": {
+      "case_count": 382,
+      "actual_original_functions": [
+        1417,
+        2862
+      ],
+      "reached_original_callees_unchanged": true,
+      "original_allocator": 91940,
+      "fresh_instances": 12,
+      "fresh_instance_every": 32,
+      "max_memory_bytes": 14942208,
+      "memory_limit_pages": 512,
+      "denied_function_imports": 878,
+      "actual_host_calls": 0,
+      "node": "v22.23.4",
+      "application_start_called": false,
+      "full_game_started": false,
+      "network_used": false,
+      "user_saves_accessed": false
+    },
+    "source_sha256": {
+      "scripts/build_full134_oracle.py": "c902cac2ec5494c1be2184a850b3efa790ac012915bce986c39fd259f05a6f88",
+      "scripts/full134_host.mjs": "ddf6c4ef4f5049e30dbb80dc6c1ca126c7c51b8876df3254a9b4a3b0e314726e",
+      "scripts/check_pickups134_full_spec.py": "31fc180730a65d037a6b89287e6a14a795ba50fb7d36f50ccde176ce7fb74e7b",
+      "scripts/run_pickups134_full_oracle.mjs": "8413095246f0b90fe384f3157d094fc5b891afa07c9fa1c9313d374a5331709b",
+      "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+      "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+      "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+      "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+    },
+    "artifact_sha256": {
+      "pickups134-cases.json": "4c99ec3b9feb1694abf4e48588041a1d2017483e4beb8a5c2966a9c6c6788595",
+      "pickups134-original-results.jsonl": "0adf3e81df57e6c0c780ac5e0124009c911071730c24ae3ea202a021ee219d47",
+      "pickups134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "pickups134-runtime.json": "f6782effd3fde5e76d490fb8befcf0984ba15275dd404f141b76c75d70b01fa8"
+    },
+    "limitations": [
+      "Kind0 and idle foreign records outside collect guards; kind1 append;mode0,empty claims/XP aux,resolved region0 flat placement.",
+      "All complete original internal callees retained. Other state/message/visual fields not compared.",
+      "World clamp/full terrain,foreign pickup callbacks,noncanonical marker,mode/claims and full scheduling remain pending.",
+      "Model pending serialization/physical allocation/4630 full side effects remain pending."
+    ],
+    "run_directory": "evidence/full0134-oracle-20261101T015951.533992Z",
+    "receipt_sha256": "6b9e7cdbe0fe5253ec3dd0ccbda009b83a9c5156383ac405fee02cb964233f17",
+    "review_sha256": "491621bc2d99a7de523b593d08227ce617616c4b08ee9f7cfc9855f1adcffdde"
+  },
+  "ordinary_composition_run": {
+    "version": "0.134.0",
+    "build": "983346a7",
+    "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "module_sha256": "942105a9a3ebcfb2bcafc7f7bf80e5e91527e2cd8024d7e4976fc4a5a27705ee",
+    "actual_original_chain": [
+      914,
+      1417,
+      1820,
+      2862,
+      4630
+    ],
+    "case_count": 367,
+    "stage_snapshots_per_case": 4,
+    "mismatch_count": 0,
+    "groups": {
+      "XP_fraction_strict_boundary": 3,
+      "bounded3_exact_low32_boundary": 2,
+      "currency_probability_grid_boundary": 2,
+      "death_append_or_merge_before_collection": 6,
+      "death_reward_counter_guid_wrap": 6,
+      "nonlethal_no_reward": 4,
+      "phase3_growth_after_real_death": 12,
+      "seeded_complete_ordinary_rewards": 332
+    },
+    "currency_pass_cases": 87,
+    "bounded_rejection_cases": 17,
+    "independently_predicted_times": true,
+    "boundary_contract_checks": {
+      "mode": "purePython boundary/lifecycle contract regression",
+      "cases": 5,
+      "original_WASM_cases": 0,
+      "choice_boundary_preserves_later_record": true,
+      "stat_rebuild_boundary_preserves_later_record": true,
+      "last_award_marks_dirty_and_future_calls_block": true,
+      "explicit_external_stat_snapshot_required": true
+    },
+    "runtime": {
+      "case_count": 367,
+      "original_functions": [
+        914,
+        1417,
+        1820,
+        2862,
+        4630
+      ],
+      "original_callees_unchanged": true,
+      "original_allocator": 91940,
+      "fresh_instances": 23,
+      "fresh_instance_every": 16,
+      "max_memory_bytes": 20578304,
+      "memory_limit_pages": 512,
+      "actual_host_calls": 0,
+      "denied_function_imports": 878,
+      "node": "v22.23.4",
+      "full_game_started": false,
+      "application_start_called": false,
+      "network_used": false,
+      "user_saves_accessed": false
+    },
+    "source_sha256": {
+      "scripts/build_full134_oracle.py": "c902cac2ec5494c1be2184a850b3efa790ac012915bce986c39fd259f05a6f88",
+      "scripts/full134_host.mjs": "ddf6c4ef4f5049e30dbb80dc6c1ca126c7c51b8876df3254a9b4a3b0e314726e",
+      "scripts/check_ordinary_pipeline134.py": "7e1893f09f8fbccc5e609a9c4cbe13804d9c8a519e8e6a3f876a1761357d6ea5",
+      "scripts/run_ordinary_pipeline134_oracle.mjs": "d6f4506ee0083781c3791d9ea2fc83c838528eec6c91658d40c68c51f7083495",
+      "scripts/check_pickups134_full_spec.py": "31fc180730a65d037a6b89287e6a14a795ba50fb7d36f50ccde176ce7fb74e7b",
+      "reconstruction/core_spec/ordinary_pipeline134.py": "2bc89471033a20409f3e02bbd939f6afec56887162304c1c46e20f140fc51877",
+      "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+      "reconstruction/core_spec/death_loot134.py": "7c9709d827b0646a064bc66802ba2c31d1ae1e4b912bd70dcebfb4f643a0e1f6",
+      "reconstruction/core_spec/pickup_entity134.py": "f0ea7b743921fa0e44eaff4c2c21885d83006ca6ba53b254e7e146d76f92eaec",
+      "reconstruction/core_spec/pickups134.py": "a021c011b23b059b5026bc48bf65c55a49e67519bc549507657666a7fd4b4248",
+      "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+      "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+    },
+    "artifact_sha256": {
+      "ordinary-pipeline134-cases.json": "201f3c66130c1560c17f403e44fcc1c63667d22e8d690e04db4f77dd58ba7243",
+      "ordinary-pipeline134-original-results.jsonl": "538d6472910c37cab98081c407819d238ba0c4be62e006961fd5c1325b326731",
+      "ordinary-pipeline134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "ordinary-pipeline134-runtime.json": "8fee360f3e9a24622dce08f7124d984557d1217395cf0f0fe7db4bfe83f41b77"
+    },
+    "limitations": [
+      "One unmoving ordinary target,flag68=0,empty items/abilities/procs/claims,mode0,region0 resolved flat world placements.",
+      "Low-level progression cases explicitly set phase3 after914 to bypass2159;no independent scheduler/candidate generation implied.",
+      "Full original normal callees retained;selected core fields/56B words/four-word RNG compared,not all messages/entities/events.",
+      "New pickup arrival+4 remains masked until the original/model writes it;other compared words exact.",
+      "Boss/special/flagged rewards,foreign collectible callbacks,terrain,full skills and independent whole game remain incomplete."
+    ],
+    "run_directory": "evidence/full0134-oracle-20261101T020143.890376Z",
+    "receipt_sha256": "5a0b99e7e4b772125ae6480f0827847b604404bb20474f36cbd4a58e38df016b",
+    "review_sha256": "16f5b755e700c09db8d2eaeb573ce49b7afea4a7cfa74d7f1e31c575c46e5158"
+  },
+  "terminal_model_status_counts": {
+    "core_projection": 363,
+    "pending_stats": 4
+  },
+  "modeled_draw_counts": {
+    "0": 4,
+    "2": 276,
+    "4": 70,
+    "5": 8,
+    "6": 9
+  },
+  "baseline_pickup_checkpoint": "fb74fdb",
+  "baseline_pickup_cases": 345,
+  "baseline_source_is_historical": true,
+  "independent_reconstruction_complete": false,
+  "full_game_started": false,
+  "installed_apps_or_saves_modified": false,
+  "limits": [
+    "Exact tested fields/stages only; independent complete tick, terrain, candidate generation, attributes and full events remain incomplete.",
+    "Four composition terminal states retain stats_dirty and pending_stats; later calls require an explicit independently resolved stat snapshot.",
+    "Five purePython boundary/lifecycle contracts are not original-WASM cases."
+  ]
+}

@@ -18,7 +18,8 @@ from build_full134_oracle import ROOT,SOURCE,SOURCE_SHA,build
 from build_upgrade134_oracle import sha
 sys.path.insert(0,str(ROOT/'reconstruction'))
 from core_spec import binary32 as f
-from core_spec.pickups134 import (PickupRecord,PickupState,Placement,append_xp,step_pickups,encode_record56)
+from core_spec.pickups134 import (PickupRecord,PickupState,Placement,append_xp,append_idle_currency,step_pickups,encode_record56)
+from core_spec.pickup_entity134 import project_kind1_entity
 from core_spec.progression134 import ProgressionState,apply_xp
 
 SEED=0xa2e02862
@@ -37,7 +38,13 @@ def corpus():
         options.update(kw)
         state=PickupState(records=records,capacity=capacity,**options)
         placement=placement or Placement(b(-9396),b(-633),0)
-        result=append_xp(state,amount,placement)if operation=='append'else step_pickups(state)
+        rng=[1,2,3,4]
+        if operation=='append':result=append_xp(state,amount,placement)
+        elif operation=='currency':
+            entity=project_kind1_entity(rng,state.spawn_counter)
+            result=append_idle_currency(state,amount,placement,guid=entity.guid,counter_after=entity.counter2400)
+            rng=list(entity.rng_state)
+        else:result=step_pickups(state)
         if result.status!='core_projection':raise ValueError('Corpus outside model domain: '+str(result))
         growth=result.capacity_growth is not None
         old_arrival={r.guid:r.arrival_bits if r.arrival_bits is not None else OLD_ARRIVAL for r in records}
@@ -51,7 +58,7 @@ def corpus():
         for award in result.xp_awards:progress=apply_xp(progress,award).state
         expected={'capacity':result.state.capacity,'count':len(words),'spawn_counter':result.state.spawn_counter,
             'message_sequence':result.state.message_sequence,'level':progress.level,'xp':progress.xp,
-            'pending':progress.pending_upgrades,'phase':phase,'rng':[1,2,3,4],'records_words':words}
+            'pending':progress.pending_upgrades,'phase':phase,'rng':rng,'records_words':words}
         scalar=asdict(state);scalar.pop('records')
         cases.append({'id':len(cases),'operation':operation,'group':group,'state':scalar,
             'record_hex':[encode_record56(r,uninitialized_arrival_bits=OLD_ARRIVAL if r.arrival_bits is None else None).hex()for r in records],
@@ -95,6 +102,14 @@ def corpus():
             rs.append(replace(record(i,x=rng.randrange(-20,21),y=rng.randrange(-20,21),marker=marker,
                 arrival_bits=b(rng.choice((9,10,11)))if marker else None),amount=rng.getrandbits(32)))
         add('step','seeded_records',tuple(rs),radius_bits=b(rng.randrange(0,25)),xp=rng.getrandbits(32))
+    for count in (0,1,4,44,45):
+        for spare in (0,2):
+            for amount in (0,4,0xffffffff):
+                add('currency','kind1_entity_counter_rng_append',tuple(record(i)for i in range(count)),capacity=count+spare,amount=amount)
+    for counter in (0xffffff,0xffffffff):add('currency','kind1_guid_counter_wrap',capacity=1,spawn_counter=counter)
+    for foreign_kind,distance in ((1,10),(1,4.0009765625),(2,4),(6,10),(99,10)):
+        foreign=record(1,x=distance,kind=foreign_kind)
+        add('step','idle_foreign_outside_collect_guard',(record(0),foreign))
     return cases
 
 
@@ -128,17 +143,18 @@ def main():
     mismatchfile=out/'pickups134-mismatches.json';mismatchfile.write_text(json.dumps(mismatches,indent=2,allow_nan=False)+'\n')
     runtimefile=out/'pickups134-runtime.json'
     files=('scripts/build_full134_oracle.py','scripts/full134_host.mjs','scripts/check_pickups134_full_spec.py','scripts/run_pickups134_full_oracle.mjs',
-        'reconstruction/core_spec/pickups134.py','reconstruction/core_spec/binary32_sqrt.py','reconstruction/core_spec/binary32.py','reconstruction/core_spec/progression134.py')
+        'reconstruction/core_spec/pickups134.py','reconstruction/core_spec/pickup_entity134.py','reconstruction/core_spec/rng.py',
+        'reconstruction/core_spec/binary32_sqrt.py','reconstruction/core_spec/binary32.py','reconstruction/core_spec/progression134.py')
     receipt={'version':'0.134.0','build':'983346a7','original_wasm_sha256':SOURCE_SHA,'module_sha256':manifest['module_sha256'],
         'original_full_functions':[1417,2862],'case_count':len(cases),'mismatch_count':len(mismatches),
-        'operation_cases':{op:sum(c['operation']==op for c in cases)for op in ('append','step')},
+        'operation_cases':{op:sum(c['operation']==op for c in cases)for op in ('append','currency','step')},
         'groups':{g:sum(c['group']==g for c in cases)for g in sorted({c['group']for c in cases})},
         'fields_compared':list(cases[0]['expected']),'unwritten_arrival_policy':'Known old/prior slot words exact; only newly allocated unknown append arrival masked.',
         'runtime':json.loads(runtimefile.read_text()),'source_sha256':{p:sha(ROOT/p)for p in files},
         'artifact_sha256':{p.name:sha(p)for p in (casefile,resultfile,mismatchfile,runtimefile)},
-        'limitations':['Kind0 only,mode0,empty claims/aux vectors,resolved region0 placement inside clamp radius and flat terrain.',
+        'limitations':['Kind0 and idle foreign records outside collect guards; kind1 append;mode0,empty claims/XP aux,resolved region0 flat placement.',
             'All complete original internal callees retained. Other state/message/visual fields not compared.',
-            'World clamp/full terrain,other kinds,noncanonical marker,mode/claims and full scheduling remain pending.',
+            'World clamp/full terrain,foreign pickup callbacks,noncanonical marker,mode/claims and full scheduling remain pending.',
             'Model pending serialization/physical allocation/4630 full side effects remain pending.']}
     if sha(SOURCE)!=SOURCE_SHA:raise ValueError('Source changed')
     (out/'pickups134-comparison.json').write_text(json.dumps(receipt,indent=2,allow_nan=False)+'\n')

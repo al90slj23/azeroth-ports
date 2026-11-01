@@ -1,10 +1,12 @@
-"""Independent official0.134.0 kind0 pickup record/arithmetic projection.
+"""Independent official0.134.0 XP/currency pickup record projection.
 
 Source SHA256:2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52.
 Evidence:reports/2026-11-01-death-xp0134-chain.json (full1417/2862).
 This module never calls original WASM. World placement is an explicit already
-resolved input; physical heap addresses, visual/message serialization, other
-pickup kinds, claims, multiplayer and4630 side effects are reported pending.
+resolved input; physical heap addresses, visual/message serialization,
+non-XP collection callbacks, claims, multiplayer and4630 effects stay pending.
+Idle non-XP records are retained only when their actual2862 geometry guards
+cannot dispatch a callback. Currency entity GUID/counter are explicit inputs.
 Floating inputs/outputs are IEEE754 u32 words. Codec preserves all raw words;
 arithmetic uses binary32 and canonicalizes NaNs as documented by binary32.py.
 """
@@ -17,7 +19,9 @@ from .progression134 import round_85718_bits, trunc_sat_u32
 
 STRIDE = 56
 XP_KIND = 0
+CURRENCY_KIND = 1
 XP_VISUAL_ID = 9001
+CURRENCY_VISUAL_ID = 9004
 XP_GUID_PREFIX = 0xf130002329000000
 ONE = 0x3f800000
 MIN_DELAY = 0x3df5c28f           # exact f32 literal0.12 from2862
@@ -25,6 +29,7 @@ AGE_SIX = 0x40c00000
 SPEED_24 = 0x41c00000
 SPEED_32 = 0x42000000
 MILLISECONDS = 0x447a0000
+OTHER_KIND_RADIUS = 0x40400000    # actual2862 default arm: distance<=3
 _RECORD = struct.Struct('<IIIIQIIIIIIII')
 
 
@@ -50,7 +55,7 @@ class Placement:
 class PickupRecord:
     """All56 bytes; arrival=None means append has not written that word.
 
-    Newly appended kind0 record+4 is uninitialized in the original. Encoding
+    Newly appended kind0/1 record+4 is uninitialized in the original. Encoding
     such a record therefore requires either its prior56B slot or an explicit
     raw word. A decoded record always carries the actual raw arrival bits.
     """
@@ -243,34 +248,89 @@ def pickup_xp_amount(base_amount, xp_multiplier_bits):
     return trunc_sat_u32(_minimum_nan_safe(amount, ONE))
 
 
-def step_pickups(state):
-    """Project one full2862 kind0-only, empty-claim, mode0 invocation.
+def append_idle_currency(state, amount, placement, *, guid, counter_after):
+    """Project1417 kind1's record append after a separately modeled1820.
+
+    Kind1 bypasses1417's kind0 45-idle cap and kind2 count cap. Its entity
+    GUID and post-entity G2400 counter must come from an independent source
+    such as pickup_entity134.project_kind1_entity; this function invents
+    neither RNG nor entity behavior. Height/xy must already be resolved by
+    the world-placement model. Arrival+4 remains unwritten (None).
+    """
+    if not isinstance(state, PickupState):
+        raise TypeError('Expected a PickupState')
+    _u(amount)
+    _u(guid, 64)
+    _u(counter_after)
+    if not isinstance(placement, Placement):
+        return _pending(state, '1417 region clamp/terrain placement must be supplied explicitly')
+    record = PickupRecord(kind=CURRENCY_KIND, amount=amount, guid=guid,
+        visual_id=CURRENCY_VISUAL_ID, x_bits=placement.x_bits, y_bits=placement.y_bits,
+        height_bits=placement.height_bits, spawn_time_bits=state.now_bits)
+    capacity, growth = state.capacity, None
+    if len(state.records) == capacity:
+        capacity = max(4, (capacity * 2) & f.MASK)
+        if capacity <= len(state.records) or capacity * STRIDE > 0x7fffffff:
+            return _pending(state, '1417 allocation-size failure/overflow is pending')
+        growth = (state.capacity, capacity)
+    output = replace(state, records=state.records + (record,), capacity=capacity,
+                     spawn_counter=counter_after)
+    message = MessageProjection('currency_spawn', guid,
+        position_bits=(record.x_bits, record.y_bits, record.height_bits), amount=amount)
+    pending = ('1820 currency entity state/RNG and binary messages are external to this record append',)
+    if growth is not None:
+        pending += ('65336/56191 physical allocation address and copied heap bytes',)
+    return PickupResult(output, 'core_projection', (message,), capacity_growth=growth,
+                        pending=pending)
+
+
+def step_pickups(state, *, after_award=None):
+    """Project2862 XP plus provably idle other kinds, empty claims and mode0.
 
     First attract marker0 records; then collect marker!=0 records whose stored
     arrival<=the same entry now. Eligible indices are processed in descending
     order, preserving31731's ordered removal. Very large now may round
     now+.12 back to now and allow collection within this same invocation.
-    Return xp_awards in real dispatch order; apply_xp can project4630 fields.
+    Return xp_awards in real dispatch order. An optional independent consumer
+    sees each award immediately after its ordered removal; returning False
+    stops at that consumer boundary with later records still present. It does
+    not run original code or invent unresolved4630/2159 side effects.
+
+    Other kinds require marker0 and a false actual collection geometry gate:
+    kind1 uses distance<=radius; kind>=2 uses distance<=3. Marker0 alone does
+    not make a currency record idle. Any potentially dispatched non-XP
+    callback returns pending_domain with the entire input state unchanged.
     """
     if not isinstance(state, PickupState):
         raise TypeError('Expected a PickupState')
+    if after_award is not None and not callable(after_award):
+        raise TypeError('after_award must be callable or None')
     if state.mode != 0:
         return _pending(state, '2862 nonzero-mode queue and XP multiplier are pending')
     if not state.claims_empty:
         return _pending(state, '2862 claim-vector construction and GUID membership are pending')
-    if any(record.kind != XP_KIND for record in state.records):
-        return _pending(state, '2862 mixed pickup-kind callbacks are pending')
-    if any(record.marker not in (0, 1) for record in state.records):
+    xp = tuple(record for record in state.records if record.kind == XP_KIND)
+    for record in state.records:
+        if record.kind == XP_KIND:
+            continue
+        if record.marker != 0:
+            return _pending(state, '2862 marked non-XP collection callbacks are pending')
+        distance = sqrt_bits(_squared_distance(record.x_bits, record.y_bits,
+                                              state.player_x_bits, state.player_y_bits))
+        radius = state.radius_bits if record.kind == CURRENCY_KIND else OTHER_KIND_RADIUS
+        if f.to_float(distance) <= f.to_float(radius):
+            return _pending(state, '2862 nearby non-XP collection callbacks are pending even for marker0')
+    if any(record.marker not in (0, 1) for record in xp):
         return _pending(state, '2862/31731 noncanonical marker/despawn variants are pending')
-    if any(record.aux_count or record.aux_capacity for record in state.records):
+    if any(record.aux_count or record.aux_capacity for record in xp):
         return _pending(state, '31731 auxiliary visual GUID vector/destruction is pending')
-    if any(record.marker and record.arrival_bits is None for record in state.records):
+    if any(record.marker and record.arrival_bits is None for record in xp):
         return _pending(state, 'Attracting record requires its actual stored arrival word')
     records, messages = list(state.records), []
     now = f.to_float(state.now_bits)
     sequence = state.message_sequence
     for index, record in enumerate(records):
-        if record.marker != 0:
+        if record.kind != XP_KIND or record.marker != 0:
             continue
         distance = sqrt_bits(_squared_distance(record.x_bits, record.y_bits,
                                               state.player_x_bits, state.player_y_bits))
@@ -287,13 +347,22 @@ def step_pickups(state):
             (state.player_x_bits, state.player_y_bits, state.player_z_bits),
             delay, trunc_sat_u32(f.mul(delay, MILLISECONDS))))
     eligible = [i for i, record in enumerate(records)
-                if record.marker != 0 and record.arrival_bits is not None
+                if record.kind == XP_KIND and record.marker != 0 and record.arrival_bits is not None
                 and f.to_float(record.arrival_bits) <= now]
     awards = []
     for index in reversed(eligible):
         record = records.pop(index)
         messages.append(MessageProjection('xp_despawn', record.guid))
-        awards.append(pickup_xp_amount(record.amount, state.xp_multiplier_bits))
+        award=pickup_xp_amount(record.amount, state.xp_multiplier_bits)
+        awards.append(award)
+        if after_award is not None:
+            intermediate=replace(state,records=tuple(records),message_sequence=sequence)
+            proceed=after_award(award,intermediate)
+            if type(proceed)is not bool:
+                raise TypeError('after_award must return a boolean')
+            if not proceed:
+                return PickupResult(intermediate,'pending_consumer',tuple(messages),tuple(awards),
+                    pending=('XP consumer stopped before unresolved side effects; later due records remain undispatched',))
     output = replace(state, records=tuple(records), message_sequence=sequence)
     pending = ()
     if messages:

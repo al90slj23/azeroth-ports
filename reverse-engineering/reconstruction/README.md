@@ -16,6 +16,9 @@
 - `core_spec/incoming134.py`：新版玩家减伤/盾消费与barrier替换标量规则的前缀；所有未实现回调显式pending。139例非致死空状态的选定最终字段与完整原1063一致，盾耗尽、复活/死亡、完整施法未验收。
 - `core_spec/binary32_sqrt.py`：用精确有理数和平方中点比较得到binary32最近偶数平方根，NaN载荷不保证；没有依赖host libm。
 - `core_spec/pickups134.py`：56B记录、kind0追加/45闲置合并、模式0空claim的吸取/到期/XP投影；与完整原1417/2862对照345例，0差异。世界placement和消息/实体/其他kind等仍显式pending。
+- 当前扩展`pickups134`支持kind1显式GUID/counter追加、真实收取guard外的idle外来记录，以及逐笔XP消费者边界；最新382例完整原件对照0差异，345例是fb74fdb历史基线。
+- `core_spec/death_loot134.py`、`pickup_entity134.py`：普通死亡XP/金币的直接抽样，以及kind1消费者的额外随机角度抽样、counter/GUID投影；flagged/kind2和完整实体树/视觉仍pending。
+- `core_spec/ordinary_pipeline134.py`：将上述规格接成受控普通单目标死亡→拾取→XP投影，367例×4阶段与原件一致。遇选卡或未恢复属性立即返回pending，升级后dirty状态阻止跨调用复用旧倍率；不是独立完整主循环。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
 ```sh
@@ -26,6 +29,7 @@ python3 reverse-engineering/scripts/check_combat134_full_spec.py
 python3 reverse-engineering/scripts/check_progression134_full_spec.py
 python3 reverse-engineering/scripts/check_incoming134_nonfatal_spec.py
 python3 reverse-engineering/scripts/check_pickups134_full_spec.py
+python3 reverse-engineering/scripts/check_ordinary_pipeline134.py
 
 # 历史0.126.0的隔离数值对照。
 python3 reverse-engineering/scripts/check_upgrade_spec.py

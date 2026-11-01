@@ -24,8 +24,8 @@ for(let index=0;index<cases.length;++index){
     player_z_bits:1512,radius_bits:1384,xp_multiplier_bits:1388,spawn_counter:2400,message_sequence:2404}))w(G+offset,c.state[name]);
   w(G+1860,capacity);w(G+1864,records);w(G+1868,c.record_hex.length);
   c.rng.forEach((x,i)=>w(G+1712+4*i,x));
-  if(c.operation==='append'){
-    c.placement.forEach((x,i)=>w(XYZ+4*i,x));roles.spawn_pickup(G,0,c.amount,XYZ);
+  if(c.operation==='append'||c.operation==='currency'){
+    c.placement.forEach((x,i)=>w(XYZ+4*i,x));roles.spawn_pickup(G,c.operation==='currency'?1:0,c.amount,XYZ);
   }else if(c.operation==='step')roles.collect_pickups(G);
   else throw Error('Unknown operation');
   v=new DataView(memory.buffer);const r=p=>v.getUint32(p,true),count=r(G+1868),pointer=r(G+1864);

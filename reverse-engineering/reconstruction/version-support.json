@@ -132,12 +132,14 @@
         "revival/death",
         "complete incoming1063 and cast922"
       ],
-      "report": "../reports/2026-11-01-incoming0134-spec.json"
+      "report": "../reports/2026-11-01-incoming0134-spec.json",
+      "source_checkpoint": "f6a1625613255757e133fcd47a74749115fb874f"
     },
     {
       "module": "core_spec.pickups134",
       "api": [
         "append_xp",
+        "append_idle_currency",
         "step_pickups",
         "encode_record56",
         "decode_record56"
@@ -147,23 +149,95 @@
         1417,
         2862
       ],
-      "cases": 345,
+      "cases": 382,
       "mismatches": 0,
       "operation_cases": {
         "append": 56,
-        "step": 289
+        "currency": 32,
+        "step": 294
       },
-      "domain": "Kind0-only,mode0,empty claims/aux,canonical markers,resolved region0 in-radius flat placement;level120 except phase3 reverse-order boundary.",
-      "fields_compared": "capacity/count,counters,56B known words,level/XP/pending/phase/RNG. Only15 newly allocated unwritten arrival words masked.",
+      "domain": "Mode0/empty claims;kind0 and idle foreign records outside their real collect guards;kind1 append with explicit entity GUID/counter;resolved region0 flat placement.",
+      "fields_compared": "capacity/count,counters,56B known words,level/XP/pending/phase/RNG. Only30 newly allocated unwritten arrival words masked.",
       "not_independently_implemented": [
         "world placement/terrain",
         "binary messages",
         "physical allocation addresses",
-        "other pickup kinds",
+        "foreign collectible callbacks",
         "claims/modes",
         "complete4630 side effects"
       ],
-      "report": "../reports/2026-11-01-pickups0134-spec.json"
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json",
+      "historical_baseline": {
+        "checkpoint": "fb74fdb",
+        "cases": 345,
+        "report": "../reports/2026-11-01-pickups0134-spec.json"
+      },
+      "report_section": "mixed_pickup_run"
+    },
+    {
+      "module": "core_spec.death_loot134",
+      "api": [
+        "project_ordinary_xp",
+        "project_ordinary_currency",
+        "project_ordinary_rewards"
+      ],
+      "status": "flag0_direct_rewards_verified_inside_full_original_composition",
+      "cases": 367,
+      "mismatches": 0,
+      "domain": "One ordinary flag68=0 unmoving target,empty auxiliary death effects;XP0/1/25/u32MAX,high24 and bounded3 boundaries.",
+      "not_runtime_covered": [
+        "flag68_nonzero/kind2",
+        "U244/U64 routes",
+        "items/procs/other death effects"
+      ],
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
+    },
+    {
+      "module": "core_spec.pickup_entity134",
+      "api": "project_kind1_entity",
+      "status": "successful_kind1_rng_counter_guid_verified_in_full_original_calls",
+      "verified_fields": [
+        "rng_state",
+        "counter2400",
+        "guid"
+      ],
+      "kind1_composition_cases": 87,
+      "kind1_standalone_cases": 32,
+      "not_fully_implemented": [
+        "entity tree/rotation",
+        "geometry",
+        "visuals",
+        "messages",
+        "other kinds"
+      ],
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
+    },
+    {
+      "module": "core_spec.ordinary_pipeline134",
+      "api": [
+        "apply_ordinary_hit",
+        "collect_at"
+      ],
+      "status": "restricted_composition_full_original_differential_passed",
+      "cases": 367,
+      "stages_per_case": 4,
+      "mismatches": 0,
+      "domain": "flag68=0,one unmoving target,mode0,empty items/abilities/modifiers/claims,resolved region0 flat placements;phase1 level120 or explicit phase3 controller for12 low-level cases.",
+      "terminal_models": {
+        "core_projection": 363,
+        "pending_stats": 4
+      },
+      "choice_and_stats_boundaries": "Per-award stop;unprocessed records preserved,dirty stats block future operations until caller supplies independently resolved values.",
+      "pure_lifecycle_contract_cases": 5,
+      "pure_contract_original_wasm_cases": 0,
+      "remaining": [
+        "independent full stat rebuild integration",
+        "2159 candidate generation",
+        "boss/special/flagged rewards",
+        "full terrain/skill/frame scheduling",
+        "messages/entities/saves/UI/network"
+      ],
+      "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
     }
   ],
   "other_modules": [
