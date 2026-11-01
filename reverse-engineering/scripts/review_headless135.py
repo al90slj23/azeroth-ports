@@ -6,8 +6,8 @@ from collections import Counter
 import argparse,hashlib,json,re,struct,sys
 sys.dont_write_bytecode=True
 from review_gameplay_phase135 import ROOT,ORIGINAL,ORIGINAL_SHA,sha,strict,norm,sections,bodies,core_closure,load_checker,moving_guids,uint
-DEFAULT='full0135-oracle-20261101T064308.759593Z'
-ROLE_BINDINGS={'initial_game':(1560,'7f7f7f',''),'player_tick':(2088,'7f7d',''),'process_hits':(1754,'7f',''),'area_tick':(3757,'7f',''),'update_units':(921,'7f7d',''),'collect_pickups':(2862,'7f',''),'spawn_tick':(947,'7f7d',''),'select_ability':(1072,'7f7f','')}
+DEFAULT='full0135-oracle-20261101T072329.149731Z'
+ROLE_BINDINGS={'initial_game':(1560,'7f7f7f',''),'player_tick':(2088,'7f7d',''),'process_hits':(1754,'7f',''),'area_tick':(3757,'7f',''),'update_units':(921,'7f7d',''),'collect_pickups':(2862,'7f',''),'spawn_tick':(947,'7f7d',''),'select_ability':(1072,'7f7f',''),'effect_tick':(915,'7f7d','')}
 
 
 def compare(want,actual,path,counts):
@@ -86,7 +86,7 @@ def verify_area_tick_storage(prior,old_count,now_bits,current,new_count,local):
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--batch',default=DEFAULT);parser.add_argument('--output');args=parser.parse_args()
  batch=Path(args.batch);batch=batch if batch.is_absolute()else ROOT/'evidence'/args.batch
- out=Path(args.output).resolve()if args.output else ROOT/'evidence'/datetime.now(timezone.utc).strftime('headless-area0135-independent-review-%Y%m%dT%H%M%S.%fZ');out.mkdir(parents=True,exist_ok=True)
+ out=Path(args.output).resolve()if args.output else ROOT/'evidence'/datetime.now(timezone.utc).strftime('headless-effects0135-independent-review-%Y%m%dT%H%M%S.%fZ');out.mkdir(parents=True,exist_ok=True)
  receipt_path=batch/'headless135-comparison.json';receipt=json.loads(receipt_path.read_text());frozen=receipt['source_sha256_before'];assert frozen==receipt['source_sha256_after'];snap=batch/'source-snapshot';drift={}
  for name,digest in frozen.items():
   assert sha(snap/name)==digest
@@ -95,8 +95,9 @@ def main():
  for name,digest in receipt['artifacts'].items():assert sha(batch/name)==digest
  raw=ORIGINAL.read_bytes();assert hashlib.sha256(raw).hexdigest()==ORIGINAL_SHA;ss=sections(raw);bb=bodies(raw,ss);signature=signatures(raw,ss)
  module=(batch/'research135-exports.wasm').read_bytes();ms=sections(module);assert [(k,x)for k,x,_,_ in ss if k!=7]==[(k,x)for k,x,_,_ in ms if k!=7];assert not any(k==8 for k,*_ in ss)
- manifest=json.loads((batch/'manifest.json').read_text());has_area=any(r['role']=='area_tick'for r in manifest['roles']);roles=dict(ROLE_BINDINGS)
+ manifest=json.loads((batch/'manifest.json').read_text());has_area=any(r['role']=='area_tick'for r in manifest['roles']);has_effects=any(r['role']=='effect_tick'for r in manifest['roles']);roles=dict(ROLE_BINDINGS)
  if not has_area:del roles['area_tick']
+ if not has_effects:del roles['effect_tick']
  assert manifest['denied_function_import_count']==878 and {r['role']for r in manifest['roles']}==roles.keys()
  for r in manifest['roles']:
   i,params,results=roles[r['role']];assert(i,params,results)==(r['index'],r['parameters_hex'],r['results_hex']);assert signature(i)==(params,results)
@@ -107,7 +108,13 @@ def main():
  fixtures=[json.loads(x)for x in(batch/'headless135-fixtures.jsonl').read_text().splitlines()];budgets={f.get('frame_budget',250)for f in fixtures};assert len(budgets)==1
  regenerated=author.corpus(False,frame_budget=next(iter(budgets)));assert strict(fixtures,regenerated),'Fixed-policy corpus regeneration differs'
  observed=[json.loads(x)for x in(batch/'headless135-results.jsonl').read_text().splitlines()];assert [x['id']for x in observed]==list(range(8));assert[int(f['input']['seed_u64'])for f in fixtures]==list(range(8))
- counts=Counter();cases=[];unknowns=[];expected_kinds=('player','hits','area','ai','collect','spawn')if has_area else('player','hits','ai','collect','spawn')
+ counts=Counter();cases=[];unknowns=[];unknown_effects=[];expected_kinds=('player','hits','area','effects','ai','collect','spawn')if has_effects else(('player','hits','area','ai','collect','spawn')if has_area else('player','hits','ai','collect','spawn'))
+ if has_effects:
+  prior_batch=ROOT/'evidence/full0135-oracle-20261101T064308.759593Z';prior_cases=[json.loads(x)for x in(prior_batch/'headless135-fixtures.jsonl').read_text().splitlines()]
+  assert sha(prior_batch/'headless135-fixtures.jsonl')=='535a5c994df7d51a2d697cbd75dc2d869b81c0f6c8f128572fa6d04809dd21e4'
+  for new,old in zip(fixtures,prior_cases):
+   assert strict({k:v for k,v in new.items()if k!='expected'},{k:v for k,v in old.items()if k!='expected'}),'Original8seedactions/boundaries changed'
+   projected=[dict(kind=v['kind'],projection={k:x for k,x in v['projection'].items()if k!='effect_state'})for v in new['expected']if v['kind']!='effects'];assert strict(projected,old['expected']),'Preexistingmodel expected changed'
  for fixture,actual in zip(fixtures,observed):
   inp=dict(fixture['input']);inp['seed_u64']=int(inp['seed_u64']);inp['object_id_u64']=int(inp['object_id_u64']);kw=dict(flat_height_bits=inp['flat_height_bits'],zeroed_unit_storage_resolved=True)
   if has_area:kw['zeroed_area_storage_resolved']=True
@@ -121,6 +128,10 @@ def main():
     state,status=author.select(state,action['index']);current=(('select',state),);selection_frames.append(state.frames)
    for kind,model in current:
     o=actual['stages'][at];expected=norm(author.projection(model));assert kind==o['kind'];words_guard(expected);compare(expected,o['projection'],f'case{fixture["id"]}.stage{at}',counts)
+    if has_effects:
+     e=expected['effect_state'];assert e['clock2364_bits']==0 and e['effect_counter2356']==0 and e['action_sequence1644']==1 and e['player_action_tag416']==0
+     assert e['delayed56']==e['effects120']==dict(capacity=0,records_hex=[]);assert e['player_xyz']==list(model.collection.player_xyz)
+     side=o['unmodeled_effect_fields'];assert set(side)=={'inactive_action_payload_words','delayed_pointer','effect120_pointer','player_facing_bits'};assert len(side['inactive_action_payload_words'])==5 and all(type(x)is int and 0<=x<=0xffffffff for x in(*side['inactive_action_payload_words'],side['delayed_pointer'],side['effect120_pointer'],side['player_facing_bits']));unknown_effects.append(dict(case=fixture['id'],stage=at,fields=side))
     prior=bytes(storage);prior_area=bytes(area_storage);lossless(storage,o['unit_storage_delta_words'],local,'unit');modeled=b''.join(bytes.fromhex(r)for r in model.unit_storage);assert len(modeled)==len(storage)and modeled==storage;assert sha_bytes(storage)==expected['unit_storage_sha256']==o['projection']['unit_storage_sha256']
     records=o['projection']['records'];max_units=max(max_units,len(records));assert b''.join(bytes.fromhex(r)for r in records)==storage[:len(records)*424]
     if has_area:
@@ -172,10 +183,11 @@ def main():
  for c in cases:
   for k,v in c.items():
    if isinstance(v,int)and k not in('id','seed','frames','selections','final_level','max_active_units','max_active_areas','original_compared_frames_after_last_selection'):totals[k]+=v
- result=dict(version='0.135.1',build='0898d5e3',reviewed_receipt=str(receipt_path.relative_to(ROOT)),reviewed_receipt_sha256=sha(receipt_path),original_sha256=ORIGINAL_SHA,source_files=len(frozen),core_init_import_closure=closure,current_source_drift=drift,roles=manifest['roles'],cases=cases,totals=dict(totals),comparison=dict(counts),boundaries=dict(Counter(c['boundary']for c in cases)),frame_budget=next(iter(budgets)),all_nonexport_sections_identical=True,original_exports_preserved_and_exact_expected_roles_added=True,independent_model_regeneration_and_action_replay=True,lossless_original_unit_and_area_storage_reconstructed=has_area,original_executed=False,author_source_modified=False,reviewer_script_sha256=sha(Path(__file__)),unmodeled_player_key_stage_occurrences=len(unknowns),limitations=receipt['limitations'],coverage_notes=['Onlyactualevents inthese8seeds arecounted; standalonearea693case metrics are notimported.','All128NPC424B and128area88B slots reconstructed fromordered losslessu32deltas, independentlyhashchecked at every stage.','Independentarea sequential expiry memmoves preserveinactive intermediate tails; thenone64/72 tick update perliveentry.','Append19B reusechecks are exact, but nonzero unwritten reuse is claimedonlyif observed count ispositive.','Next model frame aftera budget stop isobservational only andhasnooriginaloutput inthisbatch.','Only documented pickup/live words accept unspecifiedu32;area/NPCbacking have nomask.'],conclusion='Controlled same-G ordinary+seven-area gameplay slice passes; complete880, genuinephaseentry andwholegame remain unproven.')
+ result=dict(version='0.135.1',build='0898d5e3',reviewed_receipt=str(receipt_path.relative_to(ROOT)),reviewed_receipt_sha256=sha(receipt_path),original_sha256=ORIGINAL_SHA,source_files=len(frozen),core_init_import_closure=closure,current_source_drift=drift,roles=manifest['roles'],cases=cases,totals=dict(totals),comparison=dict(counts),boundaries=dict(Counter(c['boundary']for c in cases)),frame_budget=next(iter(budgets)),all_nonexport_sections_identical=True,original_exports_preserved_and_exact_expected_roles_added=True,independent_model_regeneration_and_action_replay=True,lossless_original_unit_and_area_storage_reconstructed=has_area,original_executed=False,author_source_modified=False,reviewer_script_sha256=sha(Path(__file__)),unmodeled_player_key_stage_occurrences=len(unknowns),unmodeled_effect_field_stage_occurrences=len(unknown_effects),new_independent915_empty_domain_verified=has_effects,prior8seed_actions_and_legacy_expected_unchanged=has_effects,limitations=receipt['limitations'],coverage_notes=['Onlyactualevents inthese8seeds arecounted; standalonearea693case metrics are notimported.','All128NPC424B and128area88B slots reconstructed fromordered losslessu32deltas, independentlyhashchecked at every stage.','Independentarea sequential expiry memmoves preserveinactive intermediate tails; thenone64/72 tick update perliveentry.','Append19B reusechecks are exact, but nonzero unwritten reuse is claimedonlyif observed count ispositive.','Next model frame aftera budget stop isobservational only andhasnooriginaloutput inthisbatch.','Only documented pickup/live words accept unspecifiedu32;area/NPCbacking have nomask.'],conclusion='Controlled same-G ordinary+seven-area gameplay slice passes; complete880, genuinephaseentry andwholegame remain unproven.')
+ if has_effects:(out/'unmodeled-effect-fields-observed.json').write_text(json.dumps(unknown_effects,indent=2)+'\n')
  (out/'reviewer-source.py').write_bytes(Path(__file__).read_bytes());(out/'review.json').write_text(json.dumps(result,indent=2)+'\n')
- (ROOT/'reports/2026-11-01-headless-area0135-independent-review.json').write_text(json.dumps(dict(result,evidence_directory=str(out.relative_to(ROOT)),review_sha256=sha(out/'review.json')),indent=2)+'\n')
- (ROOT/'reports/2026-11-01-headless-area0135-independent-review.md').write_text('# Headless area135 independent review\n\n'+f'Fixed0.135.1/0898d5e3: {len(cases)} seeds, {receipt["frames"]} frames, {receipt["stages"]} stages and {receipt["selections"]} natural selections; strict snapshot-model corpus regeneration/action replay and retained original comparisons passed. No original execution or author-source edit.\n\n'+f'All {len(frozen)} source snapshots, {len(closure)} core modules including package init, exact {len(roles)} role signatures/bodySHA and non-export original bytes passed. Both 128-slot storages are independently reconstructed losslessly at every stage; area expiry/tick byte transformations are separately reproduced.\n\n'+'Actual-event totals: `'+json.dumps(dict(totals),sort_keys=True)+'`.\n\n'+'Boundaries: `'+json.dumps(result['boundaries'])+'`; fixed first-upgrade-else-first policy retained. Post-selection original frames and next-model-only status are listed per seed in review.json. No extra original frame after an unknown or budget boundary is implied.\n\n'+'Masks remain limited to declared pickup arrival and inactive live words; full NPC424/area88 backing bytes are strict. Physical packets/ECS/rendering and complete880/genuineentry remain unresolved.\n\n'+'Receipt: `'+str((out/'review.json').relative_to(ROOT))+'`\n')
+ (ROOT/'reports/2026-11-01-headless-effects0135-independent-review.json').write_text(json.dumps(dict(result,evidence_directory=str(out.relative_to(ROOT)),review_sha256=sha(out/'review.json')),indent=2)+'\n')
+ (ROOT/'reports/2026-11-01-headless-effects0135-independent-review.md').write_text('# Headless area135 independent review\n\n'+f'Fixed0.135.1/0898d5e3: {len(cases)} seeds, {receipt["frames"]} frames, {receipt["stages"]} stages and {receipt["selections"]} natural selections; strict snapshot-model corpus regeneration/action replay and retained original comparisons passed. No original execution or author-source edit.\n\n'+f'All {len(frozen)} source snapshots, {len(closure)} core modules including package init, exact {len(roles)} role signatures/bodySHA and non-export original bytes passed. Both 128-slot storages are independently reconstructed losslessly at every stage; area expiry/tick byte transformations are separately reproduced.\n\n'+'Actual-event totals: `'+json.dumps(dict(totals),sort_keys=True)+'`.\n\n'+'Boundaries: `'+json.dumps(result['boundaries'])+'`; fixed first-upgrade-else-first policy retained. Post-selection original frames and next-model-only status are listed per seed in review.json. No extra original frame after an unknown or budget boundary is implied.\n\n'+'Masks remain limited to declared pickup arrival and inactive live words; full NPC424/area88 backing bytes are strict. Physical packets/ECS/rendering and complete880/genuineentry remain unresolved.\n\n'+'Receipt: `'+str((out/'review.json').relative_to(ROOT))+'`\n')
  print(json.dumps(dict(directory=str(out),receipt_sha256=sha(receipt_path),review_sha256=sha(out/'review.json'),stages=receipt['stages'],source_files=len(frozen),core_files=len(closure),drift=list(drift),totals=dict(totals)),indent=2))
 
 

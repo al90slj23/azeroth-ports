@@ -1,0 +1,839 @@
+{
+  "title": "Fixed135 real entry resource boundary and local asset request contract",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "static_contract_and_real_local_asset_inventory_only_not_completed_entry",
+  "static_traces": [
+    {
+      "path": "evidence/entry-resources0135-static-20261101T070842.694262Z/trace.json",
+      "sha256": "54e83f0a283efdf762def047df9436bd8320076f4a3cd0b7544cab2390c5aba9"
+    },
+    {
+      "path": "evidence/entry-resources0135-static-20261101T071050.388765Z/trace.json",
+      "sha256": "2a501d5f810f43c33ecb6f0a7068dbad94c56e0d073fbd4c6c6f36f97d753668"
+    }
+  ],
+  "local_inventory": {
+    "path": "evidence/entry-resources135-local-inventory-20261101T072438.139967Z/inventory.json",
+    "sha256": "d19a9de9e6041231e460e1aeeb8e702745915e70eba35ca9f93bdce1f6ab9bcf"
+  },
+  "independent_spec": "reconstruction/resource_spec/entry_resources135.py",
+  "spec_sha256": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+  "trace_script": "scripts/trace_entry_resources135.py",
+  "trace_script_sha256": "9f67c94e1c6a633697005ccbf1ecc43b32da97c967768e86f6083f2bbfdaaf00",
+  "source_functions": [
+    {
+      "index": 1089,
+      "header": "  (func (;1089;) (type 3) (param i32)",
+      "body_sha256": "08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb",
+      "wat_sha256": "9fa6c776a9e45cc8f64972bf1f44d02c2da362035f282566ebf9ceef9254a025",
+      "wat_start": 226954244,
+      "wat_end": 227135103
+    },
+    {
+      "index": 4546,
+      "header": "  (func (;4546;) (type 5) (param i32) (result i32)",
+      "body_sha256": "073d44f43e2a1a3ebb31ad697f20516f07128a866eb8c7c40c2eb1fbcca2e00f",
+      "wat_sha256": "d79688d3a20d4863b25689282eda94542ec00119da8d4570f07b81fcbc157f9b",
+      "wat_start": 543805792,
+      "wat_end": 543915883
+    },
+    {
+      "index": 95986,
+      "header": "  (func (;95986;) (type 3) (param i32)",
+      "body_sha256": "d93a67b5fd5b31244c802b9d9c3ef680ddc0a6a6d03b641fa3a4bf59cdde0034",
+      "wat_sha256": "73fbb7fd3e2fe1295fa7c927561ecea28f1a4dd1b5e2578947417a1a7132facc",
+      "wat_start": 1272224307,
+      "wat_end": 1272224734
+    },
+    {
+      "index": 23171,
+      "header": "  (func (;23171;) (type 3) (param i32)",
+      "body_sha256": "409bb27ce70f961d11132c3459eccf4d04b7aca40ea4f984c03c1ecacaee6970",
+      "wat_sha256": "dd91512a81fa81fd13b5737f5e7e9a0b83b4ba2786e4fc7a54a70fb8c39949a1",
+      "wat_start": 919609306,
+      "wat_end": 919617509
+    },
+    {
+      "index": 50449,
+      "header": "  (func (;50449;) (type 1) (param i32 i32 i32)",
+      "body_sha256": "977861c4d996eb6fb30150259be7f2cd33f84d366626f5da5f36c8eb534d8e13",
+      "wat_sha256": "59a2583d5acd477974d1badd8a6b19fede03ffda82ccb7c45c3d55255296f108",
+      "wat_start": 1148935322,
+      "wat_end": 1148937533
+    },
+    {
+      "index": 96127,
+      "header": "  (func (;96127;) (type 3) (param i32)",
+      "body_sha256": "1fefa7c1d0b763e08661d71580014b3a239c0c8379e8a8cbc78486bf94960ba1",
+      "wat_sha256": "a5c29cb141acfb552dcc602d20d359c08c7b6f7c741e38e5e1f6c2f58e0fdbf2",
+      "wat_start": 1272310550,
+      "wat_end": 1272310996
+    },
+    {
+      "index": 67826,
+      "header": "  (func (;67826;) (type 11) (result i32)",
+      "body_sha256": "294b6524bfa35e360ec2f5bb310dea985110f776458a92ea78fcf89e44784672",
+      "wat_sha256": "9ca4ad5aca615ae5726074fbbc807030f34d3a62b2780e1effeb729d3570f98f",
+      "wat_start": 1212659551,
+      "wat_end": 1212660517
+    },
+    {
+      "index": 19179,
+      "header": "  (func (;19179;) (type 11) (result i32)",
+      "body_sha256": "0f8bda70f0361b37af60f86c924877707aa1e149047faaa06db82e44ae79596e",
+      "wat_sha256": "0d0db80ec7bfc0fcc4d41e6fd349955fb9c6c2bb2a8311ffda2d17601e7292ab",
+      "wat_start": 867226870,
+      "wat_end": 867233670
+    },
+    {
+      "index": 122098,
+      "header": "  (func (;122098;) (type 3) (param i32)",
+      "body_sha256": "0fac1221588116bb240f3e017d8564ff9c6b09552691422085e5279e9d0e8992",
+      "wat_sha256": "9d887c9c540e2dd469af055786203131f6509c288a81cc879b70705ef7e4be1e",
+      "wat_start": 1280108204,
+      "wat_end": 1280108402
+    },
+    {
+      "index": 1744,
+      "header": "  (func (;1744;) (type 3) (param i32)",
+      "body_sha256": "c7c16dcf45b62c60bf6ba39c8e9e97fe7ca09845d9ad0de467e4362b80a93af7",
+      "wat_sha256": "3420342a2ebe2bec9809fed51bf1f1150e8a6ca61ffcc875e672356e25c72d10",
+      "wat_start": 361070839,
+      "wat_end": 361132156
+    },
+    {
+      "index": 13516,
+      "header": "  (func (;13516;) (type 40) (param i32 i32 f32 f32)",
+      "body_sha256": "58ff93447950538f3b0f4df4bbed8a1cef1fda89a7b6cbc182340d0926299c5e",
+      "wat_sha256": "d5559ab0a9d3924ccf442ee37a7635b4386e5f58566b89e1c14482d42440789a",
+      "wat_start": 787173337,
+      "wat_end": 787183155
+    },
+    {
+      "index": 5112,
+      "header": "  (func (;5112;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "28169494eb34e0d985bc08d4a6d5a2f5977e4a92bd8e55537d92d0f65887f15c",
+      "wat_sha256": "05d6f352b1a66b1a351a5abc88b156baa4f7b800694229ef821503e1c5523f4e",
+      "wat_start": 565769008,
+      "wat_end": 565792851
+    },
+    {
+      "index": 5893,
+      "header": "  (func (;5893;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "ff1e47b424d001cd445ef80f42e665c60cf0ab886d083ff97c76ca23944645a0",
+      "wat_sha256": "46ed3b22f5a5d0c8eed059f1a358232b8466c74d68cf7f8db63e3f080b4eecdc",
+      "wat_start": 595813646,
+      "wat_end": 595834384
+    },
+    {
+      "index": 20468,
+      "header": "  (func (;20468;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "b018d8d79cf4883b8a98c3a42f9e2e9d7789478957ee43fc96463ee0e932e90b",
+      "wat_sha256": "d3e139454331779ad51b369cd9d00d16c9017350d0e50eef22f2096451ea6f51",
+      "wat_start": 883070638,
+      "wat_end": 883077720
+    },
+    {
+      "index": 27849,
+      "header": "  (func (;27849;) (type 22) (param i32 i32) (result i64)",
+      "body_sha256": "b56e271debb5090282aaaa2af7fbeb62439b5a9a41b3044ffdeec566255dab37",
+      "wat_sha256": "a6ac7062d8769ef6697fd1e6920c1bcfc1f4559d798eee556d0746db54c51616",
+      "wat_start": 976751785,
+      "wat_end": 976755420
+    },
+    {
+      "index": 41301,
+      "header": "  (func (;41301;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "365fba791b9adc8be048cda6d4347d634579313d380c8cec6c2aa842c157c969",
+      "wat_sha256": "7962f4da0aad2ac11d0a6251278eedd7e0b666a92ad5bcd01d645ea06beccc5f",
+      "wat_start": 1108422253,
+      "wat_end": 1108425549
+    },
+    {
+      "index": 48393,
+      "header": "  (func (;48393;) (type 3) (param i32)",
+      "body_sha256": "60800b017c0cfff6022eb7fc3d62cff30a2fa26531a262840be5dbb208b1b2d5",
+      "wat_sha256": "ae259a4999cd5857eae1321e53e9d64120f777926dff7eeea5581f1292196867",
+      "wat_start": 1141485276,
+      "wat_end": 1141487640
+    },
+    {
+      "index": 75619,
+      "header": "  (func (;75619;) (type 0) (param i32 i32)",
+      "body_sha256": "966975b63fb11cbf8658f7a7d66f681254639778fa66a8f1ece4ad5b0b9c3240",
+      "wat_sha256": "0d264f5917fb55dda0b410b7b5919327a290400ad0b19b6025801da0dac6ed47",
+      "wat_start": 1225307596,
+      "wat_end": 1225310466
+    },
+    {
+      "index": 90403,
+      "header": "  (func (;90403;) (type 3) (param i32)",
+      "body_sha256": "24c398e0c164b509fe9de690bc18b13872cea1f783bde7bfb288b93cc575f2f9",
+      "wat_sha256": "6363c2dedbd3ae2e9e67f2f17b51213ee821b1e5d0a056b3dbbddc10bbe8377b",
+      "wat_start": 1267819390,
+      "wat_end": 1267819941
+    },
+    {
+      "index": 95999,
+      "header": "  (func (;95999;) (type 6) (param i32 i32) (result i32)",
+      "body_sha256": "d7ddc7663e6457f5c261cb8292ef0af632fbf0895aab880abf079970c2c69d81",
+      "wat_sha256": "e62605db6be94cb31a3d547cb4c56a8817956ef7811614906b8096d5be018488",
+      "wat_start": 1272229953,
+      "wat_end": 1272230883
+    },
+    {
+      "index": 96128,
+      "header": "  (func (;96128;) (type 3) (param i32)",
+      "body_sha256": "465059da5e1aa71ce63455d1314148b90f83e4d10e1fc8c73b88b8d78e7ab6d6",
+      "wat_sha256": "684f816b8549ce1e4a80536d64d25e0d915940d2834fb6288d462128a30aaadf",
+      "wat_start": 1272310996,
+      "wat_end": 1272311353
+    },
+    {
+      "index": 102275,
+      "header": "  (func (;102275;) (type 11) (result i32)",
+      "body_sha256": "db3570d841ffb60d69d59bb4d417d311971f861b67e8d893f5f5e86f481d58dc",
+      "wat_sha256": "8012a8053ad8f22651b4089321e3f2e1c57bca3c719ebe8a0426555fd16e28fb",
+      "wat_start": 1275091561,
+      "wat_end": 1275091740
+    },
+    {
+      "index": 25611,
+      "header": "  (func (;25611;) (type 1) (param i32 i32 i32)",
+      "body_sha256": "93ffc75cebf38583cbc91a6f9414acdd38b28cf2aba16c80596982296182416d",
+      "wat_sha256": "0db591c0799943cdb4cd8459c95a2ef97258a9336d07006050547445ccc7fd4b",
+      "wat_start": 952105898,
+      "wat_end": 952112581
+    },
+    {
+      "index": 78412,
+      "header": "  (func (;78412;) (type 0) (param i32 i32)",
+      "body_sha256": "b56df8aacdbcbc5e4485fe7514e4f9d71b32a5484c17e350ebc08f67895e05f1",
+      "wat_sha256": "4145a3ff7de3f8c2351d5c0325414f7974c4cc21bdf99975b9a0ea4023e4fc5f",
+      "wat_start": 1228960830,
+      "wat_end": 1228986933
+    },
+    {
+      "index": 23187,
+      "header": "  (func (;23187;) (type 1) (param i32 i32 i32)",
+      "body_sha256": "eb5c24537d4b947304e9ffd0ba8872044bb7e01ace89b6fe60e7fc66fa9021e4",
+      "wat_sha256": "4ee004e6aec549e1c80296cfd6be90ed6acfda4b9577736c0c9c666114a63253",
+      "wat_start": 919751614,
+      "wat_end": 919758169
+    },
+    {
+      "index": 46340,
+      "header": "  (func (;46340;) (type 6) (param i32 i32) (result i32)",
+      "body_sha256": "8d9c8297f22b3a400b8bfd72dcc62c248d9c2ac07cc5772229cba6e8ba3c443c",
+      "wat_sha256": "f569825d48126d50f94287e648ba7e4138f529c889fd40fad8c5a8004d2c12f0",
+      "wat_start": 1133240693,
+      "wat_end": 1133243396
+    },
+    {
+      "index": 48920,
+      "header": "  (func (;48920;) (type 8) (param i32 i32 i32 i32 i32)",
+      "body_sha256": "316c1578f8d0b3fc2a073b4207af9d611bc4ad4afbfc6fb7bb637df821e55a0a",
+      "wat_sha256": "d4707e161aa85ad210a021096f97afa250b1086f881923f676668ae68e260ce4",
+      "wat_start": 1143707316,
+      "wat_end": 1143733500
+    },
+    {
+      "index": 11489,
+      "header": "  (func (;11489;) (type 1) (param i32 i32 i32)",
+      "body_sha256": "1ef5123792b64621433a284443b1376ddf24e152076c9bfa82a6b2b61bfc2125",
+      "wat_sha256": "38e2b01dba6966690e0cfb0d3683d712e82326f7ceca6632fb32e49b37587d60",
+      "wat_start": 752334203,
+      "wat_end": 752350850
+    },
+    {
+      "index": 2709,
+      "header": "  (func (;2709;) (type 0) (param i32 i32)",
+      "body_sha256": "7c7fce2f60ccaf02ae7edac6617c7090c02ca8d6e3fc51581f970844ff50e396",
+      "wat_sha256": "4971b61be019f99ab917ea46ee8f24f7bfa413a8abf6e24e322d4bf7fc3d977d",
+      "wat_start": 447900743,
+      "wat_end": 448578113
+    },
+    {
+      "index": 970,
+      "header": "  (func (;970;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "da7ec2590935653bc9a8cd69bd66c2d4af89ad85f063369c06dceb71c853a73a",
+      "wat_sha256": "047ebb2e10f04f10ebf98d0f7599d668d577142b2653981737e5900700706bad",
+      "wat_start": 181356909,
+      "wat_end": 183476747
+    },
+    {
+      "index": 6730,
+      "header": "  (func (;6730;) (type 0) (param i32 i32)",
+      "body_sha256": "9aa867cf375c7e60bffcee15c07f77e1320f715f08a68af69bd439eedb8f61e8",
+      "wat_sha256": "8d8ff56b1b836550d0db3ef0ce1f9b2b8e9d778f39d0d451a9504be08d65ecbb",
+      "wat_start": 627206949,
+      "wat_end": 627768424
+    },
+    {
+      "index": 5736,
+      "header": "  (func (;5736;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671",
+      "wat_sha256": "462e196ee49c6304433bd5692b41bb4fc23c9e9fa386ada39574c03dc3662d16",
+      "wat_start": 591099419,
+      "wat_end": 591116721
+    },
+    {
+      "index": 2785,
+      "header": "  (func (;2785;) (type 15) (param i32 i32 f32)",
+      "body_sha256": "2b8d07e32cdde3d22724bb7f1992812be8cc165d22c5092cff2f64eed2ef0a76",
+      "wat_sha256": "2ceddd7da4eab9d0e2ec82c9dec4c1e6e871fd09514601b9dc4aa2a776702e1a",
+      "wat_start": 453675952,
+      "wat_end": 453716953
+    },
+    {
+      "index": 1417,
+      "header": "  (func (;1417;) (type 2) (param i32 i32 i32 i32)",
+      "body_sha256": "4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342",
+      "wat_sha256": "7e9ae77a571bce628dc9202237f928772e8199b3c583bd7d9dd1a47755abdc33",
+      "wat_start": 318560368,
+      "wat_end": 318633040
+    },
+    {
+      "index": 29631,
+      "header": "  (func (;29631;) (type 40) (param i32 i32 f32 f32)",
+      "body_sha256": "26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650",
+      "wat_sha256": "a6bff26a5ae98d6e3a8180f4ac0e457b1ea8564b7ed1c9f8cd51b81326a7c941",
+      "wat_start": 1004619467,
+      "wat_end": 1004624257
+    },
+    {
+      "index": 3735,
+      "header": "  (func (;3735;) (type 0) (param i32 i32)",
+      "body_sha256": "141ddd31b287296781552671b4b166238fe0e642c58591955f37c14dbe989d0d",
+      "wat_sha256": "194ec41f5c0dc35747d82a8e04fd63594e5a8089e8743920ff2a6eb6facff634",
+      "wat_start": 504185226,
+      "wat_end": 504222477
+    },
+    {
+      "index": 17862,
+      "header": "  (func (;17862;) (type 0) (param i32 i32)",
+      "body_sha256": "df463ab362528ebef804aaf039bf4eaffb0a1eaafc438dac8154ea62a6c5d9a7",
+      "wat_sha256": "6d6c8e87d6c21d68fa2c1925a9aebce703ca66d9320fa843cff7e226c41ffc88",
+      "wat_start": 848771617,
+      "wat_end": 848907975
+    },
+    {
+      "index": 17955,
+      "header": "  (func (;17955;) (type 0) (param i32 i32)",
+      "body_sha256": "2a724993631994e39f3b9b3c15705314eb11911dd2ec6c7cee88eca29a3d81b5",
+      "wat_sha256": "71643eca534da2284f8eafe8b5ad73148dfe3feb5ac26f52b4be04f1543ca824",
+      "wat_start": 851073588,
+      "wat_end": 851140242
+    },
+    {
+      "index": 19873,
+      "header": "  (func (;19873;) (type 0) (param i32 i32)",
+      "body_sha256": "ff8477d5e7faba71682e78b233c9ed88ab9a278a1883f9119ef364bfd55c43ab",
+      "wat_sha256": "700e62741fe2d0cffb7612f6891be3aae80c0c9a12058532b441b2626cccc807",
+      "wat_start": 876521157,
+      "wat_end": 876720288
+    }
+  ],
+  "entry_first_resource_steps": [
+    {
+      "caller": 1089,
+      "callee": 4546,
+      "line": 12,
+      "argument": 0,
+      "purpose": "Initialize global Spell/SpellIcon Once data; return value dropped"
+    },
+    {
+      "caller": 4546,
+      "callee": 95986,
+      "purpose": "Construct64BwebFileSystem; getsconfiguredbasevia23171/50449/SELF"
+    },
+    {
+      "caller": 20468,
+      "first": 25611,
+      "purpose": "In-memory virtual-file lookup before externalfile path"
+    },
+    {
+      "caller": 20468,
+      "callee": 78412,
+      "purpose": "Lazy __index request andJSON string-array normalization"
+    },
+    {
+      "caller": 4546,
+      "callee": 20468,
+      "path": "DBFilesClient\\Spell.dbc",
+      "pointer": 5305649,
+      "length": 23,
+      "function_line": 106
+    },
+    {
+      "caller": 4546,
+      "callee": 20468,
+      "path": "DBFilesClient\\SpellIcon.dbc",
+      "pointer": 5305672,
+      "length": 27,
+      "function_line": 192
+    }
+  ],
+  "vfs_contract": {
+    "base": "__wenilla_data_base trimmed of trailing slash; fallback browser location.origin+/data",
+    "layout": "Cached __wenilla_data_layout==static; static lowercasesASCII/splits slash-or-backslash/encodessegments; other layout encodes wholechain name",
+    "index": "base+/__index+__wenilla_data_stamp; successful JSON names normalized with exact23187 ASCIIlower/slash->backslash; semanticset only",
+    "read": "overlay25611 first, optionalindex membership,48920URL,11489syncXHR GET withx-user-defined MIME; 200success/404not-found branch",
+    "not_recovered": "Completefailurepolicies,JSoverlayinitialproducer,physical64Bhash/Once lifetimes andbrowserhost context are not independently implemented"
+  },
+  "world_before1560": {
+    "producer": 6730,
+    "actual_map_source": "zone152+96mapID,+104/+108/+112centerXYZ,+120radius; not aMap.dbc lookup inthis observed path",
+    "cache": "App5116 worldRc pointer reused onlyifmapID/XYZmatchApp5100/5104/5108/5112",
+    "new_world": "124B allocation, twoRCwords=1, copy116Bworldpayload to+8; thenpassed as1560argument2",
+    "order": "VFS->WDT->WDTMAINmask->3x3existingADT->terrain/objectgeometry/raster/navigation->world124->1560->movement2328->1089",
+    "terrain_pending": true,
+    "ownership_note": "6730 initializesstrong=weak=1, immediatelyincrementsstrong1->2 andstoresApp5116whilepassingthesameRc to1560;completeownership/drop remainsunmodeled."
+  },
+  "local_resources": {
+    "unique_first_request_files": 116,
+    "decoded_bytes_rehashed_against_prior_MPQ_index": 170383346,
+    "dbc_files": 2,
+    "wdt_files": 7,
+    "adt_files": 107,
+    "all116uniquely_owned_in_MPQ": true,
+    "all116listed_in_existing_android_index": true,
+    "physically_in_androiddata": 2,
+    "complete135asset_equivalence": false,
+    "candidate_ADT_model_strings": 1531,
+    "candidate_no_direct_or_hypothetical_m2_alias": 18,
+    "model_strings_are_required_readset": false
+  },
+  "regions": [
+    {
+      "index": 0,
+      "zone": "elwynn",
+      "map_id": 0,
+      "center_xyz_bits": [
+        3323121664,
+        3290316800,
+        1116209152
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Azeroth\\Azeroth.wdt",
+      "adt_order": [
+        "World\\Maps\\Azeroth\\Azeroth_32_48.adt",
+        "World\\Maps\\Azeroth\\Azeroth_33_48.adt",
+        "World\\Maps\\Azeroth\\Azeroth_34_48.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_49.adt",
+        "World\\Maps\\Azeroth\\Azeroth_33_49.adt",
+        "World\\Maps\\Azeroth\\Azeroth_34_49.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_50.adt",
+        "World\\Maps\\Azeroth\\Azeroth_33_50.adt",
+        "World\\Maps\\Azeroth\\Azeroth_34_50.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 617,
+      "raw152_sha256": "aa7ace8cbc885786ee0752885198aa690e9482b91c77cdec6ebf0dee90828da7"
+    },
+    {
+      "index": 1,
+      "zone": "duskwood",
+      "map_id": 0,
+      "center_xyz_bits": [
+        3324293120,
+        1127481344,
+        1106404966
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Azeroth\\Azeroth.wdt",
+      "adt_order": [
+        "World\\Maps\\Azeroth\\Azeroth_30_50.adt",
+        "World\\Maps\\Azeroth\\Azeroth_31_50.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_50.adt",
+        "World\\Maps\\Azeroth\\Azeroth_30_51.adt",
+        "World\\Maps\\Azeroth\\Azeroth_31_51.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_51.adt",
+        "World\\Maps\\Azeroth\\Azeroth_30_52.adt",
+        "World\\Maps\\Azeroth\\Azeroth_31_52.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_52.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 855,
+      "raw152_sha256": "ca189663b2a3ab2003e24720015d15103501ada49232c0b2c86959043416149f"
+    },
+    {
+      "index": 2,
+      "zone": "wsg",
+      "map_id": 489,
+      "center_xyz_bits": [
+        1150926848,
+        1152729088,
+        1134231552
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\PVPZone03\\PVPZone03.wdt",
+      "adt_order": [
+        "World\\Maps\\PVPZone03\\PVPZone03_28_28.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_29_28.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_30_28.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_28_29.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_29_29.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_30_29.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_28_30.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_29_30.adt",
+        "World\\Maps\\PVPZone03\\PVPZone03_30_30.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 316,
+      "raw152_sha256": "c54a1ca88e277d5db8548fd19c0cae55a2040a00d86fa2db026d9a1a861c3363"
+    },
+    {
+      "index": 3,
+      "zone": "ungoro",
+      "map_id": 1,
+      "center_xyz_bits": [
+        3318874112,
+        3304062976,
+        3280476570
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Kalimdor\\Kalimdor.wdt",
+      "adt_order": [
+        "World\\Maps\\Kalimdor\\Kalimdor_34_43.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_35_43.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_36_43.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_34_44.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_35_44.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_36_44.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_34_45.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_35_45.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_36_45.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 257,
+      "raw152_sha256": "50c1fce42938d203710123101cce8fcff1d3756a7c1d04013215a01815cad84a"
+    },
+    {
+      "index": 4,
+      "zone": "ab",
+      "map_id": 529,
+      "center_xyz_bits": [
+        1148436480,
+        1149288448,
+        3258187776
+      ],
+      "radius_bits": 1124007936,
+      "flag148": 0,
+      "wdt": "World\\Maps\\PVPZone04\\PVPZone04.wdt",
+      "adt_order": [
+        "World\\Maps\\PVPZone04\\PVPZone04_29_29.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_30_29.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_31_29.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_29_30.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_30_30.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_31_30.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_29_31.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_30_31.adt",
+        "World\\Maps\\PVPZone04\\PVPZone04_31_31.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 369,
+      "raw152_sha256": "387a37ec6c6ec09a3b43cfee40528326cb955cee5832ab84c523ce6c731e7936"
+    },
+    {
+      "index": 5,
+      "zone": "feralas",
+      "map_id": 1,
+      "center_xyz_bits": [
+        3314696192,
+        1151500288,
+        1119774310
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Kalimdor\\Kalimdor.wdt",
+      "adt_order": [
+        "World\\Maps\\Kalimdor\\Kalimdor_28_39.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_29_39.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_30_39.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_28_40.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_29_40.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_30_40.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_28_41.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_29_41.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_30_41.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 544,
+      "raw152_sha256": "eac30d5b618a4c34f891858a83e3cc82eec6987fb5eb63bb0e4d546cf0a24c18"
+    },
+    {
+      "index": 6,
+      "zone": "arena",
+      "map_id": 0,
+      "center_xyz_bits": [
+        3327021056,
+        1133051904,
+        1102000947
+      ],
+      "radius_bits": 1107296256,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Azeroth\\Azeroth.wdt",
+      "adt_order": [
+        "World\\Maps\\Azeroth\\Azeroth_30_55.adt",
+        "World\\Maps\\Azeroth\\Azeroth_31_55.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_55.adt",
+        "World\\Maps\\Azeroth\\Azeroth_30_56.adt",
+        "World\\Maps\\Azeroth\\Azeroth_31_56.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_56.adt",
+        "World\\Maps\\Azeroth\\Azeroth_30_57.adt",
+        "World\\Maps\\Azeroth\\Azeroth_31_57.adt",
+        "World\\Maps\\Azeroth\\Azeroth_32_57.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 625,
+      "raw152_sha256": "fe65289501caad74872aa6c4040903f061b54445daa35f7ea46f516f350c06f9"
+    },
+    {
+      "index": 7,
+      "zone": "sm",
+      "map_id": 189,
+      "center_xyz_bits": [
+        1149411328,
+        1152286720,
+        1104674816
+      ],
+      "radius_bits": 1125515264,
+      "flag148": 1,
+      "wdt": "World\\Maps\\MonasteryInstances\\MonasteryInstances.wdt",
+      "adt_order": [
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_28_29.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_29_29.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_30_29.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_28_30.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_29_30.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_30_30.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_28_31.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_29_31.adt",
+        "World\\Maps\\MonasteryInstances\\MonasteryInstances_30_31.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 2,
+      "raw152_sha256": "b8ff8364be50edc0df355cc522acb2c8a5b40702e2dae2c3d5192d189d34dcba"
+    },
+    {
+      "index": 8,
+      "zone": "av",
+      "map_id": 30,
+      "center_xyz_bits": [
+        3278241792,
+        3281059840,
+        1088421888
+      ],
+      "radius_bits": 1124532224,
+      "flag148": 0,
+      "wdt": "World\\Maps\\PVPZone01\\PVPZone01.wdt",
+      "adt_order": [
+        "World\\Maps\\PVPZone01\\PVPZone01_31_31.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_32_31.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_33_31.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_31_32.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_32_32.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_33_32.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_31_33.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_32_33.adt",
+        "World\\Maps\\PVPZone01\\PVPZone01_33_33.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 565,
+      "raw152_sha256": "1c2a23383bfff2bfe944d99e0b2f1fa5a59235b1051c0188c80a310d5a258b26"
+    },
+    {
+      "index": 9,
+      "zone": "brm",
+      "map_id": 0,
+      "center_xyz_bits": [
+        3321004032,
+        3303079936,
+        1124388045
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Azeroth\\Azeroth.wdt",
+      "adt_order": [
+        "World\\Maps\\Azeroth\\Azeroth_34_45.adt",
+        "World\\Maps\\Azeroth\\Azeroth_35_45.adt",
+        "World\\Maps\\Azeroth\\Azeroth_36_45.adt",
+        "World\\Maps\\Azeroth\\Azeroth_34_46.adt",
+        "World\\Maps\\Azeroth\\Azeroth_35_46.adt",
+        "World\\Maps\\Azeroth\\Azeroth_36_46.adt",
+        "World\\Maps\\Azeroth\\Azeroth_34_47.adt",
+        "World\\Maps\\Azeroth\\Azeroth_35_47.adt",
+        "World\\Maps\\Azeroth\\Azeroth_36_47.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 530,
+      "raw152_sha256": "441dfa2fff1f3cfb64501a285ea66714397b19951879dce9bd45fdceca1868c5"
+    },
+    {
+      "index": 10,
+      "zone": "aq",
+      "map_id": 1,
+      "center_xyz_bits": [
+        3321085952,
+        1153138688,
+        1069547520
+      ],
+      "radius_bits": 1123024896,
+      "flag148": 0,
+      "wdt": "World\\Maps\\Kalimdor\\Kalimdor.wdt",
+      "adt_order": [
+        "World\\Maps\\Kalimdor\\Kalimdor_28_45.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_29_45.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_30_45.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_28_46.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_29_46.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_30_46.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_28_47.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_29_47.adt",
+        "World\\Maps\\Kalimdor\\Kalimdor_30_47.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 569,
+      "raw152_sha256": "176cbefc1dd1f611f11622b6077922314385a6d9355c69982591bef73c58a46e"
+    },
+    {
+      "index": 11,
+      "zone": "naxx",
+      "map_id": 533,
+      "center_xyz_bits": [
+        1164460032,
+        3315568640,
+        1124945101
+      ],
+      "radius_bits": 1110441984,
+      "flag148": 1,
+      "wdt": "World\\Maps\\Stratholme Raid\\Stratholme Raid.wdt",
+      "adt_order": [
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_40_24.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_41_24.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_42_24.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_40_25.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_41_25.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_42_25.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_40_26.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_41_26.adt",
+        "World\\Maps\\Stratholme Raid\\Stratholme Raid_42_26.adt"
+      ],
+      "adt_count": 9,
+      "declared_model_path_count": 386,
+      "raw152_sha256": "dcfc391a11161aa90f8c51a04ac456ba31e1ef52dc6bc5d45e49fa02f7e8eb2e"
+    }
+  ],
+  "opening_default_inputs": {
+    "guards": "mode0,G2576=0,emptyinitialNPC/pickup vectors; actualpost1744state,world/RNG/countermustbecarried",
+    "calls": [
+      [
+        "1744"
+      ],
+      [
+        "5736",
+        0,
+        false,
+        1104150528,
+        1108344832,
+        1056964608
+      ],
+      [
+        "5736",
+        0,
+        false,
+        1104150528,
+        1108344832,
+        1056964608
+      ],
+      [
+        "5736",
+        0,
+        false,
+        1104150528,
+        1108344832,
+        1056964608
+      ],
+      [
+        "5736",
+        0,
+        false,
+        1104150528,
+        1108344832,
+        1056964608
+      ],
+      [
+        "13516_then1417",
+        1099956224,
+        1112014848,
+        2,
+        2
+      ],
+      [
+        "13516_then1417",
+        1099956224,
+        1112014848,
+        2,
+        1
+      ]
+    ],
+    "normal_count": 4,
+    "normal_definition_index_each": 0,
+    "normal_position_option_flag_each": 0,
+    "normal_position8751_bits": [
+      1104150528,
+      1108344832,
+      1056964608
+    ],
+    "kind2_count": 2,
+    "kind2_amount_order": [
+      2,
+      1
+    ],
+    "kind2_sampling13516_bits": [
+      1099956224,
+      1112014848
+    ],
+    "kind2_1417_reclamp": "Eachsample isreclamped tozoneradius-2 andheightqueried separately",
+    "kind2_actor_descriptor": [
+      9005,
+      259,
+      1065353216
+    ],
+    "kind2_entity_args": [
+      3,
+      0
+    ],
+    "kind2_cap_mode0": 5,
+    "kind2_consumer_not_restored": true,
+    "all_entry_side_effects_implemented": false
+  },
+  "new_original_runtime_cases": 0,
+  "host_stub_used": false,
+  "cache_or_once_forged": false,
+  "application_start_called": false,
+  "native_executed": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "installation_packages_modified": false,
+  "limitations": [
+    "Resource116 count islocal assetinventory,not116original gameplaytests.",
+    "BothfirstDBCbytes andWDT/ADTrequestsetexistlocally,butcompleteADTterrain/M2/WMOgeometryselection/world124producerisnotrestored.",
+    "1531declaredmodelstrings include18unresolvedcandidatepaths;theyarenotprovenrequiredrequestsorproofthatrealentrymustfail.",
+    "VFSsemantichelpersdonotwriteoriginalglobals,pointers,hashtablesorOnceflags. NoSELFdummy/noJSreturnstub/noinitialized-cachebypass.",
+    "FourNPC/twokind2contractsareunexecuted1089defaultcallerinputs;actualpost1744RNG/world/packetoutputsandlaterG1964/G1972plansremainunverified.",
+    "Map.dbcalsopresentandMPQhash-matching,butnotprovenrequiredby1089orhardcoded6730path."
+  ],
+  "current_spec_replay": {
+    "path": "evidence/entry-resources135-contract-replay-20261101T073037.619657Z/replay.json",
+    "sha256": "c4760b9174b3b220891d2cc25cc6bd9e22404a0b81a290361545e5503e864c00"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "reviewed_receipt": "evidence/full0135-oracle-20261101T071906.163112Z/effect-system135-comparison.json",
+  "reviewed_receipt_sha256": "252c8db3ca3cb00b07b64ca6e063b97f3bfb5af018a1de990eda7a0bc9888bae",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "passed within explicit empty120/special35,36,37 and raw255 trap domain",
+  "source_files": 17,
+  "core_init_import_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/ai_trig135.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/binary32_sqrt.py",
+    "reconstruction/core_spec/effect_system135.py",
+    "reconstruction/core_spec/progression134.py",
+    "reconstruction/core_spec/spawn135_data.py",
+    "reconstruction/core_spec/spawn_geometry135.py",
+    "reconstruction/core_spec/spawn_heading135.py",
+    "reconstruction/core_spec/spawn_position135_data.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": {},
+  "cases": 500,
+  "stages": 2121,
+  "case_outcomes": {
+    "normal_return_cases": 383,
+    "actual_expected_trap_cases": 117
+  },
+  "strict_comparison": {
+    "strict_nodes": 134814,
+    "full56_backing_bytes_checked": 3800832,
+    "full424_unit_bytes_compared": 1293200,
+    "independent_aura_bytes_checked": 195200,
+    "stages": 2121,
+    "due_records_popped": 663,
+    "matched_tag35": 136,
+    "matched_tag36": 124,
+    "matched_tag37": 102,
+    "raw255_after_pop_traps": 117,
+    "first_slot_aura_callbacks": 77,
+    "missing_or_lowbit_target_pops": 184,
+    "nontrivial56_compactions": 274,
+    "aura_zero_spell_callbacks": 1,
+    "aura_independent_target_differs_from_outer": 1
+  },
+  "model_fixture_regeneration_equal": true,
+  "independent_action_replay_equal": true,
+  "original_results_strict_equal": true,
+  "regenerated_original_guard_cases": [
+    {
+      "name": "ordinary910-explicit-pop-boundary",
+      "status": "pending_910_dispatch"
+    },
+    {
+      "name": "nonempty120-preserved-before-entry",
+      "rejected": true
+    },
+    {
+      "name": "terrain_grid_absent",
+      "status": "pending_world_geometry"
+    },
+    {
+      "name": "navigation_absent",
+      "status": "pending_world_geometry"
+    },
+    {
+      "name": "collision_grid_absent",
+      "status": "pending_world_geometry"
+    }
+  ],
+  "all_nonexport_sections_identical": true,
+  "original915_role": {
+    "role": "effect_tick",
+    "index": 915,
+    "export": "research135_effect_tick",
+    "type_index": 37,
+    "parameters_hex": "7f7d",
+    "results_hex": "",
+    "body_start": 2421302,
+    "body_end": 2442154,
+    "body_bytes": 20852,
+    "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6"
+  },
+  "static_helper_trace": "evidence/effect-system135-delayed-static-20261101T071931.505004Z/trace.json",
+  "static_helper_trace_sha256": "e72b735eec13b9f500d4c20924e6e91e070d68f338336f9e4da1b65820d4763d",
+  "independently_checked_helper_identities": [
+    {
+      "index": 915,
+      "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6",
+      "wat_sha256": "153f1608b702bfb5214eff4ae7f348e04b9226a1b1384bdd20f001f3fd60046a"
+    },
+    {
+      "index": 4543,
+      "body_sha256": "06c211dac173f277e0277b4071cf6e2dad2c744e7504625b0070d7dc06520a62",
+      "wat_sha256": "abf4ab4cf77bf5699411838837feae4456a9fe9c616713134edfb40263ef73d0"
+    },
+    {
+      "index": 15511,
+      "body_sha256": "30446f1aefc24637b1d16f4ae41b622f63498c1760663514cba78749408ad7ee",
+      "wat_sha256": "c5be2cca7467c744b9a052bd5edf920e75052188e3cba6809f7c276fbbe8eb3f"
+    },
+    {
+      "index": 54811,
+      "body_sha256": "d8c63e8bd253fcf92c0def707c2d63b99fb455ad373ee873173803d95bb2b504",
+      "wat_sha256": "f899297045c787d144aa47cf7b48eac78c15e973b8b0858cf177cf44ef50d05c"
+    },
+    {
+      "index": 27457,
+      "body_sha256": "d5828588e28f348d87604edfd0bae6afc3717b4b60b48cf0c048844634927f99",
+      "wat_sha256": "e266072404399d93a1b0812f22d39002e24d5f928c6078a245d5b5a0b7ca3cd2"
+    },
+    {
+      "index": 29219,
+      "body_sha256": "f3f0b39b3b4edca24dbf8b59ad1fe84280200939d413230a59abc866f808d493",
+      "wat_sha256": "e7605ae3ac1ec5a81f8a7286fee58dcc4970a41df0bab82fa8c928236274902d"
+    },
+    {
+      "index": 10529,
+      "body_sha256": "964d28a7b04ff4c53d0a8ddd32fd2b8da3053bfef34493f2b733d2faa9f3891d",
+      "wat_sha256": "ef2c9f65b5c239b299675ca221d68575e1f9b7fad3e43bfb47085f0b2d16be5c"
+    },
+    {
+      "index": 50798,
+      "body_sha256": "b9c1ce4d590247d695f871f63320c6665883e10f43395523b1acd44c4e1ee43d",
+      "wat_sha256": "410f45b41a72b571108acc23fd968eb56d60b8c3a86dd4611f0349585ad3e97e"
+    },
+    {
+      "index": 49503,
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "wat_sha256": "2f883dd1b06c4808fddcf64c5bd8c9d89d3b5ec4f517d5120b4963f226c6b589"
+    },
+    {
+      "index": 63687,
+      "body_sha256": "f0091ed4244a43b327bb1efe763595c76eb297e1b24a15f6e584e3113c3e12f8",
+      "wat_sha256": "13456bfd2e0b510c8a5405dc399199612220825f6bcfb35dedd27fc484f5ef8a"
+    }
+  ],
+  "reviewer_source_sha256": {
+    "scripts/review_effect_system135.py": "98c551a66253494b9062f269ffa09d817c28c3af586dc9c19f176a9ddf0c2d5b",
+    "scripts/review_gameplay_phase135.py": "8738bcda26101167e79eba168ce4ae0f6ccc90e96238ba2d80f0ed2d6aa9d1f2"
+  },
+  "comparison_masks": [],
+  "nan_relaxation": false,
+  "source_ID_inputs_above_2pow53": 500,
+  "physical_payload_bytes_observed_in_cumulative_sidecars": 74825,
+  "physical_wire_encoding_independently_restored": false,
+  "original_executed_by_reviewer": false,
+  "author_sources_modified_by_reviewer": false,
+  "reviewer_script_sha256": "98c551a66253494b9062f269ffa09d817c28c3af586dc9c19f176a9ddf0c2d5b",
+  "limitations": [
+    "Full915 with effect120 empty actualfixture snapshot;120 nonempty neverdeleted/zeroed byproduction;ordinary910 due dispatch explicitpartial boundary.",
+    "Special35/36 movement finite and flat terrain/collision/navigation absent;clock/dueNaN comparisons explicit and no NaN bit equivalence;255 is an expected actualunreachable afterpop, counted separately.",
+    "Complete56B queue/backing and424B units/player action state strict;physical payload bytes retained in originalsidecar but onlyopcode order compared, wire encoding remainspending.",
+    "Controlled state fixtures prove consumers;actual8seed producer/three-domain observation is a separate root run.",
+    "Onlyopcode order checked for physical packets; neither payload geometry nor actorGUID wire encoding is independently proved.",
+    "SourceID fixture strings are lossless input data; output message GUIDs are not decoded by this review.",
+    "Expectedraw255trapcases are117separate post-pop originalunreachable outcomes, not117normal gameplayreturns.",
+    "Fixture source/flatworld/empty120domain isexplicit; thiscomponent doesnotestablish real910/120producers orfull915/880 gameplay."
+  ],
+  "evidence_directory": "evidence/effect-system0135-independent-review-20261101T073734.885524Z",
+  "review_sha256": "e9b161a45d9afed31dd48785e0e8c0af07faf3e2409779a8181cd95aed7ed34f"
+}

@@ -91,7 +91,7 @@
   },
   "global_inputs": {
     "clock2352": "read at entry",
-    "2364": "positive due deadline\u2192clear0,1644++,54811 message",
+    "2364": "positive due deadline→clear0,1644++,54811 message",
     "1820/1824/1828": "cap/pointer/length stride56 pending target/action records",
     "1808/1812/1816": "cap/pointer/length stride120 effect/projectile/geometry records",
     "1784/1788/1792": "ordinary424B entity vector",
@@ -124,7 +124,7 @@
       ],
       "name": "pending56",
       "guard": "G1828>0",
-      "behavior": "ordered due/owner test, delete56 via memory.copy;tag255 skip;tag35 movement;36 phase1 player relocation;37 aura removal;default910"
+      "behavior": "ordered due/owner test, delete56 via memory.copy;tag255 pop then bounds panic (later original correction);tag35 movement;36 phase1 player relocation;37 aura removal;default910"
     },
     {
       "lines": [
@@ -214,7 +214,7 @@
       ],
       "name": "deferred-outgoing914",
       "guard": "temporary24B descriptors",
-      "behavior": "spatial collect IDs\u2192914 damage with literal school2,critical0/context0;death may consume RNG"
+      "behavior": "spatial collect IDs→914 damage with literal school2,critical0/context0;death may consume RNG"
     },
     {
       "lines": [
@@ -418,8 +418,8 @@
       ],
       "63687": "G1820/1824/1828 push56",
       "34693": "G1808/1812/1816 push120",
-      "921": "dynamic44B NPC action queue\u2192910",
-      "915": "due56 default\u2192910"
+      "921": "dynamic44B NPC action queue→910",
+      "915": "due56 default→910"
     },
     "exact_clock_site": {
       "raw_descriptor37_tag": 34,
@@ -463,5 +463,21 @@
     "112-function global offset scan is lexical candidate discovery only; aliases/copies/deserialization/indirectcall provenance need separate confirmation.",
     "Only exact helper layouts and selected producer branches are named. Unrestored120B type/shape families retain numeric tags and fullsource.",
     "Current same-G0diff excludes915 and never observed its3entrydomains; no actual8seed915coverage is claimed."
-  ]
+  ],
+  "later_original_semantic_erratum": {
+    "previous_source_commit": "a9e43774fea5bdcd56712fe67a400df6ccf23c1b",
+    "previous_wrapper_sha256": {
+      "2026-11-01-effect-system0135-static.md": "31444aa415d7514979ea159fe016dba339f6bf0f3d16b767d8cabfc30fd2d27a",
+      "2026-11-01-effect-system0135-static.json": "c84f053c75b8b0238fd00165a9bc00c8c743206ecc98130df7ec8ab7bd2101f8",
+      "2026-11-01-effect-system0135-static-review.md": "14e1465d1891822318e19114ba4b65f028aea5ea132085f0a12cd77fd1e3aea7",
+      "2026-11-01-effect-system0135-static-review.json": "05e373fc62cb4bb5a889ba593c2b79dae23451e39e88992d0172f8cf65333e35"
+    },
+    "original_runtime_receipt": "evidence/full0135-oracle-20261101T071906.163112Z/effect-system135-comparison.json",
+    "original_runtime_receipt_sha256": "252c8db3ca3cb00b07b64ca6e063b97f3bfb5af018a1de990eda7a0bc9888bae",
+    "correction": "Raw255 is popped then triggers80660/90675 bounds panic/unreachable; it is not skipped. Original CFG target inventory was correct; the earlier prose interpretation was wrong.",
+    "expected_trap_cases": 117,
+    "normal_cases": 383,
+    "immutable_static_evidence_or_review_receipts_rewritten": false
+  },
+  "current_runtime_followup_report": "2026-11-01-headless-effects0135.json"
 }

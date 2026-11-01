@@ -86,7 +86,7 @@ def main():
     p = argparse.ArgumentParser(); p.add_argument('--phase', choices=('pilot', 'full'), default='pilot'); args = p.parse_args()
     before = {name: sha(ROOT / name) for name in FILES}; assert before == IMPORTED
     rows = corpus(args.phase == 'pilot')
-    out, manifest = build(['initial_game', 'player_tick', 'process_hits', 'area_tick', 'update_units', 'collect_pickups', 'spawn_tick', 'select_ability'])
+    out, manifest = build(['initial_game', 'player_tick', 'process_hits', 'area_tick', 'effect_tick', 'update_units', 'collect_pickups', 'spawn_tick', 'select_ability'])
     snapshots = out / 'source-snapshot'; snapshots.mkdir()
     for name in FILES:
         target = snapshots / name; target.parent.mkdir(parents=True, exist_ok=True); target.write_bytes((ROOT / name).read_bytes()); assert sha(target) == before[name]
@@ -107,13 +107,15 @@ def main():
     if code: raise RuntimeError(f'Original exit{code}: {out}')
     actual = [json.loads(line) for line in result.read_text().splitlines()]
     assert [a['id'] for a in actual] == list(range(len(rows)))
-    failures, counters, unmodeled = [], Counter(), []
+    failures, counters, unmodeled, unmodeled_effects = [], Counter(), [], []
     for case, observed in zip(rows, actual):
         observations = [dict(kind=s['kind'], projection=s['projection']) for s in observed['stages']]
         compare(case['expected'], observations, f'case{case["id"]}', failures, counters)
         unmodeled.append(dict(id=case['id'], stages=[s['unmodeled_player_fields'] for s in observed['stages']]))
+        unmodeled_effects.append(dict(id=case['id'], stages=[s['unmodeled_effect_fields'] for s in observed['stages']]))
     mismatches = out / 'headless135-mismatches.json'; mismatches.write_text(json.dumps(failures, indent=2) + '\n')
     omitted = out / 'headless135-unmodeled-player-fields.json'; omitted.write_text(json.dumps(unmodeled, separators=(',', ':')) + '\n')
+    omitted_effects = out / 'headless135-unmodeled-effect-fields.json'; omitted_effects.write_text(json.dumps(unmodeled_effects, separators=(',', ':')) + '\n')
     assert before == {name: sha(ROOT / name) for name in FILES}
     assert sha(SOURCE) == SOURCE_SHA and sha(RUNTIME) == RUNTIME_SHA
     assert frozen == {p.name: sha(p) for p in (fixtures, out / 'manifest.json', out / manifest['module_file'])}
@@ -122,13 +124,15 @@ def main():
         stages=sum(len(c['expected']) for c in rows), frames=sum(c['independent_frames'] for c in rows),
         selections=sum(c['independent_selections'] for c in rows), boundaries=dict(Counter(c['boundary'] for c in rows)),
         comparison=dict(counters), differences=counters['differences'], source_sha256_before=before, source_sha256_after=before,
-        artifacts={p.name: sha(p) for p in (fixtures, result, stderr, mismatches, omitted, runtime, out / 'manifest.json', out / manifest['module_file'])},
+        artifacts={p.name: sha(p) for p in (fixtures, result, stderr, mismatches, omitted, omitted_effects, runtime, out / 'manifest.json', out / manifest['module_file'])},
         original_sha256=SOURCE_SHA, runtime=json.loads(runtime.read_text()),
         process=dict(command=command, pid=child.pid, pgid=child.pid, seconds=duration, exit_code=code, deadline_seconds=60),
         independent_expected_before_original=True, source_snapshots=True,
         limitations=['Explicit phase1 research resolution;1089/resource boot is incomplete and real entry has additional spawns/kind2 objects.',
             'Unit and area destination memory explicitly pre-reserved as128 zeroed424B/88B slots;live allocator padding determinism is not claimed.',
-            'Same-G controlled2088/1754/3757/921/2862/947 sequence;complete880/915 scheduling not established;2088 and3757 within declared source domains.',
+            'Same-G controlled2088/1754/3757/915/921/2862/947 sequence;complete880 and other915 families not established.',
+            '915 integrated with real-observed idle vectors;active56/120 headless continuation remains pending, separately modeled delayed56 component has its own receipt.',
+            'Inactive player action payload420..436 and physical vec pointers retained separately, not assumed zero or cosmetic.',
             'Seven persistent-area definitions;modifiers36/49,hostile/following areas and other effects remain pending.',
             'Only declared unwritten pickup arrival and inactive live words may be unspecified;all other compared data strict.',
             'Unknown selected abilities and due event clocks stop before another frame;all seeds and boundaries retained.',

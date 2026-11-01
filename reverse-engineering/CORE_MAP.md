@@ -4,7 +4,7 @@
 
 ## 固定0.135.1已定位与已验范围
 
-[完整profile](reports/2026-11-01-wasm0135-profile.md)有175317个defined函数；初批17角色映射保留，当前40个研究角色各自绑定本版body/签名，含area_tick3757。builder只增加export，内部callee保留，原malloc91941、878个拒绝导入固定，应用start不调用。角色数量不是已恢复系统百分比。
+[完整profile](reports/2026-11-01-wasm0135-profile.md)有175317个defined函数；当前41个研究角色绑定本版body/签名，含area_tick3757和effect_tick915。builder仅增加export，原callee、malloc91941与878拒绝导入保留，不调用应用start。白名单数量不等于模块恢复百分比。
 
 [真实1560构造151组](reports/2026-11-01-initial0135-independent-review.md)输出空profile的starter、racial、属性/HP/RNG与phase0。G1256是racial80；class starter是learned80向量首记录。旧[1076/1754的639组5924阶段](reports/2026-11-01-owned-cast0135.md)使用G1256槽中的basic隔离fixture，不追溯称为真实racial；真实racial六分支另由[完整922的720组](reports/2026-11-01-racial-cast0135.md)验证。
 
@@ -16,7 +16,8 @@ flowchart LR
     Boundary --> Player[2088 玩家到期回血及1076主施法]
     Player --> Hits[1754 延迟命中]
     Hits --> Area[3757 持续范围及逐hit伤害死亡]
-    Area --> AI[921 普通AI及尸体清理]
+    Area --> Effects[915 已观测空域及独立守卫]
+    Effects --> AI[921 普通AI及尸体清理]
     AI --> Pickup[2862 XP和金币拾取]
     Pickup --> Spawn[947 普通生成]
     Spawn --> Player
@@ -25,13 +26,13 @@ flowchart LR
     Select -->|新技能未恢复| Pending[pending_selected_ability]
 ```
 
-图示对应[当前064308](reports/2026-11-01-headless-area0135.md)，不是完整880顺序。8seed、1614帧、9695阶段、11select、9703原件入口调用0差异；seed1/6各到400帧预算，seed3在首次选择后继续152帧，于257帧选cone_of_cold后停止，其余未知也保留。前阶段[061901/独审062623](reports/2026-11-01-headless0135-independent-review.md)的1093帧5473阶段单独保留，不重复计数。固定策略优先第一张upgrade，否则第一张，不为支持范围换卡或删除种子。
+图示对应[当前072329](reports/2026-11-01-headless-effects0135.md)，不是完整880顺序。8seed、1614帧、11309阶段、11select、11317原件入口调用0差异，[独审通过](reports/2026-11-01-headless-effects0135-independent-review.md)。seed1/6各400帧预算，seed3到257帧选cone_of_cold后停止；固定策略优先第一张upgrade，否则第一张。旧064308/9695与061901/5473保持历史身份，不重复计数。
 
-唯一HP/RNG沿整条链传递；每hit先自疗，再将死亡奖励RNG返回下一目标。死亡位置取pre-hit424B而非已清零duration，见[placement924](reports/2026-11-01-ordinary-placement0135.md)。mode0自然选卡pause/resume逐移动NPC推进G2412，见[396组1136阶段/604消息](reports/2026-11-01-movement-pause0135.md)。[新独审](reports/2026-11-01-headless-area0135-independent-review.md)按Node无损delta逐阶段复原526167040B单位与109204480B范围backing；52次NPC旧槽复用保留416个非零未写字节。4次area复用的19B未写区全0，4次expiry均删除末槽，不能宣称本批覆盖了非零area未写字节复用或非平凡压缩。7个numeric player keys之外的完整keyed state单列unmodeled。
+唯一HP/RNG/counter沿整链传递，每hit先自疗再续死亡奖励RNG，pre-hit424B决定死亡位置。当前[独审](reports/2026-11-01-headless-effects0135-independent-review.md)以无损delta重建613762048B单位与127384576B范围backing；7numeric keys之外的状态另存。52次单位复用保留416个非零未写字节；area复用的19B全0、4次expiry均末槽，非零area未写复用和非平凡压缩未在本组合覆盖。
 
-真实1089/2328进入链仍在SELF/data宿主访问处阻断，还缺4NPC和2kind2开局对象。phase1、初始128个zeroed424B单位槽与128个zeroed88B范围槽是研究输入；上图不声称完成资源boot、真实分配器padding、完整880/915及3757其余域或独立完整一局。
+真实1089/2328仍缺真实SELF/VFS/world资源与4NPC/2kind2开局生产。phase1及128个zeroed424B/88B槽是研究输入；[资源静态规格](reports/2026-11-01-entry-resources0135-static.md)新增116资产与首层路径核对并获[静态独审](reports/2026-11-01-entry-resources0135-static-review.md)，未完成实际加载/入口。
 
-上图未观测915的G2364延迟通知、56B delayed-effect向量G1820/1824/1828及120B projectile/geometry向量G1808/1812/1816；实际producer910的直接调用者含921/915。它们是否在组合途中产生状态或玩法副作用尚未证明，不能由现有投影0差异推定为空。真实915与这三域读回是下一阶段边界；[完整静态控制清单](reports/2026-11-01-effect-system0135-static.md)及[独立复核](reports/2026-11-01-effect-system0135-static-review.md)已完成，尚无915运行差分或独立实现。
+上图现已接真实915与独立idle模型：[原件插入观测](reports/2026-11-01-effect-system0135-probe.md)捕获三域与完整消息，后继主切片独立预测clock0、两空Vec、1644=1、2356=0及416tag0。90472个inactive动作payload/指针/facing词只另存观察，不预测零、不新增mask。[非空56组件500/2121](reports/2026-11-01-effect-system0135.md)另验35/36/37及255错误；普通910/120B效果尚未在组合接通。完整880尚缺916/975/38007/2602/2573/49037、2376及前段/party/终态，见[NPC/调度静态清单](reports/2026-11-01-npc-effect-producer0135-static.md)。
 
 ### 组件验证与剩余分支
 
@@ -43,7 +44,7 @@ flowchart LR
 | 长期普通AI | [trig6726与AI429组3423步](reports/2026-11-01-ai-motion0135.md)，重放旧416组 | 中角上界421657408；三条800帧跨2π轨迹没有接触攻击。远程/Boss/极大角/死亡复活未恢复。 |
 | 玩家更新与尸体 | [285组444阶段](reports/2026-11-01-player-update0135.md) | 该批以真实perception但CD=Inf、空learned隔离2088；不冒称真实开局调度。periodic/11426和物理1453/1202仍缺。 |
 | 非空definition事件 | [855组1004阶段](reports/2026-11-01-proc-events0135.md)恢复kind27/zero16B gate，解释旧12组差异 | 显式非致死/context0；致死loot后事件顺序及其他gate仍拒绝。旧失败证据不改，不把非空源伪装空源接headless。 |
-| 持续范围技能 | [693组5495阶段](reports/2026-11-01-area-effects0135.md)覆盖922 kind3和3757限定分支 | [组件独审通过](reports/2026-11-01-area-effects0135-independent-review.md)，后继064308已接3757；不代表915、全3757或所有AoE已支持。 |
+| 持续范围技能 | [693组5495阶段](reports/2026-11-01-area-effects0135.md)与[组件独审](reports/2026-11-01-area-effects0135-independent-review.md) | 当前072329已接3757和idle915；不代表全3757、全915或所有AoE。 |
 | 可选接口回归 | [默认639与5068重新执行](reports/2026-11-01-default-extension0135-regression.md) | 输入含expected及结果与原批逐字节一致，不重复计新增覆盖。 |
 | 基础资源 | [29602命名MPQ块/1636167198B与154份DBC](reports/2026-11-01-resource-index-base.md) | 基础RAR含旧0.102.3程序，不自动构成新版完整资产或M2/BLP渲染管线。 |
 

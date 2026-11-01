@@ -1,0 +1,134 @@
+{
+  "status": "passed_scoped_independent_static_and_real_bytes_review",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "reviewer_sha256": "7923bd1e48998adea5330f5de8f7b3d7d319cfb4157602f06e5fb46945d42449",
+  "author_report_sha256": "331cc36ef2e27f3ea0d1d439eaae7985ead8342a7d787b0cb323e3201706e68c",
+  "inventory_sha256": "d19a9de9e6041231e460e1aeeb8e702745915e70eba35ca9f93bdce1f6ab9bcf",
+  "final_contract_replay_sha256": "c4760b9174b3b220891d2cc25cc6bd9e22404a0b81a290361545e5503e864c00",
+  "source_sha256": {
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/extract_catalogue134.py": "4e465095731c6abc9775ce8445fdd6b96c11982300ec33be1c1b4bda0b8b709a",
+    "scripts/trace_entry_resources135.py": "9f67c94e1c6a633697005ccbf1ecc43b32da97c967768e86f6083f2bbfdaaf00"
+  },
+  "production_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/upgrade_values.py",
+    "reconstruction/resource_spec/__init__.py",
+    "reconstruction/resource_spec/dbc.py",
+    "reconstruction/resource_spec/entry_resources135.py"
+  ],
+  "original_bodies_verified": 39,
+  "function_indices": [
+    970,
+    1089,
+    1417,
+    1744,
+    2709,
+    2785,
+    3735,
+    4546,
+    5112,
+    5736,
+    5893,
+    6730,
+    11489,
+    13516,
+    17862,
+    17955,
+    19179,
+    19873,
+    20468,
+    23171,
+    23187,
+    25611,
+    27849,
+    29631,
+    41301,
+    46340,
+    48393,
+    48920,
+    50449,
+    67826,
+    75619,
+    78412,
+    90403,
+    95986,
+    95999,
+    96127,
+    96128,
+    102275,
+    122098
+  ],
+  "key_contracts": [
+    "Spell then SpellIcon real data pointers and WDBC checks",
+    "6730 world Rc before1560 with124B allocation116B payload and1to2strongincrement",
+    "MAIN x64+y; xouter/yinner3x3; ADT y_x; hardcodedmapIDs",
+    "1744;four5736idx0positionNone;13516then1417kind2amount2then1"
+  ],
+  "asset_count": 116,
+  "decoded_bytes": 170383346,
+  "archive_asset_counts": {
+    "patch.MPQ": 87,
+    "patch-5.MPQ": 29
+  },
+  "archives_rehashed": {
+    "patch-5.MPQ": "5008e56873718b468fa5ae1b697dcbe4f5da9ffe6c793f3ef9939dbd7716f3d8",
+    "patch.MPQ": "6828b191789acdf61b0b8749327cfaed726bea7f015f8be4cc9b0abbfcb696f4"
+  },
+  "mpq_index_sha256": "a3f219f6e76e1d87e50b0790b757f999091e2b479d3b1d40ac2c101aa8680cf4",
+  "android_index_sha256": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8",
+  "android_actual_payloads": [
+    "DBFilesClient\\Spell.dbc",
+    "DBFilesClient\\SpellIcon.dbc"
+  ],
+  "dbc_headers": [
+    {
+      "chain": "DBFilesClient\\Spell.dbc",
+      "rows": 22357,
+      "fields": 173,
+      "record_bytes": 692,
+      "strings_bytes": 833949
+    },
+    {
+      "chain": "DBFilesClient\\SpellIcon.dbc",
+      "rows": 1033,
+      "fields": 2,
+      "record_bytes": 8,
+      "strings_bytes": 38158
+    }
+  ],
+  "unique_wdt": 7,
+  "unique_adt": 107,
+  "candidate_paths": 1531,
+  "candidate_direct": 158,
+  "candidate_hypothetical_alias": 1355,
+  "candidate_missing_both": 18,
+  "unknown_rejection_checks": 10,
+  "historical_inventory_source_revision": {
+    "old": "ecdb116b98ba6c29d1fa3fb3da3c1aea6906e1e82a1faef6836d130f6aad2620",
+    "final": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "note": "Older inventory source retained; final replay binds revised URL contract; first-request plans/payloads replayed, not rewritten."
+  },
+  "original_runtime_executed": false,
+  "downloads": false,
+  "network_used": false,
+  "saves_or_apps_touched": false,
+  "limitations": [
+    "Static contracts and pure local reader replay are not original-function differential validation.",
+    "116 genuine old base assets do not establish complete latest0.135.1 asset equivalence.",
+    "1531 ADT declaration strings, including18 absent candidates, are not a proven actual readset; mdx-to-m2 alias is hypothetical.",
+    "No legal SELF/VFS64/Once/world124/1089 completion is constructed or claimed; terrain, ownership and opening effects remain pending.",
+    "Direct-callee identity is checked, not exhaustive call_indirect reachability."
+  ],
+  "review_path": "evidence/entry-resources0135-static-review-20261101T073838Z/review.json",
+  "review_sha256": "4bb0c763f182c0b34a524a7582fe73d2ad36864ba9bc20cf946753d52aabe5cd",
+  "reviewer_path": "evidence/entry-resources0135-static-review-20261101T073838Z/verify.py"
+}

@@ -1,0 +1,81 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "status": "bounded-915-clock-delayed56-consumer-differential-pass;full915-incomplete",
+  "model_sha256": "c00ead750a1eb8aa80a610d8745831d73c62eb9299caf023fac30779d03b1d3f",
+  "checker_sha256": "af0104ef6d1c3025957b1d4ad00422db95109a3bf4d23036e356643f26b93001",
+  "runner_sha256": "a08d6cead9d0bf7162437d1e395191776b42eaec2910c0601719418d684963d1",
+  "receipt": {
+    "path": "evidence/full0135-oracle-20261101T071906.163112Z/effect-system135-comparison.json",
+    "sha256": "252c8db3ca3cb00b07b64ca6e063b97f3bfb5af018a1de990eda7a0bc9888bae",
+    "cases": 500,
+    "stages": 2121,
+    "normal_cases": 383,
+    "expected_trap_cases": 117,
+    "mismatch_cases": 0,
+    "sources": 17,
+    "guards": 5
+  },
+  "strict_bytes": {
+    "delayed56_full_backing": 3800832,
+    "unit424_full": 1293200,
+    "masks": 0,
+    "nan_equivalence_exceptions": 0
+  },
+  "static_helpers": {
+    "path": "evidence/effect-system135-delayed-static-20261101T071931.505004Z/trace.json",
+    "sha256": "e72b735eec13b9f500d4c20924e6e91e070d68f338336f9e4da1b65820d4763d"
+  },
+  "erratum": {
+    "prior_static_report": "reports/2026-11-01-effect-system0135-static.md",
+    "old_claim": "tag255 skips",
+    "correct": "raw255 removes current56B record then branches to915 bounds panic80660\u219290675\u2192unreachable;not normal success",
+    "original_failed_attempt": "evidence/full0135-oracle-20261101T071346.184054Z",
+    "reason": "Static branch destination was correctly inventoried but its fallthrough-to-panic was misinterpreted in human summary.",
+    "final_proof": "117 expected255-trap cases compare strict post-trap queue/backing/unit/player state;runner stops that fixture and instantiates fresh host before nextcase"
+  },
+  "rules": [
+    "Positive clock2364<=now clearsclock,emits234usingold1644 then increments1644wrapu32;otherbits includingNaN/-0/Infinity retained accordingtoactualcomparisons.",
+    "Due iff not(record8>now),includingNaN;mode!=0 first matchingGUID ownerU280(missing0)==G2528 gates consumption,withoutdeadfilter.",
+    "Pop56 throughorderedmemory.copy beforetarget lookup/tag handling;inactive tails preserveintermediatecompactionbytes.",
+    "Outer target is firstGUID with(marker&1)==0.35movesit;36phase1relocatesplayer.37calls4543which independently finds firstGUIDwithmarker!=1.",
+    "35:clampedcurrentXYZ;flatenabled replacesstartZ,elseinterpolatedZretained;duration=maxnum(.15,sqrt(dx\u00b2+dy\u00b2)/40),2412++,messages221/306;orderedunit316..352writes.",
+    "36:currentunitXYZ + (reach308+1.5)*headingtrigtowardplayer;collisionabsent;circleclampzoneRadius-4unlessdistance<.01;flatenabledreplaceZelseunitZ;z+.5;old1644 packet199/306 thenwrapincrement,playerXYZ/action416..436writes.",
+    "37:clearfirstmatching16auras168..228,includingzero-match;emit169onlywhen4543foundslot;retainotherrawunitbytes.",
+    "255:explicitafter-poptrapresult;ordinaryother tags withlive target returnpartialpending_910_dispatch withremovedraw56 retainedascontinuation input.",
+    "Initialnonempty120 raisesPendingEffectSystem135 holdingunchangedstate;neverclearsunsupported120. Unknownworldfor35/36 returnsafter-pop partialboundary withraw56."
+  ],
+  "api": {
+    "state": "EffectSystemState135(now_bits,delayed_records,delayed_storage,effect_records120,units,clock2364_bits,action_sequence1644,movement_sequence2412,player_xyz_bits,player_action_words,source_id,phase2587,mode2582,local_peer2528,zone,flat_height_bits,flat_height_enabled,terrain_grid_absent=False,collision_grid_absent=False,navigation_absent=False,rng_words=(0,0,0,0),spawn_counter2408=0)",
+    "consumer": "step_effect_system(state,dt_bits)->EffectSystemResult135(state,status,events,pending_record56,pending_target_index,pending)",
+    "statuses": [
+      "delayed_prefix_projection",
+      "pending_910_dispatch",
+      "pending_world_geometry",
+      "trap_invalid255_after_pop"
+    ],
+    "empty": "delayed_records/storage/effect120=()valid;clock0\u2192noevents/numericalmutation;dtunusedinthesupportedprefix"
+  },
+  "verified": [
+    "12zones/staticandmoving/fullradius-4clamp/flatenabledanddisabled",
+    "mode0/1/2,owner0/7/missingGUID;phase0/1/2/3/255;marker0/1/2/3;duplicateGUIDlookupdifference",
+    "all16auraslots,duplicateauras,zero/absentspell,successivecompaction,forceddurationfloorandsequencewrap",
+    "clock/dueNaN/\u00b1Infinity/-0andexactdeadlines;old352NaN/\u00b1Infinity/-0maxnum;dtNaN/\u00b1Infinityunusedwhen120empty",
+    "17-filepre-importsourceclosureincludespackageinit andcheckerZONESdata;input/expectedwrittenandreadbackbeforeoriginal;full915allinternalcalleesunchanged;exportsectiononly",
+    "FixedNode22.23.4/512MiBheap/512pages/60sownedprocess/878hostdeny;noappstart,EXE,network,saves"
+  ],
+  "unknown": [
+    "120nonempty915effect/projectilefamilies;ordinary910actiondispatch;terrain/collision/navigationfor35/36",
+    "Physicalpayloads retainedlosslesslyinoriginalsidecarbutonlyopcodeorder compared;wirecodecnotrestored",
+    "WASMruntime stack state aftertrap notmodeled;trapcaseisnotresumedandnextfixturefreshinstance",
+    "Finite movementintermediate/coordinate domains outside thetestedmaps/boundsremainunproven;nonfiniteposition/radiusinputsreject",
+    "Controlledconsumerfixtures do not proveactual8seedqueuesempty orfull880/915composition;rootintegration/probe tracked separately"
+  ],
+  "independent_review": "requested;pendingseparatereview",
+  "prior_attempts_not_additive": [
+    "071346.184054Z failedraw255staticassumption",
+    "071625.848741Z pilot4",
+    "071657.731955Z first489correctedfull"
+  ]
+}

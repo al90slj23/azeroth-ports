@@ -2,7 +2,7 @@
 
 本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能对齐目标固定为0.135.1 / 0898d5e3**，`derived_stats135`已完成新版原件差分；0.134.0 / 983346a7的局部实现与组合保留为固定研究基线，结果按版本与域分别记录，不转记为新版通过。各自确切范围见[版本支持清单](version-support.json)，不能直接视为新版全部行为。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
 
-现有纯Python研究入口可运行限定平地切片：真实空profile构造→显式研究phase1→普通生成/自动施法/死亡掉落/拾取成长/自然选卡。当前[含持续范围切片064308](../reports/2026-11-01-headless-area0135.md)对照8seed、1614帧、9695阶段、11次选择，0差异；seed1/6各到400帧，seed3到257帧第二次选择后停，总6个未知技能/2个帧预算边界。前阶段061901的1093帧/5473阶段及[独审062623](../reports/2026-11-01-headless0135-independent-review.md)单独保留，不重复计数。它没有实现完整880或独立完整一局。
+现有纯Python入口运行限定平地切片：真实空profile构造→显式phase1→普通生成/施法/范围/idle915→死亡掉落/成长/自然选卡。当前[072329](../reports/2026-11-01-headless-effects0135.md)对照8seed/1614帧/11309阶段/11选择/11317调用0差异且[独审通过](../reports/2026-11-01-headless-effects0135-independent-review.md)。seed1/6各400帧、seed3到257帧，总6未知技能/2预算边界；旧064308和061901保留不相加，尚非完整880或独立一局。
 
 - `core_spec/binary32.py`：精确有理数运算后按IEEE binary32 nearest-even逐步舍入；NaN载荷不保证保留。
 - `core_spec/upgrade_values.py`：五种升级值计算，输入为明确的状态字段/原始浮点位，输出为binary32位。不会读取或执行原游戏。
@@ -48,7 +48,9 @@
 - `core_spec/player_update135.py`、`ai_lifecycle135.py`：完整2088/921的285组444阶段0差异，恢复live到期/重算/再生及普通尸体稳定清理；完整live32/NPC424无mask。隔离测试用真实perception但CD=Inf且learned为空，不能当真实开局；periodic/其他来源/11426/物理1453和1202输出仍缺，见[独审](../reports/2026-11-01-gameplay-phase0135-independent-review.md)。
 - `core_spec/movement_pause135.py`：35514/25472共享26200的有序移动快照；完整1371共396组1136阶段、604条221消息GUID/seq/stopflag、NPC字节与RNG通过。mode0暂停/恢复不是no-op，每个移动NPC都推进G2412；非空aux112/claim88及完整包几何未恢复，见[独审](../reports/2026-11-01-gameplay-phase0135-independent-review.md)。
 - `core_spec/unit_records135.py`、`headless135.py`及`run_headless135.py`的**前阶段061901**：研究组合2088→1754→921→2862→947→1072，唯一HP/RNG归属、逐hit死亡placement、自然XP/选择暂停及恢复接入。8seed/1093帧/5473阶段/8select通过，63源含56份core/init冻结，逐阶段完整128槽无损delta/字节/SHA一致；24次旧槽复用保留192个非零未写字节。详见[独审062623](../reports/2026-11-01-headless0135-independent-review.md)，后继含3757的当前数据见下一项，次数不相加。
-- `core_spec/area_effects135.py`：七个922 kind3/3757持续AoE定义，693组5495阶段0差异且[独审通过](../reports/2026-11-01-area-effects0135-independent-review.md)。后继headless064308已插入3757，64源/57core、8seed1614帧9695阶段11select/0diff且[独审通过](../reports/2026-11-01-headless-area0135-independent-review.md)；完整active88B及128槽area backing/delta与共享counter/RNG/逐hit死亡、减速接入。两种storage初始zero为研究输入，915/3757其它分支及全部AoE尚缺，见[组合报告](../reports/2026-11-01-headless-area0135.md)。
+- `core_spec/area_effects135.py`：七个922 kind3/3757持续AoE定义，693/5495组件及[独审](../reports/2026-11-01-area-effects0135-independent-review.md)保留；历史064308接3757。当前headless072329以65源/58core/9入口接真实idle915，完整unit/area backing和counter/RNG相续；非空915/全3757仍缺。
+- `core_spec/effect_system135.py`：时钟2364、延迟56B的35/36/37及255 pop后trap，500case/2121stage0diff（383正常117预期trap），完整56backing/424B严格。普通910、非空120和真实几何显式待续/拒绝；[组件报告](../reports/2026-11-01-effect-system0135.md)不等于完整915。主切片只接真实观察为空的域。
+- `resource_spec/entry_resources135.py`：[进场资源静态契约](../reports/2026-11-01-entry-resources0135-static.md)，39函数、116资产/170383346B和12区首层路径核对；[静态独审](../reports/2026-11-01-entry-resources0135-static-review.md)通过，未执行实际VFS/world/1089，非新增玩法用例。
 - `resource_spec/mpq.py`、`dbc.py`：不依赖原游戏或StormLib的MPQ读取与有界WDBC容器实现。基础包29602命名块/1636167198B对照0差异、154份DBC可读取；90例合成格式对照单列。基础资源不自动等于新版全部资产，尚无M2/BLP解释渲染。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
@@ -56,9 +58,9 @@
 
 对象键未知单列：headless只严格比较numeric player keys22/28/34/716/717/1109/1176，其余完整原件keyed状态另存为unmodeled，不能假定都是cosmetic。1202 aura/外观键、1453治疗/account输出、完整物理包和source获得链仍缺。完整880/915及3757其余分支调度、全部技能/AI、真实地形资源、终局/存档/UI/联网也没有整局验收。
 
-915观测缺口单列：G2364延迟通知、56B delayed-effect向量G1820/1824/1828及120B projectile/geometry向量G1808/1812/1816未在same-G投影中读回，producer910来自921/915。不能把它们默认当空或把915当no-op；当前仅验证列明入口序列，下一步需真实915与这三域状态对照。
+915已观测/接入的域单列：[071318](../reports/2026-11-01-effect-system0135-probe.md)真实插入915并保存三域/消息；[072329](../reports/2026-11-01-headless-effects0135.md)才用新独立模型重新产生预期。clock0、两Vec cap0 ptr8 len0、1644=1、2356=0、416tag0获限定验收；90472个inactive payload/ptr/facing词仅观察，未预测零或新增mask。非空56组件另验但未接headless；120/910、916/975/38007/2602/2573/49037、2376及前段/party/终态仍缺。
 
-当前[独立复制运行](../evidence/headless-area135-standalone-20261101T064619.877910Z/receipt.json)有58份源码与4次纯Python执行：真实入口边界0帧、seed1/6各400帧、seed3到257帧。全部core导入位于复制包且逐文件保留SHA；复制包没有原件、资源、Node/WABT。这是独立实现可运行证据，不新增原件差分次数。
+当前[独立复制运行](../evidence/headless-effects135-standalone-20261101T072549.178656Z/receipt.json)为59文件（58core+1CLI），无原件/WAT/SQLite/资源/Node/WABT，所有core实际导入均来自复制包。默认停0帧真实进场边界；显式研究输入下seed1/6各400帧、seed3到257帧。这是模型自运行，不新增原件差分。
 
 ```sh
 # 纯独立运行，不读取原件；显式开关只提供研究phase1，不完成1089。
@@ -91,6 +93,7 @@ python3 reverse-engineering/scripts/check_proc135.py --phase full
 python3 reverse-engineering/scripts/check_ai_motion135.py --phase full
 python3 reverse-engineering/scripts/check_player_update135.py --phase full
 python3 reverse-engineering/scripts/check_movement_pause135.py --phase full
+python3 reverse-engineering/scripts/check_effect_system135.py --phase full
 python3 reverse-engineering/scripts/check_headless135.py --phase full
 
 # 固定研究基线0.134.0的实际原件差分，不能转计0.135.1。
@@ -118,7 +121,7 @@ python3 reverse-engineering/scripts/check_rng_spec.py
 
 升级数值、敌人成长、半径等命令执行原件纯数值函数的隔离复制体，不启动完整游戏。这些复制体没有host imports、start、网络、时钟、图形或存档接口。升级模块保留函数索引，仅导出计算函数和固定内存，其他函数为trap；敌人成长模块只有两条无引用函数；半径模块保留单一helper和一页scratch内存。复制体均重解析并核对原体哈希，WABT验证后才交给Node。
 
-固定0.135.1使用`build_full135_oracle.py`和`full135_host.mjs`：当前40个角色分别校验本版完整body/签名，含area_tick3757，仅增加导出并保留全部原callee，原malloc91941和878个拒绝宿主导入固定。各批依据各自冻结源码和完整输入域验收；角色数量不等于已恢复模块数。tick通过或上述同状态切片通过，都不代表完整调度、全局状态或完整一局已实现。
+固定0.135.1使用`build_full135_oracle.py`/`full135_host.mjs`：41角色逐body/签名guard，含3757/915，仅加export，保留原callee/malloc91941并拒绝878导入。[41角色保守性证明](../evidence/builder135-role41-review-20261101T072424.422022Z/review.json)仅重建旧8-role字节一致，无新增运行用例；角色数量与tick/切片通过均不代表完整一局。
 
 固定0.134.0完整选卡与扣血工具另用`build_full134_oracle.py`：只修改export节，保留所有原内部指令和callee。`full134_host.mjs`复核固定原件、原导出前缀及全部非export节；878宿主导入均拒绝，应用入口不调用。它们确实实例化完整官方模块，但只以原分配器构造的合成状态调用指定内部函数。选卡779例与扣血454例均0差异，宿主实际调用0次；前者生产后处理仍pending，后者未独立实现完整死亡loot/RNG。详见[新版选卡](../reports/2026-11-01-selection0134-spec.md)与[新版扣血](../reports/2026-11-01-combat0134-spec.md)。
 

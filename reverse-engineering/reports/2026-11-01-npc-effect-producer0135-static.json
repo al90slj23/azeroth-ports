@@ -1,0 +1,6288 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "wat_sha256": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+  "script_sha256": "10bc04455dcdae396fa5810ddc4df33625e24d6934321163a8866125b84b9b5d",
+  "functions": [
+    {
+      "index": 880,
+      "wat_start": 69404549,
+      "wat_end": 73451705,
+      "wat_sha256": "aa61c76f491ba39bb756426e71a6a5ce1e8c1a4da8b57e6a36ba57a7d82c16a6",
+      "body_start": 1152222,
+      "body_end": 1291445,
+      "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58",
+      "body_bytes": 139223,
+      "parameters_hex": "7f7c",
+      "results_hex": "",
+      "direct_callees": [
+        890,
+        915,
+        916,
+        921,
+        947,
+        968,
+        975,
+        989,
+        1032,
+        1037,
+        1056,
+        1089,
+        1182,
+        1202,
+        1238,
+        1371,
+        1417,
+        1420,
+        1441,
+        1512,
+        1560,
+        1627,
+        1678,
+        1754,
+        1755,
+        1758,
+        1822,
+        1898,
+        1938,
+        2035,
+        2080,
+        2088,
+        2159,
+        2314,
+        2376,
+        2502,
+        2572,
+        2573,
+        2602,
+        2862,
+        2908,
+        2922,
+        3279,
+        3442,
+        3587,
+        3686,
+        3699,
+        3735,
+        3756,
+        3757,
+        4328,
+        4401,
+        4630,
+        4824,
+        5350,
+        5351,
+        5736,
+        5821,
+        6215,
+        6592,
+        6730,
+        7239,
+        7240,
+        8310,
+        8628,
+        9160,
+        9391,
+        9867,
+        10319,
+        10434,
+        10530,
+        10573,
+        10823,
+        10862,
+        11428,
+        11490,
+        11503,
+        11735,
+        11775,
+        11850,
+        12223,
+        12383,
+        12592,
+        12899,
+        12964,
+        13099,
+        13103,
+        13104,
+        13373,
+        13517,
+        13853,
+        13922,
+        13942,
+        15816,
+        15916,
+        16200,
+        16256,
+        16342,
+        16537,
+        16538,
+        16574,
+        17119,
+        17511,
+        17726,
+        17946,
+        17979,
+        18284,
+        18853,
+        19101,
+        19964,
+        20363,
+        20469,
+        20664,
+        21342,
+        21453,
+        21698,
+        22248,
+        22318,
+        22445,
+        22634,
+        22746,
+        22747,
+        23089,
+        23181,
+        24129,
+        24446,
+        24447,
+        24741,
+        25077,
+        25391,
+        25667,
+        25687,
+        25848,
+        26202,
+        26361,
+        26365,
+        26665,
+        26666,
+        26667,
+        26754,
+        26969,
+        27681,
+        28567,
+        28732,
+        28797,
+        28889,
+        28964,
+        29219,
+        29380,
+        29631,
+        32111,
+        32246,
+        32250,
+        32967,
+        33322,
+        33324,
+        34498,
+        35515,
+        35516,
+        36536,
+        37372,
+        38007,
+        38323,
+        38553,
+        38706,
+        39632,
+        39958,
+        39959,
+        40493,
+        41293,
+        41300,
+        42515,
+        42919,
+        42920,
+        43616,
+        43735,
+        44343,
+        44345,
+        44448,
+        44449,
+        44450,
+        45096,
+        45097,
+        45625,
+        45628,
+        46123,
+        47196,
+        47314,
+        47563,
+        47565,
+        48232,
+        48233,
+        48803,
+        48804,
+        49037,
+        49039,
+        49040,
+        49338,
+        49503,
+        50305,
+        50798,
+        51418,
+        51567,
+        51591,
+        52241,
+        53014,
+        53015,
+        53843,
+        53845,
+        54802,
+        55054,
+        55440,
+        56192,
+        57310,
+        58315,
+        58316,
+        59307,
+        60416,
+        60440,
+        65313,
+        65316,
+        65319,
+        65323,
+        65324,
+        65327,
+        65335,
+        65338,
+        65339,
+        65350,
+        67828,
+        67837,
+        71010,
+        71887,
+        71889,
+        71891,
+        75258,
+        75442,
+        76715,
+        80658,
+        80660,
+        80663,
+        82066,
+        83823,
+        84376,
+        85719,
+        90675,
+        92449,
+        95054,
+        96010,
+        96243,
+        106891,
+        107843,
+        135592,
+        170436,
+        172317
+      ]
+    },
+    {
+      "index": 921,
+      "wat_start": 130858837,
+      "wat_end": 131203095,
+      "wat_sha256": "20fb6cb14a8000c408185e4a8ee911ed32229b21dc695867bbd398acc9ceaf1f",
+      "body_start": 2600015,
+      "body_end": 2623153,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37",
+      "body_bytes": 23138,
+      "parameters_hex": "7f7d",
+      "results_hex": "",
+      "direct_callees": [
+        910,
+        914,
+        1073,
+        1453,
+        3735,
+        4543,
+        5736,
+        6592,
+        10529,
+        11428,
+        11503,
+        13814,
+        15916,
+        16341,
+        16574,
+        17979,
+        19964,
+        20602,
+        20664,
+        21023,
+        23181,
+        24296,
+        27375,
+        27457,
+        28963,
+        29631,
+        29894,
+        32246,
+        35880,
+        38323,
+        39635,
+        42327,
+        44449,
+        45628,
+        45845,
+        46304,
+        49503,
+        50798,
+        51569,
+        54802,
+        55800,
+        58162,
+        58163,
+        65314,
+        65315,
+        65320,
+        65324,
+        65325,
+        65336,
+        65341,
+        65379,
+        67828,
+        69798,
+        71889,
+        80447,
+        80663,
+        82072,
+        106891,
+        107843,
+        172317
+      ]
+    },
+    {
+      "index": 910,
+      "wat_start": 123805461,
+      "wat_end": 124342709,
+      "wat_sha256": "e065d83d1c3a89b0da2ad8848eb621de991353cb5fce92ecfcd924ada9fe207e",
+      "body_start": 2283656,
+      "body_end": 2305246,
+      "body_sha256": "2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae",
+      "body_bytes": 21590,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "direct_callees": [
+        910,
+        2572,
+        4543,
+        4865,
+        5736,
+        10529,
+        11428,
+        11503,
+        16574,
+        17979,
+        19964,
+        21024,
+        23181,
+        28889,
+        29631,
+        29894,
+        31733,
+        32653,
+        34693,
+        35880,
+        38323,
+        42475,
+        46304,
+        49503,
+        54810,
+        57528,
+        58157,
+        60415,
+        61441,
+        63687,
+        65324,
+        65337,
+        65344,
+        66966,
+        71889,
+        80663,
+        106891,
+        107843
+      ]
+    },
+    {
+      "index": 63687,
+      "wat_start": 1206784312,
+      "wat_end": 1206785433,
+      "wat_sha256": "13456bfd2e0b510c8a5405dc399199612220825f6bcfb35dedd27fc484f5ef8a",
+      "body_start": 68954308,
+      "body_end": 68954440,
+      "body_sha256": "f0091ed4244a43b327bb1efe763595c76eb297e1b24a15f6e584e3113c3e12f8",
+      "body_bytes": 132,
+      "parameters_hex": "7f7d7e7f",
+      "results_hex": "",
+      "direct_callees": [
+        65337
+      ]
+    },
+    {
+      "index": 34693,
+      "wat_start": 1046981164,
+      "wat_end": 1046984535,
+      "wat_sha256": "46775f8e698b761ab93f2b1a1004061b32b2154b84078154750477c69bcf598e",
+      "body_start": 57056620,
+      "body_end": 57057015,
+      "body_sha256": "10cdfbc68a514447755dfd458a8f2def9d60b7bffd5220871bf94ed9b619b0dd",
+      "body_bytes": 395,
+      "parameters_hex": "7f7e7f7d7d7d7d7f7d7f",
+      "results_hex": "7f",
+      "direct_callees": [
+        23181,
+        29631,
+        65344
+      ]
+    },
+    {
+      "index": 5736,
+      "wat_start": 591099419,
+      "wat_end": 591116721,
+      "wat_sha256": "462e196ee49c6304433bd5692b41bb4fc23c9e9fa386ada39574c03dc3662d16",
+      "body_start": 24718522,
+      "body_end": 24720298,
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671",
+      "body_bytes": 1776,
+      "parameters_hex": "7f7f7f7f",
+      "results_hex": "",
+      "direct_callees": [
+        1525,
+        6449,
+        8751,
+        21454,
+        38323,
+        65342,
+        80663,
+        85719,
+        95997,
+        95998
+      ]
+    },
+    {
+      "index": 1525,
+      "wat_start": 333981422,
+      "wat_end": 334036415,
+      "wat_sha256": "5b3d72f024c82b8571cda330b68fb5c4702b53d18290c61091c4262059bc6408",
+      "body_start": 10310284,
+      "body_end": 10314759,
+      "body_sha256": "2814ce2fe88b861e13404a26fea3db118567ddd30f0aca710f69159dbabbacd1",
+      "body_bytes": 4475,
+      "parameters_hex": "7f7e7f7f7d7d7f7f",
+      "results_hex": "",
+      "direct_callees": [
+        3735,
+        10823,
+        20664,
+        23469,
+        42475,
+        50798,
+        65324
+      ]
+    },
+    {
+      "index": 2785,
+      "wat_start": 453675952,
+      "wat_end": 453716953,
+      "wat_sha256": "2ceddd7da4eab9d0e2ec82c9dec4c1e6e871fd09514601b9dc4aa2a776702e1a",
+      "body_start": 16655245,
+      "body_end": 16658986,
+      "body_sha256": "2b8d07e32cdde3d22724bb7f1992812be8cc165d22c5092cff2f64eed2ef0a76",
+      "body_bytes": 3741,
+      "parameters_hex": "7f7f7d",
+      "results_hex": "",
+      "direct_callees": [
+        1525,
+        2572,
+        6449,
+        8628,
+        8751,
+        16574,
+        17979,
+        19964,
+        21454,
+        23181,
+        29631,
+        32246,
+        38323,
+        42920,
+        49503,
+        54802,
+        65324,
+        65342,
+        71889,
+        80663,
+        106891,
+        107843
+      ]
+    },
+    {
+      "index": 916,
+      "wat_start": 127484921,
+      "wat_end": 127925101,
+      "wat_sha256": "f06b78a6beaaab11d69785d0a7405d0050e2527c25aa69895fe56ac51738eb3c",
+      "body_start": 2442157,
+      "body_end": 2462661,
+      "body_sha256": "a358136ba7f5f35bc5a33968b35624d5a788f6fabcbc017c01e2a3652caa4bdf",
+      "body_bytes": 20504,
+      "parameters_hex": "7f7d",
+      "results_hex": "",
+      "direct_callees": [
+        914,
+        922,
+        984,
+        1409,
+        1512,
+        1541,
+        4154,
+        5745,
+        8685,
+        9868,
+        10529,
+        11428,
+        11503,
+        12527,
+        13372,
+        13814,
+        17270,
+        18181,
+        22287,
+        23468,
+        27562,
+        35877,
+        36294,
+        37591,
+        49338,
+        50796,
+        52692,
+        54802,
+        58021,
+        65313,
+        65315,
+        65324,
+        65336,
+        71889,
+        80663,
+        90675,
+        106891,
+        107843,
+        122101,
+        172317
+      ]
+    },
+    {
+      "index": 975,
+      "wat_start": 185140598,
+      "wat_end": 185382645,
+      "wat_sha256": "351bf9ed8a39fe8b53e14f6de97eea9b3b2094189aa19f2cb4e0c1512328f817",
+      "body_start": 4085481,
+      "body_end": 4100448,
+      "body_sha256": "11ffc7a65f7f5703fa3bacca09f3a4e2614b610f74bc387e5e28ad6c3a6cdb7c",
+      "body_bytes": 14967,
+      "parameters_hex": "7f7d",
+      "results_hex": "",
+      "direct_callees": [
+        914,
+        1821,
+        3735,
+        3776,
+        4543,
+        8338,
+        8685,
+        10318,
+        10529,
+        12743,
+        17947,
+        20661,
+        22377,
+        23181,
+        26201,
+        27562,
+        29631,
+        32860,
+        35399,
+        35877,
+        36021,
+        37310,
+        40220,
+        47198,
+        50100,
+        54802,
+        55442,
+        58021,
+        65314,
+        65320,
+        65324,
+        71889,
+        80663,
+        82066,
+        106891,
+        107843
+      ]
+    },
+    {
+      "index": 38007,
+      "wat_start": 1074930965,
+      "wat_end": 1074934672,
+      "wat_sha256": "0104bad05558d43889c686c8882ed18199e5894860fef9d32a60811ba9fa1a05",
+      "body_start": 59367183,
+      "body_end": 59367520,
+      "body_sha256": "970c6290bedabc686aa99221938e0fecb504442cb304bc808f9fad371808cd2b",
+      "body_bytes": 337,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "direct_callees": [
+        10529,
+        65324,
+        80660
+      ]
+    },
+    {
+      "index": 2602,
+      "wat_start": 439708953,
+      "wat_end": 439759396,
+      "wat_sha256": "f63d17b0037c6462fb98942d49ead6c2663cbec5fecdca53a7f9dc3d943c2b14",
+      "body_start": 15910803,
+      "body_end": 15913713,
+      "body_sha256": "badd383731d42ec76e01ba1d5b28e1da341a8a253767126101dec27b50d76b11",
+      "body_bytes": 2910,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "direct_callees": [
+        914,
+        8685,
+        10529,
+        10847,
+        27562,
+        27960,
+        35877,
+        65324,
+        65336,
+        71889,
+        80660,
+        80663,
+        82066,
+        106891,
+        107843
+      ]
+    },
+    {
+      "index": 2573,
+      "wat_start": 436993825,
+      "wat_end": 437042133,
+      "wat_sha256": "cc6840f1b081bc1f94d5e5a76ed5938547d1d1b197e511f682669396f49c525e",
+      "body_start": 15777057,
+      "body_end": 15780080,
+      "body_sha256": "1d896b573277b55fa03a9fbeef1ae5e61c3e3997aea5fca6fc836abaaab89139",
+      "body_bytes": 3023,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "direct_callees": [
+        4630,
+        5950,
+        10298,
+        11428,
+        11503,
+        18182,
+        27063,
+        28796,
+        31732,
+        38323,
+        42475,
+        65327,
+        71889,
+        80663,
+        85719,
+        90675
+      ]
+    },
+    {
+      "index": 49037,
+      "wat_start": 1144075264,
+      "wat_end": 1144077453,
+      "wat_sha256": "571012a93a7916c1ba1ac79be6bbcbd5eaf8f5f3b43660b780bcf33791f43c1e",
+      "body_start": 64576917,
+      "body_end": 64577174,
+      "body_sha256": "e972d7925d7cdeb7b3fa81cae73ff0ace5e819bb7c0277259669bcae9062efc7",
+      "body_bytes": 257,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "direct_callees": [
+        1938,
+        17119,
+        54810,
+        65323,
+        65324
+      ]
+    },
+    {
+      "index": 947,
+      "wat_start": 165734621,
+      "wat_end": 166104083,
+      "wat_sha256": "7cb256d48c90e0dc3f3fed81fc9b1e7ca263b9074444ef8f4bb9320c189a65e7",
+      "body_start": 3513924,
+      "body_end": 3531974,
+      "body_sha256": "8eafc61592944f9083c7542177928d582672300323e367fd0c7b343d777c1c76",
+      "body_bytes": 18050,
+      "parameters_hex": "7f7d",
+      "results_hex": "",
+      "direct_callees": [
+        1417,
+        2785,
+        3735,
+        5736,
+        6592,
+        8751,
+        11428,
+        11503,
+        11735,
+        13516,
+        15916,
+        17979,
+        19964,
+        20272,
+        20664,
+        23181,
+        26361,
+        28889,
+        29631,
+        31520,
+        32246,
+        38323,
+        42475,
+        42920,
+        44448,
+        45845,
+        49503,
+        49504,
+        50798,
+        52241,
+        54802,
+        65323,
+        65324,
+        67828,
+        71889,
+        80660,
+        80663,
+        85719,
+        86866,
+        106891,
+        107843,
+        122101
+      ]
+    },
+    {
+      "index": 2376,
+      "wat_start": 420201167,
+      "wat_end": 420253472,
+      "wat_sha256": "fe58aacaa1fec0fbbfad926474e61730dedf259974904e1f373bf9c2cd2ec548",
+      "body_start": 14895741,
+      "body_end": 14899671,
+      "body_sha256": "6b985b23a141a82085f021e7bedf0247ea2a61a99bda05cf820e38a369be29ff",
+      "body_bytes": 3930,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "direct_callees": [
+        1525,
+        16341,
+        17979,
+        19964,
+        32246,
+        32969,
+        38323,
+        42327,
+        54802,
+        65324,
+        65342,
+        67828,
+        71889,
+        80663,
+        106891,
+        107843,
+        170436
+      ]
+    }
+  ],
+  "normal_count": 148,
+  "melee_prefix_zero_count": 124,
+  "ranged_prefix_one_count": 24,
+  "boss_count": 60,
+  "declared_boss_action_records": 290,
+  "action_rawtag_counts": {
+    "18": 25,
+    "5": 69,
+    "19": 14,
+    "6": 14,
+    "10": 22,
+    "22": 8,
+    "8": 15,
+    "7": 17,
+    "0": 5,
+    "3": 7,
+    "14": 7,
+    "24": 5,
+    "27": 5,
+    "4": 26,
+    "11": 13,
+    "25": 4,
+    "31": 2,
+    "30": 3,
+    "17": 6,
+    "28": 2,
+    "13": 3,
+    "12": 5,
+    "9": 3,
+    "29": 2,
+    "26": 1,
+    "16": 3,
+    "15": 2,
+    "23": 1,
+    "33": 1
+  },
+  "normal_declarations": "normal-declarations.json",
+  "boss_declarations": "boss-declarations.json",
+  "action_declarations": "action-declarations.json",
+  "queue921": {
+    "temporary_cap_ptr_len": [
+      148,
+      152,
+      156
+    ],
+    "stride": 44,
+    "layout": {
+      "0": "NPCindex",
+      "4..43": "complete40Bdescriptor",
+      "41": "rawtag37"
+    },
+    "append_sites": [
+      {
+        "line": 4532,
+        "family": "threshold52",
+        "domain": "U64!=MAX; U96definition+16ptr/+20len; U104one-shotbits",
+        "window": [
+          {
+            "line": 4484,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4485,
+            "text": "i64.load offset=44 align=4"
+          },
+          {
+            "line": 4486,
+            "text": "i64.store offset=328"
+          },
+          {
+            "line": 4487,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4488,
+            "text": "i32.load offset=156"
+          },
+          {
+            "line": 4489,
+            "text": "local.tee 6"
+          },
+          {
+            "line": 4490,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4491,
+            "text": "i32.load offset=148"
+          },
+          {
+            "line": 4492,
+            "text": "i32.eq"
+          },
+          {
+            "line": 4493,
+            "text": "if  ;; label = @9"
+          },
+          {
+            "line": 4494,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4495,
+            "text": "i32.const 148"
+          },
+          {
+            "line": 4496,
+            "text": "i32.add"
+          },
+          {
+            "line": 4497,
+            "text": "call 65341"
+          },
+          {
+            "line": 4498,
+            "text": "end"
+          },
+          {
+            "line": 4499,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4500,
+            "text": "i32.load offset=152"
+          },
+          {
+            "line": 4501,
+            "text": "local.get 6"
+          },
+          {
+            "line": 4502,
+            "text": "i32.const 44"
+          },
+          {
+            "line": 4503,
+            "text": "i32.mul"
+          },
+          {
+            "line": 4504,
+            "text": "i32.add"
+          },
+          {
+            "line": 4505,
+            "text": "local.tee 4"
+          },
+          {
+            "line": 4506,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4507,
+            "text": "i64.load offset=296"
+          },
+          {
+            "line": 4508,
+            "text": "i64.store offset=4 align=4"
+          },
+          {
+            "line": 4509,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4510,
+            "text": "local.get 15"
+          },
+          {
+            "line": 4511,
+            "text": "i32.store"
+          },
+          {
+            "line": 4512,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4513,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4514,
+            "text": "i64.load offset=304"
+          },
+          {
+            "line": 4515,
+            "text": "i64.store offset=12 align=4"
+          },
+          {
+            "line": 4516,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4517,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4518,
+            "text": "i64.load offset=312"
+          },
+          {
+            "line": 4519,
+            "text": "i64.store offset=20 align=4"
+          },
+          {
+            "line": 4520,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4521,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4522,
+            "text": "i64.load offset=320"
+          },
+          {
+            "line": 4523,
+            "text": "i64.store offset=28 align=4"
+          },
+          {
+            "line": 4524,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4525,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4526,
+            "text": "i64.load offset=328"
+          },
+          {
+            "line": 4527,
+            "text": "i64.store offset=36 align=4"
+          },
+          {
+            "line": 4528,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4529,
+            "text": "local.get 6"
+          },
+          {
+            "line": 4530,
+            "text": "i32.const 1"
+          },
+          {
+            "line": 4531,
+            "text": "i32.add"
+          },
+          {
+            "line": 4532,
+            "text": "i32.store offset=156"
+          },
+          {
+            "line": 4533,
+            "text": "block  ;; label = @9"
+          },
+          {
+            "line": 4534,
+            "text": "local.get 7"
+          }
+        ]
+      },
+      {
+        "line": 4955,
+        "family": "timer44",
+        "domain": "U64!=MAX; U68timerptr/U72len; U84actionptr/U88len; action+40cooldown",
+        "window": [
+          {
+            "line": 4907,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4908,
+            "text": "i32.load offset=148"
+          },
+          {
+            "line": 4909,
+            "text": "i32.eq"
+          },
+          {
+            "line": 4910,
+            "text": "if  ;; label = @9"
+          },
+          {
+            "line": 4911,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4912,
+            "text": "i32.const 148"
+          },
+          {
+            "line": 4913,
+            "text": "i32.add"
+          },
+          {
+            "line": 4914,
+            "text": "call 65341"
+          },
+          {
+            "line": 4915,
+            "text": "end"
+          },
+          {
+            "line": 4916,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4917,
+            "text": "i32.load offset=152"
+          },
+          {
+            "line": 4918,
+            "text": "local.get 6"
+          },
+          {
+            "line": 4919,
+            "text": "i32.const 44"
+          },
+          {
+            "line": 4920,
+            "text": "i32.mul"
+          },
+          {
+            "line": 4921,
+            "text": "i32.add"
+          },
+          {
+            "line": 4922,
+            "text": "local.tee 2"
+          },
+          {
+            "line": 4923,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4924,
+            "text": "i64.load offset=416"
+          },
+          {
+            "line": 4925,
+            "text": "i64.store offset=4 align=4"
+          },
+          {
+            "line": 4926,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4927,
+            "text": "local.get 15"
+          },
+          {
+            "line": 4928,
+            "text": "i32.store"
+          },
+          {
+            "line": 4929,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4930,
+            "text": "local.get 13"
+          },
+          {
+            "line": 4931,
+            "text": "i32.store16 offset=42"
+          },
+          {
+            "line": 4932,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4933,
+            "text": "local.get 4"
+          },
+          {
+            "line": 4934,
+            "text": "i32.store8 offset=41"
+          },
+          {
+            "line": 4935,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4936,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4937,
+            "text": "i64.load offset=424"
+          },
+          {
+            "line": 4938,
+            "text": "i64.store offset=12 align=4"
+          },
+          {
+            "line": 4939,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4940,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4941,
+            "text": "i64.load offset=432"
+          },
+          {
+            "line": 4942,
+            "text": "i64.store offset=20 align=4"
+          },
+          {
+            "line": 4943,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4944,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4945,
+            "text": "i64.load offset=440"
+          },
+          {
+            "line": 4946,
+            "text": "i64.store offset=28 align=4"
+          },
+          {
+            "line": 4947,
+            "text": "local.get 2"
+          },
+          {
+            "line": 4948,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4949,
+            "text": "i64.load offset=445 align=1"
+          },
+          {
+            "line": 4950,
+            "text": "i64.store offset=33 align=1"
+          },
+          {
+            "line": 4951,
+            "text": "local.get 3"
+          },
+          {
+            "line": 4952,
+            "text": "local.get 6"
+          },
+          {
+            "line": 4953,
+            "text": "i32.const 1"
+          },
+          {
+            "line": 4954,
+            "text": "i32.add"
+          },
+          {
+            "line": 4955,
+            "text": "i32.store offset=156"
+          },
+          {
+            "line": 4956,
+            "text": "end"
+          },
+          {
+            "line": 4957,
+            "text": "local.get 8"
+          }
+        ]
+      },
+      {
+        "line": 5158,
+        "family": "threshold52",
+        "domain": "U244!=MAX boss; U256definition+24ptr/+28len; U272one-shotbits",
+        "window": [
+          {
+            "line": 5110,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5111,
+            "text": "i64.load offset=32 align=4"
+          },
+          {
+            "line": 5112,
+            "text": "i64.store offset=328"
+          },
+          {
+            "line": 5113,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5114,
+            "text": "i32.load offset=156"
+          },
+          {
+            "line": 5115,
+            "text": "local.tee 6"
+          },
+          {
+            "line": 5116,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5117,
+            "text": "i32.load offset=148"
+          },
+          {
+            "line": 5118,
+            "text": "i32.eq"
+          },
+          {
+            "line": 5119,
+            "text": "if  ;; label = @10"
+          },
+          {
+            "line": 5120,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5121,
+            "text": "i32.const 148"
+          },
+          {
+            "line": 5122,
+            "text": "i32.add"
+          },
+          {
+            "line": 5123,
+            "text": "call 65341"
+          },
+          {
+            "line": 5124,
+            "text": "end"
+          },
+          {
+            "line": 5125,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5126,
+            "text": "i32.load offset=152"
+          },
+          {
+            "line": 5127,
+            "text": "local.get 6"
+          },
+          {
+            "line": 5128,
+            "text": "i32.const 44"
+          },
+          {
+            "line": 5129,
+            "text": "i32.mul"
+          },
+          {
+            "line": 5130,
+            "text": "i32.add"
+          },
+          {
+            "line": 5131,
+            "text": "local.tee 4"
+          },
+          {
+            "line": 5132,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5133,
+            "text": "i64.load offset=296"
+          },
+          {
+            "line": 5134,
+            "text": "i64.store offset=4 align=4"
+          },
+          {
+            "line": 5135,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5136,
+            "text": "local.get 15"
+          },
+          {
+            "line": 5137,
+            "text": "i32.store"
+          },
+          {
+            "line": 5138,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5139,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5140,
+            "text": "i64.load offset=304"
+          },
+          {
+            "line": 5141,
+            "text": "i64.store offset=12 align=4"
+          },
+          {
+            "line": 5142,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5143,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5144,
+            "text": "i64.load offset=312"
+          },
+          {
+            "line": 5145,
+            "text": "i64.store offset=20 align=4"
+          },
+          {
+            "line": 5146,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5147,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5148,
+            "text": "i64.load offset=320"
+          },
+          {
+            "line": 5149,
+            "text": "i64.store offset=28 align=4"
+          },
+          {
+            "line": 5150,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5151,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5152,
+            "text": "i64.load offset=328"
+          },
+          {
+            "line": 5153,
+            "text": "i64.store offset=36 align=4"
+          },
+          {
+            "line": 5154,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5155,
+            "text": "local.get 6"
+          },
+          {
+            "line": 5156,
+            "text": "i32.const 1"
+          },
+          {
+            "line": 5157,
+            "text": "i32.add"
+          },
+          {
+            "line": 5158,
+            "text": "i32.store offset=156"
+          },
+          {
+            "line": 5159,
+            "text": "local.get 5"
+          },
+          {
+            "line": 5160,
+            "text": "i64.load offset=112"
+          }
+        ]
+      },
+      {
+        "line": 5583,
+        "family": "timer44",
+        "domain": "U244!=MAX boss; U248timerptr/U252len; U260actionptr/U264len; action+40cooldown",
+        "window": [
+          {
+            "line": 5535,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5536,
+            "text": "i32.load offset=148"
+          },
+          {
+            "line": 5537,
+            "text": "i32.eq"
+          },
+          {
+            "line": 5538,
+            "text": "if  ;; label = @9"
+          },
+          {
+            "line": 5539,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5540,
+            "text": "i32.const 148"
+          },
+          {
+            "line": 5541,
+            "text": "i32.add"
+          },
+          {
+            "line": 5542,
+            "text": "call 65341"
+          },
+          {
+            "line": 5543,
+            "text": "end"
+          },
+          {
+            "line": 5544,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5545,
+            "text": "i32.load offset=152"
+          },
+          {
+            "line": 5546,
+            "text": "local.get 6"
+          },
+          {
+            "line": 5547,
+            "text": "i32.const 44"
+          },
+          {
+            "line": 5548,
+            "text": "i32.mul"
+          },
+          {
+            "line": 5549,
+            "text": "i32.add"
+          },
+          {
+            "line": 5550,
+            "text": "local.tee 2"
+          },
+          {
+            "line": 5551,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5552,
+            "text": "i64.load offset=456"
+          },
+          {
+            "line": 5553,
+            "text": "i64.store offset=4 align=4"
+          },
+          {
+            "line": 5554,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5555,
+            "text": "local.get 15"
+          },
+          {
+            "line": 5556,
+            "text": "i32.store"
+          },
+          {
+            "line": 5557,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5558,
+            "text": "local.get 13"
+          },
+          {
+            "line": 5559,
+            "text": "i32.store16 offset=42"
+          },
+          {
+            "line": 5560,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5561,
+            "text": "local.get 4"
+          },
+          {
+            "line": 5562,
+            "text": "i32.store8 offset=41"
+          },
+          {
+            "line": 5563,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5564,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5565,
+            "text": "i64.load offset=464"
+          },
+          {
+            "line": 5566,
+            "text": "i64.store offset=12 align=4"
+          },
+          {
+            "line": 5567,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5568,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5569,
+            "text": "i64.load offset=472"
+          },
+          {
+            "line": 5570,
+            "text": "i64.store offset=20 align=4"
+          },
+          {
+            "line": 5571,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5572,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5573,
+            "text": "i64.load offset=480"
+          },
+          {
+            "line": 5574,
+            "text": "i64.store offset=28 align=4"
+          },
+          {
+            "line": 5575,
+            "text": "local.get 2"
+          },
+          {
+            "line": 5576,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5577,
+            "text": "i64.load offset=485 align=1"
+          },
+          {
+            "line": 5578,
+            "text": "i64.store offset=33 align=1"
+          },
+          {
+            "line": 5579,
+            "text": "local.get 3"
+          },
+          {
+            "line": 5580,
+            "text": "local.get 6"
+          },
+          {
+            "line": 5581,
+            "text": "i32.const 1"
+          },
+          {
+            "line": 5582,
+            "text": "i32.add"
+          },
+          {
+            "line": 5583,
+            "text": "i32.store offset=156"
+          },
+          {
+            "line": 5584,
+            "text": "end"
+          },
+          {
+            "line": 5585,
+            "text": "local.get 8"
+          }
+        ]
+      }
+    ],
+    "drain": {
+      "line": 9279,
+      "index": 910,
+      "contexts": [
+        6791,
+        9188,
+        9202,
+        9253
+      ]
+    },
+    "drain_window": [
+      {
+        "line": 9191,
+        "text": "local.tee 2"
+      },
+      {
+        "line": 9192,
+        "text": "i32.eqz"
+      },
+      {
+        "line": 9193,
+        "text": "br_if 0 (;@2;)"
+      },
+      {
+        "line": 9194,
+        "text": "local.get 4"
+      },
+      {
+        "line": 9195,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9196,
+        "text": "i32.const 44"
+      },
+      {
+        "line": 9197,
+        "text": "i32.mul"
+      },
+      {
+        "line": 9198,
+        "text": "i32.add"
+      },
+      {
+        "line": 9199,
+        "text": "local.set 8"
+      },
+      {
+        "line": 9200,
+        "text": "local.get 4"
+      },
+      {
+        "line": 9201,
+        "text": "local.set 2"
+      },
+      {
+        "line": 9202,
+        "text": "loop  ;; label = @3"
+      },
+      {
+        "line": 9203,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9204,
+        "text": "i32.const 41"
+      },
+      {
+        "line": 9205,
+        "text": "i32.add"
+      },
+      {
+        "line": 9206,
+        "text": "i32.load8_u"
+      },
+      {
+        "line": 9207,
+        "text": "local.tee 6"
+      },
+      {
+        "line": 9208,
+        "text": "i32.const 255"
+      },
+      {
+        "line": 9209,
+        "text": "i32.eq"
+      },
+      {
+        "line": 9210,
+        "text": "br_if 1 (;@2;)"
+      },
+      {
+        "line": 9211,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9212,
+        "text": "i32.load"
+      },
+      {
+        "line": 9213,
+        "text": "local.set 9"
+      },
+      {
+        "line": 9214,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9215,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9216,
+        "text": "i32.const 42"
+      },
+      {
+        "line": 9217,
+        "text": "i32.add"
+      },
+      {
+        "line": 9218,
+        "text": "i32.load16_u"
+      },
+      {
+        "line": 9219,
+        "text": "i32.store16 offset=334"
+      },
+      {
+        "line": 9220,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9221,
+        "text": "local.get 6"
+      },
+      {
+        "line": 9222,
+        "text": "i32.store8 offset=333"
+      },
+      {
+        "line": 9223,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9224,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9225,
+        "text": "i32.const 33"
+      },
+      {
+        "line": 9226,
+        "text": "i32.add"
+      },
+      {
+        "line": 9227,
+        "text": "i64.load align=1"
+      },
+      {
+        "line": 9228,
+        "text": "i64.store offset=325 align=1"
+      },
+      {
+        "line": 9229,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9230,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9231,
+        "text": "i32.const 28"
+      },
+      {
+        "line": 9232,
+        "text": "i32.add"
+      },
+      {
+        "line": 9233,
+        "text": "i64.load align=4"
+      },
+      {
+        "line": 9234,
+        "text": "i64.store offset=320"
+      },
+      {
+        "line": 9235,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9236,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9237,
+        "text": "i32.const 20"
+      },
+      {
+        "line": 9238,
+        "text": "i32.add"
+      },
+      {
+        "line": 9239,
+        "text": "i64.load align=4"
+      },
+      {
+        "line": 9240,
+        "text": "i64.store offset=312"
+      },
+      {
+        "line": 9241,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9242,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9243,
+        "text": "i32.const 12"
+      },
+      {
+        "line": 9244,
+        "text": "i32.add"
+      },
+      {
+        "line": 9245,
+        "text": "i64.load align=4"
+      },
+      {
+        "line": 9246,
+        "text": "i64.store offset=304"
+      },
+      {
+        "line": 9247,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9248,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9249,
+        "text": "i32.const 4"
+      },
+      {
+        "line": 9250,
+        "text": "i32.add"
+      },
+      {
+        "line": 9251,
+        "text": "i64.load align=4"
+      },
+      {
+        "line": 9252,
+        "text": "i64.store offset=296"
+      },
+      {
+        "line": 9253,
+        "text": "block  ;; label = @4"
+      },
+      {
+        "line": 9254,
+        "text": "block  ;; label = @5"
+      },
+      {
+        "line": 9255,
+        "text": "local.get 0"
+      },
+      {
+        "line": 9256,
+        "text": "i32.load8_u offset=387"
+      },
+      {
+        "line": 9257,
+        "text": "i32.const 3"
+      },
+      {
+        "line": 9258,
+        "text": "i32.gt_u"
+      },
+      {
+        "line": 9259,
+        "text": "br_if 0 (;@5;)"
+      },
+      {
+        "line": 9260,
+        "text": "i32.const 29"
+      },
+      {
+        "line": 9261,
+        "text": "local.get 6"
+      },
+      {
+        "line": 9262,
+        "text": "i32.const 3"
+      },
+      {
+        "line": 9263,
+        "text": "i32.sub"
+      },
+      {
+        "line": 9264,
+        "text": "local.get 6"
+      },
+      {
+        "line": 9265,
+        "text": "i32.const 2"
+      },
+      {
+        "line": 9266,
+        "text": "i32.le_u"
+      },
+      {
+        "line": 9267,
+        "text": "select"
+      },
+      {
+        "line": 9268,
+        "text": "i32.const 255"
+      },
+      {
+        "line": 9269,
+        "text": "i32.and"
+      },
+      {
+        "line": 9270,
+        "text": "i32.const 9"
+      },
+      {
+        "line": 9271,
+        "text": "i32.sub"
+      },
+      {
+        "line": 9272,
+        "text": "br_table 1 (;@4;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 0 (;@5;) 1 (;@4;) 0 (;@5;)"
+      },
+      {
+        "line": 9273,
+        "text": "end"
+      },
+      {
+        "line": 9274,
+        "text": "local.get 0"
+      },
+      {
+        "line": 9275,
+        "text": "local.get 9"
+      },
+      {
+        "line": 9276,
+        "text": "local.get 3"
+      },
+      {
+        "line": 9277,
+        "text": "i32.const 296"
+      },
+      {
+        "line": 9278,
+        "text": "i32.add"
+      },
+      {
+        "line": 9279,
+        "text": "call 910"
+      },
+      {
+        "line": 9280,
+        "text": "end"
+      },
+      {
+        "line": 9281,
+        "text": "local.get 2"
+      },
+      {
+        "line": 9282,
+        "text": "i32.const 44"
+      },
+      {
+        "line": 9283,
+        "text": "i32.add"
+      },
+      {
+        "line": 9284,
+        "text": "local.tee 2"
+      },
+      {
+        "line": 9285,
+        "text": "local.get 8"
+      },
+      {
+        "line": 9286,
+        "text": "i32.ne"
+      },
+      {
+        "line": 9287,
+        "text": "br_if 0 (;@3;)"
+      },
+      {
+        "line": 9288,
+        "text": "end"
+      },
+      {
+        "line": 9289,
+        "text": "end"
+      },
+      {
+        "line": 9290,
+        "text": "local.get 7"
+      },
+      {
+        "line": 9291,
+        "text": "if  ;; label = @2"
+      },
+      {
+        "line": 9292,
+        "text": "local.get 4"
+      },
+      {
+        "line": 9293,
+        "text": "local.get 7"
+      },
+      {
+        "line": 9294,
+        "text": "i32.const 44"
+      },
+      {
+        "line": 9295,
+        "text": "i32.mul"
+      },
+      {
+        "line": 9296,
+        "text": "call 71889"
+      },
+      {
+        "line": 9297,
+        "text": "end"
+      },
+      {
+        "line": 9298,
+        "text": "local.get 3"
+      }
+    ],
+    "guard": "raw255 breaksentiretemporaryqueue; whenG387<=3 normalized9/raw12 andnormalized23/raw26 suppress910, otherpassedtags call910. Raw255hereisnot915 raw255!"
+  },
+  "scheduler880": [
+    {
+      "index": 2088,
+      "line": 36570,
+      "if_contexts": [
+        {
+          "line": 36565,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36551,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36552,
+              "text": "i32.const 2064"
+            },
+            {
+              "line": 36553,
+              "text": "i32.add"
+            },
+            {
+              "line": 36554,
+              "text": "call 45096"
+            },
+            {
+              "line": 36555,
+              "text": "end"
+            },
+            {
+              "line": 36556,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36557,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36558,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36559,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36560,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 36561,
+              "text": "i32.add"
+            },
+            {
+              "line": 36562,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 36563,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36564,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36581
+        }
+      ],
+      "window": [
+        {
+          "line": 36562,
+          "text": "i32.store offset=2064"
+        },
+        {
+          "line": 36563,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 36564,
+          "text": "i32.eq"
+        },
+        {
+          "line": 36565,
+          "text": "if  ;; label = @17"
+        },
+        {
+          "line": 36566,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36567,
+          "text": "local.get 14"
+        },
+        {
+          "line": 36568,
+          "text": "f32.load offset=28"
+        },
+        {
+          "line": 36569,
+          "text": "local.tee 149"
+        },
+        {
+          "line": 36570,
+          "text": "call 2088"
+        },
+        {
+          "line": 36571,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 916,
+      "line": 36573,
+      "if_contexts": [
+        {
+          "line": 36565,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36551,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36552,
+              "text": "i32.const 2064"
+            },
+            {
+              "line": 36553,
+              "text": "i32.add"
+            },
+            {
+              "line": 36554,
+              "text": "call 45096"
+            },
+            {
+              "line": 36555,
+              "text": "end"
+            },
+            {
+              "line": 36556,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36557,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36558,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36559,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36560,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 36561,
+              "text": "i32.add"
+            },
+            {
+              "line": 36562,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 36563,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36564,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36581
+        }
+      ],
+      "window": [
+        {
+          "line": 36565,
+          "text": "if  ;; label = @17"
+        },
+        {
+          "line": 36566,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36567,
+          "text": "local.get 14"
+        },
+        {
+          "line": 36568,
+          "text": "f32.load offset=28"
+        },
+        {
+          "line": 36569,
+          "text": "local.tee 149"
+        },
+        {
+          "line": 36570,
+          "text": "call 2088"
+        },
+        {
+          "line": 36571,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36572,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36573,
+          "text": "call 916"
+        },
+        {
+          "line": 36574,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 975,
+      "line": 36576,
+      "if_contexts": [
+        {
+          "line": 36565,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36551,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36552,
+              "text": "i32.const 2064"
+            },
+            {
+              "line": 36553,
+              "text": "i32.add"
+            },
+            {
+              "line": 36554,
+              "text": "call 45096"
+            },
+            {
+              "line": 36555,
+              "text": "end"
+            },
+            {
+              "line": 36556,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36557,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36558,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36559,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36560,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 36561,
+              "text": "i32.add"
+            },
+            {
+              "line": 36562,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 36563,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36564,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36581
+        }
+      ],
+      "window": [
+        {
+          "line": 36568,
+          "text": "f32.load offset=28"
+        },
+        {
+          "line": 36569,
+          "text": "local.tee 149"
+        },
+        {
+          "line": 36570,
+          "text": "call 2088"
+        },
+        {
+          "line": 36571,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36572,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36573,
+          "text": "call 916"
+        },
+        {
+          "line": 36574,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36575,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36576,
+          "text": "call 975"
+        },
+        {
+          "line": 36577,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 1754,
+      "line": 36578,
+      "if_contexts": [
+        {
+          "line": 36565,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36551,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36552,
+              "text": "i32.const 2064"
+            },
+            {
+              "line": 36553,
+              "text": "i32.add"
+            },
+            {
+              "line": 36554,
+              "text": "call 45096"
+            },
+            {
+              "line": 36555,
+              "text": "end"
+            },
+            {
+              "line": 36556,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36557,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36558,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36559,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36560,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 36561,
+              "text": "i32.add"
+            },
+            {
+              "line": 36562,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 36563,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36564,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36581
+        }
+      ],
+      "window": [
+        {
+          "line": 36570,
+          "text": "call 2088"
+        },
+        {
+          "line": 36571,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36572,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36573,
+          "text": "call 916"
+        },
+        {
+          "line": 36574,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36575,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36576,
+          "text": "call 975"
+        },
+        {
+          "line": 36577,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36578,
+          "text": "call 1754"
+        },
+        {
+          "line": 36579,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 3757,
+      "line": 36580,
+      "if_contexts": [
+        {
+          "line": 36565,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36551,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36552,
+              "text": "i32.const 2064"
+            },
+            {
+              "line": 36553,
+              "text": "i32.add"
+            },
+            {
+              "line": 36554,
+              "text": "call 45096"
+            },
+            {
+              "line": 36555,
+              "text": "end"
+            },
+            {
+              "line": 36556,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36557,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36558,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36559,
+              "text": "local.get 14"
+            },
+            {
+              "line": 36560,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 36561,
+              "text": "i32.add"
+            },
+            {
+              "line": 36562,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 36563,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36564,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36581
+        }
+      ],
+      "window": [
+        {
+          "line": 36572,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36573,
+          "text": "call 916"
+        },
+        {
+          "line": 36574,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36575,
+          "text": "local.get 149"
+        },
+        {
+          "line": 36576,
+          "text": "call 975"
+        },
+        {
+          "line": 36577,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36578,
+          "text": "call 1754"
+        },
+        {
+          "line": 36579,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36580,
+          "text": "call 3757"
+        },
+        {
+          "line": 36581,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 2088,
+      "line": 36790,
+      "if_contexts": [
+        {
+          "line": 36591,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36577,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36578,
+              "text": "call 1754"
+            },
+            {
+              "line": 36579,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36580,
+              "text": "call 3757"
+            },
+            {
+              "line": 36581,
+              "text": "end"
+            },
+            {
+              "line": 36582,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36583,
+              "text": "call 17726"
+            },
+            {
+              "line": 36584,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36585,
+              "text": "i32.const 2132"
+            },
+            {
+              "line": 36586,
+              "text": "i32.add"
+            },
+            {
+              "line": 36587,
+              "text": "local.set 33"
+            },
+            {
+              "line": 36588,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36589,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 36590,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 36852
+        },
+        {
+          "line": 36782,
+          "kind": "if",
+          "parent": 36612,
+          "condition_window": [
+            {
+              "line": 36768,
+              "text": "local.set 9"
+            },
+            {
+              "line": 36769,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 36770,
+              "text": "local.get 2"
+            },
+            {
+              "line": 36771,
+              "text": "i32.store"
+            },
+            {
+              "line": 36772,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36773,
+              "text": "i32.load"
+            },
+            {
+              "line": 36774,
+              "text": "local.set 2"
+            },
+            {
+              "line": 36775,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36776,
+              "text": "local.get 8"
+            },
+            {
+              "line": 36777,
+              "text": "i32.store"
+            },
+            {
+              "line": 36778,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36779,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36780,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36781,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36803
+        }
+      ],
+      "window": [
+        {
+          "line": 36782,
+          "text": "if  ;; label = @19"
+        },
+        {
+          "line": 36783,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36784,
+          "text": "local.get 14"
+        },
+        {
+          "line": 36785,
+          "text": "i32.const 2064"
+        },
+        {
+          "line": 36786,
+          "text": "i32.add"
+        },
+        {
+          "line": 36787,
+          "text": "i32.load"
+        },
+        {
+          "line": 36788,
+          "text": "local.tee 8"
+        },
+        {
+          "line": 36789,
+          "text": "f32.load"
+        },
+        {
+          "line": 36790,
+          "text": "call 2088"
+        },
+        {
+          "line": 36791,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 916,
+      "line": 36794,
+      "if_contexts": [
+        {
+          "line": 36591,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36577,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36578,
+              "text": "call 1754"
+            },
+            {
+              "line": 36579,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36580,
+              "text": "call 3757"
+            },
+            {
+              "line": 36581,
+              "text": "end"
+            },
+            {
+              "line": 36582,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36583,
+              "text": "call 17726"
+            },
+            {
+              "line": 36584,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36585,
+              "text": "i32.const 2132"
+            },
+            {
+              "line": 36586,
+              "text": "i32.add"
+            },
+            {
+              "line": 36587,
+              "text": "local.set 33"
+            },
+            {
+              "line": 36588,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36589,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 36590,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 36852
+        },
+        {
+          "line": 36782,
+          "kind": "if",
+          "parent": 36612,
+          "condition_window": [
+            {
+              "line": 36768,
+              "text": "local.set 9"
+            },
+            {
+              "line": 36769,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 36770,
+              "text": "local.get 2"
+            },
+            {
+              "line": 36771,
+              "text": "i32.store"
+            },
+            {
+              "line": 36772,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36773,
+              "text": "i32.load"
+            },
+            {
+              "line": 36774,
+              "text": "local.set 2"
+            },
+            {
+              "line": 36775,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36776,
+              "text": "local.get 8"
+            },
+            {
+              "line": 36777,
+              "text": "i32.store"
+            },
+            {
+              "line": 36778,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36779,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36780,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36781,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36803
+        }
+      ],
+      "window": [
+        {
+          "line": 36786,
+          "text": "i32.add"
+        },
+        {
+          "line": 36787,
+          "text": "i32.load"
+        },
+        {
+          "line": 36788,
+          "text": "local.tee 8"
+        },
+        {
+          "line": 36789,
+          "text": "f32.load"
+        },
+        {
+          "line": 36790,
+          "text": "call 2088"
+        },
+        {
+          "line": 36791,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36792,
+          "text": "local.get 8"
+        },
+        {
+          "line": 36793,
+          "text": "f32.load"
+        },
+        {
+          "line": 36794,
+          "text": "call 916"
+        },
+        {
+          "line": 36795,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 975,
+      "line": 36798,
+      "if_contexts": [
+        {
+          "line": 36591,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36577,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36578,
+              "text": "call 1754"
+            },
+            {
+              "line": 36579,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36580,
+              "text": "call 3757"
+            },
+            {
+              "line": 36581,
+              "text": "end"
+            },
+            {
+              "line": 36582,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36583,
+              "text": "call 17726"
+            },
+            {
+              "line": 36584,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36585,
+              "text": "i32.const 2132"
+            },
+            {
+              "line": 36586,
+              "text": "i32.add"
+            },
+            {
+              "line": 36587,
+              "text": "local.set 33"
+            },
+            {
+              "line": 36588,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36589,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 36590,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 36852
+        },
+        {
+          "line": 36782,
+          "kind": "if",
+          "parent": 36612,
+          "condition_window": [
+            {
+              "line": 36768,
+              "text": "local.set 9"
+            },
+            {
+              "line": 36769,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 36770,
+              "text": "local.get 2"
+            },
+            {
+              "line": 36771,
+              "text": "i32.store"
+            },
+            {
+              "line": 36772,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36773,
+              "text": "i32.load"
+            },
+            {
+              "line": 36774,
+              "text": "local.set 2"
+            },
+            {
+              "line": 36775,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36776,
+              "text": "local.get 8"
+            },
+            {
+              "line": 36777,
+              "text": "i32.store"
+            },
+            {
+              "line": 36778,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36779,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36780,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36781,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36803
+        }
+      ],
+      "window": [
+        {
+          "line": 36790,
+          "text": "call 2088"
+        },
+        {
+          "line": 36791,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36792,
+          "text": "local.get 8"
+        },
+        {
+          "line": 36793,
+          "text": "f32.load"
+        },
+        {
+          "line": 36794,
+          "text": "call 916"
+        },
+        {
+          "line": 36795,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36796,
+          "text": "local.get 8"
+        },
+        {
+          "line": 36797,
+          "text": "f32.load"
+        },
+        {
+          "line": 36798,
+          "text": "call 975"
+        },
+        {
+          "line": 36799,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 1754,
+      "line": 36800,
+      "if_contexts": [
+        {
+          "line": 36591,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36577,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36578,
+              "text": "call 1754"
+            },
+            {
+              "line": 36579,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36580,
+              "text": "call 3757"
+            },
+            {
+              "line": 36581,
+              "text": "end"
+            },
+            {
+              "line": 36582,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36583,
+              "text": "call 17726"
+            },
+            {
+              "line": 36584,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36585,
+              "text": "i32.const 2132"
+            },
+            {
+              "line": 36586,
+              "text": "i32.add"
+            },
+            {
+              "line": 36587,
+              "text": "local.set 33"
+            },
+            {
+              "line": 36588,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36589,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 36590,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 36852
+        },
+        {
+          "line": 36782,
+          "kind": "if",
+          "parent": 36612,
+          "condition_window": [
+            {
+              "line": 36768,
+              "text": "local.set 9"
+            },
+            {
+              "line": 36769,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 36770,
+              "text": "local.get 2"
+            },
+            {
+              "line": 36771,
+              "text": "i32.store"
+            },
+            {
+              "line": 36772,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36773,
+              "text": "i32.load"
+            },
+            {
+              "line": 36774,
+              "text": "local.set 2"
+            },
+            {
+              "line": 36775,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36776,
+              "text": "local.get 8"
+            },
+            {
+              "line": 36777,
+              "text": "i32.store"
+            },
+            {
+              "line": 36778,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36779,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36780,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36781,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36803
+        }
+      ],
+      "window": [
+        {
+          "line": 36792,
+          "text": "local.get 8"
+        },
+        {
+          "line": 36793,
+          "text": "f32.load"
+        },
+        {
+          "line": 36794,
+          "text": "call 916"
+        },
+        {
+          "line": 36795,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36796,
+          "text": "local.get 8"
+        },
+        {
+          "line": 36797,
+          "text": "f32.load"
+        },
+        {
+          "line": 36798,
+          "text": "call 975"
+        },
+        {
+          "line": 36799,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36800,
+          "text": "call 1754"
+        },
+        {
+          "line": 36801,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 3757,
+      "line": 36802,
+      "if_contexts": [
+        {
+          "line": 36591,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 36577,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36578,
+              "text": "call 1754"
+            },
+            {
+              "line": 36579,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36580,
+              "text": "call 3757"
+            },
+            {
+              "line": 36581,
+              "text": "end"
+            },
+            {
+              "line": 36582,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36583,
+              "text": "call 17726"
+            },
+            {
+              "line": 36584,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36585,
+              "text": "i32.const 2132"
+            },
+            {
+              "line": 36586,
+              "text": "i32.add"
+            },
+            {
+              "line": 36587,
+              "text": "local.set 33"
+            },
+            {
+              "line": 36588,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36589,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 36590,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 36852
+        },
+        {
+          "line": 36782,
+          "kind": "if",
+          "parent": 36612,
+          "condition_window": [
+            {
+              "line": 36768,
+              "text": "local.set 9"
+            },
+            {
+              "line": 36769,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 36770,
+              "text": "local.get 2"
+            },
+            {
+              "line": 36771,
+              "text": "i32.store"
+            },
+            {
+              "line": 36772,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36773,
+              "text": "i32.load"
+            },
+            {
+              "line": 36774,
+              "text": "local.set 2"
+            },
+            {
+              "line": 36775,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 36776,
+              "text": "local.get 8"
+            },
+            {
+              "line": 36777,
+              "text": "i32.store"
+            },
+            {
+              "line": 36778,
+              "text": "local.get 6"
+            },
+            {
+              "line": 36779,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 36780,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 36781,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 36803
+        }
+      ],
+      "window": [
+        {
+          "line": 36794,
+          "text": "call 916"
+        },
+        {
+          "line": 36795,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36796,
+          "text": "local.get 8"
+        },
+        {
+          "line": 36797,
+          "text": "f32.load"
+        },
+        {
+          "line": 36798,
+          "text": "call 975"
+        },
+        {
+          "line": 36799,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36800,
+          "text": "call 1754"
+        },
+        {
+          "line": 36801,
+          "text": "local.get 6"
+        },
+        {
+          "line": 36802,
+          "text": "call 3757"
+        },
+        {
+          "line": 36803,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 915,
+      "line": 37277,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 37269,
+          "text": "local.get 14"
+        },
+        {
+          "line": 37270,
+          "text": "local.get 14"
+        },
+        {
+          "line": 37271,
+          "text": "i32.const 28"
+        },
+        {
+          "line": 37272,
+          "text": "i32.add"
+        },
+        {
+          "line": 37273,
+          "text": "i32.store offset=2064"
+        },
+        {
+          "line": 37274,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37275,
+          "text": "local.get 14"
+        },
+        {
+          "line": 37276,
+          "text": "f32.load offset=28"
+        },
+        {
+          "line": 37277,
+          "text": "call 915"
+        },
+        {
+          "line": 37278,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 915,
+      "line": 37475,
+      "if_contexts": [
+        {
+          "line": 37283,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 37269,
+              "text": "local.get 14"
+            },
+            {
+              "line": 37270,
+              "text": "local.get 14"
+            },
+            {
+              "line": 37271,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 37272,
+              "text": "i32.add"
+            },
+            {
+              "line": 37273,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 37274,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37275,
+              "text": "local.get 14"
+            },
+            {
+              "line": 37276,
+              "text": "f32.load offset=28"
+            },
+            {
+              "line": 37277,
+              "text": "call 915"
+            },
+            {
+              "line": 37278,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37279,
+              "text": "call 17726"
+            },
+            {
+              "line": 37280,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37281,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 37282,
+              "text": "local.tee 16"
+            }
+          ],
+          "end_line": 37521
+        }
+      ],
+      "window": [
+        {
+          "line": 37467,
+          "text": "i32.store"
+        },
+        {
+          "line": 37468,
+          "text": "i32.const 14384320"
+        },
+        {
+          "line": 37469,
+          "text": "local.get 8"
+        },
+        {
+          "line": 37470,
+          "text": "i32.store"
+        },
+        {
+          "line": 37471,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37472,
+          "text": "local.get 9"
+        },
+        {
+          "line": 37473,
+          "text": "i32.load"
+        },
+        {
+          "line": 37474,
+          "text": "f32.load"
+        },
+        {
+          "line": 37475,
+          "text": "call 915"
+        },
+        {
+          "line": 37476,
+          "text": "i32.const 14384320"
+        }
+      ]
+    },
+    {
+      "index": 38007,
+      "line": 37523,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 37515,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37516,
+          "text": "local.get 18"
+        },
+        {
+          "line": 37517,
+          "text": "i32.store offset=2136"
+        },
+        {
+          "line": 37518,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37519,
+          "text": "local.get 13"
+        },
+        {
+          "line": 37520,
+          "text": "i32.store offset=2132"
+        },
+        {
+          "line": 37521,
+          "text": "end"
+        },
+        {
+          "line": 37522,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37523,
+          "text": "call 38007"
+        },
+        {
+          "line": 37524,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2602,
+      "line": 37793,
+      "if_contexts": [
+        {
+          "line": 37791,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 37777,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 37778,
+              "text": "end"
+            },
+            {
+              "line": 37779,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37780,
+              "text": "local.get 2"
+            },
+            {
+              "line": 37781,
+              "text": "i32.store offset=2284"
+            },
+            {
+              "line": 37782,
+              "text": "local.get 14"
+            },
+            {
+              "line": 37783,
+              "text": "i32.const 2064"
+            },
+            {
+              "line": 37784,
+              "text": "i32.add"
+            },
+            {
+              "line": 37785,
+              "text": "call 45096"
+            },
+            {
+              "line": 37786,
+              "text": "end"
+            },
+            {
+              "line": 37787,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37788,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 37789,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 37790,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 37794
+        }
+      ],
+      "window": [
+        {
+          "line": 37785,
+          "text": "call 45096"
+        },
+        {
+          "line": 37786,
+          "text": "end"
+        },
+        {
+          "line": 37787,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37788,
+          "text": "i32.load8_u offset=2587"
+        },
+        {
+          "line": 37789,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 37790,
+          "text": "i32.eq"
+        },
+        {
+          "line": 37791,
+          "text": "if  ;; label = @17"
+        },
+        {
+          "line": 37792,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37793,
+          "text": "call 2602"
+        },
+        {
+          "line": 37794,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 2602,
+      "line": 37993,
+      "if_contexts": [
+        {
+          "line": 37800,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 37786,
+              "text": "end"
+            },
+            {
+              "line": 37787,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37788,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 37789,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 37790,
+              "text": "i32.eq"
+            },
+            {
+              "line": 37791,
+              "text": "if  ;; label = @17"
+            },
+            {
+              "line": 37792,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37793,
+              "text": "call 2602"
+            },
+            {
+              "line": 37794,
+              "text": "end"
+            },
+            {
+              "line": 37795,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37796,
+              "text": "call 17726"
+            },
+            {
+              "line": 37797,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37798,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 37799,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 38043
+        },
+        {
+          "line": 37991,
+          "kind": "if",
+          "parent": 37821,
+          "condition_window": [
+            {
+              "line": 37977,
+              "text": "local.set 9"
+            },
+            {
+              "line": 37978,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 37979,
+              "text": "local.get 2"
+            },
+            {
+              "line": 37980,
+              "text": "i32.store"
+            },
+            {
+              "line": 37981,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 37982,
+              "text": "i32.load"
+            },
+            {
+              "line": 37983,
+              "text": "local.set 2"
+            },
+            {
+              "line": 37984,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 37985,
+              "text": "local.get 8"
+            },
+            {
+              "line": 37986,
+              "text": "i32.store"
+            },
+            {
+              "line": 37987,
+              "text": "local.get 6"
+            },
+            {
+              "line": 37988,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 37989,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 37990,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 37994
+        }
+      ],
+      "window": [
+        {
+          "line": 37985,
+          "text": "local.get 8"
+        },
+        {
+          "line": 37986,
+          "text": "i32.store"
+        },
+        {
+          "line": 37987,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37988,
+          "text": "i32.load8_u offset=2587"
+        },
+        {
+          "line": 37989,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 37990,
+          "text": "i32.eq"
+        },
+        {
+          "line": 37991,
+          "text": "if  ;; label = @19"
+        },
+        {
+          "line": 37992,
+          "text": "local.get 6"
+        },
+        {
+          "line": 37993,
+          "text": "call 2602"
+        },
+        {
+          "line": 37994,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 921,
+      "line": 38052,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 38044,
+          "text": "local.get 14"
+        },
+        {
+          "line": 38045,
+          "text": "local.get 14"
+        },
+        {
+          "line": 38046,
+          "text": "i32.const 28"
+        },
+        {
+          "line": 38047,
+          "text": "i32.add"
+        },
+        {
+          "line": 38048,
+          "text": "i32.store offset=2064"
+        },
+        {
+          "line": 38049,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38050,
+          "text": "local.get 14"
+        },
+        {
+          "line": 38051,
+          "text": "f32.load offset=28"
+        },
+        {
+          "line": 38052,
+          "text": "call 921"
+        },
+        {
+          "line": 38053,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 921,
+      "line": 38250,
+      "if_contexts": [
+        {
+          "line": 38058,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 38044,
+              "text": "local.get 14"
+            },
+            {
+              "line": 38045,
+              "text": "local.get 14"
+            },
+            {
+              "line": 38046,
+              "text": "i32.const 28"
+            },
+            {
+              "line": 38047,
+              "text": "i32.add"
+            },
+            {
+              "line": 38048,
+              "text": "i32.store offset=2064"
+            },
+            {
+              "line": 38049,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38050,
+              "text": "local.get 14"
+            },
+            {
+              "line": 38051,
+              "text": "f32.load offset=28"
+            },
+            {
+              "line": 38052,
+              "text": "call 921"
+            },
+            {
+              "line": 38053,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38054,
+              "text": "call 17726"
+            },
+            {
+              "line": 38055,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38056,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 38057,
+              "text": "local.tee 16"
+            }
+          ],
+          "end_line": 38296
+        }
+      ],
+      "window": [
+        {
+          "line": 38242,
+          "text": "i32.store"
+        },
+        {
+          "line": 38243,
+          "text": "i32.const 14384320"
+        },
+        {
+          "line": 38244,
+          "text": "local.get 8"
+        },
+        {
+          "line": 38245,
+          "text": "i32.store"
+        },
+        {
+          "line": 38246,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38247,
+          "text": "local.get 9"
+        },
+        {
+          "line": 38248,
+          "text": "i32.load"
+        },
+        {
+          "line": 38249,
+          "text": "f32.load"
+        },
+        {
+          "line": 38250,
+          "text": "call 921"
+        },
+        {
+          "line": 38251,
+          "text": "i32.const 14384320"
+        }
+      ]
+    },
+    {
+      "index": 2862,
+      "line": 38303,
+      "if_contexts": [
+        {
+          "line": 38301,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 38287,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38288,
+              "text": "local.get 16"
+            },
+            {
+              "line": 38289,
+              "text": "i32.store offset=2140"
+            },
+            {
+              "line": 38290,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38291,
+              "text": "local.get 18"
+            },
+            {
+              "line": 38292,
+              "text": "i32.store offset=2136"
+            },
+            {
+              "line": 38293,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38294,
+              "text": "local.get 13"
+            },
+            {
+              "line": 38295,
+              "text": "i32.store offset=2132"
+            },
+            {
+              "line": 38296,
+              "text": "end"
+            },
+            {
+              "line": 38297,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38298,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 38299,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 38300,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 38306
+        }
+      ],
+      "window": [
+        {
+          "line": 38295,
+          "text": "i32.store offset=2132"
+        },
+        {
+          "line": 38296,
+          "text": "end"
+        },
+        {
+          "line": 38297,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38298,
+          "text": "i32.load8_u offset=2587"
+        },
+        {
+          "line": 38299,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 38300,
+          "text": "i32.eq"
+        },
+        {
+          "line": 38301,
+          "text": "if  ;; label = @17"
+        },
+        {
+          "line": 38302,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38303,
+          "text": "call 2862"
+        },
+        {
+          "line": 38304,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2573,
+      "line": 38305,
+      "if_contexts": [
+        {
+          "line": 38301,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 38287,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38288,
+              "text": "local.get 16"
+            },
+            {
+              "line": 38289,
+              "text": "i32.store offset=2140"
+            },
+            {
+              "line": 38290,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38291,
+              "text": "local.get 18"
+            },
+            {
+              "line": 38292,
+              "text": "i32.store offset=2136"
+            },
+            {
+              "line": 38293,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38294,
+              "text": "local.get 13"
+            },
+            {
+              "line": 38295,
+              "text": "i32.store offset=2132"
+            },
+            {
+              "line": 38296,
+              "text": "end"
+            },
+            {
+              "line": 38297,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38298,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 38299,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 38300,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 38306
+        }
+      ],
+      "window": [
+        {
+          "line": 38297,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38298,
+          "text": "i32.load8_u offset=2587"
+        },
+        {
+          "line": 38299,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 38300,
+          "text": "i32.eq"
+        },
+        {
+          "line": 38301,
+          "text": "if  ;; label = @17"
+        },
+        {
+          "line": 38302,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38303,
+          "text": "call 2862"
+        },
+        {
+          "line": 38304,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38305,
+          "text": "call 2573"
+        },
+        {
+          "line": 38306,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 2862,
+      "line": 38505,
+      "if_contexts": [
+        {
+          "line": 38312,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 38298,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 38299,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 38300,
+              "text": "i32.eq"
+            },
+            {
+              "line": 38301,
+              "text": "if  ;; label = @17"
+            },
+            {
+              "line": 38302,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38303,
+              "text": "call 2862"
+            },
+            {
+              "line": 38304,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38305,
+              "text": "call 2573"
+            },
+            {
+              "line": 38306,
+              "text": "end"
+            },
+            {
+              "line": 38307,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38308,
+              "text": "call 17726"
+            },
+            {
+              "line": 38309,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38310,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 38311,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 38557
+        },
+        {
+          "line": 38503,
+          "kind": "if",
+          "parent": 38333,
+          "condition_window": [
+            {
+              "line": 38489,
+              "text": "local.set 9"
+            },
+            {
+              "line": 38490,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 38491,
+              "text": "local.get 2"
+            },
+            {
+              "line": 38492,
+              "text": "i32.store"
+            },
+            {
+              "line": 38493,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 38494,
+              "text": "i32.load"
+            },
+            {
+              "line": 38495,
+              "text": "local.set 2"
+            },
+            {
+              "line": 38496,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 38497,
+              "text": "local.get 8"
+            },
+            {
+              "line": 38498,
+              "text": "i32.store"
+            },
+            {
+              "line": 38499,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38500,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 38501,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 38502,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 38508
+        }
+      ],
+      "window": [
+        {
+          "line": 38497,
+          "text": "local.get 8"
+        },
+        {
+          "line": 38498,
+          "text": "i32.store"
+        },
+        {
+          "line": 38499,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38500,
+          "text": "i32.load8_u offset=2587"
+        },
+        {
+          "line": 38501,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 38502,
+          "text": "i32.eq"
+        },
+        {
+          "line": 38503,
+          "text": "if  ;; label = @19"
+        },
+        {
+          "line": 38504,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38505,
+          "text": "call 2862"
+        },
+        {
+          "line": 38506,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2573,
+      "line": 38507,
+      "if_contexts": [
+        {
+          "line": 38312,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 38298,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 38299,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 38300,
+              "text": "i32.eq"
+            },
+            {
+              "line": 38301,
+              "text": "if  ;; label = @17"
+            },
+            {
+              "line": 38302,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38303,
+              "text": "call 2862"
+            },
+            {
+              "line": 38304,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38305,
+              "text": "call 2573"
+            },
+            {
+              "line": 38306,
+              "text": "end"
+            },
+            {
+              "line": 38307,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38308,
+              "text": "call 17726"
+            },
+            {
+              "line": 38309,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38310,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 38311,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 38557
+        },
+        {
+          "line": 38503,
+          "kind": "if",
+          "parent": 38333,
+          "condition_window": [
+            {
+              "line": 38489,
+              "text": "local.set 9"
+            },
+            {
+              "line": 38490,
+              "text": "i32.const 14384324"
+            },
+            {
+              "line": 38491,
+              "text": "local.get 2"
+            },
+            {
+              "line": 38492,
+              "text": "i32.store"
+            },
+            {
+              "line": 38493,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 38494,
+              "text": "i32.load"
+            },
+            {
+              "line": 38495,
+              "text": "local.set 2"
+            },
+            {
+              "line": 38496,
+              "text": "i32.const 14384320"
+            },
+            {
+              "line": 38497,
+              "text": "local.get 8"
+            },
+            {
+              "line": 38498,
+              "text": "i32.store"
+            },
+            {
+              "line": 38499,
+              "text": "local.get 6"
+            },
+            {
+              "line": 38500,
+              "text": "i32.load8_u offset=2587"
+            },
+            {
+              "line": 38501,
+              "text": "i32.const 1"
+            },
+            {
+              "line": 38502,
+              "text": "i32.eq"
+            }
+          ],
+          "end_line": 38508
+        }
+      ],
+      "window": [
+        {
+          "line": 38499,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38500,
+          "text": "i32.load8_u offset=2587"
+        },
+        {
+          "line": 38501,
+          "text": "i32.const 1"
+        },
+        {
+          "line": 38502,
+          "text": "i32.eq"
+        },
+        {
+          "line": 38503,
+          "text": "if  ;; label = @19"
+        },
+        {
+          "line": 38504,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38505,
+          "text": "call 2862"
+        },
+        {
+          "line": 38506,
+          "text": "local.get 6"
+        },
+        {
+          "line": 38507,
+          "text": "call 2573"
+        },
+        {
+          "line": 38508,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 947,
+      "line": 41517,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 41509,
+          "text": "local.get 4"
+        },
+        {
+          "line": 41510,
+          "text": "i32.store"
+        },
+        {
+          "line": 41511,
+          "text": "i32.const 14384320"
+        },
+        {
+          "line": 41512,
+          "text": "local.get 9"
+        },
+        {
+          "line": 41513,
+          "text": "i32.store"
+        },
+        {
+          "line": 41514,
+          "text": "local.get 6"
+        },
+        {
+          "line": 41515,
+          "text": "local.get 2"
+        },
+        {
+          "line": 41516,
+          "text": "f32.load"
+        },
+        {
+          "line": 41517,
+          "text": "call 947"
+        },
+        {
+          "line": 41518,
+          "text": "i32.const 14384320"
+        }
+      ]
+    },
+    {
+      "index": 947,
+      "line": 41598,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 41590,
+          "text": "local.get 5"
+        },
+        {
+          "line": 41591,
+          "text": "i32.const 1583384"
+        },
+        {
+          "line": 41592,
+          "text": "call 80658"
+        },
+        {
+          "line": 41593,
+          "text": "unreachable"
+        },
+        {
+          "line": 41594,
+          "text": "end"
+        },
+        {
+          "line": 41595,
+          "text": "local.get 6"
+        },
+        {
+          "line": 41596,
+          "text": "local.get 14"
+        },
+        {
+          "line": 41597,
+          "text": "f32.load offset=28"
+        },
+        {
+          "line": 41598,
+          "text": "call 947"
+        },
+        {
+          "line": 41599,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2376,
+      "line": 42054,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 42046,
+          "text": "br 1 (;@18;)"
+        },
+        {
+          "line": 42047,
+          "text": "end"
+        },
+        {
+          "line": 42048,
+          "text": "local.get 5"
+        },
+        {
+          "line": 42049,
+          "text": "local.get 4"
+        },
+        {
+          "line": 42050,
+          "text": "call 107843"
+        },
+        {
+          "line": 42051,
+          "text": "unreachable"
+        },
+        {
+          "line": 42052,
+          "text": "end"
+        },
+        {
+          "line": 42053,
+          "text": "local.get 6"
+        },
+        {
+          "line": 42054,
+          "text": "call 2376"
+        },
+        {
+          "line": 42055,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2376,
+      "line": 42246,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 42238,
+          "text": "local.set 138"
+        },
+        {
+          "line": 42239,
+          "text": "i32.const 14384324"
+        },
+        {
+          "line": 42240,
+          "text": "local.get 2"
+        },
+        {
+          "line": 42241,
+          "text": "i32.store"
+        },
+        {
+          "line": 42242,
+          "text": "i32.const 14384320"
+        },
+        {
+          "line": 42243,
+          "text": "local.get 8"
+        },
+        {
+          "line": 42244,
+          "text": "i32.store"
+        },
+        {
+          "line": 42245,
+          "text": "local.get 6"
+        },
+        {
+          "line": 42246,
+          "text": "call 2376"
+        },
+        {
+          "line": 42247,
+          "text": "i32.const 14384320"
+        }
+      ]
+    },
+    {
+      "index": 49037,
+      "line": 42294,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 42286,
+          "text": "local.get 6"
+        },
+        {
+          "line": 42287,
+          "text": "local.get 13"
+        },
+        {
+          "line": 42288,
+          "text": "i32.store offset=2136"
+        },
+        {
+          "line": 42289,
+          "text": "local.get 6"
+        },
+        {
+          "line": 42290,
+          "text": "local.get 10"
+        },
+        {
+          "line": 42291,
+          "text": "i32.store offset=2132"
+        },
+        {
+          "line": 42292,
+          "text": "end"
+        },
+        {
+          "line": 42293,
+          "text": "local.get 6"
+        },
+        {
+          "line": 42294,
+          "text": "call 49037"
+        },
+        {
+          "line": 42295,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 49037,
+      "line": 42485,
+      "if_contexts": [
+        {
+          "line": 42300,
+          "kind": "if",
+          "parent": 34923,
+          "condition_window": [
+            {
+              "line": 42286,
+              "text": "local.get 6"
+            },
+            {
+              "line": 42287,
+              "text": "local.get 13"
+            },
+            {
+              "line": 42288,
+              "text": "i32.store offset=2136"
+            },
+            {
+              "line": 42289,
+              "text": "local.get 6"
+            },
+            {
+              "line": 42290,
+              "text": "local.get 10"
+            },
+            {
+              "line": 42291,
+              "text": "i32.store offset=2132"
+            },
+            {
+              "line": 42292,
+              "text": "end"
+            },
+            {
+              "line": 42293,
+              "text": "local.get 6"
+            },
+            {
+              "line": 42294,
+              "text": "call 49037"
+            },
+            {
+              "line": 42295,
+              "text": "local.get 6"
+            },
+            {
+              "line": 42296,
+              "text": "call 17726"
+            },
+            {
+              "line": 42297,
+              "text": "local.get 6"
+            },
+            {
+              "line": 42298,
+              "text": "i32.load offset=2140"
+            },
+            {
+              "line": 42299,
+              "text": "local.tee 18"
+            }
+          ],
+          "end_line": 42531
+        }
+      ],
+      "window": [
+        {
+          "line": 42477,
+          "text": "local.set 138"
+        },
+        {
+          "line": 42478,
+          "text": "i32.const 14384324"
+        },
+        {
+          "line": 42479,
+          "text": "local.get 2"
+        },
+        {
+          "line": 42480,
+          "text": "i32.store"
+        },
+        {
+          "line": 42481,
+          "text": "i32.const 14384320"
+        },
+        {
+          "line": 42482,
+          "text": "local.get 8"
+        },
+        {
+          "line": 42483,
+          "text": "i32.store"
+        },
+        {
+          "line": 42484,
+          "text": "local.get 6"
+        },
+        {
+          "line": 42485,
+          "text": "call 49037"
+        },
+        {
+          "line": 42486,
+          "text": "i32.const 14384320"
+        }
+      ]
+    },
+    {
+      "index": 2088,
+      "line": 49801,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49793,
+          "text": "i32.load offset=44"
+        },
+        {
+          "line": 49794,
+          "text": "local.get 2"
+        },
+        {
+          "line": 49795,
+          "text": "i32.const 3"
+        },
+        {
+          "line": 49796,
+          "text": "i32.shl"
+        },
+        {
+          "line": 49797,
+          "text": "call 71889"
+        },
+        {
+          "line": 49798,
+          "text": "end"
+        },
+        {
+          "line": 49799,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49800,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49801,
+          "text": "call 2088"
+        },
+        {
+          "line": 49802,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 916,
+      "line": 49804,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49796,
+          "text": "i32.shl"
+        },
+        {
+          "line": 49797,
+          "text": "call 71889"
+        },
+        {
+          "line": 49798,
+          "text": "end"
+        },
+        {
+          "line": 49799,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49800,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49801,
+          "text": "call 2088"
+        },
+        {
+          "line": 49802,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49803,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49804,
+          "text": "call 916"
+        },
+        {
+          "line": 49805,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 975,
+      "line": 49807,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49799,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49800,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49801,
+          "text": "call 2088"
+        },
+        {
+          "line": 49802,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49803,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49804,
+          "text": "call 916"
+        },
+        {
+          "line": 49805,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49806,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49807,
+          "text": "call 975"
+        },
+        {
+          "line": 49808,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 1754,
+      "line": 49809,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49801,
+          "text": "call 2088"
+        },
+        {
+          "line": 49802,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49803,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49804,
+          "text": "call 916"
+        },
+        {
+          "line": 49805,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49806,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49807,
+          "text": "call 975"
+        },
+        {
+          "line": 49808,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49809,
+          "text": "call 1754"
+        },
+        {
+          "line": 49810,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 3757,
+      "line": 49811,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49803,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49804,
+          "text": "call 916"
+        },
+        {
+          "line": 49805,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49806,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49807,
+          "text": "call 975"
+        },
+        {
+          "line": 49808,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49809,
+          "text": "call 1754"
+        },
+        {
+          "line": 49810,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49811,
+          "text": "call 3757"
+        },
+        {
+          "line": 49812,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 915,
+      "line": 49814,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49806,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49807,
+          "text": "call 975"
+        },
+        {
+          "line": 49808,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49809,
+          "text": "call 1754"
+        },
+        {
+          "line": 49810,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49811,
+          "text": "call 3757"
+        },
+        {
+          "line": 49812,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49813,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49814,
+          "text": "call 915"
+        },
+        {
+          "line": 49815,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 38007,
+      "line": 49816,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49808,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49809,
+          "text": "call 1754"
+        },
+        {
+          "line": 49810,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49811,
+          "text": "call 3757"
+        },
+        {
+          "line": 49812,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49813,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49814,
+          "text": "call 915"
+        },
+        {
+          "line": 49815,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49816,
+          "text": "call 38007"
+        },
+        {
+          "line": 49817,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2602,
+      "line": 49818,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49810,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49811,
+          "text": "call 3757"
+        },
+        {
+          "line": 49812,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49813,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49814,
+          "text": "call 915"
+        },
+        {
+          "line": 49815,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49816,
+          "text": "call 38007"
+        },
+        {
+          "line": 49817,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49818,
+          "text": "call 2602"
+        },
+        {
+          "line": 49819,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 921,
+      "line": 49821,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49813,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49814,
+          "text": "call 915"
+        },
+        {
+          "line": 49815,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49816,
+          "text": "call 38007"
+        },
+        {
+          "line": 49817,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49818,
+          "text": "call 2602"
+        },
+        {
+          "line": 49819,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49820,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49821,
+          "text": "call 921"
+        },
+        {
+          "line": 49822,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2862,
+      "line": 49823,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49815,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49816,
+          "text": "call 38007"
+        },
+        {
+          "line": 49817,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49818,
+          "text": "call 2602"
+        },
+        {
+          "line": 49819,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49820,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49821,
+          "text": "call 921"
+        },
+        {
+          "line": 49822,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49823,
+          "text": "call 2862"
+        },
+        {
+          "line": 49824,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2573,
+      "line": 49825,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49817,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49818,
+          "text": "call 2602"
+        },
+        {
+          "line": 49819,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49820,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49821,
+          "text": "call 921"
+        },
+        {
+          "line": 49822,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49823,
+          "text": "call 2862"
+        },
+        {
+          "line": 49824,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49825,
+          "text": "call 2573"
+        },
+        {
+          "line": 49826,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 947,
+      "line": 49832,
+      "if_contexts": [
+        {
+          "line": 49829,
+          "kind": "if",
+          "parent": 47853,
+          "condition_window": [
+            {
+              "line": 49815,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49816,
+              "text": "call 38007"
+            },
+            {
+              "line": 49817,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49818,
+              "text": "call 2602"
+            },
+            {
+              "line": 49819,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49820,
+              "text": "local.get 155"
+            },
+            {
+              "line": 49821,
+              "text": "call 921"
+            },
+            {
+              "line": 49822,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49823,
+              "text": "call 2862"
+            },
+            {
+              "line": 49824,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49825,
+              "text": "call 2573"
+            },
+            {
+              "line": 49826,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49827,
+              "text": "i32.load8_u offset=2579"
+            },
+            {
+              "line": 49828,
+              "text": "i32.eqz"
+            }
+          ],
+          "end_line": 49835
+        }
+      ],
+      "window": [
+        {
+          "line": 49824,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49825,
+          "text": "call 2573"
+        },
+        {
+          "line": 49826,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49827,
+          "text": "i32.load8_u offset=2579"
+        },
+        {
+          "line": 49828,
+          "text": "i32.eqz"
+        },
+        {
+          "line": 49829,
+          "text": "if  ;; label = @15"
+        },
+        {
+          "line": 49830,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49831,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49832,
+          "text": "call 947"
+        },
+        {
+          "line": 49833,
+          "text": "local.get 6"
+        }
+      ]
+    },
+    {
+      "index": 2376,
+      "line": 49834,
+      "if_contexts": [
+        {
+          "line": 49829,
+          "kind": "if",
+          "parent": 47853,
+          "condition_window": [
+            {
+              "line": 49815,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49816,
+              "text": "call 38007"
+            },
+            {
+              "line": 49817,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49818,
+              "text": "call 2602"
+            },
+            {
+              "line": 49819,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49820,
+              "text": "local.get 155"
+            },
+            {
+              "line": 49821,
+              "text": "call 921"
+            },
+            {
+              "line": 49822,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49823,
+              "text": "call 2862"
+            },
+            {
+              "line": 49824,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49825,
+              "text": "call 2573"
+            },
+            {
+              "line": 49826,
+              "text": "local.get 6"
+            },
+            {
+              "line": 49827,
+              "text": "i32.load8_u offset=2579"
+            },
+            {
+              "line": 49828,
+              "text": "i32.eqz"
+            }
+          ],
+          "end_line": 49835
+        }
+      ],
+      "window": [
+        {
+          "line": 49826,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49827,
+          "text": "i32.load8_u offset=2579"
+        },
+        {
+          "line": 49828,
+          "text": "i32.eqz"
+        },
+        {
+          "line": 49829,
+          "text": "if  ;; label = @15"
+        },
+        {
+          "line": 49830,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49831,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49832,
+          "text": "call 947"
+        },
+        {
+          "line": 49833,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49834,
+          "text": "call 2376"
+        },
+        {
+          "line": 49835,
+          "text": "end"
+        }
+      ]
+    },
+    {
+      "index": 49037,
+      "line": 49837,
+      "if_contexts": [],
+      "window": [
+        {
+          "line": 49829,
+          "text": "if  ;; label = @15"
+        },
+        {
+          "line": 49830,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49831,
+          "text": "local.get 155"
+        },
+        {
+          "line": 49832,
+          "text": "call 947"
+        },
+        {
+          "line": 49833,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49834,
+          "text": "call 2376"
+        },
+        {
+          "line": 49835,
+          "text": "end"
+        },
+        {
+          "line": 49836,
+          "text": "local.get 6"
+        },
+        {
+          "line": 49837,
+          "text": "call 49037"
+        },
+        {
+          "line": 49838,
+          "text": "local.get 6"
+        }
+      ]
+    }
+  ],
+  "single_state_tail_order": [
+    2088,
+    916,
+    975,
+    1754,
+    3757,
+    915,
+    38007,
+    2602,
+    921,
+    2862,
+    2573,
+    947,
+    2376,
+    49037
+  ],
+  "skipped_stages": [
+    {
+      "function": 916,
+      "scope": "G648/G652 active84 and extra timers/procs; notmain1076",
+      "direct_G_memarg_candidates": [
+        "f32.load offset=1416",
+        "f32.load offset=1420",
+        "f32.load offset=1428",
+        "f32.load offset=1444",
+        "f32.load offset=1536",
+        "f32.load offset=1540",
+        "f32.load offset=1544",
+        "f32.load offset=1548",
+        "f32.load offset=1552",
+        "f32.load offset=1556",
+        "f32.load offset=1580",
+        "f32.load offset=2352",
+        "f32.load offset=756",
+        "f32.load offset=760",
+        "f32.load offset=768",
+        "i32.load offset=1424",
+        "i32.load offset=1432",
+        "i32.load offset=1592",
+        "i32.load offset=1660",
+        "i32.load offset=1664",
+        "i32.load offset=1720",
+        "i32.load offset=1724",
+        "i32.load offset=1728",
+        "i32.load offset=1732",
+        "i32.load offset=1788",
+        "i32.load offset=1792",
+        "i32.load offset=1844",
+        "i32.load offset=1848",
+        "i32.load offset=1852",
+        "i32.load offset=1880",
+        "i32.load offset=1884",
+        "i32.load offset=1888",
+        "i32.load offset=2028",
+        "i32.load offset=2032",
+        "i32.load offset=2052",
+        "i32.load offset=2056",
+        "i32.load offset=472",
+        "i32.load offset=476",
+        "i32.load offset=600",
+        "i32.load offset=604",
+        "i32.load offset=612",
+        "i32.load offset=616",
+        "i32.load offset=624",
+        "i32.load offset=628",
+        "i32.load offset=648",
+        "i32.load offset=652",
+        "i32.load offset=660",
+        "i32.load offset=664",
+        "i32.load offset=720",
+        "i32.load offset=724",
+        "i32.load offset=752",
+        "i32.load8_u offset=2587",
+        "i32.load8_u offset=774",
+        "i32.store offset=56",
+        "i64.load offset=1336",
+        "i64.load offset=1416 align=4",
+        "i64.load offset=520"
+      ],
+      "status": "Notincluded incurrent sameG, requires originalstate readback andindependent guard/model; noemptyassumption"
+    },
+    {
+      "function": 975,
+      "scope": "owned80 definition.execution84==11 gate; otherglobals784..904 conditional behavior",
+      "direct_G_memarg_candidates": [
+        "f32.load offset=1416",
+        "f32.load offset=1420",
+        "f32.load offset=1536",
+        "f32.load offset=1540",
+        "f32.load offset=1548",
+        "f32.load offset=1552",
+        "f32.load offset=1580",
+        "f32.load offset=2352",
+        "f32.load offset=868",
+        "f32.load offset=872",
+        "f32.load offset=876",
+        "f32.load offset=884",
+        "f32.load offset=904",
+        "i32.load offset=1424",
+        "i32.load offset=1592",
+        "i32.load offset=1660",
+        "i32.load offset=1664",
+        "i32.load offset=1720",
+        "i32.load offset=1724",
+        "i32.load offset=1728",
+        "i32.load offset=1732",
+        "i32.load offset=1788",
+        "i32.load offset=1792",
+        "i32.load offset=1880",
+        "i32.load offset=1884",
+        "i32.load offset=1888",
+        "i32.load offset=2052",
+        "i32.load offset=2056",
+        "i32.load offset=2348",
+        "i32.load offset=2476",
+        "i32.load offset=2480",
+        "i32.load offset=472",
+        "i32.load offset=476",
+        "i32.load offset=488",
+        "i32.load offset=492",
+        "i32.load offset=784",
+        "i32.load offset=792",
+        "i32.load offset=800",
+        "i32.load offset=804",
+        "i32.load offset=808",
+        "i32.load offset=812",
+        "i32.load offset=816",
+        "i32.load offset=824",
+        "i32.load offset=828",
+        "i32.load offset=836",
+        "i32.load offset=840",
+        "i32.load offset=844",
+        "i32.load offset=848",
+        "i32.load offset=852",
+        "i32.load offset=860",
+        "i32.load offset=864",
+        "i32.load offset=900",
+        "i32.load16_u offset=788",
+        "i32.load8_u offset=774",
+        "i32.store offset=256",
+        "i32.store offset=268",
+        "i64.load offset=1336",
+        "i64.load offset=1416 align=4",
+        "i64.load offset=472",
+        "i64.load offset=488",
+        "i64.load offset=776"
+      ],
+      "status": "Notincluded incurrent sameG, requires originalstate readback andindependent guard/model; noemptyassumption"
+    },
+    {
+      "function": 38007,
+      "scope": "G1836ptr/G1840len stride32 deadline+8 queue; notG1800area88",
+      "direct_G_memarg_candidates": [
+        "f32.load offset=2352",
+        "i32.load offset=1836",
+        "i32.load offset=1840",
+        "i32.load offset=1880",
+        "i32.load offset=1884",
+        "i32.load offset=1888"
+      ],
+      "status": "Notincluded incurrent sameG, requires originalstate readback andindependent guard/model; noemptyassumption"
+    },
+    {
+      "function": 2602,
+      "scope": "G1860ptr/G1864len stride112; distinctfrom1754 G1848/G1852",
+      "direct_G_memarg_candidates": [
+        "f32.load offset=1536",
+        "f32.load offset=1540",
+        "f32.load offset=1548",
+        "f32.load offset=1552",
+        "f32.load offset=1580",
+        "f32.load offset=2352",
+        "i32.load offset=1592",
+        "i32.load offset=1660",
+        "i32.load offset=1664",
+        "i32.load offset=1720",
+        "i32.load offset=1724",
+        "i32.load offset=1728",
+        "i32.load offset=1732",
+        "i32.load offset=1788",
+        "i32.load offset=1792",
+        "i32.load offset=1844",
+        "i32.load offset=1848",
+        "i32.load offset=1852",
+        "i32.load offset=1860",
+        "i32.load offset=1864",
+        "i32.load offset=1880",
+        "i32.load offset=1884",
+        "i32.load offset=1888",
+        "i32.load offset=2052",
+        "i32.load offset=2056",
+        "i32.load offset=2068",
+        "i64.load offset=520"
+      ],
+      "status": "Notincluded incurrent sameG, requires originalstate readback andindependent guard/model; noemptyassumption"
+    },
+    {
+      "function": 2573,
+      "scope": "phase1 andG2116 claims88, XP/movement resources and4630",
+      "direct_G_memarg_candidates": [
+        "f32.load offset=1416",
+        "f32.load offset=1420",
+        "f32.load offset=1428",
+        "f32.load offset=1556",
+        "f32.load offset=1564",
+        "f32.load offset=1648",
+        "f32.load offset=2352",
+        "f32.load offset=2500",
+        "f32.load offset=2524",
+        "i32.load offset=184",
+        "i32.load offset=1872",
+        "i32.load offset=1876",
+        "i32.load offset=188",
+        "i32.load offset=2112",
+        "i32.load offset=2116",
+        "i32.load offset=2144",
+        "i32.load offset=2148",
+        "i32.load offset=2152",
+        "i32.load offset=2496",
+        "i32.load offset=2528",
+        "i32.load offset=2540",
+        "i32.load8_u offset=2582",
+        "i32.load8_u offset=2587",
+        "i32.load8_u offset=273"
+      ],
+      "status": "Notincluded incurrent sameG, requires originalstate readback andindependent guard/model; noemptyassumption"
+    },
+    {
+      "function": 49037,
+      "scope": "G400!=0 &&phase1 &&!(G2568&1) ->phase5 and17119/messages",
+      "direct_G_memarg_candidates": [
+        "i32.load offset=1644",
+        "i32.load offset=1880",
+        "i32.load offset=1884",
+        "i32.load offset=1888",
+        "i32.load offset=1892",
+        "i32.load offset=1896",
+        "i32.load offset=1900",
+        "i32.load offset=400",
+        "i32.load8_u offset=2568",
+        "i32.load8_u offset=2587",
+        "i64.load offset=1336"
+      ],
+      "status": "Notincluded incurrent sameG, requires originalstate readback andindependent guard/model; noemptyassumption"
+    }
+  ],
+  "retained_NPC_fields": {
+    "source": "evidence/full0135-oracle-20261101T064308.759593Z/headless135-results.jsonl",
+    "sha256": "76ad387d468c5ceca3ee0432da2e2fa55095abdb45ad638ef45733c7269c7ddc",
+    "cases": [
+      {
+        "seed": 0,
+        "record_occurrences": 3030,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 1,
+        "record_occurrences": 20053,
+        "definition_pointers": [
+          5415572,
+          5415644
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 2,
+        "record_occurrences": 5238,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 3,
+        "record_occurrences": 11481,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 4,
+        "record_occurrences": 3598,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 5,
+        "record_occurrences": 3484,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 6,
+        "record_occurrences": 20738,
+        "definition_pointers": [
+          5415572,
+          5415644
+        ],
+        "noncanonical_field_occurrences": {}
+      },
+      {
+        "seed": 7,
+        "record_occurrences": 3484,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {}
+      }
+    ],
+    "scope": "OnlyactualNPC424fieldobservations; not915three-domainreadback andnotanoriginal915execution proof."
+  },
+  "known_limits": [
+    "NPCprefixzero ismelee declaration, not an actiontag andnotitself proof all915producersremaininactive.",
+    "U64family52/44 declarations andtheirconstructor notyetfullyrecovered; boss60declarationsarefullyretainedraw,butnotexecutedbythisstatictrace.",
+    "Direct callordering andifcontexts do notcomplete880host/transport/world-entry orchestration.",
+    "Prior915static semantic skip255summary was disproved bynewnonemptyprobe(popthenpanic80660/90675); do notinherit thatsummary.",
+    "Staticdata inventory doesnot countasbehavioraldifferentialvalidation; no original function executed."
+  ],
+  "original_executed": false,
+  "evidence_directory": "evidence/npc-effect-producer0135-static-20261101T071734.993684Z",
+  "evidence_report_sha256": "6760ab833313e8021ae6be284891054a2b989a45fbc6546cf81ad2cd55c3fa99",
+  "declaration_artifacts": {
+    "normal-declarations.json": "0a2fcc6df95b3f03ce290c3fe4ddd0a0b25c58f4cb4f19ab1b4be4c02507072b",
+    "boss-declarations.json": "0bcecbd38ee9582490e3fe4ef08298d6dee68977ee341192cb7f7b18666d67cb",
+    "action-declarations.json": "1416a41c2c9138daeac6d1909925fdaecb58d32105e17c23789b0506de5d6ea3"
+  },
+  "retained_NPC_record_occurrences": 71106,
+  "semantic_erratum": "915oldstatic skip255summary isnotvalid: latercontrollednonemptyexperiment poppedthenpanicked80660/90675. 921temporary44raw255 breakisadifferentconsumer andmustnotbe conflated."
+}

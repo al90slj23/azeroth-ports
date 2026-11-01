@@ -137,5 +137,21 @@
   "evidence_directory": "evidence/effect-system0135-static-review-20261101T070036.663383Z",
   "review_sha256": "9bad3b91870a5a20e0178449003461a4a30e6f11858613bc42319d12c2f8fac2",
   "reviewer_source_sha256": "68d142827ae9d892f211a55d19b10d4537ec83df33a5348fc259873ab1917d24",
-  "melee124_note": "ai135_data.MELEE_DEFINITIONS has124 definitionpointers; itisnot anactiondescriptorrawtag."
+  "melee124_note": "ai135_data.MELEE_DEFINITIONS has124 definitionpointers; itisnot anactiondescriptorrawtag.",
+  "reviewed_source_commit": "a9e43774fea5bdcd56712fe67a400df6ccf23c1b",
+  "later_original_semantic_erratum": {
+    "previous_source_commit": "a9e43774fea5bdcd56712fe67a400df6ccf23c1b",
+    "previous_wrapper_sha256": {
+      "2026-11-01-effect-system0135-static.md": "31444aa415d7514979ea159fe016dba339f6bf0f3d16b767d8cabfc30fd2d27a",
+      "2026-11-01-effect-system0135-static.json": "c84f053c75b8b0238fd00165a9bc00c8c743206ecc98130df7ec8ab7bd2101f8",
+      "2026-11-01-effect-system0135-static-review.md": "14e1465d1891822318e19114ba4b65f028aea5ea132085f0a12cd77fd1e3aea7",
+      "2026-11-01-effect-system0135-static-review.json": "05e373fc62cb4bb5a889ba593c2b79dae23451e39e88992d0172f8cf65333e35"
+    },
+    "original_runtime_receipt": "evidence/full0135-oracle-20261101T071906.163112Z/effect-system135-comparison.json",
+    "original_runtime_receipt_sha256": "252c8db3ca3cb00b07b64ca6e063b97f3bfb5af018a1de990eda7a0bc9888bae",
+    "correction": "Raw255 is popped then triggers80660/90675 bounds panic/unreachable; it is not skipped. Original CFG target inventory was correct; the earlier prose interpretation was wrong.",
+    "expected_trap_cases": 117,
+    "normal_cases": 383,
+    "immutable_static_evidence_or_review_receipts_rewritten": false
+  }
 }

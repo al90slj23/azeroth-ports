@@ -45,11 +45,36 @@
       "reports/2026-11-01-player-update0135.json",
       "reports/2026-11-01-movement-pause0135.json",
       "reports/2026-11-01-area-effects0135.json",
-      "reports/2026-11-01-headless-area0135.json"
+      "reports/2026-11-01-headless-area0135.json",
+      "reports/2026-11-01-effect-system0135.json",
+      "reports/2026-11-01-headless-effects0135.json"
     ],
-    "approved_research_role_count": 40,
+    "approved_research_role_count": 41,
     "catalogue_report": "reports/2026-11-01-catalogue0135.json",
-    "scope_note": "Separate scoped original differentials only; producer/world/keyed-state gaps and full independent game remain incomplete."
+    "scope_note": "Current07232965source/58core/9entry8seed1614frame11309stage freshindependentmodeldiff0 includesactual-observed idle915. Active915/remaining880/2376andfront/party/terminal/genuineentry/world/wholegame incomplete; installations unchanged.",
+    "same_state_checkpoint": {
+      "report": "reports/2026-11-01-headless-effects0135.json",
+      "receipt": "evidence/full0135-oracle-20261101T072329.149731Z/headless135-comparison.json",
+      "receipt_sha256": "8e4506a40eb2d7dda7cadc528c6447f8221b55a704e1c6e75d9ff3c46d832a3b",
+      "cases": 8,
+      "frames": 1614,
+      "stages": 11309,
+      "selections": 11,
+      "original_entry_calls": 11317,
+      "differences": 0,
+      "source_files": 65,
+      "core_init_files": 58,
+      "roles": 9,
+      "independent_review": "reports/2026-11-01-headless-effects0135-independent-review.json",
+      "independent_review_receipt": "evidence/headless-effects0135-independent-review-20261101T072627.470924Z/review.json",
+      "independent_review_sha256": "466b8875ee910f9cbf7ae067a5be0042888dd8eadab58dc5beef866edab0a8f8",
+      "scope": "Controlledphase1/zero128unit424+128area88slots;actualidle915,notfull880/915orwholegame"
+    },
+    "effect_system_observational_probe": "reports/2026-11-01-effect-system0135-probe.json",
+    "npc_effect_static_inventory": "reports/2026-11-01-npc-effect-producer0135-static.json",
+    "entry_resources_static_contract": "reports/2026-11-01-entry-resources0135-static.json",
+    "entry_resources_static_review": "reports/2026-11-01-entry-resources0135-static-review.json",
+    "entry_resources_static_review_sha256": "4bb0c763f182c0b34a524a7582fe73d2ad36864ba9bc20cf946753d52aabe5cd"
   },
   "web_core": {
     "version": "0.126.0",

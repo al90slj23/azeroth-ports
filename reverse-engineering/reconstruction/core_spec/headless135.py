@@ -1,7 +1,7 @@
 """Independent same-state135 ordered-entry gameplay composition.
 
 Constructor, casts/racial/areas, hits, ordinary AI, drops/XP and selection share one
-canonical player/source/RNG state. This is not a replacement for880/915,
+canonical player/source/RNG state. This is not a replacement for880 or full915,
 asset boot, phase-entry or their still-unrecovered side effects. Terrain is an
 explicit flat-world domain, and unsupported effects/events return boundaries.
 Production code reads no original program, index, output, save or network.
@@ -24,6 +24,7 @@ from .currency134 import CurrencyState
 from .death_loot134 import OrdinaryDefinition
 from .death_pickup135 import (DeathContext135, CollectionState135, OrdinaryDeathBinding135,
     consume_ordinary_death, collect_pickups, apply_damage_lifesteal)
+from .effect_system135 import EffectSystemState135, step_effect_system
 from .incoming135 import IncomingState135, BuffRecord
 from .initial_state135 import InitialState135
 from .initial_state135_data import ZONE_ENTRIES
@@ -75,6 +76,14 @@ class HeadlessState135:
     source_id: int
     initial_scalars: tuple
     game_tag: int
+    effect_clock2364_bits: int = 0
+    effect_counter2356: int = 0
+    action_sequence1644: int = 1
+    player_action_tag416: int = 0
+    delayed_records56: tuple = ()
+    delayed_storage56: tuple = ()
+    effect_records120: tuple = ()
+    effect_capacity120: int = 0
     frames: int = 0
     selections: int = 0
 
@@ -322,10 +331,48 @@ def _ai_phase(state, dt):
         collection=replace(state.collection, level=level, death=death))
 
 
-def step_frame(state, dt_bits):
-    """Controlled ordered entries2088→1754→3757→921→2862→947 on shared state.
+def _effects_phase(state, dt):
+    """915's actually observed idle-queue domain, using the independent model.
 
-    It intentionally does not pretend the omitted880/915 phases ran.
+    1560 writes scratch+2444/2452=0 and i64(1<<32) at1728, then copies
+    scratch+88 toG: 2356/2364 start0 and1644 starts1. Its416 action tag
+    starts0. Inactive payload words420..436 are not modeled or compared;
+    representative zeros below are never read in this guarded domain and
+    never written to the original. Actual payload bytes remain observations.
+    """
+    if state.delayed_records56 or state.effect_records120 or state.player_action_tag416:
+        raise PendingHeadless135('Active915 queues/player action need a headless continuation')
+    level = state.collection.level
+    snapshot = EffectSystemState135(now_bits=level.stats.now_bits,
+        delayed_records=state.delayed_records56, delayed_storage=state.delayed_storage56,
+        effect_records120=state.effect_records120, units=state.records,
+        clock2364_bits=state.effect_clock2364_bits, action_sequence1644=state.action_sequence1644,
+        movement_sequence2412=state.collection.death.message_sequence,
+        player_xyz_bits=state.collection.player_xyz, player_action_words=(0, 0, 0, 0, 0, 0),
+        source_id=state.source_id, phase2587=level.phase2587, mode2582=0,
+        local_peer2528=state.collection.currency.local_peer, zone=state.zone,
+        flat_height_bits=state.flat_height_bits, flat_height_enabled=True,
+        terrain_grid_absent=True, collision_grid_absent=True, navigation_absent=True,
+        rng_words=level.rng_words, spawn_counter2408=state.collection.death.spawn_counter)
+    result = step_effect_system(snapshot, dt)
+    if result.status != 'delayed_prefix_projection':
+        raise PendingHeadless135('Unresolved915 continuation: ' + result.status)
+    updated = result.state
+    collection = replace(state.collection, player_xyz=updated.player_xyz_bits,
+        level=replace(level, rng_words=updated.rng_words),
+        death=replace(state.collection.death, spawn_counter=updated.spawn_counter2408,
+            message_sequence=updated.movement_sequence2412))
+    return replace(state, collection=collection, records=updated.units,
+        unit_storage=_store_prefix(state.unit_storage, updated.units),
+        effect_clock2364_bits=updated.clock2364_bits,
+        action_sequence1644=updated.action_sequence1644,
+        delayed_records56=updated.delayed_records, delayed_storage56=updated.delayed_storage)
+
+
+def step_frame(state, dt_bits):
+    """Controlled ordered2088→1754→3757→915→921→2862→947 shared state.
+
+    Omitted880 phases and active915 continuation remain explicit boundaries.
     Unknown due timers or a selected unsupported ability stop before the frame.
     """
     if not 0 <= f.to_float(dt_bits) <= .1000000015: raise ValueError('Finite clamped frame delta required')
@@ -347,6 +394,7 @@ def step_frame(state, dt_bits):
     state = _cast_phase(state, dt_bits); stages.append(('player', state))
     state = _cast_phase(state, dt_bits, phase='hits'); stages.append(('hits', state))
     state = _cast_phase(state, dt_bits, phase='area'); stages.append(('area', state))
+    state = _effects_phase(state, dt_bits); stages.append(('effects', state))
     state = _ai_phase(state, dt_bits); stages.append(('ai', state))
     result = collect_pickups(state.collection, now)
     if result.status != 'core_projection': raise PendingHeadless135(result.status)
@@ -435,5 +483,10 @@ def projection(state):
         earned=state.collection.currency.earned, xp_queue=[list(x) for x in state.collection.xp_queue],
         xp_queue_capacity=state.collection.xp_queue_capacity,
         currency_queue=[list(x) for x in state.collection.currency.queue], currency_queue_capacity=state.collection.currency.queue_capacity,
-        game_tag=str(state.game_tag), auxiliary_motion_count=0, claim_count=0)
+        game_tag=str(state.game_tag), auxiliary_motion_count=0, claim_count=0,
+        effect_state=dict(clock2364_bits=state.effect_clock2364_bits,
+            effect_counter2356=state.effect_counter2356, action_sequence1644=state.action_sequence1644,
+            player_action_tag416=state.player_action_tag416, player_xyz=list(state.collection.player_xyz),
+            delayed56=dict(capacity=len(state.delayed_storage56), records_hex=list(state.delayed_records56)),
+            effects120=dict(capacity=state.effect_capacity120, records_hex=list(state.effect_records120))))
     return result

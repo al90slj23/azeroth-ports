@@ -1,0 +1,247 @@
+{
+  "status": "pass-static-identity-data-and-claims-only",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "author_script_sha256": "10bc04455dcdae396fa5810ddc4df33625e24d6934321163a8866125b84b9b5d",
+  "review_script_sha256": "adf392f9dcd1a1c386b7d43771bc7a0f0d4541b6d03c9467c155f798f72bcad2",
+  "reviewed_files": {
+    "scripts/trace_npc_effect_producer135.py": "10bc04455dcdae396fa5810ddc4df33625e24d6934321163a8866125b84b9b5d",
+    "reports/2026-11-01-npc-effect-producer0135-static.json": "edef882e1ed0685caa88253ff0cfdb6c394cd9ea2913a2ad7cc842fd334a5ceb",
+    "reports/2026-11-01-npc-effect-producer0135-static.md": "a9ac76f12474faa5c517eaaca9f5f26bdb91c4a3acad2c41198830cde95810bf"
+  },
+  "identities": [
+    {
+      "index": 880,
+      "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58",
+      "bytes": 139223
+    },
+    {
+      "index": 921,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37",
+      "bytes": 23138
+    },
+    {
+      "index": 910,
+      "body_sha256": "2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae",
+      "bytes": 21590
+    },
+    {
+      "index": 63687,
+      "body_sha256": "f0091ed4244a43b327bb1efe763595c76eb297e1b24a15f6e584e3113c3e12f8",
+      "bytes": 132
+    },
+    {
+      "index": 34693,
+      "body_sha256": "10cdfbc68a514447755dfd458a8f2def9d60b7bffd5220871bf94ed9b619b0dd",
+      "bytes": 395
+    },
+    {
+      "index": 5736,
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671",
+      "bytes": 1776
+    },
+    {
+      "index": 1525,
+      "body_sha256": "2814ce2fe88b861e13404a26fea3db118567ddd30f0aca710f69159dbabbacd1",
+      "bytes": 4475
+    },
+    {
+      "index": 2785,
+      "body_sha256": "2b8d07e32cdde3d22724bb7f1992812be8cc165d22c5092cff2f64eed2ef0a76",
+      "bytes": 3741
+    },
+    {
+      "index": 916,
+      "body_sha256": "a358136ba7f5f35bc5a33968b35624d5a788f6fabcbc017c01e2a3652caa4bdf",
+      "bytes": 20504
+    },
+    {
+      "index": 975,
+      "body_sha256": "11ffc7a65f7f5703fa3bacca09f3a4e2614b610f74bc387e5e28ad6c3a6cdb7c",
+      "bytes": 14967
+    },
+    {
+      "index": 38007,
+      "body_sha256": "970c6290bedabc686aa99221938e0fecb504442cb304bc808f9fad371808cd2b",
+      "bytes": 337
+    },
+    {
+      "index": 2602,
+      "body_sha256": "badd383731d42ec76e01ba1d5b28e1da341a8a253767126101dec27b50d76b11",
+      "bytes": 2910
+    },
+    {
+      "index": 2573,
+      "body_sha256": "1d896b573277b55fa03a9fbeef1ae5e61c3e3997aea5fca6fc836abaaab89139",
+      "bytes": 3023
+    },
+    {
+      "index": 49037,
+      "body_sha256": "e972d7925d7cdeb7b3fa81cae73ff0ace5e819bb7c0277259669bcae9062efc7",
+      "bytes": 257
+    },
+    {
+      "index": 947,
+      "body_sha256": "8eafc61592944f9083c7542177928d582672300323e367fd0c7b343d777c1c76",
+      "bytes": 18050
+    },
+    {
+      "index": 2376,
+      "body_sha256": "6b985b23a141a82085f021e7bedf0247ea2a61a99bda05cf820e38a369be29ff",
+      "bytes": 3930
+    }
+  ],
+  "data": {
+    "normal72_count": 148,
+    "normal72_bytes": 10656,
+    "melee_zero_prefix": 124,
+    "ranged_prefix1": 24,
+    "boss72_count": 60,
+    "boss72_bytes": 4320,
+    "base44_count": 257,
+    "hp52_count": 33,
+    "descriptor40_count": 290,
+    "descriptor40_bytes": 11600,
+    "full_action_record_bytes": 13024,
+    "unique_descriptor_addresses": 290,
+    "unique_descriptor_hex": 193
+  },
+  "queue921": {
+    "push_sites": [
+      4532,
+      4955,
+      5158,
+      5583
+    ],
+    "drain_line": 9279,
+    "stride": 44,
+    "raw255": "break this entire temporary queue; distinct from915pop-then-trap",
+    "scope": "fourproducerfamilies/guards mustremain explicit;U64constructor still unknown"
+  },
+  "tail880": {
+    "order": [
+      2088,
+      916,
+      975,
+      1754,
+      3757,
+      915,
+      38007,
+      2602,
+      921,
+      2862,
+      2573,
+      947,
+      2376,
+      49037
+    ],
+    "spawn_guard": "G2579==0 only947/2376",
+    "effect915_sites": [
+      37277,
+      37475,
+      49814
+    ],
+    "party_scope": "Earlier2sites around2080/2000Bparty swaps andpeer2528 changes; if_contexts onlysyntactic, notcomplete reachabilityproof"
+  },
+  "old_retained": {
+    "path": "evidence/full0135-oracle-20261101T064308.759593Z/headless135-results.jsonl",
+    "sha256": "76ad387d468c5ceca3ee0432da2e2fa55095abdb45ad638ef45733c7269c7ddc",
+    "record_occurrences": 71106,
+    "per_case_unique_guid_sum": 122,
+    "cases": [
+      {
+        "seed": 0,
+        "record_occurrences": 3030,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 9
+      },
+      {
+        "seed": 1,
+        "record_occurrences": 20053,
+        "definition_pointers": [
+          5415572,
+          5415644
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 28
+      },
+      {
+        "seed": 2,
+        "record_occurrences": 5238,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 12
+      },
+      {
+        "seed": 3,
+        "record_occurrences": 11481,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 18
+      },
+      {
+        "seed": 4,
+        "record_occurrences": 3598,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 9
+      },
+      {
+        "seed": 5,
+        "record_occurrences": 3484,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 9
+      },
+      {
+        "seed": 6,
+        "record_occurrences": 20738,
+        "definition_pointers": [
+          5415572,
+          5415644
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 28
+      },
+      {
+        "seed": 7,
+        "record_occurrences": 3484,
+        "definition_pointers": [
+          5415572
+        ],
+        "noncanonical_field_occurrences": {},
+        "unique_guid_count": 9
+      }
+    ],
+    "limitation": "71106repeatedstageobservations are not71106NPCs;thisoldreceiptdoesnotobserve915domains orvalidatecomplete880"
+  },
+  "artifact_sha256": {
+    "normal-declarations.json": "0a2fcc6df95b3f03ce290c3fe4ddd0a0b25c58f4cb4f19ab1b4be4c02507072b",
+    "boss-declarations.json": "0bcecbd38ee9582490e3fe4ef08298d6dee68977ee341192cb7f7b18666d67cb",
+    "action-declarations.json": "1416a41c2c9138daeac6d1909925fdaecb58d32105e17c23789b0506de5d6ea3",
+    "npc-effect-producer135-static.json": "6760ab833313e8021ae6be284891054a2b989a45fbc6546cf81ad2cd55c3fa99"
+  },
+  "data_range_count": 1113,
+  "all_bytes_original_active_data_or_WASM_initial_zero": true,
+  "failures": [],
+  "original_executed": false,
+  "files_modified_in_author_scope": false,
+  "limitations": [
+    "Staticdata/call/control evidence only;not257/33/290behaviorsrecovered",
+    "Nooriginal915or880run;noabsenceclaimforomittedstages",
+    "Directcallgraphandifcontexts donotcaptureallbranchreachability/indirect/worldorhostbehavior"
+  ],
+  "evidence_directory": "evidence/npc-effect-producer0135-static-review-20261101T073403.218204Z",
+  "review_sha256": "ce557a1918e1ab962bd7e40d6a09c2511afabc8b996491763c4eb3a652f51a83",
+  "range_file_sha256": "551137c116fc0a9d99f3c24be089a513cdc1028d6bfd6dab141d79e2fdbc53a1"
+}

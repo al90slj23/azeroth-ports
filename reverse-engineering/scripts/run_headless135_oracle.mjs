@@ -1,10 +1,10 @@
-// One real1560 constructor, then controlled2088/1754/3757/921/2862/947/1072 entries.
+// One real1560 constructor, then controlled2088/1754/3757/915/921/2862/947/1072.
 // Phase1 is an explicit research fixture boundary, NOT completed1089/resource boot.
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {prepareFull135} from './full135_host.mjs';
 const [directory, file] = process.argv.slice(2);
-const required = ['initial_game', 'player_tick', 'process_hits', 'area_tick', 'update_units', 'collect_pickups', 'spawn_tick', 'select_ability'];
+const required = ['initial_game', 'player_tick', 'process_hits', 'area_tick', 'effect_tick', 'update_units', 'collect_pickups', 'spawn_tick', 'select_ability'];
 const prepared = await prepareFull135(directory, required);
 const text = await fs.readFile(file, 'utf8'); if (Buffer.byteLength(text) > 128 * 1024 * 1024) throw Error('Fixture bytes');
 const cases = text.trim().split('\n').map(JSON.parse); if (!cases.length || cases.length > 48) throw Error('Fixture count');
@@ -69,6 +69,11 @@ for (let index = 0; index < cases.length; index++) {
       if (value !== previousAreaStorage.readUInt32LE(word * 4)) area_storage_delta_words.push([word, value]);
     }
     previousAreaStorage = areaStorage;
+    const effectVector = (base, stride) => {
+      const n = r(G + base + 8), p = r(G + base + 4), capacity = r(G + base);
+      if (n > capacity || capacity > 256) throw Error('Effect vector budget');
+      return {capacity, records_hex: Array.from({length: n}, (_, j) => Buffer.from(span(p + j * stride, stride, stride)).toString('hex'))};
+    };
     const projection = {progression: {level: r(G + 1432), xp: r(G + 1436), pending_upgrades: r(G + 2376)},
       derived_bits: Object.fromEntries(Array.from({length: 23}, (_, j) => [1536 + j * 4, r(G + 1536 + j * 4)])),
       current_hp_bits: r(G + 1440), auxiliary_bits: Object.fromEntries([1444, 1448, 1348, 768, 756].map(o => [o, r(G + o)])),
@@ -91,8 +96,13 @@ for (let index = 0; index < cases.length; index++) {
       queued: Array.from({length: hn}, (_, j) => {const q = hp + j * 112; return {target_id: d().getBigUint64(q + 64, true).toString(), source_id: d().getBigUint64(q + 72, true).toString(), due_bits: r(q + 92), spell_id: r(q + 96), damage_bits: r(q + 100), critical: d().getUint8(q + 104), school: d().getUint8(q + 106), context908: d().getUint8(q + 105)};}),
       attempted_spell_sets: [672, 684, 732].map(offset => {const p = r(G + offset), n = r(G + offset + 4); if (n > 256) throw Error('Spell ledger'); return Array.from({length: n}, (_, j) => r(p + j * 4));}),
       gold: r(G + 1456), earned: r(G + 1100), xp_queue: queue(2144), xp_queue_capacity: r(G + 2144), currency_queue: queue(2156), currency_queue_capacity: r(G + 2156), game_tag: d().getBigUint64(G, true).toString(),
-      auxiliary_motion_count: r(G + 664), claim_count: r(G + 2116)};
-    return {projection, unmodeled_player_fields, unit_storage_delta_words, area_storage_delta_words};
+      auxiliary_motion_count: r(G + 664), claim_count: r(G + 2116),
+      effect_state: {clock2364_bits: r(G + 2364), effect_counter2356: r(G + 2356), action_sequence1644: r(G + 1644),
+        player_action_tag416: r(G + 416), player_xyz: [r(G + 1416), r(G + 1420), r(G + 1424)],
+        delayed56: effectVector(1820, 56), effects120: effectVector(1808, 120)}};
+    const unmodeled_effect_fields = {inactive_action_payload_words: [420, 424, 428, 432, 436].map(o => r(G + o)),
+      delayed_pointer: r(G + 1824), effect120_pointer: r(G + 1812), player_facing_bits: r(G + 1428)};
+    return {projection, unmodeled_player_fields, unmodeled_effect_fields, unit_storage_delta_words, area_storage_delta_words};
   };
   const stages = [];
   const number = bits => {const v = new DataView(new ArrayBuffer(4)); v.setUint32(0, bits, true); return v.getFloat32(0, true);};
@@ -100,9 +110,9 @@ for (let index = 0; index < cases.length; index++) {
     if (action.kind === 'frame') {
       if (d().getUint8(G + 2587) !== 1) throw Error('Frame called outside running phase');
       d().setFloat32(G + 2352, d().getFloat32(G + 2352, true) + number(action.dt_bits), true);
-      for (const [kind, role] of [['player', 'player_tick'], ['hits', 'process_hits'], ['area', 'area_tick'], ['ai', 'update_units'], ['collect', 'collect_pickups'], ['spawn', 'spawn_tick']]) {
+      for (const [kind, role] of [['player', 'player_tick'], ['hits', 'process_hits'], ['area', 'area_tick'], ['effects', 'effect_tick'], ['ai', 'update_units'], ['collect', 'collect_pickups'], ['spawn', 'spawn_tick']]) {
         if (kind === 'collect' && (r(G + 664) || r(G + 2116))) throw Error('Unrestored auxiliary movement/claim producer');
-        if (kind === 'player' || kind === 'ai' || kind === 'spawn') roles[role](G, number(action.dt_bits)); else roles[role](G);
+        if (kind === 'player' || kind === 'effects' || kind === 'ai' || kind === 'spawn') roles[role](G, number(action.dt_bits)); else roles[role](G);
         totalCalls++; if (hostCalls.length) throw Error('Original host import attempted'); stages.push({kind, ...snapshot()});
       }
     } else if (action.kind === 'select') {if (r(G + 664) || r(G + 2116)) throw Error('Unrestored auxiliary movement/claim producer'); roles.select_ability(G, action.index); totalCalls++; stages.push({kind: 'select', ...snapshot()});}
@@ -112,7 +122,7 @@ for (let index = 0; index < cases.length; index++) {
   process.stdout.write(JSON.stringify({id: index, stages}) + '\n'); maxMemory = Math.max(maxMemory, memory.buffer.byteLength);
 }
 await fs.writeFile(`${directory}/headless135-runtime.json`, JSON.stringify({cases: cases.length, original_entry_calls: totalCalls,
-  original_functions: [1560, 2088, 1754, 3757, 921, 2862, 947, 1072], host_calls: 0, denied_imports: 878,
+  original_functions: [1560, 2088, 1754, 3757, 915, 921, 2862, 947, 1072], host_calls: 0, denied_imports: 878,
   max_memory_bytes: maxMemory, memory_page_limit: 512, original_allocator: 91941, node: process.version,
   application_start_called: false, network_used: false, user_saves_accessed: false, full_game_started: false,
   controlled_phase1_boundary: true, zeroed_unit_storage_capacity: 128, zeroed_area_storage_capacity: 128}, null, 2) + '\n');

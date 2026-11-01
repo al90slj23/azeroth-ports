@@ -9,7 +9,7 @@
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
 | 最新Windows功能目标 | 官方更新EXE 0.135.1，147797504B，SHA `71e5f176…bc59249` | 官方大小/SHA与gzip CRC/ISIZE通过；未执行EXE，语义迁移待验。 |
-| 最新Web功能目标 | Web 0.135.1 / 0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 40个研究角色分别绑定body/签名。真实构造151及受控同状态8seed/1614frame/9695stage/11select、0差异；完整phase进入/880/独立一局仍未完成。 |
+| 最新Web功能目标 | Web 0.135.1 /0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 41角色body/签名guard。当前072329切片8seed/1614frame/11309stage/11select/11317调用0差异且独审通过；只接idle915，真实phase进入/完整880/独立一局仍缺。 |
 | 历史规则和差分参照 | Web 0.126.0 / 3e72472a，WASM SHA `06705937…b147c` | 保留所有既有规格、输入和证据作迁移/回归；固定版本工具继续拒绝其他原件，不再作主目标扩展。 |
 | 固定 Windows 原生研究基线 | 官方更新 EXE 0.134.0，147793408B，SHA `ed7dc687…1a3f6` | 核对原生离线发行、平台行为和同源游戏规则；每个原生地址重新定位。 |
 | 固定同版WASM研究基线 | Web 0.134.0 / 983346a7，90953762B，SHA `2e86455a…73d52` | 已建立若干局部独立实现/原件差分；不代表完整游戏实现，也不代表0.135.1验收。 |
@@ -28,7 +28,7 @@
 
 本版[目录重提](reports/2026-11-01-catalogue0135.md)还发现真实平衡差异：rockbiter伤害120→132、冷却1.786→1.3571429、范围5→10；stormstrike冷却7→6.0714288、范围6→10。原始位保留在JSON，不能把相对0.135.0的单条修复说明当作0.134.0→0.135.1完整差异。
 
-新版候选、初始化/升级、成长/选卡、生成和施法分别局部验收，见[清单](RECONSTRUCTION.md)。任意heading5068（含旧1580）、Boss871、精英549、受伤2107、历史AI416/1013与主施法639/5924的限定结果保留，后继AI扩展及同状态组合另列，不相加为整局通过。原12组definition失败原样保留，新855批只解决显式非致死context0域；其它事件、非普通死亡、真实地形/producer、未投影keys与完整资源/存档/UI/联机仍pending。当前40角色只是导出白名单；[静态保守性证明](evidence/builder135-role40-review-20261101T064717.549128Z/review.json)以当前白名单重建3组旧请求，module逐字节不变，没有新增原件执行。历史manifest、源码快照和计数保持原身份，不追溯扩大旧source-set冻结保证。
+新版各组件与组合各自验收，见[覆盖清单](RECONSTRUCTION.md)。历史motion5068、Boss871、精英549、受伤2107、主施法639等保留各自源快照与输入域，不相加为整局通过。当前41角色只是白名单；[41保守性证明](evidence/builder135-role41-review-20261101T072424.422022Z/review.json)重建旧8-role模块字节一致，仅静态构建。旧40/32证明继续保留，不追溯修改历史manifest。
 
 本次已取得两个层次的复用证据：
 
@@ -39,11 +39,13 @@
 
 新增验证分开记录：[空profile构造151](reports/2026-11-01-initial0135-independent-review.md)、[死亡placement924](reports/2026-11-01-ordinary-placement0135.md)、[真实racial720](reports/2026-11-01-racial-cast0135.md)、[kind27事件855](reports/2026-11-01-proc-events0135.md)、[trig6726/AI429组3423步](reports/2026-11-01-ai-motion0135.md)、[玩家更新/尸体285组444阶段](reports/2026-11-01-player-update0135.md)、[移动暂停396组1136阶段](reports/2026-11-01-movement-pause0135.md)。旧12组definition差异已在显式非致死context0域解释并重验；致死loot之后proc顺序仍未知。G1256是racial，旧639批basic是effect0隔离fixture，不能追溯称其验证了真实racial。
 
-[同状态研究切片061901](reports/2026-11-01-headless0135.md)与[独审062623](reports/2026-11-01-headless0135-independent-review.md)验证8种子1093帧5473阶段及8次自然选择；seed3选卡后继续145帧至250，另7种子在未支持新技能前停止。phase1和初始128个全零单位槽是显式研究输入，真实1089/2328仍被SELF/data资源链阻断，尚缺4NPC与2kind2开局对象。全槽保留和复用、HP/RNG、真实racial、暂停/恢复序号与七个numeric keys均对照，其它keyed state单列未知。[默认扩展回归639/5068](reports/2026-11-01-default-extension0135-regression.md)不重复计新增覆盖。持续AoE693/5495组件已获独审通过，并接入后继[064308同状态切片](reports/2026-11-01-headless-area0135.md)：8seed/1614帧/9695阶段/11select、0差异。seed1/6各400帧，seed3到257帧后因cone_of_cold未知停止，其余未知不删；新area128槽88B初始内存同样是显式研究输入。后继[独立复核](reports/2026-11-01-headless-area0135-independent-review.md)已通过，前阶段次数不与后继相加。
+历史[同状态研究切片061901](reports/2026-11-01-headless0135.md)与[独审062623](reports/2026-11-01-headless0135-independent-review.md)验证8种子1093帧5473阶段及8次自然选择；seed3选卡后继续145帧至250，另7种子在未支持新技能前停止。phase1和初始128个全零单位槽是显式研究输入，真实1089/2328仍被SELF/data资源链阻断，尚缺4NPC与2kind2开局对象。全槽保留和复用、HP/RNG、真实racial、暂停/恢复序号与七个numeric keys均对照，其它keyed state单列未知。[默认扩展回归639/5068](reports/2026-11-01-default-extension0135-regression.md)不重复计新增覆盖。持续AoE693/5495组件已获独审通过，并接入后继[064308同状态切片](reports/2026-11-01-headless-area0135.md)：8seed/1614帧/9695阶段/11select、0差异。seed1/6各400帧，seed3到257帧后因cone_of_cold未知停止，其余未知不删；新area128槽88B初始内存同样是显式研究输入。后继[独立复核](reports/2026-11-01-headless-area0135-independent-review.md)已通过，前阶段次数不与后继相加。
 
-上述same-G并未读回915的延迟通知G2364、56B delayed-effect和120B projectile/geometry向量；producer910来自921/915。因此既不能推断这些来源为空，也不能把省略915视为无玩法影响。应先接真实915及flag/vec读回，再扩大自然帧验收，而不是只凭已支持技能和投影0差异宣称完整880成立。
+当前[072329同状态切片](reports/2026-11-01-headless-effects0135.md)及[独审](reports/2026-11-01-headless-effects0135-independent-review.md)已接真实915与独立idle模型：65源/58core/9入口、8seed/1614帧/11309阶段/11选择/11317调用0差异。此前[071318观测](reports/2026-11-01-effect-system0135-probe.md)已实测三域保持clock0/两Vec cap0 ptr8 len0、1644=1、2356=0；它复用旧预期，不能冒称新模型验收。当前inactive payload/ptr/facing另存，不预测零、不加mask。独立[500组件](reports/2026-11-01-effect-system0135.md)分列383正常/117预期255 pop后trap，非空56未接主切片，120/910仍pending。
 
 没有直接body匹配的函数也不能立即判定规则变化：call索引、静态地址、编译布局可能改变字节。需在语义、常量、输入输出与具体副作用层继续核对。当前仍以[全模块清单](RECONSTRUCTION.md)记录未知项，不将旧版验证次数移作新版验收。
+
+当前[独立复制运行](evidence/headless-effects135-standalone-20261101T072549.178656Z/receipt.json)59文件=58core+CLI，是纯模型自跑，不新增原件case。[NPC/880静态清单](reports/2026-11-01-npc-effect-producer0135-static.md)列出缺入口916/975/38007/2602/2573/49037；2376特殊事件及前段/party/终态也未闭合；[进场资源静态规格](reports/2026-11-01-entry-resources0135-static.md)及[静态独审](reports/2026-11-01-entry-resources0135-static-review.md)另核116已有资产与首层URL，仍未执行真实VFS/world/1089，均不升级为完整游戏验收。
 
 ## Windows与WASM的分工
 

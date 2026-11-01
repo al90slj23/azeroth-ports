@@ -59,7 +59,8 @@ ROLES = {'select_ability': (1072, b'\x7f\x7f', b''),
  'initial_game': (1560, b'\x7f\x7f\x7f', b''),
  'begin_run': (1089, b'\x7f', b''),
  'move_player': (2328, b'\x7f\x7f}', b'\x7f'),
- 'area_tick': (3757, b'\x7f', b'')}
+ 'area_tick': (3757, b'\x7f', b''),
+ 'effect_tick': (915, b'\x7f}', b'')}
 
 APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01',
  'recalculate_stats': '31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748',
@@ -100,7 +101,8 @@ APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273d
  'initial_game': '064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe',
  'begin_run': '08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb',
  'move_player': '8e456fb160c30e4c4275670d2f4c1d9a6691e4be791905364ea5ff34b008b84b',
- 'area_tick': 'e976ee48b3f0ad4117bfa98c81538fa88bf4607c4a9ca15c1a5a040c1c4477f5'}
+ 'area_tick': 'e976ee48b3f0ad4117bfa98c81538fa88bf4607c4a9ca15c1a5a040c1c4477f5',
+ 'effect_tick': '7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6'}
 
 def require(condition, message):
     if not condition:
