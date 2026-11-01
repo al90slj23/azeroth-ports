@@ -19,6 +19,7 @@
 - 当前扩展`pickups134`支持kind1显式GUID/counter追加、真实收取guard外的idle外来记录，以及逐笔XP消费者边界；最新382例完整原件对照0差异，345例是fb74fdb历史基线。
 - `core_spec/death_loot134.py`、`pickup_entity134.py`：普通死亡XP/金币的直接抽样，以及kind1消费者的额外随机角度抽样、counter/GUID投影；flagged/kind2和完整实体树/视觉仍pending。
 - `core_spec/ordinary_pipeline134.py`：将上述规格接成受控普通单目标死亡→拾取→XP投影，367例×4阶段与原件一致。遇选卡或未恢复属性立即返回pending，升级后dirty状态阻止跨调用复用旧倍率；不是独立完整主循环。
+- `core_spec/derived_stats134.py`：新版22派生字段、HP、辅助池、对象字段和速度更新决策；完整原1513的10569例对照0差异。真实modifier来源和组合中每次升级的刷新仍需接入，不能用API默认空值代替未知数据。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
 ```sh
@@ -30,6 +31,7 @@ python3 reverse-engineering/scripts/check_progression134_full_spec.py
 python3 reverse-engineering/scripts/check_incoming134_nonfatal_spec.py
 python3 reverse-engineering/scripts/check_pickups134_full_spec.py
 python3 reverse-engineering/scripts/check_ordinary_pipeline134.py
+python3 reverse-engineering/scripts/check_stats134_full_spec.py
 
 # 历史0.126.0的隔离数值对照。
 python3 reverse-engineering/scripts/check_upgrade_spec.py

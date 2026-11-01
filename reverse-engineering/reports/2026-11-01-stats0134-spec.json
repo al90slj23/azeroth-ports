@@ -1,0 +1,360 @@
+{
+  "date": "2026-11-01",
+  "frozen_at_utc": "2026-11-01T02:11:18.356404+00:00",
+  "version": "0.134.0",
+  "build": "983346a7",
+  "status": "synthetic1513_numeric_projection_verified; producer_and_full_game_integration_pending",
+  "comparison_receipt": "evidence/full0134-oracle-20261101T020610.760555Z/stats134-comparison.json",
+  "comparison_receipt_sha256": "bf7c94c0effff474ce3271d84f39460915487cbf8ae795495cae53d8bee872f4",
+  "static_receipt": "evidence/stats0134-static-20261101T020759.413184Z/manifest.json",
+  "static_receipt_sha256": "0464cba128896eee26c86f57dad6e7e65b1f19c1642f454ed49832f6d99e7a0d",
+  "validation": {
+    "version": "0.134.0",
+    "build": "983346a7",
+    "cases": 10569,
+    "case_groups": {
+      "class-selector": 256,
+      "race-selector": 256,
+      "class-level": 981,
+      "passive-tag": 345,
+      "adjustment-tag": 810,
+      "item-tag": 645,
+      "hp-select": 225,
+      "owned-soul-link": 525,
+      "timed-expiry": 180,
+      "live-dominance": 3600,
+      "live-expiry": 60,
+      "mixed-ordered": 600,
+      "all-class-race-level": 576,
+      "new-adjustment-cap1": 8,
+      "new-auxiliary-pool-clamps": 162,
+      "new-conditional-pool-select-order": 1296,
+      "XP-radius-ordered-source-domains": 32,
+      "movement-threshold": 12
+    },
+    "passed": 10569,
+    "mismatch_fields": 0,
+    "failures": [],
+    "original_function1513_executed": true,
+    "original_internal_callees_executed": true,
+    "replacement_callees": [],
+    "changed_original_sections": [
+      7
+    ],
+    "host_calls": 0,
+    "denied_function_imports": 878,
+    "application_start_called": false,
+    "user_saves_read": false,
+    "network_used": false,
+    "actual_original_movement_packets_queued": 1537,
+    "actual_original_BTree_insertions": 31707,
+    "maximum_memory_bytes": 15204352,
+    "memory_page_cap": 512,
+    "fresh_instances": 166,
+    "runtime": {
+      "runtime_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "runtime_version": "v22.23.4",
+      "runtime_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+      "runtime_flags": [
+        "--max-old-space-size=512",
+        "--wasm-max-mem-pages=512"
+      ],
+      "exit_code": 0,
+      "runner_seconds": 3.514,
+      "subprocess_deadline_seconds": 60,
+      "stderr_file": "stats134-stderr.log",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "persisted_fixture_ids_unique_and_ordered": true,
+    "result_ids_unique_and_ordered": true,
+    "nan_comparison": "classification only; every non-NaN result requires exact bits",
+    "fixture_sha256": "362dd58da9b1b201535c9e0334b212ddc0bc03f84887cac2a039c9188ccb2c09",
+    "results_sha256": "0f211541f955aa6cc4b534e7a71ac7c958d42a31856a4a21d70559feaf36e8cf",
+    "source_sha256": {
+      "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+      "scripts/check_stats134_full_spec.py": "7ae60392f59fea1f193e949e4bb691ba913ba2c3031df208453fb1bd2ee04fa0",
+      "scripts/run_stats134_full_oracle.mjs": "36d2f4d532a93897176c249a13b87624ec27d5609d9f64c0f73b26606bb324e9",
+      "scripts/full134_host.mjs": "ddf6c4ef4f5049e30dbb80dc6c1ca126c7c51b8876df3254a9b4a3b0e314726e",
+      "scripts/build_full134_oracle.py": "c902cac2ec5494c1be2184a850b3efa790ac012915bce986c39fd259f05a6f88",
+      "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+      "scripts/trace_stats134.py": "80c1dc46fb86db5bdbff0bf528bc784d90daa547ca8cac37315eed7e1bcff955"
+    },
+    "source_hashes_checked_before_and_after": true,
+    "research_manifest_sha256": "0a0f9d8d4792eb1d4e3a94a480678bf69629ab488e980ada20abfbe059205ec8",
+    "research_module_sha256": "d264ead09b0207ed4c4356cc950e54e234e510109bcc54a2897c7ec5c1614ff4",
+    "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "full_oracle_directory": "evidence/full0134-oracle-20261101T020610.760555Z",
+    "compared_derived_offsets": [
+      1360,
+      1364,
+      1368,
+      1372,
+      1376,
+      1380,
+      1384,
+      1388,
+      1392,
+      1396,
+      1400,
+      1404,
+      1408,
+      1412,
+      1416,
+      1420,
+      1424,
+      1428,
+      1432,
+      1436,
+      1440,
+      1444
+    ],
+    "compared_auxiliary_offsets": [
+      1532,
+      1536,
+      1348,
+      768
+    ],
+    "scope": "Complete original1513 and reached original callees on synthetic states; no game start or host call",
+    "limitations": [
+      "Synthetic records do not establish real item/talent/effect producer IDs or save compatibility.",
+      "Movement queue count and BTree numeric fields verified; packet bytes and external delivery not compared.",
+      "Other full-game state, integration, scheduling and UI remain unvalidated. NaN payload preservation not claimed."
+    ]
+  },
+  "static_validation": {
+    "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "complete_wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
+    "index_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9",
+    "complete_selected_functions": [
+      {
+        "function_index": 1513,
+        "wat_start": 332573005,
+        "wat_end": 332635462,
+        "wat_line": 4193822,
+        "wat_sha256": "fa23c1db25f897b78a48e1d2c0779c8d32bc3da39f7829bd188d3cce16dd6909",
+        "body_start": 10230025,
+        "body_end": 10234773,
+        "body_bytes": 4748,
+        "body_sha256": "e978d8b2c80f495f3c669c957444b4392368fe87dc92104b297482163c3b419e"
+      },
+      {
+        "function_index": 3735,
+        "wat_start": 504184056,
+        "wat_end": 504221307,
+        "wat_line": 8463031,
+        "wat_sha256": "bcba0cf849b43c0c933be1c405fe57ea61912319aae4245e5deb92810de08ce8",
+        "body_start": 19543146,
+        "body_end": 19545238,
+        "body_bytes": 2092,
+        "body_sha256": "a74c80160cb7cd545f993cbf932d40c9bcf9e4e692251615487da71fed6b4b7b"
+      },
+      {
+        "function_index": 48065,
+        "wat_start": 1140131831,
+        "wat_end": 1140134064,
+        "wat_line": 28646186,
+        "wat_sha256": "440767125542eb04cc2c95eaffe889f4a20eb3b542e0b096d516a4eb2ed02b28",
+        "body_start": 64204220,
+        "body_end": 64204467,
+        "body_bytes": 247,
+        "body_sha256": "1b3bc5367e9a6bc14feee60059c9651257df15299814194889db34b2987e2598"
+      },
+      {
+        "function_index": 65323,
+        "wat_start": 1209171117,
+        "wat_end": 1209172016,
+        "wat_line": 30853606,
+        "wat_sha256": "cd993eb22a48e925988de2139a98b001bddc0f17ae8f839c92612314fab3572b",
+        "body_start": 69210249,
+        "body_end": 69210358,
+        "body_bytes": 109,
+        "body_sha256": "2aa59e719779d28fd832bff816892902f6518c260fdd1b5cac023e65fe060802"
+      },
+      {
+        "function_index": 65326,
+        "wat_start": 1209173688,
+        "wat_end": 1209174586,
+        "wat_line": 30853758,
+        "wat_sha256": "fca48e1062c7d74626efdecedc3ae3a3e13fd5498c8dd2f93c523371786b93b1",
+        "body_start": 69210571,
+        "body_end": 69210680,
+        "body_bytes": 109,
+        "body_sha256": "d16105dd925ce6d1084b289dde9b86235bea0656c98139c699935ea952ce60e7"
+      },
+      {
+        "function_index": 71888,
+        "wat_start": 1220172619,
+        "wat_end": 1220173474,
+        "wat_line": 31268141,
+        "wat_sha256": "8db6667e442d77dc4b71fc05407f8d086931672d4ccb912c54ec17bc670f6868",
+        "body_start": 70156055,
+        "body_end": 70156152,
+        "body_bytes": 97,
+        "body_sha256": "96edd81de231a799faf50434b510332381cadbdd3c03d7000960f046b6eeed1e"
+      },
+      {
+        "function_index": 106890,
+        "wat_start": 1276385188,
+        "wat_end": 1276385417,
+        "wat_line": 33404315,
+        "wat_sha256": "1382a9c9fd491aabacacd3a407746b7356ef01877952b8901d31a5b3560ad1cf",
+        "body_start": 75206824,
+        "body_end": 75206848,
+        "body_bytes": 24,
+        "body_sha256": "1782ebdd04fb0487495727392c4ff80dafbfbd6c4886aade5aaac14e0ac68575"
+      }
+    ],
+    "reconstructed_active_data_bytes": 14375987,
+    "active_data_segments": 28470,
+    "reconstructed_active_data_sha256": "7649f0f920f7ebcccf7662dbbe2801012868a04418940043961be21650018338",
+    "class_count": 9,
+    "race_count": 8,
+    "derived_store_count": 22,
+    "dispatch_tables": 4,
+    "instruction_guards": 10
+  },
+  "input_layout": {
+    "class_byte": [
+      360
+    ],
+    "race_byte": [
+      361
+    ],
+    "level": [
+      1520
+    ],
+    "old_max_hp": [
+      1360
+    ],
+    "current_hp": [
+      1528
+    ],
+    "now": [
+      2344
+    ],
+    "conditional": [
+      268,
+      2574
+    ],
+    "passives": [
+      1692,
+      1696,
+      8
+    ],
+    "adjustments": [
+      1668,
+      1672,
+      16
+    ],
+    "item_modifiers": [
+      2020,
+      2024,
+      8
+    ],
+    "owned_skills": [
+      172,
+      176,
+      8
+    ],
+    "skill_definition_id": [
+      32,
+      36
+    ],
+    "timed_definitions": [
+      2044,
+      2048,
+      36
+    ],
+    "timed_records": [
+      600,
+      604,
+      12
+    ],
+    "live_effects": [
+      1704,
+      1708,
+      32
+    ],
+    "auxiliary_pools": [
+      1532,
+      1536,
+      1344,
+      1348,
+      768
+    ],
+    "previous_speed_sequence": [
+      1644,
+      1640
+    ],
+    "entity_id_i64": [
+      1336
+    ],
+    "movement_queue_cap_ptr_len": [
+      1872,
+      1876,
+      1880
+    ],
+    "field_btree_root_height": [
+      2468,
+      2472
+    ]
+  },
+  "current_numeric_changes": [
+    "race1 XP-tag8 .1->.2",
+    "adjustment cap .4->1",
+    "new pool1532/1536 clamps plus conditional1348 and768 writes"
+  ],
+  "API": {
+    "module": "core_spec.derived_stats134",
+    "entry": "recalculate(StatsInput(...))",
+    "all_float_values": "unsigned binary32 bit patterns; no host float arithmetic in accumulation",
+    "XP_multiplier": "result[derived_bits][1388] with string offset key",
+    "pickup_radius": "result[derived_bits][1384] with string offset key",
+    "example": {
+      "input": {
+        "class_byte": 1,
+        "race_byte": 1,
+        "level": 2,
+        "old_max_hp_bits": 1130758144,
+        "current_hp_bits": 1128792064
+      },
+      "assumption": "all modifier/effect vectors known empty; auxiliary and conditional fields zero; previous speed7",
+      "expected": {
+        "max_hp1360_bits": 1131347968,
+        "current_hp_bits": 1129381888,
+        "XP_multiplier1388_bits": 1067030938,
+        "pickup_radius1384_bits": 1091567616
+      }
+    }
+  },
+  "integration_contract": [
+    "Preserve each original4630 level-iteration call order (call1513 at function line329).",
+    "Capture current class/race/level/HP, modifiers, skill ranks/IDs, timed definitions/records, live effects and now.",
+    "Absent producer data is unknown; do not silently replace unknown state with empty/default buffers.",
+    "Model returns numeric state/object field/movement decision data; scheduling, packet allocation and emission remain caller work."
+  ],
+  "limitations": [
+    "Synthetic records do not establish real item/talent/effect producer IDs or save compatibility.",
+    "Movement queue count and BTree numeric fields verified; packet bytes and external delivery not compared.",
+    "Other full-game state, integration, scheduling and UI remain unvalidated. NaN payload preservation not claimed.",
+    "Only fresh empty field BTree insertions exercised; existing BTree update branches not specifically covered.",
+    "Owned soul_link ID and raw tags are evidenced consumers; full item/talent/ability producer mapping remains pending.",
+    "No APK, Android save, Android WIP, UI, app start or deployed-game validation performed."
+  ],
+  "independent_review": "Read-only static/function/table review and persisted10569-case replay found no numeric/layout issue; source-freeze fix rechecked.",
+  "reproduce": [
+    "python3 reverse-engineering/scripts/trace_stats134.py",
+    "python3 reverse-engineering/scripts/check_stats134_full_spec.py",
+    "python3 reverse-engineering/scripts/check_stats134_full_spec.py --full-directory reverse-engineering/evidence/full0134-oracle-20261101T020610.760555Z"
+  ],
+  "root_independent_review": {
+    "file": "root-independent-review.json",
+    "sha256": "ba919c9af35900025ded94526a64627d517f30d1a1b2aaab96032e225afcc779",
+    "cases_recomputed": 10569,
+    "target_executed_by_review": false,
+    "nonexport_sections_byte_compared": true
+  }
+}

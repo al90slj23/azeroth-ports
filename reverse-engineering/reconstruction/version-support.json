@@ -238,6 +238,36 @@
         "messages/entities/saves/UI/network"
       ],
       "report": "../reports/2026-11-01-ordinary-pipeline0134.json"
+    },
+    {
+      "module": "core_spec.derived_stats134",
+      "api": "recalculate(StatsInput)",
+      "status": "numeric_projection_full_original_function_differential_passed",
+      "original_function": 1513,
+      "cases": 10569,
+      "mismatches": 0,
+      "fields_compared": [
+        "22 derived stores1360..1444",
+        "currentHP1528",
+        "aux1532/1536/1348/768",
+        "object22/28/1109",
+        "speed1644",
+        "speed_sequence1640",
+        "movement_queue_count1880"
+      ],
+      "numeric_changes_from_0126": [
+        "race1XPtag8 .1->.2",
+        "adjustmentcap1432 .4->1",
+        "auxiliary pool clamp writes"
+      ],
+      "not_accepted": [
+        "actual modifier/equipment/talent producers",
+        "BTree existing-item update special corpus",
+        "packetbytes/external delivery",
+        "integration of per-level1513 into ordinary pipeline",
+        "complete game scheduling"
+      ],
+      "report": "../reports/2026-11-01-stats0134-spec.json"
     }
   ],
   "other_modules": [
