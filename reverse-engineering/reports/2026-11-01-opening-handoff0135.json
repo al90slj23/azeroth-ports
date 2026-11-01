@@ -1,0 +1,106 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "passed_scoped_opening_handoff",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "static_trace": "evidence/profile-companions0135-static-20261101T142845.620902Z/trace.json",
+  "static_trace_sha256": "94fe72c1c55a3a9311d0bd4dd195c7151a810688cd4b1ed794f9c98cd9638d0a",
+  "static_functions": 6,
+  "verified_static_snippets": 18,
+  "receipt": "evidence/opening-handoff0135-20261101T143030.053754Z/report.json",
+  "receipt_sha256": "02b744c72090393b0ec721f052278b450c09ed7ef2cacfa0e91654a9dc350baf",
+  "cases": 16,
+  "model_assertions": 594,
+  "original_differences": 0,
+  "full_original6730_calls": 16,
+  "full_original1089_calls": 16,
+  "source_closure_files": 52,
+  "source_unchanged": true,
+  "strict_comparison": {
+    "strict_backing_bytes": 31472,
+    "strict_active_bytes": 31472,
+    "active_unwritten_bytes": 9152,
+    "active_unwritten_nonzero_bytes": 8085,
+    "inactive_allocator_bytes": 9552,
+    "inactive_allocator_nonzero_bytes": 7724,
+    "opening_packets": 1216,
+    "opening_packet_bytes": 129792,
+    "notifications": 16,
+    "constructor_prefix_packets": 1
+  },
+  "independent_producer_reads_original_memory": false,
+  "profile_input": {
+    "account_flags": []
+  },
+  "seed0": {
+    "phase2587": 1,
+    "counter2408": 85,
+    "rng_words": [
+      3253128260,
+      1876369536,
+      2014361798,
+      3839958702
+    ],
+    "player_xyz": [
+      3323121664,
+      3290316800,
+      1116212265
+    ],
+    "packet_count": 76,
+    "packet_bytes": 8112
+  },
+  "vectors": {
+    "companions": {
+      "capacity": 0,
+      "count": 0,
+      "active_unknown_bytes": 0,
+      "inactive_unknown_bytes": 0
+    },
+    "units": {
+      "capacity": 4,
+      "count": 4,
+      "active_unknown_bytes": 516,
+      "inactive_unknown_bytes": 0
+    },
+    "pickups": {
+      "capacity": 4,
+      "count": 2,
+      "active_unknown_bytes": 8,
+      "inactive_unknown_bytes": 112
+    },
+    "special": {
+      "capacity": 4,
+      "count": 4,
+      "active_unknown_bytes": 48,
+      "inactive_unknown_bytes": 0
+    },
+    "windows": {
+      "capacity": 4,
+      "count": 2,
+      "active_unknown_bytes": 0,
+      "inactive_unknown_bytes": 16
+    },
+    "boundaries": {
+      "capacity": 128,
+      "count": 69,
+      "active_unknown_bytes": 0,
+      "inactive_unknown_bytes": 472
+    }
+  },
+  "new_mainloop_frames": 0,
+  "new_fresh_bootstraps": 0,
+  "whole_game_complete": false,
+  "limitations": [
+    "Empty account companion flags only; other profile/account/menu fields remain explicit.",
+    "2922 absence branch is statically traced; this oracle invokes complete6730/1089, not2922.",
+    "Independent world query artifacts are reused, not rebuilt by this checker.",
+    "The controlled oracle restores a historical resolved world; no fresh full App bootstrap or880 frame.",
+    "Handoff retains all six physical vectors but does not execute their pending consumers."
+  ],
+  "api": {
+    "profile": "EmptyCompanionProfile135(())",
+    "producer": "initialize_absent_companion_handoff(value, world, companion_profile=profile, title_utf8=..., subtitle_utf8=...)",
+    "adapter": "from_opening(opening, world)",
+    "owned": "opening/world references; collection semantic view; all six physical vectors, outputs and pending consumer obligations"
+  }
+}

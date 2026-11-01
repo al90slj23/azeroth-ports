@@ -2,7 +2,13 @@
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。
 
-最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。功能目标持续跟随官方最新稳定版；每轮检查后固定版本/SHA，本轮证据为0.135.1 / Web0898d5e3。当前[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异；6未知技能/2预算边界不替换，phase1与初始zero槽仍为研究输入，尚非完整880或独立游戏。旧072329/11309、064308/9695、061901/5473按历史身份保留，不相加。0.134.0/0.126.0的结果不转记为新版验收；见[版本策略](VERSION_STRATEGY.md)与[覆盖清单](RECONSTRUCTION.md)。
+最终目标是拆清全部逻辑与数据，形成能够独立重造的核心。功能目标持续跟随官方最新稳定版；每轮检查后固定版本/SHA。**当前latest为0.137.0 / `d171b8f9f`，仅身份/采集，动态验收0**；0.136.0 / `fe24fb74c`保留静态profile与候选映射，动态验收0；持续动态实验仍锁定0.135.1 / `90898d5e3`。旧`0898d5e3`为历史截短alias，收据不覆写，见[最新版本状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。
+
+固定135的[历史14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异；其6未知技能/2预算边界、显式phase1与初始zero槽保留为旧批范围。后继真实开局/战斗/升级/选卡另出135收据，不能倒填旧批，也不转记136/137通过。旧072329/11309、064308/9695、061901/5473及0.134.0/0.126.0结果各自保留，不相加；详见[覆盖清单](RECONSTRUCTION.md)。
+
+新[opening→combat→XP/首次选卡组合](reports/2026-11-01-opening-combat0135.md)固定135 human warrior／seed0／navigation False：120受控帧、1select、1681stage、1683原件入口0差异，90源/80 production。真实1089的phase1、4NPC/2kind2/4special/2window/69boundary/0companion及实际capacity保留，未知字节None不补零；level2选择实际index0 thunder_clap后续33帧。独立预解析world、原件snapshot与外部clock调度明确分开；不是完整880/native/一局，旧headless、frame及death-pickup回归不与新case相加。 该限定投影已通过[只读独审](reports/2026-11-02-opening-combat0135-independent-review.md)，receipt SHA `2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d`；原packet payload语义仍只观察。
+
+另一个[raw451资产独立入口](reports/2026-11-01-opening-combat0135.md)实际读取67,281,330B／9tiles，87源不变且无closure逃逸；不读原memory、预解析world或WASM，从world/opening走完120帧／1select至level2／XP6／gold7，三个world SHA与既有query产物一致。它是独立生产层的补充证据，不新增原件case或完整880帧。
 
 新增[独立默认开局](reports/2026-11-01-opening0135.md)完成16组／32次完整6730缓存命中构造与1089、0差异，[独审通过](reports/2026-11-01-opening0135-independent-review.md)；以已解析真实world输入接通附属对象、4NPC、2kind2、事件窗口与69个边界对象。它与旧14阶段切片尚未整合。M2／WMO碰撞、候选／导航producer及world查询消费者分别验收；后继资产查询world组合不改变这些原批身份。
 
@@ -20,7 +26,13 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 
 ## 已实际运行
 
-### 固定0.135.1与基础资源
+### latest与固定研究分工
+
+- latest0.137.0：官方manifest／native／Web采集和实际9字节build身份已核；全量profile、动态规则验收仍为0。
+- 固定0.136.0：[全量WAT/RO SQLite与12入口候选](reports/2026-11-01-wasm0136-profile.md)已完成；静态同形及地址/table slot迁移不等于运行通过。
+- 固定0.135.1：既有和进行中的独立资源→opening→combat→XP/选卡实验继续锁定原SHA；52-role与各私有builder仍按各自版本准入。
+
+### 固定0.135.1动态研究与基础资源
 
 - 固定0.135.1：[完整WASM profile](reports/2026-11-01-wasm0135-profile.md)覆盖175317个defined函数、824549条直接调用；全量函数header/body范围和28471个data payload哈希读回通过。这是静态导航基础，不等于所有逻辑已恢复。
 - 固定0.135.1：[初批映射](reports/2026-11-01-migration0135.md)保留，当前52角色各自body/签名guard；[52角色保守性证明](evidence/builder135-role52-review-20261101T083845.125766Z/review.json)重建旧9-role模块字节一致，0新增运行case。主Node878导入全拒绝/总32MiB；单块allocate从1升至4MiB用于完整ADT，总上限未变。
@@ -134,7 +146,9 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 | 目标 | 状态与下一步 |
 |---|---|
 | 原版 JS 启动层、资源路径、存档／插件桥 | 已跑通 REA 静态分析；动态值须进一步追踪或运行观测。 |
-| 固定目标0.135.1 / 90,959,080B WASM | 主切片仍为082927的14尾8/1614/22607/11/22615；另有已解析world上的独立开局16/32、M2／WMO碰撞与query／position组件。各层分验，默认Elwynn查询world已由451资源独立生成并作1历史case对照；其它地图/物理world所有权、开局接主切片、完整880和一局仍未通过。 |
+| latest0.137.0 / 90,941,108B WASM | 官方身份与原件采集已核，实际build `d171b8f9f`；完整profile和动态验收0，旧版结果不转入。 |
+| 固定0.136.0 / 90,927,420B WASM | 完整静态profile与12入口候选、实际build `fe24fb74c`已核；动态验收0。 |
+| 固定动态研究0.135.1 / 90,959,080B WASM | 082927历史14尾8/1614/22607/11/22615等收据各自保留，后继真实开局/战斗/升级/选卡组合另记。451资源查询world、组件与原件观察分别验收；完整物理world/App/880和独立一局未通过。 |
 | 固定0.134.0 / 90,953,762B WASM | 完整验证/解码/独立索引，多个规则投影已做限定域原件差分；完整游戏未实现。REA原版大小限制未修改，本地扩展单列。 |
 | 历史0.126.0 / 90,116,970B WASM | 保留完整WAT和已验证局部模型作迁移/回归参考；WAT不是原始Rust源码。 |
 | 原生 Windows EXE 的导入表／Rust 元数据 | 已运行无目标执行的 REA 检查；元数据不是函数实现或源码。 |
@@ -153,7 +167,7 @@ python3 reverse-engineering/scripts/decompile_native_focus.py --exe /path/to/ori
 - `scripts/`：固定版本启动器和可复现分析入口。
 - `reports/`：可进入 Git 的精简结论，保留 Evidence ID、范围及未知项。
 - `RECONSTRUCTION.md`、`reconstruction/`：全模块覆盖/验收清单和独立规则实现。
-- `VERSION_STRATEGY.md`：最新0.135.1目标、固定0.134.0/历史0.126.0参照、平台分工和增量迁移策略。
+- `VERSION_STRATEGY.md`：latest137目标、固定136静态/135动态研究及0.134.0/0.126.0历史参照的分工和迁移策略。
 - `evidence/`：原始报告与只读输入副本，仅本机保留；`originals/`、`work/` 也不提交。
 
 研究结果接入正式封装时，固定原始 SHA-256、记录精确补丁和回退方式，并运行对应回归。单机规则实验与官方合作同步分别验收；显示数字的变化不能当作真实伤害／生命值修改成功。

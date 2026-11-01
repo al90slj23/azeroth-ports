@@ -1,0 +1,340 @@
+{
+  "status": "scoped_static_profile_and_correspondence_complete_no136_runtime_acceptance",
+  "version": "0.136.0",
+  "actual_consumed_build": "fe24fb74c",
+  "actual_consumed_build_length": 9,
+  "web_wasm_sha256": "48c3bce7d690b3be02973bde89903c385e21ef16deca23539dcef60a1eb2eef3",
+  "native_exe_sha256": "eb744751b4e17ec1397b0cdc85a22af63b6af63c1da1d9c2861762c3c4d8947c",
+  "official_acquisition_stamp": "4762d2b13821",
+  "identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json",
+  "identity_sidecar_sha256": "be6c2874770470d160ca0d0cf0cb72c9be88f7be491be070c1a60d14b72190e5",
+  "legacy135_actual_web_build": "90898d5e3",
+  "legacy135_historical_alias": "0898d5e3",
+  "old_receipts_relabelled": false,
+  "profile_manifest": "evidence/wasm0136-profile-20261101T143713.272522Z/manifest.json",
+  "profile_manifest_sha256": "23785a951b7c2db24fd6d984a17916e19c21ca205e819fbeedf6b9b329e98c52",
+  "profile_counts": {
+    "functions": 175319,
+    "calls": 824479,
+    "iconsts": 5193664,
+    "memops": 5537062
+  },
+  "defined_functions": 175319,
+  "function_imports": 878,
+  "wat_sha256": "1e5a5953bf4e9f4dce8e049a4a4b18e55f8dec6a6dbd6729a051c1c5e1fcc246",
+  "wat_bytes": 1326242528,
+  "database_sha256": "2006b1a14f17a16c2723605e732c83e6c3ddcdc4434f6b88b5a0b2fc614a3e2f",
+  "database_bytes": 642613248,
+  "database_mode": "0444; query URI mode=ro",
+  "integrity_check": "ok",
+  "profile_elapsed_seconds": 72.69,
+  "profile_deadline_seconds": 300,
+  "mapping": "evidence/core0135-to0136-static-20261101T144126.756775Z/mapping.json",
+  "mapping_sha256": "78a52e688c749a1ebd7c64950010e773c3b541930cf3c112d631ad2dab12931a",
+  "candidate_review": "evidence/core0136-candidate-review-20261101T144757.900933Z/review.json",
+  "candidate_review_sha256": "303194485f54c866ef698d6a5cce31c42336a4c30ff461405ecf82bb05fb35f0",
+  "candidate_map": [
+    {
+      "role": "constructor",
+      "old135_index": 1560,
+      "reviewed136_candidate": 1560,
+      "initial_method": "diagnostic_similarity_only",
+      "selected_candidates_preserved": [],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 1560,
+          "ordered_trigram_similarity": 0.995373665480427
+        },
+        {
+          "new_index": 1217,
+          "ordered_trigram_similarity": 0.03877440347071583
+        },
+        {
+          "new_index": 32191,
+          "ordered_trigram_similarity": 0.03824289405684755
+        }
+      ],
+      "remaining_integer_immediate_changes": 5,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "opening",
+      "old135_index": 1089,
+      "reviewed136_candidate": 1087,
+      "initial_method": "diagnostic_similarity_only",
+      "selected_candidates_preserved": [],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 1087,
+          "ordered_trigram_similarity": 0.9967759269210102
+        },
+        {
+          "new_index": 2636,
+          "ordered_trigram_similarity": 0.04841028918357565
+        },
+        {
+          "new_index": 2845,
+          "ordered_trigram_similarity": 0.045895044797952096
+        }
+      ],
+      "remaining_integer_immediate_changes": 6,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "cached_world_construct",
+      "old135_index": 6730,
+      "reviewed136_candidate": 6738,
+      "initial_method": "diagnostic_similarity_only",
+      "selected_candidates_preserved": [],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 6738,
+          "ordered_trigram_similarity": 0.9936051899907321
+        },
+        {
+          "new_index": 5069,
+          "ordered_trigram_similarity": 0.07967667436489607
+        },
+        {
+          "new_index": 10709,
+          "ordered_trigram_similarity": 0.0701310861423221
+        }
+      ],
+      "remaining_integer_immediate_changes": 25,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "application_tick",
+      "old135_index": 880,
+      "reviewed136_candidate": 880,
+      "initial_method": "diagnostic_similarity_only",
+      "selected_candidates_preserved": [],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 880,
+          "ordered_trigram_similarity": 0.9887521630455681
+        }
+      ],
+      "remaining_integer_immediate_changes": 250,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "cast",
+      "old135_index": 922,
+      "reviewed136_candidate": 923,
+      "initial_method": "calls_static_addresses_normalized_wat",
+      "selected_candidates_preserved": [
+        923
+      ],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 923,
+          "ordered_trigram_similarity": 1.0
+        },
+        {
+          "new_index": 38227,
+          "ordered_trigram_similarity": 0.024665464155375644
+        },
+        {
+          "new_index": 38315,
+          "ordered_trigram_similarity": 0.023775058121682676
+        }
+      ],
+      "remaining_integer_immediate_changes": 0,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "owned_tick",
+      "old135_index": 1076,
+      "reviewed136_candidate": 1075,
+      "initial_method": "calls_static_addresses_normalized_wat",
+      "selected_candidates_preserved": [
+        1075
+      ],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 1075,
+          "ordered_trigram_similarity": 1.0
+        }
+      ],
+      "remaining_integer_immediate_changes": 0,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "damage",
+      "old135_index": 914,
+      "reviewed136_candidate": 914,
+      "initial_method": "diagnostic_similarity_only",
+      "selected_candidates_preserved": [],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 914,
+          "ordered_trigram_similarity": 0.999755600814664
+        }
+      ],
+      "remaining_integer_immediate_changes": 1,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "unit_tick",
+      "old135_index": 921,
+      "reviewed136_candidate": 922,
+      "initial_method": "calls_static_addresses_normalized_wat",
+      "selected_candidates_preserved": [
+        922
+      ],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 922,
+          "ordered_trigram_similarity": 1.0
+        },
+        {
+          "new_index": 916,
+          "ordered_trigram_similarity": 0.10295547345907058
+        },
+        {
+          "new_index": 915,
+          "ordered_trigram_similarity": 0.06917499510092102
+        }
+      ],
+      "remaining_integer_immediate_changes": 0,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "spawn_tick",
+      "old135_index": 947,
+      "reviewed136_candidate": 947,
+      "initial_method": "calls_static_addresses_normalized_wat",
+      "selected_candidates_preserved": [
+        947
+      ],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 947,
+          "ordered_trigram_similarity": 1.0
+        },
+        {
+          "new_index": 916,
+          "ordered_trigram_similarity": 0.07341966637401229
+        },
+        {
+          "new_index": 915,
+          "ordered_trigram_similarity": 0.06886625332152348
+        }
+      ],
+      "remaining_integer_immediate_changes": 0,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "special_tick",
+      "old135_index": 2376,
+      "reviewed136_candidate": 2375,
+      "initial_method": "diagnostic_similarity_only",
+      "selected_candidates_preserved": [],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 2375,
+          "ordered_trigram_similarity": 0.9983624454148472
+        },
+        {
+          "new_index": 3758,
+          "ordered_trigram_similarity": 0.08133535660091047
+        },
+        {
+          "new_index": 2861,
+          "ordered_trigram_similarity": 0.060950104571257845
+        }
+      ],
+      "remaining_integer_immediate_changes": 1,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "account_companion_selection",
+      "old135_index": 2922,
+      "reviewed136_candidate": 2919,
+      "initial_method": "calls_static_addresses_normalized_wat",
+      "selected_candidates_preserved": [
+        2919
+      ],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 2919,
+          "ordered_trigram_similarity": 1.0
+        },
+        {
+          "new_index": 3269,
+          "ordered_trigram_similarity": 0.052308949734368615
+        },
+        {
+          "new_index": 6880,
+          "ordered_trigram_similarity": 0.046445497630331754
+        }
+      ],
+      "remaining_integer_immediate_changes": 0,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    },
+    {
+      "role": "allocator",
+      "old135_index": 91941,
+      "reviewed136_candidate": 91927,
+      "initial_method": "calls_normalized_wat",
+      "selected_candidates_preserved": [
+        91927
+      ],
+      "diagnostic_alternatives_preserved": [
+        {
+          "new_index": 91927,
+          "ordered_trigram_similarity": 1.0
+        },
+        {
+          "new_index": 97165,
+          "ordered_trigram_similarity": 0.0975609756097561
+        },
+        {
+          "new_index": 93707,
+          "ordered_trigram_similarity": 0.08163265306122448
+        }
+      ],
+      "remaining_integer_immediate_changes": 0,
+      "remaining_opcode_changes": 0,
+      "acceptance_transferred": false
+    }
+  ],
+  "element_table_pairs": 13,
+  "element_referenced_normalized_same": 12,
+  "ambiguous_callee_pairs": 0,
+  "new_original_target_calls": 0,
+  "new136_runtime_cases": 0,
+  "new136_mainloop_frames": 0,
+  "old135_sources_or_builders_changed_by_this_work": false,
+  "whole_game_complete": false,
+  "work_split": {
+    "ongoing_fixed135": "Existing independent world/opening/handoff/combat work remains tied to its frozen135 WASM SHA and fixtures; its passes do not become136 passes.",
+    "fixed136_static": "Identity/profile and provisional migration correspondence; distinct source/body/type/data guards and controlled tests still required.",
+    "latest137": "Latest137 has separate identity/acquisition only; this136 profile/mapping is not137 acceptance."
+  },
+  "pending": [
+    "Bind a separate136 source/body/type allowlist; do not overwrite the fixed135 builders.",
+    "Review actual136 data declarations, BSS ownership and referenced callees; numerical relocation is not a semantics proof.",
+    "Resolve the one element-reference body still different after call/static normalization (13552420 to13652430).",
+    "Run new expected-first controlled136 constructor/opening and combat cases only after inputs/definitions are independently migrated.",
+    "Full App/UI/saves/deployment/complete mainloop acceptance remains outside this static task."
+  ],
+  "latest_release_since_this_fixed_profile": {
+    "version": "0.137.0",
+    "actual_consumed_build": "d171b8f9f",
+    "report": "reports/2026-11-01-latest-version-state.json",
+    "does_not_change_frozen136_inputs_or_receipts": true
+  }
+}

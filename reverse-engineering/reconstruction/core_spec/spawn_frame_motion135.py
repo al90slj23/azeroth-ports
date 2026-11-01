@@ -14,22 +14,28 @@ from .spawn_position_motion135 import sample_position
 from .spawn_schedule135 import FrameInput,FrameResult,budget_rate,_word,_slowdown
 from .spawn135_data import NORMALS
 from .progression134 import trunc_sat_u32
+from .record_cells135 import cells135,encode_row
+from .world_position135 import WorldPositionInput135,sample_spawn_position
 ONE=0x3f800000
 
 
-def step_ordinary_frame(state:FrameInput, *, destination_slots=None):
+def step_ordinary_frame(state:FrameInput, *, destination_slots=None,world=None,distance_map=None,
+        allow_unknown_storage_growth=False):
     if not state.other_event_timers_future:raise ValueError('Other event schedules are unresolved')
     if not math.isfinite(f.to_float(state.now_bits))or not math.isfinite(f.to_float(state.dt_bits)):
         raise ValueError('Controlled ordinary-frame domain has finite simulation time')
-    units=[bytes.fromhex(x)for x in state.unit_records]
+    units=[cells135(x,424)for x in state.unit_records]
     if any(len(x)!=424 for x in units):raise ValueError('Explicit424B unit records required')
     if destination_slots is not None:
         if type(destination_slots)is not tuple or len(destination_slots)<len(units):
             raise ValueError('Explicit allocated destination-slot snapshots required')
-        if any(len(bytes.fromhex(raw))!=424 for raw in destination_slots):
+        if any(len(cells135(raw,424))!=424 for raw in destination_slots):
             raise ValueError('Each allocated destination slot must be424B')
-        if destination_slots[:len(units)]!=state.unit_records:
+        if tuple(encode_row(raw)for raw in destination_slots[:len(units)])!=tuple(encode_row(raw)for raw in state.unit_records):
             raise ValueError('Live vector and allocated backing snapshots disagree')
+    if allow_unknown_storage_growth and destination_slots is None:
+        raise ValueError('Growth requires an explicit existing physical vector')
+    backing=list(destination_slots)if destination_slots is not None else None
     velocity=state.velocity_xy
     if state.mode==0 and f.to_float(state.dt_bits)>0:
         dx=f.div(f.sub(state.player_xyz[0],state.previous_player_xyz[0]),state.dt_bits)
@@ -46,22 +52,27 @@ def step_ordinary_frame(state:FrameInput, *, destination_slots=None):
         nonlocal words,counter,draws
         # Cap is checked before8751, so failed capacity attempts consume no
         # position or unit-angle randomness. Reuse known numeric spawn guard.
-        slot=(destination_slots[len(units)]if destination_slots is not None and len(units)<len(destination_slots)
-              else bytes(424).hex())
+        slot=(backing[len(units)]if backing is not None and len(units)<len(backing)
+              else (None,)*424 if allow_unknown_storage_growth else bytes(424).hex())
         raw=SpawnInput(state.zone,index,state.now_bits,state.zone_multiplier_bits,state.difficulty,state.mode,state.members,
             state.victory_field400,state.endless_flag,state.endless_start_bits,tuple(_word(u,0)for u in units),
             words,counter,(0,0,0),0,slot)
         probe=spawn_normal(raw)
         if not probe.success:return False,'cap'
-        if destination_slots is not None and len(units)>=len(destination_slots):
-            raise ValueError('Allocator growth needs explicit new destination storage')
-        placed=sample_position(PositionInput(state.zone,state.player_xyz,velocity,f.from_float(26),f.from_float(36),
-            f.from_float(.5),state.flat_height_bits,True,True,words))
+        if backing is not None and len(units)>=len(backing):
+            if not allow_unknown_storage_growth:raise ValueError('Allocator growth needs explicit new destination storage')
+            backing.extend([(None,)*424]*(max(4,2*len(backing))-len(backing)))
+        if world is None:
+            placed=sample_position(PositionInput(state.zone,state.player_xyz,velocity,f.from_float(26),f.from_float(36),
+                f.from_float(.5),state.flat_height_bits,True,True,words))
+        else:
+            placed=sample_spawn_position(WorldPositionInput135(state.zone,state.player_xyz,velocity,
+                f.from_float(26),f.from_float(36),f.from_float(.5),words,distance_map),world)
         words=placed.rng_words;draws+=placed.draws
-        if placed.status!='resolved_flat':return False,placed.status
+        if world is None and placed.status!='resolved_flat':return False,placed.status
         result=spawn_normal(replace(raw,rng_words=words,position_bits=placed.position_bits))
         words=result.rng_words;counter=result.counter;draws+=result.draws
-        units.append(bytes.fromhex(result.record_hex));requests.append(dict(origin=origin,index=index,guid=result.guid,position_bits=list(placed.position_bits)))
+        units.append(cells135(result.record_hex,424));requests.append(dict(origin=origin,index=index,guid=result.guid,position_bits=list(placed.position_bits)))
         return True,'spawned'
 
     from .spawn135 import definition
@@ -73,7 +84,7 @@ def step_ordinary_frame(state:FrameInput, *, destination_slots=None):
             ok,status=attempt(choice.index,'budget')
             if not ok:
                 if status=='cap':budget=min_numeric(cost,budget);break
-                return FrameResult(status,budget,killed,words,counter,tuple(u.hex()for u in units),velocity,tuple(requests),draws)
+                return FrameResult(status,budget,killed,words,counter,tuple(encode_row(u)for u in units),velocity,tuple(requests),draws)
             budget=f.sub(budget,cost)
             if not f.to_float(budget)>=1:break
     alive=0
@@ -89,5 +100,5 @@ def step_ordinary_frame(state:FrameInput, *, destination_slots=None):
         ok,status=attempt(choice.index,'density')
         if not ok:
             if status=='cap':break
-            return FrameResult(status,budget,killed,words,counter,tuple(u.hex()for u in units),velocity,tuple(requests),draws)
-    return FrameResult('ordinary_projection',budget,killed,words,counter,tuple(u.hex()for u in units),velocity,tuple(requests),draws)
+            return FrameResult(status,budget,killed,words,counter,tuple(encode_row(u)for u in units),velocity,tuple(requests),draws)
+    return FrameResult('ordinary_projection',budget,killed,words,counter,tuple(encode_row(u)for u in units),velocity,tuple(requests),draws)

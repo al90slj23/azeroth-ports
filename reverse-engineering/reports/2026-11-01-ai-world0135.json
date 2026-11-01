@@ -1,0 +1,90 @@
+{
+  "status": "pass fixed135 ordinary real-world AI component domain",
+  "receipt": "evidence/full0135-oracle-20261101T150442.478090Z/ai-world135-comparison.json",
+  "receipt_sha256": "0f1e57812b39a48e52ab6fa092761c16cb2d7c1faff10403dce07bf2b157bb7f",
+  "static": "evidence/ai-world0135-static-20261101T150619.898007Z/summary.json",
+  "source_files": 31,
+  "cases": 20,
+  "stages": 45,
+  "differences": 0,
+  "groups": {
+    "pilot-real-parsed-world-chase": 1,
+    "pilot-real-parsed-world-multiple": 1,
+    "pilot-controlled-flow-height-separation": 1,
+    "real-parsed-world-nonflat-and-obstacles": 8,
+    "real-parsed-world-ten-frames": 1,
+    "real-parsed-world-contact-stop": 1,
+    "controlled-nav-bit0-and-flow": 5,
+    "controlled-flow-continuous": 1,
+    "controlled-packet-nearest-z-only": 1
+  },
+  "routing": {
+    "direct_clear": 17,
+    "flow_cell_centre": 9,
+    "navigation_or_map_absent": 1
+  },
+  "stack_checks": 213,
+  "runtime": {
+    "cases": 20,
+    "entry_calls": 45,
+    "original_full_entries": [
+      921
+    ],
+    "zero_mocked_callees": true,
+    "denied_function_imports": 878,
+    "actual_host_calls": 0,
+    "original_allocator": 91941,
+    "max_memory_bytes": 26673152,
+    "memory_page_limit": 512,
+    "fresh_instances": 5,
+    "fresh_every": 4,
+    "stack_all_restored": true,
+    "independently_parsed_world_inputs": true,
+    "original_snapshot_loaded": false,
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_ai_world135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T150442.478090Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T150442.478090Z/ai-world135-fixtures.json"
+    ],
+    "pid": 9530,
+    "pgid": 9530,
+    "exit_code": 0,
+    "deadline_seconds": 60,
+    "seconds": 0.404,
+    "process_group_absent_after": true
+  },
+  "world_input": {
+    "directory": "evidence/asset-world0135-independent-20261101T111736.050879Z",
+    "hashes": {
+      "terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+    },
+    "context": "already independently parsed451-asset world; not a new resource-production run"
+  },
+  "none_opening_pure_model": {
+    "rows": 4,
+    "unknown_input_bytes": 516,
+    "preserved": true,
+    "original_calls": 0
+  },
+  "flat_shared_output_regression": "evidence/ai-world0135-flat-regression-20261101T150808.580642Z/comparison.json",
+  "previous_counts_not_added": true,
+  "limitations": [
+    "Controlled fully known NPC row fixtures on independently parsed Elwynn world inputs, not natural Game/880.",
+    "Independent opening None rows are pure-model only; never materialized into original input.",
+    "Ordinary melee/local/finite/nonfatal source restrictions inherited; ranged/Boss/status/proc producers remain explicit unknown.",
+    "Movement221 XYZ/duration/sequence projections compared; full hit/registry/aura packet semantics remain pending.",
+    "Fixed0.135.1 only, no0.136 or complete-game acceptance."
+  ]
+}

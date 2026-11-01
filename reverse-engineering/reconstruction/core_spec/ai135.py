@@ -5,12 +5,13 @@ rejected, rather than silently treated as ordinary melee. Network packet bytes,
 registry/history/aura side effects and fatal/revival behavior remain separate.
 """
 from dataclasses import dataclass,replace
-import struct
 from . import binary32 as f
 from .binary32_sqrt import sqrt_bits
 from .spawn_geometry135 import sin_bits,cos_bits
 from .incoming135 import IncomingState135,UnitPosition,resolve_incoming_prefix
 from .ai135_data import MELEE_DEFINITIONS
+from .record_cells135 import (cells135, u32, u64, put_u32, encode_row,
+                              optional_u32)
 
 
 @dataclass(frozen=True)
@@ -33,8 +34,8 @@ class AiResult135:
     pending:tuple
 
 
-def _get(raw,offset):return struct.unpack_from('<I',raw,offset)[0]
-def _put(raw,offset,value):struct.pack_into('<I',raw,offset,value)
+def _get(raw,offset):return u32(raw,offset,consumer='ai135')
+def _put(raw,offset,value):put_u32(raw,offset,value)
 def _float(raw,offset):return f.to_float(_get(raw,offset))
 def _maximum(a,b):return a if f.to_float(a)>f.to_float(b)else b
 def _distance(a,b):
@@ -68,7 +69,7 @@ def _attack(raw,now):
 
 
 def unit_position(raw):
-    return UnitPosition(marker=_get(raw,0),target_id=struct.unpack_from('<Q',raw,112)[0],
+    return UnitPosition(marker=_get(raw,0),target_id=u64(raw,112,consumer='ai135.unit_position'),
         start_x_bits=_get(raw,316),start_y_bits=_get(raw,320),
         end_x_bits=_get(raw,328),end_y_bits=_get(raw,332),
         movement_time_bits=_get(raw,340),movement_duration_bits=_get(raw,344))
@@ -85,7 +86,11 @@ def _validate(raw,now):
         raise ValueError('Fear/stun/expiry producers remain unresolved')
     for offset in(120,124,128,132,136,140,288,292,296,300,304,308,316,320,324,
                   328,332,336,340,344,348,352,396,400,404):
-        if not f.to_float(_get(raw,offset))==f.to_float(_get(raw,offset))or abs(f.to_float(_get(raw,offset)))==float('inf'):
+        # This finite-domain guard must not turn an unconsumed magnitude into
+        # a physical read. Known words retain the old guard; an unknown word
+        # is required only if the selected branch actually consumes it below.
+        value=optional_u32(raw,offset,consumer='ai135.finite_domain')
+        if value is not None and(not f.to_float(value)==f.to_float(value)or abs(f.to_float(value))==float('inf')):
             raise ValueError('Finite ordinary AI fixture required')
 
 
@@ -110,7 +115,7 @@ def update_ordinary_units(state:AiFrame135, *, trig_sin_bits=sin_bits, trig_cos_
         raise ValueError('Remote multiplayer phase interpolation remains unresolved')
     if any(not(-1e20<f.to_float(x)<1e20)for x in(state.now_bits,state.dt_bits,*state.player_xyz_bits)):
         raise ValueError('Finite bounded frame inputs required')
-    raws=[bytearray.fromhex(x)for x in state.records]
+    raws=[cells135(x)for x in state.records]
     for raw in raws:_validate(raw,state.now_bits)
     if state.incoming.mode_2574 and any(_get(raw,280)!=0 for raw in raws):
         raise ValueError('Remote owner routing remains unresolved; local peer0 required')
@@ -118,7 +123,7 @@ def update_ordinary_units(state:AiFrame135, *, trig_sin_bits=sin_bits, trig_cos_
     for raw in raws:
         if _float(raw,400)>now_value:continue
         pos=position(raw,now);timer=f.sub(_get(raw,352),state.dt_bits);_put(raw,352,timer)
-        distance=_distance(pos,state.player_xyz_bits);guid=struct.unpack_from('<Q',raw,112)[0]
+        distance=_distance(pos,state.player_xyz_bits);guid=u64(raw,112,consumer='ai135.update.guid')
         if f.to_float(distance)<=_float(raw,308):
             if _float(raw,344)>0 and now_value<f.to_float(f.add(_get(raw,340),_get(raw,344))):
                 for i in range(3):_put(raw,316+4*i,pos[i]);_put(raw,328+4*i,pos[i])
@@ -150,4 +155,4 @@ def update_ordinary_units(state:AiFrame135, *, trig_sin_bits=sin_bits, trig_cos_
         if result.stage not in('scalar_nonfatal_projection','phase_guard','protection_guard','active_raw_buff12_guard'):
             raise ValueError('Incoming callback/death boundary: '+result.stage)
         incoming=result.state
-    return AiResult135(tuple(x.hex()for x in raws),incoming,tuple(attacks),tuple(moves),tuple(sorted(pending)))
+    return AiResult135(tuple(encode_row(x)for x in raws),incoming,tuple(attacks),tuple(moves),tuple(sorted(pending)))

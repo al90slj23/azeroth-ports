@@ -1,0 +1,120 @@
+{
+  "status": "pass fixed135 nav distance-map producer component domain",
+  "receipt": "evidence/full0135-oracle-20261101T144248.426025Z/distance-map135-comparison.json",
+  "receipt_sha256": "40d541e2674c1e60ca1a32a047536306bfa4893f5b2970f5b393ae42dbe30cdb",
+  "static": "evidence/distance-map0135-static-20261101T144409.518452Z/summary.json",
+  "source_files": 22,
+  "cases": 180,
+  "stages": 185,
+  "mismatches": 0,
+  "stack_checks": 916,
+  "stack_all_restored": true,
+  "runtime": {
+    "cases": 180,
+    "entry_calls": 185,
+    "original_full_entries": [
+      921
+    ],
+    "original_allocator": 91941,
+    "unchanged_callees": true,
+    "fresh_instances": 23,
+    "fresh_every": 8,
+    "max_memory_bytes": 14680064,
+    "memory_page_limit": 512,
+    "denied_function_imports": 878,
+    "actual_host_calls": 0,
+    "stack_all_restored": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_distance_map135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T144248.426025Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T144248.426025Z/distance-map135-fixtures.jsonl"
+    ],
+    "pid": 65636,
+    "pgid": 65636,
+    "exit_code": 0,
+    "deadline_seconds": 60,
+    "seconds": 0.499,
+    "process_group_absent_after": true
+  },
+  "observed_nav_model_replay": {
+    "kind": "observed_nav_input_to_independent_map_output_not_world_or_Game_production",
+    "snapshot_path": "evidence/game-entry0135-probe-20261101T135403.797895Z/original_game.memory",
+    "snapshot_bytes": 1378877440,
+    "all_reads_explicit_seeks": true,
+    "total_source_bytes": 235272,
+    "ranges": [
+      {
+        "label": "world_rc",
+        "offset": 22627084,
+        "bytes": 4,
+        "sha256": "33fe5480ae7c980170babc02399ccc506d00aea93dd0e4f0e5824e5e28ff5d17"
+      },
+      {
+        "label": "distance_map_and_clock",
+        "offset": 22627104,
+        "bytes": 8,
+        "sha256": "eae1a580425131808b246402afd9def70bb9bba58d7c9b89732438bb1526febc"
+      },
+      {
+        "label": "player_xy",
+        "offset": 22626152,
+        "bytes": 8,
+        "sha256": "e7430bc4beb897569580561a6466ea2a7ff9e3e852ffaed2e679c1dec01b9123"
+      },
+      {
+        "label": "nav_header",
+        "offset": 24229992,
+        "bytes": 24,
+        "sha256": "f12e189c070d2a2477dce7f0afab514566fb8855b463a87658b6c9874f5230cc"
+      },
+      {
+        "label": "nav_input_bytes",
+        "offset": 258323144,
+        "bytes": 78400,
+        "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79"
+      },
+      {
+        "label": "observed_map_header",
+        "offset": 762892056,
+        "bytes": 28,
+        "sha256": "8f8db9ab3214f478d54c8a811b1704396ac971ae92b7974e184c9737c6bc266c"
+      },
+      {
+        "label": "observed_map_values",
+        "offset": 1213431104,
+        "bytes": 156800,
+        "sha256": "f9cacadfa57c30c9eb5f420eb117a5625846c104a703cddea992ec3727f0dd14"
+      }
+    ],
+    "world_rc": 24229960,
+    "old_map_rc": 762892056,
+    "updated_at_bits": 1020591604,
+    "player_xy_bits": [
+      3323121773,
+      3290257218
+    ],
+    "width": 280,
+    "cells": 78400,
+    "start_index": 40179,
+    "field24": 72660,
+    "max_cost": 161,
+    "full_map_u16_equal": true,
+    "source_map_not_used_as_production_input": true
+  },
+  "limitations": [
+    "Pure explicit nav input producer; observed-nav replay does not prove independent world/bootstrap/Game production.",
+    "Complete original921 component runs have zero unit vectors and no AI/combat/packet continuation.",
+    "Finite player XY and at most1048576 grid cells; u16 sentinel-collision paths remain explicit unresolved.",
+    "Fixed0.135.1 only; no0.136 acceptance or full880/complete game claim."
+  ]
+}

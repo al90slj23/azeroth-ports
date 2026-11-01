@@ -2,8 +2,8 @@
 
 Constructor, casts/racial/areas, hits, ordinary AI, drops/XP and selection share one
 canonical player/source/RNG state. This is not a replacement for880 or full915,
-asset boot, phase-entry or their still-unrecovered side effects. Terrain is an
-explicit flat-world domain, and unsupported effects/events return boundaries.
+asset boot or their still-unrecovered side effects. World inputs come from an
+explicit independent producer; unsupported effects/events return boundaries.
 Production code reads no original program, index, output, save or network.
 """
 from dataclasses import asdict, dataclass, replace
@@ -18,6 +18,8 @@ from .ai_lifecycle135 import cleanup_ordinary_corpses
 from .area_effects135 import AREAS, AreaDefinition135, AreaState135, produce_area, tick_areas
 from .cast135 import CastState, CastResult, UnresolvedCast
 from .cast_events135 import cast_ability, process_hits
+from .cleave135 import cast_cleave135
+from .thunder_clap135 import cast_thunder_clap135
 from .cast_catalogue135 import definition, RAW_BY_POINTER
 from .combat135 import CombatState, encoded_hp
 from .currency134 import CurrencyState
@@ -43,6 +45,8 @@ from .spawn135 import NORMALS, definition as normal_definition
 from .spawn_frame_motion135 import step_ordinary_frame
 from .spawn_schedule135 import FrameInput
 from .unit_records135 import decode_spatial, patch_units
+from .record_cells135 import cells135,u32,u64,put_u32,encode_row,known_bytes
+from .pickup_record_cells135 import pickup_words135,encode_pickup_cells135
 
 
 class PendingHeadless135(NotImplementedError): pass
@@ -90,13 +94,30 @@ class HeadlessState135:
     tail: TailDomains135 = TailDomains135()
     frames: int = 0
     selections: int = 0
+    opening_handoff: object|None = None
+    world: object|None = None
+    distance_map: object|None = None
+    distance_map_updated_at_bits: int = 0
+    allow_unknown_storage_growth: bool = False
+    pickup_storage56: tuple = ()
+    pickup_active_count: int = 0
+    window_storage8: tuple = ()
+    window_count: int = 0
+    boundary_storage8: tuple = ()
+    boundary_count: int = 0
+    special_locale: object|None = None
+    produced_packets: tuple = ()
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
         #transiently at each consumer/producer boundary with that same counter.
         AreaState135(self.areas, self.collection.death.spawn_counter)
-        if len(self.area_storage) != 128 or any(len(bytes.fromhex(raw)) != 88 for raw in self.area_storage):
-            raise PendingHeadless135('Explicit128-slot88B area backing required')
+        def valid_row(raw,size):
+            if isinstance(raw,str):return len(bytes.fromhex(raw))==size
+            if isinstance(raw,bytes):return len(raw)==size
+            return len(cells135(raw,size))==size
+        if len(self.area_storage)>4096 or any(not valid_row(raw,88)for raw in self.area_storage):
+            raise PendingHeadless135('Explicit real88B area backing required')
         if len(self.areas) > len(self.area_storage) or self.area_storage[:len(self.areas)] != self.areas:
             raise ValueError('Active area records and backing prefix disagree')
 
@@ -132,20 +153,87 @@ def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
         level=replace(state.collection.level, phase2587=1)))
 
 
+def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None):
+    """Consume the real independent opening; retain all physical owners.
+
+    This installs neither a synthetic phase nor an original memory image.
+    Remaining consumer boundaries apply to the actual nonempty owners.
+    """
+    from .opening_handoff135 import OpeningHandoff135
+    if not isinstance(handoff,OpeningHandoff135):raise TypeError('Independent opening handoff required')
+    if type(navigation_enabled)is not bool:raise ValueError('Explicit navigation preference required')
+    initial=handoff.initial;words=dict(initial.initial_scalar_words);o=handoff.opening
+    if initial.level.phase2587!=1:raise ValueError('Preserve actual opening phase')
+    def storage(vector):return tuple(encode_row(row)for row in vector.storage)
+    tail=TailDomains135(claims88_storage=storage(o.companions),claims88_count=o.companions.count,
+        special40_storage=storage(o.special),special40_count=o.special.count,
+        special_navigation2564=int(navigation_enabled))
+    collection=replace(handoff.collection,claims_empty=o.companions.count==0)
+    return HeadlessState135(collection,tuple(encode_row(row)for row in handoff.records),
+        storage(o.units),(),(),initial.racial,initial.timer1628_bits,(),0.0,
+        IncomingState135(phase_2579=0,last_hit_1648_bits=words[1652],
+            absorbed_740_bits=words[740],maximum_shield_744_bits=words[744]),(),(),(),words[2416],(0,0),
+        tuple(words[v]for v in(2428,2432,2436)),initial.region_index,handoff.world.fallback_height_bits,
+        initial.source_id,initial.initial_scalar_words,initial.game_tag,
+        action_sequence1644=2 if abs(f.to_float(f.sub(initial.level.stats.previous_speed_bits,0x40e00000)))>f.to_float(0x3c23d70a)else 1,
+        tail=tail,opening_handoff=handoff,world=handoff.world,allow_unknown_storage_growth=True,
+        pickup_storage56=storage(o.pickups),pickup_active_count=o.pickups.count,
+        window_storage8=storage(o.windows),window_count=o.windows.count,
+        boundary_storage8=storage(o.boundaries),boundary_count=o.boundaries.count,
+        special_locale=special_locale,produced_packets=o.packets)
+
+
 def supported(pointer):
     d = definition(pointer)
-    return (d.effect_tag == 0 and d.execution_kind in (0, 2) or d.ability_id in RACIALS
+    return (d.effect_tag == 0 and d.execution_kind in (0, 2) or d.ability_id==b'cleave' and d.effect_tag==0 and d.execution_kind==5
+        or d.ability_id==b'thunder_clap' and d.effect_tag==1 and d.execution_kind==2 or d.ability_id in RACIALS
         or d.execution_kind == 3 and d.ability_id in AREAS)
 
 
-def _store_prefix(storage, records):
-    if len(records) > len(storage): raise PendingHeadless135('Unresolved destination storage growth')
+def _store_prefix(storage, records, *, stride=None,allow_growth=False):
+    if len(records) > len(storage):
+        if not allow_growth or stride is None:raise PendingHeadless135('Unresolved destination storage growth')
+        grown=list(storage)
+        while len(grown)<len(records):grown.extend([(None,)*stride]*(max(4,2*len(grown))-len(grown)))
+        storage=tuple(grown)
     return tuple(records) + storage[len(records):]
+
+
+def _sync_pickup_owner(state, *, pre_compaction_records=None,removal_order='reverse'):
+    """Keep the physical active prefix alongside canonical pickup semantics.
+
+    Removals compact in descending-index order; append preserves the actual
+    destination's unconsumed arrival word. No new allocator bytes are invented.
+    """
+    if state.opening_handoff is None:return state
+    records=state.collection.death.records;backing=list(state.pickup_storage56)
+    if state.collection.death.capacity<len(backing):raise PendingHeadless135('Pickup allocation shrink needs continuation')
+    backing.extend([(None,)*56]*(state.collection.death.capacity-len(backing)))
+    wanted={p.guid for p in records}
+    if len(wanted)!=len(records):raise PendingHeadless135('Duplicate pickup GUID ownership unresolved')
+    count=state.pickup_active_count
+    if pre_compaction_records is not None:
+        if len(pre_compaction_records)!=count:raise PendingHeadless135('Pickup pre-compaction count differs')
+        for i,pickup in enumerate(pre_compaction_records):
+            if u64(backing[i],16,'Pickup pre-compaction GUID')!=pickup.guid:
+                raise PendingHeadless135('Pickup pre-compaction ownership differs')
+            backing[i]=encode_pickup_cells135(pickup,prior=backing[i])
+    remove=[i for i in range(count)if u64(backing[i],16,'Pickup owner removal GUID')not in wanted]
+    if removal_order not in('reverse','forward'):raise ValueError('Explicit pickup removal order required')
+    ordered=reversed(remove)if removal_order=='reverse'else (index-shift for shift,index in enumerate(remove))
+    for i in ordered:
+        for j in range(i,count-1):backing[j]=backing[j+1]
+        count-=1
+    for i,pickup in enumerate(records):
+        if i<count and u64(backing[i],16,'Pickup owner prefix GUID')!=pickup.guid:
+            raise PendingHeadless135('Pickup reorder requires a physical owner continuation')
+        backing[i]=encode_pickup_cells135(pickup,prior=backing[i])
+    return replace(state,pickup_storage56=tuple(backing),pickup_active_count=len(records))
 
 
 def _cast_state(state):
     level = state.collection.level; d = dict(level.derived_bits)
-    spatial = tuple(decode_spatial(bytes.fromhex(raw)) for raw in state.records)
+    spatial = tuple(decode_spatial(raw) for raw in state.records)
     combat = CombatState(tuple(s.unit for s in spatial), now_bits=level.stats.now_bits,
         phase_2579=level.phase2587, accounted_total=state.outgoing_total)
     return CastState(combat, spatial, state.collection.player_xyz[:2], level.rng_words,
@@ -164,7 +252,7 @@ def _area_expire_storage(storage, records, now_bits):
         raise ValueError('Area backing prefix differs before expiration')
     backing = list(storage); count = len(records); index = 0
     while index < count:
-        expiry = struct.unpack_from('<I', bytes.fromhex(backing[index]), 80)[0]
+        expiry = u32(backing[index],80,'3757 area expiry compaction')
         if f.to_float(now_bits) >= f.to_float(expiry):
             for j in range(index, count - 1): backing[j] = backing[j + 1]
             count -= 1
@@ -178,7 +266,7 @@ def _cast_phase(state, dt, *, phase='owned'):
         raise ValueError('Explicit owned/hits/area entry phase required')
     collection = state.collection; live = state.live_records; unknown = state.unspecified_live_words
     areas, area_storage = state.areas, state.area_storage
-    original = {struct.unpack_from('<Q', bytes.fromhex(raw), 112)[0]: raw for raw in state.records}
+    original = {u64(raw,112,'Headless pre-hit GUID'): raw for raw in state.records}
     death_positions = {}
     effect_writes = ()
 
@@ -192,8 +280,8 @@ def _cast_phase(state, dt, *, phase='owned'):
         nonlocal collection
         guid = damage.target.target_id
         placed = project_from_record(state.zone, cast.combat.now_bits, original[guid], state.flat_height_bits,
-            terrain_grid_absent=True, navigation_absent=True)
-        pointer = struct.unpack_from('<I', bytes.fromhex(original[guid]), 284)[0]
+            terrain_grid_absent=state.world is None, navigation_absent=state.world is None,world=state.world)
+        pointer = u32(original[guid],284,'Headless ordinary death definition')
         index = next((i for i, row in enumerate(NORMALS[state.zone]) if row[1] == pointer), None)
         if index is None: raise PendingHeadless135('Ordinary definition source not restored')
         row = normal_definition(state.zone, index)
@@ -204,21 +292,28 @@ def _cast_phase(state, dt, *, phase='owned'):
         return result.cast
 
     def dispatch(cast, d, owned, **callbacks):
-        nonlocal collection, live, unknown, areas, area_storage
+        nonlocal collection, live, unknown, areas, area_storage, effect_writes
         if d.ability_id in AREAS:
+            if state.world is not None:raise PendingHeadless135('Real-world area height producer requires continuation')
             if len(areas) >= len(area_storage):
-                raise PendingHeadless135('Area backing growth beyond128 slots is unresolved')
+                if not state.allow_unknown_storage_growth:raise PendingHeadless135('Area backing growth requires explicit unknown slots')
+                area_storage=_store_prefix(area_storage,areas+((None,)*88,),stride=88,allow_growth=True)
             result = produce_area(cast, AreaState135(areas, collection.death.spawn_counter),
                 AreaDefinition135(d.pointer, d.ability_id, RAW_BY_POINTER[d.pointer]), owned,
                 state.flat_height_bits, append_slot_hex=area_storage[len(areas)],
                 terrain_grid_absent=True, navigation_absent=True, area_modifiers_absent=True, busy488=0)
             areas = result.areas.records
-            area_storage = _store_prefix(area_storage, areas)
+            area_storage = _store_prefix(area_storage, areas,stride=88,allow_growth=state.allow_unknown_storage_growth)
             #No damage/death callbacks run inside the area producer; this is
             #the freshly consumed canonical counter, including earlier hits.
             collection = replace(collection, death=replace(collection.death,
                 spawn_counter=result.areas.spawn_counter))
             return CastResult(result.cast, result.success, (), 0, 0, ())
+        if d.ability_id==b'cleave':return cast_cleave135(cast,d,owned,**callbacks)
+        if d.ability_id==b'thunder_clap':
+            result=cast_thunder_clap135(cast,d,owned,**callbacks)
+            effect_writes+=result.effect_writes
+            return result
         if d.ability_id not in RACIALS:
             return cast_ability(cast, d, owned, **callbacks)
         level = replace(collection.level, rng_words=cast.rng_words,
@@ -236,7 +331,7 @@ def _cast_phase(state, dt, *, phase='owned'):
             collection.level.stats.now_bits, after_hit=on_hit, after_death=on_death,
             area_modifiers_absent=True)
         cast, areas, effect_writes = result.cast, result.areas.records, result.effect_writes
-        area_storage = _store_prefix(area_storage, areas)
+        area_storage = _store_prefix(area_storage, areas,stride=88,allow_growth=state.allow_unknown_storage_growth)
         #result.areas.spawn_counter is its entry snapshot. Death callbacks may
         #have spawned XP/coins since then: retain collection.death's final word.
         racial, timer = state.racial, state.melee_timer_bits
@@ -255,31 +350,32 @@ def _cast_phase(state, dt, *, phase='owned'):
             for old, new in zip(collection.level.choice_inputs.owned, result.entries))
         collection = replace(collection, level=replace(collection.level,
             choice_inputs=replace(collection.level.choice_inputs, owned=owned)))
-    records = list(patch_units(tuple(bytes.fromhex(raw) for raw in state.records), cast.combat.units))
+    records = list(patch_units(state.records, cast.combat.units))
     for j, raw in enumerate(records):
-        guid = struct.unpack_from('<Q', raw, 112)[0]
+        guid = u64(raw,112,'Headless post-hit GUID')
         if guid in death_positions:
-            raw = bytearray(raw)
-            for offset in (316, 328): struct.pack_into('<3I', raw, offset, *death_positions[guid])
-            records[j] = bytes(raw)
+            raw = cells135(raw,424)
+            for offset in (316, 328):
+                for k,value in enumerate(death_positions[guid]):put_u32(raw,offset+4*k,value)
+            records[j] = raw
     #The generic combat adapter owns modeled124, but intentionally not U120.
     #Apply both returned writes after the generic patch to retain canonical
     #full424B records for the next AI stage and future phase readback.
     if effect_writes:
-        indices = {struct.unpack_from('<Q', raw, 112)[0]: j for j, raw in enumerate(records)}
+        indices = {u64(raw,112,'Headless effect GUID'): j for j, raw in enumerate(records)}
         for guid, offset, value in effect_writes:
             if offset not in (120, 124) or guid not in indices:
                 raise PendingHeadless135('Unrestored area status-write destination')
-            j = indices[guid]; raw = bytearray(records[j]); struct.pack_into('<I', raw, offset, value)
-            records[j] = bytes(raw)
+            j = indices[guid]; raw = cells135(records[j],424);put_u32(raw,offset,value)
+            records[j] = raw
     collection = replace(collection, level=replace(collection.level, rng_words=cast.rng_words))
-    serialized = tuple(raw.hex() for raw in records)
-    return replace(state, collection=collection, records=serialized,
-        unit_storage=_store_prefix(state.unit_storage, serialized),
+    serialized = tuple(encode_row(raw)for raw in records)
+    return _sync_pickup_owner(replace(state, collection=collection, records=serialized,
+        unit_storage=_store_prefix(state.unit_storage, serialized,stride=424,allow_growth=state.allow_unknown_storage_growth),
         areas=areas, area_storage=area_storage,
         racial=racial, melee_timer_bits=timer, queued_hits=cast.queued,
         outgoing_total=cast.combat.accounted_total, attempted_spells=cast.attempted_spell_ids,
-        live_records=live, unspecified_live_words=unknown)
+        live_records=live, unspecified_live_words=unknown))
 
 
 def _ai_phase(state, dt):
@@ -298,14 +394,33 @@ def _ai_phase(state, dt):
         barrier_1536_bits=stats.pool1536_bits, shield_source_1344=stats.conditional1344_id,
         shield_source_remaining_1348_bits=stats.conditional1348_bits, reserve_768_bits=stats.pool768_bits,
         buffs=buffs, modifiers=())
-    indices = [j for j, raw in enumerate(state.records) if struct.unpack_from('<I', bytes.fromhex(raw))[0] == 0]
-    result = update_ordinary_units(AiFrame135(tuple(state.records[j] for j in indices), stats.now_bits, dt,
-        state.collection.player_xyz, incoming, incoming_item_effects=(), other_incoming_sources_absent=True))
+    indices = [j for j, raw in enumerate(state.records) if u32(raw,0,'Headless AI live marker') == 0]
+    ai_input=AiFrame135(tuple(state.records[j]for j in indices),stats.now_bits,dt,
+        state.collection.player_xyz,incoming,incoming_item_effects=(),other_incoming_sources_absent=True)
+    if state.world is None:result=update_ordinary_units(ai_input)
+    else:
+        from .distance_map135 import update_distance_map135
+        from .ai_world135 import update_world_ordinary_units135
+        distances=update_distance_map135(state.world.nav,state.collection.player_xyz[:2],stats.now_bits,
+            previous=state.distance_map,updated_at_bits=state.distance_map_updated_at_bits)
+        state=replace(state,distance_map=distances.distance_map,distance_map_updated_at_bits=distances.updated_at_bits)
+        result=update_world_ordinary_units135(ai_input,state.world,distance_map=state.distance_map)
     records = list(state.records)
     for j, raw in zip(indices, result.records): records[j] = raw
-    storage = _store_prefix(state.unit_storage, tuple(records))
+    storage = _store_prefix(state.unit_storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth)
     cleanup = cleanup_ordinary_corpses(tuple(records), stats.now_bits, mode=stats.flag2574,
         local_peer=state.collection.currency.local_peer, explicit_other_sources_absent=True)
+    #39635 removes every matching GUID with memory.copy on each removal.
+    #Retain the resulting inactive tail, including repeated shifted records.
+    backing=list(storage);count=len(records)
+    for guid in cleanup.removed_guids:
+        index=0
+        while index<count:
+            if u64(backing[index],112,'39635 physical removal GUID')==guid:
+                for j in range(index,count-1):backing[j]=backing[j+1]
+                count-=1
+            else:index+=1
+    storage=tuple(backing)
     records = list(cleanup.records)
     current = result.incoming
     stats = replace(stats, current_hp_bits=current.hp_1528_bits, pool1532_bits=current.shield_1532_bits,
@@ -331,7 +446,7 @@ def _ai_phase(state, dt):
     death = replace(state.collection.death,
         message_sequence=(state.collection.death.message_sequence + len(result.movements)) & f.MASK)
     return replace(state, records=tuple(records), incoming=current,
-        unit_storage=_store_prefix(storage, tuple(records)),
+        unit_storage=_store_prefix(storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth),
         live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)),
         collection=replace(state.collection, level=level, death=death))
 
@@ -356,8 +471,8 @@ def _effects_phase(state, dt):
         player_xyz_bits=state.collection.player_xyz, player_action_words=(0, 0, 0, 0, 0, 0),
         source_id=state.source_id, phase2587=level.phase2587, mode2582=0,
         local_peer2528=state.collection.currency.local_peer, zone=state.zone,
-        flat_height_bits=state.flat_height_bits, flat_height_enabled=True,
-        terrain_grid_absent=True, collision_grid_absent=True, navigation_absent=True,
+        flat_height_bits=state.flat_height_bits, flat_height_enabled=state.world is None,
+        terrain_grid_absent=state.world is None, collision_grid_absent=state.world is None, navigation_absent=state.world is None,
         rng_words=level.rng_words, spawn_counter2408=state.collection.death.spawn_counter)
     result = step_effect_system(snapshot, dt)
     if result.status != 'delayed_prefix_projection':
@@ -368,7 +483,7 @@ def _effects_phase(state, dt):
         death=replace(state.collection.death, spawn_counter=updated.spawn_counter2408,
             message_sequence=updated.movement_sequence2412))
     return replace(state, collection=collection, records=updated.units,
-        unit_storage=_store_prefix(state.unit_storage, updated.units),
+        unit_storage=_store_prefix(state.unit_storage, updated.units,stride=424,allow_growth=state.allow_unknown_storage_growth),
         effect_clock2364_bits=updated.clock2364_bits,
         action_sequence1644=updated.action_sequence1644,
         delayed_records56=updated.delayed_records, delayed_storage56=updated.delayed_storage)
@@ -397,7 +512,22 @@ def _tail_phase(state, kind, dt):
         if result.status != 'claim_gate_complete': raise PendingHeadless135(result.status)
         tail = replace(tail, claims88_storage=result.storage, claims88_count=result.count)
     elif kind == 'special':
-        guard_special2376(tail.special40_count, level.flags2576)
+        if state.opening_handoff is None:guard_special2376(tail.special40_count,level.flags2576)
+        else:
+            from .special2376_135 import SpecialState2376_135,tick_special2376_135,UnknownSpecial2376_135
+            from .special2376_notify135 import tick_special2376_notify135
+            special=SpecialState2376_135(tail.special40_storage,tail.special40_count,
+                level.stats.now_bits,state.collection.player_xyz[:2],level.flags2576,tail.special_navigation2564,
+                tail.special_announced2565,tail.special_selected392,tail.special_target396,tail.special_clock2392_bits)
+            try:result=tick_special2376_135(special)
+            except UnknownSpecial2376_135 as error:
+                if not str(error).startswith('Selected-target localized548'):raise
+                if state.special_locale is None:raise PendingHeadless135('Explicit initialized special locale names required')
+                result=tick_special2376_notify135(special,state.zone,state.special_locale)
+            s=result.state
+            tail=replace(tail,special40_storage=s.storage,special_selected392=s.selected392,special_target396=s.target396,
+                special_navigation2564=s.navigation2564,special_announced2565=s.announced2565,special_clock2392_bits=s.announcement_time2392_bits)
+            state=replace(state,produced_packets=state.produced_packets+tuple((opcode,payload)for opcode,cap,payload in result.packets))
     elif kind == 'terminal':
         guard_terminal_tick49037(tail.field400, level.phase2587, tail.flag2568)
     else:
@@ -442,7 +572,7 @@ def step_frame(state, dt_bits):
         motion = moving_sequence_delta(state.records, now, auxiliary_motions=(), claims=())
         result = replace(result, state=replace(result.state, death=replace(result.state.death,
             message_sequence=(result.state.death.message_sequence + motion.count) & f.MASK)))
-    state = replace(state, collection=result.state); stages.append(('collect', state))
+    state = _sync_pickup_owner(replace(state, collection=result.state),pre_compaction_records=result.pre_compaction_records); stages.append(('collect', state))
     state = _tail_phase(state, 'claims', dt_bits); stages.append(('claims', state))
     if state.tail.gate2579:
         raise PendingHeadless135('Alternate2579 spawn/special gate requires continuation')
@@ -451,12 +581,13 @@ def step_frame(state, dt_bits):
         level.stats.flag2574, state.collection.currency.member_count, level.heal_gate387, words[2516],
         0, 0, 0, state.collection.player_xyz, state.previous_player_xyz, state.velocity_xy,
         state.flat_height_bits, level.rng_words, state.collection.death.spawn_counter, state.records, True)
-    spawned = step_ordinary_frame(frame, destination_slots=state.unit_storage)
+    spawned = step_ordinary_frame(frame, destination_slots=state.unit_storage,world=state.world,
+        distance_map=state.distance_map,allow_unknown_storage_growth=state.allow_unknown_storage_growth)
     if spawned.status != 'ordinary_projection': raise PendingHeadless135(spawned.status)
     collection = replace(state.collection, level=replace(level, rng_words=spawned.rng_words),
         death=replace(state.collection.death, spawn_counter=spawned.counter, kill_cost_bits=spawned.kill_cost_bits))
     state = replace(state, collection=collection, records=spawned.unit_records,
-        unit_storage=_store_prefix(state.unit_storage, spawned.unit_records),
+        unit_storage=_store_prefix(state.unit_storage, spawned.unit_records,stride=424,allow_growth=state.allow_unknown_storage_growth),
         budget_bits=spawned.budget_bits, velocity_xy=spawned.velocity_xy,
         previous_player_xyz=state.collection.player_xyz if level.stats.flag2574==0 else state.previous_player_xyz)
     stages.append(('spawn', state))
@@ -468,16 +599,12 @@ def step_frame(state, dt_bits):
 def select(state, index):
     """Use actual generated candidates; never replace them to force a result."""
     collection = state.collection
-    unspecified = {p.guid for p in collection.death.records if p.arrival_bits is None}
-    #The original inactive arrival word is unused by4600. The adapter's zero
-    #is a semantic placeholder, restored as unspecified if that record survives.
-    pickups = tuple(replace(p, arrival_bits=0) if p.arrival_bits is None else p for p in collection.death.records)
-    value = SelectionCycleState(collection.level, 0, 0, pickups, collection.player_xyz[0],
+    value = SelectionCycleState(collection.level, 0, 0, collection.death.records, collection.player_xyz[0],
         collection.player_xyz[1], collection.currency, state.game_tag, collection.xp_queue, collection.xp_queue_capacity)
     result = select_card(value, index, additional_modifiers=())
     if not result.accepted: return state, result.status
     selected = result.state
-    records = tuple(replace(p, arrival_bits=None) if p.guid in unspecified else p for p in selected.pickups)
+    records = selected.pickups
     live = []; unknown = set()
     for i, raw in enumerate(state.live_records):
         if result.status == 'running' and struct.unpack_from('<I', bytes.fromhex(raw), 20)[0] == 1020: continue
@@ -495,8 +622,8 @@ def select(state, index):
             auxiliary_motions=(), claims=())
         collection = replace(collection, death=replace(collection.death,
             message_sequence=(collection.death.message_sequence + motion.count) & f.MASK))
-    return replace(state, collection=collection, game_tag=selected.game_tag,
-        live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)), selections=state.selections + 1), result.status
+    return _sync_pickup_owner(replace(state, collection=collection, game_tag=selected.game_tag,
+        live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)), selections=state.selections + 1),removal_order='forward'), result.status
 
 
 def projection(state):
@@ -504,19 +631,17 @@ def projection(state):
     result['player_fields'] = {k: v for k, v in result['player_fields'].items() if int(k) in (22, 28, 34, 716, 717, 1109, 1176)}
     live = [list(struct.unpack('<8I', bytes.fromhex(raw))) for raw in state.live_records]
     for index, offset in state.unspecified_live_words: live[index][offset // 4] = None
-    pickups = []
-    for p in state.collection.death.records:
-        raw = encode_record56(p, uninitialized_arrival_bits=0) if p.arrival_bits is None else encode_record56(p)
-        words = list(struct.unpack('<14I', raw))
-        if p.arrival_bits is None: words[1] = None
-        pickups.append(words)
+    pickups = [list(pickup_words135(p))for p in state.collection.death.records]
+    def storage_sha(storage):
+        if any(not isinstance(row,(str,bytes))and None in row for row in storage):return None
+        return hashlib.sha256(b''.join(bytes.fromhex(row)if isinstance(row,str)else known_bytes(row)for row in storage)).hexdigest()
     result.update(records=list(state.records), racial_record_hex=state.racial.to_bytes().hex(),
         owned_records_hex=[x.record.to_bytes().hex() for x in state.collection.level.choice_inputs.owned],
         timer1628_bits=state.melee_timer_bits, budget_bits=state.budget_bits,
         velocity_xy=list(state.velocity_xy), previous_player_xyz=list(state.previous_player_xyz), now_bits=state.collection.level.stats.now_bits,
-        unit_storage_sha256=hashlib.sha256(b''.join(bytes.fromhex(raw) for raw in state.unit_storage)).hexdigest(),
+        unit_storage_sha256=storage_sha(state.unit_storage),
         area_records=list(state.areas), area_capacity=len(state.area_storage),
-        area_storage_sha256=hashlib.sha256(b''.join(bytes.fromhex(raw) for raw in state.area_storage)).hexdigest(),
+        area_storage_sha256=storage_sha(state.area_storage),
         pickup_words=pickups, pickup_capacity=state.collection.death.capacity,
         spawn_counter=state.collection.death.spawn_counter, message_sequence=state.collection.death.message_sequence,
         kill_cost_bits=state.collection.death.kill_cost_bits, live_words=live,
@@ -535,4 +660,19 @@ def projection(state):
             player_action_tag416=state.player_action_tag416, player_xyz=list(state.collection.player_xyz),
             delayed56=dict(capacity=len(state.delayed_storage56), records_hex=list(state.delayed_records56)),
             effects120=dict(capacity=state.effect_capacity120, records_hex=list(state.effect_records120))))
+    if state.opening_handoff is not None:
+        path=state.distance_map
+        result['independent_opening_owner']={
+            'unit_capacity':len(state.unit_storage),'unit_backing_cells':[cells135(row,424)for row in state.unit_storage],
+            'area_backing_cells':[cells135(row,88)for row in state.area_storage],
+            'pickup_active_count':state.pickup_active_count,'pickup_backing_cells':[cells135(row,56)for row in state.pickup_storage56],
+            'window_count':state.window_count,'window_backing_cells':[cells135(row,8)for row in state.window_storage8],
+            'boundary_count':state.boundary_count,'boundary_backing_cells':[cells135(row,8)for row in state.boundary_storage8],
+            'special_selected392':state.tail.special_selected392,'special_target396':state.tail.special_target396,
+            'special_announced2565':state.tail.special_announced2565,'special_clock2392_bits':state.tail.special_clock2392_bits,
+            'distance_map':None if path is None else dict(start_index=path.start_index,reachable=path.field24,
+                values_sha256=hashlib.sha256(b''.join(struct.pack('<H',v)for v in path.values_u16)).hexdigest()),
+            'distance_map_updated_at_bits':state.distance_map_updated_at_bits,
+            'produced_packets':[list(x)for x in state.produced_packets],
+            'new_mainloop_is_full880':False}
     return result

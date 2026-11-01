@@ -1,0 +1,444 @@
+{
+  "kind": "guardian_ai135_readonly_static_handoff",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "acceptance": {
+    "dynamic_cases": 0,
+    "differential_cases": 0,
+    "original_executed": false,
+    "original_memory_input": false,
+    "full_wat_read": false,
+    "behavior_validated": false,
+    "whole_guardian_ai_complete": false
+  },
+  "method": {
+    "index_open_mode": "ro",
+    "bounded_function_count": 16,
+    "bounded_wat_bytes": 1878986,
+    "full_wat_sha256_from_index_meta": "15bccec81235752573d903d098911612d8add22cc51956d03afb8fb17382a7f2",
+    "full_wat_sha256_recomputed_this_run": false,
+    "original_function_text_in_this_report": false
+  },
+  "functions": [
+    {
+      "index": 910,
+      "body_start": 2283656,
+      "body_end": 2305246,
+      "body_sha256": "2763f92fecd400e7ca4802f195fff10fa54f30c18d5c3eb7640ca05dc8f17bae",
+      "wat_start": 123805461,
+      "wat_end": 124342709,
+      "wat_line": 619776,
+      "wat_sha256": "e065d83d1c3a89b0da2ad8848eb621de991353cb5fce92ecfcd924ada9fe207e",
+      "role": "NPC action dispatch / busy / effects production"
+    },
+    {
+      "index": 914,
+      "body_start": 2394962,
+      "body_end": 2421299,
+      "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+      "wat_start": 126751708,
+      "wat_end": 127132114,
+      "wat_line": 667479,
+      "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a",
+      "role": "outgoing NPC damage and protection gates"
+    },
+    {
+      "index": 915,
+      "body_start": 2421302,
+      "body_end": 2442154,
+      "body_sha256": "7eec05b5e91cbcd797664a0854484e6db03129e9b7b8233e4465b07e9926b3d6",
+      "wat_start": 127132114,
+      "wat_end": 127484921,
+      "wat_line": 679756,
+      "wat_sha256": "153f1608b702bfb5214eff4ae7f348e04b9226a1b1384bdd20f001f3fd60046a",
+      "role": "delayed56 and effect120 consumers / accumulated incoming"
+    },
+    {
+      "index": 921,
+      "body_start": 2600015,
+      "body_end": 2623153,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37",
+      "wat_start": 130858837,
+      "wat_end": 131203095,
+      "wat_line": 760122,
+      "wat_sha256": "20fb6cb14a8000c408185e4a8ee911ed32229b21dc695867bbd398acc9ceaf1f",
+      "role": "guardian home / aggro / leash / HP threshold / cooldown scheduler"
+    },
+    {
+      "index": 1073,
+      "body_start": 5745892,
+      "body_end": 5757845,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+      "wat_start": 223040626,
+      "wat_end": 223217705,
+      "wat_line": 2177451,
+      "wat_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+      "role": "incoming damage prefix and later callback boundary"
+    },
+    {
+      "index": 4865,
+      "body_start": 22648209,
+      "body_end": 22650066,
+      "body_sha256": "f1b6fd38412133efd722d32901743dfca068f5fa8a90dd9d6181385ad1648e89",
+      "wat_start": 556140977,
+      "wat_end": 556160099,
+      "wat_line": 9878736,
+      "wat_sha256": "425c1ce89af11824b724ffae7bb9b0283644662f7764a28f81a6fac2914af488",
+      "role": "predicted player target over explicit world"
+    },
+    {
+      "index": 5736,
+      "body_start": 24718522,
+      "body_end": 24720298,
+      "body_sha256": "59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671",
+      "wat_start": 591099419,
+      "wat_end": 591116721,
+      "wat_line": 10802195,
+      "wat_sha256": "462e196ee49c6304433bd5692b41bb4fc23c9e9fa386ada39574c03dc3662d16",
+      "role": "ordinary NPC creation for raw5 reinforcements"
+    },
+    {
+      "index": 21024,
+      "body_start": 45441027,
+      "body_end": 45442169,
+      "body_sha256": "b744dc54456db981275168ddacadde40f4f21a7d37454aa5b27a38bb4bd4b665",
+      "wat_start": 894041746,
+      "wat_end": 894053850,
+      "wat_line": 20250562,
+      "wat_sha256": "dfed44fa666b7c5a3f5b2eb8c41e1e6827c7cbf471294b2f8d629c5af634ed91",
+      "role": "caster movement stop and lock"
+    },
+    {
+      "index": 31733,
+      "body_start": 55161169,
+      "body_end": 55161599,
+      "body_sha256": "e280d7d04f9ca4f9a7d77dea4fea29f4943c57e782dab025115652fe59c72869",
+      "wat_start": 1024794159,
+      "wat_end": 1024802486,
+      "wat_line": 24647364,
+      "wat_sha256": "0ac488cae479037006d4b2473e9665109353c1c78675129c134cfcda87ac81eb",
+      "role": "descriptor busy duration"
+    },
+    {
+      "index": 32653,
+      "body_start": 55753216,
+      "body_end": 55753615,
+      "body_sha256": "3bc2af5d41a740dbbf45fd6051b9a3610cd671a437224b22d208d1859590e5f0",
+      "wat_start": 1032336714,
+      "wat_end": 1032341370,
+      "wat_line": 24912838,
+      "wat_sha256": "cbfd1e7fa06648b0dbba4e04fcab92b7d0a55f0114a220c0c5c7d5af1aee0067",
+      "role": "spread-radius RNG helper"
+    },
+    {
+      "index": 32969,
+      "body_start": 55968161,
+      "body_end": 55968710,
+      "body_sha256": "4d0e83992e774fdd207aa91824e2018f438abdf8c6481e7be597d1c73b386c2f",
+      "wat_start": 1034884904,
+      "wat_end": 1034901314,
+      "wat_line": 25009432,
+      "wat_sha256": "7b3e2eb5c9e286c4571fbe5940a7b6bc54ad5a01473837aadb557a60539af320",
+      "role": "default guardian declaration header lookup"
+    },
+    {
+      "index": 34693,
+      "body_start": 57056620,
+      "body_end": 57057015,
+      "body_sha256": "10cdfbc68a514447755dfd458a8f2def9d60b7bffd5220871bf94ed9b619b0dd",
+      "wat_start": 1046981164,
+      "wat_end": 1046984535,
+      "wat_line": 25492825,
+      "wat_sha256": "46775f8e698b761ab93f2b1a1004061b32b2154b84078154750477c69bcf598e",
+      "role": "effect120 allocation and record production"
+    },
+    {
+      "index": 46304,
+      "body_start": 63557802,
+      "body_end": 63558067,
+      "body_sha256": "281d6b748bffe3e73b30b725c34aed5e7f75b45a2d99c425d0296b393a374f7d",
+      "wat_start": 1133140105,
+      "wat_end": 1133142574,
+      "wat_line": 28365187,
+      "wat_sha256": "2e9fc8972c9619a5ceced454e5bd340417134c39b569e4a89da006d8b2ef24ac",
+      "role": "collision-limited target segment"
+    },
+    {
+      "index": 57528,
+      "body_start": 67622783,
+      "body_end": 67622929,
+      "body_sha256": "61ae650d69b79f88abe4f64f05cee9f766d89063b1a62247e6eb4cb320a3c915",
+      "wat_start": 1187927303,
+      "wat_end": 1187928598,
+      "wat_line": 30155302,
+      "wat_sha256": "362f2786fa2b4f982b07e46a38b42496a5152ac210f64b37768188641d319189",
+      "role": "target point world height"
+    },
+    {
+      "index": 63687,
+      "body_start": 68954308,
+      "body_end": 68954440,
+      "body_sha256": "f0091ed4244a43b327bb1efe763595c76eb297e1b24a15f6e584e3113c3e12f8",
+      "wat_start": 1206784312,
+      "wat_end": 1206785433,
+      "wat_line": 30743704,
+      "wat_sha256": "13456bfd2e0b510c8a5405dc399199612220825f6bcfb35dedd27fc484f5ef8a",
+      "role": "delayed56 producer"
+    },
+    {
+      "index": 66966,
+      "body_start": 69470779,
+      "body_end": 69470891,
+      "body_sha256": "90f750090d25a1e87a03e509ddc33476aef078d82ee3c22eb95c97c80028ac04",
+      "wat_start": 1211714447,
+      "wat_end": 1211715458,
+      "wat_line": 30964161,
+      "wat_sha256": "dba9275d7610651096dd812718337288292589285c27bd69adbbbfad5bf91bc5",
+      "role": "spell target or animation output"
+    }
+  ],
+  "fields": {
+    "U64/U68/U72": "skill timer Vec capacity / unknown physical owned pointer / count; retain independent three-f32 payload",
+    "U76/U80;U84/U88": "default ability pointer/count; current ability pointer/count;44B records",
+    "U92;G1920/G1924": "special40 home index and vector; home XYZ at+16/+20/+24",
+    "U96+16/+20;U104": "header HP-threshold52 pointer/count; one-shot mask",
+    "U100;U108": "exclusive busy-until; aggro/engaged byte",
+    "U288/U292;U352": "HP/maxHP; common melee timer decremented before guardian idle decision"
+  },
+  "guardians": [
+    {
+      "index": 9,
+      "entry": 609,
+      "header_pointer": 5484048,
+      "ability_pointer": 5477460,
+      "name": "Kobold Taskmaster",
+      "timers": [
+        {
+          "index": 0,
+          "pointer": 5477460,
+          "raw_tag37": 7,
+          "source_cooldown_bits": 1091567616,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        },
+        {
+          "index": 1,
+          "pointer": 5477504,
+          "raw_tag37": 10,
+          "source_cooldown_bits": 1092616192,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        },
+        {
+          "index": 2,
+          "pointer": 5477548,
+          "raw_tag37": 5,
+          "source_cooldown_bits": 1097859072,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        }
+      ],
+      "nested_dependencies": [],
+      "hp_thresholds": []
+    },
+    {
+      "index": 10,
+      "entry": 610,
+      "header_pointer": 5484076,
+      "ability_pointer": 5477592,
+      "name": "Gruff Swiftbite",
+      "timers": [
+        {
+          "index": 0,
+          "pointer": 5477592,
+          "raw_tag37": 18,
+          "source_cooldown_bits": 1093664768,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        },
+        {
+          "index": 1,
+          "pointer": 5477636,
+          "raw_tag37": 8,
+          "source_cooldown_bits": 1088421888,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        },
+        {
+          "index": 2,
+          "pointer": 5477680,
+          "raw_tag37": 5,
+          "source_cooldown_bits": 1098907648,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        }
+      ],
+      "nested_dependencies": [
+        {
+          "pointer": 5426156,
+          "raw_tag37": 7,
+          "spell_id": 100
+        },
+        {
+          "pointer": 5426196,
+          "raw_tag37": 7,
+          "spell_id": 100
+        }
+      ],
+      "hp_thresholds": []
+    },
+    {
+      "index": 11,
+      "entry": 611,
+      "header_pointer": 5484104,
+      "ability_pointer": 5477724,
+      "name": "Bellygrub",
+      "timers": [
+        {
+          "index": 0,
+          "pointer": 5477724,
+          "raw_tag37": 19,
+          "source_cooldown_bits": 1091567616,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        },
+        {
+          "index": 1,
+          "pointer": 5477768,
+          "raw_tag37": 11,
+          "source_cooldown_bits": 1094713344,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        },
+        {
+          "index": 2,
+          "pointer": 5477812,
+          "raw_tag37": 7,
+          "source_cooldown_bits": 1091567616,
+          "initial_timer_rule": "f32(source_cooldown * 0.5)"
+        }
+      ],
+      "nested_dependencies": [],
+      "hp_thresholds": [
+        {
+          "pointer": 5477880,
+          "hp_fraction": 0.5,
+          "raw_tag37": 18,
+          "text": "%s squeals and charges!",
+          "nested_pointer": 5426156,
+          "nested_count": 2,
+          "interval_bits": 1070386381
+        }
+      ]
+    }
+  ],
+  "call_summary": [
+    {
+      "caller": 921,
+      "callees": [
+        910,
+        1073
+      ],
+      "path": "unit planning and HP threshold before index-ordered timers; stable temporary44 queue drains into910 after all NPC planning"
+    },
+    {
+      "caller": 910,
+      "callees": [
+        31733,
+        4865,
+        21024,
+        34693,
+        63687,
+        66966,
+        5736,
+        910,
+        32653,
+        46304,
+        57528
+      ],
+      "path": "busy before branch; exact helper subset depends on raw tag"
+    },
+    {
+      "caller": 915,
+      "callees": [
+        910,
+        1073,
+        914
+      ],
+      "path": "delayed56 first, including recursive910; later effect120 geometry/type; positive ordinary-type damage accumulates then one1073"
+    }
+  ],
+  "key_paths": [
+    "special home from U92 and G1920/G1924; guardian does not always chase player",
+    "common U352 decremented before guardian idle decision; three skill timers freeze on idle",
+    "U108 aggro; damage or home<=3 and player<=20 activates; player-home>97.5 resets",
+    "HP<0.5 one-shot threshold precedes timers; low HP<0.3 resets skill CD times0.7",
+    "queue arbitration mask0xa0180006; only raw5 among these timer families is parallel",
+    "U100 busy and existing same-NPC exclusive queue gate later exclusive timers; no overshoot carry",
+    "raw18 immediate child plus delayed56 child at1.6s; preserve nested declarations",
+    "120 producers occur after same-frame915, later915 delayed-before-geometry-before accumulated1073",
+    "descriptor spell differs from 120+84: raw7/raw8 effects store0; raw10/11/19 store133/6524/20549"
+  ],
+  "raw_tag_domains": {
+    "7": "Charge100; world predicted target/collision/height; rectangle120 damage x2 and delayed35 relocation; effect spell84=0",
+    "8": "cone15284 radius7 angle90deg delay1 damage x1.4; effect spell84=0",
+    "10": "spell133; three circles radius3.5; spread7 and canonical RNG; delay1.6 + index*0.35; damage x1.2",
+    "11": "spell6524; radius5 with duration6 / extra coefficient0.3 type2 payload; full periodic consumer remains pending",
+    "18": "two raw7 children; child0 immediate, child1 delayed56 at+1.6; also611 HP<0.5 threshold",
+    "19": "spell20549 radius7 delay1.3 damage x1.3; effect116=1 and effect100=12 require player-action continuation",
+    "5": "count4 or3 normal NPC reinforcements via5736 over real world; preserve RNG/counter/capacity/create outputs"
+  },
+  "headless_guards": [
+    "ai135._validate: U64 != -1 alternate family",
+    "ai_lifecycle135.cleanup_ordinary_corpses: nonordinary family rejected even alive",
+    "headless135._effects_phase: any delayed56 or effect120 nonempty is pending"
+  ],
+  "next_domain": {
+    "kind": "exact_stationary_idle_only",
+    "conditions": [
+      "U108=0",
+      "HP==maxHP",
+      "unit-home<=2",
+      "player-unit>20",
+      "canonical other status domain"
+    ],
+    "writes": [
+      "common U352 f32 subtract dt",
+      "retain all three skill timers and physical unknown pointer",
+      "no chase or queued skill dispatch"
+    ],
+    "unknowns": [
+      "engage/leash not covered by idle",
+      "dead guardian timer deallocation",
+      "HP threshold and due exclusive action dispatch",
+      "all seven910 effect branches and full915/1073 tail"
+    ]
+  },
+  "unknowns": [
+    "Guardian idle domain is a proposed next slice, not implemented or differentially accepted by this static report.",
+    "Full aggro/leash state changes, reset ownership and guardian corpse timer deallocation.",
+    "HP-threshold text/one-shot and busy/timer44 stable queue dispatch.",
+    "All seven910 branch producer/consumer pairs; existing flat raw9 rectangle model does not cover them.",
+    "Real-world delayed35 Charge, circle/cone/periodic, raw19 player action, raw5 reinforcements.",
+    "Full1073 spell registry/history/aura/retaliation/death tail; descriptor spell and effect spell must remain distinct.",
+    "Full880 entry/party/transport and complete game remain outside this static work."
+  ],
+  "local_evidence": {
+    "directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/guardian-ai0135-static-20261101T155959.325284Z",
+    "primary_report": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/guardian-ai0135-static-20261101T155959.325284Z/analysis.md",
+      "sha256": "7e80c089776121d5228cba8765d34614135d07ece425428e3e49916d425560b4"
+    },
+    "declarations": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/guardian-ai0135-static-20261101T155959.325284Z/guardian-declarations.json",
+      "sha256": "8f18406bb11fb21e5b02236b790bffbd5eaa67aeaf9db03c946230dbcaa49b71"
+    },
+    "function_manifest": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/guardian-ai0135-static-20261101T155959.325284Z/seek-manifest.json",
+      "sha256": "32d0ea9cbe418c8e134e5e9920c3b7e1f566a1e2641e436d125f1c40365fdb66"
+    },
+    "artifact_hashes": {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/guardian-ai0135-static-20261101T155959.325284Z/artifact-sha256.json",
+      "sha256": "054e15eb04e3ede087b70c9d5d06886367ab4d165b31acc68538cf5cbfa4e0be"
+    },
+    "readonly_index": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0135-profile-20261101T031028.877964Z/index.sqlite",
+    "portable_note": "Local evidence is not copied into reports; use fixed original identity and readonly indexed seeks to resume on another checkout."
+  },
+  "production_files_modified": [],
+  "frozen_scripts_modified": [],
+  "new_production_scripts": []
+}

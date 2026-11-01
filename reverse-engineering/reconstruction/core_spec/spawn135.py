@@ -97,10 +97,12 @@ class SpawnResult:
 
 
 def spawn_normal(state:SpawnInput):
+    from .record_cells135 import cells135,put_u32,put_u64,encode_row
     if not 0<=state.zone<12 or not 0<=state.definition_index<=f.MASK:
         raise ValueError('Invalid explicit zone/index')
-    if len(state.position_bits)!=3 or len(bytes.fromhex(state.initial_slot_hex))!=424:
+    if len(state.position_bits)!=3:
         raise ValueError('Explicit xyz and full existing destination slot are required')
+    initial=cells135(state.initial_slot_hex,424)
     group=f.mul(0x3f333333 if state.zone<3 else 0x3f800000,f.from_u32((state.members-1)&f.MASK))
     cap=(trunc_sat_u32(rounded_bits(f.mul(f.add(f.mul(group,0x3e9fbe77),0x3f800000),0x42480000)))
          if state.mode==1 else 50)
@@ -130,9 +132,9 @@ def spawn_normal(state:SpawnInput):
     guid=0xf130000000000000|((d['entry']&0xffffff)<<24)|(counter&0xffffff)
     angle=uniform_range_bits(state.rng_words,0,0x40c90fdb)
     jitter=uniform_range_bits(angle.state,0,0x3e99999a)
-    raw=bytearray.fromhex(state.initial_slot_hex)
-    def u(offset,value):struct.pack_into('<I',raw,offset,value&f.MASK)
-    def qword(offset,value):struct.pack_into('<Q',raw,offset,value&0xffffffffffffffff)
+    raw=initial
+    def u(offset,value):put_u32(raw,offset,value&f.MASK)
+    def qword(offset,value):put_u64(raw,offset,value&0xffffffffffffffff)
     for offset in (0,8,16,344):u(offset,0)
     for offset in (40,64,244):u(offset,f.MASK)
     qword(112,guid);raw[120:236]=bytes(116);qword(236,4)
@@ -144,4 +146,4 @@ def spawn_normal(state:SpawnInput):
     for offset in (316,328):
         for i,value in enumerate(state.position_bits):u(offset+4*i,value)
     raw[356:396]=bytes(40);raw[400:416]=bytes(16);raw[416]=d['elite'];raw[417:419]=bytes(2)
-    return SpawnResult(True,guid,counter,jitter.state,angle.draws+jitter.draws,raw.hex(),hp,attack,cap)
+    return SpawnResult(True,guid,counter,jitter.state,angle.draws+jitter.draws,encode_row(raw),hp,attack,cap)

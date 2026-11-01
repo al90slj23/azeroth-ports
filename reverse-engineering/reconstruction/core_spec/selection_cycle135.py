@@ -18,6 +18,7 @@ from .level_cycle135 import LevelCycleState,gain_xp,projection as level_projecti
 from .pickups134 import PickupRecord,decode_record56,encode_record56
 from .binary32_sqrt import sqrt_bits
 from .progression134 import ProgressionState,round_85718_bits,trunc_sat_u32
+from .pickup_record_cells135 import encode_pickup_cells135
 
 
 @dataclass(frozen=True)
@@ -41,7 +42,8 @@ class SelectionCycleState:
         if type(self.game_tag)is not int or not 0<=self.game_tag<1<<64:raise ValueError('u64 game tag required')
         if type(self.pickups)is not tuple or any(not isinstance(p,PickupRecord) for p in self.pickups):
             raise TypeError('Resolved ordered pickup records required')
-        if any(p.arrival_bits is None for p in self.pickups):raise ValueError('Explicit raw pickup arrival words required')
+        #4600's sweep reads kind/marker/XY/amount, never an old arrival word.
+        #Keep an unconsumed +4 opaque instead of assigning a dummy value.
         if any(p.marker not in(0,1)for p in self.pickups):
             raise ValueError('Canonical live pickup markers0/1 required; original31732 rejects sentinel2')
         if self.currency.mode!=self.level.stats.flag2574:raise ValueError('Mode snapshots differ')
@@ -157,7 +159,7 @@ def projection(state):
     result=level_projection(state.level)
     result.update(owned_records_hex=[e.record.to_bytes().hex()for e in state.level.choice_inputs.owned],
         pending_kind1=state.pending_kind1,pending_kind2=state.pending_kind2,
-        remaining_pickups_hex=[encode_record56(p).hex()for p in state.pickups],game_tag=state.game_tag,
+        remaining_pickups_hex=[encode_pickup_cells135(p)for p in state.pickups],game_tag=state.game_tag,
         flag2581=state.level.choice_inputs.flag2581,flags2573=state.level.flags2573,
         live_effects=[asdict(e)for e in state.level.sources.live_effects],
         gold=state.currency.gold,earned=state.currency.earned,

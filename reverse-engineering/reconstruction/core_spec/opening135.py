@@ -54,12 +54,13 @@ class OpeningState135:
     def phase2587(self): return self.initial.level.phase2587
 
 
-def initialize_empty_opening(value, world, *, title_utf8, subtitle_utf8):
+def initialize_empty_opening(value, world, *, title_utf8, subtitle_utf8, companion_slots=None):
     """Complete default1089 logical opening within an explicit empty profile.
 
-    Mode0, protection0, rank273=0 and two zero selected equipment slots are
-    declared here. They are not inferred from a missing account/profile. Locale
-    resolution and world construction must be supplied by independent callers.
+    Mode0, protection0 and rank273=0 are declared here. The historical default
+    retains its two explicitly zero selected equipment slots. A different
+    profile must supply its independently produced companion_slots; this never
+    infers absence from a missing account/profile. Locale/world are inputs.
     """
     if not isinstance(value, EmptyOpeningInput135):
         raise TypeError('Explicit empty-profile opening input required')
@@ -77,7 +78,8 @@ def initialize_empty_opening(value, world, *, title_utf8, subtitle_utf8):
     xyz = initial.player_xyz
     #1560 reads zone152+116 to local33 and temp+1516, copied toGame1428.
     heading = ZONE_OPENING[value.region_index][1]
-    companions = create_companions((CompanionSlot135(0,0,0,0,0),) * 2, xyz, heading, 0,
+    slots = (CompanionSlot135(0,0,0,0,0),) * 2 if companion_slots is None else companion_slots
+    companions = create_companions(slots, xyz, heading, 0,
         dict(initial.level.derived_bits)[1556], 0, initial.spawn_counter, world)
     npcs = create_opening_npcs(value.region_index, xyz, world, initial.level.rng_words,
         companions.counter, player_guid=initial.source_id, level1432=1, now_bits=0,
@@ -101,6 +103,13 @@ def initialize_empty_opening(value, world, *, title_utf8, subtitle_utf8):
          'Menu/profile assembly, nonempty equipment/talents, other entry modes and all locales remain separate.',
          'CompleteGame2592/pointer ownership/player keyed tree are not all independently projected.',
          'Subsequent full880, all abilities/AI, saves/UI/multiplayer and complete game remain unfinished.'))
+
+
+def initialize_absent_companion_opening(value, world, *, companion_profile, title_utf8, subtitle_utf8):
+    """Distinct empty-account path, preserving the historical zero-slot API."""
+    from .profile_companions135 import produce_companion_slots
+    return initialize_empty_opening(value, world, title_utf8=title_utf8, subtitle_utf8=subtitle_utf8,
+        companion_slots=produce_companion_slots(companion_profile))
 
 
 def projection(state):

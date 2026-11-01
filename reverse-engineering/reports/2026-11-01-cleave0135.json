@@ -1,0 +1,115 @@
+{
+  "status": "pass within explicit cleave execution5 effect0 component domain",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "model": "reconstruction/core_spec/cleave135.py",
+  "receipt": "evidence/full0135-oracle-20261101T141458.138874Z/cleave135-comparison.json",
+  "receipt_sha256": "fdc65574cba4de16af8ec0ce64e599ffb89af9920f6c0c3aeaf3bc589de5d8d7",
+  "static": "evidence/cleave0135-static-20261101T141455.836231Z/summary.json",
+  "cases": 351,
+  "stages": 1923,
+  "accepted_hits": 1845,
+  "mismatch_cases": 0,
+  "source_files": 37,
+  "stack_checks": 2976,
+  "stack_roles": {
+    "__wbindgen_malloc": 1053,
+    "cast": 282,
+    "owned_tick": 820,
+    "process_hits": 821
+  },
+  "all_stack_before_after1048576": true,
+  "only_changed_section": 7,
+  "exact_added_exports": [
+    [
+      "research135_cast",
+      0,
+      922
+    ],
+    [
+      "research135_owned_tick",
+      0,
+      1076
+    ],
+    [
+      "research135_process_hits",
+      0,
+      1754
+    ],
+    [
+      "research135_cleave_stack0",
+      3,
+      0
+    ]
+  ],
+  "default_existing_dispatch_unchanged": true,
+  "baseline_input_expected_identity": {
+    "path": "evidence/full0135-oracle-20261101T140356.630952Z/cleave135-fixtures.jsonl",
+    "sha256": "bced44d50aa966eeed02b90990b54a07e328e89ed3e09b971d5fdecd5f2143bf",
+    "bytes_equal": true,
+    "previous_counts_not_added": true
+  },
+  "previous_run_counts_not_added": true,
+  "runtime_summary": {
+    "cases": 351,
+    "entry_calls": 1923,
+    "fresh_instances": 30,
+    "fresh_every": 12,
+    "max_memory_bytes": 20971520,
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "original_allocator": 91941,
+    "original_full_entries": [
+      922,
+      1076,
+      1754
+    ],
+    "unchanged_callees": true,
+    "memory_page_limit": 512,
+    "stack_policy": "Private global0 export inspected read-only before/after every exposed allocator/922/1076/1754 invocation; no setter exposed",
+    "private_global_export": true,
+    "stack_all_restored": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_cleave135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T141458.138874Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T141458.138874Z/cleave135-fixtures.jsonl",
+      "--stack-guard"
+    ],
+    "pid": 20944,
+    "pgid": 20944,
+    "exit_code": 0,
+    "deadline_seconds": 60,
+    "seconds": 1.229,
+    "process_group_absent_after": true
+  },
+  "observed_input_shape_provenance": {
+    "path": "evidence/game-entry0135-probe-20261101T135403.797895Z/observation-before-upload.json",
+    "sha256": "751c4d251eeea95b6211069f295ac251ff9bb83cc78147255fcdb739f34071cb",
+    "record_hex": "246d5300010000000000003f0000803f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+    "scope": "UI-observed80B input shape only, relocated into a synthetic quiet fixture"
+  },
+  "limitations": [
+    "Complete original922/1076/1754 resolved-state component calls, not natural Game or880.",
+    "Empty item/talent/proc snapshots, G1596=0/G908=0/G772=0; nonlethal ordinary914 domain.",
+    "G1256 is the actual racial slot; this corpus uses explicit effect0 isolated records there. Legacy basic/real-basic labels do not prove real racial scheduling.",
+    "Full packet bytes/visual metadata, physical heal logs and complete game are not projected.",
+    "Original global0 inspected before/after every exposed target/allocator invocation; original internal callee calls are not separately instrumented. No setter exposed or write performed.",
+    "Only the existing declared float fields use NaN-class equality; integer fields remain strict.",
+    "G1256 basic is a legacy API fixture label, not actual racial scheduling.",
+    "headless135.supported/_cast_phase.dispatch remain unchanged; natural UI/phase1/world/special combination is a later acceptance.",
+    "The range-boundary corpus does not include its listed ninth NaN coordinate."
+  ],
+  "independent_review": "reports/2026-11-01-cleave0135-independent-review.json",
+  "independent_review_sha256": "c806215afc71a6187f5b21b16ea512f029bac1428c0a308dda5e0be6b425518d"
+}

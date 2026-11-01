@@ -12,6 +12,7 @@ from .ai_trig135 import sin_bits,cos_bits
 from .spawn_geometry135 import hypot_bits
 from .spawn_position135_data import ZONE_GEOMETRY
 from .progression134 import trunc_sat_u32
+from .record_cells135 import cells135,u32,u64,put_u32,encode_row
 
 
 class PendingEffectSystem135(NotImplementedError):
@@ -30,9 +31,9 @@ def _raw(value,size):
     return raw
 
 
-def _word(raw,offset):return struct.unpack_from('<I',raw,offset)[0]
-def _guid(raw,offset=112):return struct.unpack_from('<Q',raw,offset)[0]
-def _put(raw,offset,value):struct.pack_into('<I',raw,offset,value)
+def _word(raw,offset):return u32(raw,offset,'915 record field')
+def _guid(raw,offset=112):return u64(raw,offset,'915 record GUID')
+def _put(raw,offset,value):put_u32(raw,offset,value)
 def _finite(value):
     _u(value)
     if value&0x7fffffff>=f.INF:raise ValueError('Finite movement input required')
@@ -78,7 +79,9 @@ class EffectSystemState135:
         if type(self.flat_height_enabled)is not bool:raise ValueError('Explicit flat-height enable flag required')
         for values,size in((self.delayed_records,56),(self.delayed_storage,56),(self.effect_records120,120),(self.units,424)):
             if type(values)is not tuple or len(values)>512:raise ValueError('Bounded ordered record vectors required')
-            for raw in values:_raw(raw,size)
+            for raw in values:
+                if size==424:cells135(raw,424)
+                else:_raw(raw,size)
         if len(self.delayed_records)>len(self.delayed_storage)or self.delayed_storage[:len(self.delayed_records)]!=self.delayed_records:raise ValueError('Delayed active prefix and full backing differ')
 
 
@@ -112,11 +115,11 @@ def step_effect_system(state,dt_bits):
     if not isinstance(state,EffectSystemState135):raise TypeError('Resolved effect system state required')
     _u(dt_bits);_finite(state.now_bits)
     if state.effect_records120:raise PendingEffectSystem135('Nonempty120B effects require actual unresolved915 continuation',state)
-    now=state.now_bits;events=[];rows=list(state.delayed_records);backing=list(state.delayed_storage);units=[bytearray.fromhex(x)for x in state.units]
+    now=state.now_bits;events=[];rows=list(state.delayed_records);backing=list(state.delayed_storage);units=[cells135(x,424)for x in state.units]
     clock=state.clock2364_bits;sequence=state.action_sequence1644;movement=state.movement_sequence2412
     player=state.player_xyz_bits;action=state.player_action_words
     def snapshot():
-        return replace(state,delayed_records=tuple(rows),delayed_storage=tuple(backing),units=tuple(bytes(x).hex()for x in units),
+        return replace(state,delayed_records=tuple(rows),delayed_storage=tuple(backing),units=tuple(encode_row(x)for x in units),
             clock2364_bits=clock,action_sequence1644=sequence,movement_sequence2412=movement,player_xyz_bits=player,player_action_words=action)
     if f.to_float(clock)>0 and f.to_float(clock)<=f.to_float(now):
         clock=0;old=sequence;sequence=(sequence+1)&f.MASK

@@ -15,6 +15,7 @@ from .spawn_position135 import PositionInput,sample_position
 from .spawn_schedule135_data import BOSS_FINAL_FLAGS
 from .spawn135_data import NORMALS
 from .progression134 import trunc_sat_u32
+from .record_cells135 import u32
 
 ONE=0x3f800000
 
@@ -56,7 +57,7 @@ class FrameResult:
     draws:int
 
 
-def _word(raw,offset):return struct.unpack_from('<I',raw,offset)[0]
+def _word(raw,offset):return u32(raw,offset,'947 ordinary schedule')
 
 
 def _slowdown(units):

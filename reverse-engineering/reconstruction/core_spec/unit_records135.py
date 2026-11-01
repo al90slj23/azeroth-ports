@@ -10,6 +10,8 @@ import struct
 
 from .combat135 import UnitState
 from .cast135 import SpatialUnit
+from .record_cells135 import (cells135,u32,i32,u64,optional_u32,optional_u64,
+    put_u32,put_u64,known_bytes)
 
 
 FLOAT_FIELDS = {
@@ -26,19 +28,18 @@ FLOAT_FIELDS = {
 
 
 def _record(raw):
-    if not isinstance(raw,bytes) or len(raw)!=424:
-        raise ValueError('An explicit424B unit snapshot is required')
-    return raw
+    return cells135(raw,424)
 
 
 def decode_unit(raw):
     """Interpret only the already modeled135 combat fields."""
     raw=_record(raw)
-    word=lambda offset:struct.unpack_from('<I',raw,offset)[0]
-    signed=lambda offset:struct.unpack_from('<i',raw,offset)[0]
-    data={name:word(offset) for name,offset in FLOAT_FIELDS.items()}
-    data.update(target_id=struct.unpack_from('<Q',raw,112)[0],
-        linked_id_32=struct.unpack_from('<Q',raw,32)[0],marker=word(0),
+    word=lambda offset:u32(raw,offset,'135 combat unit field')
+    signed=lambda offset:i32(raw,offset,'135 combat unit tag')
+    data={name:(optional_u32(raw,offset) if name=='death_time_4_bits' else word(offset))
+        for name,offset in FLOAT_FIELDS.items()}
+    data.update(target_id=u64(raw,112,'135 combat target GUID'),
+        linked_id_32=optional_u64(raw,32),marker=word(0),
         kind_40=signed(40),kind_64=signed(64),elite_244=signed(244),
         elite_416=raw[416],afflicted_240=word(240))
     if set(data)!={field.name for field in fields(UnitState)}:
@@ -47,9 +48,9 @@ def decode_unit(raw):
 
 
 def decode_spatial(raw):
-    raw=_record(raw)
-    return SpatialUnit(decode_unit(raw),struct.unpack_from('<2I',raw,316),
-        struct.unpack_from('<2I',raw,328),struct.unpack_from('<I',raw,372)[0])
+    unit=decode_unit(raw);raw=_record(raw)
+    return SpatialUnit(unit,tuple(u32(raw,o,'135 spatial fromXY')for o in(316,320)),
+        tuple(u32(raw,o,'135 spatial toXY')for o in(328,332)),u32(raw,372,'135 spatial priority'))
 
 
 def patch_unit(raw,unit):
@@ -57,18 +58,19 @@ def patch_unit(raw,unit):
     raw=_record(raw)
     if not isinstance(unit,UnitState):
         raise TypeError('A resolved combat UnitState is required')
-    if struct.unpack_from('<Q',raw,112)[0]!=unit.target_id:
+    if u64(raw,112,'135 unit patch GUID')!=unit.target_id:
         raise ValueError('Unit record GUID differs')
-    result=bytearray(raw)
+    result=list(raw)
     for name,offset in FLOAT_FIELDS.items():
-        struct.pack_into('<I',result,offset,getattr(unit,name))
-    struct.pack_into('<I',result,0,unit.marker)
-    struct.pack_into('<Q',result,32,unit.linked_id_32)
+        value=getattr(unit,name)
+        if value is not None:put_u32(result,offset,value)
+    put_u32(result,0,unit.marker)
+    if unit.linked_id_32 is not None:put_u64(result,32,unit.linked_id_32)
     for name,offset in (('kind_40',40),('kind_64',64),('elite_244',244)):
-        struct.pack_into('<I',result,offset,getattr(unit,name)&0xffffffff)
-    struct.pack_into('<I',result,240,unit.afflicted_240)
+        put_u32(result,offset,getattr(unit,name)&0xffffffff)
+    put_u32(result,240,unit.afflicted_240)
     result[416]=unit.elite_416
-    return bytes(result)
+    return tuple(result)if None in result else known_bytes(result)
 
 
 def patch_units(records,units):

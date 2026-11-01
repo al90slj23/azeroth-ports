@@ -7,6 +7,7 @@ This pure consumer does not mutate NPC records, phase, RNG, or packet bytes.
 from dataclasses import dataclass
 import struct
 from . import binary32 as f
+from .record_cells135 import cells135,u32,u64
 
 
 class UnresolvedMovementPause135(NotImplementedError):pass
@@ -33,9 +34,9 @@ def moving_sequence_delta(records,now_bits,*,auxiliary_motions=None,claims=None)
             raise UnresolvedMovementPause135('Explicit empty '+name+' source snapshot required')
     guids=[]
     for value in records:
-        raw=bytes.fromhex(value)
+        raw=cells135(value,424)
         if len(raw)!=424:raise ValueError('Complete424B NPC source required')
-        marker=struct.unpack_from('<I',raw,0)[0];start,duration=struct.unpack_from('<II',raw,340)
+        marker=u32(raw,0,'26200 marker');start=u32(raw,340,'26200 movement start');duration=u32(raw,344,'26200 movement duration')
         if marker==0 and f.to_float(duration)>0 and f.to_float(f.add(duration,start))>f.to_float(now_bits):
-            guids.append(struct.unpack_from('<Q',raw,112)[0])
+            guids.append(u64(raw,112,'26200 moving GUID'))
     return MovementSequence135(len(guids),tuple(guids))

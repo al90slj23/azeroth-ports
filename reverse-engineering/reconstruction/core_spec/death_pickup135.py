@@ -201,6 +201,9 @@ class CollectionResult135:
     removed_guids: tuple = ()
     messages: tuple = ()
     pending: tuple = ()
+    #2862 writes attraction markers/arrival words before31731 compaction.
+    #Physical owners need this ordered producer state, including removed rows.
+    pre_compaction_records: tuple = ()
 
 
 # Actual18353 class-table+80, selected by the class byte before additive sources.
@@ -310,6 +313,7 @@ def collect_pickups(state, now_bits):
         messages.append(MessageProjection('xp_attract', record.guid, sequence,
             (record.x_bits, record.y_bits, record.height_bits), state.player_xyz,
             delay, trunc_sat_u32(f.mul(delay, 0x447a0000))))
+    pre_compaction_records=tuple(records)
     eligible = []
     for index, record in enumerate(records):
         if record.kind == 0:
@@ -381,4 +385,5 @@ def collect_pickups(state, now_bits):
                       xp_queue=xp_queue, xp_queue_capacity=capacity)
     return CollectionResult135(updated, 'core_projection', tuple(xp_awards), tuple(coin_awards),
         tuple(removed), tuple(messages), ('Physical queues/visual entities/wire bytes and full frame scheduling remain unresolved',
-        'Mode0 next-choice35514 movement-stop effects are pending; numeric metadata/control is projected'))
+        'Mode0 next-choice35514 movement-stop effects are pending; numeric metadata/control is projected'),
+        pre_compaction_records=pre_compaction_records)

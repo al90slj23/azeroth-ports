@@ -1,0 +1,112 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "comparison": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T154826.676203Z/comparison.json",
+  "comparison_sha256": "1dda3cfc59206997b6db15b694b822c26458abf10da52e983eed9d7b67d0e3ab",
+  "reviewer_script_sha256": "9e690a996eea8edb693ec5f6d527a002476122c532dffcadeb04336cba522c51",
+  "source_files": 90,
+  "production_files": 80,
+  "all_current_and_frozen_sources_verified": true,
+  "production_direct_IO_calls": [],
+  "nonexport_sections_unchanged": true,
+  "strict_stream_order": true,
+  "stream_record_counts": {
+    "case_start": 1,
+    "constructor": 1,
+    "opening": 1,
+    "clock_control": 120,
+    "stage": 1681,
+    "case_end": 1
+  },
+  "declared_projection_recompared": true,
+  "comparison_counts": {
+    "projection_leaves": 185013,
+    "unwritten_pickup_arrival_words": 3436,
+    "vector_shape_fields": 33640,
+    "strict_record_bytes": 6033328,
+    "unknown_cells": 6194416,
+    "unknown_cells_nonzero_original": 4110367
+  },
+  "active_unknown_masks_restricted_to_recovered_write_sets": true,
+  "omitted_payload_max_counts": {
+    "effects120": 0,
+    "delayed56": 0,
+    "hits112": 0,
+    "active84": 0,
+    "timed12": 0,
+    "deadline32": 0,
+    "secondary112": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "observed_vector_max_counts": {
+    "companions": 0,
+    "units": 10,
+    "areas": 0,
+    "effects120": 0,
+    "delayed56": 0,
+    "deadline32": 0,
+    "hits112": 0,
+    "secondary112": 0,
+    "pickups": 7,
+    "candidates80": 3,
+    "special": 4,
+    "windows": 2,
+    "boundaries": 69,
+    "owned80": 2,
+    "live32": 2,
+    "timed12": 0,
+    "active84": 0,
+    "xp_queue8": 0,
+    "currency_queue8": 0
+  },
+  "independent_dijkstra_distance_map": {
+    "count": 78400,
+    "start_index": 39340,
+    "field24": 72660,
+    "values_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+  },
+  "first_selection": {
+    "action_index": 87,
+    "clock_bits": 1091253040,
+    "candidates": [
+      "thunder_clap",
+      "battle_shout",
+      "bloodthirst"
+    ],
+    "selected_index": 0,
+    "selected_id": "thunder_clap",
+    "phase_after": 1
+  },
+  "frames_after_first_selection": 33,
+  "final_progression": {
+    "level": 2,
+    "xp": 6,
+    "pending_upgrades": 0
+  },
+  "final_gold": 7,
+  "observed_packet_count_max": 301,
+  "packet_payloads_claimed_compared": false,
+  "all_packet_payloads_preserved_as_observations": true,
+  "terminal": {
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "original_program_executed_by_reviewer": false,
+  "model_producer_executed_by_reviewer": false,
+  "new_original_cases": 0,
+  "new_full880_frames": 0,
+  "elapsed_seconds": 4.9189059999916935,
+  "limitations": [
+    "One seed/class/race/navigationFalse/stationary12s context; no broader input or full-game acceptance.",
+    "Preparsed independent world/original snapshot/external clock remain separate declared inputs.",
+    "Raw packet queues are nonempty and retained, but their unmodeled payload semantics are explicitly not claimed compared.",
+    "Original full raw heap/vector captures remain concrete; unknown independent bytes are bounded masks, not predicted zero.",
+    "This review checks existing frozen outputs/source/protocol; it does not rerun any original or add a differential case."
+  ],
+  "review_receipt": "evidence/opening-combat0135-independent-review-20261101T160437.916704Z/review.json",
+  "review_receipt_sha256": "2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d",
+  "closure_recheck": "evidence/opening-combat0135-independent-review-20261101T160437.916704Z/closure-recheck.json",
+  "closure_recheck_sha256": "19ae3b9e44f8590da66b244d10dc575fd0c69892ee8b17e6bb36acd0982a150f",
+  "stage_identity_leaves_verified_separately": 3362,
+  "declared_comparison_leaf_total_reconciled": 6255343
+}

@@ -6,6 +6,7 @@ original program. Full component functions own their separate verified slices.
 """
 from dataclasses import dataclass
 from .frame_systems135 import UnresolvedFrameSystem135
+from .record_cells135 import cells135,encode_row
 
 
 @dataclass(frozen=True)
@@ -23,6 +24,11 @@ class TailDomains135:
     field400: int = 0
     flag2568: int = 0
     gate2579: int = 0
+    special_selected392: int = 0
+    special_target396: int = 0
+    special_clock2392_bits: int = 0
+    special_navigation2564: int = 1
+    special_announced2565: int = 0
 
     def __post_init__(self):
         for name, size in (('active84', 84), ('deadline32', 32), ('secondary112', 112),
@@ -30,13 +36,17 @@ class TailDomains135:
             storage, count = getattr(self, name + '_storage'), getattr(self, name + '_count')
             if type(storage) is not tuple or type(count) is not int or not 0 <= count <= len(storage) <= 512:
                 raise ValueError('Explicit full tail backing and active count required')
-            if any(len(bytes.fromhex(raw)) != size for raw in storage):
+            if any(len(cells135(raw,size)) != size for raw in storage):
                 raise ValueError('Tail record stride differs')
         if type(self.field400) is not int or not 0 <= self.field400 < 1 << 32:
             raise ValueError('Explicit field400 word required')
         for value in (self.flag2568, self.gate2579):
             if type(value) is not int or not 0 <= value <= 255:
                 raise ValueError('Explicit tail byte flags required')
+        for value in(self.special_selected392,self.special_target396,self.special_clock2392_bits):
+            if type(value)is not int or not 0<=value<1<<32:raise ValueError('Explicit special scalar required')
+        for value in(self.special_navigation2564,self.special_announced2565):
+            if type(value)is not int or not 0<=value<256:raise ValueError('Explicit special byte required')
 
 
 def guard_extra916(timed_records, active_count):
@@ -67,6 +77,6 @@ def projection(state):
     result = {}
     for name in ('active84', 'deadline32', 'secondary112', 'claims88', 'special40'):
         storage, count = getattr(state, name + '_storage'), getattr(state, name + '_count')
-        result[name] = dict(capacity=len(storage), records_hex=list(storage[:count]))
+        result[name] = dict(capacity=len(storage), records_hex=[encode_row(x)for x in storage[:count]])
     result.update(field400=state.field400, flag2568=state.flag2568, gate2579=state.gate2579)
     return result

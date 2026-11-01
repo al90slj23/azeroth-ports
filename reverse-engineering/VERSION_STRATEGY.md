@@ -2,14 +2,17 @@
 
 核对日期：2026-11-01（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
 
-**按用户最新方向，功能目标持续对齐官方最新稳定版；每轮先核实发布身份，再固定版本、SHA与资源输入。本轮验证仍为已取得的官方0.135.1 / Web0898d5e3。** 新稳定版按同一项目增量迁移：已验证规则保留原版本身份，变化部分补规格/实现/差分，不能在一次实验中浮动替换原件。0.134.0与0.126.0均保留历史结果，不自动转记新版本。当前默认Elwynn已有451资产→查询world→开局的1历史case对照；物理所有权、完整调度和独立一局仍未闭合。
+**功能目标持续对齐官方最新稳定版；2026-11-01T15:43:19Z核实的latest已是0.137.0 / `d171b8f9f`，目前仅身份和采集，动态验收0。固定0.136.0 / `fe24fb74c`保留静态profile与迁移候选，动态验收0；持续动态实验仍锁定0.135.1 / `90898d5e3`。** 每轮先固定版本、SHA与资源输入，不能把浮动latest换入正在运行的实验，或把静态同形当新版通过。旧`0898d5e3`是实际9字节Web build的历史截短alias，原收据不覆写；0.134.0与0.126.0也保留各自身份。详见[最新版本状态](reports/2026-11-01-latest-version-state.md)。
 
 ## 目标与固定参照
 
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
-| 本轮固定Windows程序目标 | 官方更新EXE 0.135.1，147797504B，SHA `71e5f176…bc59249` | 官方大小/SHA与gzip CRC/ISIZE通过；未执行EXE，语义迁移待验。 |
-| 本轮固定Web研究目标 | Web0.135.1/0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 共享52角色guard；主切片仍082927的8/1614/22607/11/22615、67源60core16角色。另有开局16/32、placement13/13、M2／WMO等组件，以及451资产→查询world→开局的1历史case；物理world所有权、旧主切片连接、独立完整880和一局仍缺。 |
+| latest Windows程序目标 | 官方更新EXE0.137.0，147844608B，SHA `aa6b254f…3a10dc8`，实际build `d171b8f9f` | 新目录已核官方大小/SHA及gzip CRC/ISIZE，未执行EXE；原生/游戏语义验收0。 |
+| latest Web目标 | Web0.137.0/`d171b8f9f`，90941108B，SHA `20ec9a2b…3fe1c8`，stamp `c628fd68823e` | coherent下载及真实pointer/len9 guard通过；全量profile和动态验收0。 |
+| 固定0.136静态迁移 | Web0.136.0/`fe24fb74c`，90927420B，SHA `48c3bce7…1eb2eef3`；native SHA `eb744751…c4d8947c` | [完整175319函数profile/RO索引与12入口候选](reports/2026-11-01-wasm0136-profile.md)保留；动态case0，不能转计137。 |
+| 固定0.135动态研究 | Web0.135.1/`90898d5e3`，90959080B，SHA `c62c85f5…0dc96e2`；历史alias `0898d5e3` | 原52-role与私有builder及既有收据继续绑定该SHA。后继真实开局/战斗/升级/选卡组合另记，旧082927等计数不合并，完整880、native与独立一局仍缺。 |
+| 固定0.135 Windows参照 | 官方EXE0.135.1，147797504B，SHA `71e5f176…bc59249` | 保留原采集身份，未执行EXE；Web结果不冒称native验收。 |
 | 历史规则和差分参照 | Web 0.126.0 / 3e72472a，WASM SHA `06705937…b147c` | 保留所有既有规格、输入和证据作迁移/回归；固定版本工具继续拒绝其他原件，不再作主目标扩展。 |
 | 固定 Windows 原生研究基线 | 官方更新 EXE 0.134.0，147793408B，SHA `ed7dc687…1a3f6` | 核对原生离线发行、平台行为和同源游戏规则；每个原生地址重新定位。 |
 | 本轮App外围与自然启动 | transport43/220 quiet0host、history24/96、App32static/10源、既有cast730B投影及自然原App/Metal观察分别记录 | entropy只比已知408B、384B opaque；cast33B输入/697B预测。中文角色选择页和8idle880是原程序观察，Game tag2未开局，不是独立App/880或完整游戏。 |
@@ -25,7 +28,11 @@
 
 此前0.134.0更新说明包含增强萨满/天赋重做、新饰品以及Ice Barrier上限变化。因此不能只因升级系数相同，就把0.126.0的整套行为标为0.134.0已支持。
 
-本次又发现0.135.1，官方说明为修复0.135.0角色面板报错、缺少本局数值。更新说明只能指引排查，不能证明其他逻辑必然未改。manifest、EXE和Web各自身份已保存，见[新版采集报告](reports/2026-11-01-official-0135-acquisition.md)；接着核对代码/数据差异，相同模块复用独立实现及既有输入，变化模块补规格和差分。新版本作为同一项目的增量迁移，无需重新立项。研究输入始终锁定版本与SHA，不能在一次实验中被浮动latest替换。
+此前取得0.135.1时，官方说明为修复0.135.0角色面板报错、缺少本局数值。更新说明只能指引排查，不能证明其他逻辑必然未改。manifest、EXE和Web各自身份已保存，见[当时的采集报告](reports/2026-11-01-official-0135-acquisition.md)；代码/数据变化按固定版本另验。新版本作为同一项目的增量迁移，无需重新立项。研究输入始终锁定版本与SHA，不能在一次实验中被浮动latest替换。
+
+后继0.136.0的clock选项/API更新已单独完成静态profile与引用候选审查；0.137.0又宣布增强萨满proc互相触发、武器附魔/项链重做与两个新天赋。公告只能指引迁移排查，不证明其它路径未变。137原件另档，136静态工作及135动态实验分别保留，不能共用一个“本轮通过”标签。135/136的9字节build身份由[真实pointer/length sidecar](evidence/branding0136-identity-20261101T145343.493343Z/identity.json)确认，137也有独立[指令guard](evidence/branding0137-identity-20261101T154758.086510Z/identity.json)，不再凭固定8位regex截取。
+
+固定135的新[真实opening→combat→XP/首次选卡闭环](reports/2026-11-01-opening-combat0135.md)为单case human warrior／seed0／navigation False：120受控帧、1次实际选择、1681阶段、1683次原件入口，0差异，90源含80 production。真实1089产生phase1及实际capacity，None未知字节不清零；首次level2的index0确为thunder_clap，随后继续33帧。模型使用预解析独立world，原件使用合法snapshot，clock由显式外部调度推进；它不是完整880、Windows执行或完整一局。旧headless/frame/death-pickup回归各自另记，不与该新case相加。
 
 本版[目录重提](reports/2026-11-01-catalogue0135.md)还发现真实平衡差异：rockbiter伤害120→132、冷却1.786→1.3571429、范围5→10；stormstrike冷却7→6.0714288、范围6→10。原始位保留在JSON，不能把相对0.135.0的单条修复说明当作0.134.0→0.135.1完整差异。
 
@@ -66,7 +73,7 @@ macOS可直接用Ghidra/REA和PE解析器静态分析x86-64 Windows程序，无�
 
 ## 下载与原件保存
 
-所有新下载和解压原件均保存在4T外盘的`reverse-engineering/originals/`，每次采集创建独立时间目录。原0.134.0采集位于`official-acquisition-20261031T235700.049192Z/`：三个官方更新分块拼成gzip流，解压CRC/ISIZE通过，得到匹配官方SHA的EXE。0.135.1另存，保留原研究输入。
+所有新下载、解压和下载证据均在4T外盘的`reverse-engineering/originals/`或`evidence/`，每次创建独立时间目录。原0.134.0采集位于`official-acquisition-20261031T235700.049192Z/`，0.135.1、0.136.0分别另存；最新137为`official-acquisition-20261101T154517.001467Z/`。官方更新分块拼接gzip并读至EOF核CRC/ISIZE，解压EXE匹配各自官方大小/SHA；不替换原研究输入、用户安装包或存档。
 
 完整资源RAR已复用用户原有4T文件，完成全包CRC与8个提取文件SHA复核，含7个MPQ；对应官方已验证HTTP块及末尾共289411072B一致，没有把本地整包SHA说成官方发布的SHA。包内139691008B EXE仍与历史Windows0.102.3 / f78e6fab完全相同。官网RAR提供旧版基础程序/资源，新版程序须取官方更新清单，不能仅下载RAR就称为最新版。详见[资源验收](reports/2026-11-01-resource-acquisition.md)。基础资源的[MPQ索引/独立读取器及DBC容器](reports/2026-11-01-resource-index-base.md)已验收29602命名块/1636167198B与154份DBC。实际31M2／410WMO及后继451资产已用于默认Elwynn查询world历史对照，仍不证明基础包等于新版全部资产；物理场景/VFS所有权、其它地图、列/玩法ID关联、动画／材质／音画与渲染继续待恢复。
 

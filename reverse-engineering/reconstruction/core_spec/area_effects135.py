@@ -14,6 +14,7 @@ from .cast135 import (CastDefinition, CastState, UnresolvedCast, base_damage,
 from .cast_events135 import apply_hit
 from .progression134 import round_85718_bits, trunc_sat_u32
 from .radius import radius_bits
+from .record_cells135 import cells135,u32,u64,put_u32,put_u64,encode_row
 
 AREAS = {
     b'consecration': (5468396, 0, 26573), b'volley': (5469716, 0, 1510),
@@ -37,10 +38,7 @@ def _finite(value):
 
 
 def _raw(hexdata):
-    raw = bytes.fromhex(hexdata)
-    if len(raw) != 88:
-        raise ValueError('Complete88B area record required')
-    return raw
+    return cells135(hexdata,88)
 
 
 @dataclass(frozen=True)
@@ -51,7 +49,7 @@ class AreaDefinition135:
 
     def words(self):
         raw = _raw(self.raw88_hex)
-        w = struct.unpack('<22I', raw)
+        w = tuple(u32(raw,o,'135 area definition')for o in range(0,88,4))
         if self.ability_id not in AREAS or (self.pointer, w[0], w[11]) != AREAS[self.ability_id] or raw[84] != 3:
             raise UnresolvedCast('Unrestored area definition/execution/effect')
         return w
@@ -73,13 +71,13 @@ class AreaState135:
             raise ValueError('Bounded ordered area vector required')
         for row in self.records:
             raw = _raw(row)
-            if struct.unpack_from('<Q', raw)[0] != 0 or struct.unpack_from('<I', raw, 32)[0] not in (0, 1):
+            if u64(raw,0,'135 area tag') != 0 or u32(raw,32,'135 area effect tag') not in (0, 1):
                 raise UnresolvedCast('Hostile/alternate area variants and other status effects remain pending')
-            spell = struct.unpack_from('<I', raw, 60)[0]
+            spell = u32(raw,60,'135 area spell')
             if spell not in {v[2] for v in AREAS.values()}:
                 raise UnresolvedCast('Unknown area spell/follow behavior remains pending')
             for offset in (36, 40, 44, 48, 52, 56, 64, 68, 76, 80):
-                _finite(struct.unpack_from('<I', raw, offset)[0])
+                _finite(u32(raw,offset,'135 active area scalar'))
 
 
 @dataclass(frozen=True)
@@ -131,7 +129,9 @@ def _cast_finite(cast):
         raise UnresolvedCast('Duplicate-GUID area lookup remains pending')
     for entry in cast.spatial:
         for field in fields(entry.unit):
-            if field.name.endswith('_bits'):
+            #3757/922 do not consume an old death timestamp. Corpse cleanup
+            #requires U4 only after marker1, not during an unrelated area pass.
+            if field.name.endswith('_bits') and field.name!='death_time_4_bits':
                 _finite(getattr(entry.unit, field.name))
         for value in (*entry.from_xy, *entry.to_xy):
             _finite(value)
@@ -150,7 +150,7 @@ def produce_area(cast, areas, definition, owned, flat_height_bits, *, append_slo
     if terrain_grid_absent is not True or navigation_absent is not True or area_modifiers_absent is not True:
         raise UnresolvedCast('Terrain/navigation or nonempty area modifier sources remain pending')
     _finite(flat_height_bits); _cast_finite(cast); _u(busy488)
-    w = definition.words(); common = definition.common(); raw = bytearray(_raw(append_slot_hex))
+    w = definition.words(); common = definition.common(); raw = _raw(append_slot_hex)
     if owned.definition_pointer != definition.pointer:
         raise ValueError('Owned pointer differs')
     for value in (cast.area_multiplier_bits, owned.area_bits, owned.additional_area_bits,
@@ -184,16 +184,16 @@ def produce_area(cast, areas, definition, owned, flat_height_bits, *, append_slo
     if actual > 1000000:
         raise UnresolvedCast('Area tick-count watchdog')
     counter = (areas.spawn_counter + 1) & f.MASK
-    struct.pack_into('<Q', raw, 0, 0)
-    struct.pack_into('<Q', raw, 24, 0xf100000000000000 | counter)
+    put_u64(raw,0,0)
+    put_u64(raw,24,0xf100000000000000 | counter)
     effect_aux = f.mul(owned.additional_duration_bits, w[2]) if w[0] == 1 else w[2]
     for offset, value in ((32, w[0]), (36, w[1]), (40, effect_aux), (44, xy[0]), (48, xy[1]), (52, flat_height_bits),
         (56, radius), (60, spell), (64, f.add(cast.combat.now_bits, 0x3e800000)),
         (68, f.div(duration, f.from_u32(actual))), (72, actual), (76, f.div(base_damage(cast, common, owned), base_ticks)),
         (80, f.add(f.add(duration, cast.combat.now_bits), 0x3e99999a))):
-        struct.pack_into('<I', raw, offset, value)
+        put_u32(raw,offset,value)
     raw[84] = _raw(definition.raw88_hex)[85]
-    return AreaCastResult135(cast, AreaState135(areas.records + (bytes(raw).hex(),), counter), 1, xy + (flat_height_bits,), ledgers)
+    return AreaCastResult135(cast, AreaState135(areas.records + (encode_row(raw),), counter), 1, xy + (flat_height_bits,), ledgers)
 
 
 def tick_areas(cast, areas, now_bits, *, after_hit=None, after_death=None, area_modifiers_absent=False):
@@ -209,14 +209,15 @@ def tick_areas(cast, areas, now_bits, *, after_hit=None, after_death=None, area_
     cast = replace(cast, combat=replace(cast.combat, now_bits=now_bits))
     rows, expired, hits, writes = [], [], [], []
     for hexdata in areas.records:
-        raw = bytearray(_raw(hexdata)); w = struct.unpack('<22I', raw)
+        raw = _raw(hexdata)
+        w = {i:u32(raw,i*4,'3757 active area field')for i in(8,9,10,11,12,14,15,16,17,18,19,20)}
         if f.to_float(now_bits) >= f.to_float(w[20]):
-            guid = struct.unpack_from('<Q', raw, 24)[0]
+            guid = u64(raw,24,'3757 expired area GUID')
             if guid: expired.append(guid)
             continue
         if w[18] and f.to_float(w[16]) <= f.to_float(now_bits):
-            struct.pack_into('<I', raw, 72, w[18] - 1)
-            struct.pack_into('<I', raw, 64, f.add(w[16], w[17]))
+            put_u32(raw,72,w[18]-1)
+            put_u32(raw,64,f.add(w[16],w[17]))
             targets = query_targets(cast.spatial, (w[11], w[12]), w[14], now_bits)
             for guid in targets:
                 cast, damage, critical = _critical(cast, w[19])
@@ -231,5 +232,5 @@ def tick_areas(cast, areas, now_bits, *, after_hit=None, after_death=None, area_
                             writes.extend(((guid, 120, w[9]), (guid, 124, expiry)))
                             break
                     cast = _updated_combat(cast, replace(cast.combat, units=tuple(units)))
-        rows.append(bytes(raw).hex())
+        rows.append(encode_row(raw))
     return AreaTickResult135(cast, AreaState135(tuple(rows), areas.spawn_counter), tuple(hits), tuple(expired), tuple(writes))

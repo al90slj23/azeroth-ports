@@ -1,0 +1,152 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "component_projection_passed_independent_review_pending",
+  "independent_full_game": false,
+  "independent_frames": 0,
+  "native_port": false,
+  "playable_reconstruction": false,
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "sources": {
+    "reconstruction/core_spec/thunder_clap135.py": "1aeadd63ceecdbaae1653cef97a9ff6f7ba42c9d103a8d9356dd0b0d2239bfa4",
+    "scripts/check_thunder_clap135.py": "64c8b049da6aaa48eb55d0003cfc70cea5e44b2fd846b5561d0070ac6d3147dd",
+    "scripts/run_thunder_clap135_oracle.mjs": "62c1b3f1e445807a1f45981ad22273f9ba0eed65070ffa495deabc016154ea4c",
+    "scripts/trace_thunder_clap135.py": "aab5640c4d7c1d185b57e92fa2bf2eb366af74ee968712fc77befc9cd9005a83"
+  },
+  "final_evidence": {
+    "directory": "evidence/full0135-oracle-20261101T161214.028333Z",
+    "comparison_sha256": "596ea8bb3ea696f940632b3c4a3871c54f949c00b30a2eceb3710e68c82f49f5",
+    "prepared_sha256": "428919e53ee7b641933c533514b5fda91a2fe3ced8ece07b8a0b28052e7b5151",
+    "static_evidence_sha256": "b9530bfbb6638bab9456b96485c16ce4a735f8157f2aeacf8873ac8f1f44e8a5",
+    "eof_cleanup_replay_sha256": "6461776a6e17274d24a0ce2fe6d455478873ed71e0cef1d029eabdb1e54c09bb"
+  },
+  "verification": {
+    "cases": 55,
+    "complete_original_entry_calls": 124,
+    "role_calls": {
+      "cast": 80,
+      "owned": 22,
+      "process": 22
+    },
+    "original2244": "Unchanged original callee of full922; not exported or separately instrumented",
+    "mismatch_cases": 0,
+    "accepted_hits_independent": 288,
+    "source_closure_files": 41,
+    "source_unchanged": true,
+    "host_calls": 0,
+    "max_memory_bytes": 20578304,
+    "fresh_instances": 7,
+    "stack_all_restored": true,
+    "process": {
+      "pid": 32248,
+      "pgid": 32248,
+      "exit_code": 0,
+      "timed_out": false,
+      "deadline_seconds": 60,
+      "pid_absent_after": true,
+      "process_group_absent_after": true,
+      "seconds": 0.671
+    },
+    "original_state_kind": "Explicit relocated synthetic controlled component state; not copied App/Game"
+  },
+  "rules": {
+    "definition_pointer": 5467604,
+    "execution_kind": 2,
+    "effect_tag": 1,
+    "spell_id": 6343,
+    "school": 0,
+    "damage_bits": 1101529088,
+    "cooldown_bits": 1084227584,
+    "radius_bits": 1092616192,
+    "strength_bits": 1056964608,
+    "duration_bits": 1077936128,
+    "target_query": "27562 interpolated circular query; marker0 only, stable increasing distance order",
+    "per_target": "critical RNG, full914, accepted-hit/death consumers, then2244 effect1",
+    "duration": "f32(definition8 * owned68), then f32(now+duration); owned28 unread in execution2",
+    "effect_writes_in_order": [
+      124,
+      120
+    ],
+    "U356": "Retained for empty effect49 override sources",
+    "rejected_damage": "Effect still applies to first matching GUID with marker!=1",
+    "previous_expiry": "Overwritten, not max/extension-only"
+  },
+  "interface": {
+    "cast": "cast_thunder_clap135(state, definition, owned, after_hit=..., after_death=..., slow_overrides=())",
+    "result": "CastResult fields plus effect_writes tuple(GUID,byte_offset,binary32_word)",
+    "mirrored": "U124 simultaneously updates UnitState.control_until_124_bits",
+    "owned": "ThunderClapOwnedEntry135 and tick_owned_thunder_clap135; old dispatcher unchanged",
+    "integration_owner": "root; no headless/cast/area/shared frozen module edited"
+  },
+  "groups": {
+    "pilot-full922-damage-then-slow": 1,
+    "pilot-empty-full922": 1,
+    "pilot-replace-longer-slow-not-max": 1,
+    "pilot-full1076-learned-warrior": 1,
+    "target-count-stable-distance-marker-boundary": 6,
+    "radius10-exact-boundary-nonfinite": 6,
+    "additional-duration-and-unread-owned28": 8,
+    "motion-critical-area-duration-multipliers": 20,
+    "effect-after-phase-rejected-damage": 3,
+    "effect-after-elite-protected-damage": 2,
+    "1076-countdown-success-retry-and-timer": 4,
+    "1076-empty-failure-retry-point2": 1,
+    "1076-ordered-double-thunder-and-projectile": 1
+  },
+  "artifacts": {
+    "thunder-clap135-fixtures.jsonl": "be5cc133f17a34613af2c1cdac85d710800b8f1db7a37fde31fe24d4f1008daa",
+    "expected.json": "c067534dc2dfa7574a201629318be2f95f28ac7e3ea9acf41b9c21f966b0ce69",
+    "manifest.json": "b5e4b662e3103e9f790ab0495e6c5ed882deb5ac5a2847bdc014b611ab56e369",
+    "research135-exports.wasm": "c8708e3e3843598a480e1d2f629a2bf38279507d8425c50ecf5714285904c723",
+    "static-evidence.json": "b9530bfbb6638bab9456b96485c16ce4a735f8157f2aeacf8873ac8f1f44e8a5",
+    "thunder-clap135-results.jsonl": "72dc69df213370899ac21e9625546d554fc6c0ba32708dd76fa68f44c8543aea",
+    "thunder-clap135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "thunder-clap135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "process-terminal.json": "f75b9b76cd2b773d7c4d13d85202b952111b5421ff216013661000e162ed87f9",
+    "thunder-clap135-runtime.json": "659b2dadadebe105368a12c3efd6d8e50f3ad63447e085caa154775c1b4de305"
+  },
+  "limitations": [
+    "Complete original922/1076/1754 component calls, not natural Game/880 or independent full frames.",
+    "2244 unchanged callee; only thunder_clap effect1 with empty effect49 override sources; procs/items empty.",
+    "Nonlethal ordinary and declared protection/phase rejection targets; unresolved death continuation stops explicitly.",
+    "Physical presentation/cooldown packet bytes and localization not predicted.",
+    "Embedded G1256 is real racial slot supplied explicit effect0 isolated fireball fixture, never null.",
+    "NaN float words compare by NaN class; other integer/float words strict; control120/124/356 projected.",
+    "Private global0 checked read-only around every exposed allocator/target invocation; internal callee frames not separately instrumented."
+  ],
+  "superseded": [
+    {
+      "directory": "evidence/full0135-oracle-20261101T152443.506837Z",
+      "scope": "prepare-only,0 original calls"
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T152541.526889Z",
+      "cases": 4,
+      "calls": 10,
+      "scope": "pilot; included in final, not added"
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T152618.822580Z",
+      "cases": 55,
+      "calls": 124,
+      "scope": "pre-None-admission guard; same inputs/expected, not added"
+    },
+    {
+      "directory": "evidence/full0135-oracle-20261101T152739.841129Z",
+      "cases": 55,
+      "calls": 124,
+      "comparison_sha256": "c932e3b30f2b6bb2442df1c3ebc4a61878682cd249cb60c67ee8198a6ffffec4",
+      "scope": "Historical pre-EOF-cleanup checker; same fixture/expected/module, not added"
+    }
+  ],
+  "independent_review": {
+    "status": "pending",
+    "receipt": null
+  },
+  "historical_input_admission": {
+    "directory": "evidence/full0135-oracle-20261101T152739.841129Z",
+    "input_admission_sha256": "b233e0ae20328eb045b6f489031562a41ab1812fbfc994819cc42916b9e744cb",
+    "input_contract_correction_sha256": "7fa00d48163528c4216e4700f48cdc6f54341223981f44b797ebc7f35c1dbfd2",
+    "scope": "Pure model checks,0 original calls; thunder model unchanged"
+  }
+}

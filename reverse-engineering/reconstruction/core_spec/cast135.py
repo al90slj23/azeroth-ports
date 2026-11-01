@@ -11,7 +11,7 @@ from dataclasses import dataclass, replace
 from . import binary32 as f
 from .ability_state import AbilityRecord
 from .binary32_sqrt import sqrt_bits
-from .combat135 import CombatState, UnitState, resolve_damage
+from .combat135 import CombatState, UnitState, resolve_damage, required_linked_id135
 from .radius import radius_bits
 from .rng import next_u32_words
 
@@ -166,7 +166,7 @@ def projectile_targets(state, radius):
         if u.elite_244 != -1:
             if f.to_float(u.phase_until_412_bits)>now: return 0
             protected = f.to_float(u.phase_until_408_bits)>now or any(
-                x.marker==0 and x.kind_40==2 and x.linked_id_32==guid for x in state.combat.units)
+                x.marker==0 and x.kind_40==2 and required_linked_id135(x,'8685 live kind2 protection scan Q32')==guid for x in state.combat.units)
             if not protected: return 0
         return 2-u.elite_416
     ordered = sorted(ids,key=priority)

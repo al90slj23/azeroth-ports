@@ -1,0 +1,62 @@
+{
+  "status": "latest137_identity_acquired_fixed136_static_fixed135_dynamic",
+  "checked_at_utc": "2026-11-01T15:43:19.089349+00:00",
+  "latest_stable": {
+    "version": "0.137.0",
+    "actual_consumed_build": "d171b8f9f",
+    "build_length": 9,
+    "official_notes": "Enhancement Shaman's procs now feed each other: Windfury strikes and Stormbound Echoes repeats count as real Rockbiter and Stormstrike attacks. Flametongue, Frostbrand, Resonant Shocks and three necklaces are remade, with two new talents in Stormguard and Elemental Sunder.",
+    "windows_bytes": 147844608,
+    "windows_sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8",
+    "web_wasm_bytes": 90941108,
+    "web_wasm_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+    "web_stamp": "c628fd68823e",
+    "manifest_stable_during_recheck": true,
+    "web_stamp_stable_during_recheck": true,
+    "acquisition_directory": "originals/official-acquisition-20261101T154517.001467Z",
+    "acquisition_summary_sha256": "30f718efa5066e0b738e7b76e5248f06da7a83beab6f12852c58d76faa655e49",
+    "actual_build_identity": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
+    "actual_build_identity_sha256": "f93884e6798bce704b4d565be88627bb2dd54259589fd531f7609d472b1251f3",
+    "full_static_profile_produced": false,
+    "runtime_cases": 0,
+    "targets_executed": false
+  },
+  "fixed136_static": {
+    "version": "0.136.0",
+    "actual_consumed_build": "fe24fb74c",
+    "build_length": 9,
+    "web_wasm_sha256": "48c3bce7d690b3be02973bde89903c385e21ef16deca23539dcef60a1eb2eef3",
+    "native_exe_sha256": "eb744751b4e17ec1397b0cdc85a22af63b6af63c1da1d9c2861762c3c4d8947c",
+    "profile_report": "reports/2026-11-01-wasm0136-profile.json",
+    "profile_manifest": "evidence/wasm0136-profile-20261101T143713.272522Z/manifest.json",
+    "full_defined_functions": 175319,
+    "candidate_entry_count": 12,
+    "static_correspondence_is_acceptance": false,
+    "runtime_cases": 0
+  },
+  "fixed135_dynamic": {
+    "version": "0.135.1",
+    "actual_consumed_web_build": "90898d5e3",
+    "build_length": 9,
+    "historical_truncated_alias": "0898d5e3",
+    "web_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "role": "Continue independent asset/world/opening/combat/XP/selection work on its frozen original inputs; new reports remain135.",
+    "old_receipts_relabelled": false,
+    "acceptance_transferred_to136_or137": false
+  },
+  "135_136_pointer_length_identity": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json",
+  "135_136_pointer_length_identity_sha256": "be6c2874770470d160ca0d0cf0cb72c9be88f7be491be070c1a60d14b72190e5",
+  "live_recheck_source": "evidence/official-latest136-recheck-20261101T154250.834931Z/recheck.json",
+  "live_recheck_source_sha256": "fbb6c64919c39f576cd361b7b7b1679a123ea6ad51039dd844b7d39c00c35899",
+  "live_recheck_interpretation": "The original still136 comparison assertion correctly failed because live latest is137. Its actual_consumed_build field refers to the frozen136 identity sidecar, not137. This state and137 pointer/length sidecar supersede that ambiguous comparison label; no raw receipt overwritten.",
+  "installation_packages_changed": false,
+  "git_commit_or_push": false,
+  "whole_game_complete": false,
+  "final_metadata_recheck": {
+    "checked_at_utc": "2026-11-01T15:55:17.363331+00:00",
+    "receipt": "evidence/official-latest-final-check-20261101T155515.017487Z/check.json",
+    "receipt_sha256": "609d145476f39adaa61d59acfd545becbf27f6fbe408dc72e92f3617ce0f2d4e",
+    "latest_still137": true,
+    "scope": "Final small manifest/page refresh; coherent full137 body acquisition stays separately frozen."
+  }
+}

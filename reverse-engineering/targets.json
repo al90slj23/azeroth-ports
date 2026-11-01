@@ -1,13 +1,45 @@
 {
   "active_reconstruction_target": {
-    "version": "0.135.1",
-    "web_build": "0898d5e3",
+    "version": "0.137.0",
+    "web_build": "d171b8f9f",
+    "actual_build_length": 9,
     "web_reference_key": "web_official_latest_snapshot",
     "windows_reference_key": "windows_official_latest_reference",
-    "selected_by": "User latest-version direction; live official manifest rechecked2026-11-01 UTC",
+    "selected_by": "Official manifest and Web stamp rechecked 2026-11-01T15:55:17.363331+00:00; full coherent137 acquisition frozen separately.",
+    "status": "official_identity_and_acquisition_only_no_dynamic_acceptance",
+    "version_policy": "Align the product goal to verified latest137; freeze every experiment. Retain separate fixed136 static and fixed135 dynamic lanes without transferring acceptance.",
+    "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0135",
+    "fixed_static_migration_target_key": "fixed_static_migration_target_0136",
+    "fixed_research_baseline": "fixed_research_baseline",
+    "installation_packages_updated": false,
+    "version_support": "reconstruction/version-support.json",
+    "version_support_scope": "Existing version-bound validation registry, not137 acceptance.",
+    "analysis_profile": {
+      "report": "reports/2026-11-01-latest-version-state.json",
+      "source_sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+      "full_static_profile_produced": false,
+      "complete_wat": null,
+      "index": null
+    },
+    "build_identity_sidecar": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
+    "build_identity_sidecar_sha256": "f93884e6798bce704b4d565be88627bb2dd54259589fd531f7609d472b1251f3",
+    "latest_check_report": "reports/2026-11-01-latest-version-state.json",
+    "runtime_acceptance_reports": [],
+    "approved_research_role_count": 0,
+    "new_original_runtime_cases": 0,
+    "full_mainloop_frames": 0,
+    "scope_note": "137 official bytes and actual9-byte build are admitted for future static migration only. No137 EXE/WASM execution, full profile, gameplay validation or installation update;135/136 results remain version-bound.",
+    "latest_metadata_recheck": "evidence/official-latest-final-check-20261101T155515.017487Z/check.json"
+  },
+  "fixed_dynamic_research_target_0135": {
+    "version": "0.135.1",
+    "web_build": "90898d5e3",
+    "web_reference_key": "web_official_fixed_0135_snapshot",
+    "windows_reference_key": "windows_official_fixed_0135_reference",
+    "selected_by": "Retain the already frozen135 original/model/differential lane while latest-release admission proceeds separately.",
     "status": "complete_static_profile_and_partial_original_runtime_differentials_passed",
     "fixed_research_baseline": "fixed_research_baseline",
-    "version_policy": "Continuously align to verified official latest stable, freeze version/build/SHA per experiment and migrate changes within the same project; this round0.135.1/0898d5e3.",
+    "version_policy": "This fixed0.135.1 lane never swaps its original or expected inputs for floating latest; historical counts and receipts remain135 only.",
     "installation_packages_updated": false,
     "version_support": "reconstruction/version-support.json",
     "analysis_profile": {
@@ -683,7 +715,76 @@
       "review_receipt": "evidence/full-app0135-independent-review-20261101T124434.382127Z/review.json",
       "review_sha256": "cc3b2c00ad46e2283737728bcfe5bfe8ea0e8d1fbaba1e7025d3b7c3a1397be0",
       "scope": "Original4253 natural construction/callback path; not independent App,not activeGame/no phase1/fullrun. Linear memory only,not completeVM/externref restore. Observer callback lifetime/cutoff retained,shutdown ownership not validated. Earlier SwiftGPU and firstMetal researchtelemetry/font failures retained separately;not summed."
+    },
+    "historical_web_build_alias": "0898d5e3",
+    "actual_build_length": 9,
+    "role": "fixed_0.135.1_dynamic_research_lane_not_latest_release",
+    "build_identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json",
+    "build_identity_sidecar_sha256": "be6c2874770470d160ca0d0cf0cb72c9be88f7be491be070c1a60d14b72190e5",
+    "historical_nested_build_labels_retained": true,
+    "ongoing_lane_note": "The nested checkpoints retain their own historical counts/inputs; subsequent real-opening/combat/XP/selection work stays135 and receives separate new receipts. No135 pass is transferred to136/137.",
+    "real_opening_combat_checkpoint": {
+      "report": "reports/2026-11-01-opening-combat0135.md",
+      "receipt": "evidence/opening-combat0135-oracle-20261101T154826.676203Z/comparison.json",
+      "frames": 120,
+      "selections": 1,
+      "stages": 1681,
+      "original_entry_calls": 1683,
+      "differences": 0,
+      "source_files": 90,
+      "production_files": 80,
+      "scope": "One human warrior seed0/navFalse, stationary; real1089 phase1/physical capacities, None write masks, preparsed independent world/original snapshot/externalclock; not full880/native/wholegame.",
+      "historical_counts_combined": false,
+      "independent_review": "reports/2026-11-02-opening-combat0135-independent-review.json",
+      "independent_review_receipt": "evidence/opening-combat0135-independent-review-20261101T160437.916704Z/review.json",
+      "independent_review_receipt_sha256": "2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d",
+      "independent_review_scope": "Declared state projection/known cells and stream/source/process proof; nonempty raw packet payload semantics remain observational."
+    },
+    "raw_asset_combat_entry": {
+      "receipt": "evidence/asset-combat135-owned-20261101-154943.508577Z/model/receipt.json",
+      "receipt_sha256": "a75f8e198d7121cb2812b127c5d406553aec31556a185cc045dabcf802a7ce46",
+      "asset_files": 451,
+      "decoded_asset_bytes": 67281330,
+      "terrain_tiles": 9,
+      "source_files": 87,
+      "frames": 120,
+      "selections": 1,
+      "final_level": 2,
+      "final_xp": 6,
+      "final_gold": 7,
+      "original_memory_read": false,
+      "preparsed_world_read": false,
+      "original_WASM_read": false,
+      "new_original_cases": 0,
+      "full880_frames": 0,
+      "scope": "Separate independent raw-asset producer receipt; three world query SHA match prior output; not an extra original differential case."
     }
+  },
+  "fixed_static_migration_target_0136": {
+    "version": "0.136.0",
+    "web_build": "fe24fb74c",
+    "actual_build_length": 9,
+    "web_reference_key": "web_official_fixed_0136_snapshot",
+    "windows_reference_key": "windows_official_fixed_0136_reference",
+    "role": "fixed_0.136.0_static_profile_and_provisional_migration_lane",
+    "status": "complete_static_profile_and_candidate_review_no_runtime_acceptance",
+    "analysis_profile": {
+      "report": "reports/2026-11-01-wasm0136-profile.json",
+      "source_sha256": "48c3bce7d690b3be02973bde89903c385e21ef16deca23539dcef60a1eb2eef3",
+      "complete_wat": "evidence/wasm0136-profile-20261101T143713.272522Z/official-0.136.0-full.wat",
+      "wat_sha256": "1e5a5953bf4e9f4dce8e049a4a4b18e55f8dec6a6dbd6729a051c1c5e1fcc246",
+      "index": "evidence/wasm0136-profile-20261101T143713.272522Z/index.sqlite",
+      "index_sha256": "2006b1a14f17a16c2723605e732c83e6c3ddcdc4434f6b88b5a0b2fc614a3e2f"
+    },
+    "migration_mapping": "evidence/core0135-to0136-static-20261101T144126.756775Z/mapping.json",
+    "candidate_review": "evidence/core0136-candidate-review-20261101T144757.900933Z/review.json",
+    "candidate_entry_count": 12,
+    "candidate_correspondence_is_acceptance": false,
+    "build_identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json",
+    "runtime_acceptance_reports": [],
+    "new_original_runtime_cases": 0,
+    "full_mainloop_frames": 0,
+    "installation_packages_updated": false
   },
   "web_core": {
     "version": "0.126.0",
@@ -773,7 +874,7 @@
     },
     "role": "Version-bound completed partial models and differential evidence; not latest-version acceptance"
   },
-  "windows_official_latest_reference": {
+  "windows_official_fixed_0135_reference": {
     "version": "0.135.1",
     "build": null,
     "filename": "AzerothSurvivors.exe",
@@ -784,28 +885,99 @@
     "retrieval_date": "2026-11-01 UTC",
     "local_acquisition": "originals/official-acquisition-20261101T030310.926207Z/windows-0.135.1/AzerothSurvivors.exe",
     "report": "reports/2026-11-01-official-0135-acquisition.json",
-    "role": "active_latest_native_target; acquired_not_executed",
+    "role": "fixed_0.135.1_native_reference_acquired_not_executed",
     "limitations": [
       "Publisher size/SHA and gzip CRC/ISIZE verified; native semantic migration pending.",
       "No native short build ID identified; use official SHA.",
       "No original EXE executed; historical addresses cannot be transferred without mapping."
     ]
   },
-  "web_official_latest_snapshot": {
+  "web_official_fixed_0135_snapshot": {
     "version": "0.135.1",
-    "build": "0898d5e3",
+    "build": "90898d5e3",
     "stamp": "f31d0e03e3ac",
     "bytes": 90959080,
     "sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
     "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=f31d0e03e3ac",
     "local_snapshot": "originals/official-acquisition-20261101T030310.926207Z/latest-wenilla_bg.wasm",
     "report": "reports/2026-11-01-official-0135-acquisition.json",
-    "role": "active_fixed_latest_web_target; complete_static_profile_and_scoped_original_runtime_differentials",
+    "role": "fixed_0.135.1_dynamic_research_snapshot_not_latest_release",
     "limitations": [
       "Version/build identified from static menu branding; SHA computed locally from saved HTTPS bytes, not a publisher digest.",
       "Partial0.135.1 runtime validation is separately recorded in reconstruction/version-support.json; no whole-game equivalence or transfer of0.134.0 results.",
-      "All existing installed apps, saves and fixed oracle inputs preserved."
+      "All existing installed apps, saves and fixed oracle inputs preserved.",
+      "Historical acquisition/report eight-character label0898d5e3 is a truncated alias; actual Web1465 pointer/length guard consumes90898d5e3 length9. Old receipts are not rewritten."
     ],
-    "analysis_profile_report": "reports/2026-11-01-wasm0135-profile.json"
+    "analysis_profile_report": "reports/2026-11-01-wasm0135-profile.json",
+    "historical_build_alias": "0898d5e3",
+    "actual_build_length": 9,
+    "build_identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json"
+  },
+  "windows_official_fixed_0136_reference": {
+    "version": "0.136.0",
+    "build": "fe24fb74c",
+    "actual_build_length": 9,
+    "filename": "AzerothSurvivors.exe",
+    "format": "PE32+ x86-64 GUI",
+    "bytes": 147811840,
+    "sha256": "eb744751b4e17ec1397b0cdc85a22af63b6af63c1da1d9c2861762c3c4d8947c",
+    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
+    "retrieval_date": "2026-11-01 UTC",
+    "local_acquisition": "originals/official-acquisition-20261101T142725.754244Z/windows-0.136.0/AzerothSurvivors.exe",
+    "role": "fixed_0.136.0_native_identity_reference_not_executed",
+    "report": "reports/2026-11-01-wasm0136-profile.json",
+    "build_identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json"
+  },
+  "web_official_fixed_0136_snapshot": {
+    "version": "0.136.0",
+    "build": "fe24fb74c",
+    "actual_build_length": 9,
+    "stamp": "4762d2b13821",
+    "bytes": 90927420,
+    "sha256": "48c3bce7d690b3be02973bde89903c385e21ef16deca23539dcef60a1eb2eef3",
+    "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=4762d2b13821",
+    "local_snapshot": "originals/official-acquisition-20261101T142725.754244Z/latest-wenilla_bg.wasm",
+    "role": "fixed_0.136.0_static_profile_no_runtime_acceptance",
+    "report": "reports/2026-11-01-wasm0136-profile.json",
+    "build_identity_sidecar": "evidence/branding0136-identity-20261101T145343.493343Z/identity.json"
+  },
+  "windows_official_latest_reference": {
+    "version": "0.137.0",
+    "build": "d171b8f9f",
+    "actual_build_length": 9,
+    "filename": "AzerothSurvivors.exe",
+    "format": "PE32+ x86-64 GUI",
+    "bytes": 147844608,
+    "sha256": "aa6b254f905e2f7a4cbc7c2c8f11af822ec362e3d2b8e84cabd8c38893a10dc8",
+    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
+    "retrieval_date": "2026-11-01T15:43:19.089349+00:00",
+    "local_acquisition": "originals/official-acquisition-20261101T154517.001467Z/windows-0.137.0/AzerothSurvivors.exe",
+    "report": "reports/2026-11-01-latest-version-state.json",
+    "build_identity_sidecar": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
+    "role": "active_latest_native_identity_only_acquired_not_executed",
+    "limitations": [
+      "Publisher size/SHA and gzip CRC/ISIZE verified; actual build pointer/length guarded.",
+      "No137 native runtime or gameplay acceptance; historical addresses/data not transferred.",
+      "Installed Mac/Android/native packages and user saves unchanged."
+    ]
+  },
+  "web_official_latest_snapshot": {
+    "version": "0.137.0",
+    "build": "d171b8f9f",
+    "actual_build_length": 9,
+    "stamp": "c628fd68823e",
+    "bytes": 90941108,
+    "sha256": "20ec9a2b5182a72e13ca11668ff0aab17e9dc54a10b923b546708ab85e3fe1c8",
+    "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=c628fd68823e",
+    "local_snapshot": "originals/official-acquisition-20261101T154517.001467Z/latest-wenilla_bg.wasm",
+    "report": "reports/2026-11-01-latest-version-state.json",
+    "build_identity_sidecar": "evidence/branding0137-identity-20261101T154758.086510Z/identity.json",
+    "role": "active_latest_web_identity_only_no_profile_or_runtime_acceptance",
+    "limitations": [
+      "Fresh coherent HTTPS bytes, stable manifest/stamp and actual9B build pointer/length guard.",
+      "No137 full static profile, original runtime cases or independent gameplay acceptance.",
+      "Fixed136 static candidates and135 dynamic passes are not137 validation.",
+      "No original EXE/WASM executed during latest acquisition; no installations or saves changed."
+    ]
   }
 }

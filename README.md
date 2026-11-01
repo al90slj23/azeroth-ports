@@ -11,7 +11,13 @@ Aethus 原作游戏的非官方社区封装与逆向研究仓库。现有社区�
 
 `android/`、`macos/` 保留现有构建、签名和存档路径；研究区独立保存工具入口、目标版本、问题清单和分析结论。研究补丁经过对应版本验证后，才能进入封装版。REA 分析结果不等于已经恢复完整源码。
 
-逆向持续对齐官方最新稳定版，每轮先固定版本与SHA；**本轮验证为已取得的0.135.1 / Web0898d5e3**。0.134.0保留固定研究结果，0.126.0保留历史回归参考。当前[14阶段独立研究切片](reverse-engineering/reports/2026-11-01-headless-tail0135-independent-review.md)已完成8种子1614帧22607阶段、11次选择、22615次原件入口调用0差异（67源/60core/16角色）。主切片的phase1仍为研究输入，6未知技能/2预算边界保留。
+逆向持续对齐官方最新稳定版，每轮固定版本与SHA。**官方latest已核为0.137.0 / `d171b8f9f`，目前仅完成身份和原件采集，动态验收0**，见[最新版本状态](reverse-engineering/reports/2026-11-01-latest-version-state.md)。[0.136.0 / `fe24fb74c`](reverse-engineering/reports/2026-11-01-wasm0136-profile.md)保留完整静态profile与迁移候选，动态验收同样为0；持续动态实验固定在**0.135.1 / `90898d5e3`**。旧`0898d5e3`是历史截短alias，原收据不覆写，旧通过不转记136或137。
+
+固定135的[历史14阶段独立研究切片](reverse-engineering/reports/2026-11-01-headless-tail0135-independent-review.md)保留8种子1614帧22607阶段、11次选择、22615次原件入口调用0差异（67源/60core/16角色），其phase1/初始zero槽是该旧批研究输入。后续真实开局→战斗→升级与选卡组合使用新的135收据，不合并这些历史计数。0.134.0与0.126.0继续保留各自固定研究结果。
+
+新增固定135的[真实开局→战斗→XP/首次选卡闭环](reverse-engineering/reports/2026-11-01-opening-combat0135.md)：单human warrior／seed0／navigation False，120受控帧、1次选择、1681阶段、1683原件入口0差异（90源/80 production）。phase1来自真实1089，六类opening对象保留实际capacity及None未知字节；level2实际选择index0的thunder_clap后继续33帧。模型使用预解析独立world，原件从合法snapshot恢复，时间由显式外部调度推进；尚非完整880、Windows执行或独立一局，旧回归与新case分别计数。 该限定投影已通过[只读独审](reverse-engineering/reports/2026-11-02-opening-combat0135-independent-review.md)，receipt SHA `2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d`；原packet payload语义仍只观察。
+
+同版另有[raw资产→world→opening→120帧独立入口](reverse-engineering/reports/2026-11-01-opening-combat0135.md)：真实451文件／67,281,330B、9tiles，87源前后不变；未读原memory、预解析world或WASM，三个world产物SHA与既有独立查询world一致，最终level2／XP6／gold7、1次选卡。它补足资产生产入口这一层，不增加上述原件差分case，也不等于完整880或完整一局。
 
 新增[独立默认开局](reverse-engineering/reports/2026-11-01-opening0135.md)：16组、32次完整原件入口、0声明差异，连续产生2条附属对象、4NPC、2个kind2、事件声明及69个边界对象，六vector和全部新增消息均对照；[独审通过](reverse-engineering/reports/2026-11-01-opening0135-independent-review.md)。世界侧已有[M2碰撞／候选与导航生产](reverse-engineering/reports/2026-11-01-world-raster0135-independent-review.md)、[world查询与位置消费者](reverse-engineering/reports/2026-11-01-world-consumers0135-independent-review.md)独审通过，[WMO碰撞生产](reverse-engineering/reports/2026-11-01-wmo-geometry0135.md)覆盖实际readset全部410文件、[独审通过](reverse-engineering/reports/2026-11-01-wmo-geometry0135-independent-review.md)。该16组原件验收仍以已解析world为输入，尚未接入旧主切片；后继资产组合另列。
 

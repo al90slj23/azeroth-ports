@@ -1,0 +1,114 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "first_expiry_component_passed_independent_review_pending",
+  "sources": {
+    "reconstruction/core_spec/special2376_spawn135.py": "1cdba9050c565853194bcdb2d8309cb9e653f8476ce977a1af92829659e9229e",
+    "reconstruction/core_spec/special2376_spawn135_data.py": "d96d2281cbf8b309d9cf8beb28bbb6b270fc1158877ade86b7b0aa2b2d37300e",
+    "scripts/check_special2376_spawn135.py": "a28bd538aead3e1d998b9b9dff8e88b4144c29e6c527fc105d4d1275e73fcd9a",
+    "scripts/run_special2376_spawn135_oracle.mjs": "be316a551efd26dc456d9e1902d5a487e5ba513255cebf3c5596473c171044ba",
+    "scripts/trace_special2376_spawn135.py": "46b5dbc029cdd407a474cff0631d71e7ae8a4ea1d72057f1d82224f2c0ff7550"
+  },
+  "evidence": {
+    "directory": "evidence/special2376-spawn0135-oracle-20261101T160138.650314Z",
+    "comparison_sha256": "b9f731a4c818b889eb105dfbc81d67cb169a82397336d13a705e5979f94ae68d",
+    "prepared_sha256": "6650932aeff6ecec3fca0a063130f16eb2352be145c16f4f810e03dbaee8afed",
+    "static_sha256": "9cecf212e05331d723369e2af8067b7900169745316e3ffa838968485b394134",
+    "pending_input_checks_sha256": "dd7d1fabddbb9163944618c91bbd29846938fb9b3dfd79cb81880ffeb6a1dcbc",
+    "correction_history_sha256": "783ec58d1a4b95daa2774f9b93697ed1b580f6af69dfc4d95dbabce96849cfdd"
+  },
+  "verification": {
+    "cases": 57,
+    "full_original2376_calls": 57,
+    "mismatch_leaves": 0,
+    "appended_NPCs": 180,
+    "packets": 190,
+    "known_leaves": 144154,
+    "declared_unknown_cells": 58256,
+    "source_files": 57,
+    "source_unchanged": true,
+    "original_host_calls": 0,
+    "memory_peak_bytes": 14614528,
+    "stack_restored": true,
+    "process": {
+      "pid": 15541,
+      "pgid": 15541,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 1.0935356249974575,
+      "launcher_error": null
+    }
+  },
+  "domain": {
+    "zone": 0,
+    "definitions": [
+      9,
+      10,
+      11
+    ],
+    "entries": [
+      609,
+      610,
+      611
+    ],
+    "first_due_clock_max_bits": 1101529088,
+    "initial_specials": 4,
+    "variants": "All three original32969 headers have variantcount0; RNG rejection still performed",
+    "world_input": "Frozen independently produced preparsed world query artifacts; not rerun asset pipeline",
+    "fixture": "Independent absent-companion opening seed0/class1/race1, explicit external20s component clock, plus controlled variations"
+  },
+  "interfaces": {
+    "input": "SpecialSpawnInput135; complete40B special capacity,424B NPC capacity/active prefix, explicit counters/RNG/scalars/player XYZ+GUID/locale",
+    "producer": "tick_special_spawn135(value,locale=SpecialLocale2376_135(...))",
+    "result": "special/units/rng_words/counter/rng_draws/creates/cooldowns/packets/status",
+    "cooldowns": "unit_index/GUID/capacity3/timers_bits/ability_pointer/header_pointer/ability_records44_hex/header28_hex",
+    "pointer68": "Physical four bytes remainNone; original fixture independently verifies nonzero/aligned/unique/bounded timer allocations and exact payload",
+    "static_provider": "special_ability_records135(ability_pointer),special_header135(header_pointer) return independent local declarations without original IO"
+  },
+  "scalar_correction": {
+    "field1092_HP": "difficulty>1: .35, else .25",
+    "field1092_attack": "difficulty>1: .07, else .05",
+    "original_failed_batch": "evidence/special2376-spawn0135-oracle-20261101T155753.277988Z",
+    "failed_leaves": 400,
+    "retained": true
+  },
+  "limitations": [
+    "Full unchanged original2376 with1525/16341/42327/32969 callees; not original App/full880 or independently completed20s flow.",
+    "Due clock>21 localized150 respawn banner remains pending; complete initial20..21s due producer is accepted.",
+    "Non-Elwynn definitions and nondefault variants remain pending; locale tables are explicit initialized inputs, not cold locale producer.",
+    "HP16341 first-milestone branch validated here; later interpolation implementation not independently accepted by this batch.",
+    "Special NPC AI/skill/timer consumption and transitive metadata references in skill/header records remain pending.",
+    "Packet payloads169/548 are compared; their runtime allocation capacities/pointers are observed but not predicted.",
+    "Unwritten record bytes remainNone. Original concrete poison inputs never enter production state; strict guards preserve old prefix/inactive backing/padding.",
+    "Only final57 cases counted; pilot4, failed57 and intermediate57 are preserved and not summed."
+  ],
+  "independent_review": {
+    "status": "pending",
+    "receipt": null
+  },
+  "full_game_complete": false,
+  "independent_full880_frames": 0,
+  "playable_replacement": false,
+  "native_port": false,
+  "pending_guardian_AI_dependencies": [
+    {
+      "entry": 610,
+      "producer": "raw18",
+      "reference": 5426156,
+      "referenced_records": 2,
+      "stride": 40,
+      "kind": "raw7 Charge100; interval1.6",
+      "status": "successor_readonly_trace_not_accepted_by_this_batch"
+    },
+    {
+      "entry": 611,
+      "producer": "header+16/+20",
+      "reference": 5477880,
+      "bytes": 52,
+      "kind": "HP<0.5 threshold; U104 one-shot bit",
+      "status": "successor_readonly_trace_not_accepted_by_this_batch"
+    }
+  ],
+  "successor_guardian_static_report": "reports/2026-11-02-guardian-ai0135-static.md"
+}

@@ -6,6 +6,7 @@ and active secondary-area effects remain explicit continuations, never dropped.
 from dataclasses import dataclass
 import struct
 from . import binary32 as f
+from .record_cells135 import cells135,encode_row
 
 
 class UnresolvedFrameSystem135(NotImplementedError):
@@ -135,10 +136,13 @@ def guard_claim_tick2573(storage88, count, phase2587):
     Nonempty running claims require attraction/expiry/XP/UI continuation; all
     caller-owned raw88B backing remains explicit and is never silently cleared.
     """
-    _u(phase2587, 8); rows = _rows(storage88, count, 88)
+    _u(phase2587, 8);_u(count)
+    if type(storage88)is not tuple or not 0<=count<=len(storage88)<=512:
+        raise ValueError('Explicit bounded claim backing required')
+    rows=tuple(encode_row(cells135(row,88))for row in storage88)
     if phase2587 == 1 and count:
         raise UnresolvedFrameSystem135('Running nonempty claims require full2573 continuation')
-    return FrameQueueResult135(tuple(x.hex() for x in rows), count, (), 'claim_gate_complete')
+    return FrameQueueResult135(rows, count, (), 'claim_gate_complete')
 
 
 def guard_terminal_tick49037(field400, phase2587, endless2568):

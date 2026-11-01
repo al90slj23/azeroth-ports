@@ -1,0 +1,330 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_build_alias": "0898d5e3",
+  "kind": "independent_real_opening_to_first_choice_and_resumed_controlled_combat",
+  "status": "matched_requested_budget",
+  "evidence": "evidence/opening-combat0135-oracle-20261101T154826.676203Z",
+  "comparison_sha256": "1dda3cfc59206997b6db15b694b822c26458abf10da52e983eed9d7b67d0e3ab",
+  "independent_cases": 1,
+  "independent_frames": 120,
+  "selections": 1,
+  "compared_stages": 1681,
+  "original_entry_calls": 1683,
+  "differences": 0,
+  "requested_frames": 120,
+  "completed_requested_budget": true,
+  "final_level": 2,
+  "final_xp": 6,
+  "simulation_seconds_f32": 12.000009536743164,
+  "source_files": 90,
+  "production_files": 80,
+  "initial_owners": {
+    "units": [
+      4,
+      4
+    ],
+    "pickups": [
+      2,
+      4
+    ],
+    "special": [
+      4,
+      4
+    ],
+    "windows": [
+      2,
+      4
+    ],
+    "boundaries": [
+      69,
+      128
+    ],
+    "companions": [
+      0,
+      0
+    ],
+    "areas": [
+      0,
+      0
+    ]
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=4096",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_opening_combat135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T154826.676203Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/opening-combat0135-oracle-20261101T154826.676203Z/config.json"
+    ],
+    "pid": 78345,
+    "pgid": 78345,
+    "exit_code": 0,
+    "seconds": 7.201300582994008,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "kind": "real_opening_then_controlled14_tail_original_observation",
+    "schema_version": 3,
+    "output_protocol": "bounded_stage_jsonl",
+    "cases": 1,
+    "original_entry_calls": 1683,
+    "completed_controlled_tail_frames": 120,
+    "completed_stages": 1681,
+    "boundaries": 0,
+    "case_receipts": [
+      {
+        "id": 0,
+        "completed_stages": 1681,
+        "boundary": null
+      }
+    ],
+    "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+    "module_sha256": "bf1dda28b386e1394c0f811c533745801f285460c7a76d70937591126d24a572",
+    "input_sha256": "62d292f2c56501e85d9d41b5f403101d4b55b8e775307f9d8cc7d7664c0f66ef",
+    "memory_page_cap": 4096,
+    "peak_memory_bytes": 166395904,
+    "denied_imports": 878,
+    "host_imports_throw": true,
+    "stage_entries": [
+      {
+        "kind": "player",
+        "role": "player_tick",
+        "index": 2088
+      },
+      {
+        "kind": "extra",
+        "role": "auto_cast",
+        "index": 916
+      },
+      {
+        "kind": "owned_effects",
+        "role": "owned_effect_tick",
+        "index": 975
+      },
+      {
+        "kind": "hits",
+        "role": "process_hits",
+        "index": 1754
+      },
+      {
+        "kind": "area",
+        "role": "area_tick",
+        "index": 3757
+      },
+      {
+        "kind": "effects",
+        "role": "effect_tick",
+        "index": 915
+      },
+      {
+        "kind": "deadline",
+        "role": "deadline_tick",
+        "index": 38007
+      },
+      {
+        "kind": "secondary",
+        "role": "secondary_hits",
+        "index": 2602
+      },
+      {
+        "kind": "ai",
+        "role": "update_units",
+        "index": 921
+      },
+      {
+        "kind": "collect",
+        "role": "collect_pickups",
+        "index": 2862
+      },
+      {
+        "kind": "claims",
+        "role": "claim_tick",
+        "index": 2573
+      },
+      {
+        "kind": "spawn",
+        "role": "spawn_tick",
+        "index": 947
+      },
+      {
+        "kind": "special",
+        "role": "special_tick",
+        "index": 2376
+      },
+      {
+        "kind": "terminal",
+        "role": "terminal_tick",
+        "index": 49037
+      }
+    ],
+    "selection_entry": {
+      "role": "select_ability",
+      "index": 1072,
+      "signature": "(G:i32,input_index:i32)->void",
+      "advances_clock": false
+    },
+    "budgets": {
+      "cases": 1,
+      "actions_per_case": 200,
+      "output_bytes": 268435456
+    },
+    "actual_opening_phase_used": true,
+    "constructor_phase_overwritten": false,
+    "preallocated_zero128_storage": false,
+    "world_rc_forged": false,
+    "locale_once_injected": false,
+    "locale_source": "Preserved initialized genuine snapshot; prestate index bound to explicit input.",
+    "controlled_clock_scheduler": "explicit_external_f32_add_G2352_not_original880",
+    "full880_called": false,
+    "new_full880_frames": 0,
+    "independent_model_validation_cases": 0,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "output_bytes": 260615319,
+    "node": "v22.23.4"
+  },
+  "comparison": {
+    "compared_leaves": 6255343,
+    "unwritten_pickup_arrivals": 3436,
+    "declared_unknown_cells": 6194416
+  },
+  "world_input": {
+    "kind": "independently_produced_preparsed_world_query_artifacts",
+    "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json",
+    "receipt_sha256": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+    "artifacts": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/terrain-query.bin": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/navigation.bin": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/secondary-height.u32le": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/receipt.json": "4042ee79112521f67bca6d39447d9072a9b9b2f1c6f78d3b8fdab21a9d36f7c5",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world0135-independent-20261101T111736.050879Z/inputs.json": "603bd691eb614f4c0ae932401c2d790761c9b18b38951922c2fa9757bd4d7b80"
+    }
+  },
+  "original_context": {
+    "snapshot_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/after_real_begin1089.memory",
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "externref_VM_restoration": false,
+    "fresh_bootstraps": 0
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "limitations": [
+    "Controlled external f32 time scheduler and14 component entries,not880 front/party/transport.",
+    "World is independently produced canonical query input; this check does not rerun451-asset parser.",
+    "Independent state retains None only from producer/consumer write sets; original buffers remain concrete.",
+    "Original full raw captures retained. Only declared state projection/known record cells compared; unrelated allocator bytes/keyed fields/runtime packet producers remain unknown.",
+    "Navigation preferenceFalse corresponds to declared snapshot App5165=0; actual menu defaults are another input domain.",
+    "Original initialized locale is preserved, not reconstructed; model receives explicit static English names.",
+    "One stationary human-warrior seed0/Elwynn input; other seeds/classes/maps/active sources require their own integration checks.",
+    "Unit/capacity slots retain unknown cells only where independent producers did not write. They are not supplied to the original.",
+    "Live32 active record projection is compared with its explicitly unwritten union words; live inactive capacity is not compared.",
+    "Full packet queues/raw App/G/world-owner captures are evidence; runtime packet bytes are not independently reproduced or compared here.",
+    "Special NPC expiry production, all skills/procs, player death/victory/save/UI/rendering and a complete run remain unverified."
+  ],
+  "separate_regressions": [
+    {
+      "path": "evidence/full0135-oracle-20261101T154947.045195Z/headless135-comparison.json",
+      "cases": 8,
+      "frames": 1614,
+      "stages": 22607,
+      "selections": 11,
+      "differences": 0,
+      "domain": "legacy explicit phase1 zero128 flat-world fixture"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T154920.423199Z",
+      "cases": 573,
+      "stages": 944,
+      "mismatch_cases": 0,
+      "domain": "five tail components"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T154920.810963Z",
+      "cases": 204,
+      "mismatch_cases": 0,
+      "domain": "death and mixed pickup component"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T160100.231651Z/cleave135-comparison.json",
+      "cases": 351,
+      "stages": 1923,
+      "accepted_hits": 1845,
+      "mismatch_cases": 0,
+      "domain": "current-source cleave component regression, not new coverage"
+    },
+    {
+      "path": "evidence/full0135-oracle-20261101T161214.028333Z/comparison.json",
+      "cases": 55,
+      "original_calls": 124,
+      "mismatch_leaves": 0,
+      "domain": "current-source thunder_clap component replay, not new coverage"
+    }
+  ],
+  "historical_attempts_not_added": [
+    {
+      "path": "evidence/opening-combat0135-oracle-20261101T154120.339056Z",
+      "scope": "one-frame pilot; earlier source snapshot"
+    },
+    {
+      "path": "evidence/opening-combat0135-oracle-20261101T154142.915105Z",
+      "scope": "failed, Node512MiB heap serialization; exit-6"
+    },
+    {
+      "path": "evidence/opening-combat0135-oracle-20261101T154435.824361Z",
+      "scope": "87frame failed prefix; 19 pickup inactive-tail differences; selection status mapping bug"
+    },
+    {
+      "path": "evidence/opening-combat0135-oracle-20261101T154631.129336Z",
+      "scope": "120frame failed; 2647 differences originating from forward selection removal tail"
+    }
+  ],
+  "native_windows_executed": false,
+  "full880_frames": 0,
+  "complete_games": 0,
+  "latest_version_dynamic_acceptance": false,
+  "goal_complete": false,
+  "raw_asset_selfcheck": {
+    "path": "evidence/asset-combat135-owned-20261101-154943.508577Z/model",
+    "receipt_sha256": "a75f8e198d7121cb2812b127c5d406553aec31556a185cc045dabcf802a7ce46",
+    "loaded_files": 451,
+    "decoded_bytes": 67281330,
+    "source_files": 87,
+    "frames": 120,
+    "selections": 1,
+    "original_cases": 0,
+    "projection_bridge_sha256": "0eccdb2785933acf485d95385ab025b2a0a3a3e2d732913329041779bb09d417",
+    "checks": 34
+  },
+  "model_only_next_boundary": {
+    "path": "evidence/opening-combat135-model-boundary-20261101T155453.026878Z/receipt.json",
+    "frames": 199,
+    "selections": 2,
+    "level": 3,
+    "boundary": "Due inactive special0 requires NPC production and complete1525 continuation",
+    "original_cases": 0,
+    "preparsed_independent_world": true
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-opening-combat0135-independent-review.md",
+    "receipt": "evidence/opening-combat0135-independent-review-20261101T160437.916704Z/review.json",
+    "sha256": "2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d",
+    "passed": true,
+    "new_original_cases": 0,
+    "model_producer_executed": false,
+    "raw_packet_semantics_accepted": false
+  },
+  "special_first_expiry_component_not_integrated": {
+    "report": "reports/2026-11-01-special2376-spawn0135.md",
+    "receipt": "evidence/special2376-spawn0135-oracle-20261101T160138.650314Z/comparison.json",
+    "sha256": "b9f731a4c818b889eb105dfbc81d67cb169a82397336d13a705e5979f94ae68d",
+    "cases": 57,
+    "original_calls": 57,
+    "new_units": 180,
+    "packets": 190,
+    "mismatch_leaves": 0,
+    "integrated_into_120_frame_case": false
+  }
+}

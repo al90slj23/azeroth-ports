@@ -1,6 +1,8 @@
 # 独立核心的可执行规格
 
-本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标持续对齐官方最新稳定版，每轮固定版本/SHA；本轮为0.135.1 / 0898d5e3**，`derived_stats135`已完成新版原件差分；0.134.0 / 983346a7的局部实现与组合保留为固定研究基线，结果按版本与域分别记录，不转记为新版通过。各自确切范围见[版本支持清单](version-support.json)，不能直接视为新版全部行为。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标的latest现为0.137.0 / `d171b8f9f`，仅身份/采集；0.136.0 / `fe24fb74c`只有静态profile/迁移候选，两版动态验收0**。本目录进行中的动态实验继续锁定**0.135.1 / `90898d5e3`**；旧`0898d5e3`是历史截短alias，不改旧收据或原件。0.134.0 / 983346a7与更旧模型按其固定版本保留，各自范围见[版本支持清单](version-support.json)和[最新版本状态](../reports/2026-11-01-latest-version-state.md)，不能自动转计新版本通过。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+
+固定135的新[opening/combat/升级选卡组合](../reports/2026-11-01-opening-combat0135.md)在独立预解析world／原件snapshot／外部clock的明确域内完成120帧、1select、1681stage、1683入口0差异（90源/80 production）；level2实际index0 thunder_clap后续33帧。另一个raw451资产入口（67,281,330B、9tiles、87源不变）未读原memory/预解析world/WASM，独立完成同样120帧／1select至level2／XP6／gold7，三个world SHA与既有query一致。两层证据不增加彼此的原件case，不是完整880/native/一局；下列旧checkpoint计数仍按原收据保留。 该限定投影已通过[只读独审](../reports/2026-11-02-opening-combat0135-independent-review.md)，receipt SHA `2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d`；原packet payload语义仍只观察。
 
 现有纯Python入口运行限定平地14尾阶段组合：真实空profile构造→显式phase1→普通生成/主施法/范围/idle效果与尾队列守卫→死亡奖励/自然选卡。当前[082927独审](../reports/2026-11-01-headless-tail0135-independent-review.md)：8/1614帧/22607阶段/11选择/22615调用，67源60core16角色0差异。6未知技能/2预算保留；旧072329/064308/061901仅历史，不相加，尚非完整880或独立一局。
 

@@ -1,10 +1,22 @@
 # 独立重造的工作基线
 
-目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。按用户最新方向，**功能对齐持续跟随官方最新稳定版，每轮固定版本与SHA；本轮验证采用已取得的0.135.1**；0.135.1 / Web`0898d5e3`已经完成完整静态profile、函数/布局映射和局部原件差分；**0.134.0 / Web983346a7**保留已有规则/组合验证，Windows官方SHA各自固定。两版结果分开记录，既有0.134.0验证不会自动转记新版。此前0.126.0 / 3e72472a作为历史验证与复用参考保留，不再作为继续扩展的主目标。完整原件身份见[targets.json](targets.json)，迁移原则见[版本策略](VERSION_STRATEGY.md)。工具安装、原始游戏、WAT和原件函数测试模块均保存在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
+目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。功能目标持续跟随官方最新稳定版，每轮固定版本与SHA：**latest0.137.0 / `d171b8f9f`仅完成身份与采集；固定0.136.0 / `fe24fb74c`完成静态profile及迁移候选，两版动态验收均为0**。持续动态组合研究保持**固定0.135.1 / `90898d5e3`**及原SHA，旧`0898d5e3`为历史截短alias，旧收据和输入不覆写；0.134.0 / 983346a7与0.126.0 / 3e72472a继续作各自固定历史参照。任何旧通过均不自动转记新版。完整身份及分工见[targets.json](targets.json)、[最新版本状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。工具、原件与分析产物留在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
 
 这里的“完成”需要覆盖行为、状态变化和结果，而不是只有函数地址、解码文本或一份大关系图。原作Rust变量名和源文件原文没有恢复；重造不以逐字找回这些标识符为验收条件。
 
-## 固定0.135.1目标的迁移与验收
+## latest准入与固定版本研究
+
+| 版本域 | 当前事实 | 验收边界 |
+|---|---|---|
+| latest0.137.0 | 官方manifest、匹配SHA的Windows EXE与coherent Web WASM已另档；实际9字节build `d171b8f9f` | 尚无全量profile或动态验收；136/135结果不外推。 |
+| 固定0.136.0静态迁移 | [175319函数完整profile/RO索引、12入口候选和引用审查](reports/2026-11-01-wasm0136-profile.md)；实际9字节build `fe24fb74c` | 动态case0；候选同形与callee/数据等价分开验证。 |
+| 固定0.135.1动态研究 | 既有与进行中的独立资源、opening、combat、XP/选卡实验保持原始SHA；实际build `90898d5e3` | 下表计数仍属于各自冻结135收据；新组合另记，不倒填历史或转记136/137。 |
+
+固定135的[新opening→combat→XP/首次选卡组合](reports/2026-11-01-opening-combat0135.md)为单human warrior／seed0／navigation False：120帧、1select、1681stage、1683原件入口0差异，90源含80 production。真实1089产生phase1，4NPC/2kind2/4special/2window/69boundary/0companion和实际capacity保留，None未知字节不清零；level2实际index0选择thunder_clap后续33帧。模型用预解析独立world，原件从合法snapshot恢复，时间是外部显式受控调度；不代表完整880、native执行或完整一局。旧headless8/1614/22607/11、frame573/944、death-pickup204回归各自独立保留，不与新case求和。 该限定投影已通过[只读独审](reports/2026-11-02-opening-combat0135-independent-review.md)，receipt SHA `2b768595711ff9f5daea0fcd718c4e963b8d2d02b652823285444000e2e96d2d`；原packet payload语义仍只观察。
+
+同版[raw资产独立入口](reports/2026-11-01-opening-combat0135.md)另以451文件／67,281,330B、9tiles直接生产world/opening并推进120帧／1select；87源前后相同，无production closure逃逸，原memory／预解析world／WASM读取均false。三个world产物SHA与已验证query产物一致，最终level2／XP6／gold7。此收据为独立入口层，不增加原件差分case或完整880计数。
+
+## 固定0.135.1动态研究的迁移与验收
 
 | 范围 | 当前证据 | 下一步 |
 |---|---|---|

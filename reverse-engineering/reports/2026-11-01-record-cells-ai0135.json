@@ -1,0 +1,119 @@
+{
+  "status": "pass fixed135 None-aware AI/corpse migration within existing ordinary flat domain",
+  "receipt": "evidence/record-cells-ai0135-20261101T143057.757089Z/comparison.json",
+  "receipt_sha256": "73409f0a763f9ac8ecc85bce399de33234fa53bcd638020f19fdae80a62a3a37",
+  "source_files": 17,
+  "ai_cases": 416,
+  "ai_stages": 1013,
+  "corpse_cases": 35,
+  "corpse_stages": 35,
+  "mismatches": 0,
+  "none_pure_model_checks": 16,
+  "unknown_rows_sent_to_original": false,
+  "versions_accepted": [
+    "0.135.1/0898d5e3"
+  ],
+  "batches": [
+    {
+      "kind": "ai",
+      "directory": "evidence/full0135-oracle-20261101T143058.066403Z",
+      "cases": 416,
+      "steps": 1013,
+      "mismatches": 0,
+      "process": {
+        "command": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+          "--max-old-space-size=512",
+          "--wasm-max-mem-pages=512",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_ai135_oracle.mjs",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T143058.066403Z",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T143058.066403Z/record-cells-ai135-fixtures.jsonl"
+        ],
+        "pid": 46746,
+        "pgid": 46746,
+        "exit_code": 0,
+        "deadline_seconds": 60,
+        "seconds": 0.688,
+        "process_group_absent_after": true
+      },
+      "runtime": {
+        "case_count": 416,
+        "steps": 1013,
+        "original_function": 921,
+        "original_internal_callees_unchanged": true,
+        "original_allocator": 91941,
+        "fresh_instances": 18,
+        "fresh_every": 24,
+        "max_memory_bytes": 20643840,
+        "actual_host_calls": 0,
+        "denied_function_imports": 878,
+        "memory_page_cap": 512,
+        "node": "v22.23.4",
+        "application_start_called": false,
+        "full_game_started": false,
+        "user_saves_accessed": false,
+        "network_used": false
+      },
+      "artifacts": {
+        "record-cells-ai135-fixtures.jsonl": "2670e389f721198bce82fd2f0dd7348987c6b0971f644bcf41076b44ecce3c0c",
+        "record-cells-original-results.jsonl": "6a0fd6593b08d7ea1fd6de7d9563fbc95115405c2f5d215a740791b3731b4159",
+        "record-cells-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "ai135-runtime.json": "fe6aa85cb39db57f317f3b00d2ed68d59f8ff05ed3f02fd76c15afccc619357b",
+        "manifest.json": "6a7239074e7e82e7b34a9a46ea5ddd3f994a096421dff0244a64a27b563551a8",
+        "research135-exports.wasm": "c9d7cd427d9de4786cdb76786ee59015748c1a837ab477c97b89a6bf6e002a75"
+      }
+    },
+    {
+      "kind": "corpse",
+      "directory": "evidence/full0135-oracle-20261101T143103.688484Z",
+      "cases": 35,
+      "steps": 35,
+      "mismatches": 0,
+      "process": {
+        "command": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+          "--max-old-space-size=512",
+          "--wasm-max-mem-pages=512",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_player_update135_oracle.mjs",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T143103.688484Z",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T143103.688484Z/record-cells-corpse135-fixtures.json"
+        ],
+        "pid": 46815,
+        "pgid": 46815,
+        "exit_code": 0,
+        "deadline_seconds": 60,
+        "seconds": 0.292,
+        "process_group_absent_after": true
+      },
+      "runtime": {
+        "cases": 35,
+        "full2088_calls": 0,
+        "full921_calls": 35,
+        "unchanged_callees": true,
+        "original_allocator": 91941,
+        "fresh_instances": 3,
+        "max_memory_bytes": 14680064,
+        "host_calls": 0,
+        "denied_imports": 878,
+        "application_start_called": false,
+        "full_game_started": false,
+        "user_saves_accessed": false,
+        "network_used": false
+      },
+      "artifacts": {
+        "record-cells-corpse135-fixtures.json": "35e824dc158249e7b80899ac36f2460c38ac134781cb566b44ed36beef9692c3",
+        "record-cells-original-results.jsonl": "584f0ba12f1474d47d944cd0294f60b17c34406e5b1ca030ab32687028ba6474",
+        "record-cells-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "player-update135-runtime.json": "ffd992952eaa764e7fa1501c2f4460e4cad3f7e1f5caaee2204c5773aa26d4bd",
+        "manifest.json": "15507bcad266a69b8a705ef8826b975760573e5d4d03edfbfa1c9a68128b2626",
+        "research135-exports.wasm": "f7688d8ea8ab0b965c14fe7f880bc0d788b5a78edbc04ae88d41595107bcf520"
+      }
+    }
+  ],
+  "limitations": [
+    "Unchanged0.135.1 flat ordinary melee and corpse domains; no0.136 acceptance.",
+    "None cases are pure-model conditional-read checks; only existing fully known hex cases enter921.",
+    "Original exports retain source global0; this batch does not dynamically instrument stack.",
+    "No headless, spawn, combat, unit adapter, cast or area code edited by this migration."
+  ]
+}
