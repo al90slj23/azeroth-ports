@@ -1,0 +1,80 @@
+{
+  "title": "固定0.135.1 incoming48 history独立只读复核",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "passed_scoped_independent_read_only_review",
+  "receipt": "evidence/full0135-oracle-20261101T092259.307993Z/incoming-history135-comparison.json",
+  "receipt_sha256": "378bd6c29ccaeb887ab6e25ec39c982e9ee25842e47591b76ac544c81e3c8b63",
+  "review_path": "evidence/incoming-history0135-independent-review-20261101T093042.886399Z/review.json",
+  "review_sha256": "62ed36f102d40876a84ab2f7c67bba2d5cbbaefecd1c2aaaba4de2aef709cf06",
+  "reviewer": "scripts/review_incoming_history135.py",
+  "reviewer_sha256": "9dad2569d7736257cd02c4fe12da4d4610579d4dcab7c65b61d4aa0434da92fd",
+  "reviewer_source_snapshot": "evidence/incoming-history0135-independent-review-20261101T093042.886399Z/reviewer-source.py",
+  "source_files": 12,
+  "core_closure": [
+    "reconstruction/core_spec/__init__.py",
+    "reconstruction/core_spec/binary32.py",
+    "reconstruction/core_spec/incoming134.py",
+    "reconstruction/core_spec/incoming135.py",
+    "reconstruction/core_spec/incoming_history135.py",
+    "reconstruction/core_spec/upgrade_values.py"
+  ],
+  "current_source_drift": {},
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original1073_body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+  "original1073_signature": "(i32,f32,i64,i32,i32,i32)->void",
+  "original_function_bodies_and_nonexport_sections_identical": true,
+  "expected_model_replayed_without_original": true,
+  "independent_byte_and_scalar_reconstruction": true,
+  "input_only_exact_eight_keys": true,
+  "original_process_received_expected": false,
+  "checks": {
+    "grow_nonwrapped": 74,
+    "appends": 915,
+    "independent_strict_backing_bytes": 5516958,
+    "translated_name_pointer_observations": 451544,
+    "translated_name_pointer_nonzero": 338658,
+    "independently_uninitialized_bytes": 2439658,
+    "independently_uninitialized_nonzero": 981581,
+    "static_pointer_checked_active_rows": 106263,
+    "rawG_bytes": 2395008,
+    "stages": 924,
+    "cases": 164,
+    "grow_move_prefix": 33,
+    "grow_tie": 10,
+    "strict_padding_bytes": 33030,
+    "first_old_heap_pointer_words_observed": 66,
+    "grow_move_suffix": 15,
+    "pruned_for_time": 209,
+    "pruned_for_count": 707,
+    "guard_stages": 9
+  },
+  "total_observed_history_backing_bytes": 8408160,
+  "pointer_scope": {
+    "source_pointer": 1,
+    "source_classification44": 4,
+    "fallback_icon_pointers": {
+      "0": 5414832,
+      "1": 5414849,
+      "2": 5414885
+    },
+    "translated_name_pointer": "Only this4B pointer is normalized in the independent byte reconstruction; every active UTF8 name and length is strict.19964 returns a real heap translation slice even for English equal to the lookup key.",
+    "static_name_literals_are_lookup_keys_not_return_address_assertions": true
+  },
+  "process_terminal_receipt_exit0": true,
+  "pid_missing_at_review": true,
+  "original_executed_by_reviewer": false,
+  "author_sources_modified_by_reviewer": false,
+  "new_original_cases_from_review": 0,
+  "reviewer_failed_assumption": {
+    "evidence_directory": "evidence/incoming-history0135-review-failed-20261101T092749.966196Z",
+    "reason": "Initial reviewer incorrectly equated translated name return address with the static English lookup key. The actual allocated name14782152 decoded correctly;19964/82070 explain it. Author source and receipt unchanged."
+  },
+  "limitations": [
+    "History and scalar component only; full1073 rawG/registry/keyed/proc semantics are not independently restored.",
+    "GUID0/no source unit and spellID0 English fallback domain; no realDBC metadata or world/headless integration.",
+    "Source1 and fallback icon pointers additionally compared exactly; translated name heap pointer is normalized but UTF8 contents/length are strict. Static name literals are input lookup keys, not necessarily returned slices.",
+    "Only new allocator-unwritten bytes remain unknown; existing backing and old padding are strict.",
+    "The original fixture history allocation address before a first grow is absent; that one old pointer word is observational in first rawG delta reconstruction."
+  ]
+}

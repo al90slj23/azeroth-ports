@@ -1,0 +1,102 @@
+{
+  "status": "passed_scoped_original_world_entry_observation_review",
+  "receipt": "evidence/entry-world0135-probe-20261101T092959.623703Z/entry-world135-probe-receipt.json",
+  "receipt_sha256": "530f079d322365691ce897120ac0014be0da416eb048861b4d42ab988160556c",
+  "reviewer_sha256": "5f770ee27b75c600127eda7005971d49e651203f4cfcf4dc78e1bfb6b96a86ec",
+  "author_sources_unchanged": true,
+  "original_executed_by_reviewer": false,
+  "browser_executed_by_reviewer": false,
+  "only_wasm_export_section_changed": true,
+  "official_glue_prefix_unchanged": true,
+  "exact_original_exports_added": [
+    "entry135_load_account",
+    "entry135_apply_unlocks",
+    "entry135_construct_world_game",
+    "entry135_begin_run"
+  ],
+  "native_storage_read_empty": true,
+  "storage_writes_observed": 0,
+  "import_calls": 3396,
+  "import_kinds": 16,
+  "resource_imports_allowed": 24,
+  "resource_imports_denied": 854,
+  "data_gets": 561,
+  "unique_mpq_files": 453,
+  "mpq_decoded_bytes": 83632785,
+  "independently_reread_all_mpq_files": true,
+  "original_asset_precedence_inferred": false,
+  "all_resource_responses200": true,
+  "asset_extensions": {
+    ".wdt": 1,
+    ".adt": 9,
+    ".m2": 31,
+    ".wmo": 410,
+    ".dbc": 2
+  },
+  "full_memory_captures": [
+    {
+      "file": "after_real_account2902.memory",
+      "bytes": 14614528,
+      "complete": true,
+      "sha256": "e960314a0f9348677452c228e46a4b2cce79060274f09b21e91254fa44f856a5",
+      "sha256_rechecked": true
+    },
+    {
+      "file": "after_real_unlocks6959.memory",
+      "bytes": 20578304,
+      "complete": true,
+      "sha256": "337de6c3333f8986e3304f12163c0b5e1746fff0b6488ea8fffc515220c528da",
+      "sha256_rechecked": true
+    },
+    {
+      "file": "after_real_world6730.memory",
+      "bytes": 117440512,
+      "complete": true,
+      "sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a",
+      "sha256_rechecked": true
+    },
+    {
+      "file": "after_real_begin1089.memory",
+      "bytes": 166395904,
+      "complete": true,
+      "sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+      "sha256_rechecked": true
+    }
+  ],
+  "same_original_world_preserved": true,
+  "no_flat_world_injected": true,
+  "actual_phase0_then1": true,
+  "memory_cap_bytes": 268435456,
+  "peak_memory_bytes": 166395904,
+  "owned_processes_absent": true,
+  "new_independent_gameplay_cases": 0,
+  "selected_profile_and_entropy_remain_research_inputs": true,
+  "limitations": [
+    "Original observation and provenance, not an independent world/entry model or full-game acceptance.",
+    "Explicit empty selected-profile and App inputs; menu assembly and all profile behavior are not recovered.",
+    "MPQ bytes verified against historical StormLib reference; latest135 complete-asset equivalence remains unproved.",
+    "No renderer, normal main-loop continuation, all-skill behavior, saves or multiplayer acceptance.",
+    "No implicit WASM start and explicit entry allowlist checked; no claim to an exhaustive dynamic indirect-call trace."
+  ],
+  "title": "固定0.135.1真实世界与开局原件观察独立复核",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "review_path": "evidence/entry-world0135-independent-review-20261101T093740.230091Z/review.json",
+  "review_sha256": "0675b4c87874e00e622a899af3c06b164a180cadb70a83f3d95815ee70628f8f",
+  "reviewer": "scripts/review_entry_world135_probe.py",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "observed_phase_and_counts": [
+    {
+      "phase": 0,
+      "npc_count": 0,
+      "pickup_count": 0,
+      "world_rc": 26204808
+    },
+    {
+      "phase": 1,
+      "npc_count": 4,
+      "pickup_count": 2,
+      "world_rc": 26204808
+    }
+  ]
+}

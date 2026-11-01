@@ -40,7 +40,7 @@
 - `core_spec/death_pickup135.py`：普通死亡续RNG→XP/coin→逆序混合奖励→逐级属性/候选，204组871阶段通过。原12组非空definitions失败证据不改，后由`proc_events135`在非致死context0域恢复并解释；不能把这项新验证转称致死proc通过。物理实体/包仍缺。
 - `core_spec/incoming135.py`、`ai135.py`：有效护甲/受伤2107例、普通124melee的原416组1013步保留。远程/Boss/真实地形/致死复活及未解析反击来源仍拒绝；长期角度扩展见`ai_motion135`。
 - `core_spec/owned_cast135.py`、`owned_prelude135.py`、`cast_events135.py`：1076职业近战→已学80B→G1256槽basic隔离fixture→延迟命中与逐有效hit自疗，639组5924阶段通过。旧basic只是测试标签，不能追溯称为真实racial；实际G1256身份由真实构造确认，真实racial及同状态致死/拾取/选卡另由下列模块验收。原916额外84B模型保留。
-- `core_spec/initial_state135.py`及data：完整1560空376B selected-profile构造，最终055136严格151组通过；9职业starter/8种族racial/12区域、两个完整80B、HP/属性/RNG、预算/timer/flags和u64身份均验。G1256是racial，learned向量首记录才是class starter；初始CD均为0.5，不用Inf或fireball替换真实racial。返回phase0，上游账号/profile、App初始熵及完整进入仍未知，见[独审](../reports/2026-11-01-initial0135-independent-review.md)。
+- `core_spec/initial_state135.py`及data：完整1560空376B selected-profile构造，最终055136严格151组通过；9职业starter/8种族racial/12区域、两个完整80B、HP/属性/RNG、预算/timer/flags和u64身份均验。G1256是racial，learned向量首记录才是class starter；初始CD均为0.5，不用Inf或fireball替换真实racial。返回phase0，上游profile、App初始熵及独立进入仍未知；后继原件真实账号/world/1089观察另列，见[独审](../reports/2026-11-01-initial0135-independent-review.md)。
 - `core_spec/ordinary_placement135.py`：pre-hit424B插值死亡XYZ，XP与coin分别做地图clamp/高度，完整1417/914的924组0差异，含移动目标及12地图。必须显式空terrain/grid/navigation，不能读取致死后duration0来猜原位置，见[独审](../reports/2026-11-01-ordinary-placement0135-independent-review.md)。
 - `core_spec/racial_cast135.py`：真实G1256对应六个kind9 racial的完整922分支，720组（693成功/27游戏guard拒绝）0声明差异；live32、属性/盾/HP/三份attempt列表/真实80B严格比较。仅新7/8/9的+16未写词未知；war_stomp/escape_artist和1202显示/包仍缺，见[独审](../reports/2026-11-01-racial-cast0135-independent-review.md)。
 - `core_spec/proc_events135.py`：kind27/zero16B gate，完整984/8157及非致死914共855组1004阶段，恢复并解释旧12组差异。要求context774显式整数0、nonfatal显式True；其它gate/producer、致死loot后的事件顺序与非空source的1076集成仍拒绝，见[报告](../reports/2026-11-01-proc-events0135.md)。
@@ -51,18 +51,20 @@
 - `core_spec/area_effects135.py`：七kind3持续AoE，693/5495组件保留；当前14阶段接3757及idle915，完整backing与共享counter/RNG连续。全3757/915其余活跃域仍缺。
 - `core_spec/frame_systems135.py` / `headless_tail135.py`：五阶段573/944与14尾实际守卫；活跃2602精确partial不能当完成状态继续。
 - `core_spec/terminal_transition135.py`：416组/832真49037+416构造，315组phase5胜利、完整停步/232/victory通知；phase4死亡与完整保存仍缺。
-- `resource_spec/terrain135.py`：107完整ADT/18413调用，145XYZ/洞及四层高度采样，真实缓存/导航/模型碰撞/世界构造仍缺。
-- `core_spec/effect_geometry135.py`：三真实Boss raw9矩形，390/2883分277正常113资源拒绝前缀，4Bscratch显式未知；真实browser3组完整返回另验，post4546 history/容器未独立还原，pending API不倒改，[browser独审](../reports/2026-11-01-browser-resources0135-independent-review.md)另验原件正常返回与known投影。
+- `resource_spec/terrain135.py`：107完整ADT/18413调用，145XYZ/洞及四层高度采样，独立真实缓存/导航/模型碰撞/世界构造仍缺；原件world生产已在单例观察中走通。
+- `core_spec/effect_geometry135.py`：三真实Boss raw9矩形，390/2883分277正常113资源拒绝前缀，4Bscratch显式未知；真实browser3组完整返回另验，后继history组件另列、完整容器/proc仍缺，旧pending API不倒改，[browser独审](../reports/2026-11-01-browser-resources0135-independent-review.md)另验原件正常返回与known投影。
 - `core_spec/effect_system135.py`：时钟2364、延迟56B的35/36/37及255 pop后trap，500case/2121stage0diff（383正常117预期trap），完整56backing/424B严格。普通910、非空120和真实几何显式待续/拒绝；[组件报告](../reports/2026-11-01-effect-system0135.md)不等于完整915。主切片只接真实观察为空的域。
-- `resource_spec/entry_resources135.py`：[进场资源静态契约](../reports/2026-11-01-entry-resources0135-static.md)，39函数、116资产/170383346B和12区首层路径核对；[静态独审](../reports/2026-11-01-entry-resources0135-static-review.md)通过，未执行实际VFS/world/1089，非新增玩法用例。
+- `resource_spec/entry_resources135.py`：[进场资源静态契约](../reports/2026-11-01-entry-resources0135-static.md)，39函数、116资产/170383346B和12区首层路径核对；[静态独审](../reports/2026-11-01-entry-resources0135-static-review.md)通过；该静态批不执行实际VFS/world/1089，不新增玩法用例。后继真实入口观察不等于本模块已实现world。
 - `resource_spec/mpq.py`、`dbc.py`：不依赖原游戏或StormLib的MPQ读取与有界WDBC容器实现。基础包29602命名块/1636167198B对照0差异、154份DBC可读取；90例合成格式对照单列。基础资源不自动等于新版全部资产，尚无M2/BLP解释渲染。
+- `core_spec/incoming_history135.py`：[164组/924次完整1073](../reports/2026-11-01-incoming-history0135.md)及[独审](../reports/2026-11-01-incoming-history0135-independent-review.md)验证spell0 fallback、48B环形裁剪/扩容、UTF8切片与旧padding；[真实DBC9组/37调用](../reports/2026-11-01-browser-history0135.md)及[独审](../reports/2026-11-01-browser-history0135-independent-review.md)补冷加载name/icon全路径与同组件组合。无单位/sourceGUID0、空proc、非致死或minimum-one，未接headless；来源容器/keyed/proc完整尾部仍缺。
+- [真实world/entry探针](../reports/2026-11-01-entry-world0135-probe.md)及[独审](../reports/2026-11-01-entry-world0135-probe-independent-review.md)实际运行原2902→6959→6730→1089，phase0→1、4NPC/2kind2、453MPQ/561GET全部200。同world Rc/4整memory保留，但这是原件观察，尚无独立world/entry实现，新增独立模型case0。
 - 原件函数对照器在 `../scripts/check_*_spec.py` 和 `../scripts/check_enemy_scaling.py`；生成的WASM、输入及结果仅写入被忽略的 `../evidence/`。
 
-研究切片必须显式提供phase1解析、128个初始全零424B单位槽和128个初始全零88B范围槽；之后保留清理后的尾槽，不重新清空复用。旧纯Node的1089/2328仍在SELF/data被拒绝；新browser仅已走通真实DBC解析和三次命中，完整world/进场及4NPC/2kind2实际生产仍缺；手工phase1不代表这条链已完成。不宣称覆盖非零死亡时间U4复用；当前4次area过期均末槽删除，复用槽19B未写区全0，非平凡压缩和非零area未写复用也没有本批动态覆盖。真实分配器padding未证明恒定。
+研究切片必须显式提供phase1解析、128个初始全零424B单位槽和128个初始全零88B范围槽；之后保留清理后的尾槽，不重新清空复用。旧纯Node批的1089/2328在SELF/data被拒绝；新browser原件真实world/1089已同状态完成4NPC/2kind2生产，独立world/entry及与本切片整合仍缺，不能据此删除显式phase1边界。不宣称覆盖非零死亡时间U4复用；当前4次area过期均末槽删除，复用槽19B未写区全0，非平凡压缩和非零area未写复用也没有本批动态覆盖。真实分配器padding未证明恒定。
 
 对象键未知单列：headless只严格比较numeric player keys22/28/34/716/717/1109/1176，其余完整原件keyed状态另存为unmodeled，不能假定都是cosmetic。1202 aura/外观键、1453治疗/account输出、完整物理包和source获得链仍缺。完整880/915及3757其余分支调度、全部技能/AI、真实地形资源、终局/存档/UI/联网也没有整局验收。
 
-当前14尾独立切片已接916/975/38007/2602/2573/2376/49037的实际限定守卫，31个975 inactive词及5个pointer仅观察，活跃域仍拒绝。 975只在实际执行该入口时检查execution11；终止选卡快照可含11，下一帧停止，不表示支持其执行。非空56、390矩形组件与browser资源另列；前段/party/真实进场/完整880没有验收。旧071318/072329保留历史身份。
+当前14尾独立切片已接916/975/38007/2602/2573/2376/49037的实际限定守卫，31个975 inactive词及5个pointer仅观察，活跃域仍拒绝。 975只在实际执行该入口时检查execution11；终止选卡快照可含11，下一帧停止，不表示支持其执行。非空56、390矩形组件与browser资源另列；前段/party/独立真实进场/完整880没有验收；原件单例进场观察另列。旧071318/072329保留历史身份。
 
 当前[独立复制运行](../evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json)61文件=60core+CLI，不含原件/WAT/SQLite/资源/Node/WABT；默认0帧停真实进场边界，研究输入seed1/6各400、seed3到257。是模型自跑，不新增原件差分。
 
@@ -125,7 +127,7 @@ python3 reverse-engineering/scripts/check_rng_spec.py
 
 升级数值、敌人成长、半径等命令执行原件纯数值函数的隔离复制体，不启动完整游戏。这些复制体没有host imports、start、网络、时钟、图形或存档接口。升级模块保留函数索引，仅导出计算函数和固定内存，其他函数为trap；敌人成长模块只有两条无引用函数；半径模块保留单一helper和一页scratch内存。复制体均重解析并核对原体哈希，WABT验证后才交给Node。
 
-固定0.135.1主Node使用`build_full135_oracle.py`/`full135_host.mjs`：52角色body/签名guard、仅加export、保留callee/malloc91941、878全拒绝；单块allocate4MiB、总32MiB/512pages。[52角色证明](../evidence/builder135-role52-review-20261101T083845.125766Z/review.json)旧9-role字节一致，0新增runtimecase。另[真实browser资源实验](../reports/2026-11-01-browser-resources0135.md)17资源绑定允许、861拒绝、128MiB；不等同旧Node宿主，均未调用appstart。
+固定0.135.1主Node使用`build_full135_oracle.py`/`full135_host.mjs`：52角色body/签名guard、仅加export、保留callee/malloc91941、878全拒绝；单块allocate4MiB、总32MiB/512pages。[52角色证明](../evidence/builder135-role52-review-20261101T083845.125766Z/review.json)旧9-role字节一致，0新增runtimecase。另[真实browser资源](../reports/2026-11-01-browser-resources0135.md)与[history组合](../reports/2026-11-01-browser-history0135.md)17资源绑定允许、861拒绝、128MiB；[world/entry探针](../reports/2026-11-01-entry-world0135-probe.md)另24允许、854拒绝、256MiB。各宿主独立声明，均未调用appstart。
 
 固定0.134.0完整选卡与扣血工具另用`build_full134_oracle.py`：只修改export节，保留所有原内部指令和callee。`full134_host.mjs`复核固定原件、原导出前缀及全部非export节；878宿主导入均拒绝，应用入口不调用。它们确实实例化完整官方模块，但只以原分配器构造的合成状态调用指定内部函数。选卡779例与扣血454例均0差异，宿主实际调用0次；前者生产后处理仍pending，后者未独立实现完整死亡loot/RNG。详见[新版选卡](../reports/2026-11-01-selection0134-spec.md)与[新版扣血](../reports/2026-11-01-combat0134-spec.md)。
 

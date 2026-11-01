@@ -4,7 +4,7 @@
 
 ## 固定0.135.1已定位与已验范围
 
-[完整profile](reports/2026-11-01-wasm0135-profile.md)有175317个defined函数；当前52个研究角色绑定本版body/签名，含area_tick3757和effect_tick915。builder仅增加export，原callee、malloc91941与878拒绝导入保留，不调用应用start。白名单数量不等于模块恢复百分比。
+[完整profile](reports/2026-11-01-wasm0135-profile.md)有175317个defined函数；当前52个研究角色绑定本版body/签名，含area_tick3757和effect_tick915。主Node builder仅增加export，原callee、malloc91941与878拒绝导入保留；浏览器资源/进场另有各自有限导入政策，均不调用应用start。白名单数量不等于模块恢复百分比。
 
 [真实1560构造151组](reports/2026-11-01-initial0135-independent-review.md)输出空profile的starter、racial、属性/HP/RNG与phase0。G1256是racial80；class starter是learned80向量首记录。旧[1076/1754的639组5924阶段](reports/2026-11-01-owned-cast0135.md)使用G1256槽中的basic隔离fixture，不追溯称为真实racial；真实racial六分支另由[完整922的720组](reports/2026-11-01-racial-cast0135.md)验证。
 
@@ -34,9 +34,20 @@ flowchart LR
 
 唯一HP/RNG/counter持续传递，逐hit自疗后接死亡奖励RNG，pre-hit424B决定掉落位置。当前[独审](reports/2026-11-01-headless-tail0135-independent-review.md)严格复原1226927104B单位与254645248B范围backing；52次单位复用保留416非零未写字节。area19B复用全0、4次expiry均末槽；不外推非零area padding或非平凡压缩。7numeric keys之外的keyed状态另存未知。
 
-真实1089/2328尚缺完整world/4NPC/2kind2开局生产。[资源静态规格](reports/2026-11-01-entry-resources0135-static.md)、[实际ADT高度组件](reports/2026-11-01-terrain0135.md)与[真实DBC浏览器实验](reports/2026-11-01-browser-resources0135.md)分别有证据，不能合称完整进场。phase1与128槽仍为显式研究输入。
+### 已走通的原件真实进场观察
 
-当前独立预测idle915与新增尾阶段的真实守卫；31个975 inactive词和5个堆指针仅另存观察，不能预测零。真实14stage observer另有3038帧/42550快照/18选择/42558调用，6预算/2实际phase4终点，是原件观测而非模型验收。14个真实尾阶段已在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、真实1089世界与4NPC/2kind2、未知技能/AI/存档/UI/联机及完整独立一局仍未验收。
+```mermaid
+flowchart LR
+    Storage[新origin真实空Storage] --> Account[原2902账号与6959解锁]
+    Account --> World[原6730读取VFS和真实世界]
+    World --> Construct[内部1560返回phase0]
+    Construct --> Entry[原1089完整开局]
+    Entry --> Output[同world phase1与4NPC和2kind2]
+```
+
+[真实进场探针](reports/2026-11-01-entry-world0135-probe.md)及[独审](reports/2026-11-01-entry-world0135-probe-independent-review.md)核实1个显式空selected-profile、453MPQ文件/561GET全部200、4份完整memory/319,029,248B；Rc由原6730生成，非平地、未写Once或跳过开局对象。这是完整原件入口的受控观察，新增独立模型case0；菜单/profile/App熵、独立world/VFS/碰撞栅格/1089生产及与上方主切片的整合仍未完成。主切片的phase1与初始128槽继续保持原研究输入；未运行完整880/移动2328。
+
+当前独立预测idle915与新增尾阶段的真实守卫；31个975 inactive词和5个堆指针仅另存观察，不能预测零。真实14stage observer另有3038帧/42550快照/18选择/42558调用，6预算/2实际phase4终点，是原件观测而非模型验收。14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、独立world/1089及4NPC/2kind2生产、未知技能/AI/存档/UI/联机与完整独立一局仍未验收。
 
 ### 组件验证与剩余分支
 
@@ -49,10 +60,11 @@ flowchart LR
 | 玩家更新与尸体 | [285组444阶段](reports/2026-11-01-player-update0135.md) | 该批以真实perception但CD=Inf、空learned隔离2088；不冒称真实开局调度。periodic/11426和物理1453/1202仍缺。 |
 | 非空definition事件 | [855组1004阶段](reports/2026-11-01-proc-events0135.md)恢复kind27/zero16B gate，解释旧12组差异 | 显式非致死/context0；致死loot后事件顺序及其他gate仍拒绝。旧失败证据不改，不把非空源伪装空源接headless。 |
 | 持续范围技能 | [693组5495阶段](reports/2026-11-01-area-effects0135.md)与[组件独审](reports/2026-11-01-area-effects0135-independent-review.md) | 当前082927已接3757和idle915；不代表全3757、全915或所有AoE。 |
+| 受伤48B history | [fallback164组/924调用](reports/2026-11-01-incoming-history0135.md)与[独审](reports/2026-11-01-incoming-history0135-independent-review.md)；[真实DBC9组/37调用](reports/2026-11-01-browser-history0135.md)冷加载姓名/完整图标路径与环形队列0声明差异，[组合独审通过](reports/2026-11-01-browser-history0135-independent-review.md) | 限sourceGUID0/无单位/空proc，非致死或minimum-one；完整registry/keyed/proc及来源匹配未恢复，未接headless。 |
 | 可选接口回归 | [默认639与5068重新执行](reports/2026-11-01-default-extension0135-regression.md) | 输入含expected及结果与原批逐字节一致，不重复计新增覆盖。 |
 | 基础资源 | [29602命名MPQ块/1636167198B与154份DBC](reports/2026-11-01-resource-index-base.md) | 基础RAR含旧0.102.3程序，不自动构成新版完整资产或M2/BLP渲染管线。 |
 
-[五阶段组件573/944](reports/2026-11-01-frame-systems0135.md)、[真实胜利终态416/832及416构造](reports/2026-11-01-terminal-transition0135.md)、[107完整ADT/18413调用](reports/2026-11-01-terrain0135.md)、[真实Boss矩形390](reports/2026-11-01-effect-geometry0135.md)分别验收，不与主切片相加。[真实浏览器资源链](reports/2026-11-01-browser-resources0135.md)另以原生SELF/XHR完成3组phase1命中/15已恢复投影；17资源绑定允许、861拒绝、128MiB，区别于纯Node878全拒绝/32MiB。资源后的history/来源容器/keyed输出仍未独立恢复。 [浏览器独审](reports/2026-11-01-browser-resources0135-independent-review.md)通过，未重跑原件。 14个真实尾阶段已在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、真实1089世界与4NPC/2kind2、未知技能/AI/存档/UI/联机及完整独立一局仍未验收。
+[五阶段组件573/944](reports/2026-11-01-frame-systems0135.md)、[真实胜利终态416/832及416构造](reports/2026-11-01-terminal-transition0135.md)、[107完整ADT/18413调用](reports/2026-11-01-terrain0135.md)、[真实Boss矩形390](reports/2026-11-01-effect-geometry0135.md)分别验收，不与主切片相加。[真实浏览器资源链](reports/2026-11-01-browser-resources0135.md)另以原生SELF/XHR完成3组phase1命中/15已恢复投影；17资源绑定允许、861拒绝、128MiB，区别于纯Node878全拒绝/32MiB。后继[history164/924组件](reports/2026-11-01-incoming-history0135.md)及[真实DBC9/37组合](reports/2026-11-01-browser-history0135.md)扩展了声明域；来源容器/keyed/proc完整尾部仍未知。 [浏览器独审](reports/2026-11-01-browser-resources0135-independent-review.md)通过，未重跑原件。Node878拒绝/32MiB、history资源browser17允许861拒绝/128MiB、world browser24允许854拒绝/256MiB分别记录，组件和观察结果不扩大上方主切片。
 
 ## 固定0.134.0已重新定位的技能主干
 

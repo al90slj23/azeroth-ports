@@ -52,11 +52,13 @@
       "reports/2026-11-01-terminal-transition0135.json",
       "reports/2026-11-01-terrain0135.json",
       "reports/2026-11-01-effect-geometry0135.json",
-      "reports/2026-11-01-headless-tail0135.json"
+      "reports/2026-11-01-headless-tail0135.json",
+      "reports/2026-11-01-incoming-history0135.json",
+      "reports/2026-11-01-browser-history0135.json"
     ],
     "approved_research_role_count": 52,
     "catalogue_report": "reports/2026-11-01-catalogue0135.json",
-    "scope_note": "Current08292767source/60core/16role8seed1614frame22607stage11select22615calls freshindependentmodeldiff0 includes14actualsingle-state-tailstagesunderexplicitidle/guarddomains. Originalobserver3038framesnotindependentmodel. Browserresource3normalhitknownprojectionsseparate17allow/861deny128MiB;postDBChistory/containersstillunknown. Installationsunchanged.",
+    "scope_note": "Fixed082927 independent14-tail:67source/60core/16role,8seed/1614frame/22607stage/11select/22615calls0diff unchanged. Incoming history fallback164/924 andrealSpell9/37 separately validated components. Actual6730/1089 observation now completes phase0to1,4NPC/2kind2 usingreal453MPQ files,0newindependentmodelcases. Independentworld/entry,mainintegration,sourcecontainers/keyed/proc/fullgame remainincomplete. Installations unchanged.",
     "same_state_checkpoint": {
       "report": "reports/2026-11-01-headless-tail0135.json",
       "receipt": "evidence/full0135-oracle-20261101T082927.606617Z/headless135-comparison.json",
@@ -152,6 +154,62 @@
       "independent_review": "reports/2026-11-01-browser-resources0135-independent-review.json",
       "independent_review_receipt": "evidence/browser-resources0135-independent-review-20261101T084320.657099Z/review.json",
       "independent_review_sha256": "810135b220315dd30a04ba54d72cba71198306025da58d47f8ee6a29e049fcc8"
+    },
+    "incoming_history_components": [
+      {
+        "report": "reports/2026-11-01-incoming-history0135.json",
+        "receipt": "evidence/full0135-oracle-20261101T092259.307993Z/incoming-history135-comparison.json",
+        "receipt_sha256": "378bd6c29ccaeb887ab6e25ec39c982e9ee25842e47591b76ac544c81e3c8b63",
+        "cases": 164,
+        "original_calls": 924,
+        "differences": 0,
+        "headless_integrated": false
+      },
+      {
+        "report": "reports/2026-11-01-browser-history0135.json",
+        "receipt": "evidence/full0135-oracle-20261101T093136.935919Z/browser-history135-comparison.json",
+        "receipt_sha256": "3ce007255c7063bd8955fe5d73a3f4e545ba818ecde999646859506403a1a638",
+        "cases": 9,
+        "original_calls": 37,
+        "differences": 0,
+        "headless_integrated": false
+      }
+    ],
+    "entry_world_observational_probe": {
+      "status": "original_true_world_and_entry_observed_not_independent_model",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "report": "reports/2026-11-01-entry-world0135-probe.json",
+      "receipt": "evidence/entry-world0135-probe-20261101T092959.623703Z/entry-world135-probe-receipt.json",
+      "receipt_sha256": "530f079d322365691ce897120ac0014be0da416eb048861b4d42ab988160556c",
+      "independent_review": "reports/2026-11-01-entry-world0135-probe-independent-review.json",
+      "review_receipt": "evidence/entry-world0135-independent-review-20261101T093740.230091Z/review.json",
+      "review_sha256": "0675b4c87874e00e622a899af3c06b164a180cadb70a83f3d95815ee70628f8f",
+      "original_entries": [
+        2902,
+        6959,
+        6730,
+        1089
+      ],
+      "observed_cases": 1,
+      "new_independent_gameplay_cases": 0,
+      "phase_before": 0,
+      "phase_after": 1,
+      "npc_count_after": 4,
+      "kind2_pickup_count_after": 2,
+      "data_gets": 561,
+      "unique_mpq_files": 453,
+      "decoded_mpq_bytes": 83632785,
+      "full_memory_capture_bytes": 319029248,
+      "host_allowed_imports": 24,
+      "host_denied_imports": 854,
+      "memory_cap_bytes": 268435456,
+      "max_memory_bytes": 166395904,
+      "source_files": 9,
+      "full_game_restored": false,
+      "selected_profile_menu_producer_complete": false,
+      "headless_integrated": false,
+      "latest135_complete_asset_equivalence": false
     }
   },
   "web_core": {

@@ -471,13 +471,13 @@
     }
   ],
   "full_game_remaining": [
-    "upstreamaccount/profileandtrue1089/2328worldentry+4NPC/2kind2;realDBCbrowserparsealoneisnotwholeentry",
+    "independent account/profile/world/1089 opening producers and2328 integration;original6730to1089 observation completed1case butisnotanindependententrymodel",
     "full880front/party/orchestrationandactive916/975execution11/2602/2573/2376;14guardedtailentriesarenotcomplete880",
     "active56/120/ordinary910headlesscontinuation;other915families;geometry390277normal113hostprefixfrozen",
     "remainingtimedgeneration/rangedBossPetAI/collision/navigation/cacheproduction",
     "unsupportedselectedskillsretainedandstoppedbeforeunimplementedcast",
     "nonfatalcontext0kind27separate;fatalpostlootprocs/retaliation/deathrevivalstillunknown",
-    "postDBChistory48/sourcecontainers/keyedHPfullproducersandwiremessages",
+    "matching-source history48,healing1848,registry/keyedHP producers,proc/death andwire;fallback164 and realSpell9 components passed separately",
     "latestassetcompleteness/M2BLP/audioandworldrenderer",
     "saves/terminalrewards/phase4deathrecap/otherlocalizations",
     "UI/input/allmultiplayer/crossplatformdelivery",
@@ -1602,6 +1602,48 @@
       "scope": "threegenuineBossraw9/type0/shape2;full120except4Bcopiedscratch;normalphase1hithaltsatrealDBC;pendingAPIfrozen",
       "validated_version": "0.135.1",
       "validated_web_build": "0898d5e3"
+    },
+    {
+      "module": "core_spec.incoming_history135",
+      "api": [
+        "from_raw_storage",
+        "append_incoming_history",
+        "projection"
+      ],
+      "status": "scoped_history_ring_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 164,
+      "stages": 924,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-incoming-history0135.json",
+      "receipt": "../evidence/full0135-oracle-20261101T092259.307993Z/incoming-history135-comparison.json",
+      "receipt_sha256": "378bd6c29ccaeb887ab6e25ec39c982e9ee25842e47591b76ac544c81e3c8b63",
+      "independent_review": "../reports/2026-11-01-incoming-history0135-independent-review.json",
+      "review_receipt": "../evidence/incoming-history0135-independent-review-20261101T093042.886399Z/review.json",
+      "review_sha256": "62ed36f102d40876a84ab2f7c67bba2d5cbbaefecd1c2aaaba4de2aef709cf06",
+      "domain": "SourceGUID0/no units/spellID0/English fallback; complete1073 scalar and48B ring projections;400/10s pruning,wrap/grow,padding,shield/minimum-one;not full1073.",
+      "headless_integrated": false
+    },
+    {
+      "module": "core_spec.incoming_history135",
+      "status": "real_spell_resource_history_ring_full_original_differential_passed",
+      "validated_version": "0.135.1",
+      "validated_web_build": "0898d5e3",
+      "cases": 9,
+      "stages": 37,
+      "mismatches": 0,
+      "report": "../reports/2026-11-01-browser-history0135.json",
+      "receipt": "../evidence/full0135-oracle-20261101T093136.935919Z/browser-history135-comparison.json",
+      "receipt_sha256": "3ce007255c7063bd8955fe5d73a3f4e545ba818ecde999646859506403a1a638",
+      "independent_review": "../reports/2026-11-01-browser-history0135-independent-review.json",
+      "review_receipt": "../evidence/browser-history0135-independent-review-20261101T093816.554900Z/review.json",
+      "review_sha256": "493a8735aa88bd1ccb79753caab064629c023e14e4785f373cbabcb9ed4cfe8b",
+      "domain": "3 real nonzero Spell IDs/actual DBC names and full icon paths;9 coldOnce0to3 instances;48B ring+scalar;no matching source/proc/death or full1073.",
+      "host_allowed_imports": 17,
+      "host_denied_imports": 861,
+      "memory_cap_bytes": 134217728,
+      "headless_integrated": false
     }
   ],
   "resource_verified_domains": [
@@ -1797,7 +1839,8 @@
     "independent_review_sha256": "4bb0c763f182c0b34a524a7582fe73d2ad36864ba9bc20cf946753d52aabe5cd",
     "URL_contract_checks": 4,
     "rejected_unknown_inputs": 10,
-    "static_review_passed": true
+    "static_review_passed": true,
+    "followup_original_observation": "../reports/2026-11-01-entry-world0135-probe.json"
   },
   "browser_resource_embedding": {
     "report": "../reports/2026-11-01-browser-resources0135.json",
@@ -1859,5 +1902,41 @@
     "observed_execution11_snapshots": 2521,
     "execution11_model_support_claimed": false
   },
-  "latest_verified_domains_scope": "Fixed135 component domains/current08292714-tail independentprefix/observationalfulltail/browserresourceembedding remain separate; no case counts summed or historicalscope retroactivelyexpanded."
+  "latest_verified_domains_scope": "Fixed135 component domains/current08292714-tail independentprefix/observationalfulltail/browserresourceembedding remain separate; no case counts summed or historicalscope retroactivelyexpanded. History164/924Node and9/37realbrowser are component projections,not extra main-slice frames;actual6730/1089 observation is0independentmodelcases.",
+  "entry_world_observational_probe": {
+    "status": "original_true_world_and_entry_observed_not_independent_model",
+    "validated_version": "0.135.1",
+    "validated_web_build": "0898d5e3",
+    "report": "../reports/2026-11-01-entry-world0135-probe.json",
+    "receipt": "../evidence/entry-world0135-probe-20261101T092959.623703Z/entry-world135-probe-receipt.json",
+    "receipt_sha256": "530f079d322365691ce897120ac0014be0da416eb048861b4d42ab988160556c",
+    "independent_review": "../reports/2026-11-01-entry-world0135-probe-independent-review.json",
+    "review_receipt": "../evidence/entry-world0135-independent-review-20261101T093740.230091Z/review.json",
+    "review_sha256": "0675b4c87874e00e622a899af3c06b164a180cadb70a83f3d95815ee70628f8f",
+    "original_entries": [
+      2902,
+      6959,
+      6730,
+      1089
+    ],
+    "observed_cases": 1,
+    "new_independent_gameplay_cases": 0,
+    "phase_before": 0,
+    "phase_after": 1,
+    "npc_count_after": 4,
+    "kind2_pickup_count_after": 2,
+    "data_gets": 561,
+    "unique_mpq_files": 453,
+    "decoded_mpq_bytes": 83632785,
+    "full_memory_capture_bytes": 319029248,
+    "host_allowed_imports": 24,
+    "host_denied_imports": 854,
+    "memory_cap_bytes": 268435456,
+    "max_memory_bytes": 166395904,
+    "source_files": 9,
+    "full_game_restored": false,
+    "selected_profile_menu_producer_complete": false,
+    "headless_integrated": false,
+    "latest135_complete_asset_equivalence": false
+  }
 }

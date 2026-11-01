@@ -10,8 +10,8 @@
 |---|---|---|
 | 静态profile | [完整WABT/WAT/SQLite](reports/2026-11-01-wasm0135-profile.md)，175317个defined函数/824549条直接调用，完整函数范围和data payload读回通过 | 结构覆盖不代表全部逻辑已恢复；间接调用和运行时顺序需单独验收。 |
 | 函数与布局 | [14个既有角色及3个新增入口](reports/2026-11-01-migration0135.md)有本版body/签名guard；malloc91941，等级/HP/派生区重排，G1572为护甲上限 | 静态映射不直接计作原件运行验证；有效护甲27375/玩家受伤1073和AI921已在下行按限定域另验。 |
-| 受控原件入口 | 主Node export-only、878全拒绝、总32MiB、原callee保留，单块allocate4MiB；[52角色证明](evidence/builder135-role52-review-20261101T083845.125766Z/review.json)旧9-role模块字节一致 | 浏览器真实资源宿主另17允许/861拒绝、128MiB；52白名单和0新增静态build case不等于行为覆盖。 |
-| 真实空profile构造 | [最终055136的151组与独立复核](reports/2026-11-01-initial0135-independent-review.md)：完整1560输出的starter80、racial80、属性/HP/RNG、预算/计时器/flags及u64身份0差异 | 输入为显式空376B selected-profile，返回真实phase0；上游账号/角色profile、初始App熵、非空装备天赋和真实phase进入未闭合。G1256是racial，class starter在learned80向量中。 |
+| 受控原件入口 | 主Node export-only、878全拒绝、总32MiB、原callee保留，单块allocate4MiB；[52角色证明](evidence/builder135-role52-review-20261101T083845.125766Z/review.json)旧9-role模块字节一致 | history/资源browser17允许/861拒绝、128MiB；world browser另24允许/854拒绝、256MiB。52白名单和0新增静态build case不等于行为覆盖。 |
+| 真实空profile构造 | [最终055136的151组与独立复核](reports/2026-11-01-initial0135-independent-review.md)：完整1560输出的starter80、racial80、属性/HP/RNG、预算/计时器/flags及u64身份0差异 | 输入为显式空376B selected-profile，返回真实phase0；上游角色profile、初始App熵、非空装备天赋和独立phase进入未闭合；真实账号/world/1089的后继观察另列。G1256是racial，class starter在learned80向量中。 |
 | 属性1512 | [10569例完整原件差分](reports/2026-11-01-stats0135-spec.md)，23派生word、HP、4辅助字段、3对象键、速度/序号和队列数0差异；只读复核通过 | 真实来源producer、已有树项更新与包字节仍未验收；每级成长和选卡收尾的限定组合在下行另验。 |
 | tick与暂停命令 | [完整原880/1371的6558例](reports/2026-11-01-game-loop0135.md)，5400暂停命令＋1158tick，0差异；20个静态函数/34条guard另列 | 只独立比较暂停phase、上次时间/marker和模拟时钟；无单位/空队列/skip-spawn域。tick其他phase、完整调度、fresh终局保存及party/victory/Endless仍未运行验收。 |
 | 能力目录 | [114能力/9职业](reports/2026-11-01-catalogue0135.md)按本版指令/data重提；rockbiter/stormstrike平衡变化真实存在 | 表和kit不是全部执行效果/解锁/天赋producer验收。 |
@@ -40,21 +40,24 @@
 | 真正胜利终态 | [416组/832次49037+416真实1560](reports/2026-11-01-terminal-transition0135.md)及[独审](reports/2026-11-01-terminal-transition0135-independent-review.md)，315真终态，完整232/221/victory通知及构造226 | 平地有限运动/默认英文标签；phase5胜利组件不等于observer中phase4死亡或完整终局存档。 |
 | 真实地形高度 | [107完整ADT/18413原件调用](reports/2026-11-01-terrain0135.md)及[独审](reports/2026-11-01-terrain0135-independent-review.md)，27392MCNK/3971840顶点，0差异 | 145XYZ+洞/三角采样有独立规格；其余264B、缓存生成/碰撞/导航/完整世界未知。 |
 | 真实Boss矩形120B | [390组/2883快照](reports/2026-11-01-effect-geometry0135.md)及[独审](reports/2026-11-01-effect-geometry0135-independent-review.md)，真2785→910→915，277正常+113SELF拒绝前缀 | 三raw9/type0/shape2、4B scratch未知；正常命中完整尾部独立模型仍缺，旧prefix不倒改。 |
-| 浏览器真实DBC资源 | [3fresh实例/15已恢复投影](reports/2026-11-01-browser-resources0135.md)，原SELF/XHR解析Spell/SpellIcon并正常返回；含2组cold915加载 | 单独embedding17允许/861拒绝、128MiB；原件执行成功≠完整新独立模型。history/来源容器/keyed尾部未知，[独审通过](reports/2026-11-01-browser-resources0135-independent-review.md)。 |
+| 浏览器真实DBC资源 | [3fresh实例/15已恢复投影](reports/2026-11-01-browser-resources0135.md)，原SELF/XHR解析Spell/SpellIcon并正常返回；含2组cold915加载 | 单独embedding17允许/861拒绝、128MiB；原件执行成功≠完整新独立模型。旧批不还原history；后继history组件另列，来源容器/keyed/proc完整尾部仍缺。[原资源批独审通过](reports/2026-11-01-browser-resources0135-independent-review.md)。 |
+| 受伤48B history组件 | [完整1073的164组/924入口](reports/2026-11-01-incoming-history0135.md)及[独审](reports/2026-11-01-incoming-history0135-independent-review.md)，声明字段0差异；环形裁剪/扩容/UTF8切片/旧padding严格 | sourceGUID0/无单位/spell0英语fallback，空proc，非致死或minimum-one；来源匹配/heal生产/完整1073仍缺。 |
+| 真实DBC与history组合 | [9fresh/37次完整1073](reports/2026-11-01-browser-history0135.md)及[独审](reports/2026-11-01-browser-history0135-independent-review.md)，冷加载真实Spell/SpellIcon、完整name/icon与环形history声明字段0差异 | sourceGUID0/category1/2/三Spell、17允许861拒绝/128MiB。完整来源容器/keyed/proc未知，未接headless。 |
+| 原件真实world与1089观察 | [1例2902→6959→6730→1089](reports/2026-11-01-entry-world0135-probe.md)及[独审](reports/2026-11-01-entry-world0135-probe-independent-review.md)：同非平地Rc，phase0→1、4NPC/2kind2；453MPQ/561GET全部200、4memory319029248B | 原件行为观察，独立模型case0；selected-profile/App熵仍为显式输入，独立world/entry/所有权及与主切片整合未完成。24允许854拒绝/256MiB，不能混记Node域。 |
 | 14stage原件观测 | [080624](evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json)：3038帧/42550快照/18选择/42558调用，6预算、seed3=353/seed5=285进入phase4 | [观测独审通过](reports/2026-11-01-main-tail0135-probe-independent-review.md)，0新增独立帧；2521个execution11快照不计模型支持，与其他层不相加。 |
 | 完整游戏 | 尚无独立完整一局验收；0.134.0局部组合另列 | 新版刷怪、施法、拾取、选卡应用、存档、UI和联机继续连接与验证。 |
 
-基础资源属于另一层证据：[MPQ读取器/索引](reports/2026-11-01-resource-index-base.md)已对29602个命名块、1636167198B完成固定StormLib逐字节对照，154份DBC容器可独立读取。基础RAR包内程序仍是0.102.3，不能自动认定为0.135.1完整资产。最新资源完备性、实际加载/ID列语义、M2动画、BLP材质、地形/音画与渲染尚未完成。
+基础资源属于另一层证据：[MPQ读取器/索引](reports/2026-11-01-resource-index-base.md)已对29602个命名块、1636167198B完成固定StormLib逐字节对照，154份DBC容器可独立读取。基础RAR包内程序仍是0.102.3，不能自动认定为0.135.1完整资产。实际world加载已有上述单例原件观察；最新资源完备性、独立加载/ID列语义、M2动画、BLP材质、地形/音画与渲染仍未完成。
 
-[真实进场资源静态规格](reports/2026-11-01-entry-resources0135-static.md)及[独审](reports/2026-11-01-entry-resources0135-static-review.md)另核39函数、2DBC/7WDT/107ADT共116份170383346B，以及12区首层路径/开局调用契约。18条模型候选未配但未证明属于实际必需读取；这不是实际VFS/world加载、1089完成或新增玩法差分。
+[真实进场资源静态规格](reports/2026-11-01-entry-resources0135-static.md)及[独审](reports/2026-11-01-entry-resources0135-static-review.md)另核39函数、2DBC/7WDT/107ADT共116份170383346B，以及12区首层路径/开局调用契约。18条模型候选未配但未证明属于实际必需读取；该静态批不算原件运行。后继真实world/1089观察已完成一个实际read-set，未把116库存或453读入文件计为独立玩法差分。
 
 ## 当前切片之外的明确边界
 
-- **真实进入游戏**：1560返回phase0。旧纯Node在SELF/data被拒绝；新浏览器已正常解析真实DBC并完成命中，但world/1089/2328和4NPC/2kind2开局仍未闭合。不能以显式phase1加空单位替代真实进场。
+- **独立真实进场**：原件6730→1089已经在真实world中正常产生phase1与4NPC/2kind2，单例观察及独审通过；独立VFS/world/位置和1089生产尚未实现，未接同状态主切片。菜单/profile/App熵和移动2328/full880仍未恢复；主切片显式phase1不能当作独立入口完成。
 - **研究输入与内存**：phase1及128个初始zeroed424B/88B槽仍显式。[当前独审](reports/2026-11-01-headless-tail0135-independent-review.md)复原1226927104B单位与254645248B范围backing；52次单位复用保留416非零字节，area19B复用全0，非平凡压缩/allocator padding恒定未证明。
 - **对象键与物理输出**：headless严格比较numeric player keys22/28/34/716/717/1109/1176，其余原件keyed状态全部另存为unmodeled，不能归为纯显示。1202 aura/外观键、1453治疗/account输出、完整消息字节/交付与所有producer仍分别待还原。
-- **全部游戏流程**：14个真实尾阶段已在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、真实1089世界与4NPC/2kind2、未知技能/AI/存档/UI/联机及完整独立一局仍未验收。 真胜利终态是另一受控组件，浏览器正常资源只是新embedding，均未升级为完整流程验收。
-- **915当前边界**：主切片仍只接idle域；500delayed56和390Boss矩形分别有独审，非空56/120/ordinary910未接自然headless。浏览器3组正常命中保留完整rawG/backing，未知history/来源容器/key22/28不归为纯显示；旧probe和072329作为历史证据保留。
+- **全部游戏流程**：14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、独立world/1089及4NPC/2kind2生产、未知技能/AI/存档/UI/联机与完整独立一局仍未验收。 真胜利终态、history组件与真实world/entry观察分别有证据，均未升级为独立完整流程验收。
+- **915当前边界**：主切片仍只接idle域；500delayed56和390Boss矩形分别有独审，非空56/120/ordinary910未接自然headless。浏览器3组正常命中保留完整rawG/backing；history后继164/924与9/37组件另验，完整来源容器/key22/28/proc仍未知；旧probe和072329保持历史身份。
 
 ## 固定0.134.0研究基线的覆盖状态
 
@@ -74,13 +77,6 @@
 | 属性重算 | [完整原1513与新独立模型10569例，0差异](reports/2026-11-01-stats0134-spec.md)；22派生字段、HP/4辅助池/3对象字段/速度与队列已对照 | 数值输入来源、已有树项更新/包字节/整场调度未验收；每级刷新在独立level_cycle组合另验，未接普通拾取控制器。 |
 | XP消费者组合 | [完整原4630的1151状态序列/3450入口调用](reports/2026-11-01-level-cycle0134.md)，逐级属性→20%治疗/半减→下一阈值→kind0候选，0差异；只读复核通过 | 强制显式来源快照；未接拾取/金币/选卡应用控制器，物理队列/消息/world和0.135.1迁移仍pending。 |
 | 其他独立模型 | 下表所列模型有0.126.0依据；未自动计入0.134.0完成度，逐项范围见[版本支持清单](reconstruction/version-support.json) | 刷怪、施法基数/暴击、存档、UI与协议继续迁移和连接。 |
-| 当前14阶段独立切片082927 | [14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异，[独审](reports/2026-11-01-headless-tail0135-independent-review.md)通过 | 6未知技能/2预算，phase1/初始zero槽明确；14单状态尾入口不是完整880/前段/party/整局。 |
-| 五个尾阶段组件 | [573组/944入口](reports/2026-11-01-frame-systems0135.md)及[独审](reports/2026-11-01-frame-systems0135-independent-review.md)；975无execution11、38007完整非空队列/306、2602 expiry/idle及精确pending、2573守卫、49037假谓词 | 23预期原件异常分列；975守卫在入口执行时检查，终止选卡可含11后下一帧pending，活跃资源/secondary/claim不伪装空。 |
-| 真正胜利终态 | [416组/832次49037+416真实1560](reports/2026-11-01-terminal-transition0135.md)及[独审](reports/2026-11-01-terminal-transition0135-independent-review.md)，315真终态，完整232/221/victory通知及构造226 | 平地有限运动/默认英文标签；phase5胜利组件不等于observer中phase4死亡或完整终局存档。 |
-| 真实地形高度 | [107完整ADT/18413原件调用](reports/2026-11-01-terrain0135.md)及[独审](reports/2026-11-01-terrain0135-independent-review.md)，27392MCNK/3971840顶点，0差异 | 145XYZ+洞/三角采样有独立规格；其余264B、缓存生成/碰撞/导航/完整世界未知。 |
-| 真实Boss矩形120B | [390组/2883快照](reports/2026-11-01-effect-geometry0135.md)及[独审](reports/2026-11-01-effect-geometry0135-independent-review.md)，真2785→910→915，277正常+113SELF拒绝前缀 | 三raw9/type0/shape2、4B scratch未知；正常命中完整尾部独立模型仍缺，旧prefix不倒改。 |
-| 浏览器真实DBC资源 | [3fresh实例/15已恢复投影](reports/2026-11-01-browser-resources0135.md)，原SELF/XHR解析Spell/SpellIcon并正常返回；含2组cold915加载 | 单独embedding17允许/861拒绝、128MiB；原件执行成功≠完整新独立模型。history/来源容器/keyed尾部未知，[独审通过](reports/2026-11-01-browser-resources0135-independent-review.md)。 |
-| 14stage原件观测 | [080624](evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json)：3038帧/42550快照/18选择/42558调用，6预算、seed3=353/seed5=285进入phase4 | [观测独审通过](reports/2026-11-01-main-tail0135-probe-independent-review.md)，0新增独立帧；2521个execution11快照不计模型支持，与其他层不相加。 |
 | 完整游戏 | 尚无新版或旧版的独立完整一局验收 | 按状态→生成→施法→伤害/死亡→经验→选卡拼出闭环。 |
 
 ## 历史已验证覆盖（0.126.0）
@@ -121,7 +117,7 @@
 
 ## 当前独立实现
 
-**0.135.1当前主进度**为[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。旧072329/064308/061901冻结为历史；组件、原件观测、浏览器embedding与独立主链各层不相加。14个真实尾阶段已在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、真实1089世界与4NPC/2kind2、未知技能/AI/存档/UI/联机及完整独立一局仍未验收。 详见[版本支持清单](reconstruction/version-support.json)。
+**0.135.1当前主进度**为[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。旧072329/064308/061901冻结为历史；组件、原件观测、浏览器embedding与独立主链各层不相加。14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、独立world/1089及4NPC/2kind2生产、未知技能/AI/存档/UI/联机与完整独立一局仍未验收。 详见[版本支持清单](reconstruction/version-support.json)。
 
 `core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**包括升级值、有序拥有记录、伤害/受伤投影、经验与拾取、限定普通死亡组合、属性数值、kind0候选metadata、金币收取和新能力初始化；各自例数、输入域和未实现项见上表与[版本支持清单](reconstruction/version-support.json)，不同层级的计数不合并为完整游戏覆盖。完整原模块对照保留内部callee；未调用应用start，所有878宿主导入拒绝且实际调用0次。另有`level_cycle134`把XP消费者、每级属性/治疗与kind0候选接成限定组合，但仍未接普通死亡/混合拾取、金币、选卡应用或自然主循环。
 
@@ -200,4 +196,4 @@ python3 reverse-engineering/scripts/check_combat_full_spec.py
 
 上述不同验证层分开记录：无宿主导入的微模块、承载原连续片段的合成wrapper、仅新增导出的完整原模块。完整模块所有878个宿主导入均拒绝调用，应用start未调用，真实内部callee按所述fixture运行。没有启动完整游戏或访问网络/存档；也没有把0.126.0实验次数称为0.134.0验收。有限输入的一致不等于穷举证明，NaN不承诺载荷一致，替代panic的范围各自列明。
 
-当前独立切片连接14个单状态尾入口的已恢复/实际守卫域，保留6未知技能与2预算边界。后续优先恢复活跃尾队列/效果、资源后的history与容器、真实进场/世界和未知技能，再扩终局存档/UI/联机；在完整一局及关键行为均有依据前不宣布重造完成。
+当前独立切片连接14个单状态尾入口的已恢复/实际守卫域，保留6未知技能与2预算边界。后续优先把真实world/entry原件观察还原为独立生产链，补来源容器/keyed/proc、活跃尾队列/效果和未知技能，再扩终局存档/UI/联机；在完整一局及关键行为均有依据前不宣布重造完成。

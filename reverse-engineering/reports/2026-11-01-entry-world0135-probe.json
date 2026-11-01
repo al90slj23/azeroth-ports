@@ -1,0 +1,297 @@
+{
+  "title": "Fixed135 genuine6730 world producer and complete1089 default opening observation",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "kind": "original_controlled_observation_not_independent_model_differential",
+  "status": "true_world_and_entry_returned_in_one_explicit_empty_selected_profile_case",
+  "receipt": "evidence/entry-world0135-probe-20261101T092959.623703Z/entry-world135-probe-receipt.json",
+  "receipt_sha256": "530f079d322365691ce897120ac0014be0da416eb048861b4d42ab988160556c",
+  "observations": "evidence/entry-world0135-probe-20261101T092959.623703Z/observations.json",
+  "observations_sha256": "931d4d9990408f5a74cc8b55f1d2ea6c9767f5d2bb0b09687eb3f38384304061",
+  "analysis_script": "evidence/entry-world0135-probe-20261101T092959.623703Z/observations.py",
+  "analysis_script_sha256": "9cdbbcafaa2ba80c7fddc35029bbae465ec709102d5e5caaee09f1d92994355e",
+  "sources": {
+    "scripts/probe_entry_world135.py": "ae3ce76eb6676fe452669b8415baef4927c2f169025c6154977d385696dfca79",
+    "scripts/run_entry_world135.mjs": "a0883c5afa20b4e676a72b5a177521a45bcae2342bb057d27ab2585aa8622f88",
+    "scripts/browser_entry_world135.mjs": "7630758d8242f5cdc7f217e27a416fb070759703c05a30f7929f40a7f1e3d75f",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9"
+  },
+  "source_files": 9,
+  "source_before_after_equal": true,
+  "functions": [
+    {
+      "name": "entry135_load_account",
+      "index": 2902,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_start": 17106492,
+      "body_end": 17109355,
+      "body_sha256": "7b997071062b9d2540ee660f2664615e17f3c2fe6f1d923e84dcf2cbaaa2d3fb"
+    },
+    {
+      "name": "entry135_apply_unlocks",
+      "index": 6959,
+      "parameters_hex": "7f7f7e7e",
+      "results_hex": "",
+      "body_start": 27530065,
+      "body_end": 27531398,
+      "body_sha256": "dba509c6dec130407ee8d5e6533f612791def96c137a3f727d74cb275591d65c"
+    },
+    {
+      "name": "entry135_construct_world_game",
+      "index": 6730,
+      "parameters_hex": "7f7f",
+      "results_hex": "",
+      "body_start": 27040903,
+      "body_end": 27063384,
+      "body_sha256": "9aa867cf375c7e60bffcee15c07f77e1320f715f08a68af69bd439eedb8f61e8"
+    },
+    {
+      "name": "entry135_begin_run",
+      "index": 1089,
+      "parameters_hex": "7f",
+      "results_hex": "",
+      "body_start": 5953495,
+      "body_end": 5965617,
+      "body_sha256": "08ba0c62e0fa4009e7faa31de75154a9c0a98a1f0349d72ec7cd1874229772cb"
+    }
+  ],
+  "original_exports_preserved": true,
+  "only_changed_wasm_section": 7,
+  "official_glue_prefix_unchanged": true,
+  "input": {
+    "region_id": "elwynn",
+    "class_byte": 1,
+    "race_byte": 1,
+    "object_id_u64": "0",
+    "app_lcg_seed_u64": "0",
+    "live_bytes": 372,
+    "allocation_bytes": 376,
+    "basis": "Explicit empty376 selected-profile input previously verified with complete1560; App+3376 same live layout. This is not the complete menu/profile producer.",
+    "initial1560_receipt": "evidence/full0135-oracle-20261101T055136.418672Z/initial135-comparison.json",
+    "initial1560_receipt_sha256": "f19963db365d60021f4d547a464622bbc5eebb69ba42e9f4ff55237de1457649"
+  },
+  "app_input": {
+    "allocation_bytes": 5168,
+    "initial_poison": 165,
+    "account_offset": 4160,
+    "account_bytes": 368,
+    "selected_profile_offset": 3376,
+    "cache5116": 0,
+    "transport_vtable": 1495776,
+    "transport_vtable36_hex": "b90600001800000008000000ba060000bb060000bc060000bd060000be060000bf060000",
+    "transport_method32_table_slot": 1727,
+    "transport_method32_original_function": 176109,
+    "transport_method32_body_sha256": "ffa2edca2d3a0ef88bfcea9e5cf488eb6a4d98e7f1b4011ce4fa3de388c0b4ea",
+    "app4776": 0,
+    "flags5163_u32": 4278255360
+  },
+  "actual_account": {
+    "producer": 2902,
+    "real_storage_read_key": "rogue.characters",
+    "record_present": false,
+    "fresh_browser_origin": true,
+    "save_writes": 0,
+    "then_apply_unlocks": 6959,
+    "unlock_args": [
+      "0",
+      "0"
+    ]
+  },
+  "observed": {
+    "cases": 1,
+    "original_research_entries": 4,
+    "allocator_entries": 6,
+    "phase_before": 0,
+    "phase_after": 1,
+    "world_Rc_pointer": 26204808,
+    "same_world_Rc_after1089": true,
+    "world_Rc124_words": [
+      2,
+      1,
+      19,
+      20895016,
+      9,
+      9,
+      20895704,
+      9,
+      78400,
+      64802128,
+      78400,
+      3323265024,
+      3292610560,
+      280,
+      4294967295,
+      27,
+      20339448,
+      27,
+      0,
+      0,
+      0,
+      0,
+      0,
+      313600,
+      51023152,
+      313600,
+      3323265024,
+      3292610560,
+      560,
+      1116209152,
+      0
+    ],
+    "world_flat_flag120": 0,
+    "NPC_count_before": 0,
+    "NPC_count_after": 4,
+    "NPC_definition_pointer284": [
+      5415572,
+      5415572,
+      5415572,
+      5415572
+    ],
+    "pickup_count_before": 0,
+    "pickup_count_after": 2,
+    "pickup_kinds8": [
+      2,
+      2
+    ],
+    "pickup_amounts12": [
+      2,
+      1
+    ],
+    "pickup_visuals36": [
+      9005,
+      9005
+    ],
+    "packet_count": 78,
+    "packet_opcodes": {
+      "150": 1,
+      "169": 77
+    },
+    "notification_count": 1,
+    "notification_json": [
+      {
+        "type": "start"
+      }
+    ],
+    "player_xyz_bits_after1089": [
+      3323121664,
+      3290316800,
+      1116212265
+    ],
+    "raw_G2592_preserved": true,
+    "full_memory_snapshots": [
+      {
+        "file": "after_real_account2902.memory",
+        "bytes": 14614528,
+        "complete": true,
+        "sha256": "e960314a0f9348677452c228e46a4b2cce79060274f09b21e91254fa44f856a5"
+      },
+      {
+        "file": "after_real_unlocks6959.memory",
+        "bytes": 20578304,
+        "complete": true,
+        "sha256": "337de6c3333f8986e3304f12163c0b5e1746fff0b6488ea8fffc515220c528da"
+      },
+      {
+        "file": "after_real_world6730.memory",
+        "bytes": 117440512,
+        "complete": true,
+        "sha256": "f651042520491d22e9910b1c01b34eaf90c73e004a4cd60ce310428186d9291a"
+      },
+      {
+        "file": "after_real_begin1089.memory",
+        "bytes": 166395904,
+        "complete": true,
+        "sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf"
+      }
+    ],
+    "full_memory_total_bytes": 319029248
+  },
+  "resources": {
+    "actual_data_GETs": 561,
+    "all_data_GETs_200": true,
+    "name_index_GETs": 2,
+    "actual_unique_MPQ_files": 453,
+    "unique_decoded_bytes": 83632785,
+    "unique_extensions": {
+      ".wdt": 1,
+      ".adt": 9,
+      ".m2": 31,
+      ".wmo": 410,
+      ".dbc": 2
+    },
+    "actual_XHR_entries": {
+      "entry135_construct_world_game": 558,
+      "entry135_begin_run": 3
+    },
+    "asset_index_sha256": "a3f219f6e76e1d87e50b0790b757f999091e2b479d3b1d40ac2c101aa8680cf4",
+    "name_index_sha256": "1ca98562aee4c460c4eb46d20f1bf0facdff0fb0bc1f4b73814b9cfea5c4aad8",
+    "asset_inventory": "evidence/entry-world0135-probe-20261101T092959.623703Z/actual-assets-inventory.json",
+    "asset_inventory_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c",
+    "real_MPQ_payloads_match_prior_StormLib_reference": true,
+    "server_aliasing_or_model_defaults_used": false,
+    "differing_byte_MPQ_precedence_inferred": false,
+    "base_assets_program_version": "0.102.3",
+    "latest135_complete_asset_equivalence": false
+  },
+  "runtime": {
+    "node_pid": 54944,
+    "browser_pid": 54950,
+    "worker_pid": 54946,
+    "node_exit_code": 0,
+    "browser_exit_code": 0,
+    "asset_worker_terminated_signal": "SIGTERM",
+    "all_three_PIDs_missing": true,
+    "process_seconds": 41.792093916999875,
+    "max_WASM_memory_bytes": 166395904,
+    "WASM_page_cap": 4096,
+    "WASM_memory_cap_bytes": 268435456,
+    "over_cap_memory_negative_test_checked": true,
+    "Node_heap_MiB": 512,
+    "browser_heap_MiB": 512,
+    "browser_watchdog_seconds": 90,
+    "outer_group_deadline_seconds": 120,
+    "allowed_official_imports": 24,
+    "all_other_denied_imports": 854,
+    "actual_import_calls": 3396,
+    "actual_distinct_imports": 16,
+    "all_actual_imports_allowed": true,
+    "non_loopback_requests": 0,
+    "browser_errors": 0,
+    "all_output_and_browser_temp_on_4T": true
+  },
+  "prior_failure": {
+    "directory": "evidence/entry-world0135-probe-20261101T092647.702804Z",
+    "Node_exit": -6,
+    "outer_python_exit": 0,
+    "cause": "Nodeheap OOM in giant CDP full-memory request, not originalWASM256MiB exhaustion.256-file researchbudget also returned156budget500s after256files/41097386B.",
+    "diagnosis": "evidence/entry-world0135-probe-20261101T092647.702804Z/post-exit-diagnosis.json",
+    "correction": "1MiB capture chunks, file count256->1024 from measured412requests/static617candidates, and explicit resource-error stop before1089;256MiB bytes/WASM and original input/bodies unchanged.",
+    "old_failed_receipt_preserved": true
+  },
+  "new_independent_model_cases": 0,
+  "complete_game_restored": false,
+  "selected_profile_menu_producer_complete": false,
+  "full880_or_movement2328_exercised": false,
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-entry-world0135-probe-independent-review.json",
+    "review_path": "evidence/entry-world0135-independent-review-20261101T093740.230091Z/review.json",
+    "review_sha256": "0675b4c87874e00e622a899af3c06b164a180cadb70a83f3d95815ee70628f8f",
+    "original_reexecuted": false
+  },
+  "remaining": [
+    "Independentworld/VFS/geometry/raster/navigation producer model and ownership/lifetime rules are not implemented.",
+    "Selected-profile376/menu assembly and initialApp entropy remain explicit inputs;full4253 App bootstrap andcomplete880/2328 entry not exercised.",
+    "FourNPC/twokind2 outputs are captured original behavior, not yet independent placement/kind2 consumer/packet semantics.",
+    "Only oneclass1/race1/elwynn/mode0 input;otherzones/classes/profiles/modes and missingresource/priority variants unproved.",
+    "Resource hashes establish current readset compatibility with existingbaseMPQs,not complete latest135 asset equivalence.",
+    "No complete playable replacement,rendering,persistence,transport/network orwhole-game equivalence is claimed."
+  ]
+}
