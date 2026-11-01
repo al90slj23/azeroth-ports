@@ -8,10 +8,13 @@
 
 | 范围 | 当前证据 | 下一步 |
 |---|---|---|
-| 官方原件 | Windows更新EXE通过官方大小/SHA；同版Web快照完成身份提取；[新版完整WAT/独立索引完成](reports/2026-11-01-wasm0134-profile.md) | 按新版索引恢复消费者并迁移独立实现。 |
-| 原生同源核对 | 本版PE重新定位五表、两原生函数；五路升级结构与历史规格相符 | 新版调用者→状态写回→战斗消费链。 |
-| 可复用数值 | 四个已知Web函数体在新版逐字节匹配，编号已重新定位 | 核对签名/调用上下文，建立新版可执行对照。 |
-| 独立模型 | 下表所列模型有0.126.0依据；未自动计入0.134.0完成度 | 逐项迁移、复用或修正；重点覆盖新版萨满/天赋与Ice Barrier改动。 |
+| 官方原件 | Windows更新EXE通过官方大小/SHA；同版Web快照完成身份提取；[新版完整WAT/独立索引完成](reports/2026-11-01-wasm0134-profile.md) | 资源RAR仍单独下载/验收；按新版索引恢复消费者。 |
+| 原生同源核对 | 本版PE重新定位五表、两原生函数；五路升级结构与历史规格相符 | 继续在当前原生消费者中核对行为；Web结果不冒称原生执行结果。 |
+| 目录与差异 | [114能力、9职业的新表](reports/2026-11-01-catalogue0134.md)；新增stormstrike/rockbiter、移除call_of_flame，stoneform参数变化 | 新定义/职业kit不等于所有技能、天赋行为已实现。 |
+| 升级数值 | [新原25368的11560例对照，0差异](reports/2026-11-01-upgrade0134-spec.md)，现有独立数值模型可复用 | 四个逐字节匹配的其他helper尚待新版上下文与执行验收。 |
+| 选卡与施法状态链 | [16完整新函数、29条guard](reports/2026-11-01-selection0134-chain.md)；[完整新1073的779例，0差异](reports/2026-11-01-selection0134-spec.md) | 已验完整80B+5标量；共享后处理、属性输出与完整选卡控制API仍未独立迁移。 |
+| 敌人扣血 | [424B单位、36B新加区与55条guard](reports/2026-11-01-combat0134-chain.md)；[独立combat134与完整新914的454例，0差异](reports/2026-11-01-combat0134-spec.md) | 缺完整触发/掉落/死亡RNG；玩家incoming1063与IceBarrier另行恢复。 |
+| 其他独立模型 | 下表所列模型有0.126.0依据；未自动计入0.134.0完成度，逐项范围见[版本支持清单](reconstruction/version-support.json) | 刷怪、施法基数/暴击、属性、XP、存档、UI与协议继续迁移和连接。 |
 | 完整游戏 | 尚无新版或旧版的独立完整一局验收 | 按状态→生成→施法→伤害/死亡→经验→选卡拼出闭环。 |
 
 ## 历史已验证覆盖（0.126.0）
@@ -52,7 +55,9 @@
 
 ## 当前独立实现
 
-`core_spec.binary32`用精确有理数计算和逐步binary32舍入。以下是**0.126.0历史规格与对照**，将按0.134.0新原件逐项迁移：
+`core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**为升级值11560例、有序拥有记录/中性tier0初始化779例，以及新`combat134`扣血主字段454例，各自范围和未实现项见上表与版本支持清单。选卡和扣血的完整原模块确实被实例化、内部callee保持原样；未调用应用start，所有宿主导入拒绝且实际调用0次。
+
+以下是**0.126.0历史规格与对照**，不能把其次数转记为新版结果：
 
 | 规格 | 对照范围 | 数量/结果 |
 |---|---|---|
@@ -66,6 +71,12 @@
 | `combat` | 原933/934连续片段及完整原933有限样例 | 9153片段、32份完整933核心字段一致；完整死亡loot/RNG仍未实现。 |
 
 ```sh
+# 当前0.134.0；需要已固定的新原件及本机证据输入。
+python3 reverse-engineering/scripts/check_upgrade134_spec.py
+python3 reverse-engineering/scripts/check_selection134_full_spec.py
+python3 reverse-engineering/scripts/check_combat134_full_spec.py
+
+# 历史0.126.0，保留回归入口。
 python3 reverse-engineering/scripts/check_upgrade_spec.py
 python3 reverse-engineering/scripts/check_enemy_scaling.py
 python3 reverse-engineering/scripts/check_radius_spec.py

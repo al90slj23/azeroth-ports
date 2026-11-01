@@ -1,0 +1,260 @@
+{
+  "status": "passed",
+  "date": "2026-11-01",
+  "version": "0.134.0",
+  "build": "983346a7",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "original_function_index": 25368,
+  "original_body_sha256": "1469599a6ddc00f4a9c958d2c1e0db6d70d2c658fa89a2bfe3587b1d693376bf",
+  "original_target_type_index": 94,
+  "original_panic_type_index": 1,
+  "oracle_module_sha256": "609cc152a3ef934d4f639e00cd09e46ee15af085de24cce1e042f20c962554ef",
+  "body_byte_identical": true,
+  "case_count": 11560,
+  "groups": {
+    "all_kind_tier_pairs": 25,
+    "u32_counter_rounding": 55,
+    "f32_edges_thresholds_nan_infinity": 390,
+    "caps_identifiers_and_u32_edges": 1080,
+    "seeded_raw_bit_patterns": 10000,
+    "invalid_tier_trap": 10
+  },
+  "mismatch_count": 0,
+  "valid_numeric_results_compared_by_u32_bits": 11550,
+  "invalid_tier_traps_compared": 10,
+  "invalid_tier_domain": [
+    -1,
+    5
+  ],
+  "supported_kind_domain": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "supported_tier_domain": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "seed": "0xA2E2026",
+  "corpus_sha256": "fb64c891ee1e72b3876e5e2b94a2818f648da8b2f8a61642d99e4ab9c7dd4373",
+  "historical_case_and_result_files_read": false,
+  "isolated_original0134_function_executed": true,
+  "full_original_module_instantiated": false,
+  "full_game_started": false,
+  "host_imports": [],
+  "network_used": false,
+  "user_saves_accessed": false,
+  "installed_game_modified": false,
+  "arithmetic_model": "unchanged production core_spec/upgrade_values.py; exact rational arithmetic with per-operation binary32 nearest-even rounding",
+  "runtime": {
+    "version": "v22.23.4",
+    "sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0"
+  },
+  "tool_identity": {
+    "wabt_version": "1.0.42",
+    "validator_sha256": "a17b421f1cca2c0bba48c6ab3a510f9510db44e505cffd5a48c64bb1f0b5659c",
+    "archive_sha256": "3f654779b436c628db3ca4323c51538815f5fbc887a6d5f3bb1c18d36281e240"
+  },
+  "source_sha256": {
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_upgrade134_spec.py": "1bca4d546c4499767fc8bf8f8ccd88c6d11bed994f8008e4d04def1101f37d5c",
+    "scripts/run_upgrade134_oracle.mjs": "ae1ceee4d48af3cc38225fff2559306311a189ab8e4da4c7c3b907302b55765a",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "static_helper_sidecar": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/upgrade-helper-sidecar/upgrade-helper-25368.json",
+    "sha256": "03b2194f870792e7db88588e8571a9941e1279fc95b0f62adad1c4c0625b867a"
+  },
+  "tables": [
+    {
+      "linear_memory_address": 5410584,
+      "original_file_offset": 82071598,
+      "source_data_segment_index": 2877,
+      "bytes": 20,
+      "raw_hex": "ec51383e0000803e7b14ae3e1f85eb3e6666263f",
+      "sha256": "4d4dd659e77d55323c3388420d4041fe90fc678657ef3e7c614a7fd98aa05c0a"
+    },
+    {
+      "linear_memory_address": 5410620,
+      "original_file_offset": 82071634,
+      "source_data_segment_index": 2877,
+      "bytes": 20,
+      "raw_hex": "295c8f3dcdcccc3db81e053e7b142e3e1f856b3e",
+      "sha256": "2ce51b76784775bddcb4c4eb37d6405f17b8ffdcf9a042b0f111ff2ffd0d5dbb"
+    },
+    {
+      "linear_memory_address": 5410656,
+      "original_file_offset": 82071670,
+      "source_data_segment_index": 2877,
+      "bytes": 20,
+      "raw_hex": "0100000001000000010000000200000002000000",
+      "sha256": "c7a5958727276cdee4286492253978d00e716955fd04834ea62dfeb962a95291"
+    },
+    {
+      "linear_memory_address": 5410692,
+      "original_file_offset": 82071706,
+      "source_data_segment_index": 2877,
+      "bytes": 20,
+      "raw_hex": "8fc2f53dec51383e0000803e3333b33e0000003f",
+      "sha256": "d5139f32188f8bd7419a9ebaeb6a2dc494109f7b4881cedbb7b94e3eb74be2d4"
+    },
+    {
+      "linear_memory_address": 5410728,
+      "original_file_offset": 82071742,
+      "source_data_segment_index": 2877,
+      "bytes": 20,
+      "raw_hex": "9a99193eae47613e9a99993ecdcccc3e9a99193f",
+      "sha256": "74ec3c67c4fc280877855dc4cff0d087827ab62f072f9139ce46e3bdc06c5790"
+    }
+  ],
+  "source_locations": [
+    {
+      "linear_memory_address": 5410604,
+      "original_file_offset": 82071618,
+      "raw_hex": "cfca11002a000000ca0000001d000000",
+      "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+      "line": 202,
+      "column": 29,
+      "path_linear_memory_address": 1166031,
+      "path_original_file_offset": 77852081
+    },
+    {
+      "linear_memory_address": 5410640,
+      "original_file_offset": 82071654,
+      "raw_hex": "cfca11002a000000cc00000011000000",
+      "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+      "line": 204,
+      "column": 17,
+      "path_linear_memory_address": 1166031,
+      "path_original_file_offset": 77852081
+    },
+    {
+      "linear_memory_address": 5410676,
+      "original_file_offset": 82071690,
+      "raw_hex": "cfca11002a000000d300000011000000",
+      "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+      "line": 211,
+      "column": 17,
+      "path_linear_memory_address": 1166031,
+      "path_original_file_offset": 77852081
+    },
+    {
+      "linear_memory_address": 5410712,
+      "original_file_offset": 82071726,
+      "raw_hex": "cfca11002a000000d600000011000000",
+      "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+      "line": 214,
+      "column": 17,
+      "path_linear_memory_address": 1166031,
+      "path_original_file_offset": 77852081
+    },
+    {
+      "linear_memory_address": 5410748,
+      "original_file_offset": 82071762,
+      "raw_hex": "cfca11002a000000d900000011000000",
+      "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+      "line": 217,
+      "column": 17,
+      "path_linear_memory_address": 1166031,
+      "path_original_file_offset": 77852081
+    }
+  ],
+  "artifact_reparse": {
+    "all_function_declarations_reparsed": 80663,
+    "all_function_bodies_reparsed": 80663,
+    "trap_bodies_verified": 80662,
+    "function_signatures_reparsed": 2,
+    "active_data_segments_reparsed": 5,
+    "allowed_section_ids": [
+      1,
+      3,
+      5,
+      7,
+      10,
+      11
+    ]
+  },
+  "owned_oracle_process": {
+    "arguments": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_upgrade134_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/upgrade0134-oracle-20261101T002649.756493Z/isolated-upgrade0134.wasm",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/upgrade0134-oracle-20261101T002649.756493Z/cases.jsonl",
+      "609cc152a3ef934d4f639e00cd09e46ee15af085de24cce1e042f20c962554ef",
+      "fb64c891ee1e72b3876e5e2b94a2818f648da8b2f8a61642d99e4ab9c7dd4373"
+    ],
+    "deadline_seconds": 45,
+    "started_utc": "2026-11-01T00:26:50.390377+00:00",
+    "stdout_file": "official0134-function-results.jsonl",
+    "stderr_file": "oracle.stderr.log",
+    "pid": 29088,
+    "process_group_id": 29088,
+    "exit_code": 0,
+    "elapsed_seconds": 0.139999,
+    "finished_utc": "2026-11-01T00:26:50.530391+00:00",
+    "deadline_exceeded": false
+  },
+  "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/upgrade0134-oracle-20261101T002649.756493Z",
+  "artifacts": {
+    "cases.jsonl": {
+      "bytes": 3402152,
+      "sha256": "fb64c891ee1e72b3876e5e2b94a2818f648da8b2f8a61642d99e4ab9c7dd4373"
+    },
+    "invocation.json": {
+      "bytes": 1165,
+      "sha256": "d77c3f10f7c7ba1d9ebd2c28754d9604755fdecff01d483f23a154d6bb4d67a1"
+    },
+    "isolated-upgrade0134.wasm": {
+      "bytes": 404145,
+      "sha256": "609cc152a3ef934d4f639e00cd09e46ee15af085de24cce1e042f20c962554ef"
+    },
+    "manifest.json": {
+      "bytes": 5809,
+      "sha256": "7187d6c368b6c2ee8d45626729f073508a70a09a7675dd7998ee8b2a208775c5"
+    },
+    "mismatches.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "model-results.jsonl": {
+      "bytes": 332627,
+      "sha256": "60a459534a679a9bfa76a18a4f649e134caf85c2e63ad8d11000d75b156d8e26"
+    },
+    "official0134-function-results.jsonl": {
+      "bytes": 297947,
+      "sha256": "46329aa742c5eb69591d05412c8c01b4ea9db78850b60dcf0e28ed540cc2b800"
+    },
+    "oracle.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "validation.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "validation.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_and_artifact_readback_verified": true,
+  "support_claim": "The existing independent upgrade-value model is accepted against official 0.134.0 function25368 for this supported API and deterministic corpus.",
+  "limitations": [
+    "This validates one numeric helper, not card application, other models, the complete core, or whole-game behavior.",
+    "The production model docstring retains its historical 0.126.0 origin; its unchanged source was accepted here against the new official body.",
+    "NaN inputs exercise the original clamp-to-zero behavior; no general NaN payload preservation is claimed.",
+    "Bounds-panic80662 is replaced with unreachable. Only invalid-tier trap class is compared; original panic text and host behavior are outside scope.",
+    "Kinds outside0..4 are not part of this independent API; the official dispatcher masks kind with255 and has separate defaults.",
+    "A matching deterministic corpus is differential evidence, not exhaustive enumeration of every possible input."
+  ],
+  "evidence_summary_file": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/upgrade0134-oracle-20261101T002649.756493Z/differential-summary.json",
+  "evidence_summary_sha256": "46d0637c3b8c1a9cbce3306cbfdb4425e5f860cc0390ce675bf92fc5a5221b60"
+}

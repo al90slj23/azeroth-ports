@@ -1,0 +1,320 @@
+{
+  "date": "2026-11-01",
+  "status": "passed",
+  "version": "0.134.0",
+  "build": "983346a7",
+  "scope": "Complete official1073 and reached original internal callees, compared with independent80B record arithmetic and explicit synthetic-fixture tail expectations.",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "original_wasm_bytes": 90953762,
+  "original_function_index": 1073,
+  "original_function_body": {
+    "role": "select_ability",
+    "index": 1073,
+    "export": "research134_select_ability",
+    "type_index": 0,
+    "parameters_hex": "7f7f",
+    "results_hex": "",
+    "body_start": 5741770,
+    "body_end": 5758218,
+    "body_bytes": 16448,
+    "body_sha256": "264e7ce32add4bcd3695a8429c1b342c392aa83091b76a37c5f99c646b267d02"
+  },
+  "original_full_function_executed": true,
+  "full_original_module_instantiated": true,
+  "derived_module": {
+    "bytes": 90953857,
+    "sha256": "0ce9e7d78a3fe5d09c5d43d4cd8ffbb05073492818d9c0952ecd3399b332f1de",
+    "only_changed_section": 7,
+    "original_exports_preserved": 36,
+    "added_research_exports": [
+      {
+        "role": "finish_selection",
+        "index": 4600,
+        "export": "research134_finish_selection",
+        "type_index": 0,
+        "parameters_hex": "7f7f",
+        "results_hex": "",
+        "body_start": 21989210,
+        "body_end": 21991198,
+        "body_bytes": 1988,
+        "body_sha256": "0cd48de295a6655883329710fbb6dccec6921d66794390f7424c6d9fb07ebe09"
+      },
+      {
+        "role": "recalculate_stats",
+        "index": 1513,
+        "export": "research134_recalculate_stats",
+        "type_index": 3,
+        "parameters_hex": "7f",
+        "results_hex": "",
+        "body_start": 10230025,
+        "body_end": 10234773,
+        "body_bytes": 4748,
+        "body_sha256": "e978d8b2c80f495f3c669c957444b4392368fe87dc92104b297482163c3b419e"
+      },
+      {
+        "role": "select_ability",
+        "index": 1073,
+        "export": "research134_select_ability",
+        "type_index": 0,
+        "parameters_hex": "7f7f",
+        "results_hex": "",
+        "body_start": 5741770,
+        "body_end": 5758218,
+        "body_bytes": 16448,
+        "body_sha256": "264e7ce32add4bcd3695a8429c1b342c392aa83091b76a37c5f99c646b267d02"
+      }
+    ],
+    "all_nonexport_sections_byte_identical": true,
+    "original_implicit_start_absent": true
+  },
+  "original_allocator_export": {
+    "name": "__wbindgen_malloc",
+    "index": 91940,
+    "signature": "(i32,i32)->i32"
+  },
+  "case_count": 779,
+  "mismatch_count": 0,
+  "groups": {
+    "ordered_upgrade": 775,
+    "phase_guard": 1,
+    "empty_kinds_does_not_read_tier": 1,
+    "owned_index_out_of_range_still_finishes": 1,
+    "new_tier0_empty_modifiers": 1
+  },
+  "ordered_corpus": {
+    "case_count": 775,
+    "kind_domain": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "ordered_sequence_lengths": [
+      1,
+      2,
+      3
+    ],
+    "tier_domain": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "construction": "Every ordered kind sequence in5^1+5^2+5^3, crossed with all5 tiers; repeated kinds retained."
+  },
+  "boundary_cases": [
+    {
+      "name": "phase_guard",
+      "count": 1,
+      "input": "phase2579=1; kinds[0,1], tier2",
+      "observed": "Record/owned count unchanged; phase1, selection kind0, pending1 and candidate count1 retained."
+    },
+    {
+      "name": "empty_kinds_does_not_read_tier",
+      "count": 1,
+      "input": "Empty kinds; tier999",
+      "observed": "Record unchanged; full completion tail returns phase1/kind255/pending0/candidate count0."
+    },
+    {
+      "name": "owned_index_out_of_range_still_finishes",
+      "count": 1,
+      "input": "Owned index1 with owned count1; kinds[0,1], tier2",
+      "observed": "Record unchanged; full completion tail returns phase1/kind255/pending0/candidate count0."
+    },
+    {
+      "name": "new_tier0_empty_modifiers",
+      "count": 1,
+      "input": "Canonical new-ability tag0x80000000, cleave ID, tier0, empty owned/modifier vectors",
+      "observed": "Complete initialized80B record equals neutral-additional model; owned count1 and completed tail states."
+    }
+  ],
+  "fields_compared": [
+    "complete80B owned record",
+    "owned_count1660",
+    "phase2579",
+    "selection_kind2577",
+    "pending2368",
+    "candidate_count1904"
+  ],
+  "complete_owned_record_bytes_compared": 80,
+  "scalar_fields_compared": 5,
+  "fixture_profile": {
+    "definition_id": "cleave",
+    "definition_address": 5463472,
+    "definition_execution_kind": 5,
+    "class": "warrior",
+    "race": "human",
+    "level": 1,
+    "state_bytes": 8192,
+    "modifiers": "empty",
+    "equipment": "empty",
+    "loot": "empty",
+    "mode2574": 0,
+    "pending2368": 1,
+    "state_offsets_0134": {
+      "owned_capacity": 1652,
+      "owned_pointer": 1656,
+      "owned_count": 1660,
+      "candidate_capacity": 1896,
+      "candidate_pointer": 1900,
+      "candidate_count": 1904,
+      "level": 1520,
+      "phase": 2579,
+      "selection_kind": 2577,
+      "mode": 2574,
+      "pending": 2368
+    },
+    "candidate_bytes": 80,
+    "owned_record_bytes": 80,
+    "uses_user_saves": false
+  },
+  "runtime": {
+    "version": "0.134.0",
+    "build": "983346a7",
+    "complete_original1073_executed": true,
+    "original_internal_callees": true,
+    "dependency_shims": [],
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "application_start_called": false,
+    "full_game_started": false,
+    "cases": 779,
+    "fresh_instances": 25,
+    "maximum_memory_bytes": 14942208,
+    "scope": "Synthetic empty auxiliaries and pending2368=1; candidate generation and nonempty modifiers/loot are not covered."
+  },
+  "host_import_policy": "All878 original function imports throw immediately; no application startup export is called.",
+  "production_model": {
+    "used_functions": [
+      "AbilityRecord",
+      "apply_upgrade_card",
+      "initialize_ability",
+      "neutral_additional_bytes"
+    ],
+    "migration_scope": "Existing independent ordered binary32 record math and tier0 neutral initialization accepted for this0.134.0 corpus.",
+    "historical_high_level_selection_api_accepted": false,
+    "shared_postprocessing_implemented_by_model": false,
+    "original_postprocessing_reached_and_executed": true,
+    "qualification": "The production model retains historical naming and explicit pending effects. Actual original1073 reaches original1513/4600; this does not implement those effects in the independent model."
+  },
+  "independent_review": {
+    "path": "evidence/full0134-oracle-20261101T003559.972819Z/independent-review.json",
+    "sha256": "db34627dc88a92ea912bea2cdfff395dd1ef56d672eef7b0bc9befe0c317cf68",
+    "status": "no substantive findings",
+    "findings": [],
+    "recomputed_python_model_comparisons": 779,
+    "nonexport_sections_independently_byte_compared": [
+      {
+        "section_id": 1,
+        "sha256": "a4f96a5df0341228edadf05b1ff3e6223bf947aa036e4477e4237c91ca0d7ce6"
+      },
+      {
+        "section_id": 2,
+        "sha256": "602251f37e1c78db23e87b6b0773440a3a63e5d82a3b9176302237cb7d4c120a"
+      },
+      {
+        "section_id": 3,
+        "sha256": "bf21508406a4fbb5e05940d858dc16e12f9dc80658f061cbf496db04af3370a6"
+      },
+      {
+        "section_id": 4,
+        "sha256": "a3eba8f6201ad3e0ced8cd195db593ddc4538ab1720ebfb050f72998b6cca6b5"
+      },
+      {
+        "section_id": 5,
+        "sha256": "35a24381212d8fb0f8073418b3acbbebbad372bf4a7f24e3b479aec055a5f860"
+      },
+      {
+        "section_id": 6,
+        "sha256": "9f3cfe5176ae52746cd84164515877d028e9591e51c615e41f3a33b6c52e9608"
+      },
+      {
+        "section_id": 9,
+        "sha256": "b9f86174488d198733dda93d4fb32d7a63a8a6b9b399e1761bafebb7a036d19c"
+      },
+      {
+        "section_id": 12,
+        "sha256": "184fbde55f05419e101be152cb02004c284853dca75da6b267d9e377ecc5d30b"
+      },
+      {
+        "section_id": 10,
+        "sha256": "50072ebaceba5f1e457c864516755c72a1606536b1262fc9d7090a8cf226e324"
+      },
+      {
+        "section_id": 11,
+        "sha256": "b93f4b00c6805b2e570cff8a078cb11b33455800140a850279d73cdbd58b3270"
+      },
+      {
+        "section_id": 0,
+        "sha256": "32e109d01c5d3559542285182b3144ede855e6da942fc12714870127c9ca3bba"
+      }
+    ],
+    "new_body_hashes_match_frozen_static_trace": true,
+    "new_fixture_offsets_match_frozen_static_trace": true,
+    "review_executed_wasm": false
+  },
+  "evidence": {
+    "run_directory": "evidence/full0134-oracle-20261101T003559.972819Z",
+    "comparison_receipt": {
+      "path": "evidence/full0134-oracle-20261101T003559.972819Z/selection134-comparison.json",
+      "sha256": "db02302326f5f72a01cdc44ccc5fc4156ade7768c3820af9fc67aecc4e431a69"
+    },
+    "builder_manifest": {
+      "path": "evidence/full0134-oracle-20261101T003559.972819Z/manifest.json",
+      "sha256": "43ccbeb88da74b72e9a0702c8802ddaa8d19527ee8619125a5785423bf2c70a1"
+    },
+    "artifact_sha256": {
+      "selection134-cases.jsonl": "46242bddeabc6dc27fd7980e83d364c46fe9ca86685af29cb0af0783f3b599e3",
+      "selection134-original-results.jsonl": "c806e68cf527d222175262f03254577094db15c95060be91b851fec70d3f4522",
+      "selection134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "source_sha256": {
+      "scripts/build_full134_oracle.py": "d8998324930dfda72fc7976558e4a65f3c236f89c9c70dcf8e16a57a3a725354",
+      "scripts/full134_host.mjs": "d6095c8846db05ecfd0de48025c5c7966eae718bd451625da771dcbaba030d6c",
+      "scripts/run_selection134_full_oracle.mjs": "eb76aa217806b5721dad49a500ba01e7b961b5153bf19133c7dcf9e158930fd9",
+      "scripts/check_selection134_full_spec.py": "15a70097850bc2960f30b7a60c0af775ac12b4b348fdb366019a92ad20d12bd3",
+      "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+      "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+    }
+  },
+  "verification": {
+    "strict_json_readback": true,
+    "current_source_hashes_match_recorded": {
+      "scripts/build_full134_oracle.py": true,
+      "scripts/full134_host.mjs": true,
+      "scripts/run_selection134_full_oracle.mjs": true,
+      "scripts/check_selection134_full_spec.py": true,
+      "scripts/build_upgrade134_oracle.py": true,
+      "reconstruction/core_spec/ability_state.py": true,
+      "reconstruction/core_spec/upgrade_values.py": true,
+      "reconstruction/core_spec/binary32.py": true
+    },
+    "persisted_artifact_hashes_match_recorded": {
+      "selection134-cases.jsonl": true,
+      "selection134-original-results.jsonl": true,
+      "selection134-mismatches.json": true
+    },
+    "persisted_result_ids_exact": true,
+    "ordered_corpus_exact_cartesian_product": true,
+    "historical_results_or_case_counters_reused_as_current": false
+  },
+  "application_start_called": false,
+  "full_game_started": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "installed_game_modified": false,
+  "report_generation_executed_wasm": false,
+  "limitations": [
+    "Only synthetic warrior/human level1 cleave states with empty modifiers/equipment/loot and pending2368=1 are covered.",
+    "Record output plus five scalar fields are compared; no independent derived-stat vector comparison is claimed.",
+    "The complete original tail actually executes, while independent production postprocessing remains unresolved/pending.",
+    "Nonzero new-ability tiers, next-candidate generation, other pending queues, nonempty auxiliaries and other definitions are unverified.",
+    "This is779-case latest-version full1073 acceptance, not exhaustive input enumeration, whole-core equivalence or a playable replacement.",
+    "Historical0.126 results and isolated25368 case counts are not counted as these0.134 full1073 results."
+  ],
+  "reproduce_command": "python3 reverse-engineering/scripts/check_selection134_full_spec.py"
+}

@@ -2,7 +2,24 @@
 
 **主目标已切到官方0.134.0，Web build983346a7。** 下文图和函数编号保留已验证的**历史Web0.126.0 / 3e72472a**依据，不能套到新版。新版Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[新版原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
 
-## 一局游戏的核心主干
+## 当前0.134.0已重新定位的技能主干
+
+```mermaid
+flowchart LR
+    Select[1073 选卡应用] --> Owned[80B拥有记录 G1656/1660]
+    Upgrade[25368 五路升级值] --> Select
+    Owned --> Resolve[22287 有效记录读取]
+    Resolve --> Tick[916 自动施法]
+    Tick --> Cast[922 技能执行]
+    Cast --> Damage[914 敌人扣血]
+    Damage --> HP[424B单位 HP288]
+    Select --> Stats[1513 属性重算]
+    Select --> Finish[4600 选卡收尾]
+```
+
+这是新版原指令的静态数据流，不是已可玩的独立闭环。新版[升级值11560例](reports/2026-11-01-upgrade0134-spec.md)、[完整1073的779例](reports/2026-11-01-selection0134-spec.md)、[完整914的454例](reports/2026-11-01-combat0134-spec.md)对照通过；其余箭头未因此自动获得执行验收。实际状态字段、调用点和新版新增伤害T加区见[选卡状态链](reports/2026-11-01-selection0134-chain.md)与[伤害链](reports/2026-11-01-combat0134-chain.md)。
+
+## 历史0.126.0一局游戏的核心主干
 
 ```mermaid
 flowchart LR

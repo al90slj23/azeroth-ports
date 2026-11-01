@@ -7,6 +7,7 @@
     "selected_by": "User latest-version direction on2026-11-01",
     "previous_verified_reference": "web_core0.126.0/3e72472a retained only for regression/equivalence mapping",
     "installation_packages_updated": false,
+    "version_support": "reconstruction/version-support.json",
     "analysis_profile": {
       "report": "reports/2026-11-01-wasm0134-profile.json",
       "source_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
@@ -79,7 +80,7 @@
     "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=d1eb6005e172",
     "local_snapshot": "originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm",
     "limitations": [
-      "Static snapshot identity and four known-body matches only; not complete0.134.0 gameplay acceptance.",
+      "Partial0.134.0 numeric/owned-record/damage-projection acceptance is recorded separately in reconstruction/version-support.json; not whole-game equivalence.",
       "SHA computed locally from HTTPS download; not a separately published official WASM digest.",
       "Existing fixed0.126.0 source files, installation packages and saves remain unchanged."
     ],
