@@ -1,0 +1,221 @@
+{
+  "status": "passed_scoped_read_only_projection_review",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "comparison": "evidence/app-state0135-capture-check-20261101T121246.633972Z/comparison.json",
+  "comparison_sha256": "0850bf419fe3b430117255ddd445501721c0c3c6ffb343d99fdd7c3e0b09c03a",
+  "original_observation": "evidence/full-app0135-probe-20261101T120144.289175Z/receipt.json",
+  "original_observation_sha256": "fd5dba35d0aeacffe822ce070fd5bc218da8352a5b725e48c166df289b91c726",
+  "source_count": 7,
+  "source_closure_independently_collected": true,
+  "review_source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/app_state135.py": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/check_app_state135_capture.py": "97d73d911dd8fff80df0c8d2a091cb5d5766938c99ac69ee501d8680cb434721",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/review_app_state135_capture.py": "97970f4c4d275887d77c7e6fad5de899aaadde7b579b24adb114533c0c567c4e",
+    "scripts/review_app_state135.py": "972d52ebc1531976db22ac789b8b16323bb070f945c5403bbae599ea65036a31",
+    "scripts/review_app_history135.py": "c9ea94fa2a045ea9e9dc111be83b926c2235b21a3974bf1303ec58f0e7e7da2d"
+  },
+  "review_source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/app_state135.py": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/check_app_state135_capture.py": "97d73d911dd8fff80df0c8d2a091cb5d5766938c99ac69ee501d8680cb434721",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/review_app_state135_capture.py": "97970f4c4d275887d77c7e6fad5de899aaadde7b579b24adb114533c0c567c4e",
+    "scripts/review_app_state135.py": "972d52ebc1531976db22ac789b8b16323bb070f945c5403bbae599ea65036a31",
+    "scripts/review_app_history135.py": "c9ea94fa2a045ea9e9dc111be83b926c2235b21a3974bf1303ec58f0e7e7da2d"
+  },
+  "frozen_original_observer_sources": {
+    "scripts/probe_full_app135.py": "9bb2ba70ee07141660f4fc82280249e33c8eecf9abafe6bf4bda021a7c835207",
+    "scripts/run_full_app135.mjs": "5a74a5aa36769e8bc7e974bf881af9c467517e0915564b17e27947cbc7eb7461",
+    "scripts/browser_full_app135.mjs": "c5bdef174fa758552bf99663e86155f99e692b82f162df9661ddcaaf61831e0a",
+    "scripts/probe_entry_world135.py": "ae3ce76eb6676fe452669b8415baef4927c2f169025c6154977d385696dfca79",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9"
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original_official_js_prefix_unchanged": true,
+  "four_original_functions_reread": [
+    {
+      "idx": 4253,
+      "wat_start": 523870331,
+      "wat_end": 531062070,
+      "wat_line": 9069319,
+      "body_start": 20853050,
+      "body_end": 21033633,
+      "body_bytes": 180583,
+      "wat_sha256": "3575bc4ec48a803b5991083d8be438e8a5c1a4057167a60a776c3d5b699e2b5c",
+      "body_sha256": "2e1c4907770ddaded28e360145cf29080294fff0b615ed7a7f6e1425b9b2206d"
+    },
+    {
+      "idx": 53845,
+      "wat_start": 1167978358,
+      "wat_end": 1167980414,
+      "wat_line": 29603165,
+      "body_start": 66374004,
+      "body_end": 66374270,
+      "body_bytes": 266,
+      "wat_sha256": "7f60af4db98caf28a5291a14e7ffe0c709e5ff60f35b1b8ab62e9ba96305f581",
+      "body_sha256": "943285579e1934d411fe1e4d465a1d523be0705216068352f3acbbbe48dcf1c0"
+    },
+    {
+      "idx": 83825,
+      "wat_start": 1257056952,
+      "wat_end": 1257057557,
+      "wat_line": 32586925,
+      "body_start": 73259446,
+      "body_end": 73259522,
+      "body_bytes": 76,
+      "wat_sha256": "e30ae97c24c8d80c69d42261f46a936264079be1815dc27fc02e47b49798a84b",
+      "body_sha256": "2916193e6cbecb54b946afb7b9e1860f44c6340771f9061bbf31bf82c17b0f24"
+    },
+    {
+      "idx": 122123,
+      "wat_start": 1280113468,
+      "wat_end": 1280113688,
+      "wat_line": 33577853,
+      "body_start": 75668648,
+      "body_end": 75668673,
+      "body_bytes": 25,
+      "wat_sha256": "72c8566f01ba026da61f773b611bb372459a3d76bd16c55196e52537b984b618",
+      "body_sha256": "2d7be9e9a8da07b361f10a5f66525c8b567b27ef3a138f1f9c372e6115102619"
+    }
+  ],
+  "cast_app": {
+    "env": 20859824,
+    "Rc": 21088824,
+    "App": 21088840,
+    "memory_bytes": 27787264,
+    "final_memory_not_used": true,
+    "strong_count_not_predicted": true
+  },
+  "declared_input_ranges": [
+    {
+      "offset": 4008,
+      "length": 16
+    },
+    {
+      "offset": 4768,
+      "length": 4
+    },
+    {
+      "offset": 4928,
+      "length": 8
+    },
+    {
+      "offset": 5056,
+      "length": 4
+    },
+    {
+      "offset": 5161,
+      "length": 1
+    }
+  ],
+  "direct_input_bytes": 33,
+  "known_bytes": 730,
+  "independently_predicted_bytes": 697,
+  "unknown_None_bytes": 4438,
+  "predicted697_sha256": "19546d640c95b2be24bc86cc8f72cac5656d4b83ce5250b2e56a02ce01c09c1f",
+  "decoded_history_from_30_original53845_stores": 240,
+  "decoded_maps_from_first_seed_pair_and_static_header": 128,
+  "independently_predicted_map_bytes": 112,
+  "whole_maps_or_history_copied_from_observed": false,
+  "live_copy_inputs_supplied": false,
+  "independent_wat_memory_addresses": [
+    458752,
+    589824
+  ],
+  "no_production_model_imported": true,
+  "new_original_calls": 0,
+  "new_original_cases": 0,
+  "new_mainloop_frames": 0,
+  "reused_original_observation_runs": 1,
+  "whole_App_legality_proved": false,
+  "renderer_or_boot_health_proved": false,
+  "original_state_restored": false,
+  "excluded_prior_context": {
+    "complete_idle880_returns": 8,
+    "runtime_errors": 1,
+    "renderer_panic_preserved": true,
+    "counted_as_this_review_acceptance": false
+  },
+  "static_data_proof": {
+    "table": {
+      "address": 5222424,
+      "bytes": 16,
+      "pieces": [
+        {
+          "segment": 1723,
+          "source_file_offsets": [
+            81901785,
+            81901788
+          ],
+          "target_offsets": [
+            0,
+            3
+          ],
+          "bytes_hex": "10b04f"
+        }
+      ],
+      "initial_zero_gap_offsets": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "server": {
+      "address": 5221378,
+      "bytes": 13,
+      "pieces": [
+        {
+          "segment": 1722,
+          "source_file_offsets": [
+            81900807,
+            81900820
+          ],
+          "target_offsets": [
+            0,
+            13
+          ],
+          "bytes_hex": "617a65726f74682e6c6f63616c"
+        }
+      ],
+      "initial_zero_gap_offsets": []
+    }
+  },
+  "limitations": [
+    "Only697bytespredicted;33capturedinputbytesarenotpredictionvalidation. Unknown4438remainNone.",
+    "Priororiginalnaturalconstructorcastonly;noindependentAppallocator/entropy/profile/ownershipproducer.",
+    "CapturedAppiscast-time27.8MiBcontext;final413.7MiBmemoryclockstatewasnotcomparedorrestored.",
+    "Earlier8idle880andSwiftShaderpanicareexcludedfromprojectionacceptance;nohealthyboot/gameplay/full880reconstructionclaim."
+  ],
+  "artifacts": {
+    "decoded-history240.bin": "8b3cd9283cbbf0aef95c4880a5e0b394494d989f2bf505abc61da7a8ac0d7f8a",
+    "decoded-maps128.bin": "b835f6f5fa41a1d8f28c562eb83383a2a1cb9c83f51523cd7a6aaaf91fb5a007",
+    "predicted697.bin": "19546d640c95b2be24bc86cc8f72cac5656d4b83ce5250b2e56a02ce01c09c1f",
+    "independent-wat-byte-write-trace.json": "fa30729adcd881e5c1d340986acf0c03538dad5c6efd21849f50976382b1858b"
+  },
+  "review_path": "evidence/app-state0135-capture-independent-review-20261101T122346.076103Z/review.json",
+  "review_sha256": "1745dcd8d245eeaa21e79b074e34c7f94e585b460afac942c410cfef695af144"
+}

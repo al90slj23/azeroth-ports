@@ -17,9 +17,13 @@ Aethus 原作游戏的非官方社区封装与逆向研究仓库。现有社区�
 
 新增[451资源→Elwynn查询world→默认开局](reverse-engineering/reports/2026-11-01-asset-world0135.md)：生产过程不读snapshot或执行原程序，terrain规范投影4,022,968B、nav78,400B、secondary1,254,400B及78包与一份历史原件结果相符，[整体独审通过](reverse-engineering/reports/2026-11-01-asset-world0135-independent-review.md)。[placement13组原件验证](reverse-engineering/reports/2026-11-01-world-placements0135.md)与[cache静态恢复](reverse-engineering/reports/2026-11-01-world-cache0135.md)另计；该历史对照新增原件调用、bootstrap和主切片帧均为0。完整物理App/Rc/VFS所有权、其它地图、渲染与独立一局仍未完成。
 
-[真实世界与开局观察](reverse-engineering/reports/2026-11-01-entry-world0135-probe.md)的453份MPQ／561次GET仍是历史原件观察；本轮新增bootstrap与主切片帧均为0。history的[164组/924调用组件](reverse-engineering/reports/2026-11-01-incoming-history0135.md)与[真实DBC9组/37调用组合](reverse-engineering/reports/2026-11-01-browser-history0135-independent-review.md)分别保留，各层不相加。现有安装包不随研究目标自动更新，详见[版本策略](reverse-engineering/VERSION_STRATEGY.md)与[覆盖清单](reverse-engineering/RECONSTRUCTION.md)。
+新增App外围的独立组件：[transport43组/220调用](reverse-engineering/reports/2026-11-01-transport0135.md)限quiet域、宿主调用0；[空history与地址熵24组/96调用](reverse-engineering/reports/2026-11-01-app-history0135.md)只预测entropy的408B，另384B地址词保持opaque，四map为typed-state静态规则。[App构造32组静态重组](reverse-engineering/reports/2026-11-01-app-state0135.md)冻结10源、0新WASM调用；[真实cast投影](reverse-engineering/reports/2026-11-01-app-state0135-capture.md)730B中33B为显式输入、697B独立预测，4,438B保持None。四份组件/投影均已通过各自范围的独审，不增加旧主切片计数。
 
-[真实915观测](reverse-engineering/reports/2026-11-01-effect-system0135-probe.md)确认本批时钟和两类效果队列保持空；后继主切片使用独立模型重新生成预期，保留原始三域读回。非空延迟动作另有500组对照（383正常、117预期原版错误），不代表全部915。完整880还缺其他入口、2376特殊事件及前段/party/终态组合，完整自然帧和独立一局未完成。
+[自然原App/Metal观察](reverse-engineering/reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reverse-engineering/reports/2026-11-01-full-app0135-independent-review.md)）已显示正常中文角色选择页，8次完整idle880返回、0 page error、999次HTTP均200；App Game tag2，尚未进入一局。CSP阻止presence外发，不能称“没有联网尝试”。这是执行原程序的观察，独立gameplay帧仍为0；早期SwiftShader错误和首Metal批的研究observer/font边界完整保留，独立App/880及整局仍未恢复。
+
+[真实世界与开局观察](reverse-engineering/reports/2026-11-01-entry-world0135-probe.md)的453份MPQ／561次GET仍是历史原件观察；该历史资源/开局组合不增加bootstrap或主切片帧。history的[164组/924调用组件](reverse-engineering/reports/2026-11-01-incoming-history0135.md)与[真实DBC9组/37调用组合](reverse-engineering/reports/2026-11-01-browser-history0135-independent-review.md)分别保留，各层不相加。现有安装包不随研究目标自动更新，详见[版本策略](reverse-engineering/VERSION_STRATEGY.md)与[覆盖清单](reverse-engineering/RECONSTRUCTION.md)。
+
+[真实915观测](reverse-engineering/reports/2026-11-01-effect-system0135-probe.md)确认本批时钟和两类效果队列保持空；后继主切片使用独立模型重新生成预期，保留原始三域读回。非空延迟动作另有500组对照（383正常、117预期原版错误），不代表全部915。完整880还缺其他入口、2376特殊事件及前段/party/终态组合，独立完整自然帧和独立一局未完成。
 
 ## 当前封装版本
 

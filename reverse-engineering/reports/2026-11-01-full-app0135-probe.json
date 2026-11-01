@@ -1,0 +1,216 @@
+{
+  "title": "Natural official0.135.1 App construction and complete idle880 observation with actual Metal rendering",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "kind": "controlled_whole_original_App_and_idle_tick_observation_not_independent_reconstruction",
+  "status": "original_character_screen_and8_idle_returns_observed_and_independent_review_passed",
+  "receipt": "evidence/full-app0135-probe-20261101T122659.584362Z/receipt.json",
+  "receipt_sha256": "8a8bc535e373eacf31e33433e63e1e8f1930d7a2c1389582df2609f0ce0e95d8",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original_WASM_modified": false,
+  "official_glue_prefix_sha256": "636bcd5acba01a31c4b40234969243e964cc8e7e7610adf0817e3494d92c9945",
+  "official_glue_prefix_bytes": 187006,
+  "original_functions_or_internal_callees_replaced": false,
+  "original_app_constructed": true,
+  "research_WASM_memory_writes": false,
+  "source_files": 10,
+  "source_sha256_before": {
+    "scripts/probe_full_app135.py": "5600fdfd534760e18a5d875f450febdf049d42601344949c32faef9f07cdd628",
+    "scripts/run_full_app135.mjs": "b661b19152fcf42602635c6b585e512eb4e8c369493d541e9dda74054ded2d88",
+    "scripts/browser_full_app135.mjs": "99e0e20975b928e7a1a353c7650a95eeed7e2e2c76443b99d462a22edc90a174",
+    "scripts/probe_entry_world135.py": "ae3ce76eb6676fe452669b8415baef4927c2f169025c6154977d385696dfca79",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9"
+  },
+  "source_sha256_after": {
+    "scripts/probe_full_app135.py": "5600fdfd534760e18a5d875f450febdf049d42601344949c32faef9f07cdd628",
+    "scripts/run_full_app135.mjs": "b661b19152fcf42602635c6b585e512eb4e8c369493d541e9dda74054ded2d88",
+    "scripts/browser_full_app135.mjs": "99e0e20975b928e7a1a353c7650a95eeed7e2e2c76443b99d462a22edc90a174",
+    "scripts/probe_entry_world135.py": "ae3ce76eb6676fe452669b8415baef4927c2f169025c6154977d385696dfca79",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/mpq.py": "7e9d2df3c4655d36443dc4d9077280f866f09a62d8e9b0a0fea8e8ae7f9390d9"
+  },
+  "whole_original_init_observation_cases": 1,
+  "confirmed_complete_idle880_returns": 8,
+  "game_discriminant_during_all_frames": "2 (no Game yet)",
+  "new_independent_cases": 0,
+  "new_independent_mainloop_frames": 0,
+  "snapshot": {
+    "bytes": 419692544,
+    "sha256": "17be706e1fc91beb8851389ba56e8cbeb340f9b7ec419c7e0ace44c6ef3f8781",
+    "file": "evidence/full-app0135-probe-20261101T122659.584362Z/original_app.memory",
+    "synchronous_nonshared_memory_copy": true,
+    "final_header_from_same_frozen_copy": true,
+    "live_memory_bytes_after_upload": 476643328,
+    "full_VM_state_or_externref_restoration_proven": false
+  },
+  "original_App": {
+    "pointer": 22624720,
+    "Rc": 22624704,
+    "constructor_header": {
+      "App": 22624720,
+      "Rc": 22624704,
+      "strong": 3,
+      "weak": 1,
+      "borrow": 0,
+      "borrow_padding_hex": "000000",
+      "marker_u64": "0",
+      "previous_bits_u64": "0",
+      "clock_previous_active": false,
+      "previous_seconds": null,
+      "game_tag_u64": "2",
+      "second_tag": 2,
+      "profile_tag": 2,
+      "transport_pointer": 14549552,
+      "transport_vtable": 1495776,
+      "world_cache": 0,
+      "memory_bytes": 29360128
+    },
+    "frozen_final_header": {
+      "App": 22624720,
+      "Rc": 22624704,
+      "strong": 2,
+      "weak": 1,
+      "borrow": 0,
+      "borrow_padding_hex": "000000",
+      "marker_u64": "1",
+      "previous_bits_u64": "4619199824045694517",
+      "clock_previous_active": true,
+      "previous_seconds": 6.67360000000149,
+      "game_tag_u64": "2",
+      "second_tag": 2,
+      "profile_tag": 2,
+      "transport_pointer": 14549552,
+      "transport_vtable": 1495776,
+      "world_cache": 0,
+      "memory_bytes": 419692544
+    },
+    "actual_cast_time5168_bytes_retained": true
+  },
+  "callback_chain": {
+    "cast_import": 867,
+    "cast_vtable": 5305816,
+    "environment_bytes": 12,
+    "environment_AppRc_offset": 8,
+    "Rc_App_data_offset": 16,
+    "setInterval_import": 517,
+    "interval_ms": 25,
+    "FnMut_original": 83825,
+    "tick_original": 880,
+    "complete_call_guard": "real before borrow-byte0,original closure returned normally,real after borrow-byte0;input now_ms/1000 and final clock words independently checked",
+    "native_callback_observer_wrapper_present": true,
+    "wrapper_holds_callback_until_capture": true,
+    "whole_App_destructor_or_shutdown_ownership_validated": false
+  },
+  "browser": {
+    "profile": "metal",
+    "version": "156.0.8078.74",
+    "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "sha256": "cf864393a84aa983ba58feea2c24050748e39738591205ecaa54b2c1199ad28c",
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3"
+    },
+    "playwright_version": "1.64.1",
+    "node_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+    "performance_validation": false
+  },
+  "host": {
+    "real_official_import_bindings_admitted": 878,
+    "original_host_calls_counted": 12133225,
+    "detailed_import_events_retained": 20000,
+    "detail_limit": 20000,
+    "details_truncated": true,
+    "all_HTTP_requests": 999,
+    "all_HTTP200": true,
+    "page_errors": 0,
+    "memory_cap_bytes": 536870912,
+    "asset_decoded_byte_budget": 268435456,
+    "asset_file_budget": 1024,
+    "external_egress_permitted": false,
+    "blocked_presence_attempts_recorded_in_console": true,
+    "presence_endpoint": "https://wow.aethus.pl/presence",
+    "no_network_intent_claimed": false,
+    "multiplayer_delivery_validated": false
+  },
+  "actual_resources": {
+    "MPQ_files": 535,
+    "MPQ_decoded_bytes": 53898024,
+    "name_index_is_explicit_fixed_base_input": true,
+    "latest_complete_asset_equivalence_proven": false,
+    "additional_font": {
+      "path": "originals/official-full-app-font-20261101T122429.151414Z/azs_sc.ttf",
+      "url": "https://wow.aethus.pl/data/fonts/azs_sc.ttf",
+      "bytes": 1225412,
+      "sha256": "5499291b696324c10c3e7f2d3d89a5c490897319a629141ea5b40c85e62e6224",
+      "MPQ_source": false,
+      "matches_native_exe_offset": 120912388,
+      "native_exe_sha256": "71e5f1767279db4bd428d1cd9c5d50d37759b72295386a69f9e3f6e70bc59249",
+      "native_original_executed": false
+    }
+  },
+  "screenshot": {
+    "file": "evidence/full-app0135-probe-20261101T122659.584362Z/original-app.png",
+    "sha256": "f91acc6c5f041f975a0337ea2520c19626b2200866f02771f5da47d3cba474b6",
+    "visually_checked_by_root_and_independent_reviewer": true,
+    "description": "Actual original Chinese character-selection UI,not an independently rebuilt UI."
+  },
+  "process": {
+    "pid": 6638,
+    "pgid": 6638,
+    "exit_code": 0,
+    "seconds": 69.80150604200026,
+    "terminal": {
+      "owned_pids": {
+        "6642": true,
+        "6653": true,
+        "6638": true
+      },
+      "owned_pgids": {
+        "6653": true,
+        "6638": true
+      },
+      "events": [],
+      "all_owned_terminal": true
+    }
+  },
+  "independent_review": {
+    "status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-full-app0135-independent-review.json",
+    "review_path": "evidence/full-app0135-independent-review-20261101T124434.382127Z/review.json",
+    "review_sha256": "cc3b2c00ad46e2283737728bcfe5bfe8ea0e8d1fbaba1e7025d3b7c3a1397be0",
+    "original_reexecuted": false
+  },
+  "previous_batches": [
+    {
+      "receipt": "evidence/full-app0135-probe-20261101T120144.289175Z/receipt.json",
+      "diagnosis": "evidence/full-app0135-probe-20261101T120144.289175Z/post-exit-diagnosis.json",
+      "boundary": "Actual SwiftShader createBuffer failure/Rust wgpu panic;App ctor and8idle callbacks still observed;not healthy rendering."
+    },
+    {
+      "receipt": "evidence/full-app0135-probe-20261101T121656.691420Z/receipt.json",
+      "diagnosis": "evidence/full-app0135-probe-20261101T121656.691420Z/post-exit-diagnosis.json",
+      "boundary": "Research telemetry1M event throw and three missing-font404s;not an intrinsic original Metal failure."
+    }
+  ],
+  "counter_policy": "Final1 observation case/8idle returns separately recorded. Old2 observations,typedApp cast comparison and component oracle counts are not summed or relabelled independent game frames.",
+  "limitations": [
+    "Original App/renderer runs original code;this is an oracle/reference observation,not an independent app.",
+    "Game remains absent/tag2;no natural run entry or active gameplay frames/complete880 reconstruction is claimed.",
+    "Actual externref/JS/GPU/VM state not restored;frozen linear memory is not a complete VM snapshot.",
+    "Callback observation and cutoff retain JS closure lifetime through capture;post-cutoff ownership is not natural full shutdown validation.",
+    "Presence attempts are blocked by isolation;no multiplayer,server sync or account interaction validated.",
+    "Native Windows evidence here is font data byte equality only,not native function execution.",
+    "Independent Apps/world/game integration,allbehaviors/renderer/saves/UI/multiplayer and fullrun remain incomplete."
+  ],
+  "installed_packages_or_user_saves_modified": false,
+  "goal_complete": false
+}

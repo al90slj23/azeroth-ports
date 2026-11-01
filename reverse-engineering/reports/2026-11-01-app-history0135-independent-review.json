@@ -1,0 +1,525 @@
+{
+  "status": "passed_scoped_read_only_review",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "receipt": "evidence/app-history0135-oracle-20261101T114831.615348Z/comparison.json",
+  "receipt_sha256": "254783e9554e47977d44f2f07f4ce2b433db14d21ef4ac443f4470c56ba9eb05",
+  "source_count": 10,
+  "source_closure_independently_collected": true,
+  "source_sha256_before": {
+    "scripts/check_app_history135.py": "ef0439d94bef40fcf681ff777e4ce1b10bd29f8868f26e97b3ef56f3ad68ee4a",
+    "scripts/run_app_history135_oracle.mjs": "cf9bd110f362491cd6a1f33c75c92a3711d3c5c68f991e654403c19b9b36c5a5",
+    "scripts/trace_app_history135.py": "81428ee9c9ad88265ffb2d9706fb5d0a57df978a389fb6159658a03f3f5d8838",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/review_app_history135.py": "c9ea94fa2a045ea9e9dc111be83b926c2235b21a3974bf1303ec58f0e7e7da2d"
+  },
+  "source_sha256_after": {
+    "scripts/check_app_history135.py": "ef0439d94bef40fcf681ff777e4ce1b10bd29f8868f26e97b3ef56f3ad68ee4a",
+    "scripts/run_app_history135_oracle.mjs": "cf9bd110f362491cd6a1f33c75c92a3711d3c5c68f991e654403c19b9b36c5a5",
+    "scripts/trace_app_history135.py": "81428ee9c9ad88265ffb2d9706fb5d0a57df978a389fb6159658a03f3f5d8838",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/review_app_history135.py": "c9ea94fa2a045ea9e9dc111be83b926c2235b21a3974bf1303ec58f0e7e7da2d"
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "functions": [
+    {
+      "idx": 53845,
+      "wat_start": 1167978358,
+      "wat_end": 1167980414,
+      "wat_line": 29603165,
+      "body_start": 66374004,
+      "body_end": 66374270,
+      "body_bytes": 266,
+      "wat_sha256": "7f60af4db98caf28a5291a14e7ffe0c709e5ff60f35b1b8ab62e9ba96305f581",
+      "body_sha256": "943285579e1934d411fe1e4d465a1d523be0705216068352f3acbbbe48dcf1c0"
+    },
+    {
+      "idx": 28797,
+      "wat_start": 990983150,
+      "wat_end": 990986478,
+      "wat_line": 23567483,
+      "body_start": 52757536,
+      "body_end": 52757978,
+      "body_bytes": 442,
+      "wat_sha256": "25142cd143c46ce0d714ff443c34c8e1b5672a4433edf2362035d418145ec643",
+      "body_sha256": "6e6c0f5317cbe15e579b2a02f43fc54f974c0aca8bf914cdf814fd41ed507aaf"
+    },
+    {
+      "idx": 60416,
+      "wat_start": 1195891866,
+      "wat_end": 1195892548,
+      "wat_line": 30468794,
+      "body_start": 68331722,
+      "body_end": 68331826,
+      "body_bytes": 104,
+      "wat_sha256": "c7ccae6a3723d01513d5b201f9d16050d9336dd12e06b3b75e6f6f347fa621b6",
+      "body_sha256": "6fd41e5c89903d91cf1ef1a431191632961b37d7e592701d3e62f22740d22e30"
+    },
+    {
+      "idx": 81334,
+      "wat_start": 1233660149,
+      "wat_end": 1233660804,
+      "wat_line": 31837844,
+      "body_start": 71425438,
+      "body_end": 71425515,
+      "body_bytes": 77,
+      "wat_sha256": "1f41d2cee03b362d6f0c92467fdd24688a2c455fa5437fe707fd20362586e631",
+      "body_sha256": "f78993c4e711bf523a1890b24a97835b3b487350e9bc2a3de72913f87e6313a5"
+    },
+    {
+      "idx": 4253,
+      "wat_start": 523870331,
+      "wat_end": 531062070,
+      "wat_line": 9069319,
+      "body_start": 20853050,
+      "body_end": 21033633,
+      "body_bytes": 180583,
+      "wat_sha256": "3575bc4ec48a803b5991083d8be438e8a5c1a4057167a60a776c3d5b699e2b5c",
+      "body_sha256": "2e1c4907770ddaded28e360145cf29080294fff0b615ed7a7f6e1425b9b2206d"
+    }
+  ],
+  "only_export_section_changed": true,
+  "added_exports": [
+    [
+      "history135_empty",
+      0,
+      53845
+    ],
+    [
+      "history135_drop",
+      0,
+      28797
+    ],
+    [
+      "history135_seed",
+      0,
+      60416
+    ],
+    [
+      "history135_entropy",
+      0,
+      81334
+    ],
+    [
+      "history135_stack",
+      3,
+      0
+    ]
+  ],
+  "original_mutable_stack_global_unchanged": true,
+  "cases": 24,
+  "original_author_calls": 96,
+  "new_original_calls": 0,
+  "reviewer_imported_production": false,
+  "complete53845_bytes": 5760,
+  "full512B_poison_and_drop_observation_bytes": 24576,
+  "decoded53845_i64_stores": [
+    {
+      "offset": 232,
+      "value": "1"
+    },
+    {
+      "offset": 224,
+      "value": "0"
+    },
+    {
+      "offset": 216,
+      "value": "4294967296"
+    },
+    {
+      "offset": 208,
+      "value": "1"
+    },
+    {
+      "offset": 200,
+      "value": "0"
+    },
+    {
+      "offset": 192,
+      "value": "4294967296"
+    },
+    {
+      "offset": 184,
+      "value": "1"
+    },
+    {
+      "offset": 176,
+      "value": "0"
+    },
+    {
+      "offset": 168,
+      "value": "4294967296"
+    },
+    {
+      "offset": 160,
+      "value": "1"
+    },
+    {
+      "offset": 152,
+      "value": "0"
+    },
+    {
+      "offset": 144,
+      "value": "4294967296"
+    },
+    {
+      "offset": 136,
+      "value": "1"
+    },
+    {
+      "offset": 128,
+      "value": "0"
+    },
+    {
+      "offset": 120,
+      "value": "4294967296"
+    },
+    {
+      "offset": 112,
+      "value": "1"
+    },
+    {
+      "offset": 104,
+      "value": "0"
+    },
+    {
+      "offset": 96,
+      "value": "4294967296"
+    },
+    {
+      "offset": 88,
+      "value": "1"
+    },
+    {
+      "offset": 80,
+      "value": "0"
+    },
+    {
+      "offset": 72,
+      "value": "4294967296"
+    },
+    {
+      "offset": 64,
+      "value": "1"
+    },
+    {
+      "offset": 56,
+      "value": "0"
+    },
+    {
+      "offset": 48,
+      "value": "4294967296"
+    },
+    {
+      "offset": 40,
+      "value": "1"
+    },
+    {
+      "offset": 32,
+      "value": "0"
+    },
+    {
+      "offset": 24,
+      "value": "4294967296"
+    },
+    {
+      "offset": 16,
+      "value": "1"
+    },
+    {
+      "offset": 8,
+      "value": "0"
+    },
+    {
+      "offset": 0,
+      "value": "4294967296"
+    }
+  ],
+  "drop_scope": "Empty20vectors only; original20conditionalfreebranches are skipped byrealcap0, not patched.",
+  "entropy_known_stack_flag_bytes": 408,
+  "entropy_opaque_address_bytes": 384,
+  "entropy_observations": [
+    {
+      "id": 0,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549520",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549544",
+      "seed_flag": 1
+    },
+    {
+      "id": 1,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549536",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549560",
+      "seed_flag": 1
+    },
+    {
+      "id": 2,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14553624",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14553648",
+      "seed_flag": 1
+    },
+    {
+      "id": 3,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14615064",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14615088",
+      "seed_flag": 1
+    },
+    {
+      "id": 4,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549520",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549544",
+      "seed_flag": 1
+    },
+    {
+      "id": 5,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549536",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549560",
+      "seed_flag": 1
+    },
+    {
+      "id": 6,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14553624",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14553648",
+      "seed_flag": 1
+    },
+    {
+      "id": 7,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14615064",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14615088",
+      "seed_flag": 1
+    },
+    {
+      "id": 8,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549520",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549544",
+      "seed_flag": 1
+    },
+    {
+      "id": 9,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549536",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549560",
+      "seed_flag": 1
+    },
+    {
+      "id": 10,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14553624",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14553648",
+      "seed_flag": 1
+    },
+    {
+      "id": 11,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14615064",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14615088",
+      "seed_flag": 1
+    },
+    {
+      "id": 12,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549520",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549544",
+      "seed_flag": 1
+    },
+    {
+      "id": 13,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549536",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549560",
+      "seed_flag": 1
+    },
+    {
+      "id": 14,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14553624",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14553648",
+      "seed_flag": 1
+    },
+    {
+      "id": 15,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14615064",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14615088",
+      "seed_flag": 1
+    },
+    {
+      "id": 16,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549520",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549544",
+      "seed_flag": 1
+    },
+    {
+      "id": 17,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549536",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549560",
+      "seed_flag": 1
+    },
+    {
+      "id": 18,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14553624",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14553648",
+      "seed_flag": 1
+    },
+    {
+      "id": 19,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14615064",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14615088",
+      "seed_flag": 1
+    },
+    {
+      "id": 20,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549520",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549544",
+      "seed_flag": 1
+    },
+    {
+      "id": 21,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14549536",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14549560",
+      "seed_flag": 1
+    },
+    {
+      "id": 22,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14553624",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14553648",
+      "seed_flag": 1
+    },
+    {
+      "id": 23,
+      "seed0_known": 1048559,
+      "seed1_opaque": "14615064",
+      "entropy0_known": 1048575,
+      "entropy1_opaque": "14615088",
+      "seed_flag": 1
+    }
+  ],
+  "stack_before_after": 1048576,
+  "typed_map_static_header": {
+    "raw_hex": "10b04f00000000000000000000000000",
+    "address": 5222424,
+    "bytes": 16,
+    "pieces": [
+      {
+        "segment": 1723,
+        "source_file_offsets": [
+          81901785,
+          81901788
+        ],
+        "target_offsets": [
+          0,
+          3
+        ],
+        "bytes_hex": "10b04f"
+      }
+    ],
+    "initial_zero_gap_offsets": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "typed_map_replays": 3,
+  "new_original4253_calls": 0,
+  "source_closure_correction": {
+    "old_sources": 7,
+    "new_sources": 10,
+    "path": "evidence/app-history0135-oracle-20261101T114831.615348Z/source-closure-correction.json",
+    "sha256": "89f2d7601bc4ee5f1f3f1174bcb757e8864a4ccff4f5a41e02bea5db3340b8fd",
+    "six_artifacts_byte_identical": true,
+    "cases_not_added": true
+  },
+  "process_terminal_pid_and_pgid_verified_missing": true,
+  "original_runtime": {
+    "cases": 24,
+    "original_calls": 96,
+    "by_role": {
+      "28797": 24,
+      "53845": 24,
+      "60416": 24,
+      "81334": 24
+    },
+    "peak_memory_bytes": 14680064,
+    "memory_cap_bytes": 33554432,
+    "denied_imports": 878,
+    "host_calls": 0,
+    "global_or_once_injected": false,
+    "address_dependent_seed_second_word_predicted": false
+  },
+  "limitations": [
+    "Knownentropyprojectionatgenuine1MiBstackonly; both8Ballocatoraddresswordsremainopaque, no independentallocation/seedprediction.",
+    "Fourmap128B onlyexplicitinitializedRandomState replay and4253staticwindows;notfull4253acceptance.",
+    "Nonemptyhistorydestruction, actualhistoryusage, Appownership,880,UI/network andcompletegame remain separate."
+  ],
+  "artifacts": {
+    "4253-8488-8597-typed-map-seeds.wat": "430372aa1d7738529ff45754418f3d6b65ffc0761e1fc9d78f1881f5bd86a967",
+    "53845.wat": "7f60af4db98caf28a5291a14e7ffe0c709e5ff60f35b1b8ab62e9ba96305f581",
+    "81334.wat": "1f41d2cee03b362d6f0c92467fdd24688a2c455fa5437fe707fd20362586e631",
+    "4253-8757-8846-history-and-map-writes.wat": "efce49697257dd9b97dda02e437af19d19dd5d07f813025394381cfc40b0792f",
+    "28797.wat": "25142cd143c46ce0d714ff443c34c8e1b5672a4433edf2362035d418145ec643",
+    "60416.wat": "c7ccae6a3723d01513d5b201f9d16050d9336dd12e06b3b75e6f6f347fa621b6"
+  },
+  "review_path": "evidence/app-history0135-independent-review-20261101T115315.665894Z/review.json",
+  "review_sha256": "cb7653a5c960e0b0e2438e6c2d64a5b0700f5567ef8fba835c59db0e2190371f",
+  "original_reexecuted_by_reviewer": false
+}

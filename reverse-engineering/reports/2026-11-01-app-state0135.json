@@ -1,0 +1,156 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "kind": "partial_typed_App5168_constructor_static_recomposition",
+  "status": "static_window_passed_complete_App_producer_unrestored",
+  "production_source_sha256": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+  "static_comparison": {
+    "path": "evidence/app-state0135-static-check-20261101T121056.399055Z/comparison.json",
+    "sha256": "93c92bd3525979fe61ce187742eb7c763d7ed02be64150d338880ccc80f1d7c2",
+    "cases": 32,
+    "source_count": 10,
+    "known_bytes_checked": 30592,
+    "None_bytes_checked": 134784,
+    "kind": "original straightline WAT window interpretedlocally;not originalWASM execution"
+  },
+  "static_identity": {
+    "path": "evidence/app-state0135-static-20261101T115859.144598Z/trace.json",
+    "sha256": "48db0f0d0bba56e903af570a1f78460b66b15c093850e0448029d759e16ae601"
+  },
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "new_original_calls": 0,
+  "new_original_cases": 0,
+  "snapshot_read": false,
+  "appstart_called": false,
+  "independent_review": {
+    "status": "passed",
+    "review_status": "passed_scoped_static_read_only_review",
+    "report": "reports/2026-11-01-app-state0135-independent-review.md",
+    "json": "reports/2026-11-01-app-state0135-independent-review.json",
+    "evidence": "evidence/app-state0135-independent-review-20261101T121623.578791Z/review.json",
+    "sha256": "e706357340af3af5bc7b01d375f4145d025c4af69a3fc9404ec646e94683f240",
+    "scope": "Parent-arranged static/read-onlyreview;full actualApp capture separate",
+    "registration_only": true
+  },
+  "byte_scope": {
+    "app_bytes": 5168,
+    "no_livecopies_known": 730,
+    "no_livecopies_unknown": 4438,
+    "with_three_livecopies_known": 1182,
+    "with_three_livecopies_unknown": 3986,
+    "default_unknown_ranges": [
+      [
+        8,
+        8
+      ],
+      [
+        24,
+        2584
+      ],
+      [
+        2616,
+        760
+      ],
+      [
+        3380,
+        372
+      ],
+      [
+        4155,
+        593
+      ],
+      [
+        4752,
+        16
+      ],
+      [
+        4924,
+        4
+      ],
+      [
+        4980,
+        36
+      ],
+      [
+        5068,
+        8
+      ],
+      [
+        5100,
+        16
+      ],
+      [
+        5121,
+        40
+      ],
+      [
+        5167,
+        1
+      ]
+    ]
+  },
+  "interfaces": [
+    "AppConstructorInputs135(lcg_seed_u64,transport_pointer,history240,hash_maps128,server_string_pointer,startup_flag5161,live_blocks=())",
+    "project_app_constructor135(inputs)->AppProjection135",
+    "AppLiveBlock135(offset,data,producer)",
+    "AppProjection135.require_known(offset,length)",
+    "app_owner_layout135()",
+    "game_install_contract135()",
+    "app_pointer_from_tick_closure135(env,vtable,read_u32)"
+  ],
+  "timing": {
+    "initial_app0_i64": 0,
+    "app8_f64_inactive_unknown": true,
+    "browser_clock_divisor": 1000,
+    "actual_interval_ms": 25,
+    "game_elapsed_separate": true
+  },
+  "pointers": {
+    "app_owner_allocation": 5184,
+    "app_payload_offset": 16,
+    "app_bytes": 5168,
+    "strong_offset": 0,
+    "weak_offset": 4,
+    "borrow_byte_offset": 8,
+    "tick_env_bytes": 12,
+    "tick_env_Rc_offset": 8,
+    "tick_vtable": 5305816,
+    "callback_import": "__wbindgen_cast_0000000000000010",
+    "callback_target83825_table_slot": 4473,
+    "callback_target58521_table_slot": 4472,
+    "official_glue_has_original_property": false,
+    "contract": "Transparentcastwrapper canbindcallback to(a,b);onlyguardedb5305816 admitsApp=u32(a+8)+16"
+  },
+  "pending": [
+    "Complete legitimate App producer not recovered;4438 no-livecopy/3986 with-livecopy bytes remain unknown or inactive.",
+    "Settings368/loaded-state48/preferences36 realproducers,profile/menu/history/transport ownership and completeGame installation need separate typed producers.",
+    "Integer seed4936 computed from declaredLCG entropy input;initialentropy andpointerallocation production not forecast.",
+    "Game move caller24129/oldDrop1627/sourceforget contract established,not implementedfullcaller ornewRcclone.",
+    "No original4253/GPU/storage/browser/network or complete880 run performed inthis task."
+  ],
+  "legal_full_app": false,
+  "whole_game_complete": false,
+  "source_closure_correction": {
+    "path": "evidence/app-state0135-static-check-20261101T121056.399055Z/source-closure-correction.json",
+    "sha256": "9a473472c5612ecddac91ff298c08cdf219be339924ea2aa085cadd3b5b9d48c",
+    "old_comparison": "evidence/app-state0135-static-check-20261101T115726.290244Z/comparison.json",
+    "old_sha256": "32843a116a65948adcf24a4fe65a92114c958141bd664c8b537816b8211be9d7",
+    "old_source_count": 7,
+    "missing_imports": [
+      "core_spec/upgrade_values.py",
+      "core_spec/binary32.py"
+    ],
+    "added_closure_helper": "scripts/source_closure135.py",
+    "inputs_expected_window_and_masks_unchanged": true,
+    "production_and_trace_unchanged": true,
+    "old_receipt_preserved": true,
+    "new_original_calls": 0
+  },
+  "actual_capture_projection": {
+    "report": "reports/2026-11-01-app-state0135-capture.md",
+    "kind": "separate_prior_original_observation_projection_not_this_static_batch",
+    "known_bytes": 730,
+    "declared_input_bytes": 33,
+    "independently_predicted_bytes": 697
+  }
+}

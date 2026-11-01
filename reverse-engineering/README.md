@@ -8,6 +8,8 @@
 
 后继[独立资产组合](reports/2026-11-01-asset-world0135.md)从451文件/67,281,330B重建默认Elwynn查询world并继续开局，37源冻结；terrain4,022,968B、nav78,400B、secondary1,254,400B、78包/8,410B及RNG/phase1/counter87与**1历史原件case**一致，[整体独审通过](reports/2026-11-01-asset-world0135-independent-review.md)。生产不读原memory；历史checker另读原snapshot，0新增原件调用/案例或主切片帧。物理App/Once/Rc/VFS、其它地图模式与完整一局仍缺。
 
+另有[自然原App/Metal观察](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)）：官方构造产生真实App，已显示正常中文角色选择页，8次idle880完整返回；999次HTTP全部200、0 page error，Game tag2仍在菜单、未进入一局。CSP阻止presence外发，保留真实联网尝试；前期SwiftShader失败与首Metal的observer/font边界不倒改。它是原程序观察，新增独立gameplay帧0，不代表独立App/880已经实现。
+
 此前0.126.0已恢复主循环主干、9职业/113能力定义、选卡/施法/伤害、12区域及账号存档主干，并建立若干独立模型。它们保留为历史验证和新版迁移参考，不能直接计为0.134.0已支持；[核心还原图](CORE_MAP.md)明确区分两者。
 
 HP对象更新经主机发送、客人解码、事件通道和注册系统到客户端字段写入已静态追通，见[事件投递](reports/2026-11-01-ecs-delivery.md)、[伤害计算](reports/2026-11-01-damage-core.md)和[合作同步](reports/2026-11-01-coop-sync.md)。该静态路径和离线codec尚未经过真实跨端联机验收。
@@ -53,7 +55,10 @@ HP对象更新经主机发送、客人解码、事件通道和注册系统到客
 - snapshot查询／位置／开局仍使用独立256MiB／878deny与栈1048576；M2／WMO fresh域32MiB／878deny。共享52role和各实验准入保持，所有计数不相加。本轮451资源纯模型CLI是另一条无原件执行的生产链；物理App/Rc/VFS所有权、菜单/profile、其它地图模式、非空装备天赋、旧切片整合和独立一局仍未知。
 - 真实14尾阶段[080624观测](evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json)为3038帧/42550快照/18选择/42558调用，6预算、seed3第353帧与seed5第285帧进入phase4；这是原件观测，不是独立模型验收，不与当前1614帧相加。 [观测独审](reports/2026-11-01-main-tail0135-probe-independent-review.md)通过；2521个execution11快照不计新模型能力。
 
-- [完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)只补参数/控制流与transport前置条件；合法App及76B transport尚未独立生产，未执行新的完整880自然帧。
+- [76B transport六方法](reports/2026-11-01-transport0135.md)在43组/220次完整原件调用中0差异，[独审通过](reports/2026-11-01-transport0135-independent-review.md)。quiet flags/timer域、fresh32MiB/878deny、实际宿主0；flag日志/时钟、完整owner生命周期、receive→ECS及真实网络未验。
+- [空history/真实地址熵](reports/2026-11-01-app-history0135.md)24组/96入口、[独审通过](reports/2026-11-01-app-history0135-independent-review.md)：20个空12B头完整生成/析构，entropy仅已知408B投影，另384B地址词opaque；四map128B是typed-state静态规则，不是完整4253差分。
+- [App5168部分构造](reports/2026-11-01-app-state0135.md)32组静态重组/10源闭包，[独审通过](reports/2026-11-01-app-state0135-independent-review.md)，0新WASM调用；默认730已知/4438None，显式三块live-copy后1182/3986。[既有真实cast投影](reports/2026-11-01-app-state0135-capture.md)另以33B输入独立预测697B，全部730已知相同、[独审通过](reports/2026-11-01-app-state0135-capture-independent-review.md)，未把第一次观察的8idle返回或GPU panic算成投影验收。
+- [完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史前置依据；后继自然原App及8idle880观察已走通，但独立合法App/完整880生产、游戏内自然调度和完整一局仍未恢复。
 
 ### 固定0.134.0的局部结果
 

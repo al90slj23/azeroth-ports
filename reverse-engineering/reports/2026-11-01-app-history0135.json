@@ -1,0 +1,129 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "complete_empty_history_and_scoped_address_entropy_differential_passed",
+  "receipt": "evidence/app-history0135-oracle-20261101T114831.615348Z/comparison.json",
+  "receipt_sha256": "254783e9554e47977d44f2f07f4ce2b433db14d21ef4ac443f4470c56ba9eb05",
+  "production_model": "reconstruction/core_spec/app_history135.py",
+  "production_sha256": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+  "source_count": 10,
+  "source_sha256_before": {
+    "scripts/check_app_history135.py": "ef0439d94bef40fcf681ff777e4ce1b10bd29f8868f26e97b3ef56f3ad68ee4a",
+    "scripts/run_app_history135_oracle.mjs": "cf9bd110f362491cd6a1f33c75c92a3711d3c5c68f991e654403c19b9b36c5a5",
+    "scripts/trace_app_history135.py": "81428ee9c9ad88265ffb2d9706fb5d0a57df978a389fb6159658a03f3f5d8838",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "source_sha256_after": {
+    "scripts/check_app_history135.py": "ef0439d94bef40fcf681ff777e4ce1b10bd29f8868f26e97b3ef56f3ad68ee4a",
+    "scripts/run_app_history135_oracle.mjs": "cf9bd110f362491cd6a1f33c75c92a3711d3c5c68f991e654403c19b9b36c5a5",
+    "scripts/trace_app_history135.py": "81428ee9c9ad88265ffb2d9706fb5d0a57df978a389fb6159658a03f3f5d8838",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "cases": 24,
+  "original_calls": 96,
+  "differences": 0,
+  "roles": {
+    "history53845": {
+      "calls": 24,
+      "complete_written_bytes": 5760,
+      "full512B_buffer_and_poison_compared": true
+    },
+    "drop28797": {
+      "calls": 24,
+      "domain": "empty20vectors only; whole512B invariant; no live allocation destruction tested"
+    },
+    "seed60416": {
+      "calls": 24,
+      "domain": "complete original entry, known firstu64 plus flag1 and unchanged stack; second allocation-address u64 opaque"
+    },
+    "entropy81334": {
+      "calls": 24,
+      "domain": "complete original entry, known stackaddress firstu64; second allocation-address u64 opaque"
+    }
+  },
+  "seed_provenance": "Real original60416 and81334 allocate/free1B through original106891/71889; addresses depend on real stack/allocator; no global/Once injected",
+  "entropy_known_bytes": 408,
+  "entropy_opaque_observed_bytes": 384,
+  "original_allocator_body_unchanged": true,
+  "private_exports": 4,
+  "shared_approved_roles_unchanged": 52,
+  "typed4253_map_replay": {
+    "cases": 3,
+    "original4253_calls": 0,
+    "map_offsets": [
+      3992,
+      4024,
+      4056,
+      4088
+    ],
+    "byte_count": 128,
+    "keys": "(state.first+i modulo2^64,state.second), i0..3",
+    "next_first": "state.first+4 modulo2^64",
+    "empty_table_static_proof": "evidence/app-history0135-oracle-20261101T113852.683205Z/empty-table-static-proof.json",
+    "empty_table_static_sha256": "a75989aba926b082944d268da198003df05e3a4a0b10663cbd0e025d70bf3c47"
+  },
+  "runtime": {
+    "cases": 24,
+    "original_calls": 96,
+    "by_role": {
+      "28797": 24,
+      "53845": 24,
+      "60416": 24,
+      "81334": 24
+    },
+    "peak_memory_bytes": 14680064,
+    "memory_cap_bytes": 33554432,
+    "denied_imports": 878,
+    "host_calls": 0,
+    "global_or_once_injected": false,
+    "address_dependent_seed_second_word_predicted": false
+  },
+  "process": {
+    "pid": 15605,
+    "pgid": 15605,
+    "exit_code": 0,
+    "seconds": 1.7301755419975962,
+    "deadline_seconds": 60,
+    "pid_and_pgid_missing": true
+  },
+  "independent_review": {
+    "status": "passed",
+    "review_status": "passed_scoped_read_only_review",
+    "report": "reports/2026-11-01-app-history0135-independent-review.md",
+    "json": "reports/2026-11-01-app-history0135-independent-review.json",
+    "evidence": "evidence/app-history0135-independent-review-20261101T115315.665894Z/review.json",
+    "sha256": "cb7653a5c960e0b0e2438e6c2d64a5b0700f5567ef8fba835c59db0e2190371f",
+    "scope": "Scoped read-only review; see independent wrapper for validated and unknown domains",
+    "registration_only": true
+  },
+  "new_mainloop_frames": 0,
+  "complete_App4253": false,
+  "goal_complete": false,
+  "limitations": [
+    "53845 complete240B and empty28797 only; nonempty history destruction not accepted here.",
+    "60416 and81334 known stack/flag projection only; allocator-address second word is opaque, not predicted.",
+    "4253 fourmap constructor is static typed-state replay, not full4253 runtime acceptance.",
+    "No complete App/history usage/880/ownership/game acceptance."
+  ],
+  "source_closure_correction": {
+    "path": "evidence/app-history0135-oracle-20261101T114831.615348Z/source-closure-correction.json",
+    "sha256": "89f2d7601bc4ee5f1f3f1174bcb757e8864a4ccff4f5a41e02bea5db3340b8fd",
+    "old_sources": 7,
+    "new_sources": 10,
+    "old_receipt_preserved": true,
+    "all_core_outputs_identical": true,
+    "counters_not_added": true
+  }
+}

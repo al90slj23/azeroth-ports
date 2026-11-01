@@ -9,9 +9,10 @@
 | 角色 | 版本/身份 | 用法 |
 |---|---|---|
 | 本轮固定Windows程序目标 | 官方更新EXE 0.135.1，147797504B，SHA `71e5f176…bc59249` | 官方大小/SHA与gzip CRC/ISIZE通过；未执行EXE，语义迁移待验。 |
-| 本轮固定Web研究目标 | Web0.135.1/0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 共享52角色guard；主切片仍082927的8/1614/22607/11/22615、67源60core16角色。另有开局16/32、placement13/13、M2／WMO等组件，以及451资产→查询world→开局的1历史case；物理world所有权、旧主切片连接、880和一局仍缺。 |
+| 本轮固定Web研究目标 | Web0.135.1/0898d5e3，90959080B，SHA `c62c85f5…0dc96e2` | 共享52角色guard；主切片仍082927的8/1614/22607/11/22615、67源60core16角色。另有开局16/32、placement13/13、M2／WMO等组件，以及451资产→查询world→开局的1历史case；物理world所有权、旧主切片连接、独立完整880和一局仍缺。 |
 | 历史规则和差分参照 | Web 0.126.0 / 3e72472a，WASM SHA `06705937…b147c` | 保留所有既有规格、输入和证据作迁移/回归；固定版本工具继续拒绝其他原件，不再作主目标扩展。 |
 | 固定 Windows 原生研究基线 | 官方更新 EXE 0.134.0，147793408B，SHA `ed7dc687…1a3f6` | 核对原生离线发行、平台行为和同源游戏规则；每个原生地址重新定位。 |
+| 本轮App外围与自然启动 | transport43/220 quiet0host、history24/96、App32static/10源、既有cast730B投影及自然原App/Metal观察分别记录 | entropy只比已知408B、384B opaque；cast33B输入/697B预测。中文角色选择页和8idle880是原程序观察，Game tag2未开局，不是独立App/880或完整游戏。 |
 | 固定同版WASM研究基线 | Web 0.134.0 / 983346a7，90953762B，SHA `2e86455a…73d52` | 已建立若干局部独立实现/原件差分；不代表完整游戏实现，也不代表0.135.1验收。 |
 
 完整SHA与来源在[targets.json](targets.json)和相应报告。Windows版本/大小/SHA匹配[官方更新清单](https://wow.aethus.pl/exe/latest.json)；WASM身份是从本次HTTPS下载和内嵌菜单branding确认，未取得另行发布的官方WASM SHA。相同版本号不代表不同平台的二进制、布局或所有行为必然相同。
@@ -51,7 +52,7 @@ history的[164组/924调用组件](reports/2026-11-01-incoming-history0135-indep
 
 当前[独立复制运行](evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json)61文件=60core+CLI，默认0帧停真实进场边界，显式研究输入下seed1/6各400、seed3到257；纯模型自跑不新增原件case。新资产开局另有纯模型CLI，但尚未接该旧headless CLI，旧phase1边界保持。活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、完整物理world／菜单profile／其它地图模式／非空装备天赋、全部技能AI／存档UI网络与独立完整一局仍缺。
 
-[完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)仅增加前置布局/控制流依据；合法App/76B transport仍缺，不能因此宣称完整880或独立一局。未来每轮继续检查latest稳定版，新增版本只在新固定SHA批次迁移。
+[完整880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留原历史身份；后继[transport43/220](reports/2026-11-01-transport0135.md)、[history24/96](reports/2026-11-01-app-history0135.md)、[App32组静态重组](reports/2026-11-01-app-state0135.md)及[真实cast730B投影](reports/2026-11-01-app-state0135-capture.md)分别独审通过，不新增主切片帧。[自然原App/Metal观察](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)）显示正常中文角色选择页并返回8次完整idle880，999HTTP200、0 page error；CSP拦截presence外发，不能说无联网尝试。早期SwiftShader真实GPU失败、首Metal研究observer达1M事件上限throw及字体404原样保留。这是单独的真实浏览器/GPU宿主域，不套旧32/128/256MiB或有限import政策；Game tag2未开局，0独立gameplay帧，完整独立App/880及一局仍缺。未来每轮继续核实latest稳定版，并在新固定版本/SHA批次增量迁移；这些0.135.1结果不外推到后续版本。
 
 ## Windows与WASM的分工
 

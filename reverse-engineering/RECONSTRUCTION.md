@@ -52,8 +52,13 @@
 | 451资产→查询world→开局 | [37源完整组合](reports/2026-11-01-asset-world0135.md)及[整体独审](reports/2026-11-01-asset-world0135-independent-review.md)：terrain4022968B/nav78400B/secondary1254400B，开局known2118B/78包8410B/start/RNG等，0差异 | 1历史原件case，0新增原件调用/案例/bootstrap/主切片帧；生产不读snapshot。物理App/Rc/VFS、其它地图模式、1370B未写/未用记录、接旧主切片仍缺。 |
 | 开局1744／1821组件 | [27组/116完整入口与独审](reports/2026-11-01-opening-entities0135-independent-review.md)，附属88B、actor角度／GUID／169、旧padding严格 | 实验自身不包含完整1089；内联windows／special／boundary由下行整条开局差分验证，不倒记116调用。 |
 | 独立默认开局 | [16组/32完整6730缓存构造→1089](reports/2026-11-01-opening0135.md)，39源、六vector、1248新增包／16start，0差异；[独审通过](reports/2026-11-01-opening0135-independent-review.md) | 已解析Elwynn world是输入；每局2附属／4NPC／2kind2／4special／2或3窗口／69边界、counter10→87。未接旧主切片，未覆盖完整物理Game／菜单profile／其它maps/modes／非空装备天赋。 |
-| 原件真实world与1089观察 | [1例2902→6959→6730→1089](reports/2026-11-01-entry-world0135-probe.md)及[独审](reports/2026-11-01-entry-world0135-probe-independent-review.md)：同非平地Rc，phase0→1、4NPC/2kind2；453MPQ/561GET全部200、4memory319029248B | 历史原件观察、独立模型case0；后继开局单列，未倒改该批。24允许854拒绝/256MiB；本轮新bootstrap0、主切片帧0。 |
+| 原件真实world与1089观察 | [1例2902→6959→6730→1089](reports/2026-11-01-entry-world0135-probe.md)及[独审](reports/2026-11-01-entry-world0135-probe-independent-review.md)：同非平地Rc，phase0→1、4NPC/2kind2；453MPQ/561GET全部200、4memory319029248B | 历史原件观察、独立模型case0；后继开局单列，未倒改该批。24允许854拒绝/256MiB；后继独立组合不新增该原件bootstrap或主切片帧。 |
 | 14stage原件观测 | [080624](evidence/full0135-oracle-20261101T080624.993012Z/main-tail135-probe-receipt.json)：3038帧/42550快照/18选择/42558调用，6预算、seed3=353/seed5=285进入phase4 | [观测独审通过](reports/2026-11-01-main-tail0135-probe-independent-review.md)，0新增独立帧；2521个execution11快照不计模型支持，与其他层不相加。 |
+| transport六方法 | [43组/220完整原件调用](reports/2026-11-01-transport0135.md)及[独审](reports/2026-11-01-transport0135-independent-review.md)，10源、quiet域、实际宿主0 | ring/vector/88B深clone已恢复；日志/时钟分支、完整Rc owner、receive→ECS及真实联网未知，不等于完整App。 |
+| 空history与真实地址熵 | [24组/96入口](reports/2026-11-01-app-history0135.md)及[独审](reports/2026-11-01-app-history0135-independent-review.md)，完整240B头/析构、entropy已知408B | 另384B地址词opaque；四map128B使用显式seed的typed-state静态规则，非完整4253差分。 |
+| App5168静态构造投影 | [32组静态重组/10源](reports/2026-11-01-app-state0135.md)及[独审](reports/2026-11-01-app-state0135-independent-review.md)，0新WASM调用，730已知/4438None；显式live-copy后1182/3986 | 不是完整合法App；旧7源依赖遗漏与补正历史保留，32组只动态覆盖4936 select条件0。 |
+| 真实cast部分投影 | [730B对照](reports/2026-11-01-app-state0135-capture.md)及[独审](reports/2026-11-01-app-state0135-capture-independent-review.md)，33B明确输入→697B独立预测，4438None，0差异 | 复用首SwiftShader原观察，0新原件调用/案例；8idle与GPU panic不算投影验收，不推断全部App/owner合法性。 |
+| 自然原App/Metal观察 | [官方构造、中文角色选择页及8次完整idle880返回](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)），999HTTP均200、0 page error | 原件观察，Game tag2未开局、0独立gameplay帧。CSP拦presence外发；早期SwiftShader真实GPU失败、首Metal研究observer达1M事件上限throw及字体404均保留，独立App/full880仍未恢复。 |
 | 完整游戏 | 尚无独立完整一局验收；0.134.0局部组合另列 | 新版刷怪、施法、拾取、选卡应用、存档、UI和联机继续连接与验证。 |
 
 基础资源属于另一层证据：[MPQ读取器/索引](reports/2026-11-01-resource-index-base.md)已对29602个命名块、1636167198B完成固定StormLib逐字节对照，154份DBC容器可独立读取。基础RAR包内程序仍是0.102.3，不能自动认定为0.135.1完整资产。上表后继451资源链已独立产生默认Elwynn查询world并与历史输出逐字相符；完整物理App/Once/Rc/VFS所有权、其它地图模式、最新全部资产等价、动画／材质／音画及渲染仍未完成。
@@ -62,7 +67,7 @@
 
 ## 当前切片之外的明确边界
 
-- **独立真实进场**：默认开局16组/32入口及后继451资源→Elwynn查询world→开局的1历史case分别保留。查询world生产不读原memory；完整App/Once/Rc/VFS所有权、菜单/profile、其它地图模式、非空装备天赋、移动2328/full880及接旧主切片仍缺。[880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)尚未合法生产76B transport，旧切片显式phase1保持。
+- **独立真实进场**：默认开局16组/32入口及后继451资源→Elwynn查询world→开局的1历史case分别保留。查询world生产不读原memory；完整App/Once/Rc/VFS所有权、菜单/profile、其它地图模式、非空装备天赋、移动2328/full880及接旧主切片仍缺。[880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史边界；后继transport六方法和部分App投影已验，完整独立App/owner/调度仍缺。自然原App已实际构造并返回8次idle880，但未开局；旧独立切片显式phase1保持。
 - **研究输入与内存**：phase1及128个初始zeroed424B/88B槽仍显式。[当前独审](reports/2026-11-01-headless-tail0135-independent-review.md)复原1226927104B单位与254645248B范围backing；52次单位复用保留416非零字节，area19B复用全0，非平凡压缩/allocator padding恒定未证明。
 - **对象键与物理输出**：headless严格比较numeric player keys22/28/34/716/717/1109/1176，其余原件keyed状态全部另存为unmodeled，不能归为纯显示。1202 aura/外观键、1453治疗/account输出、完整消息字节/交付与所有producer仍分别待还原。
 - **全部游戏流程**：14个真实尾阶段只在限定域接入；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、其它地图及物理world所有权、开局接主切片、全部技能/AI/存档/UI/联机与独立完整一局仍未验收。真胜利终态、history、默认开局与world原件观察分层记录，均不等于完整游戏。
@@ -126,7 +131,7 @@
 
 ## 当前独立实现
 
-**0.135.1当前主切片**仍为[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。旧072329/064308/061901冻结为历史；新默认开局16/32、placement13/13、451资源历史组合及其它组件/观测分别记录，不相加。本轮bootstrap0、主切片帧0；其它地图/完整物理world所有权、开局接主切片、活跃队列／全部技能AI／full880／存档UI网络和独立完整一局仍缺。详见[版本支持清单](reconstruction/version-support.json)。
+**0.135.1当前主切片**仍为[14阶段独立切片](reports/2026-11-01-headless-tail0135.md)：8seed/1614帧/22607阶段/11选择/22615原件调用，67源含60core、16角色，0差异。旧072329/064308/061901冻结为历史；新默认开局16/32、placement13/13、451资源历史组合及其它组件/观测分别记录，不相加。独立组合新增bootstrap0、主切片帧0；自然原App观察另列，不当作独立实现。其它地图/完整物理world所有权、开局接主切片、活跃队列／全部技能AI／full880／存档UI网络和独立完整一局仍缺。详见[版本支持清单](reconstruction/version-support.json)。
 
 `core_spec.binary32`用精确有理数计算和逐步binary32舍入。**0.134.0已验证范围**包括升级值、有序拥有记录、伤害/受伤投影、经验与拾取、限定普通死亡组合、属性数值、kind0候选metadata、金币收取和新能力初始化；各自例数、输入域和未实现项见上表与[版本支持清单](reconstruction/version-support.json)，不同层级的计数不合并为完整游戏覆盖。完整原模块对照保留内部callee；未调用应用start，所有878宿主导入拒绝且实际调用0次。另有`level_cycle134`把XP消费者、每级属性/治疗与kind0候选接成限定组合，但仍未接普通死亡/混合拾取、金币、选卡应用或自然主循环。
 
@@ -211,6 +216,6 @@ python3 reverse-engineering/scripts/check_combat_spec.py
 python3 reverse-engineering/scripts/check_combat_full_spec.py
 ```
 
-上述不同验证层分开记录：无宿主导入的微模块、承载原连续片段的合成wrapper、仅新增导出的完整原模块。完整模块所有878个宿主导入均拒绝调用，应用start未调用，真实内部callee按所述fixture运行。没有启动完整游戏或访问网络/存档；也没有把0.126.0实验次数称为0.134.0验收。有限输入的一致不等于穷举证明，NaN不承诺载荷一致，替代panic的范围各自列明。
+上述不同验证层分开记录：无宿主导入的微模块、承载原连续片段的合成wrapper、仅新增导出的完整原模块。完整模块所有878个宿主导入均拒绝调用，应用start未调用，真实内部callee按所述fixture运行。这些旧函数实验没有启动完整游戏或访问网络/存档；后继自然原App浏览器观察是另域，有真实presence联网尝试被CSP阻止。0.126.0实验次数不转记0.134.0验收。有限输入的一致不等于穷举证明，NaN不承诺载荷一致，替代panic的范围各自列明。
 
 当前独立切片连接14个单状态尾入口的已恢复/实际守卫域，保留6未知技能与2预算边界。后续补齐world资源实例／placement／合并缓存／所有权生产，连接已验默认开局与主切片，继续来源容器/keyed/proc、活跃尾队列／效果及未知技能，再扩终局存档/UI/联机；在完整一局及关键行为均有依据前不宣布重造完成。

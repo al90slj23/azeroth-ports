@@ -1,0 +1,104 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "kind": "partial_typed_App_constructor_vs_prior_real_original_cast",
+  "status": "known_projection_passed_complete_App_producer_unrestored",
+  "comparison": {
+    "path": "evidence/app-state0135-capture-check-20261101T121246.633972Z/comparison.json",
+    "sha256": "0850bf419fe3b430117255ddd445501721c0c3c6ffb343d99fdd7c3e0b09c03a",
+    "source_count": 7,
+    "known_bytes": 730,
+    "declared_input_bytes": 33,
+    "independently_predicted_bytes": 697,
+    "unknown_None_bytes": 4438,
+    "differences": 0
+  },
+  "original_observation": {
+    "path": "evidence/full-app0135-probe-20261101T120144.289175Z/receipt.json",
+    "sha256": "fd5dba35d0aeacffe822ce070fd5bc218da8352a5b725e48c166df289b91c726",
+    "App": 21088840,
+    "Rc": 21088824,
+    "cast_memory_bytes": 27787264,
+    "kind": "prior_controlled_natural_original_constructor_and_idle_tick_observation",
+    "renderer_panic_preserved": true,
+    "healthy_boot_proved": false,
+    "gameplay_proved": false
+  },
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "source_sha256": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/app_state135.py": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/check_app_state135_capture.py": "97d73d911dd8fff80df0c8d2a091cb5d5766938c99ac69ee501d8680cb434721",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01"
+  },
+  "input_ranges": [
+    {
+      "offset": 4008,
+      "length": 16,
+      "label": "first_map_seed_pair"
+    },
+    {
+      "offset": 4768,
+      "length": 4,
+      "label": "transport24_pointer"
+    },
+    {
+      "offset": 4928,
+      "length": 8,
+      "label": "lcg_entropy_seed"
+    },
+    {
+      "offset": 5056,
+      "length": 4,
+      "label": "server_string_pointer"
+    },
+    {
+      "offset": 5161,
+      "length": 1,
+      "label": "startup_branch_flag"
+    }
+  ],
+  "independent_byte_groups": {
+    "empty_history_headers": 240,
+    "map_headers_and_next_three_seed_pairs": 112,
+    "seed_derived_word4936": 8,
+    "other_constructor_writes": 337
+  },
+  "history_generated_by": "empty_history135()",
+  "maps_generated_by": "app_hash_maps135(RandomState135(actual_first,actual_second))",
+  "whole_maps_or_history_copied_from_App": false,
+  "live_blocks_supplied": false,
+  "new_original_calls": 0,
+  "new_original_cases": 0,
+  "new_independent_mainloop_frames": 0,
+  "new_controlled_observation_runs": 0,
+  "prior_controlled_observations_reused": 1,
+  "original_module_instantiated_by_this_checker": false,
+  "appstart_called_by_this_checker": false,
+  "snapshot_memory_restored": false,
+  "table_or_globals_restored": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "legal_full_app_produced": false,
+  "whole_game_complete": false,
+  "independent_review": {
+    "status": "passed",
+    "review_status": "passed_scoped_read_only_projection_review",
+    "report": "reports/2026-11-01-app-state0135-capture-independent-review.md",
+    "json": "reports/2026-11-01-app-state0135-capture-independent-review.json",
+    "evidence": "evidence/app-state0135-capture-independent-review-20261101T122346.076103Z/review.json",
+    "sha256": "1745dcd8d245eeaa21e79b074e34c7f94e585b460afac942c410cfef695af144",
+    "scope": "Read-only source and receipt review; no new original execution",
+    "registration_only": true
+  },
+  "limitations": [
+    "Only697 bytes are independently predicted from declared33-byte inputs; those33 input-byte comparisons are not predictive validation.",
+    "Unknown4438 bytes remain None and are not compared; no copied live blocks are supplied.",
+    "ActualApp is a prior original natural-constructor observation, not an independent legalApp producer or a fresh original differential run.",
+    "Original run returned8 idle880 calls but had a separate WebGPU rendererpanic; no healthyboot/render/gameplay claim.",
+    "Original fullmemory/table/global/externref state and typed ownership are not reconstructed or restored."
+  ]
+}

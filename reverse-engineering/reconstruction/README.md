@@ -14,6 +14,9 @@
 - `core_spec/radius.py`：原35684的log1p家族近似与半径软压缩，逐操作建模；不以语言标准数学函数替代近似。
 - `core_spec/progression.py`：85387舍入、等级阈值及XP/pending数值投影；不包含原3231的属性/治疗/消息/选卡副作用。
 - `core_spec/progression134.py`：新版85718阈值、120级上限、u32 XP/pending绕回和选卡资格守卫投影；phase3完整原4630的2197例四字段一致。本模块不包含候选/消息/治疗副作用，限定XP消费者组合另见`level_cycle134`。
+- `core_spec/transport135.py`：[43组/220完整方法调用](../reports/2026-11-01-transport0135.md)及[独审](../reports/2026-11-01-transport0135-independent-review.md)通过，quiet域payload ring、232B搬移、optional替换与88B深clone；32MiB/878deny、实际宿主0。日志/平台时钟、全owner生命周期、receive→ECS/真实网络另待恢复。
+- `core_spec/app_history135.py`：[24组/96入口](../reports/2026-11-01-app-history0135.md)及[独审](../reports/2026-11-01-app-history0135-independent-review.md)通过，完整240B空头及析构，entropy仅408B已知、384B地址词opaque；四map128B是显式RandomState的静态规则。
+- `core_spec/app_state135.py`：[32组静态重组/10源闭包](../reports/2026-11-01-app-state0135.md)及[独审](../reports/2026-11-01-app-state0135-independent-review.md)通过，0新WASM调用；默认730B已知/4438None，三live-copy显式后1182/3986。另[真实cast730B投影](../reports/2026-11-01-app-state0135-capture.md)33B输入/697B独立预测、[独审通过](../reports/2026-11-01-app-state0135-capture-independent-review.md)，不生产完整合法App。
 - `core_spec/rng.py`：四字递推与32475区间采样，含拒绝重抽；固定135的1560 seed初始化另见`initial_state135`，全游戏随机时序尚未恢复。
 - `core_spec/derived_stats.py`：22派生属性、当前HP、四套tag及32B实时效果；输出对象字段和移动更新决策，未实现真实modifier生成方。
 - `core_spec/ability_state.py`：80B拥有能力、真实升级顺序、新tier0初始化与选卡控制投影；未实现后处理显式pending，未知新tier明确拒绝。
@@ -79,7 +82,7 @@
 
 当前14尾独立切片已接916/975/38007/2602/2573/2376/49037的实际限定守卫，31个975 inactive词及5个pointer仅观察，活跃域仍拒绝。975只在实际执行该入口时检查execution11；终止选卡快照可含11，下一帧停止，不表示支持其执行。非空56、390矩形组件、browser资源及默认开局分别验收；前段/party、完整物理world/其它地图、开局接主切片与完整880仍缺。旧071318/072329保留历史身份。
 
-[880上下文静态记录](../evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)尚未形成合法App/76B transport；asset→查询world→开局不是完整880自然帧或整局验收。
+[880上下文静态记录](../evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史依据，后继已恢复transport方法与部分App投影。[自然原App/Metal观察](../reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](../reports/2026-11-01-full-app0135-independent-review.md)）实际官方构造并显示正常中文角色选择页，8次完整idle880返回、999HTTP200、0 page error；CSP阻止presence外发，早期SwiftShader和首Metal的observer/font边界均保留。该观察执行原程序，Game tag2未开局、0独立gameplay帧；完整独立App/owner/880仍缺，asset→查询world→开局不算整局验收。
 
 当前[独立复制运行](../evidence/headless-tail135-standalone-20261101T083836.389587Z/receipt.json)61文件=60core+CLI，不含原件/WAT/SQLite/资源/Node/WABT；默认0帧停真实进场边界，研究输入seed1/6各400、seed3到257。是模型自跑，不新增原件差分。
 
@@ -116,6 +119,12 @@ python3 reverse-engineering/scripts/check_player_update135.py --phase full
 python3 reverse-engineering/scripts/check_movement_pause135.py --phase full
 python3 reverse-engineering/scripts/check_effect_system135.py --phase full
 python3 reverse-engineering/scripts/check_headless135.py --phase full
+
+# App外围：前两者原件差分；后两者静态/既有观察复核，不产生新原件调用。
+python3 reverse-engineering/scripts/check_transport135.py --phase full
+python3 reverse-engineering/scripts/check_app_history135.py
+python3 reverse-engineering/scripts/check_app_state135.py
+python3 reverse-engineering/scripts/check_app_state135_capture.py
 
 # world组件和显式world输入上的默认开局，独立于headless计数。
 python3 reverse-engineering/scripts/check_world_query135.py --phase full

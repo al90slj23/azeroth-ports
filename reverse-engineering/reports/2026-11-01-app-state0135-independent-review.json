@@ -1,0 +1,267 @@
+{
+  "status": "passed_scoped_static_read_only_review",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "receipt": "evidence/app-state0135-static-check-20261101T121056.399055Z/comparison.json",
+  "receipt_sha256": "93c92bd3525979fe61ce187742eb7c763d7ed02be64150d338880ccc80f1d7c2",
+  "production_sha256": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+  "author_source_closure": 10,
+  "review_source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/app_state135.py": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_app_state135.py": "f527c1d8e43190cf0345542d1ed01c0bd526a2adf1a3a5af02813a5cb632695a",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/trace_app_state135.py": "0146438bc7007e46f77945fca847050e19b840bd4527039a7a43bdabfee7ddd5",
+    "scripts/review_app_state135.py": "972d52ebc1531976db22ac789b8b16323bb070f945c5403bbae599ea65036a31",
+    "scripts/review_app_history135.py": "c9ea94fa2a045ea9e9dc111be83b926c2235b21a3974bf1303ec58f0e7e7da2d"
+  },
+  "review_source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/app_history135.py": "d8f423c6973be125115857672d506bfc0d7d53f77cc03e04b08837a97376b7d2",
+    "reconstruction/core_spec/app_state135.py": "4f1e4a3b048a9491ea8edae34ec9e1c97916d8f2e1ef06b6db12c1b9bb9fb1da",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_app_state135.py": "f527c1d8e43190cf0345542d1ed01c0bd526a2adf1a3a5af02813a5cb632695a",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/trace_app_state135.py": "0146438bc7007e46f77945fca847050e19b840bd4527039a7a43bdabfee7ddd5",
+    "scripts/review_app_state135.py": "972d52ebc1531976db22ac789b8b16323bb070f945c5403bbae599ea65036a31",
+    "scripts/review_app_history135.py": "c9ea94fa2a045ea9e9dc111be83b926c2235b21a3974bf1303ec58f0e7e7da2d"
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "functions": [
+    {
+      "idx": 4253,
+      "wat_start": 523870331,
+      "wat_end": 531062070,
+      "wat_line": 9069319,
+      "body_start": 20853050,
+      "body_end": 21033633,
+      "body_bytes": 180583,
+      "wat_sha256": "3575bc4ec48a803b5991083d8be438e8a5c1a4057167a60a776c3d5b699e2b5c",
+      "body_sha256": "2e1c4907770ddaded28e360145cf29080294fff0b615ed7a7f6e1425b9b2206d"
+    },
+    {
+      "idx": 880,
+      "wat_start": 69404549,
+      "wat_end": 73451705,
+      "wat_line": 122345,
+      "body_start": 1152222,
+      "body_end": 1291445,
+      "body_bytes": 139223,
+      "wat_sha256": "aa61c76f491ba39bb756426e71a6a5ce1e8c1a4da8b57e6a36ba57a7d82c16a6",
+      "body_sha256": "c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58"
+    },
+    {
+      "idx": 1371,
+      "wat_start": 299347064,
+      "wat_end": 300272044,
+      "wat_line": 3683319,
+      "body_start": 9110896,
+      "body_end": 9136547,
+      "body_bytes": 25651,
+      "wat_sha256": "4e75be767cd3e28abd943ef6765590c82111bc8918ffa794e7a7ab30192058ff",
+      "body_sha256": "fe613365e0c9b6520201f744a7c4c187e07e3d6010b074e65ef57179bef660cd"
+    },
+    {
+      "idx": 58521,
+      "wat_start": 1190923895,
+      "wat_end": 1190925056,
+      "wat_line": 30266599,
+      "body_start": 67872582,
+      "body_end": 67872728,
+      "body_bytes": 146,
+      "wat_sha256": "ee7c270020b4e1dcdbd9117e8fa691ac48b5280d53ac4bb3696f28df054116ee",
+      "body_sha256": "be4dc9751553a8e2e4eaa6d7f7974c74a8da89e35e530f32c4a2079363195c1f"
+    },
+    {
+      "idx": 83825,
+      "wat_start": 1257056952,
+      "wat_end": 1257057557,
+      "wat_line": 32586925,
+      "body_start": 73259446,
+      "body_end": 73259522,
+      "body_bytes": 76,
+      "wat_sha256": "e30ae97c24c8d80c69d42261f46a936264079be1815dc27fc02e47b49798a84b",
+      "body_sha256": "2916193e6cbecb54b946afb7b9e1860f44c6340771f9061bbf31bf82c17b0f24"
+    },
+    {
+      "idx": 122123,
+      "wat_start": 1280113468,
+      "wat_end": 1280113688,
+      "wat_line": 33577853,
+      "body_start": 75668648,
+      "body_end": 75668673,
+      "body_bytes": 25,
+      "wat_sha256": "72c8566f01ba026da61f773b611bb372459a3d76bd16c55196e52537b984b618",
+      "body_sha256": "2d7be9e9a8da07b361f10a5f66525c8b567b27ef3a138f1f9c372e6115102619"
+    }
+  ],
+  "static_data": {
+    "table": {
+      "address": 5222424,
+      "bytes": 16,
+      "pieces": [
+        {
+          "segment": 1723,
+          "source_file_offsets": [
+            81901785,
+            81901788
+          ],
+          "target_offsets": [
+            0,
+            3
+          ],
+          "bytes_hex": "10b04f"
+        }
+      ],
+      "initial_zero_gap_offsets": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "server": {
+      "address": 5221378,
+      "bytes": 13,
+      "pieces": [
+        {
+          "segment": 1722,
+          "source_file_offsets": [
+            81900807,
+            81900820
+          ],
+          "target_offsets": [
+            0,
+            13
+          ],
+          "bytes_hex": "617a65726f74682e6c6f63616c"
+        }
+      ],
+      "initial_zero_gap_offsets": []
+    },
+    "frame_vtable": {
+      "address": 5305816,
+      "bytes": 20,
+      "pieces": [
+        {
+          "segment": 1779,
+          "source_file_offsets": [
+            81983158,
+            81983178
+          ],
+          "target_offsets": [
+            0,
+            20
+          ],
+          "bytes_hex": "771100000c000000040000007811000079110000"
+        }
+      ],
+      "initial_zero_gap_offsets": []
+    }
+  },
+  "static_cases": 32,
+  "known_bytes_checked": 30592,
+  "None_bytes_checked": 134784,
+  "known_without_livecopies": 730,
+  "None_without_livecopies": 4438,
+  "known_with_three_explicit_livecopies": 1182,
+  "None_with_livecopies": 3986,
+  "seed4936_select_conditions_observed": [
+    0
+  ],
+  "interpreter": {
+    "independent_byte_memory": true,
+    "app_base": 458752,
+    "scratch_base": 589824,
+    "different_addresses_from_author": true,
+    "unknown_unmapped_reads_remain_None": true,
+    "static_zero_only_in_explicitly_decoded_immutable_ranges": true,
+    "loads_stores_use_actual_width_and_unaligned_offsets": true,
+    "memory_copy_takes_temporary_snapshot": true,
+    "original_branches_or_calls_not_executed": true
+  },
+  "game_move_contract": {
+    "destination_app_offset": 16,
+    "bytes": 2592,
+    "old_tag_offset": 16,
+    "absent_tag": 2,
+    "drop_old_unless_absent_function": 1627,
+    "preceding_function": 24129,
+    "move_not_clone": true,
+    "additional_world_rc_increment_from_copy": 0,
+    "source_must_be_forgotten": true,
+    "complete_caller_semantics_recovered": false,
+    "evidence": [
+      "880:13478..13495,15007..15008,15850..15864",
+      "1371:11306..11326"
+    ]
+  },
+  "owner_layout_contract": {
+    "allocation_bytes": 5184,
+    "strong_offset": 0,
+    "weak_offset": 4,
+    "borrow_byte_offset": 8,
+    "app_offset": 16,
+    "app_bytes": 5168,
+    "initially_written_strong": 1,
+    "initially_written_weak": 1,
+    "initially_written_borrow": 0,
+    "bytes9_through15_unknown": true,
+    "final_holder_counts_not_predicted": true,
+    "evidence": "4253:8938..8987"
+  },
+  "tick_environment_rc_offset": 8,
+  "tick_rc_app_offset": 16,
+  "tick_interval_milliseconds": 25,
+  "legal_full_app": false,
+  "reviewer_imported_production": false,
+  "new_original_calls": 0,
+  "new_original_cases": 0,
+  "source_closure_correction": {
+    "old_count": 7,
+    "new_count": 10,
+    "path": "evidence/app-state0135-static-check-20261101T121056.399055Z/source-closure-correction.json",
+    "sha256": "9a473472c5612ecddac91ff298c08cdf219be339924ea2aa085cadd3b5b9d48c",
+    "three_input_expected_window_artifacts_identical": true
+  },
+  "actual_constructor_capture_comparison": {
+    "status": "separate_not_reviewed_here",
+    "included_in_static32cases": false
+  },
+  "limitations": [
+    "This independentlyreplays32straightlineWATcases,notneworiginal4253/880orfullAppacceptance.",
+    "Settings/loadedstate/preferences,pointers/hashentropyremainexplicitinputs;knownbytesarenotindependentproducerproof.",
+    "All32declaredseed4936selectconditionsare0;alternatebranchhasstaticexpressionreasoningonly,notcasecoveragehere.",
+    "Gameinstallationisonlyamovecontract;24129,oldGamedestruction/sourceforget/fullcallersemanitcsstillunimplemented.",
+    "Pointerdecoderrequiresactualguardedvtableandvalidmemoryprovider;arithmeticdecodealoneisnotApplegality/ownershipproof."
+  ],
+  "artifacts": {
+    "constructor-window.wat.txt": "53bb99b7e410781f47d5d240ffee9bd7bdfda8690872b5eff10951c552040e52",
+    "83825.wat": "e30ae97c24c8d80c69d42261f46a936264079be1815dc27fc02e47b49798a84b",
+    "game-move880-880-15850-15864.wat": "19f0d3bb69b01950786104f1b4e9216491140b064bebc65701267a9345684afc",
+    "tick-closure-4253-9293-9373.wat": "b1342398fe382a6f7b3ad856035878e0a2c91dffef51d7b38ee04ac62cad15c4",
+    "independent-byte-write-traces.json": "e88ee72b2c30381c1b769c78671f322f080f940b5b554c47872833b8193df9e1",
+    "owner-4253-8938-8987.wat": "6e27840e6a88c47af92ab6dea2a787778550b80c38255381897e8518470b4f60",
+    "122123.wat": "72c8566f01ba026da61f773b611bb372459a3d76bd16c55196e52537b984b618",
+    "game-move1371-1371-11306-11326.wat": "b297dc7d933e795ba651881ac33373fb5a5f7540538e0749a3a5d95f15555f6e"
+  },
+  "review_path": "evidence/app-state0135-independent-review-20261101T121623.578791Z/review.json",
+  "review_sha256": "e706357340af3af5bc7b01d375f4145d025c4af69a3fc9404ec646e94683f240"
+}

@@ -1,0 +1,99 @@
+{
+  "status": "passed_scoped_independent_read_only_review",
+  "reviewer_sha256": "996bf9edcd891dc1e2d34ce0911e1c3a9fec4631b72509bdfb0e839a8613e836",
+  "receipt": "evidence/transport0135-20261101T114315.811874Z/transport135-comparison.json",
+  "receipt_sha256": "d9db73414156c5877f7e9a9eeb1da9a3c0454e6adde85d0ddce634b4e7fd133a",
+  "source_closure": 10,
+  "current_and_frozen_sources_verified": true,
+  "cases_reviewed": 43,
+  "complete_entry_calls_reviewed": 220,
+  "new_original_calls": 0,
+  "counts": {
+    "stages": 220,
+    "false": 43,
+    "poll": 47,
+    "known_ring_slots": 1014,
+    "unknown_ring_slots": 383,
+    "send": 95,
+    "snapshot": 9,
+    "rows88": 13,
+    "rows12": 13,
+    "known_command_bytes": 6728,
+    "unknown_command_bytes": 2088
+  },
+  "growth_branch_counts": {
+    "empty_growth": 2,
+    "contiguous_growth": 10,
+    "move_tail": 21,
+    "copy_prefix": 2
+  },
+  "replacements": {
+    "snapshot_old_some": 7,
+    "rows88_old_some": 11,
+    "rows12_old_some": 11
+  },
+  "unknown_raw_observations": {
+    "absent_option_tail_observation_bytes": 4400,
+    "nonzero_absent_option_tail_observation_bytes": 4400,
+    "ring_unknown_raw_bytes": 4596,
+    "ring_unknown_nonzero_bytes": 1140,
+    "absent88_tail_observation_bytes": 1216,
+    "nonzero_absent88_tail_observation_bytes": 332,
+    "command_unknown_raw_bytes": 2088,
+    "command_unknown_nonzero_bytes": 2088
+  },
+  "prior_batches": [
+    {
+      "directory": "evidence/transport0135-20261101T113625.117033Z",
+      "receipt_sha256": "30bdc49931c62820a59d90eb942296ac39b12fc576e265228482597709d66b0e",
+      "cases": 16,
+      "invalid_command_tags": 9,
+      "invalid_UTF8_payloads": 24,
+      "counters_not_added": true
+    },
+    {
+      "directory": "evidence/transport0135-20261101T113742.916745Z",
+      "receipt_sha256": "af7a76438801914ea93354d040a14e6bba705362b8de7a368c8752ecd709a220",
+      "cases": 41,
+      "invalid_command_tags": 29,
+      "invalid_UTF8_payloads": 99,
+      "counters_not_added": true
+    },
+    {
+      "directory": "evidence/transport0135-20261101T113901.046913Z",
+      "receipt_sha256": "92c9ee49c96a14f9388b399bf35f06394b355d3535f50476eb041f14468a5a8b",
+      "cases": 41,
+      "invalid_command_tags": 0,
+      "invalid_UTF8_payloads": 99,
+      "counters_not_added": true
+    },
+    {
+      "directory": "evidence/transport0135-20261101T114041.491286Z",
+      "receipt_sha256": "1bf66d551486ec4523f803c77c8f02486cd20cfa0730f181ea7ded2c3068f448",
+      "cases": 41,
+      "invalid_command_tags": 0,
+      "invalid_UTF8_payloads": 0,
+      "counters_not_added": true
+    }
+  ],
+  "prior_typed41_inputs_preserved_except_two_added_cases": true,
+  "expected_independently_reconstructed_without_author_import": true,
+  "raw_struct_and_owned_headers_verified": true,
+  "source_nonalias_and_unrelated_byte_guards_reviewed": true,
+  "section7_only_and_original_bodies_verified": true,
+  "static_functions_verified": 11,
+  "original_program_executed": false,
+  "author_model_or_checker_executed": false,
+  "full_App": false,
+  "full880": false,
+  "new_mainloop_frames": 0,
+  "limitations": [
+    "Quiet flags20/21=0 and timer8=-1 only; clock/logging branches are not runtime-validated.",
+    "232B commands use payload-free tag2; they are moved, not decoded or replayed as gameplay.",
+    "Pointer identities and freed-heap contents are not independently predicted; live source invariance/nonalias checks are enforced by the frozen runner and original unchanged alloc/free bodies.",
+    "Absent option/ring/command unknown backing remains unasserted and raw observations are retained.",
+    "Typed76B cell is not full4253 App/transport ownership or network synchronization acceptance."
+  ],
+  "review_path": "evidence/transport0135-independent-review-20261101T115033.938265Z/review.json",
+  "review_sha256": "b5de2b063d326bfb99593a57235a2959ea66e3b78980556e21de82e12c54c4c9"
+}

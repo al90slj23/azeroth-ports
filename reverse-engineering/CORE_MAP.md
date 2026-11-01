@@ -4,9 +4,27 @@
 
 ## 固定0.135.1已定位与已验范围
 
-[完整profile](reports/2026-11-01-wasm0135-profile.md)有175317个defined函数；当前52个研究角色绑定本版body/签名，含area_tick3757和effect_tick915。主Node builder仅增加export，原callee、malloc91941与878拒绝导入保留；浏览器资源/进场另有各自有限导入政策，均不调用应用start。白名单数量不等于模块恢复百分比。
+[完整profile](reports/2026-11-01-wasm0135-profile.md)有175317个defined函数；当前52个研究角色绑定本版body/签名，含area_tick3757和effect_tick915。主Node builder仅增加export，原callee、malloc91941与878拒绝导入保留；早期浏览器资源/进场另有各自有限导入政策，均不调用应用start；后继自然原App观察使用单独的真实浏览器/GPU域并实际调用官方start，分类另列。白名单数量不等于模块恢复百分比。
 
 [真实1560构造151组](reports/2026-11-01-initial0135-independent-review.md)输出空profile的starter、racial、属性/HP/RNG与phase0。G1256是racial80；class starter是learned80向量首记录。旧[1076/1754的639组5924阶段](reports/2026-11-01-owned-cast0135.md)使用G1256槽中的basic隔离fixture，不追溯称为真实racial；真实racial六分支另由[完整922的720组](reports/2026-11-01-racial-cast0135.md)验证。
+
+### App外围组件与自然原件启动
+
+[transport六方法43/220](reports/2026-11-01-transport0135.md)已独立恢复quiet域的ring/vector/深clone，原件宿主调用0；[history24/96](reports/2026-11-01-app-history0135.md)恢复完整240B空头及已知entropy408B，384B地址词仍opaque，四map仅typed-state静态初始化。[App32组静态重组](reports/2026-11-01-app-state0135.md)有10源完整闭包、0WASM调用；[原件cast730B对照](reports/2026-11-01-app-state0135-capture.md)明确33B输入、697B独立预测、4438B None。四项分别独审通过，不组成完整App producer。
+
+[自然原App/Metal观察](reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reports/2026-11-01-full-app0135-independent-review.md)）实际走官方构造与25ms timer，正常中文角色选择页及8次完整idle880返回已观察；999HTTP200、0 page error，CSP仍拦截了presence外发。Game tag2未开局，0独立gameplay帧；早期SwiftShader和首Metal观察边界保留，不能以原程序运行代替独立实现。
+
+```mermaid
+flowchart LR
+    Official[官方start / 4253真实构造] --> Rc[真实Rc与App5168]
+    Rc --> Cast[867 cast记录env+8的Rc]
+    Cast --> Timer[25ms timer / 83825]
+    Timer --> Idle[完整原880 idle返回8次]
+    Rc --> UI[Metal中文角色选择页]
+    UI --> Boundary[Game tag2 尚未进入一局]
+```
+
+当前独立投影不恢复全部App字段、allocator/entropy/owner与table/global/externref，未将自然启动观察记作独立full880或整局验收。
 
 ### 独立资产查询world与默认开局
 
@@ -80,7 +98,7 @@ flowchart LR
 
 [真实进场探针](reports/2026-11-01-entry-world0135-probe.md)及[独审](reports/2026-11-01-entry-world0135-probe-independent-review.md)核实1个显式空selected-profile、453MPQ文件/561GET全部200、4份完整memory/319,029,248B；Rc由原6730生成，非平地、未写Once或跳过开局对象。这是历史完整原件观察、独立模型case0；后继开局差分单独列在首图，不倒改本批身份。后继451资源查询world链另列；菜单/profile、物理App/Rc/VFS所有权及与旧主切片整合仍缺；主切片phase1与初始128槽保持原研究输入。
 
-当前独立预测idle915与新增尾阶段的真实守卫；31个975 inactive词和5个堆指针仅另存观察，不能预测零。真实14stage observer另有3038帧/42550快照/18选择/42558调用，6预算/2实际phase4终点，是原件观测而非模型验收。14个尾阶段仍限原域；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、其它地图与物理world所有权、开局接主切片、未知技能/AI/存档/UI/联机与独立完整一局仍缺。本轮新增bootstrap0、主切片帧0。
+当前独立预测idle915与新增尾阶段的真实守卫；31个975 inactive词和5个堆指针仅另存观察，不能预测零。真实14stage observer另有3038帧/42550快照/18选择/42558调用，6预算/2实际phase4终点，是原件观测而非模型验收。14个尾阶段仍限原域；活跃916/975 execution11/2602/2573/2376、915其余类型、前段/party/完整880、其它地图与物理world所有权、开局接主切片、未知技能/AI/存档/UI/联机与独立完整一局仍缺。独立资产组合新增bootstrap0、主切片帧0；后继自然原App观察另域，不计独立gameplay帧。
 
 ### 组件验证与剩余分支
 
@@ -104,7 +122,7 @@ flowchart LR
 
 本轮M2／WMO使用fresh32MiB／878deny；query／position／opening为snapshot256MiB／878deny、正常返回栈1048576。共享52role不变，9role snapshot及私有4／2role只在各实验准入，不能相加为恢复比例；历史browser资源128MiB／17allow和world256MiB／24allow保持各自身份。
 
-[880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)尚未补齐合法App/76B transport，因此不将独立资产开局当成完整880或自然战斗帧验收。
+[880上下文静态记录](evidence/full880-context0135-static-20261101T111231.254023Z/notes.md)保留历史前置依据。后继transport方法、部分App投影与自然原构造观察分别已通；完整独立App/owner/880和自然战斗仍缺，资产开局不算完整880验收。
 
 ## 固定0.134.0已重新定位的技能主干
 

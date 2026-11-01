@@ -1,0 +1,71 @@
+{
+  "status": "passed_scoped_independent_read_only_review",
+  "reviewer_sha256": "55cf86a4b1ca3912c0bb146de214ba49eadfeffcecbb2239c2b83b22e95b1ce1",
+  "receipt": "evidence/full-app0135-probe-20261101T122659.584362Z/receipt.json",
+  "receipt_sha256": "8a8bc535e373eacf31e33433e63e1e8f1930d7a2c1389582df2609f0ce0e95d8",
+  "source_closure": 10,
+  "current_and_frozen_sources_verified": true,
+  "original_wasm_whole_identity_verified": true,
+  "official_glue_prefix_byte_identical": true,
+  "actual_adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3"
+  },
+  "observed_original_App_contexts": 1,
+  "eligible_original_complete_idle880_returns": 8,
+  "Game_tag2_no_run_world": true,
+  "callback_identity_static_chain_verified": true,
+  "clock_ms_to_seconds_exact_f64_bits": true,
+  "frozen_capture_bytes": 419692544,
+  "frozen_capture_sha256": "17be706e1fc91beb8851389ba56e8cbeb340f9b7ec419c7e0ace44c6ef3f8781",
+  "live_memory_bytes_after_upload": 476643328,
+  "header_from_same_frozen_capture_verified": true,
+  "mpq_assets_raw_payloads_rechecked": 535,
+  "mpq_decoded_bytes": 53898024,
+  "official_non_MPQ_font_bytes": 1225412,
+  "official_non_MPQ_font_sha256": "5499291b696324c10c3e7f2d3d89a5c490897319a629141ea5b40c85e62e6224",
+  "font_native_static_offset": 120912388,
+  "font_native_static_full_bytes_equal": true,
+  "HTTP_requests": 999,
+  "HTTP_all200": true,
+  "page_errors": 0,
+  "CSP_blocked_presence_attempts": 1,
+  "actual_presence_HTTP_request_observed": false,
+  "network_intent_present": true,
+  "live_multiplayer_validated": false,
+  "all_owned_processes_and_groups_terminal": true,
+  "old_runs": [
+    {
+      "directory": "evidence/full-app0135-probe-20261101T120144.289175Z",
+      "receipt_sha256": "fd5dba35d0aeacffe822ce070fd5bc218da8352a5b725e48c166df289b91c726",
+      "post_exit_diagnosis_sha256": "c10ee16f2d568c9cfcff91c5f95bb236593271202a77ece0a261458902c57998",
+      "counters_not_added": true
+    },
+    {
+      "directory": "evidence/full-app0135-probe-20261101T121656.691420Z",
+      "receipt_sha256": "3bc5f80d9d791194bf0257d9b8dbfd3271b36a1720c12abee14a065b5ffb7512",
+      "post_exit_diagnosis_sha256": "edac4248ae00ebf9d4ad669916b170e8a5ccdee22b9dc6186188322af6319148",
+      "counters_not_added": true
+    }
+  ],
+  "screenshot_sha256": "f91acc6c5f041f975a0337ea2520c19626b2200866f02771f5da47d3cba474b6",
+  "screenshot_visual_check": "Reviewer viewed actual original Chinese character/class/region selection UI; this is original rendering, not reconstructed UI or gameplay acceptance.",
+  "original_program_reexecuted_by_reviewer": false,
+  "new_independent_cases": 0,
+  "new_independent_mainloop_frames": 0,
+  "complete_game": false,
+  "limitations": [
+    "Complete original App construction and8 idle880 returns only; Game remainsNone tag2 and no world/run is entered.",
+    "Real browser/API/GPU domain is distinct from pureNode878deny/32MiB component oracles.",
+    "Presence networking intent was explicitly blocked by CSP; no co-op/server/protocol acceptance.",
+    "Import details truncate at20000; counters record12,133,225 before calls and24,266,450 total events; not all import arguments retained.",
+    "Native font inclusion is static evidence only; Windows program was not executed.",
+    "One screenshot and absence of reported renderer errors do not validate all UI/render/audio/performance/game behavior."
+  ],
+  "evidence_files": {
+    "asset-payload-audit.json": "c3500fd9172da06968e71d0508829c09457be279e31f27f2db40bfa3175e6c4c",
+    "static-callback-chain.json": "cbed4ff63e1709cf4423cbb6897c9d3a97c87b384a854a072a66ad73d4f8d1d8"
+  },
+  "review_path": "evidence/full-app0135-independent-review-20261101T124434.382127Z/review.json",
+  "review_sha256": "cc3b2c00ad46e2283737728bcfe5bfe8ea0e8d1fbaba1e7025d3b7c3a1397be0"
+}

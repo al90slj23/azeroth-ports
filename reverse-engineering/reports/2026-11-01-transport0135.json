@@ -1,0 +1,603 @@
+{
+  "title": "Independent fixedWeb135 transport76 typedcell and sixmethods",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "quiet_typed_cell_six_complete_original_methods_differential_passed",
+  "receipt": "evidence/transport0135-20261101T114315.811874Z/transport135-comparison.json",
+  "receipt_sha256": "d9db73414156c5877f7e9a9eeb1da9a3c0454e6adde85d0ddce634b4e7fd133a",
+  "cases": 43,
+  "original_calls": 220,
+  "differences": 0,
+  "original_call_breakdown": {
+    "false": 43,
+    "poll": 47,
+    "send": 95,
+    "snapshot": 9,
+    "rows88": 13,
+    "rows12": 13
+  },
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "source_count": 10,
+  "source_sha256_before": {
+    "scripts/check_transport135.py": "b237ae382c2c7bcbdeafc64a0c5a71be729f9af04e6e5ff497ba17d13b8a2abd",
+    "scripts/run_transport135_oracle.mjs": "23c9ae3ec2bb753ae004bd6722562f3fef690b1bd5e16a4134a70d81f5aed3be",
+    "scripts/trace_transport135.py": "f43612060aaabd26c213a136be9af50c766218e576a9799f6932034fb81e667e",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/transport135.py": "c6a340a5510d185626b73cf11788ecc39e09e7215de0562cec0485897a989f76",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "source_sha256_after": {
+    "scripts/check_transport135.py": "b237ae382c2c7bcbdeafc64a0c5a71be729f9af04e6e5ff497ba17d13b8a2abd",
+    "scripts/run_transport135_oracle.mjs": "23c9ae3ec2bb753ae004bd6722562f3fef690b1bd5e16a4134a70d81f5aed3be",
+    "scripts/trace_transport135.py": "f43612060aaabd26c213a136be9af50c766218e576a9799f6932034fb81e667e",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/transport135.py": "c6a340a5510d185626b73cf11788ecc39e09e7215de0562cec0485897a989f76",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "expected_before_original": true,
+  "expected_in_original_input": false,
+  "private_six_exports_do_not_extend_shared52": true,
+  "manifest": "evidence/transport0135-20261101T114315.811874Z/manifest.json",
+  "manifest_sha256": "823ef2c442d920d501d7655abb9f4721705811dfdf70cd4b5019d1e0a1dc930a",
+  "roles": [
+    {
+      "name": "transport135_send",
+      "index": 28425,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 52470633,
+      "body_end": 52471124,
+      "body_sha256": "9ffd408d805557e5edfc9e1efe1f7fe59a3b180072abb2e1f53207f9fd1fa7a0"
+    },
+    {
+      "name": "transport135_snapshot",
+      "index": 52236,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 65911913,
+      "body_end": 65912118,
+      "body_sha256": "e6d7295cd921000039197411f36759df6dea8155a4a8d1d8b048b05993ea815f"
+    },
+    {
+      "name": "transport135_poll",
+      "index": 45626,
+      "parameters_hex": "7f7f",
+      "results_hex": "",
+      "body_start": 63156179,
+      "body_end": 63156468,
+      "body_sha256": "00004ff1b8e9a4f6b5b867474f4c50b8b0664f45c25809c8f1274aecbaa440f0"
+    },
+    {
+      "name": "transport135_rows88",
+      "index": 21513,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 45957469,
+      "body_end": 45958089,
+      "body_sha256": "d3139042d626e0e9c8abcdc0cce151acf3ad463fa5668c69bd8b646f60a7c715"
+    },
+    {
+      "name": "transport135_rows12",
+      "index": 47313,
+      "parameters_hex": "7f7f7f",
+      "results_hex": "",
+      "body_start": 63926209,
+      "body_end": 63926459,
+      "body_sha256": "d836969e4687366121145d4043220a5fffbe9d1d7c34ab5e01efc3744f77d7b7"
+    },
+    {
+      "name": "transport135_false",
+      "index": 176109,
+      "parameters_hex": "7f",
+      "results_hex": "7f",
+      "body_start": 77734724,
+      "body_end": 77734728,
+      "body_sha256": "ffa2edca2d3a0ef88bfcea9e5cf488eb6a4d98e7f1b4011ce4fa3de388c0b4ea"
+    }
+  ],
+  "vtable": {
+    "address": 1495776,
+    "raw_hex": "b90600001800000008000000ba060000bb060000bc060000bd060000be060000bf060000",
+    "file_offset": 78180317,
+    "data_segment": 697,
+    "element_base": 1,
+    "element_function_count": 223613,
+    "slots_to_functions": {
+      "1722": 28425,
+      "1723": 52236,
+      "1724": 45626,
+      "1725": 21513,
+      "1726": 47313,
+      "1727": 176109
+    }
+  },
+  "constructor_static_domain": {
+    "cell_bytes": 76,
+    "transport_bytes": 24,
+    "log_flag20": 0,
+    "choice_flag21": 0,
+    "timer_nanos_tag8": 4294967295
+  },
+  "constructor_not_executed": true,
+  "cell_unknown_initial_bytes": 27,
+  "transport_unknown_initial_bytes": 14,
+  "method_scope": {
+    "send": "clonebinarypayloadintoVecDeque12,capacity/head/wrap/retainedbacking",
+    "snapshot": "replace optionalownedbytevec",
+    "poll": "moveownedopaque232vector/reset0,8,0",
+    "rows88": "deepclone3required+4presentoptionalbytevectors+word84;oldownedvaluesdrop",
+    "rows12": "exact12Brecordcopyandoldoptionalvecdrop",
+    "false": "constant0withoutdereference"
+  },
+  "typed_input_domain": {
+    "command_variant": "payload-free i64tag2, explicitnonzeroinactive224Btail",
+    "rows88_payloads": "validUTF8subset; optional NonevsSomeemptydistinct",
+    "old_bytevector_capacity": "equalpayloadlengthforfixtureownedclones",
+    "references": "explicit1or2strong,weak1;unchangedbymethods;notfullRcdestructor"
+  },
+  "comparison": {
+    "known_ring_slots": 1014,
+    "unknown_ring_slots": 383,
+    "known_command_bytes": 6728,
+    "unknown_command_bytes": 2088,
+    "stages": 220
+  },
+  "physical_observation": {
+    "path": "evidence/transport0135-20261101T114315.811874Z/physical-unknowns-and-ring-growth.json",
+    "sha256": "4bfd7efb7256e183916f3f988255ea5831f1e0b3aa24bef8b059144524bc7d02",
+    "counts": {
+      "ring_unknown_raw_bytes": 4596,
+      "ring_unknown_nonzero_bytes": 1140,
+      "rows88_optional_inactive_bytes": 1216,
+      "rows88_optional_inactive_nonzero_bytes": 332,
+      "command_unknown_raw_bytes": 2088,
+      "command_unknown_nonzero_bytes": 2088
+    },
+    "growths": [
+      {
+        "id": 0,
+        "label": "empty-constructor-typed-input",
+        "stage": 2,
+        "oldcap": 0,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "empty-grow"
+      },
+      {
+        "id": 1,
+        "label": "ring-cap0-head0-count0",
+        "stage": 0,
+        "oldcap": 0,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "empty-grow"
+      },
+      {
+        "id": 2,
+        "label": "ring-cap1-head0-count0",
+        "stage": 1,
+        "oldcap": 1,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 3,
+        "label": "ring-cap1-head0-count1",
+        "stage": 0,
+        "oldcap": 1,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 4,
+        "label": "ring-cap2-head0-count0",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 5,
+        "label": "ring-cap2-head0-count1",
+        "stage": 1,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 6,
+        "label": "ring-cap2-head0-count2",
+        "stage": 0,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 6,
+        "label": "ring-cap2-head0-count2",
+        "stage": 2,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 7,
+        "label": "ring-cap2-head1-count0",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 8,
+        "label": "ring-cap2-head1-count1",
+        "stage": 1,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 9,
+        "label": "ring-cap2-head1-count2",
+        "stage": 0,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 9,
+        "label": "ring-cap2-head1-count2",
+        "stage": 2,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 3,
+        "head_after": 7,
+        "kind": "move-tail"
+      },
+      {
+        "id": 11,
+        "label": "ring-cap4-head0-count3",
+        "stage": 1,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 12,
+        "label": "ring-cap4-head0-count4",
+        "stage": 0,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 14,
+        "label": "ring-cap4-head2-count3",
+        "stage": 1,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 2,
+        "head_after": 6,
+        "kind": "move-tail"
+      },
+      {
+        "id": 15,
+        "label": "ring-cap4-head2-count4",
+        "stage": 0,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 2,
+        "head_after": 6,
+        "kind": "move-tail"
+      },
+      {
+        "id": 17,
+        "label": "ring-cap4-head3-count3",
+        "stage": 1,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 3,
+        "head_after": 7,
+        "kind": "move-tail"
+      },
+      {
+        "id": 18,
+        "label": "ring-cap4-head3-count4",
+        "stage": 0,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 3,
+        "head_after": 7,
+        "kind": "move-tail"
+      },
+      {
+        "id": 20,
+        "label": "ring-cap8-head0-count7",
+        "stage": 1,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 21,
+        "label": "ring-cap8-head0-count8",
+        "stage": 0,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 0,
+        "head_after": 0,
+        "kind": "contiguous"
+      },
+      {
+        "id": 23,
+        "label": "ring-cap8-head4-count7",
+        "stage": 1,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 4,
+        "head_after": 12,
+        "kind": "move-tail"
+      },
+      {
+        "id": 24,
+        "label": "ring-cap8-head4-count8",
+        "stage": 0,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 4,
+        "head_after": 12,
+        "kind": "move-tail"
+      },
+      {
+        "id": 26,
+        "label": "ring-cap8-head7-count7",
+        "stage": 1,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 7,
+        "head_after": 15,
+        "kind": "move-tail"
+      },
+      {
+        "id": 27,
+        "label": "ring-cap8-head7-count8",
+        "stage": 0,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 7,
+        "head_after": 15,
+        "kind": "move-tail"
+      },
+      {
+        "id": 28,
+        "label": "wrapped-short-prefix-relocation-cap4",
+        "stage": 0,
+        "oldcap": 4,
+        "newcap": 8,
+        "head_before": 1,
+        "head_after": 1,
+        "kind": "copy-prefix"
+      },
+      {
+        "id": 29,
+        "label": "wrapped-short-prefix-relocation-cap8",
+        "stage": 0,
+        "oldcap": 8,
+        "newcap": 16,
+        "head_before": 1,
+        "head_after": 1,
+        "kind": "copy-prefix"
+      },
+      {
+        "id": 34,
+        "label": "command-move-cap0-count0",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 35,
+        "label": "command-move-cap1-count0",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 36,
+        "label": "command-move-cap1-count1",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 37,
+        "label": "command-move-cap4-count0",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 38,
+        "label": "command-move-cap4-count2",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 39,
+        "label": "command-move-cap4-count4",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 40,
+        "label": "command-move-cap8-count0",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 41,
+        "label": "command-move-cap8-count4",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      },
+      {
+        "id": 42,
+        "label": "command-move-cap8-count8",
+        "stage": 2,
+        "oldcap": 2,
+        "newcap": 4,
+        "head_before": 1,
+        "head_after": 3,
+        "kind": "move-tail"
+      }
+    ],
+    "growth_kind_counts": {
+      "empty-grow": 2,
+      "contiguous": 10,
+      "copy-prefix": 2,
+      "move-tail": 21
+    },
+    "counts_are_cumulative_observations_not_unique_coverage": true
+  },
+  "runtime": {
+    "cases": 43,
+    "calls": 220,
+    "call_counts": {
+      "false": 43,
+      "poll": 47,
+      "send": 95,
+      "snapshot": 9,
+      "rows88": 13,
+      "rows12": 13
+    },
+    "peak_memory_bytes": 14614528,
+    "denied_imports": 878,
+    "actual_host_calls": 0,
+    "fresh_instances": 43,
+    "node": "v22.23.4",
+    "memory_page_cap": 512,
+    "cell_bytes": 76,
+    "transport_bytes": 24,
+    "default_flags20_21": [
+      0,
+      0
+    ],
+    "timer_tag8": 4294967295,
+    "appstart_called": false,
+    "network_used": false,
+    "snapshot_input_used": false,
+    "user_saves_accessed": false,
+    "shared52_whitelist_changed": false
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_transport135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/transport0135-20261101T114315.811874Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/transport0135-20261101T114315.811874Z/inputs.json"
+    ],
+    "pid": 97057,
+    "exit_code": 0,
+    "seconds": 1.863616667003953,
+    "deadline_seconds": 60,
+    "pid_and_pgid_missing": true
+  },
+  "provenance": {
+    "path": "evidence/transport0135-20261101T114315.811874Z/typed-input-and-growth-provenance.json",
+    "sha256": "ddf27de3773993876503ee0a1423b9537fffaa8bf37c14b4183de190c861e434",
+    "old_passed_cases_not_added": true
+  },
+  "independent_review": {
+    "status": "passed",
+    "review_status": "passed_scoped_independent_read_only_review",
+    "report": "reports/2026-11-01-transport0135-independent-review.md",
+    "json": "reports/2026-11-01-transport0135-independent-review.json",
+    "evidence": "evidence/transport0135-independent-review-20261101T115033.938265Z/review.json",
+    "sha256": "b5de2b063d326bfb99593a57235a2959ea66e3b78980556e21de82e12c54c4c9",
+    "scope": "Scoped read-only review; see independent wrapper for validated and unknown domains",
+    "registration_only": true
+  },
+  "unvalidated_explicit_host_branches": [
+    "flag20 logging55988",
+    "flag21 choicesmarker clock60918/174158",
+    "non-absenttimer poll48383/174158",
+    "RefCell borrow1 panic logging/path",
+    "Rc finalrelease andactualpeerproducer/consumer ownership"
+  ],
+  "static_model_only": [
+    "ExplicitInstant input/elapsedf32 strict>1.5 andtag2 timeoutappend;nooriginalclockacceptance",
+    "4253 constructor livewriteprojection49/76bytes;transport24 initiallivefields10/24bytes;unknownsremainNone"
+  ],
+  "limitations": [
+    "Web32singlethreadlocaltransportonly;notWindowsABI/realserverprotocol/networkdelivery.",
+    "TypedcellinputisnotfullApp4253construction;noApp5168or880executioninthisbatch.",
+    "Rows88fieldmeanings,232commanddecoder,ringconsumer/receiveproducer,externalclock/loggingandRcfulldropremainseparate.",
+    "NoUI/gameframe/newbootstrap/playable-completeclaim;priorheadlesscountsunchanged."
+  ],
+  "installed_apps_or_saves_modified": false,
+  "goal_complete": false
+}
