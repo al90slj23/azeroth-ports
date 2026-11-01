@@ -1,0 +1,56 @@
+{
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "module_sha256": "4daa514d68c1812c5ed3c308bcd60854476ed757787e2f7a62d8517e4f8bd6f8",
+  "original3231_executed": true,
+  "original_internal_callees_unchanged": true,
+  "dependency_shims": [],
+  "case_count": 1954,
+  "mismatch_count": 0,
+  "fields_compared": [
+    "u32 level1336",
+    "u32 XP1340",
+    "u32 pending2088",
+    "phase2299"
+  ],
+  "fixture_scope": "Paused phase3, empty auxiliary game state, synthetic original-allocator allocations. Original2098 skipped by real phase guard.",
+  "other_sideeffect_fields_not_compared": true,
+  "full_game_started": false,
+  "actual_host_calls": 0,
+  "runtime": {
+    "original3231_executed": true,
+    "original1573_reached_on_levelup": true,
+    "dependency_shims": [],
+    "actual_host_calls": 0,
+    "full_game_started": false,
+    "cases": 1954,
+    "fresh_instances": 62,
+    "maximum_memory_bytes": 20840448,
+    "denied_function_imports": 878,
+    "phase_fixture": 3,
+    "original2098_executed": false
+  },
+  "source_sha256": {
+    "scripts/build_full_function_oracle.py": "dd5e10c4d9a00257278642fa34ce0ae27599d0ac38da69de005f9b9de1f33e52",
+    "scripts/full_function_host.mjs": "c231b36ce89f7f7f3c6ab0c25cb0853771cfcb21ef14d47596fe5ec4d81ab74c",
+    "scripts/run_full_progression_oracle.mjs": "32078ffc7329ef6443ac8bdb90ac0dd459c80d433c193e403ebc74e51b4fa6ab",
+    "scripts/check_full_progression_spec.py": "f4ac3eaa804e42165daf13e7e4e34702d55d7c50cac21c67a28f92525be86d86",
+    "scripts/check_progression_spec.py": "d0cee869d670d8904646c0327155f2af9f4fa7a866337819cbb986efd4682344"
+  },
+  "model_sha256": {
+    "progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "date": "2026-11-01",
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "active_target_version": "0.134.0",
+  "status": "historical_verified_reference_for_migration",
+  "evidence_directory": "evidence/full-function-oracle-20261031T235339.336533Z",
+  "report": "reports/2026-11-01-full-function-oracles.md",
+  "independent_review": {
+    "file": "evidence/full-function-oracle-20261031T235339.336533Z/independent-review.json",
+    "sha256": "b0beda829bb7502367e0c23d7bda2aa7ecacd5b009c0ccab45d105efed7f6318",
+    "review_executed_original": false
+  },
+  "report_sha256": "c8736ef8318744be6c6cb13cd66cbb3a0d67d2879f61a38b69e4c79733342b02"
+}

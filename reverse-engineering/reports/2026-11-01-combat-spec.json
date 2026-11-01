@@ -1,0 +1,400 @@
+{
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "complete_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "module_file": "combat-slices.wasm",
+  "module_sha256": "86bad3dab89eadb9f60600377636ac3ae07902fb13afcff631b4408377153040",
+  "module_bytes": 2995,
+  "sections": [
+    1,
+    3,
+    5,
+    7,
+    10
+  ],
+  "slices": [
+    {
+      "export": "modifiers",
+      "original_function": 933,
+      "wat_lines": [
+        8,
+        1022
+      ],
+      "original_body_relative_offset": 19,
+      "original_file_start": 3145191,
+      "original_file_end": 3147122,
+      "instruction_boundaries_checked": true,
+      "bytes": 1931,
+      "sha256": "ffd7662901c1d97b4b0d2f68909a10ea8f3bc6eadd343db8d83b0813a06a9cbd",
+      "byte_identical": true
+    },
+    {
+      "export": "category_guard",
+      "original_function": 933,
+      "wat_lines": [
+        1228,
+        1239
+      ],
+      "original_body_relative_offset": 2384,
+      "original_file_start": 3147556,
+      "original_file_end": 3147579,
+      "instruction_boundaries_checked": true,
+      "bytes": 23,
+      "sha256": "44b3b0e5d89bb786a1c7a0afde935563bbdc51830ae046a1bffa403af490fdc7",
+      "byte_identical": true
+    },
+    {
+      "export": "cap",
+      "original_function": 933,
+      "wat_lines": [
+        1241,
+        1265
+      ],
+      "original_body_relative_offset": 2408,
+      "original_file_start": 3147580,
+      "original_file_end": 3147627,
+      "instruction_boundaries_checked": true,
+      "bytes": 47,
+      "sha256": "734f79e4f01cf56070a5aa12cba9519685adbe120e486eeff79e77594bdfa0c6",
+      "byte_identical": true
+    },
+    {
+      "export": "hp",
+      "original_function": 933,
+      "wat_lines": [
+        1303,
+        1337
+      ],
+      "original_body_relative_offset": 2524,
+      "original_file_start": 3147696,
+      "original_file_end": 3147777,
+      "instruction_boundaries_checked": true,
+      "bytes": 81,
+      "sha256": "64cfc3ca3389bd06fa279b2ee9f1874ef17719bb7bf19a21e6914c52c6a4650b",
+      "byte_identical": true
+    },
+    {
+      "export": "hp",
+      "original_function": 933,
+      "wat_lines": [
+        1446,
+        1455
+      ],
+      "original_body_relative_offset": 2831,
+      "original_file_start": 3148003,
+      "original_file_end": 3148024,
+      "instruction_boundaries_checked": true,
+      "bytes": 21,
+      "sha256": "17575861f5c1f0bd4e7a389347d028ca718fcc7b77b088c94a032799ebb76ca0",
+      "byte_identical": true
+    },
+    {
+      "export": "death",
+      "original_function": 933,
+      "wat_lines": [
+        4627,
+        4672
+      ],
+      "original_body_relative_offset": 9440,
+      "original_file_start": 3154612,
+      "original_file_end": 3154717,
+      "instruction_boundaries_checked": true,
+      "bytes": 105,
+      "sha256": "a51d8a5ff3074ba1d1e6c49646594c9f54188b6804b050542e142c1ecb581b36",
+      "byte_identical": true
+    },
+    {
+      "export": "base",
+      "original_function": 934,
+      "wat_lines": [
+        440,
+        507
+      ],
+      "original_body_relative_offset": 882,
+      "original_file_start": 3169137,
+      "original_file_end": 3169290,
+      "instruction_boundaries_checked": true,
+      "bytes": 153,
+      "sha256": "2df1a2dd2f80b3cdb452013329e654456ba0b61d6d01a787a7fe02c3642ed495",
+      "byte_identical": true
+    },
+    {
+      "export": "critical",
+      "original_function": 934,
+      "wat_lines": [
+        730,
+        764
+      ],
+      "original_body_relative_offset": 1536,
+      "original_file_start": 3169791,
+      "original_file_end": 3169870,
+      "instruction_boundaries_checked": true,
+      "bytes": 79,
+      "sha256": "88febd13101e8855c54ab2490051045eac1dbab3143ee2c6b8fd43483517a1e9",
+      "byte_identical": true
+    },
+    {
+      "export": "critical",
+      "original_function": 934,
+      "wat_lines": [
+        767,
+        789
+      ],
+      "original_body_relative_offset": 1619,
+      "original_file_start": 3169874,
+      "original_file_end": 3169918,
+      "instruction_boundaries_checked": true,
+      "bytes": 44,
+      "sha256": "e366c815a55feb02a6fc47a43ac32d5f23f1fb6547d7e67d28587e2906b4510e",
+      "byte_identical": true
+    },
+    {
+      "export": "wire",
+      "original_function": 933,
+      "wat_lines": [
+        3102,
+        3113
+      ],
+      "original_body_relative_offset": 6215,
+      "original_file_start": 3151387,
+      "original_file_end": 3151416,
+      "instruction_boundaries_checked": true,
+      "bytes": 29,
+      "sha256": "9fd5453e914e3161657fad57c1d212044af04cae0949619c4d35df3b3339867d",
+      "byte_identical": true
+    },
+    {
+      "export": "wire",
+      "original_function": 933,
+      "wat_lines": [
+        3148,
+        3148
+      ],
+      "original_body_relative_offset": 6323,
+      "original_file_start": 3151495,
+      "original_file_end": 3151496,
+      "instruction_boundaries_checked": true,
+      "bytes": 1,
+      "sha256": "075198bfe61765d35f990debe90959d438a943ceeb9d39440e7db5455d449086",
+      "byte_identical": true
+    },
+    {
+      "export": "wire",
+      "original_function": 933,
+      "wat_lines": [
+        3292,
+        3292
+      ],
+      "original_body_relative_offset": 6626,
+      "original_file_start": 3151798,
+      "original_file_end": 3151800,
+      "instruction_boundaries_checked": true,
+      "bytes": 2,
+      "sha256": "0ae7b0503ae77d153e4747c652deeaba896527ea5199e0771d69be32ef26f03a",
+      "byte_identical": true
+    }
+  ],
+  "memory": {
+    "minimum_pages": 32,
+    "maximum_pages": 32,
+    "exported": true
+  },
+  "imports": [],
+  "stub_callees": [],
+  "start": null,
+  "data_segments": [],
+  "original_full_933_executed": false,
+  "original_full_934_executed": false,
+  "method": "byte-identical contiguous instruction slices with custom initialization/termination wrappers",
+  "full_game_started": false,
+  "network_used": false,
+  "user_saves_accessed": false,
+  "case_count": 9153,
+  "mismatch_count": 0,
+  "groups": {
+    "all_categories": 256,
+    "all_category_cap_guards": 256,
+    "base_special_values": 96,
+    "base_seeded_raw_bits": 1500,
+    "base_seeded_game_range": 1000,
+    "crit_special_values": 16,
+    "crit_probability_edges": 16,
+    "cap_special_values": 32,
+    "wire_special_values": 16,
+    "crit_seeded_raw_bits": 1500,
+    "crit_strict_threshold": 9,
+    "cap_seeded_raw_bits": 1200,
+    "wire_seeded_raw_bits": 1200,
+    "conditional_state_compositions": 1800,
+    "hp_special_cross_product": 256
+  },
+  "modes": {
+    "base": 2852,
+    "category": 256,
+    "critical": 1541,
+    "cap": 1232,
+    "wire": 1216,
+    "resolve": 2056
+  },
+  "nan_category_pairs": 171,
+  "seed": "0x933934",
+  "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/combat-oracle-20261031T235733.574000Z",
+  "node_version": "v22.23.4",
+  "source_sha256": {
+    "reconstruction/core_spec/combat.py": "1bff4413144ac703fbac172b559034c81376f1c8e70fc768cb28184be890dd5c",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "scripts/build_combat_oracle.py": "8072d27d1b1bd1bf0df7078705346513a96f95e3fcbd16fb6d95db2de780e970",
+    "scripts/check_combat_spec.py": "1dad6bdcde0647774ffa55fe4b505ede9ee6ab1a36ad821d0b65d40fa52e05dc",
+    "scripts/run_combat_oracle.mjs": "9d89a70d51d57b1f698aa17d59e61a3cd156f431ed10ad3da656e233a633f4b8"
+  },
+  "artifact_sha256": {
+    "combat-slices.wat": "b3a260db4e12bbd1c521e18d784860d15855b1fec416f07d7940a2f57b862a41",
+    "original-slice-results.jsonl": "cb8a93e164f1e9ea5da191efc95e8d732cf3211332d2a328dca7650a000c1af3",
+    "combat-slices.wasm": "86bad3dab89eadb9f60600377636ac3ae07902fb13afcff631b4408377153040",
+    "oracle.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cases.jsonl": "2b751f1f77b2ef362dd88acc098c692cc032c71b1383546590d86f374c7fe2b5",
+    "mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "manifest.json": "ec1588971cb64b3a1eaea3fbb592adad284a8b977f3c1642ded9d4f1965b7ba1",
+    "model-results.jsonl": "600f62b8c389416477c160e2cca616271422ddfea473de3987a32d03075cdaa0"
+  },
+  "limitations": [
+    "Finite sampled states, not exhaustive proof.",
+    "NaN payload/sign are compared by category only.",
+    "Custom wrappers compose slices; neither full933 nor full934 executes.",
+    "Per-spell statistics, HP packet queue, healing/procs, position interpolation, death XP and loot excluded.",
+    "Death RNG continuation is unknown: XP/gold/loot can advance RNG after the core marker write.",
+    "Projection requires unique GUIDs and a resolved category for special targets with nonzero spell ID."
+  ],
+  "scope": "Independent ordered-binary32 core projection; 9153 byte-matched micro-slice cases and32 actual full original933 allocated-state cases, both zero mismatches.",
+  "apis": {
+    "base_hit_bits": [
+      "definition_damage_bits",
+      "ability_damage_bits",
+      "ability_additional_bits",
+      "category",
+      "player_hp_bits",
+      "ability_hp_component_bits",
+      "player_damage_bits"
+    ],
+    "critical_hit_bits": [
+      "base_bits",
+      "crit_probability_bits",
+      "crit_multiplier_bits",
+      "rng_state"
+    ],
+    "resolve_damage": [
+      "state",
+      "target_id",
+      "amount_bits",
+      "spell_id=0",
+      "spell_category=None"
+    ],
+    "data": "Immutable ItemModifier, UnitState, CombatState, CriticalHit, DamageResult; floats use uint32 bits except accounted_total f64."
+  },
+  "death_rng_static_only": {
+    "normal_xp_draw": "933 L6895..6929, def+68==0; XP arithmetic L6930..6952",
+    "reward_chance_draw": "933 L6971..7005; strict U < (elite?1:0.165) at L7018..7023",
+    "normal_reward_count_draw": "On chance success, normal-only loop L7045..7086 rejects when low32(output*3)>u0xbfffffff; accepted high32+2 gives2..4.",
+    "closed": false,
+    "warning": "Callees and earlier triggers are not closed. resolve_damage does not consume any death RNG or award XP/loot. Crit RNG is not a proven full-tick continuation after death."
+  },
+  "covered_behavior": [
+    "934 ordered base and category scale",
+    "934 strict critical draw and all4 next RNG words",
+    "933 conditional tag18/19/20/21/28 additive groups",
+    "target additive offsets144/152/160/364 with time priority",
+    "target P phases and linked kind2 unit",
+    "special kind3/link0 category reject and minNum-like hpm/5 cap",
+    "NaN->1 and minimum1 actual f32 HP store without clamp",
+    "oldHP-nonnegative capped damage accounting in f64 total",
+    "HP field22 ceil and unsigned saturation",
+    "death marker+0=1, +344=0, +240=0, +4=now and +340=now"
+  ],
+  "full_original_933_differential": {
+    "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "research_module_sha256": "20dd2464ac9e0bf2474b089b8ffa84b3f1731a4bbe6d993339be3d123e7f76ae",
+    "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full-function-oracle-20261031T235400.319122Z",
+    "case_count": 32,
+    "completed": 32,
+    "mismatch_count": 0,
+    "actual_host_calls": [],
+    "original_full_933_executed": true,
+    "original_internal_callees_unchanged": true,
+    "only_changed_section": 7,
+    "no_implicit_or_application_start_executed": true,
+    "stub_callees": [],
+    "host_import_policy": "all878 imports throw; zero host calls observed",
+    "fresh_instance_per_fixture": true,
+    "synthetic_state_original_allocator_owned": true,
+    "rng_draw_count_by_case": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 4,
+      "10": 4,
+      "11": 4,
+      "12": 4,
+      "13": 4,
+      "14": 0,
+      "15": 4,
+      "16": 4,
+      "17": 4,
+      "18": 4,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0
+    },
+    "scope": "Ordinary unique target, spell133/school2, no abilities/procs/talents; controlled item/debuff/phase cases included.",
+    "limitations": [
+      "Finite synthetic corpus, not original gameplay tick.",
+      "Other target kinds, proc/death/loot branches and subsequent event consumers not covered.",
+      "RNG draw-count observations apply to exact fixtures; independent combat projection still excludes death RNG.",
+      "NaN payload compared by category.",
+      "No network/UI/save APIs or application start invoked."
+    ],
+    "source_sha256": {
+      "scripts/run_combat_full_oracle.mjs": "23cffaf14e132a2242ebbb03b3342bf0766e91709b81649cf89d66d4dc0e7967",
+      "scripts/check_combat_full_spec.py": "200e094947e9d8fbb0cb4783d88489d8482370bf702724fca7923b90f2bd88ce",
+      "reconstruction/core_spec/combat.py": "1bff4413144ac703fbac172b559034c81376f1c8e70fc768cb28184be890dd5c"
+    }
+  },
+  "full_original_933_artifact_sha256": {
+    "combat-full-results.json": "38901de8943b2cfa98da0ed0a0cdfbc16a44c3da3fd18c6aa45560b7ede66aba",
+    "combat-full.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "combat-full-summary.json": "369140972a04db24dd50f2b954a84aaf23f421ef715a214ccd91a864603e52da",
+    "combat-full-cases.json": "b79700f328c4d2fc46bbb37471e44a94f13471723ce6edcf81ad4c63c195decf",
+    "combat-full.stdout.log": "bf4173b4200ff519a02c94702ef9675135fdea588d51c0dbd23708b01dc8eb01",
+    "manifest.json": "d89027b3a6531327a3f82ec7ab3ce8a102ec34365dd998bf5a28a367d65d6a13",
+    "research-exports.wasm": "20dd2464ac9e0bf2474b089b8ffa84b3f1731a4bbe6d993339be3d123e7f76ae",
+    "combat-full-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "evidence_boundary_correction": {
+    "old_run": "evidence/combat-oracle-20261031T235002.403408Z",
+    "new_run": "evidence/combat-oracle-20261031T235733.574000Z",
+    "reason": "Repeated nop delimiter overlapped final0x01 of fc01, and first-match search could select an immediate rather than the opcode. Replaced delimiter with non-self-overlapping const/drop; fully decoded every933/934 instruction, aligned opcode names to original WAT lines, then compared each source span at exact instruction boundaries. Explicit fc01 guard retained. Arithmetic execution results unchanged."
+  },
+  "independent_review": {
+    "file": "evidence/combat-oracle-20261031T235733.574000Z/independent-review.json",
+    "sha256": "0dde7294ff4543bdcc4ae6d2c29568e90e8a4c0c557e77c9659b2a1efd32e63e",
+    "review_executed_target": false,
+    "scope": "Independent static artifact/instruction/input-output review; see raw receipt for exact coverage."
+  }
+}

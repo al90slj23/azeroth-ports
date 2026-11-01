@@ -1,0 +1,1558 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "method": "Read-only stdlib PE parser, mmap literal scans, file/objdump format confirmation; target not executed.",
+  "official_source": {
+    "page": "https://wow.aethus.pl/",
+    "manifest_url": "https://wow.aethus.pl/exe/latest.json",
+    "manifest_sha256": "2494423366d14cd67f0eeaf430956b755162d8d896b7520cc2193f8a81ca1598",
+    "acquisition_receipt": "originals/official-acquisition-20261031T235700.049192Z/windows-acquisition.json",
+    "acquisition_receipt_sha256": "be59dc7919eaeddf55976ac2628ea827dd2305d1ccfb869354150196438c75f0"
+  },
+  "native_identity": {
+    "version": "0.134.0",
+    "independent_build_literal": null,
+    "bytes": 147793408,
+    "sha256": "ed7dc687778ef7a613531f1eb6e25766fe06a63552115ebbd024fdede7d1a3f6",
+    "official_identity_matched": true,
+    "artifact_scope": "Official updater EXE only; this report does not establish completion or integrity of the full resource RAR.",
+    "pe": {
+      "format": "PE32+",
+      "machine": "0x8664",
+      "machine_name": "x86-64",
+      "coff_timestamp": 1793486502,
+      "timestamp_is_not_version_proof": true,
+      "characteristics": "0x22",
+      "image_base": "0x140000000",
+      "entry_point_rva": "0x61135a4",
+      "subsystem": 2,
+      "sections": [
+        {
+          "name": ".text",
+          "rva": 4096,
+          "virtual_size": 103534926,
+          "file_offset": 1024,
+          "raw_bytes": 103535104,
+          "characteristics": "0x60000020"
+        },
+        {
+          "name": ".rdata",
+          "rva": 103542784,
+          "virtual_size": 38091296,
+          "file_offset": 103536128,
+          "raw_bytes": 38091776,
+          "characteristics": "0x40000040"
+        },
+        {
+          "name": ".data",
+          "rva": 141635584,
+          "virtual_size": 313992,
+          "file_offset": 141627904,
+          "raw_bytes": 302592,
+          "characteristics": "0xc0000040"
+        },
+        {
+          "name": ".pdata",
+          "rva": 141950976,
+          "virtual_size": 4343700,
+          "file_offset": 141930496,
+          "raw_bytes": 4343808,
+          "characteristics": "0x40000040"
+        },
+        {
+          "name": ".rsrc",
+          "rva": 146296832,
+          "virtual_size": 210688,
+          "file_offset": 146274304,
+          "raw_bytes": 210944,
+          "characteristics": "0x40000040"
+        },
+        {
+          "name": ".reloc",
+          "rva": 146509824,
+          "virtual_size": 1308148,
+          "file_offset": 146485248,
+          "raw_bytes": 1308160,
+          "characteristics": "0x42000040"
+        }
+      ],
+      "section_raw_end": 147793408,
+      "overlay_bytes": 0,
+      "clr_directory_present": false
+    },
+    "version_literal_observations": [
+      {
+        "candidate": "0.134.0",
+        "count": 2,
+        "examples": [
+          {
+            "file_offset": 103550032,
+            "section": ".rdata",
+            "rva": "0x62c2650",
+            "virtual_address": "0x1462c2650",
+            "context_ascii": "ary\\std\\src\\sync\\mpmc\\context.rs.....%,F....T.......0.......0.134.0RUST_MIN_STACKC:\\Users\\Aethus\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b55"
+          },
+          {
+            "file_offset": 103752832,
+            "section": ".rdata",
+            "rva": "0x62f3e80",
+            "virtual_address": "0x1462f3e80",
+            "context_ascii": "already downloading.You...re up to date (v{version}).version0.134.0..>/F..................................... .@....y>/F.............>/F.....>/F..."
+          }
+        ]
+      }
+    ],
+    "version_resource_present": false
+  },
+  "architecture": {
+    "conclusion": "Static evidence identifies a native x86-64 Rust/Bevy Windows executable.",
+    "import_dlls": [
+      "kernel32.dll",
+      "api-ms-win-core-synch-l1-2-0.dll",
+      "user32.dll",
+      "ole32.dll",
+      "avrt.dll",
+      "gdi32.dll",
+      "shell32.dll",
+      "advapi32.dll",
+      "uiautomationcore.dll",
+      "oleaut32.dll",
+      "ntdll.dll",
+      "pdh.dll",
+      "powrprof.dll",
+      "psapi.dll",
+      "api-ms-win-core-winrt-l1-1-0.dll",
+      "ws2_32.dll",
+      "bcryptprimitives.dll",
+      "KERNEL32.dll",
+      "USER32.dll",
+      "GDI32.dll",
+      "ADVAPI32.dll",
+      "imm32.dll",
+      "dwmapi.dll",
+      "uxtheme.dll",
+      "opengl32.dll",
+      "bcrypt.dll",
+      "VCRUNTIME140.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll"
+    ],
+    "import_symbol_count": 425,
+    "delay_imports": [],
+    "rust_source_path_count": 779,
+    "rust_dependency_path_literals": [
+      {
+        "path_literal": "bevy_animation-0.18.1/src",
+        "count": 32,
+        "locations": [
+          {
+            "file_offset": 108108085,
+            "section": ".rdata",
+            "rva": "0x671b335",
+            "virtual_address": "0x14671b335"
+          },
+          {
+            "file_offset": 109257941,
+            "section": ".rdata",
+            "rva": "0x6833ed5",
+            "virtual_address": "0x146833ed5"
+          },
+          {
+            "file_offset": 109271157,
+            "section": ".rdata",
+            "rva": "0x6837275",
+            "virtual_address": "0x146837275"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_anti_alias-0.18.1/src",
+        "count": 12,
+        "locations": [
+          {
+            "file_offset": 112667942,
+            "section": ".rdata",
+            "rva": "0x6b74726",
+            "virtual_address": "0x146b74726"
+          },
+          {
+            "file_offset": 112668104,
+            "section": ".rdata",
+            "rva": "0x6b747c8",
+            "virtual_address": "0x146b747c8"
+          },
+          {
+            "file_offset": 112682403,
+            "section": ".rdata",
+            "rva": "0x6b77fa3",
+            "virtual_address": "0x146b77fa3"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_app-0.18.1/src",
+        "count": 52,
+        "locations": [
+          {
+            "file_offset": 103729315,
+            "section": ".rdata",
+            "rva": "0x62ee2a3",
+            "virtual_address": "0x1462ee2a3"
+          },
+          {
+            "file_offset": 104374893,
+            "section": ".rdata",
+            "rva": "0x638bc6d",
+            "virtual_address": "0x14638bc6d"
+          },
+          {
+            "file_offset": 104737964,
+            "section": ".rdata",
+            "rva": "0x63e46ac",
+            "virtual_address": "0x1463e46ac"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_asset-0.18.1/src",
+        "count": 396,
+        "locations": [
+          {
+            "file_offset": 103566450,
+            "section": ".rdata",
+            "rva": "0x62c6672",
+            "virtual_address": "0x1462c6672"
+          },
+          {
+            "file_offset": 103567301,
+            "section": ".rdata",
+            "rva": "0x62c69c5",
+            "virtual_address": "0x1462c69c5"
+          },
+          {
+            "file_offset": 103751893,
+            "section": ".rdata",
+            "rva": "0x62f3ad5",
+            "virtual_address": "0x1462f3ad5"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_camera-0.18.1/src",
+        "count": 21,
+        "locations": [
+          {
+            "file_offset": 111698877,
+            "section": ".rdata",
+            "rva": "0x6a87dbd",
+            "virtual_address": "0x146a87dbd"
+          },
+          {
+            "file_offset": 111811917,
+            "section": ".rdata",
+            "rva": "0x6aa374d",
+            "virtual_address": "0x146aa374d"
+          },
+          {
+            "file_offset": 112217317,
+            "section": ".rdata",
+            "rva": "0x6b066e5",
+            "virtual_address": "0x146b066e5"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_color-0.18.1/src",
+        "count": 543,
+        "locations": [
+          {
+            "file_offset": 106967165,
+            "section": ".rdata",
+            "rva": "0x6604a7d",
+            "virtual_address": "0x146604a7d"
+          },
+          {
+            "file_offset": 107075300,
+            "section": ".rdata",
+            "rva": "0x661f0e4",
+            "virtual_address": "0x14661f0e4"
+          },
+          {
+            "file_offset": 107166677,
+            "section": ".rdata",
+            "rva": "0x66355d5",
+            "virtual_address": "0x1466355d5"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_core_pipeline-0.18.1/src",
+        "count": 55,
+        "locations": [
+          {
+            "file_offset": 112869357,
+            "section": ".rdata",
+            "rva": "0x6ba59ed",
+            "virtual_address": "0x146ba59ed"
+          },
+          {
+            "file_offset": 112869504,
+            "section": ".rdata",
+            "rva": "0x6ba5a80",
+            "virtual_address": "0x146ba5a80"
+          },
+          {
+            "file_offset": 112869763,
+            "section": ".rdata",
+            "rva": "0x6ba5b83",
+            "virtual_address": "0x146ba5b83"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_diagnostic-0.18.1/src",
+        "count": 2,
+        "locations": [
+          {
+            "file_offset": 116654481,
+            "section": ".rdata",
+            "rva": "0x6f41b91",
+            "virtual_address": "0x146f41b91"
+          },
+          {
+            "file_offset": 116655637,
+            "section": ".rdata",
+            "rva": "0x6f42015",
+            "virtual_address": "0x146f42015"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_ecs-0.18.1/src",
+        "count": 2167,
+        "locations": [
+          {
+            "file_offset": 103565237,
+            "section": ".rdata",
+            "rva": "0x62c61b5",
+            "virtual_address": "0x1462c61b5"
+          },
+          {
+            "file_offset": 103565445,
+            "section": ".rdata",
+            "rva": "0x62c6285",
+            "virtual_address": "0x1462c6285"
+          },
+          {
+            "file_offset": 103565573,
+            "section": ".rdata",
+            "rva": "0x62c6305",
+            "virtual_address": "0x1462c6305"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_gilrs-0.18.1/src",
+        "count": 9,
+        "locations": [
+          {
+            "file_offset": 112409515,
+            "section": ".rdata",
+            "rva": "0x6b355ab",
+            "virtual_address": "0x146b355ab"
+          },
+          {
+            "file_offset": 112409701,
+            "section": ".rdata",
+            "rva": "0x6b35665",
+            "virtual_address": "0x146b35665"
+          },
+          {
+            "file_offset": 112410165,
+            "section": ".rdata",
+            "rva": "0x6b35835",
+            "virtual_address": "0x146b35835"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_gizmos-0.18.1/src",
+        "count": 16,
+        "locations": [
+          {
+            "file_offset": 104532293,
+            "section": ".rdata",
+            "rva": "0x63b2345",
+            "virtual_address": "0x1463b2345"
+          },
+          {
+            "file_offset": 104770077,
+            "section": ".rdata",
+            "rva": "0x63ec41d",
+            "virtual_address": "0x1463ec41d"
+          },
+          {
+            "file_offset": 111921997,
+            "section": ".rdata",
+            "rva": "0x6abe54d",
+            "virtual_address": "0x146abe54d"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_gizmos_render-0.18.1/src",
+        "count": 16,
+        "locations": [
+          {
+            "file_offset": 109504965,
+            "section": ".rdata",
+            "rva": "0x68703c5",
+            "virtual_address": "0x1468703c5"
+          },
+          {
+            "file_offset": 109505643,
+            "section": ".rdata",
+            "rva": "0x687066b",
+            "virtual_address": "0x14687066b"
+          },
+          {
+            "file_offset": 109505845,
+            "section": ".rdata",
+            "rva": "0x6870735",
+            "virtual_address": "0x146870735"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_gltf-0.18.1/src",
+        "count": 30,
+        "locations": [
+          {
+            "file_offset": 109249462,
+            "section": ".rdata",
+            "rva": "0x6831db6",
+            "virtual_address": "0x146831db6"
+          },
+          {
+            "file_offset": 109259016,
+            "section": ".rdata",
+            "rva": "0x6834308",
+            "virtual_address": "0x146834308"
+          },
+          {
+            "file_offset": 109271495,
+            "section": ".rdata",
+            "rva": "0x68373c7",
+            "virtual_address": "0x1468373c7"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_heavy-0.4.0/src",
+        "count": 3,
+        "locations": [
+          {
+            "file_offset": 107230221,
+            "section": ".rdata",
+            "rva": "0x6644e0d",
+            "virtual_address": "0x146644e0d"
+          },
+          {
+            "file_offset": 107858945,
+            "section": ".rdata",
+            "rva": "0x66de601",
+            "virtual_address": "0x1466de601"
+          },
+          {
+            "file_offset": 107863449,
+            "section": ".rdata",
+            "rva": "0x66df799",
+            "virtual_address": "0x1466df799"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_image-0.18.1/src",
+        "count": 60,
+        "locations": [
+          {
+            "file_offset": 108578285,
+            "section": ".rdata",
+            "rva": "0x678dfed",
+            "virtual_address": "0x14678dfed"
+          },
+          {
+            "file_offset": 108798261,
+            "section": ".rdata",
+            "rva": "0x67c3b35",
+            "virtual_address": "0x1467c3b35"
+          },
+          {
+            "file_offset": 108872725,
+            "section": ".rdata",
+            "rva": "0x67d5e15",
+            "virtual_address": "0x1467d5e15"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_input-0.18.1/src",
+        "count": 39,
+        "locations": [
+          {
+            "file_offset": 111755781,
+            "section": ".rdata",
+            "rva": "0x6a95c05",
+            "virtual_address": "0x146a95c05"
+          },
+          {
+            "file_offset": 111777365,
+            "section": ".rdata",
+            "rva": "0x6a9b055",
+            "virtual_address": "0x146a9b055"
+          },
+          {
+            "file_offset": 111810697,
+            "section": ".rdata",
+            "rva": "0x6aa3289",
+            "virtual_address": "0x146aa3289"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_input_focus-0.18.1/src",
+        "count": 7,
+        "locations": [
+          {
+            "file_offset": 109171589,
+            "section": ".rdata",
+            "rva": "0x681ed85",
+            "virtual_address": "0x14681ed85"
+          },
+          {
+            "file_offset": 109179197,
+            "section": ".rdata",
+            "rva": "0x6820b3d",
+            "virtual_address": "0x146820b3d"
+          },
+          {
+            "file_offset": 109186149,
+            "section": ".rdata",
+            "rva": "0x6822665",
+            "virtual_address": "0x146822665"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_internal-0.18.1/src",
+        "count": 1,
+        "locations": [
+          {
+            "file_offset": 108226893,
+            "section": ".rdata",
+            "rva": "0x673834d",
+            "virtual_address": "0x14673834d"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_light-0.18.1/src",
+        "count": 21,
+        "locations": [
+          {
+            "file_offset": 112131277,
+            "section": ".rdata",
+            "rva": "0x6af16cd",
+            "virtual_address": "0x146af16cd"
+          },
+          {
+            "file_offset": 112145284,
+            "section": ".rdata",
+            "rva": "0x6af4d84",
+            "virtual_address": "0x146af4d84"
+          },
+          {
+            "file_offset": 112171075,
+            "section": ".rdata",
+            "rva": "0x6afb243",
+            "virtual_address": "0x146afb243"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_log-0.18.1/src",
+        "count": 5,
+        "locations": [
+          {
+            "file_offset": 116821387,
+            "section": ".rdata",
+            "rva": "0x6f6a78b",
+            "virtual_address": "0x146f6a78b"
+          },
+          {
+            "file_offset": 116821565,
+            "section": ".rdata",
+            "rva": "0x6f6a83d",
+            "virtual_address": "0x146f6a83d"
+          },
+          {
+            "file_offset": 116821787,
+            "section": ".rdata",
+            "rva": "0x6f6a91b",
+            "virtual_address": "0x146f6a91b"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_math-0.18.1/src",
+        "count": 82,
+        "locations": [
+          {
+            "file_offset": 104273208,
+            "section": ".rdata",
+            "rva": "0x6372f38",
+            "virtual_address": "0x146372f38"
+          },
+          {
+            "file_offset": 104554607,
+            "section": ".rdata",
+            "rva": "0x63b7a6f",
+            "virtual_address": "0x1463b7a6f"
+          },
+          {
+            "file_offset": 105256151,
+            "section": ".rdata",
+            "rva": "0x6462ed7",
+            "virtual_address": "0x146462ed7"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_mesh-0.18.1/src",
+        "count": 45,
+        "locations": [
+          {
+            "file_offset": 104793348,
+            "section": ".rdata",
+            "rva": "0x63f1f04",
+            "virtual_address": "0x1463f1f04"
+          },
+          {
+            "file_offset": 105436165,
+            "section": ".rdata",
+            "rva": "0x648ee05",
+            "virtual_address": "0x14648ee05"
+          },
+          {
+            "file_offset": 106483637,
+            "section": ".rdata",
+            "rva": "0x658e9b5",
+            "virtual_address": "0x14658e9b5"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_mikktspace-0.17.0-dev/src",
+        "count": 7,
+        "locations": [
+          {
+            "file_offset": 116184813,
+            "section": ".rdata",
+            "rva": "0x6ecf0ed",
+            "virtual_address": "0x146ecf0ed"
+          },
+          {
+            "file_offset": 116284821,
+            "section": ".rdata",
+            "rva": "0x6ee7795",
+            "virtual_address": "0x146ee7795"
+          },
+          {
+            "file_offset": 116299669,
+            "section": ".rdata",
+            "rva": "0x6eeb195",
+            "virtual_address": "0x146eeb195"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_pbr-0.18.1/src",
+        "count": 105,
+        "locations": [
+          {
+            "file_offset": 106564533,
+            "section": ".rdata",
+            "rva": "0x65a25b5",
+            "virtual_address": "0x1465a25b5"
+          },
+          {
+            "file_offset": 106625954,
+            "section": ".rdata",
+            "rva": "0x65b15a2",
+            "virtual_address": "0x1465b15a2"
+          },
+          {
+            "file_offset": 106639885,
+            "section": ".rdata",
+            "rva": "0x65b4c0d",
+            "virtual_address": "0x1465b4c0d"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_picking-0.18.1/src",
+        "count": 26,
+        "locations": [
+          {
+            "file_offset": 111687781,
+            "section": ".rdata",
+            "rva": "0x6a85265",
+            "virtual_address": "0x146a85265"
+          },
+          {
+            "file_offset": 111706025,
+            "section": ".rdata",
+            "rva": "0x6a899a9",
+            "virtual_address": "0x146a899a9"
+          },
+          {
+            "file_offset": 111706259,
+            "section": ".rdata",
+            "rva": "0x6a89a93",
+            "virtual_address": "0x146a89a93"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_post_process-0.18.1/src",
+        "count": 22,
+        "locations": [
+          {
+            "file_offset": 108999580,
+            "section": ".rdata",
+            "rva": "0x67f4d9c",
+            "virtual_address": "0x1467f4d9c"
+          },
+          {
+            "file_offset": 108999758,
+            "section": ".rdata",
+            "rva": "0x67f4e4e",
+            "virtual_address": "0x1467f4e4e"
+          },
+          {
+            "file_offset": 109015124,
+            "section": ".rdata",
+            "rva": "0x67f8a54",
+            "virtual_address": "0x1467f8a54"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_reflect-0.18.1/src",
+        "count": 1234,
+        "locations": [
+          {
+            "file_offset": 104375389,
+            "section": ".rdata",
+            "rva": "0x638be5d",
+            "virtual_address": "0x14638be5d"
+          },
+          {
+            "file_offset": 105436757,
+            "section": ".rdata",
+            "rva": "0x648f055",
+            "virtual_address": "0x14648f055"
+          },
+          {
+            "file_offset": 105437045,
+            "section": ".rdata",
+            "rva": "0x648f175",
+            "virtual_address": "0x14648f175"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_render-0.18.1/src",
+        "count": 247,
+        "locations": [
+          {
+            "file_offset": 104384309,
+            "section": ".rdata",
+            "rva": "0x638e135",
+            "virtual_address": "0x14638e135"
+          },
+          {
+            "file_offset": 104730514,
+            "section": ".rdata",
+            "rva": "0x63e2992",
+            "virtual_address": "0x1463e2992"
+          },
+          {
+            "file_offset": 104779022,
+            "section": ".rdata",
+            "rva": "0x63ee70e",
+            "virtual_address": "0x1463ee70e"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_scene-0.18.1/src",
+        "count": 7,
+        "locations": [
+          {
+            "file_offset": 109422257,
+            "section": ".rdata",
+            "rva": "0x685c0b1",
+            "virtual_address": "0x14685c0b1"
+          },
+          {
+            "file_offset": 109428085,
+            "section": ".rdata",
+            "rva": "0x685d775",
+            "virtual_address": "0x14685d775"
+          },
+          {
+            "file_offset": 109448533,
+            "section": ".rdata",
+            "rva": "0x6862755",
+            "virtual_address": "0x146862755"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_shader-0.18.1/src",
+        "count": 7,
+        "locations": [
+          {
+            "file_offset": 114029409,
+            "section": ".rdata",
+            "rva": "0x6cc0d61",
+            "virtual_address": "0x146cc0d61"
+          },
+          {
+            "file_offset": 114073981,
+            "section": ".rdata",
+            "rva": "0x6ccbb7d",
+            "virtual_address": "0x146ccbb7d"
+          },
+          {
+            "file_offset": 114074225,
+            "section": ".rdata",
+            "rva": "0x6ccbc71",
+            "virtual_address": "0x146ccbc71"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_sprite-0.18.1/src",
+        "count": 24,
+        "locations": [
+          {
+            "file_offset": 108530973,
+            "section": ".rdata",
+            "rva": "0x678271d",
+            "virtual_address": "0x14678271d"
+          },
+          {
+            "file_offset": 108531125,
+            "section": ".rdata",
+            "rva": "0x67827b5",
+            "virtual_address": "0x1467827b5"
+          },
+          {
+            "file_offset": 108680125,
+            "section": ".rdata",
+            "rva": "0x67a6dbd",
+            "virtual_address": "0x1467a6dbd"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_sprite_render-0.18.1/src",
+        "count": 36,
+        "locations": [
+          {
+            "file_offset": 105437325,
+            "section": ".rdata",
+            "rva": "0x648f28d",
+            "virtual_address": "0x14648f28d"
+          },
+          {
+            "file_offset": 110481333,
+            "section": ".rdata",
+            "rva": "0x695e9b5",
+            "virtual_address": "0x14695e9b5"
+          },
+          {
+            "file_offset": 110482123,
+            "section": ".rdata",
+            "rva": "0x695eccb",
+            "virtual_address": "0x14695eccb"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_state-0.18.1/src",
+        "count": 6,
+        "locations": [
+          {
+            "file_offset": 104383929,
+            "section": ".rdata",
+            "rva": "0x638dfb9",
+            "virtual_address": "0x14638dfb9"
+          },
+          {
+            "file_offset": 104729381,
+            "section": ".rdata",
+            "rva": "0x63e2525",
+            "virtual_address": "0x1463e2525"
+          },
+          {
+            "file_offset": 104783957,
+            "section": ".rdata",
+            "rva": "0x63efa55",
+            "virtual_address": "0x1463efa55"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_tasks-0.18.1/src",
+        "count": 68,
+        "locations": [
+          {
+            "file_offset": 104375741,
+            "section": ".rdata",
+            "rva": "0x638bfbd",
+            "virtual_address": "0x14638bfbd"
+          },
+          {
+            "file_offset": 104385875,
+            "section": ".rdata",
+            "rva": "0x638e753",
+            "virtual_address": "0x14638e753"
+          },
+          {
+            "file_offset": 105413197,
+            "section": ".rdata",
+            "rva": "0x648944d",
+            "virtual_address": "0x14648944d"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_text-0.18.1/src",
+        "count": 28,
+        "locations": [
+          {
+            "file_offset": 108561029,
+            "section": ".rdata",
+            "rva": "0x6789c85",
+            "virtual_address": "0x146789c85"
+          },
+          {
+            "file_offset": 110946037,
+            "section": ".rdata",
+            "rva": "0x69d00f5",
+            "virtual_address": "0x1469d00f5"
+          },
+          {
+            "file_offset": 111005963,
+            "section": ".rdata",
+            "rva": "0x69deb0b",
+            "virtual_address": "0x1469deb0b"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_time-0.18.1/src",
+        "count": 14,
+        "locations": [
+          {
+            "file_offset": 106598869,
+            "section": ".rdata",
+            "rva": "0x65aabd5",
+            "virtual_address": "0x1465aabd5"
+          },
+          {
+            "file_offset": 107400051,
+            "section": ".rdata",
+            "rva": "0x666e573",
+            "virtual_address": "0x14666e573"
+          },
+          {
+            "file_offset": 116664232,
+            "section": ".rdata",
+            "rva": "0x6f441a8",
+            "virtual_address": "0x146f441a8"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_transform-0.18.1/src",
+        "count": 6,
+        "locations": [
+          {
+            "file_offset": 116757944,
+            "section": ".rdata",
+            "rva": "0x6f5afb8",
+            "virtual_address": "0x146f5afb8"
+          },
+          {
+            "file_offset": 116773278,
+            "section": ".rdata",
+            "rva": "0x6f5eb9e",
+            "virtual_address": "0x146f5eb9e"
+          },
+          {
+            "file_offset": 116788677,
+            "section": ".rdata",
+            "rva": "0x6f627c5",
+            "virtual_address": "0x146f627c5"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_transform_interpolation-0.4.0/src",
+        "count": 5,
+        "locations": [
+          {
+            "file_offset": 107714031,
+            "section": ".rdata",
+            "rva": "0x66bafef",
+            "virtual_address": "0x1466bafef"
+          },
+          {
+            "file_offset": 107781853,
+            "section": ".rdata",
+            "rva": "0x66cb8dd",
+            "virtual_address": "0x1466cb8dd"
+          },
+          {
+            "file_offset": 107798908,
+            "section": ".rdata",
+            "rva": "0x66cfb7c",
+            "virtual_address": "0x1466cfb7c"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_ui-0.18.1/src",
+        "count": 34,
+        "locations": [
+          {
+            "file_offset": 108487493,
+            "section": ".rdata",
+            "rva": "0x6777d45",
+            "virtual_address": "0x146777d45"
+          },
+          {
+            "file_offset": 108490864,
+            "section": ".rdata",
+            "rva": "0x6778a70",
+            "virtual_address": "0x146778a70"
+          },
+          {
+            "file_offset": 108508229,
+            "section": ".rdata",
+            "rva": "0x677ce45",
+            "virtual_address": "0x14677ce45"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_ui_render-0.18.1/src",
+        "count": 17,
+        "locations": [
+          {
+            "file_offset": 108381289,
+            "section": ".rdata",
+            "rva": "0x675de69",
+            "virtual_address": "0x14675de69"
+          },
+          {
+            "file_offset": 108389208,
+            "section": ".rdata",
+            "rva": "0x675fd58",
+            "virtual_address": "0x14675fd58"
+          },
+          {
+            "file_offset": 108400949,
+            "section": ".rdata",
+            "rva": "0x6762b35",
+            "virtual_address": "0x146762b35"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_utils-0.18.1/src",
+        "count": 9,
+        "locations": [
+          {
+            "file_offset": 104373557,
+            "section": ".rdata",
+            "rva": "0x638b735",
+            "virtual_address": "0x14638b735"
+          },
+          {
+            "file_offset": 106847177,
+            "section": ".rdata",
+            "rva": "0x65e75c9",
+            "virtual_address": "0x1465e75c9"
+          },
+          {
+            "file_offset": 107592421,
+            "section": ".rdata",
+            "rva": "0x669d4e5",
+            "virtual_address": "0x14669d4e5"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_window-0.18.1/src",
+        "count": 28,
+        "locations": [
+          {
+            "file_offset": 103724893,
+            "section": ".rdata",
+            "rva": "0x62ed15d",
+            "virtual_address": "0x1462ed15d"
+          },
+          {
+            "file_offset": 108288461,
+            "section": ".rdata",
+            "rva": "0x67473cd",
+            "virtual_address": "0x1467473cd"
+          },
+          {
+            "file_offset": 113764677,
+            "section": ".rdata",
+            "rva": "0x6c80345",
+            "virtual_address": "0x146c80345"
+          }
+        ]
+      },
+      {
+        "path_literal": "bevy_winit-0.18.1/src",
+        "count": 38,
+        "locations": [
+          {
+            "file_offset": 108237631,
+            "section": ".rdata",
+            "rva": "0x673ad3f",
+            "virtual_address": "0x14673ad3f"
+          },
+          {
+            "file_offset": 108245907,
+            "section": ".rdata",
+            "rva": "0x673cd93",
+            "virtual_address": "0x14673cd93"
+          },
+          {
+            "file_offset": 108247131,
+            "section": ".rdata",
+            "rva": "0x673d25b",
+            "virtual_address": "0x14673d25b"
+          }
+        ]
+      },
+      {
+        "path_literal": "wgpu-core-27.0.3/src",
+        "count": 62,
+        "locations": [
+          {
+            "file_offset": 114181605,
+            "section": ".rdata",
+            "rva": "0x6ce5fe5",
+            "virtual_address": "0x146ce5fe5"
+          },
+          {
+            "file_offset": 114181751,
+            "section": ".rdata",
+            "rva": "0x6ce6077",
+            "virtual_address": "0x146ce6077"
+          },
+          {
+            "file_offset": 114181901,
+            "section": ".rdata",
+            "rva": "0x6ce610d",
+            "virtual_address": "0x146ce610d"
+          }
+        ]
+      },
+      {
+        "path_literal": "wgpu-hal-27.0.4/src",
+        "count": 62,
+        "locations": [
+          {
+            "file_offset": 114220085,
+            "section": ".rdata",
+            "rva": "0x6cef635",
+            "virtual_address": "0x146cef635"
+          },
+          {
+            "file_offset": 114291237,
+            "section": ".rdata",
+            "rva": "0x6d00c25",
+            "virtual_address": "0x146d00c25"
+          },
+          {
+            "file_offset": 114316493,
+            "section": ".rdata",
+            "rva": "0x6d06ecd",
+            "virtual_address": "0x146d06ecd"
+          }
+        ]
+      },
+      {
+        "path_literal": "wgpu-types-27.0.1/src",
+        "count": 3,
+        "locations": [
+          {
+            "file_offset": 114252861,
+            "section": ".rdata",
+            "rva": "0x6cf763d",
+            "virtual_address": "0x146cf763d"
+          },
+          {
+            "file_offset": 114349621,
+            "section": ".rdata",
+            "rva": "0x6d0f035",
+            "virtual_address": "0x146d0f035"
+          },
+          {
+            "file_offset": 118024667,
+            "section": ".rdata",
+            "rva": "0x70903db",
+            "virtual_address": "0x1470903db"
+          }
+        ]
+      },
+      {
+        "path_literal": "winit-0.29.2/src",
+        "count": 2,
+        "locations": [
+          {
+            "file_offset": 108243184,
+            "section": ".rdata",
+            "rva": "0x673c2f0",
+            "virtual_address": "0x14673c2f0"
+          },
+          {
+            "file_offset": 108285103,
+            "section": ".rdata",
+            "rva": "0x67466af",
+            "virtual_address": "0x1467466af"
+          }
+        ]
+      },
+      {
+        "path_literal": "winit-0.30.13/src",
+        "count": 46,
+        "locations": [
+          {
+            "file_offset": 108242914,
+            "section": ".rdata",
+            "rva": "0x673c1e2",
+            "virtual_address": "0x14673c1e2"
+          },
+          {
+            "file_offset": 108243412,
+            "section": ".rdata",
+            "rva": "0x673c3d4",
+            "virtual_address": "0x14673c3d4"
+          },
+          {
+            "file_offset": 108244397,
+            "section": ".rdata",
+            "rva": "0x673c7ad",
+            "virtual_address": "0x14673c7ad"
+          }
+        ]
+      }
+    ],
+    "embedded_wasm_v1_magic_matches": 0,
+    "wrapper_markers": [
+      {
+        "literal": "Electron",
+        "count": 2,
+        "first_file_offsets": [
+          104072985,
+          125947425
+        ],
+        "offset_limit": 8,
+        "locations": [
+          {
+            "file_offset": 104072985,
+            "section": ".rdata",
+            "rva": "0x6342119",
+            "virtual_address": "0x146342119"
+          },
+          {
+            "file_offset": 125947425,
+            "section": ".rdata",
+            "rva": "0x781e821",
+            "virtual_address": "0x14781e821"
+          }
+        ],
+        "contexts_ascii": [
+          "..1.0...U....TN1705..U....Agence Nationale de Certification Electronique1.0...U....TunTrust Root CA0...*.H.............0..............S.. :....KA...",
+          "..1.0...U....TN1705..U....Agence Nationale de Certification Electronique1.0...U....TunTrust Root CA0...*.H.............0..............S.. :....KA..."
+        ],
+        "literal_is_identity_proof": false
+      }
+    ],
+    "electron_match_explanation": "Both Electron byte matches occur inside the root-certificate subject Agence Nationale de Certification Electronique, not Electron runtime identifiers.",
+    "limitations": [
+      "This inspected EXE exposes no CLR directory, no section overlay, no WebView2/Chromium/CEF runtime indicators, and no WASM v1 magic.",
+      "Absence of byte signatures does not prove absence of compressed or encrypted payloads in uninspected resources."
+    ]
+  },
+  "comparison": {
+    "web_baseline": {
+      "version": "0.126.0",
+      "build": "3e72472a",
+      "wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c"
+    },
+    "old_native_baseline": {
+      "version": "0.102.3",
+      "build": "f78e6fab",
+      "bytes": 139691008,
+      "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a"
+    },
+    "new_native_shared_paths_with_web": 735,
+    "old_native_shared_paths_with_web": 684,
+    "shared_gameplay_path_examples": [
+      "crates/wenilla-rogue-app/src/screens/cards.rs",
+      "crates/wenilla-rogue/src/game/abilities.rs",
+      "crates/wenilla-rogue/src/game/enemy.rs",
+      "crates/wenilla-rogue/src/game/talents.rs",
+      "crates/wenilla-rogue/src/game/upgrades.rs",
+      "crates/wenilla-rogue/src/save.rs"
+    ],
+    "catalogue_literal_presence": {
+      "abilities": {
+        "new_native": 113,
+        "old_native": 112,
+        "reference": 113
+      },
+      "classes": {
+        "new_native": 9,
+        "old_native": 9,
+        "reference": 9
+      }
+    },
+    "constant_sequence_matches": [
+      {
+        "name": "upgrade_damage_f32",
+        "hex": "ec51383e0000803e7b14ae3e1f85eb3e6666263f",
+        "count": 2,
+        "first_file_offsets": [
+          118561684,
+          125820248
+        ],
+        "offset_limit": 8,
+        "locations": [
+          {
+            "file_offset": 118561684,
+            "section": ".rdata",
+            "rva": "0x7113594",
+            "virtual_address": "0x147113594"
+          },
+          {
+            "file_offset": 125820248,
+            "section": ".rdata",
+            "rva": "0x77ff758",
+            "virtual_address": "0x1477ff758"
+          }
+        ]
+      },
+      {
+        "name": "upgrade_cooldown_f32",
+        "hex": "295c8f3dcdcccc3db81e053e7b142e3e1f856b3e",
+        "count": 2,
+        "first_file_offsets": [
+          118561728,
+          125820144
+        ],
+        "offset_limit": 8,
+        "locations": [
+          {
+            "file_offset": 118561728,
+            "section": ".rdata",
+            "rva": "0x71135c0",
+            "virtual_address": "0x1471135c0"
+          },
+          {
+            "file_offset": 125820144,
+            "section": ".rdata",
+            "rva": "0x77ff6f0",
+            "virtual_address": "0x1477ff6f0"
+          }
+        ]
+      },
+      {
+        "name": "upgrade_count_u32",
+        "hex": "0100000001000000010000000200000002000000",
+        "count": 7,
+        "first_file_offsets": [
+          104785796,
+          114121748,
+          114482444,
+          116509780,
+          116509884,
+          118561776,
+          126297652
+        ],
+        "offset_limit": 8,
+        "locations": [
+          {
+            "file_offset": 104785796,
+            "section": ".rdata",
+            "rva": "0x63f0184",
+            "virtual_address": "0x1463f0184"
+          },
+          {
+            "file_offset": 114121748,
+            "section": ".rdata",
+            "rva": "0x6cd7614",
+            "virtual_address": "0x146cd7614"
+          },
+          {
+            "file_offset": 114482444,
+            "section": ".rdata",
+            "rva": "0x6d2f70c",
+            "virtual_address": "0x146d2f70c"
+          },
+          {
+            "file_offset": 116509780,
+            "section": ".rdata",
+            "rva": "0x6f1e654",
+            "virtual_address": "0x146f1e654"
+          },
+          {
+            "file_offset": 116509884,
+            "section": ".rdata",
+            "rva": "0x6f1e6bc",
+            "virtual_address": "0x146f1e6bc"
+          },
+          {
+            "file_offset": 118561776,
+            "section": ".rdata",
+            "rva": "0x71135f0",
+            "virtual_address": "0x1471135f0"
+          },
+          {
+            "file_offset": 126297652,
+            "section": ".rdata",
+            "rva": "0x7874034",
+            "virtual_address": "0x147874034"
+          }
+        ]
+      },
+      {
+        "name": "upgrade_radius_f32",
+        "hex": "8fc2f53dec51383e0000803e3333b33e0000003f",
+        "count": 1,
+        "first_file_offsets": [
+          118561824
+        ],
+        "offset_limit": 8,
+        "locations": [
+          {
+            "file_offset": 118561824,
+            "section": ".rdata",
+            "rva": "0x7113620",
+            "virtual_address": "0x147113620"
+          }
+        ]
+      },
+      {
+        "name": "upgrade_duration_f32",
+        "hex": "9a99193eae47613e9a99993ecdcccc3e9a99193f",
+        "count": 1,
+        "first_file_offsets": [
+          118561872
+        ],
+        "offset_limit": 8,
+        "locations": [
+          {
+            "file_offset": 118561872,
+            "section": ".rdata",
+            "rva": "0x7113650",
+            "virtual_address": "0x147113650"
+          }
+        ]
+      }
+    ],
+    "semantic_caveat": "All mappings here are exact string/constant candidates. Native addresses, Rust record layouts, and equal formulas are not transferred from WASM or old EXE."
+  },
+  "continuation_strategy": [
+    "Use official native 0.134.0 as the new Windows primary target, with its own SHA-bound baseline; keep existing 0.102.3/0.126.0 evidence reproducible.",
+    "Seed new native Ghidra work from same-source paths, the new constant VAs, and this PE .pdata; independently establish each function boundary and caller/consumer chain.",
+    "Revalidate upgrades, catalogue definitions and the official 0.134.0 Shaman/absorb changes before promoting old executable specifications to current behavior.",
+    "Refresh Web/Mac/Android to an explicitly identified official matching version in a separate authorized change; do not overwrite the current 0.126.0 identity or transplant old offsets."
+  ],
+  "validation": {
+    "originals_preserved": true,
+    "target_executed": false,
+    "old_native_offsets_used": false,
+    "script": "scripts/inspect_official_windows.py",
+    "script_sha256": "da103335c7e2cd97b745a39588373bfaa615e5f1743db3985df1f2caec39cb89",
+    "evidence_run": "evidence/20261101T000304.822273Z-official-windows-inventory",
+    "evidence_sha256": {
+      "summary.json": "0a4fabe38a9b3143faa858e951e4f7eb560abb73502a94f1f4628627ffdd39dc",
+      "web-reference.json": "b17930cc682f95caf45da878fb71765667bea1c91eabe8d963dceb0e44105a10",
+      "inventory.json": "b8689aca4e97b793738415f83b879ffe98dd0cea069dd2b69c6927d4cdb91cb7",
+      "pe-reports.json": "cfa94c0b057fe01442cf3b820444a10d7c86bf8b124b0eeebc1b23de5591f7ab"
+    },
+    "old_baseline_validation_run": "evidence/20261101T000031.347137Z-official-windows-inventory",
+    "parser_errors": {}
+  },
+  "not_completed": [
+    "No full native autoanalysis, decompilation, recovered source code, or gameplay execution is claimed by this report.",
+    "Full resource RAR completion and latest Web identity are tracked separately."
+  ],
+  "official_download_archive_addendum": {
+    "source_url": "https://wow.aethus.pl/download/AzerothSurvivorsWindowsNew.rar",
+    "archive_prefix_verified_bytes": 33554432,
+    "verified_ranges": 8,
+    "first_file_decode_and_crc_complete": true,
+    "first_exe": {
+      "bytes": 139691008,
+      "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
+      "matches_fixed_old_native_baseline": true,
+      "version": "0.102.3",
+      "build": "f78e6fab",
+      "version_literal_observations": [
+        {
+          "literal": "0.102.3",
+          "offset": 98077400,
+          "ascii_context": ".................E.......................E............8... ...f78e6fab0.102.3....E.............v.. (..).%mpq://interface/glues/loadingscreens/...blp...........$l......"
+        },
+        {
+          "literal": "0.102.3",
+          "offset": 98089024,
+          "ascii_context": ".E....l.......?...4......E....l.......@...4......E....l.......>...4...0.102.3.update: up to date (site has v..)...update: v.. is out (this is v..)...update: could not "
+        },
+        {
+          "literal": "0.102.3",
+          "offset": 98095457,
+          "ascii_context": "E....+...............{n} MB. ..p..... ..@..................... .@....n0.102.3A new version is out!New game data........r?y.f?^.I?...?{size} download .. the game restar"
+        }
+      ]
+    },
+    "whole_archive_complete": false,
+    "scope": "Complete first EXE only; entire RAR download and resource integrity are not completed by this receipt.",
+    "latest_exe_source": "https://wow.aethus.pl/exe/latest.json",
+    "target_executed": false,
+    "receipt_sources_sha256": {
+      "originals/official-acquisition-20261031T235700.049192Z/rar-first-exe-receipt.json": "8e1a22e7bfbfbc3a68560adc0313c9254bee0f92ba241c1fa321346f34e1807a",
+      "originals/official-acquisition-20261031T235700.049192Z/rar-first-exe-identity.json": "a8b77d553a3f8dbc5a310fdf42a9f5fa02f17a6dbaed348a4e21411cc2f78065",
+      "originals/official-acquisition-20261031T235700.049192Z/rar-first-exe-version-candidates.json": "7d5484b623ea2e0e443c06e285ebf52256915500ad0da97b4d03e6e14d16908c"
+    }
+  }
+}

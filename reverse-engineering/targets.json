@@ -1,4 +1,21 @@
 {
+  "active_reconstruction_target": {
+    "version": "0.134.0",
+    "web_build": "983346a7",
+    "web_reference_key": "web_current_comparison_snapshot",
+    "windows_reference_key": "windows_official_current_reference",
+    "selected_by": "User latest-version direction on2026-11-01",
+    "previous_verified_reference": "web_core0.126.0/3e72472a retained only for regression/equivalence mapping",
+    "installation_packages_updated": false,
+    "analysis_profile": {
+      "report": "reports/2026-11-01-wasm0134-profile.json",
+      "source_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+      "complete_wat": "evidence/wasm0134-profile-20261101T001728.222975Z/official-0.134.0-full.wat",
+      "wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
+      "index": "evidence/wasm0134-profile-20261101T001728.222975Z/index.sqlite",
+      "index_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9"
+    }
+  },
   "web_core": {
     "version": "0.126.0",
     "build": "3e72472a",
@@ -7,8 +24,20 @@
     "wasm_filename": "wenilla_bg.wasm",
     "wasm_bytes": 90116970,
     "wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
-    "javascript_sources": ["rogue.js", "boot.js", "wenilla.js", "wasi_stubs.js", "addons.js", "saves.js", "ime.js"],
-    "limitations": ["REA 6.8.0 WASM inspection admits at most 8 MiB per artifact; this complete core exceeds it.", "JavaScript analysis does not establish the WASM gameplay implementation."]
+    "javascript_sources": [
+      "rogue.js",
+      "boot.js",
+      "wenilla.js",
+      "wasi_stubs.js",
+      "addons.js",
+      "saves.js",
+      "ime.js"
+    ],
+    "limitations": [
+      "REA 6.8.0 WASM inspection admits at most 8 MiB per artifact; this complete core exceeds it.",
+      "JavaScript analysis does not establish the WASM gameplay implementation."
+    ],
+    "role": "historical_validated_web_reference; fixed existing oracle inputs, no longer the active reconstruction target"
   },
   "windows_native_reference": {
     "version": "0.102.3",
@@ -18,6 +47,42 @@
     "format": "PE32+ x86-64 GUI",
     "bytes": 139691008,
     "sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
-    "limitations": ["Older reference only; do not transfer offsets or behavior directly to web 0.126.0.", "Native decompilation needs a working REA analysis provider."]
+    "limitations": [
+      "Older reference only; do not transfer offsets or behavior directly to web 0.126.0.",
+      "Native decompilation needs a working REA analysis provider."
+    ]
+  },
+  "windows_official_current_reference": {
+    "version": "0.134.0",
+    "build": null,
+    "filename": "AzerothSurvivors.exe",
+    "format": "PE32+ x86-64 GUI native Rust/Bevy",
+    "bytes": 147793408,
+    "sha256": "ed7dc687778ef7a613531f1eb6e25766fe06a63552115ebbd024fdede7d1a3f6",
+    "official_manifest": "https://wow.aethus.pl/exe/latest.json",
+    "retrieval_date": "2026-11-01 Asia/Taipei",
+    "local_acquisition": "originals/official-acquisition-20261031T235700.049192Z/windows-0.134.0/AzerothSurvivors.exe",
+    "limitations": [
+      "New original-native reference, not a replacement for fixed Web0.126.0 oracle inputs.",
+      "No reliable native short build fingerprint identified; use official size/SHA.",
+      "EXE acquired and statically inspected; full resource RAR has separate completion and identity receipts.",
+      "Old0.102.3 and WASM offsets must not be transferred without mapping."
+    ],
+    "role": "active_reconstruction_native_target; original Windows semantics cross-check"
+  },
+  "web_current_comparison_snapshot": {
+    "version": "0.134.0",
+    "build": "983346a7",
+    "stamp": "d1eb6005e172",
+    "bytes": 90953762,
+    "sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "source": "https://wow.aethus.pl/wenilla_bg.wasm?v=d1eb6005e172",
+    "local_snapshot": "originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm",
+    "limitations": [
+      "Static snapshot identity and four known-body matches only; not complete0.134.0 gameplay acceptance.",
+      "SHA computed locally from HTTPS download; not a separately published official WASM digest.",
+      "Existing fixed0.126.0 source files, installation packages and saves remain unchanged."
+    ],
+    "role": "active_reconstruction_web_target; latest-specific semantics and runtime verification in progress"
   }
 }

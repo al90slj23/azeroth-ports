@@ -1,0 +1,348 @@
+{
+  "status": "complete",
+  "target_version": "0.134.0",
+  "role": "primary latest-version static analysis profile",
+  "official_stamp_kind": "acquisition identity; not a WASM embedded string",
+  "source_bytes": 90953762,
+  "profile": {
+    "target_version": "0.134.0",
+    "embedded_build": "983346a7",
+    "official_stamp": "d1eb6005e172",
+    "original_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "original_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm",
+    "wat_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/official-0.134.0-full.wat",
+    "wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
+    "index_schema": "azeroth-ports-local-wasm134-index-v1",
+    "local_tool_sources": {
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    },
+    "wabt_version": "1.0.42",
+    "wabt_archive_sha256": "3f654779b436c628db3ca4323c51538815f5fbc887a6d5f3bb1c18d36281e240",
+    "direct_call_kinds": [
+      "call",
+      "return_call"
+    ],
+    "integer_constant_kinds": [
+      "i32.const",
+      "i64.const"
+    ],
+    "memory_scope": "scalar/vector/atomic load/store instructions; static offset immediate only",
+    "terminal_parentheses_supported": true,
+    "target_executed": false,
+    "method": "local full-WAT lexical instruction index; not runtime or stock REA",
+    "counts": {
+      "functions": 175316,
+      "calls": 824546,
+      "iconsts": 5196562,
+      "memops": 5540073
+    },
+    "direct_call_counts": {
+      "call": 824546
+    },
+    "terminal_parenthesis_counts": {
+      "call": 5585,
+      "return_call": 0,
+      "iconst": 2493,
+      "memop": 73793
+    },
+    "wat_lines": 34382352,
+    "sqlite_integrity_check": "ok",
+    "index_elapsed_seconds": 50.624,
+    "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z",
+    "database_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/index.sqlite",
+    "database_bytes": 642973696,
+    "database_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9",
+    "full_module_validated": true,
+    "defined_functions": 175316,
+    "function_imports": 878,
+    "wat_bytes": 1326868841,
+    "identities_preserved": true,
+    "elapsed_seconds": 69.186
+  },
+  "verification": {
+    "database_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9",
+    "function_index_bounds": [
+      878,
+      176193,
+      175316
+    ],
+    "constant_instruction_counts": {
+      "i32.const": 4448262,
+      "i64.const": 748300
+    },
+    "selected_function_readback": [
+      {
+        "function_idx": 35876,
+        "wat_start_line": 25915351,
+        "wat_bytes": 3976,
+        "wat_header": "  (func (;35876;) (type 55) (param f32) (result f32)",
+        "body_bytes": 364,
+        "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+        "range_valid": true
+      },
+      {
+        "function_idx": 85718,
+        "wat_start_line": 32844583,
+        "wat_bytes": 651,
+        "wat_header": "  (func (;85718;) (type 55) (param f32) (result f32)",
+        "body_bytes": 68,
+        "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+        "range_valid": true
+      },
+      {
+        "function_idx": 95996,
+        "wat_start_line": 33224293,
+        "wat_bytes": 436,
+        "wat_header": "  (func (;95996;) (type 107) (param f32 f32) (result f32)",
+        "body_bytes": 46,
+        "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432",
+        "range_valid": true
+      },
+      {
+        "function_idx": 95997,
+        "wat_start_line": 33224315,
+        "wat_bytes": 436,
+        "wat_header": "  (func (;95997;) (type 107) (param f32 f32) (result f32)",
+        "body_bytes": 46,
+        "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18",
+        "range_valid": true
+      }
+    ],
+    "call_readback_samples": [
+      {
+        "caller": 878,
+        "callee": 57312,
+        "wat_line": 4273,
+        "instruction": "call 57312",
+        "indexed_target_matches": true
+      },
+      {
+        "caller": 878,
+        "callee": 41373,
+        "wat_line": 4403,
+        "instruction": "call 41373",
+        "indexed_target_matches": true
+      },
+      {
+        "caller": 878,
+        "callee": 35911,
+        "wat_line": 4799,
+        "instruction": "call 35911",
+        "indexed_target_matches": true
+      },
+      {
+        "caller": 878,
+        "callee": 71888,
+        "wat_line": 5537,
+        "instruction": "call 71888",
+        "indexed_target_matches": true
+      },
+      {
+        "caller": 878,
+        "callee": 83831,
+        "wat_line": 5561,
+        "instruction": "call 83831",
+        "indexed_target_matches": true
+      }
+    ],
+    "read_only_sqlite": true,
+    "all_checks_passed": true,
+    "synthetic_terminal_parser_regression": {
+      "counts": {
+        "functions": 5,
+        "calls": 2,
+        "iconsts": 2,
+        "memops": 1
+      },
+      "direct_call_counts": {
+        "call": 1,
+        "return_call": 1
+      },
+      "terminal_parenthesis_counts": {
+        "call": 1,
+        "return_call": 1,
+        "iconst": 2,
+        "memop": 1
+      },
+      "wat_lines": 12,
+      "sqlite_integrity_check": "ok",
+      "index_elapsed_seconds": 0.001,
+      "synthetic_only": true,
+      "passed": true
+    }
+  },
+  "known_leaf_mappings": {
+    "old_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "new_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+    "embedded_string_offsets": {
+      "0.134.0": 78095624,
+      "983346a7": 78095616,
+      "d1eb6005e172": -1
+    },
+    "exact_body_mappings": [
+      {
+        "old": 95640,
+        "new": 95996,
+        "equal": true,
+        "body_bytes": 46,
+        "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432"
+      },
+      {
+        "old": 95641,
+        "new": 95997,
+        "equal": true,
+        "body_bytes": 46,
+        "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18"
+      },
+      {
+        "old": 35684,
+        "new": 35876,
+        "equal": true,
+        "body_bytes": 364,
+        "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162"
+      },
+      {
+        "old": 85387,
+        "new": 85718,
+        "equal": true,
+        "body_bytes": 68,
+        "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36"
+      }
+    ]
+  },
+  "execution": {
+    "shell_command": "python3 -m py_compile reverse-engineering/scripts/wasm134_profile.py && python3 -u reverse-engineering/scripts/wasm134_profile.py --deadline-seconds 900",
+    "shell_session_id": 83547,
+    "profile_pid": 3765,
+    "observed_shell_exit_code": 0,
+    "deadline_seconds": 900,
+    "profile_stdout_summary": {
+      "target_version": "0.134.0",
+      "embedded_build": "983346a7",
+      "official_stamp": "d1eb6005e172",
+      "original_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+      "original_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm",
+      "wat_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/official-0.134.0-full.wat",
+      "wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
+      "index_schema": "azeroth-ports-local-wasm134-index-v1",
+      "local_tool_sources": {
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+        "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+      },
+      "wabt_version": "1.0.42",
+      "wabt_archive_sha256": "3f654779b436c628db3ca4323c51538815f5fbc887a6d5f3bb1c18d36281e240",
+      "direct_call_kinds": [
+        "call",
+        "return_call"
+      ],
+      "integer_constant_kinds": [
+        "i32.const",
+        "i64.const"
+      ],
+      "memory_scope": "scalar/vector/atomic load/store instructions; static offset immediate only",
+      "terminal_parentheses_supported": true,
+      "target_executed": false,
+      "method": "local full-WAT lexical instruction index; not runtime or stock REA",
+      "counts": {
+        "functions": 175316,
+        "calls": 824546,
+        "iconsts": 5196562,
+        "memops": 5540073
+      },
+      "direct_call_counts": {
+        "call": 824546
+      },
+      "terminal_parenthesis_counts": {
+        "call": 5585,
+        "return_call": 0,
+        "iconst": 2493,
+        "memop": 73793
+      },
+      "wat_lines": 34382352,
+      "sqlite_integrity_check": "ok",
+      "index_elapsed_seconds": 50.624,
+      "run_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z",
+      "database_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/index.sqlite",
+      "database_bytes": 642973696,
+      "database_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9",
+      "full_module_validated": true,
+      "defined_functions": 175316,
+      "function_imports": 878,
+      "wat_bytes": 1326868841,
+      "identities_preserved": true,
+      "elapsed_seconds": 69.186
+    },
+    "invocations": [
+      {
+        "arguments": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/rea-wasm-profile/wabt/wabt-1.0.42/bin/wasm-validate",
+          "--enable-all",
+          "--ignore-custom-section-errors",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm"
+        ],
+        "started_utc": "2026-11-01T00:17:28.293334+00:00",
+        "stdout_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/validate.stdout.txt",
+        "stderr_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/validate.stderr.txt",
+        "deadline_seconds": 899.838,
+        "pid": 3770,
+        "process_group_id": 3770,
+        "exit_code": 0,
+        "finished_utc": "2026-11-01T00:17:32.410761+00:00",
+        "elapsed_seconds": 4.117
+      },
+      {
+        "arguments": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/rea-wasm-profile/wabt/wabt-1.0.42/bin/wasm-objdump",
+          "-h",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm"
+        ],
+        "started_utc": "2026-11-01T00:17:32.411190+00:00",
+        "stdout_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/headers.stdout.txt",
+        "stderr_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/headers.stderr.txt",
+        "deadline_seconds": 895.72,
+        "pid": 3918,
+        "process_group_id": 3918,
+        "exit_code": 0,
+        "finished_utc": "2026-11-01T00:17:32.481692+00:00",
+        "elapsed_seconds": 0.071
+      },
+      {
+        "arguments": [
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/rea-wasm-profile/wabt/wabt-1.0.42/bin/wasm2wat",
+          "--enable-all",
+          "--ignore-custom-section-errors",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm",
+          "-o",
+          "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/official-0.134.0-full.wat"
+        ],
+        "started_utc": "2026-11-01T00:17:32.482001+00:00",
+        "stdout_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/decode.stdout.txt",
+        "stderr_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z/decode.stderr.txt",
+        "deadline_seconds": 895.649,
+        "pid": 3919,
+        "process_group_id": 3919,
+        "exit_code": 0,
+        "finished_utc": "2026-11-01T00:17:44.232507+00:00",
+        "elapsed_seconds": 11.751
+      }
+    ],
+    "target_executed": false
+  },
+  "evidence_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0134-profile-20261101T001728.222975Z",
+  "local_profile_script": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/wasm134_profile.py",
+  "preservation": {
+    "historical_0126_tools_not_modified": true,
+    "old_full_wat_and_indexes_not_replaced": true,
+    "target_not_executed": true,
+    "network_used_by_profile": false,
+    "app_or_save_writes": false,
+    "commit_or_push": false
+  },
+  "limits": [
+    "Full WABT validation/decode and lexical SQLite index; not recovered source or stock REA semantic analysis.",
+    "Direct call/return_call sites only; indirect calls and runtime call resolution are not represented in calls.",
+    "Memory field_offset is the encoded static immediate, not a recovered structure field type.",
+    "The real target has no return_call sites; terminal return_call parser support was separately checked with a synthetic fixture."
+  ]
+}

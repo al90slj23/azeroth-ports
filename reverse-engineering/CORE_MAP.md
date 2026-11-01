@@ -1,6 +1,6 @@
 # 当前核心还原图
 
-目标固定为 **Web 0.126.0 / 3e72472a**。原始核心身份见 [targets.json](targets.json)。本页汇总静态链路和局部独立数值验证；完整指令、字节范围和哈希保存在本机证据中。全模块覆盖、未完成项和独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
+**主目标已切到官方0.134.0，Web build983346a7。** 下文图和函数编号保留已验证的**历史Web0.126.0 / 3e72472a**依据，不能套到新版。新版Windows身份、函数与迁移见[版本策略](VERSION_STRATEGY.md)和[新版原生报告](reports/2026-11-01-latest-native-focused.md)。全模块最新状态与独立重造验收见[RECONSTRUCTION.md](RECONSTRUCTION.md)。
 
 ## 一局游戏的核心主干
 
@@ -32,6 +32,8 @@ flowchart LR
 | 随机数与经验 | 四字状态/高23位区间采样及拒绝重抽；85387舍入、XP阈值/循环/开卡guard投影 | [RNG](reports/2026-11-01-rng.md)18144组原体对照；[经验](reports/2026-11-01-progression.md)24643份原helper及5482份重组，均0差异；seed与完整副作用尚缺。 |
 | 其他技能执行 | 12kind/14tag全目录和跳表入口；Fireball→112B待命中→到期→933 | [执行类别报告](reports/2026-11-01-cast-dispatch.md)；延迟到达不等于已恢复逐帧投射物碰撞/显示。 |
 | 属性重算 | 4套modifier tag表、9职业/8种族、生命/暴击溢出/haste/护甲等真实写入 | [属性报告](reports/2026-11-01-derived-stats.md)；22个范围内store不等于完整属性模型已实现。 |
+
+后续历史模型已进一步验证：原1573与原内部callee8495份、完整原1065有限5份、完整原933有限32份；见[属性模型](reports/2026-11-01-stats-spec.md)、[选卡状态](reports/2026-11-01-card-apply.md)、[战斗投影](reports/2026-11-01-combat-spec.md)。这些是受控合成状态的原件对照，不是新版或完整游戏验收。
 
 ## 已接通的伤害与同步路径
 

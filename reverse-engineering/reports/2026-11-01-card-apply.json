@@ -1,0 +1,240 @@
+{
+  "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+  "original1065_body_sha256": "f37ff412a377544132ceefbcad008468a369b64b5f5b78a6749bb87cdbb3cf27",
+  "original25242_body_sha256": "f9534cbe556e1d07b3c464d9ffff601d7ac45b9615cfb06bac794d406a1eb023",
+  "fragments": [
+    {
+      "name": "existing_ability_upgrade_loop",
+      "wat_lines": [
+        836,
+        948
+      ],
+      "original_file_start": 5576603,
+      "original_file_end": 5576839,
+      "bytes": 236,
+      "sha256": "354042ac41bdda1031fa4c21af37c08af790de5db997d3d3ceb51bbda966eb7e",
+      "byte_identical_contiguous_fragment": true
+    },
+    {
+      "name": "new_ability_initialization_stores",
+      "wat_lines": [
+        457,
+        495
+      ],
+      "original_file_start": 5575733,
+      "original_file_end": 5575881,
+      "bytes": 148,
+      "sha256": "b57ef6ed4b41ee816c0b62d49d22fdc8253ef05b8dc1b66d9a4015461e0fa42c",
+      "byte_identical_contiguous_fragment": true
+    }
+  ],
+  "module_sha256": "571ee4ce95303c18e3b447207e6bd37c1afd5adc02eb6ac945c9786cd9ab8309",
+  "imports": [],
+  "start": null,
+  "full1065_executed": true,
+  "full_game_started": false,
+  "case_count": 2345,
+  "initialization_cases": 1,
+  "mismatch_count": 0,
+  "nan_equivalent_words": 0,
+  "groups": {
+    "level_and_counter_wrap": 40,
+    "ordered_kind_sequences": 775,
+    "seeded_finite_record_words": 1500,
+    "target_caps": 30
+  },
+  "boundary_validation": {
+    "model_boundary_checks": "passed",
+    "completion_queue_cases": 108,
+    "qualification": "Boundary assertions are model checks and static-source recovery, not original4595 execution."
+  },
+  "network_used": false,
+  "user_saves_accessed": false,
+  "oracle_qualification": "Original1065 fragments, NOT full1065.",
+  "source_sha256": {
+    "scripts/check_ability_state.py": "ff1163c8f461a68a56a426cbf08632c3de76d5c1b8a60f33916081789b2e4b84",
+    "scripts/run_ability_state_oracle.mjs": "92db483863a1d4bd5f906c25d7b36a626d52ab1073d282f26caa6c471e1516b8",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "scripts/check_full_card_apply.py": "e513c7aaa4c90a83dbfa64e28dcaa5c933a5ddf957ed8610310f42334eedbb9b",
+    "scripts/probe_full_card_apply.mjs": "1c860ee434c8c03f176923ddb3460a2d63814899e772742e632f529bc18bd8f7",
+    "scripts/build_full_function_oracle.py": "dd5e10c4d9a00257278642fa34ce0ae27599d0ac38da69de005f9b9de1f33e52"
+  },
+  "version": "0.126.0",
+  "build": "3e72472a",
+  "date": "2026-11-01",
+  "original_full_wat_sha256": "02f5c4c2951a037c35c4fe110f040ad872bd43719e27b1c0766b04d35c7d8d9c",
+  "evidence_directory": "evidence/ability-state-oracle-20261031T234910.842713Z",
+  "implementation": "reconstruction/core_spec/ability_state.py",
+  "public_api": [
+    "AbilityDefinition",
+    "AbilityRecord.from_bytes",
+    "AbilityRecord.to_bytes",
+    "UpgradeCard.from_candidate_bytes",
+    "NewAbilityCard.from_candidate_bytes",
+    "apply_upgrade_card",
+    "initialize_ability",
+    "neutral_additional_bytes",
+    "SelectionState",
+    "accept_upgrade_selection",
+    "accept_new_ability_selection",
+    "selection_completion_control"
+  ],
+  "owned_record_size": 80,
+  "candidate_record_size": 80,
+  "candidate_layout": {
+    "60": "niche tag or existing-kind Vec capacity",
+    "64": "kind bytes ptr or new definition string ID ptr",
+    "68": "kind count or new definition string ID length",
+    "72": "owned ability index for existing variant",
+    "76": "tier"
+  },
+  "new_record_defaults": {
+    "level": 1,
+    "remaining_cooldown_bits": "0x3f000000",
+    "main_multiplier_bits": "0x3f800000",
+    "counts": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "extra_targets": 0
+  },
+  "mutation_order": [
+    "for each listed kind: level=u32wrap(level+1)",
+    "original25242-compatible upgrade value on current record",
+    "write kind-specific scalar",
+    "count[kind]=u32wrap(count[kind]+1)",
+    "shared damage growth using saturated subtraction after new-level wrap"
+  ],
+  "postprocessing_order": [
+    "1065 new-notification when acquiring, then shared postprocessing",
+    "1573(state)",
+    "4595(state, entry2297)"
+  ],
+  "completion_control": {
+    "entry_decrement": {
+      "1": "2092",
+      "2": "2096",
+      "default": "2088 and flag2293=1"
+    },
+    "before_priority": [
+      "decrement entry queue",
+      "clear candidate length1720 and cleanup",
+      "collect eligible XP loot (may add pending entries)"
+    ],
+    "priority": [
+      2092,
+      2096,
+      2088
+    ],
+    "suppress2088": "flag2284 == 1 and flag2285 & 1 != 0",
+    "no_next": {
+      "phase2299": 1,
+      "selection_kind2297": 255,
+      "flag2285": 0
+    },
+    "has_next": "call2098(state,next_kind,0); original phase2 remains; candidate generation is unresolved",
+    "validation": "static source and108 model cases only; no original4595 execution"
+  },
+  "explicit_unimplemented": [
+    "26840 full talent-modifier calculation (caller must supply explicit28B result)",
+    "26457 nonzero new-ability rarity tiers (raises)",
+    "1065 shared talent/notification/equipment postprocessing",
+    "1573 complete derived-stat rebuild in this module",
+    "4595 XP loot pass/resume/effect1020/notifications",
+    "2098 candidate generation"
+  ],
+  "source_bindings": {
+    "evidence/abilities-20261031T224245.735794Z/function-1065.wat": "1a5f390ba62fb41c411ca17faf922b98b62b4a544b9772b980511f9ab0d4ce7f",
+    "evidence/abilities-20261031T224245.735794Z/function-26840.wat": "f6a47c54d763a92c186886fff5dd7de2cb494c0cedbe618d1c53700692c6614b",
+    "evidence/abilities-20261031T224245.735794Z/function-26457.wat": "3ef187a9d15a654ccc66cdd38753f6b36fd1462dec8e8c9b13928be002092d06",
+    "evidence/game-loop-20261031T224735.578795Z/function-4595.wat": "f3253cb4dd48a7353ac2f6f973ee7463b9b10d0ff59675c3a9f2cb96aedf9240"
+  },
+  "fragment_oracle_full1065_executed": false,
+  "full_original_probe": {
+    "scope": "Actual full original1065 and original internal callees, invented empty-state fixtures.",
+    "original_wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "research_module_sha256": "a8ad6ad7bb15599e1c03ec76f9f4f137cb969ff88891dbb63367ab80c292192c",
+    "original1065_executed": true,
+    "original_allocator_executed": true,
+    "full_game_started": false,
+    "original_start_exports_called": false,
+    "host_calls": [],
+    "results": [
+      {
+        "id": 0,
+        "record_hex": "c43c1a00030000000000003f26b9b83f52b85e3f000000000000803f0000803f01000000010000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+        "owned_count": 1,
+        "phase2299": 1,
+        "selection_kind2297": 255,
+        "pending2088": 0,
+        "candidate_count1720": 0
+      },
+      {
+        "id": 1,
+        "record_hex": "c43c1a00010000000000003f0000803f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+        "owned_count": 1,
+        "phase2299": 1,
+        "selection_kind2297": 0,
+        "pending2088": 1,
+        "candidate_count1720": 1
+      },
+      {
+        "id": 2,
+        "record_hex": "c43c1a00010000000000003f0000803f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+        "owned_count": 1,
+        "phase2299": 1,
+        "selection_kind2297": 255,
+        "pending2088": 0,
+        "candidate_count1720": 0
+      },
+      {
+        "id": 3,
+        "record_hex": "c43c1a00010000000000003f0000803f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+        "owned_count": 1,
+        "phase2299": 1,
+        "selection_kind2297": 255,
+        "pending2088": 0,
+        "candidate_count1720": 0
+      },
+      {
+        "id": 4,
+        "record_hex": "c43c1a00010000000000003f0000803f0000803f000000000000803f0000803f00000000000000000000000000000000000000000000803f0000803f000000000000803f0000803f000000000000803f",
+        "owned_count": 1,
+        "phase2299": 1,
+        "selection_kind2297": 255,
+        "pending2088": 0,
+        "candidate_count1720": 0
+      }
+    ],
+    "failure": null,
+    "fixture_count": 5,
+    "qualification": "This executes a complete original function in the original module with added exports. It does not start the game or prove every1065 state/path.",
+    "evidence_directory": "evidence/full-function-oracle-20261031T235147.634032Z",
+    "only_modified_section": 7,
+    "all_other_sections_byte_identical": true,
+    "denied_host_import_count": 878,
+    "fixture_coverage": [
+      "existing kinds0,1 tier2",
+      "phase1 entry guard",
+      "empty kinds skips invalid tier999",
+      "out-of-range owned index still completes",
+      "tier0 acquisition original26840/26457 and append"
+    ],
+    "comparison": "complete80B and owned count/phase2299/selection_kind2297/pending2088/candidate1720",
+    "all_fixtures_passed": true,
+    "limits": [
+      "empty modifier/equipment/loot only",
+      "no nonzero new ability tier fixture",
+      "no2092/2096 or next-candidate generation fixture"
+    ]
+  },
+  "independent_review": {
+    "file": "evidence/card-apply-independent-review-20261101T000105.313864Z/independent-review.json",
+    "sha256": "a0cdcd39ef32c76ee5ea85e6d412a419fa39e441f2f672f1d03d6bad8e29cb79",
+    "review_executed_target": false,
+    "scope": "Independent static artifact/instruction/input-output review; see raw receipt for exact coverage."
+  }
+}

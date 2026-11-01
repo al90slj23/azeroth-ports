@@ -1,0 +1,694 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Taipei",
+  "native_identity": {
+    "version": "0.134.0",
+    "bytes": 147793408,
+    "sha256": "ed7dc687778ef7a613531f1eb6e25766fe06a63552115ebbd024fdede7d1a3f6",
+    "original": "originals/official-acquisition-20261031T235700.049192Z/windows-0.134.0/AzerothSurvivors.exe",
+    "official_source_report": "reports/2026-11-01-official-windows-0134-static.json"
+  },
+  "method": {
+    "provider": "project-local independent Ghidra 12.1.4 auxiliary script, not stock REA native provider",
+    "locator": "new PE section headers and .pdata; .text RIP-relative LEA references to exact .rdata tables and +/-4-byte bases",
+    "old_function_addresses_used": false,
+    "read_only": true,
+    "automatic_analysis": false,
+    "target_executed": false,
+    "switch_override": "five raw signed-i32 entries from native table, validated in-range instruction boundaries; valid kind 0..4 only",
+    "analyst_prototype": "float(void *state, byte kind, u64 tier) inferred from RCX/DL/R8 input and XMM0 result; not recovered Rust signature",
+    "all_generated_paths_on_external_volume": true
+  },
+  "validation": {
+    "method": "project-local-ghidra-noanalysis-new-pe-selected-functions",
+    "original_version": "0.134.0",
+    "original_sha256": "ed7dc687778ef7a613531f1eb6e25766fe06a63552115ebbd024fdede7d1a3f6",
+    "original_preserved": true,
+    "target_executed": false,
+    "automatic_analysis": false,
+    "whole_process_timeout_seconds": 240,
+    "per_function_timeout_seconds": 60,
+    "max_heap": "4G",
+    "timed_out": false,
+    "exit_code": 0,
+    "selected_functions": 2,
+    "pseudocode_completed": 2,
+    "accepted_for_bounded_semantic_inspection": 2,
+    "complete_program_semantics_verified": false,
+    "scripts_sha256": {
+      "decompile_latest_native_focus.py": "301291133131dc585d42ca3229ee5a586683fcd70e75de2767bf4764abbd0aa4",
+      "AzerothLatestFocusedDecompile.java": "604a4628b2cf1f4235bbf691051b5b30a0e94c96af6f7df40262aef46ae796c2"
+    },
+    "scripts_preserved_during_run": true
+  },
+  "functions": [
+    {
+      "selection": {
+        "label": "upgrade_cooldown_count_damage_duration_radius_candidate",
+        "start": "0x145bb5e70",
+        "end_exclusive": "0x145bb6071",
+        "bytes": 513,
+        "range_source": "this input PE .pdata",
+        "file_offset": 96162416,
+        "sha256": "7809087c0b0208aa72c74e68aa8c68eb08bf0594c5612b4d1b62458f128aeade",
+        "table_references": [
+          {
+            "instruction": "0x145bb5e9b",
+            "file_offset": 96162459,
+            "raw_bytes": "488d05f2d65501",
+            "destination": "0x147113594",
+            "table": "damage",
+            "table_base": "0x147113594",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145bb5e70",
+            "function_end_exclusive": "0x145bb6071"
+          },
+          {
+            "instruction": "0x145bb5ecb",
+            "file_offset": 96162507,
+            "raw_bytes": "488d057ed75501",
+            "destination": "0x147113650",
+            "table": "duration",
+            "table_base": "0x147113650",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145bb5e70",
+            "function_end_exclusive": "0x145bb6071"
+          },
+          {
+            "instruction": "0x145bb5f8a",
+            "file_offset": 96162698,
+            "raw_bytes": "488d058fd65501",
+            "destination": "0x147113620",
+            "table": "radius",
+            "table_base": "0x147113620",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145bb5e70",
+            "function_end_exclusive": "0x145bb6071"
+          },
+          {
+            "instruction": "0x145bb5fb2",
+            "file_offset": 96162738,
+            "raw_bytes": "488d0507d65501",
+            "destination": "0x1471135c0",
+            "table": "cooldown",
+            "table_base": "0x1471135c0",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145bb5e70",
+            "function_end_exclusive": "0x145bb6071"
+          },
+          {
+            "instruction": "0x145bb600d",
+            "file_offset": 96162829,
+            "raw_bytes": "488d0ddcd55501",
+            "destination": "0x1471135f0",
+            "table": "count",
+            "table_base": "0x1471135f0",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145bb5e70",
+            "function_end_exclusive": "0x145bb6071"
+          }
+        ],
+        "additional_entry_points": [
+          "0x145bb5e88",
+          "0x145bb5fa8",
+          "0x145bb5eec",
+          "0x145bb5f80",
+          "0x145bb5ec1"
+        ],
+        "verified_switches": [
+          {
+            "site": "0x145bb5e85",
+            "table_address": "0x147134110",
+            "file_offset": 118695696,
+            "bytes": "781da8fe981ea8fedc1da8fe701ea8feb11da8fe",
+            "index_assumption": "valid five-variant branch discriminant 0..4",
+            "targets": [
+              "0x145bb5e88",
+              "0x145bb5fa8",
+              "0x145bb5eec",
+              "0x145bb5f80",
+              "0x145bb5ec1"
+            ]
+          }
+        ]
+      },
+      "disassembled_bytes_within_selected_range": 513,
+      "undecoded_bytes": 0,
+      "instructions_crossing_selected_end": [],
+      "unresolved_computed_jump_sites": [],
+      "terminal_ud2_traps": [
+        "145bb606f"
+      ],
+      "completed": true,
+      "timed_out": false,
+      "diagnostic": "",
+      "flow_warning_pattern": false,
+      "accepted_for_bounded_semantic_inspection": true,
+      "pseudocode_bytes": 2572,
+      "pseudocode_sha256": "d1db5bf7fd332db509ef61b00edaa3126bbee13dd51e57996bde80aac3620335",
+      "remaining_warnings": [
+        "Globals starting with '_' overlap smaller symbols at the same address",
+        "Unknown calling convention -- yet parameter storage is locked",
+        "Switch is manually overridden"
+      ]
+    },
+    {
+      "selection": {
+        "label": "upgrade_cooldown_damage_candidate",
+        "start": "0x145d6b220",
+        "end_exclusive": "0x145d6b482",
+        "bytes": 610,
+        "range_source": "this input PE .pdata",
+        "file_offset": 97953312,
+        "sha256": "c3ccc46192c7aea97753fbbddf9a6a8f12e354d3ca2faef818b17c77e9bc6b79",
+        "table_references": [
+          {
+            "instruction": "0x145d6b2f4",
+            "file_offset": 97953524,
+            "raw_bytes": "488d055d44a901",
+            "destination": "0x1477ff758",
+            "table": "damage",
+            "table_base": "0x1477ff758",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145d6b220",
+            "function_end_exclusive": "0x145d6b482"
+          },
+          {
+            "instruction": "0x145d6b332",
+            "file_offset": 97953586,
+            "raw_bytes": "488d05b743a901",
+            "destination": "0x1477ff6f0",
+            "table": "cooldown",
+            "table_base": "0x1477ff6f0",
+            "base_adjustment": 0,
+            "instruction_boundary_verified": false,
+            "function_start": "0x145d6b220",
+            "function_end_exclusive": "0x145d6b482"
+          }
+        ],
+        "additional_entry_points": [],
+        "verified_switches": []
+      },
+      "disassembled_bytes_within_selected_range": 610,
+      "undecoded_bytes": 0,
+      "instructions_crossing_selected_end": [],
+      "unresolved_computed_jump_sites": [],
+      "terminal_ud2_traps": [
+        "145d6b46d",
+        "145d6b480"
+      ],
+      "completed": true,
+      "timed_out": false,
+      "diagnostic": "",
+      "flow_warning_pattern": false,
+      "accepted_for_bounded_semantic_inspection": true,
+      "pseudocode_bytes": 3812,
+      "pseudocode_sha256": "57874ca9e47ce4edfa1921082f430119a3323c31829868ea3d73087a8e7eb1d1",
+      "remaining_warnings": [
+        "Globals starting with '_' overlap smaller symbols at the same address"
+      ]
+    }
+  ],
+  "independent_instruction_validation": [
+    {
+      "start": "0x145bb5e70",
+      "llvm_contiguous_decode_exact_range": true,
+      "llvm_instruction_count": 108,
+      "ghidra_instruction_count": 108,
+      "llvm_ghidra_instruction_bytes_equal": true,
+      "selected_lea_instruction_boundaries": [
+        {
+          "address": "0x145bb5e9b",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RAX,[0x147113594]"
+        },
+        {
+          "address": "0x145bb5ecb",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RAX,[0x147113650]"
+        },
+        {
+          "address": "0x145bb5f8a",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RAX,[0x147113620]"
+        },
+        {
+          "address": "0x145bb5fb2",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RAX,[0x1471135c0]"
+        },
+        {
+          "address": "0x145bb600d",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RCX,[0x1471135f0]"
+        }
+      ],
+      "all_lea_bytes_verified": true
+    },
+    {
+      "start": "0x145d6b220",
+      "llvm_contiguous_decode_exact_range": true,
+      "llvm_instruction_count": 149,
+      "ghidra_instruction_count": 149,
+      "llvm_ghidra_instruction_bytes_equal": true,
+      "selected_lea_instruction_boundaries": [
+        {
+          "address": "0x145d6b2f4",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RAX,[0x1477ff758]"
+        },
+        {
+          "address": "0x145d6b332",
+          "raw_bytes_match": true,
+          "actual_assembly": "LEA RAX,[0x1477ff6f0]"
+        }
+      ],
+      "all_lea_bytes_verified": true
+    }
+  ],
+  "upgrade_getter": {
+    "start": "0x145bb5e70",
+    "valid_kind_range": [
+      0,
+      4
+    ],
+    "valid_tier_range": [
+      0,
+      4
+    ],
+    "formula_float_type": "binary32, each original SSE scalar operation rounds separately",
+    "formulas": [
+      {
+        "kind": 0,
+        "formula": "A[tier] / (1 + 0.5 * u32(state + 0x24 + 4*kind))",
+        "instruction_range": [
+          "0x145bb5e88",
+          "0x145bb5ec0"
+        ]
+      },
+      {
+        "kind": 1,
+        "formula": "B[tier] * positive_or_zero_non_nan((f32(state+0x14) + f32(-0.2)) / f32(0.8))",
+        "instruction_range": [
+          "0x145bb5fa8",
+          "0x145bb5fdf"
+        ]
+      },
+      {
+        "kind": 2,
+        "formula": "f32(min(saturating_sub_u32(cap, u32(state+0x18)), C[tier]))",
+        "instruction_range": [
+          "0x145bb5eec",
+          "0x145bb5f7b",
+          "0x145bb5fe0",
+          "0x145bb6032"
+        ]
+      },
+      {
+        "kind": 3,
+        "formula": "D[tier] * positive_or_zero_non_nan((5 - f32(state+0x1c)) * 0.25)",
+        "instruction_range": [
+          "0x145bb5f80",
+          "0x145bb5fa6",
+          "0x145bb5fce",
+          "0x145bb5fdf"
+        ]
+      },
+      {
+        "kind": 4,
+        "formula": "E[tier] * positive_or_zero_non_nan((6 - f32(state+0x20)) / 5)",
+        "instruction_range": [
+          "0x145bb5ec1",
+          "0x145bb5ee7",
+          "0x145bb5fce",
+          "0x145bb5fdf"
+        ]
+      }
+    ],
+    "cap_selection": "12 for ability discriminator byte +0x75 != 11; if ==11, 2 for seal_fate/soul_fire/lightwell/faerie_fire, else 0",
+    "clamp": "XORPS XMM1,XMM1; MAXSS XMM0,XMM1: NaN, negative values and zero select +0; pseudocode alone does not capture all NaN behavior",
+    "switch": {
+      "site": "0x145bb5e85",
+      "table_address": "0x147134110",
+      "file_offset": 118695696,
+      "bytes": "781da8fe981ea8fedc1da8fe701ea8feb11da8fe",
+      "index_assumption": "valid five-variant branch discriminant 0..4",
+      "targets": [
+        "0x145bb5e88",
+        "0x145bb5fa8",
+        "0x145bb5eec",
+        "0x145bb5f80",
+        "0x145bb5ec1"
+      ]
+    },
+    "source_locations": [
+      {
+        "address": "0x1471135a8",
+        "file_offset": 118561704,
+        "raw_hex": "68351147010000002a00000000000000ca0000001d000000",
+        "path_address": "0x147113568",
+        "path_bytes": 42,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "line": 202,
+        "column": 29
+      },
+      {
+        "address": "0x1471135d8",
+        "file_offset": 118561752,
+        "raw_hex": "68351147010000002a00000000000000cc00000011000000",
+        "path_address": "0x147113568",
+        "path_bytes": 42,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "line": 204,
+        "column": 17
+      },
+      {
+        "address": "0x147113608",
+        "file_offset": 118561800,
+        "raw_hex": "68351147010000002a00000000000000d300000011000000",
+        "path_address": "0x147113568",
+        "path_bytes": 42,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "line": 211,
+        "column": 17
+      },
+      {
+        "address": "0x147113638",
+        "file_offset": 118561848,
+        "raw_hex": "68351147010000002a00000000000000d600000011000000",
+        "path_address": "0x147113568",
+        "path_bytes": 42,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "line": 214,
+        "column": 17
+      },
+      {
+        "address": "0x147113668",
+        "file_offset": 118561896,
+        "raw_hex": "68351147010000002a00000000000000d900000011000000",
+        "path_address": "0x147113568",
+        "path_bytes": 42,
+        "path": "crates\\wenilla-rogue\\src\\game\\abilities.rs",
+        "line": 217,
+        "column": 17
+      }
+    ],
+    "scalars": [
+      {
+        "name": "quarter",
+        "address": "0x1462c45a0",
+        "file_offset": 103558048,
+        "hex": "0000803e",
+        "value": 0.25,
+        "sha256": "75e253f50979177eba47b2d0805ad36038789108924514d2a761a70de057d16f"
+      },
+      {
+        "name": "half",
+        "address": "0x1462c45a4",
+        "file_offset": 103558052,
+        "hex": "0000003f",
+        "value": 0.5,
+        "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57"
+      },
+      {
+        "name": "one",
+        "address": "0x1462c45a8",
+        "file_offset": 103558056,
+        "hex": "0000803f",
+        "value": 1.0,
+        "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      {
+        "name": "six",
+        "address": "0x1462edca0",
+        "file_offset": 103727776,
+        "hex": "0000c040",
+        "value": 6.0,
+        "sha256": "fedcca07b1ccdacce623cb6d8afdeed0314e8508d763e228871f18d4e0ebb7c4"
+      },
+      {
+        "name": "five",
+        "address": "0x1462c5d08",
+        "file_offset": 103564040,
+        "hex": "0000a040",
+        "value": 5.0,
+        "sha256": "fca31f1667a6aa1bba12fca4e4ea1becd503379d80da3213af07f6cc5702828d"
+      },
+      {
+        "name": "negative_point_two",
+        "address": "0x147112e38",
+        "file_offset": 118559800,
+        "hex": "cdcc4cbe",
+        "value": -0.20000000298023224,
+        "sha256": "62b63b02d96af87993dc5e31bd2bfd1ef752fed635f3258b65068f7091e5252e"
+      },
+      {
+        "name": "point_eight",
+        "address": "0x1463020f0",
+        "file_offset": 103810800,
+        "hex": "cdcc4c3f",
+        "value": 0.800000011920929,
+        "sha256": "030a1a64b337c633d995221728d15e8b0d086cc0dcf4557205111b089b04464d"
+      },
+      {
+        "name": "hundred",
+        "address": "0x1462c5e48",
+        "file_offset": 103564360,
+        "hex": "0000c842",
+        "value": 100.0,
+        "sha256": "2238f30df488055daf5e8f362cf904e370011a172d20df193c1b7ae8e5db8e01"
+      }
+    ],
+    "tables": [
+      {
+        "name": "damage",
+        "address": "0x147113594",
+        "file_offset": 118561684,
+        "bytes": 20,
+        "hex": "ec51383e0000803e7b14ae3e1f85eb3e6666263f",
+        "value": [
+          0.18000000715255737,
+          0.25,
+          0.3400000035762787,
+          0.46000000834465027,
+          0.6499999761581421
+        ],
+        "sha256": "4d4dd659e77d55323c3388420d4041fe90fc678657ef3e7c614a7fd98aa05c0a",
+        "web_table": "A",
+        "web_table_sha256": "4d4dd659e77d55323c3388420d4041fe90fc678657ef3e7c614a7fd98aa05c0a",
+        "raw_bytes_equal_web": true
+      },
+      {
+        "name": "cooldown",
+        "address": "0x1471135c0",
+        "file_offset": 118561728,
+        "bytes": 20,
+        "hex": "295c8f3dcdcccc3db81e053e7b142e3e1f856b3e",
+        "value": [
+          0.07000000029802322,
+          0.10000000149011612,
+          0.12999999523162842,
+          0.17000000178813934,
+          0.23000000417232513
+        ],
+        "sha256": "2ce51b76784775bddcb4c4eb37d6405f17b8ffdcf9a042b0f111ff2ffd0d5dbb",
+        "web_table": "B",
+        "web_table_sha256": "2ce51b76784775bddcb4c4eb37d6405f17b8ffdcf9a042b0f111ff2ffd0d5dbb",
+        "raw_bytes_equal_web": true
+      },
+      {
+        "name": "count",
+        "address": "0x1471135f0",
+        "file_offset": 118561776,
+        "bytes": 20,
+        "hex": "0100000001000000010000000200000002000000",
+        "value": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "sha256": "c7a5958727276cdee4286492253978d00e716955fd04834ea62dfeb962a95291",
+        "web_table": "C",
+        "web_table_sha256": "c7a5958727276cdee4286492253978d00e716955fd04834ea62dfeb962a95291",
+        "raw_bytes_equal_web": true
+      },
+      {
+        "name": "radius",
+        "address": "0x147113620",
+        "file_offset": 118561824,
+        "bytes": 20,
+        "hex": "8fc2f53dec51383e0000803e3333b33e0000003f",
+        "value": [
+          0.11999999731779099,
+          0.18000000715255737,
+          0.25,
+          0.3499999940395355,
+          0.5
+        ],
+        "sha256": "d5139f32188f8bd7419a9ebaeb6a2dc494109f7b4881cedbb7b94e3eb74be2d4",
+        "web_table": "D",
+        "web_table_sha256": "d5139f32188f8bd7419a9ebaeb6a2dc494109f7b4881cedbb7b94e3eb74be2d4",
+        "raw_bytes_equal_web": true
+      },
+      {
+        "name": "duration",
+        "address": "0x147113650",
+        "file_offset": 118561872,
+        "bytes": 20,
+        "hex": "9a99193eae47613e9a99993ecdcccc3e9a99193f",
+        "value": [
+          0.15000000596046448,
+          0.2199999988079071,
+          0.30000001192092896,
+          0.4000000059604645,
+          0.6000000238418579
+        ],
+        "sha256": "74ec3c67c4fc280877855dc4cff0d087827ab62f072f9139ce46e3bdc06c5790",
+        "web_table": "E",
+        "web_table_sha256": "74ec3c67c4fc280877855dc4cff0d087827ab62f072f9139ce46e3bdc06c5790",
+        "raw_bytes_equal_web": true
+      }
+    ]
+  },
+  "other_mutating_function": {
+    "start": "0x145d6b220",
+    "valid_nonzero_tier_range": [
+      1,
+      5
+    ],
+    "zero_tier": "separate copy branch",
+    "writes": [
+      {
+        "field_offset": 16,
+        "formula": "old * (1 + damage_table[tier-1])",
+        "table_address": "0x1477ff758",
+        "instruction_range": [
+          "0x145d6b2f4",
+          "0x145d6b311"
+        ]
+      },
+      {
+        "field_offset": 20,
+        "formula": "old * (1 - cooldown_table[tier-1])",
+        "table_address": "0x1477ff6f0",
+        "instruction_range": [
+          "0x145d6b332",
+          "0x145d6b34f"
+        ]
+      }
+    ],
+    "caller_and_battle_consumer_verified": false,
+    "relationship_to_five_branch_getter_verified": false
+  },
+  "web_comparison": {
+    "version": "0.126.0",
+    "wasm_sha256": "067059375d884186338e6f86364b658f1daf6bdb779908d6d0c116f2068b147c",
+    "function_index": 25242,
+    "reference_report": "reports/2026-11-01-upgrade-values.json",
+    "all_five_table_bytes_equal": true,
+    "five_numeric_operation_structures_match": true,
+    "cap_and_clamp_match": true,
+    "native_branch_counts_first_offset": 36,
+    "wasm_branch_counts_first_offset": 32,
+    "native_source_lines": [
+      202,
+      204,
+      211,
+      214,
+      217
+    ],
+    "wasm_corresponding_source_lines": [
+      195,
+      197,
+      204,
+      207,
+      210
+    ],
+    "source_line_delta": 7,
+    "native_execution_oracle_performed": false,
+    "cross_version_bitwise_output_verified": false,
+    "native_state_field_offsets": [
+      20,
+      24,
+      28,
+      32
+    ],
+    "wasm_state_field_offsets": [
+      16,
+      20,
+      24,
+      28
+    ]
+  },
+  "rejected_first_pass": {
+    "evidence_directory": "evidence/20261101T000618.049027Z-latest-native-focus",
+    "reason": "Despite full instruction decode, unbounded enum jump-table inference invented invalid cases and outside-function flow. Getter pseudocode rejected. New run uses five independently validated raw-table targets.",
+    "run_summary_sha256": "b6684f87ecb89b08022090e2ff5b7effdaa9081beac4670b3b1cb20d4e28fbe8",
+    "functions_sha256": "be2e88d44a36d3e1430b94cd72e41cca8c3a10524af99641ff6485f5541ef493"
+  },
+  "evidence": {
+    "directory": "evidence/20261101T000726.720192Z-latest-native-focus",
+    "sha256": {
+      "0x145bb5e70-objdump.txt": "cecd5c1c7a076fd390c86bcfc66485cfdae0a10192087ecb51904a561c03da4b",
+      "0x145d6b220-objdump.txt": "375613e6cb8317cbaa010360bb043d9e4012addfe12274a0a2cadb57872977ef",
+      "constants.json": "2a0dbfc5d9a1fa6f999f3715bcaa05d8ac337a22d93222a89e6a44f1c12cab97",
+      "functions.json": "12e3d7000457df65e69091b999a8e8d40cef5f2e7e2beab392835670e541a2b4",
+      "ghidra.log": "19051cc39ed8379d8ea30b71b9a8682f007398dd9a5906fe3a6496a0407d2143",
+      "lea-candidates.json": "04fc9ffeb3aafe214fe705fc537ff6dce919de1ddf52381cd41eb86484cb0d44",
+      "pe-map.json": "00c9cc3743fb3112e78f4331e79f2611a84d692fa23b9c2ffc37fd8b01fba529",
+      "process.log": "fdb7f8cce0ed1d4db6c67c1f58ff61b3e3ea7c9a079e6ca754b8d8c7146caa51",
+      "run-summary.json": "bef7f3cf8e5d1628896c75672c004fa1ca4645ab77bfc563f37de4cd96652e24",
+      "script.log": "5e4e38fb734fe026a8a4dc8c3f4a4e6028ce28faae52685c592e116b05c181c1",
+      "selection.json": "ecbdbfcfc2d5bee6131175f4def145d159cecf63a8bc0423bb7e4c28d5f502cc",
+      "semantic-anchors.json": "706c05a5f196e446e6a30a1476fd9f9d7759e012508ceb2f4d9eef7a14f60ca9"
+    }
+  },
+  "limitations": [
+    "No target execution, native numeric oracle, recovered Rust types, complete native call graph or whole-program semantic proof.",
+    "Five-entry switch override is explicitly an analyst annotation for valid variants 0..4; no behavior is asserted for invalid kind bytes.",
+    "Getter correspondence does not establish identity of all gameplay or the official 0.134.0 Shaman/absorb changes.",
+    "The second function mutates its input and copies results, but its call context and actual combat consumption remain untraced.",
+    "Web execution-spec tests remain Web-only evidence; 80-byte WASM layout and old native offsets are not transplanted."
+  ],
+  "reproduce": "python3 reverse-engineering/scripts/decompile_latest_native_focus.py --timeout 240",
+  "typed_field_mapping": [
+    {
+      "role": "cooldown",
+      "type": "f32",
+      "native_offset": 20,
+      "wasm126_offset": 16
+    },
+    {
+      "role": "extra_count",
+      "type": "u32",
+      "native_offset": 24,
+      "wasm126_offset": 20
+    },
+    {
+      "role": "area",
+      "type": "f32",
+      "native_offset": 28,
+      "wasm126_offset": 24
+    },
+    {
+      "role": "duration",
+      "type": "f32",
+      "native_offset": 32,
+      "wasm126_offset": 28
+    }
+  ],
+  "independent_review": {
+    "file": "evidence/20261101T000726.720192Z-latest-native-focus/independent-review.json",
+    "sha256": "7e72012937388c8f7a216f7752dc532aed4198bcb42e18fe185967b448df97a0",
+    "review_executed_target": false,
+    "scope": "Independent static artifact/instruction/input-output review; see raw receipt for exact coverage."
+  }
+}
