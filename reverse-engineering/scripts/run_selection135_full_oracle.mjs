@@ -1,0 +1,42 @@
+// Complete original0.135.1 selection1072 including reached original callees.
+// Synthetic empty auxiliary state; real0.135 field positions, no start/host.
+import fs from 'node:fs/promises';
+import {prepareFull135} from './full135_host.mjs';
+const [directory,caseFile]=process.argv.slice(2),prepared=await prepareFull135(directory,['select_ability']);
+const text=await fs.readFile(caseFile,'utf8');if(text.length>8*1024*1024)throw new Error('Fixture byte budget exceeded');
+const fixtures=text.trim().split('\n').filter(Boolean).map(JSON.parse);
+if(!fixtures.length||fixtures.length>5000)throw new Error('Fixture count outside budget');
+let session,instances=0,maxMemory=0;
+for(let i=0;i<fixtures.length;++i) {
+  if(i%32===0){session=await prepared.fresh();++instances;}
+  const c=fixtures[i];if(c.id!==i||c.kinds.length>32)throw new Error('Fixture profile differs');
+  const {memory,allocate,roles,hostCalls}=session,G=allocate(8192),owned=allocate(80),candidate=allocate(80);
+  const v=()=>new DataView(memory.buffer),u32=(p,value)=>v().setUint32(p,value>>>0,true),u8=(p,value)=>v().setUint8(p,value);
+  const def=c.definition_pointer,namePtr=v().getUint32(def+12,true),nameLen=v().getUint32(def+16,true);
+  if(Buffer.from(new Uint8Array(memory.buffer,namePtr,nameLen)).toString()!==c.ability_id||v().getUint8(def+84)!==c.execution_kind)throw new Error('Latest cleave definition differs');
+  u8(G+360,1);u8(G+361,1);u32(G+1432,1);u8(G+2587,c.phase);u8(G+2585,0);u8(G+2582,0);u32(G+2376,1);
+  if(c.variant==='upgrade') {
+    const raw=Buffer.from(c.input_hex,'hex');if(raw.length!==80)throw new Error('Owned record size differs');
+    new Uint8Array(memory.buffer,owned,80).set(raw);u32(G+1656,1);u32(G+1660,owned);u32(G+1664,1);
+    const kinds=allocate(Math.max(1,c.kinds.length),1);new Uint8Array(memory.buffer,kinds,c.kinds.length).set(c.kinds);
+    u32(candidate+60,c.kinds.length);u32(candidate+64,kinds);u32(candidate+68,c.kinds.length);
+    u32(candidate+72,c.owned_index);u32(candidate+76,c.tier);
+  } else if(c.variant==='new') {
+    u32(candidate+60,0x80000000);u32(candidate+64,namePtr);u32(candidate+68,nameLen);u32(candidate+76,0);
+  } else throw new Error('Unsupported fixture variant');
+  u32(G+1904,1);u32(G+1908,candidate);u32(G+1912,1);
+  roles.select_ability(G,0);
+  if(hostCalls.length)throw new Error('Original attempted a host call');
+  const p=v().getUint32(G+1660,true),count=v().getUint32(G+1664,true);
+  if(count!==1||p+80>memory.buffer.byteLength)throw new Error('Result owned vector outside fixture domain');
+  maxMemory=Math.max(maxMemory,memory.buffer.byteLength);
+  const result={id:i,record_hex:Buffer.from(new Uint8Array(memory.buffer,p,80)).toString('hex'),owned_count:count,
+    phase2587:v().getUint8(G+2587),selection_kind2585:v().getUint8(G+2585),pending2376:v().getUint32(G+2376,true),
+    candidate_count1912:v().getUint32(G+1912,true)};
+  process.stdout.write(JSON.stringify(result)+'\n');
+}
+await fs.writeFile(`${directory}/selection135-runtime.json`,JSON.stringify({version:'0.135.1',build:'0898d5e3',
+  complete_original1072_executed:true,original_internal_callees:true,dependency_shims:[],
+  actual_host_calls:0,denied_function_imports:878,application_start_called:false,full_game_started:false,
+  cases:fixtures.length,fresh_instances:instances,maximum_memory_bytes:maxMemory,
+  scope:'Synthetic empty auxiliaries and pending2376=1; candidate generation and nonempty modifiers/loot are not covered.'},null,2)+'\n');

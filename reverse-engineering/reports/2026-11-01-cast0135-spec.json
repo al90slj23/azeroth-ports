@@ -1,0 +1,187 @@
+{
+  "date": "2026-11-01",
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "status": "scoped_common_cast_full_original_differential_passed",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "cases": 1314,
+  "original_entry_calls": 3626,
+  "mismatch_cases": 0,
+  "original_entry_counts": {
+    "query27562": 425,
+    "direct_cast922": 519,
+    "auto_cast916": 1110,
+    "process_hits1754": 1572
+  },
+  "case_modes": {
+    "query": 425,
+    "cast": 519,
+    "auto": 298,
+    "auto-many": 72
+  },
+  "case_groups": {
+    "pilot-query": 1,
+    "pilot-area": 1,
+    "pilot-projectile": 1,
+    "pilot-auto": 1,
+    "pilot-empty-retry": 1,
+    "all-supported-definitions-ranked": 300,
+    "query-size-sort-and-radius": 64,
+    "query-random-motion-exclusion": 360,
+    "mixed-cast-rank-multipliers": 200,
+    "mixed-auto-rank-multipliers": 200,
+    "multiple-active-forward-HP-RNG-order": 72,
+    "phase-and-override-cooldown": 96,
+    "nearby-hp-priority-and-target-count-clamp": 17
+  },
+  "runtime": {
+    "cases": 1314,
+    "fresh_instances": 55,
+    "fresh_every": 24,
+    "max_memory_bytes": 20774912,
+    "memory_page_limit": 512,
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "original_allocator": 91941,
+    "original_full_functions": [
+      922,
+      916,
+      1754,
+      27562
+    ],
+    "unchanged_callees": true,
+    "application_start_called": false,
+    "full_game_started": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "node": "v22.23.4"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_cast135_full_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T035943.083459Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T035943.083459Z/cast135-fixtures.jsonl"
+    ],
+    "exit_code": 0,
+    "deadline_seconds": 60,
+    "seconds": 4.793,
+    "pid": 49858,
+    "pgid": 49858
+  },
+  "only_changed_section": 7,
+  "original_internal_callees_preserved": true,
+  "independent_expected_before_original": true,
+  "source_sha256_before": {
+    "scripts/check_cast135_full_spec.py": "ce0e52071dc1844f6fa87d8545a99efd6c61820c4ce5e133a1e10bc5c9897a13",
+    "scripts/run_cast135_full_oracle.mjs": "6815ef1c22025b24b18163212f034b666fbae06167fd9220fb3e7de2bffa95b5",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/combat135.py": "21c46816ca34320c0c755f84e3f77406d7556ec873ec59d9d31d037f898eebca",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd"
+  },
+  "source_sha256_after": {
+    "scripts/check_cast135_full_spec.py": "ce0e52071dc1844f6fa87d8545a99efd6c61820c4ce5e133a1e10bc5c9897a13",
+    "scripts/run_cast135_full_oracle.mjs": "6815ef1c22025b24b18163212f034b666fbae06167fd9220fb3e7de2bffa95b5",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/cast135.py": "d9ce37ec9392648b1c56f3edcb4b6d4bbbaedfdcd00888c290b72d95be8bce89",
+    "reconstruction/core_spec/combat135.py": "21c46816ca34320c0c755f84e3f77406d7556ec873ec59d9d31d037f898eebca",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd"
+  },
+  "source_snapshots": true,
+  "module_sha256": "89f62f0a3c3d68eb7dd686f3031b86f2d34096d8bcf28ed267aaf4ae1ea1cc36",
+  "manifest_sha256": "05d49a9d95c55b8179de55ac9e5caea04394e3db834b5cdb970830f40160dcf0",
+  "artifact_sha256": {
+    "cast135-fixtures.jsonl": "807ed13f8536d121dc8fd82dc52b4bce12e6135bbf319b0cc77aa57e4e38cbbd",
+    "cast135-original-results.jsonl": "1d01d67f78ace5a78c62dae4a0b8020741c8c5e42ed8d2a880a1e333d2d53c7f",
+    "cast135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cast135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "cast135-runtime.json": "691581a12b1ecb7092f41f63a44b759d94aa6382f8a090fbab00d3595378edc9"
+  },
+  "receipt_path": "evidence/full0135-oracle-20261101T035943.083459Z/comparison.json",
+  "receipt_sha256": "5fcb15ba71429ed687f238e4e1abc086c011d639ab2dba3a7032095075f7fd1f",
+  "covered_execution_kinds": [
+    0,
+    2
+  ],
+  "covered_effect_tag": 0,
+  "actual_definition_count": 25,
+  "area_definition_count": 8,
+  "projectile_definition_count": 17,
+  "fields_compared": [
+    "query target GUID order",
+    "unit HP/marker and accounted outgoing f64 total",
+    "four-word RNG",
+    "queued target/source/due/spell/damage/critical/school/context908 in order",
+    "three attempted-spell sets",
+    "active cooldown words after each call"
+  ],
+  "death_bridge": {
+    "api": "after_death(post_core_cast_state, DamageResult) -> CastState",
+    "default_boundary": "CastDeathBoundary carries post-core HP/RNG state and remaining target/hit descriptors",
+    "lethal_original_cases_in_this_corpus": 0,
+    "original_death_continuation_validated_here": false,
+    "unresolved": [
+      "death loot/procs/RNG continuation",
+      "moving-unit death-placement/visual writes",
+      "new proc-created hit ordering"
+    ]
+  },
+  "earlier_runs_not_added_to_coverage": [
+    "full0135-oracle-20261101T035309.018790Z pilot5 passed",
+    "full0135-oracle-20261101T035352.840122Z failed1242,253differences, all inputs retained after model corrections",
+    "full0135-oracle-20261101T035547.754521Z interim1242 passed",
+    "full0135-oracle-20261101T035710.667535Z interim1314 passed before structured death hook/source hardening"
+  ],
+  "limitations": [
+    "All original profiles use known-empty auxiliary/proc/item state, canonical unique ordinary GUIDs and nonlethal hits.",
+    "Production dispatcher rejects nonzero effect tags, other execution kinds and unresolved death continuation.",
+    "Physical packet/presentation bytes, procs/death loot, complete active/timed-system scheduler and full game remain pending.",
+    "Only declared float outputs permit NaN classification equality; integers are strict.",
+    "One to six active spells are compared only with empty timed/proc producer state.",
+    "Nonordinary projectile priority branches remain static model hypotheses outside the original differential corpus.",
+    "No complete game, natural scheduler, input/UI or shader/model rendering acceptance.",
+    "The queued-hit corpus contains newly created damage-only events; arbitrary preexisting payloads/NaN due records remain outside runtime acceptance."
+  ],
+  "complete_independent_game": false,
+  "installed_apps_or_saves_modified": false,
+  "static_evidence": {
+    "path": "evidence/cast0135-static-20261101T040409.013889Z/summary.json",
+    "sha256": "b9d5e7847763afc1418326059aab1fd01b9f54e1cb147993081f4e566543badc",
+    "functions": 13,
+    "continuous_guards": 20,
+    "runtime_cases": 0,
+    "source_sha256": {
+      "scripts/trace_cast135.py": "15b8bdf142ef32a9ccfbb245104eb667c8dc8d92c684b3efc373b8a5598f9abf",
+      "scripts/trace_ecs_forward.py": "fd70b417c5fb2fd6cd5b259aa268f8ecea1cd68ad7e625d5d86745c56e9d9863",
+      "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+      "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368"
+    }
+  },
+  "independent_review": {
+    "status": "passed_readonly_regeneration",
+    "path": "evidence/full0135-oracle-20261101T035943.083459Z/cast135-root-review.json",
+    "sha256": "712c4ac799a57af8687e91aa6b3e6d47e1731fb567cb419088b4725f8f3fc780",
+    "recomputed_scalar_leaves": 112410,
+    "mismatch_fields": 0,
+    "original_WASM_reexecuted": false
+  }
+}

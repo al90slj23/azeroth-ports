@@ -1,0 +1,108 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "phase": "full",
+  "status": "passed",
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original_full_function": 1072,
+  "original_internal_callees_unchanged": true,
+  "only_changed_source_section": 7,
+  "cases": 3629,
+  "mismatches": 0,
+  "groups": {
+    "ordered_upgrade": 775,
+    "all114-declarations-all5kinds-tiers": 2850,
+    "phase_guard": 1,
+    "empty_kinds_does_not_read_tier": 1,
+    "owned_index_out_of_range_still_finishes": 1,
+    "new_tier0_known_empty_modifiers": 1
+  },
+  "compared_fields": [
+    "full80B owned record",
+    "owned count1664",
+    "phase2587",
+    "selection kind2585",
+    "pending2376",
+    "candidate count1912"
+  ],
+  "source_sha256_before": {
+    "scripts/check_selection135_full_spec.py": "b63b6447b34da059d8324173771b98f06ad944839f40ae45d22ed234e8c959e7",
+    "scripts/run_selection135_full_oracle.mjs": "2b21863487e2753012470f21a56577bd5f8e537c652ccdbf978f9c855778d422",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "source_sha256_after": {
+    "scripts/check_selection135_full_spec.py": "b63b6447b34da059d8324173771b98f06ad944839f40ae45d22ed234e8c959e7",
+    "scripts/run_selection135_full_oracle.mjs": "2b21863487e2753012470f21a56577bd5f8e537c652ccdbf978f9c855778d422",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "reconstruction/core_spec/ability_upgrade135.py": "20e5d52c2f2dafca618f5342b2abb1466d78a710ceeda921339c4475235abca4",
+    "reconstruction/core_spec/ability_state135.py": "0c08d46bfc8a3c7451d218bd0100ca40c99f859f16cb926a9984b71d27cea37f",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "source_snapshots": true,
+  "module_sha256": "c95450b47840316b51f842fbdf27001766ab6b1ddab1c0c6946419f0d0669e33",
+  "manifest_sha256": "4ab5795e62b8fed67dda44a3444071333b5fcf86a697f4e0e596c532192f61d5",
+  "artifact_sha256": {
+    "selection135-cases.jsonl": "b7f8adc67fb493ab24723d56c61aa60342e1367ae0831f85c7e06b6b03f26ccd",
+    "selection135-original-results.jsonl": "7df22975fa94f9b2fd2c189fbeec39e6939c512fb44e5ba916d90f4b8a115ec2",
+    "selection135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "selection135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "selection135-runtime.json": "e71c054791d21576d04ecc8bb1a8e66a0a02359051250026cde320bde16b762d"
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_selection135_full_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T034736.621817Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T034736.621817Z/selection135-cases.jsonl"
+    ],
+    "pid": 20857,
+    "pgid": 20857,
+    "deadline_seconds": 60,
+    "seconds": 1.6196812919988588,
+    "exit_code": 0,
+    "runtime_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0"
+  },
+  "runtime": {
+    "version": "0.135.1",
+    "build": "0898d5e3",
+    "complete_original1072_executed": true,
+    "original_internal_callees": true,
+    "dependency_shims": [],
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "application_start_called": false,
+    "full_game_started": false,
+    "cases": 3629,
+    "fresh_instances": 114,
+    "maximum_memory_bytes": 14942208,
+    "scope": "Synthetic empty auxiliaries and pending2376=1; candidate generation and nonempty modifiers/loot are not covered."
+  },
+  "evidence_directory": "evidence/full0135-oracle-20261101T034736.621817Z",
+  "limitations": [
+    "Each owned record starts at level1/counts0 and known neutral numeric fields; all114 synthetic definitions/all5kind bytes do not prove all kinds naturally eligible.",
+    "Ordered1..3-kind loops use cleave; separate114*5*5 covers execution/ID definitions and tiers.",
+    "Shared tail actually executes, but production API only returns record mutation; real producers/talent/world/messages/stats/choice scheduling remain pending."
+  ],
+  "application_start_called": false,
+  "full_game_started": false,
+  "user_saves_accessed": false,
+  "independent_review": {
+    "status": "passed_readonly_regeneration_and_identity_check",
+    "path": "evidence/full0135-oracle-20261101T034736.621817Z/selection135-root-review.json",
+    "sha256": "c57e154a0fc4fdaa95fadb13eba8eee892b612f8b970b1b6ad9a995af92a3279",
+    "original_WASM_reexecuted": false
+  }
+}

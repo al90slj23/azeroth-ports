@@ -1,0 +1,151 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "phase": "full",
+  "cases": 4021,
+  "groups": {
+    "pilot-normal": 1,
+    "pilot-elite": 1,
+    "pilot-coop": 1,
+    "pilot-endless": 6,
+    "pilot-choice": 1,
+    "pilot-choice-inf": 1,
+    "pilot-decay": 7,
+    "every-normal-definition": 148,
+    "every-definition-endless": 296,
+    "eligible-world-pool": 336,
+    "all-definition-special-time": 240,
+    "every-difficulty-byte": 256,
+    "mode-member-region": 120,
+    "alive-cap-xor": 28,
+    "definition-clamp": 3,
+    "counter-guid-wrap": 5,
+    "endless-power-and-clock": 60,
+    "mixed-ordered": 300,
+    "decay-special-bits": 9,
+    "decay-range-and-thresholds": 2202
+  },
+  "kind_counts": {
+    "normal": 1225,
+    "choice": 578,
+    "decay": 2218
+  },
+  "mismatch_fields": 0,
+  "mismatch_cases": 0,
+  "original_functions": [
+    20272,
+    5736,
+    26361
+  ],
+  "original_internal_callees_unchanged": true,
+  "only_changed_section": 7,
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "module_sha256": "6a87ededee387508e6ebdde27650375e4766d5e036f049de5a6bb0768e8a5298",
+  "source_sha256_before": {
+    "scripts/check_spawn135_spec.py": "1d56f8353e0bc09677b64cb71b929f9c05b883c6cbab1f93ff7c652deac09150",
+    "scripts/run_spawn135_oracle.mjs": "8a80cfc9bae558afa1e8bc911cc5c8ba4fb3d83cf7cf8a994249e62064f7853c",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+  },
+  "source_sha256_after": {
+    "scripts/check_spawn135_spec.py": "1d56f8353e0bc09677b64cb71b929f9c05b883c6cbab1f93ff7c652deac09150",
+    "scripts/run_spawn135_oracle.mjs": "8a80cfc9bae558afa1e8bc911cc5c8ba4fb3d83cf7cf8a994249e62064f7853c",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+  },
+  "artifact_sha256": {
+    "spawn135-fixtures.json": "82f5cf52c1f20351954fda2c3fbd45a592a6a9ab09ddcce4d71e80f00c70eeaf",
+    "spawn135-results.jsonl": "4f8344c0e26082e0774b25cb5dcc73cdd1d619b8769c041b6765cd31be73c12c",
+    "spawn135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spawn135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "spawn135-runtime.json": "e817da989544414c04685ffb92836f26af562cf18bae2ad43a30d591f25ef4ac"
+  },
+  "runtime": {
+    "case_count": 4021,
+    "original_functions": [
+      20272,
+      5736,
+      26361
+    ],
+    "original_allocator": 91941,
+    "original_internal_callees_unchanged": true,
+    "host_calls": 0,
+    "denied_host_imports": 878,
+    "fresh_instances": 126,
+    "fresh_every": 32,
+    "max_memory_bytes": 15269888,
+    "memory_page_cap": 512,
+    "node": "v22.23.4",
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_spawn135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T034959.214145Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T034959.214145Z/spawn135-fixtures.json"
+    ],
+    "exit_code": 0,
+    "deadline_seconds": 60,
+    "seconds": 2.111
+  },
+  "expected_generated_before_original": true,
+  "original_application_start_called": false,
+  "installed_apps_or_saves_modified": false,
+  "limitations": [
+    "Explicit supplied position and resolved owner; world sampling8751 and complete scheduler947/boss2785 still pending.",
+    "Entire424B destination slot is explicit before append; unwritten bytes must be preserved, not assumed initialized.",
+    "Object creation1525/queues execute but their bytes/accounting are not independently compared.",
+    "Only actual normal/elite definitions, no successful empty-candidate panic comparison; NaN float fields compare classification only."
+  ],
+  "date": "2026-11-01",
+  "status": "scoped_full_original_spawn_differential_passed",
+  "evidence_directory": "evidence/full0135-oracle-20261101T034959.214145Z",
+  "receipt_sha256": "babc50e59082dc6344a85ef4dbf5f0d8759453e291515d20251d1e21c0b29fb7",
+  "static_evidence_directory": "evidence/spawn0135-static-20261101T034427.162905Z",
+  "static_data_sha256": "52b8e6c9badc148a51ea8e0538be909a6631e9647ece1159d7c82239f281aa47",
+  "zones": 12,
+  "normal_and_elite_definitions": 148,
+  "boss_definitions_statically_extracted": 60,
+  "boss_generation_independently_implemented": false,
+  "full947_scheduler_independently_implemented": false,
+  "full_game_complete": false,
+  "actual_successful_spawn_cases": 1211,
+  "actual_denied_by_cap_cases": 14,
+  "full_424B_record_comparison": "Every existing destination byte compared; differences are permitted only if both declared float words classifyNaN. No other byte mask.",
+  "prior_failed_pilot": {
+    "directory": "evidence/full0135-oracle-20261101T034932.655242Z",
+    "cases": 18,
+    "mismatch_fields": 5,
+    "cause": "Independent attack re-associated multiplications; corrected actual baseAttack*(polynomial*sqrt(scale)) operation order, retained source/results and no domain shrink."
+  },
+  "independent_review": {
+    "status": "passed",
+    "path": "evidence/full0135-oracle-20261101T034959.214145Z/independent-cast-agent-review.json",
+    "sha256": "c8373d0209de77f5d77d9f7223d817e6ada138ca9a3ae9ac5c6a26a6af4b94a3",
+    "original_WASM_reexecuted": false
+  }
+}

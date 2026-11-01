@@ -20,9 +20,61 @@ SOURCE_BYTES = 90959080
 VALIDATOR_SHA = 'a17b421f1cca2c0bba48c6ab3a510f9510db44e505cffd5a48c64bb1f0b5659c'
 # Candidate discovery by structural correspondence is separately recorded in the
 # migration trace. These fixed bindings are independently signature/body-guarded.
-ROLES = {'select_ability': (1072, b'\x7f\x7f', b''), 'recalculate_stats': (1512, b'\x7f', b''), 'finish_selection': (4600, b'\x7f\x7f', b''), 'resolve_owned_ability': (22287, b'\x7f\x7f\x7f', b''), 'auto_cast': (916, b'\x7f}', b''), 'cast': (922, b'\x7f\x7f', b'\x7f'), 'damage': (914, b'\x7f~}\x7f\x7f\x7f\x7f', b''), 'gain_experience': (4630, b'\x7f\x7f', b''), 'incoming_damage': (1073, b'\x7f}~\x7f\x7f\x7f', b''), 'spawn_pickup': (1417, b'\x7f\x7f\x7f\x7f', b''), 'collect_pickups': (2862, b'\x7f', b''), 'attract_all_xp': (21779, b'\x7f', b''), 'generate_choices': (2159, b'\x7f\x7f\x7f', b''), 'upgrade_value': (25368, b'\x7f\x7f\x7f', b'}'), 'tick': (880, b'\x7f|', b''), 'command': (1371, b'\x7f\x7f', b''), 'effective_armor': (27375, b'\x7f', b'}')}
+ROLES = {'select_ability': (1072, b'\x7f\x7f', b''),
+ 'recalculate_stats': (1512, b'\x7f', b''),
+ 'finish_selection': (4600, b'\x7f\x7f', b''),
+ 'resolve_owned_ability': (22287, b'\x7f\x7f\x7f', b''),
+ 'auto_cast': (916, b'\x7f}', b''),
+ 'cast': (922, b'\x7f\x7f', b'\x7f'),
+ 'damage': (914, b'\x7f~}\x7f\x7f\x7f\x7f', b''),
+ 'gain_experience': (4630, b'\x7f\x7f', b''),
+ 'incoming_damage': (1073, b'\x7f}~\x7f\x7f\x7f', b''),
+ 'spawn_pickup': (1417, b'\x7f\x7f\x7f\x7f', b''),
+ 'collect_pickups': (2862, b'\x7f', b''),
+ 'attract_all_xp': (21779, b'\x7f', b''),
+ 'generate_choices': (2159, b'\x7f\x7f\x7f', b''),
+ 'upgrade_value': (25368, b'\x7f\x7f\x7f', b'}'),
+ 'tick': (880, b'\x7f|', b''),
+ 'command': (1371, b'\x7f\x7f', b''),
+ 'effective_armor': (27375, b'\x7f', b'}'),
+ 'spawn_tick': (947, b'\x7f}', b''),
+ 'special_tick': (2376, b'\x7f', b''),
+ 'choose_spawn': (20272, b'\x7f\x7f\x7f}', b'\x7f'),
+ 'spawn_normal': (5736, b'\x7f\x7f\x7f\x7f', b''),
+ 'spawn_boss': (2785, b'\x7f\x7f}', b''),
+ 'spawn_position': (8751, b'\x7f\x7f}}}', b''),
+ 'spawn_decay': (26361, b'}', b'}'),
+ 'process_hits': (1754, b'\x7f', b''),
+ 'query_targets': (27562, b'\x7f\x7f\x7f}\x7f\x7f', b''),
+ 'queue_hit': (8295, b'\x7f\x7f\x7f\x7f~}}\x7f', b'')}
 
-APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01', 'recalculate_stats': '31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748', 'finish_selection': '55b714430f81a1440d38cdeede434a677b8e4cbcce331cbe8266104281329acd', 'resolve_owned_ability': '2809d38e9e5b3bf6ac302e790d591c19447804b1e9ae1345a9403233468306fb', 'auto_cast': 'a358136ba7f5f35bc5a33968b35624d5a788f6fabcbc017c01e2a3652caa4bdf', 'cast': '32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80', 'damage': '13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc', 'gain_experience': '828722a8f200878b4bdcf5ac59df4d95f1021df6ca42044a6419c216a405fd21', 'incoming_damage': 'ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076', 'spawn_pickup': '4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342', 'collect_pickups': '5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a', 'attract_all_xp': '08a1fc041396675a27f577af12436433a72256c79958008fd129ddf59b7a17b6', 'generate_choices': '413d98654b02253f255eb0cf54bcdc06309fb7aea5c9079fb73a20a9b6a98bcc', 'upgrade_value': 'bd939e6a7a535282fef1ac6d6e476183a8666298880371c24aba497b580ec68e', 'tick': 'c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58', 'command': 'fe613365e0c9b6520201f744a7c4c187e07e3d6010b074e65ef57179bef660cd', 'effective_armor': 'e45b81dd82d055b9baff0a5bcbdf7461568882656922c250b8a6a6c9cd2f3d2a'}
+APPROVED_BODY_SHA = {'select_ability': '2a2be6157b509b2ac741f5d1dacf803f2fdf273da9512916ef750b9817ee5b01',
+ 'recalculate_stats': '31ff40340e52cb6b24453d114b676fb519187a30c1c091418208eda59c89e748',
+ 'finish_selection': '55b714430f81a1440d38cdeede434a677b8e4cbcce331cbe8266104281329acd',
+ 'resolve_owned_ability': '2809d38e9e5b3bf6ac302e790d591c19447804b1e9ae1345a9403233468306fb',
+ 'auto_cast': 'a358136ba7f5f35bc5a33968b35624d5a788f6fabcbc017c01e2a3652caa4bdf',
+ 'cast': '32cdc4ec4ee9b320ae2052560c2a3f4682979df5638e57c3e7140ffc8b047d80',
+ 'damage': '13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc',
+ 'gain_experience': '828722a8f200878b4bdcf5ac59df4d95f1021df6ca42044a6419c216a405fd21',
+ 'incoming_damage': 'ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076',
+ 'spawn_pickup': '4bb47348a0b2b2e4564b4862512de1e7164cc1f4636921e0d00abcea1f861342',
+ 'collect_pickups': '5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a',
+ 'attract_all_xp': '08a1fc041396675a27f577af12436433a72256c79958008fd129ddf59b7a17b6',
+ 'generate_choices': '413d98654b02253f255eb0cf54bcdc06309fb7aea5c9079fb73a20a9b6a98bcc',
+ 'upgrade_value': 'bd939e6a7a535282fef1ac6d6e476183a8666298880371c24aba497b580ec68e',
+ 'tick': 'c3a0484b1e630dda325e24b14a9003bc19ffc9720c24a9dd24393b7845e1ed58',
+ 'command': 'fe613365e0c9b6520201f744a7c4c187e07e3d6010b074e65ef57179bef660cd',
+ 'effective_armor': 'e45b81dd82d055b9baff0a5bcbdf7461568882656922c250b8a6a6c9cd2f3d2a',
+ 'spawn_tick': '8eafc61592944f9083c7542177928d582672300323e367fd0c7b343d777c1c76',
+ 'special_tick': '6b985b23a141a82085f021e7bedf0247ea2a61a99bda05cf820e38a369be29ff',
+ 'choose_spawn': 'a84d3dcb7bd37b23115b15898284e140817d80b8631c086c78bc3b08fc100aad',
+ 'spawn_normal': '59e98d191a6da662992a9e4e261f02d012ad34adb8744b98a4011a9d26f7b671',
+ 'spawn_boss': '2b8d07e32cdde3d22724bb7f1992812be8cc165d22c5092cff2f64eed2ef0a76',
+ 'spawn_position': '94147d4d71b3186ec42fa1b9012884441fb874563c5995527d04d35ab926e4d8',
+ 'spawn_decay': '867e5b613a355ed43c0395805ec4b11200177d5a29c6c13ac3365165cdb1b46f',
+ 'process_hits': '7a214558b394295d2bf84bee2db34163c5596ceb1c00c38ce4336eaef1dd9b89',
+ 'query_targets': 'bfbeab0a322ceecda316c34b4cf6097c8dbce7a90b211946996b9fe24ac57344',
+ 'queue_hit': 'fe1c2b62706ac3f5f9b9edee25336d356fbad815272d58d84dd789b0d6557a7d'}
 
 def require(condition, message):
     if not condition:

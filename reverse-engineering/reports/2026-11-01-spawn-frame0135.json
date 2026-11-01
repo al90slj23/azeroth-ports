@@ -1,0 +1,163 @@
+{
+  "version": "0.135.1",
+  "build": "0898d5e3",
+  "phase": "full",
+  "cases": 1580,
+  "kind_counts": {
+    "position": 305,
+    "tick": 1275
+  },
+  "groups": {
+    "pilot-flat": 3,
+    "pilot-natural": 9,
+    "pilot-axis": 4,
+    "pilot-moving": 4,
+    "zone-boundary-retry": 144,
+    "all-zones-clock-budget": 720,
+    "motion-threshold-and-bias": 154,
+    "mode-and-member-normal-frame": 90,
+    "all-difficulty-natural": 256,
+    "prior-units-density-cap": 40,
+    "endless-guard-and-powers": 36,
+    "seeded-natural-mixed": 120
+  },
+  "pending_model_inputs_not_counted": 8,
+  "mismatch_fields": 0,
+  "compared_scalar_or_record_words": 1130005,
+  "naturally_created_units": 9360,
+  "source_sha256_before": {
+    "scripts/check_spawn_frame135.py": "5eb47630529a0a2713cc1940af4d0dae37e891d7f17eafe5bd090f057ef88e5e",
+    "scripts/run_spawn_position135_oracle.mjs": "1a5349d3eb0df0cccacea77a794ae200d691740f6faac9fffea6cb6d1694108c",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/spawn_schedule135.py": "8e19632a8514b8c374111686ae1dfca6e36bab28746f29312ef336c8649cf27c",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2"
+  },
+  "source_sha256_after": {
+    "scripts/check_spawn_frame135.py": "5eb47630529a0a2713cc1940af4d0dae37e891d7f17eafe5bd090f057ef88e5e",
+    "scripts/run_spawn_position135_oracle.mjs": "1a5349d3eb0df0cccacea77a794ae200d691740f6faac9fffea6cb6d1694108c",
+    "scripts/build_full135_oracle.py": "269d215ba02f432854acf7db34f0dfea9995940a20d0d0a4ac537ea00b335ad2",
+    "scripts/full135_host.mjs": "1ef79cffd0906aa331cbabf75f7bc4ab0f39723d06b3a901d8b98c5c0eef6a0a",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "reconstruction/core_spec/spawn_schedule135.py": "8e19632a8514b8c374111686ae1dfca6e36bab28746f29312ef336c8649cf27c",
+    "reconstruction/core_spec/spawn_schedule135_data.py": "b6896225804759f431d215b1def1dd4a005db4d0244f7f9eabb1a62970f73cd5",
+    "reconstruction/core_spec/spawn_position135.py": "bfddd1f7d1426edaff183ac9e4a9e644b2c39812ad7d4956e0347d70c6c45362",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn135.py": "d506f7233fe7b12ebbbb1c7218694db39e709eba443e3365209a2d65c6129cb2",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/enemy_scaling.py": "704104a7e4773f76707fa029b194b5f84df20f0c1d7234563008f90e06adacf2"
+  },
+  "original_wasm_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "module_sha256": "dda64fc6958b3047533e79e6515037f3e96769f7b97a3adaa5c6868c18299c35",
+  "manifest_sha256": "1cb1be8dbd9056cdd5defe3f6d681927b997254c278b3f846fdfc51319af8be4",
+  "original_functions": [
+    947,
+    8751
+  ],
+  "unchanged_original_callees": true,
+  "changed_original_sections": [
+    7
+  ],
+  "artifact_sha256": {
+    "spawn-frame135-fixtures.json": "ee709bf89b8a4d3e46d6673dcf6bc3fad700a5903717e411cc8892d35325bc3d",
+    "spawn-frame135-results.jsonl": "0b4ede4f69f59b39e61ae1762d828b8302d6423a35909775935d89d3da984330",
+    "spawn-frame135-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "spawn-frame135-pending.json": "88f90ce08695d435382d6c85fbd2a697eee9c002ae85a3117e40e0c35c4ec3ed",
+    "spawn-frame135-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "spawn-position135-runtime.json": "44ae2bfd8ea9ba4514c5056ee2684f6db2e42116ba2a610ca6ffc58e54ba90de"
+  },
+  "runtime": {
+    "cases": 1580,
+    "functions": [
+      8751,
+      947
+    ],
+    "original_internal_callees_unchanged": true,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "fresh_instances": 99,
+    "max_memory_bytes": 15597568,
+    "original_allocator": 91941,
+    "application_start_called": false,
+    "full_game_started": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_spawn_position135_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T041142.272329Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0135-oracle-20261101T041142.272329Z/spawn-frame135-fixtures.json"
+    ],
+    "pid": 91725,
+    "pgid": 91725,
+    "exit_code": 0,
+    "deadline_seconds": 60,
+    "seconds": 1.525
+  },
+  "expected_before_original_launch": true,
+  "complete947_reconstruction": false,
+  "application_start_called": false,
+  "limitations": [
+    "Other elite/event/Boss timers explicitly future, associated vectors empty; ordinary budget/density only.",
+    "Original8751 samples real positions using flat29631 guard and absentgrid/pathfinding; terrain andfallback13516 remain pending.",
+    "Nonaxis atan2 heading is unresolved if motion-biased branch selected; pending model inputs are separately retained and not accepted comparisons.",
+    "Object/message callees execute unchanged; physical message/object structures and full AI/rendering are not compared."
+  ],
+  "date": "2026-11-01",
+  "status": "controlled_natural_spawn_frame_and_position_differential_passed",
+  "evidence_directory": "evidence/full0135-oracle-20261101T041142.272329Z",
+  "receipt_sha256": "8bf42053eec1b4b1f5e5202f783fcd7340b5a3d1adbd5a6e10e2d60734d2f8f2",
+  "actual_new_record_count_recomputed_from_original": 9360,
+  "all_original_results_recomputed_without_reexecution": true,
+  "static_evidence_directory": "evidence/spawn-frame0135-static-20261101T041357.852424Z",
+  "static_receipt_sha256": "14a4c4cf7af772d263d1248c913223f89d02f49b0e0642278a61011edca81f35",
+  "static_function_count": 12,
+  "static_guard_count": 8,
+  "full_game_complete": false,
+  "position_retry_coverage": {
+    "cases_with_multiple_outer_attempts": 48,
+    "cases_with_radius_shrink": 72,
+    "max_outer_attempts": 8,
+    "max_radius_shrinks": 72
+  },
+  "original_result_comparison_fields": [
+    "947budget2416/killcost2420",
+    "947counter2408/unitcount1792/four-wordRNG",
+    "Every complete424B old/new unitrecord (declaredfloatNaNclassification only)",
+    "947velocity1736/1740",
+    "8751xyz and four-wordRNG"
+  ],
+  "independent_review": {
+    "status": "passed",
+    "path": "evidence/full0135-oracle-20261101T041142.272329Z/independent-cast-agent-review.json",
+    "sha256": "e735212cf6c3d9c126ebf0297ba934a3f8e06eecb98f2d54a34ccd7a878090f5",
+    "original_WASM_reexecuted": false,
+    "regenerated_cases": 1580,
+    "compared_scalar_or_record_words": 1130005,
+    "total_records_verified": 10520,
+    "new_records_verified": 9360,
+    "pending_inputs_regenerated_not_counted": 8
+  }
+}
