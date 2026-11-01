@@ -32,6 +32,7 @@ ROLES = {'select_ability': (1073, b'\x7f\x7f', b''),
          'spawn_pickup': (1417, b'\x7f\x7f\x7f\x7f', b''),
          'collect_pickups': (2862, b'\x7f', b''),
          'attract_all_xp': (21779, b'\x7f', b''),
+         'generate_choices': (2159, b'\x7f\x7f\x7f', b''),
          'upgrade_value': (25368, b'\x7f\x7f\x7f', b'\x7d')}
 
 

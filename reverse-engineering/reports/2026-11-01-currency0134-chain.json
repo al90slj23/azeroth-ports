@@ -1,0 +1,2019 @@
+{
+  "date": "2026-11-01",
+  "version": "0.134.0",
+  "build": "983346a7",
+  "status": "static_currency_consumer_recovered_independent_projection_no_new_original_execution",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "profile_manifest_sha256": "952e2cd4c1fdb0bbf62cf44d6cf4f265ae15120a1572facaad23b43ff4fc51b9",
+  "full_wat_sha256": "6014dab110e40ae279a6450ae15dcc0d84727c31e2da71f18f2cab1f21ec8422",
+  "sqlite_sha256": "f131b4454ac1a8754f5b0417e4192efbaada6478df737e09490154c71fd340f9",
+  "run_directory": "evidence/currency0134-chain-20261101T022005.805413Z",
+  "target_executed": false,
+  "new_original_runtime_cases": 0,
+  "functions": [
+    {
+      "index": 1679,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;1679;) (type 5) (param i32) (result i32)",
+      "wat_start": 355386008,
+      "wat_end": 355452006,
+      "wat_line": 4714000,
+      "wat_bytes": 65998,
+      "wat_sha256": "905bf510b603b7cb01cdd5ecd586a381e7370db7a565e3a334363b934223bb20",
+      "body_start": 11388402,
+      "body_end": 11393278,
+      "body_bytes": 4876,
+      "body_sha256": "b36c9f804ae637277cad6b5c0841ce82e81a60748b8dcda37dcc8bec48a829e6",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 2862,
+      "role": "actual collection guard and dispatch",
+      "signature_wat": "  (func (;2862;) (type 3) (param i32)",
+      "wat_start": 459442089,
+      "wat_end": 459489232,
+      "wat_line": 7264244,
+      "wat_bytes": 47143,
+      "wat_sha256": "046411c6939d535cc7dc81aed61448107f28b5528cbc4832c39cc949c5eaf1df",
+      "body_start": 16965489,
+      "body_end": 16968668,
+      "body_bytes": 3179,
+      "body_sha256": "502221f3e34228e0a37970e55505d1506f323d2c5f81510b707d8d8e414122ef",
+      "in28795_direct_closure": false
+    },
+    {
+      "index": 3735,
+      "role": "u16 to u32 keyed-tree insertion",
+      "signature_wat": "  (func (;3735;) (type 0) (param i32 i32)",
+      "wat_start": 504184056,
+      "wat_end": 504221307,
+      "wat_line": 8463031,
+      "wat_bytes": 37251,
+      "wat_sha256": "bcba0cf849b43c0c933be1c405fe57ea61912319aae4245e5deb92810de08ce8",
+      "body_start": 19543146,
+      "body_end": 19545238,
+      "body_bytes": 2092,
+      "body_sha256": "a74c80160cb7cd545f993cbf932d40c9bcf9e4e692251615487da71fed6b4b7b",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 13196,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;13196;) (type 16) (param i32 i32 i32 i32) (result i32)",
+      "wat_start": 781876545,
+      "wat_end": 781891578,
+      "wat_line": 16493026,
+      "wat_bytes": 15033,
+      "wat_sha256": "9d58dac55bf187d728a7bf754a98b588046d041e62527e12fd319c9f62b57f28",
+      "body_start": 37145637,
+      "body_end": 37146525,
+      "body_bytes": 888,
+      "body_sha256": "cfc12c57caf6e88c97c73655b6bca57b443503eee5b40cb9192d2c1bfa961796",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 17395,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;17395;) (type 3) (param i32)",
+      "wat_start": 842850887,
+      "wat_end": 842860272,
+      "wat_line": 18578129,
+      "wat_bytes": 9385,
+      "wat_sha256": "b02ccdab193a68f4e15e9c1925b55f32d5cfbb85b27cc4256694c0cebd59f624",
+      "body_start": 41725141,
+      "body_end": 41725949,
+      "body_bytes": 808,
+      "body_sha256": "b1007eb12a9befe95d2cca0cacf89213bccfcbe10c9a11638b4fa3f95a56a4b8",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 20570,
+      "role": "available gold spend example",
+      "signature_wat": "  (func (;20570;) (type 3) (param i32)",
+      "wat_start": 888640111,
+      "wat_end": 888647866,
+      "wat_line": 20070051,
+      "wat_bytes": 7755,
+      "wat_sha256": "16e2cc6e893074d395989adc9bf9b2c868e285b4ed4e195a23fd7976ceac5e53",
+      "body_start": 45035476,
+      "body_end": 45036043,
+      "body_bytes": 567,
+      "body_sha256": "6d6f5efb204fbc6a7cfc0339655f0170b84f113d9e9a39289958c9c1b89daeeb",
+      "in28795_direct_closure": false
+    },
+    {
+      "index": 20660,
+      "role": "available gold spend example",
+      "signature_wat": "  (func (;20660;) (type 5) (param i32) (result i32)",
+      "wat_start": 890771101,
+      "wat_end": 890778848,
+      "wat_line": 20124154,
+      "wat_bytes": 7747,
+      "wat_sha256": "b75c8e48182652523349321ff49af02a13d52d0cf16c61d42e01f795a3d6cc08",
+      "body_start": 45165172,
+      "body_end": 45165840,
+      "body_bytes": 668,
+      "body_sha256": "52c979c2631839d23c0a0e1007d2cdba5c89151fa6563511543abeebf49ae765",
+      "in28795_direct_closure": false
+    },
+    {
+      "index": 27448,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;27448;) (type 0) (param i32 i32)",
+      "wat_start": 972744395,
+      "wat_end": 972749843,
+      "wat_line": 22946909,
+      "wat_bytes": 5448,
+      "wat_sha256": "ee5bbe0531400257cab22c95c7963b637e5606bee42d249353d01edcdbae1fa5",
+      "body_start": 51366389,
+      "body_end": 51366921,
+      "body_bytes": 532,
+      "body_sha256": "cfa7ab2cb4576914ef82bec1fb46b103795c0b4ed8e0b31b6ce258beb269946f",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 28795,
+      "role": "currency numeric award, mode queue and player-key update",
+      "signature_wat": "  (func (;28795;) (type 0) (param i32 i32)",
+      "wat_start": 990970514,
+      "wat_end": 990975508,
+      "wat_line": 23566942,
+      "wat_bytes": 4994,
+      "wat_sha256": "85e5f5811c509997cbd2c726add255a2ba18178c1a32ee490a62956ac6288fee",
+      "body_start": 52756411,
+      "body_end": 52756892,
+      "body_bytes": 481,
+      "body_sha256": "060656ba494343bd4edf74adead6e6b4d33a8674d9f2a69e1a44305da4d86946",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 30532,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;30532;) (type 0) (param i32 i32)",
+      "wat_start": 1013984735,
+      "wat_end": 1013989514,
+      "wat_line": 24257402,
+      "wat_bytes": 4779,
+      "wat_sha256": "60d2b50e874fc58ba47fcc0e0cc9769f7af14b5f112b5bb1b72d33abf7c7ea07",
+      "body_start": 54286668,
+      "body_end": 54287083,
+      "body_bytes": 415,
+      "body_sha256": "18db4bca0c09d00ec55650ef7142e088a0adc23af07ed2168060e9b70c97c86b",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 31509,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;31509;) (type 6) (param i32 i32) (result i32)",
+      "wat_start": 1023236029,
+      "wat_end": 1023239919,
+      "wat_line": 24586440,
+      "wat_bytes": 3890,
+      "wat_sha256": "11b0570541b3fae3644283bbaf55583bced8f9c524e5f66545aa2e88f0790b3d",
+      "body_start": 55024581,
+      "body_end": 55024945,
+      "body_bytes": 364,
+      "body_sha256": "7b3698b4df39ca854da1eca6277fcfedb0c3a2267672e441dcb9ff3d083f7704",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 31731,
+      "role": "ordered removal and despawn messages",
+      "signature_wat": "  (func (;31731;) (type 0) (param i32 i32)",
+      "wat_start": 1024781957,
+      "wat_end": 1024786517,
+      "wat_line": 24646859,
+      "wat_bytes": 4560,
+      "wat_sha256": "87f19bc1b669f6506b49a8f906c0aee2dd2bca922125f79cd1030c4041ec51e7",
+      "body_start": 55160115,
+      "body_end": 55160526,
+      "body_bytes": 411,
+      "body_sha256": "560c55a9de7ea32b0e2ef6df126cb8ce457b3eb203f25090da48df26fb152cdc",
+      "in28795_direct_closure": false
+    },
+    {
+      "index": 33904,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;33904;) (type 0) (param i32 i32)",
+      "wat_start": 1041157351,
+      "wat_end": 1041162087,
+      "wat_line": 25257216,
+      "wat_bytes": 4736,
+      "wat_sha256": "d3cb8a78d03ad6253eea95ee43396bcb673b619bed6908507efda2cd0986544e",
+      "body_start": 56524114,
+      "body_end": 56524500,
+      "body_bytes": 386,
+      "body_sha256": "c7ae5f2de3b4933b1e963ec53b29f0ddc1faa3d344344bfaba50350f1b51a266",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 38315,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;38315;) (type 0) (param i32 i32)",
+      "wat_start": 1090257382,
+      "wat_end": 1090260475,
+      "wat_line": 26697176,
+      "wat_bytes": 3093,
+      "wat_sha256": "bcc45fb79def99b21cef5a87092ce5ba277f66a511bdf19ef1462ede1c90cf33",
+      "body_start": 59754598,
+      "body_end": 59754921,
+      "body_bytes": 323,
+      "body_sha256": "b1b3530ab0ba36d7df6bde305e0edaff0826a6c17463c24c3533bedcfcf92241",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 38322,
+      "role": "region string to index",
+      "signature_wat": "  (func (;38322;) (type 6) (param i32 i32) (result i32)",
+      "wat_start": 1090319509,
+      "wat_end": 1090324418,
+      "wat_line": 26699903,
+      "wat_bytes": 4909,
+      "wat_sha256": "b9de3828ed59d329045430cf17a19abe6b323a41601dff40b531f582f0cc1d39",
+      "body_start": 59760536,
+      "body_end": 59760881,
+      "body_bytes": 345,
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 39631,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;39631;) (type 2) (param i32 i32 i32 i32)",
+      "wat_start": 1097897568,
+      "wat_end": 1097900424,
+      "wat_line": 27005788,
+      "wat_bytes": 2856,
+      "wat_sha256": "3bdca9a68d6759114b66c932e4d49653f1b1ad8bd571cd951b12a2fc5b169b99",
+      "body_start": 60452891,
+      "body_end": 60453177,
+      "body_bytes": 286,
+      "body_sha256": "6f705d205f97924edf2f45eebc4c380f38b418063424d54c65f13aa9b4b06d8b",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 49501,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;49501;) (type 8) (param i32 i32 i32 i32 i32)",
+      "wat_start": 1145520676,
+      "wat_end": 1145524766,
+      "wat_line": 28874196,
+      "wat_bytes": 4090,
+      "wat_sha256": "0dfaf811eb52e8dbbd7c7ed8c6df4f3424fa9cc67a6a52461ace42960c4300ee",
+      "body_start": 64721615,
+      "body_end": 64721963,
+      "body_bytes": 348,
+      "body_sha256": "a9f607a218ef2ce705ac3cfce04851bc5a6b24616f15800a24b0447fe2731638",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 56191,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;56191;) (type 10) (param i32 i32 i32 i32 i32 i32)",
+      "wat_start": 1184524143,
+      "wat_end": 1184525877,
+      "wat_line": 30006197,
+      "wat_bytes": 1734,
+      "wat_sha256": "92702374388f469181096c7239f8a37674893544905c2c3c2f5a3e2319afae60",
+      "body_start": 67283976,
+      "body_end": 67284136,
+      "body_bytes": 160,
+      "body_sha256": "6f787dd326055ba1564f2e8c19062de2998337be18549b4d599d3f0491a38df0",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 65323,
+      "role": "16B message vector reserve",
+      "signature_wat": "  (func (;65323;) (type 3) (param i32)",
+      "wat_start": 1209171117,
+      "wat_end": 1209172016,
+      "wat_line": 30853606,
+      "wat_bytes": 899,
+      "wat_sha256": "cd993eb22a48e925988de2139a98b001bddc0f17ae8f839c92612314fab3572b",
+      "body_start": 69210249,
+      "body_end": 69210358,
+      "body_bytes": 109,
+      "body_sha256": "2aa59e719779d28fd832bff816892902f6518c260fdd1b5cac023e65fe060802",
+      "in28795_direct_closure": false
+    },
+    {
+      "index": 65326,
+      "role": "8B queue reserve",
+      "signature_wat": "  (func (;65326;) (type 3) (param i32)",
+      "wat_start": 1209173688,
+      "wat_end": 1209174586,
+      "wat_line": 30853758,
+      "wat_bytes": 898,
+      "wat_sha256": "fca48e1062c7d74626efdecedc3ae3a3e13fd5498c8dd2f93c523371786b93b1",
+      "body_start": 69210571,
+      "body_end": 69210680,
+      "body_bytes": 109,
+      "body_sha256": "d16105dd925ce6d1084b289dde9b86235bea0656c98139c699935ea952ce60e7",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 71888,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;71888;) (type 0) (param i32 i32)",
+      "wat_start": 1220172619,
+      "wat_end": 1220173474,
+      "wat_line": 31268141,
+      "wat_bytes": 855,
+      "wat_sha256": "8db6667e442d77dc4b71fc05407f8d086931672d4ccb912c54ec17bc670f6868",
+      "body_start": 70156055,
+      "body_end": 70156152,
+      "body_bytes": 97,
+      "body_sha256": "96edd81de231a799faf50434b510332381cadbdd3c03d7000960f046b6eeed1e",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 85718,
+      "role": "binary32 round helper",
+      "signature_wat": "  (func (;85718;) (type 55) (param f32) (result f32)",
+      "wat_start": 1264344197,
+      "wat_end": 1264344848,
+      "wat_line": 32844583,
+      "wat_bytes": 651,
+      "wat_sha256": "c052984dfa4cf4ebb3603bcb847616a904e8f530eebd255f6631f54ea1a4a878",
+      "body_start": 73839306,
+      "body_end": 73839374,
+      "body_bytes": 68,
+      "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 90674,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;90674;) (type 1) (param i32 i32 i32)",
+      "wat_start": 1267991771,
+      "wat_end": 1267993570,
+      "wat_line": 33019687,
+      "wat_bytes": 1799,
+      "wat_sha256": "22e3a6b548c201e6b7d8e5a6ae167d072d4e9c41969678cd6017b660504444e6",
+      "body_start": 74264498,
+      "body_end": 74264720,
+      "body_bytes": 222,
+      "body_sha256": "23f9475806ab44081f58e5982cb3865e8f3cdcb6bcc8e5f54af1c96b15de1541",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 90675,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;90675;) (type 1) (param i32 i32 i32)",
+      "wat_start": 1267993570,
+      "wat_end": 1267994044,
+      "wat_line": 33019786,
+      "wat_bytes": 474,
+      "wat_sha256": "e0bcd32f738775dba7d3ce00c0aafc575e89e901d6724f4e5fd86929d0fc61f6",
+      "body_start": 74264721,
+      "body_end": 74264783,
+      "body_bytes": 62,
+      "body_sha256": "658a48c239048055b3bac12afb2305433bf16dc83db9be9826f645d599f7f124",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 104435,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;104435;) (type 0) (param i32 i32)",
+      "wat_start": 1275673832,
+      "wat_end": 1275674034,
+      "wat_line": 33372811,
+      "wat_bytes": 202,
+      "wat_sha256": "fd89b74a8e222cf39750697e7e7ad607bc37c300fe58394b266eba225cce4a4d",
+      "body_start": 75114215,
+      "body_end": 75114236,
+      "body_bytes": 21,
+      "body_sha256": "c120b29a59f2400a6e1e3c5038e8ec7c8343c0ad42e07a44dc7a3ec571ca8a16",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 106890,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;106890;) (type 6) (param i32 i32) (result i32)",
+      "wat_start": 1276385188,
+      "wat_end": 1276385417,
+      "wat_line": 33404315,
+      "wat_bytes": 229,
+      "wat_sha256": "1382a9c9fd491aabacacd3a407746b7356ef01877952b8901d31a5b3560ad1cf",
+      "body_start": 75206824,
+      "body_end": 75206848,
+      "body_bytes": 24,
+      "body_sha256": "1782ebdd04fb0487495727392c4ff80dafbfbd6c4886aade5aaac14e0ac68575",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 107842,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;107842;) (type 0) (param i32 i32)",
+      "wat_start": 1277042093,
+      "wat_end": 1277042350,
+      "wat_line": 33432121,
+      "wat_bytes": 257,
+      "wat_sha256": "82c5ac342fc761c2b627231015b1f9c3e53ae43321ed2dc55a177015a30c2d50",
+      "body_start": 75274108,
+      "body_end": 75274141,
+      "body_bytes": 33,
+      "body_sha256": "1147bbcf9ba118b5f5499f4b9f380471df9532c3280751b73acba6ccf846155c",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 122100,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;122100;) (type 1) (param i32 i32 i32)",
+      "wat_start": 1280101120,
+      "wat_end": 1280101303,
+      "wat_line": 33577304,
+      "wat_bytes": 183,
+      "wat_sha256": "45391483d1ab232dab1d8ed2a71b6ac493809ff16d49eaeb264907b9e27cef0b",
+      "body_start": 75667474,
+      "body_end": 75667493,
+      "body_bytes": 19,
+      "body_sha256": "d3ae3617c8ed40627ab9d3c6204a309d477028649c635ac2bbec4ef9fbd15baf",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 170433,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;170433;) (type 3) (param i32)",
+      "wat_start": 1289234752,
+      "wat_end": 1289234881,
+      "wat_line": 33966886,
+      "wat_bytes": 129,
+      "wat_sha256": "9b92e4823dfe9e7c378b197dd113bd5a79e4b2d2d8705c9319c6f1cb86cb829c",
+      "body_start": 76811632,
+      "body_end": 76811648,
+      "body_bytes": 16,
+      "body_sha256": "b86c96f5fded7d3edac256155d347f7a8491338e422b0c61e271b094decd4c60",
+      "in28795_direct_closure": true
+    },
+    {
+      "index": 172316,
+      "role": "28795 complete direct callee closure",
+      "signature_wat": "  (func (;172316;) (type 0) (param i32 i32)",
+      "wat_start": 1290968856,
+      "wat_end": 1290969361,
+      "wat_line": 34023960,
+      "wat_bytes": 505,
+      "wat_sha256": "add4515aa8b38cb5586ce46f251659b95ee9978c8e3fb454bc25077b65998f50",
+      "body_start": 76946049,
+      "body_end": 76946112,
+      "body_bytes": 63,
+      "body_sha256": "666aa53055b92c4127f3fd8d689f605b5a1375fdd5ab152bdaf3dc627e372ef6",
+      "in28795_direct_closure": true
+    }
+  ],
+  "complete28795_direct_closure": [
+    1679,
+    3735,
+    13196,
+    17395,
+    27448,
+    28795,
+    30532,
+    31509,
+    33904,
+    38315,
+    38322,
+    39631,
+    49501,
+    56191,
+    65326,
+    71888,
+    85718,
+    90674,
+    90675,
+    104435,
+    106890,
+    107842,
+    122100,
+    170433,
+    172316
+  ],
+  "closure_function_count": 25,
+  "closure_imports": [],
+  "closure_call_indirect_instructions": 4,
+  "indirect_call_sites": [
+    {
+      "function_index": 49501,
+      "function_line": 76,
+      "full_wat_line": 28874271,
+      "instruction": "call_indirect (type 0)",
+      "continuous_context": [
+        "i32.eqz",
+        "br_if 1 (;@6;)",
+        "local.get 5",
+        "i32.const 8",
+        "i32.add",
+        "local.get 0",
+        "local.get 1",
+        "i32.load offset=20",
+        "call_indirect (type 0)",
+        "local.get 5",
+        "local.get 4",
+        "i32.store8 offset=29",
+        "local.get 5"
+      ],
+      "status": "unresolved dynamic error/panic callback; never treated as no-op"
+    },
+    {
+      "function_index": 49501,
+      "function_line": 98,
+      "full_wat_line": 28874293,
+      "instruction": "call_indirect (type 0)",
+      "continuous_context": [
+        "i32.const 14518544",
+        "i32.load",
+        "local.get 5",
+        "i32.const 16",
+        "i32.add",
+        "i32.const 14518548",
+        "i32.load",
+        "i32.load offset=20",
+        "call_indirect (type 0)",
+        "br 2 (;@5;)",
+        "end",
+        "local.get 5",
+        "local.get 0"
+      ],
+      "status": "unresolved dynamic error/panic callback; never treated as no-op"
+    },
+    {
+      "function_index": 49501,
+      "function_line": 105,
+      "full_wat_line": 28874300,
+      "instruction": "call_indirect (type 0)",
+      "continuous_context": [
+        "i32.load offset=20",
+        "call_indirect (type 0)",
+        "br 2 (;@5;)",
+        "end",
+        "local.get 5",
+        "local.get 0",
+        "local.get 1",
+        "i32.load offset=24",
+        "call_indirect (type 0)",
+        "unreachable",
+        "end",
+        "i32.const -1",
+        "local.get 5"
+      ],
+      "status": "unresolved dynamic error/panic callback; never treated as no-op"
+    },
+    {
+      "function_index": 172316,
+      "function_line": 27,
+      "full_wat_line": 34023986,
+      "instruction": "call_indirect (type 0)",
+      "continuous_context": [
+        "local.get 0",
+        "i32.load offset=4",
+        "i32.const 14518536",
+        "i32.load",
+        "local.tee 0",
+        "i32.const 223505",
+        "local.get 0",
+        "select",
+        "call_indirect (type 0)",
+        "unreachable)"
+      ],
+      "status": "unresolved dynamic error/panic callback; never treated as no-op"
+    }
+  ],
+  "direct_edges": [
+    {
+      "caller": 1679,
+      "callee": 38315,
+      "wat_offset": 355414573,
+      "wat_line": 4714989,
+      "instruction": "call"
+    },
+    {
+      "caller": 1679,
+      "callee": 38315,
+      "wat_offset": 355439315,
+      "wat_line": 4715692,
+      "instruction": "call"
+    },
+    {
+      "caller": 1679,
+      "callee": 33904,
+      "wat_offset": 355443215,
+      "wat_line": 4715807,
+      "instruction": "call"
+    },
+    {
+      "caller": 1679,
+      "callee": 38315,
+      "wat_offset": 355444291,
+      "wat_line": 4715840,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 106890,
+      "wat_offset": 459444853,
+      "wat_line": 7264364,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 54801,
+      "wat_offset": 459447594,
+      "wat_line": 7264447,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 107842,
+      "wat_offset": 459448701,
+      "wat_line": 7264482,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 65313,
+      "wat_offset": 459457093,
+      "wat_line": 7264847,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 27456,
+      "wat_offset": 459459595,
+      "wat_line": 7264960,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 65323,
+      "wat_offset": 459459813,
+      "wat_line": 7264969,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 71888,
+      "wat_offset": 459460619,
+      "wat_line": 7265006,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 86865,
+      "wat_offset": 459463528,
+      "wat_line": 7265128,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 20660,
+      "wat_offset": 459466877,
+      "wat_line": 7265225,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 31731,
+      "wat_offset": 459467156,
+      "wat_line": 7265230,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 106890,
+      "wat_offset": 459467324,
+      "wat_line": 7265233,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 65323,
+      "wat_offset": 459468195,
+      "wat_line": 7265248,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 2159,
+      "wat_offset": 459470604,
+      "wat_line": 7265290,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 80662,
+      "wat_offset": 459470929,
+      "wat_line": 7265296,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 31731,
+      "wat_offset": 459471347,
+      "wat_line": 7265304,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 19964,
+      "wat_offset": 459472291,
+      "wat_line": 7265321,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 28795,
+      "wat_offset": 459474338,
+      "wat_line": 7265363,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 10298,
+      "wat_offset": 459474544,
+      "wat_line": 7265368,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 21779,
+      "wat_offset": 459474954,
+      "wat_line": 7265378,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 106890,
+      "wat_offset": 459479066,
+      "wat_line": 7265469,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 65323,
+      "wat_offset": 459479713,
+      "wat_line": 7265483,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 19964,
+      "wat_offset": 459481062,
+      "wat_line": 7265513,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 106890,
+      "wat_offset": 459482250,
+      "wat_line": 7265539,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 42919,
+      "wat_offset": 459484250,
+      "wat_line": 7265582,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 107842,
+      "wat_offset": 459484457,
+      "wat_line": 7265587,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 107842,
+      "wat_offset": 459484653,
+      "wat_line": 7265592,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 65326,
+      "wat_offset": 459484802,
+      "wat_line": 7265596,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 107842,
+      "wat_offset": 459484978,
+      "wat_line": 7265601,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 106890,
+      "wat_offset": 459485212,
+      "wat_line": 7265608,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 107842,
+      "wat_offset": 459485476,
+      "wat_line": 7265616,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 42919,
+      "wat_offset": 459486755,
+      "wat_line": 7265658,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 38322,
+      "wat_offset": 459487665,
+      "wat_line": 7265690,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 85718,
+      "wat_offset": 459488355,
+      "wat_line": 7265716,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 4630,
+      "wat_offset": 459488683,
+      "wat_line": 7265729,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 71888,
+      "wat_offset": 459488948,
+      "wat_line": 7265744,
+      "instruction": "call"
+    },
+    {
+      "caller": 2862,
+      "callee": 71888,
+      "wat_offset": 459489143,
+      "wat_line": 7265755,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 106890,
+      "wat_offset": 504188430,
+      "wat_line": 8463150,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 106890,
+      "wat_offset": 504189701,
+      "wat_line": 8463186,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 30532,
+      "wat_offset": 504206822,
+      "wat_line": 8463645,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 30532,
+      "wat_offset": 504207774,
+      "wat_line": 8463672,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 106890,
+      "wat_offset": 504217050,
+      "wat_line": 8463944,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 122100,
+      "wat_offset": 504217873,
+      "wat_line": 8463972,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 106890,
+      "wat_offset": 504218339,
+      "wat_line": 8463987,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 122100,
+      "wat_offset": 504219591,
+      "wat_line": 8464025,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 170433,
+      "wat_offset": 504219713,
+      "wat_line": 8464029,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 172316,
+      "wat_offset": 504220444,
+      "wat_line": 8464054,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 170433,
+      "wat_offset": 504220542,
+      "wat_line": 8464058,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 39631,
+      "wat_offset": 504221198,
+      "wat_line": 8464090,
+      "instruction": "call"
+    },
+    {
+      "caller": 3735,
+      "callee": 172316,
+      "wat_offset": 504221274,
+      "wat_line": 8464095,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 31509,
+      "wat_offset": 781878004,
+      "wat_line": 16493072,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 33904,
+      "wat_offset": 781881153,
+      "wat_line": 16493159,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 27448,
+      "wat_offset": 781882674,
+      "wat_line": 16493196,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 27448,
+      "wat_offset": 781887843,
+      "wat_line": 16493330,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 122100,
+      "wat_offset": 781889543,
+      "wat_line": 16493383,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 122100,
+      "wat_offset": 781889734,
+      "wat_line": 16493389,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 122100,
+      "wat_offset": 781889913,
+      "wat_line": 16493395,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 122100,
+      "wat_offset": 781890080,
+      "wat_line": 16493401,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 1679,
+      "wat_offset": 781890910,
+      "wat_line": 16493438,
+      "instruction": "call"
+    },
+    {
+      "caller": 13196,
+      "callee": 17395,
+      "wat_offset": 781891536,
+      "wat_line": 16493471,
+      "instruction": "call"
+    },
+    {
+      "caller": 17395,
+      "callee": 33904,
+      "wat_offset": 842852272,
+      "wat_line": 18578198,
+      "instruction": "call"
+    },
+    {
+      "caller": 17395,
+      "callee": 33904,
+      "wat_offset": 842853313,
+      "wat_line": 18578230,
+      "instruction": "call"
+    },
+    {
+      "caller": 17395,
+      "callee": 38315,
+      "wat_offset": 842854796,
+      "wat_line": 18578276,
+      "instruction": "call"
+    },
+    {
+      "caller": 20570,
+      "callee": 3735,
+      "wat_offset": 888647696,
+      "wat_line": 20070343,
+      "instruction": "call"
+    },
+    {
+      "caller": 20570,
+      "callee": 2159,
+      "wat_offset": 888647779,
+      "wat_line": 20070348,
+      "instruction": "call"
+    },
+    {
+      "caller": 20660,
+      "callee": 19964,
+      "wat_offset": 890775535,
+      "wat_line": 20124314,
+      "instruction": "call"
+    },
+    {
+      "caller": 20660,
+      "callee": 8628,
+      "wat_offset": 890776385,
+      "wat_line": 20124351,
+      "instruction": "call"
+    },
+    {
+      "caller": 20660,
+      "callee": 49503,
+      "wat_offset": 890776529,
+      "wat_line": 20124357,
+      "instruction": "call"
+    },
+    {
+      "caller": 20660,
+      "callee": 65323,
+      "wat_offset": 890776794,
+      "wat_line": 20124368,
+      "instruction": "call"
+    },
+    {
+      "caller": 20660,
+      "callee": 42919,
+      "wat_offset": 890778000,
+      "wat_line": 20124416,
+      "instruction": "call"
+    },
+    {
+      "caller": 20660,
+      "callee": 3735,
+      "wat_offset": 890778456,
+      "wat_line": 20124437,
+      "instruction": "call"
+    },
+    {
+      "caller": 27448,
+      "callee": 33904,
+      "wat_offset": 972745811,
+      "wat_line": 22946971,
+      "instruction": "call"
+    },
+    {
+      "caller": 27448,
+      "callee": 33904,
+      "wat_offset": 972746467,
+      "wat_line": 22946997,
+      "instruction": "call"
+    },
+    {
+      "caller": 27448,
+      "callee": 38315,
+      "wat_offset": 972747589,
+      "wat_line": 22947043,
+      "instruction": "call"
+    },
+    {
+      "caller": 28795,
+      "callee": 65326,
+      "wat_offset": 990971112,
+      "wat_line": 23566969,
+      "instruction": "call"
+    },
+    {
+      "caller": 28795,
+      "callee": 38322,
+      "wat_offset": 990971746,
+      "wat_line": 23567000,
+      "instruction": "call"
+    },
+    {
+      "caller": 28795,
+      "callee": 85718,
+      "wat_offset": 990972200,
+      "wat_line": 23567025,
+      "instruction": "call"
+    },
+    {
+      "caller": 28795,
+      "callee": 3735,
+      "wat_offset": 990975421,
+      "wat_line": 23567164,
+      "instruction": "call"
+    },
+    {
+      "caller": 30532,
+      "callee": 106890,
+      "wat_offset": 1013985016,
+      "wat_line": 24257413,
+      "instruction": "call"
+    },
+    {
+      "caller": 30532,
+      "callee": 39631,
+      "wat_offset": 1013989151,
+      "wat_line": 24257587,
+      "instruction": "call"
+    },
+    {
+      "caller": 30532,
+      "callee": 172316,
+      "wat_offset": 1013989248,
+      "wat_line": 24257592,
+      "instruction": "call"
+    },
+    {
+      "caller": 30532,
+      "callee": 39631,
+      "wat_offset": 1013989377,
+      "wat_line": 24257599,
+      "instruction": "call"
+    },
+    {
+      "caller": 30532,
+      "callee": 122100,
+      "wat_offset": 1013989481,
+      "wat_line": 24257605,
+      "instruction": "call"
+    },
+    {
+      "caller": 31509,
+      "callee": 1679,
+      "wat_offset": 1023236604,
+      "wat_line": 24586470,
+      "instruction": "call"
+    },
+    {
+      "caller": 31509,
+      "callee": 27448,
+      "wat_offset": 1023238561,
+      "wat_line": 24586568,
+      "instruction": "call"
+    },
+    {
+      "caller": 31509,
+      "callee": 27448,
+      "wat_offset": 1023239797,
+      "wat_line": 24586631,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 106890,
+      "wat_offset": 1024783329,
+      "wat_line": 24646917,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 65323,
+      "wat_offset": 1024783772,
+      "wat_line": 24646936,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 106890,
+      "wat_offset": 1024784697,
+      "wat_line": 24646975,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 65323,
+      "wat_offset": 1024785113,
+      "wat_line": 24646990,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 71888,
+      "wat_offset": 1024786189,
+      "wat_line": 24647032,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 80659,
+      "wat_offset": 1024786321,
+      "wat_line": 24647039,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 107842,
+      "wat_offset": 1024786407,
+      "wat_line": 24647044,
+      "instruction": "call"
+    },
+    {
+      "caller": 31731,
+      "callee": 107842,
+      "wat_offset": 1024786484,
+      "wat_line": 24647049,
+      "instruction": "call"
+    },
+    {
+      "caller": 39631,
+      "callee": 90674,
+      "wat_offset": 1097898775,
+      "wat_line": 27005837,
+      "instruction": "call"
+    },
+    {
+      "caller": 39631,
+      "callee": 90674,
+      "wat_offset": 1097899479,
+      "wat_line": 27005867,
+      "instruction": "call"
+    },
+    {
+      "caller": 39631,
+      "callee": 90674,
+      "wat_offset": 1097900392,
+      "wat_line": 27005914,
+      "instruction": "call"
+    },
+    {
+      "caller": 49501,
+      "callee": 104435,
+      "wat_offset": 1145524025,
+      "wat_line": 28874305,
+      "instruction": "call"
+    },
+    {
+      "caller": 49501,
+      "callee": 90675,
+      "wat_offset": 1145524588,
+      "wat_line": 28874329,
+      "instruction": "call"
+    },
+    {
+      "caller": 49501,
+      "callee": 90674,
+      "wat_offset": 1145524706,
+      "wat_line": 28874335,
+      "instruction": "call"
+    },
+    {
+      "caller": 56191,
+      "callee": 13196,
+      "wat_offset": 1184525120,
+      "wat_line": 30006242,
+      "instruction": "call"
+    },
+    {
+      "caller": 56191,
+      "callee": 106890,
+      "wat_offset": 1184525403,
+      "wat_line": 30006254,
+      "instruction": "call"
+    },
+    {
+      "caller": 65323,
+      "callee": 56191,
+      "wat_offset": 1209171567,
+      "wat_line": 30853633,
+      "instruction": "call"
+    },
+    {
+      "caller": 65323,
+      "callee": 107842,
+      "wat_offset": 1209171754,
+      "wat_line": 30853643,
+      "instruction": "call"
+    },
+    {
+      "caller": 65326,
+      "callee": 56191,
+      "wat_offset": 1209174137,
+      "wat_line": 30853785,
+      "instruction": "call"
+    },
+    {
+      "caller": 65326,
+      "callee": 107842,
+      "wat_offset": 1209174324,
+      "wat_line": 30853795,
+      "instruction": "call"
+    },
+    {
+      "caller": 71888,
+      "callee": 17395,
+      "wat_offset": 1220173221,
+      "wat_line": 31268173,
+      "instruction": "call"
+    },
+    {
+      "caller": 71888,
+      "callee": 122100,
+      "wat_offset": 1220173334,
+      "wat_line": 31268179,
+      "instruction": "call"
+    },
+    {
+      "caller": 71888,
+      "callee": 122100,
+      "wat_offset": 1220173441,
+      "wat_line": 31268185,
+      "instruction": "call"
+    },
+    {
+      "caller": 90674,
+      "callee": 49501,
+      "wat_offset": 1267993195,
+      "wat_line": 33019765,
+      "instruction": "call"
+    },
+    {
+      "caller": 90674,
+      "callee": 49501,
+      "wat_offset": 1267993538,
+      "wat_line": 33019784,
+      "instruction": "call"
+    },
+    {
+      "caller": 90675,
+      "callee": 90674,
+      "wat_offset": 1267994012,
+      "wat_line": 33019810,
+      "instruction": "call"
+    },
+    {
+      "caller": 104435,
+      "callee": 71888,
+      "wat_offset": 1275674008,
+      "wat_line": 33372820,
+      "instruction": "call"
+    },
+    {
+      "caller": 106890,
+      "callee": 31509,
+      "wat_offset": 1276385348,
+      "wat_line": 33404322,
+      "instruction": "call"
+    },
+    {
+      "caller": 106890,
+      "callee": 1679,
+      "wat_offset": 1276385402,
+      "wat_line": 33404326,
+      "instruction": "call"
+    },
+    {
+      "caller": 107842,
+      "callee": 172316,
+      "wat_offset": 1277042211,
+      "wat_line": 33432126,
+      "instruction": "call"
+    },
+    {
+      "caller": 107842,
+      "callee": 90674,
+      "wat_offset": 1277042318,
+      "wat_line": 33432132,
+      "instruction": "call"
+    },
+    {
+      "caller": 122100,
+      "callee": 90674,
+      "wat_offset": 1280101271,
+      "wat_line": 33577312,
+      "instruction": "call"
+    },
+    {
+      "caller": 170433,
+      "callee": 122100,
+      "wat_offset": 1289234848,
+      "wat_line": 33966890,
+      "instruction": "call"
+    }
+  ],
+  "continuous_guards": [
+    {
+      "function_index": 28795,
+      "label": "mode0 skips currency queue",
+      "function_lines": [
+        11
+      ],
+      "full_wat_lines": [
+        23566952
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=2574",
+        "i32.eqz",
+        "br_if 0 (;@1;)"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "queue stores peer and unmodified base",
+      "function_lines": [
+        30
+      ],
+      "full_wat_lines": [
+        23566971
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=2152",
+        "local.get 2",
+        "i32.const 3",
+        "i32.shl",
+        "i32.add",
+        "local.tee 5",
+        "local.get 1",
+        "i32.store offset=4",
+        "local.get 5",
+        "local.get 3",
+        "i32.store"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "only exact mode1 has member divisor",
+      "function_lines": [
+        47
+      ],
+      "full_wat_lines": [
+        23566988
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load8_u offset=2574",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 0 (;@1;)"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "member count wrap before f32",
+      "function_lines": [
+        63
+      ],
+      "full_wat_lines": [
+        23567004
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=2532",
+        "i32.const 1",
+        "i32.sub",
+        "f32.convert_i32_u",
+        "f32.mul",
+        "f32.const 0x1.3f7ceep-2 (;=0.312;)",
+        "f32.mul"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "no minimum1 or NaN1 after round",
+      "function_lines": [
+        76
+      ],
+      "full_wat_lines": [
+        23567017
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 11",
+        "local.get 0",
+        "f32.load offset=1408",
+        "local.get 1",
+        "f32.convert_i32_u",
+        "f32.mul",
+        "f32.mul",
+        "call 85718",
+        "i32.trunc_sat_f32_u",
+        "local.tee 1"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "gold1544 wrap addition",
+      "function_lines": [
+        87
+      ],
+      "full_wat_lines": [
+        23567028
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1544",
+        "i32.add",
+        "local.tee 2",
+        "i32.store offset=1544"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "local collected tally1100 wrap addition",
+      "function_lines": [
+        92
+      ],
+      "full_wat_lines": [
+        23567033
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 1",
+        "local.get 0",
+        "i32.load offset=1100",
+        "i32.add",
+        "i32.store offset=1100"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "keyed copper value wraps",
+      "function_lines": [
+        98
+      ],
+      "full_wat_lines": [
+        23567039
+      ],
+      "instructions": [
+        "local.get 2",
+        "i32.const 10000",
+        "i32.mul",
+        "local.set 8"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "missing key1176 calls3735",
+      "function_lines": [
+        205
+      ],
+      "full_wat_lines": [
+        23567146
+      ],
+      "instructions": [
+        "local.get 4",
+        "i32.const 1176",
+        "i32.store offset=28"
+      ]
+    },
+    {
+      "function_index": 28795,
+      "label": "tree root address for insertion",
+      "function_lines": [
+        214
+      ],
+      "full_wat_lines": [
+        23567155
+      ],
+      "instructions": [
+        "local.get 4",
+        "local.get 0",
+        "i32.const 2468",
+        "i32.add",
+        "i32.store offset=12",
+        "local.get 4",
+        "i32.const 12",
+        "i32.add",
+        "local.get 8",
+        "call 3735"
+      ]
+    },
+    {
+      "function_index": 2862,
+      "label": "K1 real radius can collect even marker0",
+      "function_lines": [
+        859
+      ],
+      "full_wat_lines": [
+        7265102
+      ],
+      "instructions": [
+        "f32.sqrt",
+        "local.get 25",
+        "f32.le",
+        "br_if 0 (;@4;)",
+        "local.get 1",
+        "i32.load",
+        "i32.const 1",
+        "i32.ne",
+        "br_if 1 (;@3;)"
+      ]
+    },
+    {
+      "function_index": 2862,
+      "label": "save amount then remove before dispatch",
+      "function_lines": [
+        1056
+      ],
+      "full_wat_lines": [
+        7265299
+      ],
+      "instructions": [
+        "local.get 4",
+        "i32.load offset=12",
+        "local.set 4",
+        "local.get 0",
+        "local.get 1",
+        "call 31731",
+        "local.get 3",
+        "i32.const 1",
+        "i32.sub",
+        "br_table 3 (;@15;) 1 (;@17;) 4 (;@14;) 4 (;@14;) 4 (;@14;) 5 (;@13;) 2 (;@16;)"
+      ]
+    },
+    {
+      "function_index": 2862,
+      "label": "kind1 dispatcher28795",
+      "function_lines": [
+        1118
+      ],
+      "full_wat_lines": [
+        7265361
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 4",
+        "call 28795",
+        "br 10 (;@4;)"
+      ]
+    },
+    {
+      "function_index": 31731,
+      "label": "preserve order shift56",
+      "function_lines": [
+        41
+      ],
+      "full_wat_lines": [
+        24646899
+      ],
+      "instructions": [
+        "local.get 2",
+        "local.get 2",
+        "i32.const 56",
+        "i32.add",
+        "local.get 6",
+        "memory.copy"
+      ]
+    },
+    {
+      "function_index": 31731,
+      "label": "despawn opcode170 and8B GUID",
+      "function_lines": [
+        86
+      ],
+      "full_wat_lines": [
+        24646944
+      ],
+      "instructions": [
+        "local.tee 1",
+        "i32.const 170",
+        "i32.store16 offset=12",
+        "local.get 1",
+        "i32.const 8",
+        "i32.store offset=8"
+      ]
+    },
+    {
+      "function_index": 20660,
+      "label": "available gold is checked then spent",
+      "function_lines": [
+        11
+      ],
+      "full_wat_lines": [
+        20124164
+      ],
+      "instructions": [
+        "local.get 0",
+        "i32.load offset=1544",
+        "local.tee 10",
+        "local.get 0",
+        "i32.load offset=2444",
+        "local.tee 8",
+        "i32.ge_u",
+        "if  ;; label = @4",
+        "local.get 0",
+        "local.get 10",
+        "local.get 8",
+        "i32.sub",
+        "local.tee 3",
+        "i32.store offset=1544"
+      ]
+    }
+  ],
+  "windows": [
+    {
+      "function_index": 2862,
+      "label": "collection gates",
+      "function_lines": [
+        785,
+        910
+      ],
+      "full_wat_lines": [
+        7265028,
+        7265153
+      ],
+      "path": "guard-2862-785-910.wat.txt",
+      "bytes": 1448,
+      "sha256": "cad90940f0470c9b768ac530a94f0f18c4bb60fc13c968216fef39a6c21805cc"
+    },
+    {
+      "function_index": 2862,
+      "label": "reverse remove and kind dispatch",
+      "function_lines": [
+        1015,
+        1170
+      ],
+      "full_wat_lines": [
+        7265258,
+        7265413
+      ],
+      "path": "guard-2862-1015-1170.wat.txt",
+      "bytes": 2112,
+      "sha256": "c2f4b37eda25584db881c8dd17486e067188a2d11dd781a8f7d3d4bd719cba5f"
+    },
+    {
+      "function_index": 28795,
+      "label": "entire currency consumer",
+      "function_lines": [
+        1,
+        228
+      ],
+      "full_wat_lines": [
+        23566942,
+        23567169
+      ],
+      "path": "guard-28795-1-228.wat.txt",
+      "bytes": 3016,
+      "sha256": "e539908c4cbd6c7b910426379f726d6d43f140a5fdf1d6fa6541246cb6851d2e"
+    },
+    {
+      "function_index": 31731,
+      "label": "entire ordered removal and messages",
+      "function_lines": [
+        1,
+        192
+      ],
+      "full_wat_lines": [
+        24646859,
+        24647050
+      ],
+      "path": "guard-31731-1-192.wat.txt",
+      "bytes": 2466,
+      "sha256": "f4a5f6c1b1fae3c6fbce1cc8b36d1bd11d8c4887dc7e1e5f3bd2b25b95abb6eb"
+    },
+    {
+      "function_index": 20660,
+      "label": "gold spending proves local balance",
+      "function_lines": [
+        8,
+        51
+      ],
+      "full_wat_lines": [
+        20124161,
+        20124204
+      ],
+      "path": "guard-20660-8-51.wat.txt",
+      "bytes": 667,
+      "sha256": "4afd59226b57c65bab91145fa42ab88431da213503127e0c76b0b688e9701512"
+    }
+  ],
+  "G28795_direct_memory_offsets": [
+    4,
+    12,
+    16,
+    20,
+    28,
+    50,
+    76,
+    184,
+    188,
+    1100,
+    1408,
+    1544,
+    2148,
+    2152,
+    2156,
+    2468,
+    2472,
+    2520,
+    2532,
+    2574
+  ],
+  "layout": {
+    "currency_multiplier_f32": 1408,
+    "available_run_gold_u32": 1544,
+    "local_collected_tally_u32": 1100,
+    "mode_u8": 2574,
+    "local_peer_u32": 2520,
+    "member_count_u32": 2532,
+    "region_id_ptr_len": [
+      184,
+      188
+    ],
+    "currency_queue_capacity_pointer_count": [
+      2148,
+      2152,
+      2156
+    ],
+    "queue_stride": 8,
+    "player_key_tree_root_depth": [
+      2468,
+      2472
+    ],
+    "currency_player_key_u16": 1176
+  },
+  "semantics": {
+    "gate": "distance<=radius OR(marker==1 AND arrival<=entryNow); no phase entry guard",
+    "order": "2862 captures kind/amount,31731 ordered delete/despawn,then28795; eligible indices consumed descending",
+    "mode0": "multiplier1,no currency queue append",
+    "mode_nonzero": "append(peer=G2520,unmodified base amount) to8B G2148/2152/2156 queue",
+    "mode1": "1/(1+f32(f32((regionIndex<3?.7:1)*f32.u32(wrap(G2532-1)))*f32(.312)))",
+    "mode_other_nonzero": "queue still appended,mode multiplier remains1",
+    "award": "trunc_sat_u32(round85718(f32(modeMultiplier*f32(G1408*f32.u32(baseAmount)))))",
+    "no_XP_minimum": "zero legal; NaN/negative→0; +overflow→0xffffffff",
+    "writes": [
+      "G1544=wrap(G1544+award)",
+      "G1100=wrap(G1100+award)",
+      "logical player-key1176=wrap(G1544*10000),existing overwrite or3735 insert"
+    ],
+    "caps": "No explicit gold maximum clamp in complete28795; trunc_sat applies award only; additions and*10000 wrap",
+    "messages": "31731 queues opcode170 with8B pickup GUID,then each aux GUID;28795 has no message constructor/flush call",
+    "RNG": "28795 arithmetic/queue/key normal path has no RNG; spawning1820 RNG belongs to earlier creation. Direct closure has no imports but four unresolved indirect error/panic callbacks remain pending; do not infer complete error-path behavior",
+    "account": "No account write or persistence call in28795;G1100→persistent account stat transfer remains unknown"
+  },
+  "controlled_fixture": {
+    "status": "recipe_only_not_executed",
+    "entry_function": 2862,
+    "allocate_G_bytes": 8192,
+    "record_source": {
+      "path": "evidence/full0134-oracle-20261101T020143.890376Z",
+      "artifacts": {
+        "ordinary-pipeline134-cases.json": "201f3c66130c1560c17f403e44fcc1c63667d22e8d690e04db4f77dd58ba7243",
+        "ordinary-pipeline134-original-results.jsonl": "538d6472910c37cab98081c407819d238ba0c4be62e006961fd5c1325b326731",
+        "ordinary-pipeline134-comparison.json": "5a0b99e7e4b772125ae6480f0827847b604404bb20474f36cbd4a58e38df016b"
+      },
+      "case_id": 0,
+      "group": "seeded_complete_ordinary_rewards",
+      "stage": "after_death",
+      "record_index": 0,
+      "original_chain": [
+        914,
+        1417,
+        1820
+      ],
+      "rng_input": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "definition_hex": "00000000000000000000000000000000789252000d000000580200001a0000006666663f070000000000c04100004040cdcccc3f0000a040000000000000803f0000000000000000",
+      "source": "prior recorded original result, read only",
+      "record_words": [
+        0,
+        14519000,
+        1,
+        4,
+        738197505,
+        4044357667,
+        0,
+        8,
+        0,
+        9004,
+        3323120845,
+        3290303693,
+        0,
+        1092616192
+      ],
+      "record_hex": "00000000d88add0001000000040000000100002c230010f10000000008000000000000002c230000cdcc12c6cd0c1ec40000000000002041",
+      "record_sha256": "5a9ce3d687c7a0ce1972779f91857ee42b30efee0d6d9a07bd112470fb1a638b",
+      "arrival_word_policy": "raw observed uninitialized append+4 word retained; radius guard ignores it",
+      "not_new_runtime_evidence": true
+    },
+    "record_stride": 56,
+    "G_initial_u32": {
+      "1384": 1091567616,
+      "1388": 1065353216,
+      "1408": 1065353216,
+      "1504": 3323121664,
+      "1508": 3290316800,
+      "1512": 0,
+      "1520": 120,
+      "1524": 0,
+      "1544": 0,
+      "1100": 0,
+      "1860": 1,
+      "1868": 1,
+      "1872": 4,
+      "1880": 0,
+      "2108": 0,
+      "2148": 0,
+      "2156": 0,
+      "2344": 1092616192,
+      "2468": 0,
+      "2472": 0,
+      "2520": 0,
+      "2532": 1
+    },
+    "G_initial_u8": {
+      "2574": 0,
+      "2579": 1
+    },
+    "G_pointer_fields": {
+      "1864": "one allocated record copied byte-for-byte",
+      "1876": "allocated message vector with1872 capacity>=4",
+      "2152": "empty currency queue dangling/aligned4; mode0 does not read"
+    },
+    "containers": "Zero-initialize fresh G; explicitly set all cap/pointer/count triples valid. No claims, aux records, items, modifiers or owned callbacks.",
+    "expected_projection": {
+      "pickup_count": 0,
+      "G1544": 4,
+      "G1100": 4,
+      "player_key1176": 40000,
+      "currency_queue_count": 0,
+      "rng_unchanged": true,
+      "message": "31731 opcode170,8B GUID payload; later player-field flush outside entry"
+    },
+    "required_synthetic_boundaries": [
+      "radius0 retains the same marker0 record",
+      "radius9 collects marker0 with raw stale arrival",
+      "radius0 marker1 at arrival<=now collects; future or NaN arrival does not",
+      "radius0 marker2 is outside supported normal-marker domain",
+      "mode0/1/2/255, member0/1/2, region<3 and>=3, scale0/1/1.2/NaN/±Inf",
+      "amount0/1/maxu32, gold/earned wrapping, key1176 multiplication wrapping",
+      "empty and nonempty currency queue, missing/existing key1176, ordered mixed XP/K1 dispatch"
+    ],
+    "do_not_claim": "This extractor runs no target, so no28795/2862 collection differential is established"
+  },
+  "model_checks": {
+    "kind": "purePython hand-derived contracts",
+    "cases": 23,
+    "original_WASM_cases": 0,
+    "original_target_executed": false,
+    "limits": "No original28795/2862 differential was run by this extractor"
+  },
+  "unknown": [
+    "G1100 to persistent account gold statistics transfer and its exact new-version guard",
+    "Later keyed player-state serialization/flush and network queue consumer acceptance",
+    "Full logical-to-physical keyed B-tree and allocation identity; retained original callee evidence is complete",
+    "Four dynamic error/panic callbacks in172316/49501: original table/callees must be preserved; no no-op substitution",
+    "Mixed XP/K1 full2862 scheduling and later unknown foreign-kind callbacks stay pending",
+    "No account persistence, browser bridge, disk save or recipient delivery demonstrated"
+  ],
+  "independent_reconstruction_complete": false,
+  "source_sha256": {
+    "scripts/trace_currency134.py": "bb2c58937aff6b5584fc143ad110a4ba0c0a724445f4447343971ac3b94d6572",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+  },
+  "pinned_inputs_stable_after": true,
+  "elapsed_seconds": 2.412,
+  "evidence_manifest_sha256": "c7cdf6a88d4b0dc81de2cd68c68977f2ede54f2e5ae969058e2391b2a3604ef0"
+}

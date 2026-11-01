@@ -1,0 +1,152 @@
+{
+  "date": "2026-11-01",
+  "status": "controlled_full_original_currency_differential_passed",
+  "version": "0.134.0",
+  "build": "983346a7",
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "module_sha256": "a1b62c52ed05c891072e6630aa32bdc4c18e65eeedc0f659db93fae0d3b4956a",
+  "original_full_entry": 2862,
+  "unchanged_original_currency_callees": [
+    31731,
+    28795
+  ],
+  "case_count": 1030,
+  "mismatch_count": 0,
+  "groups": {
+    "exact_3_4_5_radius_boundary": 3,
+    "gold_tally_and_copper_wrap": 72,
+    "inside_radius_ignores_marker_arrival": 12,
+    "mixed_eligible_indices_preserve_remaining_order": 3,
+    "mode1_region_member_divisor": 125,
+    "no_phase_entry_guard": 5,
+    "nonfinite_radius_guard": 4,
+    "outside_radius_marker_arrival_guard": 12,
+    "queue_reverse_order_growth_existing_tree": 50,
+    "round_nonfinite_saturation": 486,
+    "seeded_numeric_and_reverse_vectors": 256,
+    "unaltered_original_record_radius0_retained": 1,
+    "unaltered_original_record_radius9": 1
+  },
+  "model_expected_before_original_launch": true,
+  "production_currency_model_used": true,
+  "record_provenance": {
+    "path": "evidence/currency0134-chain-20261101T022005.805413Z/prior-original-case0-kind1-record.bin",
+    "sha256": "5a9ce3d687c7a0ce1972779f91857ee42b30efee0d6d9a07bd112470fb1a638b",
+    "origin": "prior original full914 case0/after_death/record0; complete56B copied or declared synthetic variants"
+  },
+  "fields_compared": [
+    "gold",
+    "earned",
+    "queue_capacity",
+    "queue_count",
+    "queue_entries",
+    "player_fields",
+    "tree_present",
+    "pickup_capacity",
+    "pickup_count",
+    "record_hex",
+    "rng",
+    "messages",
+    "phase"
+  ],
+  "warmup_cases": 578,
+  "missing_tree_target_cases": 452,
+  "existing_tree_target_cases": 578,
+  "actual_missing_key_insert_cases": 438,
+  "actual_existing_key_update_cases": 578,
+  "normal_original_tree_insert_and_existing_key_update_exercised": true,
+  "observed_tree_depths": [
+    0
+  ],
+  "runtime": {
+    "case_count": 1030,
+    "actual_original_entry": 2862,
+    "original_currency_callees": [
+      31731,
+      28795
+    ],
+    "original_callees_unchanged": true,
+    "original_allocator": 91940,
+    "added_research_exports": [
+      "collect_pickups"
+    ],
+    "entry_calls": 1608,
+    "target_calls_with_preexisting_tree": 578,
+    "target_calls_with_empty_tree": 452,
+    "fresh_instances": 33,
+    "fresh_instance_every": 32,
+    "max_memory_bytes": 14876672,
+    "memory_limit_pages": 512,
+    "denied_function_imports": 878,
+    "actual_host_calls": 0,
+    "node": "v22.23.4",
+    "full_game_started": false,
+    "application_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "owned_process": {
+    "runtime_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+    "version": "v22.23.4",
+    "runtime_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+    "flags": [
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512"
+    ],
+    "deadline_seconds": 60,
+    "seconds": 0.574,
+    "exit_code": 0
+  },
+  "source_sha256_before": {
+    "scripts/check_currency134_full_spec.py": "724320ed51e85f98d066969d4bfb819119198e0754a4bee91b32638e10aac908",
+    "scripts/run_currency134_full_oracle.mjs": "de7832ab39ff7a79f6bd2b3177cc6c58f9709bda4fbca60258f920faea15e5b8",
+    "scripts/build_full134_oracle.py": "34dae3f74c8628a0f5593af0d01fea72bf4201cac6c97a1ada9b9f90c72be735",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full134_host.mjs": "63ad13fa1bb6e44f8995ea65c7c7bad2e40131162084b537c737c2a3a0747c1f",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+  },
+  "source_sha256_after": {
+    "scripts/check_currency134_full_spec.py": "724320ed51e85f98d066969d4bfb819119198e0754a4bee91b32638e10aac908",
+    "scripts/run_currency134_full_oracle.mjs": "de7832ab39ff7a79f6bd2b3177cc6c58f9709bda4fbca60258f920faea15e5b8",
+    "scripts/build_full134_oracle.py": "34dae3f74c8628a0f5593af0d01fea72bf4201cac6c97a1ada9b9f90c72be735",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full134_host.mjs": "63ad13fa1bb6e44f8995ea65c7c7bad2e40131162084b537c737c2a3a0747c1f",
+    "reconstruction/core_spec/currency134.py": "e392ee41d15b9f64bd1ecbdc17df494f90ec26b79d866b4e95b6fd47792d62aa",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c"
+  },
+  "builder_manifest_sha256": "e6487664a20175ebddcf673346621ed4cc5d629c66cd4873516c2895c358b120",
+  "artifact_sha256": {
+    "currency134-cases.json": "936666e9e04186ff44c5755293c659c22e7c38ac68e20ff12b83dd5b497fea25",
+    "currency134-original-results.jsonl": "0e2f069251793d933cf88837c39918e4c5c2bfc87d5dce16ff404fb64b963cb2",
+    "currency134-mismatches.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "currency134-runtime.json": "7c993fac53359cc163913311896240801d09fb9b14854ecf1d7efe5c1ae85fff",
+    "currency134-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "currency134-source-freeze-before.json": "82d7977330a7ed192be188dec778ca018610d8ba34a4d52dac1ee56c26bd62a8",
+    "currency134-source-freeze-after.json": "e7a9227ffae3d224f072082b4e1595fdb5ff1b9340436eaf08c6213b69f43afb"
+  },
+  "run_directory": "evidence/full0134-oracle-20261101T023206.810587Z",
+  "limitations": [
+    "Only kind1 records with normal marker0/1,empty claims/aux; no XP or other-kind callback composition.",
+    "Original tree insertion and existing key1176 update tested at depth0; deeper/multi-key search remains pending.",
+    "Despawn opcode170/length8/GUID queue entries compared; later player-field wire flush and transport are pending.",
+    "Producer1820/death914,account transfer/persistence,full game/app start and network not exercised.",
+    "Indirect error/panic/allocation-failure callbacks remain unchanged in original but are not deliberately triggered."
+  ],
+  "receipt_path": "evidence/full0134-oracle-20261101T023206.810587Z/currency134-comparison.json",
+  "receipt_sha256": "036886078881e01906cc0bbdaabb0d12d79f60869baad23bd47442428c6d1aaf",
+  "independent_review": {
+    "status": "passed",
+    "path": "evidence/full0134-oracle-20261101T023206.810587Z/currency134-independent-review.json",
+    "sha256": "51afef28c37d82d74a24074fdec516571f7bae92703e9a2a518a36d1b20203c1",
+    "original_WASM_reexecuted_by_review": false,
+    "source_drift": false,
+    "regenerated_production_cases": 1030,
+    "recomputed_mismatches": 0
+  },
+  "independent_reconstruction_complete": false,
+  "full_game_started": false,
+  "producer_account_transfer_wire_transport_and_game_composition_complete": false
+}

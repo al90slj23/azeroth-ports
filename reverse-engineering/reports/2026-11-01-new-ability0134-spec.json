@@ -1,0 +1,510 @@
+{
+  "version": "0.134.0",
+  "build": "983346a7",
+  "phase": "full",
+  "status": "passed",
+  "cases": 2781,
+  "case_groups": {
+    "all114-tier0..4-empty-modifiers": 570,
+    "all114-original-tier5-table-entry": 114,
+    "modifier-every-kind-binary32-and-u32-edges": 690,
+    "modifier-all-filter-dispatch-match-and-miss": 200,
+    "all114-all-seven-additional-words": 228,
+    "ordered-f32-sums-before-round-clamp": 280,
+    "synthetic-definition-tier-classification": 270,
+    "seeded-mixed-ordered-explicit-modifiers": 400,
+    "phase-entry-guard": 4,
+    "kind-index-entry-guards": 10,
+    "append-preserves-existing-owned-records": 15
+  },
+  "mismatch_fields": 0,
+  "mismatch_cases": 0,
+  "original_wasm_sha256": "2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c54e1a051bb73d52",
+  "original_function": 1073,
+  "complete_original_function_executed": true,
+  "original_helpers_executed": [
+    26967,
+    26591,
+    85718
+  ],
+  "replacement_callees": [],
+  "only_changed_original_section": 7,
+  "comparison_fields": [
+    "every owned80B word",
+    "owned count1660",
+    "phase2579",
+    "selection kind2577",
+    "pending2368",
+    "candidate count1904",
+    "host call count"
+  ],
+  "nan_comparison": "NaN classification only; all non-NaN floating words and all u32 words require exact bits",
+  "modifier_context": "Explicit synthetic snapshot; unknown/default producer state raises. Real producers remain pending.",
+  "original_runtime": {
+    "version": "0.134.0",
+    "build": "983346a7",
+    "complete_original1073_executed": true,
+    "original_internal_callees": true,
+    "dependency_shims": [],
+    "actual_host_calls": 0,
+    "denied_function_imports": 878,
+    "original_allocator_index": 91940,
+    "application_start_called": false,
+    "full_game_started": false,
+    "cases": 2781,
+    "fresh_instances": 87,
+    "maximum_memory_bytes": 20774912,
+    "memory_page_cap": 512,
+    "scope": "Synthetic explicit new-ability candidate/modifier snapshots; current1073 append and reached original tail execute."
+  },
+  "process": {
+    "command": [
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/runtime/node_modules/node/bin/node",
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/run_new_ability134_full_oracle.mjs",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0134-oracle-20261101T025358.837028Z",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0134-oracle-20261101T025358.837028Z/new-ability134-full-20261101T025535.517706Z/fixtures.jsonl",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0134-oracle-20261101T025358.837028Z/new-ability134-full-20261101T025535.517706Z"
+    ],
+    "pid": 88166,
+    "pgid": 88166,
+    "owned_process_group": true,
+    "runtime_version": "v22.23.4",
+    "runtime_sha256": "2cc28a1880d0774616959f2210ee739bffa6ac695c887e8988a496a21271f6c0",
+    "runtime_flags": [
+      "--max-old-space-size=512",
+      "--wasm-max-mem-pages=512"
+    ],
+    "deadline_seconds": 60,
+    "timed_out": false,
+    "exit_code": 0,
+    "elapsed_seconds": 2.974,
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "result_sha256": "578b7a397af3a3860fb50e6b94602e73bc512b639098b6fdc998cc0ee499341d"
+  },
+  "source_sha256": {
+    "scripts/check_new_ability134_full_spec.py": "ca3579b34e9d1bafa781efd677270435b2705be00e9ad1a2ad5b61349152ed2e",
+    "scripts/run_new_ability134_full_oracle.mjs": "b5a1d3387ff5564a94fe59fdcb56b704c015a271e4f301ecbdd344c88c099eb3",
+    "scripts/trace_new_ability134.py": "a32149332870e1da904af9a0e2c092d39dfc30159b1dc3a501a7d16391c5596f",
+    "scripts/build_full134_oracle.py": "34dae3f74c8628a0f5593af0d01fea72bf4201cac6c97a1ada9b9f90c72be735",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/full134_host.mjs": "63ad13fa1bb6e44f8995ea65c7c7bad2e40131162084b537c737c2a3a0747c1f",
+    "scripts/extract_catalogue134.py": "4e465095731c6abc9775ce8445fdd6b96c11982300ec33be1c1b4bda0b8b709a",
+    "reconstruction/core_spec/ability_state134.py": "fd2ac820632cb2192f3467b0977f776e04f1ab40366576a734ad264f0fafb5b4",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482"
+  },
+  "source_freeze_before_after": true,
+  "source_snapshot_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0134-oracle-20261101T025358.837028Z/new-ability134-full-20261101T025535.517706Z/source-snapshot",
+  "fixture_ids_unique_contiguous_and_ordered": true,
+  "result_ids_unique_contiguous_and_ordered": true,
+  "fixture_sha256": "2a55559d6aa5c19a9b8b3c3c708728f522245abd2eb08018ccca298f6a61ba22",
+  "results_sha256": "578b7a397af3a3860fb50e6b94602e73bc512b639098b6fdc998cc0ee499341d",
+  "mismatches_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "research_module_sha256": "14eb807605cbdb61eba96cc72d110171b80f90050c57a7954c7ad9925cd2d438",
+  "research_manifest_sha256": "02d5c13c4ce5775a7ad7fd459dfd1bc3e45001c8b43c8843a3a288d13c62bc44",
+  "static_evidence_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/new-ability0134-static-20261101T025535.134684Z",
+  "static_guards": [
+    {
+      "function": 1073,
+      "label": "new helper receives explicit G+2016 snapshot before tier helper",
+      "sites": [
+        496
+      ],
+      "absolute_wat_lines": [
+        2176673
+      ],
+      "instructions": [
+        "i32.const 252",
+        "i32.add",
+        "local.get 0",
+        "i32.const 2016",
+        "i32.add",
+        "local.get 4",
+        "call 26967",
+        "local.get 3",
+        "i32.const 104",
+        "i32.add",
+        "local.tee 4",
+        "local.get 3",
+        "i32.const 200",
+        "i32.add",
+        "local.tee 2",
+        "local.get 10",
+        "call 26591"
+      ]
+    },
+    {
+      "function": 1073,
+      "label": "new record starts cooldown0.5 and damage1",
+      "sites": [
+        483
+      ],
+      "absolute_wat_lines": [
+        2176660
+      ],
+      "instructions": [
+        "local.get 3",
+        "i64.const 4575657222465388544",
+        "i64.store offset=208 align=4"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "20B modifier stride and count",
+      "sites": [
+        23
+      ],
+      "absolute_wat_lines": [
+        22803316
+      ],
+      "instructions": [
+        "i32.load offset=16",
+        "local.tee 13",
+        "local.get 11",
+        "i32.const 20",
+        "i32.mul",
+        "i32.add"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "filter tag dispatch",
+      "sites": [
+        73
+      ],
+      "absolute_wat_lines": [
+        22803366
+      ],
+      "instructions": [
+        "i32.load8_u",
+        "i32.const 1",
+        "i32.sub",
+        "br_table 2 (;@7;) 0 (;@9;) 3 (;@6;) 1 (;@8;) 5 (;@4;) 5 (;@4;) 6 (;@3;)"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "numeric kind dispatch",
+      "sites": [
+        156
+      ],
+      "absolute_wat_lines": [
+        22803449
+      ],
+      "instructions": [
+        "i32.load8_u offset=12",
+        "i32.const 1",
+        "i32.sub",
+        "br_table 1 (;@9;) 2 (;@8;) 3 (;@7;) 4 (;@6;) 5 (;@5;) 6 (;@4;) 0 (;@10;)"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered additive output0",
+      "sites": [
+        161
+      ],
+      "absolute_wat_lines": [
+        22803454
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 10",
+        "local.get 3",
+        "f32.add",
+        "local.tee 10",
+        "f32.store"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered additive output12",
+      "sites": [
+        181
+      ],
+      "absolute_wat_lines": [
+        22803474
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 9",
+        "local.get 3",
+        "f32.add",
+        "local.tee 9",
+        "f32.store offset=12"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered additive output16",
+      "sites": [
+        189
+      ],
+      "absolute_wat_lines": [
+        22803482
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 8",
+        "local.get 3",
+        "f32.add",
+        "local.tee 8",
+        "f32.store offset=16"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered additive output20",
+      "sites": [
+        197
+      ],
+      "absolute_wat_lines": [
+        22803490
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 7",
+        "local.get 3",
+        "f32.add",
+        "local.tee 7",
+        "f32.store offset=20"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered additive output24",
+      "sites": [
+        205
+      ],
+      "absolute_wat_lines": [
+        22803498
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 6",
+        "local.get 3",
+        "f32.add",
+        "local.tee 6",
+        "f32.store offset=24"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered cooldown reduction accumulation",
+      "sites": [
+        169
+      ],
+      "absolute_wat_lines": [
+        22803462
+      ],
+      "instructions": [
+        "local.get 5",
+        "local.get 3",
+        "f32.add",
+        "local.set 5"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "ordered targets before round accumulation",
+      "sites": [
+        175
+      ],
+      "absolute_wat_lines": [
+        22803468
+      ],
+      "instructions": [
+        "local.get 4",
+        "local.get 3",
+        "f32.add",
+        "local.set 4"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "round helper before saturating target conversion",
+      "sites": [
+        218
+      ],
+      "absolute_wat_lines": [
+        22803511
+      ],
+      "instructions": [
+        "local.get 0",
+        "local.get 4",
+        "call 85718",
+        "i32.trunc_sat_f32_u",
+        "i32.store offset=8"
+      ]
+    },
+    {
+      "function": 26967,
+      "label": "cooldown subtract then NaN select then max0.4",
+      "sites": [
+        224
+      ],
+      "absolute_wat_lines": [
+        22803517
+      ],
+      "instructions": [
+        "f32.const 0x1.99999ap-2 (;=0.4;)",
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 5",
+        "f32.sub",
+        "local.tee 3",
+        "local.get 3",
+        "local.get 3",
+        "f32.ne",
+        "select",
+        "local.tee 3",
+        "f32.const 0x1.99999ap-2 (;=0.4;)",
+        "local.get 3",
+        "f32.const 0x1.99999ap-2 (;=0.4;)",
+        "f32.gt",
+        "select",
+        "f32.store offset=4)"
+      ]
+    },
+    {
+      "function": 26591,
+      "label": "tier0 copy without table read",
+      "sites": [
+        8
+      ],
+      "absolute_wat_lines": [
+        22673227
+      ],
+      "instructions": [
+        "local.get 2",
+        "i32.eqz",
+        "if  ;; label = @2",
+        "local.get 0",
+        "local.get 1",
+        "i32.const 80",
+        "memory.copy"
+      ]
+    },
+    {
+      "function": 26591,
+      "label": "execution classification",
+      "sites": [
+        34
+      ],
+      "absolute_wat_lines": [
+        22673253
+      ],
+      "instructions": [
+        "i32.load8_u offset=84",
+        "i32.const 9",
+        "i32.sub",
+        "br_table 1 (;@11;) 3 (;@9;) 0 (;@12;) 3 (;@9;)"
+      ]
+    },
+    {
+      "function": 26591,
+      "label": "effect-tag mask",
+      "sites": [
+        69
+      ],
+      "absolute_wat_lines": [
+        22673288
+      ],
+      "instructions": [
+        "i32.const 1",
+        "local.get 4",
+        "i32.shl",
+        "i32.const 8384",
+        "i32.and"
+      ]
+    },
+    {
+      "function": 26591,
+      "label": "tier cooldown order",
+      "sites": [
+        130
+      ],
+      "absolute_wat_lines": [
+        22673349
+      ],
+      "instructions": [
+        "f32.load offset=16",
+        "f32.const 0x1p+0 (;=1;)",
+        "local.get 4",
+        "i32.const 2",
+        "i32.shl",
+        "f32.load offset=5879624",
+        "local.tee 8",
+        "f32.sub",
+        "f32.mul",
+        "f32.store offset=16"
+      ]
+    },
+    {
+      "function": 26591,
+      "label": "tier damage order",
+      "sites": [
+        213
+      ],
+      "absolute_wat_lines": [
+        22673432
+      ],
+      "instructions": [
+        "f32.load offset=12",
+        "local.get 4",
+        "i32.const 2",
+        "i32.shl",
+        "f32.load offset=5879676",
+        "local.tee 8",
+        "f32.const 0x1p+0 (;=1;)",
+        "f32.add",
+        "f32.mul",
+        "f32.store offset=12"
+      ]
+    },
+    {
+      "function": 85718,
+      "label": "binary32 bias before integer mask",
+      "sites": [
+        2
+      ],
+      "absolute_wat_lines": [
+        32844585
+      ],
+      "instructions": [
+        "local.get 0",
+        "f32.const 0x1.fffffep-2 (;=0.5;)",
+        "local.get 0",
+        "f32.copysign",
+        "f32.add",
+        "local.tee 0",
+        "i32.reinterpret_f32"
+      ]
+    }
+  ],
+  "runtime_evidence_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0134-oracle-20261101T025358.837028Z/new-ability134-full-20261101T025535.517706Z",
+  "full_module_directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/full0134-oracle-20261101T025358.837028Z",
+  "tier_adjustment_actual_definition_counts": {
+    "damage": 103,
+    "cooldown": 11
+  },
+  "limitations": [
+    "Synthetic warrior/human level1, explicit ability-modifier snapshots and empty equipment/loot.",
+    "Original1073 tail executes; independent model exposes shared postprocessing,1513 and4600 as pending effects.",
+    "No real talent/equipment modifier producers, save compatibility, whole-core or playable-game claim.",
+    "Current candidate tiers0..4 covered; tier5 is extra original helper-domain evidence.",
+    "Other pending queues,next-choice generation and other candidate variants are outside this checker."
+  ],
+  "application_start_called": false,
+  "network_used": false,
+  "app_or_save_writes": false,
+  "independent_review": {
+    "status": "passed_readonly_regeneration_and_identity_review",
+    "path": "evidence/full0134-oracle-20261101T025358.837028Z/new-ability134-full-20261101T025535.517706Z/independent-readonly-review.json",
+    "sha256": "f03529f277a2d164630b85df23297250cd74e64e57a5d001e1079a60c53a4a83",
+    "original_WASM_reexecuted_by_review": false
+  }
+}

@@ -7,7 +7,7 @@ export const original134SHA = '2e86455ac39028dd45fc224b30e2e6a46ad5746bb44ce894c
 export const digest = value => createHash('sha256').update(value).digest('hex');
 const roleIndices = Object.freeze({select_ability:1073,recalculate_stats:1513,finish_selection:4600,
   resolve_owned_ability:22287,auto_cast:916,cast:922,damage:914,gain_experience:4630,incoming_damage:1063,
-  spawn_pickup:1417,collect_pickups:2862,attract_all_xp:21779,upgrade_value:25368});
+  spawn_pickup:1417,collect_pickups:2862,attract_all_xp:21779,generate_choices:2159,upgrade_value:25368});
 const originalPath = new URL('../originals/official-acquisition-20261031T235700.049192Z/latest-wenilla_bg.wasm',import.meta.url);
 function leb(raw,p) {
   let n=0,shift=0;
