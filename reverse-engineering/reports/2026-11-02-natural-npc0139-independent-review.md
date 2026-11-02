@@ -1,0 +1,19 @@
+# 0.139 四次连续 None 刷怪独立复核
+
+结论：当前声明域通过。22组、88次完整5719(None)的四阶段结果由独立参考逐项重算一致，复核没有执行作者生产模块、检查器、构建器或原件。
+
+每次真实None路径先执行8740采样，再由同一随机状态执行该敌人的yaw/jitter，之后才进入下一次8740。全部88个最终随机状态、XYZ、GUID/计数器、HP/攻击、完整169消息及记录known/None都一致。220次消息观察是累积前缀，只记88条新169。内部8740、尝试次数、draw和半径收缩都是当前WAT/参考推断，不冒充原件单独计数器。
+
+9组提供已知4×432B caller backing，13组真实capacity0→4分配。完整四槽逐阶段核101598个known字节，50466个None保留；其中24297次未知观察非零，均未倒填。Game的224224个非owned字节守恒；四词RNG与counter分别独立预测。容器/消息头指针与实际分配容量是观察边界，只有声明count/domain另作核对，不称完整2592B Game已独立构造。
+
+首组没有覆写快照中的constructor RNG/counter。独立按当前6786控制Appseed0的LCG得到1442695040888963407，再按1600 PCG得到`[3713081075,3463651554,2696601855,1334331845]`，与原件构造状态及首组输入相符，初始counter为10。另21组明确覆写受控RNG/counter。本批实际是22次healthy-v2 snapshot恢复，没有重新执行1600、6786或1108；该构造种子链只能称显式研究Appseed0的来源，不是自然账号/profile所有权。
+
+原件5719完整None分支的26..36/.5参数、位置采样先于yaw/jitter，以及1108静态四次None调用窗口均重新绑定当前139本体。1108之前的1795等其他逻辑没有被本批执行或恢复；不能把四次调用组件等同完整开局。
+
+独立期望只读取root从139原始资产生成的terrain/nav/secondary canonical数据，没有从原件memory生成期望。已冻结纯参考函数复用的是当前WAT算式：即使文件名来自旧版拒绝报告，其中Reference已使用正确f32 norm，作者旧v1生产模块没有被导入，拒绝记录也没改。修正版85例与SomeXYZ NPC64例的独审收据作为来源依赖绑定，当前88条仍全部重新计算，不转移旧通过数。
+
+31来源/20生产文件/71导入边、7作者交付件与来源快照逐项核SHA。原件只增加两个私有导出（5719和stack），其他段逐字节保持，882导入全部拒绝且0host。None输入16B的tag0/payload A5及双16B canary、结果16B双canary保持；146次栈检查为冻结runner断言与汇总。World124/digest和path view不变只是原件runner的只读观察，不是独立Rc生产或复核重新读取snapshot。Pythonopen期望读取审计不等于OS系统调用审计。
+
+范围限默认Elwynn定义0、time0/mode0/member1/level1、playerGUID0和中心XY、显式Z/velocity/pathMap的consumer域。自然pathMap producer、App/WorldRc所有权、其他敌人、完整1108/主循环/游戏流程及Windows执行仍未验收。
+
+最终收据：`evidence/natural-npc139-independent-review-20261102T045700.418633Z/review.json`，SHAad1296aa8438c35830485d1a30ae855421aa10474757d716cc9d4ec3b878b52e。原件90877及复核19873均有exit0/PID与PGID消失收据。首次复核的诊断字段遗漏失败原样保留，没有转成原件失败或新增覆盖。

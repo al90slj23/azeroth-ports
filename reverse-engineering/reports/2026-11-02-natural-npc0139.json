@@ -1,0 +1,197 @@
+{
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "scoped_sequentialnatural4_22cases88full5719_differential_passed_independent_review_pending",
+  "receipt": "evidence/natural-npc139-oracle-20261102T044325.586298Z/comparison.json",
+  "receipt_sha256": "bc6f71760ce62c824a176c8ccc2351782412b725a6f5bc0cfca5d0823dac9d1d",
+  "author_sources": {
+    "reconstruction/core_spec/natural_npc139.py": "0e749d4bf0479b2ebe5fe30b542256e29d9910e15f480b3fbb1a0ab87eee2670",
+    "scripts/build_natural_npc139_oracle.py": "40feea018047473f0f48e5024cfb475d67fd59330a84eed82d426b8df540f6f1",
+    "scripts/check_natural_npc139.py": "a17bf19c52dd8ca9c5c915996f100ff57fd04fce7fac1ce75700e7080a4d61cc",
+    "scripts/run_natural_npc139_oracle.mjs": "a5172815bfa96094b13e304ec990e2e42510e6223de8ceeb20a4476614348c10",
+    "scripts/trace_natural_npc139.py": "d639691ea6b6ec017997d0e215c1a2942cc8cfefad0095bb43d4b7870ef4eecf"
+  },
+  "experiment_sources": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+    "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+    "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+    "reconstruction/core_spec/natural_npc139.py": "0e749d4bf0479b2ebe5fe30b542256e29d9910e15f480b3fbb1a0ab87eee2670",
+    "reconstruction/core_spec/npc_heading139.py": "680ff998e8e77916a2c976ccc590834ff94fa58b484efbde5e1bf41a9458f229",
+    "reconstruction/core_spec/npc_spawn139.py": "c1a4122f82edad2dadddc3a1e63f00544db7e349050a21d05a93247a326b1330",
+    "reconstruction/core_spec/position_math139.py": "79fe9a84dba5fa4f1f7828c4b018d9045f7b653e573e270c0051e7131c64265a",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position139_data.py": "872dd5d3701cb1344f1a838e2c992117d1f84b844e0d09a0e2d0b9dc32831b81",
+    "reconstruction/core_spec/world_position139_v2.py": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_combat139_oracle.py": "7e4fd1cf82238561a407857483e3ca19ae55697e6afcab5e608c8532779a7b95",
+    "scripts/build_natural_npc139_oracle.py": "40feea018047473f0f48e5024cfb475d67fd59330a84eed82d426b8df540f6f1",
+    "scripts/build_npc_spawn139_oracle.py": "b6b1cf248cdf7c68f234a59407ef656e96a505be4ff1a847534677473587ff1f",
+    "scripts/check_natural_npc139.py": "a17bf19c52dd8ca9c5c915996f100ff57fd04fce7fac1ce75700e7080a4d61cc",
+    "scripts/load_world_position139_inputs.py": "2e069ad38eea8430ba3133f9e684ad5788731851a7e205b5c3d991b48036e1ae",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_natural_npc139_oracle.mjs": "a5172815bfa96094b13e304ec990e2e42510e6223de8ceeb20a4476614348c10",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "source_files": 31,
+  "production_sources": 20,
+  "local_edges": 71,
+  "formal_cases": 22,
+  "full5719_calls": 88,
+  "new169_packets": 88,
+  "cumulative169_packet_comparisons": 220,
+  "formal_differences": 0,
+  "record_comparison": {
+    "known_bytes": 101598,
+    "unknown_bytes": 50466,
+    "observed_nonzero_unknown_bytes": 24297,
+    "unknowns_not_filled": true
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "cases": 22,
+    "full5719_calls": 88,
+    "original_none_position_argument": true,
+    "internal8740_calls_notdirectlyinstrumented": true,
+    "snapshot_restores": 22,
+    "healthy_v2_input": true,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "allocator_calls": 58,
+    "stack_checks": 146,
+    "peak_memory_bytes": 111804416,
+    "memory_cap_bytes": 268435456,
+    "original_full_callees_preserved": true,
+    "only_export_section_changed": true,
+    "native_executions": 0,
+    "complete_games": 0
+  },
+  "process": {
+    "pid": 90877,
+    "pgid": 90877,
+    "exit_code": 0,
+    "seconds": 2.615088916994864,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "validator": {
+    "pid": 90666,
+    "pgid": 90666,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 6.916872707995935
+  },
+  "static_input_proof_sha256": "6f200ec4983d696b2e94e75daecbfed2f146f29457299a1a6455f3a6c193697c",
+  "world_provenance": {
+    "receipt": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/asset-world139-owned-20261102T031312.028310Z/model/receipt.json",
+    "receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+    "world_artifacts": {
+      "terrain": {
+        "file": "terrain-query.bin",
+        "bytes": 4022968,
+        "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e"
+      },
+      "navigation": {
+        "file": "navigation.bin",
+        "bytes": 78400,
+        "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+        "origin_xy_bits": [
+          3323265024,
+          3292610560
+        ],
+        "width": 280
+      },
+      "secondary": {
+        "file": "secondary-height.u32le",
+        "bytes": 1254400,
+        "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5",
+        "origin_xy_bits": [
+          3323265024,
+          3292610560
+        ],
+        "width": 560
+      }
+    },
+    "query_scalars": {
+      "center_xy_bits": [
+        3323121664,
+        3290316800
+      ],
+      "radius_bits": 1123024896,
+      "fallback_height_bits": 1116209152,
+      "primary_present": false,
+      "flat_present": false
+    },
+    "source": "Independent139rawassetproducer; generic135-named algorithms reusedwithoutoldacceptance",
+    "original_memory_input": false
+  },
+  "world_source_ranges": 2318,
+  "world_source_bytes": 5950608,
+  "world_source_digest": "fdd8a0dad2966135695481ef66a09d79ebcce467efc84bb163e0e331fd6c8ad0",
+  "completeGame_observed_before_and_after_bytes": 456192,
+  "Game_unknown_allocpointers_notpredicted": true,
+  "allowed_Game_changes": [
+    "1720..1735 RNG",
+    "1784..1795 NPCheader",
+    "1880..1891 packetheader",
+    "2408..2411 counter"
+  ],
+  "constructor_rng_lineage": {
+    "Appseed0_explicit_fixture": true,
+    "LCGafter4928": "1442695040888963407",
+    "expected_four_words": [
+      3713081075,
+      3463651554,
+      2696601855,
+      1334331845
+    ],
+    "actual_four_words": [
+      3713081075,
+      3463651554,
+      2696601855,
+      1334331845
+    ],
+    "counter10_preserved": true,
+    "RNG_preserved": true,
+    "uncontrolled_naturalApp_claim": false
+  },
+  "pilot_receipt": "evidence/natural-npc139-oracle-20261102T044253.606514Z/comparison.json",
+  "pilot_sha256": "aa2cc510f7675eabc0e09ee9a5eff6e71adce3a80a4fc1bb95cfd9987761bce8",
+  "pilot2cases8calls_not_added_toformal": true,
+  "model_diagnostics_not_original_internal_counters": true,
+  "formal_dependencies": {
+    "position_v2_receipt": "evidence/world-position139-v2-oracle-20261102T042946.182486Z/comparison.json",
+    "position_v2_sha256": "0bcff452e5ad0cb93399e3e215200309bfe02d8d368afe0b0b33a3b0f1ab8b3b",
+    "NPC_fresh_Some_sha256": "97a19153ff42e9b3ad692bd0edf134a52ecc0c4e2db5fc1f36a52b43f427e3e4"
+  },
+  "scope": "Four sequential full1395719 with realNone8740→5719yaw/jitter interleaving; healthyv2Rc; expectedraw139world; defaultElwynnNPC; controlledfiniteposition/velocity/path/RNG/backing; notfull1108",
+  "unknowns": [
+    "full1108",
+    "naturalApp/profile/storageproducer",
+    "naturalpathMapowner",
+    "independentworldRcowner",
+    "allocationheaderphysicalpointers",
+    "arbitraryplayerXY",
+    "nondefaultNPCdefinitionsandmodes",
+    "completegame"
+  ],
+  "native_executions": 0,
+  "complete_games": 0,
+  "old_badcontext_loaded": false,
+  "old_version_acceptance_transferred": false,
+  "commit_push_performed": false,
+  "markdown_sha256": "367546d924e5501516790a6a32ea22ebff2a26f3f04876c2147da65d128b5fca"
+}

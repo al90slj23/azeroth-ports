@@ -1,0 +1,176 @@
+{
+  "status": "author_scoped_full922_differential_passed_pending_different_author_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "comparison": "evidence/cast139-oracle-20261102T043654.185463Z/comparison.json",
+  "comparison_sha256": "77fa62cb19d90f17ec91773593dd21bb97e7311f0f2f1052ebe5fec88321c9be",
+  "cases": 110,
+  "complete_original922_calls": 184,
+  "differences": 0,
+  "compared": {
+    "full_unit_byte_occurrences": 1002672,
+    "owned80_byte_occurrences": 14720,
+    "complete_launch306_messages": 157,
+    "complete_launch306_payload_bytes": 9858,
+    "original_592_or_HP169_packet_semantics_predicted": false
+  },
+  "source_closure": {
+    "files": 15,
+    "production": 6,
+    "edges": 24,
+    "source_sha256": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/cast139.py": "88ad210ea3a959b62f19c0fd5f6b43a14983609d7bcb69132166e6c475b50fd0",
+      "reconstruction/core_spec/combat139.py": "4f7f8f00411583608d4c1d8e917733ae1b8068b10ad2f55b63dde675c917fc89",
+      "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "scripts/build_cast139_oracle.py": "27fcc53757fc90293852c4aa5e754afa84bdb5b08e15327ed6ed9ca37fc961e7",
+      "scripts/check_cast139.py": "ea5ff21a3a8c92cef0a4f7872c648c8d6703ca32e3af3b8d034581a287af39a3",
+      "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/run_cast139_oracle.mjs": "dd969bc1acb854b28414473cac1fc13e1c4e4d135ec5deb5959ae106015b800b",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    }
+  },
+  "static_functions": 15,
+  "static_trace_sha256": "dfc678176f9b7b492bd19a77c96ca8046ba287174f013515a6fecf8405479cf4",
+  "definition": {
+    "pointer": 5882740,
+    "ability_id": "cleave",
+    "raw88_hex": "0000000000000000000000003aa5590006000000ccb5590006000000d2b5590016000000e8b55900030000004d03000000003c420000c03f0000e04000000000030000000000000000000000000000000000000005000000"
+  },
+  "rules": {
+    "normal_kind40": -1,
+    "normal_header64": -1,
+    "boss_header244": -1,
+    "classification_byte": 424,
+    "priority_until": 380,
+    "damage_school_bonus_until": 372,
+    "interpolation_from": [
+      316,
+      320
+    ],
+    "interpolation_to": [
+      328,
+      332
+    ],
+    "movement_start": 340,
+    "duration": 344,
+    "ordinary_near_squared": 36,
+    "radius_squared_inclusive": true,
+    "critical_uses_strict_greater": true,
+    "spell_sets": [
+      [
+        664,
+        668,
+        672
+      ],
+      [
+        676,
+        680,
+        684
+      ],
+      [
+        724,
+        728,
+        732
+      ]
+    ],
+    "first_set_skip": "G552 !=0 or G908&1",
+    "effect0_2189": "no Game/target mutation",
+    "launch306": "packed source twice,spellU32,flagsU16=256,countU8,ordered rawGUID64s,missU8=0,targetmaskU16=2,packedfirst"
+  },
+  "model_APIs": [
+    "CleaveDefinition139",
+    "CleaveState139",
+    "cleave_targets139",
+    "cast_cleave139",
+    "cleave_launch306139"
+  ],
+  "process": {
+    "pid": 77015,
+    "pgid": 77015,
+    "exit_code": 0,
+    "seconds": 4.331161624999368,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "fresh_instances": 110,
+    "snapshot_restores": 0,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "stack_checks": 547,
+    "all_normal_returns": true,
+    "peak_memory_bytes": 20709376,
+    "memory_cap_bytes": 33554432,
+    "observation_bytes": 2189527,
+    "output_bytes": 2106277
+  },
+  "author_sources": {
+    "reconstruction/core_spec/cast139.py": "88ad210ea3a959b62f19c0fd5f6b43a14983609d7bcb69132166e6c475b50fd0",
+    "scripts/build_cast139_oracle.py": "27fcc53757fc90293852c4aa5e754afa84bdb5b08e15327ed6ed9ca37fc961e7",
+    "scripts/run_cast139_oracle.mjs": "dd969bc1acb854b28414473cac1fc13e1c4e4d135ec5deb5959ae106015b800b",
+    "scripts/check_cast139.py": "ea5ff21a3a8c92cef0a4f7872c648c8d6703ca32e3af3b8d034581a287af39a3"
+  },
+  "scopes": [
+    "Real current139 cleave definition5882740/execution5/effect0/spell845. Synthetic Game, explicit complete80B owned and known432B normal targets; no snapshot.",
+    "Normal kind40/header64/boss244 are-1 andclassification424 is0/1.0..63targets; time10,empty item/modifier/proc inputs,phase0/1,nonlethal damage only.",
+    "Finite interpolation/radius inclusivity,380 priority,ordinarynear6/HPordering,strict critical,RNG,wrapping targetcount,ordered base/life damage,logical spellsets and owned80 preservation.",
+    "157 complete306 launch packets9858B compare exact,including ordered targets and sparse/zero GUID bytes.592/HP169 remain retained observations.",
+    "Tie/edge cases include20/21/32/63 equaldistance/equalHP units; their full ordered306 list is compared. This is not an exhaustive arbitrary-large-list sorting proof."
+  ],
+  "history": [
+    {
+      "directory": "evidence/cast139-oracle-20261102T043143.182996Z",
+      "cases": 4,
+      "calls": 5,
+      "classification": "pilot_not_added",
+      "comparison_sha256": "bb13bd6d745c189746d56044b717b46db13491df65b254924033d589e27a6869"
+    },
+    {
+      "directory": "evidence/cast139-oracle-20261102T043212.947622Z",
+      "cases": 102,
+      "calls": 176,
+      "differences": 36,
+      "classification": "rejected_wrong_priority372_instead_of_current380; source_snapshots_and_actual_preserved",
+      "comparison_sha256": "45b9fdde4f316f8b525013b424a79606ec454d6505e490934cd08cffc7073887"
+    },
+    {
+      "directory": "evidence/cast139-oracle-20261102T043320.590395Z",
+      "cases": 103,
+      "calls": 177,
+      "classification": "corrected_preliminary_not_added",
+      "comparison_sha256": "32d95eb9d5d3ad44b28d3f0cdd87d97744793fc1c46671bae4ea021af2b2089b"
+    },
+    {
+      "directory": "evidence/cast139-oracle-20261102T043523.100176Z",
+      "cases": 110,
+      "calls": 184,
+      "classification": "extended_packets_and_ties_before_disclosure_and_static_binding_strengthening_not_added",
+      "comparison_sha256": "12d4e8d21fd17c6d49be46d83f25ce537e64cee488984ae01f307c5d1776c248"
+    }
+  ],
+  "limitations": [
+    "Only current139 cleave/effect0, normal432targets, empty proc/item/modifier inputs and nonlethal numeric continuation.",
+    "All432unit bytes,owned80,RNG,f64accounting,three logical spell sets and return are compared.",
+    "Complete cleave launch306 packet is predicted; damage592/HP169 and other packet payloads and rawGame are observations.",
+    "Model selectedIDs are checked as ordered306 target list; internal hits/draw counts remain model diagnostics,not original instrumentation.",
+    "SyntheticGame,no naturalApp/world/input/owned scheduler/death or Windows/fullgame acceptance.",
+    "Only current saved139 bytes; no135/138 passed case is transferred. Pure arithmetic/data production consumes an explicit current88B static definition extracted by the builder; it reads no captured Game/original execution.",
+    "Full Game knownness/physical vector and packet allocation/free lifetimes,spell scheduling,death,UI,naturalApp,world,full884 or Windows gameplay are not accepted.",
+    "The old372 field is a distinct current913 school-bonus field; this cast target priority reads380.",
+    "Other cast identities,execution kinds,phase modes,reserved callbacks,talents,procs and arbitrary definition mutations remain unknown."
+  ],
+  "full_mainloop_frames": 0,
+  "native_executions": 0,
+  "complete_games": 0,
+  "installations_modified": false,
+  "saves_modified": false,
+  "markdown_sha256": "0d85e3074117f2fca73df4b8d02e59cf29f13a109df6cccade50ccc656bce3d6"
+}

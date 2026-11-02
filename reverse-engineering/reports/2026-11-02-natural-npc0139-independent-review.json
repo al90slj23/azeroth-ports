@@ -1,0 +1,122 @@
+{
+  "status": "pass_with_declared_healthy_snapshot_four_None_consumer_limits",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/stats138_review",
+  "review_script_sha256": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+  "independent_receipt": "evidence/natural-npc139-independent-review-20261102T045700.418633Z/review.json",
+  "independent_receipt_sha256": "ad1296aa8438c35830485d1a30ae855421aa10474757d716cc9d4ec3b878b52e",
+  "owned_terminal": "evidence/natural-npc139-independent-review-owned-20261102T045659.335046Z/process-terminal.json",
+  "owned_terminal_sha256": "f265d7b0033de5291a16175cf383f64a1d7e16e715ffb11e9d1daae182a92ea1",
+  "author_comparison_sha256": "bc6f71760ce62c824a176c8ccc2351782412b725a6f5bc0cfca5d0823dac9d1d",
+  "author_handoff_sha256": "75d62f2497f7a2a14c0c6eb9654d2b5dd1190a1ac4210e357b4d3f86b73272dc",
+  "static_input_proof_sha256": "6f200ec4983d696b2e94e75daecbfed2f146f29457299a1a6455f3a6c193697c",
+  "cases": 22,
+  "full5719_None_calls": 88,
+  "independent_mismatches": 0,
+  "allocation_modes": {
+    "reserve0to4": 13,
+    "caller4": 9
+  },
+  "counts": {
+    "known": 101598,
+    "unknown": 50466,
+    "unknown_nonzero": 24297,
+    "Game_conserved_nonowned_bytes": 224224,
+    "Game_RNG_bytes": 1408,
+    "Game_counter_bytes": 352
+  },
+  "new169_messages": 88,
+  "cumulative169_prefix_observations": 220,
+  "source_closure_count": 31,
+  "production_sources": 20,
+  "local_import_edges": 71,
+  "author_owned_files": 7,
+  "reference_helpers": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2"
+  },
+  "prior_independent_review_dependencies": {
+    "position_v2": {
+      "path": "evidence/world-position139-v2-independent-review-20261102T044432.168408Z/review.json",
+      "sha256": "13cc31dd94a4ea71a49a8c51874f3d415a202f65f0378b6c60848f29c7562893"
+    },
+    "SomeXYZ_NPC": {
+      "path": "evidence/npc-spawn139-independent-review-20261102T033638.669740Z/review.json",
+      "sha256": "3bc74e87c54f591426563a243b1ad80732cb1a5397383c019186c0d6d2153a4b"
+    }
+  },
+  "source_status_note": "Pure Reference in review_world_position139.py already uses correct current-WAT direct f32 norm. The author v1 production module is not imported; its rejection remains unchanged.",
+  "controlled_seed_lineage": {
+    "App_seed_before": 0,
+    "LCG_after": "1442695040888963407",
+    "constructor_PCG_words": [
+      3713081075,
+      3463651554,
+      2696601855,
+      1334331845
+    ],
+    "firstcase_not_overwritten": true,
+    "other21_controlled_overrides": true
+  },
+  "current_batch_constructor_executions": 0,
+  "current_batch_cached6786_executions": 0,
+  "current_batch_opening1108_executions": 0,
+  "nonexport_sections_byte_identical": true,
+  "runtime": {
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "cases": 22,
+    "full5719_calls": 88,
+    "original_none_position_argument": true,
+    "internal8740_calls_notdirectlyinstrumented": true,
+    "snapshot_restores": 22,
+    "healthy_v2_input": true,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "allocator_calls": 58,
+    "stack_checks": 146,
+    "peak_memory_bytes": 111804416,
+    "memory_cap_bytes": 268435456,
+    "original_full_callees_preserved": true,
+    "only_export_section_changed": true,
+    "native_executions": 0,
+    "complete_games": 0
+  },
+  "author_owned_process": {
+    "pid": 90877,
+    "pgid": 90877,
+    "exit_code": 0,
+    "seconds": 2.615088916994864,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_executions": {
+    "author_model": 0,
+    "author_checker": 0,
+    "author_builder": 0,
+    "original": 0,
+    "native": 0
+  },
+  "limits": [
+    "22restored healthyv2snapshot fixtures,88full5719 withNone position. No fresh1600/6786/1108 runs in this batch;firstcase preserves supplied snapshotconstructorRNG/counter,independently predicted from explicitly controlled Appseed0 LCG→1600PCG only.",
+    "Everyposition8740 occurs before thatNPCyaw/jitter;all88finalRNGstates/XYZ/full169/recordmasks rechecked. Internal8740 calls,attempt/draw/shrink counts inferred by WAT/reference,not directly instrumented original counters.",
+    "DefaultElwynn definition0,time0/mode0/member1/level1/playerGUID0/centerXY only,explicit velocities/Z/pathMap and21RNG/counter overrides. This is a naturalNone callsite component,not natural fullApp/profile/world ownership or complete1108.",
+    "9caller432backing cases and13actual reserve0to4 cases. Allfour slots are compared with101598known+50466None;24297nonzero unknown observations never fill unknown cells.",
+    "224224Game nonowned byte occurrences are conserved;fourRNGwords andcounter are predicted,vector/packetheader pointer and capacity allocations remain observed with declared count/domain checks. Other constructorGame fields are not independently reconstructed here.",
+    "Full169payloads independently predicted:220cumulative prefix observations are88new producer messages. No other packets/entity callbacks/UI/fullgame/native acceptance.",
+    "WorldRc124/range digest and pathimmutability are frozenrunner observations/guards,not reviewer snapshot parsing or independent Rc production.146stack checks are runner assertions/aggregate,not serialized per call.",
+    "Expectation reads raw139canonical only;no reference snapshotmemory read. Current fixedWAT/validated pure reference functions reused as algorithms,not oldbehavior passingcases. Trace script/static-input proof is posthoc bound,not retroactively partof31experimental pre-run sources.",
+    "Pythonopen audit is not OSsyscall audit. Source opening1108 fourNone window is static evidence only;its preceding1795 and other opening logic were not executed/reconstructed by this batch."
+  ],
+  "review_history": [
+    {
+      "owned_directory": "evidence/natural-npc139-independent-review-owned-20261102T045617.581123Z",
+      "result": "Independent helper diagnostic dictionary omitted id and raisedKeyError before comparison; corrected reviewer-only dictionary,0author/original execution. Original failed receipt retained."
+    }
+  ]
+}
