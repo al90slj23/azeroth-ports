@@ -1,6 +1,8 @@
 # Azeroth Ports
 
-官方元数据本轮核对至 **2026-11-01T23:57:03Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](reverse-engineering/evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reverse-engineering/reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reverse-engineering/reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reverse-engineering/reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。最新138的[默认构造162次fresh1571及独审](reverse-engineering/reports/2026-11-02-initial-state0138.md)也已通过，覆盖502B已知投影及40个完整速度包；borrowedflatview、累计338580个None和未进入phase1均单独标明。现有安装包与存档未替换。
+当前研究目标为 **0.139.0 / `f79c5e2b4`**，官方清单于 **2026-11-02T09:54:50Z** 再核未变；Windows 与 Web 原件均已固定版本、构建和 SHA。[当前验收清单](reverse-engineering/README.md)包含地图构造、受控完整开局及限定战斗／死亡等独立实现和原件差分；拾取与首次选卡继续接入同一状态。完整自然 App／主循环、独立渲染、Windows 原生执行和独立完整一局均未验收。安装包与存档未替换。
+
+历史138核对：官方元数据本轮核对至 **2026-11-01T23:57:03Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](reverse-engineering/evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reverse-engineering/reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reverse-engineering/reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reverse-engineering/reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。最新138的[默认构造162次fresh1571及独审](reverse-engineering/reports/2026-11-02-initial-state0138.md)也已通过，覆盖502B已知投影及40个完整速度包；borrowedflatview、累计338580个None和未进入phase1均单独标明。现有安装包与存档未替换。
 
 本轮固定135的[移动→战斗→真实符文拾取](reverse-engineering/reports/2026-11-02-opening-moving-rune0135.md)完成新460帧／4选卡／44次完整968输入／6488阶段／6490原件入口，0声明差异，[独审通过](reverse-engineering/reports/2026-11-02-opening-moving-rune0135-independent-review.md)。第444帧（raw索引443）消费实际刷出的kind5符文，停止移动后继续16帧；恢复请求133，但当时满血266，故只证明cap、移除与通知链，不称非零回血增量。117源／100production、snapshot／独立预解析world／部分类型App和外部clock边界明确。
 
@@ -9,6 +11,10 @@
 历史[静止玩家750帧物理状态闭环](reverse-engineering/reports/2026-11-02-opening-player-sources0135.md)及[raw451资源→750帧模型入口](reverse-engineering/reports/2026-11-02-raw-physical7500135.md)保持各自范围，后继[raw451→移动460模型入口](reverse-engineering/reports/2026-11-02-raw-moving-rune0135.md)已另跑，79项终态模型组合一致，新增原件case仍为0；各批计数不相加。后续纯模型探路到920帧／7选／level8，停在玩家致死受伤边界，**新增原件case为0**；下一步恢复死亡／复活、冻结运动和失败recap，再做连续原件验证。[普通敌人来源163组完整1073与独审](reverse-engineering/reports/2026-11-02-incoming-source0135.md)补齐名称／分类→history组件，尚未接连续死亡。[死亡40组](reverse-engineering/reports/2026-11-02-player-death0135.md)与[recap103组](reverse-engineering/reports/2026-11-02-player-death-recap0135.md)已分别独审，但仅空地形组件域；实际非平地停止运动和有序AI队列仍待接，不能宣称完整失败一局。以下较早收据保持各自历史范围。
 
 Aethus 原作游戏的非官方社区封装与逆向研究仓库。现有社区版本使用原作提供的核心，没有从原作 Rust 源码重新编译。
+
+资源与运行逻辑分开：历史实验曾通过本机MPQ读取器提供包内文件；当前139世界构造使用原作静态资源中的WDT／ADT地图与M2／WMO模型等独立文件。既有[MPQ读取器](reverse-engineering/reconstruction/resource_spec/mpq.py)仅支持已明确实现的classic v0范围，不能据此称任意资源包都可直接使用。地图几何读取已验证，不代表贴图／材质／动画／音频或Logo来源全部恢复。
+
+独立重建负责资源解析与加载、碰撞和导航、画面与动画，以及刷怪、技能、伤害、成长、存档和联机。复用素材本身不会恢复Azeroth Survivors的玩法规则；现有社区封装仍运行原作核心，与独立重建的验收分开。
 
 ## 两个板块
 
@@ -47,7 +53,7 @@ Aethus 原作游戏的非官方社区封装与逆向研究仓库。现有社区�
 
 [自然原App/Metal观察](reverse-engineering/reports/2026-11-01-full-app0135-probe.md)（[观察独审通过](reverse-engineering/reports/2026-11-01-full-app0135-independent-review.md)）已显示正常中文角色选择页，8次完整idle880返回、0 page error、999次HTTP均200；App Game tag2，尚未进入一局。CSP阻止presence外发，不能称“没有联网尝试”。这是执行原程序的观察，独立gameplay帧仍为0；早期SwiftShader错误和首Metal批的研究observer/font边界完整保留，独立App/880及整局仍未恢复。
 
-[真实世界与开局观察](reverse-engineering/reports/2026-11-01-entry-world0135-probe.md)的453份MPQ／561次GET仍是历史原件观察；该历史资源/开局组合不增加bootstrap或主切片帧。history的[164组/924调用组件](reverse-engineering/reports/2026-11-01-incoming-history0135.md)与[真实DBC9组/37调用组合](reverse-engineering/reports/2026-11-01-browser-history0135-independent-review.md)分别保留，各层不相加。现有安装包不随研究目标自动更新，详见[版本策略](reverse-engineering/VERSION_STRATEGY.md)与[覆盖清单](reverse-engineering/RECONSTRUCTION.md)。
+[真实世界与开局观察](reverse-engineering/reports/2026-11-01-entry-world0135-probe.md)的453份MPQ内文件／561次GET仍是历史原件观察；该历史资源/开局组合不增加bootstrap或主切片帧。history的[164组/924调用组件](reverse-engineering/reports/2026-11-01-incoming-history0135.md)与[真实DBC9组/37调用组合](reverse-engineering/reports/2026-11-01-browser-history0135-independent-review.md)分别保留，各层不相加。现有安装包不随研究目标自动更新，详见[版本策略](reverse-engineering/VERSION_STRATEGY.md)与[覆盖清单](reverse-engineering/RECONSTRUCTION.md)。
 
 [真实915观测](reverse-engineering/reports/2026-11-01-effect-system0135-probe.md)确认本批时钟和两类效果队列保持空；后继主切片使用独立模型重新生成预期，保留原始三域读回。非空延迟动作另有500组对照（383正常、117预期原版错误），不代表全部915。完整880还缺其他入口、2376特殊事件及前段/party/终态组合，独立完整自然帧和独立一局未完成。
 

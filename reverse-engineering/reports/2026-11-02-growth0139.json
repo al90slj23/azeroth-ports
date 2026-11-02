@@ -1,0 +1,196 @@
+{
+  "kind": "current139_first_level_gain_choices_select",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "author": "self_buffs119_review",
+  "independent_review_pending": true,
+  "final_comparison": "evidence/growth139-oracle-20261102T060448.902434Z/comparison.json",
+  "final_comparison_sha256": "bd70df451612fce78bd0e8074a9c975acaf790e037caecc02c9fd8052bab8169",
+  "source_hashes": {
+    "reconstruction/core_spec/growth139.py": "046d30aacfc3775bfdb2c022e61e3f1b655e858ebfdf865cee6e8e9419ea2169",
+    "reconstruction/core_spec/candidates139.py": "4ff5b2c3706247a9bb0f733bda6b7b2a9d46bbb19ab46b4d7f418b8e3ee70954",
+    "reconstruction/core_spec/candidates139_data.py": "efb653784d0fe24bdc35cf65437a5226eff64888252f33826a8341645eaf8343",
+    "reconstruction/core_spec/select139.py": "d801746fb135cd8a85bb69f5105c1cbe519e312dc1431e858a19b37f53a17412",
+    "scripts/build_growth139_oracle.py": "2d489c56450d21ece38d22f168d1b8c5ad43414f965401001132d17f8b553731",
+    "scripts/check_growth139.py": "85cff6431f7a9de384fd82f2e2df00e5857358ac7a88391467baf69a558455b5",
+    "scripts/run_growth139_oracle.mjs": "4eee17b46919baa163fa37105c2887531559c0ef585669fa78d67bed95399f64"
+  },
+  "input_fixture_count": 24,
+  "unique_input_combinations_excluding_id": 21,
+  "runtime": {
+    "cases": 24,
+    "fresh_instances": 24,
+    "full1600_calls": 24,
+    "real83304_calls": 24,
+    "full4677_calls": 24,
+    "full1093_calls": 18,
+    "full2181_calls_notinstrumented": true,
+    "snapshot_restores": 0,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "allocations": 96,
+    "stack_checks": 186,
+    "peak_memory_bytes": 20709376,
+    "memory_cap_bytes": 67108864,
+    "only_export_section_changed": true,
+    "original_callees_intact": true,
+    "native_executions": 0,
+    "complete_games": 0,
+    "error": null
+  },
+  "original_full_gain4677": 24,
+  "original_full_select1093": 18,
+  "real_three_card_phase2_count": 19,
+  "internal2181_calls_inferred_not_direct_instrument": true,
+  "comparison": {
+    "differences": 0,
+    "complete23_derived": true,
+    "all_owned80": true,
+    "logical_candidate_variants_IDs_tiers_kinds_order": true,
+    "full_rng": true,
+    "keyed_field_projection": "Declared logical subset22/28/1109/34/716/717;other keyedfieldsnot independentlyreconstructed.",
+    "live32_known": 432,
+    "live32_None": 144,
+    "observed_nonzero_live_None": 16
+  },
+  "source_count": 21,
+  "production_source_count": 12,
+  "source_import_edges": 40,
+  "selected_new_cards": [
+    {
+      "ability_id": "battle_shout",
+      "tier": 2,
+      "count": 1
+    },
+    {
+      "ability_id": "battle_shout",
+      "tier": 3,
+      "count": 1
+    },
+    {
+      "ability_id": "bloodthirst",
+      "tier": 1,
+      "count": 1
+    },
+    {
+      "ability_id": "demo_shout",
+      "tier": 0,
+      "count": 2
+    },
+    {
+      "ability_id": "demo_shout",
+      "tier": 3,
+      "count": 1
+    },
+    {
+      "ability_id": "execute",
+      "tier": 0,
+      "count": 7
+    },
+    {
+      "ability_id": "execute",
+      "tier": 1,
+      "count": 1
+    },
+    {
+      "ability_id": "rend",
+      "tier": 0,
+      "count": 1
+    },
+    {
+      "ability_id": "rend",
+      "tier": 4,
+      "count": 1
+    },
+    {
+      "ability_id": "shield_slam",
+      "tier": 0,
+      "count": 2
+    }
+  ],
+  "current_static_bodies": [
+    "1093",
+    "1173",
+    "1501",
+    "1542",
+    "1600",
+    "2181",
+    "4603",
+    "4677",
+    "11033",
+    "25613",
+    "26364",
+    "27167",
+    "27572",
+    "28155",
+    "28657",
+    "30022",
+    "34853",
+    "35988",
+    "83304",
+    "86979"
+  ],
+  "rules": {
+    "entry": "Fresh1600 produceddefaultownedcleave80/racial80/emptycontainers fromexplicitP376. Real83304 initializesEnglish. Setphase1 ascomponentinput;mode0 remains0.",
+    "gain": "4677 wrappingaddXP,orderedf32 threshold,incrementlevel/pending then1542 andcause0/.2maxHPheal perlevel;fields716/717updatedevenwithoutlevel.",
+    "choices": "Realphase1+pending+guards reaches2181 kind0;warriorkit11 minusownedcleave10newweight1.6 pluscleaveupgradeweight1.3;orderedweighted sampling/shuffle/tier weights followcurrent139.",
+    "select": "Real1093 acceptsnichevariant andtier;newowned80 via27167/28657;1542;4603 decrements pending,clearscards,returnsphase1/selection255/flag2581=1,appendsinvulnerability12/1020expirynow+1.",
+    "None": "live32+12..19unwrittenremainNone;UI80allocatedstrings/pointers/physicalGameheadersnotzero-filledorreusedasexpectations."
+  },
+  "source_admission_readback": "evidence/growth139-oracle-20261102T060448.902434Z/source-admission-readback.json",
+  "source_admission_readback_sha256": "20a415697495811a624a3b6a8e8d92e7ec72350d95e760e7ea46940eb7acd35d",
+  "expected_before_original": true,
+  "postrun_artifacts": {
+    "inputs.json": "53406dfc5b8834f5b3de38b550460d77d8fbae1358eabcacf5f8f71ab2e2baf3",
+    "expected.json": "60a255fb2cfca17112ac6813359d87a4c4be4c35c6d45b89edde65735625769b",
+    "config.json": "9c4953d841cbef17c5d5950370c2e4455fe0bf2a154a8f4b723f1b300400b7a1",
+    "manifest.json": "df1c4c8138bf73e7c91dee54f43f7ef9737e0b578eca81a2c486b0047dcf9df6",
+    "stdout.jsonl": "1eb584d7614759cc1c65398308d7a0f7686e7e18788842c7454a9f7b26ef60bb",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.json": "4dce6f49586455a6e6014c6d501729c9680f5f1c8e58941f4dbcece96334e6d8",
+    "process-terminal.json": "f007da4f575933b58ffb734c7bb2594bd35fd8b5e24a316250114248e88a001d"
+  },
+  "history": [
+    {
+      "comparison": "evidence/growth139-oracle-20261102T055155.714215Z/comparison.json",
+      "sha256": "fd3397cfa4c51e95801b9204954d11c880b0b12d446cd3399d68f420c78c0269",
+      "gain": 3,
+      "select": 2,
+      "counted_in_final": false
+    },
+    {
+      "comparison": "evidence/growth139-oracle-20261102T055449.920119Z/comparison.json",
+      "sha256": "237146a127c2763f630965292ff76adcf6391f06e595d0a6f45fcbca0c8d5537",
+      "gain": 3,
+      "select": 2,
+      "counted_in_final": false
+    },
+    {
+      "comparison": "evidence/growth139-oracle-20261102T055717.487703Z/comparison.json",
+      "sha256": "b552d69daced720f64186f03953235561c56f750b8ac9d6d4fce69606ecb5883",
+      "gain": 24,
+      "select": 18,
+      "counted_in_final": false,
+      "purpose": "OnlyrunnerEOFnewlinechanged;inputsandexpectedexactlyequal;priorfullbatchpreserved"
+    }
+  ],
+  "original_study_totals": {
+    "gain4677": 54,
+    "select1093": 40,
+    "constructor1600": 54,
+    "locale83304": 54
+  },
+  "limitations": [
+    "Freshcomplete1600+real83304;borrowedflatquery andemptyresearchprofile are explicit inputs,notApp/worldRc.",
+    "Real4677 invokes2181 inphase1 andreal1093 selectsfirstcard;no mode/phase bypass.",
+    "CandidateUI80strings,allpresentation packets,fullkeyedfields andAura topology areobservations.",
+    "Only firstHumanWarrior/emptyworld firstnewability-selection;nonemptyworld/resume orupgradecardexplicitPending.",
+    "NumericdynamicXPawards0..13,initiallevel1/xp0;u32wrap/multilevel/codegeneralizationnotacceptedbythismatrix.",
+    "Onlynew-cardselectionisselected;upgradecleavecanappearamongthreeactualcardsbutacceptingupgrade/goldremainsPending.",
+    "Real4NPC/aux/claimsnonemptyworldscrossingthresholdremainPendinginthisv1;noownerisclearedtoevade35988/25613.",
+    "Sourcecountsreadbackispostcaptureobservation;sourceproducerbodies/profileinputsareseparatelybound.",
+    "NonemptylivefurtherstatrecalculationPending;not completegrowth/mainloop/fullgame/native."
+  ],
+  "format_only_refresh_receipt": "evidence/growth139-format-refresh/change.json",
+  "format_only_refresh_sha256": "66b77305842c68e0986a42f5953651da3ae28238906b341ccb3f148d7a76b39a"
+}
