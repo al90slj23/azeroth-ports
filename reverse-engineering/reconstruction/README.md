@@ -1,6 +1,10 @@
 # 独立核心的可执行规格
 
-官方元数据本轮核对至 **2026-11-01T23:57:03Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](../evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](../reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](../reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](../reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。最新138的[默认构造162次fresh1571及独审](../reports/2026-11-02-initial-state0138.md)也已通过，覆盖502B已知投影及40个完整速度包；borrowedflatview、累计338580个None和未进入phase1均单独标明。现有安装包与存档未替换。
+当前功能对齐目标为官方0.139.1／b89633f9b，范围见[版本登记](version-support.json)。新增固定0.139.0／f79c5e2b4的[独立运行命令与输入说明](RUNNING139.md)，从原始资源生产世界并执行已恢复的自然战斗组件；[独立入口只读复核](../reports/2026-11-03-headless0139-independent-review.md)通过，新增原件调用0。完整游戏、渲染和全主循环仍未验收。
+
+以下为各固定历史版本的分域记录，按其日期和验证范围保留。
+
+历史138记录：官方元数据当时核对至 **2026-11-01T23:57:03Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](../evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](../reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](../reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](../reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。最新138的[默认构造162次fresh1571及独审](../reports/2026-11-02-initial-state0138.md)也已通过，覆盖502B已知投影及40个完整速度包；borrowedflatview、累计338580个None和未进入phase1均单独标明。现有安装包与存档未替换。
 
 本轮固定135的[移动→战斗→真实符文拾取](../reports/2026-11-02-opening-moving-rune0135.md)完成新460帧／4选卡／44次完整968输入／6488阶段／6490原件入口，0声明差异，[独审通过](../reports/2026-11-02-opening-moving-rune0135-independent-review.md)。第444帧（raw索引443）消费实际刷出的kind5符文，停止移动后继续16帧；恢复请求133，但当时满血266，故只证明cap、移除与通知链，不称非零回血增量。117源／100production、snapshot／独立预解析world／部分类型App和外部clock边界明确。
 
@@ -8,7 +12,7 @@
 
 历史[静止玩家750帧物理状态闭环](../reports/2026-11-02-opening-player-sources0135.md)及[raw451资源→750帧模型入口](../reports/2026-11-02-raw-physical7500135.md)保持各自范围，后继[raw451→移动460模型入口](../reports/2026-11-02-raw-moving-rune0135.md)已另跑，79项终态模型组合一致，新增原件case仍为0；各批计数不相加。后续纯模型探路到920帧／7选／level8，停在玩家致死受伤边界，**新增原件case为0**；下一步恢复死亡／复活、冻结运动和失败recap，再做连续原件验证。[普通敌人来源163组完整1073与独审](../reports/2026-11-02-incoming-source0135.md)补齐名称／分类→history组件，尚未接连续死亡。[死亡40组](../reports/2026-11-02-player-death0135.md)与[recap103组](../reports/2026-11-02-player-death-recap0135.md)已分别独审，但仅空地形组件域；实际非平地停止运动和有序AI队列仍待接，不能宣称完整失败一局。以下较早收据保持各自历史范围。
 
-本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**功能目标latest0.137.0 / `d171b8f9f`已有完整静态profile和非致死伤害80组/125调用0差异；0.136.0 / `fe24fb74c`只有静态profile/迁移候选、动态验收0**。本目录开局/同状态主循环组合实验继续锁定**0.135.1 / `90898d5e3`**；旧`0898d5e3`是历史截短alias，不改旧收据或原件。0.134.0 / 983346a7与更旧模型按其固定版本保留，各自范围见[版本支持清单](version-support.json)和[先前身份采集状态](../reports/2026-11-01-latest-version-state.md)，不能自动转计新版本通过。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
+本目录保存自己实现的规则代码，目标是逐步组成能独立运行的替代核心。**历史0.137.0 / `d171b8f9f`已有完整静态profile和非致死伤害80组/125调用0差异；0.136.0 / `fe24fb74c`只有静态profile/迁移候选、动态验收0**。本目录开局/同状态主循环组合实验继续锁定**0.135.1 / `90898d5e3`**；旧`0898d5e3`是历史截短alias，不改旧收据或原件。0.134.0 / 983346a7与更旧模型按其固定版本保留，各自范围见[版本支持清单](version-support.json)和[先前身份采集状态](../reports/2026-11-01-latest-version-state.md)，不能自动转计新版本通过。当前还不是可玩游戏，现有Mac/Android安装包继续保持原样。
 
 此前metadata核对截至 **2026-11-01T16:51:40Z**，官方manifest仍为同一137 EXE SHA、HTML stamp仍为`c628fd68823e`；仅复查清单/页面，未重取大二进制，见[核对收据](../evidence/official-latest137-closecheck-20261101T165135.413048Z/receipt.json)。
 

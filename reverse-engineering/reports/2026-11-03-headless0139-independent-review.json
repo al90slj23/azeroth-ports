@@ -1,0 +1,146 @@
+{
+  "status": "scoped_readonly_headless139_entry_and_historical_projection_review_passed",
+  "author_handoff_sha256": "4e3f77c60df4ca10feadbd255f472d431fcb2b39d422011b96d46c153cf5616e",
+  "author_verifier_sha256": "99b4d85331cb0fe4ec2cc531de14f01945139c49a359b399572efa5d9ef26225",
+  "run_receipt_sha256": "57832970a4bef0c130c71d2502398c05ffef171e094620ab4f128e982262c8c7",
+  "states_sha256": "49f6ae4e5d0ee806392c1370bdd85633074553e194f322b3c43ac7100ebcae0f",
+  "auditor_sha256": "12f44bb4fe95f7760cd03563ce801d5352996cdc4c74b04877a0803fb642957d",
+  "source_files": 93,
+  "import_edges": 392,
+  "project_IO_modules": 2,
+  "raw_assets_declared": 453,
+  "raw_assets_loaded": 451,
+  "raw_asset_bytes": 67281330,
+  "asset_requests": 461,
+  "world_full_artifacts_matched": 3,
+  "records": {
+    "opening": 3,
+    "components": 306,
+    "choice": 2
+  },
+  "counts": {
+    "assertions": 966194,
+    "known_bytes_compared": 959968,
+    "unknown_bytes_observed_only": 1140224
+  },
+  "read_audit_classifications": {
+    "declared_raw_asset": 902,
+    "declared_metadata": 2,
+    "declared_source": 93,
+    "own_output": 1
+  },
+  "run_process": {
+    "pid": 47196,
+    "pgid": 47196,
+    "exit_code": 0,
+    "seconds": 161.146106082997,
+    "error": null,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "prior_successful_run_process": {
+    "pid": 13094,
+    "pgid": 13094,
+    "exit_code": 0,
+    "seconds": 199.5534323749962,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "prior_wall_timeout_recovered": {
+    "pid": 26011,
+    "pgid": 26011,
+    "wrapper_exit_code": 1,
+    "child_exit_code": null,
+    "child_exit_code_not_recorded_by_failed_supervisor": true,
+    "observed_failure": "subprocess.TimeoutExpired after360wallseconds; finally terminated andwaited ownedchild",
+    "pid_missing": true,
+    "pgid_missing": true,
+    "new_original_calls": 0
+  },
+  "prior_metadata_time_correction": {
+    "prior_model_run": "reverse-engineering/evidence/raw-natural139-owned-20261102T162529.468980Z/model",
+    "prior_run_completed": true,
+    "correction": "Rename receipt creation time into distinct actual started_at_utc and finished_at_utc; no gameplay or resource rule changed",
+    "new_original_calls": 0
+  },
+  "new_CPU_watchdog": {
+    "previous": "reverse-engineering/evidence/raw-natural139-formal-owned-20261102T163050.069192Z",
+    "recovered_terminal": {
+      "pid": 26011,
+      "pgid": 26011,
+      "wrapper_exit_code": 1,
+      "child_exit_code": null,
+      "child_exit_code_not_recorded_by_failed_supervisor": true,
+      "observed_failure": "subprocess.TimeoutExpired after360wallseconds; finally terminated andwaited ownedchild",
+      "pid_missing": true,
+      "pgid_missing": true,
+      "new_original_calls": 0
+    },
+    "new_child_CPU_budget_seconds": 600,
+    "wall_watchdog_seconds": 3600,
+    "normal_outputs_not_reused": true
+  },
+  "asset_proof_sha256": "a6c5224cdc22e2c7ace3b807d9ec237309750f2efd421d0abcfb69d17834d4c2",
+  "source_proof_sha256": "5676d8323c1f9163851e84b55fead5e07c044fc847a55c564acb469fa3b25b67",
+  "author_original_executions": 0,
+  "author_model_executions": 0,
+  "author_CLI_or_verifier_executions": 0,
+  "new_original_acceptance_cases": 0,
+  "different_mathematical_reference": false,
+  "full884_frames": 0,
+  "native_windows_executions": 0,
+  "complete_games": 0,
+  "seconds": 15.033050333004212,
+  "limitations": [
+    "This is a new independent production entry plus historical-original projection comparison, not a new mathematical reference or neworiginal experiment.",
+    "Only declared CLI growth/player/knownNone physical/ledger projections compared; unknown bytes remain observations and packetstream/AIhistory/schedulerhiddenstate are not included.",
+    "Python open audit begins after source/metadata freezing and checks project opens; it is not OS-wide filesystem isolation. Static AST audit finds IO only in entry and rawprovider.",
+    "Three existing rawworld artifact hashes are matched, not independently rebuilt again by this reviewer.",
+    "Only firstThunderchoice policy; seed111actualDemo boundary retained. Full14/884/App/render/audio/save/network/nativeWindows/completegame remain unaccepted."
+  ],
+  "owned_start": {
+    "pid": 65216,
+    "pgid": 65216,
+    "command": [
+      "python3",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/scripts/review_headless139_run.py",
+      "--handoff",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/task-handoff.json",
+      "--handoff-sha",
+      "4e3f77c60df4ca10feadbd255f472d431fcb2b39d422011b96d46c153cf5616e",
+      "--verifier",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/historical-projection-check/comparison.json",
+      "--output",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/headless139-independent-review-owned-20261102T164441.935208Z/review"
+    ],
+    "deadline_seconds": 180,
+    "reviewer_sha256": "12f44bb4fe95f7760cd03563ce801d5352996cdc4c74b04877a0803fb642957d"
+  },
+  "owned_terminal": {
+    "pid": 65216,
+    "pgid": 65216,
+    "exit_code": 0,
+    "seconds": 15.46039379099966,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_terminal_sha256": "b6a5175442602127fd7b2cefdf309dc488706c5d42d6dffe9d8438ab666734a3",
+  "review_evidence": "evidence/headless139-independent-review-owned-20261102T164441.935208Z/review/review.json",
+  "review_json_sha256": "2ac9a6e897ed5fefb11f9d337de22391c2c6a5d3dbdb14c1b7b44b9dd2dc5f9f",
+  "author6_SHA_preserved": true,
+  "author_handoff": "evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/task-handoff.json",
+  "author_files": {
+    "reconstruction/resource_spec/asset_bundle139.py": "fcaa6e4c997e838a27f839d20fde4857af9750d1580fb981c88d2f18e92f2040",
+    "reconstruction/run_headless139.py": "a34d048bc8bdcfc360e6db6615929c085b98cd2eec1d734c2186e161564ad5c1",
+    "scripts/verify_headless139_run.py": "ffdc479265aa353ab877153a5e5927367205d39061843624d5bd6df8bf8b496b",
+    "reconstruction/RUNNING139.md": "58d7fcc15080d145981e8633db6911ad2e7278635c5d03c8badbfaa4c47bcd8d",
+    "reports/2026-11-03-raw-natural0139.json": "399904624e0464d84374899ce382cafc559dbcf24a943cc459c29217855b0cc6",
+    "reports/2026-11-03-raw-natural0139.md": "30de993f70e09d1248b1d6bedb13e3fe31d1ad7028221aa1c6edb7afbb25aa2a"
+  },
+  "reviewer_source": "scripts/review_headless139_run.py",
+  "source_change_allowlist": [
+    "scripts/review_headless139_run.py",
+    "reports/2026-11-03-headless0139-independent-review.json",
+    "reports/2026-11-03-headless0139-independent-review.md"
+  ]
+}

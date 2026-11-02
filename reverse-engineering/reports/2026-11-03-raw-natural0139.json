@@ -1,0 +1,242 @@
+{
+  "status": "independent_raw_resource_entry_and_historical_projection_pass_pending_different_author_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "author_files": {
+    "reconstruction/resource_spec/asset_bundle139.py": "fcaa6e4c997e838a27f839d20fde4857af9750d1580fb981c88d2f18e92f2040",
+    "reconstruction/run_headless139.py": "a34d048bc8bdcfc360e6db6615929c085b98cd2eec1d734c2186e161564ad5c1",
+    "scripts/verify_headless139_run.py": "ffdc479265aa353ab877153a5e5927367205d39061843624d5bd6df8bf8b496b",
+    "reconstruction/RUNNING139.md": "58d7fcc15080d145981e8633db6911ad2e7278635c5d03c8badbfaa4c47bcd8d"
+  },
+  "runtime_entry": "reconstruction/run_headless139.py",
+  "raw_provider": "reconstruction/resource_spec/asset_bundle139.py",
+  "runtime_receipt": {
+    "path": "evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/model/receipt.json",
+    "sha256": "57832970a4bef0c130c71d2502398c05ffef171e094620ab4f128e982262c8c7"
+  },
+  "historical_projection_comparison": {
+    "path": "evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/historical-projection-check/comparison.json",
+    "sha256": "99b4d85331cb0fe4ec2cc531de14f01945139c49a359b399572efa5d9ef26225"
+  },
+  "source_files": 93,
+  "raw_declared_files": 453,
+  "raw_loaded_files": 451,
+  "raw_asset_bytes": 67281330,
+  "world_artifacts": {
+    "terrain": {
+      "bytes": 4022968,
+      "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e"
+    },
+    "navigation": {
+      "bytes": 78400,
+      "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79"
+    },
+    "secondary": {
+      "bytes": 1254400,
+      "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+    }
+  },
+  "process": {
+    "pid": 47196,
+    "pgid": 47196,
+    "exit_code": 0,
+    "seconds": 161.146106082997,
+    "error": null,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_start": {
+    "pid": 47196,
+    "pgid": 47196,
+    "command": [
+      "python3",
+      "-B",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/reconstruction/run_headless139.py",
+      "--asset-map",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/entry-assets139-20261102T022818.157124Z/resource-map.json",
+      "--acquisition-receipt",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/entry-assets139-20261102T022818.157124Z/receipt.json",
+      "--seeds",
+      "0",
+      "50",
+      "111",
+      "--steps",
+      "110",
+      "--output",
+      "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/model"
+    ],
+    "wall_deadline_seconds": 3600,
+    "cpu_deadline_seconds": 600
+  },
+  "states_sha256": "49f6ae4e5d0ee806392c1370bdd85633074553e194f322b3c43ac7100ebcae0f",
+  "states_bytes": 10851876,
+  "records": {
+    "opening": 3,
+    "components": 306,
+    "choice": 2
+  },
+  "comparison_counts": {
+    "assertions": 966188,
+    "known_bytes_compared": 959968,
+    "unknown_bytes_observed_only": 1140224
+  },
+  "case_summaries": [
+    {
+      "seed": 0,
+      "steps": 110,
+      "simulation_seconds": 11.000005722045898,
+      "boundary": "requested_step_budget",
+      "error": null,
+      "level": 2,
+      "xp": 6,
+      "hp": 236.316162109375,
+      "kills": 6,
+      "NPCs": 8,
+      "live_NPCs": 7,
+      "selections": [
+        {
+          "step": 86,
+          "offered": [
+            {
+              "variant": "new",
+              "ability_id": "thunder_clap",
+              "tier": 0,
+              "kinds": []
+            },
+            {
+              "variant": "new",
+              "ability_id": "battle_shout",
+              "tier": 0,
+              "kinds": []
+            },
+            {
+              "variant": "new",
+              "ability_id": "bloodthirst",
+              "tier": 0,
+              "kinds": []
+            }
+          ],
+          "chosen_index": 0,
+          "raw_XP": 3,
+          "scaled_XP": 4
+        }
+      ]
+    },
+    {
+      "seed": 50,
+      "steps": 110,
+      "simulation_seconds": 11.000005722045898,
+      "boundary": "requested_step_budget",
+      "error": null,
+      "level": 2,
+      "xp": 7,
+      "hp": 236.6037139892578,
+      "kills": 8,
+      "NPCs": 9,
+      "live_NPCs": 5,
+      "selections": [
+        {
+          "step": 86,
+          "offered": [
+            {
+              "variant": "new",
+              "ability_id": "thunder_clap",
+              "tier": 2,
+              "kinds": []
+            },
+            {
+              "variant": "new",
+              "ability_id": "demo_shout",
+              "tier": 1,
+              "kinds": []
+            },
+            {
+              "variant": "new",
+              "ability_id": "mortal_strike",
+              "tier": 2,
+              "kinds": []
+            }
+          ],
+          "chosen_index": 0,
+          "raw_XP": 1,
+          "scaled_XP": 1
+        }
+      ]
+    },
+    {
+      "seed": 111,
+      "steps": 86,
+      "simulation_seconds": 8.599996566772461,
+      "boundary": "unrestored_real_first_card",
+      "error": null,
+      "level": 2,
+      "xp": 3,
+      "hp": 239.0,
+      "kills": 5,
+      "NPCs": 9,
+      "live_NPCs": 6,
+      "selections": [
+        {
+          "step": 85,
+          "offered": [
+            {
+              "variant": "new",
+              "ability_id": "demo_shout",
+              "tier": 2,
+              "kinds": []
+            },
+            {
+              "variant": "new",
+              "ability_id": "shield_slam",
+              "tier": 0,
+              "kinds": []
+            },
+            {
+              "variant": "new",
+              "ability_id": "bloodthirst",
+              "tier": 0,
+              "kinds": []
+            }
+          ],
+          "chosen_index": null
+        }
+      ]
+    }
+  ],
+  "original_program_executed": false,
+  "original_memory_read": false,
+  "preparsed_world_read": false,
+  "new_original_calls": 0,
+  "new_original_acceptance_cases": 0,
+  "Python_open_audit_forbidden": 0,
+  "read_audit_sha256": "ecb929caa0540caa502c37c7b9aaf436d504fb686582951df8749612ed93e4ba",
+  "source_before_after_match": true,
+  "raw_bytes_rehashed_after": true,
+  "prior_runs": [
+    {
+      "path": "evidence/raw-natural139-owned-20261102T162529.468980Z",
+      "status": "completed_before_receipt_timestamp_metadata_correction",
+      "states_identical_to_new_run": true
+    },
+    {
+      "path": "evidence/raw-natural139-formal-owned-20261102T163050.069192Z",
+      "status": "360_wall_second_supervisor_timeout_terminated_child",
+      "recovered_terminal_sha256": "c00c95f2935ac146fe4b613d362685584255af22bab0f2a9ac5f6300e7e74ed4",
+      "child_exit_code_not_recorded": true,
+      "not_numeric_difference": true
+    }
+  ],
+  "independent_review": "pending",
+  "full_main884_frames": 0,
+  "complete_games": 0,
+  "native_windows_application_executions": 0,
+  "scope": "Independentraw451→world→defaultopening→306naturaldeclaredfourstagecomponentsteps/2Thunderchoices. Historicaloriginalprojectioncomparisononly;noexistingWASM/memory/preparsedworldinput. 311records/growth/player/knownNPCpickup/liveAura/ledgerchecked. Notrenderedorcompletegame.",
+  "limits": [
+    "Onlyfixed1390HumanWarrior/Elwynnwithsinglecleave;latest1391acceptanceunchanged.",
+    "Externaltimestampsequence/.1clampandcontrolledfirstofferedThunderpolicyareexplicit;seed111stopsatrealunsupportedDemo2card.",
+    "Librarycomponentsarecomposedunchanged;historicalrawworldhashesandoldoriginalactualarecomparisons,notneworiginalexecutionordifferentmathematicalimplementation.",
+    "959968knownphysicalbytescompared;1140224unknownbytesobservedonly. FullGame/heap/packetstreamnotpredicted.",
+    "Pythonopenauditisinstalledafterexplicitmetadata/sourcefreezeandisnotOS-wideisolation;451rawfilesand93sourcesrecheckedunchanged.",
+    "ActualApp/fulllate14/884/Guardian20/Wolf30/multi-skill/secondchoices/UI/render/audio/save/network/Windows/completegameremainoutside."
+  ]
+}

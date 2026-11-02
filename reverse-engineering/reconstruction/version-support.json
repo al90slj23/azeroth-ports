@@ -5919,7 +5919,7 @@
       "Kobold/Wolf925/913componentsexplicitclock30.1accepted;notnatural30seconds/mixedfamilyautocast/GuardianAI/othernormalfamilies.",
       "Demo16fixturesdirect922and925weakexpiryacceptedmaxactualtarget1;direct1238/CDapplication/natural5targetcontinuationseparate.",
       "Actual14functionsourceobservation306slicesfinds2372first548/scalarwrites;new20sGuardianproducer3/15awaitreview,full884/otherstages/poststage/Appownerremainopen.",
-      "Raw451→independentworld→naturalsliceexecutableinreview;neworiginalcases0. Full2077physicalheap/fullpacketstream/UI/render/audio/save/network/Windowsapplication/completegamepending."
+      "Raw451→independentworld→naturalsliceexecutableandhistoricalprojectionreviewed;neworiginalcases0. Full2077physicalheap/fullpacketstream/UI/render/audio/save/network/Windowsapplication/completegamepending."
     ],
     "instruction_fragment_acceptance_reports": [
       "../reports/2026-11-02-frame-clock0139.json"
@@ -5927,7 +5927,8 @@
     "instruction_fragment_independent_reviews": [
       "../reports/2026-11-02-frame-clock0139-independent-review.json"
     ],
-    "native_instruction_emulation_calls": 2150
+    "native_instruction_emulation_calls": 2150,
+    "raw_entry_separate_no_new_original_cases": true
   },
   "verified_domains_0139_1": [
     {
@@ -6075,5 +6076,60 @@
     "independent_review": "reports/2026-11-02-natural-growth0139-v2-independent-review.json",
     "independent_review_sha256": "e1754aa66d93590275d108186a519f60abfbe77b91e58596b3b602b3356181df",
     "old_ten_files_unchanged": true
+  },
+  "raw_asset_natural139_headless": {
+    "status": "independent_raw_entry_and_historical_original_projection_readonly_review_passed",
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "entry": "run_headless139.py",
+    "guide": "RUNNING139.md",
+    "provider": "resource_spec/asset_bundle139.py",
+    "author_report": "../reports/2026-11-03-raw-natural0139.json",
+    "author_report_sha256": "399904624e0464d84374899ce382cafc559dbcf24a943cc459c29217855b0cc6",
+    "independent_review": "../reports/2026-11-03-headless0139-independent-review.json",
+    "independent_review_sha256": "6f249968d4f8b840428dc91cd7c4d7d9c7ccee80e762094ea3178c900247fd7c",
+    "runtime_receipt": "../evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/model/receipt.json",
+    "runtime_receipt_sha256": "57832970a4bef0c130c71d2502398c05ffef171e094620ab4f128e982262c8c7",
+    "historical_projection": "../evidence/raw-natural139-cpu-owned-20261102T163757.908632Z/historical-projection-check/comparison.json",
+    "historical_projection_sha256": "99b4d85331cb0fe4ec2cc531de14f01945139c49a359b399572efa5d9ef26225",
+    "source_files": 93,
+    "source_import_edges": 392,
+    "raw_declared_assets": 453,
+    "raw_loaded_assets": 451,
+    "raw_asset_bytes": 67281330,
+    "world_full_hashes_matched": 3,
+    "records": {
+      "opening": 3,
+      "components": 306,
+      "choice": 2
+    },
+    "seeds": [
+      0,
+      50,
+      111
+    ],
+    "steps": [
+      110,
+      110,
+      86
+    ],
+    "actual_first_Thunder_tiers": [
+      0,
+      2
+    ],
+    "actual_unsupported_Demo_tier2_stopped": true,
+    "known_physical_bytes_compared": 959968,
+    "unknown_bytes_observed_only": 1140224,
+    "original_program_executed": false,
+    "original_memory_read": false,
+    "preparsed_world_read": false,
+    "new_original_calls": 0,
+    "new_original_acceptance_cases": 0,
+    "different_mathematical_reference": false,
+    "full_mainloop_frames": 0,
+    "native_windows_execution": false,
+    "complete_games": 0,
+    "Python_open_audit_not_OS_isolation": true,
+    "scope": "Raw451→independentworld→defaultopening→declared2123/925/2890/952+firstThunderselection. Newlyproducedstatecomparedwithhistoricaloriginalactual,nofreshoriginalcallorsecondmathimplementation. Explicitclock/UIpolicy,full14/884/UI/render/audio/save/network/gameoutside."
   }
 }
