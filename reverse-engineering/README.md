@@ -12,6 +12,8 @@
 
 固定135新增[同状态战斗至失败结算](reports/2026-11-02-opening-fatal0135.md)：921帧／7选卡／44次控制运动／12945阶段／12947原件入口，声明字段0差异，[独立只读复核通过](reports/2026-11-02-opening-fatal0135-independent-review.md)。history48容器、已知字节与实际字符串、事件维护的七项统计、非平地停止、defeat JSON与致死后的五阶段尾续接入同一状态；1条普通27457移动221和10条45845停止221按实际wire grammar区分，原始包全保留。原件快照、预解析world、部分类型App与外部clock等边界不变，**仍不称完整游戏或139验收**。
 
+[raw451→独立世界→同状态死亡](reports/2026-11-02-raw-fatal0135.md)另已完成：451份原始资源／67,281,330B，独立模型921帧／7选卡／44次控制运动，115项阶段与已列终态owner组合一致，[只读独审通过](reports/2026-11-02-raw-fatal0135-independent-review.md)。共113份core字节不变，12946份逐阶段摘要与known／None字节均核；这是两模型路径的组合，**新增原件case0**。模型不使用预解析world，按冻结源码／provider与路径hash证明读取边界；作者没有可追溯的OS级读取审计收据，独审记录自己的read guard。真实App／完整880／Windows原生与完整一局仍未验收。
+
 历史[静止玩家750帧](reports/2026-11-02-opening-player-sources0135.md)、[raw451→750模型入口](reports/2026-11-02-raw-physical7500135.md)、[raw451→移动460模型入口](reports/2026-11-02-raw-moving-rune0135.md)及其各自收据保留范围，不相加。来源163组、死亡40组、recap103组是先行组件验证，后继连续整合另用新收据。
 
 与 [封装优化](../ports/README.md) 并行，研究原作实际发布的程序、资源与计算逻辑。现有安装包继续由 `android/`、`macos/` 构建，实验文件放在本区；当前没有恢复完整原作源码。

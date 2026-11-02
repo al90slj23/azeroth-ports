@@ -1896,6 +1896,15 @@
       "native_windows_execution": false,
       "complete_games": 0,
       "checkpoint": "player_death40"
+    },
+    "raw_controlled_defeat_model_composition": {
+      "report": "reports/2026-11-02-raw-fatal0135.json",
+      "report_sha256": "71bd7b45b5ec58c1b92559c4448b18d00ca185bac160e8f30c0aa8939234fbe1",
+      "independent_review": "reports/2026-11-02-raw-fatal0135-independent-review.json",
+      "independent_review_sha256": "357a7984fc70ea3484c9883dace046d60ad8d949620bb76910e69f2a5539ec75",
+      "new_original_cases": 0,
+      "original_results_read_by_bridge": false,
+      "old_acceptance_transferred": false
     }
   },
   "fixed_static_migration_target_0136": {

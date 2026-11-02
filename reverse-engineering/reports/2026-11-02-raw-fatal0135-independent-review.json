@@ -1,0 +1,144 @@
+{
+  "status": "pass_scoped_raw_model_composition_not_new_original_differential",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/motion38_review",
+  "evidence": {
+    "path": "evidence/raw-fatal135-independent-review-20261102T021836.494405Z/review.json",
+    "sha256": "67b6baaebffeb8254fdf3928f3f9c1be3920e2b59ff342e23eb08298f1d52b9c"
+  },
+  "owned_receipt": {
+    "path": "evidence/raw-fatal135-review-owned-20261102T021809.473684Z/process-terminal.json",
+    "sha256": "2a96804796eebbf4c9c38317a7c6923055f7729a7a1ed8e256cecea5b67224f7"
+  },
+  "script": {
+    "path": "scripts/review_raw_fatal135.py",
+    "sha256": "eb1dda33e61fbdecc25526fefa23699ea0828957c09e1922544878d91cdf30a0"
+  },
+  "author_report_sha256": "71bd7b45b5ec58c1b92559c4448b18d00ca185bac160e8f30c0aa8939234fbe1",
+  "author_model_receipt_sha256": "ad418c9435bc4e8b246ec153b1224eb33d904f594d84fc332f859eec070b957d",
+  "author_bridge_sha256": "e34af2038593f9ab9c5e408db462714a4eacb5a9fdb3f34d336a0452b8e3a7a5",
+  "controlled_fourth_experiment_metadata_sha256": "430e764bfc0b556bf33489796ed04e96da8e1f4f0aedbcc4bee8217b67967160",
+  "independent_readonly_checks": {
+    "raw_assets": 451,
+    "raw_asset_bytes": 67281330,
+    "world_artifacts": {
+      "terrain-query.bin": {
+        "bytes": 4022968,
+        "sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e"
+      },
+      "navigation.bin": {
+        "bytes": 78400,
+        "sha256": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79"
+      },
+      "secondary-height.u32le": {
+        "bytes": 1254400,
+        "sha256": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+      }
+    },
+    "current_and_snapshot_sources": 121,
+    "production_sources": 117,
+    "shared_controlled_gameplay_sources": 113,
+    "raw_only_production_sources": [
+      "reconstruction/resource_spec/wmo_geometry135.py",
+      "reconstruction/resource_spec/world_cache135.py",
+      "reconstruction/resource_spec/world_placements135.py",
+      "reconstruction/resource_spec/world_raster135.py"
+    ],
+    "stage_rows": 12946,
+    "stage_categories": 24,
+    "expected_model_logical_bytes": 1072504103,
+    "summary_mismatches": 0,
+    "stage_summary_content_hashes_checked": true,
+    "clock_frames_selections_checked": true,
+    "full_terminal_direct_projection_keys": 36,
+    "terminal_full_owner_count": 11,
+    "terminal_cells": 22720,
+    "unknown_None_cells": 8205,
+    "terminal_owner_masks_and_bytes_equal": true,
+    "terminal_history_header": {
+      "capacity": 128,
+      "head": 48,
+      "count": 72
+    },
+    "frames": 921,
+    "selections": 7,
+    "motion_inputs": 44,
+    "actions": 972,
+    "terminal_phase": 4,
+    "HP_bits": 0,
+    "terminal_notifications": 1,
+    "fatal_stop_packets": 10
+  },
+  "known_None_scope": "All11terminalowners are directly reconstructible from storedrawrows inthisspecificfinalstate;special/companions activecount==capacity. Per-stage comparison usesdeclaredfullbacking fingerprints,notallGamefields.",
+  "read_audit": {
+    "scope": "Reviewer task-input file-open guard,notPythonbootstrap/moduleload or retrospectiveauthorOStrace",
+    "path_count": 835,
+    "forbidden_read_count": 0,
+    "forbidden_domains": [
+      "WASM",
+      "EXE",
+      "memory",
+      "WAT",
+      "original-results/CAS",
+      "historicalpreparsedworldfiles"
+    ],
+    "author_evidence": "Frozen121sources/providerreadguards/assetpaths+hashes+metadata;no separateOSfile-openreceipt"
+  },
+  "author_model_or_bridge_executions_by_reviewer": 0,
+  "author_production_executions_by_reviewer": 0,
+  "original_executions_by_reviewer": 0,
+  "new_original_cases": 0,
+  "native_executions": 0,
+  "previous_original_case_recounted": false,
+  "independent_geometry_or_gameplay_reimplementation_claimed": false,
+  "failure_preserved": {
+    "directory": "evidence/raw-fatal921-owned-20261102T014848.799382Z",
+    "exit_code": 1,
+    "reason": "hero.utf8 bytesJSON export failure after921;no successfulreceipt",
+    "production117_same_as_success": true
+  },
+  "old460bridge_hash_unchanged": true,
+  "default_ledger_flag_disabled": true,
+  "phase4_stages": [
+    {
+      "stage_index": 12940,
+      "kind": "ai",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12941,
+      "kind": "collect",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12942,
+      "kind": "claims",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12943,
+      "kind": "spawn",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12944,
+      "kind": "special",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12945,
+      "kind": "terminal",
+      "HP_bits": 0
+    }
+  ],
+  "source_files_modified": false,
+  "public_registry_modified": false,
+  "limits": [
+    "Comparison reads only model expected stream and comparison metadata,never original-results/CAS/rawmemory",
+    "No independent re-execution/reconstruction of geometry or gameplay rules;raw artifacts and two serialized modeloutputs are independently read/rehashed/compared",
+    "24stage categories are declaredsummary subsets;unserializedfields notinvented",
+    "Terminalspecial/companions fullrows are direct inthisspecificfinalstate because activecount==capacity;other stages usefullbacking fingerprint",
+    "None8205cells remainunknown,notzero;caller-scratch numericproducer remainsunrestored",
+    "NaturalApp/deviceinput/full880/win/save/render/audio/UI/network/allmaps/classes/skills andlatest139fullflow remainincomplete"
+  ]
+}

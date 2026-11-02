@@ -125,6 +125,20 @@ def state_summary(state):
         cells=state.player_motion_owner.cells
         result['motion_words']={str(o):None if None in cells[o:o+4]else u32(cells,o,'motion summary')
             for o in MOTION_WORDS135}
+    if state.run_ledger is not None:
+        from core_spec.run_ledger135 import run_ledger_projection135
+        ledger=state.run_ledger;projection=run_ledger_projection135(ledger,level,state.collection.currency)
+        result['owners']['incoming48']=owner(ledger.history.storage,48,ledger.history.count)
+        aux=ledger.auxiliary_motion
+        result['owners']['auxiliary112']=owner(aux.storage112,112,aux.count664)
+        result['run_ledger']=dict(counters=projection['counters'],hero=projection['hero'],
+            lives1632=projection['lives1632'],left2567=projection['left2567'],
+            incoming_history_header=projection['incoming_history']['header'])
+        result['auxiliary_motion']=dict(capacity656=aux.capacity656,pointer660=aux.pointer660,count664=aux.count664)
+        result['paused408']=state.paused408;result['paused412_bits']=state.paused412_bits
+        result['terminal_notifications']=list(state.terminal_notifications)
+        result['fatal_stop_packets']=list(state.fatal_stop_packets)
+        result['physical_output_pending']=list(state.physical_output_pending)
     result['summary_sha256'] = hashlib.sha256(
         json.dumps(result, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
     return result
@@ -147,6 +161,8 @@ def main():
         help='Explicit App notification context; its natural producer is not implied.')
     parser.add_argument('--motion-route',choices=('first-rune',),
         help='Controlled independent-model trajectory; not recovered device input.')
+    parser.add_argument('--run-ledger',action='store_true',
+        help='Produce the explicit empty-profile run ledger and retain incoming/death owners.')
     args = parser.parse_args()
     if not 1 <= args.frames <= 1000:
         parser.error('frames must be1..1000')
@@ -159,6 +175,8 @@ def main():
         parser.error('App notification context requires --physical-player-sources')
     if args.motion_route is not None and not args.physical_player_sources:
         parser.error('Motion route requires --physical-player-sources')
+    if args.run_ledger and not args.physical_player_sources:
+        parser.error('Run ledger requires --physical-player-sources')
     manifest = external_path(args.asset_manifest)
     output = external_path(args.output or ROOT / 'evidence' / datetime.now(timezone.utc).strftime(
         'asset-combat0135-modelselfcheck-%Y%m%dT%H%M%S.%fZ'))
@@ -175,6 +193,7 @@ def main():
     from core_spec.profile_companions135 import EmptyCompanionProfile135
     from core_spec.special2376_notify135 import SpecialLocale2376_135, ELWYNN_ENGLISH_NAMES
     from core_spec.event_wave135 import EventWaveLocale135
+    from core_spec.run_ledger135 import empty_research_run_ledger135
     from motion_route135 import FirstRuneRoute135
 
     began = time.monotonic()
@@ -221,6 +240,10 @@ def main():
                 asset_manifest=str(provider.path), asset_manifest_sha256=provider.manifest_sha256,
                 asset_inputs=asset_inputs,
                 world_input='raw_assets_only_no_preparsed_world_or_original_memory')
+            if args.run_ledger:
+                inputs.update(run_ledger135=True,
+                    selected_profile_contract='explicit_empty376_rankcount0_flag0_equipment19zero_name_length0',
+                    auxiliary_producer='actual retained opening.constructor_initial phase0 through from_opening_handoff')
             write_json(output / 'inputs.json', inputs)
             execution_phase = 'asset_world'
             built, tiles, selected = build_asset_world135(provider, progress=progress)
@@ -235,6 +258,7 @@ def main():
             state = from_opening_handoff(handoff, navigation_enabled=args.navigation,
                 special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),event_locale=EventWaveLocale135(0),banner_locale='en',
                 motion_enabled=route is not None,
+                **(dict(run_ledger=empty_research_run_ledger135())if args.run_ledger else{}),
                 **(dict(app_notification_next_id=args.app_notification_next_id,resource_locale='en')
                     if args.physical_player_sources else{}))
             emit('opening', state, action_index=None)
@@ -293,6 +317,12 @@ def main():
             [asdict(origin) for origin in state.opaque_pickup_amount_origins])
         if state.player_motion_owner is not None:
             write_json(output/'final-motion-owner.json',list(state.player_motion_owner.cells))
+        if state.run_ledger is not None:
+            ledger=state.run_ledger
+            hero=asdict(ledger.hero);hero['utf8_hex']=hero.pop('utf8').hex()
+            write_json(output/'final-ledger-owner.json',dict(incoming_history=asdict(ledger.history),
+                callback_sources=asdict(ledger.callback_sources),auxiliary_motion=asdict(ledger.auxiliary_motion),
+                hero=hero,counters=asdict(ledger.counters),lives1632=ledger.lives1632,left2567=ledger.left2567))
     after = {name: sha(ROOT / name) for name in files}
     runtime_local_sources = set()
     for module in tuple(sys.modules.values()):
@@ -341,6 +371,12 @@ def main():
             'None cells remain explicitly unknown; zero oracle cases cannot establish agreement with the original.',
             'Independent physical owners and produced outputs are scoped projections, not a playable replacement.'],
         whole_game_complete=False, playable_replacement=False)
+    if args.run_ledger:
+        receipt.update(run_ledger135=True,
+            final_ledger_owner_sha256=None if state is None else sha(output/'final-ledger-owner.json'),
+            ledger_constructor='explicit empty research profile; retained actual phase0 constructor produces auxiliary owner',
+            terminal_notifications=0 if state is None else len(state.terminal_notifications),
+            fatal_stop_packets=0 if state is None else len(state.fatal_stop_packets))
     write_json(output / 'receipt.json', receipt)
     print(json.dumps(dict(directory=str(output), mode='modelselfcheck', oracle_cases=0,
         full880_frames=0, frames=receipt['independent_frames'], selections=receipt['independent_selections'],

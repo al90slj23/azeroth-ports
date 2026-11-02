@@ -1,0 +1,357 @@
+{
+  "component": "raw451_controlled_defeat135",
+  "status": "independent_raw451_model_execution_and_stage_terminal_model_composition_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "source_files": {
+    "scripts/run_asset_combat135.py": "6faa459efa51440a7cecf74f0daac1479686f39d0e1ec30af418d35ee6eeabf8",
+    "scripts/check_raw_fatal135_bridge.py": "738126914f64ad69d8d10f21fa2fd9c97cadabc25020723315708c3c16c15473"
+  },
+  "model_receipt": "evidence/raw-fatal921-owned-20261102T015451.868431Z/model921/receipt.json",
+  "model_receipt_sha256": "ad418c9435bc4e8b246ec153b1224eb33d904f594d84fc332f859eec070b957d",
+  "bridge": "evidence/raw-fatal921-owned-20261102T015451.868431Z/stage-terminal-model-bridge.json",
+  "bridge_sha256": "e34af2038593f9ab9c5e408db462714a4eacb5a9fdb3f34d336a0452b8e3a7a5",
+  "model_process": {
+    "pid": 36363,
+    "pgid": 36363,
+    "exit_code": 0,
+    "deadline_seconds": 600,
+    "deadline_exceeded": false,
+    "seconds": 198.3118370000011,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "new_original_cases": 0,
+    "original_executions": 0
+  },
+  "bridge_process": {
+    "pid": 39129,
+    "pgid": 39129,
+    "exit_code": 0,
+    "deadline_seconds": 180,
+    "deadline_exceeded": false,
+    "seconds": 16.996758832989144,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "new_original_cases": 0,
+    "original_executions": 0
+  },
+  "model_source_files": 121,
+  "model_production_files": 117,
+  "shared_production_files": 113,
+  "frames": 921,
+  "selections": 7,
+  "motion_inputs": 44,
+  "stage_summaries": 12946,
+  "actions": 972,
+  "requested_frame_budget": 1000,
+  "boundary": {
+    "kind": "not_running",
+    "phase": "frame",
+    "attempted_frame": 921,
+    "completed_frames": 921
+  },
+  "final_phase2587": 4,
+  "final_HP_bits": 0,
+  "run_ledger": {
+    "counters": {
+      "1432": 8,
+      "1084": 109,
+      "1088": 0,
+      "1092": 0,
+      "1096": 0,
+      "1100": 115,
+      "1104": 0
+    },
+    "hero": "",
+    "lives1632": 0,
+    "left2567": 0,
+    "incoming_history_header": {
+      "capacity": 128,
+      "head": 48,
+      "count": 72
+    }
+  },
+  "terminal_notifications": [
+    [
+      3748,
+      "7b2274797065223a22646566656174222c2274696d65223a39322e3039392c226c6576656c223a382c226b696c6c73223a3130392c22656c69746573223a302c22677561726469616e73223a302c22626f73736573223a302c2264616d616765223a31313232312e3239332c2274616b656e223a3735342e3135392c22676f6c64223a3131352c22636865737473223a302c22636c617373223a2257617272696f72222c226865726f223a22222c2272616365223a2248756d616e222c226267223a22456c77796e6e20466f72657374222c226c656674223a66616c73652c227265636170223a7b2273656373223a31302e3030302c22746f74616c223a3235312c226162736f72626564223a302c2261766f696461626c65223a302c226d61786870223a3239332c226b696c6c6572223a7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a332c226f7665726b696c6c223a327d2c2268697473223a5b7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3830302c226e223a31362c22616273223a302c22636f756e74223a342c226870223a302e3037397d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3830302c226e223a332c22616273223a302c22636f756e74223a312c226870223a302e3036397d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3730302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3035357d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3430302c226e223a362c22616273223a302c22636f756e74223a322c226870223a302e3033367d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3330302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3032337d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3230302c226e223a332c22616273223a302c22636f756e74223a312c226870223a302e3031367d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3130302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3030337d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302c226e223a332c22616273223a302c22636f756e74223a312c226870223a307d5d2c226279223a5b7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a3135302c22636f756e74223a33387d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a38332c22636f756e74223a32387d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a31382c22636f756e74223a367d5d7d7d"
+    ]
+  ],
+  "fatal_stop_packets": [
+    [
+      221,
+      32,
+      "db5501580230f129d012c6b4ee17c4aed289427104000001"
+    ],
+    [
+      221,
+      32,
+      "db5601590230f1c4ce12c6f77117c4e99f89427204000001"
+    ],
+    [
+      221,
+      32,
+      "db57015a0230f1e1cc12c6a3a518c4900f8a427304000001"
+    ],
+    [
+      221,
+      32,
+      "db5c01580230f195e512c61d7913c45bfd86427404000001"
+    ],
+    [
+      221,
+      32,
+      "db5d01590230f195f212c62cdc14c44e8b88427504000001"
+    ],
+    [
+      221,
+      32,
+      "db5e015a0230f1bfff12c67d6915c4cec188427604000001"
+    ],
+    [
+      221,
+      32,
+      "db5f015a0230f160e012c6e49b1ac4cb7d89427704000001"
+    ],
+    [
+      221,
+      32,
+      "db64015a0230f1797312c600d710c435a186427804000001"
+    ],
+    [
+      221,
+      32,
+      "db6501580230f127f212c68e4d1dc4e07288427904000001"
+    ],
+    [
+      221,
+      32,
+      "db6601580230f1ed5a12c6e90113c49b9c88427a04000001"
+    ]
+  ],
+  "auxiliary_motion": {
+    "capacity656": 0,
+    "pointer660": 8,
+    "count664": 0
+  },
+  "physical_output_pending": [
+    "packet_capacity_and_count",
+    "packet_vector_allocation_copy_and_panic",
+    "complete_physical17119_return"
+  ],
+  "declared_files": 453,
+  "loaded_files": 451,
+  "raw_asset_bytes": 67281330,
+  "declared_but_unloaded_assets": [
+    "dbfilesclient\\spell.dbc",
+    "dbfilesclient\\spellicon.dbc"
+  ],
+  "asset_manifest": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/entry-world0135-probe-20261101T092959.623703Z/actual-assets-inventory.json",
+  "asset_manifest_sha256": "cc31b6efd90b7bacb040b142eb72b72d7baf83c418f87258a60b3755196bc84c",
+  "assets_unchanged": true,
+  "production_source_unchanged": true,
+  "escaped_runtime_sources": [],
+  "bridge_checks": 115,
+  "all_bridge_checks_passed": true,
+  "stage_summary_checks": {
+    "scalars": true,
+    "owner.units": true,
+    "owner.areas": true,
+    "owner.pickups": true,
+    "owner.companions": true,
+    "owner.special": true,
+    "owner.windows": true,
+    "owner.boundaries": true,
+    "owner.live32": true,
+    "owner.aura48": true,
+    "owner.incoming48": true,
+    "run_ledger": true,
+    "owner.auxiliary112": true,
+    "auxiliary_header": true,
+    "paused408": true,
+    "paused412_bits": true,
+    "terminal_notifications": true,
+    "fatal_stop_packets": true,
+    "opaque_live_origins": true,
+    "Aura_and_App": true,
+    "known_motion": true,
+    "distance_map": true,
+    "alive_units": true,
+    "stage_identity": true
+  },
+  "serialized_stage_summary_comparison": true,
+  "full_terminal_known_and_None_owner_comparison": true,
+  "per_stage_raw_asset_original_differential": false,
+  "motion_route_events": [
+    {
+      "event": "target",
+      "frame": 401,
+      "guid": "17370383913897164969",
+      "kind": 5
+    },
+    {
+      "event": "stop_after_consumption",
+      "frame": 444,
+      "guid": "17370383913897164969"
+    }
+  ],
+  "compared_original_experiment": "evidence/opening-combat0135-oracle-20261102T012524.271526Z/comparison.json",
+  "compared_original_experiment_sha256": "430e764bfc0b556bf33489796ed04e96da8e1f4f0aedbcc4bee8217b67967160",
+  "bridge_reads_independent_model_expectations": true,
+  "bridge_reads_original_results": false,
+  "model_original_memory_read": false,
+  "model_original_wasm_executed": false,
+  "model_original_program_executed": false,
+  "model_preparsed_world_input_read": false,
+  "new_original_cases": 0,
+  "original_calls": 0,
+  "full880_frames": 0,
+  "native_client_execution": false,
+  "complete_games": 0,
+  "installed_packages_or_saves_changed": false,
+  "expected_stage_records": 12946,
+  "expected_stage_bytes": 1072504103,
+  "expected_terminal_stage_index": 12944,
+  "phase4_rows": [
+    {
+      "stage_index": 12940,
+      "kind": "ai",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12941,
+      "kind": "collect",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12942,
+      "kind": "claims",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12943,
+      "kind": "spawn",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12944,
+      "kind": "special",
+      "HP_bits": 0
+    },
+    {
+      "stage_index": 12945,
+      "kind": "terminal",
+      "HP_bits": 0
+    }
+  ],
+  "bridge_direct_terminal_projection_keys": [
+    "phase2587",
+    "now_bits",
+    "rng_words",
+    "spawn_counter",
+    "message_sequence",
+    "kill_cost_bits",
+    "velocity_xy",
+    "previous_player_xyz",
+    "progression",
+    "current_hp_bits",
+    "derived_bits",
+    "player_fields",
+    "racial_record_hex",
+    "owned_records_hex",
+    "pickup_words",
+    "timer1628_bits",
+    "budget_bits",
+    "gold",
+    "earned",
+    "outgoing_total_hex",
+    "incoming_total_hex",
+    "last_hit_bits",
+    "absorbed740_bits",
+    "maximum_shield744_bits",
+    "candidates",
+    "selection_kind2585",
+    "generation_counter2400",
+    "next_resource2444_bits",
+    "next_event2424_bits",
+    "last_event2586",
+    "next_supply2448_bits",
+    "run_ledger",
+    "terminal_notifications",
+    "paused408",
+    "paused412_bits",
+    "fatal_stop_packets"
+  ],
+  "bridge_not_direct_terminal_projection_keys": [
+    "source_id",
+    "map_id_utf8",
+    "player_xyz",
+    "field1092",
+    "mode2582",
+    "resource_create_packets169",
+    "explicit_actor_creates169",
+    "banner150_packets",
+    "npc_aura_updates169",
+    "guardian_cooldowns",
+    "special",
+    "effect",
+    "tail_flags",
+    "distance_map",
+    "distance_map_updated_at_bits",
+    "aura_initialized2569",
+    "notification_next_id14340336",
+    "player_speed226_packets",
+    "rune_notifications",
+    "motion_scalar_words",
+    "auxiliary_motion",
+    "auxiliary_source_counts"
+  ],
+  "previous_460_bridge_unchanged_sha256": "f8a7bd357fa11a12ab30a8b9cec05eb64157538eefd574b86e7f04da28026ff1",
+  "default_ledger_disabled": true,
+  "failure_preserved": {
+    "owned_directory": "evidence/raw-fatal921-owned-20261102T014848.799382Z",
+    "owned_terminal": {
+      "pid": 28759,
+      "pgid": 28759,
+      "exit_code": 1,
+      "deadline_seconds": 600,
+      "deadline_exceeded": false,
+      "seconds": 204.3345940829895,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "new_original_cases": 0,
+      "original_executions": 0
+    },
+    "owned_terminal_sha256": "468fd7d572b81787cfbc3c5b512c8b4b90e4b5ef1d6e042abf92cb6ad87216a1",
+    "stderr_sha256": "facb546308d49c13427a35001bba7c31ee8531c29fd8265a8349a16c61de2a27",
+    "status": "failed_export_not_successful_model_receipt",
+    "reason": "New final-ledger-owner serializer passed hero.utf8 bytes directly to JSON after reaching921 frames; fixed by explicit utf8_hex and fresh rerun. Independent production117 frozen bytes identical.",
+    "production_before_equal_to_successful_run": true,
+    "small_serializer_preflight": "Explicit empty typed ledger+aux0/8/0 nested JSON accepted after utf8-to-hex; tool stdout,not an original receipt.",
+    "stored_failed_export_stage_precheck": {
+      "path": "evidence/raw-fatal135-preparation/first-export-failure-stage-precheck.json",
+      "sha256": "5ac7e4c48662de8c3d166714f0c3c057a8f22926b78b49a248bed58ee954147f",
+      "counts_as_successful_model_run": false
+    }
+  },
+  "artifacts": {
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/model921/receipt.json": "ad418c9435bc4e8b246ec153b1224eb33d904f594d84fc332f859eec070b957d",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/model921/final-state.json": "5a66a3b09f969fdabafab817db8769102339209e932866a62108f1db94c6d613",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/model921/final-summary.json": "9bd58e211c37e3e9669346a5487a20a6f8b03d470a323f1b73d273ac3792bae1",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/model921/final-ledger-owner.json": "1097f01447ba9f426544595b183d6a030ea9377f21bc92d23dd6dd86d1302df6",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/stage-terminal-model-bridge.json": "e34af2038593f9ab9c5e408db462714a4eacb5a9fdb3f34d336a0452b8e3a7a5",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/owned-process.json": "ca58114251ad42ec640ea091b3f953e98ef2c5619729eef4556e360c0fed9236",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/owned-terminal.json": "c7de145804301f8548d167604bb1c82a3cd508bc1e35e9729ce678f807d09dc0",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/bridge-owned-process.json": "9ffe7a5528da0240056ad5c6173eb2fb1a6f619a0d29c2317657414a4dac9f4d",
+    "evidence/raw-fatal921-owned-20261102T015451.868431Z/bridge-owned-terminal.json": "6d1fbf1193f18a2f7ea8f5716b6406e8eb4a73ca3a190b9c07fb7b8f3b2834a6"
+  },
+  "comparison_scope": "Serialized summaries for all12946 rows and explicitly exported full terminal owners compare two model executions with identical113 gameplay production sources. Raw run constructs independent world from451 raw assets. This is composition evidence,not a second independently implemented game or new original-side differential.",
+  "limitations": [
+    "Serialized stage summaries and terminal owners compare two model runs sharing gameplay sources; no new original execution or per-stage raw-asset original differential.",
+    "The explicitly listed serialized projection, complete owners and output subsets are compared; absent serializer fields are not invented.",
+    "App notification context1 is an explicit input; caller scratch values remain typed unknown sources.",
+    "Unserialized summary fields are not invented. Historical113 core states are shared; original helper/body validation remains in the separately reviewed fourth fixed135 comparison.",
+    "Physical allocator/header/complete17119 heap return and live922 caller-scratch numeric producer remain pending; None stays None.",
+    "Natural App/device input/full880,win/save/render/audio/UI/network/allclasses/maps/skills and latest138/139 fullflow remain incomplete."
+  ]
+}

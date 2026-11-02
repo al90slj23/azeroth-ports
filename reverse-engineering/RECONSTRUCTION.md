@@ -12,6 +12,8 @@
 
 固定135新增[同状态战斗至失败结算](reports/2026-11-02-opening-fatal0135.md)：921帧／7选卡／44次控制运动／12945阶段／12947原件入口，声明字段0差异，[独立只读复核通过](reports/2026-11-02-opening-fatal0135-independent-review.md)。history48容器、已知字节与实际字符串、事件维护的七项统计、非平地停止、defeat JSON与致死后的五阶段尾续接入同一状态；1条普通27457移动221和10条45845停止221按实际wire grammar区分，原始包全保留。原件快照、预解析world、部分类型App与外部clock等边界不变，**仍不称完整游戏或139验收**。
 
+[raw451→独立世界→同状态死亡](reports/2026-11-02-raw-fatal0135.md)另已完成：451份原始资源／67,281,330B，独立模型921帧／7选卡／44次控制运动，115项阶段与已列终态owner组合一致，[只读独审通过](reports/2026-11-02-raw-fatal0135-independent-review.md)。共113份core字节不变，12946份逐阶段摘要与known／None字节均核；这是两模型路径的组合，**新增原件case0**。模型不使用预解析world，按冻结源码／provider与路径hash证明读取边界；作者没有可追溯的OS级读取审计收据，独审记录自己的read guard。真实App／完整880／Windows原生与完整一局仍未验收。
+
 历史[静止玩家750帧](reports/2026-11-02-opening-player-sources0135.md)、[raw451→750模型入口](reports/2026-11-02-raw-physical7500135.md)、[raw451→移动460模型入口](reports/2026-11-02-raw-moving-rune0135.md)及其各自收据保留范围，不相加。来源163组、死亡40组、recap103组是先行组件验证，后继连续整合另用新收据。
 
 目标是逐项拆清原作逻辑和数据，形成能够独立运行的游戏核心。功能目标持续跟随官方最新稳定版，每轮固定版本与SHA：**固定0.137.0 / `d171b8f9f`已有完整静态profile与非致死伤害80组/125调用0差异；固定0.136.0 / `fe24fb74c`仅静态profile/迁移候选，动态验收0**。持续动态组合研究保持**固定0.135.1 / `90898d5e3`**及原SHA，旧`0898d5e3`为历史截短alias，旧收据和输入不覆写；0.134.0 / 983346a7与0.126.0 / 3e72472a继续作各自固定历史参照。任何旧通过均不自动转记新版。完整身份及分工见[targets.json](targets.json)、[先前身份采集状态](reports/2026-11-01-latest-version-state.md)与[版本策略](VERSION_STRATEGY.md)。工具、原件与分析产物留在本机忽略区；独立实现放在[reconstruction/](reconstruction/README.md)。
