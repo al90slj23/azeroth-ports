@@ -1,6 +1,6 @@
 # REA 逆向研究
 
-官方元数据于 **2026-11-02T01:57:42Z** 再核仍为 **0.139.0**，首页stamp `f339dd20e0fe`。已完成[官方Windows／Web一致获取与实际9B构建身份](reports/2026-11-02-official0139-acquisition-identity.md)：两端均为 `f79c5e2b4`，Windows150,595,584B／官方SHA匹配，Web92,511,151B／本地SHA固定；获取前后元数据逐字一致。[139完整静态索引与增量清单](reports/2026-11-02-engine0139-incremental.md)已固定177101函数／882导入、30/30主要入口身份；本轮核对143行技能／职业／种族／地图声明一致，19个入口仍有编译或结构差异，不能据此判行为等价。首次下载与工具失败均保留，139其他行为迁移另行验证，**不将旧版通过转记139**。现有安装包与存档未替换。
+官方元数据于 **2026-11-02T04:07:29Z** 再核仍为 **0.139.0**，首页stamp `f339dd20e0fe`。已完成[官方Windows／Web一致获取与实际9B构建身份](reports/2026-11-02-official0139-acquisition-identity.md)：两端均为 `f79c5e2b4`，Windows150,595,584B／官方SHA匹配，Web92,511,151B／本地SHA固定；获取前后元数据逐字一致。[139完整静态索引与增量清单](reports/2026-11-02-engine0139-incremental.md)已固定177101函数／882导入、30/30主要入口身份；本轮核对143行技能／职业／种族／地图声明一致，19个入口仍有编译或结构差异，不能据此判行为等价。首次下载与工具失败均保留，139其他行为迁移另行验证，**不将旧版通过转记139**。现有安装包与存档未替换。
 
 最新139的[限定非致死伤害80组／125完整913调用](reports/2026-11-02-combat0139.md)已重新执行新版原件，0声明差异，[异作者独审通过](reports/2026-11-02-combat0139-independent-review.md)。新版真实单位stride为432、导入882；完整单位字节与声明的HP／累计伤害／RNG等比较通过。合成Game／空items、spells、1972 proc队列／无context的边界明确：不代表完整Game、自然构造、死亡、原生Windows或完整一局。Pilot4组／5调用另存，不加入正式80／125。
 
@@ -9,6 +9,14 @@
 139的[默认空profile构造162次完整1600](reports/2026-11-02-initial-state0139.md)也已完成新原件差分和[独立复核](reports/2026-11-02-initial-state0139-independent-review.md)：81324个已知字节、40条完整226包0差异；338580字节保留None，其中实际非零未反填。此域使用明确借用的flat V128查询输入，Game2592未完整预测，cached6786仅静态、opening1108未执行、未进入phase1；研究pilot与此前162批不加算。真实139 world／opening另行观察，不能当作独立开局或完整游戏通过。
 
 139已取得[修正后的真实world／1108上下文v2](reports/2026-11-02-entry-world0139-context-v2.md)，并经[独立只读复核](reports/2026-11-02-entry-world0139-context-v2-independent-review.md)通过受控观察gate：2945完整返回36B、显式40B输出与两侧16B保护区合法，两份新memory分别为111MB／177MB，phase0→1与4NPC／2pickup／69boundary等原件状态已保存。旧16B输出区批次[明确不接受](reports/2026-11-02-entry-world0139-context-independent-review.md)，旧源码与快照字节均保留，未据越界直接推定堆破坏。v2仍是researchApp与selected376受控输入，且tag255／inactiveA5与先前全零profile构造域有差别：独立开局model case仍为0，不能把观察当完整自然App或独立开局验收。
+
+139的[四只初始普通敌人生产](reports/2026-11-02-npc-spawn0139.md)完成16组／64次完整5719与[独审](reports/2026-11-02-npc-spawn0139-independent-review.md)：真实1600作为16次setup，0快照恢复，64条新169消息／432B记录已知字节一致；31056个未知字节保留None。位置由显式SomeXYZ输入，不能称自然刷怪或完整1108。
+
+139的[受击与历史前缀](reports/2026-11-02-incoming0139-prefix.md)99组／164次完整1076，经[独审](reports/2026-11-02-incoming0139-prefix-independent-review.md)核对当前分类424、护盾736／740、modifier54按当前雷盾等级3%及历史记录。后继[护盾清理→1173 Aura→HP／历史](reports/2026-11-02-incoming-aura0139.md)另有36组／39次入口（31次1076＋8次直接1173），[独审](reports/2026-11-02-incoming-aura0139-independent-review.md)核对48个tag-only Aura与66个条件更新字段；1173未调用1542。两域分别验收，真实83304／1600只作setup，不加入组件覆盖。正reserve溢出、非空保留来源、回调、致死与复活仍有缺口。
+
+139的[原始451资源→独立查询world](reports/2026-11-02-world0139.md)已从本轮原始资源生产5355768B地形／导航／二级高度，与合法v2原件观察完全一致；新3368组／6671次原件查询入口尝试亦0差异，其中6670正常返回、1次预期越界终止。[异作者独审](reports/2026-11-02-world0139-independent-review.md)独立重建9份ADT地形并重算全批查询。导航／二级高度几何生产未另写第二套pipeline，复核范围为源码／读取审计与v2全字节一致；原件查询使用合法v2快照，独立模型不读快照。完整Rc／cache／App／渲染／游戏流程仍未验收。
+
+刷怪位置v1的80组原件输出虽一致，独审已发现13563局部f32运算顺序与模型f64中间值不同，且找到真实地图反例；该组件暂不登记通过，继续以v2修正和新原件差分解决。已冻结作者报告保留执行时的pending状态，最终独审和上述版本注册分别说明实际接受范围；当前独立新版开局／完整884／Windows原生／完整一局均为0。
 
 固定138的[属性计算10569组](reports/2026-11-02-stats0138.md)、[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)、[默认构造162次](reports/2026-11-02-initial-state0138.md)及其独审保留各自窄域；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)仍是静态证据。它们均不等于138／139连续流程或Windows原生验收。
 

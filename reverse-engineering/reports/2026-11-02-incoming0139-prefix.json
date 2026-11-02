@@ -1,0 +1,2452 @@
+{
+  "status": "author_scoped_differential_passed_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "target": {
+    "index": 1076,
+    "signature": "i32,f32,i64,i32,i32,i32 -> void",
+    "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39"
+  },
+  "evidence_directory": "evidence/incoming139-oracle-20261102T033003.208321Z",
+  "comparison_sha256": "7bc59682f0b82976f113e4a93b794d3ae9aca11a861ab012bb247dc7789f2533",
+  "cases": 99,
+  "complete_target_calls": 164,
+  "setup_calls": {
+    "real_fresh83304": 4
+  },
+  "counts": {
+    "assertions": 106378,
+    "resource_pointer_observed_bytes": 26088,
+    "known_history_bytes": 104566,
+    "allocator_unwritten_observed_bytes": 48962,
+    "observed_changed_Game_bytes": 2415,
+    "stages": 164,
+    "branch_no_reserve_spill_nonfatal_prefix": 156,
+    "guard_bytes": 20736,
+    "branch_phase_guard": 4,
+    "branch_protection_guard": 3,
+    "branch_active_raw12_guard": 1
+  },
+  "groups": {
+    "baseline-real-English": 1,
+    "phase-guard": 4,
+    "protection-guard": 3,
+    "protection-bit2-permits": 1,
+    "raw12-strict-expiry": 3,
+    "shield736740-source-reserve0": 3,
+    "real-English-fallback": 5,
+    "normal-source432": 1,
+    "history-wrap-growth": 1,
+    "finite-armor-domain": 18,
+    "classification424-not416": 12,
+    "first-GUID-wins": 1,
+    "dead-source-still-resolves": 1,
+    "unmatched-GUID": 1,
+    "high-GUID": 1,
+    "zero-GUID-match": 1,
+    "null-definition-preserves-rank": 1,
+    "modifier54-current-lightning-rank3pct": 8,
+    "modifier54-first-wins": 1,
+    "modifier54-inactive-byte4": 1,
+    "nearby-five-threshold": 6,
+    "nearby-dead-skip": 1,
+    "nearby-outside8": 1,
+    "nearby-interpolation": 1,
+    "physical-ring-growth": 18,
+    "strict-10s-prune": 1,
+    "count400-prune": 1,
+    "repeated-same-state-category-history": 1,
+    "minimum-one-history-preclamp": 1
+  },
+  "source_closure": {
+    "files": 15,
+    "production": 5,
+    "import_edges": 23,
+    "sources": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/incoming139.py": "c3b71824ebce3f932b194f8c1e531827f541d72500e2d9f50b181d0fc10197cd",
+      "reconstruction/core_spec/incoming_history139.py": "13445d0d1594d859d74301a54e392acc51ee60958a38fa50e0077c71a6a27473",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "scripts/build_incoming139_oracle.py": "4b9ac588b3ce7f41f0398eeb6fed783acd0af20ff6f21bd3480b0dbcbd71cfd2",
+      "scripts/check_incoming139.py": "8c5a20f48cf7c91d1acfa3a28d23fcf93a8468326835789cfb3144df5124b98b",
+      "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/run_incoming139_oracle.mjs": "1a3567da699a0b6131d4e9d6a9786c4d8a40912726025137b327a02a46fbc424",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+      "scripts/trace_incoming139.py": "5563281356d26d334b92d4a14a7c7d0355a90cd84162d495a6b2807bdd140d4b",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    }
+  },
+  "authors_sources": {
+    "reconstruction/core_spec/incoming139.py": "c3b71824ebce3f932b194f8c1e531827f541d72500e2d9f50b181d0fc10197cd",
+    "reconstruction/core_spec/incoming_history139.py": "13445d0d1594d859d74301a54e392acc51ee60958a38fa50e0077c71a6a27473",
+    "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+    "scripts/trace_incoming139.py": "5563281356d26d334b92d4a14a7c7d0355a90cd84162d495a6b2807bdd140d4b",
+    "scripts/build_incoming139_oracle.py": "4b9ac588b3ce7f41f0398eeb6fed783acd0af20ff6f21bd3480b0dbcbd71cfd2",
+    "scripts/run_incoming139_oracle.mjs": "1a3567da699a0b6131d4e9d6a9786c4d8a40912726025137b327a02a46fbc424",
+    "scripts/check_incoming139.py": "8c5a20f48cf7c91d1acfa3a28d23fcf93a8468326835789cfb3144df5124b98b"
+  },
+  "original_result_artifacts": {
+    "stdout.jsonl": "c1be2a3f6f43e8570987d636ad7fa3237d5a31101b73493509709f369283862f",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.json": "960e6dc051063e9e62667244fd842aa00f9c9a385b52e2853bc256c8b344feb9",
+    "owned-terminal.json": "82511866ec3777de3686c56453e71b8beb49201e65da870e23b71c013d23f126",
+    "prepared.json": "096446729b7fbb635e958d514ac5530071acdf3ad482d87ce0351c3acb0edbda",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "static/trace.json": "b0a34e658ea445e5399fd877324b3cbd2d70300d3a00df34a28787efd9100bb7"
+  },
+  "expected_artifacts": {
+    "fixtures.json": "3323ad8ff50769dd6120c07fe469e8ad063b6dc749c8a586890a25121218707c",
+    "inputs.jsonl": "3b41ebfb90353e137a168cfff305b7c821a1436c9146874bbcb3c090649d4fb3",
+    "expected.json": "d6f4d56d3eeabc797865c67e84a00725f485e293702bc292a382d4abd984cfb0",
+    "manifest.json": "8f766268757e47d240b9bd68c2a539c6be97d5862c725def06e2174e77fac727",
+    "incoming139-original-exports.wasm": "4c870e18440eef9035eff2675582bdc0926838b2bc92b6e5af23a9de5dedb63a"
+  },
+  "process": {
+    "pid": 39390,
+    "pgid": 39390,
+    "exit_code": 0,
+    "seconds": 0.36613620800198987,
+    "deadline_seconds": 90,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "actual_build": "f79c5e2b4",
+    "cases": 99,
+    "completed_target1076_calls": 164,
+    "real_locale83304_setup_calls": 4,
+    "fresh_instances": 4,
+    "actual_host_calls": 0,
+    "denied_imports": 882,
+    "peak_memory_bytes": 20840448,
+    "memory_cap_bytes": 134217728,
+    "heap_cap_mib": 512,
+    "output_bytes": 2767874,
+    "stack_guards": 663,
+    "target_stack_returns": [
+      {
+        "call": 0,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 1,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 2,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 3,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 4,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 5,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 6,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 7,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 8,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 9,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 10,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 11,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 12,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 13,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 14,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 15,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 16,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 17,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 18,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 19,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 20,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 21,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 22,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 23,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 24,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 25,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 26,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 27,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 28,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 29,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 30,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 31,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 32,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 33,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 34,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 35,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 36,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 37,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 38,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 39,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 40,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 41,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 42,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 43,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 44,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 45,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 46,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 47,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 48,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 49,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 50,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 51,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 52,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 53,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 54,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 55,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 56,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 57,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 58,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 59,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 60,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 61,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 62,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 63,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 64,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 65,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 66,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 67,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 68,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 69,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 70,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 71,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 72,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 73,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 74,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 75,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 76,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 77,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 78,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 79,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 80,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 81,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 82,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 83,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 84,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 85,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 86,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 87,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 88,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 89,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 90,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 91,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 92,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 93,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 94,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 95,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 96,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 97,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 98,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 99,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 100,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 101,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 102,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 103,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 104,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 105,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 106,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 107,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 109,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 110,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 111,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 112,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 113,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 114,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 115,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 116,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 117,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 118,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 119,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 120,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 121,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 122,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 123,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 124,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 125,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 126,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 127,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 128,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 129,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 130,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 131,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 132,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 133,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 134,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 135,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 136,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 137,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 138,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 139,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 140,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 141,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 142,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 143,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 144,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 145,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 146,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 147,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 148,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 149,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 150,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 151,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 152,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 153,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 154,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 155,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 156,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 157,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 158,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 159,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 160,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 161,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 162,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "call": 163,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "locale_producer_receipts": [
+      {
+        "instance": 1,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 2,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 3,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 4,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      }
+    ],
+    "old_snapshot_loaded": false,
+    "original_memory_restored": false,
+    "language_flags_written_by_driver": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "scope": "Complete unchanged1076 controlled invocation; independent scalar/shield/source-category/history48/keyed-HP projection with actual fresh83304 English producer.",
+  "limitations": [
+    "Explicit synthetic zero Game and432B NPC consumer fixtures; not natural constructor/NPC/world/App producers.",
+    "Only mode0 nonfatal/minimum-one,spellID0,no-positive-reserve-spill and known no-active-callback inputs are accepted.",
+    "Unknown history resource-pointer and allocator-unwritten cells remain None; full physical backing captured, only known cells claimed.",
+    "Full Game2592 captured; all bytes independently checked for guards, remaining full-body bytes retained as observations.",
+    "Category/keyed logical values verified; physical BTree pointer/allocation/layout not independently reconstructed.",
+    "No old135/138 acceptance or discovery pilot counts are transferred.",
+    "0 complete game/native/full880/latest headless composition claimed.",
+    "Shield exhausted/source-depleted→1173 remains an immediate next recovery target, not a permanently excluded game behavior.",
+    "The source432 rank424 and English consumer outputs are validated, but a natural5719 NPC producer and original App/account/world constructors are not exercised in this batch.",
+    "Synthetic zero Game allocation is explicit research input. No restored original snapshot or old-context output is used to fill independent inputs."
+  ],
+  "static_scope": {
+    "trace": "static/trace.json",
+    "trace_sha256": "b0a34e658ea445e5399fd877324b3cbd2d70300d3a00df34a28787efd9100bb7",
+    "indices": [
+      1076,
+      83304,
+      20060,
+      59230,
+      56864,
+      994,
+      1173,
+      28155,
+      1466,
+      38882,
+      5719,
+      93344
+    ],
+    "English_producer": "Every fresh instance invokes unchanged83304, which parses current embedded14-language tables. Default selector is not rewritten;0 host calls; Once becomes3 by actual producer.",
+    "English_embedded_entries": 3334,
+    "NPC_stride": 432,
+    "NPC_classification_offset": 424,
+    "shield_accumulator": 736,
+    "maximum_shield": 740,
+    "old744": "poison canary unchanged; not a139 shield field",
+    "lightning_shield": {
+      "spell_id": 324,
+      "rank_bonus": "ordered f32 rank*3/100",
+      "definition_pointer": 5888020
+    },
+    "history": "48B physical backing, all known bytes including untouched fixture padding; resource_pointer/allocator_unwritten remain None, content resolved separately."
+  },
+  "model_boundary_checks": {
+    "path": "evidence/incoming139-boundaries-20261102T033232.472297Z/checks.json",
+    "sha256": "cd0e01ae1e999c377539a761ebcd14b1cff0f017bc71ada16d1a72ab16bff1c2",
+    "script_sha256": "2e2bdff7204f17c9baed883f93813ebd2a9aa5a1913925bbf2b07923a7fd7029",
+    "checks": 13,
+    "kind": "model_only_boundary_selfcheck_not_original_differential",
+    "new_original_calls": 0
+  },
+  "prior_discovery": {
+    "directory": "evidence/incoming139-fresh-locale-pilot-20261102T025623.661008Z",
+    "comparison_sha256": "9465f5ba45570d2393fb90b29b7f9d7fd8e082bdd0d3e54f26ae5407c0fcc263",
+    "target_calls": 1,
+    "setup_calls": 1,
+    "included_in_final_164": false
+  },
+  "prior_controlled_pilot": {
+    "directory": "evidence/incoming139-oracle-20261102T032856.575075Z",
+    "comparison_sha256": "d7e31943f0e83c4ca10434c8884544cfe5cd9170e9cb5c49a242bd8d665c8c7b",
+    "target_calls": 22,
+    "setup_calls": 1,
+    "included_in_final_164": false
+  },
+  "failed_preserved": [
+    {
+      "directory": "evidence/incoming139-oracle-20261102T032732.833918Z",
+      "reason": "Full1076 returned14 times, but shield exhaustion entered real1173 and exceeded the leaf-only keyed decoder domain. Extra Aura/keyed producer is unmodeled and explicitly rejected in the final partial-shield model.",
+      "files": {
+        "failure.json": "10f18cec3221dfdd7a75a24bfd1514bb6df139034c4cf3ea7bed82dbdd784cbc",
+        "runtime.json": "2d2bef9e2c0c0b54cb6b0215c3aad0225c1c1bd18268a6255bf4bb6c27268034",
+        "prepared.json": "343f4307665de43f8834cac947014ac64568b378caa28da700f7265d1d1e2226",
+        "owned-terminal.json": "5e29e5fbe4f193b9825a825ad55dabe606421d93677d0eed151ec45549c66b8a"
+      },
+      "runtime": {
+        "version": "0.139.0",
+        "actual_build": "f79c5e2b4",
+        "cases": 25,
+        "completed_target1076_calls": 14,
+        "real_locale83304_setup_calls": 1,
+        "fresh_instances": 1,
+        "actual_host_calls": 0,
+        "denied_imports": 882,
+        "peak_memory_bytes": 20709376,
+        "memory_cap_bytes": 134217728,
+        "heap_cap_mib": 512,
+        "output_bytes": 158355,
+        "stack_guards": 85,
+        "target_stack_returns": [
+          {
+            "call": 0,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 1,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 2,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 3,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 4,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 5,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 6,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 7,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 8,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 9,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 10,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 11,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 12,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 13,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          }
+        ],
+        "locale_producer_receipts": [
+          {
+            "instance": 1,
+            "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+            "once": 3,
+            "tag": 0,
+            "value": 0,
+            "fallback": 0,
+            "capacity": 14,
+            "count": 14,
+            "pointer": 14680072
+          }
+        ],
+        "old_snapshot_loaded": false,
+        "original_memory_restored": false,
+        "language_flags_written_by_driver": false,
+        "network_used": false,
+        "user_saves_accessed": false,
+        "error": "Error: Nonleaf keyed fixture"
+      },
+      "process": {
+        "pid": 37622,
+        "pgid": 37622,
+        "exit_code": 1,
+        "seconds": 0.26658420800231397,
+        "deadline_seconds": 90,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    },
+    {
+      "directory": "evidence/incoming139-oracle-20261102T032914.877649Z",
+      "reason": "Full1076 returned162 times; per-case stdout serialization exceeded the1MiB finite record budget at the64-hit case. No final comparison. Record budget alone increased to8MiB and a fresh full batch executed; no field removed.",
+      "files": {
+        "failure.json": "3e6dbda905578422d73efb5e9309ffec862b1f26f16fe3fb0525267e9261d8ff",
+        "runtime.json": "01524a250c0472d891b02f8960b6745d2d0b3575f51899397cbd5c4b5d293c58",
+        "prepared.json": "afb5835c6d04fc846bdef753721511204350283f9e8898a15345a49e1814a985",
+        "owned-terminal.json": "5681aa62d9b089d6bf99406b26431ddc7b43e0b4f75c4e4dfa5868501339a3cf"
+      },
+      "runtime": {
+        "version": "0.139.0",
+        "actual_build": "f79c5e2b4",
+        "cases": 99,
+        "completed_target1076_calls": 162,
+        "real_locale83304_setup_calls": 4,
+        "fresh_instances": 4,
+        "actual_host_calls": 0,
+        "denied_imports": 882,
+        "peak_memory_bytes": 20840448,
+        "memory_cap_bytes": 134217728,
+        "heap_cap_mib": 512,
+        "output_bytes": 1625973,
+        "stack_guards": 656,
+        "target_stack_returns": [
+          {
+            "call": 0,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 1,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 2,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 3,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 4,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 5,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 6,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 7,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 8,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 9,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 10,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 11,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 12,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 13,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 14,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 15,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 16,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 17,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 18,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 19,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 20,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 21,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 22,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 23,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 24,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 25,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 26,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 27,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 28,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 29,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 30,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 31,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 32,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 33,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 34,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 35,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 36,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 37,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 38,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 39,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 40,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 41,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 42,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 43,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 44,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 45,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 46,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 47,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 48,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 49,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 50,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 51,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 52,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 53,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 54,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 55,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 56,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 57,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 58,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 59,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 60,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 61,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 62,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 63,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 64,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 65,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 66,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 67,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 68,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 69,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 70,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 71,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 72,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 73,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 74,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 75,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 76,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 77,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 78,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 79,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 80,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 81,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 82,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 83,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 84,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 85,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 86,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 87,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 88,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 89,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 90,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 91,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 92,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 93,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 94,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 95,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 96,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 97,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 98,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 99,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 100,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 101,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 102,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 103,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 104,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 105,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 106,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 107,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 108,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 109,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 110,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 111,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 112,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 113,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 114,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 115,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 116,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 117,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 118,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 119,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 120,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 121,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 122,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 123,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 124,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 125,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 126,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 127,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 128,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 129,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 130,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 131,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 132,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 133,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 134,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 135,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 136,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 137,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 138,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 139,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 140,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 141,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 142,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 143,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 144,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 145,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 146,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 147,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 148,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 149,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 150,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 151,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 152,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 153,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 154,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 155,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 156,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 157,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 158,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 159,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 160,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "call": 161,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          }
+        ],
+        "locale_producer_receipts": [
+          {
+            "instance": 1,
+            "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+            "once": 3,
+            "tag": 0,
+            "value": 0,
+            "fallback": 0,
+            "capacity": 14,
+            "count": 14,
+            "pointer": 14680072
+          },
+          {
+            "instance": 2,
+            "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+            "once": 3,
+            "tag": 0,
+            "value": 0,
+            "fallback": 0,
+            "capacity": 14,
+            "count": 14,
+            "pointer": 14680072
+          },
+          {
+            "instance": 3,
+            "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+            "once": 3,
+            "tag": 0,
+            "value": 0,
+            "fallback": 0,
+            "capacity": 14,
+            "count": 14,
+            "pointer": 14680072
+          },
+          {
+            "instance": 4,
+            "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+            "once": 3,
+            "tag": 0,
+            "value": 0,
+            "fallback": 0,
+            "capacity": 14,
+            "count": 14,
+            "pointer": 14680072
+          }
+        ],
+        "old_snapshot_loaded": false,
+        "original_memory_restored": false,
+        "language_flags_written_by_driver": false,
+        "network_used": false,
+        "user_saves_accessed": false,
+        "error": "Error: Output bound"
+      },
+      "process": {
+        "pid": 38753,
+        "pgid": 38753,
+        "exit_code": 1,
+        "seconds": 0.37962166700162925,
+        "deadline_seconds": 90,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    }
+  ],
+  "old_acceptance_transferred": false,
+  "new_original_calls_claimed": 164,
+  "full_game_runs": 0,
+  "native_runs": 0,
+  "full880_runs": 0
+}

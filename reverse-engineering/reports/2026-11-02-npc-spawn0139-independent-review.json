@@ -1,0 +1,108 @@
+{
+  "status": "pass_with_declared_controlled_SomeXYZ_time0_limits",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/stats138_review",
+  "independent_receipt": "evidence/npc-spawn139-independent-review-20261102T033638.669740Z/review.json",
+  "independent_receipt_sha256": "3bc74e87c54f591426563a243b1ad80732cb1a5397383c019186c0d6d2153a4b",
+  "owned_terminal": "evidence/npc-spawn139-independent-review-owned-20261102T033638.227069Z/process-terminal.json",
+  "owned_terminal_sha256": "9e86d641d0a1339686948bb274366fab857c5667ea482811c5cc9389d1a5956d",
+  "review_script_sha256": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+  "review_helper": {
+    "path": "scripts/review_combat139.py",
+    "sha256": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scope": "pure parsing/AST/f32 helpers only; main never called"
+  },
+  "author_comparison_sha256": "97a19153ff42e9b3ad692bd0edf134a52ecc0c4e2db5fc1f36a52b43f427e3e4",
+  "author_handoff_sha256": "0b76c780dcbe17e31edbd25e8d8bf018c833256fc0dca8a2e0a0e52af7d67903",
+  "original_source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "static_proof_sha256": "fe75f664b7d05627cb94e964d2750a24a929d83114ff192c6f543b2038ccd72d",
+  "independent_result": {
+    "independent_cases": 16,
+    "full5719_captured_calls_checked": 64,
+    "author_full1600_calls": 16,
+    "independent_mismatches": 0,
+    "allocation_modes": {
+      "caller_backing": 8,
+      "reserve0to4": 8
+    },
+    "record_known_bytes": 79536,
+    "record_unknown_bytes": 31056,
+    "observed_nonzero_unknown_bytes": 15028,
+    "bytes_written_per_active_record": 303,
+    "unknown_padding_per_new_active_record": 129,
+    "packet_prefix_observations": 160,
+    "distinct_new169_messages": 64,
+    "raw_game_observation_bytes": 165888,
+    "independent_reference_rng_draws": 128,
+    "original_rng_draw_count_directly_captured": false,
+    "output_ABI": {
+      "size": 16,
+      "tag_store": "u64@0",
+      "guid_store": "u64@8",
+      "param0_gets": 2,
+      "param0_reassignments": 0,
+      "whole_function_pinned": true
+    },
+    "frozen_production_sources": 8,
+    "nonexport_sections_byte_identical": true,
+    "all_original_callees_retained": true
+  },
+  "source_closure_count": 18,
+  "source_import_edge_count": 29,
+  "fresh_static_body_count": 11,
+  "additional_allocator_body_count": 3,
+  "reserve_path": "66565 computes max(2*oldcapacity,4);57285 oldcapacity0 bypasses realloc and calls108362(size1728,align8);108362 selects1711 allocator;no NPC-specific initialization before303B writes",
+  "runtime": {
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "full5719_calls": 64,
+    "fresh_instances": 16,
+    "full1600_calls": 16,
+    "snapshot_restores": 0,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "stack_checks": 184,
+    "peak_memory_bytes": 20709376,
+    "memory_cap_bytes": 33554432,
+    "raw_Game_observation_bytes": 165888,
+    "only_export_section_changed": true,
+    "old_snapshot_loaded": false,
+    "naturalApp_claimed": false,
+    "borrowed_flat_query_input": true,
+    "fullworldRc_produced": false,
+    "independent_world_producer": false,
+    "native_executions": 0,
+    "complete_games": 0
+  },
+  "reviewer_executions": {
+    "author_model": 0,
+    "author_checker": 0,
+    "author_builder": 0,
+    "original": 0,
+    "native": 0
+  },
+  "limitations": [
+    "Only SomeXYZ, Elwynn definition0, initialtime0, mode0,difficulty0,member1,level1. No8740,naturalplacement,realWorldRc,phase1/full1108 or native/fullgame acceptance.",
+    "Original1600 is a true constructor with explicit research profile and borrowed flat query view; this is not natural menu/App production.",
+    "64 complete5719 include all natural callees but no assertion every branch/callee was reached. Eight preallocated caller backings and eight real capacity0-to4 reserve cases only.",
+    "Raw2592B Game is observed; only declared inputs,counters,RNG,headers and phase were independently cross-checked. It is not a full Game knownness prediction.",
+    "184 stack guard successes are runner assertions plus aggregate output, not184 separately serialized per-call stack records.",
+    "Original RNG state is checked after every full entry; loop draw counts are independently recomputed but not separately captured from original.",
+    "160 packet occurrences are cumulative prefixes, exactly64 new169 producers. Unknown allocation padding remainsNone even when15028 raw observations are nonzero.",
+    "Prior restricted snapshot batches3+64+64 and previous legal east-only64 do not contribute to this16/64 acceptance; study total2595719 and32constructor calls remains historical.",
+    "Static helper/body/data checks do not establish nonfinite atan coverage or arbitrary NPC/difficulty/time behavior; no author negative guard is counted as an original case.",
+    "Artifact and output hashes recorded here bind bytes as read, not a retroactive pre-run freeze. Prepared receipt binds expected/input/module before original."
+  ],
+  "review_history": [
+    {
+      "path": "evidence/npc-spawn139-independent-review-owned-20261102T033437.985217Z",
+      "result": "Reviewer manifest-field normalization assertion failed before references; retained, no author failure and0original execution."
+    },
+    {
+      "path": "evidence/npc-spawn139-independent-review-20261102T033450.693678Z/review.json",
+      "result": "First byte/reference pass before extra source-snapshot and allocator proof checks; retained and superseded by final same64artifact review."
+    }
+  ]
+}

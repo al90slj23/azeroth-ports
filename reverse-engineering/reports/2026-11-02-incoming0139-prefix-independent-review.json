@@ -1,0 +1,109 @@
+{
+  "status": "pass_with_declared_nonfatal_numeric_history_prefix_limits",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/motion38_review",
+  "review_script_sha256": "adaa5e21f2e491fe3eee18a8ec57c9d8b249481c6edc52a29408ad194dece07b",
+  "pure_review_helper": {
+    "path": "scripts/review_combat139.py",
+    "sha256": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scope": "only pure struct/AST/module parsing helpers; main never called"
+  },
+  "independent_receipt": "evidence/incoming139-independent-review-20261102T034555.805099Z/review.json",
+  "independent_receipt_sha256": "f6532f1e1392c120dd81f96583d2385685ec5d0be5496d6f7e1656ba2eca8f46",
+  "owned_terminal": "evidence/incoming139-independent-review-owned-20261102T034554.368215Z/process-terminal.json",
+  "owned_terminal_sha256": "27d0e7d8528f70d1664fd15ddb1f5ad375da71c147705e15654c5918a8895f6c",
+  "author_comparison_sha256": "7bc59682f0b82976f113e4a93b794d3ae9aca11a861ab012bb247dc7789f2533",
+  "author_handoff_sha256": "1e438e6075058f3f61d076519056c110c70ca315b485e93d26a9482ad5714e29",
+  "source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "static_trace_sha256": "b0a34e658ea445e5399fd877324b3cbd2d70300d3a00df34a28787efd9100bb7",
+  "cases": 99,
+  "complete1076_calls_checked": 164,
+  "original83304_setup_receipts_checked": 4,
+  "mismatches": 0,
+  "counts": {
+    "resource_pointer": 26088,
+    "resource_pointer_nonzero": 17300,
+    "known_history": 104566,
+    "allocator_unwritten": 48962,
+    "allocator_unwritten_nonzero": 16149,
+    "branch_no_reserve_spill_nonfatal_prefix": 156,
+    "stages": 164,
+    "guard_bytes": 20736,
+    "branch_phase_guard": 4,
+    "branch_protection_guard": 3,
+    "branch_active_raw12_guard": 1
+  },
+  "source_closure_count": 15,
+  "production_source_count": 5,
+  "source_import_edge_count": 23,
+  "static_body_count": 12,
+  "direct_call_sites": 75,
+  "unique_direct_callees": 34,
+  "nonexport_sections_byte_identical": true,
+  "current_lightning_shield": {
+    "index": 60,
+    "definition_pointer": 5888020,
+    "spell_id": 324,
+    "raw88_hex": "0d0000000000a44100000000c1ab5900100000002fbd5900100000003fbd59001c000000322d1500010000004401000000000000000070410000000000000000000000000000704100000000000000000000000009030000"
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "actual_build": "f79c5e2b4",
+    "cases": 99,
+    "completed_target1076_calls": 164,
+    "real_locale83304_setup_calls": 4,
+    "fresh_instances": 4,
+    "actual_host_calls": 0,
+    "denied_imports": 882,
+    "peak_memory_bytes": 20840448,
+    "memory_cap_bytes": 134217728,
+    "heap_cap_mib": 512,
+    "output_bytes": 2767874,
+    "stack_guards": 663,
+    "old_snapshot_loaded": false,
+    "original_memory_restored": false,
+    "language_flags_written_by_driver": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "author_terminal": {
+    "pid": 39390,
+    "pgid": 39390,
+    "exit_code": 0,
+    "seconds": 0.36613620800198987,
+    "deadline_seconds": 90,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_executions": {
+    "author_model": 0,
+    "author_checker": 0,
+    "author_builder": 0,
+    "original": 0,
+    "native": 0
+  },
+  "scope_and_limits": [
+    "99 controlled fixtures/164 complete1076 calls on4fresh instances, not99fresh Game constructors. Synthetic zero Game/NPC432/history/source fixtures, no natural constructor/App/world producer.",
+    "Mode0,nonfatal or minimum-one,spellID0,no-positive-reserve-spill,unexhausted/undepleted shield and known no-active-callback domain only.1173/28155/1466/fatal/revival callbacks remain excluded.",
+    "Current139 tag54 first active byte4 modifier matches lightning_shield spell324 with strict expiry; rankbyte5*3/100. No old135nearcount*2 rule or passing test is reused.",
+    "History resource pointers are unknown addresses with separately checked strings; allocator-unwritten bytes remainNone, existing padding and copied inactive slots remain known when sourced.",
+    "Full2592B Game is captured; full byte equality is checked only for8guards. Numeric fields/history/source records and logical categories/keyed22/28 are verified, BTree physical nodes and full Game are not independently reconstructed.",
+    "164 target stack records are individually stored;663totalguards include allocations and4locale calls, with non-target successes represented by runner assertions/aggregate.",
+    "83304 initializes real current embedded English tables/Once on each instance with882denied imports and0host calls. This is explicit setup, not natural menu locale choice or general multilingual reconstruction.",
+    "13 author model-boundary rejections/pilots/two failed studies are not added to99/164. Prior evidence and first failures remain untouched;0neworiginal by reviewer.",
+    "Extra output hashes bind bytes as read;prepared pins inputs/expected/module before original. No native, full gameplay, or full1076 arbitrary behavior acceptance."
+  ],
+  "review_history": {
+    "retained_failed_owned_directories": [
+      "evidence/incoming139-independent-review-owned-20261102T034241.837066Z",
+      "evidence/incoming139-independent-review-owned-20261102T034255.152707Z",
+      "evidence/incoming139-independent-review-owned-20261102T034325.062327Z"
+    ],
+    "reason": "Reviewer guard development: export list format, spell field+44 rather than string length+40, and group retained in inputs. These fail before reference comparison and are not author/original findings.",
+    "retained_first_pass": "evidence/incoming139-independent-review-20261102T034352.054015Z/review.json",
+    "final_delta": "Additional fixed export identity and fixture pre-state binding, same original164 results; no new original execution."
+  }
+}

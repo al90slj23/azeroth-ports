@@ -1,0 +1,1064 @@
+{
+  "status": "author_scoped_differential_passed_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "evidence_directory": "evidence/incoming-aura139-oracle-20261102T034802.773264Z",
+  "comparison_sha256": "7dde10f5f65b9afbde625c2b0b386981eb128998a82e034b03e9366e60d488b0",
+  "cases": 36,
+  "target1076_calls": 31,
+  "target1173_calls": 8,
+  "nested1173_control_path_reached": 30,
+  "nested1173_count_kind": "static conditional path follows30 cleanup calls; not separately instrumented or additional independent target cases",
+  "setup_calls": {
+    "actual1600": 36,
+    "actual83304": 36
+  },
+  "counts": {
+    "assertions": 27422,
+    "known_cells": 26648,
+    "unknown_cells_observed": 102568,
+    "physical_pointer_or_treeheight_words_observed": 179,
+    "relative_Game_known_bytes": 100372,
+    "stages": 39,
+    "branch_direct1173-empty": 8,
+    "branch_shield_exhausted": 23,
+    "branch_shield_source_depleted": 7,
+    "branch_post-cleanup-no_reserve_spill_nonfatal_prefix": 1
+  },
+  "groups": {
+    "direct1173-empty-current-constructor": 1,
+    "full1076-shield-exhaustion-kind7": 1,
+    "full1076-shield-source-depletion": 1,
+    "direct1173-repeat-empty": 1,
+    "direct1173-prior-tag0-ready-policy": 4,
+    "exhaustion-matrix": 16,
+    "source-depletion-matrix": 4,
+    "exhaustion-removes-all-kind7": 1,
+    "source-depletion-removes-all-matching-spell": 1,
+    "exhaustion-no-live-record-still1173": 1,
+    "depletion-no-live-record-still1173": 1,
+    "cleanup-real-English-history-fallback": 3,
+    "same-Game-post-cleanup-followup": 1
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "cases": 36,
+    "completed_target1076_calls": 31,
+    "completed_target1173_calls": 8,
+    "real_locale83304_setup_calls": 36,
+    "real1600_setup_calls": 36,
+    "fresh_instances": 36,
+    "actual_host_calls": 0,
+    "denied_imports": 882,
+    "peak_memory_bytes": 20709376,
+    "memory_cap_bytes": 134217728,
+    "heap_cap_mib": 512,
+    "output_bytes": 939700,
+    "stack_guards": 295,
+    "target_stack_returns": [
+      {
+        "role": "1173",
+        "call": 0,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 1,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 2,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 3,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 4,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 5,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 6,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 7,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 8,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1173",
+        "call": 9,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 10,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 11,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 12,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 13,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 14,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 15,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 16,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 17,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 18,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 19,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 20,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 21,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 22,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 23,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 24,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 25,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 26,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 27,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 28,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 29,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 30,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 31,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 32,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 33,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 34,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 35,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 36,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 37,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "1076",
+        "call": 38,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "locale_producer_receipts": [
+      {
+        "instance": 1,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 2,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 3,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 4,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 5,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 6,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 7,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 8,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 9,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 10,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 11,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 12,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 13,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 14,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 15,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 16,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 17,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 18,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 19,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 20,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 21,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 22,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 23,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 24,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 25,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 26,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 27,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 28,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 29,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 30,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 31,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 32,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 33,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 34,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 35,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      },
+      {
+        "instance": 36,
+        "before": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "after": "0000000000000000000000000e0000000800e0000e00000003000000000000000000000000000000",
+        "once": 3,
+        "tag": 0,
+        "value": 0,
+        "fallback": 0,
+        "capacity": 14,
+        "count": 14,
+        "pointer": 14680072
+      }
+    ],
+    "old_snapshot_loaded": false,
+    "original_memory_restored": false,
+    "language_flags_written_by_driver": false,
+    "phase1_is_explicit_component_input": true,
+    "App_produced": false,
+    "world_Rc_producer_executed": false,
+    "borrowed_flat_query": true,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "process": {
+    "pid": 74307,
+    "pgid": 74307,
+    "exit_code": 0,
+    "seconds": 1.4080557499983115,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "deadline_seconds": 90
+  },
+  "source_closure": {
+    "files": 23,
+    "production": 10,
+    "edges": 50,
+    "sources": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+      "reconstruction/core_spec/incoming139.py": "c3b71824ebce3f932b194f8c1e531827f541d72500e2d9f50b181d0fc10197cd",
+      "reconstruction/core_spec/incoming_aura139.py": "6a65422a2b2531365d57f6507e155dc3cd954f81e114da1968a8cfc9aa1a818b",
+      "reconstruction/core_spec/incoming_history139.py": "13445d0d1594d859d74301a54e392acc51ee60958a38fa50e0077c71a6a27473",
+      "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+      "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+      "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "scripts/build_incoming139_oracle.py": "4b9ac588b3ce7f41f0398eeb6fed783acd0af20ff6f21bd3480b0dbcbd71cfd2",
+      "scripts/build_incoming_aura139_oracle.py": "59a30a1b8dbfc85fdb75c4cf9f30983b130909560bcc246f7e3b9195d3a23722",
+      "scripts/check_incoming139.py": "8c5a20f48cf7c91d1acfa3a28d23fcf93a8468326835789cfb3144df5124b98b",
+      "scripts/check_incoming_aura139.py": "033ec9bea1e7983917c6936bf96be96c0ee91659b047393b2242cbbbdd1076ba",
+      "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/run_incoming_aura139_oracle.mjs": "dd8dec17d63ac8d25f33dde079764bdab7b41845c6359d874c6ed526a6298691",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+      "scripts/trace_incoming139.py": "5563281356d26d334b92d4a14a7c7d0355a90cd84162d495a6b2807bdd140d4b",
+      "scripts/trace_incoming_aura139.py": "75120ecbca08d4886e734b7d688c224ccba43fbbd807d3868cb97daa7c924528",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    }
+  },
+  "author_sources": {
+    "reconstruction/core_spec/incoming_aura139.py": "6a65422a2b2531365d57f6507e155dc3cd954f81e114da1968a8cfc9aa1a818b",
+    "scripts/trace_incoming_aura139.py": "75120ecbca08d4886e734b7d688c224ccba43fbbd807d3868cb97daa7c924528",
+    "scripts/build_incoming_aura139_oracle.py": "59a30a1b8dbfc85fdb75c4cf9f30983b130909560bcc246f7e3b9195d3a23722",
+    "scripts/run_incoming_aura139_oracle.mjs": "dd8dec17d63ac8d25f33dde079764bdab7b41845c6359d874c6ed526a6298691",
+    "scripts/check_incoming_aura139.py": "033ec9bea1e7983917c6936bf96be96c0ee91659b047393b2242cbbbdd1076ba"
+  },
+  "static_trace": {
+    "path": "static/trace.json",
+    "sha256": "b64e36a880abd02976a275137acd2c3e6963c2ff83898d8dfe785167a7667521",
+    "entry1173": {
+      "index": 1173,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 7464512,
+      "body_end": 7471604,
+      "body_bytes": 7092,
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_bytes": 104133,
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "direct_callees": [
+      23732,
+      29910,
+      31155,
+      52397,
+      66545,
+      66553,
+      73034,
+      81897,
+      108362,
+      109316
+    ],
+    "no1542_in1173": true,
+    "setup1600_does_call1542": true,
+    "frame88_constructor_source_windows": {
+      "constructor_f64_zero_temporary": {
+        "first_line": 614,
+        "last_line": 625,
+        "text": "                  i64.const 0\n                  i64.store offset=1376\n                  local.get 3\n                  i64.const 0\n                  i64.store offset=2864\n                  local.get 3\n                  i64.const 0\n                  i64.store offset=2872\n                  local.get 3\n                  i64.const 0\n                  i64.store offset=2840\n                  local.get 3",
+        "sha256": "5eb65bb678487ea2628d13f96965e770d42ab1faf3af4dad0f3f21df32e22ec3"
+      },
+      "constructor_f64_Game992": {
+        "first_line": 985,
+        "last_line": 1000,
+        "text": "                  i64.const 0\n                  i64.store offset=1064\n                  local.get 3\n                  i64.const 17179869184\n                  i64.store offset=1056\n                  local.get 3\n                  local.get 3\n                  i64.load offset=2872\n                  i64.store offset=1080\n                  local.get 3\n                  local.get 3\n                  i64.load offset=2864\n                  i64.store offset=1072\n                  local.get 3\n                  i64.const 17179869184\n                  i64.store offset=1088",
+        "sha256": "d383e16e7be53305589256074bce6cd96c2a98ad640cbe2fa7293ad39241bfe2"
+      },
+      "constructor_shield_source_zero": {
+        "first_line": 713,
+        "last_line": 722,
+        "text": "                  i64.const 3212836864\n                  i64.store offset=1440\n                  local.get 3\n                  i64.const 0\n                  i64.store offset=1432\n                  local.get 3\n                  local.get 26\n                  i64.store offset=1424\n                  local.get 3\n                  i32.const 1065353216",
+        "sha256": "1c5e43d90726f202a2fb3dd48eb5a816d23560374c5426295a427a60dd70ed16"
+      },
+      "constructor_Aura_empty_ready0": {
+        "first_line": 1183,
+        "last_line": 1202,
+        "text": "                  i32.store offset=2576\n                  local.get 3\n                  i32.const 0\n                  i32.store16 offset=2657 align=1\n                  local.get 3\n                  i64.const 4\n                  i64.store offset=2104\n                  local.get 3\n                  i64.const 0\n                  i64.store offset=2096\n                  local.get 3\n                  i64.const 17179869184\n                  i64.store offset=2088\n                  local.get 3\n                  i32.const -1054867456\n                  i32.store offset=2580\n                  local.get 3\n                  i64.const 0\n                  i64.store offset=2584\n                  local.get 3",
+        "sha256": "3afe5d8e4c1154ddde7bc2f77af387bdb56bcd165d185725e35ae9060bfa7710"
+      },
+      "constructor_frame88_Game2592": {
+        "first_line": 2695,
+        "last_line": 2710,
+        "text": "                  i64.store align=4\n                  local.get 3\n                  i32.const 88\n                  i32.add\n                  local.tee 1\n                  call 1542\n                  local.get 3\n                  local.get 3\n                  f32.load offset=1624\n                  f32.store offset=1528\n                  local.get 0\n                  local.get 1\n                  i32.const 2592\n                  memory.copy\n                  local.get 3\n                  i32.const 2944",
+        "sha256": "a5c0918c6baedbce0e91ffa8d74e01c6e2fe82d68a320ab9c5985f3e787eb521"
+      }
+    },
+    "default_definition_kinds": {
+      "5882740": 0,
+      "5891892": 8
+    }
+  },
+  "numeric_source": "Fresh actual1600 constructs class1/race1/level1 HP230 and matching derived armor/cap; independent current139 constructor model supplies expectation. Typed component overrides shield/barrier/source/remaining/reserve/accumulator/max plus now/phase/744-canary, not HP or derived attributes.",
+  "Aura": {
+    "header": [
+      2000,
+      2004,
+      2008
+    ],
+    "flag": 2569,
+    "records": 48,
+    "stride": 16,
+    "tag0_known_bytes": 4,
+    "uninitialized_payload_bytes": 12,
+    "known_bytes_per_stage": 192,
+    "unknown_bytes_per_stage": 576,
+    "logical_key_groups": [
+      [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      [
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ]
+    ],
+    "logical_new_keys": 66,
+    "initial_existing_keys": [
+      22,
+      28,
+      1109
+    ],
+    "normal_key_count": 69,
+    "ready_equal_skip_key_count": 3,
+    "actual_BTree_height": 1,
+    "raw_BTree_nodes_captured": true,
+    "physical_BTree_producer_independently_recreated": false
+  },
+  "source_order": "1076 armor→shield scalar split→stable retain-away kind7/all matching sourceID→1173 new Aura→736/740 reset→HP/total/source category→history48→keyedHP; a second incoming call continues on the same Game after cleanup.",
+  "known_unknown_counts": {
+    "constructor_known": 18072,
+    "constructor_unknown": 75240,
+    "Aura_known": 7488,
+    "Aura_unknown": 22464,
+    "history_known": 1088,
+    "history_unknown": 4864,
+    "relative_Game_known": 100372,
+    "physical_pointer_or_treeheight_words_observed": 179
+  },
+  "model_boundary_selfcheck": {
+    "path": "evidence/incoming-aura139-boundaries-20261102T035102.483512Z/checks.json",
+    "sha256": "24536bb4d0314c08f044f951bdae5143d455a7501610e82137f9cb2351bcf547",
+    "script_sha256": "a3dddf3cc98fd87b4c8d65e5cbfb8dee433cc634b5221f90806517beb482423c",
+    "checks": 12,
+    "original_calls": 0,
+    "kind": "model_only_unknown_boundary_selfcheck_not_original"
+  },
+  "pilot": {
+    "directory": "evidence/incoming-aura139-oracle-20261102T034651.842563Z",
+    "comparison_sha256": "84be6975e09de9b50f68a2e0c93ae6e23533698c1a02e0248eeb74653e2a4bab",
+    "target1076_calls": 2,
+    "target1173_calls": 1,
+    "included_in_formal_counts": false
+  },
+  "failed_preserved": [
+    {
+      "directory": "evidence/incoming-aura139-oracle-20261102T034742.762811Z",
+      "failure_sha256": "963b948a434abe082651fee92411505f4985b493f8db47113e4421e47dcc92e2",
+      "new_original_calls": 0,
+      "reason": "Pre-original fixture rejected: shield20/amount25 after armor does not enter cleanup. Fresh full fixture uses30."
+    },
+    {
+      "directory": "evidence/incoming-aura139-boundaries-20261102T035028.181014Z",
+      "failure_sha256": "36c629ebf68966e1af9bf3f59a8b802715625901c77f4d4c3640092a53e77133",
+      "new_original_calls": 0,
+      "reason": "Negative fixture incorrectly equated reserve-positive with positive spill; source remaining100 makes spill0. New selfcheck uses sourceID0; production unchanged."
+    }
+  ],
+  "scope": "Fresh controlled1600 consistent humanwarrior→actual83304→direct1173 empty-source or complete1076 shield exhaustion/source-depletion;66 keyed outputs,48 Aura known/None cells,HP/history/counters and relative Game conservation.",
+  "limitations": [
+    "Actual1600 and83304 are setup, not new independent constructor/localization acceptance counts.",
+    "Phase1 is explicit consumer input; noApp/externref/natural cachedworld or opening1108.",
+    "Only shield-only live records entirely removed,empty mod36,no owned/racial kind12,no reserve spill and nonfatal source0/contact0 are accepted.",
+    "Nonempty Aura/modifier/retained live/cooldown branches remain future work; physical BTree allocation/pointers/treeheight are observations with full nodes retained.",
+    "No full880/native/complete game runs or transferred135/138 cases.",
+    "Typed live32 source is a controlled consumer fixture, not an independently recovered shield-cast/apply producer.",
+    "The independent139 constructor/stats model is reused as a dependency; its prior162/10569 acceptance counts are not new cases in this batch.",
+    "All full2592 Game bytes are retained and relative unchanged/modeled writes checked except explicitly observed physical pointer/treeheight words; no complete heap/BTree/Rc allocator reimplementation is claimed.",
+    "The old prefix9 files remain byte-identical and the original shield1173 failure is preserved; this new closed domain does not retrospectively relabel it passed."
+  ],
+  "artifacts": {
+    "stdout.jsonl": "f7544b52f766f4da45e51224ee8e8b0785898a808d2a882103cab18697dfb47d",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.json": "9c505188e98ebafb02f5fb0ba2b8df8cde5b13ff75bde66c5ee5128d33a21421",
+    "prepared.json": "96a790c96fb4d08a32b833052369d00bee035373b0541c81c334fc35152004b4",
+    "owned-terminal.json": "4f6df3c3aeef57deffe298724aa9eb7b68cc6f5ced8022708bf7d6b336f75a0f",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "static/trace.json": "b64e36a880abd02976a275137acd2c3e6963c2ff83898d8dfe785167a7667521"
+  },
+  "frozen_artifacts": {
+    "fixtures.json": "2c26367efdd00d0a9b041645720644cf17fbc9570413cc61c61efb38fdd76ea9",
+    "inputs.jsonl": "e818c1001f6fea1427e58ac0b54dc00e1f27b3ec229a5526fed646ec8828949f",
+    "expected.json": "782b14282c4e04f4dfde3990f1e4f237f4c4b94eb0e0cf599f1f8fb419af5f45",
+    "manifest.json": "60f83cbd3d39326484acc873e440d6c1c2eafff527380a28164182c6799ac170",
+    "incoming-aura139-original-exports.wasm": "e748c8cc7901903a1819cd4036dc6a1670fb51a9eb7f27299735997e12f5be22"
+  },
+  "old_acceptance_transferred": false,
+  "full880_runs": 0,
+  "native_runs": 0,
+  "complete_game_runs": 0
+}

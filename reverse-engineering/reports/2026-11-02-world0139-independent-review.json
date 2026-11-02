@@ -1,0 +1,282 @@
+{
+  "status": "pass_current139_bounded_raw_world_and_query_projection",
+  "reviewer": "/root/motion38_review",
+  "author": "/root",
+  "author_handoff": "evidence/world-query139-oracle-20261102T034447.093808Z/task-handoff.json",
+  "author_handoff_sha256": "51de826f41c2e8dcc10ecfc2e088f26ea526f095e2f88d94d2ae4bdf7fd7e42f",
+  "author_comparison_sha256": "9e197108372b96a29397c0e3c4f5ba312e182a3cd4ab2872d986bf6119c494ef",
+  "reviewer_script": "scripts/review_world139.py",
+  "reviewer_script_sha256": "031c0dc5e8605947687e9326b14171d6c5d6e198dcb49cea20c10fc2ede95591",
+  "owned_review": "evidence/world139-independent-review-owned-20261102T041305.531201Z/review/review.json",
+  "owned_review_sha256": "dcbd2ad0703771e1b023306a91594f33f0d333419b330da0a8797b45c8bfcdff",
+  "owned_process": {
+    "pid": 11351,
+    "pgid": 11351,
+    "exit_code": 0,
+    "seconds": 4.678950999994413,
+    "deadline_seconds": 180,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "author_files": {
+    "reconstruction/resource_spec/world139.py": "b075fb3cc5cc47f119f55eb068c131d65e0c4276da023004bbb8310901333b09",
+    "scripts/run_asset_world139.py": "5e27f29817e94a3a5b54bdadcd03d9fece8824c8f03b3ec812bc96ce77b17e03",
+    "scripts/trace_world139.py": "765794b8aae82671c2db346492f85b4c58df67b3377917e7b991bba9d6b11545",
+    "scripts/check_asset_world139.py": "7b3717c403fac3a39213edbd9ef7ca13465a51e55206c68aeef7ef2a2b0f2100",
+    "scripts/build_world_query139_oracle.py": "b77a2920cac0b127cbfd579e407d8408c597500ab23992d6f759b03234112c7f",
+    "scripts/run_world_query139_oracle.mjs": "8b9edbad5707d2e083a4df61f582d8962af9e0400a08c5541661c4b7eb72a06b",
+    "scripts/check_world_query139.py": "0e1d49b82c3c8ed16f3e28403af4be9e3ba3cacf2247441842bfa123821aecd8",
+    "reports/2026-11-02-world0139.json": "4b0e6b62b1c28736e7d16866813ba1441e9dfd6700b34f92227681a7dd431c94",
+    "reports/2026-11-02-world0139.md": "d8bbcd2153d16d0293f7de1528f442f8dff9c35cea8a70d9fa83221e7af28ee8"
+  },
+  "current139_original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "independent_math_reference": {
+    "path": "scripts/review_player_motion135.py",
+    "sha256": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "current139_whole_WAT_rebound": true,
+    "old_runtime_inputs_or_results_read": false
+  },
+  "static_admission": {
+    "pairs": [
+      {
+        "old_static_index": 29631,
+        "current139_index": 29912,
+        "lines": 206,
+        "only_permitted_changes": [
+          {
+            "line": 1,
+            "reason": "function/type"
+          },
+          {
+            "line": 81,
+            "reason": "panic-location"
+          },
+          {
+            "line": 82,
+            "reason": "boundcallee"
+          },
+          {
+            "line": 91,
+            "reason": "boundcallee"
+          },
+          {
+            "line": 193,
+            "reason": "panic-location"
+          },
+          {
+            "line": 194,
+            "reason": "boundcallee"
+          }
+        ]
+      },
+      {
+        "old_static_index": 18670,
+        "current139_index": 18742,
+        "lines": 336,
+        "only_permitted_changes": [
+          {
+            "line": 1,
+            "reason": "function/type"
+          },
+          {
+            "line": 102,
+            "reason": "boundcallee"
+          },
+          {
+            "line": 196,
+            "reason": "boundcallee"
+          },
+          {
+            "line": 290,
+            "reason": "boundcallee"
+          }
+        ]
+      },
+      {
+        "old_static_index": 46295,
+        "current139_index": 47025,
+        "lines": 126,
+        "only_permitted_changes": [
+          {
+            "line": 1,
+            "reason": "function/type"
+          },
+          {
+            "line": 76,
+            "reason": "boundcallee"
+          },
+          {
+            "line": 93,
+            "reason": "boundcallee"
+          }
+        ]
+      },
+      {
+        "old_static_index": 5795,
+        "current139_index": 5787,
+        "lines": 791,
+        "only_permitted_changes": [
+          {
+            "line": 1,
+            "reason": "function/type"
+          }
+        ]
+      },
+      {
+        "old_static_index": 23181,
+        "current139_index": 23333,
+        "lines": 269,
+        "only_permitted_changes": [
+          {
+            "line": 1,
+            "reason": "function/type"
+          },
+          {
+            "line": 203,
+            "reason": "panic-location"
+          },
+          {
+            "line": 204,
+            "reason": "boundcallee"
+          }
+        ]
+      }
+    ],
+    "zone152_sha256": "ef0688481b9a0f45ae93230689c7b299a27828db57300b8ada8a774cd0dfc50c",
+    "current_original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "export_only": true,
+    "imports": 882,
+    "old_actual_or_expected_read": false
+  },
+  "producer": {
+    "model_receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+    "sources": 18,
+    "source_edges": 48,
+    "loaded_assets": 451,
+    "declared_assets": 453,
+    "raw_bytes": 67281330,
+    "Python_audit_events": 945,
+    "Python_not_OS_audit": true,
+    "terrain_independently_reparsed_bytes": 4022968,
+    "terrain_sha256": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+    "nav_secondary_geometry_pipeline_reimplemented": false,
+    "nav_secondary_forward_producer_source_and_audit_checked": true,
+    "process": {
+      "pid": 27547,
+      "pgid": 27547,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 108.53866495800321,
+      "deadline_seconds": 300,
+      "error": null,
+      "original_calls": 0
+    },
+    "new_original_calls": 0
+  },
+  "snapshot": {
+    "canonical_bytes": 5355768,
+    "ranges": 2318,
+    "range_bytes": 5950608,
+    "all_bytes_exact": true,
+    "snapshot_sha256": "ed3a755752ddf9907712b408f7ef042f5a9407d684d0aa6afd3f0a394bbd7ce2",
+    "old_invalid_context_used": false,
+    "new_original_calls": 0,
+    "artifacts": {
+      "terrain": "3ecb0d08bc2202524a0b2a86cf43b7a6eba7d201de70f104c4dc675bf1e12b9e",
+      "navigation": "239b456859bedd6c4e1ebcdf5dadeefc6da66b344ec108e17f8b85819157fd79",
+      "secondary": "07c7ab72911e7425456abdbad2a16b3d9fe068db17367996693f70a8be2df1d5"
+    }
+  },
+  "current_query": {
+    "cases": 3368,
+    "entries": 6671,
+    "normal_returns": 6670,
+    "expected_abort": 1,
+    "counts": {
+      "declared139Elwynn-centre": 1,
+      "height": 3303,
+      "terrain_miss": 59,
+      "world_miss": 59,
+      "secondary_lift": 96,
+      "full16_output_bytes": 106736,
+      "outside-terrain": 1,
+      "nearest-direct": 1,
+      "nearest": 65,
+      "bounds_abort": 1,
+      "nearest_found": 57,
+      "nearest-tie-first": 1,
+      "nearest-no-valid": 1,
+      "nearest-short-count-bounds-trap": 1,
+      "all-produced-terrain-chunks": 2304,
+      "seeded-nine-tile-region": 500,
+      "seeded-cache-interior": 256,
+      "cache-edge-halfcell": 49,
+      "secondary-finite": 96,
+      "secondary-NaN": 96,
+      "nearest-edges": 25,
+      "nearest-positive-inf-height": 1,
+      "nearest-negative-inf-height": 1,
+      "nearest-radius20-inclusive": 1,
+      "nearest-radius21-excluded": 1,
+      "nearest-seeded-order": 32
+    },
+    "process": {
+      "pid": 58750,
+      "pgid": 58750,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "deadline_seconds": 120,
+      "seconds": 0.8834463749954011,
+      "error": null
+    },
+    "all_expected_and_actual_independently_exact": true,
+    "poison16_checked": true,
+    "source_closure": 20,
+    "edges": 38,
+    "read_only_ranges_rechecked": 2318,
+    "new_original_calls": 0
+  },
+  "reviewer_original_calls": 0,
+  "reviewer_author_model_executions": 0,
+  "reviewer_author_builder_checker_runner_executions": 0,
+  "old_runtime_inputs_or_acceptance_transferred": false,
+  "canonical_data_source": "Current139 raw-asset model buffers for query math; current corrected v2 snapshot only for separately admitted historical original-field observation,never supplied to the independent asset producer.",
+  "healthy_context_gate": {
+    "review": "reports/2026-11-02-entry-world0139-context-v2-independent-review.json",
+    "review_sha256": "e3ea36cd8eb773a142afe400f959ce63e0d45b715512fdc206acbc2c0b736cb1",
+    "required_2945_minimum": 36,
+    "actual_return_bytes": 40,
+    "canaries_admitted": true,
+    "snapshot_sha256": "ed3a755752ddf9907712b408f7ef042f5a9407d684d0aa6afd3f0a394bbd7ce2",
+    "old_invalid5d940_used": false
+  },
+  "preserved_review_attempts": [
+    {
+      "directory": "evidence/world139-independent-review-owned-20261102T041034.638407Z",
+      "status": "reviewer_SyntaxError_before_execution",
+      "original_calls": 0,
+      "author_source_changes": 0
+    },
+    {
+      "directory": "evidence/world139-independent-review-owned-20261102T041058.711224Z",
+      "status": "first_complete_readonly_review_passed_then_additional_module_owned_binding_checks_added",
+      "review_sha256": "55f575b631ea89b0484c3b07dd5c9dff3458473564cbda73de4e7bdc8131ee3e",
+      "original_calls": 0
+    }
+  ],
+  "author_files_modified": false,
+  "primary_registry_modified": false,
+  "limitations": [
+    "Raw9ADT terrain independently reconstructed; nav/secondary full mesh/raster pipeline is not implemented a second time in this review. Their frozen forward producer/source/Python audit and all canonical v2 bytes are checked.",
+    "Python audit is not an OS-wide syscall audit.",
+    "Only current139 Elwynn no-primary/nonflat world and explicit nearest raster fixtures; no wholeRc/cache/JS/App/worldbootstrap/render/gameplay acceptance.",
+    "Panic diagnostic location contents are not compared; controlled abort output and stack contract are checked.",
+    "No135/138 passed case is transferred; old mathematical reference is checked against current139 complete WAT.",
+    "0 complete game/native/full880 executions."
+  ],
+  "complete_games": 0,
+  "native_executions": 0,
+  "full880_executions": 0
+}
