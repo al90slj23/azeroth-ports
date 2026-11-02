@@ -1,0 +1,83 @@
+{
+  "status": "pass_complete139_default_controlled_opening_only",
+  "reviewer": "/root",
+  "author": "/root/motion38_review",
+  "reviewer_source": "scripts/review_opening139.py",
+  "reviewer_source_sha256": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+  "review_file": "evidence/opening139-independent-review-owned-20261102T055606.836554Z/review/review.json",
+  "review_sha256": "a65c1ec9dd7afb7ef55b537b067f5d37e4558c4ae5163c874e36c49ecb63c4b2",
+  "comparison_sha256": "ad3ae6e0128cd109d1ac0f1e9b0cf3231b304cdbba6bba7ea5ff425c311386b6",
+  "author_handoff_sha256": "b128b1f5af03510c643782f300f46eb102ddde7dbc1ed202acbd109ec6245934",
+  "author_files_untouched": true,
+  "formal_cases": 16,
+  "new_original_calls_by_reviewer": 0,
+  "author_production_checker_builder_executions": 0,
+  "owning_process": {
+    "directory": "evidence/opening139-independent-review-owned-20261102T055606.836554Z",
+    "terminal_sha256": "9d0991a4b42f3c8850d5e1074724c326d32e6a548307f53cc5db91e7f0015848",
+    "terminal": {
+      "pid": 40457,
+      "pgid": 40457,
+      "exit_code": 0,
+      "seconds": 8.556993417005287,
+      "pid_missing": true,
+      "pgid_missing": true
+    }
+  },
+  "counts": {
+    "selected_known": 640,
+    "constructor_known": 8032,
+    "constructor_None": 33440,
+    "constructor_nonzero_None": 3375,
+    "afterGame_known": 8896,
+    "afterGame_None": 32576,
+    "afterGame_nonzero_None": 3679,
+    "units_known": 19392,
+    "units_None": 8256,
+    "units_nonzero_None": 7600,
+    "pickups_known": 1664,
+    "pickups_None": 1920,
+    "pickups_nonzero_None": 1696,
+    "special_known": 1792,
+    "special_None": 768,
+    "special_nonzero_None": 768,
+    "windows_known": 304,
+    "windows_None": 208,
+    "windows_nonzero_None": 208,
+    "boundaries_known": 8832,
+    "boundaries_None": 7552,
+    "boundaries_nonzero_None": 3264,
+    "complete_packets": 1216,
+    "complete_packet_bytes": 129792,
+    "notifications": 16,
+    "new_pointer_words_observed": 112,
+    "relativeGame_bytes": 41472
+  },
+  "source_files": 39,
+  "source_edges": 100,
+  "current_function_bindings": 22,
+  "full1108_calls": 16,
+  "setup2945_calls": 16,
+  "setup1600_calls": 16,
+  "window_counts": {
+    "2": 10,
+    "3": 6
+  },
+  "window_count_draws": {
+    "3": 3,
+    "1": 10,
+    "4": 2,
+    "2": 1
+  },
+  "limits": [
+    "Resource-only legal v2post1108 snapshot on original side;new2945/1600Game,not naturalApp/Rc/externref/host bootstrap.",
+    "Independent expectations reconstructed from current static data and raw-derived canonical world;no author production or target execution by reviewer.",
+    "Known556Game bytes only;112newpointer words observations and other unknown/payload allocation cells remain unknown.",
+    "48world range checks and account/profile conservation booleans are frozen runner observations;full account/profile before-and-after bytes not serialized.",
+    "AppLCG is controlled arithmetic/current6786static binding;full6786 not executed. Explicit velocity0/pathNone required.",
+    "TwoRune/special40/windows/circle/defaultElwynn HumanWarrior only;other companions/events/debug domains remain unknown.",
+    "No mainloop/nativeWindows/fullgame/network/save acceptance implied."
+  ],
+  "first_readonly_pass_preserved": "evidence/opening139-independent-review-owned-20261102T055453.703914Z",
+  "first_readonly_pass_new_original_calls": 0
+}

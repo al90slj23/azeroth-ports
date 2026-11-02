@@ -1,0 +1,166 @@
+{
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "status": "author_controlled_default_full1108_differential_passed_pending_independent_review",
+  "comparison_file": "evidence/opening139-oracle-20261102T053454.622445Z/comparison.json",
+  "comparison_sha256": "ad3ae6e0128cd109d1ac0f1e9b0cf3231b304cdbba6bba7ea5ff425c311386b6",
+  "sources": {
+    "reconstruction/core_spec/opening_aux139.py": "a2d3109330e125bd2d70fcf5a37d00c2a4f61ff87486990a54b9bfc3321a5238",
+    "reconstruction/core_spec/opening139.py": "291a0e2a9374a07c984b6de7143764ae827bc36e6fcc1664598dc9468bf64817",
+    "scripts/trace_opening139.py": "dc37a68c03ff9f5023443ad638f55dbdef3a6b288813a1a4b53a8e7320174dcc",
+    "scripts/run_opening139_oracle.mjs": "e3baf34ff823b03868086cea53b63d32c37a44d4f1594fab9d1e8a2294e99708",
+    "scripts/check_opening139.py": "24855ffbe8b317d83e549af521e711ebba2d01a0d0e7e6d40fb1adcdf2c819f2"
+  },
+  "source_closure_count": 39,
+  "source_import_edges": 100,
+  "formal_full1108_calls": 16,
+  "setup2945_calls": 16,
+  "setup1600_calls": 16,
+  "pilot_and_failed_calls_not_added": true,
+  "differences": 0,
+  "counts": {
+    "assertions": 50112,
+    "selected40_known_bytes": 640,
+    "constructor_known_bytes": 8032,
+    "constructor_unknown_bytes_observed": 33440,
+    "constructor_nonzero_unknown_bytes_observed": 3375,
+    "afterGame_known_bytes": 8896,
+    "afterGame_unknown_bytes_observed": 32576,
+    "afterGame_nonzero_unknown_bytes_observed": 3679,
+    "units_known_bytes": 19392,
+    "units_unknown_bytes_observed": 8256,
+    "units_nonzero_unknown_bytes_observed": 7600,
+    "pickups_known_bytes": 1664,
+    "pickups_unknown_bytes_observed": 1920,
+    "pickups_nonzero_unknown_bytes_observed": 1696,
+    "special_known_bytes": 1792,
+    "special_unknown_bytes_observed": 768,
+    "special_nonzero_unknown_bytes_observed": 768,
+    "windows_known_bytes": 304,
+    "windows_unknown_bytes_observed": 208,
+    "windows_nonzero_unknown_bytes_observed": 208,
+    "boundaries_known_bytes": 8832,
+    "boundaries_unknown_bytes_observed": 7552,
+    "boundaries_nonzero_unknown_bytes_observed": 3264,
+    "complete_packets": 1216,
+    "complete_notifications": 16,
+    "observed_new_allocation_pointer_words": 112,
+    "relativeGame_bytes": 41472
+  },
+  "process": {
+    "pid": 92696,
+    "pgid": 92696,
+    "exit_code": 0,
+    "seconds": 2.8289412920130417,
+    "deadline_seconds": 120,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "actual_build": "f79c5e2b4",
+    "cases": 16,
+    "full_calls": {
+      "1108": 16,
+      "1600": 16,
+      "2945": 16
+    },
+    "fresh_instances": 16,
+    "host_calls": 0,
+    "denied_imports": 882,
+    "allocator_calls": 80,
+    "stack_guards": 128,
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "heap_cap_mib": 512,
+    "output_bytes": 834012,
+    "snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "snapshot_role": "legal_v2_after_real_begin1108_initialized_resource_context_only;newtargetGamefromfresh1600",
+    "old_snapshot_Game_reused_as_target": false,
+    "flags_or_Once_readiness_injected": false,
+    "profile_input": "explicit376 +actual2945four-empty-account prefix16;notnaturalmenu",
+    "app_lcg_step": "controlledinputderivedbyexact6786formula;full6786notcalled",
+    "typed_velocity0_and_pathNone": true,
+    "App_or_WorldRc_producer_executed": false,
+    "externref_state_restored": false,
+    "full_mainloop_frames": 0,
+    "native_executions": 0,
+    "complete_games": 0,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "physical_vectors": {
+    "known_bytes": 31984,
+    "unknown_bytes": 18704
+  },
+  "relative_game": {
+    "bytes": 41472,
+    "observed_relocation_pointer_words": 112,
+    "strict_bytes_except_observed_pointers": 41024
+  },
+  "window_count_distribution": {
+    "2": 10,
+    "3": 6
+  },
+  "count_draw_distribution": {
+    "3": 3,
+    "1": 10,
+    "4": 2,
+    "2": 1
+  },
+  "static_artifacts": {
+    "static/trace.json": "177944dfd37f685c0feab54f1feeeb67019fa481779eb4188a5729029a6b2d03",
+    "static-extra/11425.wat": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d",
+    "static-extra/11499.wat": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58",
+    "whole-opening-static/trace.json": "ee3ef64f5e8a60ee79efb8d392751560a8ac8336445e25cd137ba98e90d211c8",
+    "whole-opening-static/1108.wat": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb",
+    "whole-opening-static/1795.wat": "793ebd89db94fdeed967204a767a4ff26b9f1ac20344fe3443812d48cd1ffcc0",
+    "whole-opening-static/10099.wat": "12033e44baf81c33bce2192c395e111ccb7967dfafd87ef474da8290d3feda1f"
+  },
+  "independent_world_receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+  "original_resource_context": {
+    "snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "gate_sha256": "e3ea36cd8eb773a142afe400f959ce63e0d45b715512fdc206acbc2c0b736cb1",
+    "old_snapshot_Game_reused": false,
+    "role": "Initialized139v2 world/locale/SpellDB resource context only.NewtargetGamefromfresh1600."
+  },
+  "expected_read_audit": {
+    "file": "evidence/opening139-oracle-20261102T053454.622445Z/expectation-read-audit.json",
+    "sha256": "64cf34b850008955b45c306ed44bfc34484cb5b99963ea12dc5ba05133455190",
+    "layer": "Pythonopenaudit;notOSaudit",
+    "original_WASM_or_memory_read_during_expectation": false
+  },
+  "failures": [
+    {
+      "directory": "evidence/opening139-oracle-20261102T053054.525326Z",
+      "comparison_sha256": "2f996643611a5f79997534a453056fbf6f7331c0f12ca3bf55e8780e3b4399dd",
+      "full1108_calls": 1,
+      "differences": 8,
+      "cause": "specialselectorindexversusidentifier"
+    },
+    {
+      "directory": "evidence/opening139-oracle-20261102T053202.196075Z",
+      "full1108_calls": 0,
+      "cause": "Staticassertexpected directtags ratherthan stride8 iterator"
+    }
+  ],
+  "pilot": {
+    "directory": "evidence/opening139-oracle-20261102T053231.356040Z",
+    "comparison_sha256": "0771e339e2b0a4f7b95e781423f016802f6d29e27d665da55fe8e9b7d42f5926",
+    "full1108_calls": 1,
+    "differences": 0
+  },
+  "limitations": [
+    "Current defaultElwynn humanWarrior/GUID0/mode0/level1,explicit empty-account counts and selectedprofile;otherdebug/companion/rank/event modes rejected.",
+    "Original consumes healthyv2 initializedlocale/SpellDB/world resource snapshot;newtargetGamefromfresh1600.NotfreshApp/Rc/bootstrap/externref reconstruction.",
+    "Independent model consumes onlycurrent139raw-derivedcanonicalworld;nooriginalmemory/WASMread duringexpectationPythonopenaudit;notOSaudit.",
+    "Appseed→constructorseed formula is controlled6786LCG arithmetic;full6786notexecuted.",
+    "Velocity0/pathNone are explicit typed component inputs;navigationowner remains separate.",
+    "Allocator-unwritten cells remainNone;physicalbacking retained.FullGame knownprojectiononly;unmodeledbytes/pointer/payloadcapacity observationsnotclaimed.",
+    "Setup2945/1600 are separatelycounted,notnewcomponentacceptance.Mainloop/native/network/completegame0.",
+    "Complete1108 original call is measured;inner dynamiccallstack/invocation counts are not separately instrumented.",
+    "Largeangles in special use pure legacy mathematical helper,explicitly rebound to139full trig bodies and actual special outputs;old135acceptance not transferred.",
+    "Selectedprofile/defaultgate producer conditions are statically bound;originalcanonicalconstructor remains502known mask ratherthan claiming completeinitialGame."
+  ]
+}

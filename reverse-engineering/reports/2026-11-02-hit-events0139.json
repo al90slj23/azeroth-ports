@@ -1,0 +1,159 @@
+{
+  "kind": "static139_empty_hit_event_source_and_damage_tail_route",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "static_proof": "evidence/hit-events139-static-20261102T051414.357644Z/trace.json",
+  "static_proof_sha256": "fc8eae2442ec213268345e352b934126d50c0bbf3650a77bf52eced114c893e0",
+  "owned_terminal": "evidence/hit-events139-static-owned-20261102T051413.914711Z/process-terminal.json",
+  "owned_terminal_sha256": "49500da7c3a800cc946be8d003cd0d79531a9a4a3c83e98c3d576a59cdf94441",
+  "functions": {
+    "913": {
+      "index": 913,
+      "signature": [
+        "7f7e7d7f7f7f7f",
+        ""
+      ],
+      "body_start": 2317860,
+      "body_end": 2346188,
+      "body_bytes": 28328,
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_bytes": 443907,
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "994": {
+      "index": 994,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 4433607,
+      "body_end": 4445466,
+      "body_bytes": 11859,
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_bytes": 351403,
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1542": {
+      "index": 1542,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 10921827,
+      "body_end": 10926572,
+      "body_bytes": 4745,
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_bytes": 62140,
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "index": 1600,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 11298574,
+      "body_end": 11305645,
+      "body_bytes": 7071,
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_bytes": 90865,
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "2004": {
+      "index": 2004,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 13856409,
+      "body_end": 13864218,
+      "body_bytes": 7809,
+      "body_sha256": "8fac8ddbe40058711eb3289c8cf919b1ec05ad2c3bab5ea4cdedc46efb8cdb64",
+      "WAT_bytes": 145679,
+      "WAT_sha256": "250859649eee636ba480d8726d16138ea0cfc1562110cd9c06b90b53638b2ac8"
+    },
+    "9819": {
+      "index": 9819,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 33182881,
+      "body_end": 33184889,
+      "body_bytes": 2008,
+      "body_sha256": "0f5febb2bcdcbe6fce3bad00e1fe4627fe54a352d34df8980bd300374abf7ffd",
+      "WAT_bytes": 22968,
+      "WAT_sha256": "ddc7360d9414068bab27d01b0cc958c752ee94d9eb00bcd11c9f07718befabbc"
+    },
+    "20442": {
+      "index": 20442,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 45617175,
+      "body_end": 45617754,
+      "body_bytes": 579,
+      "body_sha256": "9cf2129d9227db17437f8abde5084d6efa59d8cfbdb69d6a5e3a6f61a2d0feae",
+      "WAT_bytes": 6516,
+      "WAT_sha256": "4a0515a41bc69742fd9ef5c4df739e2762955d18474bf5800f4a0f229a15dd02"
+    },
+    "25911": {
+      "index": 25911,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 51064494,
+      "body_end": 51065740,
+      "body_bytes": 1246,
+      "body_sha256": "f81323f4712bd2f2f549a8d71ea35c022e70d4b8d51cf8d143f4d3d20ac968b5",
+      "WAT_bytes": 11592,
+      "WAT_sha256": "4483b9c1c9304ef4e892577acc4a9411520a4c332fdc2a96d33d1c94f7b545e4"
+    }
+  },
+  "source_WASM_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "production_source_hashes": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/hit_events139.py": "c009ef5ef76fc89905fefe4910bd48cff71681721a4ea4699ba582f7f9dbd4e7",
+    "reconstruction/core_spec/hit_events139_data.py": "4d556a86753fe67d48a1fd5c2d2a05dd32d9871f86b768cbfd2923eb7a943bd0",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "rules": {
+    "empty_owner": "P160 talent count0 + nineteen item IDs P260..332 zero ->9819 thirdVec36(cap0,ptr4,count0);20442 discriminator2 skips equipment source path;25911 out24/28/32 ->1600 SP48/52/56 ->SP2136/2140/2144 ->Game2048/2052/2056.",
+    "mode770": "1600 SP851..858 zero64 includesSP858=Game770. This is initial state only.",
+    "owned11": "913 scans exactlyGame1660/1664 owned80, loads record.pointer then definition.byte84 and enters special arm onlyfor11. Defaultcleave5 skips. Racial1256 is not part of that vector; eight current racials84=9/2 separatelydeclared.",
+    "994": "count2056*36==0 branches directly to finalSPrestore; no pointer2052/event/owned/racial/RNG/key/header read or heap callback. Nonempty bodies have real effects, including optional1542, and are pending.",
+    "913_tail": "mode770==3 or count2056==0 skips both994 calls. Local18 death44 count0/u32(-1) skipfree; else release bytes wraps count*44. This is only12790..13071,not completion of913.",
+    "1542_guard_limit": "Current complete1542 is bound; no explicit direct-offset stores to2048/2052/2056/770. This syntactic assertion alone is not an indirect alias proof. Existing independentlyvalidated constructor sourcecount2056=0 is a supporting dependency, not additional current runtime coverage."
+  },
+  "supporting_constructor_review": {
+    "path": "reports/2026-11-02-initial-state0139-independent-review.json",
+    "sha256": "c6657779fb8eb9b4da050e509bcc3f42156f137ed047ab51b3eeb2b91e8152c0",
+    "transferred_current_runtime_coverage": false
+  },
+  "API": {
+    "produce_empty_profile_event_definitions139": "profile376 bytes/byte-None tuple -> EventDefinitions139(0,4,0,())",
+    "produce_default_cleave_hit_sources139": "profile376,tupleowned80,racial80 -> explicitsourceowner/scan/racial/initialmode; one constructorcleave/8races only",
+    "prove_owned_execution11_absent139": "tupleowned80,tuple(pointer,definition88) -> actualconsumedcodes guard;11/unknown rejects",
+    "dispatch_hit_event139": "knownemptyEventDefinitions139 -> exactemptybranch proof; inactiveevent/context notread",
+    "plan_damage_tail_events139": "mode770,typedEventDefinitions139,actualdeath44_count -> calls994 empty + releaseplan only; unknown/nonempty pending"
+  },
+  "model_selfchecks": {
+    "count": 23,
+    "accepted": 16,
+    "explicit_pending": 7,
+    "original_behavior_coverage": false
+  },
+  "original_executions": 0,
+  "current_runtime_accepted": false,
+  "independent_peer_review": false,
+  "limitations": [
+    "Nonempty994 selector dispatch, allocations, callbacks, schedules and stats-recalculation effects remain pending.",
+    "Owned execution11 is rejected, not silently skipped.",
+    "No general post-selection/equipment owner preservation or naturalApp/profile producer is proved.",
+    "913 tail plan excludes earlier death/XP/spell-set/proc phases and later20752 cleanup.",
+    "No new runtime, native execution, fullGame or fullopening acceptance."
+  ]
+}

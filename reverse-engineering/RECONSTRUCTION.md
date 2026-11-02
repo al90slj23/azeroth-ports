@@ -1,6 +1,6 @@
 # 独立重造的工作基线
 
-官方元数据于 **2026-11-02T05:37:40Z** 再核仍为 **0.139.0**，首页stamp `f339dd20e0fe`。已完成[官方Windows／Web一致获取与实际9B构建身份](reports/2026-11-02-official0139-acquisition-identity.md)：两端均为 `f79c5e2b4`，Windows150,595,584B／官方SHA匹配，Web92,511,151B／本地SHA固定；获取前后元数据逐字一致。[139完整静态索引与增量清单](reports/2026-11-02-engine0139-incremental.md)已固定177101函数／882导入、30/30主要入口身份；本轮核对143行技能／职业／种族／地图声明一致，19个入口仍有编译或结构差异，不能据此判行为等价。首次下载与工具失败均保留，139其他行为迁移另行验证，**不将旧版通过转记139**。现有安装包与存档未替换。
+官方元数据于 **2026-11-02T05:57:22Z** 再核仍为 **0.139.0**，首页stamp `f339dd20e0fe`。已完成[官方Windows／Web一致获取与实际9B构建身份](reports/2026-11-02-official0139-acquisition-identity.md)：两端均为 `f79c5e2b4`，Windows150,595,584B／官方SHA匹配，Web92,511,151B／本地SHA固定；获取前后元数据逐字一致。[139完整静态索引与增量清单](reports/2026-11-02-engine0139-incremental.md)已固定177101函数／882导入、30/30主要入口身份；本轮核对143行技能／职业／种族／地图声明一致，19个入口仍有编译或结构差异，不能据此判行为等价。首次下载与工具失败均保留，139其他行为迁移另行验证，**不将旧版通过转记139**。现有安装包与存档未替换。
 
 最新139的[限定非致死伤害80组／125完整913调用](reports/2026-11-02-combat0139.md)已重新执行新版原件，0声明差异，[异作者独审通过](reports/2026-11-02-combat0139-independent-review.md)。新版真实单位stride为432、导入882；完整单位字节与声明的HP／累计伤害／RNG等比较通过。合成Game／空items、spells、1972 proc队列／无context的边界明确：不代表完整Game、自然构造、死亡、原生Windows或完整一局。Pilot4组／5调用另存，不加入正式80／125。
 
@@ -8,7 +8,7 @@
 
 139的[默认空profile构造162次完整1600](reports/2026-11-02-initial-state0139.md)也已完成新原件差分和[独立复核](reports/2026-11-02-initial-state0139-independent-review.md)：81324个已知字节、40条完整226包0差异；338580字节保留None，其中实际非零未反填。此域使用明确借用的flat V128查询输入，Game2592未完整预测，cached6786仅静态、opening1108未执行、未进入phase1；研究pilot与此前162批不加算。真实139 world／opening另行观察，不能当作独立开局或完整游戏通过。
 
-139已取得[修正后的真实world／1108上下文v2](reports/2026-11-02-entry-world0139-context-v2.md)，并经[独立只读复核](reports/2026-11-02-entry-world0139-context-v2-independent-review.md)通过受控观察gate：2945完整返回36B、显式40B输出与两侧16B保护区合法，两份新memory分别为111MB／177MB，phase0→1与4NPC／2pickup／69boundary等原件状态已保存。旧16B输出区批次[明确不接受](reports/2026-11-02-entry-world0139-context-independent-review.md)，旧源码与快照字节均保留，未据越界直接推定堆破坏。v2仍是researchApp与selected376受控输入，且tag255／inactiveA5与先前全零profile构造域有差别：独立开局model case仍为0，不能把观察当完整自然App或独立开局验收。
+139已取得[修正后的真实world／1108上下文v2](reports/2026-11-02-entry-world0139-context-v2.md)，并经[独立只读复核](reports/2026-11-02-entry-world0139-context-v2-independent-review.md)通过受控观察gate：2945完整返回36B、显式40B输出与两侧16B保护区合法，两份新memory分别为111MB／177MB，phase0→1与4NPC／2pickup／69boundary等原件状态已保存。旧16B输出区批次[明确不接受](reports/2026-11-02-entry-world0139-context-independent-review.md)，旧源码与快照字节均保留，未据越界直接推定堆破坏。v2仍是researchApp与selected376受控输入，且tag255／inactiveA5与先前全零profile构造域有差别：该v2观察批自身没有独立开局model case；后继完整1108验收另记，不能把本观察当完整自然App或独立开局验收。
 
 139的[四只初始普通敌人生产](reports/2026-11-02-npc-spawn0139.md)完成16组／64次完整5719与[独审](reports/2026-11-02-npc-spawn0139-independent-review.md)：真实1600作为16次setup，0快照恢复，64条新169消息／432B记录已知字节一致；31056个未知字节保留None。位置由显式SomeXYZ输入，不能称自然刷怪或完整1108。
 
@@ -30,7 +30,11 @@
 
 [经验球／金币1446生产与45门槛合并](reports/2026-11-02-death-pickups0139.md)另有43次完整原件并经[异作者独审](reports/2026-11-02-death-pickups0139-independent-review.md)：40条完整169共5052B、3次merge、17996已知／8884 None及RNG／geometry一致；超过19的经验视觉scale为.9，旧43批5处差异与2次pilot均保留不加计。此域是XP／coin生成，不是完整死亡或经验拾取；runtime内容由comparison内联绑定，独立JSON的hash只有独审as-read记录。
 
-已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。默认第二击死亡14组和完整1108开局16seed的新原件作者批已返回一致，分别等待独审，尚不计入上述接受范围；经验拾取2890、增长4677／候选2181／选择1093继续恢复。当前独立新版完整开局／884／Windows原生／完整一局均为0。
+[默认第二击死亡与经验／金币](reports/2026-11-02-death0139.md)14组／56次完整5719＋28次完整922已通过[异作者独审](reports/2026-11-02-death0139-independent-review.md)：18次死亡、18次XP、8次coin；35056已知NPC字节与13328 None、1820已知pickup字节与2436 None、RNG／f64累计及53条已知有序消息共4190B一致。真实G2056=0使913跳过994，36367是NPC名称解析而非删记录；四槽保留。完整592／HP169流、正回血和moving221未验收。
+
+[完整默认开局1108](reports/2026-11-02-opening0139.md)16seed经[异作者独审](reports/2026-11-02-opening0139-independent-review.md)：新2945／1600Game→完整1108，四NPC／两符文／2或3时间窗／四special／69边界、RNG／counter85与1216条完整消息129792B一致。31984个vector已知字节、18704 None及每例556B已知Game；112新指针word只观察，其余41024相对Game字节严格守恒。原件仍借合法v2post1108初始化资源上下文，独立模型只使用raw构造world；新目标Game与旧Game分开。自然App／Rc／externref／设备输入未还原。
+
+已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。当前139有14753组限定fixture／18511次目标入口（18510正常返回／1预期越界），只是实验清单，不是完整覆盖率。setup／pilot／拒绝批／静态study不相加；默认空来源hit-events只有静态证据与模型自检，无新动态接受。经验拾取2890、增长4677／候选2181／选择1093继续恢复，下一步接通同一Game完整开局→死亡→拾取→首次选卡→继续。主循环884／Windows原生／完整一局仍为0。
 
 固定138的[属性计算10569组](reports/2026-11-02-stats0138.md)、[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)、[默认构造162次](reports/2026-11-02-initial-state0138.md)及其独审保留各自窄域；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)仍是静态证据。它们均不等于138／139连续流程或Windows原生验收。
 
