@@ -1,0 +1,64 @@
+{
+  "component": "raw_asset_moving_rune135",
+  "status": "independent_raw451_model_execution_and_terminal_model_composition_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "model_receipt": "evidence/raw-moving460-owned-20261101T234449.317665Z/model460/receipt.json",
+  "model_receipt_sha256": "c8cee9a312f3ed4639fea4e6e26055276cfbf9d26ddf99afdbbf7b2459781f42",
+  "model_source_files": 108,
+  "model_production_files": 104,
+  "shared_production_files": 100,
+  "frames": 460,
+  "selections": 4,
+  "motion_inputs": 44,
+  "stage_summaries": 6489,
+  "declared_files": 453,
+  "loaded_files": 451,
+  "raw_asset_bytes": 67281330,
+  "model_process": {
+    "pid": 63273,
+    "pgid": 63273,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 157.85763020800368,
+    "error": null,
+    "deadline_seconds": 480
+  },
+  "bridge": "evidence/raw-moving460-owned-20261101T234449.317665Z/terminal-model-bridge.json",
+  "bridge_sha256": "2479b7cb37a5efe673ad1874e067aa74a529af84d16e1b9a213bf06a050ebb36",
+  "bridge_checks": 79,
+  "all_bridge_checks_passed": true,
+  "motion_route_events": [
+    {
+      "event": "target",
+      "frame": 401,
+      "guid": "17370383913897164969",
+      "kind": 5
+    },
+    {
+      "event": "stop_after_consumption",
+      "frame": 444,
+      "guid": "17370383913897164969"
+    }
+  ],
+  "compared_original_experiment": "evidence/opening-combat0135-oracle-20261101T232156.684647Z/comparison.json",
+  "compared_original_experiment_sha256": "521db52b9d97637212460083a7ea88b9038d63871536d6635edc21645e0bd622",
+  "original_results_read_by_bridge": false,
+  "bridge_reads_independent_model_expectations": true,
+  "comparison_scope": "Terminal comparison of two independent model executions with identical100production files; not a second independent implementation, not per-stage raw-asset original differential.",
+  "new_original_cases": 0,
+  "original_calls": 0,
+  "original_memory_read": false,
+  "original_wasm_executed": false,
+  "preparsed_world_input_read": false,
+  "full880_frames": 0,
+  "native_windows_execution": false,
+  "complete_games": 0,
+  "installed_packages_or_saves_changed": false,
+  "remaining": [
+    "Naturaldevice input/App/full880",
+    "Fatalincoming/death/recap same-state composition and original validation",
+    "LaterBoss/win/save/render/audio/UI/network and latest138fullflow"
+  ]
+}

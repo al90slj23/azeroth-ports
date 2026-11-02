@@ -1,0 +1,296 @@
+{
+  "status": "scoped_frozen163_incoming_source_history_scalar_independent_review_passed",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "comparison": "evidence/full0135-oracle-20261101T235458.632785Z/incoming-source135-comparison.json",
+  "comparison_sha256": "84accac68189bdf3bb55dc41118e67fff3c36c6437512373ec31d2c3182459e9",
+  "cases": 163,
+  "frozen_original1073_calls": 163,
+  "new_original_executions": 0,
+  "new_production_model_checker_builder_executions": 0,
+  "differences": 0,
+  "counts": {
+    "scalar_values": 2282,
+    "raw_Game_bytes_bound": 422496,
+    "source_record_bytes_exact": 69960,
+    "resource_pointer_observations": 1944,
+    "resource_pointer_nonzero_observations": 1451,
+    "strict_backing_bytes": 5508,
+    "allocator_unwritten_observations": 23652,
+    "allocator_unwritten_nonzero_observations": 7252,
+    "active_rows": 162,
+    "matched_source_rows": 161,
+    "unmatched_source_rows": 1,
+    "phase_guard_returns": 1
+  },
+  "groups": {
+    "matched-normal": 1,
+    "unmatched-GUID": 1,
+    "matched-second-vector-slot": 1,
+    "all148-English-normal-definitions": 148,
+    "raw-rank-byte": 7,
+    "duplicate-GUID-first-wins": 1,
+    "dead-entry-still-matched": 1,
+    "null-definition-keeps-rank": 1,
+    "zero-GUID-can-match": 1,
+    "phase-guard-no-name-consumed": 1
+  },
+  "source_files": 20,
+  "production_files": 9,
+  "independent_local_import_edges": 32,
+  "source_snapshot_current_equal": true,
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/incoming134.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_source135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_source135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_source135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/build_full135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "reconstruction/core_spec/incoming_history135.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_incoming_history135.py",
+      "scripts/source_closure135.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "reconstruction/core_spec/incoming_history135.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "reconstruction/core_spec/incoming_source135.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "scripts/check_incoming_history135.py"
+    ],
+    [
+      "scripts/check_incoming_source135.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/run_incoming_history135_oracle.mjs",
+      "scripts/full135_host.mjs"
+    ],
+    [
+      "scripts/run_incoming_source135_oracle.mjs",
+      "scripts/full135_host.mjs"
+    ],
+    [
+      "scripts/trace_coop.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "all148_English_fallback_names_reextracted": true,
+  "observed_rank_bytes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    7,
+    255
+  ],
+  "source_record_bytes_saved_and_independently_compared": true,
+  "first_match_including_dead_entry_static_verified": true,
+  "unmatched_does_not_consume_inactive_source_fields_static_verified": true,
+  "only_export_section_changed": true,
+  "complete_original1073_callees_preserved": true,
+  "identities": {
+    "1073": {
+      "index": 1073,
+      "signature": [
+        "7f7d7e7f7f7f",
+        ""
+      ],
+      "body_start": 5745892,
+      "body_end": 5757845,
+      "body_bytes": 11953,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076"
+    },
+    "58162": {
+      "index": 58162,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 67790885,
+      "body_end": 67791031,
+      "body_bytes": 146,
+      "body_sha256": "5fb3a3a71ba57466df809978af2b9eda8dbcf50df4168a5648679d422a4218c0"
+    }
+  },
+  "static_names_provenance_sha256": "f6db81c3302c048d7c55ed13890dd6e37949be62c4590f17fdd763bcef3bb571",
+  "runtime": {
+    "cases": 163,
+    "calls": 163,
+    "fresh_instances": 21,
+    "max_memory_bytes": 20578304,
+    "all_callees_unchanged": true,
+    "original_functions": [
+      1073
+    ],
+    "allocator": 91941,
+    "denied_imports": 878,
+    "host_calls": 0,
+    "memory_pages": 512,
+    "app_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "only_input_keys": [
+      "capacity",
+      "count",
+      "group",
+      "head",
+      "id",
+      "input",
+      "ops",
+      "source_records",
+      "storage"
+    ],
+    "source_metadata_domain": "ordinary NPC English fallback; explicit424 fixtures; registry remains unmodeled"
+  },
+  "process": {
+    "pid": 76947,
+    "pgid": 76947,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 0.8306100839981809,
+    "deadline_seconds": 60,
+    "timed_out": false
+  },
+  "source_sha256": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/incoming_history135.py": "db5aecc00a204e33a72fe332ea1ae712243ee6745b8855212ceeaba5bfec2d2b",
+    "reconstruction/core_spec/incoming_source135.py": "46b962f7b2d4fafffb1b276bf338d06396c02ab99e44d6421dc0a12a6024d1ba",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_incoming_history135.py": "b5a69412bb4507e05f91153248e90617faf2d74ac9fdaca63e7d283f595cc4b5",
+    "scripts/check_incoming_source135.py": "74cbfd76731d8f84d606231b39db7f5d3e340249ada1e16361b47da1c2023b48",
+    "scripts/full135_host.mjs": "53d18f34e2f6ce0ad93da5c655aeefd94ab265a4c9369f2ef8f46531c36aee73",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_incoming_history135_oracle.mjs": "dfe50fed8a3dfb865ad88b04d95f1a15c42c3373d490fd9fa6a8e62b57fb195f",
+    "scripts/run_incoming_source135_oracle.mjs": "74bac4e72dce14f84869ac8b45c5745ebdb6e0d8ce4a5c0235bb30bc72410b2b",
+    "scripts/source_closure135.py": "ed254301f00380423bea790d3398e1273bd51e316d4a4859584f684094fe8b01",
+    "scripts/trace_coop.py": "b225c282284fe0c756451d00b0826540a500a18f40ce5352da6491334e516776",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "auditor_sha256": "25f92b0c375540ba53c239e1f03d3af56b0c5b5d62ade855ce60e8f37445b368",
+  "auditor_utilities": {
+    "scripts/review_stats138.py": "3ba425adcad46139b553fa3c7c40ca1608211639af3d271505d75b5a1b908e2b"
+  },
+  "owned_audit_process": {
+    "pid": 82110,
+    "pgid": 82110,
+    "expected_terminal_file": "owned-terminal.json"
+  },
+  "full880_frames": 0,
+  "complete_games": 0,
+  "native_executions": 0,
+  "elapsed_seconds": 0.918,
+  "limitations": [
+    "Only original English fallback labels; translation-map producer remains unverified.",
+    "Raw classification bytes include7/255; this does not extend1367 recap acceptance beyond its own rank domain.",
+    "G1112 source-statistics registry/other keyed heap layout,retaliation/proc and fatal/revival outputs remain unmodeled.",
+    "Only declared scalar/history/source-record outputs compared; rawGame retained and bound fieldwise,not wholeGame equality.",
+    "Older163 capture and separate pilots are not added.",
+    "No current138/native/full-game/880 acceptance follows from this fixed135 component."
+  ],
+  "evidence": "evidence/incoming-source135-independent-review-20261101T235824.848357Z",
+  "review_sha256": "f19563ed9c0bdb693c0cd66c0ecfaf89a92648c9cd7e2952afba7d95a44bcbe8"
+}

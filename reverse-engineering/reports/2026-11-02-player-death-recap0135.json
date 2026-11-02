@@ -1,0 +1,264 @@
+{
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "phase": "full",
+  "cases": 103,
+  "actual_cases": 103,
+  "differences": 0,
+  "status": "scoped_fresh_full1367_differential_and_independent_readonly_review_passed",
+  "full_original_function": 1367,
+  "expected_before_original": true,
+  "input_contains_expected": false,
+  "source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/incoming_history135.py": "db5aecc00a204e33a72fe332ea1ae712243ee6745b8855212ceeaba5bfec2d2b",
+    "reconstruction/core_spec/player_death_recap135.py": "8becf091edef1fe406818b89b3b83b52ed7490cf96d10e1810a9226cc453d895",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/terminal_transition135.py": "bc20eed7dbf4bd1e298ec5b1b6150c05de11a64b448a269e22e533f5906fc58b",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_player_death_recap135_oracle.py": "6cd9ac562608f04ead9c4a3992f07efb311eea36f71e37507cf96eaadc53d080",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_player_death_recap135.py": "245f9695a7147d6fdef349df834b797fe160b3eb44d4b31df119690616a7a470",
+    "scripts/run_player_death_recap135_oracle.mjs": "6f65e9c122326044dfce12dc6aa164d39ce0a052016730488e260398dd204a43"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/incoming_history135.py": "db5aecc00a204e33a72fe332ea1ae712243ee6745b8855212ceeaba5bfec2d2b",
+    "reconstruction/core_spec/player_death_recap135.py": "8becf091edef1fe406818b89b3b83b52ed7490cf96d10e1810a9226cc453d895",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/terminal_transition135.py": "bc20eed7dbf4bd1e298ec5b1b6150c05de11a64b448a269e22e533f5906fc58b",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_player_death_recap135_oracle.py": "6cd9ac562608f04ead9c4a3992f07efb311eea36f71e37507cf96eaadc53d080",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_player_death_recap135.py": "245f9695a7147d6fdef349df834b797fe160b3eb44d4b31df119690616a7a470",
+    "scripts/run_player_death_recap135_oracle.mjs": "6f65e9c122326044dfce12dc6aa164d39ce0a052016730488e260398dd204a43"
+  },
+  "local_source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_death_recap135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_death_recap135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_death_recap135.py",
+      "reconstruction/core_spec/incoming_history135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_death_recap135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_death_recap135.py",
+      "reconstruction/core_spec/terminal_transition135.py"
+    ],
+    [
+      "reconstruction/core_spec/terminal_transition135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/terminal_transition135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/build_full135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/build_player_death_recap135_oracle.py",
+      "scripts/build_full135_oracle.py"
+    ],
+    [
+      "scripts/build_player_death_recap135_oracle.py",
+      "scripts/build_upgrade134_oracle.py"
+    ],
+    [
+      "scripts/check_player_death_recap135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_death_recap135.py",
+      "reconstruction/core_spec/incoming_history135.py"
+    ],
+    [
+      "scripts/check_player_death_recap135.py",
+      "reconstruction/core_spec/player_death_recap135.py"
+    ],
+    [
+      "scripts/check_player_death_recap135.py",
+      "scripts/build_player_death_recap135_oracle.py"
+    ]
+  ],
+  "frozen_artifacts": {
+    "fixtures.json": "216b260d72c9d1e6c27a49bd366c5b1b47bdf4440d2d459ae211b4095d27b974",
+    "inputs.json": "9d471ce15991da5f337dbf5b72949f1b65b63d3bbfddd93ef64d981a00339ce6",
+    "config.json": "f74f3ca30b972294fccab5d175f40013889bcc308b204af7f03df49a49300eaa",
+    "manifest.json": "be24bf1c620c117f17c122c55e0a660c4604e2ba1e5f79167572a7e46415e978",
+    "player-death-recap135-private-exports.wasm": "0df72c6489bd188366f01894f5c0d63db5a46ffbee3c2f9bfeee77296454cb5c"
+  },
+  "original_body_sha256": "f5b307b9d13c9e9c899ddca880349c2ba03815cf12508b3669dc02c37db502d7",
+  "process": {
+    "pid": 63836,
+    "pgid": 63836,
+    "exit_code": 0,
+    "seconds": 2.3878667500102893,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "cases": 103,
+    "completed_cases": 103,
+    "full1367_calls": 103,
+    "fresh_instances": 103,
+    "host_calls": 0,
+    "denied_imports": 878,
+    "max_memory_bytes": 14614528,
+    "memory_cap_bytes": 33554432,
+    "stack_checks": 4447,
+    "old_snapshot_loaded": false,
+    "App_or_Game_constructed": false,
+    "history_producer_executed": false,
+    "explicit_borrowed_history_input": true,
+    "original_bodies_modified": false,
+    "user_saves_accessed": false,
+    "network_used": false,
+    "error": null
+  },
+  "artifacts": {
+    "results.jsonl": "26e57c0de60c255b60f14c104f4dc83175338a0e0aa0715c25d36deaa65d0dff",
+    "runtime.json": "fcdf5dae6732b4903692dc420389fda1d8a1b7cfbfe03f4e06050c3b39490728",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "terminal.json": "f57e38cbe72616dd25cb959ce33d88beb4d64629daa36e00e61796234858eadf",
+    "owned-process.json": "8df074f8dff8435749d0db87d80f461d190f3d7f1563d38e12ff6b8c4fa0e4af",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "limitations": [
+    "Explicit borrowed incoming48 ring and resolvedUTF8 metadata,not independent1073 producer or complete5620/1938 integration.",
+    "History resource-pointer words are semanticNone with separately bound bytes; no pointer/heap allocation prediction.",
+    "Only five original source-rank labels; larger classification payloads remainunknown.",
+    "No Game/App,phase transition,network/native/complete game acceptance."
+  ],
+  "component": "player_death_recap1367",
+  "receipt": "evidence/player-death-recap135-oracle-20261101T234514.840259Z/comparison.json",
+  "receipt_sha256": "05c30dcb209a287d5a722f80fa5e10207c8b173fcb8f0866210677157da8d090",
+  "module_sha256": "8becf091edef1fe406818b89b3b83b52ed7490cf96d10e1810a9226cc453d895",
+  "source_files": 12,
+  "production_files": 7,
+  "source_import_edge_count": 20,
+  "groups": {
+    "empty-zero": 1,
+    "single": 1,
+    "cutoff-inclusive": 1,
+    "empty-capacity": 1,
+    "expired": 1,
+    "future": 1,
+    "adjacent-one-second": 1,
+    "reverse-time-adjacent": 1,
+    "same-pair-changing-metadata": 1,
+    "interleaved-global-groups": 1,
+    "top8-top6-sort-7": 1,
+    "stable-equal-sort-7": 1,
+    "top8-top6-sort-8": 1,
+    "stable-equal-sort-8": 1,
+    "top8-top6-sort-9": 1,
+    "stable-equal-sort-9": 1,
+    "top8-top6-sort-20": 1,
+    "stable-equal-sort-20": 1,
+    "top8-top6-sort-21": 1,
+    "stable-equal-sort-21": 1,
+    "top8-top6-sort-22": 1,
+    "stable-equal-sort-22": 1,
+    "top8-top6-sort-25": 1,
+    "stable-equal-sort-25": 1,
+    "top8-top6-sort-33": 1,
+    "stable-equal-sort-33": 1,
+    "rounding": 11,
+    "hp-ratio": 6,
+    "maxhp-lower-bound": 1,
+    "ordered-f32-cancellation": 1,
+    "mechanic-two-is-true-not-avoidable": 1,
+    "unicode-control": 1,
+    "all-ranks": 1,
+    "wrapped400": 1,
+    "nonfinite-stamp": 2,
+    "nonfinite-damage": 1,
+    "nonfinite-absorbed": 1,
+    "nonfinite-hp": 1,
+    "nonfinite-maxhp": 1,
+    "deterministic-mixed": 48
+  },
+  "distinct_selected_rows": 1291,
+  "payload_bytes_compared": 120301,
+  "capacity_comparisons": 103,
+  "guard_selfcheck": {
+    "receipt": "evidence/player-death-recap135-model-guards-20261101T234617.829718Z/guards.json",
+    "sha256": "cc96da13e802dee8bc00f6e4643a62848f828300acfbb931d51a3f1af90bffec",
+    "new_original_cases": 0,
+    "production_model_guard_checks": 4
+  },
+  "old_pilot": {
+    "receipt": "evidence/player-death-recap135-oracle-20261101T234454.646053Z/comparison.json",
+    "sha256": "baa0ac229650fb2a7fb0345749f0cc0d163f5eb3d6e660b3b71cfcc1aa882d9b",
+    "cases": 3,
+    "not_added_to_full103": true
+  },
+  "independent_review": {
+    "report": "reports/2026-11-02-player-death-recap0135-independent-review.json",
+    "report_sha256": "1625cc4628bbb215121e6a5f770bed12f090896c7fcace6b17d9a38b29af6b88",
+    "receipt": "evidence/player-death-recap135-review-owned-20261102T000113.244785Z/review/review.json",
+    "receipt_sha256": "9a0b879daa2d18d2b87d3d56786134f4497c0348d32acc338ae353310b7a6dcf",
+    "new_original_executions": 0
+  },
+  "original_history_input_is_not_1073_producer": true,
+  "input_record_unknown_pointer_words_not_filled": true,
+  "no_shared_existing_production_modified": true,
+  "semantic_rules": {
+    "window": "logical ring order, stamp>=f32(reference-10); NaN comparefalse; future records included",
+    "empty": "{} withcapacity8",
+    "aggregate": "orderedf32 sums starting negativezero; avoidable only byte45 exactly1; then actual85719 round",
+    "adjacent_hits": "same UTF8 source/name plus f32(newstamp-previousstamp)<=1; representative=latestrecord; f32 newdamage+oldsum and newabs+oldsum; last8groups",
+    "source_groups": "sameUTF8source/name acrossallselected; representative=firstrecord; orderedf32 damage/count; stable descending f32total_cmp; first6groups",
+    "killer": "lastselected originalrecord; rounded damage and round(max(-hp,0))",
+    "ratio": "f32 hp/max(maxhp,1), clamp0..1; nonfinite JSON numbers0",
+    "metadata": "who,rank(mob/elite/boss/object/none),what,icon,mechanic(boolbyte45)",
+    "JSON_order": "secs,total,absorbed,avoidable,maxhp,killer,hits,by; hits add ago,n,abs,count,hp; by add n,count; killer add n,overkill",
+    "allocation": "each append grows max(oldcapacity*2,requiredlength,8); borrowed input nevermutated; actualheapaddresses unknown"
+  },
+  "static_evidence": "evidence/player-death-recap135-static-20261101T233904.183738Z",
+  "scope": "Full1367 on explicit borrowed incoming48 ring with resolvedUTF8 and five-rank domain; not fullGame/App/1073/1938/5620 integration",
+  "pre_review_author_report_sha256": "ed326de4ec5a0a4f8dbeb5273fe86fc813936d34b1b36cdfff962b08a8f4d5aa",
+  "string_backing_scope": "ConsumedJSON strings independently checked; raw string backing after-state was not persisted, so its invariance is a frozenrunner assertion rather than independent rawreadback."
+}

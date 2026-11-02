@@ -1,0 +1,792 @@
+{
+  "status": "passed-within-declared-domain",
+  "author_receipt_sha256": "f4c71af5b092d629812c8084a7cf9daab96292151739059b1fb80393013e9c08",
+  "new_original_calls": 0,
+  "production_imports": 0,
+  "production_executions": 0,
+  "reviewer_sources": {
+    "scripts/review_player_death135.py": "08812d3599a04fd249e41e1f044f16a8aefb39a52177003da2e38037ad2e2c40",
+    "scripts/review_player_death_recap135.py": "b0c92d1116587a58022028844e2bf24d4fc259d6faec092708f9c5d6f2a7b088"
+  },
+  "source_count": 27,
+  "production_sources": 20,
+  "local_import_edges": 73,
+  "sources_verified": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/incoming_history135.py": "db5aecc00a204e33a72fe332ea1ae712243ee6745b8855212ceeaba5bfec2d2b",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/player_death135.py": "38b4ba2b699d92bbd523f4989c26167d053a837edd1f44598928e7e0c2a36349",
+    "reconstruction/core_spec/player_death_recap135.py": "8becf091edef1fe406818b89b3b83b52ed7490cf96d10e1810a9226cc453d895",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/terminal_transition135.py": "bc20eed7dbf4bd1e298ec5b1b6150c05de11a64b448a269e22e533f5906fc58b",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_player_death135_oracle.py": "4ee7819fbf7f0bd8616ab7a3bcadaf830011e89b9128e1a3c540ddc410194de9",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/check_player_death135.py": "b99d30d374a441327e6d6001875e45d1ab7ed0961414677c4dd1c9e833bcd888",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_player_death135_oracle.mjs": "d167b6df9b1e6aed1a6181c96df0c5fbdf39fbf7487914b4143f09481a41ab78",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de"
+  },
+  "static_functions": {
+    "984": {
+      "body_start": 4280168,
+      "body_end": 4292023,
+      "body_sha256": "f9e1b5fb843e275626d1cef0d554014e304a24c1e6fbe1e2b0ed21dcdb48b5fe",
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "wat_sha256": "b40e643de981586822daf2dee2920ce3b189b6c962472af37abbec7536347568",
+      "wat_bytes": 351363
+    },
+    "1073": {
+      "body_start": 5745892,
+      "body_end": 5757845,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+      "signature": [
+        "7f7d7e7f7f7f",
+        ""
+      ],
+      "wat_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62",
+      "wat_bytes": 177079
+    },
+    "1367": {
+      "body_start": 9079788,
+      "body_end": 9086305,
+      "body_sha256": "f5b307b9d13c9e9c899ddca880349c2ba03815cf12508b3669dc02c37db502d7",
+      "signature": [
+        "7f7f7d",
+        ""
+      ],
+      "wat_sha256": "d310b82f4bd3d1df8a36ab7e942aee986dc287938414b0a2471e0fc5fef7ca63",
+      "wat_bytes": 81267
+    },
+    "1560": {
+      "body_start": 10536186,
+      "body_end": 10543428,
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "wat_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109",
+      "wat_bytes": 92715
+    },
+    "1938": {
+      "body_start": 12791913,
+      "body_end": 12795659,
+      "body_sha256": "19b29713e276bb6aa10691160a2b478209278b4601136d9697409499d0457970",
+      "signature": [
+        "7f7f7f7f",
+        ""
+      ],
+      "wat_sha256": "d65bb93dde8c63f10cf454de7394177b38050ef81b078723cd831c499343304e",
+      "wat_bytes": 38942
+    },
+    "5620": {
+      "body_start": 24491099,
+      "body_end": 24492924,
+      "body_sha256": "1d51323f6e17b292370737fd21a849b0ecc80dbb96804a62c9ab73eb13f7b451",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_sha256": "36d453edf79ea572189f6aa9c0deb2cfb5d0e52a55082b3c534a4d3a4d2cdf97",
+      "wat_bytes": 20728
+    },
+    "11735": {
+      "body_start": 35266695,
+      "body_end": 35267694,
+      "body_sha256": "6385fb20ffe11d810bbf3a8b0eeaba6322e6705eb09767aeb7ade32594dccc1f",
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "wat_sha256": "9cace26939576a4160f623720cf871b73b55873c3da025604cb634c8d78dcd6f",
+      "wat_bytes": 12306
+    },
+    "16340": {
+      "body_start": 40530867,
+      "body_end": 40531645,
+      "body_sha256": "4e0bc9ee76b1df145b4b2a4fe4f6ae78aca3b17645515d4336a3ef30941982a7",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_sha256": "e70ab1a252179d34a07b32ae3425716cb37716ecda34301e8bdef06d6d9bb452",
+      "wat_bytes": 8481
+    },
+    "17119": {
+      "body_start": 41428570,
+      "body_end": 41429332,
+      "body_sha256": "33b9a485e73d8f0e4c9e13cb1dce1b6ce3d022be1cf2906cadfd5978349bfad6",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_sha256": "1bb8c772c30623d6a7e6f1c4136855aa1a84a1a39954ec879b7c6d10b1a4c31a",
+      "wat_bytes": 7936
+    },
+    "17217": {
+      "body_start": 41518581,
+      "body_end": 41519323,
+      "body_sha256": "904cef82c034dd51f03386943cec632629467cb54dbc6d6c332707faf3acb8df",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_sha256": "348e010c9b3f2df921bb534876c83b6c7274e8e14fef850fd120eecb8ab2a401",
+      "wat_bytes": 7867
+    },
+    "45845": {
+      "body_start": 63248366,
+      "body_end": 63248630,
+      "body_sha256": "c6502e4033836dcb50eb72024a9ae6418ccbd3c93c72270f07da8eb6a35aa947",
+      "signature": [
+        "7f7e7f7f",
+        ""
+      ],
+      "wat_sha256": "cadc766b51b38b7fc360e2e6d4aadadbe792795a9b151180202ad5f4346acd80",
+      "wat_bytes": 2351
+    },
+    "52241": {
+      "body_start": 65912874,
+      "body_end": 65913095,
+      "body_sha256": "66e7def57750d98b02891599645deb68ca5055aef2f8c4cc02909f1244444504",
+      "signature": [
+        "7f7c",
+        ""
+      ],
+      "wat_sha256": "2ffe46d50d6aae84f4d67d2836331cb2f60cfc8f97d165759ba0444ea4adaa7f",
+      "wat_bytes": 2011
+    },
+    "54802": {
+      "body_start": 66765818,
+      "body_end": 66765993,
+      "body_sha256": "037e8ba64a2391ab1931c98c910d5d751ec39201d39215a315834291c0281307",
+      "signature": [
+        "7f7f7f7f7f",
+        ""
+      ],
+      "wat_sha256": "cdcadca77b0cab900f92bf334e3fd3cec9d722100dbb056468fce91a2be220d7",
+      "wat_bytes": 1476
+    },
+    "58162": {
+      "body_start": 67790885,
+      "body_end": 67791031,
+      "body_sha256": "5fb3a3a71ba57466df809978af2b9eda8dbcf50df4168a5648679d422a4218c0",
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "wat_sha256": "42a38b12b0b154e86675e0fe2c19654c583c6a332579ead45cd5998549ff1c3a",
+      "wat_bytes": 1151
+    }
+  },
+  "counts": {
+    "complete_motion_backing_bytes": 23712,
+    "helper_allocator_pointer_words": 26,
+    "helper_complete_Game_bytes": 46656,
+    "Game_allocator_pointer_observation_bytes": 196,
+    "notifications": 40,
+    "notification_JSON_bytes": 14380,
+    "stop221": 27,
+    "stop_payload_bytes": 513,
+    "helper_calls": 18,
+    "stopped_units": 9,
+    "inactive_records_preserved": 87,
+    "stopped_auxiliary": 9,
+    "stopped_claims": 9,
+    "history_known_bytes": 748,
+    "history_records": 22,
+    "incoming_registry_observation_bytes": 176,
+    "incoming_history_allocator_observation_bytes": 88,
+    "incoming_Game_bytes_scanned": 57024,
+    "incoming_calls": 22,
+    "left0_other_author_recap_consumers": 12,
+    "model_only_unknown_preservation_cells": 1096,
+    "known_cell_original_projection_bytes": 152
+  },
+  "groups": {
+    "helper-empty-true-death": 1,
+    "helper-three-nonempty-stop-consumers": 1,
+    "incoming-fatal-empty": 1,
+    "incoming-fatal-moving-NPC-aux-claims": 1,
+    "left-nonzero-lazy-recap-and-three-domain-stop": 6,
+    "full1073-no-revival-fatal-scalars-history": 10,
+    "unsigned-counters-and-summary-formatter": 4,
+    "summary-UTF8-and-exact-capacity": 4,
+    "left0-real-empty1367-5620": 2,
+    "left0-full1073-single-fatal-hit-recap": 10
+  },
+  "cases": [
+    {
+      "id": 0,
+      "kind": "helper",
+      "group": "helper-empty-true-death",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 221
+    },
+    {
+      "id": 1,
+      "kind": "helper",
+      "group": "helper-three-nonempty-stop-consumers",
+      "left": 1,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 221
+    },
+    {
+      "id": 2,
+      "kind": "incoming",
+      "group": "incoming-fatal-empty",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 221
+    },
+    {
+      "id": 3,
+      "kind": "incoming",
+      "group": "incoming-fatal-moving-NPC-aux-claims",
+      "left": 1,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 221
+    },
+    {
+      "id": 4,
+      "kind": "helper",
+      "group": "left-nonzero-lazy-recap-and-three-domain-stop",
+      "left": 1,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 251
+    },
+    {
+      "id": 5,
+      "kind": "helper",
+      "group": "left-nonzero-lazy-recap-and-three-domain-stop",
+      "left": 1,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 251
+    },
+    {
+      "id": 6,
+      "kind": "helper",
+      "group": "left-nonzero-lazy-recap-and-three-domain-stop",
+      "left": 2,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 251
+    },
+    {
+      "id": 7,
+      "kind": "helper",
+      "group": "left-nonzero-lazy-recap-and-three-domain-stop",
+      "left": 2,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 251
+    },
+    {
+      "id": 8,
+      "kind": "helper",
+      "group": "left-nonzero-lazy-recap-and-three-domain-stop",
+      "left": 255,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 251
+    },
+    {
+      "id": 9,
+      "kind": "helper",
+      "group": "left-nonzero-lazy-recap-and-three-domain-stop",
+      "left": 255,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 251
+    },
+    {
+      "id": 10,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 11,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 12,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 13,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 14,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 222
+    },
+    {
+      "id": 15,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 222
+    },
+    {
+      "id": 16,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 17,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 18,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 19,
+      "kind": "incoming",
+      "group": "full1073-no-revival-fatal-scalars-history",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 20,
+      "kind": "helper",
+      "group": "unsigned-counters-and-summary-formatter",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 21,
+      "kind": "helper",
+      "group": "unsigned-counters-and-summary-formatter",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 226
+    },
+    {
+      "id": 22,
+      "kind": "helper",
+      "group": "unsigned-counters-and-summary-formatter",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 244
+    },
+    {
+      "id": 23,
+      "kind": "helper",
+      "group": "unsigned-counters-and-summary-formatter",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 512,
+      "notification_bytes": 307
+    },
+    {
+      "id": 24,
+      "kind": "helper",
+      "group": "summary-UTF8-and-exact-capacity",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 217
+    },
+    {
+      "id": 25,
+      "kind": "helper",
+      "group": "summary-UTF8-and-exact-capacity",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 2362,
+      "notification_bytes": 1241
+    },
+    {
+      "id": 26,
+      "kind": "helper",
+      "group": "summary-UTF8-and-exact-capacity",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 512,
+      "notification_bytes": 265
+    },
+    {
+      "id": 27,
+      "kind": "helper",
+      "group": "summary-UTF8-and-exact-capacity",
+      "left": 1,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 230
+    },
+    {
+      "id": 28,
+      "kind": "helper",
+      "group": "left0-real-empty1367-5620",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 256,
+      "notification_bytes": 230
+    },
+    {
+      "id": 29,
+      "kind": "helper",
+      "group": "left0-real-empty1367-5620",
+      "left": 0,
+      "stop_count": 3,
+      "notification_capacity": 256,
+      "notification_bytes": 230
+    },
+    {
+      "id": 30,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 31,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 32,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 33,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 34,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 35,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 36,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1272,
+      "notification_bytes": 637
+    },
+    {
+      "id": 37,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1272,
+      "notification_bytes": 637
+    },
+    {
+      "id": 38,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    },
+    {
+      "id": 39,
+      "kind": "incoming",
+      "group": "left0-full1073-single-fatal-hit-recap",
+      "left": 0,
+      "stop_count": 0,
+      "notification_capacity": 1260,
+      "notification_bytes": 631
+    }
+  ],
+  "original_runtime": {
+    "cases": 40,
+    "full1560_calls": 40,
+    "full5620_direct_calls": 18,
+    "full1073_calls": 22,
+    "nested5620_on_static_fatal_path": 22,
+    "nested_callee_count_instrumented": false,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "fresh_instances": 40,
+    "max_memory_bytes": 20578304,
+    "memory_page_cap": 512,
+    "heap_cap_mib": 512,
+    "stack_guards": 337,
+    "all_stack_returns": true,
+    "original_bodies_unchanged": true,
+    "app_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "original_process": {
+    "pid": 74333,
+    "pgid": 74333,
+    "exit_code": 0,
+    "seconds": 1.1619864170061192,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "dependency": {
+    "receipt": "evidence/player-death-recap135-review-owned-20261102T000113.244785Z/review/review.json",
+    "sha256": "9a0b879daa2d18d2b87d3d56786134f4497c0348d32acc338ae353310b7a6dcf",
+    "reference_sha256": "b0c92d1116587a58022028844e2bf24d4fc259d6faec092708f9c5d6f2a7b088",
+    "cases": 103,
+    "independent_reviewer": "self_buffs119_review",
+    "current_reviewer_authored_production1367": true,
+    "new_independent1367_credit": 0,
+    "tracked_report": "reports/2026-11-02-player-death-recap0135-independent-review.json",
+    "tracked_report_sha256": "1625cc4628bbb215121e6a5f770bed12f090896c7fcace6b17d9a38b29af6b88",
+    "single_active_history_adapter": "1367 reference sees logical active0/1-row projection from exported actual48;all consumed scalar/string cells independently validated first.Canonical4-slot history keeps None,unused backing unexported;no None filled."
+  },
+  "unknown_projection_kind": "152 known bytes original-compared;1096 None preservation model-only,0 new original cases",
+  "static_proof_sha256": "80c938514cd1a347edfb97a3e50e74f67595fb9e73226776edb48bf62cc8c6e6",
+  "task_handoff_sha256": "9d655810dde7856be0ed24a16e919922922cf950fc1c724c2f276047fa22d272",
+  "artifact_sha256": {
+    "owned-terminal.json": "59b8b47c48c7d145698658b64d84f024402250a0fd27697baf881df71dcab807",
+    "task-handoff.json": "9d655810dde7856be0ed24a16e919922922cf950fc1c724c2f276047fa22d272",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "manifest.json": "516adb8654ed75930c47cfd3814ba61147c4d39084368ec7abac325ebb5a22f0",
+    "comparison.json": "f4c71af5b092d629812c8084a7cf9daab96292151739059b1fb80393013e9c08",
+    "stdout.jsonl": "9cffec0c11e56714a71bd351964de605a28234ab54f2c2ce890ceda3b41afd8a",
+    "rejections.json": "8391301930208d1c57bb550acebc16d1bae1f60f716a495e8aa584741ac57ad1",
+    "runtime.json": "28f6525834902c335238de168408f6268d99eb335840d4b039ee36a8cd19d7ba",
+    "player-death135-private.wasm": "721b55a7f7a5c9b796ece94fa40fc614f1489af54d5905069987117ba39c3837",
+    "fixtures.json": "4f7ba0258069164b693acc73fa7e45fafb3abe21b8860b9306905e5b9f5bf45c",
+    "unknown-cell-projection.json": "440d798f39b0d437f27d7d3bd82d3b9ad8458885f18fcc58445fbaa391381e89",
+    "inputs.json": "1e15fb170ba92f1ec1c24a40687eb81b116a734232eec04c6d521b8563266d92",
+    "prepared.json": "2ce415ada138d47fce9805b77a5fca3af266c24cae05f0ca60ed5f223f29bccc",
+    "expected.json": "dac5cb635451133500c064386955466e9908a9623fdf816cd6217ac947ed1e4c"
+  },
+  "seconds": 0.5567960829939693,
+  "limitations": [
+    "Bounded fresh1560/typed fixture setup,not natural full App or completed game.40 setup1560 separate from40 targets.",
+    "18 complete5620 rawGame2592 compared with explicit allocator pointer observations;22 complete1073 Game deltas additionally preserve8 observed registry bytes and4 observed history pointer bytes per case rather than invent registry semantics.",
+    "All declared scalar,motion full backing,complete27 stop221 payloads/capacities,40 complete defeatJSON/capacities and22 active48 history known cells independently recomputed.",
+    "History unused capacity backing not exported;active pointerwords/padding unresolved in canonical expected.",
+    "12 left0 recap consumers use other-author independently validated pure1367 reviewer;current reviewer authored production1367,no own-helper independent restoration credit.",
+    "16 negative guards and1096 None preservation are author model selfcheck only;this review does not execute them or add original cases.",
+    "Actual sourceGUID0 unmatched,empty callback/item/modifier/live domains,innatekind8,lives0,minone0,phase1/mode0,Englishfallback only.",
+    "No intrinsic12 resurrection,modifier31,lives>0,mode1,nonflat height or naturalcallback/source registry producer acceptance."
+  ],
+  "static_windows": {
+    "1073_HP_taken_prefix": {
+      "function": 1073,
+      "first_line": 1594,
+      "last_line": 1615,
+      "sha256": "b732b91f9cda971cb249cb2ddfa9e5c1d167e7cc400c67ee8fba1e98cb8c0c93",
+      "text": "      local.get 0\n      local.get 32\n      f32.store offset=1652\n      local.get 0\n      local.get 0\n      f32.load offset=1440\n      local.get 33\n      f32.sub\n      f32.store offset=1440\n      local.get 0\n      local.get 0\n      f64.load offset=992\n      local.get 33\n      f64.promote_f32\n      local.tee 38\n      f64.add\n      f64.store offset=992\n      local.get 13\n      i32.const 424\n      i32.mul\n      local.set 7\n      local.get 11"
+    },
+    "1073_minimum_and_intrinsic_gate": {
+      "function": 1073,
+      "first_line": 3877,
+      "last_line": 3927,
+      "sha256": "61de40b7f7031654e20c2bbb01b5d41d3a9b8bfc7a515b127a573785e498e418",
+      "text": "      local.get 0\n      f32.load offset=1440\n      local.set 27\n      local.get 0\n      i32.load8_u offset=2578\n      if  ;; label = @2\n        local.get 0\n        f32.const 0x1p+0 (;=1;)\n        local.get 27\n        local.get 27\n        local.get 27\n        f32.ne\n        select\n        local.tee 1\n        f32.const 0x1p+0 (;=1;)\n        local.get 1\n        f32.const 0x1p+0 (;=1;)\n        f32.gt\n        select\n        local.tee 27\n        f32.store offset=1440\n      end\n      block  ;; label = @2\n        local.get 27\n        f32.const 0x0p+0 (;=0;)\n        f32.le\n        i32.eqz\n        br_if 0 (;@2;)\n        block  ;; label = @3\n          block  ;; label = @4\n            block  ;; label = @5\n              block  ;; label = @6\n                block  ;; label = @7\n                  block  ;; label = @8\n                    block  ;; label = @9\n                      block  ;; label = @10\n                        block  ;; label = @11\n                          local.get 0\n                          i32.load offset=1256\n                          local.tee 3\n                          i32.load\n                          i32.const 12\n                          i32.ne\n                          br_if 0 (;@11;)\n                          local.get 0\n                          f32.load offset=1264\n                          local.tee 1\n                          f32.const 0x0p+0 (;=0;)\n                          f32.gt\n                          br_if 0 (;@11;)\n                          local.get 8"
+    },
+    "1073_modifier31_separate_gate": {
+      "function": 1073,
+      "first_line": 3990,
+      "last_line": 4025,
+      "sha256": "6fff0b2b4cbba0bacba44c2a9adb71142fd8f3f96158d674df2c346302ef10b9",
+      "text": "                          i32.const 104\n                          i32.add\n                          call 922\n                          br_if 1 (;@10;)\n                          local.get 0\n                          local.get 27\n                          f32.store offset=1440\n                        end\n                        local.get 0\n                        i32.load offset=2056\n                        local.tee 3\n                        i32.eqz\n                        br_if 3 (;@7;)\n                        local.get 0\n                        f32.load offset=2352\n                        local.set 1\n                        local.get 0\n                        i32.load offset=2052\n                        local.tee 7\n                        i32.load\n                        i32.const 31\n                        i32.eq\n                        br_if 2 (;@8;)\n                        local.get 3\n                        i32.const 1\n                        i32.eq\n                        br_if 3 (;@7;)\n                        local.get 3\n                        i32.const 36\n                        i32.mul\n                        i32.const 36\n                        i32.sub\n                        local.set 6\n                        local.get 7\n                        i32.const 36\n                        i32.add"
+    },
+    "1073_zero_lives_real_death": {
+      "function": 1073,
+      "first_line": 4596,
+      "last_line": 4628,
+      "sha256": "8096faf7f8ec5a1eb3e71e9ecfb983d2768700d72d264ba14a8c3d2d882084ef",
+      "text": "                end\n                local.get 0\n                i32.load offset=1632\n                local.tee 3\n                i32.eqz\n                if  ;; label = @7\n                  local.get 0\n                  i32.const 0\n                  i32.store offset=1440\n                  local.get 0\n                  call 5620\n                  br 5 (;@2;)\n                end\n                local.get 0\n                local.get 3\n                i32.const 1\n                i32.sub\n                i32.store offset=1632\n                local.get 0\n                local.get 0\n                f32.load offset=1536\n                f32.const 0x1p-1 (;=0.5;)\n                f32.mul\n                f32.store offset=1440\n                local.get 8\n                local.get 0\n                i64.load offset=1336\n                local.tee 2\n                i64.store offset=184\n                local.get 8\n                i32.const 2\n                i32.store offset=104\n                i32.const 0"
+    },
+    "5620_mode0_complete": {
+      "function": 5620,
+      "first_line": 8,
+      "last_line": 64,
+      "sha256": "4c7cf47aa693c854998db3844024de947b12bf01e92c97a05a35223a3e5aae59",
+      "text": "    local.get 0\n    i32.const 4\n    i32.store8 offset=2587\n    local.get 0\n    i32.const 1\n    i32.store offset=408\n    local.get 0\n    local.get 0\n    f32.load offset=2352\n    f32.store offset=412\n    block  ;; label = @1\n      local.get 0\n      i32.load8_u offset=2582\n      i32.eqz\n      if  ;; label = @2\n        local.get 0\n        call 17119\n        local.get 1\n        i32.const 48\n        i32.add\n        local.get 0\n        i32.const 1583464\n        i32.const 6\n        call 1938\n        local.get 0\n        i32.load offset=1900\n        local.tee 2\n        local.get 0\n        i32.load offset=1892\n        i32.eq\n        if  ;; label = @3\n          local.get 0\n          i32.const 1892\n          i32.add\n          call 65323\n        end\n        local.get 0\n        i32.load offset=1896\n        local.get 2\n        i32.const 12\n        i32.mul\n        i32.add\n        local.tee 3\n        local.get 1\n        i32.load offset=56\n        i32.store offset=8\n        local.get 3\n        local.get 1\n        i64.load offset=48 align=4\n        i64.store align=4\n        local.get 0\n        local.get 2\n        i32.const 1\n        i32.add\n        i32.store offset=1900\n        br 1 (;@1;)\n      end"
+    },
+    "984_empty_modifiers_skip_callbacks": {
+      "function": 984,
+      "first_line": 8,
+      "last_line": 25,
+      "sha256": "d26118d5da7ccb0c9c088c92ec31ac52c637107eeb480596e7fb5585cb560a59",
+      "text": "    local.get 0\n    i32.load offset=2056\n    local.tee 31\n    i32.const 36\n    i32.mul\n    local.set 3\n    block  ;; label = @1\n      block  ;; label = @2\n        block  ;; label = @3\n          local.get 31\n          i32.const 59652323\n          i32.gt_u\n          br_if 0 (;@3;)\n          local.get 3\n          i32.eqz\n          br_if 2 (;@1;)\n          local.get 0\n          i32.load offset=2052"
+    },
+    "17119_NPC_predicate": {
+      "function": 17119,
+      "first_line": 33,
+      "last_line": 63,
+      "sha256": "f2a16a666e9c2dd33d6ff86faedde60ec5b973a74797e70da88b09404f10cec2",
+      "text": "        block  ;; label = @3\n          local.get 4\n          local.get 7\n          i32.add\n          local.tee 2\n          i32.load\n          br_if 0 (;@3;)\n          local.get 2\n          i32.const 344\n          i32.add\n          local.tee 8\n          f32.load\n          local.tee 15\n          f32.const 0x0p+0 (;=0;)\n          f32.gt\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 18\n          local.get 15\n          local.get 2\n          i32.const 340\n          i32.add\n          local.tee 5\n          f32.load\n          local.tee 17\n          f32.add\n          f32.lt\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 2\n          i32.const 336"
+    },
+    "17217_aux_predicate": {
+      "function": 17217,
+      "first_line": 30,
+      "last_line": 58,
+      "sha256": "b30ba82bd1af69d8d951a453266439beaddf46b0f8b3786c5fb3a423ee7a3c66",
+      "text": "      loop  ;; label = @2\n        block  ;; label = @3\n          local.get 4\n          local.get 7\n          i32.add\n          local.tee 2\n          i32.const 60\n          i32.add\n          local.tee 8\n          f32.load\n          local.tee 15\n          f32.const 0x0p+0 (;=0;)\n          f32.gt\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 18\n          local.get 15\n          local.get 2\n          i32.const 56\n          i32.add\n          local.tee 5\n          f32.load\n          local.tee 17\n          f32.add\n          f32.lt\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 2\n          i32.const 52"
+    },
+    "16340_claim_predicate": {
+      "function": 16340,
+      "first_line": 28,
+      "last_line": 57,
+      "sha256": "b7803835e9f0513728c82e14ff5d8c1f4686e709617e344ce5114c813e073c30",
+      "text": "      i32.load offset=2112\n      local.set 7\n      loop  ;; label = @2\n        local.get 12\n        local.get 4\n        local.get 7\n        i32.add\n        local.tee 1\n        i32.const 68\n        i32.add\n        local.tee 8\n        f32.load\n        local.tee 10\n        local.get 1\n        i32.const 72\n        i32.add\n        local.tee 5\n        f32.load\n        local.tee 9\n        f32.add\n        f32.ge\n        i32.eqz\n        if  ;; label = @3\n          local.get 2\n          i32.const 8\n          i32.add\n          local.get 0\n          i32.load offset=2348\n          local.tee 3\n          i32.const 8"
+    },
+    "1938_left0_actual_recap": {
+      "function": 1938,
+      "first_line": 1519,
+      "last_line": 1544,
+      "sha256": "90ae0e2021435008a2bdee7dd5d3c875f0967a085256b8acd70b9b4b39fba4ea",
+      "text": "            local.get 4\n            i64.load offset=64 align=4\n            i64.store offset=48\n            br 1 (;@3;)\n          end\n          local.get 6\n          i32.eqz\n          if  ;; label = @4\n            local.get 4\n            i32.const 48\n            i32.add\n            local.get 1\n            i32.const 968\n            i32.add\n            local.get 1\n            i32.const 412\n            i32.const 2352\n            local.get 1\n            i32.load offset=408\n            select\n            i32.add\n            f32.load\n            call 1367\n            br 1 (;@3;)\n          end\n          i32.const 1"
+    }
+  },
+  "innate_gate_equivalence": "Actual constructor kind8;author expected fixture boundary kind9.Both satisfy original kind!=12 before any cooldown read.Exact actual8 verified in all40,not claimed same numeric boundary.",
+  "negative_guard_receipt": {
+    "count": 16,
+    "kind": "author model selfcheck only,not executed by this reviewer",
+    "sha256": "8391301930208d1c57bb550acebc16d1bae1f60f716a495e8aa584741ac57ad1"
+  },
+  "owned_review": {
+    "path": "evidence/player-death135-independent-review-owned-20261102T000645.796312Z/review/review.json",
+    "sha256": "99e1d1ca91cd52941f8a6f37e14aaa1f9f91862b5be55e22adb287b3f02f96d3",
+    "process": {
+      "pid": 92380,
+      "pgid": 92380,
+      "exit_code": 0,
+      "seconds": 0.6558336670132121,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "terminal_sha256": "d771f3377368a262dedc0b2caeec5c6eb56ddc546ba1aa244f68fd97873b055c",
+    "owned_process_sha256": "d4cd56304fd81ed11e2fe171e6a673c4ded88e5c182009febc4df7bed9119a56"
+  },
+  "retained_reviewer_attempts": [
+    {
+      "path": "evidence/player-death135-independent-review-owned-20261102T000340.274082Z",
+      "terminal_sha256": "7cc42df6138f16518c809dfac21d43799bd839f44cc7bdd415615b6d795a0eed",
+      "stderr_sha256": "80a0d3aa9d3a41a01e7ab0006bfdb883cc95aee6fa9ab3caf4d61beb65e41534",
+      "reason": "Reviewer WAT slice cap200000 rejected351363B984;raised boundedcap1MiB.",
+      "author_implementation_failure": false
+    },
+    {
+      "path": "evidence/player-death135-independent-review-owned-20261102T000356.792814Z",
+      "terminal_sha256": "02ee0014f169beca6ef9a4480be76ae8f5d89b140b58c5def4d619ea8ef7ce79",
+      "stderr_sha256": "07076ea64d95a9b8e544963ad6f1824d0945b718478f01fe0065d8688ce45e9e",
+      "reason": "Reviewer expected direct221 literal in17119;corrected original45845 serializer call evidence.",
+      "author_implementation_failure": false
+    },
+    {
+      "path": "evidence/player-death135-independent-review-owned-20261102T000631.759295Z",
+      "terminal_sha256": "225be4b78836b8afc792ae072db68af3a3e5174634722b64b29db782b84e2504",
+      "stderr_sha256": "099587c8acd73c4491f56559e1530b19eac4e823e8ce226616c01f3f504bb344",
+      "reason": "New reviewer sparse interpreter eagerly readinactiveNPC start340;made original predicate reads lazy.",
+      "author_implementation_failure": false
+    }
+  ],
+  "intermediate_review": {
+    "path": "evidence/player-death135-independent-review-owned-20261102T000423.068193Z/review/review.json",
+    "sha256": "3eddc4d61ce3df3298586f827c61c8e67b265f6b7038186db8d443560082eb8e",
+    "meaning": "First40-case pass retained;final adds sparse lazy projection,preciseWAT windows andlogicalactive1367 adapter."
+  },
+  "reviewer_role": "Different author from player_death135;production1367 authored bythis reviewer andcheckedbyself_buffs119_review dependency,notindependentrecoveredhere.",
+  "overall_game_complete": false,
+  "new_original_target_calls_added_by_review": 0
+}

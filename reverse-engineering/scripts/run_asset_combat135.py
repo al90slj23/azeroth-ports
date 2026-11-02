@@ -31,7 +31,7 @@ PRODUCTION_ENTRIES = (
     'resource_spec.world_cache135',
 )
 HOST_SOURCES = ('scripts/run_asset_combat135.py', 'scripts/run_asset_world135.py',
-                'scripts/production_closure135.py')
+                'scripts/production_closure135.py', 'scripts/motion_route135.py')
 
 
 def sha(path):
@@ -120,6 +120,11 @@ def state_summary(state):
             notification_next_id14340336=sources.notification_next_id14340336,
             auxiliary_origins=list(sources.live_auxiliary_origins),
             rune_notifications=list(state.rune_notifications))
+    if state.player_motion_owner is not None:
+        from core_spec.headless_motion135 import MOTION_WORDS135
+        cells=state.player_motion_owner.cells
+        result['motion_words']={str(o):None if None in cells[o:o+4]else u32(cells,o,'motion summary')
+            for o in MOTION_WORDS135}
     result['summary_sha256'] = hashlib.sha256(
         json.dumps(result, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
     return result
@@ -140,6 +145,8 @@ def main():
         help='Use complete live/Aura ownership and the resource/protection composition.')
     parser.add_argument('--app-notification-next-id',type=int,
         help='Explicit App notification context; its natural producer is not implied.')
+    parser.add_argument('--motion-route',choices=('first-rune',),
+        help='Controlled independent-model trajectory; not recovered device input.')
     args = parser.parse_args()
     if not 1 <= args.frames <= 1000:
         parser.error('frames must be1..1000')
@@ -150,6 +157,8 @@ def main():
             parser.error('Physical player sources require an explicit u32 --app-notification-next-id')
     elif args.app_notification_next_id is not None:
         parser.error('App notification context requires --physical-player-sources')
+    if args.motion_route is not None and not args.physical_player_sources:
+        parser.error('Motion route requires --physical-player-sources')
     manifest = external_path(args.asset_manifest)
     output = external_path(args.output or ROOT / 'evidence' / datetime.now(timezone.utc).strftime(
         'asset-combat0135-modelselfcheck-%Y%m%dT%H%M%S.%fZ'))
@@ -160,12 +169,13 @@ def main():
     # Import only after the full static production source set has been frozen.
     from run_asset_world135 import ManifestAssets135, build_asset_world135, write_world_outputs
     from core_spec import binary32 as f
-    from core_spec.headless135 import from_opening_handoff, step_frame, select, projection
+    from core_spec.headless135 import from_opening_handoff, step_frame, select, projection, move_player135
     from core_spec.opening135 import EmptyOpeningInput135
     from core_spec.opening_handoff135 import initialize_absent_companion_handoff, projection as opening_projection
     from core_spec.profile_companions135 import EmptyCompanionProfile135
     from core_spec.special2376_notify135 import SpecialLocale2376_135, ELWYNN_ENGLISH_NAMES
     from core_spec.event_wave135 import EventWaveLocale135
+    from motion_route135 import FirstRuneRoute135
 
     began = time.monotonic()
     provider = None
@@ -178,6 +188,7 @@ def main():
     stage_count = 0
     action_count = 0
     failure = False
+    route=FirstRuneRoute135()if args.motion_route is not None else None
     with (output / 'stages.jsonl').open('w', buffering=1) as stages, \
             (output / 'progress.jsonl').open('w', buffering=1) as progress_log:
         def progress(*values, **fields):
@@ -205,6 +216,7 @@ def main():
                 dt_bits=f.from_float(.1), requested_frames=args.frames,
                 selection_policy='first_upgrade_else_index0',
                 physical_player_sources=args.physical_player_sources,
+                motion_route=args.motion_route,
                 explicit_App_notification_counter=args.app_notification_next_id,
                 asset_manifest=str(provider.path), asset_manifest_sha256=provider.manifest_sha256,
                 asset_inputs=asset_inputs,
@@ -222,10 +234,18 @@ def main():
             write_json(output / 'opening.json', opening_projection(handoff))
             state = from_opening_handoff(handoff, navigation_enabled=args.navigation,
                 special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),event_locale=EventWaveLocale135(0),banner_locale='en',
+                motion_enabled=route is not None,
                 **(dict(app_notification_next_id=args.app_notification_next_id,resource_locale='en')
                     if args.physical_player_sources else{}))
             emit('opening', state, action_index=None)
             for frame in range(args.frames):
+                if route is not None:
+                    execution_phase='motion'
+                    for motion in route.before_frame(state,f.from_float(.1)):
+                        state,status=move_player135(state,motion['opcode'],bytes.fromhex(motion['payload24_hex']))
+                        if status!='motion_core_projection':raise ValueError('Controlled motion unexpectedly rejected')
+                        emit('motion',state,action_index=action_count,opcode=motion['opcode'],payload24_hex=motion['payload24_hex'])
+                        action_count+=1
                 execution_phase = 'frame'
                 candidate, snapshots, status = step_frame(state, f.from_float(.1))
                 if status != 'ordered_frame_projection':
@@ -271,6 +291,8 @@ def main():
         write_json(output / 'final-summary.json', state_summary(state))
         write_json(output / 'opaque-pickup-amount-origins.json',
             [asdict(origin) for origin in state.opaque_pickup_amount_origins])
+        if state.player_motion_owner is not None:
+            write_json(output/'final-motion-owner.json',list(state.player_motion_owner.cells))
     after = {name: sha(ROOT / name) for name in files}
     runtime_local_sources = set()
     for module in tuple(sys.modules.values()):
@@ -309,6 +331,7 @@ def main():
         independent_frames=0 if state is None else state.frames,
         independent_selections=0 if state is None else state.selections,
         stage_summaries=stage_count, actions=action_count, boundary=boundary,
+        motion_route=args.motion_route,motion_route_events=[]if route is None else route.events,
         source_sha256_before=before, source_sha256_after=after,
         escaped_runtime_sources=escaped_sources, production_source_unchanged=source_unchanged,
         elapsed_seconds=time.monotonic() - began,

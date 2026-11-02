@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+"""Bounded static135 fatal/stop/notification provenance. Never runs original."""
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,sqlite3
+from build_full135_oracle import ROOT,SOURCE,SOURCE_SHA,parse_source
+FUNCTIONS=(1073,5620,17119,17217,16340,1938,1367,984,58162)
+WINDOWS={1073:((1587,1678,'incoming_scalar_and_registry_source'),(2925,3114,'history_GUID_source_name_rank'),(3638,3646,'item22_empty_guard'),(3877,4002,'HP_minimum_and_intrinsic12'),(4596,4619,'no_lives_death_or_halfHP_revival')),5620:((1,64,'mode0_full_death_path'),),17119:((1,61,'NPC_stop_predicate'),(176,204,'NPC_frozen_writes'),(284,334,'stop221_and_wrapping_sequence')),17217:((1,56,'auxiliary112_predicate'),(172,204,'auxiliary_frozen_writes')),16340:((1,63,'claim88_predicate'),(178,230,'claim_frozen_writes')),984:((1,25,'zero_modifier36_count_returns_without_callbacks'),),58162:((1,66,'ordinary_definition_name_and_locale_fallback'),)}
+def sha(path):
+ with Path(path).open('rb')as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def main():
+ original=SOURCE.read_bytes();assert hashlib.sha256(original).hexdigest()==SOURCE_SHA
+ types,imports,decl,bodies,_=parse_source(original);profile=ROOT/'evidence/wasm0135-profile-20261101T031028.877964Z';out=ROOT/'evidence'/datetime.now(timezone.utc).strftime('player-death135-static-%Y%m%dT%H%M%S.%fZ');out.mkdir();functions={};total=0
+ with sqlite3.connect((profile/'index.sqlite').resolve().as_uri()+'?mode=ro',uri=True)as db:
+  db.row_factory=sqlite3.Row
+  with(profile/'official-0.135.1-full.wat').open('rb')as wat:
+   for index in FUNCTIONS:
+    row=dict(db.execute('select * from functions where idx=?',(index,)).fetchone());a,b=bodies[index];assert(row['body_start'],row['body_end'])==(a,b);wat.seek(row['wat_start']);value=wat.read(row['wat_end']-row['wat_start']);total+=len(value);(out/f'{index}.wat').write_bytes(value);lines=[x.strip()for x in value.decode().splitlines()];p,r=types[decl[index-len(imports)]]
+    windows={name:[dict(line=j,instruction=lines[j-1])for j in range(lo,hi+1)]for lo,hi,name in WINDOWS.get(index,())}
+    functions[str(index)]=dict(**row,params_hex=p.hex(),results_hex=r.hex(),body_sha256=hashlib.sha256(original[a:b]).hexdigest(),wat_sha256=hashlib.sha256(value).hexdigest(),windows=windows)
+ proof=dict(version='0.135.1',actual_build='90898d5e3',original_sha256=SOURCE_SHA,producer_sha256=sha(Path(__file__)),original_executions=0,full_WAT_read=False,WAT_read_bytes=total,functions=functions,mode0_write_contract={'Game':[408,412,2587,'2412 per moving record','1880/1884/1888 packet vector if stops','1892/1896/1900 notification vector'],'caller1073':'lives0 path writesHP1440=+0 before5620;5620 itself does not writeHP','mode0_no_action_increment_or232':True,'NPC424':{'predicate':'marker0==0,duration344>0,now<f32(start340+duration344)','writes':[316,320,324,328,332,336,340,344],'GUID':112},'aux112':{'predicate':'duration60>0,now<f32(start56+duration60)','writes':[32,36,40,44,48,52,56,60,68],'GUID':16},'claim88':{'predicate':'not now>=f32(start68+duration72)','writes':[44,48,52,56,60,64,68,72,76],'GUID':24},'stop_packet':'221,32B allocation,packedGUID + XYZ f32LE + incremented wrappingu32 movementSequence + stopbyte1'},no_revival_contract={'post_callback_HP':'<=0 after optional minimum-one clamp','intrinsic12':'must not be12,or strictly positive cooldown;NaN/zero may attempt922','modifier31':'absent;unknown not accepted','lives1632':'exactu32zero','phase':'1','mode':'0','no_proc_component':'G1712 live count0,G2032 item count0,G2056 modifier count0;984 empty modifier vector jumps over1512 and action loop','upstream':'registry/source-name/history/keyedHP outputs remain separate1073 consumer contracts'},ordinary_history_source={'selection':'first424B vector row withU112 GUID equal to incoming source GUID','normal_domain':'U244==-1 andU40==-1','name':'U284 definition ->58162;locale key def+24 tried,English fallback def+16/+20','classification':'U416','unmatched':['',4],'registry':'separate earlier lookup buildsG1112 string->f64 totals;not identical to history name mapping'},unknown=['Intrinsic12 cast/resurrection continuation','Modifier31 cooldown/stealth revival','lives>0 halfHP resurrection and associated attacks/aura/packets','mode1 terminal network/field138/reporting branches','Real terrain/collision adapter for nonflat movement stops','Whole source registry/retaliation/proc and natural callback producers'])
+ (out/'proof.json').write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n');print(json.dumps(dict(evidence=str(out.relative_to(ROOT)),proof_sha256=sha(out/'proof.json'),WAT_read_bytes=total)))
+if __name__=='__main__':main()

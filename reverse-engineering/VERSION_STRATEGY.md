@@ -1,12 +1,12 @@
 # 版本与平台基线
 
-官方元数据本轮核对至 **2026-11-01T23:29:51Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](evidence/official-goal-phase-network-check-20261101T232949.996711Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。现有安装包与存档未替换。
+官方元数据本轮核对至 **2026-11-01T23:57:03Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。最新138的[默认构造162次fresh1571及独审](reports/2026-11-02-initial-state0138.md)也已通过，覆盖502B已知投影及40个完整速度包；borrowedflatview、累计338580个None和未进入phase1均单独标明。现有安装包与存档未替换。
 
 本轮固定135的[移动→战斗→真实符文拾取](reports/2026-11-02-opening-moving-rune0135.md)完成新460帧／4选卡／44次完整968输入／6488阶段／6490原件入口，0声明差异，[独审通过](reports/2026-11-02-opening-moving-rune0135-independent-review.md)。第444帧（raw索引443）消费实际刷出的kind5符文，停止移动后继续16帧；恢复请求133，但当时满血266，故只证明cap、移除与通知链，不称非零回血增量。117源／100production、snapshot／独立预解析world／部分类型App和外部clock边界明确。
 
 [移动2328的38组／完整968本地输入33组](reports/2026-11-02-player-motion0135.md)和[校正确认199的88组](reports/2026-11-02-player-correction0135.md)均各自独审通过。真实键盘／摇杆生产、自然App／完整880、远端同步仍未接通；ACK组件尚未作为连续流程动作接线。135结果不转记138，Windows原生执行与独立完整一局均为0。
 
-历史[静止玩家750帧物理状态闭环](reports/2026-11-02-opening-player-sources0135.md)及[raw451资源→750帧模型入口](reports/2026-11-02-raw-physical7500135.md)保持各自范围，本批没有重跑raw451生产，也不将两批计数相加。后续纯模型探路到920帧／7选／level8，停在玩家致死受伤边界，**新增原件case为0**；下一步恢复死亡／复活、冻结运动和失败recap，再做连续原件验证。以下较早收据保持各自历史范围。
+历史[静止玩家750帧物理状态闭环](reports/2026-11-02-opening-player-sources0135.md)及[raw451资源→750帧模型入口](reports/2026-11-02-raw-physical7500135.md)保持各自范围，后继[raw451→移动460模型入口](reports/2026-11-02-raw-moving-rune0135.md)已另跑，79项终态模型组合一致，新增原件case仍为0；各批计数不相加。后续纯模型探路到920帧／7选／level8，停在玩家致死受伤边界，**新增原件case为0**；下一步恢复死亡／复活、冻结运动和失败recap，再做连续原件验证。[普通敌人来源163组完整1073与独审](reports/2026-11-02-incoming-source0135.md)补齐名称／分类→history组件，尚未接连续死亡。[死亡40组](reports/2026-11-02-player-death0135.md)与[recap103组](reports/2026-11-02-player-death-recap0135.md)已分别独审，但仅空地形组件域；实际非平地停止运动和有序AI队列仍待接，不能宣称完整失败一局。以下较早收据保持各自历史范围。
 
 核对日期：2026-11-02（Asia/Taipei）。官方入口为 [wow.aethus.pl](https://wow.aethus.pl/)；`azerothsurvivors.io`自称非官方导航站，不以其版本说明作为原件身份。
 
