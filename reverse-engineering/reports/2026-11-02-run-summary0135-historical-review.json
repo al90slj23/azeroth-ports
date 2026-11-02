@@ -1,0 +1,198 @@
+{
+  "status": "declared_historical_counter_spec_matches",
+  "capture": "evidence/opening-combat0135-oracle-20261101T232156.684647Z/comparison.json",
+  "capture_sha256": "521db52b9d97637212460083a7ea88b9038d63871536d6635edc21645e0bd622",
+  "model_trace": "evidence/run-summary135-model-events-20261102T001522.269306Z/trace.json",
+  "model_trace_sha256": "703e0069f2c835a00e7f8c0569fe41e1990a156df5f10d7ec48ab8b4682ce0ad",
+  "static_proof_sha256": "b237777fcf3098aefe496a38f11b9694c6682c4926533bcad1c21e5811a4ceb1",
+  "original_version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "historical_controlled_frames": 460,
+  "new_original_calls": 0,
+  "new_original_frames": 0,
+  "new_model_executions": 0,
+  "new_full880_frames": 0,
+  "source_common_sha_equal": 102,
+  "historical_source_files": 117,
+  "model_trace_source_files": 106,
+  "current_source_drift": {
+    "reconstruction/core_spec/ai_world135.py": {
+      "trace_sha256": "ed30c5165b1af95b8b4002c0ce285c5da8f72709e701a90e25db25d2330cc69e",
+      "current_sha256": "379a4e33d987ae6d6cf5344fba35ccd1567366720d106b2d58bdaddad613e078"
+    }
+  },
+  "summary_not_in_historical_model": true,
+  "new_summary_source_sha256": "71ee8897fa52669193dacd14de08bb53f2fbf987a9470516a4a455e27419f0d2",
+  "counts": {
+    "raw_Game_bytes_bound": 16822080,
+    "declared_counter_values_compared": 25960,
+    "constructor_counter_values_verified": 7,
+    "counter_snapshots": 6490,
+    "original_marker_and_classification_event_matches": 38
+  },
+  "declared_differences": 0,
+  "declared_difference_rows": [],
+  "all_seven_counters_observed_by_stage": true,
+  "declared_running_counter_offsets": [
+    1432,
+    1084,
+    1088,
+    1100
+  ],
+  "unrestored_running_counter_offsets": [
+    1092,
+    1096,
+    1104
+  ],
+  "unrestored_nonzero_observations": 0,
+  "original_observed_value_sets": {
+    "1432": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "1084": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      32,
+      33,
+      35,
+      36,
+      37,
+      38
+    ],
+    "1088": [
+      0
+    ],
+    "1092": [
+      0
+    ],
+    "1096": [
+      0
+    ],
+    "1100": [
+      0,
+      7,
+      9,
+      14,
+      18,
+      23,
+      28,
+      32,
+      41,
+      45,
+      49,
+      53,
+      55,
+      60,
+      64
+    ],
+    "1104": [
+      0
+    ]
+  },
+  "counter_change_stages": 51,
+  "final_declared_counter_values": {
+    "level": 5,
+    "kills": 38,
+    "elites": 0,
+    "earned": 64
+  },
+  "all109_model_deaths_recomputed": true,
+  "model920_count109_original_parity_claimed": false,
+  "model_events_first460": 38,
+  "expected_level_gold_source": "Historical independent progression/currency stage expectations, generated before original",
+  "expected_kill_elite_source": "Separate model on_death events; independent accumulator; original counters never fed into model",
+  "static_counter_contract_sha256": "4baf3cef4291a52cbe19be5cfca50212546049af742c09d5db4c174f87d28b19",
+  "counter_rows_sha256": "6e0d38419cfff5f33d50efe1c4fcbacd5331432788509ad295f449d23b35690f",
+  "counter_changes_sha256": "cecf4429daaf64f28716f3e23751e25900f5960038c2c32f246511c1575fc247",
+  "trace_source_provenance_sha256": "872d68bca9fc48568177d41a9299e19ed1f5c55957bd27e76ee4e936b40bfc1b",
+  "transport": {
+    "source": "evidence/opening-combat0135-oracle-20261101T232156.684647Z/source-snapshot/scripts/opening_combat135_cas.py",
+    "sha256": "728b3ae0576d372b9b7467c484022ae3487e772b9a09c0172bfbcdcf29c1479f",
+    "private_source_identical": true,
+    "CAS_full_finish": {
+      "records": 6952,
+      "logical_bytes": 2139516743,
+      "logical_sha256": "8e9e568814f20cb00a6f48f8a954b8745cd2b021a9373e368c300a8dca8f04f5",
+      "maximum_logical_record_bytes": 879543,
+      "unique_blobs": 21749,
+      "unique_blob_bytes": 123474051,
+      "maximum_blob_bytes": 844901,
+      "index_uncompressed_bytes": 2247614,
+      "index_uncompressed_sha256": "e5e81b51116186370acc7f78ddcaa4501b2d297cdc6d1434add7d883f93c6ecd",
+      "maximum_index_record_bytes": 514,
+      "maximum_blob_index_record_bytes": 18523,
+      "total_logical_blob_references": 1338498,
+      "blob_index_bytes": 18376959,
+      "blob_index_sha256": "4d23a440c38d81eae6cb38687d64b24bb1a542ba9e2fe174c31f439fcb252690",
+      "blob_references_bytes": 3715895,
+      "blob_references_sha256": "77aeeacb848d5c692b5fdb492c597042242511a9072212cc4bb9a6dd8f420d34",
+      "all_blobs_and_occurrences_verified": true,
+      "decoder_cache_bytes": 8361566,
+      "logical_fragment_cache_weight_bytes": 16631424,
+      "logical_fragment_cache_weight_limit": 16777216,
+      "logical_fragment_cache_item_limit": 1048576
+    },
+    "expected_stream": {
+      "file_bytes": 58224935,
+      "file_sha256": "cc7a8aae98c9ba76dc4e74c3ba37fd1d1df926281a02a96a976bcba69c238625",
+      "uncompressed_bytes": 396624522,
+      "uncompressed_sha256": "3573874fd44ade23af4b965d0c6ef20a25ba13e4a314340b7772fab5d306ffe1",
+      "maximum_record_bytes": 64538,
+      "records": 6489,
+      "gzip": true,
+      "single_member": true
+    }
+  },
+  "auditor_sha256": "b04a074c8234ba20510f23d3828f363c394862cddc47ff97e1e47598776b57c5",
+  "owned_audit_process": {
+    "pid": 24911,
+    "pgid": 24911,
+    "expected_terminal": "owned-terminal.json"
+  },
+  "elapsed_seconds": 23.229,
+  "findings": [
+    "914 accepted deaths always increment1084 before special branches;rawU416 lowbit increments1088.Ordinary adapter is a guarded subset.",
+    "Boss1096 andguardian1092 have separate later914 producers;ordinary on_death does not establish their globalabsence.",
+    "Chest1104 is a separate20660 successful-spend producer, with2862near-kind2/2571 and38321distance call paths;no chest owner is restored in run_summary135.",
+    "Existing resource consumer explicitly rejects nearbykind2 and retains far ones;this guard must remain rather than incrementing orzeroing counts from pickup population.",
+    "Only four running counter owners are declared comparable here;the other three raw columns are observations,not verified knownzero."
+  ],
+  "limitations": [
+    "Read-only comparison reuses immutable historical original data;does not increase original/frame acceptance counts.",
+    "New summary module was absent from the old460 frozen model;102common sources match and the new trace is separately pinned.",
+    "The trace records109ordinarydeaths through920 but only its first38events have this historical460comparison.",
+    "Source/proc/wholecounter producers,same-statefatal/full880 andcompletegame remain incomplete."
+  ],
+  "evidence": "evidence/run-summary135-historical-review-20261102T002831.213172Z",
+  "review_sha256": "736535c2193da6d31d6570a85b42ac1543afffb6e96e233f0f9aa0e7b542f064"
+}

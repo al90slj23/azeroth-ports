@@ -88,7 +88,7 @@ def build_opening_combat135(directory=None):
         selection=dict(role='select_ability',index=CORE_ROLES['select_ability'][0],
             parameters_hex=CORE_ROLES['select_ability'][1].hex(),results_hex=CORE_ROLES['select_ability'][2].hex(),
             action=dict(kind='select',index='explicit uint32 choice index'),clock_advanced=False),
-        budgets=dict(cases=1,actions_per_case=200,output_bytes=268435456),
+        budgets=dict(cases=1,frames_per_case=1000,actions_per_case=1200,output_bytes=268435456),
         original_allocator=dict(index=91941,export='__wbindgen_malloc'),validator_sha256=VALIDATOR_SHA,
         target_executed_by_builder=False,full880_called=False,shared_builders_changed=False)
     save(out/'manifest.json',manifest);assert sha(SOURCE)==SOURCE_SHA

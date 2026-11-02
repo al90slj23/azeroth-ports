@@ -1,0 +1,242 @@
+{
+  "status": "historical_projection_comparison_passed",
+  "version": "0.135.1",
+  "build": "90898d5e3",
+  "historical_cases": 56,
+  "new_original_calls": 0,
+  "new_original_frames": 0,
+  "model_comparison_calls": 112,
+  "model_only_calls": 4,
+  "differences": 0,
+  "difference_rows": [],
+  "counts": {
+    "known_cases": 56,
+    "known_full_source_bytes_compared": 82544,
+    "known_new221_packets_compared": 165,
+    "unknown_header_cases": 56,
+    "unknown_header_full_source_bytes_compared": 82544,
+    "unknown_header_new221_packets_compared": 165,
+    "known_header_words_compared": 112,
+    "known_Game_bytes_compared": 145152,
+    "known_reallocation_pointer_words_observed_not_predicted": 54
+  },
+  "history": "evidence/world-motion-stop135-oracle-20261102T000919.144127Z",
+  "historical_files": {
+    "inputs.json": "0cb8885a758d04abe1745bedcdbb5bb3370645015ed153768fa81c0381253143",
+    "stdout.jsonl": "16df5d5973097199c2d00e2e48002451725c3f0b685079109a93dbe599f419d2",
+    "comparison.json": "8a49cd52bcaaf2b8fbd803ab0476f1dce459e7c837a57ac6b4c16bb83a983e99",
+    "world-summary.json": "69714c603c42ed43eef6930b22b80ec5c591c002282c2055471b3e9a2ca29c6e"
+  },
+  "historical_model_sha256": "709afc4d28df4b170d2dfb62bfcc367a5d006e01a852bf9052233f75cc7e4bed",
+  "source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_motion_stop135.py": "d06a315db63e1ca506b51e6ba4ad83c39d4fb6b1b615eaa11766b2b1412f79ee",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/check_world_motion_stop135_header_projection.py": "dae3f1d78694643e6c43e171b4b9ddae5791e875aa4a8a0068059e495da7e852",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_motion_stop135.py": "d06a315db63e1ca506b51e6ba4ad83c39d4fb6b1b615eaa11766b2b1412f79ee",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/check_world_motion_stop135_header_projection.py": "dae3f1d78694643e6c43e171b4b9ddae5791e875aa4a8a0068059e495da7e852",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de"
+  },
+  "source_files": 13,
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_motion_stop135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_motion_stop135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_motion_stop135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_motion_stop135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_motion_stop135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/check_world_motion_stop135_header_projection.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_world_motion_stop135_header_projection.py",
+      "reconstruction/core_spec/world_motion_stop135.py"
+    ],
+    [
+      "scripts/check_world_motion_stop135_header_projection.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/check_world_motion_stop135_header_projection.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/check_world_motion_stop135_header_projection.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_world_motion_stop135_header_projection.py",
+      "scripts/source_closure137.py"
+    ]
+  ],
+  "projection_api": {
+    "packet_header_input": "paired explicit unsigned integers or paired None; mixed None rejected",
+    "known": "complete=True within declared projection, pending=(); no allocation pointer prediction",
+    "unknown": "complete=False, pending capacity/count + allocation/copy/panic + complete physical17119 return; header remains None",
+    "old_4096_limit": "removed from core metadata validation; was fixture-only budget"
+  },
+  "prepared": {
+    "new_expectations_before_historical_stdout_read": true,
+    "author_blinded_to_historical_results": false,
+    "expected_sha256": "ccb73d0ec582f51103d4bf4916a6282e473b40212b50fba160417961fec90826",
+    "fixture_input_sha256": "0cb8885a758d04abe1745bedcdbb5bb3370645015ed153768fa81c0381253143",
+    "source_sha256": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "reconstruction/core_spec/world_motion_stop135.py": "d06a315db63e1ca506b51e6ba4ad83c39d4fb6b1b615eaa11766b2b1412f79ee",
+      "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+      "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+      "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+      "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+      "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+      "scripts/check_world_motion_stop135_header_projection.py": "dae3f1d78694643e6c43e171b4b9ddae5791e875aa4a8a0068059e495da7e852",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de"
+    },
+    "original_calls": 0,
+    "new_original_frames": 0,
+    "model_comparison_calls": 112,
+    "model_only_calls": 4,
+    "unknown_header_not_filled_from_actual": true
+  },
+  "world": {
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "world_rc": 26204808,
+    "query_source_ranges": 2318,
+    "query_bytes": 5950608,
+    "query_sha256": "eecd1162f7c3bb61abf16cfa556c910cd4a12036f3f638c5d97f2be880c1dd4f",
+    "primary_present": false
+  },
+  "artifacts": {
+    "fixture-inputs.json": "0cb8885a758d04abe1745bedcdbb5bb3370645015ed153768fa81c0381253143",
+    "expectations.json": "ccb73d0ec582f51103d4bf4916a6282e473b40212b50fba160417961fec90826",
+    "prepared.json": "de1081664611bf76c6187b5c1ad1b74bf09a26967115666e349e170b3c891933",
+    "model-only-checks.json": "b023e9651196d5c9a1608b7242b5f182dcd6344d818abe08f885d3a3d1c7fcf6",
+    "case-comparisons.json": "a1c46c082364184f74122aaa65831f2755aa675ef5fefc0ea4f407f6c27fac9d"
+  },
+  "limitations": [
+    "This is a new model against historical56 original captures, not new original calls or frames; author had access to historical results.",
+    "Both expectation modes use only frozen fixture inputs and genuine borrowed after1089 Elwynn world input before replay reads historical actuals.",
+    "Unknown-header output is conditional semantic records/sequence/new221 only. It does not prove physical queue allocation/copy/panic behavior or successful complete17119 return.",
+    "Capacity/count comparisons and full Game invariant are known-header only; reallocated pointer words are observed, never independently predicted.",
+    "Known metadata above4096 and growth refusal are model-only interface checks, with no new original validation of large queues or allocation validity.",
+    "Primary23181 world is absent in this historical corpus. No new native runtime, constructor, AI/fatal same-state or full game acceptance."
+  ],
+  "evidence": "evidence/world-motion-stop135-header-projection-20261102T003531.750819Z",
+  "comparison_sha256": "94d712c421b7220a3b5764a3f27951c909ea48c931795d8d78cd48aa0d5d2ec9",
+  "owned_process": {
+    "pid": 34774,
+    "pgid": 34774,
+    "exit_code": 0,
+    "seconds": 4.507363958997303,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_terminal_sha256": "1ec27bad35f1844b08e1eca125fed12d22be6d211a8923242bb33b40896ab0ee",
+  "stdout_sha256": "8fb7dab768897c5ee7b6d8e3fd26f5e92a95c336618f87d9bedc072ce1cec59f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "independent_review": "pending"
+}

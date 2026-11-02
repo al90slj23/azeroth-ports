@@ -1,0 +1,104 @@
+{
+  "status": "historical_semantic_projection_review_passed",
+  "author_receipt_sha256": "94d712c421b7220a3b5764a3f27951c909ea48c931795d8d78cd48aa0d5d2ec9",
+  "reviewer_sources": {
+    "scripts/review_world_motion_stop135_header_projection.py": "2c8a5d843ee8be56af78735f5e33110611d0e6aa50c01993457e7daeae45cabc",
+    "scripts/review_world_motion_stop135.py": "dd5249c8466dfa562d3cd89cfbe8bd85a2e9233a5e2159af9c3801e4f3f24cac",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2"
+  },
+  "source_count": 13,
+  "production_sources": 10,
+  "local_import_edges": 27,
+  "sources_verified": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_motion_stop135.py": "d06a315db63e1ca506b51e6ba4ad83c39d4fb6b1b615eaa11766b2b1412f79ee",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/check_world_motion_stop135_header_projection.py": "dae3f1d78694643e6c43e171b4b9ddae5791e875aa4a8a0068059e495da7e852",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de"
+  },
+  "historical_original_cases": 56,
+  "new_original_calls": 0,
+  "new_original_frames": 0,
+  "author_model_projection_calls": 112,
+  "reviewer_production_imports": 0,
+  "reviewer_production_executions": 0,
+  "counts": {
+    "observed_known_reallocation_pointer_words": 54,
+    "known_projections": 56,
+    "known_backing_bytes": 82544,
+    "known_new221": 165,
+    "unknown_header_projections": 56,
+    "unknown_header_backing_bytes": 82544,
+    "unknown_header_new221": 165,
+    "known_Game_bytes": 145152,
+    "known_header_words": 112
+  },
+  "old_independent_review": {
+    "path": "evidence/world-motion-stop135-independent-review-owned-20261102T001613.577948Z/review/review.json",
+    "sha256": "344b098c6b1513831a96ca28aa6c2982a5c5cc0567b73441b1a0e177be89e65d"
+  },
+  "source_change_ast": {
+    "position_and_height_unchanged": true,
+    "three_source_loops_unchanged": true,
+    "paired_None_enforced": true,
+    "fixture4096_limit_removed": true
+  },
+  "model_only_checks": {
+    "rows": 10,
+    "actual_calls": 4,
+    "run_by_this_reviewer": false,
+    "original_acceptance": false
+  },
+  "process": {
+    "pid": 34774,
+    "pgid": 34774,
+    "exit_code": 0,
+    "seconds": 4.507363958997303,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "artifacts": {
+    "fixture-inputs.json": "0cb8885a758d04abe1745bedcdbb5bb3370645015ed153768fa81c0381253143",
+    "expectations.json": "ccb73d0ec582f51103d4bf4916a6282e473b40212b50fba160417961fec90826",
+    "prepared.json": "de1081664611bf76c6187b5c1ad1b74bf09a26967115666e349e170b3c891933",
+    "model-only-checks.json": "b023e9651196d5c9a1608b7242b5f182dcd6344d818abe08f885d3a3d1c7fcf6",
+    "case-comparisons.json": "a1c46c082364184f74122aaa65831f2755aa675ef5fefc0ea4f407f6c27fac9d",
+    "comparison.json": "94d712c421b7220a3b5764a3f27951c909ea48c931795d8d78cd48aa0d5d2ec9",
+    "task-handoff.json": "169ca7ec059c58860a4ca7cd518f95a62672772b43e1dc1f8ebc9145575cb163",
+    "owned-terminal.json": "1ec27bad35f1844b08e1eca125fed12d22be6d211a8923242bb33b40896ab0ee",
+    "owned-start.json": "581b39c34ff0c224f74c76679a8830595835a4e19124c00f535c8d77c1fa5f65"
+  },
+  "seconds": 3.949673041002825,
+  "limits": [
+    "Historical56 captures reused;author was not blind,no new originalcalls/frames.",
+    "Unknown packetmetadata staysNone/completeFalse/pending;only conditional semantic records/sequence/new221 compared,no allocation/copy/panic or physical17119 return claim.",
+    "Known metadata/fullGame comparison only,with54 allocatorpointerword observations.",
+    "Largeheaders/growthrefusal only modelinterface,not largequeue native/originalvalidation.",
+    "Prior56 nonflat/staticnearest limits retained,primary absent;no actualfatal/fullApp/880/game acceptance."
+  ],
+  "owned_review": {
+    "path": "evidence/world-motion-stop135-header-review-owned-20261102T004914.998282Z/review/review.json",
+    "sha256": "dd5a5a63e2364f1a81ff768a2f8b81c4f980e773db59acefed9bd0a0e0fdc6e9",
+    "terminal_sha256": "27bc72ce314d80e3a58812b90132ddf207b9cad7575ac133c6c8e64f625ef8d0",
+    "owned_process_sha256": "e41d7d86067d41324ec1a1d21a48b59a473f034ab6c157df5a0c44ce8cbb8d62",
+    "process": {
+      "pid": 56127,
+      "pgid": 56127,
+      "exit_code": 0,
+      "seconds": 4.295253500007675,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true
+    }
+  },
+  "overall_game_complete": false
+}

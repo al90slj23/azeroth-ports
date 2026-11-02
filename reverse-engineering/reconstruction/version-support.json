@@ -1,68 +1,49 @@
 {
   "active_target": {
-    "version": "0.138.0",
-    "web_build": "382771e6c",
-    "web_sha256": "c60161d991ce97a9a4a9d3866b5e629d9e38f0fab8364c051faae8d01945b11b",
-    "official_native_sha256": "eb5fd1c1b96e6180fcf5f3d685d90a61471af28d22e5f060c02b7b7663fbf79e",
-    "official_native_sha256_scope": "Saved138original bytes rehashed; publisher size/SHA matched and actual build pointer/length proven without target execution.",
-    "official_native_bytes": 147995648,
-    "status": "scoped_damage_stats_and_default_constructor_differentials_and_independent_reviews_passed_not_fullgame",
+    "version": "0.139.0",
+    "web_build": "f79c5e2b4",
+    "actual_build_length": 9,
+    "web_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "official_native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+    "official_native_bytes": 150595584,
+    "status": "coherent_acquisition_and_build_identity_verified_no_runtime_acceptance_registered",
     "role": "functional_latest_target",
-    "latest_official_manifest_check_utc": "2026-11-01T23:57:03.648217+00:00",
-    "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json",
-    "latest_official_manifest_check_sha256": "6324fe52b9e23a70610aa6aca3ab1873290a67cb1c980d198a3919e3e111164f",
-    "version_policy": "Freeze every experiment by actual version/build/SHA. Existing137 reviewed domains remain137; no135/137 acceptance transfers to138.",
+    "latest_official_manifest_check_utc": "2026-11-02T01:09:26.123412+00:00",
+    "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261102T010926.122747Z/receipt.json",
+    "latest_official_manifest_check_sha256": "9783167febf99b7231fc97493bf6fdcdf5d38c146aea46862abb18b434e6bf1d",
+    "version_policy": "Freeze every experiment by version/build/SHA; existing135/137/138 acceptance remains historical and is not transferred to139.",
     "original_acquisition_complete": true,
     "installation_packages_updated": false,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
-    "actual_build_length": 9,
-    "latest_version_state_report": "../reports/2026-11-02-latest0138-state.json",
-    "latest_version_state_report_sha256": "768d85afb1a72c3c003b8af2bfccd74c6bf33ccec23ffdb64188f701e3f5042b",
-    "acquisition_receipt": "../originals/official-release-20261101T201508.341687Z/release-acquisition.json",
-    "acquisition_receipt_sha256": "a4d5af63a32fb2956f3c3206026b95e2c0a895a0c787c86966e29dcd5edaa0a0",
-    "build_identity_sidecar": "../evidence/branding0138-identity-20261101T202528.536773Z/identity.json",
-    "build_identity_sidecar_sha256": "da6db208afd9669c8600205643ab6061d6c2d075c086c0759090838b053cef5d",
-    "analysis_profile": "../reports/2026-11-02-wasm0138-profile.json",
-    "analysis_profile_sha256": "3a9273500e050730dce956829befe0ef5aae8259c227946be147cc4fceb78d4e",
+    "new_runtime_cases": 0,
+    "new_original_entry_calls": 0,
+    "runtime_acceptance_reports": [],
+    "acquisition_receipt": "../originals/official-release-20261102T011227.335145Z/release-acquisition-resumed.json",
+    "acquisition_receipt_sha256": "35c0e6b106056c47d3826581941174917e970133a46646e49cda8a0296b6e332",
+    "build_identity_sidecar": "../evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
+    "build_identity_sidecar_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
+    "latest_version_state_report": "../reports/2026-11-02-official0139-acquisition-identity.json",
+    "latest_version_state_report_sha256": "0ef3b97fc94009639d2ca3c000386327be9f21af74e738ad5407c3ae82839031",
     "full_static_profile_produced": true,
-    "defined_functions": 175576,
-    "function_imports": 878,
-    "new_runtime_cases": 10811,
-    "new_independent_model_cases": 10811,
-    "new_full880_frames": 0,
-    "new_original_entry_calls": 10856,
-    "runtime_acceptance_reports": [
-      "../reports/2026-11-02-combat0138.json",
-      "../reports/2026-11-02-stats0138.json",
-      "../reports/2026-11-02-initial-state0138.json"
-    ],
-    "previous_official_manifest_check": {
-      "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T215156.327710Z/receipt.json",
-      "latest_official_manifest_check_sha256": "701a69373cd07fbd6f3b69df5c109701a4d7523f77e80ab97ee72eb20a8e5e4c",
-      "latest_official_manifest_check_utc": "2026-11-01T21:51:57.945610+00:00"
-    },
-    "metadata_check_history": [
-      {
-        "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T224908.715662Z/receipt.json",
-        "latest_official_manifest_check_sha256": "4c2f9ef3085ce764caa8cddb2e9e0aec549a9f84c3e580956da75f1ce17dfb8a",
-        "latest_official_manifest_check_utc": "2026-11-01T22:49:11.014604+00:00"
-      },
-      {
-        "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T232949.996711Z/receipt.json",
-        "latest_official_manifest_check_sha256": "6f079f1ce84874279da0c841756dc65b05752503bb32b73ef8cb6c6efbac41b0",
-        "latest_official_manifest_check_utc": "2026-11-01T23:29:51.682917+00:00"
-      }
-    ],
-    "runtime_counts_scope": "Separate138 domains: damage80cases/125entries,stats10569/10569,defaultconstructor162/162. Counts are test executions, not coverage; completeGame/App/worldproducer/full880/native/fullgame0. No135/137 acceptance transferred.",
-    "flow138_static_migration": {
-      "report": "../reports/2026-11-02-flow0138-migration.json",
-      "report_sha256": "2c8169808afa1190302579495c5939d309f017f33bee7d005c0596948df6e524",
-      "roles": 13,
-      "scope": "Body/signature/ABI/data admission guards only; no runtime acceptance for mapping.",
-      "new_original_cases": 0
-    }
+    "defined_functions": 177101,
+    "function_imports": 882,
+    "static_role_bindings": 30,
+    "whole_normalized_role_matches": 11,
+    "roles_with_static_differences": 19,
+    "static_semantic_rows_compared": 143,
+    "static_rows_equal": 143,
+    "new_runtime_acceptance_registered": 0,
+    "static_migration_not_behavioral_equivalence": true,
+    "analysis_profile": "../evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
+    "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
+    "static_migration_report": "../reports/2026-11-02-engine0139-incremental.json",
+    "static_migration_report_sha256": "4762d8532f3882a4555c89b5eb3b9e059967ae6c3f33275aba82f65a5e6b41fa",
+    "static_role_map": "../evidence/engine139-refined-static-20261102T013743.612949Z/mapping.json",
+    "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
+    "static_data_delta": "../evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
+    "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be"
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -3414,5 +3395,102 @@
     "new_original_cases": 0,
     "original_calls": 0,
     "scope": "Terminal comparison of two independent model executions with identical100production files; not a second independent implementation, not per-stage raw-asset original differential."
+  },
+  "fixed_scoped_research_target_0138": {
+    "version": "0.138.0",
+    "web_build": "382771e6c",
+    "web_sha256": "c60161d991ce97a9a4a9d3866b5e629d9e38f0fab8364c051faae8d01945b11b",
+    "official_native_sha256": "eb5fd1c1b96e6180fcf5f3d685d90a61471af28d22e5f060c02b7b7663fbf79e",
+    "official_native_sha256_scope": "Saved138original bytes rehashed; publisher size/SHA matched and actual build pointer/length proven without target execution.",
+    "official_native_bytes": 147995648,
+    "status": "scoped_damage_stats_and_default_constructor_differentials_and_independent_reviews_passed_not_fullgame",
+    "role": "functional_latest_target",
+    "latest_official_manifest_check_utc": "2026-11-01T23:57:03.648217+00:00",
+    "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json",
+    "latest_official_manifest_check_sha256": "6324fe52b9e23a70610aa6aca3ab1873290a67cb1c980d198a3919e3e111164f",
+    "version_policy": "Freeze every experiment by actual version/build/SHA. Existing137 reviewed domains remain137; no135/137 acceptance transfers to138.",
+    "original_acquisition_complete": true,
+    "installation_packages_updated": false,
+    "full_mainloop_frames": 0,
+    "native_windows_execution": false,
+    "complete_games": 0,
+    "actual_build_length": 9,
+    "latest_version_state_report": "../reports/2026-11-02-latest0138-state.json",
+    "latest_version_state_report_sha256": "768d85afb1a72c3c003b8af2bfccd74c6bf33ccec23ffdb64188f701e3f5042b",
+    "acquisition_receipt": "../originals/official-release-20261101T201508.341687Z/release-acquisition.json",
+    "acquisition_receipt_sha256": "a4d5af63a32fb2956f3c3206026b95e2c0a895a0c787c86966e29dcd5edaa0a0",
+    "build_identity_sidecar": "../evidence/branding0138-identity-20261101T202528.536773Z/identity.json",
+    "build_identity_sidecar_sha256": "da6db208afd9669c8600205643ab6061d6c2d075c086c0759090838b053cef5d",
+    "analysis_profile": "../reports/2026-11-02-wasm0138-profile.json",
+    "analysis_profile_sha256": "3a9273500e050730dce956829befe0ef5aae8259c227946be147cc4fceb78d4e",
+    "full_static_profile_produced": true,
+    "defined_functions": 175576,
+    "function_imports": 878,
+    "new_runtime_cases": 10811,
+    "new_independent_model_cases": 10811,
+    "new_full880_frames": 0,
+    "new_original_entry_calls": 10856,
+    "runtime_acceptance_reports": [
+      "../reports/2026-11-02-combat0138.json",
+      "../reports/2026-11-02-stats0138.json",
+      "../reports/2026-11-02-initial-state0138.json"
+    ],
+    "previous_official_manifest_check": {
+      "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T215156.327710Z/receipt.json",
+      "latest_official_manifest_check_sha256": "701a69373cd07fbd6f3b69df5c109701a4d7523f77e80ab97ee72eb20a8e5e4c",
+      "latest_official_manifest_check_utc": "2026-11-01T21:51:57.945610+00:00"
+    },
+    "metadata_check_history": [
+      {
+        "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T224908.715662Z/receipt.json",
+        "latest_official_manifest_check_sha256": "4c2f9ef3085ce764caa8cddb2e9e0aec549a9f84c3e580956da75f1ce17dfb8a",
+        "latest_official_manifest_check_utc": "2026-11-01T22:49:11.014604+00:00"
+      },
+      {
+        "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261101T232949.996711Z/receipt.json",
+        "latest_official_manifest_check_sha256": "6f079f1ce84874279da0c841756dc65b05752503bb32b73ef8cb6c6efbac41b0",
+        "latest_official_manifest_check_utc": "2026-11-01T23:29:51.682917+00:00"
+      }
+    ],
+    "runtime_counts_scope": "Separate138 domains: damage80cases/125entries,stats10569/10569,defaultconstructor162/162. Counts are test executions, not coverage; completeGame/App/worldproducer/full880/native/fullgame0. No135/137 acceptance transferred.",
+    "flow138_static_migration": {
+      "report": "../reports/2026-11-02-flow0138-migration.json",
+      "report_sha256": "2c8169808afa1190302579495c5939d309f017f33bee7d005c0596948df6e524",
+      "roles": 13,
+      "scope": "Body/signature/ABI/data admission guards only; no runtime acceptance for mapping.",
+      "new_original_cases": 0
+    }
+  },
+  "controlled_defeat0135": {
+    "version": "0.135.1",
+    "actual_build": "90898d5e3",
+    "status": "original_differential_and_independent_readonly_review_passed_within_declared_domain",
+    "report": "../reports/2026-11-02-opening-fatal0135.json",
+    "comparison": "../evidence/opening-combat0135-oracle-20261102T012524.271526Z/comparison.json",
+    "comparison_sha256": "430e764bfc0b556bf33489796ed04e96da8e1f4f0aedbcc4bee8217b67967160",
+    "cases": 1,
+    "frames": 921,
+    "selections": 7,
+    "motion_actions": 44,
+    "stages": 12945,
+    "original_entry_calls": 12947,
+    "differences": 0,
+    "final_phase2587": 4,
+    "full880_frames": 0,
+    "native_windows_execution": false,
+    "complete_games": 0,
+    "latest139_acceptance_transferred": false,
+    "independent_review": "../reports/2026-11-02-opening-fatal0135-independent-review.json",
+    "independent_review_sha256": "4cbc9adcc495b663e08569a33b3414f4dbc31690fede19de81690b7ceef94c53"
+  },
+  "next_gameplay_gap_after_controlled_defeat0135": {
+    "scope": "New921 controlled empty-profile same-state run, not older460/750 receipts",
+    "gaps": [
+      "Raw451-to-921fatal model composition receipt not yet run.",
+      "NaturalApp and full mainloop including real keyboard/joystick/menu/world/transport remain incomplete.",
+      "Other skills/class/map/Boss/active guardian AI,shields/procs/revival remain explicit boundaries.",
+      "Victory,rewards,persistence,UI/render/audio,multiplayer and latest139 continuous parity remain unaccepted."
+    ],
+    "old_gaps_are_historical": true
   }
 }

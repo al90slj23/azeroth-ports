@@ -1,0 +1,18 @@
+{
+  "version": "0.135.1",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "production": "reconstruction/core_spec/callback_source_owner135.py",
+  "production_sha256": "ea272da71a786cba5846539a307ac6761438674d7c7b6f9f1b9722149bf734eb",
+  "api": ["CallbackSourcesProfile135", "CallbackSourceOwner135", "produce_callback_source_owner135", "empty_research_callback_sources135", "retain_callback_sources_after_selection135"],
+  "input_domain": {"named": "explicit blank376B research selected profile", "ranked_count160": 0, "ranked_flag164": 0, "equipped_ids260_332": "19 explicit zeros"},
+  "outputs": {"items8": {"capacity2024": 0, "pointer_sentinel2028": 4, "count2032": 0}, "eventdef36": {"capacity2048": 0, "pointer_sentinel2052": 4, "count2056": 0}},
+  "selection_branches_preserving_sources": ["kind0 upgrade", "kind0 new skill", "kind0 gold"],
+  "unknown_producers_rejected": ["unknown or nonempty ranked profile", "nonzero or unknown equipment ID", "kind1/2 selection", "equipment/trait/summon/item card variant"],
+  "static_proof": "evidence/callback-source-owner135-static-20261102T003650.844444Z/proof.json",
+  "static_proof_sha256": "3505a7d7a0245326575d1ad4350d8e626a4958b697e70e9f4b6d9fa22d576833",
+  "fresh_component": {"comparison": "evidence/full0135-oracle-20261102T003504.117627Z/comparison.json", "comparison_sha256": "d4d48ab268e42a5b6abb9bb826cdd3238c2832736ba0d22536d112a9f27ba354", "fresh_cases": 9, "full1560_calls": 9, "full1072_calls": 64, "differences": 0, "source_files": 17, "import_edges": 32, "expected_before_original": true, "actual_host_calls": 0, "denied_imports": 878, "max_wasm_memory_bytes": 20512768, "node_heap_mib": 256, "wasm_memory_cap_bytes": 33554432, "owned_pid": 34437, "deadline_seconds": 60, "exit_code": 0, "pid_and_pgid_missing": true, "percall_stack_receipt": false},
+  "additional_static_constructor_fields": {"lives1632": 0, "left2567": 0, "incoming48_header968_980": [0, 4, 0, 0]},
+  "correction": "tail.secondary112 atG1856 is not the movement-stop auxiliary112 atG656; separate owner required",
+  "natural_fatal_whole_chain_validated": false,
+  "limits": ["Natural6730 App/account/menu producer not reconstructed", "No nonempty equipment/talent source producer", "Component compares declared header/control/profile slices, not every1072 side effect", "Controlledphase2 candidate fixture is not naturalXP/card production", "No percall stack-global guard in inherited full135 host", "Fullsame-state fatal921 still pending root integration"]
+}

@@ -32,7 +32,7 @@ from .effect_system135 import EffectSystemState135, step_effect_system
 from .frame_systems135 import (guard_owned_execution975, tick_scheduled_spells38007,
     tick_secondary_areas2602, guard_claim_tick2573, guard_terminal_tick49037)
 from .headless_tail135 import TailDomains135, guard_extra916, guard_special2376, projection as tail_projection
-from .incoming135 import IncomingState135, BuffRecord
+from .incoming135 import IncomingState135, BuffRecord, ModifierRecord
 from .initial_state135 import InitialState135
 from .initial_state135_data import ZONE_ENTRIES
 from .level_cycle135 import projection as level_projection
@@ -43,6 +43,8 @@ from .player_update135 import prepare_player_update
 from .resource_player_update135 import prepare_resource_player_update135
 from .headless_player135 import PlayerSources135
 from .headless_motion135 import HeadlessMotionOwner135
+from .run_ledger135 import (RunLedger135, record_ordinary_death135,
+    record_ordinary_selection135, run_ledger_projection135)
 from .player_motion135 import MotionWorld135, MotionMap135, consume_motion_payload135
 from .live_owner135 import retain_live135, resume_live1020_135, append_live135, ScratchAuxiliaryWord135
 from .pickups134 import encode_record56
@@ -60,6 +62,29 @@ from .spawn_boss135_data import BOSSES
 
 
 class PendingHeadless135(NotImplementedError): pass
+
+
+def _aux_admission135(state,event,selected_kind=None):
+    """Bind every admitted source count to this same independent state."""
+    from .motion_aux_owner135 import MotionAuxAdmission135,EMPTY_SOURCE_COUNTS135
+    level=state.collection.level;sources=state.run_ledger.callback_sources;tail=state.tail
+    counts={604:len(level.sources.timed_records),652:tail.active84_count,
+        2032:sources.items8.count,2056:sources.modifiers36.count,
+        1804:len(state.areas),1852:len(state.queued_hits),
+        1816:len(state.effect_records120),1828:len(state.delayed_records56),
+        1840:tail.deadline32_count,1864:tail.secondary112_count,2116:tail.claims88_count}
+    pointers=tuple(x.record.definition_pointer for x in level.choice_inputs.owned)+(state.racial.definition_pointer,)
+    return MotionAuxAdmission135(event,level.phase2587,state.special_mode2582,level.flags2576,
+        level.stats.class_byte,level.stats.race_byte,tuple((p,RAW_BY_POINTER[p])for p in pointers),
+        tuple((o,counts[o])for o in EMPTY_SOURCE_COUNTS135),selected_kind)
+
+
+def _inherit_aux135(before,after,event,selected_kind=None):
+    if before.run_ledger is None:return after
+    from .motion_aux_owner135 import inherit_motion_aux135
+    owner=inherit_motion_aux135(before.run_ledger.auxiliary_motion,
+        _aux_admission135(before,event,selected_kind),_aux_admission135(after,event,selected_kind))
+    return replace(after,run_ledger=replace(after.run_ledger,auxiliary_motion=owner))
 
 
 @dataclass(frozen=True)
@@ -136,6 +161,12 @@ class HeadlessState135:
     player_sources: PlayerSources135|None = None
     rune_notifications: tuple = ()
     player_motion_owner: HeadlessMotionOwner135|None = None
+    run_ledger: RunLedger135|None = None
+    terminal_notifications: tuple = ()
+    paused408: int|None = None
+    paused412_bits: int|None = None
+    fatal_stop_packets: tuple = ()
+    physical_output_pending: tuple = ()
 
     def __post_init__(self):
         #G2408 is owned only by collection.death. AreaState135 is constructed
@@ -154,6 +185,10 @@ class HeadlessState135:
             self.player_sources.context(self.collection.level, self.source_id, self.action_sequence1644)
             if self.collection.resource_context is not None:
                 raise ValueError('Resource context must not persist between frame phases')
+        if self.run_ledger is not None:
+            if not isinstance(self.run_ledger,RunLedger135):raise TypeError('Explicit run ledger owner required')
+            if self.special_field1092!=self.run_ledger.counters.guardians1092:
+                raise ValueError('Special and run-summary guardian counter owners disagree')
 
 
 def from_initial(initial: InitialState135, *, flat_height_bits, zeroed_unit_storage_resolved=False,
@@ -189,7 +224,7 @@ def resolve_controlled_entry(state, *, phase1_entry_explicitly_resolved=False):
 
 
 def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,event_locale=None,banner_locale=None,
-        app_notification_next_id=None,resource_locale=None,motion_enabled=False):
+        app_notification_next_id=None,resource_locale=None,motion_enabled=False,run_ledger=None):
     """Consume the real independent opening; retain all physical owners.
 
     This installs neither a synthetic phase nor an original memory image.
@@ -217,7 +252,28 @@ def from_opening_handoff(handoff, *, navigation_enabled,special_locale=None,even
         window_storage8=storage(o.windows),window_count=o.windows.count,
         boundary_storage8=storage(o.boundaries),boundary_count=o.boundaries.count,
         special_locale=special_locale,produced_packets=o.packets,next_resource2444_bits=words[2444],
-        next_event2424_bits=words[2424],next_supply2448_bits=words[2448],event_locale=event_locale,banner_locale=banner_locale)
+        next_event2424_bits=words[2424],next_supply2448_bits=words[2448],event_locale=event_locale,banner_locale=banner_locale,
+        run_ledger=run_ledger)
+    if run_ledger is not None:
+        from .run_summary135 import empty_constructor_counters135
+        from .motion_aux_owner135 import (from_empty_profile1560_aux135,
+            MotionAuxAdmission135,EMPTY_SOURCE_COUNTS135,inherit_motion_aux135)
+        if run_ledger.counters!=empty_constructor_counters135()or run_ledger.history.capacity or run_ledger.history.head or run_ledger.history.count:
+            raise ValueError('Opening requires a constructor-produced empty run ledger')
+        constructor=o.constructor_initial
+        if not isinstance(constructor,InitialState135)or constructor.level.phase2587!=0:
+            raise PendingHeadless135('Actual retained phase0 constructor producer required')
+        aux=from_empty_profile1560_aux135(constructor)
+        if run_ledger.auxiliary_motion is not None and run_ledger.auxiliary_motion!=aux:
+            raise ValueError('Supplied auxiliary owner differs from this constructor')
+        state=replace(state,run_ledger=replace(run_ledger,auxiliary_motion=aux))
+        pointers=tuple(r.definition_pointer for r in constructor.owned)+(constructor.racial.definition_pointer,)
+        # These are1560's empty queue/header writes, retained at the actual
+        # producer boundary. Subsequent events bind actual canonical owners.
+        pre=MotionAuxAdmission135('opening1089',constructor.level.phase2587,0,
+            constructor.level.flags2576,constructor.level.stats.class_byte,constructor.level.stats.race_byte,
+            tuple((p,RAW_BY_POINTER[p])for p in pointers),tuple((o,0)for o in EMPTY_SOURCE_COUNTS135))
+        inherit_motion_aux135(aux,pre,_aux_admission135(state,'opening1089'))
     if app_notification_next_id is not None or resource_locale is not None:
         if app_notification_next_id is None or resource_locale is None:
             raise ValueError('Both explicit App notification counter and resource locale required')
@@ -264,11 +320,12 @@ def move_player135(state,opcode,payload24):
         raise PendingHeadless135('Actual phase0 begin1089 continuation is not supplied here')
     owner=owner.adopt(result.game_bytes)
     xyz=tuple(u32(result.game_bytes,o,'2328 resulting position')for o in(1416,1420,1424))
-    return replace(state,player_motion_owner=owner,
+    updated=replace(state,player_motion_owner=owner,
         collection=replace(state.collection,player_xyz=xyz),
         action_sequence1644=u32(result.game_bytes,1644,'2328 action sequence'),
         player_action_tag416=u32(result.game_bytes,416,'2328 correction state'),
-        produced_packets=state.produced_packets+result.packets),'motion_core_projection'
+        produced_packets=state.produced_packets+result.packets)
+    return _inherit_aux135(state,updated,'motion2328'),'motion_core_projection'
 
 
 def _adopt_player_context135(state, context, collection, *, packets=(),notifications=(),live_owner=None):
@@ -389,6 +446,7 @@ def _cast_phase(state, dt, *, phase='owned'):
     aura_packets = ()
     player_sources = state.player_sources
     action_sequence = state.action_sequence1644
+    run_ledger = state.run_ledger
 
     def accept_self_buff(result, previous_speed_bits):
         nonlocal collection, live, unknown, player_sources, aura_packets, action_sequence
@@ -426,7 +484,7 @@ def _cast_phase(state, dt, *, phase='owned'):
         return cast
 
     def on_death(cast, damage):
-        nonlocal collection
+        nonlocal collection,run_ledger
         guid = damage.target.target_id
         placed = project_from_record(state.zone, cast.combat.now_bits, original[guid], state.flat_height_bits,
             terrain_grid_absent=state.world is None, navigation_absent=state.world is None,world=state.world)
@@ -437,6 +495,7 @@ def _cast_phase(state, dt, *, phase='owned'):
         binding = OrdinaryDeathBinding135(OrdinaryDefinition(row['xp'], row['cost_bits'], row['elite']),
             pointer, placed.xp_placement, placed.currency_placement, placed.death_xyz, placed.movement_message)
         result = consume_ordinary_death(cast, damage, collection.death, binding)
+        if run_ledger is not None:run_ledger=record_ordinary_death135(run_ledger,damage)
         collection = replace(collection, death=result.context); death_positions[guid] = result.death_xyz
         return result.cast
 
@@ -556,7 +615,7 @@ def _cast_phase(state, dt, *, phase='owned'):
         outgoing_total=cast.combat.accounted_total, attempted_spells=cast.attempted_spell_ids,
         live_records=live, unspecified_live_words=unknown,
         player_sources=player_sources,action_sequence1644=action_sequence,
-        produced_packets=state.produced_packets+aura_packets))
+        produced_packets=state.produced_packets+aura_packets,run_ledger=run_ledger))
 
 
 def _ai_phase(state, dt):
@@ -568,6 +627,16 @@ def _ai_phase(state, dt):
     #the incoming scalar projection consumes the relevant7/12 subset.
     buffs = tuple(BuffRecord(e.kind, e.spell_id, e.value_bits, e.expires_bits)
         for e in level.sources.live_effects if e.kind in (7, 12))
+    incoming_modifiers=()
+    incoming_items=()
+    if state.run_ledger is not None:
+        sources=state.run_ledger.callback_sources
+        #These are constructor/selection-maintained physical owners, not the
+        #older numeric stat projection's placeholder empty source tuples.
+        incoming_items=sources.items8.storage[:sources.items8.count]
+        incoming_modifiers=tuple(ModifierRecord(u32(row,0,'Incoming modifier kind'),
+            cells135(row,36)[4],cells135(row,36)[5])
+            for row in sources.modifiers36.storage[:sources.modifiers36.count])
     incoming = replace(state.incoming, phase_2579=level.phase2587, protection_2568=level.flags2576,
         mode_2574=stats.flag2574, map_id=ZONE_ENTRIES[state.zone][0].encode('ascii'),
         wave_2532=state.collection.currency.member_count, now_bits=stats.now_bits,
@@ -575,7 +644,7 @@ def _ai_phase(state, dt):
         hp_1528_bits=stats.current_hp_bits, shield_1532_bits=stats.pool1532_bits,
         barrier_1536_bits=stats.pool1536_bits, shield_source_1344=stats.conditional1344_id,
         shield_source_remaining_1348_bits=stats.conditional1348_bits, reserve_768_bits=stats.pool768_bits,
-        buffs=buffs, modifiers=())
+        buffs=buffs, modifiers=incoming_modifiers)
     owners={owner.guid:owner for owner in state.guardian_cooldowns}
     if len(owners)!=len(state.guardian_cooldowns):raise PendingHeadless135('Duplicate guardian timer owners')
     guardian_indices=[];indices=[];seen=set()
@@ -588,17 +657,25 @@ def _ai_phase(state, dt):
         elif u32(raw,0,'Headless AI live marker')==0:indices.append(j)
     if seen!=set(owners):raise PendingHeadless135('Guardian timer owner missing its physical unit')
     ai_input=AiFrame135(tuple(state.records[j]for j in indices),stats.now_bits,dt,
-        state.collection.player_xyz,incoming,incoming_item_effects=(),other_incoming_sources_absent=True,
+        state.collection.player_xyz,incoming,incoming_item_effects=incoming_items,other_incoming_sources_absent=True,
         known_demo_statuses=tuple(_demo_owner135(state.records[j])for j in indices
             if u32(state.records[j],360,'AI typed demo spell')==1160))
-    if state.world is None:result=update_ordinary_units(ai_input)
+    world_plan=None
+    if state.world is None:
+        if state.run_ledger is not None:
+            raise PendingHeadless135('Recorded incoming drain requires the actual independent world-query owner')
+        result=update_ordinary_units(ai_input)
     else:
         from .distance_map135 import update_distance_map135
-        from .ai_world135 import update_world_ordinary_units135
+        from .ai_world135 import update_world_ordinary_units135,plan_world_ordinary_units135
         distances=update_distance_map135(state.world.nav,state.collection.player_xyz[:2],stats.now_bits,
             previous=state.distance_map,updated_at_bits=state.distance_map_updated_at_bits)
         state=replace(state,distance_map=distances.distance_map,distance_map_updated_at_bits=distances.updated_at_bits)
-        result=update_world_ordinary_units135(ai_input,state.world,distance_map=state.distance_map)
+        if state.run_ledger is None:
+            result=update_world_ordinary_units135(ai_input,state.world,distance_map=state.distance_map)
+        else:
+            world_plan=plan_world_ordinary_units135(ai_input,state.world,distance_map=state.distance_map)
+            result=world_plan
     records = list(state.records)
     for j, raw in zip(indices, result.records): records[j] = raw
     guardian_owners=[];guardian_movements=[]
@@ -617,11 +694,15 @@ def _ai_phase(state, dt):
                 raise PendingHeadless135('Guardian lifecycle requires an explicit resource consumer')
             records[j]=planned.record;guardian_owners.append(planned.cooldowns)
             guardian_movements.extend(planned.movements)
-    storage = _store_prefix(state.unit_storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth)
-    cleanup = cleanup_ordinary_corpses(tuple(raw for j,raw in enumerate(records)if j not in guardian_indices), stats.now_bits, mode=stats.flag2574,
-        local_peer=state.collection.currency.local_peer, explicit_other_sources_absent=True)
-    #39635 removes every matching GUID with memory.copy on each removal.
-    #Retain the resulting inactive tail, including repeated shifted records.
+    #921 drains the expired-corpse39635 queue before movement/incoming queues.
+    #Compact the planned backing now: a later fatal stop writes only its active
+    #prefix, leaving the retained inactive tail in its pre-stop planned state.
+    ordinary_plan_guids=tuple(u64(raw,112,'Ordinary planned GUID')for raw in result.records)
+    storage=_store_prefix(state.unit_storage,tuple(records),stride=424,
+        allow_growth=state.allow_unknown_storage_growth)
+    cleanup=cleanup_ordinary_corpses(tuple(raw for j,raw in enumerate(records)if j not in guardian_indices),
+        stats.now_bits,mode=stats.flag2574,local_peer=state.collection.currency.local_peer,
+        explicit_other_sources_absent=True)
     backing=list(storage);count=len(records)
     for guid in cleanup.removed_guids:
         index=0
@@ -630,11 +711,41 @@ def _ai_phase(state, dt):
                 for j in range(index,count-1):backing[j]=backing[j+1]
                 count-=1
             else:index+=1
-    storage=tuple(backing)
-    removed=set(cleanup.removed_guids)
-    records=[row for row in records if u64(row,112,'Headless post-cleanup GUID')not in removed]
-    relocated={u64(row,112,'Headless guardian relocation GUID'):j for j,row in enumerate(records)}
+    storage=tuple(backing);records=list(storage[:count])
+    relocated={u64(raw,112,'Post-cleanup planned GUID'):j for j,raw in enumerate(records)}
+    if len(relocated)!=len(records):
+        raise PendingHeadless135('Post-cleanup unit GUID ownership is ambiguous')
+    if any(guid not in relocated for guid in ordinary_plan_guids):
+        raise PendingHeadless135('Corpse cleanup removed a planned live ordinary owner')
+    indices=[relocated[guid]for guid in ordinary_plan_guids]
     guardian_owners=tuple(replace(owner,unit_index=relocated[owner.guid])for owner in guardian_owners)
+    #All owners are planned before incoming. A fatal1073 freezes this compacted
+    #canonical backing; no old plan may overwrite its stopped coordinates.
+    movement_sequence=(state.collection.death.message_sequence+len(result.movements)+len(guardian_movements))&f.MASK
+    if world_plan is not None:
+        from .ai_world135 import finish_world_ordinary_plan135
+        from .run_incoming135 import drain_run_incoming135
+        drained=drain_run_incoming135(state,world_plan.incoming,world_plan.attacks,
+            records=tuple(records),unit_storage=storage,
+            movement_sequence2412=movement_sequence,
+            auxiliary_owner=state.run_ledger.auxiliary_motion)
+        records=list(drained.records)
+        result=finish_world_ordinary_plan135(world_plan,drained.incoming,
+            records=tuple(records[j]for j in indices))
+        for j,raw in zip(indices,result.records):records[j]=raw
+        #Late Aura writes apply on the stopped backing, including its retained
+        #inactive tail. No queue-header values are inferred from packet subsets.
+        state=replace(state,unit_storage=drained.unit_storage,
+            run_ledger=drained.ledger,
+            tail=replace(state.tail,claims88_storage=drained.claims_storage),
+            produced_packets=state.produced_packets+tuple((op,payload)for op,cap,payload in drained.packets),
+            fatal_stop_packets=state.fatal_stop_packets+drained.packets,
+            terminal_notifications=state.terminal_notifications+drained.notifications,
+            paused408=drained.paused408,paused412_bits=drained.paused412_bits,
+            physical_output_pending=tuple(dict.fromkeys(state.physical_output_pending+drained.physical_queue_pending)))
+        movement_sequence=drained.movement_sequence2412
+        level=replace(level,phase2587=drained.incoming.phase_2579)
+        storage=drained.unit_storage
     current = result.incoming
     stats = replace(stats, current_hp_bits=current.hp_1528_bits, pool1532_bits=current.shield_1532_bits,
         pool1536_bits=current.barrier_1536_bits, conditional1344_id=current.shield_source_1344,
@@ -666,8 +777,7 @@ def _ai_phase(state, dt):
         live,unknown=player_sources.active_view()
         if not all(keep_flags):
             level,player_sources=player_sources.refresh_aura(level)
-    death = replace(state.collection.death,
-        message_sequence=(state.collection.death.message_sequence + len(result.movements)+len(guardian_movements)) & f.MASK)
+    death = replace(state.collection.death,message_sequence=movement_sequence)
     return replace(state, records=tuple(records), incoming=current,
         unit_storage=_store_prefix(storage, tuple(records),stride=424,allow_growth=state.allow_unknown_storage_growth),
         guardian_cooldowns=guardian_owners,
@@ -963,6 +1073,7 @@ def step_frame(state, dt_bits):
         return state, (), 'pending_scheduled_boss'
     if next_boss>=5 and state.tail.flag2568 and f.to_float(now)>=f.to_float(words[2460]):
         return state, (), 'pending_endless_boss'
+    player_before=state
     state = replace(state, collection=replace(state.collection,
         level=replace(level, stats=replace(level.stats, now_bits=now))), frames=state.frames + 1)
     if state.player_sources is None:
@@ -980,19 +1091,24 @@ def step_frame(state, dt_bits):
         state=_adopt_player_context135(state,prepared.context,
             replace(state.collection,level=prepared.level),packets=prepared.packets,live_owner=sources)
     stages = []
-    state = _cast_phase(state, dt_bits); stages.append(('player', state))
-    state = _tail_phase(state, 'extra', dt_bits); stages.append(('extra', state))
-    state = _tail_phase(state, 'owned_effects', dt_bits); stages.append(('owned_effects', state))
-    state = _cast_phase(state, dt_bits, phase='hits'); stages.append(('hits', state))
-    state = _cast_phase(state, dt_bits, phase='area'); stages.append(('area', state))
-    state = _effects_phase(state, dt_bits); stages.append(('effects', state))
-    state = _tail_phase(state, 'deadline', dt_bits); stages.append(('deadline', state))
-    state = _tail_phase(state, 'secondary', dt_bits); stages.append(('secondary', state))
-    state = _ai_phase(state, dt_bits); stages.append(('ai', state))
-    state=_collect_phase135(state,now);stages.append(('collect',state))
-    state = _tail_phase(state, 'claims', dt_bits); stages.append(('claims', state))
+    def stage(kind,previous,current):
+        current=_inherit_aux135(previous,current,kind)
+        stages.append((kind,current))
+        return current
+    state=stage('player',player_before,_cast_phase(state,dt_bits))
+    state=stage('extra',state,_tail_phase(state,'extra',dt_bits))
+    state=stage('owned_effects',state,_tail_phase(state,'owned_effects',dt_bits))
+    state=stage('hits',state,_cast_phase(state,dt_bits,phase='hits'))
+    state=stage('area',state,_cast_phase(state,dt_bits,phase='area'))
+    state=stage('effects',state,_effects_phase(state,dt_bits))
+    state=stage('deadline',state,_tail_phase(state,'deadline',dt_bits))
+    state=stage('secondary',state,_tail_phase(state,'secondary',dt_bits))
+    state=stage('ai',state,_ai_phase(state,dt_bits))
+    state=stage('collect',state,_collect_phase135(state,now))
+    state=stage('claims',state,_tail_phase(state,'claims',dt_bits))
     if state.tail.gate2579:
         raise PendingHeadless135('Alternate2579 spawn/special gate requires continuation')
+    spawn_before=state
     level = state.collection.level
     frame = FrameInput(state.zone, now, dt_bits, state.budget_bits, state.collection.death.kill_cost_bits,
         level.stats.flag2574, state.collection.currency.member_count, level.heal_gate387, words[2516],
@@ -1010,19 +1126,24 @@ def step_frame(state, dt_bits):
     state=_event_phase(state)
     state=_resource_phase(state)
     state=_supply_phase(state)
-    stages.append(('spawn', state))
-    state = _tail_phase(state, 'special', dt_bits); stages.append(('special', state))
-    state = _tail_phase(state, 'terminal', dt_bits); stages.append(('terminal', state))
+    state=stage('spawn',spawn_before,state)
+    state=stage('special',state,_tail_phase(state,'special',dt_bits))
+    state=stage('terminal',state,_tail_phase(state,'terminal',dt_bits))
     return state, tuple(stages), 'ordered_frame_projection'
 
 
 def select(state, index):
     """Use actual generated candidates; never replace them to force a result."""
+    before_selection=state
     collection = state.collection
     value = SelectionCycleState(collection.level, 0, 0, collection.death.records, collection.player_xyz[0],
         collection.player_xyz[1], collection.currency, state.game_tag, collection.xp_queue, collection.xp_queue_capacity)
     result = select_card(value, index, additional_modifiers=())
     if not result.accepted: return state, result.status
+    run_ledger=state.run_ledger
+    if run_ledger is not None:
+        run_ledger=record_ordinary_selection135(run_ledger,collection.level.candidates[index],
+            phase2587=collection.level.phase2587,selection_kind2585=collection.level.selection_kind2585)
     selected = result.state
     records = selected.pickups
     player_sources=state.player_sources
@@ -1055,8 +1176,9 @@ def select(state, index):
             message_sequence=(collection.death.message_sequence + motion.count) & f.MASK))
     state = _sync_pickup_owner(replace(state, collection=collection, game_tag=selected.game_tag,
         live_records=tuple(live), unspecified_live_words=tuple(sorted(unknown)),
-        player_sources=player_sources,selections=state.selections + 1),removal_order='forward')
-    return _growth_banners(state,result.growth_events),result.status
+        player_sources=player_sources,selections=state.selections + 1,run_ledger=run_ledger),removal_order='forward')
+    state=_growth_banners(state,result.growth_events)
+    return _inherit_aux135(before_selection,state,'selection1072',before_selection.collection.level.selection_kind2585),result.status
 
 
 def projection(state):
@@ -1098,6 +1220,13 @@ def projection(state):
             player_action_tag416=state.player_action_tag416, player_xyz=list(state.collection.player_xyz),
             delayed56=dict(capacity=len(state.delayed_storage56), records_hex=list(state.delayed_records56)),
             effects120=dict(capacity=state.effect_capacity120, records_hex=list(state.effect_records120))))
+    if state.run_ledger is not None:
+        result['run_ledger']=run_ledger_projection135(state.run_ledger,state.collection.level,state.collection.currency)
+        result['terminal_notifications']=list(state.terminal_notifications)
+        result['paused408']=state.paused408
+        result['paused412_bits']=state.paused412_bits
+        result['fatal_stop_packets']=list(state.fatal_stop_packets)
+        result['physical_output_pending']=list(state.physical_output_pending)
     if state.player_sources is not None:
         sources=state.player_sources
         result['player_source_owner']={

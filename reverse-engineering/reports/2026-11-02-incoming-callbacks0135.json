@@ -1,0 +1,452 @@
+{
+  "status": "narrow_executable_callback_predicate_static_and_model_checks",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "original_calls": 0,
+  "new_original_cases": 0,
+  "production_scheduler_executions": 0,
+  "source_before": {
+    "reconstruction/core_spec/incoming_callbacks135.py": "4045cd21c510175bfe87313687045ee66de8b2dffc3dd3a498580b3955ef4fc9",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "scripts/trace_incoming_callbacks135.py": "cf873077364ab2e686108e314fe62318aa5ffae6dd7339957a92d508763a5d99",
+    "reconstruction/core_spec/headless135.py": "006267aa623020427cd4fedc7be522d047277a8cd2854175b6e956f65c8b9240",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/selection_cycle135.py": "897de2d39ef5c8c032467a8fdeea6b11db33d288a59d57ffcb6cfce5789be9d4"
+  },
+  "source_after": {
+    "reconstruction/core_spec/incoming_callbacks135.py": "4045cd21c510175bfe87313687045ee66de8b2dffc3dd3a498580b3955ef4fc9",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "scripts/trace_incoming_callbacks135.py": "cf873077364ab2e686108e314fe62318aa5ffae6dd7339957a92d508763a5d99",
+    "reconstruction/core_spec/headless135.py": "006267aa623020427cd4fedc7be522d047277a8cd2854175b6e956f65c8b9240",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/selection_cycle135.py": "897de2d39ef5c8c032467a8fdeea6b11db33d288a59d57ffcb6cfce5789be9d4"
+  },
+  "functions": {
+    "1073": {
+      "body_start": 5745892,
+      "body_end": 5757845,
+      "body_bytes": 11953,
+      "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076",
+      "wat_bytes": 177079,
+      "wat_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62"
+    },
+    "984": {
+      "body_start": 4280168,
+      "body_end": 4292023,
+      "body_bytes": 11855,
+      "body_sha256": "f9e1b5fb843e275626d1cef0d554014e304a24c1e6fbe1e2b0ed21dcdb48b5fe",
+      "wat_bytes": 351363,
+      "wat_sha256": "b40e643de981586822daf2dee2920ce3b189b6c962472af37abbec7536347568"
+    },
+    "914": {
+      "body_start": 2394962,
+      "body_end": 2421299,
+      "body_bytes": 26337,
+      "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc",
+      "wat_bytes": 380406,
+      "wat_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a"
+    },
+    "921": {
+      "body_start": 2600015,
+      "body_end": 2623153,
+      "body_bytes": 23138,
+      "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37",
+      "wat_bytes": 344258,
+      "wat_sha256": "20fb6cb14a8000c408185e4a8ee911ed32229b21dc695867bbd398acc9ceaf1f"
+    },
+    "1560": {
+      "body_start": 10536186,
+      "body_end": 10543428,
+      "body_bytes": 7242,
+      "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe",
+      "wat_bytes": 92715,
+      "wat_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109"
+    }
+  },
+  "windows": {
+    "history_append_before_callbacks": {
+      "function": 1073,
+      "first_line": 3350,
+      "last_line": 3443,
+      "text": "      local.set 7\n      local.get 8\n      i32.load offset=112\n      local.set 13\n      local.get 8\n      i32.load offset=108\n      local.set 15\n      local.get 8\n      i32.load offset=104\n      local.set 16\n      local.get 0\n      f32.load offset=1536\n      local.set 27\n      local.get 0\n      f32.load offset=1440\n      local.set 28\n      local.get 6\n      local.get 12\n      i32.eq\n      if  ;; label = @2\n        local.get 0\n        i32.const 968\n        i32.add\n        call 55797\n        local.get 0\n        i32.load offset=980\n        local.set 12\n        local.get 0\n        i32.load offset=968\n        local.set 6\n      end\n      local.get 0\n      local.get 12\n      i32.const 1\n      i32.add\n      i32.store offset=980\n      i32.const 0\n      local.set 11\n      local.get 0\n      i32.load offset=972\n      local.get 0\n      i32.load offset=976\n      local.get 12\n      i32.add\n      local.tee 5\n      local.get 6\n      i32.const 0\n      local.get 5\n      local.get 6\n      i32.ge_u\n      select\n      i32.sub\n      i32.const 48\n      i32.mul\n      i32.add\n      local.tee 5\n      local.get 4\n      i32.const 2\n      i32.eq\n      i32.store8 offset=45\n      local.get 5\n      local.get 14\n      i32.store8 offset=44\n      local.get 5\n      local.get 27\n      f32.store offset=40\n      local.get 5\n      local.get 28\n      f32.store offset=36\n      local.get 5\n      local.get 31\n      f32.store offset=32\n      local.get 5\n      local.get 33\n      f32.store offset=28\n      local.get 5\n      local.get 32\n      f32.store offset=24\n      local.get 5\n      local.get 7\n      i32.store offset=20\n      local.get 5\n      local.get 13\n      i32.store offset=16\n      local.get 5\n      local.get 15\n      i32.store offset=12\n      local.get 5\n      local.get 16\n      i32.store offset=8\n      local.get 5\n      local.get 9\n      i32.store offset=4\n      local.get 5",
+      "sha256": "d0e87ebadd4e5e60b51ead5f2c718d8588f0bcc9f8e42aaa24e2458a94b9189a"
+    },
+    "raw13_ordered_active_reduction": {
+      "function": 1073,
+      "first_line": 3443,
+      "last_line": 3566,
+      "text": "      local.get 5\n      local.get 10\n      i32.store\n      block  ;; label = @2\n        block  ;; label = @3\n          block  ;; label = @4\n            local.get 0\n            i32.load offset=1712\n            local.tee 4\n            if  ;; label = @5\n              local.get 0\n              i32.load offset=1708\n              local.set 12\n              f32.const -0x0p+0 (;=-0;)\n              local.set 27\n              block  ;; label = @6\n                local.get 4\n                i32.const 1\n                i32.ne\n                if  ;; label = @7\n                  local.get 4\n                  i32.const 1\n                  i32.and\n                  local.get 4\n                  i32.const -2\n                  i32.and\n                  local.set 6\n                  local.get 12\n                  local.set 7\n                  loop  ;; label = @8\n                    local.get 32\n                    local.get 7\n                    i32.const 24\n                    i32.add\n                    f32.load\n                    f32.lt\n                    if  ;; label = @9\n                      local.get 27\n                      local.get 7\n                      i32.const 12\n                      i32.add\n                      f32.load\n                      f32.add\n                      local.get 27\n                      local.get 7\n                      i32.const 8\n                      i32.add\n                      i32.load\n                      i32.const 13\n                      i32.eq\n                      select\n                      local.set 27\n                    end\n                    local.get 32\n                    local.get 7\n                    i32.const 56\n                    i32.add\n                    f32.load\n                    f32.lt\n                    if  ;; label = @9\n                      local.get 27\n                      local.get 7\n                      i32.const 44\n                      i32.add\n                      f32.load\n                      f32.add\n                      local.get 27\n                      local.get 7\n                      i32.const 40\n                      i32.add\n                      i32.load\n                      i32.const 13\n                      i32.eq\n                      select\n                      local.set 27\n                    end\n                    local.get 7\n                    i32.const -64\n                    i32.sub\n                    local.set 7\n                    local.get 6\n                    local.get 11\n                    i32.const 2\n                    i32.add\n                    local.tee 11\n                    i32.ne\n                    br_if 0 (;@8;)\n                  end\n                  i32.eqz\n                  br_if 1 (;@6;)\n                end\n                local.get 12\n                local.get 11\n                i32.const 5\n                i32.shl\n                i32.add\n                local.tee 5\n                f32.load offset=24\n                local.get 32\n                f32.gt\n                i32.eqz\n                br_if 0 (;@6;)\n                local.get 27\n                local.get 5\n                f32.load offset=12\n                f32.add\n                local.get 27\n                local.get 5\n                i32.load offset=8\n                i32.const 13\n                i32.eq\n                select\n                local.set 27\n              end\n              local.get 27\n              f32.const 0x0p+0 (;=0;)\n              f32.gt\n              br_if 1 (;@4;)\n            end\n            local.get 2\n            i64.eqz\n            br_if 2 (;@2;)\n            local.get 3\n            i32.eqz",
+      "sha256": "869ec5ac4d0db19b76f88396eeb8c2016c0d86560737444d6a3859f4f42149fd"
+    },
+    "GUID_contact_phase_shortcircuit": {
+      "function": 1073,
+      "first_line": 3556,
+      "last_line": 3590,
+      "text": "              end\n              local.get 27\n              f32.const 0x0p+0 (;=0;)\n              f32.gt\n              br_if 1 (;@4;)\n            end\n            local.get 2\n            i64.eqz\n            br_if 2 (;@2;)\n            local.get 3\n            i32.eqz\n            br_if 2 (;@2;)\n            local.get 0\n            i32.load8_u offset=2587\n            i32.const 1\n            i32.eq\n            br_if 1 (;@3;)\n            br 2 (;@2;)\n          end\n          local.get 2\n          i64.eqz\n          br_if 1 (;@2;)\n          local.get 3\n          i32.eqz\n          br_if 1 (;@2;)\n          local.get 4\n          i32.const 5\n          i32.shl\n          local.set 7\n          local.get 12\n          i32.const 12\n          i32.sub\n          local.set 6\n          local.get 0\n          local.get 2",
+      "sha256": "0e0e2042d4813bd7364816eb50f9c80a845a1230fe9e426a4f20c6d5f25421ab"
+    },
+    "raw13_retaliation_and_phase_reread": {
+      "function": 1073,
+      "first_line": 3580,
+      "last_line": 3638,
+      "text": "          br_if 1 (;@2;)\n          local.get 4\n          i32.const 5\n          i32.shl\n          local.set 7\n          local.get 12\n          i32.const 12\n          i32.sub\n          local.set 6\n          local.get 0\n          local.get 2\n          local.get 0\n          f32.load offset=1540\n          local.get 27\n          local.get 0\n          f32.load offset=1604\n          f32.const 0x1p+0 (;=1;)\n          f32.add\n          f32.mul\n          f32.mul\n          block (result i32)  ;; label = @4\n            loop  ;; label = @5\n              i32.const 467\n              local.get 7\n              i32.eqz\n              br_if 1 (;@4;)\n              drop\n              local.get 7\n              i32.const 32\n              i32.sub\n              local.set 7\n              local.get 6\n              i32.const 32\n              i32.add\n              local.set 6\n              local.get 12\n              i32.load offset=8\n              local.get 12\n              i32.const 32\n              i32.add\n              local.set 12\n              i32.const 13\n              i32.ne\n              br_if 0 (;@5;)\n            end\n            local.get 6\n            i32.load\n          end\n          i32.const 3\n          i32.const 0\n          i32.const 0\n          call 914\n          local.get 0\n          i32.load8_u offset=2587\n          i32.const 1\n          i32.ne\n          br_if 1 (;@2;)\n        end\n        block  ;; label = @3",
+      "sha256": "00784fb300c12512aabfedab5acbeb940470e4baa293483b27ad9afa8c0374b7"
+    },
+    "item22_reduction": {
+      "function": 1073,
+      "first_line": 3638,
+      "last_line": 3775,
+      "text": "        block  ;; label = @3\n          local.get 0\n          i32.load offset=2032\n          local.tee 4\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 0\n          i32.load offset=2028\n          local.set 3\n          local.get 4\n          i32.const 3\n          i32.and\n          local.set 6\n          block  ;; label = @4\n            block  ;; label = @5\n              local.get 4\n              i32.const 4\n              i32.lt_u\n              if  ;; label = @6\n                f32.const -0x0p+0 (;=-0;)\n                local.set 27\n                i32.const 0\n                local.set 11\n                br 1 (;@5;)\n              end\n              local.get 4\n              i32.const -4\n              i32.and\n              local.set 4\n              f32.const -0x0p+0 (;=-0;)\n              local.set 27\n              i32.const 0\n              local.set 11\n              local.get 3\n              local.set 7\n              loop  ;; label = @6\n                local.get 27\n                local.get 7\n                i32.const 4\n                i32.add\n                f32.load\n                f32.add\n                local.get 27\n                local.get 7\n                i32.load8_u\n                i32.const 22\n                i32.eq\n                select\n                local.tee 27\n                local.get 7\n                i32.const 12\n                i32.add\n                f32.load\n                f32.add\n                local.get 27\n                local.get 7\n                i32.const 8\n                i32.add\n                i32.load8_u\n                i32.const 22\n                i32.eq\n                select\n                local.tee 27\n                local.get 7\n                i32.const 20\n                i32.add\n                f32.load\n                f32.add\n                local.get 27\n                local.get 7\n                i32.const 16\n                i32.add\n                i32.load8_u\n                i32.const 22\n                i32.eq\n                select\n                local.tee 27\n                local.get 7\n                i32.const 28\n                i32.add\n                f32.load\n                f32.add\n                local.get 27\n                local.get 7\n                i32.const 24\n                i32.add\n                i32.load8_u\n                i32.const 22\n                i32.eq\n                select\n                local.set 27\n                local.get 7\n                i32.const 32\n                i32.add\n                local.set 7\n                local.get 4\n                local.get 11\n                i32.const 4\n                i32.add\n                local.tee 11\n                i32.ne\n                br_if 0 (;@6;)\n              end\n              local.get 6\n              i32.eqz\n              br_if 1 (;@4;)\n            end\n            local.get 3\n            local.get 11\n            i32.const 3\n            i32.shl\n            i32.add\n            local.set 7\n            loop  ;; label = @5\n              local.get 27\n              local.get 7\n              i32.const 4\n              i32.add\n              f32.load\n              f32.add\n              local.get 27\n              local.get 7\n              i32.load8_u\n              i32.const 22\n              i32.eq\n              select\n              local.set 27\n              local.get 7\n              i32.const 8\n              i32.add\n              local.set 7\n              local.get 6\n              i32.const 1\n              i32.sub\n              local.tee 6\n              br_if 0 (;@5;)\n            end\n          end",
+      "sha256": "cc452b275fc69fc7bf2ad6f347cf0f991db30fcf71341bfb9754d9d459a3f0b6"
+    },
+    "item22_positive_gate_and_context774": {
+      "function": 1073,
+      "first_line": 3774,
+      "last_line": 3807,
+      "text": "            end\n          end\n          local.get 1\n          f32.const 0x0p+0 (;=0;)\n          f32.gt\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 27\n          f32.const 0x0p+0 (;=0;)\n          f32.gt\n          i32.eqz\n          br_if 0 (;@3;)\n          local.get 0\n          i32.load8_u offset=774\n          local.set 3\n          local.get 0\n          i32.const 3\n          i32.store8 offset=774\n          local.get 0\n          local.get 2\n          local.get 1\n          local.get 27\n          f32.mul\n          i32.const 467\n          i32.const 3\n          i32.const 0\n          i32.const 0\n          call 914\n          local.get 0\n          local.get 3\n          i32.store8 offset=774\n        end\n        local.get 8\n        i32.const 1024",
+      "sha256": "229e1117bd72a58dac90b214f13309f7ab4ae3858814b1223d7f66cd5b409d52"
+    },
+    "two984_and_actual_HP_reread": {
+      "function": 1073,
+      "first_line": 3807,
+      "last_line": 3895,
+      "text": "        i32.const 1024\n        i32.store16 offset=92\n        local.get 8\n        i32.const 0\n        i32.store offset=72\n        local.get 8\n        local.get 2\n        i64.store offset=64\n        local.get 8\n        i32.const 0\n        i32.store8 offset=98\n        local.get 8\n        i32.const 0\n        i32.store offset=94 align=2\n        local.get 8\n        local.get 33\n        f32.store offset=88\n        local.get 8\n        local.get 0\n        i32.load offset=1424\n        local.tee 3\n        i32.store offset=124\n        local.get 8\n        local.get 0\n        i64.load offset=1416 align=4\n        local.tee 36\n        i64.store offset=116 align=4\n        local.get 8\n        local.get 36\n        i64.store offset=76 align=4\n        local.get 8\n        local.get 3\n        i32.store offset=84\n        local.get 0\n        local.get 8\n        i32.const -64\n        i32.sub\n        i32.const 0\n        call 984\n        local.get 8\n        i32.const 0\n        i32.store8 offset=135\n        local.get 8\n        i32.const 0\n        i32.store8 offset=132\n        local.get 8\n        i32.const 0\n        i32.store offset=112\n        local.get 8\n        i32.const 0\n        i32.store8 offset=138\n        local.get 8\n        i32.const 0\n        i32.store16 offset=136\n        local.get 8\n        i32.const 5\n        i32.store16 offset=133 align=1\n        local.get 8\n        local.get 33\n        f32.store offset=128\n        local.get 8\n        local.get 2\n        i64.store offset=104\n        local.get 0\n        local.get 8\n        i32.const 104\n        i32.add\n        i32.const 0\n        call 984\n      end\n      local.get 0\n      f32.load offset=1440\n      local.set 27\n      local.get 0\n      i32.load8_u offset=2578\n      if  ;; label = @2\n        local.get 0\n        f32.const 0x1p+0 (;=1;)\n        local.get 27\n        local.get 27\n        local.get 27\n        f32.ne\n        select\n        local.tee 1\n        f32.const 0x1p+0 (;=1;)\n        local.get 1\n        f32.const 0x1p+0 (;=1;)\n        f32.gt\n        select",
+      "sha256": "e8fa81c2e7dd1bcc2fbde363fa7392384cebf8634a057a3b89fda981cb032544"
+    },
+    "984_empty_source_earlyexit": {
+      "function": 984,
+      "first_line": 8,
+      "last_line": 25,
+      "text": "    local.get 0\n    i32.load offset=2056\n    local.tee 31\n    i32.const 36\n    i32.mul\n    local.set 3\n    block  ;; label = @1\n      block  ;; label = @2\n        block  ;; label = @3\n          local.get 31\n          i32.const 59652323\n          i32.gt_u\n          br_if 0 (;@3;)\n          local.get 3\n          i32.eqz\n          br_if 2 (;@1;)\n          local.get 0\n          i32.load offset=2052",
+      "sha256": "d26118d5da7ccb0c9c088c92ec31ac52c637107eeb480596e7fb5585cb560a59"
+    },
+    "984_dispatch_load_and_transient_context": {
+      "function": 984,
+      "first_line": 173,
+      "last_line": 225,
+      "text": "          local.set 29\n          loop  ;; label = @4\n            block  ;; label = @5\n              local.get 29\n              local.tee 3\n              i32.load\n              local.tee 5\n              i32.const -1\n              i32.eq\n              br_if 0 (;@5;)\n              local.get 3\n              i32.const 36\n              i32.add\n              local.set 29\n              local.get 3\n              i32.load offset=32\n              local.set 17\n              local.get 3\n              i32.load offset=28\n              local.set 10\n              local.get 3\n              i32.load offset=24\n              local.set 12\n              local.get 3\n              i32.load offset=20\n              local.set 15\n              local.get 3\n              i32.load offset=16\n              local.set 16\n              local.get 3\n              i32.load offset=12\n              local.set 8\n              local.get 3\n              i32.load offset=8\n              local.set 11\n              local.get 3\n              i32.load offset=4\n              local.set 14\n              local.get 0\n              local.get 55\n              local.tee 6\n              i32.store offset=476\n              local.get 0\n              i32.const 1\n              i32.store offset=472\n              local.get 6\n              i32.const 1\n              i32.add\n              local.set 55\n              block  ;; label = @6\n                block  ;; label = @7\n                  block  ;; label = @8\n                    block  ;; label = @9",
+      "sha256": "f7ed83343837e37270fbf94a623f8bdf5fd4a44b95bb9f8db6795862dcd4e8cf"
+    },
+    "984_tag_selector": {
+      "function": 984,
+      "first_line": 250,
+      "last_line": 265,
+      "text": "                                                                      block  ;; label = @34\n                                                                        block  ;; label = @35\n                                                                          block  ;; label = @36\n                                                                            block  ;; label = @37\n                                                                              i32.const 4\n                                                                              local.get 5\n                                                                              i32.const 12\n                                                                              i32.sub\n                                                                              local.get 5\n                                                                              i32.const 11\n                                                                              i32.le_u\n                                                                              select\n                                                                              i32.const 1\n                                                                              i32.sub\n                                                                              br_table 0 (;@37;) 4 (;@33;) 5 (;@32;) 6 (;@31;) 7 (;@30;) 8 (;@29;) 9 (;@28;) 23 (;@14;) 22 (;@15;) 21 (;@16;) 20 (;@17;) 2 (;@35;) 31 (;@6;) 18 (;@19;) 17 (;@20;) 16 (;@21;) 15 (;@22;) 14 (;@23;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 13 (;@24;) 31 (;@6;) 12 (;@25;) 31 (;@6;) 31 (;@6;) 31 (;@6;) 11 (;@26;) 10 (;@27;) 31 (;@6;) 1 (;@36;)\n                                                                            end",
+      "sha256": "89cff17481a4856ec43818f7e1f537dbdacae9ac41e455de88f10733bc5d96b0"
+    },
+    "ordinary921_contactflag1": {
+      "function": 921,
+      "first_line": 7485,
+      "last_line": 7492,
+      "text": "          local.get 0\n          local.get 33\n          local.get 57\n          i32.const 1\n          i32.const 0\n          local.get 2\n          call 1073\n          local.get 2",
+      "sha256": "1e28d5200178e0a9a141630bcd2183a80f834feb9ba1e4ad7f274b9b602371fa"
+    },
+    "984_common_tail_restore_and_conditional1512": {
+      "function": 984,
+      "first_line": 5753,
+      "last_line": 5790,
+      "text": "                call 914\n                local.get 0\n                local.get 3\n                i32.store8 offset=774\n              end\n              local.get 29\n              local.get 38\n              i32.ne\n              br_if 1 (;@4;)\n            end\n          end\n          local.get 27\n          local.get 31\n          i32.const 36\n          i32.mul\n          call 71889\n          local.get 0\n          local.get 53\n          i32.store offset=476\n          local.get 0\n          local.get 54\n          i32.store offset=472\n          local.get 41\n          br_if 1 (;@2;)\n          br 2 (;@1;)\n        end\n        local.get 6\n        local.get 3\n        call 107843\n        unreachable\n      end\n      local.get 0\n      call 1512\n    end\n    local.get 4\n    i32.const 176\n    i32.add\n    global.set 0)",
+      "sha256": "d7567331121a1f77a1b8342fb2efaa4e00f90c23a40cdcb17373b39349caca02"
+    },
+    "984_tag54_target_skips_all_event_branches": {
+      "function": 984,
+      "target_label": 6,
+      "first_line": 5757,
+      "last_line": 5777,
+      "text": "              end\n              local.get 29\n              local.get 38\n              i32.ne\n              br_if 1 (;@4;)\n            end\n          end\n          local.get 27\n          local.get 31\n          i32.const 36\n          i32.mul\n          call 71889\n          local.get 0\n          local.get 53\n          i32.store offset=476\n          local.get 0\n          local.get 54\n          i32.store offset=472\n          local.get 41\n          br_if 1 (;@2;)\n          br 2 (;@1;)",
+      "sha256": "4c240ef2ff04b3c19096e2cab7dc3fabcfe93e4201565c4876c87f43d5019979"
+    }
+  },
+  "selector54": {
+    "value": 41,
+    "target_depth": 31,
+    "target_label": 6,
+    "rebuild1512_enabled": false
+  },
+  "model_checks": [
+    {
+      "case": "explicit_empty_sources_contact_nonzero",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": 2147483648,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          0,
+          0,
+          0
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "zero_GUID_skips_item_and_984",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": null,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 0,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          0,
+          1,
+          1
+        ],
+        "branch": "source_or_contact_gate_skips_entire_callback_block"
+      }
+    },
+    {
+      "case": "flag0_skips_item_and_984",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": null,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 0,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          0,
+          1,
+          1
+        ],
+        "branch": "source_or_contact_gate_skips_entire_callback_block"
+      }
+    },
+    {
+      "case": "kind8_opaque_value_and_auxiliary_unused",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": 2147483648,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          1,
+          0,
+          0
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "expired13_payload_unknown_unused",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": 2147483648,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          1,
+          0,
+          0
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "raw13_ordered_cancellation",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 0,
+        "item22_sum_bits": 2147483648,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          2,
+          0,
+          0
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "item22_zero_base_amount",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": 1073741824,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          0,
+          1,
+          0
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "item7_unknown_value_unused",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": 2147483648,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [],
+        "input_counts": [
+          0,
+          1,
+          0
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "full36_tag54_noevent",
+      "accepted": true,
+      "proof": {
+        "hp_before_minimum_one1440_bits": 3212836864,
+        "raw13_sum_bits": 2147483648,
+        "item22_sum_bits": 2147483648,
+        "skipped_914_calls": [
+          "raw13",
+          "item22"
+        ],
+        "returned_984_calls": 2,
+        "modifier_noevent_tags": [
+          54
+        ],
+        "input_counts": [
+          0,
+          0,
+          1
+        ],
+        "branch": "source_contact_active_no914_and_two_inert984"
+      }
+    },
+    {
+      "case": "raw13_active_positive",
+      "accepted": false,
+      "error": "Active raw13 retaliation can enter914 and change full state before HP reread"
+    },
+    {
+      "case": "raw13_active_unknown_value",
+      "accepted": false,
+      "error": "1073 raw13 value: unknown record read at +12, width 4"
+    },
+    {
+      "case": "item22_positive",
+      "accepted": false,
+      "error": "Positive item22 retaliation can enter914;temporary774=3 is not an inertness proof"
+    },
+    {
+      "case": "unknown_item_kind",
+      "accepted": false,
+      "error": "1073 item22 kind byte: unknown record read at +0, width 1"
+    },
+    {
+      "case": "unknown_modifier_kind",
+      "accepted": false,
+      "error": "984 modifier kind: unknown record read at +0, width 4"
+    },
+    {
+      "case": "unrestored984_kind",
+      "accepted": false,
+      "error": "Unrestored984 modifier kind 0"
+    },
+    {
+      "case": "copied54_payload_unknown",
+      "accepted": false,
+      "error": "984 copied modifier36 payload: unknown record read at +4, width 4"
+    },
+    {
+      "case": "unknown_physical_nonlive_owner",
+      "accepted": false,
+      "error": "Unresolved physical callback source vector8"
+    },
+    {
+      "case": "phase2",
+      "accepted": false,
+      "error": "Narrow proof requires current phase1"
+    }
+  ],
+  "model_checks_kind": "newmodule_selfcheck_not_original_differential",
+  "observer": {
+    "path": "evidence/incoming-callback-sources135-model-observer-20261102T002438.264636Z/sources.json",
+    "sha256": "880fc4c769ee4da33a2261ea632bf021c873b32188d8dcbee70b92f31f77f59c",
+    "observations": 921,
+    "kind": "pre_AI_model_source_observer_not_original_or_post_history_capture",
+    "raw13_reductions": {
+      "2147483648": 921
+    },
+    "active_live_kinds": {
+      "8": 694,
+      "12": 67
+    },
+    "unknown_cells": {
+      "active_None_cells": 3116
+    },
+    "canonical_nonlive_semantic_tuple_sizes": [
+      {
+        "items8": 0,
+        "definitions36": 0,
+        "observations": 921
+      }
+    ],
+    "physical_nonlive_owners": "unknown_null_all921;semantic empty tuples do not prove original source owners",
+    "last_frame": 921,
+    "last_level": 8
+  },
+  "api": {
+    "vector": "CallbackVector135(stride,count,storage,capacity_word=None);complete active rows,unknown unusedcapacity remainsNone",
+    "partial": "active_raw13_sum135(live32,now_bits) is not callbacks_complete",
+    "full": "prove_post_history_callbacks135(IncomingCallbacksInput135(...)).callbacks_complete only afterallsourceproof",
+    "nonlive_unknown": "None physical vector raisesUnknown;no tuple-empty promotion adapter"
+  },
+  "limits": [
+    "No full1073 new differential;old163/40 cases neither rerun noradded.",
+    "Onlypost-history callbackblock;prefix/shield-break984/registry/history/HPminimumone/revival/death/keyedHP/Aura separate.",
+    "Current921 observer only proves no raw13 among its canonical preAI live sources;posthistory identity depends on earlierprefix source effects.",
+    "Original G2028/2032 andG2052/2056 current producer not established byobserver oroldheadless hardcodedempty.",
+    "All positive914 branches and984 kinds exceptfull54 rejected;negative modelguards not original acceptance.",
+    "Capacity/pointer not read by984 emptycount branch;unconsumed unknown headers/backing not filled."
+  ],
+  "static_receipt": {
+    "path": "evidence/incoming-callbacks135-static-20261102T003044.215536Z/trace.json",
+    "sha256": "54853c37c7a3285384c921f1b289ab6151bb105efa62c68ad6b18051cfbc55a7"
+  },
+  "same_state_fatal_integration_ready": false,
+  "blocking_source_requirement": "Explicit independently produced G2028/2032 item8 andG2052/2056 eventdef36 active source owner;never infer fromobserver null orheadlessforcedempty"
+}

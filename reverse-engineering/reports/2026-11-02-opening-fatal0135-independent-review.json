@@ -1,0 +1,1242 @@
+{
+  "status": "passed-within-declared-domain",
+  "author": "root continuous-fatal integration; different-author motion38_review audit",
+  "reader": "scripts/review_opening_fatal135.py",
+  "reader_sha256": "d2cf6093815de7eb8497de6400630a7fd90acffaa08e80bd3114e563dd418e06",
+  "author_comparison": "evidence/opening-combat0135-oracle-20261102T012524.271526Z/comparison.json",
+  "author_comparison_sha256": "430e764bfc0b556bf33489796ed04e96da8e1f4f0aedbcc4bee8217b67967160",
+  "independent_receipt": "evidence/opening-fatal135-independent-review-owned-20261102T013810.490178Z/review/review.json",
+  "independent_receipt_sha256": "c456646eb66da5e9b610e600c14a705ab8704cc49cc25d6b3ef33e02c2f4796a",
+  "owned_terminal": "evidence/opening-fatal135-independent-review-owned-20261102T013810.490178Z/owned-terminal.json",
+  "owned_terminal_sha256": "713410d77062566cdca6ccfd696962567c5d88f942b967c190024e1777a0fc02",
+  "owned_process": {
+    "pid": 17503,
+    "pgid": 17503,
+    "exit_code": 0,
+    "deadline_seconds": 900,
+    "deadline_exceeded": false,
+    "seconds": 152.6546715000004,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "new_original_calls": 0,
+    "production_executions": 0
+  },
+  "new_original_calls": 0,
+  "production_imports": 0,
+  "production_executions": 0,
+  "completed_frames": 921,
+  "selections": 7,
+  "compared_stages": 12945,
+  "original_entry_calls_in_author_batch": 12947,
+  "original_internal1073_calls_instrumented": false,
+  "records": {
+    "case_start": 1,
+    "constructor": 1,
+    "opening": 1,
+    "clock_control": 921,
+    "stage": 12945,
+    "case_end": 1
+  },
+  "CAS_finish": {
+    "records": 13870,
+    "logical_bytes": 8573768533,
+    "logical_sha256": "d25cf8ef0f24a98da29841dd7a1d95a950a94f9a960db50c9dcd7fa324643891",
+    "maximum_logical_record_bytes": 1715362,
+    "unique_blobs": 50470,
+    "unique_blob_bytes": 559062917,
+    "maximum_blob_bytes": 1680147,
+    "index_uncompressed_bytes": 4492969,
+    "index_uncompressed_sha256": "5035731de3d4a9e27bf929cb69ee69b89382cd952eb566277ef501c2c760d0a3",
+    "maximum_index_record_bytes": 515,
+    "maximum_blob_index_record_bytes": 36524,
+    "total_logical_blob_references": 4053891,
+    "blob_index_bytes": 52301303,
+    "blob_index_sha256": "b225cde462e9e7cfc6f6cd5464aafe91eae13845ef04c0feb3dc044c28e016f5",
+    "blob_references_bytes": 8666941,
+    "blob_references_sha256": "73dfa7bace6828c76da52b740b1c7771f2d60908ab13a690d4ef8c630683ad87",
+    "all_blobs_and_occurrences_verified": true,
+    "decoder_cache_bytes": 8313561,
+    "logical_fragment_cache_weight_bytes": 16749212,
+    "logical_fragment_cache_weight_limit": 16777216,
+    "logical_fragment_cache_item_limit": 1048576
+  },
+  "expected_stream": {
+    "file_bytes": 150642188,
+    "file_sha256": "81fa519bd3b4608f06bfcaaf91d822c9715ec793de86e722843b9e62a8e0fdb3",
+    "uncompressed_bytes": 1072504103,
+    "uncompressed_sha256": "bd026bac03cae8b39a4fb6e5088ac0c4c848a12c138faba6cc975e55e5a4b627",
+    "maximum_record_bytes": 123410,
+    "records": 12946,
+    "gzip": true,
+    "single_member": true
+  },
+  "source_count": 130,
+  "production_source_count": 113,
+  "local_import_edges": 614,
+  "reviewer_sources": {
+    "scripts/review_opening_fatal135.py": "d2cf6093815de7eb8497de6400630a7fd90acffaa08e80bd3114e563dd418e06",
+    "scripts/review_stats138.py": "3ba425adcad46139b553fa3c7c40ca1608211639af3d271505d75b5a1b908e2b",
+    "scripts/review_player_death_recap135.py": "b0c92d1116587a58022028844e2bf24d4fc259d6faec092708f9c5d6f2a7b088",
+    "scripts/review_player_death135.py": "08812d3599a04fd249e41e1f044f16a8aefb39a52177003da2e38037ad2e2c40",
+    "scripts/review_opening_motion_rune135.py": "883b0322a9b26b34c9a833919cc7b7da29e9e6582446456a502180a60402d58d",
+    "scripts/review_resource_consumer135.py": "483df3888a83dfa7e13b8432b994378a65049b2146bae4f9e6e56a6ce1688517",
+    "scripts/review_resource_consumer137.py": "813de3c7d7478ea356a1a1ee89b5f37ca0ed65a88d6ed1e7b24f100755e8eada",
+    "scripts/review_battle_shout135.py": "cc24df28b984dc8bdf60a971bfce011491597e4195ab87f86e1a844043510f87",
+    "scripts/review_combat137.py": "b0f10b38d2696324fc47ce20b2d4f231b295cc19cbfecba846ae0c467962b449",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_player_sources135.py": "74f3606e8c1873fb0c03a93a57886d23ff5d9fa753e16055b00d29c94794cca2",
+    "scripts/review_opening_combat135_750.py": "9ce1059a2e262612ad39ed730ea0668e9b0fc469abe94d9cbece12bdc6abc66a",
+    "scripts/review_demo_shout135.py": "fbad5388cadde05b9c2185ce06f8c770f8cf107d4fc27a07911f67d7bbbb5213",
+    "scripts/review_event_wave135.py": "ae407088cf2e6e28340536fe76cb5d38387bd4d9536bf2f5e096811e037500eb",
+    "scripts/review_resource_spawn135.py": "dc096f04085bbf96d016ebf0db0ada4cef62c7d1ed12b874071204fd00f13446",
+    "scripts/review_opening_combat135_650.py": "b3c36711097cde31a684314eeefee27b8379fea3709414918902b361de861909"
+  },
+  "static_function_count": 18,
+  "static_proof": {
+    "921": {
+      "original_identity": {
+        "index": 921,
+        "signature": [
+          "7f7d",
+          ""
+        ],
+        "body_start": 2600015,
+        "body_end": 2623153,
+        "body_bytes": 23138,
+        "body_sha256": "5c2c1cdc75e805e7d4e7ed51f5dddde34eda6331617c9ea8ee2a26da90329a37"
+      },
+      "WAT_bytes": 344258,
+      "WAT_sha256": "20fb6cb14a8000c408185e4a8ee911ed32229b21dc695867bbd398acc9ceaf1f"
+    },
+    "1073": {
+      "original_identity": {
+        "index": 1073,
+        "signature": [
+          "7f7d7e7f7f7f",
+          ""
+        ],
+        "body_start": 5745892,
+        "body_end": 5757845,
+        "body_bytes": 11953,
+        "body_sha256": "ae8055c998f7dad212a404de8cee67a5375c9f4f94750f1e69fd5119f4f9e076"
+      },
+      "WAT_bytes": 177079,
+      "WAT_sha256": "7dafc834f516072928f9baf82a54206102b0e81ef78eee6d1c1672b4c324ab62"
+    },
+    "5620": {
+      "original_identity": {
+        "index": 5620,
+        "signature": [
+          "7f",
+          ""
+        ],
+        "body_start": 24491099,
+        "body_end": 24492924,
+        "body_bytes": 1825,
+        "body_sha256": "1d51323f6e17b292370737fd21a849b0ecc80dbb96804a62c9ab73eb13f7b451"
+      },
+      "WAT_bytes": 20728,
+      "WAT_sha256": "36d453edf79ea572189f6aa9c0deb2cfb5d0e52a55082b3c534a4d3a4d2cdf97"
+    },
+    "17119": {
+      "original_identity": {
+        "index": 17119,
+        "signature": [
+          "7f",
+          ""
+        ],
+        "body_start": 41428570,
+        "body_end": 41429332,
+        "body_bytes": 762,
+        "body_sha256": "33b9a485e73d8f0e4c9e13cb1dce1b6ce3d022be1cf2906cadfd5978349bfad6"
+      },
+      "WAT_bytes": 7936,
+      "WAT_sha256": "1bb8c772c30623d6a7e6f1c4136855aa1a84a1a39954ec879b7c6d10b1a4c31a"
+    },
+    "17217": {
+      "original_identity": {
+        "index": 17217,
+        "signature": [
+          "7f",
+          ""
+        ],
+        "body_start": 41518581,
+        "body_end": 41519323,
+        "body_bytes": 742,
+        "body_sha256": "904cef82c034dd51f03386943cec632629467cb54dbc6d6c332707faf3acb8df"
+      },
+      "WAT_bytes": 7867,
+      "WAT_sha256": "348e010c9b3f2df921bb534876c83b6c7274e8e14fef850fd120eecb8ab2a401"
+    },
+    "16340": {
+      "original_identity": {
+        "index": 16340,
+        "signature": [
+          "7f",
+          ""
+        ],
+        "body_start": 40530867,
+        "body_end": 40531645,
+        "body_bytes": 778,
+        "body_sha256": "4e0bc9ee76b1df145b4b2a4fe4f6ae78aca3b17645515d4336a3ef30941982a7"
+      },
+      "WAT_bytes": 8481,
+      "WAT_sha256": "e70ab1a252179d34a07b32ae3425716cb37716ecda34301e8bdef06d6d9bb452"
+    },
+    "1938": {
+      "original_identity": {
+        "index": 1938,
+        "signature": [
+          "7f7f7f7f",
+          ""
+        ],
+        "body_start": 12791913,
+        "body_end": 12795659,
+        "body_bytes": 3746,
+        "body_sha256": "19b29713e276bb6aa10691160a2b478209278b4601136d9697409499d0457970"
+      },
+      "WAT_bytes": 38942,
+      "WAT_sha256": "d65bb93dde8c63f10cf454de7394177b38050ef81b078723cd831c499343304e"
+    },
+    "1367": {
+      "original_identity": {
+        "index": 1367,
+        "signature": [
+          "7f7f7d",
+          ""
+        ],
+        "body_start": 9079788,
+        "body_end": 9086305,
+        "body_bytes": 6517,
+        "body_sha256": "f5b307b9d13c9e9c899ddca880349c2ba03815cf12508b3669dc02c37db502d7"
+      },
+      "WAT_bytes": 81267,
+      "WAT_sha256": "d310b82f4bd3d1df8a36ab7e942aee986dc287938414b0a2471e0fc5fef7ca63"
+    },
+    "984": {
+      "original_identity": {
+        "index": 984,
+        "signature": [
+          "7f7f7f",
+          ""
+        ],
+        "body_start": 4280168,
+        "body_end": 4292023,
+        "body_bytes": 11855,
+        "body_sha256": "f9e1b5fb843e275626d1cef0d554014e304a24c1e6fbe1e2b0ed21dcdb48b5fe"
+      },
+      "WAT_bytes": 351363,
+      "WAT_sha256": "b40e643de981586822daf2dee2920ce3b189b6c962472af37abbec7536347568"
+    },
+    "1560": {
+      "original_identity": {
+        "index": 1560,
+        "signature": [
+          "7f7f7f",
+          ""
+        ],
+        "body_start": 10536186,
+        "body_end": 10543428,
+        "body_bytes": 7242,
+        "body_sha256": "064fd2a7ae947b934f9a398c75aaf17923188e8fad36ddf60849f69f960837fe"
+      },
+      "WAT_bytes": 92715,
+      "WAT_sha256": "fe08f2994129d3febf1f32ab0a828b0d788b7f764fc1b2f4ee77126096778109"
+    },
+    "69798": {
+      "original_identity": {
+        "index": 69798,
+        "signature": [
+          "7f7d",
+          "7d"
+        ],
+        "body_start": 69873514,
+        "body_end": 69873609,
+        "body_bytes": 95,
+        "body_sha256": "a042121711a053832e07b547d48e7f284d074af011deb3871949ffb79d6f7086"
+      },
+      "WAT_bytes": 856,
+      "WAT_sha256": "db827758c70ff327934a38c7f60512318d2d6dc8c2c64957858f076f281d4c6a"
+    },
+    "27375": {
+      "original_identity": {
+        "index": 27375,
+        "signature": [
+          "7f",
+          "7d"
+        ],
+        "body_start": 51325205,
+        "body_end": 51325675,
+        "body_bytes": 470,
+        "body_sha256": "e45b81dd82d055b9baff0a5bcbdf7461568882656922c250b8a6a6c9cd2f3d2a"
+      },
+      "WAT_bytes": 5514,
+      "WAT_sha256": "e5ca5c2bf401668729d533a4b60ce0c5a9f93b3fbec55a06ef7ef379950156d6"
+    },
+    "914": {
+      "original_identity": {
+        "index": 914,
+        "signature": [
+          "7f7e7d7f7f7f7f",
+          ""
+        ],
+        "body_start": 2394962,
+        "body_end": 2421299,
+        "body_bytes": 26337,
+        "body_sha256": "13da39eca94557de0048ad65b63eb398d8774d08b7985b398d1ccc34a04519fc"
+      },
+      "WAT_bytes": 380406,
+      "WAT_sha256": "8e9f516e0f3fc58f3fa742a45ab231849a2ea4287e3bef5866a8009170d3e57a"
+    },
+    "2862": {
+      "original_identity": {
+        "index": 2862,
+        "signature": [
+          "7f",
+          ""
+        ],
+        "body_start": 16965627,
+        "body_end": 16968806,
+        "body_bytes": 3179,
+        "body_sha256": "5c99fc846ee151902af4a39bd6e9fc14b9ed7fd96ecb49fd538606bfba16de3a"
+      },
+      "WAT_bytes": 47143,
+      "WAT_sha256": "d35875f18df4e8c24d30759376434ba21ef83e4f5605d5a099efaf6a0b4ff1eb"
+    },
+    "20660": {
+      "original_identity": {
+        "index": 20660,
+        "signature": [
+          "7f",
+          "7f"
+        ],
+        "body_start": 45165310,
+        "body_end": 45165978,
+        "body_bytes": 668,
+        "body_sha256": "c7eb02c91b1f3daabf7e6ff26b7cb28721f41b8755ad4db2f69b446a02c459ea"
+      },
+      "WAT_bytes": 7747,
+      "WAT_sha256": "38b9966a458f7cdc310c303af73c5a3e26262cddf5c9c3537a3b13d1a1f1e9aa"
+    },
+    "27457": {
+      "original_identity": {
+        "index": 27457,
+        "signature": [
+          "7f7e7f7f7f7f",
+          ""
+        ],
+        "body_start": 51382730,
+        "body_end": 51383202,
+        "body_bytes": 472,
+        "body_sha256": "d5828588e28f348d87604edfd0bae6afc3717b4b60b48cf0c048844634927f99"
+      },
+      "WAT_bytes": 4295,
+      "WAT_sha256": "e266072404399d93a1b0812f22d39002e24d5f928c6078a245d5b5a0b7ca3cd2"
+    },
+    "45845": {
+      "original_identity": {
+        "index": 45845,
+        "signature": [
+          "7f7e7f7f",
+          ""
+        ],
+        "body_start": 63248366,
+        "body_end": 63248630,
+        "body_bytes": 264,
+        "body_sha256": "c6502e4033836dcb50eb72024a9ae6418ccbd3c93c72270f07da8eb6a35aa947"
+      },
+      "WAT_bytes": 2351,
+      "WAT_sha256": "cadc766b51b38b7fc360e2e6d4aadadbe792795a9b151180202ad5f4346acd80"
+    },
+    "13814": {
+      "original_identity": {
+        "index": 13814,
+        "signature": [
+          "7f7e7e7f7f",
+          ""
+        ],
+        "body_start": 37914872,
+        "body_end": 37915734,
+        "body_bytes": 862,
+        "body_sha256": "0d809fb5159d6cde52459eedfd66e4359a386f042f829becc9c29f2c6be51c48"
+      },
+      "WAT_bytes": 7863,
+      "WAT_sha256": "dc2e909a7d5157d14f91a506ba55cfd5648701f85416d89bbf50e8b71e1b7b0f"
+    },
+    "ordinary_contact1073_window": {
+      "first_line": 7483,
+      "last_line": 7497,
+      "text": "i32.add\ni32.store offset=1888\nlocal.get 0\nlocal.get 33\nlocal.get 57\ni32.const 1\ni32.const 0\nlocal.get 2\ncall 1073\nlocal.get 2\ni32.const 16\ni32.add\nlocal.tee 2\nlocal.get 8\ni32.ne",
+      "sha256": "64827a279565999d622d71b90e34536cf20cad376aba69baf8e571015cbeeda7"
+    },
+    "ordinary_move_before_incoming_window": {
+      "first_line": 7337,
+      "last_line": 7353,
+      "text": "local.get 3\ni32.const 296\ni32.add\nlocal.get 57\nlocal.get 3\ni32.const 512\ni32.add\nlocal.get 3\ni32.const 524\ni32.add\nlocal.get 9\nlocal.get 35\nf32.const 0x1.f4p+9 (;=1000;)\nf32.mul\ni32.trunc_sat_f32_u\ncall 27457\nend",
+      "sha256": "e323a4842c58b13451de8f78733810542f6b08f6ebe4e96635ac5d1a8d39d54d"
+    },
+    "guardian_idle_no_engagement_window": {
+      "first_line": 3686,
+      "last_line": 3775,
+      "text": "local.set 41\ni32.const 3\nlocal.set 7\nblock  ;; label = @14\nblock  ;; label = @15\nlocal.get 5\ni32.load offset=64\nlocal.tee 13\ni32.const -1\ni32.eq\nbr_if 0 (;@15;)\nlocal.get 5\nf32.load offset=292\nlocal.set 36\nlocal.get 4\nf32.load\nlocal.set 38\nlocal.get 5\ni32.load8_u offset=108\ni32.eqz\nif  ;; label = @16\nlocal.get 5\nf32.load offset=288\nlocal.set 39\nblock  ;; label = @17\nlocal.get 41\nlocal.get 38\nf32.sub\nlocal.tee 38\nlocal.get 38\nf32.mul\nlocal.get 34\nlocal.get 4\nf32.load offset=4\nf32.sub\nlocal.tee 38\nlocal.get 38\nf32.mul\nf32.add\nf32.sqrt\nf32.const 0x1.8p+1 (;=3;)\nf32.le\ni32.eqz\nif  ;; label = @18\nlocal.get 36\nlocal.get 39\nf32.gt\nbr_if 1 (;@17;)\ni32.const 0\nbr 5 (;@13;)\nend\nlocal.get 36\nlocal.get 39\nf32.gt\nbr_if 0 (;@17;)\nlocal.get 41\nlocal.get 2\nf32.load\nf32.sub\nlocal.tee 36\nlocal.get 36\nf32.mul\nlocal.get 34\nlocal.get 2\nf32.load offset=4\nf32.sub\nlocal.tee 34\nlocal.get 34\nf32.mul\nf32.add\nf32.sqrt\nf32.const 0x1.4p+4 (;=20;)\nf32.le\nbr_if 0 (;@17;)\ni32.const 0\nbr 4 (;@13;)\nend\nlocal.get 5\ni32.const 1\ni32.store8 offset=108\ni32.const 1\nbr 3 (;@13;)\nend\nlocal.get 38\nlocal.get 2\nf32.load\nf32.sub\nlocal.tee 34\nlocal.get 34\nf32.mul",
+      "sha256": "07216126d262fbe0fbbf987ae7ab5c21adfccc7251dc7e80207b463e4dec2745"
+    }
+  },
+  "comparison_counts": {
+    "projection_leaves": 24715951,
+    "unwritten_pickup_arrival_words": 27997,
+    "unwritten_pause_words": 25880,
+    "vector_shape_fields": 297758,
+    "strict_record_bytes": 81803862,
+    "unknown_cells": 68963146,
+    "unknown_cells_nonzero_original": 52201479,
+    "unknown_history_pointer_or_unwritten_cells": 10896598,
+    "verified_opaque_pickup_amount_words": 4485
+  },
+  "combat_counts": {
+    "physical_history_backing_bytes_bound": 28640256,
+    "physical_active_strings_bound": 920883,
+    "queued_contact_attacks": 267,
+    "accepted_incoming_history": 248,
+    "raw_new_ordinary_deaths": 109,
+    "active12_guard_attacks": 19,
+    "guardian_idle_no_contact": 2884
+  },
+  "history_counts": {
+    "growths": 6,
+    "appends": 248,
+    "unknown_backing_bytes_retained": 10896598,
+    "known_backing_bytes": 17749802,
+    "pruned": 176
+  },
+  "final_history_header": {
+    "capacity": 128,
+    "head": 48,
+    "count": 72
+  },
+  "recap_counts": {
+    "active_input_rows": 72,
+    "selected_rows": 72,
+    "future_selected_rows": 0,
+    "adjacent_merges": 25,
+    "reverse_time_merges": 0,
+    "hit_groups_before_limit": 47,
+    "source_groups_before_limit": 3,
+    "long_sort_cases": 0,
+    "small_sort_cases": 1
+  },
+  "fatal": {
+    "frame": 920,
+    "completed_frame": 921,
+    "stage_index": 12939,
+    "now_bits": 1119367878,
+    "notifications": [
+      [
+        3748,
+        "7b2274797065223a22646566656174222c2274696d65223a39322e3039392c226c6576656c223a382c226b696c6c73223a3130392c22656c69746573223a302c22677561726469616e73223a302c22626f73736573223a302c2264616d616765223a31313232312e3239332c2274616b656e223a3735342e3135392c22676f6c64223a3131352c22636865737473223a302c22636c617373223a2257617272696f72222c226865726f223a22222c2272616365223a2248756d616e222c226267223a22456c77796e6e20466f72657374222c226c656674223a66616c73652c227265636170223a7b2273656373223a31302e3030302c22746f74616c223a3235312c226162736f72626564223a302c2261766f696461626c65223a302c226d61786870223a3239332c226b696c6c6572223a7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a332c226f7665726b696c6c223a327d2c2268697473223a5b7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3830302c226e223a31362c22616273223a302c22636f756e74223a342c226870223a302e3037397d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3830302c226e223a332c22616273223a302c22636f756e74223a312c226870223a302e3036397d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3730302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3035357d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3430302c226e223a362c22616273223a302c22636f756e74223a322c226870223a302e3033367d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3330302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3032337d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3230302c226e223a332c22616273223a302c22636f756e74223a312c226870223a302e3031367d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3130302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3030337d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302c226e223a332c22616273223a302c22636f756e74223a312c226870223a307d5d2c226279223a5b7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a3135302c22636f756e74223a33387d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a38332c22636f756e74223a32387d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a31382c22636f756e74223a367d5d7d7d"
+      ]
+    ],
+    "invocation221": [
+      [
+        221,
+        64,
+        "db5f015a0230f160e012c6e49b1ac4cb7d89427004000000000100004c0900000100000050be12c6b4d417c424eb8942"
+      ],
+      [
+        221,
+        32,
+        "db5501580230f129d012c6b4ee17c4aed289427104000001"
+      ],
+      [
+        221,
+        32,
+        "db5601590230f1c4ce12c6f77117c4e99f89427204000001"
+      ],
+      [
+        221,
+        32,
+        "db57015a0230f1e1cc12c6a3a518c4900f8a427304000001"
+      ],
+      [
+        221,
+        32,
+        "db5c01580230f195e512c61d7913c45bfd86427404000001"
+      ],
+      [
+        221,
+        32,
+        "db5d01590230f195f212c62cdc14c44e8b88427504000001"
+      ],
+      [
+        221,
+        32,
+        "db5e015a0230f1bfff12c67d6915c4cec188427604000001"
+      ],
+      [
+        221,
+        32,
+        "db5f015a0230f160e012c6e49b1ac4cb7d89427704000001"
+      ],
+      [
+        221,
+        32,
+        "db64015a0230f1797312c600d710c435a186427804000001"
+      ],
+      [
+        221,
+        32,
+        "db6501580230f127f212c68e4d1dc4e07288427904000001"
+      ],
+      [
+        221,
+        32,
+        "db6601580230f1ed5a12c6e90113c49b9c88427a04000001"
+      ]
+    ],
+    "canonical_stop_packets": [
+      [
+        221,
+        32,
+        "db5501580230f129d012c6b4ee17c4aed289427104000001"
+      ],
+      [
+        221,
+        32,
+        "db5601590230f1c4ce12c6f77117c4e99f89427204000001"
+      ],
+      [
+        221,
+        32,
+        "db57015a0230f1e1cc12c6a3a518c4900f8a427304000001"
+      ],
+      [
+        221,
+        32,
+        "db5c01580230f195e512c61d7913c45bfd86427404000001"
+      ],
+      [
+        221,
+        32,
+        "db5d01590230f195f212c62cdc14c44e8b88427504000001"
+      ],
+      [
+        221,
+        32,
+        "db5e015a0230f1bfff12c67d6915c4cec188427604000001"
+      ],
+      [
+        221,
+        32,
+        "db5f015a0230f160e012c6e49b1ac4cb7d89427704000001"
+      ],
+      [
+        221,
+        32,
+        "db64015a0230f1797312c600d710c435a186427804000001"
+      ],
+      [
+        221,
+        32,
+        "db6501580230f127f212c68e4d1dc4e07288427904000001"
+      ],
+      [
+        221,
+        32,
+        "db6601580230f1ed5a12c6e90113c49b9c88427a04000001"
+      ]
+    ],
+    "canonical_stop221": [
+      {
+        "guid": "17379390972089074005",
+        "sequence": 1137,
+        "xyz_bits": [
+          3323121705,
+          3289902772,
+          1116328622
+        ],
+        "original_payload_hex": "db5501580230f129d012c6b4ee17c4aed289427104000001"
+      },
+      {
+        "guid": "17379390972105851222",
+        "sequence": 1138,
+        "xyz_bits": [
+          3323121348,
+          3289870839,
+          1116315625
+        ],
+        "original_payload_hex": "db5601590230f1c4ce12c6f77117c4e99f89427204000001"
+      },
+      {
+        "guid": "17379390972122628439",
+        "sequence": 1139,
+        "xyz_bits": [
+          3323120865,
+          3289949603,
+          1116344208
+        ],
+        "original_payload_hex": "db57015a0230f1e1cc12c6a3a518c4900f8a427304000001"
+      },
+      {
+        "guid": "17379390972089074012",
+        "sequence": 1140,
+        "xyz_bits": [
+          3323127189,
+          3289610525,
+          1116142939
+        ],
+        "original_payload_hex": "db5c01580230f195e512c61d7913c45bfd86427404000001"
+      },
+      {
+        "guid": "17379390972105851229",
+        "sequence": 1141,
+        "xyz_bits": [
+          3323130517,
+          3289701420,
+          1116244814
+        ],
+        "original_payload_hex": "db5d01590230f195f212c62cdc14c44e8b88427504000001"
+      },
+      {
+        "guid": "17379390972122628446",
+        "sequence": 1142,
+        "xyz_bits": [
+          3323133887,
+          3289737597,
+          1116258766
+        ],
+        "original_payload_hex": "db5e015a0230f1bfff12c67d6915c4cec188427604000001"
+      },
+      {
+        "guid": "17379390972122628447",
+        "sequence": 1143,
+        "xyz_bits": [
+          3323125856,
+          3290078180,
+          1116306891
+        ],
+        "original_payload_hex": "db5f015a0230f160e012c6e49b1ac4cb7d89427704000001"
+      },
+      {
+        "guid": "17379390972122628452",
+        "sequence": 1144,
+        "xyz_bits": [
+          3323097977,
+          3289437952,
+          1116119349
+        ],
+        "original_payload_hex": "db64015a0230f1797312c600d710c435a186427804000001"
+      },
+      {
+        "guid": "17379390972089074021",
+        "sequence": 1145,
+        "xyz_bits": [
+          3323130407,
+          3290254734,
+          1116238560
+        ],
+        "original_payload_hex": "db6501580230f127f212c68e4d1dc4e07288427904000001"
+      },
+      {
+        "guid": "17379390972089074022",
+        "sequence": 1146,
+        "xyz_bits": [
+          3323091693,
+          3289580009,
+          1116249243
+        ],
+        "original_payload_hex": "db6601580230f1ed5a12c6e90113c49b9c88427a04000001"
+      }
+    ],
+    "other_invocation221": 1,
+    "normal27457_packets": [
+      {
+        "guid": "17379390972122628447",
+        "sequence": 1136,
+        "start_xyz_bits": [
+          3323125856,
+          3290078180,
+          1116306891
+        ],
+        "end_xyz_bits": [
+          3323117136,
+          3289896116,
+          1116334884
+        ],
+        "duration_ms": 2380,
+        "source_function": 27457,
+        "capacity64": true,
+        "payload_hex": "db5f015a0230f160e012c6e49b1ac4cb7d89427004000000000100004c0900000100000050be12c6b4d417c424eb8942"
+      }
+    ],
+    "appended_opcode_order": [
+      170,
+      170,
+      170,
+      221,
+      330,
+      221,
+      221,
+      221,
+      221,
+      221,
+      221,
+      221,
+      221,
+      221,
+      221
+    ],
+    "first_stop_tail_index": 5,
+    "queued_hits": 1,
+    "accepted_hits": 1,
+    "recap_capacity": 2610,
+    "recap_hex": "7b2273656373223a31302e3030302c22746f74616c223a3235312c226162736f72626564223a302c2261766f696461626c65223a302c226d61786870223a3239332c226b696c6c6572223a7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a332c226f7665726b696c6c223a327d2c2268697473223a5b7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3830302c226e223a31362c22616273223a302c22636f756e74223a342c226870223a302e3037397d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3830302c226e223a332c22616273223a302c22636f756e74223a312c226870223a302e3036397d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3730302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3035357d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3430302c226e223a362c22616273223a302c22636f756e74223a322c226870223a302e3033367d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3330302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3032337d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3230302c226e223a332c22616273223a302c22636f756e74223a312c226870223a302e3031367d2c7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302e3130302c226e223a342c22616273223a302c22636f756e74223a312c226870223a302e3030337d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c2261676f223a302c226e223a332c22616273223a302c22636f756e74223a312c226870223a307d5d2c226279223a5b7b2277686f223a224d75726c6f632053747265616d72756e6e6572222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a3135302c22636f756e74223a33387d2c7b2277686f223a224b6f626f6c64205665726d696e222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a38332c22636f756e74223a32387d2c7b2277686f223a22596f756e6720576f6c66222c2272616e6b223a226d6f62222c2277686174223a224d656c6565222c2269636f6e223a22494e565f53776f72645f3034222c226d656368616e6963223a66616c73652c226e223a31382c22636f756e74223a367d5d7d",
+    "recap_diagnostics": {
+      "selected_slots": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "hit_groups": [
+        [
+          51,
+          1094414848,
+          0,
+          4
+        ],
+        [
+          52,
+          1081884904,
+          0,
+          1
+        ],
+        [
+          54,
+          1086112398,
+          0,
+          2
+        ],
+        [
+          55,
+          1081769540,
+          0,
+          1
+        ],
+        [
+          57,
+          1086093662,
+          0,
+          2
+        ],
+        [
+          58,
+          1081839011,
+          0,
+          1
+        ],
+        [
+          59,
+          1077614015,
+          0,
+          1
+        ],
+        [
+          60,
+          1081931176,
+          0,
+          1
+        ],
+        [
+          61,
+          1077707491,
+          0,
+          1
+        ],
+        [
+          62,
+          1081884904,
+          0,
+          1
+        ],
+        [
+          64,
+          1086112398,
+          0,
+          2
+        ],
+        [
+          66,
+          1090247176,
+          0,
+          2
+        ],
+        [
+          67,
+          1077774407,
+          0,
+          1
+        ],
+        [
+          69,
+          1090273702,
+          0,
+          2
+        ],
+        [
+          70,
+          1077811351,
+          0,
+          1
+        ],
+        [
+          71,
+          1081884904,
+          0,
+          1
+        ],
+        [
+          72,
+          1077762159,
+          0,
+          1
+        ],
+        [
+          74,
+          1090247176,
+          0,
+          2
+        ],
+        [
+          75,
+          1077774407,
+          0,
+          1
+        ],
+        [
+          76,
+          1081975065,
+          0,
+          1
+        ],
+        [
+          77,
+          1077829942,
+          0,
+          1
+        ],
+        [
+          79,
+          1090273702,
+          0,
+          2
+        ],
+        [
+          80,
+          1077850691,
+          0,
+          1
+        ],
+        [
+          81,
+          1077861104,
+          0,
+          1
+        ],
+        [
+          82,
+          1077811351,
+          0,
+          1
+        ],
+        [
+          86,
+          1098692291,
+          0,
+          4
+        ],
+        [
+          87,
+          1077774407,
+          0,
+          1
+        ],
+        [
+          88,
+          1081975065,
+          0,
+          1
+        ],
+        [
+          89,
+          1077829942,
+          0,
+          1
+        ],
+        [
+          91,
+          1090273702,
+          0,
+          2
+        ],
+        [
+          93,
+          1086219629,
+          0,
+          2
+        ],
+        [
+          96,
+          1094591006,
+          0,
+          3
+        ],
+        [
+          97,
+          1077921973,
+          0,
+          1
+        ],
+        [
+          100,
+          1094566236,
+          0,
+          3
+        ],
+        [
+          101,
+          1077900891,
+          0,
+          1
+        ],
+        [
+          103,
+          1090273702,
+          0,
+          2
+        ],
+        [
+          104,
+          1077850691,
+          0,
+          1
+        ],
+        [
+          105,
+          1082069444,
+          0,
+          1
+        ],
+        [
+          107,
+          1086325420,
+          0,
+          2
+        ],
+        [
+          111,
+          1098780616,
+          0,
+          4
+        ],
+        [
+          112,
+          1077911419,
+          0,
+          1
+        ],
+        [
+          113,
+          1081975065,
+          0,
+          1
+        ],
+        [
+          115,
+          1086309568,
+          0,
+          2
+        ],
+        [
+          116,
+          1081931176,
+          0,
+          1
+        ],
+        [
+          117,
+          1077951652,
+          0,
+          1
+        ],
+        [
+          118,
+          1082069444,
+          0,
+          1
+        ],
+        [
+          119,
+          1077921973,
+          0,
+          1
+        ]
+      ],
+      "source_groups": [
+        [
+          52,
+          1125523319,
+          38
+        ],
+        [
+          48,
+          1118161033,
+          28
+        ],
+        [
+          81,
+          1099945419,
+          6
+        ]
+      ],
+      "total_bits": 1132134006,
+      "absorbed_bits": 0,
+      "avoidable_bits": 2147483648
+    },
+    "summary": {
+      "1084": 109,
+      "1088": 0,
+      "1092": 0,
+      "1096": 0,
+      "1100": 115,
+      "1104": 0,
+      "1432": 8
+    },
+    "hp_final": 0
+  },
+  "phase4_tail": [
+    {
+      "frame": 920,
+      "stage": "collect",
+      "stage_index": 12940,
+      "phase": 4,
+      "hp_bits": 0
+    },
+    {
+      "frame": 920,
+      "stage": "claims",
+      "stage_index": 12941,
+      "phase": 4,
+      "hp_bits": 0
+    },
+    {
+      "frame": 920,
+      "stage": "spawn",
+      "stage_index": 12942,
+      "phase": 4,
+      "hp_bits": 0
+    },
+    {
+      "frame": 920,
+      "stage": "special",
+      "stage_index": 12943,
+      "phase": 4,
+      "hp_bits": 0
+    },
+    {
+      "frame": 920,
+      "stage": "terminal",
+      "stage_index": 12944,
+      "phase": 4,
+      "hp_bits": 0
+    }
+  ],
+  "rune_events": [
+    {
+      "frame": 443,
+      "completed_frame": 444,
+      "stage_index": 6258,
+      "guid": "17370383913897164969",
+      "kind": 5,
+      "index": 2,
+      "eligibility_distance_bits": 1076094363,
+      "player_xyz": [
+        3323117088,
+        3289829112,
+        1116286820
+      ],
+      "row56_hex": "00000000111f1e4205000000786186bba9000030230010f1000000000800000000000000302300009abc12c6e52c16c45e9188425c662042",
+      "reverse_consumption_order": [
+        [
+          2,
+          5,
+          "17370383913897164969"
+        ]
+      ],
+      "hp_before": 1132789760,
+      "maximum_hp_bits": 1132789760,
+      "heal_gate387": 0,
+      "request_bits": 1124401152,
+      "hp_after": 1132789760,
+      "spell306_hex": "012a012ac55b00000001012a00000000000000000000",
+      "banner150_hex": "06ffffffff2a000000000000004d000000415a5342414e4e45520969643d313b6b696e643d72756e653b626f73733d303b6e616d653d526573746f726174696f6e2052756e653b746578743d526573746f726174696f6e2052756e65210000",
+      "JSON_hex": "7b2274797065223a2262616e6e6572222c226964223a312c226b696e64223a2272756e65222c2274657874223a22526573746f726174696f6e2052756e6521222c226e616d65223a22526573746f726174696f6e2052756e65222c22626f7373223a66616c73657d",
+      "notification_id": 1,
+      "live_and_Aura_unchanged": true
+    }
+  ],
+  "motion_action_count": 44,
+  "different_author_dependencies": {
+    "reports/2026-11-02-player-death-recap0135-independent-review.json": "1625cc4628bbb215121e6a5f770bed12f090896c7fcace6b17d9a38b29af6b88",
+    "reports/2026-11-02-incoming-callbacks0135-independent-review.json": "6c2274f327c59fa80c122f671b257948caabc15539ab5ea68618b5bd4ce8040b"
+  },
+  "dependency_original_cases_added": 0,
+  "previous_author_failures_preserved": [
+    {
+      "run": "evidence/opening-combat0135-oracle-20261102T010827.391428Z",
+      "comparison_sha256": "feb1c94aa82d80269e3d8dcd9eaa6d06e17768d58750b92a6a772083f2213e81",
+      "status": "failed_preserved",
+      "differences": 1,
+      "compared_stages": 0,
+      "interpretation": "case_end logical-budget error; preceding un-emitted boundary cause unknown"
+    },
+    {
+      "run": "evidence/opening-combat0135-oracle-20261102T011436.954944Z",
+      "comparison_sha256": "7cea20594592d0d5476a3227207aa8fe7e02c07d8f69fbdd773c613b57ff5b05",
+      "status": "failed_preserved",
+      "differences": 1,
+      "compared_stages": 0,
+      "interpretation": "unique-blob512MiB capture budget failure"
+    },
+    {
+      "run": "evidence/opening-combat0135-oracle-20261102T011801.608586Z",
+      "comparison_sha256": "63530f752953dea84afb607fe4a4b2667c449af81b451f78b46bd33c97b0fc49",
+      "status": "failed_preserved",
+      "differences": 72,
+      "compared_stages": 12945,
+      "interpretation": "72 capture-attribution differences: one ordinary27457 packet included in stop-only projection; not converted to success"
+    }
+  ],
+  "first_reader_failure_preserved": {
+    "owned_directory": "evidence/opening-fatal135-independent-review-owned-20261102T013442.826007Z",
+    "terminal_sha256": "534e95e9b5beabb91ec77cf02bc92403220086fef59e2fd0d3fdc64dccdd3139",
+    "stderr_sha256": "b2230cddb8e35928526ba8c64057cd254fa2db9e73adfc1718824ceed379b095",
+    "process": {
+      "pid": 7217,
+      "pgid": 7217,
+      "exit_code": 1,
+      "deadline_seconds": 900,
+      "deadline_exceeded": false,
+      "seconds": 14.686540375012555,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "new_original_calls": 0,
+      "production_executions": 0
+    },
+    "reason": "Overstrong reviewer assertion that every active unit was ordinary; rejected first valid special64 guardian at frame199/special, not a production/model difference. Corrected to independently bound guardian-owner partitions and original921 idle predicates."
+  },
+  "third_batch_subset_diagnostic": {
+    "path": "evidence/opening-fatal135-review-static-preparation/fatal221-attribution-third.json",
+    "sha256": "00889b4d85dae7e53e2a8f78be16dda4fbc5a1ec85019b9dc2942f8ea99355c6",
+    "full_CAS_finish_claimed": false
+  },
+  "previous_expected_identity": {
+    "path": "evidence/opening-fatal135-review-static-preparation/previous-failure-expected-identity.json",
+    "sha256": "e445492134d92d42abcb485c4c476b410a24a0ef473e1fc19284be663971a374"
+  },
+  "scope": {
+    "fixed135": true,
+    "typed_partial_App": true,
+    "genuine_world_snapshot_input": true,
+    "fresh_world_constructor": false,
+    "natural1371": false,
+    "full880": false,
+    "native_client": false,
+    "latest138_or139_credit": false,
+    "complete_game": false,
+    "physical_allocator_output_predicted": false,
+    "ordinary_AI_fully_independently_reimplemented": false,
+    "live922_caller_scratch_producer_restored": false
+  },
+  "limitations": [
+    "Fixed135 ordinary humanwarrior empty research selected profile only; typed partial App snapshot and externally scheduled14 stages,not natural1371/full880/native client or latest138.",
+    "World queries independently read from pinned original snapshot; no freshworld/cache/Rc producer or primary-nearest runtime credit.",
+    "Full declared projection and storage bytes are compared; None remains explicit unknown,including physical queue allocation/header proof pending in the model.",
+    "Ordered incoming/history/counters are rebuilt from original pre-AI states; ordinary AI movement/pathfinding and full skills are checked by independently expected-first differential,not independently reimplemented here.",
+    "Recap1367 uses the different-author reviewed pure reference after independent validation of all consumed ring cells/metadata; raw pointer/padding/backing observations are not fed into production.",
+    "Canonical221 stop coordinates/payload grammar/sequence and real appended-tail origin are checked; total stop eligibility for newly planned routes is not a new independent whole921 implementation.",
+    "No complete game flow/victory/all-module reconstruction claim; one fatal firstRune route and its actual five phase4 tail calls.",
+    "Known bytes and declared projections are independently re-compared; opaque live922 origin annotations remain unresolved caller-source metadata. Their numeric values are not fed into production, predicted, or newly restored by this fatal review.",
+    "Guardian idle/no-contact partition is proved from complete owner/special inputs and original921 predicates; guardian engage/skills, attacked guardians and actual guardian deaths are excluded.",
+    "248 accepted history writes and267 queued contact hits are independent reconstruction diagnostics over12947 exported author entries, not248/267 additional standalone original cases.",
+    "Source/Rc addresses and full physical queues are observed and cross-bound; model physical queue allocation/complete17119 heap return remain explicitly pending."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.135.1",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "new_original_calls": 0,
+  "natural_fatal_completed": false,
+  "shared_core_changed": false,
+  "run_summary_source": "reconstruction/core_spec/run_summary135.py",
+  "run_summary_sha256": "71ee8897fa52669193dacd14de08bb53f2fbf987a9470516a4a455e27419f0d2",
+  "api": ["empty_constructor_counters135", "accept_ordinary_death135", "summary_counters135"],
+  "restored_producers": ["1560 explicit run-counter zero initialization", "914 accepted ordinary death kills1084", "914 rawU416 lowbit elites1088"],
+  "existing_owners": {"1432": "collection.level.progression.level", "1100": "collection.currency.earned"},
+  "unrestored_producers": {"1092": "914 guardian death branch", "1096": "914 boss death branch", "1104": "20660 successful chest consumer called by2862 or38321"},
+  "static_proof": "evidence/fatal-dependencies135-static-20261102T001521.877775Z/proof.json",
+  "static_proof_sha256": "b237777fcf3098aefe496a38f11b9694c6682c4926533bcad1c21e5811a4ceb1",
+  "model_events": "evidence/run-summary135-model-events-20261102T001522.269306Z/trace.json",
+  "model_events_sha256": "703e0069f2c835a00e7f8c0569fe41e1990a156df5f10d7ec48ab8b4682ce0ad",
+  "model_only_observations": {"completed_frames": 920, "failing_frame": 921, "ordinary_death_events": 109, "ordinary_death_events_at460": 38, "incoming_prefix_calls": 267, "sources": 106, "history_header_after_fatal_prefix": {"capacity": 128, "head": 48, "count": 72}},
+  "owned_receipt": "evidence/run-summary135-model-events-owned-20261102T001521.808056Z/receipt.json",
+  "owned_receipt_sha256": "d967f548983bd12bba3f0ff5793fec04376d099433ad64306f41a4027fbccc27",
+  "limits": ["Counter owner not integrated into shared headless state", "No new original differential", "Guardian/boss/chest observed owner zero does not prove absence of their accepted events", "Incoming callbacks are incomplete; never set incoming_callbacks_complete=True from scalar prefix", "Queued910 after fatal is not universally guarded by phase", "Hero handled by separate explicit selected-profile producer"]
+}

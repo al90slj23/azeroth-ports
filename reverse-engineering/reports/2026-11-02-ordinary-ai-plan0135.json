@@ -1,0 +1,51 @@
+{
+  "version": "0.135.1",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "changed_production": "reconstruction/core_spec/ai_world135.py",
+  "changed_production_sha256": "379a4e33d987ae6d6cf5344fba35ccd1567366720d106b2d58bdaddad613e078",
+  "api": ["WorldAiPlan135", "plan_world_ordinary_units135", "drain_world_ordinary_plan135", "finish_world_ordinary_plan135"],
+  "headless_or_original_readers_changed": false,
+  "regression": {
+    "comparison": "evidence/full0135-oracle-20261102T002251.103421Z/comparison.json",
+    "comparison_sha256": "adf5f46407e73e012992175b43516841ab8dafbac0b9f72db19ee3662c624269",
+    "cases": 58,
+    "full921_entries": 66,
+    "differences": 0,
+    "source_files": 48,
+    "import_edges": 145,
+    "input_sha256": "cf81ea5bf73ecabe8eeaa865c3b4b4343c0273c60753fdbdc57ca1ae42f9abd8",
+    "input_identical_to_previous_demo_ai_batch": true,
+    "only_changed_production_source": "reconstruction/core_spec/ai_world135.py",
+    "expected_first": true,
+    "count_as_new_coverage": false,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "max_wasm_memory_bytes": 20578304,
+    "wasm_memory_cap_bytes": 33554432,
+    "owned_pid": 17131,
+    "deadline_seconds": 60,
+    "exit_code": 0,
+    "pid_and_pgid_missing": true
+  },
+  "model_structural_selfcheck": {
+    "path": "evidence/ordinary-ai-plan135-selfcheck-20261102T002248.989301Z/selfcheck.json",
+    "sha256": "aaa9dab0045b395f2d8fc824950250652d2391bd2aa19a6dd7af4d8f0447202a",
+    "original_calls": 0,
+    "source_files": 49,
+    "import_edges": 155,
+    "does_not_validate_real_terrain_stop": true
+  },
+  "callback_source_model_observer": {
+    "path": "evidence/incoming-callback-sources135-model-observer-20261102T002438.264636Z/sources.json",
+    "sha256": "880fc4c769ee4da33a2261ea632bf021c873b32188d8dcbee70b92f31f77f59c",
+    "pre_ai_frames": 921,
+    "original_calls": 0,
+    "G2056_and_G2028_physical_owners_unknown": true,
+    "owned_pid": 18571,
+    "deadline_seconds": 120,
+    "exit_code": 0,
+    "pid_missing": true
+  },
+  "natural_fatal_full_chain_validated": false,
+  "limits": ["Ordinary incoming.units is a subset until caller binds merged canonical units", "After stop caller must supply current records explicitly", "Changed count or GUID order is unresolved", "No generic fatal910 skip", "No callback completion inferred from model empty tuples", "No full880 or complete game acceptance"]
+}

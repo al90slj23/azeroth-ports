@@ -8,10 +8,10 @@ import {Writable} from 'node:stream';
 import {pipeline} from 'node:stream/promises';
 export const CAS_PROTOCOL='opening-combat135-cas-v1';
 export const CAS_MARKER='$cas135_blob_v1';
-export const CAS_LIMITS=Object.freeze({cases:1,actions_per_case:800,controlled_frames_per_case:750,
- logical_record_bytes:2097152,logical_output_bytes:8589934592,index_record_bytes:2097152,
+export const CAS_LIMITS=Object.freeze({cases:1,actions_per_case:1200,controlled_frames_per_case:1000,capture_records:15204,
+ logical_record_bytes:8388608,logical_output_bytes:17179869184,index_record_bytes:2097152,
  index_uncompressed_bytes:1073741824,compressed_output_bytes:268435456,
- blob_bytes:16777216,unique_blob_bytes:536870912,blob_files:65536,
+ blob_bytes:16777216,unique_blob_bytes:1073741824,blob_files:65536,
  blob_index_record_bytes:2097152,blob_index_bytes:268435456,blob_references_bytes:33554432,
  encoding_depth:128,encoding_nodes_per_record:1048576,write_concurrency:16,
  string_cache_bytes:67108864,string_cache_entries:8192,owned_deadline_seconds:180});
@@ -72,7 +72,8 @@ export async function createCaptureCASOutput(directory,limits=CAS_LIMITS){
   const raw=jsonBytes(encoded),size=raw.length;assert(size<=limits.blob_bytes,'CAS single16MiB blob budget');const sha256=digest(raw);
   let entry=entries.get(sha256);
   if(entry){assert(entry.bytes===size,'CAS SHA size disagreement');touch(entry);return marker(entry);}
-  assert(entries.size<limits.blob_files&&uniqueBytes+size<=limits.unique_blob_bytes,'CAS unique blob/file budget');
+  assert(entries.size<limits.blob_files,'CAS unique file65536 budget: files='+entries.size+', record='+recordIndex);
+  assert(uniqueBytes+size<=limits.unique_blob_bytes,'CAS unique bytes1GiB budget: bytes='+(uniqueBytes+size)+', record='+recordIndex);
   const file=sha256+'.json',children=childReferences(encoded);
   for(const child of children){const known=entries.get(child.sha256);assert(known&&known.bytes===child.bytes,'CAS child must precede parent');}
   entry={sha256,bytes:size,file,first_record_index:recordIndex,last_record_index:recordIndex,total_logical_references:0};entries.set(sha256,entry);uniqueBytes+=size;maxBlob=Math.max(maxBlob,size);touch(entry);
@@ -118,9 +119,12 @@ export async function createCaptureCASOutput(directory,limits=CAS_LIMITS){
  const gzip=createGzip({level:6}),outputDone=pipeline(gzip,sink);let outputFailure=null;outputDone.catch(error=>{outputFailure=error;});
  async function emit(value){
   assert(Date.now()-started<limits.owned_deadline_seconds*1000,'CAS180s elapsed budget');if(outputFailure)throw outputFailure;if(writeFailure)throw writeFailure;
+  assert(recordIndex<limits.capture_records,'CAS15204 capture record budget');
   validateOriginal(value,limits);assert(value&&typeof value==='object'&&!Array.isArray(value),'CAS logical record object required');
   assert(typeof value.record_kind==='string'&&Number.isSafeInteger(value.id)&&value.id>=0,'CAS logical record identity');
-  const raw=Buffer.concat([jsonBytes(value),Buffer.from('\n')]);assert(raw.length<=limits.logical_record_bytes&&logicalBytes+raw.length<=limits.logical_output_bytes,'CAS logical2MiB/8GiB budget');
+  const raw=Buffer.concat([jsonBytes(value),Buffer.from('\n')]);
+  assert(raw.length<=limits.logical_record_bytes,'CAS logical record8MiB budget: bytes='+raw.length+', record='+recordIndex);
+  assert(logicalBytes+raw.length<=limits.logical_output_bytes,'CAS logical output16GiB budget: bytes='+(logicalBytes+raw.length)+', record='+recordIndex);
   const newEntries=[],encoded=encode(value,newEntries);assert(encoded.logical+1===raw.length,'CAS logical size reconstruction');
   const envelope={cas_protocol:CAS_PROTOCOL,record_index:recordIndex,record_kind:value.record_kind,id:value.id,logical_bytes:raw.length,logical_sha256:digest(raw),capture:encoded.value};
   const line=Buffer.concat([jsonBytes(envelope),Buffer.from('\n')]);assert(line.length<=limits.index_record_bytes&&indexBytes+line.length<=limits.index_uncompressed_bytes,'CAS index2MiB/1GiB budget');

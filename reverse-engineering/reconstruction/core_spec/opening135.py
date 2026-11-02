@@ -43,6 +43,9 @@ class OpeningState135:
     actor_draws: int
     window_draws: int
     pending: tuple
+    # Preserve the actual phase0 producer for later ownership certificates.
+    # It is never reconstructed by overwriting the completed opening phase.
+    constructor_initial: object|None = None
 
     @property
     def rng_words(self): return self.initial.level.rng_words
@@ -102,7 +105,8 @@ def initialize_empty_opening(value, world, *, title_utf8, subtitle_utf8, compani
         ('World/VFS/M2/WMO/cache production is an explicit input, not implemented by this opening.',
          'Menu/profile assembly, nonempty equipment/talents, other entry modes and all locales remain separate.',
          'CompleteGame2592/pointer ownership/player keyed tree are not all independently projected.',
-         'Subsequent full880, all abilities/AI, saves/UI/multiplayer and complete game remain unfinished.'))
+         'Subsequent full880, all abilities/AI, saves/UI/multiplayer and complete game remain unfinished.'),
+        constructor_initial=initial)
 
 
 def initialize_absent_companion_opening(value, world, *, companion_profile, title_utf8, subtitle_utf8):

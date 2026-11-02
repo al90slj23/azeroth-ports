@@ -31,6 +31,7 @@ from opening_pickup_provenance135 import PickupAddressVerifier135
 from opening_npc_aura135 import npc_aura_updates169
 from opening_live_auxiliary135 import LiveAuxiliaryVerifier135
 from motion_route135 import FirstRuneRoute135
+from core_spec.run_ledger135 import empty_research_run_ledger135,run_ledger_projection135
 
 
 @lru_cache(maxsize=16)
@@ -156,6 +157,15 @@ def wanted(state):
         from core_spec.record_cells135 import u32
         projection['motion_scalar_words']={str(o):u32(state.player_motion_owner.cells,o,'motion known word')
             for o in MOTION_WORDS135 if None not in state.player_motion_owner.cells[o:o+4]}
+    if state.run_ledger is not None:
+        from core_spec.headless135 import _aux_admission135
+        aux=state.run_ledger.auxiliary_motion
+        projection.update(run_ledger=run_ledger_projection135(state.run_ledger,level,state.collection.currency),
+            terminal_notifications=list(state.terminal_notifications),paused408=state.paused408,
+            paused412_bits=state.paused412_bits,fatal_stop_packets=list(state.fatal_stop_packets),
+            auxiliary_motion=dict(capacity656=aux.capacity656,pointer660=aux.pointer660,
+                count664=aux.count664,storage112=[cells135(row,112)for row in aux.storage112]),
+            auxiliary_source_counts=dict(_aux_admission135(state,'terminal').source_counts))
     result=dict(projection=projection,vectors=vectors,
         opaque_pickup_amount_origins=[asdict(origin)for origin in state.opaque_pickup_amount_origins])
     if state.player_sources is not None:
@@ -179,6 +189,13 @@ def original_view(raw,expected):
     if 'player_speed226_packets'in expected['projection']:
         raw_projection['player_speed226_packets']=[p['payload_hex']for p in raw['packets']['active']if p['opcode']==226]
         raw_projection['rune_notifications']=rune_notifications135(p['payload_hex']for p in raw['notifications']['active'])
+    if 'run_ledger'in expected['projection']:
+        game=bytes.fromhex(raw['raw_game2592_hex'])
+        word=lambda o:struct.unpack_from('<I',game,o)[0]
+        capacity,pointer,count=(word(o)for o in(656,660,664))
+        if capacity:raise ValueError('Original nonempty auxiliary owner exceeds admitted capture projection')
+        raw_projection['auxiliary_motion']=dict(capacity656=capacity,pointer660=pointer,count664=count,storage112=[])
+        raw_projection['auxiliary_source_counts']={k:word(int(k))for k in expected['projection']['auxiliary_source_counts']}
     projection=subset(expected['projection'],raw_projection);vectors={}
     for name,want in expected['vectors'].items():
         value=raw['vectors'][name];v={}
@@ -191,6 +208,10 @@ def original_view(raw,expected):
 
 
 def compare(want,actual,path,errors,counts,*,opaque_pickup_indices=()):
+    if want is None and re.search(r'\.projection\.run_ledger\.incoming_history\.storage\[\d+\]\[\d+\]$',path):
+        assert type(actual)is int and 0<=actual<=255;counts['unknown_history_pointer_or_unwritten_cells']+=1;return
+    if want is None and re.search(r'\.projection\.paused(408|412_bits)$',path):
+        assert type(actual)is int and 0<=actual<=f.MASK;counts['unwritten_pause_words']+=1;return
     if want is None and re.search(r'\.vectors\.[^.]+\.(storage|records)\[\d+\]\[\d+\]$',path):
         assert type(actual)is int and 0<=actual<=255;counts['declared_unknown_cells']+=1;return
     if want is None and re.search(r'\.projection\.pickup_words\[\d+\]\[1\]$',path):
@@ -219,13 +240,13 @@ def compare(want,actual,path,errors,counts,*,opaque_pickup_indices=()):
             if len(errors)<80:errors.append(dict(field=path,expected=want,actual=actual))
 
 
-def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False,motion_route=False):
+def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False,motion_route=False,run_ledger=False):
     value=EmptyOpeningInput135(1,1,0,seed,42)
     handoff=initialize_absent_companion_handoff(value,world,companion_profile=EmptyCompanionProfile135(()),
         title_utf8=b'Elwynn Forest',subtitle_utf8='The Defias Uprising — survive the onslaught!'.encode('utf8'))
     state=from_opening_handoff(handoff,navigation_enabled=False,special_locale=SpecialLocale2376_135(ELWYNN_ENGLISH_NAMES),
         event_locale=EventWaveLocale135(0),banner_locale='en',
-        motion_enabled=motion_route,
+        motion_enabled=motion_route,run_ledger=empty_research_run_ledger135()if run_ledger else None,
         **(dict(app_notification_next_id=1,resource_locale='en')if physical_player_sources else{}))
     route=FirstRuneRoute135()if motion_route else None
     actions=[];boundary='frame_budget';stage_count=0;expected_bytes=0
@@ -234,14 +255,14 @@ def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False,mo
             nonlocal expected_bytes
             raw=(json.dumps(value,separators=(',',':'))+'\n').encode()
             expected_bytes+=len(raw)
-            if len(raw)>2*1024*1024 or expected_bytes>1024*1024*1024:
+            if len(raw)>2*1024*1024 or expected_bytes>2*1024*1024*1024:
                 raise ValueError('Bounded independent expectation stream exceeded')
             stream.write(raw)
         emit(dict(record_kind='opening',expected=wanted(state)))
         for _ in range(frames):
             if route is not None:
                 for motion in route.before_frame(state,dt):
-                    if len(actions)>=800:raise ValueError('Controlled motion/action budget exceeded')
+                    if len(actions)>=1200:raise ValueError('Controlled motion/action budget exceeded')
                     state,status=move_player135(state,motion['opcode'],bytes.fromhex(motion['payload24_hex']))
                     if status!='motion_core_projection':raise ValueError('Controlled motion unexpectedly rejected')
                     action_index=len(actions);actions.append(motion)
@@ -252,14 +273,14 @@ def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False,mo
             except (NotImplementedError,UnknownRecordRead135)as error:
                 boundary=type(error).__name__+': '+str(error);break
             if status!='ordered_frame_projection':boundary=status;break
-            if len(actions)>=800:raise ValueError('Controlled action budget exceeded')
+            if len(actions)>=1200:raise ValueError('Controlled action budget exceeded')
             action_index=len(actions);actions.append(dict(kind='controlled_tail_frame',dt_bits=dt));state=new
             for kind,snapshot in stages:
                 emit(dict(record_kind='stage',stage_index=stage_count,action_index=action_index,kind=kind,expected=wanted(snapshot)))
                 stage_count+=1
             choices=0
             while state.collection.level.phase2587==2:
-                if choices>=64 or len(actions)>=800:raise ValueError('Controlled selection/action budget exceeded')
+                if choices>=64 or len(actions)>=1200:raise ValueError('Controlled selection/action budget exceeded')
                 cards=state.collection.level.candidates;index=next((i for i,c in enumerate(cards)if c.variant=='upgrade'),0)
                 selected,status=select(state,index)
                 if status not in('running','choice_regenerated'):
@@ -273,6 +294,10 @@ def corpus(world,seed,frames,dt,expected_path,*,physical_player_sources=False,mo
     return json.loads(json.dumps(dict(id=0,input=raw,actions=actions,stage_count=stage_count,boundary=boundary,
         independent_frames=state.frames,independent_selections=state.selections,final_level=state.collection.level.progression.level,
         expected_uncompressed_bytes=expected_bytes,
+        **(dict(run_ledger135=True,final_phase2587=state.collection.level.phase2587,
+            defeat_notifications=len(state.terminal_notifications),fatal_stop_packets=len(state.fatal_stop_packets),
+            final_summary=run_ledger_projection135(state.run_ledger,state.collection.level,state.collection.currency),
+            physical_output_pending=list(state.physical_output_pending))if run_ledger else{}),
         **(dict(physical_player_sources=True,explicit_App_notification_counter=1)if physical_player_sources else{}),
         **(dict(motion_route='first_spawned_rune',motion_route_events=route.events,
             motion_actions=sum(a['kind']=='motion'for a in actions))if route is not None else{}))))
@@ -284,9 +309,11 @@ def main():
     parser.add_argument('--seed',type=int,default=0);parser.add_argument('--frames',type=int)
     parser.add_argument('--physical-player-sources',action='store_true')
     parser.add_argument('--motion-route',choices=('first-rune',))
+    parser.add_argument('--run-ledger',action='store_true')
     parser.add_argument('--capture-format',choices=('gzip','cas'),default='gzip');args=parser.parse_args()
     frames=args.frames if args.frames is not None else(1 if args.phase=='pilot'else 200)
-    if not 1<=frames<=750:raise ValueError('Bounded controlled frame corpus required')
+    if not 1<=frames<=1000:raise ValueError('Bounded controlled frame corpus required')
+    if args.run_ledger and not args.physical_player_sources:raise ValueError('Run ledger requires canonical physical callback owners')
     cas_files=('scripts/run_opening_combat135_cas_oracle.mjs','scripts/opening_combat135_cas.mjs','scripts/opening_combat135_cas.py')if args.capture_format=='cas'else()
     files=tuple(dict.fromkeys(('scripts/check_opening_combat135.py','scripts/production_closure135.py',
         'scripts/check_opening_handoff135.py','scripts/build_opening_combat135_oracle.py','scripts/run_opening_combat135_oracle.mjs',
@@ -300,12 +327,15 @@ def main():
         target=source/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes((ROOT/p).read_bytes());assert sha(target)==h
     expectations=out/'stage-expectations.jsonl.gz'
     row=corpus(world,args.seed,frames,f.from_float(.025 if args.phase=='pilot'else.1),expectations,
-        physical_player_sources=args.physical_player_sources,motion_route=args.motion_route is not None)
+        physical_player_sources=args.physical_player_sources,motion_route=args.motion_route is not None,run_ledger=args.run_ledger)
     fixtures=out/'fixtures.json';fixtures.write_text(json.dumps(row,separators=(',',':'))+'\n')
+    if args.run_ledger and frames>=950 and not(row['defeat_notifications']==1 and row['final_phase2587']==4 and row['boundary']=='not_running'):
+        raise ValueError('Fatal-path admission requires one independently produced defeat before original execution: '+row['boundary'])
     inputs=out/'inputs.json';inputs.write_text(json.dumps([{k:row[k]for k in('id','input','actions')}],separators=(',',':'))+'\n')
     config=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,app_pointer=14549000,world_pointer=26204808,
         input_path=str(inputs),input_sha256=sha(inputs),clock_scheduler='explicit_external_f32_add_G2352_not_original880',
         locale=dict(kind='preserve_initialized_snapshot',expected_language_index=0))
+    if args.run_ledger:config['run_ledger135']=True
     if args.motion_route is not None:
         if not args.physical_player_sources:raise ValueError('Motion route requires canonical physical player sources')
         config['app_game_domain']='typed_partial_inline_fixture_not_naturalApp'
@@ -316,11 +346,11 @@ def main():
     runner='run_opening_combat135_cas_oracle.mjs'if args.capture_format=='cas'else'run_opening_combat135_oracle.mjs'
     results=out/('results.cas.jsonl.gz'if args.capture_format=='cas'else'results.jsonl.gz');stderr=out/'stderr.log'
     command=[str(NODE),'--max-old-space-size=512','--wasm-max-mem-pages=4096',str(ROOT/'scripts'/runner),str(out),str(cfg)]
-    began=time.monotonic();deadline_seconds=180 if args.capture_format=='cas'else 60
+    began=time.monotonic();deadline_seconds=240 if args.capture_format=='cas'else 60
     child_usage_before=resource.getrusage(resource.RUSAGE_CHILDREN)
     deadline_exceeded=False
     with results.open('wb')as stdout,stderr.open('wb')as err:
-        child=subprocess.Popen(command,stdout=stdout,stderr=err,start_new_session=True,env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
+        child=subprocess.Popen(command,stdout=stdout,stderr=err,start_new_session=True,env=dict(os.environ,TMPDIR=str(out),PYTHONDONTWRITEBYTECODE='1'))
         (out/'owned-process.json').write_text(json.dumps(dict(pid=child.pid,pgid=child.pid,command=command,deadline_seconds=deadline_seconds),indent=2)+'\n')
         try:
             while child.poll()is None:
@@ -353,8 +383,8 @@ def main():
             from opening_combat135_cas import CaptureCAS135
             cas_decoder=CaptureCAS135(out)
         with gzip.open(results,'rb')as stream,gzip.open(expectations,'rt')as expected_stream:
-            while line:=stream.readline(2*1024*1024+1):
-                if len(line)>2*1024*1024 or not line.endswith(b'\n'):raise ValueError('Original record budget/truncation')
+            while line:=stream.readline(8*1024*1024+1):
+                if len(line)>8*1024*1024 or not line.endswith(b'\n'):raise ValueError('Original record8MiB budget/truncation')
                 raw_bytes+=len(line);max_line=max(max_line,len(line));raw_digest.update(line)
                 if raw_bytes>1024*1024*1024:raise ValueError('Original uncompressed stream budget exceeded')
                 raw=cas_decoder.decode_line(line)if cas_decoder is not None else json.loads(line)
@@ -401,10 +431,12 @@ def main():
         else:assert runtime['schema_version']==4 and runtime['output_protocol']=='bounded_stage_jsonl_gzip'
         assert runtime['compressed_output_bytes']==results.stat().st_size and runtime['output_sha256']==sha(results)
         assert runtime['uncompressed_output_bytes']==raw_bytes and runtime['uncompressed_sha256']==raw_digest.hexdigest()
+    controlled_defeat=bool(args.run_ledger and row['boundary']=='not_running'and row['final_phase2587']==4 and row['defeat_notifications']==1)
     report=dict(version='0.135.1',actual_build='90898d5e3',historical_build_alias='0898d5e3',kind='independent_opening_plus_controlled14_tail_declared_projection_differential',
         original_sha256=SOURCE_SHA,cases=1,independent_frames=row['independent_frames'],independent_selections=row['independent_selections'],
         requested_frames=frames,completed_requested_budget=row['independent_frames']==frames and row['boundary']=='frame_budget',
-        status=('matched_requested_budget'if row['independent_frames']==frames and row['boundary']=='frame_budget'else'matched_prefix_with_pending')if counts['differences']==0 else'failed_preserved',
+        status=('matched_controlled_defeat'if controlled_defeat else'matched_requested_budget'if row['independent_frames']==frames and row['boundary']=='frame_budget'else'matched_prefix_with_pending')if counts['differences']==0 else'failed_preserved',
+        controlled_defeat_completed=controlled_defeat and counts['differences']==0,
         compared_stages=observed_stages,final_level=row['final_level'],boundary=row['boundary'],differences=counts['differences'],comparison=dict(counts),
         source_files=len(files),source_sha256_before=before,source_sha256_after=after,
         inputs_sha256=sha(inputs),expectations_sha256=sha(expectations),fixtures_sha256=sha(fixtures),original_results_sha256=sha(results),runtime=runtime,
@@ -417,6 +449,7 @@ def main():
         model_expected_before_original=True,original_input_contains_no_expectations=True,
         physical_player_sources=args.physical_player_sources,
         motion_route=args.motion_route,
+        run_ledger135=args.run_ledger,
         world_input=dict(kind='independently_produced_preparsed_world_query_artifacts',receipt=str(DEFAULT_WORLD/'receipt.json'),receipt_sha256=sha(DEFAULT_WORLD/'receipt.json'),artifacts=world_inputs),
         original_context=dict(snapshot_path=str(SNAPSHOT),snapshot_sha256=SNAPSHOT_SHA,externref_VM_restoration=False,fresh_bootstraps=0),
         full880_frames=0,native_Windows_execution=False,playable_replacement=False,
@@ -428,7 +461,7 @@ def main():
             'Original initialized locale is preserved, not reconstructed; model receives explicit static English names.'])
     (out/'comparison.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'directory':str(out),'differences':counts['differences'],'frames':row['independent_frames'],'selections':row['independent_selections'],
-        'compared_stages':row['stage_count'],'boundary':row['boundary'],'source_files':len(files),'exit_code':child.returncode,'terminal':terminal}))
+        'compared_stages':observed_stages,'boundary':row['boundary'],'source_files':len(files),'exit_code':child.returncode,'terminal':terminal}))
     if counts['differences']or not all(terminal.values()):raise SystemExit(1)
 
 

@@ -1,0 +1,2531 @@
+{
+  "status": "passed-within-declared-domain",
+  "author_receipt_sha256": "8a49cd52bcaaf2b8fbd803ab0476f1dce459e7c837a57ac6b4c16bb83a983e99",
+  "new_original_calls": 0,
+  "production_imports": 0,
+  "production_executions": 0,
+  "source_count": 17,
+  "production_sources": 10,
+  "local_import_edges": 34,
+  "sources_verified": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_motion_stop135.py": "709afc4d28df4b170d2dfb62bfcc367a5d006e01a852bf9052233f75cc7e4bed",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_full135_oracle.py": "d1a4adaa38e69d54a45d4ddae0ac1e117e87bb8f9d5583d8a176956a3c8e1a6e",
+    "scripts/build_upgrade134_oracle.py": "c94bbb507d4a3f258f55be333eeefbaff5e7f1c2d35fc38bd15b1a5fb73de368",
+    "scripts/build_world_motion_stop135_oracle.py": "0ebd72332b18e1a39cb650f50a95c944e8805e9b50138a27e2e50afbf8af1aeb",
+    "scripts/check_world_motion_stop135.py": "2757812d85ef2d03cdf8a8c4a267fb116d9e1cae41b986617f72d6b16f1cb548",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_world_motion_stop135_oracle.mjs": "b5b42b0f1e2f98165029658fb3350cd8dd297a3be4e2507b159825cbd530c4eb",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de"
+  },
+  "reviewer_sources": {
+    "scripts/review_world_motion_stop135.py": "dd5249c8466dfa562d3cd89cfbe8bd85a2e9233a5e2159af9c3801e4f3f24cac",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2"
+  },
+  "static_functions": {
+    "17119": {
+      "body_start": 41428570,
+      "body_end": 41429332,
+      "body_sha256": "33b9a485e73d8f0e4c9e13cb1dce1b6ce3d022be1cf2906cadfd5978349bfad6",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_bytes": 7936,
+      "wat_sha256": "1bb8c772c30623d6a7e6f1c4136855aa1a84a1a39954ec879b7c6d10b1a4c31a"
+    },
+    "17217": {
+      "body_start": 41518581,
+      "body_end": 41519323,
+      "body_sha256": "904cef82c034dd51f03386943cec632629467cb54dbc6d6c332707faf3acb8df",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_bytes": 7867,
+      "wat_sha256": "348e010c9b3f2df921bb534876c83b6c7274e8e14fef850fd120eecb8ab2a401"
+    },
+    "16340": {
+      "body_start": 40530867,
+      "body_end": 40531645,
+      "body_sha256": "4e0bc9ee76b1df145b4b2a4fe4f6ae78aca3b17645515d4336a3ef30941982a7",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "wat_bytes": 8481,
+      "wat_sha256": "e70ab1a252179d34a07b32ae3425716cb37716ecda34301e8bdef06d6d9bb452"
+    },
+    "29631": {
+      "body_start": 53548889,
+      "body_end": 53549297,
+      "body_sha256": "26ad625360e80687c9aa00161d60e8cb2cfde429209ef361bb0c325b93441650",
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "wat_bytes": 4790,
+      "wat_sha256": "a6bff26a5ae98d6e3a8180f4ac0e457b1ea8564b7ed1c9f8cd51b81326a7c941"
+    },
+    "23181": {
+      "body_start": 47477583,
+      "body_end": 47478077,
+      "body_sha256": "a46874e377eac8590d923753e6a5e26289b8388144a0241b6b29cc1f77640666",
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "wat_bytes": 7130,
+      "wat_sha256": "aa0d23287a9217f4db3b5344ab2521913fffc702999eb37cb221ac4f5206af8f"
+    },
+    "45845": {
+      "body_start": 63248366,
+      "body_end": 63248630,
+      "body_sha256": "c6502e4033836dcb50eb72024a9ae6418ccbd3c93c72270f07da8eb6a35aa947",
+      "signature": [
+        "7f7e7f7f",
+        ""
+      ],
+      "wat_bytes": 2351,
+      "wat_sha256": "cadc766b51b38b7fc360e2e6d4aadadbe792795a9b151180202ad5f4346acd80"
+    },
+    "18670": {
+      "body_start": 43097257,
+      "body_end": 43097914,
+      "body_sha256": "e69b2fbf238393d43be83153dbbfa5ff310497d104691c829438e18be91cd0e5",
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "wat_bytes": 8692,
+      "wat_sha256": "63ddfa2b347afe79a040e16001818529df98ac4e57e941a95e05e0b082dc50c0"
+    },
+    "46295": {
+      "body_start": 63551874,
+      "body_end": 63552136,
+      "body_sha256": "97f7b0aa2a31b0a8c3b7d061c1b8f771bc1aed842697bc0279d13b4f1e6a0ed3",
+      "signature": [
+        "7f7f7f7f",
+        ""
+      ],
+      "wat_bytes": 2757,
+      "wat_sha256": "822f00443edecbfaf3d630c288bef3b7647fbc48ea927f20ccf6be8278be0498"
+    }
+  },
+  "counts": {
+    "world29631": 150,
+    "stopped_units": 54,
+    "inactive_active_records": 73,
+    "full_source_backing_bytes": 82544,
+    "stopped_auxiliary": 55,
+    "stopped_claims": 56,
+    "observed_packet_vector_pointer_words": 54,
+    "all_Game_bytes": 145152,
+    "prefix_metadata_bytes": 48,
+    "new221_packets": 165,
+    "new_payload_bytes": 3243,
+    "interpolated": 15,
+    "claim_destination_only": 1,
+    "negative_ratio_clamps": 3
+  },
+  "world_queries": {
+    "height_requests": 169,
+    "height_unique_queries": 47,
+    "secondary_lift": 8
+  },
+  "world_input": {
+    "snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "world_rc": 26204808,
+    "range_count": 2318,
+    "range_bytes": 5950608,
+    "digest": "eecd1162f7c3bb61abf16cfa556c910cd4a12036f3f638c5d97f2be880c1dd4f",
+    "primary_present": false,
+    "secondary_width": 560,
+    "fresh_producer": false
+  },
+  "cases": [
+    {
+      "id": 0,
+      "group": "real-nonflat-Elwynn-three-domains",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 1,
+      "group": "true-world-miss-preserves-interpolatedZ",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            1203982336,
+            1203982336
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            1203982336,
+            1203982336
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            1203982336,
+            1203982336
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 2,
+      "group": "all-inactive-real-world-not-consumed",
+      "stops": 0,
+      "heights": [],
+      "sequence": 31
+    },
+    {
+      "id": 3,
+      "group": "claim-zero-duration-future-start-only-destination",
+      "stops": 1,
+      "heights": [
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323119616,
+            3290251264
+          ],
+          "interpolated_z_bits": 1103626240,
+          "result_z_bits": 1116277312,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 32
+    },
+    {
+      "id": 4,
+      "group": "prefix-all-metadata-and-wrapping-sequence",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 2
+    },
+    {
+      "id": 5,
+      "group": "dead-NPC-does-not-stop-aux-claims-still-stop",
+      "stops": 2,
+      "heights": [
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 33
+    },
+    {
+      "id": 6,
+      "group": "negative-ratio-clamps-before-actual-world-query",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323123712,
+            3290382336
+          ],
+          "interpolated_z_bits": 1099431936,
+          "result_z_bits": 1116150187,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323123712,
+            3290382336
+          ],
+          "interpolated_z_bits": 1099431936,
+          "result_z_bits": 1116150187,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323123712,
+            3290382336
+          ],
+          "interpolated_z_bits": 1099431936,
+          "result_z_bits": 1116150187,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 7,
+      "group": "exact-end-all-three-predicates-inactive",
+      "stops": 0,
+      "heights": [],
+      "sequence": 31
+    },
+    {
+      "id": 8,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323137710,
+            3289843739
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116287195,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323137710,
+            3289843739
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116287195,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323137710,
+            3289843739
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116287195,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 9,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323087580,
+            3291149937
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116226384,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323087580,
+            3291149937
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116226384,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323087580,
+            3291149937
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116226384,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 10,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323018442,
+            3289588047
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115889744,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323018442,
+            3289588047
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115889744,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323018442,
+            3289588047
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115889744,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 11,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323229495,
+            3291579692
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115050380,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323229495,
+            3291579692
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115050380,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323229495,
+            3291579692
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115050380,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 12,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323231120,
+            3288126387
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115532528,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323231120,
+            3288126387
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115532528,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323231120,
+            3288126387
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115532528,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 13,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323128130,
+            3289383136
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116144146,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323128130,
+            3289383136
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116144146,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323128130,
+            3289383136
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116144146,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 14,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323024024,
+            3290736936
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115929866,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323024024,
+            3290736936
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115929866,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323024024,
+            3290736936
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115929866,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 15,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323093632,
+            3289099251
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116168103,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323093632,
+            3289099251
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116168103,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323093632,
+            3289099251
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116168103,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 16,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323070263,
+            3292043668
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116315282,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323070263,
+            3292043668
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116315282,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323070263,
+            3292043668
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116315282,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 17,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322992858,
+            3291335484
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115587793,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322992858,
+            3291335484
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115587793,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322992858,
+            3291335484
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115587793,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 18,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323001873,
+            3289362878
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115917525,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323001873,
+            3289362878
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115917525,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323001873,
+            3289362878
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115917525,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 19,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323093420,
+            3288682082
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116383152,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323093420,
+            3288682082
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116383152,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323093420,
+            3288682082
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116383152,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 20,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323226738,
+            3289505431
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115754224,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323226738,
+            3289505431
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115754224,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323226738,
+            3289505431
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115754224,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 21,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323007308,
+            3289275162
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115815586,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323007308,
+            3289275162
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115815586,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323007308,
+            3289275162
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115815586,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 22,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323241791,
+            3290053055
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115691003,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323241791,
+            3290053055
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115691003,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323241791,
+            3290053055
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115691003,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 23,
+      "group": "real-nonflat-local-Elwynn-height",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323047428,
+            3289431345
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116470976,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323047428,
+            3289431345
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116470976,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323047428,
+            3289431345
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116470976,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 24,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323661633,
+            3285949926
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1100415725,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323661633,
+            3285949926
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1100415725,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323661633,
+            3285949926
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1100415725,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 25,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322832319,
+            3289896157
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1121432438,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322832319,
+            3289896157
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1121432438,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322832319,
+            3289896157
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1121432438,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 26,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322399131,
+            3295792808
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1124326522,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322399131,
+            3295792808
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1124326522,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322399131,
+            3295792808
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1124326522,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 27,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322256800,
+            3294059326
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1134375590,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322256800,
+            3294059326
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1134375590,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322256800,
+            3294059326
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1134375590,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 28,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323360590,
+            3296122131
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1110404009,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323360590,
+            3296122131
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1110404009,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323360590,
+            3296122131
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1110404009,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 29,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323758568,
+            3279117319
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1100392271,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323758568,
+            3279117319
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1100392271,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323758568,
+            3279117319
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1100392271,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 30,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323598223,
+            3289249051
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1099073460,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323598223,
+            3289249051
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1099073460,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323598223,
+            3289249051
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1099073460,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 31,
+      "group": "actual-nine-tile-geometry",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323306801,
+            3293769844
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1110906650,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323306801,
+            3293769844
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1110906650,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323306801,
+            3293769844
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1110906650,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 32,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323264768,
+            3291459584
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115775386,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323264768,
+            3291459584
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115775386,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323264768,
+            3291459584
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115775386,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 33,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323261696,
+            3291394048
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115746710,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323261696,
+            3291394048
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115746710,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323261696,
+            3291394048
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115746710,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 34,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323257600,
+            3291361280
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115286186,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323257600,
+            3291361280
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115286186,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323257600,
+            3291361280
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115286186,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 35,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323264768,
+            3291320320
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115619133,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323264768,
+            3291320320
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115619133,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323264768,
+            3291320320
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115619133,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 36,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323263232,
+            3291262976
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115294965,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323263232,
+            3291262976
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115294965,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323263232,
+            3291262976
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1115294965,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 37,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323143936,
+            3289182208
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116455841,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323143936,
+            3289182208
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116455841,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323143936,
+            3289182208
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116455841,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 38,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323174656,
+            3288969216
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116145918,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323174656,
+            3288969216
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116145918,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323174656,
+            3288969216
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116145918,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 39,
+      "group": "actual-secondary-height-cache-nonflat",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323172096,
+            3288928256
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116079015,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323172096,
+            3288928256
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116079015,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323172096,
+            3288928256
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116079015,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 40,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322784427,
+            3280295253
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116985700,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322784427,
+            3280295253
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116985700,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322784427,
+            3280295253
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116985700,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 41,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322238293,
+            3280295253
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1132625653,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322238293,
+            3280295253
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1132625653,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322238293,
+            3280295253
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1132625653,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 42,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3288683861
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1126328467,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3288683861
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1126328467,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3288683861
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1126328467,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 43,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            0
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1119801410,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            0
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1119801410,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            0
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1119801410,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 44,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322784427,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1117348191,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322784427,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1117348191,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322784427,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1117348191,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 45,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322238293,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1133758935,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322238293,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1133758935,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322238293,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1133758935,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 46,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3297072469
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116903102,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3297072469
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116903102,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3297072469
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116903102,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 47,
+      "group": "actual-terrain-tile-exact-boundaries",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3288683861
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1126328467,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3288683861
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1126328467,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322511360,
+            3288683861
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1126328467,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 48,
+      "group": "outside-true-world-boundary-miss",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323877717,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323877717,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323877717,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 49,
+      "group": "outside-true-world-boundary-miss",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3322237269,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3322237269,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3322237269,
+            3293052928
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 50,
+      "group": "outside-true-world-boundary-miss",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323057493,
+            3301449728
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323057493,
+            3301449728
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323057493,
+            3301449728
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 51,
+      "group": "outside-true-world-boundary-miss",
+      "stops": 3,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323057493,
+            1065353216
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323057493,
+            1065353216
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323057493,
+            1065353216
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1101529088,
+          "source": "interpolated"
+        }
+      ],
+      "sequence": 34
+    },
+    {
+      "id": 52,
+      "group": "single-source-exact-order-units",
+      "stops": 1,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 4294967295
+    },
+    {
+      "id": 53,
+      "group": "single-source-exact-order-auxiliary",
+      "stops": 1,
+      "heights": [
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 4294967295
+    },
+    {
+      "id": 54,
+      "group": "single-source-exact-order-claims",
+      "stops": 1,
+      "heights": [
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 4294967295
+    },
+    {
+      "id": 55,
+      "group": "duplicate-GUID-stable-order-and-vector-growth",
+      "stops": 15,
+      "heights": [
+        {
+          "domain": "units",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "units",
+          "record_index": 1,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "units",
+          "record_index": 2,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "units",
+          "record_index": 3,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "units",
+          "record_index": 4,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 1,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 2,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 3,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "auxiliary",
+          "record_index": 4,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 0,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 1,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 2,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 3,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        },
+        {
+          "domain": "claims",
+          "record_index": 4,
+          "xy_bits": [
+            3323121664,
+            3290316800
+          ],
+          "interpolated_z_bits": 1101529088,
+          "result_z_bits": 1116212265,
+          "source": "world29631"
+        }
+      ],
+      "sequence": 7
+    }
+  ],
+  "groups": {
+    "real-nonflat-Elwynn-three-domains": 1,
+    "true-world-miss-preserves-interpolatedZ": 1,
+    "all-inactive-real-world-not-consumed": 1,
+    "claim-zero-duration-future-start-only-destination": 1,
+    "prefix-all-metadata-and-wrapping-sequence": 1,
+    "dead-NPC-does-not-stop-aux-claims-still-stop": 1,
+    "negative-ratio-clamps-before-actual-world-query": 1,
+    "exact-end-all-three-predicates-inactive": 1,
+    "real-nonflat-local-Elwynn-height": 16,
+    "actual-nine-tile-geometry": 8,
+    "actual-secondary-height-cache-nonflat": 8,
+    "actual-terrain-tile-exact-boundaries": 8,
+    "outside-true-world-boundary-miss": 4,
+    "single-source-exact-order-units": 1,
+    "single-source-exact-order-auxiliary": 1,
+    "single-source-exact-order-claims": 1,
+    "duplicate-GUID-stable-order-and-vector-growth": 1
+  },
+  "partial_projection": {
+    "known_bytes_original_compared": 216,
+    "None_preservation_model_only": 3080,
+    "cases": [
+      0,
+      2,
+      3
+    ],
+    "new_original_calls": 0
+  },
+  "runtime": {
+    "cases": 56,
+    "full17119_calls": 56,
+    "fresh_instances": 56,
+    "stack_guards": 277,
+    "all_stack_returns": true,
+    "max_memory_bytes": 166395904,
+    "memory_page_cap": 4096,
+    "heap_cap_mib": 512,
+    "actual_host_calls": 0,
+    "denied_imports": 878,
+    "world_bytes_hashed_per_side_total": 333234048,
+    "whole_snapshot_sha256": "23af074eaebd5c1ac915ee8f8a35430b94c4276c822bc15aaf505e9c29911aaf",
+    "snapshot_restored": true,
+    "snapshot_is_observed_input": true,
+    "fresh_world_constructed": false,
+    "original_callees_unchanged": true,
+    "externref_table_restored": false,
+    "app_start_called": false,
+    "network_used": false,
+    "user_saves_accessed": false
+  },
+  "process": {
+    "pid": 96231,
+    "pgid": 96231,
+    "exit_code": 0,
+    "seconds": 5.679217583994614,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "task_handoff_sha256": "f8697ebf7191d3e13de9bc2e9c83e86aa1cd8caa0e2fef308da52d5952ab5195",
+  "artifact_sha256": {
+    "expected.json": "7a1e79c7fd87cabb60b3dd5c3305200c637992e0089f55fe3ce3336bc62ab025",
+    "manifest.json": "376d2f212d42898a5e8c502471f5dfea0466cc6cb2be306e929e1195182d1cb8",
+    "runtime.json": "a86c2281463cfa1186270c8984130883111afe6f0d62b9f09a99aea6286e313f",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "world-summary.json": "69714c603c42ed43eef6930b22b80ec5c591c002282c2055471b3e9a2ca29c6e",
+    "fixtures.json": "79f3fe4a941b173619547aedd127981d0491b298157218e3e88f7cee50e61c78",
+    "prepared.json": "e3bb86d191bb29e82dfa899bfccddfbd2ba629581e4acba97939d1df01ad2538",
+    "comparison.json": "8a49cd52bcaaf2b8fbd803ab0476f1dce459e7c837a57ac6b4c16bb83a983e99",
+    "owned-terminal.json": "30c623239b6486d7d78b8a4837fbb7e0f0269ace49b76081b060634286cd323a",
+    "inputs.json": "0cb8885a758d04abe1745bedcdbb5bb3370645015ed153768fa81c0381253143",
+    "world-motion-stop135-private.wasm": "5388dc684a791c57a33d72dead4a44332152f60ed20c13cdfa1d3a8ae54a0844",
+    "stdout.jsonl": "16df5d5973097199c2d00e2e48002451725c3f0b685079109a93dbe599f419d2",
+    "task-handoff.json": "f8697ebf7191d3e13de9bc2e9c83e86aa1cd8caa0e2fef308da52d5952ab5195",
+    "partial-projections.json": "da1f9ccbbca80d2c17f527fb087dec5beecdc204bbf80b7be265757216a2a39e",
+    "rejections.json": "eefd7ad5f2c18b1fe3fbadf4fd5d81f67ce1996bb607a0556d91502237ad2fe8"
+  },
+  "seconds": 0.5354844579997007,
+  "limitations": [
+    "56 full17119 calls consume restored observed world input,not freshworld/actualdeath/fullApp/880.17217/16340 counts inferred statically,not instrumented.",
+    "Primary absent;nearest23181 Z-only branch static/interface only,no runtime credit.",
+    "150 original-packet-matching world heights and15 interpolated misses independently recomputed;source categories are reference diagnostics,not original instrumentation.",
+    "All fullGame deltas/backing/payloads/capacities/prefix metadata match;new packet-vector heap pointerwords are explicit allocator observations.",
+    "2318 independent raw query input ranges hash stable before/after each original call;not all world allocations/geometries or Rc lifecycle.",
+    "216 known sparse bytes matched existing original cases;3080 None preservation and negative unknown-world/marker guards remain model properties,not extra original cases."
+  ],
+  "owned_review": {
+    "path": "evidence/world-motion-stop135-independent-review-owned-20261102T001613.577948Z/review/review.json",
+    "sha256": "344b098c6b1513831a96ca28aa6c2982a5c5cc0567b73441b1a0e177be89e65d",
+    "terminal_sha256": "9d755bc738934ef11b9d40dd219bb29e26fbab427229d6faf8378c7a3715c55e",
+    "owned_process_sha256": "2a5a38e4e88217b9f1951dd709d427693f0cbb573ee4754e0ea2778f5b27d822",
+    "process": {
+      "pid": 8190,
+      "pgid": 8190,
+      "exit_code": 0,
+      "seconds": 0.6218184170138557,
+      "deadline_seconds": 60,
+      "pid_missing": true,
+      "pgid_missing": true
+    }
+  },
+  "reviewer_role": "Different author from world_motion_stop135;review_player_motion135 provides earlier independent raw snapshot/query reader only,no production execution.",
+  "overall_game_complete": false,
+  "first_review_pass": true,
+  "world_query_accounting": {
+    "original_target_stop_queries_by_static_path": 165,
+    "original_source_queries_instrumented": false,
+    "independent_reference_requests": 169,
+    "reference_extra_sparse_projection_requests": 4,
+    "independent_unique_XY_queries": 47,
+    "reference_secondary_lifts": 8,
+    "extra_original_calls": 0
+  }
+}

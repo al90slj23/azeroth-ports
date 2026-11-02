@@ -32,7 +32,9 @@ function exportsOf(raw,s){let[n,p]=leb(raw,s.begin);const a=[];for(let i=0;i<n;i
 if(!process.execArgv.includes('--wasm-max-mem-pages=4096'))throw Error('Explicit256MiB research cap');
 if(!process.execArgv.includes('--max-old-space-size=512'))throw Error('Explicit512MiB JS heap cap');
 const config=JSON.parse(await fs.readFile(configFile,'utf8'));
-exact(config,['snapshot_path','snapshot_sha256','app_pointer','world_pointer','input_path','input_sha256','clock_scheduler','locale',...(config.app_game_domain===undefined?[]:['app_game_domain'])],'Config');
+exact(config,['snapshot_path','snapshot_sha256','app_pointer','world_pointer','input_path','input_sha256','clock_scheduler','locale',...(config.app_game_domain===undefined?[]:['app_game_domain']),...(config.run_ledger135===undefined?[]:['run_ledger135'])],'Config');
+if(config.run_ledger135!==undefined&&typeof config.run_ledger135!=='boolean')throw Error('run_ledger135 must be an explicit boolean');
+const runLedgerEnabled=config.run_ledger135===true;
 if(config.app_game_domain!==undefined&&config.app_game_domain!=='typed_partial_inline_fixture_not_naturalApp')throw Error('Explicit typed App domain');
 if(config.snapshot_sha256!==SNAPSHOT_SHA||config.app_pointer!==14549000||config.world_pointer!==26204808)throw Error('Admitted genuine snapshot binding');
 if(config.clock_scheduler!=='explicit_external_f32_add_G2352_not_original880')throw Error('Explicit controlled clock scheduler required');
@@ -54,8 +56,8 @@ const stackExport=added.at(-1);if(stackExport.kind!==3||stackExport.index!==0||s
 const snapshot=await fs.readFile(config.snapshot_path);if(snapshot.length%65536||snapshot.length>268435456||hash(snapshot)!==SNAPSHOT_SHA)throw Error('Snapshot hash/domain');
 const module=await WebAssembly.compile(changed),imports=WebAssembly.Module.imports(module),cases=JSON.parse(inputRaw);
 if(imports.length!==878||imports.some(v=>v.kind!=='function')||cases.length!==1)throw Error('878/exactly one controlled case');
-const limits=Object.freeze({cases:1,actions_per_case:800,controlled_frames_per_case:750,
- record_uncompressed_bytes:2097152,uncompressed_output_bytes:1073741824,compressed_output_bytes:268435456});
+const limits=Object.freeze({cases:1,actions_per_case:1200,controlled_frames_per_case:1000,capture_records:15204,
+ record_uncompressed_bytes:8388608,uncompressed_output_bytes:17179869184,compressed_output_bytes:268435456});
 let outputBytes=0,compressedOutputBytes=0,maxRecordBytes=0,outputRecords=0,outputFailure=null;
 let callsTotal=0,completedFrames=0,completedStages=0,peakMemory=0,boundaries=0;const caseReceipts=[];
 const uncompressedHash=createHash('sha256'),compressedHash=createHash('sha256');
@@ -67,16 +69,16 @@ const gzip=createGzip({level:6}),sink=new Writable({write(chunk,encoding,done){
   compressedOutputBytes+=chunk.length;compressedHash.update(chunk);done();
  }catch(error){done(error);}}});
 const outputDone=pipeline(gzip,sink);outputDone.catch(error=>{outputFailure=error;});
-async function emit(value){if(outputFailure)throw outputFailure;const raw=Buffer.from(JSON.stringify(value)+'\n');
- if(raw.length>limits.record_uncompressed_bytes)throw Error('2MiB uncompressed JSONL record cap');
- if(outputBytes+raw.length>limits.uncompressed_output_bytes)throw Error('1GiB uncompressed output cap');
+async function emit(value){if(outputFailure)throw outputFailure;if(outputRecords>=limits.capture_records)throw Error('15204 capture record cap');const raw=Buffer.from(JSON.stringify(value)+'\n');
+ if(raw.length>limits.record_uncompressed_bytes)throw Error('8MiB uncompressed JSONL record cap');
+ if(outputBytes+raw.length>limits.uncompressed_output_bytes)throw Error('16GiB uncompressed output cap');
  await new Promise((resolve,reject)=>gzip.write(raw,error=>error?reject(error):resolve()));
  outputBytes+=raw.length;outputRecords++;maxRecordBytes=Math.max(maxRecordBytes,raw.length);uncompressedHash.update(raw);
  if(outputFailure)throw outputFailure;
 }
 for(const c of cases){
  exact(c,['id','input','actions'],'Case');if(c.id!==caseReceipts.length||!Array.isArray(c.actions)||c.actions.length>limits.actions_per_case)throw Error('Case/action bounds');
- if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('750 controlled frame cap');
+ if(c.actions.filter(action=>action?.kind==='controlled_tail_frame').length>limits.controlled_frames_per_case)throw Error('1000 controlled frame cap');
  exact(c.input,['class_byte','race_byte','region_index','app_lcg_seed_u64','object_id_u64','companion_tags'],'Opening input');
  const s=c.input;uint(s.class_byte,8);uint(s.race_byte,8);if(s.region_index!==0||JSON.stringify(s.companion_tags)!=='[255,255]')throw Error('Explicit Elwynn absent slots');
  for(const n of[s.app_lcg_seed_u64,s.object_id_u64])if(typeof n!=='string'||!/^[0-9]+$/.test(n)||BigInt(n)>=1n<<64n)throw Error('Explicit uint64 decimal');
@@ -106,10 +108,20 @@ for(const c of cases){
     source:'Actual prestate; effective=(14384320!=0?14384324:14384328), fixed19964. No548 text read for expected.'};};
  const localeBefore=locale(),localeGuard=hash(Buffer.from(localeBefore.raw_once25_hex+localeBefore.map_headers32_hex.join(''),'hex'));
  const App=config.app_pointer,R=u(App+5116);if(R!==config.world_pointer)throw Error('Genuine cached world');
+ // Read the admitted snapshot profile BEFORE allocator/inline-App/identity
+ // fixture writes or the first constructor. Never zero it to satisfy a guard.
+ let emptyResearchProfileGuard=null;
+ if(runLedgerEnabled){
+  const P=App+3376,ranked_effect_count160=u(P+160),ranked_effect_flag164=byte(P+164),equipment_ids260=Array.from({length:19},(_,j)=>u(P+260+j*4)),name_length208=u(P+208);
+  emptyResearchProfileGuard={pointer:P,ranked_effect_count160,ranked_effect_flag164,equipment_ids260,name_length208,
+   ranked_effect_header12_hex:hex(P+152,12),name_header12_hex:hex(P+200,12),equipment76_hex:hex(P+260,76),
+   source:'Actual snapshot P=App+3376 before all fixture writes/first constructor; read only; no profile zeroing'};
+  if(ranked_effect_count160!==0||ranked_effect_flag164!==0||equipment_ids260.some(value=>value!==0)||name_length208!==0)throw Error('run_ledger135 requires the actual empty research selected profile');
+ }
  const inlineAppFixture=config.app_game_domain==='typed_partial_inline_fixture_not_naturalApp';
  const appFixtureBefore=inlineAppFixture?hex(App,5168):null;
  if(inlineAppFixture){d().setBigUint64(App+16,2n,true);d().setBigUint64(App+2608,2n,true);}
- const G=inlineAppFixture?App+16:allocate(8192),r=o=>u(G+o);let lastPackets=[],lastNotifications=[];
+ const G=inlineAppFixture?App+16:allocate(8192),r=o=>u(G+o);let lastPackets=[],lastNotifications=[],lastCapturePhase=null;const fatalStopPackets=[],fatalTransitions=[];
  const vector=(layout)=>{const[co,po,no,stride]=layout,capacity=r(co),pointer=r(po),count=r(no);if(count>capacity||capacity>4096)throw Error('Actual vector budget');
    return{stride,capacity,pointer,count,storage:Array.from({length:capacity},(_,j)=>hex(pointer+j*stride,stride)),storage_sha256:hash(span(pointer,capacity*stride))};};
  const queue=(base,stride,packets)=>{const capacity=r(base),pointer=r(base+4),count=r(base+8);if(count>capacity||capacity>4096)throw Error('Queue budget');
@@ -164,11 +176,51 @@ for(const c of cases){
    guardians.push({unit_index:j,guid,capacity,timers_bits,ability_pointer:abilityPointer,header_pointer:headerPointer,ability_records44_hex,header28_hex});
   }
   return{observations,guardians};};
+ const strictUtf8=(pointer,length)=>{
+  if(length>1048576)throw Error('Ledger UTF8 slice1MiB budget');
+  const raw=length?Buffer.from(span(pointer,length,1048576)):Buffer.alloc(0);
+  return{pointer,length,utf8_hex:raw.toString('hex'),text:new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(raw)};
+ };
+ const ledgerHistory=()=>{
+  const capacity=r(968),pointer=r(972),head=r(976),count=r(980);
+  if(count>capacity||capacity>4096||(capacity?head>=capacity:head!==0||count!==0))throw Error('Incoming48 ring bounds');
+  const backing=span(pointer,capacity*48),storage=Array.from({length:capacity},(_,j)=>Array.from(backing.subarray(j*48,j*48+48))),active=[],physicalActive=[];
+  for(let logical=0;logical<count;logical++){
+   const slot=(head+logical)%capacity,q=pointer+slot*48;
+   const strings=[0,8,16].map(offset=>strictUtf8(u(q+offset),u(q+offset+4)));
+   active.push({slot,strings:strings.map(value=>value.text)});
+   physicalActive.push({slot,raw48_hex:hex(q,48),strings});
+  }
+  return{projection:{header:{capacity,head,count},storage,active},physical:{header:{capacity968:capacity,pointer972:pointer,head976:head,count980:count,raw_header16_hex:hex(G+968,16)},
+   stride:48,backing_hex:Buffer.from(backing).toString('hex'),storage48_hex:storage.map(row=>Buffer.from(row).toString('hex')),active:physicalActive}};
+ };
+ const ledgerCapture=(packets,notifications,newPackets,currentPhase)=>{
+
+  const history=ledgerHistory(),capacity=r(216),pointer=r(220),length=r(224);
+  if(length>capacity||capacity>1048576)throw Error('Hero String bounds');
+  const hero={capacity216:capacity,pointer220:pointer,length224:length,raw_header12_hex:hex(G+216,12),...strictUtf8(pointer,length)};
+  const terminal=notifications.active.filter(value=>{try{return JSON.parse(new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(Buffer.from(value.payload_hex,'hex')))?.type==='defeat';}catch{return false;}}).map(value=>[value.capacity,value.payload_hex]);
+  if(lastCapturePhase===1&&currentPhase===4){
+   if(!newPackets.prefix_preserved)throw Error('Fatal-stage packet prefix was replaced; no new221 attribution');
+   const appended=packets.active.slice(newPackets.previous_count),all221=appended.filter(value=>value.opcode===221);
+   //221 multiplexes ordinary movement and canonical stop messages.17119's
+   // stop variant is packedGUID + XYZ12 + sequence4 + flag1. Keep every raw
+   // packet in the capture; classify independently of model expectations.
+   const isStop=value=>{const raw=Buffer.from(value.payload_hex,'hex');if(!raw.length)return false;let count=0;for(let i=0;i<8;i++)count+=(raw[0]>>>i)&1;return raw.length===1+count+17&&raw.at(-1)===1;};
+   const stops=all221.filter(isStop).map(value=>[221,value.capacity,value.payload_hex]);
+   fatalStopPackets.push(...stops);
+   const call=calls.at(-1);fatalTransitions.push({from_phase:1,to_phase:4,call_role:call?.role??null,entry_index:call?.index??null,call_returned:call?.returned??false,
+    previous_packet_count:newPackets.previous_count,current_packet_count:newPackets.current_count,new221_count:stops.length,appended221_count:all221.length,other221_packets:all221.filter(value=>!isStop(value)).map(value=>[221,value.capacity,value.payload_hex]),stop221_classifier:'packedGUID_then_XYZ12_sequence4_flag1_exact_length'});
+  }
+  return{projection:{run_ledger:{counters:Object.fromEntries([1432,1084,1088,1092,1096,1100,1104].map(offset=>[offset,r(offset)])),hero:hero.text,incoming_history:history.projection,lives1632:r(1632),left2567:byte(G+2567)},
+   paused408:r(408),paused412_bits:r(412),terminal_notifications:terminal,fatal_stop_packets:fatalStopPackets.map(value=>[...value])},
+   physical:{incoming_history:history.physical,hero,scalar_words:Object.fromEntries([1432,1084,1088,1092,1096,1100,1104,1632,408,412].map(offset=>[offset,r(offset)])),left2567:byte(G+2567),fatal_transitions:fatalTransitions.map(value=>({...value}))}};
+ };
  const capture=()=>{const vectors=Object.fromEntries(Object.entries(layouts).map(([n,l])=>[n,vector(l)])),packets=queue(1880,16,true),notifications=queue(1892,12,false),keyed=fields(),cooldowns=unitCooldowns();
    const pa=packets.active.map(x=>({opcode:x.opcode,payload_hex:x.payload_hex})),na=notifications.active.map(x=>x.payload_hex),newPackets=delta(lastPackets,pa),newNotifications=delta(lastNotifications,na);lastPackets=pa;lastNotifications=na;
    if(r(2348)!==R||u(App+5116)!==R)throw Error('Real world owner changed');
-   const map=Buffer.from(span(r(184),r(188),128)).toString('utf8');
-   return{raw_game2592_hex:hex(G,2592),vectors,unit_cooldowns:cooldowns.observations,packets,notifications,new_packets:newPackets,new_notifications:newNotifications,
+   const map=Buffer.from(span(r(184),r(188),128)).toString('utf8'),currentPhase=byte(G+2587),ledger=runLedgerEnabled?ledgerCapture(packets,notifications,newPackets,currentPhase):null;lastCapturePhase=currentPhase;
+   return{...(ledger?{run_ledger135:ledger.physical}:{}),raw_game2592_hex:hex(G,2592),vectors,unit_cooldowns:cooldowns.observations,packets,notifications,new_packets:newPackets,new_notifications:newNotifications,
     player_keyed_tree:keyed,projection:{phase2587:byte(G+2587),selection_kind2585:byte(G+2585),generation_counter2400:r(2400),field1092:r(1092),mode2582:byte(G+2582),
      candidates:candidates(),guardian_cooldowns:cooldowns.guardians,now_bits:r(2352),rng_words:[0,1,2,3].map(i=>r(1720+i*4)),
      spawn_counter:r(2408),message_sequence:r(2412),kill_cost_bits:r(2420),next_resource2444_bits:r(2444),next_event2424_bits:r(2424),last_event2586:byte(G+2586),next_supply2448_bits:r(2448),source_id:d().getBigUint64(G+1336,true).toString(),
@@ -187,14 +239,14 @@ for(const c of cases){
      special:{selected392:r(392),target396:r(396),navigation2564:byte(G+2564),announced2565:byte(G+2565),announcement_time2392_bits:r(2392)},
      distance_map:distanceMap(),distance_map_updated_at_bits:r(2372),
      effect:{clock2364_bits:r(2364),effect_counter2356:r(2356),action_sequence1644:r(1644),player_action_tag416:r(416)},
-     tail_flags:{field400:r(400),protection2576:byte(G+2576),flag2568:byte(G+2568),gate2579:byte(G+2579)}},
+     tail_flags:{field400:r(400),protection2576:byte(G+2576),flag2568:byte(G+2568),gate2579:byte(G+2579)},...(ledger?ledger.projection:{})},
     caller_scratch48_observation:{address:1048080,root_stack:1048576,before:callerScratchBefore,after:u(1048080),kind:'read_only_SP_minus496_not_model_input'},
     ownership:{App,G,game_world_pointer:r(2348),app_cache_pointer:u(App+5116),raw_world_rc124_hex:hex(R,124),world_refcount:u(R),
      raw_app5168_hex:hex(App,5168)},stack:stack.value,memory_bytes:memory.buffer.byteLength};};
  const appBefore=hex(App,5168),refBefore=u(R),navigationInput=byte(App+5165);d().setBigUint64(App+4928,BigInt(s.app_lcg_seed_u64),true);
  b()[App+3720]=s.class_byte;b()[App+3721]=s.race_byte;d().setBigUint64(App+3552,BigInt(s.object_id_u64),true);
  b()[App+3604]=255;b()[App+3612]=255;const declaredApp=hex(App,5168);
- const answer={id:c.id,locale_prestate:localeBefore,app_before_declared_hex:appBefore,app_after_declared_hex:declaredApp,
+ const answer={id:c.id,...(runLedgerEnabled?{empty_research_profile_guard:emptyResearchProfileGuard}:{}),locale_prestate:localeBefore,app_before_declared_hex:appBefore,app_after_declared_hex:declaredApp,
   navigation_context:{app_byte5165:navigationInput,source:'Fixed6730 App5165 -> temporary2916 -> outputGame2564; snapshot context, not menu-default production.'},
   stage_count:0,boundary:null,typed_partial_inline_App_fixture:inlineAppFixture?{kind:config.app_game_domain,before_hex:appFixtureBefore,declared_tag_writes:[{offset:16,bits64:'2'},{offset:2608,bits64:'2'}],Game:G,natural1371_install_executed:false}:null};
  await emit({record_kind:'case_start',...answer});
@@ -251,7 +303,7 @@ const runtime={kind:'real_opening_then_controlled14_tail_original_observation',s
  actual_opening_phase_used:true,constructor_phase_overwritten:false,preallocated_zero128_storage:false,
  world_rc_forged:false,locale_once_injected:false,locale_source:'Preserved initialized genuine snapshot; prestate index bound to explicit input.',
  controlled_clock_scheduler:config.clock_scheduler,full880_called:false,new_full880_frames:0,
- independent_model_validation_cases:0,network_used:false,user_saves_accessed:false,output_bytes:outputBytes,
+ independent_model_validation_cases:0,...(runLedgerEnabled?{run_ledger135_enabled:true,empty_profile_guard_before_constructor:true,fatal221_attribution:'canonical stop221 subset of actual invocation phase1_to4 appended packets; all raw221 retained'}:{}),network_used:false,user_saves_accessed:false,output_bytes:outputBytes,
  uncompressed_output_bytes:outputBytes,compressed_output_bytes:compressedOutputBytes,output_records:outputRecords,max_record_uncompressed_bytes:maxRecordBytes,
  output_sha256:compressedHash.digest('hex'),uncompressed_sha256:uncompressedHash.digest('hex'),node:process.version};
 await fs.writeFile(directory+'/opening-combat135-runtime.json',JSON.stringify(runtime,null,2)+'\n');

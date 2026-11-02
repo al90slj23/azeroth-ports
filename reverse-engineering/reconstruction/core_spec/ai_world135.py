@@ -12,7 +12,7 @@ from .ai135 import (AiFrame135, AiResult135, position, unit_position,
     _validate, _get, _put, _float, _speed, _attack, _maximum, _distance)
 from .ai_trig135 import sin_bits, cos_bits
 from .distance_map135 import ProducedDistanceMap135, NEIGHBORS
-from .incoming135 import resolve_incoming_prefix
+from .incoming135 import IncomingState135, resolve_incoming_prefix
 from .record_cells135 import cells135, u64, encode_row
 from .demo_ai135 import demo_bindings135,begin_demo_expiry135,finish_demo_expiry135
 from resource_spec.world_query135 import WorldQueries135, probe_nav, QueryBoundsTrap135
@@ -32,6 +32,25 @@ class MovementGeometry135:
 class WorldAiResult135(AiResult135):
     movement_geometry: tuple = ()
     routing: tuple = ()
+
+
+@dataclass(frozen=True)
+class WorldAiPlan135:
+    """921 ordinary planning output before any queued incoming is consumed.
+
+    records contains every planning write, including early360 expiry. The
+    separate demo bindings/removals remain pending until the late4543 drain.
+    incoming binds the original clock/playerXY and these planned unit motions;
+    HP/shields/totals are still the input values. No1073 prefix has run.
+    """
+    records: tuple
+    incoming: IncomingState135
+    attacks: tuple
+    movements: tuple
+    movement_geometry: tuple
+    routing: tuple
+    demo_bindings: tuple
+    demo_expirations: tuple
 
 
 def segment_fraction135(nav, start_xy, end_xy):
@@ -146,12 +165,13 @@ def _geometry(world, guid, start, end, duration):
         duration, max(1, milliseconds), 0)
 
 
-def update_world_ordinary_units135(state: AiFrame135, world, *, distance_map=None):
-    """AiResult135-compatible planner; the caller owns the preceding BFS update.
+def plan_world_ordinary_units135(state: AiFrame135, world, *, distance_map=None):
+    """Plan every admitted ordinary unit without consuming incoming attacks.
 
-    All ordinary/local/finite/nonfatal source restrictions stay explicit. Nav
+    All existing ordinary/local/finite source restrictions stay explicit. Nav
     changes logical XY; terrain/nearest-height queries change only message XYZ.
-    Unknown physical padding remains None through record_cells135.
+    Unknown physical padding remains None through record_cells135. The caller
+    can now plan guardian owners before draining921's ordered incoming queue.
     """
     if not isinstance(world, WorldQueries135):
         raise TypeError('Explicit independently resolved WorldQueries135 required')
@@ -221,13 +241,63 @@ def update_world_ordinary_units135(state: AiFrame135, world, *, distance_map=Non
         movements.append((guid, pos, dest, duration)); geometries.append(_geometry(world, guid, pos, dest, duration))
     incoming = replace(state.incoming, now_bits=now, player_x_1504_bits=state.player_xyz_bits[0],
         player_y_1508_bits=state.player_xyz_bits[1], units=tuple(unit_position(raw) for raw in raws))
-    for guid, amount in attacks:
+    return WorldAiPlan135(tuple(encode_row(raw) for raw in raws), incoming,
+        tuple(attacks), tuple(movements), tuple(geometries), tuple(routing),
+        tuple(demo_bindings.values()), tuple(demo_removals))
+
+
+def finish_world_ordinary_plan135(plan, incoming, *, records=None):
+    """Finish921's late demo queue on the caller's current physical backing.
+
+    records=None chooses the unchanged planning backing for the old nonfatal
+    adapter. After a callback/stop writes entity positions, the caller must
+    pass those actual records explicitly. GUID order/count must match the
+    plan; collection changes require their own unresolved continuation. The
+    plan records never overwrite coordinates in the supplied backing.
+    """
+    if not isinstance(plan, WorldAiPlan135) or not isinstance(incoming, IncomingState135):
+        raise TypeError('Explicit ordinary plan and post-drain incoming owner required')
+    if records is None:
+        records = plan.records
+    if type(records) is not tuple or len(records) != len(plan.records):
+        raise ValueError('Post-drain ordinary vector count/order continuation is unresolved')
+    raws = [cells135(row) for row in records]
+    if tuple(u64(raw,112,consumer='ai_world135.finish_owner') for raw in raws) != tuple(
+            u64(raw,112,consumer='ai_world135.planned_owner') for raw in plan.records):
+        raise ValueError('Post-drain ordinary GUID order differs from its plan')
+    bindings = {row.guid: row for row in plan.demo_bindings}
+    declarations, packets, fields = finish_demo_expiry135(raws, bindings, plan.demo_expirations)
+    return WorldAiResult135(tuple(encode_row(raw) for raw in raws), incoming,
+        plan.attacks, plan.movements,
+        ('encoded_movement_and_hit_packets', 'incoming_registry_history_aura_metadata'),
+        movement_geometry=plan.movement_geometry, routing=plan.routing,
+        demo_expirations=plan.demo_expirations, demo_aura_packets169=packets,
+        demo_aura_fields=fields, demo_statuses=declarations)
+
+
+def drain_world_ordinary_plan135(plan):
+    """Existing restricted nonfatal scalar drain, retaining every queue item.
+
+    This is not full1073 callbacks/history/fatal completion. A root controller
+    with restored callbacks instead drains plan.attacks in order, then calls
+    finish_world_ordinary_plan135 with its post-callback incoming and backing.
+    """
+    if not isinstance(plan, WorldAiPlan135):
+        raise TypeError('Explicit ordinary planning result required')
+    incoming = plan.incoming
+    for guid, amount in plan.attacks:
         result = resolve_incoming_prefix(incoming, amount, guid)
         if result.stage not in ('scalar_nonfatal_projection', 'phase_guard', 'protection_guard', 'active_raw_buff12_guard'):
             raise ValueError('Incoming callback/death boundary: ' + result.stage)
         incoming = result.state
-    declarations,packets,fields=finish_demo_expiry135(raws,demo_bindings,demo_removals)
-    return WorldAiResult135(tuple(encode_row(raw) for raw in raws), incoming, tuple(attacks), tuple(movements),
-        ('encoded_movement_and_hit_packets', 'incoming_registry_history_aura_metadata'),
-        movement_geometry=tuple(geometries),routing=tuple(routing),demo_expirations=tuple(demo_removals),
-        demo_aura_packets169=packets,demo_aura_fields=fields,demo_statuses=declarations)
+    return finish_world_ordinary_plan135(plan, incoming)
+
+
+def update_world_ordinary_units135(state: AiFrame135, world, *, distance_map=None):
+    """Compatible nonfatal plan→scalar drain→late demo finish adapter.
+
+    This preserves the previous default return fields, guards and boundaries.
+    It does not claim a complete921, guardian queue or fatal continuation.
+    """
+    return drain_world_ordinary_plan135(
+        plan_world_ordinary_units135(state, world, distance_map=distance_map))

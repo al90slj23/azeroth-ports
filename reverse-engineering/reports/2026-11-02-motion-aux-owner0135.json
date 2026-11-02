@@ -1,0 +1,377 @@
+{
+  "status": "scoped_auxiliary_owner_historical_match",
+  "version": "0.135.1",
+  "actual_build": "90898d5e3",
+  "new_original_calls": 0,
+  "new_original_frames": 0,
+  "new_model_transitions": 6489,
+  "new_constructor_model_calls": 1,
+  "historical_controlled_frames": 460,
+  "historical_stage_records": 6488,
+  "differences": 0,
+  "difference_rows": [],
+  "counts": {
+    "source_count_guard_words_compared": 71390,
+    "header_snapshots": 6490,
+    "header_words_compared": 19470,
+    "header_bytes_compared": 77880
+  },
+  "observed_headers": [
+    {
+      "header": [
+        0,
+        8,
+        0
+      ],
+      "snapshots": 6490
+    }
+  ],
+  "events": {
+    "opening1089": 1,
+    "player": 460,
+    "extra": 460,
+    "owned_effects": 460,
+    "hits": 460,
+    "area": 460,
+    "effects": 460,
+    "deadline": 460,
+    "secondary": 460,
+    "ai": 460,
+    "collect": 460,
+    "claims": 460,
+    "spawn": 460,
+    "special": 460,
+    "terminal": 460,
+    "selection1072": 4,
+    "motion2328": 44
+  },
+  "observed_admitted_skills": [
+    "battle_shout",
+    "cleave",
+    "perception",
+    "thunder_clap"
+  ],
+  "all_five_static_admitted_declarations": true,
+  "phase_counts": {
+    "1": 6468,
+    "2": 20
+  },
+  "static_proof_sha256": "318bbeff849165e2a83ebbbe238adeced1382dd40a23fc8726c25ca53fca3910",
+  "constructor_owner_expected": [
+    0,
+    8,
+    0
+  ],
+  "same_owner_identity_retained": true,
+  "nonempty_aux_producer_restored": false,
+  "source_sha256_before": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/motion_aux_owner135.py": "0e76b83a0ad56842c7f80f3a271984eedc87eb205fbd26bbc344d495f2914536",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_stats138.py": "3ba425adcad46139b553fa3c7c40ca1608211639af3d271505d75b5a1b908e2b",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/trace_motion_aux_owner135.py": "5d8c5d46242bfa4a12772365f3a8e1b4a4c5fc669dafb7dd32d2d43ebb00b2ae"
+  },
+  "source_sha256_after": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/candidates135.py": "ab9c7b73e9e19c78d877a2a0957f3581e3058b0e5cdede31ee7bab41b08623df",
+    "reconstruction/core_spec/derived_stats134.py": "331ef0c627450f24775c55ee5d6f7fa4a8e6f1ec9082df594be6d951fc17bbbc",
+    "reconstruction/core_spec/derived_stats135.py": "1c0df93a0c2bd02df4f608d59fcf50af09c920d739f7ebabd71b1379136a91b2",
+    "reconstruction/core_spec/initial_state135.py": "fd6f40ef0b19ae02aa42d481bf5a1238b3fc141cea86156f7e856a61b85f0a5e",
+    "reconstruction/core_spec/initial_state135_data.py": "a7b0805b8297e6fef065559b236a98e9ce43d18fa10a1b782b046ffcf0a41415",
+    "reconstruction/core_spec/level_cycle135.py": "502d0e183bb6c3e05ba366689edda44fc5c3835a396a8dbaa8c80131b56f6579",
+    "reconstruction/core_spec/motion_aux_owner135.py": "0e76b83a0ad56842c7f80f3a271984eedc87eb205fbd26bbc344d495f2914536",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/review_opening_combat135.py": "eef4d27841357cd445bb250e0d60803d5efe965bebdf58d61d5fc7934f23c152",
+    "scripts/review_stats138.py": "3ba425adcad46139b553fa3c7c40ca1608211639af3d271505d75b5a1b908e2b",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/trace_motion_aux_owner135.py": "5d8c5d46242bfa4a12772365f3a8e1b4a4c5fc669dafb7dd32d2d43ebb00b2ae"
+  },
+  "source_files": 20,
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates135.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats134.py",
+      "reconstruction/core_spec/progression.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats135.py",
+      "reconstruction/core_spec/derived_stats134.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/candidates135.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/initial_state135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/level_cycle135.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/candidates135.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/derived_stats135.py"
+    ],
+    [
+      "reconstruction/core_spec/level_cycle135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/motion_aux_owner135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/motion_aux_owner135.py",
+      "reconstruction/core_spec/initial_state135.py"
+    ],
+    [
+      "reconstruction/core_spec/motion_aux_owner135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "reconstruction/core_spec/initial_state135.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "reconstruction/core_spec/motion_aux_owner135.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "scripts/review_opening_combat135.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "scripts/review_stats138.py"
+    ],
+    [
+      "scripts/trace_motion_aux_owner135.py",
+      "scripts/source_closure137.py"
+    ]
+  ],
+  "capture": "evidence/opening-combat0135-oracle-20261101T232156.684647Z",
+  "capture_sha256": "521db52b9d97637212460083a7ea88b9038d63871536d6635edc21645e0bd622",
+  "original_sha256": "c62c85f5478a12d006b3bde4e5e71db5d3fb50aed218f474c228182800dc96e2",
+  "auxiliary_owner_module_absent_historical_model": true,
+  "expected_reader": {
+    "file_bytes": 58224935,
+    "file_sha256": "cc7a8aae98c9ba76dc4e74c3ba37fd1d1df926281a02a96a976bcba69c238625",
+    "uncompressed_bytes": 396624522,
+    "uncompressed_sha256": "3573874fd44ade23af4b965d0c6ef20a25ba13e4a314340b7772fab5d306ffe1",
+    "maximum_record_bytes": 64538,
+    "records": 6489,
+    "gzip": true,
+    "single_member": true
+  },
+  "capture_CAS_full_finish": {
+    "records": 6952,
+    "logical_bytes": 2139516743,
+    "logical_sha256": "8e9e568814f20cb00a6f48f8a954b8745cd2b021a9373e368c300a8dca8f04f5",
+    "maximum_logical_record_bytes": 879543,
+    "unique_blobs": 21749,
+    "unique_blob_bytes": 123474051,
+    "maximum_blob_bytes": 844901,
+    "index_uncompressed_bytes": 2247614,
+    "index_uncompressed_sha256": "e5e81b51116186370acc7f78ddcaa4501b2d297cdc6d1434add7d883f93c6ecd",
+    "maximum_index_record_bytes": 514,
+    "maximum_blob_index_record_bytes": 18523,
+    "total_logical_blob_references": 1338498,
+    "blob_index_bytes": 18376959,
+    "blob_index_sha256": "4d23a440c38d81eae6cb38687d64b24bb1a542ba9e2fe174c31f439fcb252690",
+    "blob_references_bytes": 3715895,
+    "blob_references_sha256": "77aeeacb848d5c692b5fdb492c597042242511a9072212cc4bb9a6dd8f420d34",
+    "all_blobs_and_occurrences_verified": true,
+    "decoder_cache_bytes": 8361566,
+    "logical_fragment_cache_weight_bytes": 16631424,
+    "logical_fragment_cache_weight_limit": 16777216,
+    "logical_fragment_cache_item_limit": 1048576
+  },
+  "negative_model_checks": 19,
+  "fatal_phase4_inheritance_model_only_checks": 5,
+  "artifact_sha256": {
+    "new-expectations.json": "d2ee599e4cfaa88231c0cbbc0f23a5de6905e8e0547034d3e511397b23bf95ef",
+    "prepared.json": "569962e748377ceca9df11d28b232d097f610e6a65341cc1522b0dd2a7016fcf",
+    "static-proof.json": "318bbeff849165e2a83ebbbe238adeced1382dd40a23fc8726c25ca53fca3910",
+    "model-only-rejections.json": "8b8882d0299e1779a646d0957da06228b3a595289df4c88779091474809e5961",
+    "header-comparisons.jsonl": "7d6a33f3c66913a7103435a3776e8222347656b519afe41f91e087e9d6bd17f4",
+    "frozen_capture_transport.py": "728b3ae0576d372b9b7467c484022ae3487e772b9a09c0172bfbcdcf29c1479f"
+  },
+  "elapsed_seconds": 17.981,
+  "limitations": [
+    "New auxiliary owner module was absent from the historical117-source model; this is a new spec/model compared to historical controlled460 raw Game, not new original calls/frames.",
+    "The original headers are observations used only after model predictions were frozen; zero headers are never model inputs or proof of a constructor.",
+    "Historical460 selects only the declarations seen in observed_admitted_skills. All five declarations and their producer exclusion are static; unseen skill configurations are not added original cases.",
+    "Phase4 continuation inheritance has static rules plus model-only checks for five remaining tail events. Historical460 contains only phases1/2 and adds no originalfatal acceptance.",
+    "2032/2056/1840/1864 empty count witnesses use explicit constructor/no-admitted-producer reasoning because old stage projection omitted those owners; they are not copied from actual.",
+    "Nonempty summon1680/item/modifier/timed/extra sources, remote/network replacement, unsupported abilities and general alias analysis remain unresolved. Nonempty data is refused rather than cleared.",
+    "This owner does not replace G1856 secondary areas or complete gameplay/fatal integration. The empty constructor plus admitted source closure is the declared scope."
+  ],
+  "evidence": "evidence/motion-aux-owner135-20261102T005437.610338Z",
+  "comparison_sha256": "572c0a668e89bd03b966be6a8b8aff970a76812a640b0f882e16c08220879c9a",
+  "static_functions": 36,
+  "owned_process": {
+    "pid": 62018,
+    "pgid": 62018,
+    "exit_code": 0,
+    "seconds": 18.15570466699137,
+    "deadline_seconds": 180,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_terminal_sha256": "104b1b6f6a94de680ffa9013b9c9ca17d6e9b63d42dc8ca092eb5671e6ee5aa7",
+  "independent_review": "pending"
+}

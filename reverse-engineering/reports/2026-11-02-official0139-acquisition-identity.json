@@ -1,0 +1,236 @@
+{
+  "status": "official139_coherent_bytes_and_actual_native_web_build_frozen",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "actual_build_length": 9,
+  "acquisition": "originals/official-release-20261102T011227.335145Z/release-acquisition-resumed.json",
+  "acquisition_sha256": "35c0e6b106056c47d3826581941174917e970133a46646e49cda8a0296b6e332",
+  "identity": "evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
+  "identity_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
+  "native": {
+    "version": "0.139.0",
+    "notes": "Engine update: the game now runs on a newer version of the client it is built on. Everything should play as it did before. Addons can now tell a proc's hit from the spell it borrows.",
+    "manifest": {
+      "url": "https://wow.aethus.pl/exe/latest.json",
+      "effective_url": "https://wow.aethus.pl/exe/latest.json",
+      "status": 200,
+      "bytes": 523,
+      "sha256": "125ece3f7e83f265f7bf5ec8ef33cb7fe52c6bec7fcf590efab91a5ea6fe243f",
+      "filename": "windows-latest.json",
+      "headers_sha256": "0044fe26cc3be4eabacab6fa62530fb7d5f9079b666226dd3ceb20b2e5687511"
+    },
+    "parts": [
+      {
+        "url": "https://wow.aethus.pl/exe/0.139.0/part-000.bin",
+        "effective_url": "https://wow.aethus.pl/exe/0.139.0/part-000.bin",
+        "status": 200,
+        "bytes": 20971520,
+        "sha256": "42360681d2d642ab31b8277b942ffd8f32e5c000d3b8a7eace5ebe0063b3d6de",
+        "filename": "windows-update-parts/part-000.bin",
+        "headers_sha256": "4f0573d0595558d4317647f3585c5b740b1decd2e7f2794fac205a78a0bbb2e2"
+      },
+      {
+        "url": "https://wow.aethus.pl/exe/0.139.0/part-001.bin",
+        "effective_url": "https://wow.aethus.pl/exe/0.139.0/part-001.bin",
+        "status": 200,
+        "bytes": 20971520,
+        "sha256": "0752b4abbd4d280859ef70c80f5b1447021299fc28e75507820db5e232681d98",
+        "filename": "windows-update-parts/part-001.bin",
+        "headers_sha256": "1accdd725d02a7a3c8797818dfac18a5ddc25ae9f8f0e62c5b8ca434987b54cc"
+      },
+      {
+        "url": "https://wow.aethus.pl/exe/0.139.0/part-002.bin",
+        "effective_url": "https://wow.aethus.pl/exe/0.139.0/part-002.bin",
+        "status": 200,
+        "bytes": 8795477,
+        "sha256": "95ed863cae88d455fc789f7a77d8474ee47ac98f0d4c306a0ffddc6ac54a7208",
+        "filename": "windows-update-parts/part-002.bin",
+        "headers_sha256": "a4d2070fbfe91bee54c6e99dd8d8193395c468f5a2c72aee3eb4cac4ca83dd49"
+      }
+    ],
+    "compressed_bytes": 50738517,
+    "compressed_sha256": "9ac2ae0bb14b4ca17daabf670f03fe07ca3baf6d23d7c4400d5d96476cd10a73",
+    "gzip_crc_isize_passed": true,
+    "exe_relative_path": "windows-0.139.0/AzerothSurvivors.exe",
+    "exe_bytes": 150595584,
+    "exe_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+    "official_identity_matched": true,
+    "target_executed": false
+  },
+  "web": {
+    "stamp": "f339dd20e0fe",
+    "stamp_after": "f339dd20e0fe",
+    "page_stamp_stable_during_acquisition": true,
+    "index": {
+      "url": "https://wow.aethus.pl/",
+      "effective_url": "https://wow.aethus.pl/",
+      "status": 200,
+      "bytes": 1640,
+      "sha256": "5f85b2b172200022da180709b7b047828c7f899d52a39165d925d31088ee60c1",
+      "filename": "official-index.html",
+      "headers_sha256": "566a168f2f71ced1a6184d48942cf4d1f7dd38c1bff59a8bc6c0c5903d8f610e"
+    },
+    "index_after": {
+      "url": "https://wow.aethus.pl/",
+      "effective_url": "https://wow.aethus.pl/",
+      "status": 200,
+      "bytes": 1640,
+      "sha256": "5f85b2b172200022da180709b7b047828c7f899d52a39165d925d31088ee60c1",
+      "filename": "official-index-after.html",
+      "headers_sha256": "18c508b2c9111b0f688e81c6e63f5825218b9da29e65174c0e0f9dc7e210d1f0"
+    },
+    "scripts": {
+      "rogue.js": {
+        "url": "https://wow.aethus.pl/rogue.js?v=f339dd20e0fe",
+        "effective_url": "https://wow.aethus.pl/rogue.js?v=f339dd20e0fe",
+        "status": 200,
+        "bytes": 24224,
+        "sha256": "7644df9f61fdca9865d20b9995ff3f57c51223de53ae9d926c5c539ac739a515",
+        "filename": "official-rogue.js",
+        "headers_sha256": "b6bc8aa4c66bc438e4f16b0609b4d2c50fd179cb70b875382419b950312d623b"
+      },
+      "boot.js": {
+        "url": "https://wow.aethus.pl/boot.js?v=f339dd20e0fe",
+        "effective_url": "https://wow.aethus.pl/boot.js?v=f339dd20e0fe",
+        "status": 200,
+        "bytes": 14453,
+        "sha256": "268a698dd5b550d46229c300156cca6120847fe4644cd374ba653b4dfb12ea79",
+        "filename": "official-boot.js",
+        "headers_sha256": "ba79d2e4114ae8f6075110d2d9d876e38463fc13b13400fcf979bcd1844faf8b"
+      },
+      "wenilla.js": {
+        "url": "https://wow.aethus.pl/wenilla.js?v=f339dd20e0fe",
+        "effective_url": "https://wow.aethus.pl/wenilla.js?v=f339dd20e0fe",
+        "status": 200,
+        "bytes": 187604,
+        "sha256": "d08ade052f40bcca1da93b559e9e10397ec240ba4975a467d6089ff5407bf3bd",
+        "filename": "official-wenilla.js",
+        "headers_sha256": "273033fd86eaece04195b2d0dba8cce4500f83b7eba992547f71e8de47829020"
+      }
+    },
+    "wasm": {
+      "url": "https://wow.aethus.pl/wenilla_bg.wasm?v=f339dd20e0fe",
+      "effective_url": "https://wow.aethus.pl/wenilla_bg.wasm?v=f339dd20e0fe",
+      "status": 200,
+      "bytes": 92511151,
+      "sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+      "filename": "latest-wenilla_bg.wasm",
+      "headers_file": "wasm-compressed-transport.headers",
+      "headers_sha256": "40bbd310c0ee0f1a742f586c5634d04bd381e82361122f36a02c252916ffe25e",
+      "transfer_bytes": 26200711,
+      "content_encoding": "gzip",
+      "decoded_by": "curl --compressed",
+      "successful_attempt_file": "wasm-compressed-transport.attempt.json",
+      "successful_attempt_sha256": "ed336c2e846649f25379f69a7c27569c50d5f7e86277f5719cb67e6140af6b5b"
+    },
+    "branding_discovery": {
+      "file_offset": 79598265,
+      "context_hex": "4d6164652062792041657468757320287a757a6961206d696175206d69617529d80a12002e0000004001000020000000663739633565326234302e3133392e3069261600070000002f646f776e6c6f616400418bcdd8000b05246cabd7af00419acdd8000b05b3d7ab6c240041b0cdd8000b1a1c7cdbffffffffff38102c404040402c1038ffffffffffd77c1c0041d6cdd8000b1e10b3fffffffffffffffff7fffffffffffffffff7ffffffffffffffffb3100041fecdd8000b1e98ffffffffffffffffffffffffffffffffffffffffffffffffffffffff900041a5ced8000ba10734ffffffffffffffffffffffffff",
+      "expected_version_present": true,
+      "consumed_build_identity_proved": false
+    },
+    "official_independent_wasm_digest_published": false,
+    "sha256_origin": "Computed locally from saved complete HTTPS decoded bytes",
+    "application_start_called": false,
+    "module_instantiated": false
+  },
+  "identity_summary": {
+    "native_pointer": "0x14650cdd0",
+    "native_instruction": {
+      "instruction_va": "0x14012256b",
+      "instruction_file_offset": 1186155,
+      "pointer_stack_offset": 1656,
+      "length_stack_offset": 1664,
+      "length": 9,
+      "exact_instruction_bytes_hex": "488d055ea83e064889857806000048c7858006000009000000"
+    },
+    "web_function": 1488,
+    "web_body_sha256": "5654c88a63551ea8d2d0c7117c24dbb183a6d493310e16d18361643875f01af2",
+    "web_pointer": 1451616,
+    "web_version_pointer": 1451625,
+    "web_guard": [
+      "local.get 10",
+      "i32.const 9",
+      "i32.store offset=676",
+      "local.get 10",
+      "i32.const 1451616",
+      "i32.store offset=672"
+    ],
+    "web_wat_bytes_read": 206242,
+    "profile_manifest": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
+    "profile_manifest_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
+    "single_existing_profile_reused": true
+  },
+  "prior_failed_uncompressed_attempt": {
+    "receipt": "originals/official-release-20261102T011227.335145Z/release-acquisition.json",
+    "sha256": "975c5b3d72ac55f617f3bd7390d943212d62b0a12e6bdbeb66847fa3019360e1",
+    "status": "failed_preserved",
+    "partial_bytes": 11081063,
+    "used_for_successful_assembly": false
+  },
+  "prior_failed_disassembly": {
+    "owned": "evidence/branding0139-owned-20261102T012449.222509Z/owned-terminal.json",
+    "terminal": {
+      "pid": 99186,
+      "pgid": 99186,
+      "exit_code": 1,
+      "seconds": 4.61838208300469,
+      "deadline_seconds": 90,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "target_executed": false
+    },
+    "reason": "128MiB bounded skipped-prefix disassembly budget, then reused already completed single139 indexed WAT"
+  },
+  "source_files": {
+    "scripts/finalize_official139_acquisition.py": "9899b4e25e676ff6c84d1b2db15fa8d3140fb7016d4f9200a5d2db00dc3df433",
+    "scripts/verify_build139_identity.py": "5e27870e6a6d2c8aaa7ca27efe8d038513e39d44db8e2533fe2430179a32ee9d"
+  },
+  "owned_processes": {
+    "acquisition": {
+      "pid": 88844,
+      "pgid": 88844,
+      "exit_code": 1,
+      "seconds": 98.93034887500107,
+      "deadline_seconds": 600,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "target_executed": false
+    },
+    "coherent_finalize": {
+      "pid": 96148,
+      "pgid": 96148,
+      "exit_code": 0,
+      "seconds": 3.533139167004265,
+      "deadline_seconds": 150,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "target_executed": false
+    },
+    "identity": {
+      "pid": 2192,
+      "pgid": 2192,
+      "exit_code": 0,
+      "seconds": 7.354397999995854,
+      "deadline_seconds": 90,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "target_executed": false
+    }
+  },
+  "target_executed": false,
+  "wasm_instantiated": false,
+  "new_original_cases": 0,
+  "new_native_cases": 0,
+  "new_runtime_cases": 0,
+  "new_full880_frames": 0,
+  "old_acceptance_transferred": false,
+  "existing_packages_or_saves_modified": false,
+  "public_registry_modified": false,
+  "limitations": [
+    "Official notes describe an engine update and proc-hit distinction; behavior/protocol/gameplay equivalence is unverified here.",
+    "JS/WASM/native saved bytes and real branding consumer identity only; dynamic139 damage and other behaviors require new version-specific validation.",
+    "WASM SHA is computed locally from complete saved HTTPS bytes, not an independently published official WASM digest.",
+    "The first failed uncompressed60s attempt and bounded disassembly attempt remain preserved; successful compressed HTTP200 and indexed finite-seek identities have separate receipts."
+  ]
+}
