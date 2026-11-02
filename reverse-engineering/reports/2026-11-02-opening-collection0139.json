@@ -1,0 +1,2043 @@
+{
+  "status": "author_original_composition_passed_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "module": "core_spec.opening_collection139",
+  "validated_entry": "compose_firstlevel_opening_collection139",
+  "comparison": "evidence/opening-collection139-oracle-20261102T101302.628856Z/comparison.json",
+  "comparison_sha256": "4fbbdb499aed101a1cd53ff0e43d0e0c54d486d56ec27a97baee9e6c9f9eb0e9",
+  "cases": 3,
+  "controlled_prefix": "new2945/1600Game→full1108→realdeaths/XP→full2890/4677/2181→1093→oneactualpostselectcleave",
+  "full_original_calls": {
+    "922": 21,
+    "1093": 3,
+    "1108": 3,
+    "1600": 3,
+    "2890": 20,
+    "2945": 3
+  },
+  "formal_original_target_entries": 47,
+  "setup2945_and1600_entries": 6,
+  "full_internal5719_913_4677_2181_35988_26364_25613_not_directly_instrumented": true,
+  "direct_XP_award_inserted": false,
+  "independent_model_stages": {
+    "assertions": 44633,
+    "selected40_known_bytes": 120,
+    "constructor_known_bytes": 1506,
+    "constructor_unknown_bytes_observed": 6270,
+    "constructor_nonzero_unknown_bytes_observed": 632,
+    "afterGame_known_bytes": 1668,
+    "afterGame_unknown_bytes_observed": 6108,
+    "afterGame_nonzero_unknown_bytes_observed": 689,
+    "units_known_bytes": 3636,
+    "units_unknown_bytes_observed": 1548,
+    "units_nonzero_unknown_bytes_observed": 1425,
+    "pickups_known_bytes": 312,
+    "pickups_unknown_bytes_observed": 360,
+    "pickups_nonzero_unknown_bytes_observed": 318,
+    "special_known_bytes": 336,
+    "special_unknown_bytes_observed": 144,
+    "special_nonzero_unknown_bytes_observed": 144,
+    "windows_known_bytes": 56,
+    "windows_unknown_bytes_observed": 40,
+    "windows_nonzero_unknown_bytes_observed": 40,
+    "boundaries_known_bytes": 1656,
+    "boundaries_unknown_bytes_observed": 1416,
+    "boundaries_nonzero_unknown_bytes_observed": 612,
+    "complete_packets": 228,
+    "complete_notifications": 3,
+    "observed_new_allocation_pointer_words": 21,
+    "relativeGame_bytes": 7776,
+    "castNPC_known": 25620,
+    "castNPC_None": 10668,
+    "castNPC_nonzero_None": 9807,
+    "castPickup_known": 3820,
+    "castPickup_None": 884,
+    "castPickup_nonzero_None": 782,
+    "cast_known_packets": 35,
+    "cast_known_packet_bytes": 2488,
+    "complete922_returns": 20,
+    "collectPickup_known": 3952,
+    "collectPickup_None": 528,
+    "collectPickup_nonzero_None": 466,
+    "known_player_fields": 105,
+    "known_growth_fields": 125,
+    "collect_known_packets": 25,
+    "collect_known_packet_bytes": 629,
+    "NPC_source_conserved_bytes": 34560,
+    "complete2890_returns": 20,
+    "selectedLive_known": 72,
+    "selectedLive_None": 24,
+    "selectedLive_nonzero_None": 24,
+    "complete1093_returns": 3,
+    "selected_NPC_source_conserved_bytes": 5184,
+    "followLive_known": 24,
+    "followLive_None": 8,
+    "followLive_nonzero_None": 8,
+    "postselection_live_preserved_cleave_returns": 1
+  },
+  "case_summary": [
+    {
+      "app_seed_u64": "0",
+      "controlled_rounds": 4,
+      "actual_XP_awarded": 5,
+      "actual_gold_awarded": 2,
+      "level": 2,
+      "xp": 0,
+      "phase": 1,
+      "selected_index": 0,
+      "owned80_count": 2,
+      "actual_postselect_exec": [
+        5,
+        6
+      ],
+      "postselection_following_cleave": false,
+      "actual_owned_header_before": [
+        1,
+        92731328,
+        1
+      ],
+      "actual_owned_header_after": [
+        4,
+        94879224,
+        2
+      ]
+    },
+    {
+      "app_seed_u64": "1",
+      "controlled_rounds": 3,
+      "actual_XP_awarded": 5,
+      "actual_gold_awarded": 0,
+      "level": 2,
+      "xp": 0,
+      "phase": 1,
+      "selected_index": 0,
+      "owned80_count": 2,
+      "actual_postselect_exec": [
+        5,
+        7
+      ],
+      "postselection_following_cleave": false,
+      "actual_owned_header_before": [
+        1,
+        92731328,
+        1
+      ],
+      "actual_owned_header_after": [
+        4,
+        94879224,
+        2
+      ]
+    },
+    {
+      "app_seed_u64": "42",
+      "controlled_rounds": 3,
+      "actual_XP_awarded": 5,
+      "actual_gold_awarded": 8,
+      "level": 2,
+      "xp": 0,
+      "phase": 1,
+      "selected_index": 0,
+      "owned80_count": 2,
+      "actual_postselect_exec": [
+        5,
+        2
+      ],
+      "postselection_following_cleave": true,
+      "actual_owned_header_before": [
+        1,
+        92731328,
+        1
+      ],
+      "actual_owned_header_after": [
+        4,
+        94879224,
+        2
+      ]
+    }
+  ],
+  "source_files": 54,
+  "production_sources": 40,
+  "source_import_edges": 166,
+  "owned_process": {
+    "pid": 91848,
+    "pgid": 91848,
+    "exit_code": 0,
+    "seconds": 7.396236915999907,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "actual_build": "f79c5e2b4",
+    "cases": 3,
+    "full_calls": {
+      "922": 21,
+      "1093": 3,
+      "1108": 3,
+      "1600": 3,
+      "2890": 20,
+      "2945": 3
+    },
+    "fresh_instances": 3,
+    "host_calls": 0,
+    "denied_imports": 882,
+    "allocator_calls": 15,
+    "stack_guards": 68,
+    "target_and_setup_returns": [
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2890,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 922,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "world_source_checks": [
+      {
+        "instance": 1,
+        "phase": "restored-resource-context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "before-full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after-full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round0after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round0after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round0after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round0after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round1after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round1after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round1after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round1after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round2after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round2after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round2after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round2after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round3after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round3after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round3after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "round3after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after-firstchoice",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "restored-resource-context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "before-full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after-full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round0after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round0after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round0after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round0after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round1after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round1after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round1after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round1after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round2after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round2after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round2after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "round2after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after-firstchoice",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "restored-resource-context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "before-full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after-full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round0after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round0after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round0after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round0after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round1after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round1after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round1after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round1after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round2after922-0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round2after922-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round2after2890-1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "round2after2890-2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after-firstchoice",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after-postselection-cleave",
+        "ranges": 2318,
+        "unchanged": true
+      }
+    ],
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "heap_cap_mib": 512,
+    "output_bytes": 2018939,
+    "snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "snapshot_role": "legal_v2_after_real_begin1108_initialized_resource_context_only;newtargetGamefromfresh1600",
+    "old_snapshot_Game_reused_as_target": false,
+    "flags_or_Once_readiness_injected": false,
+    "profile_input": "explicit376 +actual2945four-empty-account prefix16;notnaturalmenu",
+    "app_lcg_step": "controlledinputderivedbyexact6786formula;full6786notcalled",
+    "typed_velocity0_and_pathNone": true,
+    "App_or_WorldRc_producer_executed": false,
+    "externref_state_restored": false,
+    "scripted_player_relocation": true,
+    "initial_counters_checked_not_produced": true,
+    "full_mainloop_frames": 0,
+    "native_executions": 0,
+    "complete_games": 0,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "resource_context_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+  "resource_context_role": "Original-side only legalpost1108 initialized resource/locale/WorldRccontext;targetnewGame,notoldGame",
+  "independent_world_receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+  "independent_world_producer_executed_in_this_experiment": false,
+  "independent_preproduced_canonical_world_input": true,
+  "expected_before_original": true,
+  "original_input_contains_expected": false,
+  "full_message_stream_predicted": false,
+  "complete_opening_packets": 228,
+  "known_ordered_cast_packets": 35,
+  "known_cast_packet_bytes": 2488,
+  "known_ordered_collector_packets": 25,
+  "known_collector_packet_bytes": 629,
+  "collector_actual_packet_observations": 28,
+  "known_selection_live_bytes": 72,
+  "None_selection_live_bytes": 24,
+  "following_live_bytes_known": 24,
+  "following_live_bytes_None": 8,
+  "collect_NPC_source_bytes_conserved": 34560,
+  "select_NPC_source_bytes_conserved": 5184,
+  "postselection_source_proof": "evidence/opening-collection139-oracle-20261102T101302.628856Z/postselection-source-proof.json",
+  "postselection_source_proof_sha256": "7671cc97364165faa69bb7fa9bde56ca95f3b95db7fe73af56dca9147e3134b4",
+  "postselection_source_proof_is_supplemental_postcapture": true,
+  "prior_experiments_preserved_not_added": [
+    {
+      "comparison": "evidence/opening-collection139-oracle-20261102T100041.373106Z/comparison.json",
+      "sha256": "f168fabe1efba497a1804451174ad83391016524a444d34862beb6a0f4cf9af8",
+      "phase": "pilot",
+      "cases": 1,
+      "completed": 1,
+      "differences": 0,
+      "runtime": {
+        "version": "0.139.0",
+        "actual_build": "f79c5e2b4",
+        "cases": 1,
+        "full_calls": {
+          "922": 2,
+          "1108": 1,
+          "1600": 1,
+          "2890": 3,
+          "2945": 1
+        },
+        "fresh_instances": 1,
+        "host_calls": 0,
+        "denied_imports": 882,
+        "allocator_calls": 5,
+        "stack_guards": 13,
+        "target_and_setup_returns": [
+          {
+            "role": 2945,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1600,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1108,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          }
+        ],
+        "world_source_checks": [
+          {
+            "instance": 1,
+            "phase": "restored-resource-context",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "before-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-chain922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-chain922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-chain2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-chain2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-chain2890-3",
+            "ranges": 2318,
+            "unchanged": true
+          }
+        ],
+        "peak_memory_bytes": 177078272,
+        "memory_cap_bytes": 268435456,
+        "heap_cap_mib": 512,
+        "output_bytes": 256634,
+        "snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+        "snapshot_role": "legal_v2_after_real_begin1108_initialized_resource_context_only;newtargetGamefromfresh1600",
+        "old_snapshot_Game_reused_as_target": false,
+        "flags_or_Once_readiness_injected": false,
+        "profile_input": "explicit376 +actual2945four-empty-account prefix16;notnaturalmenu",
+        "app_lcg_step": "controlledinputderivedbyexact6786formula;full6786notcalled",
+        "typed_velocity0_and_pathNone": true,
+        "App_or_WorldRc_producer_executed": false,
+        "externref_state_restored": false,
+        "scripted_player_relocation": true,
+        "initial_counters_checked_not_produced": true,
+        "full_mainloop_frames": 0,
+        "native_executions": 0,
+        "complete_games": 0,
+        "network_used": false,
+        "user_saves_accessed": false,
+        "error": null
+      },
+      "process": {
+        "pid": 61554,
+        "pgid": 61554,
+        "exit_code": 0,
+        "seconds": 0.8531082080007764,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "not_added_to_final_coverage": true
+    },
+    {
+      "comparison": "evidence/opening-collection139-oracle-20261102T100941.527043Z/comparison.json",
+      "sha256": "9c556dc388cd7f5d948145fd7b4c50d333946a0c4ba3c4822d6bb65ef61d6c58",
+      "phase": "pilot",
+      "cases": 1,
+      "completed": 1,
+      "differences": 0,
+      "runtime": {
+        "version": "0.139.0",
+        "actual_build": "f79c5e2b4",
+        "cases": 1,
+        "full_calls": {
+          "922": 8,
+          "1093": 1,
+          "1108": 1,
+          "1600": 1,
+          "2890": 8,
+          "2945": 1
+        },
+        "fresh_instances": 1,
+        "host_calls": 0,
+        "denied_imports": 882,
+        "allocator_calls": 5,
+        "stack_guards": 25,
+        "target_and_setup_returns": [
+          {
+            "role": 2945,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1600,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1108,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1093,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          }
+        ],
+        "world_source_checks": [
+          {
+            "instance": 1,
+            "phase": "restored-resource-context",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "before-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-firstchoice",
+            "ranges": 2318,
+            "unchanged": true
+          }
+        ],
+        "peak_memory_bytes": 177078272,
+        "memory_cap_bytes": 268435456,
+        "heap_cap_mib": 512,
+        "output_bytes": 764874,
+        "snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+        "snapshot_role": "legal_v2_after_real_begin1108_initialized_resource_context_only;newtargetGamefromfresh1600",
+        "old_snapshot_Game_reused_as_target": false,
+        "flags_or_Once_readiness_injected": false,
+        "profile_input": "explicit376 +actual2945four-empty-account prefix16;notnaturalmenu",
+        "app_lcg_step": "controlledinputderivedbyexact6786formula;full6786notcalled",
+        "typed_velocity0_and_pathNone": true,
+        "App_or_WorldRc_producer_executed": false,
+        "externref_state_restored": false,
+        "scripted_player_relocation": true,
+        "initial_counters_checked_not_produced": true,
+        "full_mainloop_frames": 0,
+        "native_executions": 0,
+        "complete_games": 0,
+        "network_used": false,
+        "user_saves_accessed": false,
+        "error": null
+      },
+      "process": {
+        "pid": 78724,
+        "pgid": 78724,
+        "exit_code": 0,
+        "seconds": 1.1775471250002738,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "not_added_to_final_coverage": true
+    },
+    {
+      "comparison": "evidence/opening-collection139-oracle-20261102T101059.803082Z/comparison.json",
+      "sha256": "9a608cd10314867e0218e77f13737eddcc49823e4e0381c016d3b27cbc3d6b02",
+      "phase": "full",
+      "cases": 3,
+      "completed": 3,
+      "differences": 9,
+      "runtime": {
+        "version": "0.139.0",
+        "actual_build": "f79c5e2b4",
+        "cases": 3,
+        "full_calls": {
+          "922": 21,
+          "1093": 3,
+          "1108": 3,
+          "1600": 3,
+          "2890": 20,
+          "2945": 3
+        },
+        "fresh_instances": 3,
+        "host_calls": 0,
+        "denied_imports": 882,
+        "allocator_calls": 15,
+        "stack_guards": 68,
+        "target_and_setup_returns": [
+          {
+            "role": 2945,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1600,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1108,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1093,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2945,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1600,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1108,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1093,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2945,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1600,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1108,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 2890,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 1093,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          },
+          {
+            "role": 922,
+            "before": 1048576,
+            "after": 1048576,
+            "returned": true
+          }
+        ],
+        "world_source_checks": [
+          {
+            "instance": 1,
+            "phase": "restored-resource-context",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "before-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round0after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round1after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round2after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "round3after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 1,
+            "phase": "after-firstchoice",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "restored-resource-context",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "before-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "after-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round0after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round0after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round0after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round0after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round1after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round1after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round1after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round1after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round2after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round2after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round2after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "round2after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 2,
+            "phase": "after-firstchoice",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "restored-resource-context",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "before-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "after-full1108",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round0after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round0after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round0after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round0after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round1after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round1after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round1after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round1after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round2after922-0",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round2after922-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round2after2890-1",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "round2after2890-2",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "after-firstchoice",
+            "ranges": 2318,
+            "unchanged": true
+          },
+          {
+            "instance": 3,
+            "phase": "after-postselection-cleave",
+            "ranges": 2318,
+            "unchanged": true
+          }
+        ],
+        "peak_memory_bytes": 177078272,
+        "memory_cap_bytes": 268435456,
+        "heap_cap_mib": 512,
+        "output_bytes": 1997143,
+        "snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+        "snapshot_role": "legal_v2_after_real_begin1108_initialized_resource_context_only;newtargetGamefromfresh1600",
+        "old_snapshot_Game_reused_as_target": false,
+        "flags_or_Once_readiness_injected": false,
+        "profile_input": "explicit376 +actual2945four-empty-account prefix16;notnaturalmenu",
+        "app_lcg_step": "controlledinputderivedbyexact6786formula;full6786notcalled",
+        "typed_velocity0_and_pathNone": true,
+        "App_or_WorldRc_producer_executed": false,
+        "externref_state_restored": false,
+        "scripted_player_relocation": true,
+        "initial_counters_checked_not_produced": true,
+        "full_mainloop_frames": 0,
+        "native_executions": 0,
+        "complete_games": 0,
+        "network_used": false,
+        "user_saves_accessed": false,
+        "error": null
+      },
+      "process": {
+        "pid": 83262,
+        "pgid": 83262,
+        "exit_code": 0,
+        "seconds": 2.033574667000721,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "not_added_to_final_coverage": true
+    }
+  ],
+  "full_mainloop_frames": 0,
+  "native_windows_executions": 0,
+  "complete_games": 0,
+  "limitations": [
+    "Controlled directentry schedule with explicit teleport/clock,not recovered deviceinput,AI or mainloop. AppLCG is controlled current6786formula;full6786/App/Rc/externrefbootstrap not reconstructed.",
+    "Original consumes legalv2post1108resource-onlysnapshot,thennew2945/1600Game/full1108. Independent model consumes previously raw-derivedcanonicalworld,not originalmemory;raw451worldproducer was not rerun in this experiment.",
+    "Initialdamage accounting/spelltotals/kills/elites/gold/sequence are explicit checkedcounterinputs,not complete naturalGame producer proofs.",
+    "Fullopening4NPC/2Rune/2or3windows/4special/69boundaries retained. Rune kind2 nearbyconsumption remainsPending;these particular actions do not select it.",
+    "All47directtargetreturns actual andnew;inner5719/913/gain/choicesnotdirectlyinstrumented andnotadded separately. Threephases2 are produced by realXPdrops5,no syntheticXPgrant or phase0 bypass.",
+    "228openingmessages complete;cast306/XPcoin169 andcollector221/170 are known orderedsubsequences. Additionallevel/UI/592/ordinaryHP169/selectionappearance messages remain observed,not independentlyencoded.",
+    "Actual ownedcap1→4 relocation is observed;newcalls reacquireGame1660. Old101059batch passed stale freedpointer to followup922,caused9diff andisrejected;no originalgame/heapcorruption claim.",
+    "Selected owned2 is really rescanned againstcurrentdefinitions:cleave5+Rend6/Execute7/Demo2;eventcount2056/mode770 remain0. This proves execution11arm skipped,not everyownedcallback restored.",
+    "Postselectionfollowthrough dynamically tested only after Demo choice inseed42,withcurrentlive12 left present andonealiveNPC hit. Rend/Executecases exhaustedinitialNPCs;freshenemy scheduler/ownedabilitytick/newskillcast not integrated.",
+    "Selectedlive32payload12..19 staysNone (actualnonzero). No inactivepadding/pointer/btreepayload filled from snapshots or falsezero assumptions.",
+    "Firstnewcards are allactualindex0 inthese3cases;existingcleaveupgrade/gold/repeatedchoices/saturation andsubsequentnonemptylive statrecalculation remain separately bounded work.",
+    "FullGameUI/render/save/win/defeat/network/nativeWindows/completegame remain unaccepted."
+  ]
+}
