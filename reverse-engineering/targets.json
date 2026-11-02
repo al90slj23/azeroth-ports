@@ -8,7 +8,7 @@
     "windows_reference_key": "windows_official_latest_reference",
     "metadata_reference_key": "official_latest_0139_metadata",
     "selected_by": "Official139 metadata, coherent saved Windows/Web bytes and real native/Web nine-byte consumers.",
-    "status": "scoped139_nonlethal_damage_differential_and_independent_review_passed_not_fullgame",
+    "status": "scoped139_damage_stats_and_default_constructor_differentials_and_independent_reviews_passed_not_fullgame",
     "version_policy": "Functional target follows verified latest stable139. Every fixed135/137/138 experiment stays pinned and retains its own acceptance; no transfer.",
     "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0135",
     "fixed_previous_latest_target_key": "fixed_dynamic_research_target_0138",
@@ -20,10 +20,12 @@
     "official_manifest_declared_native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
     "official_manifest_declared_native_bytes": 150595584,
     "runtime_acceptance_reports": [
-      "reports/2026-11-02-combat0139.json"
+      "reports/2026-11-02-combat0139.json",
+      "reports/2026-11-02-stats0139.json",
+      "reports/2026-11-02-initial-state0139.json"
     ],
-    "new_original_runtime_cases": 80,
-    "new_original_entry_calls": 125,
+    "new_original_runtime_cases": 10811,
+    "new_original_entry_calls": 10856,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
@@ -42,7 +44,7 @@
     "roles_with_static_differences": 19,
     "static_semantic_rows_compared": 143,
     "static_rows_equal": 143,
-    "new_runtime_acceptance_registered": 80,
+    "new_runtime_acceptance_registered": 10811,
     "static_migration_not_behavioral_equivalence": true,
     "analysis_profile": "evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
     "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
@@ -52,12 +54,14 @@
     "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
     "static_data_delta": "evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
     "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be",
-    "new_runtime_cases": 80,
-    "new_independent_model_cases": 80,
+    "new_runtime_cases": 10811,
+    "new_independent_model_cases": 10811,
     "runtime_independent_reviews": [
-      "reports/2026-11-02-combat0139-independent-review.json"
+      "reports/2026-11-02-combat0139-independent-review.json",
+      "reports/2026-11-02-stats0139-independent-review.json",
+      "reports/2026-11-02-initial-state0139-independent-review.json"
     ],
-    "runtime_scope": "Fresh139 only:80cases/125full913calls,nonlethal explicit synthetic432byte entities,emptyitems/spells/proc1972,no context. FullGame/App/constructor/world/880/native/fullgame unaccepted; no old-version acceptance transfer."
+    "runtime_scope": "Separate139 scopes: damage80cases/125calls,stats10569/10569,defaultconstructor162/162. Counts are test executions,not coverage. FullGame/App/world/opening/884/native/fullgame not accepted here; pilots and old-version results not added."
   },
   "fixed_dynamic_research_target_0135": {
     "version": "0.135.1",
@@ -2121,7 +2125,7 @@
     "report": "reports/2026-11-02-official0139-acquisition-identity.json",
     "build_identity_sidecar": "evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
     "build_identity_sidecar_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
-    "role": "active139web_scoped_nonlethal_damage_reviewed_not_fullgame",
+    "role": "active139web_scoped_damage_stats_and_constructor_reviewed_not_fullgame",
     "official_independent_wasm_digest_published": false,
     "limitations": [
       "Saved decoded HTTPS bytes and local SHA; manifest/HTML byte-stable before/after acquisition.",
@@ -2129,10 +2133,14 @@
       "No139 behavioral acceptance transferred from135/137/138."
     ],
     "runtime_acceptance_reports": [
-      "reports/2026-11-02-combat0139.json"
+      "reports/2026-11-02-combat0139.json",
+      "reports/2026-11-02-stats0139.json",
+      "reports/2026-11-02-initial-state0139.json"
     ],
     "runtime_independent_reviews": [
-      "reports/2026-11-02-combat0139-independent-review.json"
+      "reports/2026-11-02-combat0139-independent-review.json",
+      "reports/2026-11-02-stats0139-independent-review.json",
+      "reports/2026-11-02-initial-state0139-independent-review.json"
     ]
   },
   "fixed_dynamic_research_target_0137": {

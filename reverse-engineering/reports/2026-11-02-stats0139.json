@@ -1,0 +1,450 @@
+{
+  "status": "fresh139_numeric_stats_pass_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "comparison": {
+    "path": "evidence/stats0139-oracle-20261102T020320.478498Z/comparison.json",
+    "sha256": "9f667e74d304eed1b36dd56e06c1d17e941ab87e29e558e0dd6b3fec4c316de8",
+    "bytes": 1364993
+  },
+  "cases": 10569,
+  "full_original1542_calls": 10569,
+  "mismatch_fields": 0,
+  "comparison_counts": {
+    "compared_values": 359346,
+    "actual_movement_packets": 1537
+  },
+  "case_groups": {
+    "class-selector": 256,
+    "race-selector": 256,
+    "class-level": 981,
+    "passive-tag": 345,
+    "adjustment-tag": 810,
+    "item-tag": 645,
+    "hp-select": 225,
+    "owned-soul-link": 525,
+    "timed-expiry": 180,
+    "live-dominance": 3600,
+    "live-expiry": 60,
+    "mixed-ordered": 600,
+    "all-class-race-level": 576,
+    "new-adjustment-cap1": 8,
+    "new-auxiliary-pool-clamps": 162,
+    "new-conditional-pool-select-order": 1296,
+    "XP-radius-ordered-source-domains": 32,
+    "movement-threshold": 12
+  },
+  "source_files": 13,
+  "production_files": 5,
+  "local_import_edges": 19,
+  "source_sha256": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_stats139_oracle.py": "f8549a53724df9ba8f0f4ffbc5737fdae20a71867536544745db15055999cb73",
+    "scripts/check_stats139.py": "58158210cb298fe0644d6414067ef2251f1c65c0bba1b38e550cb86f215efb75",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_stats139_oracle.mjs": "9a39985b2788bb2d743fe5fefead3dd559c0630ece757d20ffc797e0fa7dfab1",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "author_new_files": [
+    {
+      "path": "reconstruction/core_spec/derived_stats139.py",
+      "sha256": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+      "bytes": 13226
+    },
+    {
+      "path": "scripts/trace_stats139.py",
+      "sha256": "593adb17054729d2f431171251afaabc424ac2c906fe43d14d3b3ba03eab478e",
+      "bytes": 6873
+    },
+    {
+      "path": "scripts/build_stats139_oracle.py",
+      "sha256": "f8549a53724df9ba8f0f4ffbc5737fdae20a71867536544745db15055999cb73",
+      "bytes": 5243
+    },
+    {
+      "path": "scripts/run_stats139_oracle.mjs",
+      "sha256": "9a39985b2788bb2d743fe5fefead3dd559c0630ece757d20ffc797e0fa7dfab1",
+      "bytes": 7767
+    },
+    {
+      "path": "scripts/check_stats139.py",
+      "sha256": "58158210cb298fe0644d6414067ef2251f1c65c0bba1b38e550cb86f215efb75",
+      "bytes": 9523
+    }
+  ],
+  "process": {
+    "pid": 43442,
+    "pgid": 43442,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 5.173935665996396,
+    "error": null
+  },
+  "runtime_summary": {
+    "version": "0.139.0",
+    "actual_build": "f79c5e2b4",
+    "cases": 10569,
+    "completed_cases": 10569,
+    "full1542_calls": 10569,
+    "fresh_instances": 331,
+    "actual_host_calls": 0,
+    "denied_imports": 882,
+    "peak_memory_bytes": 15007744,
+    "memory_cap_bytes": 33554432,
+    "heap_cap_mib": 512,
+    "output_bytes": 60989074,
+    "stack_guards": 101736,
+    "stack_all_restored": true,
+    "denied_import_surface_sha256": "76d02a56b79898fb2422bf2ab46634a4b4b0072778a39bca8e4bef1fa12043a0",
+    "original_function_bodies_unchanged": true,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "original_snapshot_loaded": false,
+    "error": null
+  },
+  "module_sha256": "8862d92a82194626e95e1edd96e2b976140fe11ec97bd6156330aaede0d46fcf",
+  "manifest_sha256": "e7cfc5c7664e2e2cc7d511ca8cfb7bb80105139074862dbe9745e530ee503483",
+  "only_modified_original_section": 7,
+  "callee_replacements": [],
+  "original_direct_callees": [
+    {
+      "callee": 48967,
+      "sites": 1
+    },
+    {
+      "callee": 52397,
+      "sites": 3
+    },
+    {
+      "callee": 66546,
+      "sites": 1
+    },
+    {
+      "callee": 66553,
+      "sites": 2
+    },
+    {
+      "callee": 73034,
+      "sites": 1
+    },
+    {
+      "callee": 81897,
+      "sites": 1
+    },
+    {
+      "callee": 108362,
+      "sites": 1
+    },
+    {
+      "callee": 109316,
+      "sites": 1
+    }
+  ],
+  "static_trace": {
+    "path": "evidence/stats139-static-20261102T015922.236942Z/trace.json",
+    "sha256": "557b4841cd3043f229b7c7f0f7f10315c210d5935476c4b8f8b9701e5e6c6125",
+    "bytes": 16070
+  },
+  "static_rule_evidence": {
+    "full139body_lines": 2329,
+    "normalized138body_after_exact_codegen_rewrites_equal": true,
+    "rewrites": [
+      {
+        "label": "passive count local2→1",
+        "sites": [
+          615
+        ],
+        "before": [
+          "i32.load offset=1700",
+          "local.tee 2",
+          "i32.eqz"
+        ],
+        "after": [
+          "i32.load offset=1700",
+          "local.tee 1",
+          "i32.eqz"
+        ]
+      },
+      {
+        "label": "passive count local1 consumed",
+        "sites": [
+          622
+        ],
+        "before": [
+          "end",
+          "local.get 2",
+          "i32.const 3",
+          "i32.shl",
+          "local.set 2"
+        ],
+        "after": [
+          "end",
+          "local.get 1",
+          "i32.const 3",
+          "i32.shl",
+          "local.set 2"
+        ]
+      },
+      {
+        "label": "live spell temporary local2→5",
+        "sites": [
+          1500
+        ],
+        "before": [
+          "i32.load offset=20",
+          "local.tee 2",
+          "i32.const 23451",
+          "i32.ne",
+          "if  ;; label = @4",
+          "local.get 2",
+          "i32.const 23505"
+        ],
+        "after": [
+          "i32.load offset=20",
+          "local.tee 5",
+          "i32.const 23451",
+          "i32.ne",
+          "if  ;; label = @4",
+          "local.get 5",
+          "i32.const 23505"
+        ]
+      },
+      {
+        "label": "empty BTree pointer branch direct 6",
+        "sites": [
+          2032,
+          2155
+        ],
+        "before": [
+          "local.get 6",
+          "i32.eqz",
+          "if  ;; label = @5",
+          "local.get 2",
+          "i64.extend_i32_u",
+          "i64.const 32",
+          "i64.shl",
+          "local.set 52",
+          "br 3 (;@2;)",
+          "end"
+        ],
+        "after": [
+          "local.get 6",
+          "i32.eqz",
+          "br_if 2 (;@2;)"
+        ]
+      },
+      {
+        "label": "empty BTree pointer branch direct 0",
+        "sites": [
+          2267
+        ],
+        "before": [
+          "local.get 0",
+          "i32.eqz",
+          "if  ;; label = @5",
+          "local.get 2",
+          "i64.extend_i32_u",
+          "i64.const 32",
+          "i64.shl",
+          "local.set 52",
+          "br 3 (;@2;)",
+          "end"
+        ],
+        "after": [
+          "local.get 0",
+          "i32.eqz",
+          "br_if 2 (;@2;)"
+        ]
+      },
+      {
+        "label": "BTree packed u64 low0/highlocal2→two u32 writes",
+        "sites": [
+          2057,
+          2173,
+          2292
+        ],
+        "before": [
+          "local.get 4",
+          "local.get 52",
+          "i64.store offset=20 align=4"
+        ],
+        "after": [
+          "local.get 4",
+          "local.get 2",
+          "i32.store offset=24",
+          "local.get 4",
+          "i32.const 0",
+          "i32.store offset=20"
+        ]
+      }
+    ],
+    "normalization_scope": "Call/type ids and active static addresses,explicitlocal liveness/register renaming,three equivalentBTree packedheader stores;not behavioral acceptance",
+    "class_rows": 9,
+    "race_rows": 8,
+    "race_modifier_entries": 14,
+    "headers": {
+      "passives": [
+        1692,
+        1696,
+        1700,
+        8
+      ],
+      "adjustments": [
+        1668,
+        1672,
+        1676,
+        16
+      ],
+      "items": [
+        2024,
+        2028,
+        2032,
+        8
+      ],
+      "owned": [
+        168,
+        172,
+        176,
+        8
+      ],
+      "timed_definitions": [
+        2048,
+        2052,
+        2056,
+        36
+      ],
+      "timed_records": [
+        592,
+        596,
+        600,
+        12
+      ],
+      "live": [
+        1704,
+        1708,
+        1712,
+        32
+      ]
+    },
+    "output_fields": {
+      "derived": [
+        1536,
+        1540,
+        1544,
+        1548,
+        1552,
+        1556,
+        1560,
+        1564,
+        1568,
+        1572,
+        1576,
+        1580,
+        1584,
+        1588,
+        1592,
+        1596,
+        1600,
+        1604,
+        1608,
+        1612,
+        1616,
+        1620,
+        1624
+      ],
+      "currentHP": 1440,
+      "auxiliary": [
+        1444,
+        1448,
+        1348,
+        764
+      ],
+      "speed": 1648,
+      "speed_sequence": 1644,
+      "movement_queue": [
+        1880,
+        1884,
+        1888
+      ],
+      "BTree": [
+        2476,
+        2480
+      ],
+      "BTree_keys": [
+        22,
+        28,
+        1109
+      ]
+    }
+  },
+  "api": {
+    "module": "core_spec.derived_stats139",
+    "input": "StatsInput and input_from_dict;seven explicitorderedsource vectors",
+    "output": [
+      "derived_bits1536..1624 including1572",
+      "current_hp_bits(1440)",
+      "auxiliary_bits1444/1448/1348/764",
+      "object_fields22/28/1109",
+      "speed_bits(1648)",
+      "speed_changed",
+      "accepted_live_indices(model-only explanatory projection)"
+    ],
+    "legacy_input_labels": {
+      "pool1532_bits": 1444,
+      "pool1536_bits": 1448,
+      "pool768_bits": 764,
+      "flag2574": 2582
+    }
+  },
+  "expected_first": true,
+  "source_current_unchanged": true,
+  "old_runtime_results_used": false,
+  "old_expected_results_read": false,
+  "corpus_reuse": {
+    "kind": "ControlledinputJSONL only",
+    "path": "evidence/stats0138-oracle-20261101T231303.006206Z/fixtures.jsonl",
+    "sha256": "362dd58da9b1b201535c9e0334b212ddc0bc03f84887cac2a039c9188ccb2c09",
+    "no_old_original_or_model_executed": true,
+    "new139_expected_generated": true,
+    "new139_original_calls": true
+  },
+  "NaN": "Classification only forfloat output; all other numeric words exact,integer fields strict.",
+  "raw_Game2592_per_call_observation_bytes": 27394848,
+  "raw_Game_full_equality_claimed": false,
+  "packet_bytes_predicted": false,
+  "pilot": {
+    "path": "evidence/stats0139-oracle-20261102T020236.721711Z/comparison.json",
+    "sha256": "aab3c0cf524979fbdfe52139079d261e2acc424ee07c840ef9955803df40a5ab",
+    "bytes": 130097,
+    "cases": 12,
+    "calls": 12,
+    "not_added_to_full": true,
+    "fresh_instances": 1
+  },
+  "original_total_calls_in_this_recovery": 10581,
+  "total_fresh_instances": 332,
+  "independent_review": "pending",
+  "scope": "Complete1391542/callees, syntheticGame8192 and explicit orderedstat source vectors.23derived+HP+4aux+3objectkeys+speeddecision/queuecount. Timed596/600,reserve764 are explicit139 physicalABI; all seven input source producers remain caller controlled.",
+  "pending": [
+    "Naturalconstructor/profile/talent/equipment/effect producers and arbitraryinvalid source records",
+    "FullBTree physical layout and exactmovementpacketbytes/networkdelivery",
+    "FullGame/App/continuousgameplay andnewproc/death systems",
+    "Windowsnative runtime",
+    "Independent author review"
+  ],
+  "full880_frames": 0,
+  "complete_games": 0,
+  "native_executions": 0,
+  "installation_or_saves_changed": false,
+  "registry_changed": false,
+  "shared_sources_modified": false
+}

@@ -4,6 +4,10 @@
 
 最新139的[限定非致死伤害80组／125完整913调用](reports/2026-11-02-combat0139.md)已重新执行新版原件，0声明差异，[异作者独审通过](reports/2026-11-02-combat0139-independent-review.md)。新版真实单位stride为432、导入882；完整单位字节与声明的HP／累计伤害／RNG等比较通过。合成Game／空items、spells、1972 proc队列／无context的边界明确：不代表完整Game、自然构造、死亡、原生Windows或完整一局。Pilot4组／5调用另存，不加入正式80／125。
 
+139的[属性重算10569组／10569完整1542调用](reports/2026-11-02-stats0139.md)亦已重新执行新版原件，359346个声明值0差异，[异作者独审通过](reports/2026-11-02-stats0139-independent-review.md)。七组来源、当前139表、NaN分类及负零均按本体重核；1537条速度队列只核数量，不称包字节已恢复。完整BTree／Game、自然producer与全局流程仍未知，12次pilot不计入正式批。
+
+139的[默认空profile构造162次完整1600](reports/2026-11-02-initial-state0139.md)也已完成新原件差分和[独立复核](reports/2026-11-02-initial-state0139-independent-review.md)：81324个已知字节、40条完整226包0差异；338580字节保留None，其中实际非零未反填。此域使用明确借用的flat V128查询输入，Game2592未完整预测，cached6786仅静态、opening1108未执行、未进入phase1；研究pilot与此前162批不加算。真实139 world／opening另行观察，不能当作独立开局或完整游戏通过。
+
 固定138的[属性计算10569组](reports/2026-11-02-stats0138.md)、[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)、[默认构造162次](reports/2026-11-02-initial-state0138.md)及其独审保留各自窄域；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)仍是静态证据。它们均不等于138／139连续流程或Windows原生验收。
 
 本轮固定135的[移动→战斗→真实符文拾取](reports/2026-11-02-opening-moving-rune0135.md)完成新460帧／4选卡／44次完整968输入／6488阶段／6490原件入口，0声明差异，[独审通过](reports/2026-11-02-opening-moving-rune0135-independent-review.md)。第444帧（raw索引443）消费实际刷出的kind5符文，停止移动后继续16帧；恢复请求133，但当时满血266，故只证明cap、移除与通知链，不称非零回血增量。117源／100production、snapshot／独立预解析world／部分类型App和外部clock边界明确。

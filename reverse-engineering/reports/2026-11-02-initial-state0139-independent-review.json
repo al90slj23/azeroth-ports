@@ -1,0 +1,145 @@
+{
+  "status": "pass_fresh139_default_constructor_partial_projection_only",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/stats138_review",
+  "evidence": {
+    "path": "evidence/initial139-independent-review-20261102T023912.727672Z/review.json",
+    "sha256": "4c9d5ecc668e43a236160131c9b86d9f80d22ca5b141c93533d6fc6af326baa5"
+  },
+  "owned_receipt": {
+    "path": "evidence/initial139-review-owned-20261102T023906.777598Z/process-terminal.json",
+    "sha256": "73899281201ba436c679c065f68ccf7a40d754ed8fabad5eac8e8adf3eaf41eb"
+  },
+  "script": {
+    "path": "scripts/review_initial139.py",
+    "sha256": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc"
+  },
+  "pure_review_parser_dependency": {
+    "path": "scripts/review_combat139.py",
+    "sha256": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "production": false
+  },
+  "author_comparison_sha256": "e6b35679f013dc8be3467279606125a76d425b66821928a65ebbfdc30a6a0072",
+  "source_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "constructor_body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+  "cases": 162,
+  "full_original1600_calls": 162,
+  "mismatches": 0,
+  "independent_reference": "Stdlib binary32 defaultlevel1stats from actual139class/racebytes;conventionalPCGxorshiftrotate;explicit80Brecordtemplate;constructorwriteprojection andbyte-mask;noauthorproductionfunctionimport/call",
+  "stats139_separate_independent_dependency": {
+    "path": "reports/2026-11-02-stats0139-independent-review.json",
+    "sha256": "3e0c974cb0b06c0540b7d0ebaf2bbc88c8bbc247a54524ab26fcecd55c5ef393",
+    "scope": "Full10569nonempty-statmatrix separate;this constructor review independentlyrecomputes onlydefault emptysource stats",
+    "reviewer_is_stats139_author": true,
+    "not_claimed_as_second_independent_full_stats_review": true,
+    "receipt_path": "evidence/stats139-independent-review-owned-20261102T023549.515551Z/review/review.json",
+    "receipt_sha256": "772dee0e4e70f9e9b4af463ecd8473b33cddc19706dccaf6a9c1d556c1b7ffb7"
+  },
+  "known_bytes": 81324,
+  "unknown_None_bytes": 338580,
+  "known_per_case": 502,
+  "unknown_per_case": 2090,
+  "raw_game_per_case": 2592,
+  "observed_nonzero_unknown_bytes": 23706,
+  "complete226_packets": 40,
+  "source_closure": {
+    "files": 17,
+    "production": 7,
+    "edges": 25,
+    "current_and_snapshot_hashes_match": true
+  },
+  "original_identity": {
+    "type_index": 1,
+    "signature": [
+      "7f7f7f",
+      ""
+    ],
+    "nonexport_sections_byte_identical": true,
+    "direct_callsites": 48,
+    "unique_direct_callees": 21,
+    "no_callee_stubs": true
+  },
+  "runtime": {
+    "fresh_instances": 162,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "stack_checks": 810,
+    "constructor_stack_restored_allcases": true,
+    "peak_memory_bytes": 20709376,
+    "original_pid": 51782,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "static_scope": {
+    "fresh_declarations_checked": 29,
+    "class_race_modifier_source": "Fresh139rawstaticdata",
+    "profile376_memcpy": true,
+    "Game2592_memcpy": true,
+    "constructor_frame2944": true,
+    "seed_input_P184": true,
+    "borrowedflat_29912_path": "V+8 flag112/height108 means V120/V116",
+    "cached6786": "Static provenance only;not executed"
+  },
+  "input_preservation": {
+    "profile376_full_bytes_unchanged": true,
+    "borrowed_query128_full_bytes_unchanged": true,
+    "output2592_A5_poison_before_checked": true,
+    "borrowed_address_binding_G2348": true,
+    "App_or_Rc_producer": false,
+    "externref_forged": false,
+    "phase1_started": false
+  },
+  "prior_experiments": [
+    {
+      "path": "evidence/initial139-oracle-20261102T021030.924777Z/comparison.json",
+      "sha256": "81878692524dc9ac8c6b5c02fe84c713424fe657bf0e3fff6adbe1c3afffe8e7",
+      "cases": 3,
+      "original_calls": 3,
+      "not_added_to_final_coverage": true
+    },
+    {
+      "path": "evidence/initial139-oracle-20261102T021049.780758Z/comparison.json",
+      "sha256": "0baedb2f28e5f25f3b754475756b55b16ee0bcd511e3933b83a0e779268f73fd",
+      "cases": 162,
+      "original_calls": 162,
+      "not_added_to_final_coverage": true
+    }
+  ],
+  "total_author_research_original_calls": 327,
+  "negative_guards": "8author-modelrejectionsstoredonly;not rerunandnotcountedasoriginal",
+  "reviewer_author_model_executions": 0,
+  "reviewer_author_checker_executions": 0,
+  "reviewer_author_builder_executions": 0,
+  "reviewer_original_executions": 0,
+  "native_executions": 0,
+  "old_version_acceptance_transferred": false,
+  "author_sources_modified": false,
+  "public_registry_modified": false,
+  "limits": [
+    "Onlyexplicitzero376profileandfiniteborrowedflatquery;no naturalApp/profileorworldRcownerproducer",
+    "502/2592knownbytes;2090otherbytespercase remainNone,includingunmodeledaddresses/inactivepayload",
+    "No cached6786 or opening1108 execution;6786 WAT isstaticprovenance only;phase0notphase1",
+    "40packet226payloadsfullychecked;no networkserverdelivery or fullUI/App/BTreeheaplayoutaccepted",
+    "RNGallzero fallback staticallybound butnoforcedfallbackseedclaim",
+    "8storedmodelrejectionsnotrerun/countedasoriginal;no135/138acceptancetransfer",
+    "No full139game/save/win/nativeWindowsflowaccepted"
+  ],
+  "dependency_format_refresh": {
+    "reason": "Stats independent reader EOF-only format correction changed its final report hash;constructor formula/production/original artifacts unchanged",
+    "same162_author_comparison_sha256": "e6b35679f013dc8be3467279606125a76d425b66821928a65ebbfdc30a6a0072",
+    "new_original_calls": 0,
+    "new_author_production_executions": 0,
+    "old_constructor_review": {
+      "path": "evidence/initial139-independent-review-20261102T023139.620659Z/review.json",
+      "sha256": "15deab2cbf9a8861ad697ae83d4ae8ed70e1a23bed8586154fa2e723b77b42b8"
+    },
+    "old_as_issued_reports_directory": "evidence/initial139-dependency-format-refresh",
+    "old_stats_as_issued_report": {
+      "path": "evidence/stats139-format-only-refresh/old-report.json",
+      "sha256": "292643852866c5e43a3e70a92465065fec8d0a1fb9de9390527ded8cf90ee122"
+    },
+    "final_stats_report_sha256": "3e0c974cb0b06c0540b7d0ebaf2bbc88c8bbc247a54524ab26fcecd55c5ef393",
+    "read_only_same_artifact_recheck": "162/81324known/338580None/40full226/0diff"
+  }
+}
