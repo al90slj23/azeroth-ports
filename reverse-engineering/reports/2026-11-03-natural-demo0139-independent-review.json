@@ -1,0 +1,3525 @@
+{
+  "accepted": true,
+  "scope": "two fresh current139 same-seed natural Demo and second-candidate component schedules",
+  "reviewer_sha256": "91642b4d8354ad372ea46cf9e1c8ca04ca90e316c133c3584ae2a7634b30d4c9",
+  "source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "author_files": {
+    "reconstruction/core_spec/natural_demo_casts139.py": "5cde08cc60a9dfa57a1dcf52fa157fd3190402bcc3aacf6576f7d5e10eb2735d",
+    "reconstruction/core_spec/natural_demo_autocast139.py": "7ee2aa56eb59730a575f7611a431fb63b02ff5dcd205041b6d574fecffe7c977",
+    "reconstruction/core_spec/demo_family_ai139.py": "3db53fb4f48e1d8f90afaf47c7a2df96e8fd5940a0fcf712957a6aa95df21415",
+    "reconstruction/core_spec/natural_demo_choice139.py": "aef786885b4c811c4e3886685e765677fcd6e9c2be7223484c856ed9e4d9c545",
+    "reconstruction/core_spec/natural_demo_run139.py": "d39787b09c9f85cd4bc6a42e7e284df4a29c37c30b073e96a14ea01b64e03ebb",
+    "reconstruction/core_spec/natural_demo139.py": "5b3b16c268089ae41e521da2798ef62fd9b59dafeda98efc4895af3702721f82",
+    "scripts/build_natural_demo139_oracle.py": "723e6ae71ecab4b90aed87f2b12a39b4c9f1ebae1c86654d25de4ce2c7ea1c10",
+    "scripts/check_natural_demo139.py": "b625c81709cc1111bf650c568a957b50f9ff043b7f030026321acbefde6fc2fe",
+    "scripts/run_natural_demo139_oracle.mjs": "1e560d906be36d0ca65e4da826f149fd7c8a44ab177992332c0c17bfd27f4e7e",
+    "reports/2026-11-03-natural-demo0139.json": "abc92f855993c7d3002036104be45ab2a202ac9e38e590748349bacd706a7fe6",
+    "reports/2026-11-03-natural-demo0139.md": "0e1749e7c8b6141bb945c3530abbe9271f80398838057355d8ac3be2999b3cf7",
+    "reconstruction/core_spec/candidates_second139.py": "4b5773b19d6178d4e7e7b71f756611a5fa075b7eeea4c29cefb89561fb061ace",
+    "reconstruction/core_spec/natural_demo_growth_v2_139.py": "b9530bc29ad263de35ee02ae3d255578aea9f27c50bcbf1e593871587f86d525",
+    "reconstruction/core_spec/natural_demo_run_v2_139.py": "49c5b96c89251a3e7bd61f5f72315698a97934a37d942d167c555eec1f9da353",
+    "reconstruction/core_spec/natural_demo_v2_139.py": "736fef29897d7fdf4611c4f54c7c59d105b8a3f5e042ce831e09c0a7c9404be2",
+    "scripts/build_natural_demo_second139_oracle.py": "33d477e76850cf2a2d047afb500cccae83b5b1143a97dad8f99f4562dee3b25d",
+    "scripts/check_natural_demo_second139.py": "9ccd81aa311dc053b827229c473f8b69eb7213ce8ffd853ac996a828481c4124",
+    "scripts/run_natural_demo_second139_oracle.mjs": "f1fb1c2f0202b83420a0493bc1651f179821d38aec9ee026c4bcbb509c2274e6",
+    "reports/2026-11-03-natural-demo-second0139.json": "adc54d4258bb4040ab264a5480c19f37c7d7a32fb65be185d595cd4166ff6fd1",
+    "reports/2026-11-03-natural-demo-second0139.md": "ba12b2d78b8e05c0d592293d2349811902bcdfb12e33d1c00f5bc3dd7dd599c5"
+  },
+  "source_files": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "379a4e33d987ae6d6cf5344fba35ccd1567366720d106b2d58bdaddad613e078",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates139.py": "4ff5b2c3706247a9bb0f733bda6b7b2a9d46bbb19ab46b4d7f418b8e3ee70954",
+    "reconstruction/core_spec/candidates139_data.py": "efb653784d0fe24bdc35cf65437a5226eff64888252f33826a8341645eaf8343",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast139.py": "88ad210ea3a959b62f19c0fd5f6b43a14983609d7bcb69132166e6c475b50fd0",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/combat139.py": "4f7f8f00411583608d4c1d8e917733ae1b8068b10ad2f55b63dde675c917fc89",
+    "reconstruction/core_spec/death139.py": "4186d06ccd2338cd09b2be0afda7381e4b76f6b4bfdc1746714951707fad5a7f",
+    "reconstruction/core_spec/death_pickups139.py": "74b6460ab715044a90993ef8d4c74884bca1dadb3329b4b8f6b4e6e309c66cfb",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_damage139.py": "b316a7b570481270da25abd48dc77172ef00240c6c7fea1fb99538e2c2d33659",
+    "reconstruction/core_spec/demo_family_ai139.py": "3db53fb4f48e1d8f90afaf47c7a2df96e8fd5940a0fcf712957a6aa95df21415",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/demo_shout139.py": "98ea41b6d8c3f63c863bd87b466eef6f4254ec0fffc99fe5d34ead234512e692",
+    "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/enemy_ai139.py": "db7d8fce02df7674908304768e183b7e75830dbbc98d7e4fa06c4ee28d6e303a",
+    "reconstruction/core_spec/enemy_ai_dead139.py": "19b64a1991afe8964dbd70941dea454c4f79cb7ff07b5ce2db55700541a4baab",
+    "reconstruction/core_spec/enemy_ai_dead139_v2.py": "1b0fe5c7d966860047fb1e8b456fd103a090c72547c9df8c8fe632542e154d0d",
+    "reconstruction/core_spec/frame_clock139.py": "e906286b40374b649d57202097c190d634959d074f54e6350fc6d85d23656cdd",
+    "reconstruction/core_spec/growth139.py": "046d30aacfc3775bfdb2c022e61e3f1b655e858ebfdf865cee6e8e9419ea2169",
+    "reconstruction/core_spec/growth_world139.py": "0ce3d2144d42e5c61a97e21a227e0e46b85c4b955ef68af6f1ee24edbea03993",
+    "reconstruction/core_spec/healing139.py": "6ad9ccf9c161c4bacfa7532dacc53bbf555d14db688e0c7cd85c94f54cb9fc07",
+    "reconstruction/core_spec/hit_events139.py": "c009ef5ef76fc89905fefe4910bd48cff71681721a4ea4699ba582f7f9dbd4e7",
+    "reconstruction/core_spec/hit_events139_data.py": "4d556a86753fe67d48a1fd5c2d2a05dd32d9871f86b768cbfd2923eb7a943bd0",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/incoming139.py": "c3b71824ebce3f932b194f8c1e531827f541d72500e2d9f50b181d0fc10197cd",
+    "reconstruction/core_spec/incoming_history139.py": "13445d0d1594d859d74301a54e392acc51ee60958a38fa50e0077c71a6a27473",
+    "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+    "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+    "reconstruction/core_spec/natural_autocast139.py": "c233ccd946ef910e3e917b5ab0434ad83f50387cac72cb4207942bfb1ebc2825",
+    "reconstruction/core_spec/natural_collection139.py": "c6f370dc6313056fcededc8eee285e83154b99f4db854347fb896c2ea25da36e",
+    "reconstruction/core_spec/natural_damage139.py": "3800d1443d91f89b8a58fe3ed48095107df98c68e92ec7fdf4b4641f5f8fd5dc",
+    "reconstruction/core_spec/natural_demo139.py": "5b3b16c268089ae41e521da2798ef62fd9b59dafeda98efc4895af3702721f82",
+    "reconstruction/core_spec/natural_demo_autocast139.py": "7ee2aa56eb59730a575f7611a431fb63b02ff5dcd205041b6d574fecffe7c977",
+    "reconstruction/core_spec/natural_demo_casts139.py": "5cde08cc60a9dfa57a1dcf52fa157fd3190402bcc3aacf6576f7d5e10eb2735d",
+    "reconstruction/core_spec/natural_demo_choice139.py": "aef786885b4c811c4e3886685e765677fcd6e9c2be7223484c856ed9e4d9c545",
+    "reconstruction/core_spec/natural_demo_run139.py": "d39787b09c9f85cd4bc6a42e7e284df4a29c37c30b073e96a14ea01b64e03ebb",
+    "reconstruction/core_spec/natural_growth139.py": "5a9c7b696bbc770f0a7919122db2ace87c147ecd95b22422ee07fed8008b0ab7",
+    "reconstruction/core_spec/natural_npc139.py": "0e749d4bf0479b2ebe5fe30b542256e29d9910e15f480b3fbb1a0ab87eee2670",
+    "reconstruction/core_spec/natural_run139.py": "918391837a83bcca0f67ff5776a6b58150765ec5751e0d554ab985b69d1f5ffa",
+    "reconstruction/core_spec/npc_heading139.py": "680ff998e8e77916a2c976ccc590834ff94fa58b484efbde5e1bf41a9458f229",
+    "reconstruction/core_spec/npc_spawn139.py": "c1a4122f82edad2dadddc3a1e63f00544db7e349050a21d05a93247a326b1330",
+    "reconstruction/core_spec/opening139.py": "291a0e2a9374a07c984b6de7143764ae827bc36e6fcc1664598dc9468bf64817",
+    "reconstruction/core_spec/opening_actor139.py": "f6ceb4b648f993c2ff8508f255051fe6c97cb636295e162af8a4af19dc55603b",
+    "reconstruction/core_spec/opening_aux139.py": "a2d3109330e125bd2d70fcf5a37d00c2a4f61ff87486990a54b9bfc3321a5238",
+    "reconstruction/core_spec/opening_aux139_data.py": "4f38958fa24b83cbe7e674d2d659442c65fe90eb6daed4f61558fc588cdb150a",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+    "reconstruction/core_spec/ordinary_family139_data.py": "7fe6ee26d3668d56ca231d9a7afd1eba5949545fc16ddac40f31441040e56d7a",
+    "reconstruction/core_spec/ordinary_family_damage139.py": "46916161c61c7f43785820456a7ac7fcea02ef6652705ff980ba1fe96ae4c383",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/player_effects139.py": "391efc4a2538e6ca96c9cf2df4afbfd3aa1c0d3cf6ede83d2d445eb7028b7ba1",
+    "reconstruction/core_spec/player_regeneration139.py": "5fb0ce88fab837ed023acfc6315176262c1d76cddf703c6361b652b58721be49",
+    "reconstruction/core_spec/player_update139.py": "1d9abd2fe4db58b4acd02434ec9d5b04133c5860673a6f0535f6fdf3d9d147ac",
+    "reconstruction/core_spec/position_math139.py": "79fe9a84dba5fa4f1f7828c4b018d9045f7b653e573e270c0051e7131c64265a",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/select139.py": "d801746fb135cd8a85bb69f5105c1cbe519e312dc1431e858a19b37f53a17412",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_math135.py": "177caf134916d840ce323e63d71290fbbd5c490bf3f3e456112e4c075aa7a0d3",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/spawn_schedule139_data.py": "fda5dbf72540d54fcf5d716de3469ad0c8cdb316d7051f06c64a5572c20e61e2",
+    "reconstruction/core_spec/spawn_schedule139_v2.py": "c3bd51883fd2de9423400c885ce9cd6f478f47b3ff965aa75eabc0ff9955c451",
+    "reconstruction/core_spec/spawn_schedule139_v4.py": "0a21b3f2fb3935dd1f705da29ffb33038be8b8b98b7d64e95d8b11823d8a7b61",
+    "reconstruction/core_spec/spawn_wave139_data.py": "453f57de7938d87ffd922f0b8b554c1eb86aa10e331d337ad2c08a22c1a76248",
+    "reconstruction/core_spec/spawn_wave139_v4.py": "6bf7c0fe8880af8839909a1204b92d2ccb8c62b1a52999d4f351f2bc7fbedef0",
+    "reconstruction/core_spec/thunder_clap139.py": "16c7681d93746427b5472ae0c35979a86e2a25b739426aa0618f45ccfa77f0a6",
+    "reconstruction/core_spec/thunder_clap_world139.py": "ac89f68bb4a1732325577efcc335c960064bea3253a7899ee53378aa6e20518a",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_pause139.py": "c5380b454850b730a9f34da2304152416679161c5863a3099d41b3bef456f1da",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/core_spec/world_position139_data.py": "872dd5d3701cb1344f1a838e2c992117d1f84b844e0d09a0e2d0b9dc32831b81",
+    "reconstruction/core_spec/world_position139_v2.py": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_natural_demo139_oracle.py": "723e6ae71ecab4b90aed87f2b12a39b4c9f1ebae1c86654d25de4ce2c7ea1c10",
+    "scripts/build_natural_run139_oracle.py": "5f235a48fd14e8d4f333381843a4d1df5c49d30dd62b668092de9eefbe8a9b01",
+    "scripts/build_natural_spawn139_oracle.py": "a674474764eb8e5020158be836a3da59eabfaf09112cde758d28f9c617c4160b",
+    "scripts/build_player_update139_oracle.py": "397c800845b1b16883339d1bed77e7f1a1b09efa54a9b52b6f2eb93db181e76d",
+    "scripts/check_asset_world139.py": "7b3717c403fac3a39213edbd9ef7ca13465a51e55206c68aeef7ef2a2b0f2100",
+    "scripts/check_natural_demo139.py": "b625c81709cc1111bf650c568a957b50f9ff043b7f030026321acbefde6fc2fe",
+    "scripts/check_player_update139.py": "db9be3eeb8619bae60a7d792fc50a876b644d3fd8c9bc0f695310d09835eba0d",
+    "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_natural_demo139_oracle.mjs": "1e560d906be36d0ca65e4da826f149fd7c8a44ab177992332c0c17bfd27f4e7e",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "reconstruction/core_spec/candidates_second139.py": "4b5773b19d6178d4e7e7b71f756611a5fa075b7eeea4c29cefb89561fb061ace",
+    "reconstruction/core_spec/natural_demo_growth_v2_139.py": "b9530bc29ad263de35ee02ae3d255578aea9f27c50bcbf1e593871587f86d525",
+    "reconstruction/core_spec/natural_demo_run_v2_139.py": "49c5b96c89251a3e7bd61f5f72315698a97934a37d942d167c555eec1f9da353",
+    "reconstruction/core_spec/natural_demo_v2_139.py": "736fef29897d7fdf4611c4f54c7c59d105b8a3f5e042ce831e09c0a7c9404be2",
+    "scripts/build_natural_demo_second139_oracle.py": "33d477e76850cf2a2d047afb500cccae83b5b1143a97dad8f99f4562dee3b25d",
+    "scripts/check_natural_demo_second139.py": "9ccd81aa311dc053b827229c473f8b69eb7213ce8ffd853ac996a828481c4124",
+    "scripts/run_natural_demo_second139_oracle.mjs": "f1fb1c2f0202b83420a0493bc1651f179821d38aec9ee026c4bcbb509c2274e6"
+  },
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/ai135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates_second139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates_second139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates_second139.py",
+      "reconstruction/core_spec/candidates139.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates_second139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates_second139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/combat139.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/combat134.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/combat139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/world_position139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/demo_shout135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_damage139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/ai_world135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/demo_shout139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/enemy_ai_dead139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_family_ai139.py",
+      "reconstruction/core_spec/ordinary_family139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/owned_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/demo_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats139.py",
+      "reconstruction/core_spec/progression.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/ai_world135.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/enemy_ai_dead139.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_clock139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_clock139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/candidates139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/derived_stats139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/initial_state139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/candidates139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/select139.py"
+    ],
+    [
+      "reconstruction/core_spec/healing139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/healing139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/hit_events139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/hit_events139.py",
+      "reconstruction/core_spec/hit_events139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/incoming134.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/derived_stats139.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/initial_state139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/natural_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_autocast139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_collection139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_collection139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_collection139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_collection139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_damage139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo139.py",
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo139.py",
+      "reconstruction/core_spec/natural_demo_run139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo139.py",
+      "reconstruction/core_spec/spawn_schedule139_v4.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/demo_shout139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/natural_demo_casts139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/ordinary_family_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_autocast139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/natural_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/ordinary_family_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_casts139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/natural_collection139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/natural_growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_choice139.py",
+      "reconstruction/core_spec/select139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py",
+      "reconstruction/core_spec/candidates_second139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py",
+      "reconstruction/core_spec/natural_growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/demo_family_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/natural_collection139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/natural_demo_autocast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/natural_demo_choice139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/natural_growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/ordinary_family_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/demo_family_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/natural_collection139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/natural_demo_autocast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/natural_demo_choice139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/natural_demo_growth_v2_139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/ordinary_family_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_run_v2_139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_v2_139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_v2_139.py",
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_v2_139.py",
+      "reconstruction/core_spec/natural_demo_run_v2_139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_demo_v2_139.py",
+      "reconstruction/core_spec/spawn_schedule139_v4.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/candidates139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/enemy_ai_dead139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/natural_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/select139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_growth139.py",
+      "reconstruction/core_spec/world_pause139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/npc_spawn139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/world_position139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/world_position139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/natural_autocast139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/natural_collection139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/natural_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/natural_growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_run139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_heading139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_heading139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/initial_state139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/initial_state139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/natural_npc139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_aux139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/world_position139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family139_data.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family139_data.py",
+      "reconstruction/core_spec/spawn_schedule139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/natural_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/ordinary_family_damage139.py",
+      "reconstruction/core_spec/ordinary_family139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/owned_prelude135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/derived_stats139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/hit_events139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/position_math139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/position_math139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/position_math139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_math135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/npc_spawn139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/spawn_schedule139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v2.py",
+      "reconstruction/core_spec/world_position139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/npc_spawn139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/spawn_math135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/spawn_schedule139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/spawn_wave139_v4.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_schedule139_v4.py",
+      "reconstruction/core_spec/world_position139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/spawn_schedule139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/spawn_schedule139_v4.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_wave139_v4.py",
+      "reconstruction/core_spec/spawn_wave139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/growth_world139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_pause139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_pause139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/world_position139_data.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/build_natural_demo139_oracle.py",
+      "scripts/build_natural_spawn139_oracle.py"
+    ],
+    [
+      "scripts/build_natural_demo139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_natural_demo_second139_oracle.py",
+      "scripts/build_natural_demo139_oracle.py"
+    ],
+    [
+      "scripts/build_natural_demo_second139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_natural_run139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_natural_spawn139_oracle.py",
+      "scripts/build_natural_run139_oracle.py"
+    ],
+    [
+      "scripts/build_natural_spawn139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_player_update139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/check_asset_world139.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/check_asset_world139.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/check_asset_world139.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/frame_clock139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/natural_demo139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/spawn_schedule139_v4.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "reconstruction/core_spec/world_pause139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "scripts/build_natural_demo139_oracle.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "scripts/check_player_update139.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_natural_demo139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/frame_clock139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/natural_demo_v2_139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/spawn_schedule139_v4.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "reconstruction/core_spec/world_pause139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "scripts/build_natural_demo_second139_oracle.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "scripts/check_player_update139.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_natural_demo_second139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/growth_world139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/build_player_update139_oracle.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/check_asset_world139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/incoming139_tools.py",
+      "scripts/wasm139_profile.py"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "source_counts": {
+    "files": 117,
+    "production": 100,
+    "edges": 544,
+    "bodies": 84
+  },
+  "current_body_bindings": {
+    "884": {
+      "body_sha256": "e6ed2847bcafc4e5f3fdf918af04c672b152fcf89eea7171531d056ba140eece",
+      "WAT_sha256": "c3c6e002656faafe3e468dd038c13471fd3f09f6a8942ce05d592103cb576501"
+    },
+    "913": {
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "994": {
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1076": {
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "2077": {
+      "body_sha256": "36cc754bbbce303102ce675fb8e65add6b866e983068934ab8312b0d25f2b967",
+      "WAT_sha256": "a75a15d2f980b6f60e5b0934c60a42f80b3e1575cd3a464a7342c96dfb478949"
+    },
+    "2123": {
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2890": {
+      "body_sha256": "e3ce42993a466da02a175631dfa71ef02b7be3d67e10e946e2ae8c0934976c34",
+      "WAT_sha256": "56ce20e42cac9333c107f48f1be87804095c6b931a210708e9d26fbdf0427f8c"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "8569": {
+      "body_sha256": "758f94f8950ed6c4fde0a127c17d6b8135aa3b00be6910ae192c494c4797a3d1",
+      "WAT_sha256": "cdeb4c86d5ce7fcc15dd33923b5fa27a749419eae46972e242560e613e88687d"
+    },
+    "8673": {
+      "body_sha256": "cfe20b3b60b4d26e824594c12c76f6a6700992c64f9c067cfe43ff20e0c45ece",
+      "WAT_sha256": "a35959c6b908f8be8d656b991f458b497f0ac8bfa4cbeb5ce255c42f6e1ad712"
+    },
+    "9541": {
+      "body_sha256": "0f54eea8b871474bd57aa5f7b73538597e84ab824d315d9185270ea50b0200c1",
+      "WAT_sha256": "dcf3f6bb95ecd30defec2809169c25c2b46c28fe245c3deac62cfcd3f3eb4570"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11033": {
+      "body_sha256": "279f887e41dfa0accc0ac3caf4f28e8faafadefcc4e40a1188a1e28add1e4513",
+      "WAT_sha256": "5091bc319e1aa68cd4241ff3749f4df2313c333b661fc10c9070c19e41adf443"
+    },
+    "13833": {
+      "body_sha256": "7657e041e585e81104729868558ab9bf0a28131a5df021c9e4dd8d82645d34e9",
+      "WAT_sha256": "4e4cbd1675449406fc867d53efe3382c769666c2d6ec58f09d4bd8d1f74a9fbb"
+    },
+    "18421": {
+      "body_sha256": "268c270a22568c1252d87b4eeb020937dc3860c2a34c54fd600578c939758044",
+      "WAT_sha256": "308daf31efbe89997280dd22dac2cb29779bdb1955e8e1b3ce43ca7d66ff1855"
+    },
+    "19598": {
+      "body_sha256": "58f38842752fe5aeb325edad798d13460bfcbb5d1ea6030e73a5cd035d5d1200",
+      "WAT_sha256": "a8652f10d73f4a5e657deaa0609517cb36d66851ac962490e341f62413f2f901"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "23328": {
+      "body_sha256": "2ff4e1aab09fa7d43376d1bfdbaf96f78c8e11f36465fe4a77835eb374268574",
+      "WAT_sha256": "875576e8933acca580e1cce84ef85855aa1bf20bcaea201e418e3d038e14d708"
+    },
+    "25613": {
+      "body_sha256": "80894c1d0bf8d7e0ff7402410346ace7e1ddaf251aebdc9632ab7c3a8b5818f7",
+      "WAT_sha256": "7806a9999e0a5697a29472b53599ae7c2d03dd17dde96f24ca24b6480c5b798c"
+    },
+    "26202": {
+      "body_sha256": "21cdefa04d2854bcd0ee6e5e05dc42edaa2b007a898508a0e00e24185e21f210",
+      "WAT_sha256": "2727c02723974154bc562d8531561ec9493adde032594ff5b8075f451bbc2f6f"
+    },
+    "26364": {
+      "body_sha256": "658557371e2a1f1f173fb3bbce2c7bff384a31a781fbdad123eea358f56f0586",
+      "WAT_sha256": "c064903ec232875c34c13430fa42fa8bca634be66203423a84651ac74e892310"
+    },
+    "27650": {
+      "body_sha256": "b1f898c892e2ac838a6261d3894dbf9f22ebbaa5277391548b650cbf70ebdac8",
+      "WAT_sha256": "20f9bfe01543a9a0c26ff666ddd126ffca30bb1ea67a0e3da12203123a4e4e86"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "30861": {
+      "body_sha256": "87885424a4638fe31e22b44ca21874ea94d36840e26b6b69baa4281dafbb75c8",
+      "WAT_sha256": "579279bd09b708e3b9372927c000c3370b904d9faf209971369515fe90e6dc1b"
+    },
+    "32070": {
+      "body_sha256": "7506bb6ac0fc472c7ade86e3208717b872dcc6798d28d69a1fb818b8433d7e82",
+      "WAT_sha256": "d6c87639f03795e1caccc915eb84e0bd0ad4975a10666688e54badd73cb2c148"
+    },
+    "35988": {
+      "body_sha256": "0cb2b4fdb1f7911f5157a55f2cb39fc5d2f57e7ce6ed4c7946e30723fb4937cf",
+      "WAT_sha256": "f4ff6c7648e33debdd89f697708cfa45681b60d7d506d7ca823beabe195cc1c9"
+    },
+    "36364": {
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36520": {
+      "body_sha256": "56936cd9e3b8c6af09ac1d37b1cf75fdf79ed166dda699f4244f5e2c8350366a",
+      "WAT_sha256": "b214bd48e1ba90c8c44f48a8176724ba3e32c4e5c62bfc0342816f60a5f1405f"
+    },
+    "40215": {
+      "body_sha256": "f1caf5b2294ea254006a1140136da2ce705e2849883414684f147bb292881891",
+      "WAT_sha256": "5cb63d69709801b763b99557a79dcd13c350d6dfc231f1c0d4a8f6cb2244a083"
+    },
+    "46690": {
+      "body_sha256": "b8120348643d400b9efdfde0bea367d29b817bbd397de6695d7f83da91565ea7",
+      "WAT_sha256": "ee353ccaa65702e791e69cb5dee27f036a313bbfcdcdbee4d6fdb2f16ad6c900"
+    },
+    "83299": {
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    },
+    "86979": {
+      "body_sha256": "3f9127d30eefb0c9bad49101460ed45df1f6069e63c42d87e351ffbb67151c36",
+      "WAT_sha256": "9d4555079d8c141857712d3921042bf6054950cb42b2d05b1eb8b60e4954eca5"
+    },
+    "952": {
+      "body_sha256": "e6c80338ca9a8182e86fad0b039786aa37fe6306486bb5ecc64588fc5047ed7b",
+      "WAT_sha256": "307c7ab8e6c947dbcd81718aca944d6614af38b95a8b9edcfbea2e8fbeca3fdb"
+    },
+    "1446": {
+      "body_sha256": "8767d1f7e85c487759afa70602d9ae1793a7fd9118c0d8f57bca75c05ae3c958",
+      "WAT_sha256": "285f5c4878af3a685fbfc1dbff5f36ac2529bdc62cc4de81024f9cdda8f08abe"
+    },
+    "1586": {
+      "body_sha256": "6f318b3b6c75e99768e6a940e2d8306cc613ec13bca4a462cbc1d8d136ffe179",
+      "WAT_sha256": "124c2552506e98fe18dbd0d80dcf710639138370a488ca375e8ead3aa76f8368"
+    },
+    "1886": {
+      "body_sha256": "7307a96d26652424b521a57769caa076118a3fa1b0f5fa767015ae9665fdf458",
+      "WAT_sha256": "42303255f7eaf67d66b0c9aab4a14d2b79d2e31ce07ca93394f6bd93e44d7bc1"
+    },
+    "2801": {
+      "body_sha256": "ddf83880954f9a84056c09c2a5dd89c22a6cdb038c3dc20aa206c89667f5b33c",
+      "WAT_sha256": "9dd779e78668e6004c684f4e15559651c849fb2e15931420ca4906466dde3b53"
+    },
+    "5719": {
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "6440": {
+      "body_sha256": "4ea9db44425a01afe9e8ac0f8d0791be0ead60714c863673240e0e306417752c",
+      "WAT_sha256": "ae0241f072f22c23aa023b8320e737af71a016b642562f74ffb2b8df702f7080"
+    },
+    "8740": {
+      "body_sha256": "35e2f8bf141c22a07857ff8327892bf7b6f971aea2d1ad0f705ba12dfa02af38",
+      "WAT_sha256": "ae82725c4b84528ce67a730a31f6a8ca631f41cdf0b3bac500fabeb4cea9c13b"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "13563": {
+      "body_sha256": "724158538ddf6fdcb38eb520beaa5ff8467952b418be3400132013b105a136ae",
+      "WAT_sha256": "718739b8790b32422f5c947657685744eb6f32a052b1f48320010c1f7696a03a"
+    },
+    "18062": {
+      "body_sha256": "4a75e29526e5574071a54754cddb55efcb9e19460f8c0d2e0fee4258deb48aa1",
+      "WAT_sha256": "a0cf0a9ce701d2babb457c59248292a40ad051102a5008d739d7ab3110669d3d"
+    },
+    "20060": {
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "20357": {
+      "body_sha256": "ca7a1ee671740078b1c57b89c01432e6abe220eccf4ec92c9a1ce94b5760526b",
+      "WAT_sha256": "6abafb185a2c34b7741ea127cef081066eead8e8345b57d445cdb257346751ce"
+    },
+    "21552": {
+      "body_sha256": "cf052ccc9a12542cc1d57cce7f38d9ad9ff4815a54d2bae215cc6a05ec9e887e",
+      "WAT_sha256": "6982eda67cb53174032b07367d6616c8b03b2cf1e27224799ff27341cd285a8e"
+    },
+    "26521": {
+      "body_sha256": "9edfc2ca7713db5050ef5f01df09fd0cff2bab85e944040739910c5b1217c114",
+      "WAT_sha256": "eacfcef05bb6ac37aa415401b8258b702969b10d19227b2ddddd81623e284eba"
+    },
+    "29912": {
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "31851": {
+      "body_sha256": "66558cdeb1308178abe5ced9683d6fd41aa51e4da38bbcf3dd235aeb8c627e8b",
+      "WAT_sha256": "cef9a358e46348082716573dff5a584fe1df213105dfdebb40aa40b9f41870ac"
+    },
+    "32605": {
+      "body_sha256": "8f0882e1cfc10997b27af2c6464e75454f45975e1e8bdabc94397b0bca0d5726",
+      "WAT_sha256": "01d0169ad7e2c8868bc3990f9e032a9afa480151d4a7e4395d644a0cd3899978"
+    },
+    "38882": {
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379",
+      "WAT_sha256": "4b8c39db5b6e440a44f796e52a7b02663496a9592335db390461170e335ff65d"
+    },
+    "43076": {
+      "body_sha256": "7b2d10ff30c66c0985a2b41ea90f4c2d3a4363a8d844a1aac2d0ba443f20aec6",
+      "WAT_sha256": "aa82fc5006308efb2e92449016272494916de0c9c14b2148abb7ddd651edfed9"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "66546": {
+      "body_sha256": "58a8fe8aa039f5e77083d3a31b3736679e49fffee8e7205a2ecc850e97630565",
+      "WAT_sha256": "37e33b39641ee0522336869b8775e0042ffe9ce8c7491eccb0f324de78c2921d"
+    },
+    "66558": {
+      "body_sha256": "bd4503156bac2513b41a4d9c9d4aa6161accbdb4e553afc102ef6329ac3ff90a",
+      "WAT_sha256": "281ff2fe714154f88c180806ae37420efdd93869a0e64ed53aeef3175cb2804c"
+    },
+    "66565": {
+      "body_sha256": "61a15cc00c53f22465daa4e68e0d43fe6cc7b92142f8f5c23eee3e77e0ce48cd",
+      "WAT_sha256": "03aecfb0287822d7e8b8fbc063761f4388bd7684d96f6203afbb8dc2875911df"
+    },
+    "66611": {
+      "body_sha256": "fbe38fa5d8dba46b8a09590117675c8b578abd891c2c88b1d92a79f6dd03a41e",
+      "WAT_sha256": "1119c8c1bc9fbda68ffb84c9d08d03702a06994be23a24d02315a1dbae4aa0ee"
+    },
+    "81897": {
+      "body_sha256": "dfe5e99c8d61fb010310eb7e8e0d9f4ac168a1efd6d992e9766633fef2951ce7",
+      "WAT_sha256": "6b5e36a4d5b06aa93565b111d21dd4e830c74bf449d836ff1aceac7c8831edbe"
+    },
+    "97426": {
+      "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432",
+      "WAT_sha256": "ae3086a8a1ab779ef7c5225bebac799acb3fd5aabb17cf1f39ecdc73388a03fc"
+    },
+    "97427": {
+      "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18",
+      "WAT_sha256": "9fbc00025f477557d113eb432853adc224934d060e91c937006dacd0b2ec53b1"
+    },
+    "15556": {
+      "body_sha256": "0b37c1e5c97f2b810b62fba03bae0a35fc71abee205196ff3b22489e91c0489e",
+      "WAT_sha256": "fcc5b6ad385cac726a2b825bed78dee5f98027fc08eb876c20295a46e788d606"
+    },
+    "21553": {
+      "body_sha256": "99336b2ef08690ab11a8101c4f91e12ac43b760bfc1140d7a1fb7ae64e3c2c79",
+      "WAT_sha256": "f9afac63c81029b43886b3f11697964f6f0698787baa9c61711c7f7f332fc5b1"
+    },
+    "25511": {
+      "body_sha256": "a627059d8fa98d0b6385cd67224d047ce1320f06b83517c8d78d3e58507d555f",
+      "WAT_sha256": "b0e2ae4202aa0f728c3a30798842ca63740f959dacce8b9f650a3eb57f42f022"
+    },
+    "27572": {
+      "body_sha256": "5487535c641ddf516e636ed9341bdfab851b3c55e27bd557e8a811c4ca14292e",
+      "WAT_sha256": "f6ad82820bd91a658bc36357e8590b5444d26485ad6da5429153c46a546e4efa"
+    },
+    "30022": {
+      "body_sha256": "9cfbce233e27f89d08423a6286f4c9c5cac5b843acfc0f2ffba3606af73489fe",
+      "WAT_sha256": "022a3a71109530966d12d15be6fa92b4f5b6a4291f366949f4def2df69433bee"
+    },
+    "30628": {
+      "body_sha256": "5cb37659a6c6d10d8c7d7180ddf0dcc755e1fbb2ebfe34f89c9ae9bd0037b147",
+      "WAT_sha256": "92d7db2c8956db17b03c46487515d5b83fb93c6816d0a664161b24a62ecffe8d"
+    }
+  },
+  "static_only_983_guard": {
+    "983": {
+      "body_sha256": "339b15136d8dd764be49e83f1d4f3a14c3f0f1dcce99ae92f006ccad07190297",
+      "WAT_sha256": "ff993af73fdbc7aa7560bfdd84b61030f3fa1587d46190b23f76491751b8eaa9",
+      "direct_full_entry_calls": 0
+    }
+  },
+  "helper_sha256": {
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_growth_world139.py": "0e82a1f20fd7c02ed7edcd73f4d9edfca1d3ab406402e1aa8e0b5ae4e34322a1",
+    "scripts/review_player_update139.py": "4123e0715620c0d050bfad0c1c060b0fc5b426c36d0789c95a0c7801d52c8bde",
+    "scripts/review_incoming139.py": "adaa5e21f2e491fe3eee18a8ec57c9d8b249481c6edc52a29408ad194dece07b",
+    "scripts/review_enemy_ai139.py": "73b093bdfcc59c08c010fb2c074298435b6d0f057fe15a0e5d2a8228c0fe0f42",
+    "scripts/review_world_pause139.py": "363fbe4c48e650641df248d2cc9f162df0230120748a47ab3510509e936af873",
+    "scripts/review_death_pickups139.py": "092328f7b6e7c5323f1d3b9c74b1080b1181fdd002f7153d32756110d9dcaef3",
+    "scripts/review_death139.py": "fe7790f0adcb3e3d5010d53c44f375bec5bbee6d3fe780873a6e1613afe11e6a",
+    "scripts/review_collection139.py": "b034feeecf15ad1562e28a10bb8d6cbf60d7e814a23cb931d8d60c96e82247d2",
+    "scripts/review_thunder_clap139.py": "775b8234a04067711ac126eb0ded2ce90a553db396f1bd26e07f5662fdbe0b23",
+    "scripts/review_healing_hurtactor139_v3.py": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+    "scripts/review_player_autocast139.py": "f6d2d39c357888765a42a2b1147d32b5538c00b02e2869d1662d99ff41329893",
+    "scripts/review_enemy_ai_dead139_v2.py": "51649bb168d147837872f385cb5d64799deebd938daa08031ab63754e86c7aa7",
+    "scripts/review_player_enemy139_v2.py": "c30da653210f7b81d311c5a8af0e2b6ab6ede3fe93b0807d87cf4b75da03208f",
+    "scripts/review_spawn_schedule139_v3.py": "264b675f93b9e74b271dc1cfa80892407bff088b6f6143e6b2fc7bd1e7268c6e",
+    "scripts/review_spawn_combat139.py": "79878046c39d39431622093bc706b6e42dcf17980a8c007bd78f627ec7db0ace",
+    "scripts/review_natural_growth139_v2.py": "94159b53391a89ef002f01093ded4a5f15db92825dba20b79d681816ff2feab6",
+    "scripts/review_ordinary_family139.py": "aebfd5bafa00be2fe3253e42f6d6013ff2d1cf109f13267fa56ef44da2419f93",
+    "scripts/review_demo_shout139.py": "fc1662b9218c4e1326e6fed45c627cf7a60f1936580957d479a6f0e1724388d7"
+  },
+  "batches": [
+    {
+      "evidence": "evidence/natural-demo139-oracle-20261102T162640.693635Z",
+      "handoff_sha256": "36bd1554f3c4c51195de2968e5b73d54f2ad3e3a9547c4b60fe9db93877e017e",
+      "comparison_sha256": "1bd45570537180f68862fe24675172d89afe73939b0f9221d79c8091ed10ffbb",
+      "process": {
+        "pid": 16065,
+        "pgid": 16065,
+        "exit_code": 0,
+        "seconds": 13.609397542000806,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "choices": [
+        [
+          {
+            "step": 85,
+            "now_bits": 1091148182,
+            "cards": [
+              {
+                "variant": "new",
+                "tier": 2,
+                "ability_id": "demo_shout",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              },
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "shield_slam",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              },
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "bloodthirst",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              }
+            ],
+            "active_live_before": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                8,
+                0,
+                0,
+                0,
+                154,
+                153,
+                25,
+                62,
+                null,
+                null,
+                null,
+                null,
+                120,
+                80,
+                0,
+                0,
+                154,
+                153,
+                105,
+                65,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "growth": [
+              {
+                "levels": [
+                  {
+                    "before_level": 1,
+                    "after_level": 2,
+                    "threshold_spent": 5,
+                    "old_max_hp_bits": 1130758144,
+                    "old_hp_bits": 1129392506,
+                    "after1542_hp_bits": 1129982330,
+                    "new_max_hp_bits": 1131347968,
+                    "heal_request_bits": 1111438131,
+                    "heal_actual_delta_bits": 1101444144,
+                    "heal_events": [
+                      {
+                        "reason_id": "level_up",
+                        "amount_bits": 1101444144,
+                        "now_bits": 1091148182,
+                        "event_id": 53,
+                        "resolved_spell_id_or_zero": 0,
+                        "arg3_descriptor_head": -1,
+                        "arg4_descriptor_head": 0
+                      }
+                    ]
+                  }
+                ],
+                "card_draws": 6,
+                "phase2_stop_pending": true
+              },
+              {
+                "levels": [],
+                "card_draws": 0,
+                "phase2_stop_pending": true
+              }
+            ],
+            "selection": {
+              "consumed": [
+                {
+                  "index": 2,
+                  "guid": "17379391113034465377",
+                  "raw_amount": 2,
+                  "marker": 1
+                }
+              ],
+              "raw_XP": 2,
+              "award": 2,
+              "known_packets": [
+                [
+                  170,
+                  "61000029230030f1"
+                ],
+                [
+                  221,
+                  "d95a580230f137c912c68fb320c4183b8742590000000000010000de08000001000000c4c912c6e3b81dc495a38842"
+                ],
+                [
+                  221,
+                  "d95c580230f113f112c6d36320c4d9d485425a0000000000010000ec0600000100000040d812c6d9a71ec4277e8742"
+                ],
+                [
+                  221,
+                  "d95e580230f1e76c12c6d4101dc498ff87425b0000000000010000da08000001000000f09b12c6c9851dc404d28842"
+                ]
+              ],
+              "growth": {
+                "levels": [],
+                "card_draws": 0,
+                "phase2_stop_pending": true
+              },
+              "retained_live_indices": [
+                0
+              ],
+              "new1020_index": 1
+            }
+          }
+        ]
+      ],
+      "counts": {
+        "player_views": 532,
+        "semantic_ledger_snapshots": 108,
+        "openingGame_known": 556,
+        "openingGame_None": 2036,
+        "openingGame_nonzero_None": 230,
+        "opening_units_known": 1212,
+        "opening_units_None": 516,
+        "opening_units_nonzero_None": 475,
+        "opening_pickups_known": 104,
+        "opening_pickups_None": 120,
+        "opening_pickups_nonzero_None": 106,
+        "opening_special_known": 112,
+        "opening_special_None": 48,
+        "opening_special_nonzero_None": 48,
+        "opening_windows_known": 24,
+        "opening_windows_None": 8,
+        "opening_windows_nonzero_None": 8,
+        "opening_boundaries_known": 552,
+        "opening_boundaries_None": 472,
+        "opening_boundaries_nonzero_None": 204,
+        "Game_clock_input_inheritance_bytes": 274752,
+        "positive_Regen": 39,
+        "player_NPC_physical_replay_bytes": 603072,
+        "path_rebuilds": 1,
+        "BFS_values": 78400,
+        "clamped14_motions": 52,
+        "segment_nav_probes": 3248,
+        "direct_clear_routes": 80,
+        "packet_height_queries": 160,
+        "frames": 106,
+        "movement221": 89,
+        "removals": 5,
+        "AI_NPC_physical_replay_bytes": 603072,
+        "attractions": 7,
+        "collections": 4,
+        "XP_awarded": 8,
+        "Demo_success_step91": 1,
+        "spawn_steps": 106,
+        "spawn_NPCs": 8,
+        "Wolf_born": 0,
+        "positive_spawn_cost_steps": 62,
+        "spawn_velocity_jump_filtered": 1,
+        "spawn_far55_predicates_not_taken": 818,
+        "spawn_moving_far_guard_predicates": 578,
+        "spawn_exp_evaluations": 106,
+        "spawn_positive_catchup": 2,
+        "spawn_choice_RNG_draws": 8,
+        "spawn_NPC_yaw_jitter_draws": 16,
+        "spawn_newNPC": 8,
+        "spawn_densityNPC": 0,
+        "spawn_path_cost_queries": 8,
+        "spawnNPC_known": 288720,
+        "spawnNPC_None": 319536,
+        "spawnNPC_nonzero_None": 278993,
+        "NPC_known": 273279,
+        "NPC_None": 115953,
+        "NPC_nonzero_None": 103562,
+        "pickup_known": 17288,
+        "pickup_None": 11832,
+        "pickup_nonzero_None": 10765,
+        "physicalNPC_known": 288720,
+        "physicalNPC_None": 319536,
+        "physicalNPC_nonzero_None": 278993,
+        "known_packets": 173,
+        "known_packet_bytes": 9147,
+        "observed_packets": 218,
+        "observed_packet_bytes": 11326,
+        "natural_steps": 106,
+        "AI_attacks": 18,
+        "formal_removals": 5,
+        "spawn_velocity_smoothing_branch": 105,
+        "racial": 1,
+        "live_known": 16592,
+        "live_None": 48176,
+        "live_nonzero_None": 43925,
+        "aura_known": 103776,
+        "aura_None": 284832,
+        "aura_nonzero_None": 250470,
+        "damage": 19,
+        "critical": 1,
+        "Leech": 11,
+        "cleave": 4,
+        "moving_deaths": 1,
+        "deaths": 7,
+        "basic": 4,
+        "basic_crit": 0,
+        "spawn_dead_rows_skipped": 66,
+        "level_transitions": 1,
+        "level_up_positive_events": 1,
+        "stop_kind3_packets": 9,
+        "contacts": 15,
+        "history_None": 15332,
+        "history_nonzero_None": 11287,
+        "history_known": 17884,
+        "raw_candidate_metadata80": 9,
+        "phase2_choices": 1,
+        "default0_selections": 1,
+        "selection_pickups": 1,
+        "selection_raw_XP": 2,
+        "selection_award": 2,
+        "post_select_basic": 1,
+        "post_select_Demo": 1,
+        "active_live12_guarded_contacts": 3,
+        "Aura169": 5,
+        "effect_applications": 5,
+        "full922": 0,
+        "success": 1,
+        "max_targets": 5,
+        "hits": 5,
+        "internal_Demo922_attempts": 1,
+        "Demo_success": 1,
+        "Demo_targets": 5,
+        "Demo_max_targets": 5
+      }
+    },
+    {
+      "evidence": "evidence/natural-demo-second139-oracle-20261102T163422.291343Z",
+      "handoff_sha256": "902910b59b4fb40a1cc465a74927627f48304ffc9bed701b4ae2188a402ac495",
+      "comparison_sha256": "c5974b23b007acb7195bc9388d79f97618ad668fa1ce78b078d21922bc776828",
+      "process": {
+        "pid": 36729,
+        "pgid": 36729,
+        "exit_code": 0,
+        "seconds": 4.742618459000369,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "choices": [
+        [
+          {
+            "step": 85,
+            "now_bits": 1091148182,
+            "cards": [
+              {
+                "variant": "new",
+                "tier": 2,
+                "ability_id": "demo_shout",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              },
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "shield_slam",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              },
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "bloodthirst",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              }
+            ],
+            "active_live_before": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                8,
+                0,
+                0,
+                0,
+                154,
+                153,
+                25,
+                62,
+                null,
+                null,
+                null,
+                null,
+                120,
+                80,
+                0,
+                0,
+                154,
+                153,
+                105,
+                65,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "growth": [
+              {
+                "levels": [
+                  {
+                    "before_level": 1,
+                    "after_level": 2,
+                    "threshold_spent": 5,
+                    "old_max_hp_bits": 1130758144,
+                    "old_hp_bits": 1129392506,
+                    "after1542_hp_bits": 1129982330,
+                    "new_max_hp_bits": 1131347968,
+                    "heal_request_bits": 1111438131,
+                    "heal_actual_delta_bits": 1101444144,
+                    "heal_events": [
+                      {
+                        "reason_id": "level_up",
+                        "amount_bits": 1101444144,
+                        "now_bits": 1091148182,
+                        "event_id": 53,
+                        "resolved_spell_id_or_zero": 0,
+                        "arg3_descriptor_head": -1,
+                        "arg4_descriptor_head": 0
+                      }
+                    ]
+                  }
+                ],
+                "card_draws": 6,
+                "phase2_stop_pending": true
+              },
+              {
+                "levels": [],
+                "card_draws": 0,
+                "phase2_stop_pending": true
+              }
+            ],
+            "selection": {
+              "consumed": [
+                {
+                  "index": 2,
+                  "guid": "17379391113034465377",
+                  "raw_amount": 2,
+                  "marker": 1
+                }
+              ],
+              "raw_XP": 2,
+              "award": 2,
+              "known_packets": [
+                [
+                  170,
+                  "61000029230030f1"
+                ],
+                [
+                  221,
+                  "d95a580230f137c912c68fb320c4183b8742590000000000010000de08000001000000c4c912c6e3b81dc495a38842"
+                ],
+                [
+                  221,
+                  "d95c580230f113f112c6d36320c4d9d485425a0000000000010000ec0600000100000040d812c6d9a71ec4277e8742"
+                ],
+                [
+                  221,
+                  "d95e580230f1e76c12c6d4101dc498ff87425b0000000000010000da08000001000000f09b12c6c9851dc404d28842"
+                ]
+              ],
+              "growth": {
+                "levels": [],
+                "card_draws": 0,
+                "phase2_stop_pending": true
+              },
+              "retained_live_indices": [
+                0
+              ],
+              "new1020_index": 1
+            }
+          },
+          {
+            "step": 106,
+            "now_bits": 1093350200,
+            "cards": [
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "bloodrage",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              },
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "execute",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              },
+              {
+                "variant": "new",
+                "tier": 0,
+                "ability_id": "shield_slam",
+                "owned_index": 0,
+                "kinds": [],
+                "gold": 0
+              }
+            ],
+            "active_live_before": [
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                8,
+                0,
+                0,
+                0,
+                154,
+                153,
+                25,
+                62,
+                null,
+                null,
+                null,
+                null,
+                120,
+                80,
+                0,
+                0,
+                154,
+                153,
+                105,
+                65,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "growth": [
+              {
+                "levels": [],
+                "card_draws": 0,
+                "phase2_stop_pending": false
+              },
+              {
+                "levels": [
+                  {
+                    "before_level": 2,
+                    "after_level": 3,
+                    "threshold_spent": 9,
+                    "old_max_hp_bits": 1131347968,
+                    "old_hp_bits": 1131240653,
+                    "after1542_hp_bits": 1131830477,
+                    "new_max_hp_bits": 1131937792,
+                    "heal_request_bits": 1111909991,
+                    "heal_actual_delta_bits": 1070700928,
+                    "heal_events": [
+                      {
+                        "reason_id": "level_up",
+                        "amount_bits": 1070700928,
+                        "now_bits": 1093350200,
+                        "event_id": 72,
+                        "resolved_spell_id_or_zero": 0,
+                        "arg3_descriptor_head": -1,
+                        "arg4_descriptor_head": 0
+                      }
+                    ]
+                  }
+                ],
+                "card_draws": 6,
+                "phase2_stop_pending": true
+              }
+            ]
+          }
+        ]
+      ],
+      "counts": {
+        "player_views": 538,
+        "semantic_ledger_snapshots": 110,
+        "openingGame_known": 556,
+        "openingGame_None": 2036,
+        "openingGame_nonzero_None": 230,
+        "opening_units_known": 1212,
+        "opening_units_None": 516,
+        "opening_units_nonzero_None": 475,
+        "opening_pickups_known": 104,
+        "opening_pickups_None": 120,
+        "opening_pickups_nonzero_None": 106,
+        "opening_special_known": 112,
+        "opening_special_None": 48,
+        "opening_special_nonzero_None": 48,
+        "opening_windows_known": 24,
+        "opening_windows_None": 8,
+        "opening_windows_nonzero_None": 8,
+        "opening_boundaries_known": 552,
+        "opening_boundaries_None": 472,
+        "opening_boundaries_nonzero_None": 204,
+        "Game_clock_input_inheritance_bytes": 277344,
+        "positive_Regen": 40,
+        "player_NPC_physical_replay_bytes": 609984,
+        "path_rebuilds": 1,
+        "BFS_values": 78400,
+        "clamped14_motions": 53,
+        "segment_nav_probes": 3295,
+        "direct_clear_routes": 81,
+        "packet_height_queries": 162,
+        "frames": 107,
+        "movement221": 90,
+        "removals": 5,
+        "AI_NPC_physical_replay_bytes": 609984,
+        "attractions": 7,
+        "collections": 6,
+        "XP_awarded": 12,
+        "Demo_success_step91": 1,
+        "spawn_steps": 107,
+        "spawn_NPCs": 8,
+        "Wolf_born": 0,
+        "positive_spawn_cost_steps": 63,
+        "spawn_velocity_jump_filtered": 1,
+        "spawn_far55_predicates_not_taken": 823,
+        "spawn_moving_far_guard_predicates": 580,
+        "spawn_exp_evaluations": 107,
+        "spawn_positive_catchup": 3,
+        "spawn_choice_RNG_draws": 8,
+        "spawn_NPC_yaw_jitter_draws": 16,
+        "spawn_newNPC": 8,
+        "spawn_densityNPC": 0,
+        "spawn_path_cost_queries": 8,
+        "spawnNPC_known": 291758,
+        "spawnNPC_None": 323410,
+        "spawnNPC_nonzero_None": 282366,
+        "NPC_known": 277537,
+        "NPC_None": 117743,
+        "NPC_nonzero_None": 105150,
+        "pickup_known": 17832,
+        "pickup_None": 12184,
+        "pickup_nonzero_None": 11105,
+        "physicalNPC_known": 291758,
+        "physicalNPC_None": 323410,
+        "physicalNPC_nonzero_None": 282366,
+        "known_packets": 178,
+        "known_packet_bytes": 9256,
+        "observed_packets": 224,
+        "observed_packet_bytes": 11528,
+        "natural_steps": 107,
+        "AI_attacks": 18,
+        "formal_removals": 5,
+        "spawn_velocity_smoothing_branch": 106,
+        "racial": 1,
+        "live_known": 16904,
+        "live_None": 48632,
+        "live_nonzero_None": 44345,
+        "aura_known": 105000,
+        "aura_None": 288216,
+        "aura_nonzero_None": 253422,
+        "damage": 19,
+        "critical": 1,
+        "Leech": 11,
+        "cleave": 4,
+        "moving_deaths": 1,
+        "deaths": 7,
+        "basic": 4,
+        "basic_crit": 0,
+        "spawn_dead_rows_skipped": 68,
+        "level_transitions": 2,
+        "level_up_positive_events": 2,
+        "stop_kind3_packets": 9,
+        "contacts": 15,
+        "history_None": 15848,
+        "history_nonzero_None": 11683,
+        "history_known": 18904,
+        "raw_candidate_metadata80": 21,
+        "phase2_choices": 2,
+        "default0_selections": 1,
+        "selection_pickups": 1,
+        "selection_raw_XP": 2,
+        "selection_award": 2,
+        "post_select_basic": 1,
+        "post_select_Demo": 1,
+        "active_live12_guarded_contacts": 3,
+        "Aura169": 5,
+        "effect_applications": 5,
+        "full922": 0,
+        "success": 1,
+        "max_targets": 5,
+        "hits": 5,
+        "internal_Demo922_attempts": 1,
+        "Demo_success": 1,
+        "Demo_targets": 5,
+        "Demo_max_targets": 5
+      }
+    }
+  ],
+  "formal_counts": {
+    "fresh_instances": 2,
+    "unique_app_seeds": 1,
+    "component_steps": 213,
+    "full2123": 213,
+    "full925": 213,
+    "full2890": 213,
+    "full952": 213,
+    "full1093": 2,
+    "four_stage_entries": 852,
+    "target_entries_with_1093": 854,
+    "setup2945_1600_1108": 6,
+    "direct_entries": 860,
+    "reviewer_author_program_executions": 0,
+    "reviewer_original_executions": 0
+  },
+  "counts": {
+    "player_views": 1070,
+    "semantic_ledger_snapshots": 218,
+    "openingGame_known": 1112,
+    "openingGame_None": 4072,
+    "openingGame_nonzero_None": 460,
+    "opening_units_known": 2424,
+    "opening_units_None": 1032,
+    "opening_units_nonzero_None": 950,
+    "opening_pickups_known": 208,
+    "opening_pickups_None": 240,
+    "opening_pickups_nonzero_None": 212,
+    "opening_special_known": 224,
+    "opening_special_None": 96,
+    "opening_special_nonzero_None": 96,
+    "opening_windows_known": 48,
+    "opening_windows_None": 16,
+    "opening_windows_nonzero_None": 16,
+    "opening_boundaries_known": 1104,
+    "opening_boundaries_None": 944,
+    "opening_boundaries_nonzero_None": 408,
+    "Game_clock_input_inheritance_bytes": 552096,
+    "positive_Regen": 79,
+    "player_NPC_physical_replay_bytes": 1213056,
+    "path_rebuilds": 2,
+    "BFS_values": 156800,
+    "clamped14_motions": 105,
+    "segment_nav_probes": 6543,
+    "direct_clear_routes": 161,
+    "packet_height_queries": 322,
+    "frames": 213,
+    "movement221": 179,
+    "removals": 10,
+    "AI_NPC_physical_replay_bytes": 1213056,
+    "attractions": 14,
+    "collections": 10,
+    "XP_awarded": 20,
+    "Demo_success_step91": 2,
+    "spawn_steps": 213,
+    "spawn_NPCs": 16,
+    "Wolf_born": 0,
+    "positive_spawn_cost_steps": 125,
+    "spawn_velocity_jump_filtered": 2,
+    "spawn_far55_predicates_not_taken": 1641,
+    "spawn_moving_far_guard_predicates": 1158,
+    "spawn_exp_evaluations": 213,
+    "spawn_positive_catchup": 5,
+    "spawn_choice_RNG_draws": 16,
+    "spawn_NPC_yaw_jitter_draws": 32,
+    "spawn_newNPC": 16,
+    "spawn_densityNPC": 0,
+    "spawn_path_cost_queries": 16,
+    "spawnNPC_known": 580478,
+    "spawnNPC_None": 642946,
+    "spawnNPC_nonzero_None": 561359,
+    "NPC_known": 550816,
+    "NPC_None": 233696,
+    "NPC_nonzero_None": 208712,
+    "pickup_known": 35120,
+    "pickup_None": 24016,
+    "pickup_nonzero_None": 21870,
+    "physicalNPC_known": 580478,
+    "physicalNPC_None": 642946,
+    "physicalNPC_nonzero_None": 561359,
+    "known_packets": 351,
+    "known_packet_bytes": 18403,
+    "observed_packets": 442,
+    "observed_packet_bytes": 22854,
+    "natural_steps": 213,
+    "AI_attacks": 36,
+    "formal_removals": 10,
+    "spawn_velocity_smoothing_branch": 211,
+    "racial": 2,
+    "live_known": 33496,
+    "live_None": 96808,
+    "live_nonzero_None": 88270,
+    "aura_known": 208776,
+    "aura_None": 573048,
+    "aura_nonzero_None": 503892,
+    "damage": 38,
+    "critical": 2,
+    "Leech": 22,
+    "cleave": 8,
+    "moving_deaths": 2,
+    "deaths": 14,
+    "basic": 8,
+    "basic_crit": 0,
+    "spawn_dead_rows_skipped": 134,
+    "level_transitions": 3,
+    "level_up_positive_events": 3,
+    "stop_kind3_packets": 18,
+    "contacts": 30,
+    "history_None": 31180,
+    "history_nonzero_None": 22970,
+    "history_known": 36788,
+    "raw_candidate_metadata80": 30,
+    "phase2_choices": 3,
+    "default0_selections": 2,
+    "selection_pickups": 2,
+    "selection_raw_XP": 4,
+    "selection_award": 4,
+    "post_select_basic": 2,
+    "post_select_Demo": 2,
+    "active_live12_guarded_contacts": 6,
+    "Aura169": 10,
+    "effect_applications": 10,
+    "full922": 0,
+    "success": 2,
+    "max_targets": 5,
+    "hits": 10,
+    "internal_Demo922_attempts": 2,
+    "Demo_success": 2,
+    "Demo_targets": 10,
+    "Demo_max_targets": 5
+  },
+  "actual_max_Demo_targets": 5,
+  "author_expected_values_read": false,
+  "complete_games": 0,
+  "full884_frames": 0,
+  "late14_scheduler_executions": 0,
+  "seconds": 50.484109249999165,
+  "limits": [
+    "Twofresh captures ofsameAppseed111;106+107steps share106-step input prefix. They are not two unique trajectories.",
+    "Real cleave-only/noXP start,firstdefault0Demo tier2 atindex85;one natural5-target Demo perbatch atindex91. Oldcomponentmax1 is not counted asmultitarget evidence.",
+    "Secondcapture reachesphase2atindex106 withactualBloodrage0/Execute0/ShieldSlam0. Second1093notexecuted;theseabilities are metadataonly,not restored mechanics.",
+    "Currenttwo-owned pool/weights/tier/RNG/eligibility reconstructed;all3secondcards arenew,so upgradedselectedkindshuffle andactualupgradeselection remainPending.",
+    "Knownpackets areorderedsubsets;fullnetwork/UI/presentation streams not rebuilt. Check numericcounts perbatch, not a completepacketclaim.",
+    "Fourcomponents2123→925→2890→952 plusfirst1093at externalclock;no full884/later14 stages or983 execution. Guardabsenceofexec11 isstatic sourcequalification only.",
+    "InitialRune/special/window/boundary owners persist;20sGuardian stage not reached. Wolf handlerdeclared butactualWolf births0;no positiveWolf runtime transferredfromordinaryfixtures. Demo6s expiry deadline not reached here;componentexpiry proof remains separate.",
+    "NewallocationNone staysunknown;physicalNPCinheritedbytes/stabledeletion/staleTail replayed separately. Semanticf64/Vec48accountingdoesnotestablishall2077physicalcontainers.",
+    "Resource-onlyoriginalcontext notindependentApp/worldbootstrap. No UI/save/nativeWindows/co-op/completegame acceptance."
+  ],
+  "owned_evidence": "evidence/natural-demo139-independent-owned-20261102T165141.958858Z",
+  "owned_review_sha256": "81c2b386c9eb656d77f4ab8d98dc54325f83f7962d56d73b6df62fbd163d3d7e",
+  "reviewer_process": {
+    "pid": 81556,
+    "pgid": 81556,
+    "exit_code": 0,
+    "seconds": 52.03903029200592,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "source_pre_sha256": "91642b4d8354ad372ea46cf9e1c8ca04ca90e316c133c3584ae2a7634b30d4c9",
+    "source_post_sha256": "91642b4d8354ad372ea46cf9e1c8ca04ca90e316c133c3584ae2a7634b30d4c9",
+    "author_program_executions": 0,
+    "original_executions": 0
+  },
+  "helper_receipt_check": {
+    "demo_component_review_sha256": "5aae8eb9066fcc08c2698e9485b31c48887b8268edd638f3085dd687d999b289",
+    "chain_review_handoff_sha256": "be34cae870f5dda6e7296461972cca20c64106f24f8d96509714bbcc4f491ed9"
+  },
+  "intermediate_reference_run": {
+    "evidence": "evidence/natural-demo139-independent-owned-20261102T164847.732479Z",
+    "counted_in_formal": false,
+    "reason": "Full semantic match; final added candidate raw metadata/source guards and corrected aggregation of per-batch maxima."
+  }
+}
