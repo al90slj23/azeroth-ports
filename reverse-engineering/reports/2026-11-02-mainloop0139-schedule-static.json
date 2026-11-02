@@ -1,0 +1,199 @@
+{
+  "status": "static_current139_main884_clock_and_order_extracted_not_runtime_acceptance",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "source_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "source_function": {
+    "index": 884,
+    "signature": [
+      "7f7c",
+      ""
+    ],
+    "body_start": 1159980,
+    "body_end": 1299330,
+    "body_bytes": 139350,
+    "body_sha256": "e6ed2847bcafc4e5f3fdf918af04c672b152fcf89eea7171531d056ba140eece",
+    "WAT_bytes": 4012471,
+    "WAT_sha256": "c3c6e002656faafe3e468dd038c13471fd3f09f6a8942ce05d592103cb576501"
+  },
+  "static_trace": {
+    "path": "evidence/mainloop139-schedule-static-20261102T114020.374745Z/trace.json",
+    "sha256": "c9a7d0cf45da11168be993f96483a308f4d775626783e45af6480c4ce4c113ad"
+  },
+  "trace_script": {
+    "path": "scripts/trace_mainloop139_schedule.py",
+    "sha256": "de62fcb037be2ed2c1271997be322d2e449fb7803128c214c2d7112106d56499"
+  },
+  "clock_rule": "tag@0==1: f64 delta now-previous@8, compare/select clamp0..0.1, demote f32; otherwise dt default+0; always timestamp@8 andtag1. Active phase block adds f32(dt,Game2352).",
+  "owner_rule": "Stages receive local6; nearby param0+16 assignments are captured, but full control-flow dominance and param0/App ownership remain unresolved",
+  "owner_assignment_WAT_lines": [
+    156714,
+    160229
+  ],
+  "phase_gate": "(local4 &255)==1; local4 comes from phase2587 in the surrounding branch; full preceding control flow is not reconstructed",
+  "core_stage_order": [
+    {
+      "function": 2123,
+      "research_role": "player",
+      "WAT_line": 175221,
+      "current_integration_boundary": "Players/regen/quiet1238 reviewed separately;nearby-owned auto scheduler not yet integrated"
+    },
+    {
+      "function": 924,
+      "research_role": "extra_player_actions",
+      "WAT_line": 175224,
+      "current_integration_boundary": "Current139 default nonempty/empty domain not yet dynamically joined"
+    },
+    {
+      "function": 983,
+      "research_role": "owned_effects",
+      "WAT_line": 175227,
+      "current_integration_boundary": "Current139 producer/consumer owner integration pending"
+    },
+    {
+      "function": 1775,
+      "research_role": "hit_events",
+      "WAT_line": 175229,
+      "current_integration_boundary": "Only empty owners verified in current139 Thunder batches"
+    },
+    {
+      "function": 3755,
+      "research_role": "area_events",
+      "WAT_line": 175231,
+      "current_integration_boundary": "Only empty owners verified;Thunder exec2 does not enqueue area jobs"
+    },
+    {
+      "function": 920,
+      "research_role": "effects",
+      "WAT_line": 175234,
+      "current_integration_boundary": "Current139 continuous effects integration pending"
+    },
+    {
+      "function": 38553,
+      "research_role": "deadline",
+      "WAT_line": 175236,
+      "current_integration_boundary": "Current139 deadline/clock integration pending"
+    },
+    {
+      "function": 2621,
+      "research_role": "secondary",
+      "WAT_line": 175238,
+      "current_integration_boundary": "Current139 secondary integration pending"
+    },
+    {
+      "function": 925,
+      "research_role": "enemy_AI",
+      "WAT_line": 175241,
+      "current_integration_boundary": "Separate natural movement/contact accepted;actual slow/expiry fresh batch awaits independent review"
+    },
+    {
+      "function": 2890,
+      "research_role": "collection",
+      "WAT_line": 175243,
+      "current_integration_boundary": "Death→XP/coin andfirstlevel selection components accepted;continuous schedule pending"
+    },
+    {
+      "function": 2584,
+      "research_role": "claims",
+      "WAT_line": 175245,
+      "current_integration_boundary": "Current139 claim owner lifecycle/integration pending"
+    },
+    {
+      "function": 952,
+      "research_role": "spawn",
+      "WAT_line": 175252,
+      "current_integration_boundary": "Individual NPC production accepted;full952 timed spawning not recovered here"
+    },
+    {
+      "function": 2372,
+      "research_role": "special",
+      "WAT_line": 175254,
+      "current_integration_boundary": "Current139 complete special schedule pending"
+    },
+    {
+      "function": 49961,
+      "research_role": "terminal",
+      "WAT_line": 175257,
+      "current_integration_boundary": "Current139 complete terminal/win/defeat schedule pending"
+    }
+  ],
+  "spawn_special_guard": "spawn952 andspecial2372 run only when Game2579==0",
+  "post_stage_tail": "terminal49961 → possible2388credit/4677/2181 →1173→13956, with source guards; no full owner or branch semantics claimed",
+  "source_windows": [
+    {
+      "name": "timestamp_header_prefix",
+      "file": "source/timestamp_header_prefix.wat",
+      "first_WAT_line": 125337,
+      "last_WAT_line": 125373,
+      "sha256": "e367489d46f4187a9cabff85ccc2bf126781875bfc1be994ea8a32a27afc6ec1"
+    },
+    {
+      "name": "core_stage_sequence",
+      "file": "source/core_stage_sequence.wat",
+      "first_WAT_line": 175219,
+      "last_WAT_line": 175257,
+      "sha256": "c142341caa8ea0390d67c977cbaf48f112e13b82dcb0b271cc67cfdc7777a88c"
+    },
+    {
+      "name": "phase1_clock_gate",
+      "file": "source/phase1_clock_gate.wat",
+      "first_WAT_line": 173261,
+      "last_WAT_line": 173287,
+      "sha256": "68367df78456d19d419b8f043085a064e382e41b031c45b54cca774813aa45a5"
+    },
+    {
+      "name": "nearby_stage_owner_base_plus16_assignment",
+      "file": "source/nearby_stage_owner_base_plus16_assignment.wat",
+      "first_WAT_line": 160229,
+      "last_WAT_line": 160238,
+      "sha256": "13ca9c76da575f5c60e48e73868cde78265533adb200685ec8589627a186cddc"
+    },
+    {
+      "name": "spawn_and_special_guard",
+      "file": "source/spawn_and_special_guard.wat",
+      "first_WAT_line": 175246,
+      "last_WAT_line": 175258,
+      "sha256": "386ef28841303996c3487afb000b8befbd27ae7ba864c00582122208ed4f54a5"
+    },
+    {
+      "name": "terminal_credit_XP_and_Aura",
+      "file": "source/terminal_credit_XP_and_Aura.wat",
+      "first_WAT_line": 175258,
+      "last_WAT_line": 175345,
+      "sha256": "86e5c57eabc0cdb8c94de5d1b44d0ede4538b880d2d85d89de7938451c007eba"
+    }
+  ],
+  "unique_contiguous14_stage_sequence": 1,
+  "selected_role_call_sites": 59,
+  "total_direct_call_sites": 1867,
+  "structured_control_frames": 2953,
+  "prestage_calls_in_selected_phase_block": 48,
+  "evidence_layers": {
+    "static_extraction": true,
+    "model_selfcheck": false,
+    "original_instruction_fragment_differential": false,
+    "complete_original_function_differential": false,
+    "whole_frame_differential": false
+  },
+  "prior_failed_guard": {
+    "path": "evidence/mainloop139-schedule-static-20261102T113922.839947Z/failure.json",
+    "sha256": "0b328fddb79dbdcbe0ca76fb329f36cb8fc3c993009f68f68f22012557fe6d60",
+    "reason": "Repeated lexical param0+16 assignments: rejected global-uniqueness assumption; no original execution"
+  },
+  "original_executions": 0,
+  "wasm_instantiations": 0,
+  "new_runtime_cases": 0,
+  "full_mainloop_frames": 0,
+  "native_windows_execution": false,
+  "complete_games": 0,
+  "limitations": [
+    "Static integration order only; no App/bootstrap/externref/network/input/UI/render or complete884 execution.",
+    "Several core paths occur earlier in other branches; this unique contiguous14-stage slice does not establish their global reachability or equivalence.",
+    "Repeated lexical owner assignments do not prove dominance; App/Game owner construction remains unknown.",
+    "Prestage demo/movement/pool guards, callback owners andpoststage queues are retained as source windows/call sites, not independently implemented.",
+    "No prior135/138runtime acceptance transferred; installers/saves/Android/public registry untouched.",
+    "Role names are research aliases, not recovered original Rust symbols.",
+    "The separate clock micro-module experiment is not this static trace anddoes not execute phase1 Game2352 addition or complete884.",
+    "Full G2582/G2576 entry/prestage behavior, local/party/remote branch reachability, credit producers, all resource owners andUI/network callbacks remain unresolved."
+  ]
+}

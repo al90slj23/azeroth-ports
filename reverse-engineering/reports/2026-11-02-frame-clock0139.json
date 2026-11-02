@@ -1,0 +1,3147 @@
+{
+  "status": "scoped_original_prefix_micro_differential_passed_pending_independent_review",
+  "kind": "original_contiguous_instruction_prefix_micro_module_not_full884",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "source_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "formal_comparison_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/frame-clock139-micro-20261102T114028.262512Z/comparison.json",
+  "formal_comparison_sha256": "2a5619cfb7d98030314c218226d667fcfc0f43e7d598df9aba3e874cfc0245ec",
+  "manifest": {
+    "kind": "original_contiguous_instruction_prefix_micro_module_not_full884",
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "original_function": 884,
+    "original_signature": [
+      "i32",
+      "f64"
+    ],
+    "original_result": [],
+    "original_body_start": 1159980,
+    "original_body_end": 1299330,
+    "original_body_bytes": 139350,
+    "original_body_sha256": "e6ed2847bcafc4e5f3fdf918af04c672b152fcf89eea7171531d056ba140eece",
+    "indexed_WAT_bytes": 4012471,
+    "indexed_WAT_sha256": "c3c6e002656faafe3e468dd038c13471fd3f09f6a8942ce05d592103cb576501",
+    "local_groups": [
+      [
+        137,
+        127
+      ],
+      [
+        11,
+        126
+      ],
+      [
+        11,
+        125
+      ],
+      [
+        2,
+        124
+      ]
+    ],
+    "original_local_bytes": 10,
+    "prefix_start": 1159990,
+    "prefix_end": 1160090,
+    "prefix_bytes": 100,
+    "prefix_sha256": "d77c6c23c03df0ffd34fc3018f41bee35975f5347c4f251f635875fe55de38b8",
+    "local_declaration_sha256": "d02dfdc16c2dae0316b2e34589f7e5945af2a6deef130bb8f01d6e53e516fd1f",
+    "instrumentation_tail_hex": "209c010b",
+    "tail_only_get156_and_end": true,
+    "module_file": "frame-clock139-original-prefix-micro.wasm",
+    "module_sha256": "2782cb38b18b654e5bf65d5ae3c41a3437c6ccc8a1b6f4a16159e2ca2a4cbe9d",
+    "imports": 0,
+    "memory_pages": 32,
+    "stack_initial": 1048576,
+    "original_prefix_stack_subtraction": 10704,
+    "full884_calls": 0,
+    "original_function_entry_calls": 0,
+    "builder_original_executions": 0
+  },
+  "counts": {
+    "assertions": 5936,
+    "micro_calls": 500,
+    "negative_zero_dt": 2,
+    "first_timestamp_not_consumed": 120,
+    "canary_bytes": 64000,
+    "owner_write_bytes": 8000,
+    "dt_NaN_classifications": 109,
+    "timestamp_NaN_classifications": 76
+  },
+  "formal_cases": 484,
+  "formal_micro_prefix_calls": 500,
+  "full884_calls": 0,
+  "original_function_entry_calls": 0,
+  "phase1_gameclock_original_calls": 0,
+  "game_clock_arithmetic_model_selfchecks": 25,
+  "source_closure_files": 13,
+  "source_closure_edges": 18,
+  "source_before_equals_after": true,
+  "expected_before_original_micro_execution": true,
+  "original_input_contains_expected": false,
+  "model_original_read_audit_sha256": "246a093fdc77dbbecedcc8e41732efa8060f3255adc87e31cde9aa9eae06f5d5",
+  "runtime": {
+    "kind": "original_contiguous_instruction_prefix_micro_module_not_full884",
+    "micro_prefix_calls": 500,
+    "full884_calls": 0,
+    "original_function_entry_calls": 0,
+    "imports": 0,
+    "host_calls": 0,
+    "instances": 1,
+    "memory_bytes": 2097152,
+    "memory_cap_bytes": 4194304,
+    "heap_cap_mib": 512,
+    "external_stack_reset": "beforeeachcaseonly;nonebetweenconsecutivesteps",
+    "prefix_stack_subtraction_preserved": 10704,
+    "returns": [
+      {
+        "case": 0,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 1,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 2,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 3,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 4,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 5,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 5,
+        "before": 1037872,
+        "after": 1027168,
+        "returned": true
+      },
+      {
+        "case": 5,
+        "before": 1027168,
+        "after": 1016464,
+        "returned": true
+      },
+      {
+        "case": 5,
+        "before": 1016464,
+        "after": 1005760,
+        "returned": true
+      },
+      {
+        "case": 5,
+        "before": 1005760,
+        "after": 995056,
+        "returned": true
+      },
+      {
+        "case": 5,
+        "before": 995056,
+        "after": 984352,
+        "returned": true
+      },
+      {
+        "case": 6,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 7,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 8,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 9,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 10,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 11,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 12,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 13,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 14,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 15,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 16,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 17,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 18,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 19,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 20,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 21,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 22,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 23,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 24,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 25,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 26,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 27,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 28,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 29,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 30,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 31,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 32,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 33,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 34,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 35,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 36,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 37,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 38,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 39,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 40,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 41,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 42,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 43,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 44,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 45,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 46,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 47,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 48,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 49,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 50,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 51,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 52,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 53,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 54,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 55,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 56,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 57,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 58,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 59,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 60,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 61,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 62,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 63,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 64,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 65,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 66,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 67,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 68,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 69,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 70,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 71,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 72,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 73,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 74,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 75,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 76,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 77,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 78,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 79,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 80,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 81,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 82,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 83,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 84,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 85,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 86,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 87,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 88,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 89,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 90,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 91,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 92,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 93,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 94,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 95,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 96,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 97,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 98,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 99,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 100,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 101,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 102,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 103,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 104,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 105,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 106,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 107,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 108,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 109,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 110,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 111,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 112,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 113,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 114,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 115,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 116,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 117,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 118,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 119,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 120,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 121,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 122,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 123,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 124,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 125,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 126,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 127,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 128,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 129,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 130,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 131,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 132,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 133,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 134,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 135,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 136,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 137,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 138,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 139,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 140,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 141,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 142,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 143,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 144,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 145,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 146,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 147,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 148,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 149,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 150,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 151,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 152,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 153,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 154,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 155,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 156,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 157,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 158,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 159,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 160,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 161,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 162,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 163,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 164,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 165,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 166,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 167,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 168,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 169,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 170,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 171,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 172,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 173,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 174,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 175,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 176,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 177,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 178,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 179,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 180,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 181,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 182,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 183,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 184,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 185,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 186,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 187,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 188,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 189,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 190,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 191,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 192,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 193,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 194,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 195,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 196,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 197,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 198,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 199,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 200,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 201,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 202,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 203,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 204,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 205,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 206,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 207,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 208,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 209,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 210,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 211,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 212,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 213,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 214,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 215,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 216,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 217,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 218,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 219,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 220,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 221,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 222,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 223,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 224,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 225,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 226,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 227,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 228,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 229,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 230,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 231,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 232,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 233,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 234,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 235,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 236,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 237,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 238,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 239,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 240,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 241,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 242,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 243,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 244,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 245,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 246,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 247,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 248,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 249,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 250,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 251,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 252,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 253,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 254,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 255,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 256,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 257,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 258,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 259,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 260,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 261,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 262,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 263,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 264,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 265,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 266,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 267,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 268,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 269,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 270,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 271,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 272,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 273,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 274,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 275,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 276,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 277,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 278,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 279,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 280,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 281,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 282,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 283,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 284,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 285,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 286,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 287,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 288,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 289,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 290,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 291,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 292,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 293,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 294,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 295,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 296,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 297,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 298,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 299,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 300,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 301,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 302,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 303,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 304,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 305,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 306,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 307,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 308,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 309,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 310,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 311,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 312,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 313,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 314,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 315,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 316,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 317,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 318,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 319,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 320,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 321,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 322,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 323,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 324,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 325,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 326,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 327,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 328,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 329,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 330,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 331,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 332,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 333,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 334,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 335,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 336,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 337,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 338,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 339,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 340,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 341,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 342,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 343,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 344,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 345,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 346,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 347,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 348,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 349,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 350,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 351,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 352,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 353,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 354,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 355,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 356,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 357,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 358,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 359,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 360,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 361,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 362,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 363,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 364,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 365,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 366,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 367,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 368,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 369,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 370,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 371,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 372,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 373,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 374,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 375,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 376,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 377,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 378,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 379,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 380,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 381,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 382,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 383,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 384,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 385,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 386,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 387,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 388,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 389,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 390,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 391,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 392,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 393,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 394,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 395,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 396,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 397,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 398,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 399,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 400,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 401,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 402,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 403,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 404,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 405,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 406,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 407,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 408,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 409,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 410,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 411,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 412,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 413,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 414,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 415,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 416,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 417,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 418,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 419,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 420,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 421,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 422,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 423,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 424,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 425,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 426,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 427,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 428,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 429,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 430,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 431,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 432,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 433,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 434,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 435,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 436,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 437,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 438,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 439,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 440,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 441,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 442,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 443,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 444,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 445,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 446,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 447,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 448,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 449,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 450,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 451,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 452,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 453,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 454,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 455,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 456,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 457,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 458,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 459,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 460,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 461,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 462,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 463,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 464,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 465,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 466,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 467,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 468,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 469,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 470,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 471,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 472,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 473,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 474,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 475,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 476,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 477,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 478,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 479,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 480,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 481,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 481,
+        "before": 1037872,
+        "after": 1027168,
+        "returned": true
+      },
+      {
+        "case": 481,
+        "before": 1027168,
+        "after": 1016464,
+        "returned": true
+      },
+      {
+        "case": 481,
+        "before": 1016464,
+        "after": 1005760,
+        "returned": true
+      },
+      {
+        "case": 482,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 482,
+        "before": 1037872,
+        "after": 1027168,
+        "returned": true
+      },
+      {
+        "case": 482,
+        "before": 1027168,
+        "after": 1016464,
+        "returned": true
+      },
+      {
+        "case": 482,
+        "before": 1016464,
+        "after": 1005760,
+        "returned": true
+      },
+      {
+        "case": 483,
+        "before": 1048576,
+        "after": 1037872,
+        "returned": true
+      },
+      {
+        "case": 483,
+        "before": 1037872,
+        "after": 1027168,
+        "returned": true
+      },
+      {
+        "case": 483,
+        "before": 1027168,
+        "after": 1016464,
+        "returned": true
+      },
+      {
+        "case": 483,
+        "before": 1016464,
+        "after": 1005760,
+        "returned": true
+      },
+      {
+        "case": 483,
+        "before": 1005760,
+        "after": 995056,
+        "returned": true
+      },
+      {
+        "case": 483,
+        "before": 995056,
+        "after": 984352,
+        "returned": true
+      }
+    ],
+    "error": null
+  },
+  "process": {
+    "pid": 75986,
+    "pgid": 75986,
+    "exit_code": 0,
+    "seconds": 0.9195414170026197,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "pilot_excluded": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/frame-clock139-micro-20261102T114016.246086Z/comparison.json",
+    "sha256": "aa4dfc1f32cde7565b2759365abd636b1e3a5092465f0d5d0ea3e585e3506427",
+    "cases": 6,
+    "micro_calls": 11,
+    "differences": 0
+  },
+  "failed_original_micro_batches": [],
+  "source_files": {
+    "reconstruction/core_spec/frame_clock139.py": "e906286b40374b649d57202097c190d634959d074f54e6350fc6d85d23656cdd",
+    "scripts/build_frame_clock139_oracle.py": "78d0d0b632864d1338a8f4306f104ee4273cec06982a94e6a453bf93004b91c0",
+    "scripts/run_frame_clock139_oracle.mjs": "06064aef9dead0e6c56a58d37b7700f791ffdfa315108b85decf6afea7a9cf68",
+    "scripts/check_frame_clock139.py": "574fd9cb1afcf6741b55049fe84bd2780609e8e5d377c2300c573ccdec87f3a4"
+  },
+  "postcapture_specification": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/reports/2026-11-02-frame-clock0139-spec.json",
+    "sha256": "0fefcc0f9a46dd3e3d8111ed2e1a6017951fe845385a21cc491ed8eace46017a"
+  },
+  "matrix": [
+    "64bittag0/2/2^32/2^32+1/2^63/2^64-1 firstcallswithoutpreviousread",
+    "tag1 19x19finite/Inf/NaN/negativezero/0.1neighbors/subnormal/tinyoverflowtimestamps",
+    "positive/negativeinfinitysubtraction,negativefinitedelta",
+    "continuouscallswithstorednow,NaNthenrecovery,infiniteandlarge-cancellationboundaries"
+  ],
+  "limitations": [
+    "Micro-modulewithoriginal884full local declaration+unchangedcontiguousopcodesonly;tailaddsget156/end. Notoriginal884entryorfullmainloop.",
+    "Stacksubtract10704preservedwithoutrestoration;externalharnessresetonlybetweencases.",
+    "NaNonlyclassification,nopayloadpromises.",
+    "Game2352phase1additionstaticandmodelselfcheckonly;nooriginal884branch/App/bootstrap/gameacceptance."
+  ],
+  "protected": {
+    "other_frozen_files_modified": false,
+    "public_registry_modified": false,
+    "Git_modified": false,
+    "Android_modified": false,
+    "original_installers_or_saves_modified": false,
+    "all_artifacts_4TB": true
+  }
+}

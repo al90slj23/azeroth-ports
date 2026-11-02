@@ -1,0 +1,25 @@
+{
+  "kind": "postcapture_executable_specification_document_not_new_execution",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "owner16": {
+    "0": "i64/u64 tag",
+    "8": "f64 timestamp"
+  },
+  "sample_rules": [
+    "Allocateoriginalstack10704 byglobal0 subtraction,retainthisobservablemicro-prefix effect.",
+    "Defaultlocal156f32is+0.",
+    "If64-bitownerTag==1,delta=now_f64-owner.previous_f64;lower=(delta<0?+0:delta);upper=(lower>f64(.1)?f64(.1):lower);dt=f32(upper).",
+    "ComparisonsfalseforNaN thusNaNpropagates;negativezero notless0 thusretained.",
+    "Unconditionallyowner.timestamp=now_f64andowner.tag=1."
+  ],
+  "game_clock": "Atcurrent884WAT34975and47950,explicitphase1guardaddsf32(dt+G2352). Thisbatchonlystatic/modelchecks,thisbranchisnotexecuted.",
+  "oracle_contract": "microbody=verbatim10Boriginaldecl+verbatim100Bcontinuousprefix+instrumentation209c010b(get156,end),newfunctionresultf32;imports0,memory32pages,mutableglobal0. NooriginalbodyremainderorApp.",
+  "stack_contract": "NoaddedSPrestore:before-after10704for eachstep;onlyharnessresetbeforeeachcase.",
+  "NaN_contract": "OnlyNaNclassificationforf32dt/f64newtimestamp,nopayloadorsignpreservationpromise.",
+  "limits": [
+    "Notfull884ororiginalfunctionentry,rendering/App/bootstrap/gameplay.",
+    "NoC++nativeframeexecution.",
+    "Do notsubstitutecomponenttestdt.125forrealframe cap.1withoutdeclaringcontrolledinput."
+  ]
+}

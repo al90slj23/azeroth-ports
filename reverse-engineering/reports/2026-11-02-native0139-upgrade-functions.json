@@ -1,0 +1,216 @@
+{
+  "status": "fresh_current139_native_two_functions_bounded_static_inspection_not_behavioral_acceptance",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+  "wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "run": {
+    "directory": "evidence/native139-upgrade-focus-20261102T115527.969158Z",
+    "prepared_sha256": "8f35e936f291dcc6e39cccaf353d145f7beab655c63eb77037d9e943242e0d2f",
+    "run_summary_sha256": "986479747f915a1e9752005373bade2f50ab2d85ffaeed56294b8e76f03ddb20",
+    "functions_sha256": "ace49d6d98c255b6e66787d2cf4783a8044dcff98ec3534bbfe8f719bc48df82"
+  },
+  "static_correspondence": {
+    "path": "evidence/native139-upgrade-focus-20261102T115527.969158Z/static-correspondence/correspondence.json",
+    "sha256": "7b92fd1195bc35332b81633dc8256e085b6f9b32359a972044764f1faf6cd69c"
+  },
+  "fresh_selection_source": ".pdata ranges andLEAxrefsofthefivecurrentWASM-matchednative tables; nooldaddresses",
+  "native_functions": [
+    {
+      "start": "0x145f64cc0",
+      "end_exclusive": "0x145f64ec1",
+      "bytes": 513,
+      "sha256": "ea9dc1a05053d7b28fd70a1af296556e92df40408b3da9891b66ab97635d7d25",
+      "LLVM_Ghidra_instruction_boundary_count": 108,
+      "all_original_bytes_decoded_agree": true,
+      "computed_jumps": [
+        {
+          "site": "0x145f64cd5",
+          "table_address": "0x147a205a0",
+          "file_offset": 128054176,
+          "bytes": "384754fe584854fe9c4754fe304854fe714754fe",
+          "index_assumption": "valid five-variant branch discriminant 0..4",
+          "targets": [
+            "0x145f64cd8",
+            "0x145f64df8",
+            "0x145f64d3c",
+            "0x145f64dd0",
+            "0x145f64d11"
+          ]
+        }
+      ],
+      "semantic_status": "firstfunctionstatic25511correspondence"
+    },
+    {
+      "start": "0x145f8efe0",
+      "end_exclusive": "0x145f8f242",
+      "bytes": 610,
+      "sha256": "afb1820a9ba3b43e067fc36a6cd0193a87a0737eba1ea80b04abe671e5730246",
+      "LLVM_Ghidra_instruction_boundary_count": 149,
+      "all_original_bytes_decoded_agree": true,
+      "computed_jumps": [],
+      "semantic_status": "candidateinspectiononly"
+    }
+  ],
+  "current_WASM25511": {
+    "index": 25511,
+    "signature": [
+      "7f7f7f",
+      "7d"
+    ],
+    "body_start": 50677374,
+    "body_end": 50677994,
+    "body_bytes": 620,
+    "body_sha256": "a627059d8fa98d0b6385cd67224d047ce1320f06b83517c8d78d3e58507d555f",
+    "WAT_bytes": 7824,
+    "WAT_sha256": "b0e2ae4202aa0f728c3a30798842ca63740f959dacce8b9f650a3eb57f42f022"
+  },
+  "partial_owned_field_correspondence": [
+    {
+      "field": "definitionpointer",
+      "native": 0,
+      "wasm": 0,
+      "native_width": 8,
+      "wasm_width": 4
+    },
+    {
+      "field": "kind0upgradecounter",
+      "native": 36,
+      "wasm": 32,
+      "width": 4
+    },
+    {
+      "field": "cooldownmultiplier",
+      "native": 20,
+      "wasm": 16,
+      "width": 4
+    },
+    {
+      "field": "additionalcount",
+      "native": 24,
+      "wasm": 20,
+      "width": 4
+    },
+    {
+      "field": "radiusmultiplier",
+      "native": 28,
+      "wasm": 24,
+      "width": 4
+    },
+    {
+      "field": "durationmultiplier",
+      "native": 32,
+      "wasm": 28,
+      "width": 4
+    }
+  ],
+  "static_rule_correspondence": [
+    {
+      "kind": 0,
+      "rule": "table0[tier] / (f32(u32(counter)*0.5)+1)",
+      "native_table": "0x147a1fc5c",
+      "wasm_table": 5405004
+    },
+    {
+      "kind": 1,
+      "rule": "table1[tier]*nonnegative((cooldown-0.2)/0.8)",
+      "native_table": "0x147a1fc88",
+      "wasm_table": 5405040
+    },
+    {
+      "kind": 2,
+      "rule": "f32(min(saturating_u32(cap-count),table2[tier]));cap12unlessdefinitionexec11;exec11namedseal_fate/soul_fire/lightwell/faerie_firecap2else0",
+      "native_table": "0x147a1fcb8",
+      "wasm_table": 5405076
+    },
+    {
+      "kind": 3,
+      "rule": "table3[tier]*nonnegative((5-radius)*0.25)",
+      "native_table": "0x147a1fce8",
+      "wasm_table": 5405112
+    },
+    {
+      "kind": 4,
+      "rule": "table4[tier]*nonnegative((6-duration)/5)",
+      "native_table": "0x147a1fd18",
+      "wasm_table": 5405148
+    }
+  ],
+  "numeric_scalar_constants": {
+    "0x1464d5d10": {
+      "bits": 1056964608,
+      "float": 0.5
+    },
+    "0x1464d5b60": {
+      "bits": 1065353216,
+      "float": 1.0
+    },
+    "0x147a1f88c": {
+      "bits": 3192704205,
+      "float": -0.20000000298023224
+    },
+    "0x14653d154": {
+      "bits": 1061997773,
+      "float": 0.800000011920929
+    },
+    "0x1464d5e04": {
+      "bits": 1084227584,
+      "float": 5.0
+    },
+    "0x1464e2df8": {
+      "bits": 1048576000,
+      "float": 0.25
+    },
+    "0x1464d5ea0": {
+      "bits": 1086324736,
+      "float": 6.0
+    }
+  },
+  "native_execution_byte": 117,
+  "wasm_execution_byte": 84,
+  "decoded_bytes": 1123,
+  "LLVM_Ghidra_matching_instruction_boundaries": 257,
+  "tool": {
+    "Ghidra": "12.1.4",
+    "max_heap": "3G",
+    "whole_owned_deadline_seconds": 300,
+    "per_function_deadline_seconds": 60,
+    "terminal": {
+      "pid": 2104,
+      "pgid": 2104,
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 61.828348250001,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "original_preserved": true,
+    "sources_unchanged": true,
+    "read_only_import": true,
+    "full_automatic_analysis": false
+  },
+  "evidence_layers": {
+    "static_PE_and_original_instructions": true,
+    "independent_LLVM_Ghidra_boundaries": true,
+    "static_WASM_correspondence": true,
+    "model_selfcheck": false,
+    "original_native_instruction_emulation": false,
+    "full_WASM_function_differential": false,
+    "Windows_application_execution": false
+  },
+  "limits": [
+    "Staticruleassociationdoesnotprovebehavioralequivalence.",
+    "Ghidraprototypeisanalystannotation;nativeGame/Unit/entireownedlayoutandWindowscallingcontextremainunrestored.",
+    "FirstfunctionusesMAXSS;ordinaryCconditionalpseudocodeisnotproofforNaN/signedzero. Originalinstructionemulationisaseparatenextstage.",
+    "Second610Bfunctionisinspectiononly;itsfullmetadata/callersareunmapped.",
+    "CurrentWASMfirst-cleaveupgrade19fixtureacceptanceisaseparatedomain;allfivegenericnativebranchesarenotdynamicallyaccepted.",
+    "Noneofthegame/nativeexecutable/WASMwasexecutedbythistrace.",
+    "DLLimportsnotloaded;nogameexecutionorWindowsruntimepreparedbythisboundedimport.",
+    "CurrentSSAandnativepartialfieldsarestaticcorrespondence;actualemulatedleafreturnvalueswillbeaseparatenewexperiment."
+  ],
+  "target_executed": false,
+  "new_runtime_cases": 0,
+  "full_mainloop_frames": 0,
+  "native_windows_execution": false,
+  "complete_games": 0
+}
