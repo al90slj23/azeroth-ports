@@ -8,15 +8,15 @@
     "windows_reference_key": "windows_official_latest_reference",
     "metadata_reference_key": "official_latest_0139_metadata",
     "selected_by": "Official139 metadata, coherent saved Windows/Web bytes and real native/Web nine-byte consumers.",
-    "status": "scoped139_controlled_firstlevel_loop_and_first_cleave_upgrade_reviewed_not_fullgame",
+    "status": "scoped139_firstlevel_loop_player2123_realracial_liveexpiry_reviewed_not_fullgame",
     "version_policy": "Functional target follows verified latest stable139. Every fixed135/137/138 experiment stays pinned and retains its own acceptance; no transfer.",
     "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0135",
     "fixed_previous_latest_target_key": "fixed_dynamic_research_target_0138",
     "installation_packages_updated": false,
     "version_support": "reconstruction/version-support.json",
-    "latest_metadata_recheck": "evidence/official-goal-phase-network-check-20261102T102412.748589Z/receipt.json",
-    "latest_metadata_recheck_sha256": "fe48fb01ea21752fa8de4c9b77767679c662f893e7fb6a7e7738f4857e3e3274",
-    "latest_metadata_recheck_utc": "2026-11-02T10:24:12.749301+00:00",
+    "latest_metadata_recheck": "evidence/official-goal-phase-network-check-20261102T110027.755708Z/receipt.json",
+    "latest_metadata_recheck_sha256": "3af71a3a5eaf0b18b36d3263ab05c45a9d5fee0d21be0c36629caedbd5eb58b1",
+    "latest_metadata_recheck_utc": "2026-11-02T11:00:27.756843+00:00",
     "official_manifest_declared_native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
     "official_manifest_declared_native_bytes": 150595584,
     "runtime_acceptance_reports": [
@@ -40,10 +40,11 @@
       "reports/2026-11-02-collection0139.json",
       "reports/2026-11-02-growth-world0139.json",
       "reports/2026-11-02-opening-collection0139.json",
-      "reports/2026-11-02-select-upgrade0139.json"
+      "reports/2026-11-02-select-upgrade0139.json",
+      "reports/2026-11-02-player-update0139.json"
     ],
-    "new_original_runtime_cases": 14828,
-    "new_original_entry_calls": 18845,
+    "new_original_runtime_cases": 14833,
+    "new_original_entry_calls": 19015,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
@@ -53,7 +54,7 @@
     "build_identity_sidecar_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
     "latest_version_state_report": "reports/2026-11-02-official0139-acquisition-identity.json",
     "latest_version_state_report_sha256": "0ef3b97fc94009639d2ca3c000386327be9f21af74e738ad5407c3ae82839031",
-    "scope_note": "ControlledsameGameopening→realdeath/XP→firstchoice→directcleaveaccepted;canonicalworld/resourcecontext/counters/relocation/clockexplicit,notnaturalApp/bootstrap/AI/mainloop/native/fullgame.",
+    "scope_note": "Controlledfirstlevelrealdeathloopplusquiet-centerfull2123/1238realHumanracialandliveexpiryreviewed;notjoinedAI/positiveheal/main884/native/fullgame.",
     "full_static_profile_produced": true,
     "defined_functions": 177101,
     "function_imports": 882,
@@ -62,7 +63,7 @@
     "roles_with_static_differences": 19,
     "static_semantic_rows_compared": 143,
     "static_rows_equal": 143,
-    "new_runtime_acceptance_registered": 14828,
+    "new_runtime_acceptance_registered": 14833,
     "static_migration_not_behavioral_equivalence": true,
     "analysis_profile": "evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
     "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
@@ -72,8 +73,8 @@
     "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
     "static_data_delta": "evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
     "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be",
-    "new_runtime_cases": 14828,
-    "new_independent_model_cases": 14828,
+    "new_runtime_cases": 14833,
+    "new_independent_model_cases": 14833,
     "runtime_independent_reviews": [
       "reports/2026-11-02-combat0139-independent-review.json",
       "reports/2026-11-02-stats0139-independent-review.json",
@@ -95,15 +96,16 @@
       "reports/2026-11-02-collection0139-independent-review.json",
       "reports/2026-11-02-growth-world0139-independent-review.json",
       "reports/2026-11-02-opening-collection0139-independent-review.json",
-      "reports/2026-11-02-select-upgrade0139-independent-review.json"
+      "reports/2026-11-02-select-upgrade0139-independent-review.json",
+      "reports/2026-11-02-player-update0139-independent-review.json"
     ],
-    "runtime_scope": "139acceptedexecutioninventory14828fixtures/18845targetentryattempts;18844normalreturns/1expectedboundsabort. Firstcleaveorderedupgrade19/57adds17actualreachablekeysandnew/upgraderouter;firstlevelrealdeath3/47remainsseparatelyscoped. Countsnotcoverage;setup/pilots/studiesexcluded. Player2123/1238realperception/liveexpirynewauthor155batchawaitsfinalfreeze/review.Main884/native/fullgame0.",
+    "runtime_scope": "139acceptedexecutioninventory14833fixtures/19015targetentryattempts;19014normalreturns/1expectedboundsabort. Newplayer5/170includes155full2123plus15checked1108/4677/1093prefixentries;2945/1600ten setup excluded. Real1238/perception/liveexpiryquiet-centercomponent,notAI/main884frames. Native114abilitydeclarationlayoutfreshstaticonly/0runtime. Countsnotcoverage;pilots/rejected/studiesexcluded.Native/fullgame0.",
     "controlled_original_context_reference_key": "web_official_controlled_0139_context_v2",
-    "normal_returned_target_entries": 18844,
+    "normal_returned_target_entries": 19014,
     "expected_bounds_aborts": 1,
     "pending_source_findings": [
-      "Player2123/owned1238 scheduling with realHumanperception(exec9/effect8)/1020expiry andnaturalperceptionexpiry155authorcallsawaitfinalfreeze/review. Earlier8callself306wrongmaskfailedbatchpreserved;correctself10490mask0notcleavemask2.",
-      "Repeated/saturated/otherabilityupgrade/gold,nextlevels/AI/spawn/full592andHP169/UI/save/network/native/fullgame remain unresolved. Canonicalworld/bootstrap/initialcounterproducersstillseparate."
+      "ThunderClap18fresh/47full922(single-target/no-positivecrit)andstandaloneAI9253cadences/92calls/52actualNPCcontactsnewauthorbatchesawaitindependentreview. Natural multi-target/positivecrit and1466positivehealing areinrecovery.",
+      "JoinAI→nearbyownedskills→incoming→regen/death/growth/spawn/main884remainsunaccepted. Native114typeddeclarationsmatchedonlystatic120/88layout;noNativeGame/Unit/behaviorABIproof. Historicalruntimeacceptance nottransferred."
     ],
     "scoped_components_0139": [
       {
@@ -831,8 +833,77 @@
         "native_windows_execution": false,
         "complete_games": 0,
         "scope": "All17reachablefirstcleaveupgrade(tier0two/tier1..3threeeach/tier4sixorderedpairs)fromactualfull1108appseeds→explicitXP5→real2181cards→1093. Orderedrank/kindvalue/count/tailf32and80B/derived/phase/live/backgroundchecked. NoRNG/cardoverride/redraw. Wrong18thkeysearchpreserved0original. Firstneutralcleaveonly;notrepeated/saturated/otherability/gold/fullUI/clock/mainloop/native/game."
+      },
+      {
+        "domain": "full2123_quiet_center_real_perception_and_live_expiry",
+        "version": "0.139.0",
+        "build": "f79c5e2b4",
+        "status": "scoped_differential_and_different_author_readonly_review_passed",
+        "report": "reports/2026-11-02-player-update0139.json",
+        "report_sha256": "930cd94406d2cea297671502dd9d673eb0ea28e0f947b245325c1de858a062d1",
+        "independent_review": "reports/2026-11-02-player-update0139-independent-review.json",
+        "independent_review_sha256": "0e30a97f6d8690d56ae9caafd6fcd7d6afc4eaec30498023084691adfb8862e0",
+        "comparison": "evidence/player-update139-oracle-20261102T103206.417048Z/comparison.json",
+        "comparison_sha256": "4c2e613cd691eb84086d08fadb082d84ab57e86497031f90fa5a5e4682b13526",
+        "cases": 5,
+        "original_target_entry_attempts": 170,
+        "normal_returned_entries": 170,
+        "differences": 0,
+        "full2123_calls": 155,
+        "full1108_calls": 5,
+        "full4677_calls": 5,
+        "full1093_calls": 5,
+        "setup2945_calls": 5,
+        "setup1600_calls": 5,
+        "snapshot_restores": 5,
+        "denied_imports": 882,
+        "actual_host_calls": 0,
+        "source_files": 45,
+        "production_sources": 35,
+        "local_edges": 128,
+        "current_body_WAT_bindings": 44,
+        "actual_perception_successes": 5,
+        "expired_live_sources": 6,
+        "complete2123_packets": 15,
+        "complete2123_packet_bytes": 240,
+        "complete_logical_player_fields": 11520,
+        "derived23_values": 3680,
+        "owned80_bytes": 25600,
+        "racial80_bytes": 12800,
+        "Game_inherited_bytes": 401760,
+        "nonowned_Game_conserved_bytes": 355725,
+        "background_conserved_bytes": 491040,
+        "live_known_bytes": 8172,
+        "live_None_bytes": 12308,
+        "Aura48x16_known_bytes": 32880,
+        "Aura48x16_None_bytes": 90000,
+        "physical_live_replay_bytes": 19840,
+        "new_unknown_scratch_bytes_observed": 20,
+        "strict_physical_live_replay_bytes": 19820,
+        "effects_separate_original_calls": 0,
+        "old_acceptance_transferred": false,
+        "setup_pilot_rejected_studies_excluded": true,
+        "full_mainloop_frames": 0,
+        "native_windows_execution": false,
+        "complete_games": 0,
+        "scope": "5cadencesfromrealfull1108/explicitXP5/firstnewThunder;155full2123withreal1238/Humanperceptionexec9effect8,30radiusquerysuccess,damage1.03→1.18,1020at1s/perceptionat14.5expiryandf32CDboundaries. FullHP/noAI/noincoming/quietlearnedno-targetdomain;noNPCclear/racialdisable. Complete72keys/live32/48x16Auraandknownself306/308/309. Positiveheal/incoming/AI/nearbyThunder/main884/native/game notaccepted."
       }
-    ]
+    ],
+    "native_ability_declaration_static_correspondence": {
+      "report": "reports/2026-11-02-native0139-ability-layout.json",
+      "report_sha256": "d22dd0f65a3712d5af9341fe06d44b6e70d97b5e9594f8464e134d3a03bc8705",
+      "version": "0.139.0",
+      "build": "f79c5e2b4",
+      "native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+      "wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+      "matched_ability_declarations": 114,
+      "native_stride120": true,
+      "wasm_stride88": true,
+      "scope": "FreshstaticPEfatpointer/normalizeddatafieldcorrespondenceonly;noWindowsfunction/Game/UnitABIordynamicbehavioraccepted",
+      "native_executed": false,
+      "wasm_instantiated": false,
+      "new_runtime_cases": 0
+    }
   },
   "fixed_dynamic_research_target_0135": {
     "version": "0.135.1",
@@ -2882,7 +2953,22 @@
       "Official manifest size/SHA, gzip CRC/ISIZE and coherent before/after metadata matched.",
       "Native RIP-relative pointer and explicit length9 verified statically.",
       "No native execution, installed app update, save modification or older acceptance transfer."
-    ]
+    ],
+    "ability_declaration_static_correspondence": {
+      "report": "reports/2026-11-02-native0139-ability-layout.json",
+      "report_sha256": "d22dd0f65a3712d5af9341fe06d44b6e70d97b5e9594f8464e134d3a03bc8705",
+      "version": "0.139.0",
+      "build": "f79c5e2b4",
+      "native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+      "wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+      "matched_ability_declarations": 114,
+      "native_stride120": true,
+      "wasm_stride88": true,
+      "scope": "FreshstaticPEfatpointer/normalizeddatafieldcorrespondenceonly;noWindowsfunction/Game/UnitABIordynamicbehavioraccepted",
+      "native_executed": false,
+      "wasm_instantiated": false,
+      "new_runtime_cases": 0
+    }
   },
   "web_official_latest_snapshot": {
     "version": "0.139.0",
@@ -2896,7 +2982,7 @@
     "report": "reports/2026-11-02-official0139-acquisition-identity.json",
     "build_identity_sidecar": "evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
     "build_identity_sidecar_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
-    "role": "active139_scoped_firstlevel_loop_and_firstcleaveupgrade_reviewed_not_fullgame",
+    "role": "active139_scoped_firstlevel_loop_and_realracial_playercomponent_reviewed_not_fullgame",
     "official_independent_wasm_digest_published": false,
     "limitations": [
       "Saved decoded HTTPS bytes and local SHA; manifest/HTML byte-stable before/after acquisition.",
@@ -2924,7 +3010,8 @@
       "reports/2026-11-02-collection0139.json",
       "reports/2026-11-02-growth-world0139.json",
       "reports/2026-11-02-opening-collection0139.json",
-      "reports/2026-11-02-select-upgrade0139.json"
+      "reports/2026-11-02-select-upgrade0139.json",
+      "reports/2026-11-02-player-update0139.json"
     ],
     "runtime_independent_reviews": [
       "reports/2026-11-02-combat0139-independent-review.json",
@@ -2947,7 +3034,8 @@
       "reports/2026-11-02-collection0139-independent-review.json",
       "reports/2026-11-02-growth-world0139-independent-review.json",
       "reports/2026-11-02-opening-collection0139-independent-review.json",
-      "reports/2026-11-02-select-upgrade0139-independent-review.json"
+      "reports/2026-11-02-select-upgrade0139-independent-review.json",
+      "reports/2026-11-02-player-update0139-independent-review.json"
     ]
   },
   "fixed_dynamic_research_target_0137": {

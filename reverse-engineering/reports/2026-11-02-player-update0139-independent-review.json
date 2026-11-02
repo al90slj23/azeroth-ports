@@ -1,0 +1,330 @@
+{
+  "status": "pass_current139_full2123_quiet_center_real_perception_and_live_expiry",
+  "reviewer": "/root/collection139_finish",
+  "authors": [
+    "/root/growth139_review",
+    "/root/growth139_world"
+  ],
+  "reviewer_script_sha256": "4123e0715620c0d050bfad0c1c060b0fc5b426c36d0789c95a0c7801d52c8bde",
+  "comparison_sha256": "4c2e613cd691eb84086d08fadb082d84ab57e86497031f90fa5a5e4682b13526",
+  "author_handoff_sha256": "bfd020f05de5151956a88a7ec544db9ec73be9c6616b458c360ce583b3c53bfc",
+  "author_files": {
+    "reconstruction/core_spec/player_effects139.py": "391efc4a2538e6ca96c9cf2df4afbfd3aa1c0d3cf6ede83d2d445eb7028b7ba1",
+    "reconstruction/core_spec/player_update139.py": "1d9abd2fe4db58b4acd02434ec9d5b04133c5860673a6f0535f6fdf3d9d147ac",
+    "reports/2026-11-02-player-effects0139.json": "4ca5776c7cd302c75c826129c6ee215b95d86a8f0d2cb09e806ea4d491c91e35",
+    "reports/2026-11-02-player-effects0139.md": "1801f2ab7258e9289e9ec430e0567a1fa3f1bf49b6372a39c1abc4862759172e",
+    "reports/2026-11-02-player-update0139.json": "930cd94406d2cea297671502dd9d673eb0ea28e0f947b245325c1de858a062d1",
+    "reports/2026-11-02-player-update0139.md": "c8f4f317515306a00ec6b03c563ffc52cb6143f91d5e41550e6291174cb509dc",
+    "scripts/audit_player_update139_capture.py": "9664c476f0b52e3eee68e4d94a5b7bb76c402e6ef2d68e7c44a35121ba6bf61b",
+    "scripts/build_player_update139_oracle.py": "397c800845b1b16883339d1bed77e7f1a1b09efa54a9b52b6f2eb93db181e76d",
+    "scripts/check_player_update139.py": "db9be3eeb8619bae60a7d792fc50a876b644d3fd8c9bc0f695310d09835eba0d",
+    "scripts/run_player_update139_oracle.mjs": "2b4c1e3f0740373905b0d4470e5e6e07f9cc32918001787cb508e93db7a6efd4",
+    "scripts/trace_player_effects139.py": "4aaa6975cefb04700ae6c531bab4ec60bfb59ced1c104f20f7db117e820b66d3"
+  },
+  "helper_sha256": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_growth_world139.py": "0e82a1f20fd7c02ed7edcd73f4d9edfca1d3ab406402e1aa8e0b5ae4e34322a1",
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b"
+  },
+  "cases": 5,
+  "full2123_calls": 155,
+  "full1108_calls": 5,
+  "full4677_calls": 5,
+  "full1093_calls": 5,
+  "setup2945_calls": 5,
+  "setup1600_calls": 5,
+  "counts": {
+    "openingGame_known": 2780,
+    "openingGame_None": 10180,
+    "openingGame_nonzero_None": 1150,
+    "complete_opening_packets": 380,
+    "opening_units_known": 6060,
+    "opening_units_None": 2580,
+    "opening_units_nonzero_None": 2375,
+    "opening_pickups_known": 520,
+    "opening_pickups_None": 600,
+    "opening_pickups_nonzero_None": 530,
+    "opening_windows_known": 80,
+    "opening_windows_None": 80,
+    "opening_windows_nonzero_None": 80,
+    "opening_special_known": 560,
+    "opening_special_None": 240,
+    "opening_special_nonzero_None": 240,
+    "opening_boundaries_known": 2760,
+    "opening_boundaries_None": 2360,
+    "opening_boundaries_nonzero_None": 1020,
+    "prefix_raw_tree_captures": 20,
+    "full_raw_tree_captures": 160,
+    "live_known": 8172,
+    "live_None": 12308,
+    "live_nonzero_None": 11543,
+    "aura_known": 32880,
+    "aura_None": 90000,
+    "aura_nonzero_None": 77298,
+    "derived23_values": 3680,
+    "owned80_full_bytes": 25600,
+    "racial80_full_bytes": 12800,
+    "complete_logical_player_fields": 11520,
+    "full_Game_inherited_bytes": 401760,
+    "complete2123_packets": 15,
+    "complete2123_packet_bytes": 240,
+    "background_raw_conserved_bytes": 491040,
+    "live_physical_replay_bytes": 19840,
+    "Game_nonowned_conserved_bytes": 355725,
+    "full2123_returns": 155,
+    "expired_live_sources": 6,
+    "expiry_paths": 6,
+    "fresh_unknown_scratch_words_observed": 5,
+    "perception_successes_reference": 5
+  },
+  "source_files": 45,
+  "production_sources": 35,
+  "source_edges": 128,
+  "current_function_bindings": {
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1446": {
+      "body_sha256": "8767d1f7e85c487759afa70602d9ae1793a7fd9118c0d8f57bca75c05ae3c958",
+      "WAT_sha256": "285f5c4878af3a685fbfc1dbff5f36ac2529bdc62cc4de81024f9cdda8f08abe"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1886": {
+      "body_sha256": "7307a96d26652424b521a57769caa076118a3fa1b0f5fa767015ae9665fdf458",
+      "WAT_sha256": "42303255f7eaf67d66b0c9aab4a14d2b79d2e31ce07ca93394f6bd93e44d7bc1"
+    },
+    "2123": {
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "5719": {
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "6786": {
+      "body_sha256": "628dfa51726dd61f49c61f0afd62151bf189a3d29c8397e5a8ddb217021d2b67",
+      "WAT_sha256": "55085c6a3b0da7f9770d0cddc6b21062cd9eb877f26ceeee725ffdce8eca902a"
+    },
+    "8673": {
+      "body_sha256": "cfe20b3b60b4d26e824594c12c76f6a6700992c64f9c067cfe43ff20e0c45ece",
+      "WAT_sha256": "a35959c6b908f8be8d656b991f458b497f0ac8bfa4cbeb5ce255c42f6e1ad712"
+    },
+    "8740": {
+      "body_sha256": "35e2f8bf141c22a07857ff8327892bf7b6f971aea2d1ad0f705ba12dfa02af38",
+      "WAT_sha256": "ae82725c4b84528ce67a730a31f6a8ca631f41cdf0b3bac500fabeb4cea9c13b"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "13563": {
+      "body_sha256": "724158538ddf6fdcb38eb520beaa5ff8467952b418be3400132013b105a136ae",
+      "WAT_sha256": "718739b8790b32422f5c947657685744eb6f32a052b1f48320010c1f7696a03a"
+    },
+    "15962": {
+      "body_sha256": "0cd2998ebc1278489ae5e6ebee9630a729a450d69f9ab0cdabb3c1b849d985bb",
+      "WAT_sha256": "b07d3d8c01f35f69928d037eee33c7cb77e9b1fa29889a69aeacb5252f45db7a"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "23328": {
+      "body_sha256": "2ff4e1aab09fa7d43376d1bfdbaf96f78c8e11f36465fe4a77835eb374268574",
+      "WAT_sha256": "875576e8933acca580e1cce84ef85855aa1bf20bcaea201e418e3d038e14d708"
+    },
+    "24602": {
+      "body_sha256": "7eb347950c8d414529c9dc57a8ba5a3faa2ef19849f004ef9fada22d826787d2",
+      "WAT_sha256": "50b1d16630203df0ddaf3d13acf8b0208b78e862f425aa78566b631e297883d1"
+    },
+    "25511": {
+      "body_sha256": "a627059d8fa98d0b6385cd67224d047ce1320f06b83517c8d78d3e58507d555f",
+      "WAT_sha256": "b0e2ae4202aa0f728c3a30798842ca63740f959dacce8b9f650a3eb57f42f022"
+    },
+    "25613": {
+      "body_sha256": "80894c1d0bf8d7e0ff7402410346ace7e1ddaf251aebdc9632ab7c3a8b5818f7",
+      "WAT_sha256": "7806a9999e0a5697a29472b53599ae7c2d03dd17dde96f24ca24b6480c5b798c"
+    },
+    "26364": {
+      "body_sha256": "658557371e2a1f1f173fb3bbce2c7bff384a31a781fbdad123eea358f56f0586",
+      "WAT_sha256": "c064903ec232875c34c13430fa42fa8bca634be66203423a84651ac74e892310"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "29910": {
+      "body_sha256": "ba75b9b84bb74525a69d0df9af681fadee196cc5ca8802c34a0bfe07cc1ffeb6",
+      "WAT_sha256": "d110b53922fad307e7037f4037daf92a7d539ab16648079c002d32ed3de3a361"
+    },
+    "29912": {
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "30628": {
+      "body_sha256": "5cb37659a6c6d10d8c7d7180ddf0dcc755e1fbb2ebfe34f89c9ae9bd0037b147",
+      "WAT_sha256": "92d7db2c8956db17b03c46487515d5b83fb93c6816d0a664161b24a62ecffe8d"
+    },
+    "33028": {
+      "body_sha256": "ad6febcb39fb63482c83b3916de67a60749c9516fe45ec790e80ec0593314630",
+      "WAT_sha256": "f273d4ae39059284d97afce94486be65cc95b434f8dc740054c9ec175791ce19"
+    },
+    "36518": {
+      "body_sha256": "7dc67a3d6dd30dbfb7a2c8246d505ecf0d2e6ebb7d8c8b8c1028adae0ceb34e9",
+      "WAT_sha256": "660f61ce28b8d005aa21daf3ff68035570373e5425687ff37f142ce1b344f4e2"
+    },
+    "42159": {
+      "body_sha256": "79d33ed49e860dba1abf5c29887c8a620ff87fc99aeda344646519b5bb8bd99c",
+      "WAT_sha256": "0eb6cab4e55c0d0abec782e1e07614dab0ce429d99e36df7d558d6791b264a38"
+    },
+    "45181": {
+      "body_sha256": "d36e6762c8702e9d668a7550fb0a8ddfacf1dffe2063a8a01215b9f35a9ec7e5",
+      "WAT_sha256": "b8b3c0bc473d57f1efe817534f6b39a6c76e9143418e5d0147f8f98e969d1b6d"
+    },
+    "46690": {
+      "body_sha256": "b8120348643d400b9efdfde0bea367d29b817bbd397de6695d7f83da91565ea7",
+      "WAT_sha256": "ee353ccaa65702e791e69cb5dee27f036a313bbfcdcdbee4d6fdb2f16ad6c900"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "52397": {
+      "body_sha256": "30c983acc8d9884c73f10b1415a9ee8d001239a3d0215f86ab8486e258856d26",
+      "WAT_sha256": "2acaa99b0408826fdb9a9329617a91f808bea052d3f0a5ecbd80c43360e52fa8"
+    },
+    "66535": {
+      "body_sha256": "42c649793daceccdf6d2ca4547d19f1e3ed47d6fdaa5efb8304d8763541bc262",
+      "WAT_sha256": "9e1dc592e0155b709c9fb902fed74efa2cf0792434f5f89d1434788bb934b1cf"
+    },
+    "66547": {
+      "body_sha256": "fa79ae47f31089e1f72a0a15d3423fcdeb2dc0c19157cf913a7171f5bdd90321",
+      "WAT_sha256": "f754238ab7118b95845ca4e4806e51470f477ca452bc983d5e7b84bbb6b4a1d5"
+    }
+  },
+  "all_nonexport_sections_identical": true,
+  "full2123_emitted_packets_in_this_domain_matched": true,
+  "reference_sha256": "8417b0a80de7d821d4afd5eda2bb345273c8bacd3ae4c2aa192e5f8471fc850a",
+  "diagnostics_sha256": "a83624c63ec545a3a3abd42acd5c689a1c20730e4e469f4e566e95bd27c49732",
+  "author_process": {
+    "pid": 35153,
+    "pgid": 35153,
+    "exit_code": 0,
+    "seconds": 4.052417582999624,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_original_executions": 0,
+  "reviewer_author_model_checker_builder_executions": 0,
+  "author_files_modified": false,
+  "supplemental_effects_trace_sha256": "f9eb27b44fb76bbd79bd8a4caa95d5c3448494cd8a352cdb072a1d78d469dc48",
+  "supplemental_author_audit_bound_but_not_used_as_independent_reference": true,
+  "limitations": [
+    "Real2123/1238 incontrolledcenter/firstthunder_clap/fullHP/defaultsources/4stationaryaliveNPC domain only;notfull884/AI/input/motion.",
+    "PrefixXP5isanexplicitaward,notthenaturaldrop/collectionprefix;noNPC/racial/CD/sourceclearing orphase0bypass.",
+    "Human30radiuspredicate re-evaluated fromcurrentknownNPCpositions;perceptiongenuinekind8value12=.15,expiry14.5,live12expiry1. Source16scratchremainsNone.",
+    "Strictlive32physicalretain/staletail independentlyreplayed19840B;only5newunknownscratchwords observed20B,notmodelcompleted.",
+    "1173fresh768B Aura owner eachrebuild meansinactivepayloadNone;physicalheap/BTreeaddresses notpredicted. Full72logicalkeymap inthisdomain matched.",
+    "15emitted2123packets306/308/309 complete here;fullprefixgrowth/UI/otherpresentation/networkstreamnotclaimed.",
+    "Canonicalworldinputwaspreviouslyindependentlyraw-produced;originalresource-onlyhealthyv2snapshot/newGame,notnaturalApp/Rc/externref/bootstrap.",
+    "Sixexpiry/5perceptionpaths are reference-derived;internal1238/1542/1173notdirectlyinstrumented.",
+    "Positivehealing/otherlearnedskills/near-targetdamage/otherlive8or9/perceptionnotargetor30boundary/repeatedracial/mainloop/native/save/completegame remainunknown."
+  ],
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "review_receipt": "evidence/player-update139-independent-review-owned-20261102T105350.633960Z/review/review.json",
+  "review_receipt_sha256": "1881bad1135258e501da2a1c677eb624a23fa37bdd6ffb40c6e30c36f6feb691",
+  "owned_process": {
+    "pid": 78168,
+    "pgid": 78168,
+    "exit_code": 0,
+    "seconds": 3.5847529159982514,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_terminal_sha256": "bf64bf5629f44b19e2feea59061f73e0a46f1716a24e6cfc8a510467538894ac",
+  "owned_process_journal_sha256": "a582384a08047196ac7e48518b42f45aaf7dd2cac95c00ec11aadef30c4a7b76",
+  "stdout_sha256": "6a3637e0c04d0053edc68ce49f0652d8d337f5b14cdffc8bbbfc6dc117abb196",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "author_handoff": "evidence/player-update139-oracle-20261102T103206.417048Z/task-handoff.json",
+  "formal_original_direct_entries": 180,
+  "formal_target_entries_excluding2945_1600_setup": 170,
+  "old_author_failure_pilot_and_old155_not_added": true,
+  "author_old155_comparison_excluded": "9c610642fa9b907f6e542dd84b15aef81ff0d69cc5ef2d8129d362b03aa6fe6e",
+  "preceding_reviewer_pass_superseded_without_extra_coverage": "evidence/player-update139-independent-review-owned-20261102T105247.026463Z",
+  "additional_background_checks": "Canonical opening five owner vectors compared known/None to actual; full raw background and all owners retained through prefix and every2123 input/output.",
+  "strict_physical_live19840_unknown20_excluded_from_independent_bytes": 19820,
+  "one_owned_source_adapters_bypassed": false,
+  "actual_perception_nearby_GUIDs": [
+    "17379390972089073675",
+    "17379390972089073677"
+  ],
+  "original_imports_denied": 882,
+  "original_actual_host_calls": 0,
+  "current_WASM_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299"
+}

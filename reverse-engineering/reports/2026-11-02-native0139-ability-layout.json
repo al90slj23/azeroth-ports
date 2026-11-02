@@ -1,0 +1,92 @@
+{
+  "status": "static_declaration_correspondence_only",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "evidence": "evidence/native139-ability-layout-20261102T104755.307689Z/correspondence.json",
+  "evidence_sha256": "83cc5e9324c0d0fbdab657b8778a667bc693963260ff125620915cf66fdd4d09",
+  "native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+  "wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "matched": 114,
+  "native_stride": 120,
+  "wasm_stride": 88,
+  "native_first_row": "0x147323958",
+  "native_first_row_file_offset": 120727384,
+  "field_mapping_native_then_wasm": {
+    "id_fatptr": [
+      0,
+      12
+    ],
+    "display_fatptr": [
+      16,
+      20
+    ],
+    "icon_fatptr": [
+      32,
+      28
+    ],
+    "upgrade_kinds_fatptr": [
+      48,
+      36
+    ],
+    "numeric40": [
+      64,
+      44
+    ],
+    "effect12": [
+      104,
+      0
+    ],
+    "execution_byte": [
+      117,
+      84
+    ],
+    "school_byte": [
+      116,
+      85
+    ]
+  },
+  "normalized_sha256": "04e027178f92c7c882d414070aaf5f542dca14103db4491604c0042e7d4f71f4",
+  "schema_trials": [
+    {
+      "stride": 112,
+      "matching_prefix_rows": 1,
+      "stopped_because": "AssertionError"
+    },
+    {
+      "stride": 120,
+      "matching_prefix_rows": 114,
+      "stopped_because": null
+    },
+    {
+      "stride": 128,
+      "matching_prefix_rows": 1,
+      "stopped_because": "AssertionError"
+    },
+    {
+      "stride": 136,
+      "matching_prefix_rows": 1,
+      "stopped_because": "AssertionError"
+    },
+    {
+      "stride": 144,
+      "matching_prefix_rows": 1,
+      "stopped_because": "AssertionError"
+    }
+  ],
+  "source_files": {
+    "scripts/trace_native139_ability_layout.py": "d30331638793dff04902dea58e24c68b3135b12cf72c8c0d242bc560831a8eff",
+    "scripts/inspect_official_windows.py": "da103335c7e2cd97b745a39588373bfaa615e5f1743db3985df1f2caec39cb89",
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9"
+  },
+  "native_executed": false,
+  "wasm_instantiated": false,
+  "new_runtime_cases": 0,
+  "windows_gameplay_function_ABI_restored": false,
+  "limits": [
+    "120Bnative/88BWASMlayoutisobservedstaticabilitydeclarationonly,notRustABIguaranteeforothertypes/builds.",
+    "Nativepointerwidth/orderandexec/schoolbyteorderaredifferent;addressesarenotcomparedasgameplayvalues.",
+    "ExactdatacorrespondencedoesnotidentifyWindowsdamage/castfunctions,nativeGame/Unit/ownedrecordlayoutorcallingconvention.",
+    "NoWindows/Wine/VMgameexecution,nodynamicbehavioralequivalence,norendering/UI/network/fullgameacceptance.",
+    "Typedstaticrowsarefresh139evidence,notoldversionacceptancetransfer."
+  ]
+}

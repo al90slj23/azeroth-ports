@@ -1,6 +1,6 @@
 # REA 逆向研究
 
-官方元数据于 **2026-11-02T10:24:12Z** 再核仍为 **0.139.0**，首页stamp `f339dd20e0fe`。已完成[官方Windows／Web一致获取与实际9B构建身份](reports/2026-11-02-official0139-acquisition-identity.md)：两端均为 `f79c5e2b4`，Windows150,595,584B／官方SHA匹配，Web92,511,151B／本地SHA固定；获取前后元数据逐字一致。[139完整静态索引与增量清单](reports/2026-11-02-engine0139-incremental.md)已固定177101函数／882导入、30/30主要入口身份；本轮核对143行技能／职业／种族／地图声明一致，19个入口仍有编译或结构差异，不能据此判行为等价。首次下载与工具失败均保留，139其他行为迁移另行验证，**不将旧版通过转记139**。现有安装包与存档未替换。
+官方元数据于 **2026-11-02T11:00:27Z** 再核仍为 **0.139.0**，首页stamp `f339dd20e0fe`。已完成[官方Windows／Web一致获取与实际9B构建身份](reports/2026-11-02-official0139-acquisition-identity.md)：两端均为 `f79c5e2b4`，Windows150,595,584B／官方SHA匹配，Web92,511,151B／本地SHA固定；获取前后元数据逐字一致。[139完整静态索引与增量清单](reports/2026-11-02-engine0139-incremental.md)已固定177101函数／882导入、30/30主要入口身份；本轮核对143行技能／职业／种族／地图声明一致，19个入口仍有编译或结构差异，不能据此判行为等价。首次下载与工具失败均保留，139其他行为迁移另行验证，**不将旧版通过转记139**。现有安装包与存档未替换。
 
 最新139的[限定非致死伤害80组／125完整913调用](reports/2026-11-02-combat0139.md)已重新执行新版原件，0声明差异，[异作者独审通过](reports/2026-11-02-combat0139-independent-review.md)。新版真实单位stride为432、导入882；完整单位字节与声明的HP／累计伤害／RNG等比较通过。合成Game／空items、spells、1972 proc队列／无context的边界明确：不代表完整Game、自然构造、死亡、原生Windows或完整一局。Pilot4组／5调用另存，不加入正式80／125。
 
@@ -46,7 +46,11 @@
 
 [已有顺劈技能的有序升级／new与upgrade路由](reports/2026-11-02-select-upgrade0139.md)19fixture（18个不同输入）／57目标入口经[异作者独审](reports/2026-11-02-select-upgrade0139-independent-review.md)：真实appseed完整1108→显式XP5→实际三卡→1093，18次upgrade／1次new，无改卡／重抽。17个真实可达的首轮cleave组合全含（tier0两种、tier1..3各三、tier4六种有序pair），逐kind的rank／value／count／damage尾乘及4640B owned记录、1311项属性、285项key、57份raw树一致；180576B背景守恒，live456已知／152 None保留。五表逐字静态绑定，动态只含本域0／1／2表；其它技能／重复／饱和升级与gold仍未知。错误搜索了不存在的第18键的16384次纯模型输入搜索已保留，原件执行0，不计覆盖。
 
-已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。当前139有14828组限定fixture／18845次目标入口（18844正常返回／1预期越界），只是实验清单，不是完整覆盖率。setup／pilot／拒绝批／静态study不相加；空来源hit-events单独仍是静态与模型自检。真实Human perception、1238／2123与live12到期的155次新作者批待终态冻结与独审；不禁用racial推进时钟。主循环884／Windows原生／完整一局仍为0。
+[真实自动玩家更新／Human perception与到期](reports/2026-11-02-player-update0139.md)5cadence／155次完整2123经[异作者独审](reports/2026-11-02-player-update0139-independent-review.md)：保留4活NPC／两Rune和全部背景，真实1238调度5次perception，damage1.03→1.18；1秒1020保护及14.5秒种族效果到期，并核0.1累计的实际冷却边界。72键×160快照共11520项、3680属性、owned25600B／racial12800B及15条完整self306／308／309共240B一致。live19840B物理重放仅20B新scratch观察后仍None，其余19820B独算；Aura为48×16B，每次1173新owner未写payload保留None。401760B Game继承／355725B非入口字段／491040B背景严格守恒。此为初始中心、满血、learned无近目标的组件域；未禁racial或清NPC，也不等于AI／受伤再生或主884整帧。5次1108／4677／1093前段按已比较目标另计15，2945／1600各5次是setup；effects静态支持报告不重复算155。
+
+[Windows／WASM的114技能声明直接结构对应](reports/2026-11-02-native0139-ability-layout.md)另有新静态证据：原生120B／WASM88B记录、64／32位fatptr和字段顺序不同，ID／默认名／图标／kind列表／effect12／numeric40／exec／school全部一致。不能把WASM偏移直接套到Windows，也不据此验收native伤害函数、Game／Unit ABI或行为；新增动态case为0。
+
+已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。当前139有14833组限定fixture／19015次目标入口（19014正常返回／1预期越界），只是实验清单，不是完整覆盖率。setup／pilot／拒绝批／静态study不相加。ThunderClap成功／减速与AI925自然接触两批新作者材料待独审；继续恢复多目标／自然暴击、1466正回血以及AI与自动技能的实际串联。主循环884／Windows原生／完整一局仍为0。
 
 固定138的[属性计算10569组](reports/2026-11-02-stats0138.md)、[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)、[默认构造162次](reports/2026-11-02-initial-state0138.md)及其独审保留各自窄域；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)仍是静态证据。它们均不等于138／139连续流程或Windows原生验收。
 

@@ -1,0 +1,261 @@
+{
+  "task": "current139_full2123_quiet_default_player_update_with_real1238_perception_and_live_expiry",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "author_original_differential_pass_independent_review_pending",
+  "complete_game_restored": false,
+  "scope": {
+    "legal_prefix": "resource-only admitted v2 context -> fresh2945/1600 -> full1108 HumanWarrior -> explicit XP5/full4677 -> first new/full1093 thunder_clap tier2",
+    "player_location": "unchanged initial center; 4 alive NPCs remain in original background, no AI/motion steps",
+    "prerequisites": "actual source flags0, full HP, zero pools and scan source, default cleave/thunder_clap, selected live1020 and Human perception only",
+    "external_clock_inputs": true,
+    "clock2352_only_caller_Game_write": true,
+    "dead_mask_all_zero": true,
+    "NPCs_cleared_or_racial_disabled": false,
+    "unchanged_background": [
+      "4 NPC",
+      "2 Rune",
+      "windows",
+      "4 special",
+      "69 boundaries"
+    ],
+    "component_not_full_main884": true
+  },
+  "rules": [
+    "2123 retains live32 records in order; expires at expiry <= now; physical full32 copies and stale tail survive; expiry invokes1542 then1173 before regen and1238.",
+    "kind12/spell1020 expiry1 comes from real1093. Bytes12..19 stay unknown and are not read for its numeric effects.",
+    "Full-HP regeneration computes28155 but accounts zero1466. Positive healing is outside the executable source contract.",
+    "1238 orders Warrior class target scan, owned abilities, then racial. No target within melee6 resets1628 to0.15; cleave7 and thunder_clap10 fail with actual attempt ledgers and0.2 retry.",
+    "Human perception is execution9/effect8, def5891892/spell20600; actual alive NPC within30 triggers +0.15 damage, duration10*1.4=14 and cooldown30*1.4=42.",
+    "With dt0.125 perception succeeds at0.5; damage1.03 becomes1.18; 1020 expires1; perception expires14.5 and damage returns1.03. dt0.1 f32 accumulation leaves fifth cooldown positive, so success is sixth tick.",
+    "Perception live8 has known value at+12; its scratch-written+16 word remains unknown. No zero completion. Full player state is threaded through1542 and1173.",
+    "1173 rebuilds48x16 Aura storage and logical spell/flag/stack keys. New allocator addresses and inactive payload are not guessed.",
+    "Known self306 uses variant2/targetmask0 (20B); scheduler308 and309 are16B and12B. These are checked as ordered subsequence, not the complete UI queue."
+  ],
+  "evidence": {
+    "directory": "evidence/player-update139-oracle-20261102T103206.417048Z",
+    "comparison_sha256": "4c2e613cd691eb84086d08fadb082d84ab57e86497031f90fa5a5e4682b13526",
+    "wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "formal_fresh_instances": 5,
+    "formal_full2123_calls": 155,
+    "differences": 0,
+    "setup_prefix_calls": {
+      "1093": 5,
+      "1108": 5,
+      "1600": 5,
+      "2123": 155,
+      "2945": 5,
+      "4677": 5
+    },
+    "direct_entries_total": 180,
+    "internal1238_1542_1173_not_instrumented": true,
+    "cadences": [
+      {
+        "id": 0,
+        "group": "eighths_to_1",
+        "full2123_calls": 8
+      },
+      {
+        "id": 1,
+        "group": "eighths_to_after_1",
+        "full2123_calls": 10
+      },
+      {
+        "id": 2,
+        "group": "exact_expiry_adjacent",
+        "full2123_calls": 10
+      },
+      {
+        "id": 3,
+        "group": "eighths_to_perception_expiry",
+        "full2123_calls": 116
+      },
+      {
+        "id": 4,
+        "group": "tenths_float_cooldown_boundary",
+        "full2123_calls": 11
+      }
+    ],
+    "same_opening_seed_and_avatar_for_all5": true,
+    "source_files": 45,
+    "production_files": 35,
+    "import_edges": 128,
+    "sources_before_after_and_current_match": true,
+    "prerun_author_source_hashes": {
+      "reconstruction/core_spec/player_update139.py": "1d9abd2fe4db58b4acd02434ec9d5b04133c5860673a6f0535f6fdf3d9d147ac",
+      "reconstruction/core_spec/player_effects139.py": "391efc4a2538e6ca96c9cf2df4afbfd3aa1c0d3cf6ede83d2d445eb7028b7ba1",
+      "scripts/build_player_update139_oracle.py": "397c800845b1b16883339d1bed77e7f1a1b09efa54a9b52b6f2eb93db181e76d",
+      "scripts/check_player_update139.py": "db9be3eeb8619bae60a7d792fc50a876b644d3fd8c9bc0f695310d09835eba0d",
+      "scripts/run_player_update139_oracle.mjs": "2b4c1e3f0740373905b0d4470e5e6e07f9cc32918001787cb508e93db7a6efd4"
+    },
+    "expected_frozen_before_original": true,
+    "original_input_contains_expected": false,
+    "forbidden_model_reads": [],
+    "counts": {
+      "assertions": 57222,
+      "known_player_fields": 11520,
+      "live_known": 8172,
+      "live_None": 12308,
+      "live_nonzero_None": 11543,
+      "aura_known": 32880,
+      "aura_None": 90000,
+      "aura_nonzero_None": 77298,
+      "inherited_Game2592_bytes": 401760,
+      "full2123_calls": 155,
+      "expiry1542_1173_paths": 6,
+      "expired_live_events": 6,
+      "known_packets": 15,
+      "known_packet_bytes": 240
+    },
+    "complete_keyed_player_map_keys": 72,
+    "captures_including_initial": 160,
+    "all23_stats_values": 3680,
+    "owned80_bytes": 25600,
+    "racial80_bytes": 12800,
+    "RNG_word_comparisons": 640,
+    "known_packets": "15 packets/240B = 5*(30620B+30816B+30912B), ordered subsequence only",
+    "artifacts_sha256": {
+      "inputs.json": "96610dc43c20871e1b79c3177e9cddfb14d18f526e4009f41bdcf10be823791f",
+      "expected.json": "efbc42378903e97ab397816fa49dab92cb565c33c1f647b449a5d88f6727391e",
+      "config.json": "55a2b5ad31fcc7efa071b60cdac1a199e1e657fa9b73b48a7f6833c0f1087ca9",
+      "manifest.json": "91dce7608421d8786ac25558116b50b912382b3d3857012bf5adaa634ccff1f5",
+      "prepared.json": "ae1036463cc1c0100f72a463b7844c3332b1add5058745ff5f9733b2b5a7a36c",
+      "actual.jsonl": "86b0f421ad5d56ae96725aa1b5168cec5dabe41f3d2de84ac000d54b2625b961",
+      "runtime.json": "2cc0c9430835d9c393ba3b7aae6c50b730632e8c35612a4d5ead74bbf09e99d5",
+      "owned-start.json": "a5db98cec39b6d6e5debeaad0bcb5fc01858cf3620ead7daf9bcf3b6f950a9b1",
+      "owned-terminal.json": "3eb02c238f1f871ce2e1bdd4bbb2be3a14a718198d9b01e2cedc88f3b343551f",
+      "expectation-read-audit.json": "a06eeffac5f62ed92077b74ee399253a492588e167d19f6e71a10cef6b9efb8a",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "process": {
+      "pid": 35153,
+      "pgid": 35153,
+      "exit_code": 0,
+      "seconds": 4.052417582999624,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "runtime": {
+      "cases": 5,
+      "fresh_instances": 5,
+      "full_calls": {
+        "1093": 5,
+        "1108": 5,
+        "1600": 5,
+        "2123": 155,
+        "2945": 5,
+        "4677": 5
+      },
+      "stack_checks": 205,
+      "allocator_calls": 25,
+      "denied_imports": 882,
+      "actual_host_calls": 0,
+      "peak_memory_bytes": 177078272,
+      "memory_cap_bytes": 268435456,
+      "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+      "old_Game_used_as_target": false,
+      "readiness_flags_injected": false,
+      "explicit_dead_marker_fixtures": false,
+      "input_dead_mask_all_zero": true,
+      "full2181_internal_calls_notinstrumented": true,
+      "full26364_35988_25613_calls_notinstrumented": true,
+      "App_or_world_Rc_producer_executed": false,
+      "externref_restored": false,
+      "native_executions": 0,
+      "full_mainloop_frames": 0,
+      "complete_games": 0,
+      "external_clock_components": true,
+      "full2123_callees_intact": true,
+      "internal1238_1542_1173_notinstrumented": true,
+      "output_bytes": 12337690,
+      "error": null
+    },
+    "world_source_checks": {
+      "checks": 180,
+      "ranges_each": 2318,
+      "all_unchanged": true
+    },
+    "stack_returns": {
+      "direct_entries": 180,
+      "all_returned_to1048576": true
+    }
+  },
+  "static_proof": {
+    "pre_original_manifest_sha256": "91dce7608421d8786ac25558116b50b912382b3d3857012bf5adaa634ccff1f5",
+    "bound_functions": 22,
+    "full_original_function_bodies_unchanged": true,
+    "only_export_section_changed": true,
+    "supplemental_effects_handoff": "evidence/player-effects139-static-final-20261102T103000Z/task-handoff.json",
+    "supplemental_effects_handoff_sha256": "d8079e80161629b82a6bcd9a40f444a20db60d6a6be0ef9b5c0dc3c7e48b16d9",
+    "effects_static_trace_sha256": "f9eb27b44fb76bbd79bd8a4caa95d5c3448494cd8a352cdb072a1d78d469dc48",
+    "effects_static_postcapture_not_prerun": true,
+    "effects_separate_original_calls": 0,
+    "effects_report_old_joint_comparison": "9c610642fa9b907f6e542dd84b15aef81ff0d69cc5ef2d8129d362b03aa6fe6e",
+    "effects_old_report_resolution": "frozen effects supplemental report cites prior155 batch; final formal155 uses byte-identical production models, and prior155 is excluded from formal totals"
+  },
+  "postcapture_physical_audit": {
+    "script": "scripts/audit_player_update139_capture.py",
+    "script_sha256": "9664c476f0b52e3eee68e4d94a5b7bb76c402e6ef2d68e7c44a35121ba6bf61b",
+    "receipt": "evidence/player-update139-oracle-20261102T103206.417048Z/postcapture-physical-audit.json",
+    "receipt_sha256": "d1e7c1c63de3a9443c7f53623e41089343b648d4e451e21fe86a8d94ecea1588",
+    "counts": {
+      "physical_live_bytes_strictly_conserved_or_copied": 19680,
+      "Aura_full_payload_bytes_conserved_without1173": 110592,
+      "background_full_physical_bytes_conserved": 491040,
+      "Game_bytes_conserved_outside60B_footprint": 392460,
+      "perception_append_records": 5,
+      "unknown_written_scratch16_bytes": 20,
+      "expiry_frames": 6,
+      "full32_retained_copies": 5
+    },
+    "original_executions": 0,
+    "independent_reference": false,
+    "uses_frozen_model_retained_indices_and_event_diagnostics": true,
+    "Game_allowed_write_footprint_bytes": 60,
+    "other_Game_bytes_conserved_each_call": 2532,
+    "Aura_full_conserved_only_without_actual1173": true,
+    "new_supplemental_script_not_retroactively_in_prerun45_closure": true
+  },
+  "prior_studies_excluded_from_formal_coverage": [
+    {
+      "directory": "evidence/player-update139-oracle-20261102T102603.193459Z",
+      "comparison_sha256": "8164d9c76505b803ce17860e4acfaf6b1c64da92c6d2a8a774356c8f5e468437",
+      "full2123_calls": 8,
+      "fresh_instances": 1,
+      "differences": 1,
+      "reason": "Rejected wrong mask2 self306 packet; preserved original20B mask0 correction evidence."
+    },
+    {
+      "directory": "evidence/player-update139-oracle-20261102T102846.342578Z",
+      "comparison_sha256": "8e4d6092c92e39bd43ebd86cfead5e7e1ecc21b343b5f9862bf1740611632261",
+      "full2123_calls": 8,
+      "fresh_instances": 1,
+      "differences": 0,
+      "reason": "Fresh corrected pilot only."
+    },
+    {
+      "directory": "evidence/player-update139-oracle-20261102T102941.563014Z",
+      "comparison_sha256": "9c610642fa9b907f6e542dd84b15aef81ff0d69cc5ef2d8129d362b03aa6fe6e",
+      "full2123_calls": 155,
+      "fresh_instances": 5,
+      "differences": 0,
+      "reason": "Inherited generic runtime dead-fixture metadata incorrectly true; source/input/expected persisted. Final fresh155 rerun has accurate false/allzero metadata."
+    }
+  ],
+  "whole_study_executions_not_formal_coverage": {
+    "full2123": 326,
+    "each_prefix2945_1600_1108_4677_1093": 12,
+    "separate_effects_original_calls": 0
+  },
+  "unknowns_and_limits": [
+    "This is a quiet default player-update component over explicit clock inputs, not full main884/Core1238 general behavior, AI, movement, real elapsed engine frames or a playable game.",
+    "Full HP only; positive healing/damage accounting and other nonempty pools/scan sources remain Pending.",
+    "Other learned skills, targeted Warrior/cleave/thunder branches, perception no-target and exact radius30 boundary have not been dynamically validated here.",
+    "Other live8/9 sources/stacking/dominance need recovery; kind12+12..19 and perception+16 stay unknown; inactive Aura bytes and allocator/BTree addresses remain unknown.",
+    "Known 306/308/309 ordered subsequence only; complete event queues, UI streams, physical tree/queue allocator state are not independently reconstructed.",
+    "Resource-only context is admitted; App/world Rc producers, externref restoration and bootstrap not executed in this batch.",
+    "No native executable, network, saves, whole UI, mainloop884, complete game or Android validation. No package/save/optimization changes.",
+    "Independent review is pending; no acceptance or whole-game completion claim."
+  ]
+}

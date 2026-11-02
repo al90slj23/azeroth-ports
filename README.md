@@ -1,6 +1,6 @@
 # Azeroth Ports
 
-当前研究目标为 **0.139.0 / `f79c5e2b4`**，官方清单于 **2026-11-02T10:24:12Z** 再核未变；Windows 与 Web 原件均固定版本、构建和 SHA。新增[同Game完整开局→真实击杀经验→首次选卡→续击](reverse-engineering/reports/2026-11-02-opening-collection0139-independent-review.md)3seed／47目标入口独审通过；这是保留全部背景的受控首级逻辑闭环，canonical world、资源上下文、初始计数和移位／时钟边界明确。自然App／输入／AI／自动调度／主循环、独立渲染、Windows原生和完整一局仍未验收。安装包与存档未替换。
+当前研究目标为 **0.139.0 / `f79c5e2b4`**，官方清单于 **2026-11-02T11:00:27Z** 再核未变；Windows与Web原件均固定版本、构建和SHA。[受控真实击杀→首次选卡→续击](reverse-engineering/reports/2026-11-02-opening-collection0139-independent-review.md)及[155次真实玩家更新／种族技能与到期](reverse-engineering/reports/2026-11-02-player-update0139-independent-review.md)分别独审通过，保留背景与明确输入边界；[114条Windows／WASM技能声明](reverse-engineering/reports/2026-11-02-native0139-ability-layout.md)另按两端不同布局逐字段静态对应。自然App／输入、AI自动战斗联合、主循环、独立渲染、Windows运行和完整一局仍未验收。安装包与存档未替换。
 
 历史138核对：官方元数据本轮核对至 **2026-11-01T23:57:03Z**：仍为0.138.0、同一EXE SHA／大小及首页stamp `9552af247ddb`，见[只读核对收据](reverse-engineering/evidence/official-goal-phase-network-check-20261101T235701.350290Z/receipt.json)。最新138另有[属性计算10569组／10569完整1512及独审](reverse-engineering/reports/2026-11-02-stats0138.md)，与[非致死伤害80组／125调用](reverse-engineering/reports/2026-11-02-combat0138-independent-review.md)分别登记；[13入口迁移守卫](reverse-engineering/reports/2026-11-02-flow0138-migration.md)属于静态证据，不能计为新版连续流程通过。最新138的[默认构造162次fresh1571及独审](reverse-engineering/reports/2026-11-02-initial-state0138.md)也已通过，覆盖502B已知投影及40个完整速度包；borrowedflatview、累计338580个None和未进入phase1均单独标明。现有安装包与存档未替换。
 

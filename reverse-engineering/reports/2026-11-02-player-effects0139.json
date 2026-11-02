@@ -1,0 +1,86 @@
+{
+  "status": "author_component_in_joint2123_batch_passed_pending_independent_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "model": "reconstruction/core_spec/player_effects139.py",
+  "model_sha256": "391efc4a2538e6ca96c9cf2df4afbfd3aa1c0d3cf6ede83d2d445eb7028b7ba1",
+  "joint_comparison": "evidence/player-update139-oracle-20261102T102941.563014Z/comparison.json",
+  "joint_comparison_sha256": "9c610642fa9b907f6e542dd84b15aef81ff0d69cc5ef2d8129d362b03aa6fe6e",
+  "joint_cases": 5,
+  "joint_full2123_calls": 155,
+  "separate_new_original_calls_for_this_report": 0,
+  "internal922_1173_calls_notdirectlyinstrumented": true,
+  "model_observed_perception_success_events": 5,
+  "model_expiry1542_1173_paths": 6,
+  "model_expired_live_events": 6,
+  "current_full_WAT_functions": 10,
+  "static_trace": "evidence/player-effects139-static-final-20261102T103000Z/trace.json",
+  "static_trace_sha256": "f9eb27b44fb76bbd79bd8a4caa95d5c3448494cd8a352cdb072a1d78d469dc48",
+  "static_proof_is_postcapture_supplement_not_prerun_runtime_source": true,
+  "perception_self306_packets": 5,
+  "self306_payload_bytes": 20,
+  "scheduler308_309_owned_by_player_update": true,
+  "counts_joint": {
+    "assertions": 57222,
+    "known_player_fields": 11520,
+    "live_known": 8172,
+    "live_None": 12308,
+    "live_nonzero_None": 11543,
+    "aura_known": 32880,
+    "aura_None": 90000,
+    "aura_nonzero_None": 77298,
+    "inherited_Game2592_bytes": 401760,
+    "full2123_calls": 155,
+    "expiry1542_1173_paths": 6,
+    "expired_live_events": 6,
+    "known_packets": 15,
+    "known_packet_bytes": 240
+  },
+  "original_process": {
+    "pid": 30654,
+    "pgid": 30654,
+    "exit_code": 0,
+    "seconds": 3.2063794580008107,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "core_model_byte_differences": 0,
+  "source_fields": {
+    "perception_definition_pointer": 5891892,
+    "effect": 8,
+    "execution": 9,
+    "spell_id": 20600,
+    "value12_bits": 1041865114,
+    "duration14_bits": 1096810496,
+    "live16_unknown_written": true,
+    "Aura_slots": 48,
+    "Aura_stride": 16
+  },
+  "root_API": [
+    "AuraSnapshot139.empty_constructor139",
+    "sync_aura139(context)",
+    "cast_perception139(context)"
+  ],
+  "rejected_first_pilot": {
+    "comparison": "evidence/player-update139-oracle-20261102T102603.193459Z/comparison.json",
+    "sha256": "8164d9c76505b803ce17860e4acfaf6b1c64da92c6d2a8a774356c8f5e468437",
+    "full2123_returns": 8,
+    "declared_growth_timing_live_Aura_field_differences": 0,
+    "known_packet_differences": 1,
+    "cause": "Wronglyborrowedcleaveexplicit-targetmask2;current10490selftargetvariant2usesmask0"
+  },
+  "corrected_pilot": {
+    "sha256": "8e4d6092c92e39bd43ebd86cfead5e7e1ecc21b343b5f9862bf1740611632261",
+    "full2123_calls": 8,
+    "not_added_to_formal": true
+  },
+  "limitations": [
+    "Joint5cadence155full2123 originalcalls belong player-update139 batch and are not counted again here.",
+    "Onlydefaultmode0HumanGUID0/warriorkit withoutowned effect12/emptysevenstatandprocsourcecontracts;actualfreshfullopening/firstnewselectedthunderclap.",
+    "Live sources limitedkind12spell1020 andkind8spell20600 withownerGUID0/periodic0;otherkinds/spells/modifier36/ownedcooldownAura/livegroupsremainexplicitpending.",
+    "Default5perceptioncastsactualsuccess;directno-target/geometryradiusboundary cases not separatelyoriginal-tested here;their predicates are currentWATstatic recovery.",
+    "Aura48physicalvectors encodedas known/None rows;inactivepayload4..15 andlive12payload12..19/live8written16 remainunknown.PhysicalBTree/queue/allocator pointers observedonly.",
+    "Knownpoststartpackets only15ordered306/308/309subsequence;fullpresentation/messageflow not claimed.",
+    "Resource-onlyhealthyv2snapshot/newGame,explicitXP5/externalclock;notnaturalApp/Rc/bootstrap/AI/input/main884/Windowsnative/fullgame."
+  ]
+}
