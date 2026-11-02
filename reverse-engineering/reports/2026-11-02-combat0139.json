@@ -1,0 +1,178 @@
+{
+  "status": "fresh139_nonlethal_projection_passed_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "actual_build_length": 9,
+  "comparison": "evidence/combat0139-oracle-20261102T014508.868107Z/comparison.json",
+  "comparison_sha256": "87aa5086a5b92546a71924b5c54e7f72dfbf6d0400bf7a5cffe23b1f6baa1c3d",
+  "cases": 80,
+  "full_original913_calls": 125,
+  "fresh_instances": 80,
+  "differences": 0,
+  "full_unit_bytes_compared": 55296,
+  "raw_Game_per_call8192_observation_bytes": 2060352,
+  "raw_Game_is_not_fully_predicted": true,
+  "phaseHP_accounting_RNG_vec_header_clock_count1972_checked": true,
+  "signature": [
+    "7f7e7d7f7f7f7f",
+    ""
+  ],
+  "entry_type_index": 278,
+  "entry_body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+  "allocator_index": 93344,
+  "allocator_type_index": 6,
+  "allocator_signature": [
+    "7f7f",
+    "7f"
+  ],
+  "only_export_section7_changed": true,
+  "all_original_callees_and_data_unchanged": true,
+  "exact_new_deny_surface_imports": 882,
+  "actual_host_calls": 0,
+  "peak_memory_bytes": 20709376,
+  "memory_cap_bytes": 33554432,
+  "stack_checks": 285,
+  "stack_all_restored": true,
+  "process": {
+    "pid": 24922,
+    "pgid": 24922,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.075326791993575,
+    "launcher_error": null
+  },
+  "static_role_mapping_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
+  "npc_definition": {
+    "pointer": 5830904,
+    "name": "Kobold Vermin",
+    "raw72_hex": "0000000000000000000000000000000050f858000d000000580200001a0000006666663f070000000000c04100004040cdcccc3f0000a040010000000000803f0000000000000000"
+  },
+  "windows_static_declaration": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-release-20261102T011227.335145Z/windows-0.139.0/AzerothSurvivors.exe",
+    "sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+    "bytes": 150595584,
+    "scalar_tail45_hex": "580200001a0000006666663f070000000000c04100004040cdcccc3f0000a040010000000000803f0000000000",
+    "scalar_tail_file_matches": [
+      120664736
+    ],
+    "scope": "Exact declaration scalar-tail byte correspondence only; Windows gameplay ABI/913 function identity not established",
+    "executed": false
+  },
+  "source_files": 12,
+  "production_modules": 4,
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/build_combat139_oracle.py",
+      "scripts/wasm139_profile.py"
+    ],
+    [
+      "scripts/check_combat139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_combat139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_combat139.py",
+      "reconstruction/core_spec/combat139.py"
+    ],
+    [
+      "scripts/check_combat139.py",
+      "scripts/build_combat139_oracle.py"
+    ],
+    [
+      "scripts/check_combat139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_combat139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "source_sha256": {
+    "scripts/check_combat139.py": "ad9ff7aa957f4aa1958120eb39e7dc59d62bffd70e2c9c49d94968297e92335b",
+    "scripts/build_combat139_oracle.py": "7e4fd1cf82238561a407857483e3ca19ae55697e6afcab5e608c8532779a7b95",
+    "scripts/run_combat139_oracle.mjs": "ec6a6005bdf4bf71a3edafdf44115c44daa00ef481d5ab0a7bac977cc555c2cf",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/combat139.py": "4f7f8f00411583608d4c1d8e917733ae1b8068b10ad2f55b63dde675c917fc89",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "negative_model_guards": 8,
+  "negative_guards_are_not_original_cases": true,
+  "pilot": {
+    "comparison": "evidence/combat0139-oracle-20261102T014411.330470Z/comparison.json",
+    "comparison_sha256": "9b8f0a25bc4b88e9a38ca85e5240275446869459868c1e6eccb1b6cf88661c92",
+    "cases": 4,
+    "calls": 5,
+    "differences": 0,
+    "included_in_formal80_coverage": false
+  },
+  "preparation_only": {
+    "directory": "evidence/combat0139-oracle-20261102T014231.783771Z",
+    "original_calls": 0
+  },
+  "total_actual139_original_calls_including_pilot": 130,
+  "total_actual139_fresh_instances_including_pilot": 84,
+  "official139_identity": "evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
+  "official139_identity_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
+  "old_acceptance_transferred": false,
+  "new_native_calls": 0,
+  "new_full_game_frames": 0,
+  "existing_frozen135_138_sources_modified": false,
+  "public_registry_modified": false,
+  "limitations": [
+    "Only nonlethal/no-proc numeric432B projection; full original913 and its actual callees unchanged.",
+    "Full8192B Game per call is raw observation; per-spell statistics/packet/visual allocations are not independently predicted.",
+    "Controlled all-known432B inputs are not139 constructor outputs;7 kind64=0/U68=0 fixtures only exercise numeric phase branches without timer ownership consumption.",
+    "Death/XP/loot/nonempty1972/unknown new proc producers and Windows gameplay ABI/runtime remain pending; no135/136/137/138 cases transferred. Controlled stimuli are reused but every expected and original139 call is fresh.",
+    "New139 full count80/125 excludes subsetpilot4/5; actual study executions including pilot are130calls/84instances, not additional semantic coverage.",
+    "139 new Date wrappers remain fully denied; zero host calls does not restore their behavior.",
+    "Every expected value is generated by the139 model from controlled inputs before139 original calls; stimulus patterns from historical boundary corpora are reused, not historical results.",
+    "All controlledHP inputs are finite; not an IEEE754 exhaustive proof."
+  ],
+  "independent_review": "pending"
+}

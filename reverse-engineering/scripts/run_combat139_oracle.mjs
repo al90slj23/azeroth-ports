@@ -1,0 +1,45 @@
+// Full original139 damage913; numeric projection only, no App/EXE/network.
+import fs from 'node:fs/promises';import {createHash}from'node:crypto';
+const[dir,inputFile]=process.argv.slice(2),hash=x=>createHash('sha256').update(x).digest('hex');
+if(!process.execArgv.includes('--wasm-max-mem-pages=512')||!process.execArgv.includes('--max-old-space-size=512'))throw Error('Explicit32MiB cap');
+const manifest=JSON.parse(await fs.readFile(dir+'/manifest.json','utf8')),raw=await fs.readFile(dir+'/'+manifest.module_file),input=await fs.readFile(inputFile);
+if(manifest.original_sha256!=='71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299'||manifest.entry.index!==913||manifest.version!=='0.139.0'||manifest.build!=='f79c5e2b4'||manifest.allocator_index!==93344||manifest.only_changed_section!==7||manifest.implicit_start!==false||manifest.entry.signature.join(':')!=='7f7e7d7f7f7f7f:'||hash(raw)!==manifest.module_sha256||input.length>4194304)throw Error('139 source/input identity');
+const module=await WebAssembly.compile(raw),imports=WebAssembly.Module.imports(module),cases=JSON.parse(input);
+if(imports.length!==882||imports.some(x=>x.kind!=='function')||!cases.length||cases.length>512)throw Error('Private budget');
+if(manifest.function_imports!==882||manifest.type_index!==278||JSON.stringify(imports.map(({module,name})=>({module,name})))!==JSON.stringify(manifest.original_imports.map(({module,name})=>({module,name}))))throw Error('Exact139 deny import surface differs');
+if(manifest.allocator_signature.join(':')!=='7f7f:7f'||manifest.allocator_type_index!==6)throw Error('Exact139 allocator ABI differs');
+const observer=await fs.open(dir+'/raw-games.jsonl','wx');
+let hostCalls=0,peak=0,calls=0,rawBytes=0,outputBytes=0;const stackChecks=[];const number=x=>{const v=new DataView(new ArrayBuffer(4));v.setUint32(0,x,true);return v.getFloat32(0,true);};
+for(const c of cases){
+ const bindings={};for(const v of imports){bindings[v.module]??={};bindings[v.module][v.name]=()=>{hostCalls++;throw Error('Original import denied '+v.name);};}
+ const instance=await WebAssembly.instantiate(module,bindings),e=instance.exports,memory=e.memory,stack=e.research139_stack0;
+ if(!(stack instanceof WebAssembly.Global)||stack.value!==1048576)throw Error('139 initial stack');
+ const b=()=>new Uint8Array(memory.buffer),d=()=>new DataView(memory.buffer),w=(p,n)=>d().setUint32(p,n>>>0,true),u=p=>d().getUint32(p,true);
+ const guard=(role,fn,...args)=>{const before=stack.value;if(before!==1048576)throw Error('Stack before');let returned=false;
+  try{const r=fn(...args);returned=true;return r;}finally{stackChecks.push({id:c.id,role,before,after:stack.value,returned});if(stack.value!==before)throw Error('Stack after');}};
+ const alloc=n=>{if(!Number.isInteger(n)||n<1||n>4194304)throw Error('Allocation bound');const p=guard('allocator93344',e.__wbindgen_malloc,n,8)>>>0;
+  if(!p||p+n>memory.buffer.byteLength||memory.buffer.byteLength>33554432)throw Error('Memory budget');b().fill(0,p,p+n);return p;};
+ const s=c.state,G=alloc(8192),U=alloc(Math.max(1,s.units432_hex.length)*432);
+ if(s.units432_hex.length>128||c.operations.length>16||JSON.stringify(s.sources)!==JSON.stringify({items2028:[],spells2052:[],proc_schedule1972:[],other_procs_absent:true}))throw Error('Explicit quiet source domain');
+ const originalDef=Buffer.from(manifest.npc_definition.raw72_hex,'hex');if(!Buffer.from(b().subarray(manifest.npc_definition.pointer,manifest.npc_definition.pointer+72)).equals(originalDef))throw Error('Actual139 declaration bytes');
+ s.units432_hex.forEach((row,j)=>{const r=Buffer.from(row,'hex');if(r.length!==432)throw Error('432B units');b().set(r,U+j*432);});
+ w(G+1784,s.units432_hex.length);w(G+1788,U);w(G+1792,s.units432_hex.length);w(G+2352,s.now_bits);d().setUint8(G+2587,s.phase2587);
+ d().setBigUint64(G+984,BigInt(s.accounted_total_bits),true);s.rng_words.forEach((v,j)=>w(G+1720+j*4,v));
+ d().setUint8(G+360,1);d().setUint8(G+361,1);d().setBigUint64(G+1336,999n,true);w(G+1440,0x43fa0000);w(G+1536,0x43fa0000);
+ for(const off of[2028,2052,600,648,1660,1884,1896,1812,1824,1836,1848,1860,1872,1908,1920,1968,2112,2124])w(G+off,8);
+ const answers=[];
+ for(const op of c.operations){
+  guard('damage913',e.research139_damage913,G,BigInt(op.target_id),number(op.amount_bits),op.spell_id,op.school,op.critical,op.context);calls++;
+  if(hostCalls||memory.buffer.byteLength>33554432)throw Error('Quiet original boundary');
+  const observed=JSON.stringify({case_id:c.id,operation:answers.length,game_pointer:G,unit_pointer:U,raw_game8192_hex:Buffer.from(b().subarray(G,G+8192)).toString('hex')})+'\n';
+  rawBytes+=Buffer.byteLength(observed);if(rawBytes>4194304)throw Error('Raw observation4MiB budget');await observer.write(observed);
+  answers.push({units432_hex:s.units432_hex.map((_,j)=>Buffer.from(b().subarray(U+j*432,U+(j+1)*432)).toString('hex')),
+   accounted_total_bits:d().getBigUint64(G+984,true).toString(),rng_words:[0,1,2,3].map(j=>u(G+1720+j*4))});
+ }
+ peak=Math.max(peak,memory.buffer.byteLength);const result=JSON.stringify({id:c.id,answers})+'\n';outputBytes+=Buffer.byteLength(result);if(outputBytes>4194304)throw Error('Output4MiB budget');process.stdout.write(result);
+}
+await observer.close();
+const runtime={version:'0.139.0',build:'f79c5e2b4',cases:cases.length,full_original913_calls:calls,fresh_instances:cases.length,actual_host_calls:hostCalls,
+ denied_imports:882,denied_import_surface:imports,denied_import_surface_sha256:hash(Buffer.from(JSON.stringify(imports))),peak_memory_bytes:peak,raw_observation_bytes:rawBytes,output_bytes:outputBytes,output_cap_bytes:4194304,stack_checks:stackChecks,stack_all_restored:stackChecks.every(x=>x.returned&&x.before===1048576&&x.after===x.before),
+ application_start_called:false,windows_exe_executed:false,network_used:false,user_saves_accessed:false,original_full_callees_preserved:true,shared52_roles_changed:false};
+await fs.writeFile(dir+'/runtime.json',JSON.stringify(runtime)+'\n');

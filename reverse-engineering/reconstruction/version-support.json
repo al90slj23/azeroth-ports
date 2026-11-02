@@ -6,20 +6,22 @@
     "web_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
     "official_native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
     "official_native_bytes": 150595584,
-    "status": "coherent_acquisition_and_build_identity_verified_no_runtime_acceptance_registered",
+    "status": "scoped139_nonlethal_damage_differential_and_independent_review_passed_not_fullgame",
     "role": "functional_latest_target",
-    "latest_official_manifest_check_utc": "2026-11-02T01:09:26.123412+00:00",
-    "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261102T010926.122747Z/receipt.json",
-    "latest_official_manifest_check_sha256": "9783167febf99b7231fc97493bf6fdcdf5d38c146aea46862abb18b434e6bf1d",
+    "latest_official_manifest_check_utc": "2026-11-02T01:57:42.423269+00:00",
+    "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261102T015742.416641Z/receipt.json",
+    "latest_official_manifest_check_sha256": "0f61d04db459f184f2eef4c4eed4f3f97d76c8e2ce61861fd19b12cf76655e0b",
     "version_policy": "Freeze every experiment by version/build/SHA; existing135/137/138 acceptance remains historical and is not transferred to139.",
     "original_acquisition_complete": true,
     "installation_packages_updated": false,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
-    "new_runtime_cases": 0,
-    "new_original_entry_calls": 0,
-    "runtime_acceptance_reports": [],
+    "new_runtime_cases": 80,
+    "new_original_entry_calls": 125,
+    "runtime_acceptance_reports": [
+      "../reports/2026-11-02-combat0139.json"
+    ],
     "acquisition_receipt": "../originals/official-release-20261102T011227.335145Z/release-acquisition-resumed.json",
     "acquisition_receipt_sha256": "35c0e6b106056c47d3826581941174917e970133a46646e49cda8a0296b6e332",
     "build_identity_sidecar": "../evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
@@ -34,7 +36,7 @@
     "roles_with_static_differences": 19,
     "static_semantic_rows_compared": 143,
     "static_rows_equal": 143,
-    "new_runtime_acceptance_registered": 0,
+    "new_runtime_acceptance_registered": 80,
     "static_migration_not_behavioral_equivalence": true,
     "analysis_profile": "../evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
     "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
@@ -43,7 +45,13 @@
     "static_role_map": "../evidence/engine139-refined-static-20261102T013743.612949Z/mapping.json",
     "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
     "static_data_delta": "../evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
-    "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be"
+    "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be",
+    "new_original_runtime_cases": 80,
+    "new_independent_model_cases": 80,
+    "runtime_independent_reviews": [
+      "../reports/2026-11-02-combat0139-independent-review.json"
+    ],
+    "runtime_scope": "Fresh139 only:80cases/125full913calls,nonlethal explicit synthetic432byte entities,emptyitems/spells/proc1972,no context. FullGame/App/constructor/world/880/native/fullgame unaccepted; no old-version acceptance transfer."
   },
   "historical_reference": "0.126.0 / 3e72472a",
   "playable_replacement": false,
@@ -3492,5 +3500,29 @@
       "Victory,rewards,persistence,UI/render/audio,multiplayer and latest139 continuous parity remain unaccepted."
     ],
     "old_gaps_are_historical": true
-  }
+  },
+  "verified_domains_0139": [
+    {
+      "domain": "scoped_nonlethal_damage913",
+      "version": "0.139.0",
+      "build": "f79c5e2b4",
+      "report": "../reports/2026-11-02-combat0139.json",
+      "report_sha256": "324e10f11adc3e5950926d119236bcd56ef7c65d0e11d6ff7a29f955b2badcbf",
+      "independent_review": "../reports/2026-11-02-combat0139-independent-review.json",
+      "independent_review_sha256": "84d71d42f247fbe6b1e92280be0788efeb82a705ce5d251053fe8baa3770f47e",
+      "comparison": "../evidence/combat0139-oracle-20261102T014508.868107Z/comparison.json",
+      "comparison_sha256": "87aa5086a5b92546a71924b5c54e7f72dfbf6d0400bf7a5cffe23b1f6baa1c3d",
+      "cases": 80,
+      "full_original_calls": 125,
+      "differences": 0,
+      "unit_stride": 432,
+      "deny_imports": 882,
+      "fullGame_predicted": false,
+      "native_windows_execution": false,
+      "full880_frames": 0,
+      "complete_games": 0,
+      "old_acceptance_transferred": false,
+      "pilot_calls_not_added": 5
+    }
+  ]
 }

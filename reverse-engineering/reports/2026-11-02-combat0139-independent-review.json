@@ -1,0 +1,116 @@
+{
+  "schema": "azeroth-ports-combat139-independent-review-v1",
+  "status": "pass_with_declared_nonlethal_projection_limits",
+  "author": "/root/stats138_review",
+  "reviewer": "/root/self_buffs119_review",
+  "review_script": {
+    "path": "scripts/review_combat139.py",
+    "sha256": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9"
+  },
+  "evidence": {
+    "path": "evidence/combat139-independent-review-20261102T015228.747722Z/review.json",
+    "sha256": "a51863d179b18bbf4e23f4b2db2844274349b5a1a25eb140be0c89bb54be9d0e"
+  },
+  "owned_receipt": {
+    "path": "evidence/combat139-review-owned-20261102T015228.186527Z/process-terminal.json",
+    "sha256": "983fc7a10b23bdfea0e9e5ca8b52e327fec57df63ce263e43bd9be5a909d5efd"
+  },
+  "author_comparison": {
+    "path": "evidence/combat0139-oracle-20261102T014508.868107Z/comparison.json",
+    "sha256": "87aa5086a5b92546a71924b5c54e7f72dfbf6d0400bf7a5cffe23b1f6baa1c3d"
+  },
+  "author_handoff": {
+    "path": "evidence/combat0139-oracle-20261102T014508.868107Z/task-handoff.json",
+    "sha256": "ab044e961c612a101af4642986102fd2cb94479e304c48615ab15c6f3e107926"
+  },
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "function": 913,
+  "type_index": 278,
+  "signature": [
+    "7f7e7d7f7f7f7f",
+    ""
+  ],
+  "record_stride": 432,
+  "review_original_executions": 0,
+  "review_author_model_executions": 0,
+  "review_author_checker_executions": 0,
+  "review_author_builder_executions": 0,
+  "review_native_executions": 0,
+  "author_fresh_cases": 80,
+  "author_fresh_full_calls": 125,
+  "independent_reference_mismatches": 0,
+  "projection": {
+    "full_unit_byte_occurrences": 55296,
+    "unchanged_unit_byte_occurrences": 55065,
+    "predicted_mutations": [
+      "target432+288 HP",
+      "Game984 f64accounted"
+    ],
+    "unchanged_rng": "Game1720..1732 4u32",
+    "observed_game_bytes": 1024000,
+    "raw_game_jsonl_bytes": 2060352,
+    "raw_game_is_observation_not_full_prediction": true,
+    "branch_results": {
+      "accepted": 118,
+      "phase": 5,
+      "dead_marker1": 1,
+      "missing": 1
+    }
+  },
+  "module_identity": {
+    "all_nonexport_sections_byte_identical": true,
+    "code_callees_stubbed": false,
+    "direct_call_sites": 277,
+    "unique_direct_callees": 86,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "stack_guard_count": 285,
+    "stack_all_restored": true,
+    "peak_memory_bytes": 20709376,
+    "owned_pid": 24922,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "source_closure_count": 12,
+  "source_edges": 16,
+  "npc_static_source": {
+    "pointer": 5830904,
+    "raw72_sha256": "d0f49929062b7534a10eaca3b8a50779eb5923ffb108ba998ae0378dd6cda5b4",
+    "name": "Kobold Vermin",
+    "native_scalar_tail45_unique_offset": 120664736,
+    "native_executed": false,
+    "native_scope": "Exact scalar bytes only;no native ABI/behavior claim"
+  },
+  "new_empty_proc_boundary": "G1972count0 skips69550 pop;nonempty producer/behavior not dynamically accepted",
+  "historical_acceptance_transferred": false,
+  "pilot_boundary": "prepare-only014231=0original;pilot014411=4freshcases5calls excluded from formal80/125;this review validates formal batch only",
+  "negative_guards": "8 stored author-model rejection checks;review does not rerun or add them to original coverage",
+  "review_prior_attempts": [
+    {
+      "path": "evidence/combat139-review-owned-20261102T015114.454918Z",
+      "result": "reviewer AST attempted JS;failed and retained;no original/model execution"
+    },
+    {
+      "path": "evidence/combat139-review-owned-20261102T015124.496363Z",
+      "result": "numeric/source review passed before additional native static binding"
+    },
+    {
+      "path": "evidence/combat139-review-owned-20261102T015207.740278Z",
+      "result": "reviewer static slice assumed one data segment;failed across zero-filled gap;retained;final reads actual WASM zero initial memory plus active segments"
+    }
+  ],
+  "limits": [
+    "Only these80controlledcases/125calls;not139full-game or Windows runtime acceptance",
+    "Full432B records plus f64G984 and unchanged RNG are predicted;full8192B Game is observation with per-spell statistics/packets/visual allocations outside prediction",
+    "Empty1972 proves69550is bypassed;its nonempty behavior is read statically but no producer/proc differential accepted",
+    "7U64=0/U68=0 controlled fixtures do not restore timer ownership or natural constructor output",
+    "8negative author guards are stored author model checks,not independent or original coverage",
+    "Original module functions/all actual callees remain present;no claim every callee/branch was dynamically reached",
+    "139role-map is our earlier source identity dependency,not a second independent review of that mapping",
+    "Earlier prepare-only/pilot batches are excluded from80/125;old135/138passingcases are not transferred",
+    "Source input artifacts were pre-pinned by author prepared receipt;extra output hashes here are as-read bindings,not retroactive pre-run freeze"
+  ],
+  "approval_scope": "Accept only the new139 controlled nonlethal empty-source projection. Not a complete139Game/constructor,death,XP,proc or multiplayer restoration.",
+  "author_or_frozen_static_sources_modified": false
+}
