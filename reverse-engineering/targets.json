@@ -7,29 +7,31 @@
     "web_reference_key": "web_official_latest_snapshot",
     "windows_reference_key": "windows_official_latest_reference",
     "metadata_reference_key": "official_latest_0139_1_metadata",
-    "status": "scoped1391_fresh_nonlethal913_and_finite_static_migration_reviewed_not_fullgame",
+    "status": "scoped1391_fresh_stats1542_nonlethal913_and_finite_static_migration_reviewed_not_fullgame",
     "role": "functional_latest_target",
     "version_policy": "Lateststable1391functionalalignment;everyrunning139experimentremainsfixed;oldacceptanceisnottransferred.",
     "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0139",
     "installation_packages_updated": false,
     "version_support": "reconstruction/version-support.json",
-    "latest_metadata_recheck": "evidence/official-goal-phase-network-check-20261102T143118.386082Z/receipt.json",
-    "latest_metadata_recheck_sha256": "fa52a889f57d00dcba26547d86a8cdbd02dc3d0b9d13612e51c99f2eb5a6bb81",
-    "latest_metadata_recheck_utc": "2026-11-02T14:31:18.387290+00:00",
+    "latest_metadata_recheck": "evidence/official-goal-phase-network-check-20261102T153128.336700Z/receipt.json",
+    "latest_metadata_recheck_sha256": "244143cbf872095d8e2cbd8698e3df4fa03b66f948e89587a0e84e0596cbd381",
+    "latest_metadata_recheck_utc": "2026-11-02T15:31:28.375101+00:00",
     "official_manifest_declared_native_sha256": "1c0912276637a41a1a971886bb74626577d021af55a313128f85fdbfcc3b2f1d",
     "official_manifest_declared_native_bytes": 150633472,
     "runtime_acceptance_reports": [
-      "reports/2026-11-02-combat0139-1.json"
+      "reports/2026-11-02-combat0139-1.json",
+      "reports/2026-11-02-stats0139-1.json"
     ],
     "runtime_independent_reviews": [
-      "reports/2026-11-02-combat0139-1-independent-review.json"
+      "reports/2026-11-02-combat0139-1-independent-review.json",
+      "reports/2026-11-02-stats0139-1-independent-review.json"
     ],
-    "new_original_runtime_cases": 80,
-    "new_original_entry_calls": 125,
-    "new_runtime_cases": 80,
-    "new_independent_model_cases": 80,
-    "new_runtime_acceptance_registered": 80,
-    "normal_returned_target_entries": 125,
+    "new_original_runtime_cases": 10649,
+    "new_original_entry_calls": 10694,
+    "new_runtime_cases": 10649,
+    "new_independent_model_cases": 10649,
+    "new_runtime_acceptance_registered": 10649,
+    "normal_returned_target_entries": 10694,
     "expected_bounds_aborts": 0,
     "native_instruction_emulation_calls": 0,
     "full_mainloop_frames": 0,
@@ -48,7 +50,7 @@
     "analysis_profile": "evidence/wasm01391-profile-20261102T133454.115329Z/manifest.json",
     "analysis_profile_sha256": "6d77e31ccf88ba5106524556a131614a7de385502fd5da5794063508190982fc",
     "static_migration_not_behavioral_equivalence": true,
-    "scope_note": "Onlynonlethal/no-procnumericprojectionaccepted;raw8KBGame/stats/packetsunmodeled. Completeflowcontinuesfixed139inparallel.",
+    "scope_note": "Fresh1391stats1542explicitseven-sourcedomainandquietnonlethal913acceptedseparately;wholeGame/producer/App/Windows/fullflowremainopen. Fixed139continuousintegrationdoesnottransfer.",
     "old_acceptance_transferred": false,
     "scoped_components_0139_1": [
       {
@@ -97,9 +99,55 @@
         "native_windows_execution": false,
         "complete_games": 0,
         "scope": "Freshfull1391original913andallintactcalleesagainstindependentbinary32/Fractionexpected;full432Unit/HP288/f64G984/RNGandheaderguards. Emptyitems/spells/procs/context0/nonlethal;remaining8KBGame/stats/clientpacketsrawobservationonly. Nodeinputsallfresh;80fixtures79semanticinputs. NoApp/Windows/gameacceptance."
+      },
+      {
+        "domain": "stats1542_fresh1391_explicit_seven_ordered_sources",
+        "version": "0.139.1",
+        "build": "b89633f9b",
+        "status": "scoped_fresh_original_differential_and_different_author_readonly_review_passed",
+        "report": "reports/2026-11-02-stats0139-1.json",
+        "report_sha256": "c96845ae75d23d2fa4d871fc6e8fc4f616c9ac083e1b790794d8ecd0b86d4b14",
+        "independent_review": "reports/2026-11-02-stats0139-1-independent-review.json",
+        "independent_review_sha256": "1d62552db2d5757330df9293ae9cf92607b901fdcc51342ada79251bd2e72fcb",
+        "comparison": "evidence/stats01391-oracle-20261102T151522.075107Z/comparison.json",
+        "comparison_sha256": "5383d72da72fb4e9263ff737a8fb7f18e1e839360b378332f3ac7ff27ae828bb",
+        "cases": 10569,
+        "original_target_entry_attempts": 10569,
+        "normal_returned_entries": 10569,
+        "differences": 0,
+        "full1542_calls": 10569,
+        "compared_values": 359346,
+        "source_files": 13,
+        "production_sources": 5,
+        "local_edges": 19,
+        "current_body_bindings": 9,
+        "current_class_rows": 9,
+        "current_race_rows": 8,
+        "current_race_modifiers": 14,
+        "current_allocator": 93365,
+        "fresh_instances": 331,
+        "denied_imports": 882,
+        "actual_host_calls": 0,
+        "explicit_caller_owned_source_domains": 7,
+        "movement_queue_entries_counted": 1537,
+        "movement_packet_bytes_predicted": false,
+        "raw_Game2592_observation_bytes": 27394848,
+        "full_Game_predicted": false,
+        "NaN_classification_comparisons": 1060,
+        "NaN_payload_fidelity_accepted": false,
+        "strict_integer_comparisons": 63414,
+        "historical_INPUT_only_reused": true,
+        "independent_derived_stats139_source_reused_unchanged": true,
+        "historical_expected_or_actual_replayed": false,
+        "old_acceptance_transferred": false,
+        "pilot_entries_excluded": 12,
+        "full_mainloop_frames": 0,
+        "native_windows_execution": false,
+        "complete_games": 0,
+        "scope": "Fresh1391full1542andintactcallees;23derived+HP+fouraux+threeobjectkeys+speed/sequence/queuecount. Sevenexplicitorderedcallerfixtures;newcurrenttable/bodybindingandexpected-first10569originals. NaNfloatclassificationonly. RawGameobservationsnotfullprediction,packetbytes/naturalconstructor/equipment/talent/producers/App/main884/Windows/gameoutside."
       }
     ],
-    "runtime_scope": "Current1391full-original-functioninventory80fixtures(79semanticinputs)/125formal913entries;allnormal. Freshnewsourceandexpected;no139acceptancetransfer. Syntheticquietnonlethal432BUnitnumericprojectiononly,notfullGame/App/Windows/fullmain/completegame. Static30roles/143declarationfieldmatchesseparate0runtime.",
+    "runtime_scope": "Current1391full-original-functioninventory10649fixtures/10694formalentries(10569stats1542+125damage913),allnormal. Newcurrentbytes/expected/originalcalls;no139acceptancetransfer. NaNclassificationonly;statsmovementpacketcountnotbytes. Static30roles/143rowsseparate0runtime. Fullmain/WindowsApp/independentgames0.",
     "static_role_bindings": 30,
     "whole_normalized_role_matches": 15,
     "roles_with_static_differences": 15,
@@ -114,10 +162,10 @@
     "static_data_delta": "evidence/engine1391-data-delta-20261102T135030.000122Z/delta.json",
     "static_data_delta_sha256": "600f7d5e34e1f17838883d69294ec773e16fe90ce453bb643b4381a1e82930d1",
     "pending_source_findings": [
-      "Remaining1391constructor/stats/defaultopening/AI/owned/collection/selection/fullmainmigrationisnotaccepted;fixed139experimentsretainoriginalinputs.",
-      "Nonlethal913emptyitems/spells/procs/context0only;death/loot/positiveproc/othercontexts/stats/wiresemanticsrequirefreshrecovery.",
-      "Fifteenofthirtynormalizedstructuresdiffer;referenceddata/calleesandresource/protocol/save/NativeABIdeltasremainopen.",
-      "Windows45Bdeclarationtailisstaticbytecorrespondenceonly;0Nativefunction/gameexecution."
+      "1391stats1542sevenexplicitcallerownedorderedvectorsandnonlethal913accepted;naturalconstructor/profile/equipment/talent/effectsourcesandcontinuousflowrequirefreshmigration.",
+      "Nonlethal913emptyitems/spells/procs/context0only;death/loot/positiveproc/othercontexts/wiresemanticsrequirefreshrecovery.",
+      "Fifteenofthirtynormalizedrolesdiffer;referenceddata/calleesandresource/protocol/save/NativeABIdeltasremainopen.",
+      "StatsrawGame/BTreephysical/movementmessagebytesareobservationsoutsideprediction;allWindowsapplication/fullmain/gameexecution0."
     ],
     "static_migration0139_1": {
       "status": "different_author_readonly_review_passed_finite_static_identity_only",
@@ -2204,13 +2252,15 @@
     "report": "reports/2026-11-02-official0139-1-acquisition-identity.json",
     "build_identity_sidecar": "evidence/branding01391-identity-20261102T133938.757910Z/identity.json",
     "build_identity_sidecar_sha256": "faf432f45518700f9ef2726a2fa3c280bd7ee5ec2337df309ce8db3a96f830b0",
-    "role": "latest1391_fresh_nonlethal913_scoped_reviewed_notfullgame",
+    "role": "latest1391_fresh_scoped_stats1542_nonlethal913_reviewed_notfullgame",
     "official_independent_wasm_digest_published": false,
     "runtime_acceptance_reports": [
-      "reports/2026-11-02-combat0139-1.json"
+      "reports/2026-11-02-combat0139-1.json",
+      "reports/2026-11-02-stats0139-1.json"
     ],
     "runtime_independent_reviews": [
-      "reports/2026-11-02-combat0139-1-independent-review.json"
+      "reports/2026-11-02-combat0139-1-independent-review.json",
+      "reports/2026-11-02-stats0139-1-independent-review.json"
     ]
   },
   "fixed_dynamic_research_target_0137": {
@@ -2776,7 +2826,7 @@
     "windows_reference_key": "windows_official_fixed_0139_reference",
     "metadata_reference_key": "official_latest_0139_metadata",
     "selected_by": "Official139 metadata, coherent saved Windows/Web bytes and real native/Web nine-byte consumers.",
-    "status": "fixed139_consecutive_combat_worldpause_first60s_waves_terminal_components_reviewed_not_fullgame",
+    "status": "fixed139_continuous_combat_worldpause_first60s_and_positive_combat_spawn_reviewed_not_fullgame",
     "version_policy": "Functional target follows verified latest stable139. Every fixed135/137/138 experiment stays pinned and retains its own acceptance; no transfer.",
     "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0135",
     "fixed_previous_latest_target_key": "fixed_dynamic_research_target_0138",
@@ -2824,10 +2874,11 @@
       "reports/2026-11-02-spawn-schedule0139-v2.json",
       "reports/2026-11-02-terminal0139.json",
       "reports/2026-11-02-world-pause0139.json",
-      "reports/2026-11-02-spawn-schedule0139-v3.json"
+      "reports/2026-11-02-spawn-schedule0139-v3.json",
+      "reports/2026-11-02-spawn-schedule0139-v4-combat.json"
     ],
-    "new_original_runtime_cases": 17126,
-    "new_original_entry_calls": 31040,
+    "new_original_runtime_cases": 17132,
+    "new_original_entry_calls": 31058,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
@@ -2846,7 +2897,7 @@
     "roles_with_static_differences": 19,
     "static_semantic_rows_compared": 143,
     "static_rows_equal": 143,
-    "new_runtime_acceptance_registered": 17126,
+    "new_runtime_acceptance_registered": 17132,
     "static_migration_not_behavioral_equivalence": true,
     "analysis_profile": "evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
     "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
@@ -2856,8 +2907,8 @@
     "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
     "static_data_delta": "evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
     "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be",
-    "new_runtime_cases": 17126,
-    "new_independent_model_cases": 17126,
+    "new_runtime_cases": 17132,
+    "new_independent_model_cases": 17132,
     "runtime_independent_reviews": [
       "reports/2026-11-02-combat0139-independent-review.json",
       "reports/2026-11-02-stats0139-independent-review.json",
@@ -2894,16 +2945,17 @@
       "reports/2026-11-02-spawn-schedule0139-v2-independent-review.json",
       "reports/2026-11-02-terminal0139-independent-review.json",
       "reports/2026-11-02-world-pause0139-independent-review.json",
-      "reports/2026-11-02-spawn-schedule0139-v3-independent-review.json"
+      "reports/2026-11-02-spawn-schedule0139-v3-independent-review.json",
+      "reports/2026-11-02-spawn-combat0139-independent-review.json"
     ],
-    "runtime_scope": "Fixed139full-original-functioninventory17126fixtures/31040formalWASMtargets;31039normalreturns/1expectedboundsabort. New93fixtures8257targets;sourceprefix/cleanup/pilots/rejectedv1excluded. Native2150instructionemulationsand484cases/500clockfragmentstepsseparate. Still0fullmain/WindowsApp/independentgames;1391fresh80/125separate,nooldtransfer.",
+    "runtime_scope": "Fixed139full-original-functioninventory17132fixtures/31058formalWASMtargets;31057normalreturns/1expectedboundsabort. New6fixtures18targets;319source/pilot/rejectedv1excluded. Native2150instructionemulationsand484cases/500clockfragmentstepsseparate. Still0fullmain/WindowsApp/independentgames;1391fresh10649/10694separate,nooldtransfer.",
     "controlled_original_context_reference_key": "web_official_controlled_0139_context_v2",
-    "normal_returned_target_entries": 31039,
+    "normal_returned_target_entries": 31057,
     "expected_bounds_aborts": 1,
     "pending_source_findings": [
-      "Naturalstartingcleave/realAI→2890XP→firstchoice→1093/resume→952notyetaccepted;positivelevel-heal/live/pauseintegrationinnewresearch.",
-      "360componentstepsstartafterexplicitXP5/Thunderchoice;interveningandfollowing884stagesnotexecuted.",
-      "Stationary952through64swithfirstfourwaveforms/50cap/40resources/firstRune60accepted;positivekillcost/movingcombat/deadslots/density/farrecycle/windowsdue/Boss180/elite240remainseparate.",
+      "Naturalstartingcleave/realAI→2890XP→firstchoice→1093/resume→952v2newfreshbatchesawaitdifferentauthorreview;selection4603immediateXPbranchrestoredbutnotregisteredyet.",
+      "360oldcomponentstepsstartafterexplicitXP5/Thunderchoice;interveningandfollowing884stagesnotexecuted.",
+      "Stationary952through64sandpositivecost/density/moving-sourcesuffix18acceptedseparately;natural30sWolf/otherfamilies/farrecycle/windowsdue/Boss180/elite240andfullschedulerremainopen.",
       "Full2077physicalkey/catalog/bucket/incominghistoryvariants/otherclasses/skills/UI/render/save/network/fullAppremainoutside.",
       "Windowsnativeupgradeleaf2150emulationsseparatefromunexecutedwholeEXE/nativeGameUnitABI."
     ],
@@ -4565,6 +4617,58 @@
         "native_windows_execution": false,
         "complete_games": 0,
         "scope": "Freshdefaultfull952through64sfromretained1108owners;allfourfirstwaveforms/naturalRNG,50cap,5charge,40resource+firstRune60. Onlyclockdriver. Rune+12callerheapresidueNonewithfourrawexpressionchecks. NoBoss180/elite240/windowsdue/repeatedwave/positivedensity/farrecycle/movingcombatkillcost/full884/game."
+      },
+      {
+        "domain": "ordinary952_v4_positive_killcost_density_real_combat_owners",
+        "version": "0.139.0",
+        "build": "f79c5e2b4",
+        "status": "scoped_fresh_original_differential_and_different_author_readonly_review_passed",
+        "report": "reports/2026-11-02-spawn-schedule0139-v4-combat.json",
+        "report_sha256": "c884e9a878c28ca0eee6b4d9a3179e8ecbd8bb83558f84111db29549b0f60f6f",
+        "independent_review": "reports/2026-11-02-spawn-combat0139-independent-review.json",
+        "independent_review_sha256": "a71d2ad803acb0e364b09e1a3fc53e787a428d61817aa20c820f7a528a7cd350",
+        "comparison": "evidence/spawn-combat139-full-20261102T145803.233915Z/comparison.json",
+        "comparison_sha256": "51814f71c5f6812b75541ebd5a2bfa8a2be5630b1ab42b8f8dc83de9673cc898",
+        "cases": 6,
+        "original_target_entry_attempts": 18,
+        "normal_returned_entries": 18,
+        "differences": 0,
+        "full952_calls": 18,
+        "source_setup_entries_excluded": 319,
+        "all_direct_entries": 337,
+        "source_preceding2123_925_pairs_numeric_only": 120,
+        "source_prior_packet_order_accepted": false,
+        "source_files": 104,
+        "production_sources": 86,
+        "local_edges": 445,
+        "current_body_bindings": 78,
+        "real_death_sources": [
+          1,
+          2,
+          4
+        ],
+        "actual_extra922_calls": 19,
+        "positive_killcost_decays": 18,
+        "positive_catchup_above1": 3,
+        "upper_catchup3_reached": false,
+        "new_NPCs": 24,
+        "positive_density_NPCs": 6,
+        "new_complete169_packets": 24,
+        "new169_payload_bytes": 4296,
+        "actual_player_level1432": 2,
+        "old_NPC_full432_conserved_bytes": 50544,
+        "full_Game2592_compared_bytes": 46656,
+        "nonuniform_pathcost_queries": 69,
+        "moving_source_cases": 2,
+        "one_moving_source_nonfullHP": true,
+        "target952_replaces_source925_in_two_cases": true,
+        "exact_main884_order_accepted": false,
+        "no_NPC_HP_marker_definition_pointer_injection": true,
+        "old_v3_acceptance_transferred": false,
+        "full_mainloop_frames": 0,
+        "native_windows_execution": false,
+        "complete_games": 0,
+        "scope": "Actual1108/explicitXP5/firstThunder/real2123and922deaths→full952;physicaldeadslotsretained,positivecostexp(-dt/12),catchup1..3,density,actuallevel2field34andcomplete169. Twoactualmovingcomponentprefixesreplace925with952,nofullmainorder/natural2890. Farrecycle/Boss180/elite240/windowsdue/positivevelocityfuture."
       }
     ],
     "native_ability_declaration_static_correspondence": {
@@ -4769,7 +4873,8 @@
       "reports/2026-11-02-spawn-schedule0139-v2.json",
       "reports/2026-11-02-terminal0139.json",
       "reports/2026-11-02-world-pause0139.json",
-      "reports/2026-11-02-spawn-schedule0139-v3.json"
+      "reports/2026-11-02-spawn-schedule0139-v3.json",
+      "reports/2026-11-02-spawn-schedule0139-v4-combat.json"
     ],
     "runtime_independent_reviews": [
       "reports/2026-11-02-combat0139-independent-review.json",
@@ -4807,7 +4912,8 @@
       "reports/2026-11-02-spawn-schedule0139-v2-independent-review.json",
       "reports/2026-11-02-terminal0139-independent-review.json",
       "reports/2026-11-02-world-pause0139-independent-review.json",
-      "reports/2026-11-02-spawn-schedule0139-v3-independent-review.json"
+      "reports/2026-11-02-spawn-schedule0139-v3-independent-review.json",
+      "reports/2026-11-02-spawn-combat0139-independent-review.json"
     ]
   },
   "windows_official_fixed_0139_reference": {
@@ -4870,8 +4976,8 @@
   "official_latest_0139_1_metadata": {
     "version": "0.139.1",
     "stamp": "d52c8d411876",
-    "receipt": "evidence/official-goal-phase-network-check-20261102T143118.386082Z/receipt.json",
-    "receipt_sha256": "fa52a889f57d00dcba26547d86a8cdbd02dc3d0b9d13612e51c99f2eb5a6bb81",
+    "receipt": "evidence/official-goal-phase-network-check-20261102T153128.336700Z/receipt.json",
+    "receipt_sha256": "244143cbf872095d8e2cbd8698e3df4fa03b66f948e89587a0e84e0596cbd381",
     "manifest": {
       "version": "0.139.1",
       "notes": "Fixes the old WoW menu opening behind the pause menu, where a click could hit its Exit Game and close the game. Menus and windows now stop your clicks and scrolling from reaching what's behind them. The Windows version no longer crashes after alt-tabbing when run on Linux through Proton or Wine.",
@@ -4892,9 +4998,10 @@
         }
       ]
     },
-    "checked_at_utc": "2026-11-02T14:31:18.387290+00:00",
+    "checked_at_utc": "2026-11-02T15:31:28.375101+00:00",
     "acquired": true,
     "behavior_validated": false,
-    "scoped_nonlethal_damage_validated": true
+    "scoped_nonlethal_damage_validated": true,
+    "scoped_stats1542_validated": true
   }
 }

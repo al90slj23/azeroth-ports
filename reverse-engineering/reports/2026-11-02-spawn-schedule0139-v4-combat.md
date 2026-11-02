@@ -1,0 +1,13 @@
+# Current139 combat owners to complete952 v4
+
+Author formal passed:6 fresh instances,18 full952 targets,117,855 assertions/0 differences.24 new NPCs and all24 newly emitted169 packets/4,296B match, including6 positive density spawns. The ownedNode87049 exited0 in2.43s, PID/PGID missing. Independent review is Pending.
+
+The current scheduler accepts actual physical corpse/live/moving owners, nonzero killcost, actual level2, canonical path map and inherited budgets/timers. It decays killcost through current26521 exp32(dt/-12), applies catchup clamped1..3, counts50cap by alive marker rather than physical count, skips corpses in density/far selection, and preserves full stale storage. NPC169 field34 now uses the actual player level.50,544B of existing whole NPC records and44,838B of nonownedGame fields are conserved across target calls.
+
+Source1/2/4corpse fixtures come from genuine6full2123 andextra922 calls. In the boost fixture, a complete952 creates4 new NPCs,8 genuine922cleaves kill them, andthe next scheduler steps exercise catchup1.51685→1.49002 with killcost near8. No HP/NPC/killcost/budget/RNG/timer source values are injected. Two further moving fixtures use120 preceding2123/925pairs plus target2123; the target952 replaces the former target925 as an explicit standalone component test. One has nonfullHP. Their prior old-model packet order is not accepted; complete target952 suffixes are compared separately.
+
+337 direct original entries comprise18targets and319source setup:146full2123,124full925,19full922 and30opening/XP/selection entries. None are full884frames.104source/86production/445edges and78current bodies are bound before original execution;882imports are denied andnohost call occurred. Allv3author8 files remain unchanged. Failed counter-metadata pilot andboth passed pilots are retained/excluded from formal.
+
+API:from_combat139 threads actor/physical/path into persistent scheduler state;update_spawn_schedule139 produces only new scheduler packets;thread_spawn_result139 returns updated growth/damage/RNG/counter/pickups/decayedcost. Caller retains otherstage owners and updates the complete physical vector. Persistentstate.packets is a scheduler-history projection,not a completeGame packet owner.
+
+Natural2890growth/firstchoice,fullmain/App/bootstrap/Native/fullgame remainPending. Positive velocity,catchupupper3,farNPC replay/liveBoss slowdown andnondefault modes remainPending. The modifiedv4level-aware wave helper has no new60s behavior acceptance;v3's fourwave experiment stays separate. Unknowns are explicit. See JSON for exact bindings, scope, hashes, process terminal and source-input evidence.
