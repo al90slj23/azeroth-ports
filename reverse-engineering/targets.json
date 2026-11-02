@@ -8,7 +8,7 @@
     "windows_reference_key": "windows_official_latest_reference",
     "metadata_reference_key": "official_latest_0139_metadata",
     "selected_by": "Official139 metadata, coherent saved Windows/Web bytes and real native/Web nine-byte consumers.",
-    "status": "scoped139_opening_death_collection_and_separate_first_growth_reviewed_not_fullgame",
+    "status": "scoped139_opening_death_collection_and_inactiveworld_firstgrowth_reviewed_not_fullgame",
     "version_policy": "Functional target follows verified latest stable139. Every fixed135/137/138 experiment stays pinned and retains its own acceptance; no transfer.",
     "fixed_dynamic_research_target_key": "fixed_dynamic_research_target_0135",
     "fixed_previous_latest_target_key": "fixed_dynamic_research_target_0138",
@@ -37,10 +37,11 @@
       "reports/2026-11-02-death0139.json",
       "reports/2026-11-02-opening0139.json",
       "reports/2026-11-02-growth0139.json",
-      "reports/2026-11-02-collection0139.json"
+      "reports/2026-11-02-collection0139.json",
+      "reports/2026-11-02-growth-world0139.json"
     ],
-    "new_original_runtime_cases": 14795,
-    "new_original_entry_calls": 18709,
+    "new_original_runtime_cases": 14806,
+    "new_original_entry_calls": 18741,
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
@@ -50,7 +51,7 @@
     "build_identity_sidecar_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
     "latest_version_state_report": "reports/2026-11-02-official0139-acquisition-identity.json",
     "latest_version_state_report_sha256": "0ef3b97fc94009639d2ca3c000386327be9f21af74e738ad5407c3ae82839031",
-    "scope_note": "Latest139controlledcomplete1108,sameGamedeath→collectionbelow5,andseparatefirstgrowth/newcardreviewed;notnaturalApp/bootstrap/mainloop/native/fullgame.",
+    "scope_note": "Latest139controlledfull1108andseparatelydeath→collectionbelow5plusfull1108→explicitgain/newcardreviewed;notnaturalApp/bootstrap/mainloop/native/fullgame.",
     "full_static_profile_produced": true,
     "defined_functions": 177101,
     "function_imports": 882,
@@ -59,7 +60,7 @@
     "roles_with_static_differences": 19,
     "static_semantic_rows_compared": 143,
     "static_rows_equal": 143,
-    "new_runtime_acceptance_registered": 14795,
+    "new_runtime_acceptance_registered": 14806,
     "static_migration_not_behavioral_equivalence": true,
     "analysis_profile": "evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
     "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
@@ -69,8 +70,8 @@
     "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
     "static_data_delta": "evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
     "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be",
-    "new_runtime_cases": 14795,
-    "new_independent_model_cases": 14795,
+    "new_runtime_cases": 14806,
+    "new_independent_model_cases": 14806,
     "runtime_independent_reviews": [
       "reports/2026-11-02-combat0139-independent-review.json",
       "reports/2026-11-02-stats0139-independent-review.json",
@@ -89,15 +90,16 @@
       "reports/2026-11-02-death0139-independent-review.json",
       "reports/2026-11-02-opening0139-independent-review.json",
       "reports/2026-11-02-growth0139-independent-review.json",
-      "reports/2026-11-02-collection0139-independent-review.json"
+      "reports/2026-11-02-collection0139-independent-review.json",
+      "reports/2026-11-02-growth-world0139-independent-review.json"
     ],
-    "runtime_scope": "Separate139acceptedscopes addgrowth24fixtures/42targetentries(21uniqueinputs) andcollection18/156targetentries.14795fixtures/18709targetentryattempts areexecutioninventory,notcoverage;18708normalreturns/1expectedboundsabort. Setup/pilot/rejected/studiesexcluded. Collectionkeeps4NPCbutstaysbelowfirstthreshold;growthv1realphase2/newselectionusesemptyworld. Full1108withnonemptyworldgrowth11authorbatchandcontinuousdeath→firstcardsremainpendingreview/integration.Main884/native/fullgame0.",
+    "runtime_scope": "139acceptedexecutioninventory14806fixtures/18741targetentryattempts;18740normalreturns/1expectedboundsabort. New11/32compositefull1108→explicitgain→newcard keepsallbackgroundandprovesinactive26364/25613. Fullopening→actualdeaths→collectcross5→choose→continuestillbeingintegrated. Countsnotcoverage;setup/pilots/studiesexcluded.Main884/native/fullgame0.",
     "controlled_original_context_reference_key": "web_official_controlled_0139_context_v2",
-    "normal_returned_target_entries": 18708,
+    "normal_returned_target_entries": 18740,
     "expected_bounds_aborts": 1,
     "pending_source_findings": [
-      "Full1108withstationary/deadNPC→gain4677→newcard11authorbatchpassed;awaitdifferentauthorreview. Full1108→actualdeaths→collectcross5→choose→continuebeingintegratedinnewfiles;notregisteredyet.",
-      "Existingabilityupgrade/goldselection,activeworldmotion,nonemptylivefollowupstats/hitowners/full592andHP169stream/AI/input/mainloop/native/game remain unresolved. Historical135/137/138acceptance nottransferred."
+      "SameGamefull1108→actualdeaths→collectcross5→firstcard→continueinnewfiles;onlybelow5pilotpassedsofar.Notregisteredcompleteflow.",
+      "Existingabilityupgrade/gold,activeworldmotion,nonemptyliveexpiry/nextstats/postselectionhitowner/full592andHP169stream/AI/input/mainloop/native/game remain unresolved. Historicalacceptance nottransferred."
     ],
     "scoped_components_0139": [
       {
@@ -657,6 +659,55 @@
         "production_sources": 31,
         "local_edges": 113,
         "scope": "Samehealthyv2Game4NPC→2cleave→48full2890withreal4677belowthreshold5;7naturaldeathchains11explicitpickup/claims/mode/modifierfixtures. Full221/170,56Btailshift/reverseaward/RNG/claimedagegate/coin29338/forwards checked. Marker2actual32070trap rejected;failedstudiespreserved. Notfull1108/growthjoin/mainloop/native/game."
+      },
+      {
+        "domain": "full1108_inactive_world_first_growth_and_new_selection",
+        "version": "0.139.0",
+        "build": "f79c5e2b4",
+        "status": "scoped_differential_and_different_author_readonly_review_passed",
+        "report": "reports/2026-11-02-growth-world0139.json",
+        "report_sha256": "1d47d04bc5ef1d0905b3b4bf043abd2be9de0507a1ff17216aa5a55a4750e669",
+        "independent_review": "reports/2026-11-02-growth-world0139-independent-review.json",
+        "independent_review_sha256": "91d231b07dead6849dd9503e734fa08c7a1b784aeb59c7ddba9ecc7b188ef4dc",
+        "comparison": "evidence/growth-world139-oracle-20261102T095434.252586Z/comparison.json",
+        "comparison_sha256": "1b874256c8c8223179d7f8b9e340700b9d432789e2d6e024defda40f03fa9bcf",
+        "cases": 11,
+        "original_target_entry_attempts": 32,
+        "normal_returned_entries": 32,
+        "differences": 0,
+        "full1108_calls": 11,
+        "full4677_calls": 11,
+        "full1093_calls": 10,
+        "setup2945_calls": 11,
+        "setup1600_calls": 11,
+        "snapshot_restores": 11,
+        "resource_only_context": true,
+        "new_Game_from1600": true,
+        "denied_imports": 882,
+        "actual_host_calls": 0,
+        "phase2_three_cards": 10,
+        "candidate_metadata_rows": 30,
+        "full_opening_packets": 836,
+        "full_opening_packet_bytes": 89232,
+        "background_full_bytes_conserved": 101376,
+        "background_known_bytes": 63920,
+        "background_None_bytes": 37456,
+        "background_nonzero_None_bytes": 27120,
+        "known_live_bytes": 240,
+        "None_live_bytes": 80,
+        "raw_player_tree_captures": 32,
+        "known_logical_fields": 158,
+        "source_files": 42,
+        "production_sources": 32,
+        "local_edges": 114,
+        "current_body_WAT_bindings": 36,
+        "explicit_deadmask_cases": 2,
+        "old_acceptance_transferred": false,
+        "setup_pilot_studies_excluded": true,
+        "full_mainloop_frames": 0,
+        "native_windows_execution": false,
+        "complete_games": 0,
+        "scope": "New2945/1600→complete1108→explicitXPaward→real4677/2181→10newcard1093→phase1. Stationaryorcontrolleddead4NPC/aux0/claims0stopresumeproveninactive;Rune/windows/special/69boundariesallretained. XP2below5onecase;deadmask1or15arebitmasks,actualmarker1. Notactualdeath/collectionlevelupintegration,activeworldmotion,upgrade/gold,newlivefollowupstats/fullUI/packets/App/bootstrap/mainloop/native/game."
       }
     ]
   },
@@ -2722,7 +2773,7 @@
     "report": "reports/2026-11-02-official0139-acquisition-identity.json",
     "build_identity_sidecar": "evidence/branding0139-identity-20261102T012823.573890Z/identity.json",
     "build_identity_sidecar_sha256": "2f579c55cd09a0db559cfa3aa7d75818ccb594bcf96eb072ff9d917600c49ceb",
-    "role": "active139_scoped_opening_death_collection_and_firstgrowth_reviewed_not_fullgame",
+    "role": "active139_scoped_opening_death_collection_inactiveworldgrowth_reviewed_not_fullgame",
     "official_independent_wasm_digest_published": false,
     "limitations": [
       "Saved decoded HTTPS bytes and local SHA; manifest/HTML byte-stable before/after acquisition.",
@@ -2747,7 +2798,8 @@
       "reports/2026-11-02-death0139.json",
       "reports/2026-11-02-opening0139.json",
       "reports/2026-11-02-growth0139.json",
-      "reports/2026-11-02-collection0139.json"
+      "reports/2026-11-02-collection0139.json",
+      "reports/2026-11-02-growth-world0139.json"
     ],
     "runtime_independent_reviews": [
       "reports/2026-11-02-combat0139-independent-review.json",
@@ -2767,7 +2819,8 @@
       "reports/2026-11-02-death0139-independent-review.json",
       "reports/2026-11-02-opening0139-independent-review.json",
       "reports/2026-11-02-growth0139-independent-review.json",
-      "reports/2026-11-02-collection0139-independent-review.json"
+      "reports/2026-11-02-collection0139-independent-review.json",
+      "reports/2026-11-02-growth-world0139-independent-review.json"
     ]
   },
   "fixed_dynamic_research_target_0137": {

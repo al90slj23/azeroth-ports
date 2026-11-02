@@ -1,0 +1,762 @@
+{
+  "status": "author_frozen_pending_different_author_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "original_WASM_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "report_scope": "Full1108 on newGame then actualfirst growth/select preserving inactive nonemptyworld",
+  "comparison": "evidence/growth-world139-oracle-20261102T095434.252586Z/comparison.json",
+  "comparison_sha256": "1b874256c8c8223179d7f8b9e340700b9d432789e2d6e024defda40f03fa9bcf",
+  "source_admission_readback_sha256": "1a527bd4cdf6b2cdc859ab3f2fbb9e53520037de7b777e3ee91e2728faa37e41",
+  "cases": 11,
+  "full1108_calls": 11,
+  "full4677_calls": 11,
+  "full1093_calls": 10,
+  "setup2945_calls": 11,
+  "setup1600_calls": 11,
+  "phase2_cases": 10,
+  "selected_new_card_cases": 10,
+  "below_threshold_cases": 1,
+  "explicit_dead_marker_cases": 2,
+  "stationary_generated_NPC_cases": 9,
+  "independent_model_and_current_original_differences": 0,
+  "source_files": 42,
+  "production_sources": 32,
+  "source_import_edges": 114,
+  "counts": {
+    "assertions": 65164,
+    "known_player_fields": 158,
+    "background_known_bytes": 63920,
+    "background_None_bytes": 37456,
+    "background_nonzero_None_bytes": 27120,
+    "live_known_bytes": 240,
+    "live_None_bytes": 80,
+    "live_nonzero_None_bytes": 80,
+    "full_opening_packets": 836,
+    "selected": 10,
+    "phase2": 10
+  },
+  "runtime": {
+    "cases": 11,
+    "fresh_instances": 11,
+    "full_calls": {
+      "1093": 10,
+      "1108": 11,
+      "1600": 11,
+      "2945": 11,
+      "4677": 11
+    },
+    "world_source_checks": [
+      {
+        "instance": 1,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      }
+    ],
+    "target_and_setup_returns": [
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "stack_checks": 109,
+    "allocator_calls": 55,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "old_Game_used_as_target": false,
+    "readiness_flags_injected": false,
+    "explicit_dead_marker_fixtures": true,
+    "full2181_internal_calls_notinstrumented": true,
+    "full26364_35988_25613_calls_notinstrumented": true,
+    "App_or_world_Rc_producer_executed": false,
+    "externref_restored": false,
+    "native_executions": 0,
+    "full_mainloop_frames": 0,
+    "complete_games": 0,
+    "error": null
+  },
+  "process": {
+    "pid": 49238,
+    "pgid": 49238,
+    "exit_code": 0,
+    "seconds": 5.317002499999944,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "model_source_guards": 6,
+  "new_original_calls_by_checker": 54,
+  "total_target_entries_with1108": 32,
+  "target_gain_select_entries_only": 21,
+  "constructors_setup_entries": 22,
+  "full_world_owner_objects_percase": {
+    "NPC": 4,
+    "pickup_kind2": 2,
+    "special40": 4,
+    "boundaries8": 69,
+    "windows8": "2or3"
+  },
+  "static_functions": 28,
+  "known_inactive_chain": "4677→2181→35988→26364;1093→4603→25613→26364",
+  "predicate": "Onlyalive NPC duration>0 and start+duration>now gathered;aux112 andclaims88 empty. Inactive gathered Vec40 cap0/ptr8/count0 preventsstop/resumeworldwrites.",
+  "pilot": {
+    "comparison": "evidence/growth-world139-oracle-20261102T095304.358053Z/comparison.json",
+    "sha256": "10e91293df77224a591d92ae087013579909b516445003c655fefcfc56037eec",
+    "cases": 1,
+    "new_entries_not_added_to_formal_coverage": true
+  },
+  "research_original_entry_executions_total": 59,
+  "frozen_v1_unchanged": true,
+  "full_mainloop_frames": 0,
+  "native_executions": 0,
+  "complete_games": 0,
+  "limitations": [
+    "Resource-onlylegalv2post1108context/newGame;notnaturalApp/Rc/bootstrap/externref.",
+    "NewXPawardexplicitinput,notcollection;deadmask1/15explicitmarkerfixtures,notnaturaldeathproducer.",
+    "Samecurrentfull1108creates4NPC/2Rune/windows/special/boundaries andallownerbyteskept;velocity0/pathNoneexplicit.",
+    "26364stop/resumedomainonlyinactiveNPC+emptyaux/claims;active movement/nonemptyauxclaimpending.",
+    "Onlyfirstnewabilityselection;upgrade/gold/nonemptylive32recalculationpending.",
+    "UI/appearance/additionalkeyedfields/fullpackets/Aura48/physicalBTreeallocationnotprojected.",
+    "Mainloop/nativeWindows/network/save/fullgame0."
+  ]
+}

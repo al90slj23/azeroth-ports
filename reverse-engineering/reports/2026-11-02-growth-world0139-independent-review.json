@@ -1,0 +1,131 @@
+{
+  "status": "pass_fullopening_inactive_world_first_gain_new_selection_projection",
+  "reviewer": "/root/growth139_review",
+  "author": "/root/growth139_world",
+  "reviewer_source": "scripts/review_growth_world139.py",
+  "reviewer_source_sha256": "0e82a1f20fd7c02ed7edcd73f4d9edfca1d3ab406402e1aa8e0b5ae4e34322a1",
+  "review_file": "evidence/growth-world139-independent-review-owned-20261102T100035.888950Z/review/review.json",
+  "review_sha256": "259513fe73ce42ace4ee1a9abf33c10a3ada7eff5c26caa5b6172fb9db3fb194",
+  "comparison_sha256": "1b874256c8c8223179d7f8b9e340700b9d432789e2d6e024defda40f03fa9bcf",
+  "author_handoff_sha256": "e9fffde0e79085c89d3dbfaeffa2ce760e38dc9af7d5f6e9c5fa449b47ebcaa0",
+  "author_files_untouched": true,
+  "v1_files_untouched": true,
+  "cases": 11,
+  "full1108_calls": 11,
+  "full4677_calls": 11,
+  "full1093_calls": 10,
+  "setup2945_calls": 11,
+  "setup1600_calls": 11,
+  "original_calls_by_reviewer": 0,
+  "author_production_checker_builder_executions": 0,
+  "source_count": 42,
+  "production_source_count": 32,
+  "source_edges": 114,
+  "current_body_WAT_bindings": 36,
+  "counts": {
+    "selected40_known": 440,
+    "openingGame_known": 6116,
+    "openingGame_None": 22396,
+    "openingGame_nonzero_None": 2529,
+    "full_opening_packets": 836,
+    "full_opening_packet_bytes": 89232,
+    "before_background_explicit_mask_only_full_bytes": 34848,
+    "projection_fields": 416,
+    "known_logical_fields": 158,
+    "full_raw_tree_captures_decoded": 32,
+    "derived23_values": 736,
+    "owned80_full_bytes": 3360,
+    "background_full_bytes_conserved": 101376,
+    "background_known": 63920,
+    "background_None": 37456,
+    "background_nonzero_None": 27120,
+    "phase2_three_cards": 10,
+    "candidate_metadata_rows": 30,
+    "live32_known": 240,
+    "live32_None": 80,
+    "live32_nonzero_None": 80
+  },
+  "dead_mask_cases": {
+    "0": 9,
+    "1": 1,
+    "15": 1
+  },
+  "selected_new_cards": [
+    {
+      "ability_id": "battle_shout",
+      "tier": 0,
+      "count": 1
+    },
+    {
+      "ability_id": "bloodrage",
+      "tier": 0,
+      "count": 1
+    },
+    {
+      "ability_id": "demo_shout",
+      "tier": 0,
+      "count": 1
+    },
+    {
+      "ability_id": "demo_shout",
+      "tier": 1,
+      "count": 1
+    },
+    {
+      "ability_id": "shield_slam",
+      "tier": 0,
+      "count": 1
+    },
+    {
+      "ability_id": "thunder_clap",
+      "tier": 2,
+      "count": 4
+    },
+    {
+      "ability_id": "whirlwind",
+      "tier": 3,
+      "count": 1
+    }
+  ],
+  "helper_sha256": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9"
+  },
+  "owning_process": {
+    "directory": "evidence/growth-world139-independent-review-owned-20261102T100035.888950Z",
+    "terminal_sha256": "d5b8c68f064bc6da3cba801cd8db9102641726f866a7979a14ce235a798b56a6",
+    "terminal": {
+      "pid": 61167,
+      "pgid": 61167,
+      "exit_code": 0,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "seconds": 2.4980839590007236,
+      "deadline_seconds": 60
+    }
+  },
+  "limits": [
+    "Originaluseslegalv2post1108resource-onlycontext,new2945/1600Game/full1108;notfreshApp/Rc/externref/bootstrap.",
+    "XPamountisanexplicitaward;deadmask1/15controlledmarkerfixtures,notnaturaldeathproducer. No NPC/vectorclearing;allrawbackground/pointers/countersconserved.",
+    "26364inactivepredicateverifiedcurrentWAT;movingNPC/nonemptyaux112/claims88andnonemptyliverecalculationremainpending. Sixauthorguardselfchecksaremodelonly,notoriginalcoverage.",
+    "Independentfullopeningandgrowthreferencesrecomputed;all836openingpacketschecked,subsequentfullgrowth/UI/appearance/Aura48/physicalBTreeallocationstreamremainsobservation.",
+    "556Gamebytesperopeningknown,unwrittenbackground/livecellsremainNone;observedfullrawconservationdoesnotresolveNonevalues.",
+    "OnlydefaultHumanWarrior/Elwynn/firstnewabilityselection andzeroNPCmotion;nofullmainloop/nativeWindows/network/save/completegame."
+  ],
+  "pilot_separate": {
+    "comparison": "evidence/growth-world139-oracle-20261102T095304.358053Z/comparison.json",
+    "comparison_sha256": "10e91293df77224a591d92ae087013579909b516445003c655fefcfc56037eec",
+    "cases": 1,
+    "not_added_to_formal": true
+  },
+  "source_guards_model_only": 6,
+  "acceptance_scope": "Complete1108→explicitXPaward→gain/actualphase2→newselect with preservedinactiveNPC/background;notdeath/collectionintegrated orfullmainloop/game"
+}
