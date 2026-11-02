@@ -6,7 +6,7 @@
     "web_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
     "official_native_sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
     "official_native_bytes": 150595584,
-    "status": "scoped139_controlled_real_firstlevel_loop_and_direct_continuation_reviewed_not_fullgame",
+    "status": "scoped139_controlled_firstlevel_loop_and_first_cleave_upgrade_reviewed_not_fullgame",
     "role": "functional_latest_target",
     "latest_official_manifest_check_utc": "2026-11-02T10:24:12.749301+00:00",
     "latest_official_manifest_check": "../evidence/official-goal-phase-network-check-20261102T102412.748589Z/receipt.json",
@@ -17,8 +17,8 @@
     "full_mainloop_frames": 0,
     "native_windows_execution": false,
     "complete_games": 0,
-    "new_runtime_cases": 14809,
-    "new_original_entry_calls": 18788,
+    "new_runtime_cases": 14828,
+    "new_original_entry_calls": 18845,
     "runtime_acceptance_reports": [
       "../reports/2026-11-02-combat0139.json",
       "../reports/2026-11-02-stats0139.json",
@@ -39,7 +39,8 @@
       "../reports/2026-11-02-growth0139.json",
       "../reports/2026-11-02-collection0139.json",
       "../reports/2026-11-02-growth-world0139.json",
-      "../reports/2026-11-02-opening-collection0139.json"
+      "../reports/2026-11-02-opening-collection0139.json",
+      "../reports/2026-11-02-select-upgrade0139.json"
     ],
     "acquisition_receipt": "../originals/official-release-20261102T011227.335145Z/release-acquisition-resumed.json",
     "acquisition_receipt_sha256": "35c0e6b106056c47d3826581941174917e970133a46646e49cda8a0296b6e332",
@@ -55,7 +56,7 @@
     "roles_with_static_differences": 19,
     "static_semantic_rows_compared": 143,
     "static_rows_equal": 143,
-    "new_runtime_acceptance_registered": 14809,
+    "new_runtime_acceptance_registered": 14828,
     "static_migration_not_behavioral_equivalence": true,
     "analysis_profile": "../evidence/wasm0139-profile-20261102T012426.951871Z/manifest.json",
     "analysis_profile_sha256": "40a35af3cb76c533f2b23fb43104ea9480b9993f9c84a1cb8af00ccc3e02661f",
@@ -65,8 +66,8 @@
     "static_role_map_sha256": "7b41961bce7f45e74a8d2a24305cf84d0d64f2f2d739c723b1e445af208c40f0",
     "static_data_delta": "../evidence/engine139-data-delta-20261102T014028.095422Z/delta.json",
     "static_data_delta_sha256": "c2b0fee13ad520de0cb4feebc3a003ade8e9be339f6d9c0daf3e6db639f9c4be",
-    "new_original_runtime_cases": 14809,
-    "new_independent_model_cases": 14809,
+    "new_original_runtime_cases": 14828,
+    "new_independent_model_cases": 14828,
     "runtime_independent_reviews": [
       "../reports/2026-11-02-combat0139-independent-review.json",
       "../reports/2026-11-02-stats0139-independent-review.json",
@@ -87,15 +88,16 @@
       "../reports/2026-11-02-growth0139-independent-review.json",
       "../reports/2026-11-02-collection0139-independent-review.json",
       "../reports/2026-11-02-growth-world0139-independent-review.json",
-      "../reports/2026-11-02-opening-collection0139-independent-review.json"
+      "../reports/2026-11-02-opening-collection0139-independent-review.json",
+      "../reports/2026-11-02-select-upgrade0139-independent-review.json"
     ],
-    "runtime_scope": "139acceptedexecutioninventory14809fixtures/18788targetentryattempts;18787normalreturns/1expectedboundsabort. New3/47sameGamecontrolledfull1108→realdeaths→actualXP5→firstnewcard→phase1and1directcleavecontinuation. Canonicalworldinputandresource-onlyoriginalsnapshotexplicit;fullinput/AI/owned1238/main884/native/fullgame0. Countsnotcoverage;setups/pilots/rejected/studiesexcluded.",
-    "normal_returned_target_entries": 18787,
+    "runtime_scope": "139acceptedexecutioninventory14828fixtures/18845targetentryattempts;18844normalreturns/1expectedboundsabort. Firstcleaveorderedupgrade19/57adds17actualreachablekeysandnew/upgraderouter;firstlevelrealdeath3/47remainsseparatelyscoped. Countsnotcoverage;setup/pilots/studiesexcluded. Player2123/1238realperception/liveexpirynewauthor155batchawaitsfinalfreeze/review.Main884/native/fullgame0.",
+    "normal_returned_target_entries": 18844,
     "expected_bounds_aborts": 1,
     "scope_note": "ControlledsameGameopening→realdeath/XP→firstchoice→directcleaveaccepted;canonicalworld/resourcecontext/counters/relocation/clockexplicit,notnaturalApp/bootstrap/AI/mainloop/native/fullgame.",
     "pending_source_findings": [
-      "Current139 owned1238/player2123 automatic scheduling and real Human perception(exec9/effect8)/live12 expiry are in recovery;must not disable racial or clear units to advance clock.",
-      "Existingcleaveupgrade19authorbatchcovers17reachabletier/kinds;awaitindependentreview. Otherabilities/gold/activeworldmotion/full592andHP169/UI/save/network/native/fullgame remain unresolved. Initialcombatcounterproducer/rawworldlivecomposition/bootstrapstillseparate."
+      "Player2123/owned1238 scheduling with realHumanperception(exec9/effect8)/1020expiry andnaturalperceptionexpiry155authorcallsawaitfinalfreeze/review. Earlier8callself306wrongmaskfailedbatchpreserved;correctself10490mask0notcleavemask2.",
+      "Repeated/saturated/otherabilityupgrade/gold,nextlevels/AI/spawn/full592andHP169/UI/save/network/native/fullgame remain unresolved. Canonicalworld/bootstrap/initialcounterproducersstillseparate."
     ]
   },
   "historical_reference": "0.126.0 / 3e72472a",
@@ -4294,6 +4296,60 @@
       "native_windows_execution": false,
       "complete_games": 0,
       "scope": "Appseed0/1/42,new2945/1600→full1108→controlledplayerrelocation/direct922/2890clock→actualdeathsandXP5→level2threecards→firstnew1093→phase1;seed42actualowned2/live12retainedanddirectcleaveagainstlivingNPC. FourNPC/twoRune/windows/special/69boundaries retained. Model consumes previouslyindependentlyproducedcanonicalworld,notrerunningraw451productionhere. Initialcounters explicitchecked. NotnaturalApp/bootstrap/input/AI/owned1238/main884/newskillautocast/native/fullgame."
+    },
+    {
+      "domain": "first_cleave_ordered_upgrade_and_new_variant_router",
+      "version": "0.139.0",
+      "build": "f79c5e2b4",
+      "status": "scoped_differential_and_different_author_readonly_review_passed",
+      "report": "../reports/2026-11-02-select-upgrade0139.json",
+      "report_sha256": "acac63ffdd3d7b14b72edbaa7578773e66fa635d763593992b9b73e74560113d",
+      "independent_review": "../reports/2026-11-02-select-upgrade0139-independent-review.json",
+      "independent_review_sha256": "31b35ac8b153a3d45649766279257f778f4fefad83fe17c677f53a3b4fac36cc",
+      "comparison": "../evidence/select-upgrade139-oracle-20261102T101111.568452Z/comparison.json",
+      "comparison_sha256": "ca822cc51e9340587cb6c2d5f3bdcb51585db246ca2282682b316ca29f37781c",
+      "cases": 19,
+      "unique_inputs": 18,
+      "original_target_entry_attempts": 57,
+      "normal_returned_entries": 57,
+      "differences": 0,
+      "full1108_calls": 19,
+      "full4677_calls": 19,
+      "full1093_calls": 19,
+      "setup2945_calls": 19,
+      "setup1600_calls": 19,
+      "snapshot_restores": 19,
+      "denied_imports": 882,
+      "actual_host_calls": 0,
+      "reachable_first_cleave_upgrade_keys": 17,
+      "upgrade_selections": 18,
+      "new_selections": 1,
+      "dynamic_tables": [
+        0,
+        1,
+        2
+      ],
+      "other_tables_static_only": [
+        3,
+        4
+      ],
+      "source_files": 44,
+      "production_sources": 33,
+      "local_edges": 128,
+      "complete_opening_packets": 1444,
+      "owned80_bytes": 4640,
+      "derived_values": 1311,
+      "known_player_fields": 285,
+      "raw_player_trees_checked": 57,
+      "background_full_bytes_conserved": 180576,
+      "known_live_bytes": 456,
+      "None_live_bytes": 152,
+      "old_acceptance_transferred": false,
+      "setup_pilot_rejected_studies_excluded": true,
+      "full_mainloop_frames": 0,
+      "native_windows_execution": false,
+      "complete_games": 0,
+      "scope": "All17reachablefirstcleaveupgrade(tier0two/tier1..3threeeach/tier4sixorderedpairs)fromactualfull1108appseeds→explicitXP5→real2181cards→1093. Orderedrank/kindvalue/count/tailf32and80B/derived/phase/live/backgroundchecked. NoRNG/cardoverride/redraw. Wrong18thkeysearchpreserved0original. Firstneutralcleaveonly;notrepeated/saturated/otherability/gold/fullUI/clock/mainloop/native/game."
     }
   ],
   "raw_asset_controlled_defeat0135_modelselfcheck": {

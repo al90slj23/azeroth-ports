@@ -44,7 +44,9 @@
 
 本组合的独立模型读取先前独立生产的canonical world，不在本批重做raw451资源生产；原件借合法v2post1108资源上下文，再新建Game。初始accounting／kill／gold／sequence为显式检查输入；玩家移位、直接调用与时钟是受控调度。该首级逻辑闭环不等于自然输入／AI／owned1238或主884整帧，不等于新技能自动施放或完整消息流。
 
-已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。当前139有14809组限定fixture／18788次目标入口（18787正常返回／1预期越界），只是实验清单，不是完整覆盖率。setup／pilot／拒绝批／静态study不相加；空来源hit-events单独仍是静态与模型自检。已有cleave升级19组作者批待独审；正在恢复真实Human perception种族技能、1238自动调度、2123与live12到期，不能禁用racial来推进时钟。主循环884／Windows原生／完整一局仍为0。
+[已有顺劈技能的有序升级／new与upgrade路由](reports/2026-11-02-select-upgrade0139.md)19fixture（18个不同输入）／57目标入口经[异作者独审](reports/2026-11-02-select-upgrade0139-independent-review.md)：真实appseed完整1108→显式XP5→实际三卡→1093，18次upgrade／1次new，无改卡／重抽。17个真实可达的首轮cleave组合全含（tier0两种、tier1..3各三、tier4六种有序pair），逐kind的rank／value／count／damage尾乘及4640B owned记录、1311项属性、285项key、57份raw树一致；180576B背景守恒，live456已知／152 None保留。五表逐字静态绑定，动态只含本域0／1／2表；其它技能／重复／饱和升级与gold仍未知。错误搜索了不存在的第18键的16384次纯模型输入搜索已保留，原件执行0，不计覆盖。
+
+已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。当前139有14828组限定fixture／18845次目标入口（18844正常返回／1预期越界），只是实验清单，不是完整覆盖率。setup／pilot／拒绝批／静态study不相加；空来源hit-events单独仍是静态与模型自检。真实Human perception、1238／2123与live12到期的155次新作者批待终态冻结与独审；不禁用racial推进时钟。主循环884／Windows原生／完整一局仍为0。
 
 固定138的[属性计算10569组](reports/2026-11-02-stats0138.md)、[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)、[默认构造162次](reports/2026-11-02-initial-state0138.md)及其独审保留各自窄域；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)仍是静态证据。它们均不等于138／139连续流程或Windows原生验收。
 

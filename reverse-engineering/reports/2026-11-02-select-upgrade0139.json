@@ -1,0 +1,1741 @@
+{
+  "status": "author_frozen_pending_different_author_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "original_WASM_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "comparison": "evidence/select-upgrade139-oracle-20261102T101111.568452Z/comparison.json",
+  "comparison_sha256": "ca822cc51e9340587cb6c2d5f3bdcb51585db246ca2282682b316ca29f37781c",
+  "formal_cases": 19,
+  "unique_input_cases": 18,
+  "full1108_calls": 19,
+  "full4677_calls": 19,
+  "full1093_calls": 19,
+  "setup2945_calls": 19,
+  "setup1600_calls": 19,
+  "target_entries_with1108": 57,
+  "gain_select_target_entries_only": 38,
+  "setup_entries": 38,
+  "new_original_entries_with_setup": 95,
+  "actual_variant_selection_counts": {
+    "upgrade": 18,
+    "new": 1
+  },
+  "reachable_first_cleave_upgrade_keys": 17,
+  "upgrade_key_coverage": [
+    {
+      "tier": 0,
+      "kinds": [
+        0
+      ]
+    },
+    {
+      "tier": 0,
+      "kinds": [
+        1
+      ]
+    },
+    {
+      "tier": 1,
+      "kinds": [
+        0
+      ]
+    },
+    {
+      "tier": 1,
+      "kinds": [
+        1
+      ]
+    },
+    {
+      "tier": 1,
+      "kinds": [
+        2
+      ]
+    },
+    {
+      "tier": 2,
+      "kinds": [
+        0
+      ]
+    },
+    {
+      "tier": 2,
+      "kinds": [
+        1
+      ]
+    },
+    {
+      "tier": 2,
+      "kinds": [
+        2
+      ]
+    },
+    {
+      "tier": 3,
+      "kinds": [
+        0
+      ]
+    },
+    {
+      "tier": 3,
+      "kinds": [
+        1
+      ]
+    },
+    {
+      "tier": 3,
+      "kinds": [
+        2
+      ]
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        0,
+        1
+      ]
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        0,
+        2
+      ]
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        1,
+        0
+      ]
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        1,
+        2
+      ]
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        2,
+        0
+      ]
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        2,
+        1
+      ]
+    }
+  ],
+  "natural_appseed_input_search": {
+    "kind": "independent_model_input_search_only",
+    "last_seed_inclusive": 4923,
+    "required_upgrade_keys": [
+      {
+        "tier": 0,
+        "kinds": [
+          0
+        ]
+      },
+      {
+        "tier": 0,
+        "kinds": [
+          1
+        ]
+      },
+      {
+        "tier": 1,
+        "kinds": [
+          0
+        ]
+      },
+      {
+        "tier": 1,
+        "kinds": [
+          1
+        ]
+      },
+      {
+        "tier": 1,
+        "kinds": [
+          2
+        ]
+      },
+      {
+        "tier": 2,
+        "kinds": [
+          0
+        ]
+      },
+      {
+        "tier": 2,
+        "kinds": [
+          1
+        ]
+      },
+      {
+        "tier": 2,
+        "kinds": [
+          2
+        ]
+      },
+      {
+        "tier": 3,
+        "kinds": [
+          0
+        ]
+      },
+      {
+        "tier": 3,
+        "kinds": [
+          1
+        ]
+      },
+      {
+        "tier": 3,
+        "kinds": [
+          2
+        ]
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          0,
+          1
+        ]
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          0,
+          2
+        ]
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          1,
+          0
+        ]
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          1,
+          2
+        ]
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          2,
+          0
+        ]
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          2,
+          1
+        ]
+      }
+    ],
+    "found_keys": [
+      {
+        "tier": 0,
+        "kinds": [
+          0
+        ],
+        "input": {
+          "app_seed_u64": "41",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 0
+        }
+      },
+      {
+        "tier": 0,
+        "kinds": [
+          1
+        ],
+        "input": {
+          "app_seed_u64": "25",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 0
+        }
+      },
+      {
+        "tier": 1,
+        "kinds": [
+          0
+        ],
+        "input": {
+          "app_seed_u64": "84",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      },
+      {
+        "tier": 1,
+        "kinds": [
+          1
+        ],
+        "input": {
+          "app_seed_u64": "9",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 2
+        }
+      },
+      {
+        "tier": 1,
+        "kinds": [
+          2
+        ],
+        "input": {
+          "app_seed_u64": "56",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 0
+        }
+      },
+      {
+        "tier": 2,
+        "kinds": [
+          0
+        ],
+        "input": {
+          "app_seed_u64": "107",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 2
+        }
+      },
+      {
+        "tier": 2,
+        "kinds": [
+          1
+        ],
+        "input": {
+          "app_seed_u64": "162",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      },
+      {
+        "tier": 2,
+        "kinds": [
+          2
+        ],
+        "input": {
+          "app_seed_u64": "30",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      },
+      {
+        "tier": 3,
+        "kinds": [
+          0
+        ],
+        "input": {
+          "app_seed_u64": "26",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      },
+      {
+        "tier": 3,
+        "kinds": [
+          1
+        ],
+        "input": {
+          "app_seed_u64": "13",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      },
+      {
+        "tier": 3,
+        "kinds": [
+          2
+        ],
+        "input": {
+          "app_seed_u64": "234",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 0
+        }
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          0,
+          1
+        ],
+        "input": {
+          "app_seed_u64": "1405",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 2
+        }
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          0,
+          2
+        ],
+        "input": {
+          "app_seed_u64": "1021",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          1,
+          0
+        ],
+        "input": {
+          "app_seed_u64": "4088",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 0
+        }
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          1,
+          2
+        ],
+        "input": {
+          "app_seed_u64": "704",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 0
+        }
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          2,
+          0
+        ],
+        "input": {
+          "app_seed_u64": "4923",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 2
+        }
+      },
+      {
+        "tier": 4,
+        "kinds": [
+          2,
+          1
+        ],
+        "input": {
+          "app_seed_u64": "1",
+          "amount": 5,
+          "dead_mask": 0,
+          "select_index": 1
+        }
+      }
+    ],
+    "fullopening_RNG_crosschecks": 2,
+    "first_upgrade_card_input": {
+      "app_seed_u64": "25",
+      "amount": 5,
+      "dead_mask": 0,
+      "select_index": 0
+    },
+    "original_program_reads": false,
+    "actual_functions_executed": false,
+    "complete_model_expectations_regenerated_for_everyselected_input": true
+  },
+  "no_original_output_used_for_expectation": true,
+  "all_world_owners_retained": true,
+  "differences": 0,
+  "counts": {
+    "assertions": 116230,
+    "known_player_fields": 285,
+    "background_known_bytes": 113988,
+    "background_None_bytes": 66588,
+    "background_nonzero_None_bytes": 48177,
+    "live_known_bytes": 456,
+    "live_None_bytes": 152,
+    "live_nonzero_None_bytes": 152,
+    "full_opening_packets": 1444,
+    "selected": 19,
+    "phase2": 19
+  },
+  "source_files": 44,
+  "production_sources": 33,
+  "source_import_edges": 128,
+  "static_functions": 29,
+  "tables139": {
+    "5405004": [
+      1043878380,
+      1048576000,
+      1051595899,
+      1055622431,
+      1059481190
+    ],
+    "5405040": [
+      1032805417,
+      1036831949,
+      1040522936,
+      1043207291,
+      1047233823
+    ],
+    "5405076": [
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "5405112": [
+      1039516303,
+      1043878380,
+      1048576000,
+      1051931443,
+      1056964608
+    ],
+    "5405148": [
+      1041865114,
+      1046562734,
+      1050253722,
+      1053609165,
+      1058642330
+    ]
+  },
+  "runtime": {
+    "cases": 19,
+    "fresh_instances": 19,
+    "full_calls": {
+      "1093": 19,
+      "1108": 19,
+      "1600": 19,
+      "2945": 19,
+      "4677": 19
+    },
+    "world_source_checks": [
+      {
+        "instance": 1,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 4,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 5,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 6,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 7,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 8,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 9,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 10,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 11,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 12,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 12,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 12,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 12,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 12,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 13,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 13,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 13,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 13,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 13,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 14,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 14,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 14,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 14,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 14,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 15,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 15,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 15,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 15,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 15,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 16,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 16,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 16,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 16,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 16,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 17,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 17,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 17,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 17,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 17,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 18,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 18,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 18,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 18,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 18,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 19,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 19,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 19,
+        "phase": "before_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 19,
+        "phase": "after_gain",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 19,
+        "phase": "after_select",
+        "ranges": 2318,
+        "unchanged": true
+      }
+    ],
+    "target_and_setup_returns": [
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 4677,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1093,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "stack_checks": 190,
+    "allocator_calls": 95,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "old_Game_used_as_target": false,
+    "readiness_flags_injected": false,
+    "explicit_dead_marker_fixtures": true,
+    "full2181_internal_calls_notinstrumented": true,
+    "full26364_35988_25613_calls_notinstrumented": true,
+    "App_or_world_Rc_producer_executed": false,
+    "externref_restored": false,
+    "native_executions": 0,
+    "full_mainloop_frames": 0,
+    "complete_games": 0,
+    "error": null
+  },
+  "process": {
+    "pid": 83709,
+    "pgid": 83709,
+    "exit_code": 0,
+    "seconds": 5.951797499999884,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "model_source_guards": 8,
+  "first_card_router_input_cases": 2,
+  "pilot": {
+    "path": "evidence/select-upgrade139-oracle-20261102T100555.869084Z/comparison.json",
+    "sha256": "07824c9859a5d4e92d36a50a81aced699b920401d1920475caf3fb7ead36dd50",
+    "original_entries_with_setup": 5,
+    "not_added_to_formal": true
+  },
+  "setup_failures": [
+    {
+      "path": "evidence/select-upgrade139-static/setup-import-failure.json",
+      "original_executions": 0
+    },
+    {
+      "path": "evidence/select-upgrade139-static/unreachable-search-setup/failure.json",
+      "original_executions": 0,
+      "reason": "Incorrect18thkeytier0kind2;currentfirsttier0onlykind0/1"
+    }
+  ],
+  "research_original_entries_with_setup": 100,
+  "old_v1_v2_unchanged": true,
+  "native_executions": 0,
+  "full_mainloop_frames": 0,
+  "complete_games": 0,
+  "limitations": [
+    "Currentfirstcleaveonly:constructorrank1/count0/neutraladditionalmodifierproducer;notrepeated/saturated/otherabilityupgrades.",
+    "Originalfull1108/newGameonlegalv2resource-onlypostbegincontext;notnaturalApp/Rc/externref/bootstrap.",
+    "XP5explicitawardinput;notrealcollectioninthisbatch. All19actualthreecardscomedirectlyfromfull4677/2181;nogeneratedcardoverrides/redraw/coercion.",
+    "17reachablekeys: tier0kind0/1;tiers1..3kind0/1/2;tier4sixorderedtwo-kindpairs. Type0kind2in25511numericdomainexistsbutnotreachablefromfirst2181tier0candidate.",
+    "All4NPC/2Rune/windows/4special/69boundaryheads/backingrawstrictlypreserved;Noneunfilled.",
+    "UI/appearance/additionalkeys/completepostgrowthpackets/Aura48/physicalBTree/allocatorremainobservations.",
+    "Gold/otherselectionkinds/activeNPCstopresume/nonemptylive32recalc/mainloop/native/fullgamepending."
+  ]
+}

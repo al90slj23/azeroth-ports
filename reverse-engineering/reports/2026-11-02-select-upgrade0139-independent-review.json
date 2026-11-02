@@ -1,0 +1,232 @@
+{
+  "status": "pass_current139_first_cleave_ordered_upgrade_selection",
+  "reviewer": "/root/collection139_finish",
+  "author": "/root/growth139_world",
+  "reviewer_source": "scripts/review_select_upgrade139.py",
+  "reviewer_source_sha256": "c78695fa9a680b8d08dfe4e5fefe2ffda7a5dfea3274af6a50cc4fa9c080dba6",
+  "review_file": "evidence/select-upgrade139-independent-review-owned-20261102T102534.860130Z/review/review.json",
+  "review_sha256": "7e34119c200f9b3cab666f98ad4acab6c17085d206e8044bfc4ec0c2050ede88",
+  "comparison_sha256": "ca822cc51e9340587cb6c2d5f3bdcb51585db246ca2282682b316ca29f37781c",
+  "author_handoff_sha256": "8020a8bf852698f553f56052d87261559f13630d6898590e2c11d321765e5f85",
+  "author_files_untouched": true,
+  "formal_cases": 19,
+  "unique_inputs": 18,
+  "full1108_calls": 19,
+  "full4677_calls": 19,
+  "full1093_calls": 19,
+  "target_entries": 57,
+  "setup2945_calls": 19,
+  "setup1600_calls": 19,
+  "source_files": 44,
+  "production_sources": 33,
+  "source_edges": 128,
+  "current_bound_functions": 36,
+  "upgrade_table_pointers": [
+    "5405004",
+    "5405040",
+    "5405076",
+    "5405112",
+    "5405148"
+  ],
+  "actual_variants": {
+    "upgrade": 18,
+    "new": 1
+  },
+  "reachable_upgrade_keys": [
+    {
+      "tier": 0,
+      "kinds": [
+        0
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 0,
+      "kinds": [
+        1
+      ],
+      "cases": 2
+    },
+    {
+      "tier": 1,
+      "kinds": [
+        0
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 1,
+      "kinds": [
+        1
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 1,
+      "kinds": [
+        2
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 2,
+      "kinds": [
+        0
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 2,
+      "kinds": [
+        1
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 2,
+      "kinds": [
+        2
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 3,
+      "kinds": [
+        0
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 3,
+      "kinds": [
+        1
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 3,
+      "kinds": [
+        2
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        0,
+        1
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        0,
+        2
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        1,
+        0
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        1,
+        2
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        2,
+        0
+      ],
+      "cases": 1
+    },
+    {
+      "tier": 4,
+      "kinds": [
+        2,
+        1
+      ],
+      "cases": 1
+    }
+  ],
+  "counts": {
+    "selected40_known": 760,
+    "openingGame_known": 10564,
+    "openingGame_None": 38684,
+    "openingGame_nonzero_None": 4366,
+    "full_opening_packets": 1444,
+    "projection_fields": 741,
+    "known_player_fields": 285,
+    "raw_tree_captures": 57,
+    "derived_values": 1311,
+    "owned80_bytes": 4640,
+    "background_full_bytes_conserved": 180576,
+    "background_known": 113988,
+    "background_None": 66588,
+    "background_nonzero_None": 48177,
+    "phase2_three_cards": 19,
+    "candidate_rows": 57,
+    "live32_known": 456,
+    "live32_None": 152,
+    "live32_nonzero_None": 152
+  },
+  "reviewer_original_executions": 0,
+  "reviewer_author_production_checker_builder_executions": 0,
+  "owned_review": {
+    "directory": "evidence/select-upgrade139-independent-review-owned-20261102T102534.860130Z",
+    "terminal": {
+      "pid": 21470,
+      "pgid": 21470,
+      "exit_code": 0,
+      "seconds": 3.600392500000453,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "terminal_sha256": "3c239ee996b959d63df5193f63f68f4c951b4f4abaa88bdae96a19c8d26749b2"
+  },
+  "preserved_wrong_18th_key_search": {
+    "file": "evidence/select-upgrade139-static/unreachable-search-setup/failure.json",
+    "sha256": "55bc77c9bb490cd8fcc658787c3eb5ca10892b9af6f982bc50c07bf413a41051",
+    "content": {
+      "status": "input_search_target_mistake_preserved",
+      "last_seed_inclusive": 16383,
+      "targets_requested": 18,
+      "targets_found": 17,
+      "missing_key": [
+        0,
+        [
+          2
+        ]
+      ],
+      "original_executions": 0,
+      "reason": "First current1392181 tier0 upgrades choose only kinds0/1;kind2 is not reachable at tier0",
+      "source_sha256": {
+        "reconstruction/core_spec/select_upgrade139.py": "e37862a3bcd4b9f0059b2a0ff04d3d8614735f37d787d250b686b05394238b6f",
+        "scripts/check_select_upgrade139.py": "608d71093b282354144f4a426ac4dceb5df71546e80cd05398a3562286e0e4ce",
+        "scripts/build_select_upgrade139_oracle.py": "0dfd025aa6b2262ac51ec45aca97e1e134f83bfaaa6ed7f356a7bdd2bfb72107",
+        "scripts/run_select_upgrade139_oracle.mjs": "d5fbc20f67971b860b451c1e56dc1972e36e839eaa71c05cf4dbf846d340f374"
+      }
+    },
+    "new_original_calls": 0
+  },
+  "limits": [
+    "Explicit5XP award afteractualfull1108;not naturaldrop/collection inthismatrix.",
+    "Currentfirstconstructorcleave only;full80orderedrank/count/value/tail arithmetic checked,not repeated/saturated/otherability upgrade theorem.",
+    "17actualreachablekeys are2tier0+9tier1..3+6orderedtier4;25511table3/4staticdata bound butnot dynamicallyselected byfirstcleave.",
+    "All19actualcards derive fromfull4677/2181 andgivenseeds;model-only4923search metadata checked butsearch not reexecuted or counted asoriginal.",
+    "Legalv2post1108resource-onlycontext/newGame;independentraw-derivedcanonicalworld,notnaturalApp/Rc/externref/bootstrap.",
+    "Live32payload12..19 remainsNone;fullgrowth/UI/Aura48/physicalheap/allocator/extra keyed fields/packetstreams remainobservations.",
+    "No new original executions byreviewer;oldv1/v2receipts reused onlyasfrozenpure reference helpersreboundtocurrentbodies/data,not transferred acceptance.",
+    "ActiveNPC/aux/claims/nonemptylive statrecalculation/mainloop/nativeWindows/network/save/fullgame remainunknown."
+  ]
+}
