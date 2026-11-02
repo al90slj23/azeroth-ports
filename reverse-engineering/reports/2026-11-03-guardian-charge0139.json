@@ -1,0 +1,261 @@
+{
+  "kind": "current139_guardian_first_aggro_timer_and_charge_author9",
+  "status": "author_fresh_original_match_pending_independent_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "formal_directory": "reverse-engineering/evidence/guardian-charge139-full-20261102T172227.559733Z",
+  "artifacts": {
+    "comparison.json": "d4624d5d7b96664fdc0c08ab38f70343fd5c420408772697589ada9a074f184d",
+    "prepared.json": "c2e4c49c73369ed937959d8e257a9fade9a76cd083aaa0456178441e44602bf6",
+    "manifest.json": "52acadd8cf827c4e59eebc7811859dd65aa1ac12fe6076438e6be9a71b2df8cd",
+    "expected.json": "9b3d42d2eb9df726dd6161acb441166e837f5044a3350d73d7c78581b98fcb79",
+    "inputs.json": "280712daca5a098d9d089c68ada572770b6c3921d118bfb35efec271f544a70b",
+    "config.json": "fd5ea5b6bdbcd1cc0cd7011428b09e129df3ffb8faed5099a8ca7ad1e2f297b7",
+    "expectation-read-audit.json": "9ffb40a8f8e822a899fc0b6561baace7d3cb510ed86bbdd7cea5abf2b0f45693",
+    "actual.jsonl": "bf9957c46c211ada2511fe521c033e09c2d775c3bdbae95cda266320576ca669",
+    "runtime.json": "413bb170291c248f0a472236679f30161e16c82f7227a1dd9cfde08813dc4bd6",
+    "owned-start.json": "78390022e7a8e08547fdd8f8aedfa6dae84d73855e837a61ad74e2baf2e4bd20",
+    "owned-terminal.json": "15f4f34b31507708a65c05fbbd63b74abd4ae9020fbe18d89fc88a7f943ef82b",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "static/guardian-trace.json": "a9be81257b1594d2ad99f99b96858fad04a2452876a549d680899c96173e9d27",
+    "static/charge-dispatch-proof.json": "f68e40a7b0a6a27513391d5a23e0179f1419f8e2af72a5477a2bef1fdd21fe20"
+  },
+  "counts": {
+    "assertions": 876636,
+    "special40_known": 28944,
+    "special40_None": 3216,
+    "special40_nonzero_None": 3216,
+    "NPC432_known": 509256,
+    "NPC432_None": 175032,
+    "NPC432_nonzero_None": 156618,
+    "full925": 96,
+    "internal916_actions": 2,
+    "aggro": 2,
+    "incoming_contacts": 4,
+    "known_packets": 80,
+    "known_packet_bytes": 3766,
+    "NPC_unknown_copy": 84864,
+    "unowned_Game_bytes": 237312,
+    "history_None": 15616,
+    "history_nonzero_None": 13704,
+    "history_known": 4352,
+    "effects_known": 618,
+    "effects_None": 2262,
+    "effects_nonzero_None": 2010,
+    "deferred_known": 150,
+    "deferred_None": 1194,
+    "deferred_nonzero_None": 1032,
+    "full38553": 3,
+    "scheduled_launched": 0,
+    "effect120_produced": 2,
+    "deferred56_produced": 2,
+    "all_NPC_retained": 24
+  },
+  "formal_fresh_instances": 3,
+  "formal_target_entries": {
+    "full925": 96,
+    "full38553_empty_control": 3
+  },
+  "formal_setup_entries": {
+    "full2945": 3,
+    "full1600": 3,
+    "full1108": 3,
+    "full2372": 3
+  },
+  "all_direct_entries": 111,
+  "full916_direct_entries": 0,
+  "source_conditioned_internal916_actions": 2,
+  "source_conditioned_internal916_actions_not_separate_instrumented_counter": true,
+  "corpus": [
+    {
+      "app_seed_u64": "0",
+      "home_index": 0,
+      "full925": 46,
+      "genuine_actions": [
+        {
+          "index": 45,
+          "actions": [
+            {
+              "unit_index": 4,
+              "ability_index": 0,
+              "ability_pointer": 5892772,
+              "raw40_hex": "64000000000000000000000000000000000000000000000000000000000000000000000000070000"
+            }
+          ]
+        }
+      ],
+      "control": "Explicit20s2372clock and playerHomeX+15; .1sAIcomponentsteps"
+    },
+    {
+      "app_seed_u64": "1",
+      "home_index": 3,
+      "full925": 46,
+      "genuine_actions": [
+        {
+          "index": 45,
+          "actions": [
+            {
+              "unit_index": 7,
+              "ability_index": 0,
+              "ability_pointer": 5892772,
+              "raw40_hex": "64000000000000000000000000000000000000000000000000000000000000000000000000070000"
+            }
+          ]
+        }
+      ],
+      "control": "Explicit20s2372clock and playerHomeX+15; .1sAIcomponentsteps"
+    },
+    {
+      "app_seed_u64": "5",
+      "home_index": null,
+      "full925": 4,
+      "genuine_actions": [],
+      "control": "Explicit20s2372clock with playercenter idlecontrol"
+    }
+  ],
+  "source": {
+    "files": 105,
+    "production_files": 86,
+    "edges": 409,
+    "current_full_bodies": 162,
+    "author_sources_frozen_before_original": {
+      "reconstruction/core_spec/guardian_ai139.py": "c6042fadc8fec91c91a0ef6f1da9d76b2dae2a28fa0891c03616dcd3a5e6de18",
+      "reconstruction/core_spec/guardian_ai139_data.py": "bf0c85661a57021b021ac52b6e3bb425d2afd925fd745cc3bc0eeffc7e593214",
+      "reconstruction/core_spec/guardian_charge139.py": "200b4c1b2040f87bb5c11a50e5e1165c5b7a8c6da6844d58e726252cb281b039",
+      "scripts/trace_guardian_charge139.py": "7c8b2c074c775037731a8b64aeea7029154700bb4c6bac1c7d7a8df16c28f12a",
+      "scripts/build_guardian_charge139_oracle.py": "c9be4cf9a815438783400b6b1cbdc4993312ef0ca08434041d648a62fe798a7a",
+      "scripts/check_guardian_charge139.py": "4f1ecd441812dd5d0b3d738c62a3d9854a487176ca8596dfd350d8602508e9cb",
+      "scripts/run_guardian_charge139_oracle.mjs": "5c67424dd87a990b0b48af3ba954b927747a0c3d58ae523728cd14003ac3def8"
+    },
+    "export_only_module": "8c059549e64befc41223a1d845b90c1e2e14bce8a4f19417544501ac7663a54f",
+    "only_export_section_changed": true,
+    "ABI": {
+      "full925": [
+        "Game_i32",
+        "dt_f32"
+      ],
+      "full916": [
+        "Game_i32",
+        "unit_index_i32",
+        "skill40ptr_i32"
+      ],
+      "full38553": [
+        "Game_i32"
+      ]
+    },
+    "dispatch": {
+      "rawtag": 7,
+      "normalized": 4,
+      "selector": 3,
+      "br_depth": 23,
+      "target_block_open_line": 235,
+      "target_block_end_line": 5539,
+      "branch_start_line": 5540,
+      "branch_end_line": 5761,
+      "record_param_words_not_read": true,
+      "cast_duration_bits": 1065353216,
+      "effect_shape": 2,
+      "effect_damage": "f32(attack+attack)",
+      "deferred_function": 64899,
+      "deferred_stride": 56,
+      "not_called_in_rawtag7": [
+        68224
+      ]
+    }
+  },
+  "independently_produced_expectation": {
+    "expected_before_original": true,
+    "original_input_contains_expected": false,
+    "forbidden_model_reads": [],
+    "raw_original_model_reads": false,
+    "preparsed_world": "Existing independently-produced canonical139 world artifacts; separate raw-to-world acceptance, not a new resource producer",
+    "world_receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48"
+  },
+  "validation": {
+    "full925_packets": 80,
+    "full925_packet_bytes": 3766,
+    "setup2372_packets": 15,
+    "setup2372_packet_bytes": 2271,
+    "all_complete_compared_packets": 95,
+    "all_complete_compared_packet_bytes": 6037,
+    "packet_opcode_counts_full925": {
+      "221": 70,
+      "330": 4,
+      "169": 2,
+      "150": 2,
+      "305": 2
+    },
+    "payload_capacity_and_packet_vector_growth": true,
+    "all_8_NPC_retained_each_fixture": true,
+    "initial_4_NPC_not_relocated": true,
+    "all_4_real_Guardians_timer_owners_retained": true,
+    "first_aggro_hp_refresh_and_name_notice": true,
+    "first_100_charge_at_step_index45": true,
+    "positive_Guardian_incoming_contacts": 4,
+    "effect120_records_produced": 2,
+    "deferred56_records_produced": 2,
+    "scheduled32_records_produced": 0,
+    "full38553_is_empty_control": true,
+    "full920_calls": 0,
+    "deferred_consumer_calls": 0,
+    "physical_unknown_not_filled": true,
+    "unowned_game_bytes_guarded": 237312,
+    "NPC_unwritten_copy_bytes_guarded": 84864
+  },
+  "specification": [
+    "Run actual2945/1600/1108 on a new Game with appseed. Advance explicitGame2352 to20, execute actual2372 without readiness/object/HP/RNG/timer patches; it produces all4Guardians plus the original4NPC.",
+    "Full925 advances genuine3timer heap owners only while Guardianengaged. Source44B records andHPphase52 records are bound to the current originaldata; other skills/phase/leash remain explicitPending.",
+    "Firstaggro queuesGUID; current925 refreshes HP288/max292 andattack296 via16381/42922 after the action drain, then emits169(values22/28) and150(rawGUID, Englishname, localizedengage). This order and both complete payloads/capacities are matched.",
+    "Rawskilltag7 normalizes to4, then the switch subtracts1. Actualselector3→depth23→case5540..5761. It reads spell100, not zero parameter words, projects playerXYZ, extends the ray6units, clips navigation via47161/30179, reprojects height58587 and measures max(distance,4).",
+    "Charge calls21112 withstopduration=1+distance/40 and62654 withcastduration1; common32071 extendsGuardian100castlock. Effect120 shape2 has lengthdistance, widthclamp(U312*1.2,4,7), duration1 and damagef32(attack+attack). It does not immediately apply damage.",
+    "64899 appends a56B due(now+1) action whose40B copied payload has endpointXYZ and tag35. Only source-initialized bytes are known; other scratch/padding/unusedbacking remainNone. The source branch does not call68224 and leaves scheduled32 empty.",
+    "Full38553 executes separately at the next controlledclock and preserves both nonempty120B/56B owners. It is an empty scheduled32 control, not acceptance of a natural68224 producer or of either future consumer."
+  ],
+  "rejected_prior_pilot": {
+    "directory": "evidence/guardian-charge139-pilot-20261102T171552.736844Z",
+    "comparison_sha256": "257eb5e88a0b341fa04da21645a704a71d4ffd5c573b50b2c3126c8e6ec6fabb",
+    "differences": 97,
+    "cause": "rawtag7normalized4selector3 was mistaken for selector4; source switch subtraction omitted",
+    "not_counted": true
+  },
+  "passing_pilot_excluded": {
+    "directory": "evidence/guardian-charge139-pilot-20261102T172120.974272Z",
+    "comparison_sha256": "02417e7cf124ead6cc33de39e5593ddf0ba21a381b2017771cc5f201032862fd",
+    "full925": 46,
+    "new_formal_targets_replayed": true
+  },
+  "correction": {
+    "cause": "Omitted the selector subtraction and took adjacent depth2 branch; wrong source mapping, not an engine bug.",
+    "old_expected_shape3_zero_damage_not_accepted": true,
+    "failed_actual_not_used_to_fill_expectation": true,
+    "new_model_derived_from_complete_current916_controlflow": true,
+    "stale_trace_module_docstring": "The frozen tracer module one-line docstring still says120/32; its executable trace.dispatch/constructor_deferred/source proofs and this report explicitly establish120/56. The 32Bscheduled owner remains an emptycontrol."
+  },
+  "static_assistance": {
+    "aggro_notes": "evidence/guardian-aggro139-static-20261102T171254.378340Z/notes.json",
+    "aggro_notes_sha256": "53ad7d589b5b8b3f2b3d3cff51ec856698251e74434671c00d6e909ddab227ac",
+    "additional_original_executions": 0
+  },
+  "process": {
+    "pid": 49666,
+    "pgid": 49666,
+    "exit_code": 0,
+    "seconds": 0.8572385830048006,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime_receipt_sha256": "413bb170291c248f0a472236679f30161e16c82f7227a1dd9cfde08813dc4bd6",
+  "unknowns": [
+    "Full920effect consumer and56B deferredtag35 consumer; no actualCharge effect damage/arrival yet.",
+    "OtheractualGuardian skills,HPphase transitions,leash/timerreallocation,Guardian damage/death/reward and nondefault scaling.",
+    "Natural20scombat pipeline, all14stages in one884caller, completeframe/nativeApp/renderer/network/fullgame.",
+    "Fullincoming1076callbacks/wholeheap/2077physicalcontainers and allocator address prediction."
+  ],
+  "research_results_separate_from_packaging": true,
+  "old_frozen_sources_modified": false,
+  "new_original_executions_during_report_generation": 0,
+  "full884_frames": 0,
+  "native_windows_executions": 0,
+  "complete_games": 0
+}

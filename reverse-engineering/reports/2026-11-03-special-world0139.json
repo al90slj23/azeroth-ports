@@ -1,0 +1,259 @@
+{
+  "status": "author_fresh_differential_pass_pending_independent_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "formal_evidence": "evidence/special-world139-full-20261102T162951.190698Z",
+  "comparison_sha256": "5b0382d7d7c1c2959208a9a2190e0ba699d77436342a0acde32e702a2b7c35db",
+  "prepared_sha256": "976e97e331b5acf21e2127776153560aab58096540390f593254e00d128898f8",
+  "formal_calls": {
+    "fresh_instances": 3,
+    "full2372": 15,
+    "setup2945": 3,
+    "setup1600": 3,
+    "setup1108": 3,
+    "all_direct_entries": 24,
+    "player2123": 0,
+    "enemy925": 0,
+    "scheduler952": 0,
+    "full884": 0
+  },
+  "cases": [
+    {
+      "app_seed": 0,
+      "steps": [
+        0.1,
+        19.9,
+        20.0,
+        20.1,
+        30.1
+      ],
+      "last_step_player": "Follows actual special1 XYZ after its true Guardian activation; other times original center."
+    },
+    {
+      "app_seed": 1,
+      "steps": [
+        0.1,
+        19.9,
+        20.0,
+        20.1,
+        30.1
+      ],
+      "last_step_player": "Follows actual special1 XYZ after its true Guardian activation; other times original center."
+    },
+    {
+      "app_seed": 5,
+      "steps": [
+        0.1,
+        19.9,
+        20.0,
+        20.1,
+        30.1
+      ],
+      "last_step_player": "Follows actual special1 XYZ after its true Guardian activation; other times original center."
+    }
+  ],
+  "counts": {
+    "assertions": 71511,
+    "special40_known": 1968,
+    "special40_None": 432,
+    "special40_nonzero_None": 432,
+    "special_unknown_copy_bytes": 432,
+    "units432_known": 30420,
+    "units432_None": 11052,
+    "units432_nonzero_None": 9969,
+    "existing_NPC_bytes_conserved": 36288,
+    "Game_unowned_bytes_conserved": 38025,
+    "full2372": 15,
+    "Guardian_creates": 12,
+    "known_packets": 21,
+    "known_packet_bytes": 2571,
+    "RNG_draws": 40
+  },
+  "source_closure": {
+    "files": 95,
+    "production": 80,
+    "import_edges": 360,
+    "current_bodies": 28,
+    "all_current_source_snapshot_before_after_SHA_match": true,
+    "expected_before_original": true,
+    "original_input_contains_expected": false,
+    "forbidden_model_reads": [],
+    "AST_python": 5,
+    "Node_syntax": 1,
+    "all_six_singleLF": true
+  },
+  "declarations": [
+    [
+      9,
+      5831552,
+      "00000000000000000000000000000000ccf858001100000061020000a300000085eb014007000000000016440000904100000040cdccac4019000000000040410000604001000000",
+      "Kobold Taskmaster",
+      5899360,
+      "a4ea5900030000000400000000000000040000000000000061020000",
+      5892772,
+      [
+        "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041",
+        "8500000003000000000060400000e040cdcccc3f9a99993f000000000000000000000000000a000000002041",
+        "0400000000000000000000000000000000000000000000000000000000000000000000000005000000007041"
+      ]
+    ],
+    [
+      10,
+      5831624,
+      "00000000000000000000000000000000ddf858000f00000062020000f6000000295ccf3f01000000000048440000b041cdcccc3f3333d3401c000000000050410000004101000000",
+      "Gruff Swiftbite",
+      5899388,
+      "28eb5900030000000400000000000000040000000000000062020000",
+      5892904,
+      [
+        "5022590002000000cdcccc3f0000000000000000000000000000000000000000000000000012000000003041",
+        "b43b00000000e0400000b4420000803f3333b33f00000000000000000000000000000000000800000000e040",
+        "0300000000000000000000000000000000000000000000000000000000000000000000000005000000008041"
+      ]
+    ],
+    [
+      11,
+      5831696,
+      "00000000000000000000000000000000ecf858000900000063020000790100007b143e400100000000007a440000d0419a9919400000a0401e000000000060410000504101000000",
+      "Bellygrub",
+      5899416,
+      "aceb590003000000040000000000000048ec59000100000063020000",
+      5893036,
+      [
+        "455000000000e0406666a63f0000404100000000000000000000000000000000000000000013000000001041",
+        "7c190000000000000000a04000000000cdcccc3f9a99993f0000c0409a99993e00000000000b000000004041",
+        "6400000000000000000000000000000000000000000000000000000000000000000000000007000000001041"
+      ]
+    ]
+  ],
+  "constructor_special_flags": {
+    "selected392": 0,
+    "target396": null,
+    "navigation2564": 1,
+    "announced2565": 0,
+    "stamp2392": 0
+  },
+  "constructor_scaling_sources": {
+    "difficulty387": "T475←profile371 within376Bcopy, caller zero supplies0",
+    "field1092": "T1180←scratch2815..2818, covered byi64zero2811 theni64copy2812→1177"
+  },
+  "restored_rules": [
+    "Complete2372 first checks actualprotection2576/count, then visits each complete40Bspecial record in source order. ZeroGUID marker and inclusive now>=due triggers production; nothing is cleared or bypassed.",
+    "Actualfull1108 produces4specialrecords9/10/11/9withdue20. The.1call chooses first total-order tied inactive due and sends complete548lair-empty notice;19.9is suppressed without mutation.",
+    "Exact20.0 creates allfourGuardians in originalrecord order using current16381HP/42922attack/1586fieldpacket formulas, raw72definition scale1.35, real RNG/yaw/variantloop/counter, complete432knownNone physicalallocation and full169.",
+    "Current33347 returns realheaders5899360/5899388/5899416 and3current44Bability declarations each. Originalallocates a3f32timerbuffer initialized to half each ability+40cooldown; the pointer staysNone in independentrecord+68, while logicaltimer values/capacity/count and staticability/headerpointers are compared.",
+    "Specialmarker becomes1 andGUID8is stored; selected392is cleared by production, then active target is minimum total-order currentXYdistance. Center selects special2;at30.1explicitplayerfollows special1 and selectionchanges to1.",
+    "Navigation2564/selection392/target396/announced2565/laststamp2392 implement current300s suppression. This matrix covers defaultnavigation1, freshnotice, duplicatequiet andrealactive-targetchange, noteveryoptionalnavigation/timebranch.",
+    "WholeexistingNPCrecords andinactivephysicalbacking remain unchanged;special40unwrittenGUID/paddingstayNoneandtheir actualbytesare conserved. Only2372ownedGameoffsets are allowed to change, with complete rawGameunownedbytes verified.",
+    "Actualprofile371=0 suppliesGame387difficulty through376Bprofilecopy. Game1092is initialized bypackedT2811zero→T2812load→T1177store bytes3..6. Additionalcurrent1600flags bind392=0,2564=1,2565=0,2392=0;396is unwritten/None untilSome target. Driver asserts actualsourcevalues and injectsnone."
+  ],
+  "scalar_domain": {
+    "first_milestone_minute_bits": 1077936128,
+    "first_milestone_HP_bits": 1163984896,
+    "zone136_bits": 1062333317,
+    "zone_multiplier2516_bits": 1065353216,
+    "difficulty387": 0,
+    "field1092": 0,
+    "victory400": 0,
+    "endless2568": 0,
+    "mode2582": 0,
+    "player_level": 1
+  },
+  "complete_packets": {
+    "count": 21,
+    "bytes": 2571,
+    "all_opcode_payload_order_exact": true,
+    "notice548_capacities_predicted_exact64": 9,
+    "create169_capacity179_observations_only": 12,
+    "observed_packet_capacity_histogram": {
+      "548:64": 9,
+      "169:179": 12
+    },
+    "other_game_packet_stream": false
+  },
+  "timer_owner": {
+    "new_buffers": 12,
+    "logical_f32_values": 36,
+    "capacity_each": 3,
+    "known_static_headers": [
+      5899360,
+      5899388,
+      5899416
+    ],
+    "known_static_ability_arrays": [
+      5892772,
+      5892904,
+      5893036
+    ],
+    "distinct_observed_heap_pointers_each_instance": [
+      4,
+      4,
+      4
+    ],
+    "heap_pointer_numeric_values_predicted": false
+  },
+  "process": {
+    "pid": 23386,
+    "pgid": 23386,
+    "exit_code": 0,
+    "seconds": 20.447792582999682,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "runtime": {
+    "cases": 3,
+    "fresh_instances": 3,
+    "stack_checks": 39,
+    "allocator_calls": 15,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "old_Game_used_as_target": false,
+    "App_or_world_Rc_producer_executed": false,
+    "NPC_definition_HP_position_status_or_storage_writes": false,
+    "HP_RNG_readiness_source_or_flag_injections": false,
+    "explicitclock_and_playerfollow": true,
+    "other_main_stages_not_executed": true,
+    "native_executions": 0,
+    "full_mainloop_frames": 0,
+    "complete_games": 0,
+    "output_bytes": 1332671,
+    "error": null
+  },
+  "source_identity": {
+    "original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "module_sha256": "8130d2a4926e7d9d6ed46f85578dd524829e3259e05e14ce0a9fd900e4b4751a",
+    "only_exports_changed": true,
+    "resource_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "world_ranges_unchanged": 2318,
+    "host_imports_denied": 882,
+    "actual_host_calls": 0
+  },
+  "separate_pilot": {
+    "path": "evidence/special-world139-pilot-20261102T162811.573057Z/comparison.json",
+    "sha256": "976ca946b338eebcf44a3ecbda7589f8ad3a1e45c545dd8fbb600a782794036d",
+    "fresh_instances": 1,
+    "full2372": 5,
+    "Guardian_creates": 4,
+    "differences": 0,
+    "added_to_formal": false
+  },
+  "earlier_incomplete_setup": "Earlier tuple/list declaration admission assertion occurred before original process launch; retained setup directory remains unaccepted and is not counted.",
+  "limits": [
+    "Controlledclock sequence to30.1 and oneplayerfollow;notnatural30seconds/mainframe.",
+    "Complete2372 firstdue20/4Guardian source only;noGuardianAI/skills/death,nondefaultscaling,respawn150beyond21.",
+    "Timerheap pointerNonewithlogical3timerowner;staticheader/abilitypointersbound,physicalallocationpointernotpredicted.",
+    "Thethree seeds are fixed rather than selected from captured results. Constructor/opening are actual butresourceWorldRcbootstrap/App itself is still separate.",
+    "Controlledclock jumps and oneplayerfollow are explicitcomponents, not natural30seconds or continuouswhole14stageframe. Earlierlate14observation is not counted as independentacceptance.",
+    "ProducedGuardians have nonordinary3timer/sourceheaders, notordinary64=-1. Their925AI/abilities/contact/procs/death/rewards require new recovery; this experiment doesnotrunGuardiansAI.",
+    "Dueinactiveclock>21localized150respawn remains Pending. Nondefaultdifficulty/items/group/endless, randomabilityvariants, nonfinite/NaN targetordering and exact300s suppression boundary are not dynamically covered.",
+    "9noticepayloadcapacities64are independently predicted;12createpacketcapacity179and12timerheappointerallocations are observed only. Wholeheap/BTree/allocatoridentity is not rebuilt.",
+    "0.139.1remains separate;full884/App/nativeWindows/render/UI/network/completegame0. Existingapps/APKs/saves/Android/wrapper/Gitare unchanged."
+  ],
+  "new_original_runs_during_freeze": 0,
+  "full884_frames": 0,
+  "native_windows_executions": 0,
+  "complete_games": 0
+}
