@@ -1,0 +1,303 @@
+{
+  "status": "pass_v2_explicit_research_input_original_context_observation_only",
+  "legal_context_gate_passed": true,
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/stats138_review",
+  "evidence": {
+    "path": "evidence/entry-world139-v2-independent-review-20261102T031929.466664Z/review.json",
+    "sha256": "77bf86b8bddde893f394c678699560b9da0e840388e01293835f2c3bb37473ee"
+  },
+  "owned_receipt": {
+    "path": "evidence/entry-world139-v2-review-owned-20261102T031926.655137Z/process-terminal.json",
+    "sha256": "8e2055f57a32f503805ece41e02539608aafdd32bcbc197d8be005a4c9d31bc0"
+  },
+  "script": {
+    "path": "scripts/review_entry_world139_context_v2.py",
+    "sha256": "11ac5bd8e481ec7f2c880125cfdf29258d14aadeec0b86031a6bbb5a54502a43"
+  },
+  "author_receipt_sha256": "36372f365f9831045a0dab80f1948f445ceda653992a145a03bc051255813eb8",
+  "author_handoff_sha256": "87ea5a716b81829e568f6bc4788e93c84309bd292ba179a6e53e67ac56558a19",
+  "observer_sha256": "42a5b6c17ffa0a51e947c1da972aa75521793a48e4f2f2a2540de7e1ae889162",
+  "source_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "original_code": {
+    "only_export7_changed": true,
+    "official_JS_prefix_bytes": 187604,
+    "official_JS_prefix_byte_identical": true,
+    "only_research_bindings_appended": true
+  },
+  "corrected_2945_output": {
+    "function": 2945,
+    "required_minimum_output_bytes": 36,
+    "allocated_total_bytes": 72,
+    "explicit_return_bytes": 40,
+    "before_canary_bytes": 16,
+    "after_canary_bytes": 16,
+    "written_bytes": 30,
+    "first_local0_rebind_line": 1204,
+    "stores": [
+      {
+        "relative_line": 1161,
+        "instruction": "f32.store offset=24",
+        "offset": 24,
+        "width": 4
+      },
+      {
+        "relative_line": 1164,
+        "instruction": "i32.store8 offset=33",
+        "offset": 33,
+        "width": 1
+      },
+      {
+        "relative_line": 1167,
+        "instruction": "i32.store8 offset=32",
+        "offset": 32,
+        "width": 1
+      },
+      {
+        "relative_line": 1170,
+        "instruction": "i32.store8 offset=12",
+        "offset": 12,
+        "width": 1
+      },
+      {
+        "relative_line": 1173,
+        "instruction": "i32.store offset=8",
+        "offset": 8,
+        "width": 4
+      },
+      {
+        "relative_line": 1176,
+        "instruction": "i32.store8 offset=4",
+        "offset": 4,
+        "width": 1
+      },
+      {
+        "relative_line": 1179,
+        "instruction": "i32.store",
+        "offset": 0,
+        "width": 4
+      },
+      {
+        "relative_line": 1182,
+        "instruction": "f32.store offset=28",
+        "offset": 28,
+        "width": 4
+      },
+      {
+        "relative_line": 1185,
+        "instruction": "i32.store offset=20",
+        "offset": 20,
+        "width": 4
+      },
+      {
+        "relative_line": 1188,
+        "instruction": "i32.store offset=16",
+        "offset": 16,
+        "width": 4
+      },
+      {
+        "relative_line": 1193,
+        "instruction": "i32.store8 offset=35",
+        "offset": 35,
+        "width": 1
+      },
+      {
+        "relative_line": 1198,
+        "instruction": "i32.store8 offset=34",
+        "offset": 34,
+        "width": 1
+      }
+    ],
+    "inactive_padding_offsets": [
+      5,
+      6,
+      7,
+      13,
+      14,
+      15
+    ],
+    "written_outside_return40": [],
+    "selection_output": {
+      "allocation": 14694088,
+      "allocation_bytes": 72,
+      "return_pointer": 14694104,
+      "return_minimum_bytes": 36,
+      "return_explicit_bytes": 40,
+      "return36_hex": "00000000ffa5a5a500000000ffa5a5a50000000000000000000000000000000000000000",
+      "return40_hex": "00000000ffa5a5a500000000ffa5a5a50000000000000000000000000000000000000000a5a5a5a5",
+      "return40_before_hex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "before16_hex": "c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3",
+      "after16_hex": "d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7",
+      "before16_expected_hex": "c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3",
+      "after16_expected_hex": "d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7d7",
+      "profile_copied_prefix_bytes": 16
+    },
+    "legal_output_allocation": true
+  },
+  "verified_context": {
+    "source_files": 10,
+    "source_edges": 9,
+    "current_and_snapshot_unchanged": true,
+    "component_chain": [
+      "entry139_load_account",
+      "entry139_companion_selection",
+      "entry139_construct_world_game",
+      "entry139_begin_run"
+    ],
+    "original_component_calls": 4,
+    "malloc_calls": 6,
+    "all10exportentry_stacks_restored": true,
+    "import_count": 882,
+    "allowed_imports": 24,
+    "actual_import_IDs": 16,
+    "actual_host_calls": 3396,
+    "denied_calls": 0,
+    "resource_requests": 561,
+    "resource_unique_paths": 454,
+    "resource_non200": 0,
+    "resource_files_rehashed": 454,
+    "resource_bytes": 85332479,
+    "resource_coherence_chain": [
+      {
+        "receipt": "originals/entry-assets139-20261102T022112.817796Z/receipt.json",
+        "sha256": "e596ced6b0716f36b1a6527827668557ede58663ea293f31cf92fae2aead5f82",
+        "status": "failed_preserved",
+        "requests": 308,
+        "decoded_bytes": 66319760,
+        "metadata_sha256": "125ece3f7e83f265f7bf5ec8ef33cb7fe52c6bec7fcf590efab91a5ea6fe243f"
+      },
+      {
+        "receipt": "originals/entry-assets139-20261102T022605.629039Z/receipt.json",
+        "sha256": "a31f66918a631de8dd36270735bad010cd20cf8754cd72ee1970a88c0358b5b0",
+        "status": "failed_preserved",
+        "requests": 147,
+        "decoded_bytes": 20481621,
+        "metadata_sha256": "125ece3f7e83f265f7bf5ec8ef33cb7fe52c6bec7fcf590efab91a5ea6fe243f"
+      },
+      {
+        "receipt": "originals/entry-assets139-20261102T022818.157124Z/receipt.json",
+        "sha256": "7aec47c1ce5b6d58f2374878e2f6877e95de4784aed7837a21a2075ecf97ea92",
+        "status": "fresh_official139_candidate_resource_set_acquired",
+        "requests": 16,
+        "decoded_bytes": 2049777,
+        "metadata_sha256": "125ece3f7e83f265f7bf5ec8ef33cb7fe52c6bec7fcf590efab91a5ea6fe243f"
+      }
+    ],
+    "capture_chunk_POSTs": 276,
+    "capture_bytes_total": 288882688,
+    "captures": [
+      {
+        "file": "after_real_world6786.memory",
+        "bytes": 111804416,
+        "sha256": "ed3a755752ddf9907712b408f7ef042f5a9407d684d0aa6afd3f0a394bbd7ce2",
+        "phase": 0,
+        "counter": 10,
+        "counts": {
+          "NPC": 0,
+          "companions": 0,
+          "pickups": 0,
+          "special": 0,
+          "windows": 0,
+          "boundaries": 0
+        },
+        "packet_count": 0,
+        "notification_count": 0,
+        "worldRc": 20544696,
+        "worldRc_prefix_counts": [
+          2,
+          1
+        ],
+        "locale_Once": 3,
+        "locale_count": 14,
+        "locale_pointer": 21119048,
+        "spell_Once": 0
+      },
+      {
+        "file": "after_real_begin1108.memory",
+        "bytes": 177078272,
+        "sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+        "phase": 1,
+        "counter": 85,
+        "counts": {
+          "NPC": 4,
+          "companions": 0,
+          "pickups": 2,
+          "special": 4,
+          "windows": 2,
+          "boundaries": 69
+        },
+        "packet_count": 76,
+        "notification_count": 1,
+        "worldRc": 20544696,
+        "worldRc_prefix_counts": [
+          2,
+          1
+        ],
+        "locale_Once": 3,
+        "locale_count": 14,
+        "locale_pointer": 21119048,
+        "spell_Once": 3
+      }
+    ],
+    "all_six_vector_backings_and_all_packet_notification_bytes_match": true
+  },
+  "original_process": {
+    "pid": 24683,
+    "pgid": 24683,
+    "exit_code": 0,
+    "seconds": 24.950947165998514,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "deadline_seconds": 120
+  },
+  "browser_terminal": {
+    "event": "browser_terminal",
+    "pid": 24686,
+    "exit_code": 0,
+    "signal_code": null
+  },
+  "selected_profile_scope": "Research376 input plus real2917→2945 absenttags;A5paddingnotindependentdefaultvalues",
+  "App_producer_complete": false,
+  "worldRc_from_actual6786": true,
+  "independent_world_producer": false,
+  "old_flatV_not_used": true,
+  "account_call_chain": [
+    2917,
+    48446,
+    66941,
+    640
+  ],
+  "Spell4562": "DBFilesClient/Spell.dbc andSpellIcon.dbc resolver;notlocaleproducer",
+  "locale_call_chain": [
+    20060,
+    83304
+  ],
+  "locale_static_embedded_JSON_count": 14,
+  "locale_independent_Once_or_language_producer": false,
+  "discarded_old_gate": {
+    "receipt": "evidence/entry-world139-probe-20261102T023815.931445Z/receipt.json",
+    "sha256": "5d940f9d00f0428327791132f5b9f60df7787348d6fd5a1d50ad840aea1a2964",
+    "restricted_review": "reports/2026-11-02-entry-world0139-context-independent-review.json",
+    "restricted_review_sha256": "23bd3e37c48c5d562ef670486b8bb09652e1ebc83a2984e7d00301a7c12a3ec9",
+    "reason": "2945minimum36B return hadonly16B declaredallocation;oldbytesnotmodifiedandnotadmittedtolegalgate"
+  },
+  "reviewer_original_calls": 0,
+  "reviewer_author_observer_or_acquirer_executions": 0,
+  "reviewer_model_executions": 0,
+  "independent_opening_model_cases": 0,
+  "native_executions": 0,
+  "complete_games": 0,
+  "author_files_modified": false,
+  "public_registry_modified": false,
+  "limits": [
+    "ResearchApp/profile/transportarenotnaturalApp/menu/producers;selectedabsenttags255comeonlyfromreal2917→2945",
+    "InputinactiveA5payloadsremainobservedinputbytes,notindependentknown/defaultzero",
+    "ActualnewRcproducedby6786,butindependentworldproducerandRc/JS/externreflifetimearenotrestored",
+    "24allowedrealJSimports/3396actualhostcalls;thisisnot882denyallnumericoracle",
+    "LocaleOnce3/count14/pointerareobservations;noindependentlanguagechoiceorEnglishproduceraccepted",
+    "Onlypoint-in-timeofficial139manifest/stamp/indexandper-resourceHTTP/hashcoherence;noexternalsignedassetmanifestclaim",
+    "Noindependent1108/continuousgame/win/save/render/UI/network/nativeacceptance",
+    "Previousinitial139zero376fixtureisadifferentprofiledomain;its502knownmaskdidnotpredictcompanioninactive16B",
+    "Phase1windowcount1972=2doesnotmeetearlierdamageempty1972admission;donotsilentlypassasempty"
+  ]
+}

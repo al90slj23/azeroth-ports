@@ -1,0 +1,19 @@
+# 139原件上下文旧批：独审受限，不接受合法context gate
+
+**旧receipt5d940f9d批不得作为合法world/opening上下文验收。** 2945返回对象至少36B，原观察器却仅申请16B输出区。
+
+1392945在local0仍为原输出参数时，12条store写30B，覆盖最大偏移35；直到WAT1204行才首次重绑定local0，此后无store。写入范围16..35共20B超出声明申请区。未证明实际堆破坏，但函数完整返回、后续world成功均不能替代正确调用ABI。原件和旧8作者文件不改，后续合法gate须采用更大输出区与双侧canary的新批。
+
+实际两个前8B槽各为`00000000ffa5a5a5`，其中u32写零、tag255，只有5..7/13..15六个padding字节保留A5。独审最初把这16B误假设为全A5加tag，已按原件写集纠正；没有以观察padding补独立模型已知值。
+
+其余字节观察审计已完成：两份完整内存、6种vector backing及全部packet/notification与只读解析一致；454项85,332,479B资源重新hash，561次资源请求全200；882导入中24允许、16种3396次真实调用；10次export入口栈恢复。官方JS前缀与所有非export7原件段保持原样。这些事实作为受限观察保留，不能使不充分的2945输出缓冲合法化，也不能用作独立开局模型结果。
+
+Account实际链为2917→48446→66941→import640。4562的真实literal是Spell.dbc/SpellIcon.dbc resolver；locale为20060→83304，Once3和14项映射只是观察，没有独立语言生产验收。研究App/profile/transport也不是自然producer。
+
+较早独审中间产物5885只做过byte/resource一致性，未检查完整输出span，原字节保留并由本拒绝gate的收据明确替代其初始通过文字。审查没有执行作者observer、acquirer、model或任何原件。
+
+最终受限收据：`evidence/entry-world139-independent-review-20261102T031112.998117Z/review.json` SHA `ce35ee76010d8aab529418f2d753fe18afbce4ca11800729807c824c89cf81e2`。
+
+独审脚本SHA `d4cb71114b0bf1e0de8cb71f586e9e39bf78da9eebbc1a9167dc028514e434e9`；owned SHA `b3d9c96556d0732e0eaea40dfd6a91e6a407aab39d839e6aee661099c4dc1621`。
+
+机器报告SHA `23bd3e37c48c5d562ef670486b8bb09652e1ebc83a2984e7d00301a7c12a3ec9`。

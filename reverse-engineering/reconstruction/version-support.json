@@ -3608,5 +3608,49 @@
     "full880_frames": 0,
     "native_client_execution": false,
     "complete_games": 0
+  },
+  "entry_world_observational_probe_0139_v2": {
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "status": "reviewed_controlled_original_observation_not_independent_opening_or_naturalApp",
+    "report": "../reports/2026-11-02-entry-world0139-context-v2.json",
+    "report_sha256": "a241401ae46b81dd0774ad05200317e5e1f4e9811f852ee610a49849a3e96de2",
+    "independent_review": "../reports/2026-11-02-entry-world0139-context-v2-independent-review.json",
+    "independent_review_sha256": "e3ea36cd8eb773a142afe400f959ce63e0d45b715512fdc206acbc2c0b736cb1",
+    "receipt": "../evidence/entry-world139-v2-probe-20261102T030946.739944Z/receipt.json",
+    "receipt_sha256": "36372f365f9831045a0dab80f1948f445ceda653992a145a03bc051255813eb8",
+    "App": 14680072,
+    "Game": 14685248,
+    "worldRc": 20544696,
+    "minimum_return2945": 36,
+    "explicit_return_bytes": 40,
+    "allocation_bytes": 72,
+    "canary_each_side": 16,
+    "canaries_verified": true,
+    "world_snapshot": {
+      "file": "../evidence/entry-world139-v2-probe-20261102T030946.739944Z/after_real_world6786.memory",
+      "bytes": 111804416,
+      "sha256": "ed3a755752ddf9907712b408f7ef042f5a9407d684d0aa6afd3f0a394bbd7ce2"
+    },
+    "opening_snapshot": {
+      "file": "../evidence/entry-world139-v2-probe-20261102T030946.739944Z/after_real_begin1108.memory",
+      "bytes": 177078272,
+      "sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0"
+    },
+    "independent_model_cases": 0,
+    "native_windows_execution": false,
+    "full_mainloop_frames": 0,
+    "complete_games": 0,
+    "research_App_and_selected376_inputs": true,
+    "profile_scope_note": "Actual2945 first16 output includes two tag255 slots and six inactiveA5 bytes; this differs from constructor matrix all-zero376 input and is not covered wholesale by its502B mask."
+  },
+  "entry_world_observational_probe_0139_v1_rejected": {
+    "status": "not_accepted",
+    "review": "../reports/2026-11-02-entry-world0139-context-independent-review.json",
+    "review_sha256": "23bd3e37c48c5d562ef670486b8bb09652e1ebc83a2984e7d00301a7c12a3ec9",
+    "minimum2945output": 36,
+    "old_declared_output": 16,
+    "old_evidence_preserved": true,
+    "heap_corruption_proven": false
   }
 }
