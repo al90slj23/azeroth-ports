@@ -1,0 +1,62 @@
+{
+  "kind": "different_author_current139_sameGame_naturalNPC_cast_readonly_review",
+  "status": "accepted_scoped_composition",
+  "reviewer": "self_buffs119_review",
+  "author": "root",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "independent_receipt": "evidence/npc-cast139-independent-review-20261102T052248.233724Z/review.json",
+  "independent_receipt_sha256": "e6146c4a257492ca9599b54029ac46e07f2cd11da9b853d174279520aae88074",
+  "review_script": "scripts/review_npc_cast139.py",
+  "review_script_sha256": "f45ffcd8ff47bbbca1dc677903c3b881eb00e8ddc881a77679ff488db00c3d24",
+  "owned_terminal": "evidence/npc-cast139-independent-review-owned-20261102T052248.109398Z/process-terminal.json",
+  "owned_terminal_sha256": "7af2c0eea093c882667a57f035cfb84c279c72605f62dddb777e1b5e9cc9e90d",
+  "author_comparison_sha256": "5dc6b3586d2a8ffda83cadff7c79b980a10b5f8cccdb0f871131ec3f2ae5c6cb",
+  "author_handoff_sha256": "59ff3c653a57af91ab122f6e5490a323f5ed199e74c4e0d3207859e911bbdeeb",
+  "counts": {
+    "known": 58824,
+    "None": 31032,
+    "nonzero_None": 14664,
+    "NPC_Game_constant_bytes": 81536,
+    "opaque_conserved": 7740,
+    "cast_calls": 20,
+    "selected_hits": 27,
+    "first_cast_inherited_Game_bytes": 20632,
+    "NPC_calls": 32,
+    "new306": 19,
+    "306_bytes": 566,
+    "later_cast_inherited_Game_bytes": 31104
+  },
+  "source_count": 36,
+  "production_source_count": 26,
+  "import_edges": 86,
+  "methodology": "Independently reconstruct constructor-derived actor from current139 static class/race bytes;PCG/default80;rawcanonical world→four8740/5719 interleaved RNG;None-aware unit reads and exact rational binary32 cast math;all declared expected/actual bytes and packet306 independently compared.",
+  "None_handling": "No opaque carrier built or executed by reviewer. Canonical reads assert known;onlyHP288..291 written. CompleteNone locations preserved andactualopaque conservation checked.",
+  "sameGame_continuity": "All2592 NPC after→nextbefore exact;firstcast before inherits all but13 explicitly controlled XYZ/phase bytes;latercast before equalspriorcast after,with RNG/f64/sets/unitvector bindings.",
+  "provenance_boundaries": "8healthy-v2 restores;0new1600/6786/1108. Constructor seed from explicit researchAppseed0LCG,notnaturalApp/profile producer. ScriptedXYZ andphase1 are inputs.",
+  "packet_scope": "32newNPC169 plus19completecleave306(566B);other592/HP169 andGamecontainerallocation areobservations.",
+  "source_guard_scope": "Original runner checks actualG2032/G2056/G1972 empty. General source-owner production/callbacks are notclosed by this consumer batch or by the legacyEmptyDamageSources boolean.",
+  "post_run_hash_limit": "Author comparison freezes pre-runmodule/input/expected/config plus source snapshots,butdoesnot bind post-runstdout/runtime/terminalSHA. Independentreview pins those current bytes asread;notretrofreeze.",
+  "private_carriers": "Author A5/5A two-completion runsonlymodelselfchecks;notoriginalcases/notOSreadAudit.",
+  "original_review_executions": 0,
+  "author_production_checker_builder_review_executions": 0,
+  "current_full_game_accepted": false,
+  "original_counts": {
+    "cases": 8,
+    "full5719": 32,
+    "full922": 20,
+    "world_snapshot_restores": 8
+  },
+  "reviewer_history_preserved": [
+    "evidence/npc-cast139-independent-review-20261102T051950.617286Z/review.json",
+    "evidence/npc-cast139-independent-review-20261102T052112.521591Z/review.json"
+  ],
+  "limitations": [
+    "8 restored healthy-v2 consumer fixtures,not fresh1600/6786/1108 or naturalApp.",
+    "PlayerXYZ relocation andphase1 are explicit inputs,not AI/input/motion.",
+    "Four gentle fixtures setowned multiplier0.1 for repeats;default secondlethal remains pending.",
+    "Complete306 andknown432bytes are predicted;other592/169,physical Game/container state remain observations.",
+    "Independent canonicalreader usesNone-aware reads directly;author A5/5A carriers are modelselfchecks only.",
+    "Author comparison binds pre-runartifacts but not post-runstdout/runtime;review pins current bytes asread without retrofreezing."
+  ]
+}

@@ -1,0 +1,1112 @@
+{
+  "status": "author_scoped_differential_passed_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "evidence_directory": "evidence/opening-aux139-flat-oracle-20261102T050802.301653Z",
+  "comparison_sha256": "1031dcfdfa3ba42a8ca6ac9ae14c4c5298a3fc4a78d4cfc13b8c308c398d90d3",
+  "original_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "cases": 36,
+  "complete_target_calls": {
+    "actor1886": 16,
+    "random13563": 26,
+    "pickup1446": 34,
+    "total": 76
+  },
+  "setup_calls": {
+    "selection2945": 36,
+    "constructor1600": 36
+  },
+  "counts": {
+    "assertions": 26134,
+    "constructor_known_bytes": 18072,
+    "constructor_unknown_cells_observed": 75240,
+    "observed_new_vector_pointer_words": 49,
+    "relative_Game_bytes": 196992,
+    "stages": 76,
+    "target_1886": 16,
+    "known_pickup_bytes": 7076,
+    "target_1446": 34,
+    "target_13563": 26,
+    "allocator_unwritten_pickup_cells_observed": 4572
+  },
+  "relative_Game": {
+    "total_observed_and_masked_comparison_bytes": 196992,
+    "strict_known_or_preservation_bytes": 196796,
+    "new_pointer_words_observed": 49,
+    "interpretation": "Every2592-byte source input is captured and preserved except independently predicted writes and explicitly observed new Vec pointer words. Unknown setup-produced inputs are relative conservation,not newly predicted default values."
+  },
+  "source_closure": {
+    "files": 31,
+    "edges": 67,
+    "sources": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+      "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+      "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+      "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+      "reconstruction/core_spec/npc_heading139.py": "680ff998e8e77916a2c976ccc590834ff94fa58b484efbde5e1bf41a9458f229",
+      "reconstruction/core_spec/opening_actor139.py": "f6ceb4b648f993c2ff8508f255051fe6c97cb636295e162af8a4af19dc55603b",
+      "reconstruction/core_spec/opening_aux139_data.py": "4f38958fa24b83cbe7e674d2d659442c65fe90eb6daed4f61558fc588cdb150a",
+      "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+      "reconstruction/core_spec/position_math139.py": "79fe9a84dba5fa4f1f7828c4b018d9045f7b653e573e270c0051e7131c64265a",
+      "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+      "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "reconstruction/core_spec/world_position139_data.py": "872dd5d3701cb1344f1a838e2c992117d1f84b844e0d09a0e2d0b9dc32831b81",
+      "reconstruction/core_spec/world_position139_v2.py": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+      "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+      "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+      "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+      "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+      "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+      "scripts/build_opening_aux139_oracle.py": "287b1604b43a052c49e43f083c0f378991e061ae39eea02dbc2c0cf427daa850",
+      "scripts/check_opening_aux139_flat.py": "cfd34660a626712e342abc7ce133a3f65a944d3da7a2d2c218dc5349e57679f5",
+      "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/run_opening_aux139_flat_oracle.mjs": "be1da149dec882bf36949ce5e2dcbd838eb51b1e3cd6be3199f4762b2f34898a",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+      "scripts/trace_opening_aux139.py": "679ebc678f7741bbb79fde000531e87a467194b991ada593243bd1f3514ccfed",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    }
+  },
+  "author_sources": {
+    "reconstruction/core_spec/opening_actor139.py": "f6ceb4b648f993c2ff8508f255051fe6c97cb636295e162af8a4af19dc55603b",
+    "reconstruction/core_spec/opening_aux139_data.py": "4f38958fa24b83cbe7e674d2d659442c65fe90eb6daed4f61558fc588cdb150a",
+    "scripts/build_opening_aux139_oracle.py": "287b1604b43a052c49e43f083c0f378991e061ae39eea02dbc2c0cf427daa850",
+    "scripts/run_opening_aux139_flat_oracle.mjs": "be1da149dec882bf36949ce5e2dcbd838eb51b1e3cd6be3199f4762b2f34898a",
+    "scripts/check_opening_aux139_flat.py": "cfd34660a626712e342abc7ce133a3f65a944d3da7a2d2c218dc5349e57679f5"
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "cases": 36,
+    "full_calls": {
+      "1446": 34,
+      "1600": 36,
+      "1886": 16,
+      "2945": 36,
+      "13563": 26
+    },
+    "fresh_instances": 36,
+    "host_calls": 0,
+    "denied_imports": 882,
+    "allocator_calls": 289,
+    "stack_guards": 437,
+    "target_and_setup_returns": [
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1886,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 13563,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1446,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "peak_memory_bytes": 20709376,
+    "memory_cap_bytes": 33554432,
+    "heap_cap_mib": 512,
+    "output_bytes": 875014,
+    "original_snapshot_loaded": false,
+    "world_input": "explicit borrowedflatquery128,header5A/tagAbsent/flat1;notRcproducer",
+    "profile_source": "explicit368account fourempty sources→actual2945prefix16→explicit376→actual1600",
+    "typed_path_none_and_velocity0": true,
+    "App_produced": false,
+    "resource_or_world_bootstrap_executed": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "process": {
+    "pid": 40765,
+    "pgid": 40765,
+    "exit_code": 0,
+    "seconds": 2.318022583000129,
+    "deadline_seconds": 90,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "scope": "Fresh2945→1600 setup with typedborrowedflatquery;full1886 actor and actual13563→1446 two-kind2 linked state/RNG/counter/record56/full169 bytes.",
+  "actor_API": {
+    "module": "core_spec.opening_actor139",
+    "function": "create_world_actor139(entry,display,scale_bits,xyz,kind21,flags9,counter,rng_words)",
+    "result": "ActorResult139(create{guid,xyz_bits,yaw_bits,fields,payload169},counter,rng_words,draws)",
+    "source_function": 1886,
+    "source_body_sha256": "7307a96d26652424b521a57769caa076118a3fa1b0f5fa767015ae9665fdf458",
+    "fields": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21
+    ],
+    "packet_opcode": 169,
+    "callee_guid_fields": 24602,
+    "callee_encode": 27165,
+    "callee_packet": 51773
+  },
+  "pickup_API": {
+    "function": "append_kind2_pickup139(xyz,amount,world,rng_words,counter,now_bits,vector) / create_initial_kind2_139(playerXYZ,world,RNG,counter)",
+    "kind": 2,
+    "cap_domain": "active count below5;opening starting count0",
+    "record_stride": 56,
+    "record_unwritten_word4": "None after new allocation;preserves actual caller-provided bytes when preallocated",
+    "amount_order": [
+      2,
+      1
+    ],
+    "position_radii": [
+      18,
+      50
+    ],
+    "position_dependency": "corrected world_position139_v2",
+    "position_model_sha256": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+    "clamp": "Actual1446 calls50441 hypot,limit zoneRadius120-2=118;this differs from13563 directf32sqrt norm.",
+    "other_kinds_0_1_not_recovered_here": true
+  },
+  "source_boundary": "Actual2945prefix16→explicit selected376→fresh1600 Game. World is an explicit borrowed128B flatquery view,not a forged Rc producer. Velocity0/pathNone are declared inputs;counter/RNG default preserved or explicitly controlled.",
+  "input_hash": "d9f665e215f565f5330b83d1a79200b94213fa747c4c37d71434d5b84f370206",
+  "expected_hash": "f6b98e80031004e4fffb6849ffefa844bcddd495c6a8743c077a8442b7fe1d17",
+  "prototype_refactor": {
+    "directory": "evidence/opening-aux139-flat-oracle-20261102T050606.856474Z",
+    "comparison_sha256": "358e178cf51a305d54d0b981b6c8d7c0de957d93624b76dfeacee0a08b668e45",
+    "same_inputs_and_expected_bytes": true,
+    "reason": "Actor/rune/vector primitives separated from unverified future windows/special/boundary code so their source closure can remain frozen.",
+    "old76calls_not_added": true
+  },
+  "pilot": {
+    "directory": "evidence/opening-aux139-flat-oracle-20261102T050513.033721Z",
+    "comparison_sha256": "5b3b92ef4f0b26cb603f7bf070d5f320c10344b759274ad8267d896b910d7f7c",
+    "target_calls": 7,
+    "included_in_formal76": false
+  },
+  "failed_preparation": {
+    "directory": "evidence/opening-aux139-flat-oracle-20261102T050400.969919Z",
+    "original_calls": 0,
+    "reason": "Explicit flat WorldQueries input initially omitted required None fields;fixed before any original execution and fresh batch prepared."
+  },
+  "limitations": [
+    "Typedflatquery is not a natural Rc/world producer;current139 actual nonflat world composition remains separate.",
+    "Velocity0/pathNone are explicit inputs;no App/menu/accountStorage producer.",
+    "2945/1600 setup is not counted as new independent constructor/profile acceptance.",
+    "Mode0 kind2 count<5 only;other pickup kinds/cap replacement/deathcallbacks excluded.",
+    "Allocator-unwritten record56 cells stayNone;payload pointer/capacity observations are retained without claiming an allocator reconstruction.",
+    "Full1108/windows/special/boundaries and complete gameplay are not exercised here.",
+    "opening_aux139.py windows/special/boundaries remains separateWIP and is excluded from this frozen actor closure.",
+    "502 constructor known bytes per fixture reuse independent139 model as setup;prior162constructor/85position cases are not added.",
+    "Generic kind0/1 pickup/death branches are owned by a separate pending module,not accepted by this kind2 result.",
+    "No complete1108/natural4NPC/raw-resource nonflatworld composition is claimed."
+  ],
+  "frozen_artifacts": {
+    "fixtures.json": "395c703d8569d56ef1d314527ade58c25cd80d7da65e5da0626df8de75cadf31",
+    "inputs.json": "d9f665e215f565f5330b83d1a79200b94213fa747c4c37d71434d5b84f370206",
+    "expected.json": "f6b98e80031004e4fffb6849ffefa844bcddd495c6a8743c077a8442b7fe1d17",
+    "manifest.json": "bc6465ca5302c179b68e8d5d77fad79196763f7ea0575fac5cd4351489a0b5ad",
+    "opening-aux139-original-exports.wasm": "047f2e6c63afa362f39fdec0597da6fd2afbf8d110d0bc4fe3b16a02e4c2fa59"
+  },
+  "artifacts": {
+    "actual.jsonl": "888a2e714c84a51db055043f46f7a5d088c2708e187459215673a0b21ccdb44c",
+    "runtime.json": "a21351e4c44b365216608245d1e21d5ee50ab49c1aab1d6ccfe6a54ae17a8ab7",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepared.json": "a48993f89eb4e12c8ed81af1b25e66d8f53c40c0b74c87b1d77c5934592208e4",
+    "owned-terminal.json": "9647c12c0c0cbda25c668a82357beb84f7651b33141a3349de63147acdaee735",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "static/trace.json": "177944dfd37f685c0feab54f1feeeb67019fa481779eb4188a5729029a6b2d03"
+  },
+  "full1108_calls": 0,
+  "complete_games": 0,
+  "native_runs": 0,
+  "old_acceptance_transferred": false
+}

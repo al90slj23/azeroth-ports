@@ -1,0 +1,13 @@
+# Current139 opening actor/kind2 independent review
+
+**Passed within the declared flat-query component domain.** A different author independently recomputed36 fixtures:16 complete1886 actor calls,26 complete13563 position calls and34 complete1446 kind2 calls. All observed return GUIDs,positions,ordered RNG/counters,169 packet payloads and known56B record cells match.72 real2945/1600 setup calls remain setup;they are not new constructor/profile acceptance cases.
+
+The independent reference uses freshly read139 class/race/zone data,standard PCG/xoshiro and struct-based binary32 operations. Earlier independent-review constructor/trig/hypot helpers are frozen and rebound to current139 bodies/inputs;no author production,builder,checker or original program was executed. The default flat/no-nav13563 fixture always accepts its first18..50 radius trial because its source and ground Z match;this does not transfer acceptance to nonflat worlds.
+
+The review independently checks packet field masks,packed GUIDs/counter wrapping,yaw/quaternion fields,kind2 radial limit118 and terrain height replacement.7076 known pickup byte occurrences match;4572 cells remain None,including87 actual nonzero observations.49 new vector pointer words are observed addresses;the other196796 relative Game byte occurrences compare strictly. Prior packet payloads and metadata remain unchanged across appends. These are observations/conservation,not physical allocator reconstruction.
+
+The setup's502-byte constructor projection is independently recomputed per case,18072 known bytes total;75240 other Game bytes remain observations. The selected40 output is reconstructed with30 writes and preserved padding. Explicit368B account→actual2945prefix16→explicit376 profile and borrowed128 flat-query inputs are not natural account/menu/App/world producers. Account/profile/query conservation is a frozen runner assertion;full before/after raw profile buffers were not separately serialized.
+
+Current source and export-only module are independently parsed:882 imports/177101 defined bodies,all nonexport sections unchanged,exact seven added exports including unexecuted1108. The148 recorded target/setup returns restore stack1048576;allocator stack guards remain aggregate runner assertions. No full1108 or native/full-game acceptance is inferred.
+
+Evidence: `evidence/opening-actor139-independent-review-owned-20261102T051924.529530Z/review/review.json`, SHA `16a7c272b8925c36807d2ffcbfe3e05e8ce64c40d60d511ef7445f392eee5493`.Owned read-only reviewer69898 exited0 with PID/group absent,5.314s,and unchanged reviewer source. All7 frozen author files are unchanged.
