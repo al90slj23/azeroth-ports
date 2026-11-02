@@ -1,0 +1,245 @@
+{
+  "version": "0.139.1",
+  "build": "b89633f9b",
+  "kind": "1390_to1391_static_incremental_role_and_declaration_study",
+  "status": "static_author_study_complete_pending_independent_review_not_behavior_acceptance",
+  "old_version": "0.139.0",
+  "old_build": "f79c5e2b4",
+  "old_WASM_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "new_WASM_sha256": "8831b4a21314cefd0b9f56dcb5681ac822a9ee30770ab1acae473f9e8f2aec71",
+  "initial_mapping": "evidence/engine139-to1391-static-20261102T134518.177179Z/mapping.json",
+  "initial_mapping_sha256": "95ac375a570addfd1ea9b2be62db1fdc9fb0c252bedf6703bc1bfa19894f2be6",
+  "refined_mapping": "evidence/engine1391-refined-static-20261102T134726.927557Z/mapping.json",
+  "refined_mapping_sha256": "bc7d702aedfb762bec50929d277f0374fdc74c5121d19dfc25b9328768117e42",
+  "data_delta": "evidence/engine1391-data-delta-20261102T135030.000122Z/delta.json",
+  "data_delta_sha256": "600f7d5e34e1f17838883d69294ec773e16fe90ce453bb643b4381a1e82930d1",
+  "bridge_comment_audit": "evidence/engine1391-data-delta-20261102T135030.000122Z/bridge-comment-audit.json",
+  "bridge_comment_audit_sha256": "847aa2e6fb48391085b93d452f2b57f22f122c63740cdfde28f00f6eb38b9ebf",
+  "bounded_roles": 30,
+  "unresolved_roles": [],
+  "complete_normalized_structure_equal_roles": 15,
+  "changed_or_non_equal_normalized_roles": 15,
+  "current_role_bindings": {
+    "player": 2119,
+    "owned_effects": 981,
+    "hits": 1777,
+    "area": 3756,
+    "effects": 920,
+    "deadline": 38568,
+    "secondary": 2622,
+    "collect": 2889,
+    "terminal": 49975,
+    "stats": 1542,
+    "owned_tick": 1238,
+    "player_aura": 1173,
+    "proc_event": 992,
+    "fatal_transition": 5656,
+    "network_peer_route_helper": 2101,
+    "application_tick": 884,
+    "extra": 924,
+    "ai": 925,
+    "claims": 2589,
+    "spawn": 950,
+    "special": 2376,
+    "cast": 922,
+    "outgoing_damage": 913,
+    "incoming_damage": 1075,
+    "cached_world_construct": 6801,
+    "network_decode": 971,
+    "constructor": 1601,
+    "player_motion": 2348,
+    "opening": 1108,
+    "select_ability": 1092
+  },
+  "new_main14": {
+    "index": 884,
+    "old_index": 884,
+    "roles": [
+      "player",
+      "extra",
+      "owned_effects",
+      "hits",
+      "area",
+      "effects",
+      "deadline",
+      "secondary",
+      "ai",
+      "collect",
+      "claims",
+      "spawn",
+      "special",
+      "terminal"
+    ],
+    "actual_calls": [
+      {
+        "callee": 2119,
+        "wat_line": 176256,
+        "wat_offset": 77427223
+      },
+      {
+        "callee": 924,
+        "wat_line": 176259,
+        "wat_offset": 77427349
+      },
+      {
+        "callee": 981,
+        "wat_line": 176262,
+        "wat_offset": 77427474
+      },
+      {
+        "callee": 1777,
+        "wat_line": 176264,
+        "wat_offset": 77427555
+      },
+      {
+        "callee": 3756,
+        "wat_line": 176266,
+        "wat_offset": 77427637
+      },
+      {
+        "callee": 920,
+        "wat_line": 176269,
+        "wat_offset": 77427763
+      },
+      {
+        "callee": 38568,
+        "wat_line": 176271,
+        "wat_offset": 77427844
+      },
+      {
+        "callee": 2622,
+        "wat_line": 176273,
+        "wat_offset": 77427927
+      },
+      {
+        "callee": 925,
+        "wat_line": 176276,
+        "wat_offset": 77428053
+      },
+      {
+        "callee": 2889,
+        "wat_line": 176278,
+        "wat_offset": 77428134
+      },
+      {
+        "callee": 2589,
+        "wat_line": 176280,
+        "wat_offset": 77428216
+      },
+      {
+        "callee": 950,
+        "wat_line": 176287,
+        "wat_offset": 77428529
+      },
+      {
+        "callee": 2376,
+        "wat_line": 176289,
+        "wat_offset": 77428614
+      },
+      {
+        "callee": 49975,
+        "wat_line": 176292,
+        "wat_offset": 77428732
+      }
+    ],
+    "unique_seven_stage_callers": [
+      884
+    ]
+  },
+  "bound_main14_not_full_main_semantics": true,
+  "static_declarations_equal": 143,
+  "static_declarations_compared": 143,
+  "static_declaration_domains": {
+    "abilities": 114,
+    "classes": 9,
+    "races": 8,
+    "zones": 12
+  },
+  "declaration_scope": "Onlyfourresolvedpointerpairsandallotherliteral88Babilitybytes;listedclass/race/zonefields,notallnestedobjectsor114skillbehaviors",
+  "imports": {
+    "old_count": 882,
+    "new_count": 882,
+    "added": {},
+    "removed": {},
+    "signature_changed": {}
+  },
+  "bridge_raw_complete_bytes_equal": false,
+  "bridge_remaining_bytes_equal_after_exact17_changed_generated_comment_lines_removed": true,
+  "source_files": 8,
+  "local_import_edges": 10,
+  "source_hashes": {
+    "scripts/map_engine1391_incremental.py": "56781b163c2e6e476a307d54f0f531254a761ee48cb80ce90066a44379e95ad4",
+    "scripts/prepare_engine1391_baseline139.py": "f8d48613ab20231dcb930c3592c53dacd940570845cdb3b73940adbde30ac12d",
+    "scripts/refine_engine1391_entry_map.py": "7ed719cc249f60ae745e61f966ac4be9db411b048e84585c91f90a07ec8b6af0",
+    "scripts/trace_engine1391_data_delta.py": "0a09391da3a477f0c2c339dccfd2925b91009b94183cc40e7cc28fe7aca4c709",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm1391_profile.py": "1e8e63ed2294672aa7a435711430636ce21a82ad6d045bd8b83128dee2743994",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "local_edges": [
+    [
+      "scripts/map_engine1391_incremental.py",
+      "scripts/wasm1391_profile.py"
+    ],
+    [
+      "scripts/map_engine1391_incremental.py",
+      "scripts/wasm139_profile.py"
+    ],
+    [
+      "scripts/prepare_engine1391_baseline139.py",
+      "scripts/wasm139_profile.py"
+    ],
+    [
+      "scripts/refine_engine1391_entry_map.py",
+      "scripts/map_engine1391_incremental.py"
+    ],
+    [
+      "scripts/trace_engine1391_data_delta.py",
+      "scripts/map_engine1391_incremental.py"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm1391_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm1391_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "old_full_WAT_scanned": false,
+  "refined_bounded_WAT_bytes": [
+    13996214,
+    14173013
+  ],
+  "initial_new_WAT_seek_bytes": 189719778,
+  "target_executions": 0,
+  "model_executions": 0,
+  "native_executions": 0,
+  "new_behavior_cases": 0,
+  "old_acceptance_transferred": false,
+  "complete_games": 0,
+  "failed_static_path_probe": {
+    "receipt": "evidence/engine1391-data-delta-20261102T134931.335376Z/failed-path-guard.json",
+    "receipt_sha256": "479ee4a3f88e357b84787b68005f20f859026ed5f7f12e4aefe02d2cb3ee6817",
+    "accepted": false
+  },
+  "limits": [
+    "Call/data-normalizedstructurecanhidechangedcallees/dataaddresses;rawdiffsretainedandremaining15notcalledequivalent.",
+    "UniqueABI/literal-parent-context/multi-rolegraphestablishesroleidentitynotbehavior;samemainindex884notusedasproof.",
+    "Browsercomment-onlytextdifferenceand882importsallowstaticbridgecomparison,notfullUI/transportcompatibility.",
+    "Resourcefiles/protocolschemas/saveformat/WindowsABIandall1391runtimebehaviorremaintoverify."
+  ]
+}

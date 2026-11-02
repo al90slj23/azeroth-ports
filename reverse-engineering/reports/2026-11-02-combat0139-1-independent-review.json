@@ -1,0 +1,204 @@
+{
+  "status": "pass_fresh1391_nonlethal913_Fraction_numeric_and_whole432only",
+  "version": "0.139.1",
+  "build": "b89633f9b",
+  "source_sha256": "8831b4a21314cefd0b9f56dcb5681ac822a9ee30770ab1acae473f9e8f2aec71",
+  "author_handoff_sha256": "711f00009f438b8f5195818e9c118ff988f94b0ec547bfb179909fc7d92e35b6",
+  "comparison_sha256": "f599a65f622fa1cbb9896db303c0411ad7bcfbd4222b8a36ed0633137b7aad3b",
+  "reviewer_script_sha256": "f8cf5972b72eabb6830855c13187c8ba585b4503787e3ff182fa88398cdd3592",
+  "frozen_author5": {
+    "scripts/build_combat1391_oracle.py": "0bc3a12d55be86c8bc89f511f104bbba33958cffa8b5b82fbee85d99f1974ee1",
+    "scripts/check_combat1391.py": "2f719fdaf7722cfddc31fcc72c4c170ea3c440fac9c2c7e6a90089be4173151e",
+    "scripts/run_combat1391_oracle.mjs": "86376eb51550423583535e369de05d51fed066d3c76d185d6a45a4b738d1f818",
+    "reports/2026-11-02-combat0139-1.json": "1070effe0173255b8798d669d0533b1e5f60ee66376724de183b2766f677856d",
+    "reports/2026-11-02-combat0139-1.md": "dd29d25528f6a315bf659527b7465ecd3dced8a832fd1bfbb5ad93872927aaa7"
+  },
+  "source_files": 12,
+  "production_files": 4,
+  "source_edges": 16,
+  "sources": {
+    "scripts/check_combat1391.py": "2f719fdaf7722cfddc31fcc72c4c170ea3c440fac9c2c7e6a90089be4173151e",
+    "scripts/build_combat1391_oracle.py": "0bc3a12d55be86c8bc89f511f104bbba33958cffa8b5b82fbee85d99f1974ee1",
+    "scripts/run_combat1391_oracle.mjs": "86376eb51550423583535e369de05d51fed066d3c76d185d6a45a4b738d1f818",
+    "scripts/wasm1391_profile.py": "1e8e63ed2294672aa7a435711430636ce21a82ad6d045bd8b83128dee2743994",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/combat139.py": "4f7f8f00411583608d4c1d8e917733ae1b8068b10ad2f55b63dde675c917fc89",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00"
+  },
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/build_combat1391_oracle.py",
+      "scripts/wasm1391_profile.py"
+    ],
+    [
+      "scripts/check_combat1391.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_combat1391.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_combat1391.py",
+      "reconstruction/core_spec/combat139.py"
+    ],
+    [
+      "scripts/check_combat1391.py",
+      "scripts/build_combat1391_oracle.py"
+    ],
+    [
+      "scripts/check_combat1391.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_combat1391.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm1391_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm1391_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "pure_helpers": {
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9"
+  },
+  "bindings": {
+    "913": {
+      "body_sha256": "c7161a481a2e452cb85358bb3791ff78e0d7cedfd833be565ad116861ed4ef56",
+      "WAT_sha256": "726ed0b33c59a2b904426f188e35727c90562f660cd91638a763564603d6ca9f"
+    },
+    "69552": {
+      "body_sha256": "24679ee82b3a9b6508a0334aab39c5b9e38cfe93b6eecc5d7747b3901b1ae415",
+      "WAT_sha256": "6b55d803c5999118de7e0eb90912d26c16d156f8cf202b3d7f71554e080525f2"
+    },
+    "93365": {
+      "body_sha256": "ab1d07225c6bda7a315f0a9dd471dc00cc788a18bf674a91794fa850c6f24dbe",
+      "WAT_sha256": "fb9db6a30b77858ad571e217abfc807c503cc7ce53a7cb8d433444d5f4ffd504"
+    }
+  },
+  "only_export_section_changed": true,
+  "allocator": {
+    "index": 93365,
+    "type": 6,
+    "signature": [
+      "7f7f",
+      "7f"
+    ]
+  },
+  "counts": {
+    "nonlethal_applied": 118,
+    "HP_fullbits_compared": 118,
+    "nonlethal": 118,
+    "explicit_empty_source_headers": 375,
+    "full432_preservation_bytes": 55296,
+    "raw8192_observation_bytes_not_general_validation": 1024000,
+    "full913_targets": 125,
+    "school372_strictly_active": 3,
+    "phase_guard": 5,
+    "NaN_input_value_category_only": 2,
+    "marker1_guard": 1,
+    "missing_target": 1,
+    "active_first_status": 16,
+    "active_second_status": 12,
+    "fallback_third_status": 12,
+    "phase416_quarter": 1,
+    "phase420_one_point_five": 1,
+    "linked_kind2_quarter": 1
+  },
+  "formal_counts": {
+    "fresh_fixtures": 80,
+    "semantic_unique_inputs": 79,
+    "complete_original913_entries": 125,
+    "full432bytes": 55296,
+    "Windows_application_or_instruction_emulation": 0,
+    "full_game_frames": 0,
+    "reviewer_author_program_executions": 0,
+    "reviewer_original_executions": 0,
+    "differences": 0
+  },
+  "native45B_static_only": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-release-v2-20261102T133059.984802Z/windows-0.139.1/AzerothSurvivors.exe",
+    "sha256": "1c0912276637a41a1a971886bb74626577d021af55a313128f85fdbfcc3b2f1d",
+    "file_matches": [
+      120684464
+    ],
+    "bytes": 45,
+    "executed": false,
+    "full_Native_913_identity_or_ABI_proven": false
+  },
+  "author_process": {
+    "pid": 14308,
+    "pgid": 14308,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 2.335986333000619,
+    "launcher_error": null
+  },
+  "reviewer_audit": {},
+  "expected_json_outputs_read": false,
+  "limits": [
+    "Fresh1391 original functions/inputs and explicit8KBsyntheticGame/initialized432BUnit fixtures only;old139 core reuse is a rule hypothesis not previous runtime acceptance.",
+    "Formal acceptance coversfull432Unit bytes,HP288/f64G984/RNG,vectorheaders/clock/phase/empty sourcecounts. Other8KBGame/stats/events/clientpackets are raw observations,not independently reconstructed.",
+    "Nonlethal/context0/emptyitems/spells/procs/normalbossheader. Lethal/death/rewards,nonempty69552,othercontexts/headers/variants remainPending.",
+    "NaN2 are inputvalue-category cases;JSNumber→WASM NaNpayload/sign not observed or claimed. Theirfiniteclamp1 outputs/HP/total remain exact.",
+    "Native45-byte declarationtail matchonly;no Native function/ABI/gameplay/emulation/Windowsexecution added.",
+    "No real constructor/App/AI/mainloop/world/playerinput/multiplayer/save/UI/fullgame acceptance. Negative modelguard8 are not original-case coverage.",
+    "RawGame8192 inputs are synthetic zeros/quietheaders,not a recovered completeGame schema;unasserted outputfields remainunknown."
+  ],
+  "seconds": 0.9247943749978731,
+  "review_directory": "evidence/combat1391-independent-owned-20261102T141700.693419Z/review",
+  "review_sha256": "4e266e5df6aff61c4209b22193ef6bb7061b9832ca8743ac337e3b4edb4be517",
+  "independent_branch_traces_sha256": "ed5eb8d562762f35229456db1beb8e111e04cadd63e7c9b12ac8f2fbd71cfbc0",
+  "reviewer_owned_terminal": {
+    "pid": 45459,
+    "pgid": 45459,
+    "exit_code": 0,
+    "seconds": 1.0239911249991565,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "source_before_after_same": true
+  },
+  "validation": {
+    "Python_AST_JSON": true,
+    "single_LF_no_trailing_whitespace": true
+  }
+}
