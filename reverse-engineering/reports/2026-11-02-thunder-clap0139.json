@@ -1,0 +1,434 @@
+{
+  "task": "current139_ThunderClap_exec2_effect1_success_damage_slow_death",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "author_differential_pass_independent_review_pending",
+  "complete_game_restored": false,
+  "source_identity": {
+    "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "definition_pointer": 5882916,
+    "spell6343": 6343,
+    "execution2": 2,
+    "effect1": 1,
+    "coefficient1601276_word": 1056964608,
+    "coefficient1601276_value": 0.5
+  },
+  "scope": {
+    "prefix": "admitted resource-only v2 -> fresh2945/1600 -> full1108 -> explicitXP5/full4677 -> first new thunder_clap tier2/full1093",
+    "actual_owned_definitions": [
+      5882740,
+      5882916
+    ],
+    "actual_owned_execution": [
+      5,
+      2
+    ],
+    "selected_live": "kind12/spell1020 actualknown/None retained;no expiry scheduler called",
+    "controlled_inputs": [
+      "player XYZ at natural NPC with optional X offset",
+      "clock2352"
+    ],
+    "NPC_positions_or_HP_edited": false,
+    "background_retained": [
+      "all4NPC owners (damage/slow/death writes only)",
+      "2Rune full physical records",
+      "windows",
+      "4special",
+      "69boundaries",
+      "auxiliary and claims"
+    ],
+    "racial_disabled": false,
+    "source_headers_cleared": false,
+    "initial_counter_contract": {
+      "accounted_total_bits": "0",
+      "spell_totals64": [],
+      "kills1084": 0,
+      "elites1088": 0,
+      "movement_sequence2412": 1,
+      "killcost2420_bits": 0
+    },
+    "initial_counters_checked_not_written": true
+  },
+  "rules": [
+    "922 execution2 is synchronous: prefix attempted spellsets ->27754 area selection ->10490 launch -> for each selected GUID critical RNG ->913 damage/death/reward ->2189 effect1. No pending hit1775 or area3755 is enqueued.",
+    "Radius=quantize(G1580*definition60*(owned24*owned64)); current default radius10, inclusive XY squared distance, stable distance order, marker0 only.",
+    "Base damage rounds each f32 operation: G1540*((definition48*1.4*owned12*owned52*coefficient0.5)+(definition48>0?G1536*owned72:0)). Actual selected tier2 owned12=1.25.",
+    "Each target consumes xoshiro128++ critical sample before913; area branch compares G1548 strictly against 24-bit sample. The current matrix had no positive critical outcome.",
+    "10490 area variant2 encodes ordered target list then targetmask0; it is not the cleave variant0 mask2/firstGUID envelope.",
+    "2189 effect1 is applied after913; if target remains marker!=1 it writes U124=now+definition8*owned68, U120=definition4 and U376=0. Empty actual effect49 source leaves U356 unchanged. Dead target receives no slow.",
+    "Ordinary current913 full-HP empty-profile sources compose the existing139 damage/death rules including f64 totals, per-spell totals, kills, XP/currency pickup generation and RNG. Both actual owned definitions are scanned for execution11 without deleting either.",
+    "1775 empty112B hit owner and3755 empty88B area owner are called after each cast and preserve the full2592B Game. Their nonempty dispatch behavior remains pending."
+  ],
+  "formal_evidence": {
+    "directory": "evidence/thunder-clap139-oracle-20261102T105223.121403Z",
+    "comparison_sha256": "d79779483e6b6bc9aa55c6b67fdb55518ab725cba70057dab4ce42a66677f44f",
+    "fresh_instances": 18,
+    "full922_calls": 47,
+    "empty1775_calls": 47,
+    "empty3755_calls": 47,
+    "prefix_each2945_1600_1108_4677_1093": 18,
+    "all_direct_entries": 231,
+    "differences": 0,
+    "source_files": 54,
+    "production_files": 42,
+    "import_edges": 167,
+    "sources_before_after_current_match": true,
+    "author_prerun_hashes": {
+      "reconstruction/core_spec/thunder_clap139.py": "16c7681d93746427b5472ae0c35979a86e2a25b739426aa0618f45ccfa77f0a6",
+      "scripts/build_thunder_clap139_oracle.py": "bc491cb0d505d94a29de437d4bf5ccc4d661b552e1dec96614cbc61150a7c652",
+      "scripts/check_thunder_clap139.py": "777fed31839954e4a8d2e44e08be8f38aa6d41816dfb0921208e8cd40df032aa",
+      "scripts/run_thunder_clap139_oracle.mjs": "ac16dbe985f71dd498fa6bda7b6fcf28c56d76f53f4133d4cb8f7110b80e657d"
+    },
+    "expected_before_original": true,
+    "original_input_contains_expected": false,
+    "forbidden_model_reads": [],
+    "counts": {
+      "assertions": 93031,
+      "initial_live_known": 432,
+      "initial_live_None": 1872,
+      "initial_live_nonzero_None": 1872,
+      "initial_aura_known": 3672,
+      "initial_aura_None": 10152,
+      "initial_aura_nonzero_None": 8856,
+      "inherited_Game2592_bytes": 121824,
+      "NPC_unknown_physically_conserved": 24204,
+      "NPC_known": 57012,
+      "NPC_None": 24204,
+      "NPC_nonzero_None": 22277,
+      "pickup_known": 5512,
+      "pickup_None": 5016,
+      "pickup_nonzero_None": 4430,
+      "full922": 47,
+      "successful_casts": 34,
+      "damage_calls": 34,
+      "deaths": 4,
+      "slow_write_operations": 90,
+      "known_packets": 38,
+      "known_packet_bytes": 1268
+    },
+    "process": {
+      "pid": 75942,
+      "pgid": 75942,
+      "exit_code": 0,
+      "seconds": 4.231840625001496,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "runtime": {
+      "cases": 18,
+      "fresh_instances": 18,
+      "full_calls": {
+        "922": 47,
+        "1093": 18,
+        "1108": 18,
+        "1600": 18,
+        "1775": 47,
+        "2945": 18,
+        "3755": 47,
+        "4677": 18
+      },
+      "stack_checks": 321,
+      "allocator_calls": 90,
+      "denied_imports": 882,
+      "actual_host_calls": 0,
+      "peak_memory_bytes": 177078272,
+      "memory_cap_bytes": 268435456,
+      "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+      "old_Game_used_as_target": false,
+      "readiness_flags_injected": false,
+      "explicit_dead_marker_fixtures": false,
+      "input_dead_mask_all_zero": true,
+      "full2181_internal_calls_notinstrumented": true,
+      "full26364_35988_25613_calls_notinstrumented": true,
+      "App_or_world_Rc_producer_executed": false,
+      "externref_restored": false,
+      "native_executions": 0,
+      "full_mainloop_frames": 0,
+      "complete_games": 0,
+      "external_clock_components": true,
+      "full922_callees_intact": true,
+      "internal913_2189_notinstrumented": true,
+      "controlled_player_relocation": true,
+      "empty1775_3755_only": true,
+      "output_bytes": 9466736,
+      "error": null
+    },
+    "world_source_checks": {
+      "count": 137,
+      "ranges_each": 2318,
+      "all_unchanged": true
+    },
+    "returned_direct_entries": 231,
+    "all_returns_restore1048576": true,
+    "positive_critical_outcomes": 0,
+    "max_targets_each_cast": 1,
+    "cases": [
+      {
+        "id": 0,
+        "group": "far_no_target",
+        "action": {
+          "npc_index": 0,
+          "offset_x_bits": 1120403456,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 1,
+        "group": "near_first_nonlethal",
+        "action": {
+          "npc_index": 0,
+          "offset_x_bits": 0,
+          "offset_y_bits": 0
+        },
+        "calls": 2
+      },
+      {
+        "id": 2,
+        "group": "first_through_death_then_no_target",
+        "action": {
+          "npc_index": 0,
+          "offset_x_bits": 0,
+          "offset_y_bits": 0
+        },
+        "calls": 8
+      },
+      {
+        "id": 3,
+        "group": "each_natural_NPC_through_death",
+        "action": {
+          "npc_index": 1,
+          "offset_x_bits": 0,
+          "offset_y_bits": 0
+        },
+        "calls": 8
+      },
+      {
+        "id": 4,
+        "group": "each_natural_NPC_through_death",
+        "action": {
+          "npc_index": 2,
+          "offset_x_bits": 0,
+          "offset_y_bits": 0
+        },
+        "calls": 8
+      },
+      {
+        "id": 5,
+        "group": "each_natural_NPC_through_death",
+        "action": {
+          "npc_index": 3,
+          "offset_x_bits": 0,
+          "offset_y_bits": 0
+        },
+        "calls": 8
+      },
+      {
+        "id": 6,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 0,
+          "offset_x_bits": 1092615168,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 7,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 0,
+          "offset_x_bits": 1092616192,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 8,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 0,
+          "offset_x_bits": 1092617216,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 9,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 1,
+          "offset_x_bits": 1092615168,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 10,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 1,
+          "offset_x_bits": 1092616192,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 11,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 1,
+          "offset_x_bits": 1092617216,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 12,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 2,
+          "offset_x_bits": 1092615168,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 13,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 2,
+          "offset_x_bits": 1092616192,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 14,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 2,
+          "offset_x_bits": 1092617216,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 15,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 3,
+          "offset_x_bits": 1092615168,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 16,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 3,
+          "offset_x_bits": 1092616192,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      },
+      {
+        "id": 17,
+        "group": "radius10_X_inclusive_neighbor",
+        "action": {
+          "npc_index": 3,
+          "offset_x_bits": 1092617216,
+          "offset_y_bits": 0
+        },
+        "calls": 1
+      }
+    ],
+    "artifacts_sha256": {
+      "inputs.json": "64da476fb66616b4416809d4ce25058eaea14be4268155970cbdb3716679aafd",
+      "expected.json": "38e6f88d8539a56b214faca30cc19e1ce7f392ddb54400de22efb0ec2e6889b3",
+      "config.json": "091129ef3d68a59a96b09512282e196b8f7f8fc185a50062392ce456a519350c",
+      "manifest.json": "97bfec91f8ab63922f368e1111bd82dbc350278dce53f2af1484acbbab069563",
+      "prepared.json": "dd4d12102abbe4393dae945e4403c452de547e61da119ac585f8397584683d61",
+      "actual.jsonl": "2b09eb7ce295f1ae293ad3068a6d28b2ed1db55058f5429577c702ce2ec3f123",
+      "runtime.json": "e303d2f211b48683bd85e7d8ce3831972131d9e1bd66e8ff99e4c980d3034edb",
+      "owned-start.json": "60a82704437b0827674716e93f10be52b35ff15edcb58a2c09b77db575df2d4f",
+      "owned-terminal.json": "b4fcf4ed2f8ac27f27e73964fe5be688e5eb5a44e5e2969d49097ba772949da5",
+      "expectation-read-audit.json": "a06eeffac5f62ed92077b74ee399253a492588e167d19f6e71a10cef6b9efb8a",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "manifest_sha256": "97bfec91f8ab63922f368e1111bd82dbc350278dce53f2af1484acbbab069563",
+    "static_current_function_bodies": 21,
+    "original_only_export_section_changed": true,
+    "internal913_2189_notinstrumented": true
+  },
+  "static_windows": {
+    "exec2_area27754": "922.wat:824..933",
+    "launch10490": "922.wat:913..959",
+    "damage_then_effect": "922.wat:966..1179",
+    "slow_source49": "2189.wat:38..271",
+    "slow_writes": "2189.wat:589..640",
+    "pending_hits_owner": "1775.wat:13..29",
+    "area_owner": "3755.wat:12..17",
+    "area_targetmask0": "10490.wat:275..438"
+  },
+  "knownness": {
+    "allNPC_None_physically_conserved": 24204,
+    "NPC_known_bytes": 57012,
+    "NPC_None_bytes": 24204,
+    "NPC_nonzero_None_bytes": 22277,
+    "pickup_known_bytes": 5512,
+    "pickup_None_bytes": 5016,
+    "pickup_nonzero_None_bytes": 4430,
+    "initial_live_known_bytes": 432,
+    "initial_live_None_bytes": 1872,
+    "initial_Aura_known_bytes": 3672,
+    "initial_Aura_None_bytes": 10152,
+    "complete72key_player_map_compared_each_cast": true,
+    "all23derived_unchanged_compared": true,
+    "all2owned80_unchanged_compared": true,
+    "actual_live_Aura_racial_full_physical_conservation": true,
+    "Game2592_inherited_clock_only_bytes": 121824
+  },
+  "prior_studies_excluded": [
+    {
+      "directory": "evidence/thunder-clap139-oracle-20261102T105044.690059Z",
+      "comparison_sha256": "795fed434cca61eb1ebd23153668755b1c455899a619fcdd6738d1789afd2792",
+      "fresh_instances": 1,
+      "each_prefix": 1,
+      "full922": 0,
+      "reason": "prefix guard rejected mistaken movement_sequence2412=0 contract; actual1108/current prior fixed opening contract is1; no counter was modified, no cast executed; complete terminal receipt retained"
+    },
+    {
+      "directory": "evidence/thunder-clap139-oracle-20261102T105118.263781Z",
+      "comparison_sha256": "e170b326855ee2b1ad36a3998eb4fe94a6b388b125176240bd28cd070366c4fd",
+      "fresh_instances": 3,
+      "full922": 11,
+      "empty1775": 11,
+      "empty3755": 11,
+      "differences": 0,
+      "reason": "corrected fresh pilot; final matrix newly froze stronger initial-knownness/unknown conservation checks"
+    }
+  ],
+  "pre_original_model_error": {
+    "error": "derived_bits keyed by int, caller initially used string; fixed explicit normalization before any original experiment",
+    "original_executions": 0
+  },
+  "whole_study_executions_not_formal_coverage": {
+    "full922": 58,
+    "empty1775": 58,
+    "empty3755": 58,
+    "prefix_each2945_1600_1108_4677_1093": 22
+  },
+  "unknowns_and_limits": [
+    "Component entry922 with controlled player placement and clocks, not1238 successful scheduling, natural movement/input, enemyAI925 join or full884 frame.",
+    "All18 layouts use the same seed0 HumanWarrior first-new-thunder source. Only0/1 targets per cast; multi-target ordering, >70radius quantization and positive critical outcomes have static rules but no new dynamic validation here.",
+    "No original source header, proc source, NPC count or live owner was cleared. Nonempty effect49, existing slow spell376 removal4593, other target kinds/Boss/procs/classes remain explicit Pending.",
+    "Positive healing/lifesteal, incoming damage integration and other abilities/live8/9 families remain pending; selected1020 retained without advancing2123 expiry in this direct-cast study.",
+    "Known38 packets1268B are the launch/reward ordered subsequence; complete592damage/HP169 updates, complete UI stream, heap/BTree/pointers and queue capacity are not independently predicted.",
+    "1775/3755 were empty consumers only; this does not restore their nonempty delayed producers/dispatch.",
+    "Resource-only startup context admitted, not fullApp/worldRc/bootstrap/externref producer. No nativeWindows/network/save/UI/Android/fullgame execution.",
+    "Independent review pending; no package/save/optimization/public-registry/Git changes."
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "task": "current139_ThunderClap_natural_multitarget_and_positive_critical",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "author_differential_pass_independent_review_pending",
+  "complete_game_restored": false,
+  "scope": {
+    "prefix": "resource-only admitted v2 ->fresh2945/1600->full1108->XP5/full4677->actualfirstnewThunder/full1093",
+    "unique_appseeds": [
+      11,
+      38,
+      40,
+      47,
+      55,
+      58,
+      69
+    ],
+    "layouts": 9,
+    "actual_tiers": [
+      0,
+      1,
+      4
+    ],
+    "player_control": "actual NPC pair XY midpoint, actual independent canonical map heightZ, explicitclock0..0.875",
+    "NPC_positions_or_HP_edited": false,
+    "RNG_written": false,
+    "cards_or_derived_edited": false,
+    "critical_chance_bits": 1028443341,
+    "radius_bits": 1092616192,
+    "real_owned": "cleave+selectedThunder",
+    "actual_live": "selected1020 kind12/knownNone preserved;no schedulerexpiry called",
+    "all_background_retained": true
+  },
+  "input_search": {
+    "path": "evidence/thunder-clap-world139-search-20261102T110104.917326Z/receipt.json",
+    "sha256": "81ef0765206ddbacfb7a351be8db7476f5eacb016d14615f768e819df2209d77",
+    "script_sha256": "93b96bba36a533af4436afaa5193f4e2343fceeeed91c3afc9432a2fdf47c063",
+    "inputs_checked": 128,
+    "first_new_Thunder_inputs": 10,
+    "next_positivecritical_seed11": true,
+    "seed11_next_roll_bits": 1023597824,
+    "original_executions": 0,
+    "RNG_writes": 0,
+    "method": "Independent fullopening+actual candidate generation selects future original inputs; no original output consulted"
+  },
+  "formal_evidence": {
+    "path": "evidence/thunder-clap-world139-oracle-20261102T110226.182643Z",
+    "comparison_sha256": "639f6a304828caa77a1d5a2aedb56b8354c479266ade3142d611769f5588a1a1",
+    "fresh_instances": 9,
+    "full922": 72,
+    "empty1775": 72,
+    "empty3755": 72,
+    "prefix_each2945_1600_1108_4677_1093": 9,
+    "total_direct_entries": 261,
+    "differences": 0,
+    "counts": {
+      "assertions": 140483,
+      "initial_live_known": 216,
+      "initial_live_None": 936,
+      "initial_live_nonzero_None": 900,
+      "initial_aura_known": 1836,
+      "initial_aura_None": 5076,
+      "initial_aura_nonzero_None": 4428,
+      "inherited_Game2592_bytes": 186624,
+      "NPC_unknown_physically_conserved": 36920,
+      "NPC_known": 87496,
+      "NPC_None": 36920,
+      "NPC_nonzero_None": 33968,
+      "pickup_known": 10868,
+      "pickup_None": 7500,
+      "pickup_nonzero_None": 6797,
+      "known_packets": 78,
+      "known_packet_bytes": 4678,
+      "full922": 72,
+      "successful_casts": 56,
+      "damage_calls": 113,
+      "positive_critical_hits": 14,
+      "multi_target_casts": 51,
+      "max_targets": 3,
+      "deaths": 19,
+      "slow_write_operations": 282
+    },
+    "sources": 56,
+    "production_sources": 43,
+    "import_edges": 185,
+    "source_before_after_current_match": true,
+    "author_prerun_hashes": {
+      "reconstruction/core_spec/thunder_clap_world139.py": "ac89f68bb4a1732325577efcc335c960064bea3253a7899ee53378aa6e20518a",
+      "scripts/search_thunder_clap_world139.py": "93b96bba36a533af4436afaa5193f4e2343fceeeed91c3afc9432a2fdf47c063",
+      "scripts/check_thunder_clap_world139.py": "462a1587a153c8a764c4a58f32f01ef25b0c3d8cfe59e53aa352dcf96d836865",
+      "scripts/run_thunder_clap_world139_oracle.mjs": "a21deef210ab1b8561793902d56b7469d26b270bdb764cf1ec3460d691b2592a"
+    },
+    "expected_before_original": true,
+    "original_input_contains_expected": false,
+    "forbidden_model_reads": [],
+    "process": {
+      "pid": 2348,
+      "pgid": 2348,
+      "exit_code": 0,
+      "seconds": 2.482583707998856,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "runtime": {
+      "cases": 9,
+      "fresh_instances": 9,
+      "full_calls": {
+        "922": 72,
+        "1093": 9,
+        "1108": 9,
+        "1600": 9,
+        "1775": 72,
+        "2945": 9,
+        "3755": 72,
+        "4677": 9
+      },
+      "stack_checks": 306,
+      "allocator_calls": 45,
+      "denied_imports": 882,
+      "actual_host_calls": 0,
+      "peak_memory_bytes": 177078272,
+      "memory_cap_bytes": 268435456,
+      "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+      "old_Game_used_as_target": false,
+      "readiness_flags_injected": false,
+      "explicit_dead_marker_fixtures": false,
+      "input_dead_mask_all_zero": true,
+      "full2181_internal_calls_notinstrumented": true,
+      "full26364_35988_25613_calls_notinstrumented": true,
+      "App_or_world_Rc_producer_executed": false,
+      "externref_restored": false,
+      "native_executions": 0,
+      "full_mainloop_frames": 0,
+      "complete_games": 0,
+      "external_clock_components": true,
+      "full922_callees_intact": true,
+      "internal913_2189_notinstrumented": true,
+      "controlled_player_relocation": true,
+      "empty1775_3755_only": true,
+      "output_bytes": 11045335,
+      "error": null
+    },
+    "resource_range_checks": 117,
+    "ranges_each": 2318,
+    "all_world_checks_unchanged": true,
+    "all_entry_stack_returns_1048576": true,
+    "artifacts_sha256": {
+      "inputs.json": "8175aea600df072167d69a9de0ce2a8cf432c2b95fc1bca3ef9a08b6b3cd7888",
+      "expected.json": "501422e5f4c0e9053a86d59e8dc3757dbcb2b6a2a585a3375bb1d1a3b8f1a10c",
+      "config.json": "7a3ba3b0b20b24710713616f1350b8fa6e9f281b67bd066be7aef54e7b49c18f",
+      "manifest.json": "97bfec91f8ab63922f368e1111bd82dbc350278dce53f2af1484acbbab069563",
+      "prepared.json": "1dfa283ed400a1880d15e6e72e63e64e6efe1b752f3c7d93fe91c79f868cb16f",
+      "actual.jsonl": "e32282a2a9eb10786e2bd1ea384456153510953c8888355974d4f078616e6d1d",
+      "runtime.json": "b3cc9770c7248c2a17b14ae3bb5aee8c56cf665451b63058595730dde448a14f",
+      "owned-start.json": "0f3572c4513f7b534a46c7813c152c017144594ddbe778ea60c27d360bad6c47",
+      "owned-terminal.json": "df35076ffff135a1a9e46b2bd5ecd885234741c7f77f2b7be94cc825567a3deb",
+      "expectation-read-audit.json": "a06eeffac5f62ed92077b74ee399253a492588e167d19f6e71a10cef6b9efb8a",
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  },
+  "rules_validated": [
+    "Independent natural appseed firstnewThunder producer preserves source lineage, knownNone NPCs, actual selectedtier multipliers and inherited RNG.",
+    "Current922 area radius10 inclusive and stable per-target distance selection reaches2 and3 simultaneous naturalNPC targets.",
+    "Actualcrit.05 and unmodified xoshiro nextroll produce14 positive critical hits, with exact per-target RNG and subsequent damage/death/reward RNG interleaving.",
+    "Current913 damage/death followed by2189 slow remains correct for multi-target calls, including19realdeaths; subsequent dead targets leave selection.",
+    "Complete known306 area mask0 orderedGUID targets and knownpickup169 packets match as ordered subsequence.",
+    "All72playerkeys,23derived,2owned80/racial/live/Aura inherited; all unknownNPC bytes physicalconserved, existingRune/background untouched."
+  ],
+  "per_case": [
+    {
+      "id": 0,
+      "seed": "11",
+      "tier": 0,
+      "pair": [
+        0,
+        1
+      ],
+      "player_xyz": [
+        3323123450,
+        3289786668,
+        1116266863
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 3
+    },
+    {
+      "id": 1,
+      "seed": "11",
+      "tier": 0,
+      "pair": [
+        0,
+        2
+      ],
+      "player_xyz": [
+        3323116825,
+        3289853180,
+        1116307326
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 3
+    },
+    {
+      "id": 2,
+      "seed": "11",
+      "tier": 0,
+      "pair": [
+        1,
+        2
+      ],
+      "player_xyz": [
+        3323121120,
+        3289806163,
+        1116275218
+      ],
+      "calls": 8,
+      "max_targets": 3,
+      "positive_critical_hits": 3
+    },
+    {
+      "id": 3,
+      "seed": "38",
+      "tier": 1,
+      "pair": [
+        0,
+        3
+      ],
+      "player_xyz": [
+        3323091222,
+        3290189046,
+        1116242002
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 2
+    },
+    {
+      "id": 4,
+      "seed": "40",
+      "tier": 0,
+      "pair": [
+        0,
+        3
+      ],
+      "player_xyz": [
+        3323095470,
+        3290545349,
+        1116173832
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 1
+    },
+    {
+      "id": 5,
+      "seed": "47",
+      "tier": 0,
+      "pair": [
+        1,
+        2
+      ],
+      "player_xyz": [
+        3323133232,
+        3290787434,
+        1116019133
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 0
+    },
+    {
+      "id": 6,
+      "seed": "55",
+      "tier": 1,
+      "pair": [
+        1,
+        3
+      ],
+      "player_xyz": [
+        3323110706,
+        3289906634,
+        1116337805
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 0
+    },
+    {
+      "id": 7,
+      "seed": "58",
+      "tier": 0,
+      "pair": [
+        1,
+        2
+      ],
+      "player_xyz": [
+        3323091786,
+        3290293620,
+        1116219752
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 1
+    },
+    {
+      "id": 8,
+      "seed": "69",
+      "tier": 4,
+      "pair": [
+        0,
+        1
+      ],
+      "player_xyz": [
+        3323130780,
+        3289854477,
+        1116277377
+      ],
+      "calls": 8,
+      "max_targets": 2,
+      "positive_critical_hits": 1
+    }
+  ],
+  "previous_pilot_excluded": {
+    "directory": "evidence/thunder-clap-world139-oracle-20261102T110202.216602Z",
+    "comparison_sha256": "a821cc3693634623e7b6396f13282e35622698e4e0532baf8ca103fc776472d5",
+    "fresh_instances": 1,
+    "full922": 8,
+    "empty1775": 8,
+    "empty3755": 8,
+    "prefix_each": 1,
+    "differences": 0
+  },
+  "extension_whole_study_not_formal_coverage": {
+    "full922": 80,
+    "empty1775": 80,
+    "empty3755": 80,
+    "prefix_each2945_1600_1108_4677_1093": 10
+  },
+  "dependencies_not_reaccepted": "FrozenThunder139 direct cast/bodybuilder/damage/death/source/proc logic used byte-identically; prior single-target18/47 and old135 acceptance not added to new9/72.",
+  "unknowns_and_limits": [
+    "This is direct922 with controlled player midpoint and explicit time, not enemyAI925 natural approach,1238successful cooldown scheduling,2123 orfull884.",
+    "Controlled midpoint height comes from canonical world.height; it is a fixture input, not restored userinput/navmotion.",
+    "Maximum simultaneous targets3, seven unique appseeds, tiers0/1/4; other sizes/tier3/type/area>70/general capabilities remain outside this boundedmatrix.",
+    "FullHP ordinaryWarrior only; positive regen/Warriorlifesteal1466 is a separate workstream and not silently bypassed.",
+    "Nonempty effect49/existing slow376 removal/Boss/otherproc owners remainPending.",
+    "1775/3755 onlyempty consumers; full592damage/HP169/UI/pointer/allocator/queue state not reconstructed.",
+    "No nativeWindows/network/save/Android/Appbootstrap/fullgame execution. Existing packages/saves/frozen author files untouched.",
+    "Independent review pending."
+  ]
+}

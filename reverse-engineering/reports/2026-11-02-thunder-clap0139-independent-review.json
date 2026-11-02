@@ -1,0 +1,526 @@
+{
+  "status": "pass_current139_thunder_area2_effect1_base18_and_natural_world9",
+  "reviewer": "/root/collection139_finish",
+  "author": "/root/growth139_review",
+  "reviewer_script_sha256": "775b8234a04067711ac126eb0ded2ce90a553db396f1bd26e07f5662fdbe0b23",
+  "author_files": {
+    "reconstruction/core_spec/thunder_clap139.py": "16c7681d93746427b5472ae0c35979a86e2a25b739426aa0618f45ccfa77f0a6",
+    "scripts/build_thunder_clap139_oracle.py": "bc491cb0d505d94a29de437d4bf5ccc4d661b552e1dec96614cbc61150a7c652",
+    "scripts/check_thunder_clap139.py": "777fed31839954e4a8d2e44e08be8f38aa6d41816dfb0921208e8cd40df032aa",
+    "scripts/run_thunder_clap139_oracle.mjs": "ac16dbe985f71dd498fa6bda7b6fcf28c56d76f53f4133d4cb8f7110b80e657d",
+    "reports/2026-11-02-thunder-clap0139.json": "3e872992001f55a336b078be7dfd1aeef22fa456591bc55bbf03156f701eab34",
+    "reports/2026-11-02-thunder-clap0139.md": "8b7fd7ae9ef931a08e969d767f7cb7f50d32e23301a9c504714f862bbadaecf0",
+    "reconstruction/core_spec/thunder_clap_world139.py": "ac89f68bb4a1732325577efcc335c960064bea3253a7899ee53378aa6e20518a",
+    "scripts/search_thunder_clap_world139.py": "93b96bba36a533af4436afaa5193f4e2343fceeeed91c3afc9432a2fdf47c063",
+    "scripts/check_thunder_clap_world139.py": "462a1587a153c8a764c4a58f32f01ef25b0c3d8cfe59e53aa352dcf96d836865",
+    "scripts/run_thunder_clap_world139_oracle.mjs": "a21deef210ab1b8561793902d56b7469d26b270bdb764cf1ec3460d691b2592a",
+    "reports/2026-11-02-thunder-clap-world0139.json": "8b5048fe6a71be69df87905226ec77f719b193b2cf809726977f0a3eddfb28d2",
+    "reports/2026-11-02-thunder-clap-world0139.md": "30ebd38266579d674e6a01409ac563b99599d01cd6082a289022653fc5243a12"
+  },
+  "helper_sha256": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_growth_world139.py": "0e82a1f20fd7c02ed7edcd73f4d9edfca1d3ab406402e1aa8e0b5ae4e34322a1",
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_death_pickups139.py": "092328f7b6e7c5323f1d3b9c74b1080b1181fdd002f7153d32756110d9dcaef3",
+    "scripts/review_death139.py": "fe7790f0adcb3e3d5010d53c44f375bec5bbee6d3fe780873a6e1613afe11e6a",
+    "scripts/review_player_update139.py": "4123e0715620c0d050bfad0c1c060b0fc5b426c36d0789c95a0c7801d52c8bde"
+  },
+  "current_function_bindings": {
+    "913": {
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "994": {
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1446": {
+      "body_sha256": "8767d1f7e85c487759afa70602d9ae1793a7fd9118c0d8f57bca75c05ae3c958",
+      "WAT_sha256": "285f5c4878af3a685fbfc1dbff5f36ac2529bdc62cc4de81024f9cdda8f08abe"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "1886": {
+      "body_sha256": "7307a96d26652424b521a57769caa076118a3fa1b0f5fa767015ae9665fdf458",
+      "WAT_sha256": "42303255f7eaf67d66b0c9aab4a14d2b79d2e31ce07ca93394f6bd93e44d7bc1"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "5719": {
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "6786": {
+      "body_sha256": "628dfa51726dd61f49c61f0afd62151bf189a3d29c8397e5a8ddb217021d2b67",
+      "WAT_sha256": "55085c6a3b0da7f9770d0cddc6b21062cd9eb877f26ceeee725ffdce8eca902a"
+    },
+    "8740": {
+      "body_sha256": "35e2f8bf141c22a07857ff8327892bf7b6f971aea2d1ad0f705ba12dfa02af38",
+      "WAT_sha256": "ae82725c4b84528ce67a730a31f6a8ca631f41cdf0b3bac500fabeb4cea9c13b"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "13563": {
+      "body_sha256": "724158538ddf6fdcb38eb520beaa5ff8467952b418be3400132013b105a136ae",
+      "WAT_sha256": "718739b8790b32422f5c947657685744eb6f32a052b1f48320010c1f7696a03a"
+    },
+    "20060": {
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "24602": {
+      "body_sha256": "7eb347950c8d414529c9dc57a8ba5a3faa2ef19849f004ef9fada22d826787d2",
+      "WAT_sha256": "50b1d16630203df0ddaf3d13acf8b0208b78e862f425aa78566b631e297883d1"
+    },
+    "25511": {
+      "body_sha256": "a627059d8fa98d0b6385cd67224d047ce1320f06b83517c8d78d3e58507d555f",
+      "WAT_sha256": "b0e2ae4202aa0f728c3a30798842ca63740f959dacce8b9f650a3eb57f42f022"
+    },
+    "25613": {
+      "body_sha256": "80894c1d0bf8d7e0ff7402410346ace7e1ddaf251aebdc9632ab7c3a8b5818f7",
+      "WAT_sha256": "7806a9999e0a5697a29472b53599ae7c2d03dd17dde96f24ca24b6480c5b798c"
+    },
+    "26364": {
+      "body_sha256": "658557371e2a1f1f173fb3bbce2c7bff384a31a781fbdad123eea358f56f0586",
+      "WAT_sha256": "c064903ec232875c34c13430fa42fa8bca634be66203423a84651ac74e892310"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "29912": {
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "30628": {
+      "body_sha256": "5cb37659a6c6d10d8c7d7180ddf0dcc755e1fbb2ebfe34f89c9ae9bd0037b147",
+      "WAT_sha256": "92d7db2c8956db17b03c46487515d5b83fb93c6816d0a664161b24a62ecffe8d"
+    },
+    "33028": {
+      "body_sha256": "ad6febcb39fb63482c83b3916de67a60749c9516fe45ec790e80ec0593314630",
+      "WAT_sha256": "f273d4ae39059284d97afce94486be65cc95b434f8dc740054c9ec175791ce19"
+    },
+    "36364": {
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36367": {
+      "body_sha256": "69531db09dc004833687273b796404cadcf6317b12df96cb33ccf40d95a8e527",
+      "WAT_sha256": "2a240245a140ee945df6e3f8b050fb738b85623e9a8ba999ee2af34f1d61e79c"
+    },
+    "36518": {
+      "body_sha256": "7dc67a3d6dd30dbfb7a2c8246d505ecf0d2e6ebb7d8c8b8c1028adae0ceb34e9",
+      "WAT_sha256": "660f61ce28b8d005aa21daf3ff68035570373e5425687ff37f142ce1b344f4e2"
+    },
+    "48064": {
+      "body_sha256": "e76b13463ca7ec7bf243ba6ffca8e8e3590dcb0151f3b2a939f041f1b498e084",
+      "WAT_sha256": "f9614487a380f9c0c06284ca877826e0fe0dce2332ff558ffe4518415db3687b"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "83299": {
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    }
+  },
+  "all_nonexport_sections_identical": true,
+  "reviewer_original_executions": 0,
+  "reviewer_author_model_checker_builder_executions": 0,
+  "author_files_modified": false,
+  "limitations": [
+    "Controlled direct922 components after actualfull1108/XP5/firstnewThunder; not1238/2123/925/884 integration or completegame.",
+    "Playerpositions are explicit controls: baseNPC+offset and naturalworld rawcanonicalheight midpoint. NPCpositions are never changed or cleared.",
+    "Direct casts ignore skill cooldown scheduling by design; full inherited owned80/live1020/Aura/default event sources remain intact.",
+    "34base+113world damagecalls include23stationary ordinary deaths; lifesteal stays fullHP239 domain, positivehealing remains Pending.",
+    "Known306mask0 and169reward packets are verified ordered subsets;592damage/HP169/whole UI/heap/tree/network stream remains incomplete.",
+    "1775/3755 called only with actual inherited empty owners; neither pendinghit nor area job is enqueued by this path.",
+    "Nonempty effect49,slow376 removal,U356 conditional-source branch,otherNPC/status/school/fatalplayer/procs remain unknown.",
+    "Spell totalwideBTree values are read by frozen driver; its physical tree nodes are not separately captured. Player72 BTree nodes are independently decoded.",
+    "Originalresourceonlyhealthyv2context/newGame; independentmodel canonicalworldraw artifacts; naturalApp/worldRc/externref/native/save/fullgame remain unaccepted."
+  ],
+  "batches": [
+    {
+      "label": "base18",
+      "directory": "evidence/thunder-clap139-oracle-20261102T105223.121403Z",
+      "author_handoff_sha256": "40286b855097ce0eed7f0bb41d74c18f4fd9e6d5240073b2dfc45dc5f2c5dd2a",
+      "comparison_sha256": "d79779483e6b6bc9aa55c6b67fdb55518ab725cba70057dab4ce42a66677f44f",
+      "cases": 18,
+      "full922": 47,
+      "empty1775": 47,
+      "empty3755": 47,
+      "prefix_each2945_1600_1108_4677_1093": 18,
+      "source_files": 54,
+      "production_sources": 42,
+      "source_edges": 167,
+      "counts": {
+        "prefix_tree_captures": 54,
+        "openingGame_known": 10008,
+        "openingGame_None": 36648,
+        "openingGame_nonzero_None": 4140,
+        "opening_packets": 1368,
+        "opening_units_known": 21816,
+        "opening_units_None": 9288,
+        "opening_units_nonzero_None": 8550,
+        "opening_pickups_known": 1872,
+        "opening_pickups_None": 2160,
+        "opening_pickups_nonzero_None": 1908,
+        "opening_windows_known": 288,
+        "opening_windows_None": 288,
+        "opening_windows_nonzero_None": 288,
+        "opening_special_known": 2016,
+        "opening_special_None": 864,
+        "opening_special_nonzero_None": 864,
+        "opening_boundaries_known": 9936,
+        "opening_boundaries_None": 8496,
+        "opening_boundaries_nonzero_None": 3672,
+        "initial_live_known": 432,
+        "initial_live_None": 1872,
+        "initial_live_nonzero_None": 1872,
+        "initial_aura_known": 3672,
+        "initial_aura_None": 10152,
+        "initial_aura_nonzero_None": 8856,
+        "inherited_Game2592_bytes": 121824,
+        "full922": 47,
+        "successful_casts": 34,
+        "multi_target_casts": 0,
+        "max_targets": 1,
+        "slow_write_operations": 90,
+        "NPC_known": 57012,
+        "NPC_None": 24204,
+        "NPC_nonzero_None": 22277,
+        "NPC_full_physical_replay_bytes": 81216,
+        "pickup_known": 5512,
+        "pickup_None": 5016,
+        "pickup_nonzero_None": 4430,
+        "pickup_existing_owner_physical_replay_bytes": 10528,
+        "player_tree_captures": 47,
+        "logical72_values": 3384,
+        "derived23_values": 1081,
+        "two_Runes_conserved_bytes": 5264,
+        "other_background_conserved_bytes": 57152,
+        "unmodeled_emitted_packets": 72,
+        "damage_calls": 34,
+        "positive_critical_hits": 0,
+        "known_packets": 38,
+        "known_packet_bytes": 1268,
+        "mask0_launches": 34,
+        "deaths": 4
+      },
+      "reference_sha256": "30e807a24cdeb257b949c779271d09cc16d8db7a330627574adfcf654eb154f7",
+      "diagnostics_sha256": "d05e66da2a02670a2e026942cce439c0f3cb0a47d102a958dd4e39de4f07dfee",
+      "author_process": {
+        "pid": 75942,
+        "pgid": 75942,
+        "exit_code": 0,
+        "seconds": 4.231840625001496,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    },
+    {
+      "label": "world9",
+      "directory": "evidence/thunder-clap-world139-oracle-20261102T110226.182643Z",
+      "author_handoff_sha256": "bffbc17cd69348ef11c5f0d3479f977edfe01d9bebadc6bcb380597d214326e5",
+      "comparison_sha256": "639f6a304828caa77a1d5a2aedb56b8354c479266ade3142d611769f5588a1a1",
+      "cases": 9,
+      "full922": 72,
+      "empty1775": 72,
+      "empty3755": 72,
+      "prefix_each2945_1600_1108_4677_1093": 9,
+      "source_files": 56,
+      "production_sources": 43,
+      "source_edges": 185,
+      "counts": {
+        "prefix_tree_captures": 27,
+        "openingGame_known": 5004,
+        "openingGame_None": 18324,
+        "openingGame_nonzero_None": 2070,
+        "opening_packets": 684,
+        "opening_units_known": 10908,
+        "opening_units_None": 4644,
+        "opening_units_nonzero_None": 4275,
+        "opening_pickups_known": 936,
+        "opening_pickups_None": 1080,
+        "opening_pickups_nonzero_None": 954,
+        "opening_windows_known": 200,
+        "opening_windows_None": 88,
+        "opening_windows_nonzero_None": 88,
+        "opening_special_known": 1008,
+        "opening_special_None": 432,
+        "opening_special_nonzero_None": 432,
+        "opening_boundaries_known": 4968,
+        "opening_boundaries_None": 4248,
+        "opening_boundaries_nonzero_None": 1836,
+        "initial_live_known": 216,
+        "initial_live_None": 936,
+        "initial_live_nonzero_None": 900,
+        "initial_aura_known": 1836,
+        "initial_aura_None": 5076,
+        "initial_aura_nonzero_None": 4428,
+        "inherited_Game2592_bytes": 186624,
+        "damage_calls": 113,
+        "positive_critical_hits": 14,
+        "full922": 72,
+        "successful_casts": 56,
+        "multi_target_casts": 51,
+        "max_targets": 3,
+        "slow_write_operations": 282,
+        "NPC_known": 87496,
+        "NPC_None": 36920,
+        "NPC_nonzero_None": 33968,
+        "NPC_full_physical_replay_bytes": 124416,
+        "pickup_known": 10868,
+        "pickup_None": 7500,
+        "pickup_nonzero_None": 6797,
+        "pickup_existing_owner_physical_replay_bytes": 17472,
+        "player_tree_captures": 72,
+        "logical72_values": 5184,
+        "derived23_values": 1656,
+        "two_Runes_conserved_bytes": 8064,
+        "other_background_conserved_bytes": 87552,
+        "known_packets": 78,
+        "known_packet_bytes": 4678,
+        "mask0_launches": 56,
+        "unmodeled_emitted_packets": 245,
+        "deaths": 19
+      },
+      "reference_sha256": "2e10f0fa00465d2667a329eb9b3721b13fceec720db7ebf569b01a68020611fe",
+      "diagnostics_sha256": "204cc4d805aec70369036b42c4fc5e120d6b23783d50d065d8c66ec25ea05820",
+      "author_process": {
+        "pid": 2348,
+        "pgid": 2348,
+        "exit_code": 0,
+        "seconds": 2.482583707998856,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    }
+  ],
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "counts_total": {
+    "prefix_tree_captures": 81,
+    "openingGame_known": 15012,
+    "openingGame_None": 54972,
+    "openingGame_nonzero_None": 6210,
+    "opening_packets": 2052,
+    "opening_units_known": 32724,
+    "opening_units_None": 13932,
+    "opening_units_nonzero_None": 12825,
+    "opening_pickups_known": 2808,
+    "opening_pickups_None": 3240,
+    "opening_pickups_nonzero_None": 2862,
+    "opening_windows_known": 488,
+    "opening_windows_None": 376,
+    "opening_windows_nonzero_None": 376,
+    "opening_special_known": 3024,
+    "opening_special_None": 1296,
+    "opening_special_nonzero_None": 1296,
+    "opening_boundaries_known": 14904,
+    "opening_boundaries_None": 12744,
+    "opening_boundaries_nonzero_None": 5508,
+    "initial_live_known": 648,
+    "initial_live_None": 2808,
+    "initial_live_nonzero_None": 2772,
+    "initial_aura_known": 5508,
+    "initial_aura_None": 15228,
+    "initial_aura_nonzero_None": 13284,
+    "inherited_Game2592_bytes": 308448,
+    "full922": 119,
+    "successful_casts": 90,
+    "multi_target_casts": 51,
+    "max_targets": 3,
+    "slow_write_operations": 372,
+    "NPC_known": 144508,
+    "NPC_None": 61124,
+    "NPC_nonzero_None": 56245,
+    "NPC_full_physical_replay_bytes": 205632,
+    "pickup_known": 16380,
+    "pickup_None": 12516,
+    "pickup_nonzero_None": 11227,
+    "pickup_existing_owner_physical_replay_bytes": 28000,
+    "player_tree_captures": 119,
+    "logical72_values": 8568,
+    "derived23_values": 2737,
+    "two_Runes_conserved_bytes": 13328,
+    "other_background_conserved_bytes": 144704,
+    "unmodeled_emitted_packets": 317,
+    "damage_calls": 147,
+    "positive_critical_hits": 14,
+    "known_packets": 116,
+    "known_packet_bytes": 5946,
+    "mask0_launches": 90,
+    "deaths": 23
+  },
+  "formal_entry_accounting": {
+    "fresh_fixtures": 27,
+    "checked_target_full922": 119,
+    "setup_prefix_entries": 135,
+    "setup_prefix_functions_each27": [
+      2945,
+      1600,
+      1108,
+      4677,
+      1093
+    ],
+    "checked_empty_consumers1775": 119,
+    "checked_empty_consumers3755": 119,
+    "direct_entries_total": 492,
+    "internal913_2189_calls_not_counted_as_direct_entries": true,
+    "independently_recomputed_prefix_does_not_reclassify_setup_as_target": true
+  },
+  "unique_source_union": 58,
+  "unique_production_source_union": 43,
+  "review_receipt": "evidence/thunder-clap139-independent-review-owned-20261102T111610.544490Z/review/review.json",
+  "review_receipt_sha256": "f18484dd5256454887854e3ca5b4fe4ab2aa075427a5af2215e7211c9255e05c",
+  "owned_process": {
+    "pid": 34619,
+    "pgid": 34619,
+    "exit_code": 0,
+    "seconds": 2.5751410000011674,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_terminal_sha256": "3f673f8e6b2efb986b869faf7b2bf42ac3f72178b3b05b045a09a1ff78f638cc",
+  "owned_process_journal_sha256": "e9ae8602f4f1ab608cad88478bb9c1185df524a7fdccd6d7c6e8380de49fc281",
+  "stdout_sha256": "beeafa7e2e90f65320b62417e4ba920b6c4edfc2fa35bad800e6db4b446cbc15",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "author12_and_source58_still_match_after_review": true,
+  "excluded_prior_studies": [
+    {
+      "directory": "evidence/thunder-clap139-oracle-20261102T105044.690059Z",
+      "comparison_sha256": "795fed434cca61eb1ebd23153668755b1c455899a619fcdd6738d1789afd2792",
+      "fresh_instances": 1,
+      "each_prefix": 1,
+      "full922": 0,
+      "reason": "prefix guard rejected mistaken movement_sequence2412=0 contract; actual1108/current prior fixed opening contract is1; no counter was modified, no cast executed; complete terminal receipt retained"
+    },
+    {
+      "directory": "evidence/thunder-clap139-oracle-20261102T105118.263781Z",
+      "comparison_sha256": "e170b326855ee2b1ad36a3998eb4fe94a6b388b125176240bd28cd070366c4fd",
+      "fresh_instances": 3,
+      "full922": 11,
+      "empty1775": 11,
+      "empty3755": 11,
+      "differences": 0,
+      "reason": "corrected fresh pilot; final matrix newly froze stronger initial-knownness/unknown conservation checks"
+    },
+    {
+      "directory": "evidence/thunder-clap-world139-oracle-20261102T110202.216602Z",
+      "comparison_sha256": "a821cc3693634623e7b6396f13282e35622698e4e0532baf8ca103fc776472d5",
+      "fresh_instances": 1,
+      "full922": 8,
+      "empty1775": 8,
+      "empty3755": 8,
+      "prefix_each": 1,
+      "differences": 0
+    }
+  ],
+  "author_input_search": {
+    "receipt": "evidence/thunder-clap-world139-search-20261102T110104.917326Z/receipt.json",
+    "sha256": "81ef0765206ddbacfb7a351be8db7476f5eacb016d14615f768e819df2209d77",
+    "inputs": 128,
+    "original_executions": 0,
+    "not_runtime_coverage": true,
+    "reviewer_did_not_execute_search": true
+  },
+  "captured_new_packet_counts": {
+    "306": 90,
+    "592": 147,
+    "169": 196
+  },
+  "captured_new_packet_bytes": 20284,
+  "known_packet_scope": "116 launch/reward packets,5946B,ordered subset only;317 remaining592/169 packets not independently reconstructed.",
+  "additional_unknown_Game_state": "Raw captures retain other post-hit state including changes around960/1000..1063/1136..1147; its complete semantics/owners are not independently reconstructed by this reference.",
+  "preserved_model_unknowns": {
+    "NPC_None": 61124,
+    "NPC_nonzero_None": 56245,
+    "pickup_None": 12516,
+    "pickup_nonzero_None": 11227,
+    "initial_live_None": 2808,
+    "initial_live_nonzero_None": 2772,
+    "initial_aura_None": 15228,
+    "initial_aura_nonzero_None": 13284
+  }
+}
