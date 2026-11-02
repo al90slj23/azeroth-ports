@@ -72,7 +72,19 @@
 
 [Windows513B升级值指令仿真及WASM25511配对](reports/2026-11-02-native-upgrade0139.md)2150组与[独审](reports/2026-11-02-native-upgrade0139-independent-review.md)已通过：实际x86_64机器码在macARM的Unicorn2.1.4中执行2150次，另有2150次完整WASM25511；同一2150逻辑fixture只计一次。114声明／五种kind／tier0..4与局部owner布局已核；60组含NaN输入，记录输出全部+0，不是60个NaN输出。页面保护比较保留为captured标志与源码证据，不称保存了全部原始before／after字节对。首轮SIGILL与pilot均保留并排除，未启动Windows应用、Wine或VM，不证明native伤害／AI／主循环。
 
-已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。固定139有17033组完整原件函数域fixture／22783次正式WASM目标入口（22782正常返回／1预期越界）；2150次Native指令仿真、484组／500计时片段分别登记。只是实验清单，不是完整覆盖率；setup／pilot／拒绝批／静态study不相加。新连续360探路暴露同帧尸体清除包序反例，AIdead v1尚未验收，正在另立v2。完整主884、Windows应用和独立完整一局仍为0；以上139通过不转记新1391。
+[连续自动战斗与尸体清理v2](reports/2026-11-02-player-enemy0139-v2-independent-review.md)通过异作者独审：3fresh／360个2123→925组件步，共720正式目标、15前缀setup另列。9次自然AI受伤、103正再生／10正Leech、25伤害、12死亡与清除，以及7普攻／9顺劈／3雷霆／3种族均核。168条已知消息7571B仅是实际223条9572B的有序子集，925后缀完整恢复。此批从显式XP5／已选Thunder开始，未执行2890、952或主884其余阶段，不当作自然首次升级或完整帧。
+
+[死亡保留与同帧消息顺序v2](reports/2026-11-02-enemy-ai-dead0139-v2-independent-review.md)11fresh／146完整925独审通过：144隔离入口＋2真实同帧probe，23回收／73完整925包2578B。死亡后elapsed<=1.2保留，>1.2才稳定432B移除，capacity／stale tail照原保留；queued170先于motion221／attack330。378来源setup含120前序组件对只算来源，非新增完整包序覆盖。[旧360失败](reports/2026-11-02-player-enemy0139-v1-rejected.md)和AIdead v1源均原样保留且不接受组合；v2使用新代码、新原件和新独审，不倒填旧通过。
+
+[真实40秒资源调度v2](reports/2026-11-02-spawn-schedule0139-v2-independent-review.md)4fresh／3119完整952另验通过：132新NPC及4个资源，覆盖kind3／4／5；源仅驱动clock，37物理检查点保留所有初始对象与未知字节。此批仍静止／无战斗／<60秒；2424为wave60、2440为elite240，旧v1标签勘误保留。正killcost、density填充、far回收、60Rune／波次／windows到期及Boss另批，不能由本批推定通过。
+
+[首60秒完整刷怪调度v3](reports/2026-11-02-spawn-schedule0139-v3-independent-review.md)4fresh／4096完整952独审通过：自然seed0／1／5／8分别走首波shape0..3，166普通预算＋18波次NPC，50上限实际拒绝170预算请求／7波次请求，shape1的5个charge字段与2*distance+12路径值一致。另有4个40秒资源及4个60秒Rune；192条完整169＋4条150、56物理检查点及145152B完整Game核对。Rune的+12是caller残留heap表达式，逻辑保留16B None，4条preRunePickupBase+176原始表达式另核，不反填为游戏数值。此域仍静止／无战斗；正killcost／移动死槽／density正分支／far回收／windows到期／Boss180／elite240及完整952仍未知。
+
+[运动暂停／恢复](reports/2026-11-02-world-pause0139-independent-review.md)8fresh／42目标（12×26364、15×35988、15×25613）独审通过，32来源setup与11 cleanup分列。真实1108→925四移动NPC及受控aux／comp保留原运动记录；gather40、f32插值、cap5／9／18和158条完整221共5490B一致。整段Game108864B／actor与背景148368B守恒；helper只写sequence与消息，phase来自明确外层控制，未执行完整2181／1093。
+
+[受控终局49961](reports/2026-11-02-terminal0139-independent-review.md)5fresh／10完整目标独审通过：实际movingNPC、显式field400及phase／endless／UTF8 hero输入，12完整221／232共236B与2条完整victory JSON466B、capacity272一致。自然Boss→400尚未恢复，不能把受控phase5当完成游戏。[延迟施法队列38553](reports/2026-11-02-frame-deadline0139-independent-review.md)另有58fixture／124完整目标独审，187完整306共5582B；队列来自受控32B输入，天然producer仍未知。
+
+已冻结作者报告保留执行时的pending状态，最终独审与版本注册说明实际接受范围。固定139累计17126份完整原件函数域fixture／31040次正式WASM目标入口（31039正常／1预期越界）；2150次Native指令仿真与484组／500计时片段分别登记。新增93fixture／8257正式目标，不加来源setup、cleanup、pilot或拒绝v1；计数是实验清单，不是完成率。自然开局→实际XP→首次选卡→续战与952正在接线；完整主884、Windows应用、自然Boss胜利与独立完整一局仍为0，旧139不转记1391。
 
 固定138的[属性计算10569组](reports/2026-11-02-stats0138.md)、[非致死伤害80组／125调用](reports/2026-11-02-combat0138-independent-review.md)、[默认构造162次](reports/2026-11-02-initial-state0138.md)及其独审保留各自窄域；[13入口迁移守卫](reports/2026-11-02-flow0138-migration.md)仍是静态证据。它们均不等于138／139连续流程或Windows原生验收。
 

@@ -1,0 +1,3528 @@
+{
+  "task": "current139_AIdead_v2_queued170_before_deferred_motion_attack",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "author_validated": true,
+  "independent_review_pending": true,
+  "formal_directory": "evidence/enemy-ai-dead139-v2-full-20261102T134523.549072Z",
+  "comparison_sha256": "ebd66ceb975472a40d290c5468a66a884f0faef3742a0ece34717dea2b75ce23",
+  "prepared_sha256": "d7af6f2ad9d908ca753baf4679e2409ef94e3bc177c547a1ff0bfc2e748cab01",
+  "formal_counts": {
+    "fresh_fixtures": 11,
+    "isolated_fixtures": 9,
+    "sameframe_source_probes": 2,
+    "formal_full925_targets": 146,
+    "isolated_targets": 144,
+    "sameframe_targets": 2,
+    "source_setup_preceding_full2123_full925_pairs": 120,
+    "source_setup_initial925": 9,
+    "all_full925_entries": 275,
+    "source_setup_full2123_entries": 176,
+    "source_setup_full922_entries": 18,
+    "source_setup_2945_1600_1108_4677_1093_each": 11,
+    "source_setup_entries": 378,
+    "all_direct_original_entries": 524,
+    "target_despawn170": 23,
+    "target_motion221": 46,
+    "target_attack330": 4,
+    "target_complete_packets": 73,
+    "target_complete_payload_bytes": 2578,
+    "target_physical_NPC_replay_bytes": 252288,
+    "target_Game_input_inherited_bytes": 378432,
+    "target_Game_nonowned_after_bytes": 366168,
+    "Windows_native_entries": 0,
+    "full884_entries": 0,
+    "complete_games": 0,
+    "differences": 0,
+    "assertions": 1284096
+  },
+  "author_counts": {
+    "assertions": 1284096,
+    "initial_moving_known": 10908,
+    "initial_moving_None": 4644,
+    "initial_moving_nonzero_None": 4275,
+    "live_known": 23400,
+    "live_None": 36632,
+    "live_nonzero_None": 31982,
+    "aura_known": 98028,
+    "aura_None": 262164,
+    "aura_nonzero_None": 218008,
+    "prefix0_NPC_known": 10908,
+    "prefix0_NPC_None": 4644,
+    "prefix0_NPC_nonzero_None": 4275,
+    "prefix0_pickup_known": 936,
+    "prefix0_pickup_None": 1080,
+    "prefix0_pickup_nonzero_None": 954,
+    "prefix_known_packets": 135,
+    "prefix1_NPC_known": 10908,
+    "prefix1_NPC_None": 4644,
+    "prefix1_NPC_nonzero_None": 4275,
+    "prefix1_pickup_known": 936,
+    "prefix1_pickup_None": 1080,
+    "prefix1_pickup_nonzero_None": 954,
+    "prefix2_NPC_known": 10908,
+    "prefix2_NPC_None": 4644,
+    "prefix2_NPC_nonzero_None": 4275,
+    "prefix2_pickup_known": 936,
+    "prefix2_pickup_None": 1080,
+    "prefix2_pickup_nonzero_None": 954,
+    "prefix3_NPC_known": 10908,
+    "prefix3_NPC_None": 4644,
+    "prefix3_NPC_nonzero_None": 4275,
+    "prefix3_pickup_known": 936,
+    "prefix3_pickup_None": 1080,
+    "prefix3_pickup_nonzero_None": 954,
+    "prefix4_NPC_known": 10908,
+    "prefix4_NPC_None": 4644,
+    "prefix4_NPC_nonzero_None": 4275,
+    "prefix4_pickup_known": 936,
+    "prefix4_pickup_None": 1080,
+    "prefix4_pickup_nonzero_None": 954,
+    "prefix5_NPC_known": 10944,
+    "prefix5_NPC_None": 4608,
+    "prefix5_NPC_nonzero_None": 4239,
+    "prefix5_pickup_known": 1404,
+    "prefix5_pickup_None": 612,
+    "prefix5_pickup_nonzero_None": 540,
+    "NPC_known": 337412,
+    "NPC_None": 141244,
+    "NPC_nonzero_None": 130852,
+    "after_producer_NPC_known": 13432,
+    "after_producer_NPC_None": 5576,
+    "after_producer_NPC_nonzero_None": 5143,
+    "after_producer_pickup_known": 2964,
+    "after_producer_pickup_None": 1292,
+    "after_producer_pickup_nonzero_None": 1235,
+    "full925_complete_packets": 73,
+    "full925_complete_packet_bytes": 2578,
+    "Game_input_inherited_bytes": 378432,
+    "physical_NPC_replay_bytes": 252288,
+    "Game_nonowned_after_bytes": 366168,
+    "full925_targets": 146,
+    "corpse_removals": 23,
+    "real_attacks": 4,
+    "motion221": 46,
+    "path_rebuilds": 9,
+    "lifetime_predicates": 268,
+    "extra9220_NPC_known": 7320,
+    "extra9220_NPC_None": 3048,
+    "extra9220_NPC_nonzero_None": 2802,
+    "extra9220_pickup_known": 1560,
+    "extra9220_pickup_None": 1128,
+    "extra9220_pickup_nonzero_None": 1092,
+    "history_None": 7262,
+    "history_nonzero_None": 7068,
+    "history_known": 3298,
+    "extra9221_NPC_known": 3660,
+    "extra9221_NPC_None": 1524,
+    "extra9221_NPC_nonzero_None": 1401,
+    "extra9221_pickup_known": 780,
+    "extra9221_pickup_None": 564,
+    "extra9221_pickup_nonzero_None": 546,
+    "extra9222_NPC_known": 3672,
+    "extra9222_NPC_None": 1512,
+    "extra9222_NPC_nonzero_None": 1389,
+    "extra9222_pickup_known": 936,
+    "extra9222_pickup_None": 408,
+    "extra9222_pickup_nonzero_None": 390,
+    "extra9223_NPC_known": 3672,
+    "extra9223_NPC_None": 1512,
+    "extra9223_NPC_nonzero_None": 1389,
+    "extra9223_pickup_known": 936,
+    "extra9223_pickup_None": 408,
+    "extra9223_pickup_nonzero_None": 390,
+    "extra9224_NPC_known": 3684,
+    "extra9224_NPC_None": 1500,
+    "extra9224_NPC_nonzero_None": 1377,
+    "extra9224_pickup_known": 1092,
+    "extra9224_pickup_None": 252,
+    "extra9224_pickup_nonzero_None": 249,
+    "preceding0_NPC_known": 2424,
+    "preceding0_NPC_None": 1032,
+    "preceding0_NPC_nonzero_None": 950,
+    "preceding0_pickup_known": 208,
+    "preceding0_pickup_None": 240,
+    "preceding0_pickup_nonzero_None": 212,
+    "precedingPhysical_known": 145832,
+    "precedingPhysical_None": 61528,
+    "precedingPhysical_nonzero_None": 57004,
+    "preceding_full2123_full925_pairs_numeric_only": 120,
+    "preceding1_NPC_known": 2424,
+    "preceding1_NPC_None": 1032,
+    "preceding1_NPC_nonzero_None": 950,
+    "preceding1_pickup_known": 208,
+    "preceding1_pickup_None": 240,
+    "preceding1_pickup_nonzero_None": 212,
+    "preceding2_NPC_known": 2424,
+    "preceding2_NPC_None": 1032,
+    "preceding2_NPC_nonzero_None": 950,
+    "preceding2_pickup_known": 208,
+    "preceding2_pickup_None": 240,
+    "preceding2_pickup_nonzero_None": 212,
+    "preceding3_NPC_known": 2424,
+    "preceding3_NPC_None": 1032,
+    "preceding3_NPC_nonzero_None": 950,
+    "preceding3_pickup_known": 208,
+    "preceding3_pickup_None": 240,
+    "preceding3_pickup_nonzero_None": 212,
+    "preceding4_NPC_known": 2424,
+    "preceding4_NPC_None": 1032,
+    "preceding4_NPC_nonzero_None": 950,
+    "preceding4_pickup_known": 208,
+    "preceding4_pickup_None": 240,
+    "preceding4_pickup_nonzero_None": 212,
+    "preceding5_NPC_known": 2432,
+    "preceding5_NPC_None": 1024,
+    "preceding5_NPC_nonzero_None": 942,
+    "preceding5_pickup_known": 364,
+    "preceding5_pickup_None": 308,
+    "preceding5_pickup_nonzero_None": 288,
+    "preceding6_NPC_known": 2432,
+    "preceding6_NPC_None": 1024,
+    "preceding6_NPC_nonzero_None": 942,
+    "preceding6_pickup_known": 364,
+    "preceding6_pickup_None": 308,
+    "preceding6_pickup_nonzero_None": 288,
+    "preceding7_NPC_known": 2432,
+    "preceding7_NPC_None": 1024,
+    "preceding7_NPC_nonzero_None": 942,
+    "preceding7_pickup_known": 364,
+    "preceding7_pickup_None": 308,
+    "preceding7_pickup_nonzero_None": 288,
+    "preceding8_NPC_known": 2432,
+    "preceding8_NPC_None": 1024,
+    "preceding8_NPC_nonzero_None": 942,
+    "preceding8_pickup_known": 364,
+    "preceding8_pickup_None": 308,
+    "preceding8_pickup_nonzero_None": 288,
+    "preceding9_NPC_known": 2432,
+    "preceding9_NPC_None": 1024,
+    "preceding9_NPC_nonzero_None": 942,
+    "preceding9_pickup_known": 364,
+    "preceding9_pickup_None": 308,
+    "preceding9_pickup_nonzero_None": 288,
+    "preceding10_NPC_known": 2432,
+    "preceding10_NPC_None": 1024,
+    "preceding10_NPC_nonzero_None": 942,
+    "preceding10_pickup_known": 364,
+    "preceding10_pickup_None": 308,
+    "preceding10_pickup_nonzero_None": 288,
+    "preceding11_NPC_known": 2432,
+    "preceding11_NPC_None": 1024,
+    "preceding11_NPC_nonzero_None": 942,
+    "preceding11_pickup_known": 364,
+    "preceding11_pickup_None": 308,
+    "preceding11_pickup_nonzero_None": 288,
+    "preceding12_NPC_known": 2432,
+    "preceding12_NPC_None": 1024,
+    "preceding12_NPC_nonzero_None": 942,
+    "preceding12_pickup_known": 364,
+    "preceding12_pickup_None": 308,
+    "preceding12_pickup_nonzero_None": 288,
+    "preceding13_NPC_known": 2432,
+    "preceding13_NPC_None": 1024,
+    "preceding13_NPC_nonzero_None": 942,
+    "preceding13_pickup_known": 364,
+    "preceding13_pickup_None": 308,
+    "preceding13_pickup_nonzero_None": 288,
+    "preceding14_NPC_known": 2432,
+    "preceding14_NPC_None": 1024,
+    "preceding14_NPC_nonzero_None": 942,
+    "preceding14_pickup_known": 364,
+    "preceding14_pickup_None": 308,
+    "preceding14_pickup_nonzero_None": 288,
+    "preceding15_NPC_known": 2432,
+    "preceding15_NPC_None": 1024,
+    "preceding15_NPC_nonzero_None": 942,
+    "preceding15_pickup_known": 364,
+    "preceding15_pickup_None": 308,
+    "preceding15_pickup_nonzero_None": 288,
+    "preceding16_NPC_known": 2432,
+    "preceding16_NPC_None": 1024,
+    "preceding16_NPC_nonzero_None": 942,
+    "preceding16_pickup_known": 364,
+    "preceding16_pickup_None": 308,
+    "preceding16_pickup_nonzero_None": 288,
+    "preceding17_NPC_known": 2424,
+    "preceding17_NPC_None": 1032,
+    "preceding17_NPC_nonzero_None": 968,
+    "preceding17_pickup_known": 364,
+    "preceding17_pickup_None": 308,
+    "preceding17_pickup_nonzero_None": 288,
+    "preceding18_NPC_known": 2424,
+    "preceding18_NPC_None": 1032,
+    "preceding18_NPC_nonzero_None": 968,
+    "preceding18_pickup_known": 364,
+    "preceding18_pickup_None": 308,
+    "preceding18_pickup_nonzero_None": 288,
+    "preceding19_NPC_known": 2424,
+    "preceding19_NPC_None": 1032,
+    "preceding19_NPC_nonzero_None": 968,
+    "preceding19_pickup_known": 364,
+    "preceding19_pickup_None": 308,
+    "preceding19_pickup_nonzero_None": 288,
+    "preceding20_NPC_known": 2424,
+    "preceding20_NPC_None": 1032,
+    "preceding20_NPC_nonzero_None": 968,
+    "preceding20_pickup_known": 364,
+    "preceding20_pickup_None": 308,
+    "preceding20_pickup_nonzero_None": 288,
+    "preceding21_NPC_known": 2424,
+    "preceding21_NPC_None": 1032,
+    "preceding21_NPC_nonzero_None": 968,
+    "preceding21_pickup_known": 364,
+    "preceding21_pickup_None": 308,
+    "preceding21_pickup_nonzero_None": 288,
+    "preceding22_NPC_known": 2424,
+    "preceding22_NPC_None": 1032,
+    "preceding22_NPC_nonzero_None": 968,
+    "preceding22_pickup_known": 364,
+    "preceding22_pickup_None": 308,
+    "preceding22_pickup_nonzero_None": 288,
+    "preceding23_NPC_known": 2424,
+    "preceding23_NPC_None": 1032,
+    "preceding23_NPC_nonzero_None": 968,
+    "preceding23_pickup_known": 364,
+    "preceding23_pickup_None": 308,
+    "preceding23_pickup_nonzero_None": 288,
+    "preceding24_NPC_known": 2424,
+    "preceding24_NPC_None": 1032,
+    "preceding24_NPC_nonzero_None": 968,
+    "preceding24_pickup_known": 364,
+    "preceding24_pickup_None": 308,
+    "preceding24_pickup_nonzero_None": 288,
+    "preceding25_NPC_known": 2424,
+    "preceding25_NPC_None": 1032,
+    "preceding25_NPC_nonzero_None": 968,
+    "preceding25_pickup_known": 364,
+    "preceding25_pickup_None": 308,
+    "preceding25_pickup_nonzero_None": 288,
+    "preceding26_NPC_known": 2428,
+    "preceding26_NPC_None": 1028,
+    "preceding26_NPC_nonzero_None": 964,
+    "preceding26_pickup_known": 416,
+    "preceding26_pickup_None": 256,
+    "preceding26_pickup_nonzero_None": 236,
+    "preceding27_NPC_known": 2428,
+    "preceding27_NPC_None": 1028,
+    "preceding27_NPC_nonzero_None": 964,
+    "preceding27_pickup_known": 416,
+    "preceding27_pickup_None": 256,
+    "preceding27_pickup_nonzero_None": 236,
+    "preceding28_NPC_known": 2428,
+    "preceding28_NPC_None": 1028,
+    "preceding28_NPC_nonzero_None": 964,
+    "preceding28_pickup_known": 416,
+    "preceding28_pickup_None": 256,
+    "preceding28_pickup_nonzero_None": 236,
+    "preceding29_NPC_known": 2428,
+    "preceding29_NPC_None": 1028,
+    "preceding29_NPC_nonzero_None": 964,
+    "preceding29_pickup_known": 416,
+    "preceding29_pickup_None": 256,
+    "preceding29_pickup_nonzero_None": 236,
+    "preceding30_NPC_known": 2428,
+    "preceding30_NPC_None": 1028,
+    "preceding30_NPC_nonzero_None": 964,
+    "preceding30_pickup_known": 416,
+    "preceding30_pickup_None": 256,
+    "preceding30_pickup_nonzero_None": 236,
+    "preceding31_NPC_known": 2428,
+    "preceding31_NPC_None": 1028,
+    "preceding31_NPC_nonzero_None": 964,
+    "preceding31_pickup_known": 416,
+    "preceding31_pickup_None": 256,
+    "preceding31_pickup_nonzero_None": 236,
+    "preceding32_NPC_known": 2428,
+    "preceding32_NPC_None": 1028,
+    "preceding32_NPC_nonzero_None": 964,
+    "preceding32_pickup_known": 416,
+    "preceding32_pickup_None": 256,
+    "preceding32_pickup_nonzero_None": 236,
+    "preceding33_NPC_known": 2428,
+    "preceding33_NPC_None": 1028,
+    "preceding33_NPC_nonzero_None": 964,
+    "preceding33_pickup_known": 416,
+    "preceding33_pickup_None": 256,
+    "preceding33_pickup_nonzero_None": 236,
+    "preceding34_NPC_known": 2428,
+    "preceding34_NPC_None": 1028,
+    "preceding34_NPC_nonzero_None": 964,
+    "preceding34_pickup_known": 416,
+    "preceding34_pickup_None": 256,
+    "preceding34_pickup_nonzero_None": 236,
+    "preceding35_NPC_known": 2428,
+    "preceding35_NPC_None": 1028,
+    "preceding35_NPC_nonzero_None": 964,
+    "preceding35_pickup_known": 416,
+    "preceding35_pickup_None": 256,
+    "preceding35_pickup_nonzero_None": 236,
+    "preceding36_NPC_known": 2428,
+    "preceding36_NPC_None": 1028,
+    "preceding36_NPC_nonzero_None": 964,
+    "preceding36_pickup_known": 416,
+    "preceding36_pickup_None": 256,
+    "preceding36_pickup_nonzero_None": 236,
+    "preceding37_NPC_known": 2428,
+    "preceding37_NPC_None": 1028,
+    "preceding37_NPC_nonzero_None": 964,
+    "preceding37_pickup_known": 416,
+    "preceding37_pickup_None": 256,
+    "preceding37_pickup_nonzero_None": 236,
+    "preceding38_NPC_known": 2428,
+    "preceding38_NPC_None": 1028,
+    "preceding38_NPC_nonzero_None": 964,
+    "preceding38_pickup_known": 416,
+    "preceding38_pickup_None": 256,
+    "preceding38_pickup_nonzero_None": 236,
+    "preceding39_NPC_known": 1212,
+    "preceding39_NPC_None": 516,
+    "preceding39_NPC_nonzero_None": 475,
+    "preceding39_pickup_known": 104,
+    "preceding39_pickup_None": 120,
+    "preceding39_pickup_nonzero_None": 106,
+    "preceding40_NPC_known": 1212,
+    "preceding40_NPC_None": 516,
+    "preceding40_NPC_nonzero_None": 475,
+    "preceding40_pickup_known": 104,
+    "preceding40_pickup_None": 120,
+    "preceding40_pickup_nonzero_None": 106,
+    "preceding41_NPC_known": 1212,
+    "preceding41_NPC_None": 516,
+    "preceding41_NPC_nonzero_None": 475,
+    "preceding41_pickup_known": 104,
+    "preceding41_pickup_None": 120,
+    "preceding41_pickup_nonzero_None": 106,
+    "preceding42_NPC_known": 1212,
+    "preceding42_NPC_None": 516,
+    "preceding42_NPC_nonzero_None": 475,
+    "preceding42_pickup_known": 104,
+    "preceding42_pickup_None": 120,
+    "preceding42_pickup_nonzero_None": 106,
+    "preceding43_NPC_known": 1212,
+    "preceding43_NPC_None": 516,
+    "preceding43_NPC_nonzero_None": 475,
+    "preceding43_pickup_known": 104,
+    "preceding43_pickup_None": 120,
+    "preceding43_pickup_nonzero_None": 106,
+    "preceding44_NPC_known": 1212,
+    "preceding44_NPC_None": 516,
+    "preceding44_NPC_nonzero_None": 475,
+    "preceding44_pickup_known": 104,
+    "preceding44_pickup_None": 120,
+    "preceding44_pickup_nonzero_None": 106,
+    "preceding45_NPC_known": 1212,
+    "preceding45_NPC_None": 516,
+    "preceding45_NPC_nonzero_None": 475,
+    "preceding45_pickup_known": 104,
+    "preceding45_pickup_None": 120,
+    "preceding45_pickup_nonzero_None": 106,
+    "preceding46_NPC_known": 1212,
+    "preceding46_NPC_None": 516,
+    "preceding46_NPC_nonzero_None": 475,
+    "preceding46_pickup_known": 104,
+    "preceding46_pickup_None": 120,
+    "preceding46_pickup_nonzero_None": 106,
+    "preceding47_NPC_known": 1212,
+    "preceding47_NPC_None": 516,
+    "preceding47_NPC_nonzero_None": 475,
+    "preceding47_pickup_known": 104,
+    "preceding47_pickup_None": 120,
+    "preceding47_pickup_nonzero_None": 106,
+    "preceding48_NPC_known": 1216,
+    "preceding48_NPC_None": 512,
+    "preceding48_NPC_nonzero_None": 471,
+    "preceding48_pickup_known": 156,
+    "preceding48_pickup_None": 68,
+    "preceding48_pickup_nonzero_None": 60,
+    "preceding49_NPC_known": 1216,
+    "preceding49_NPC_None": 512,
+    "preceding49_NPC_nonzero_None": 471,
+    "preceding49_pickup_known": 156,
+    "preceding49_pickup_None": 68,
+    "preceding49_pickup_nonzero_None": 60,
+    "preceding50_NPC_known": 1216,
+    "preceding50_NPC_None": 512,
+    "preceding50_NPC_nonzero_None": 471,
+    "preceding50_pickup_known": 156,
+    "preceding50_pickup_None": 68,
+    "preceding50_pickup_nonzero_None": 60,
+    "preceding51_NPC_known": 1216,
+    "preceding51_NPC_None": 512,
+    "preceding51_NPC_nonzero_None": 471,
+    "preceding51_pickup_known": 156,
+    "preceding51_pickup_None": 68,
+    "preceding51_pickup_nonzero_None": 60,
+    "preceding52_NPC_known": 1216,
+    "preceding52_NPC_None": 512,
+    "preceding52_NPC_nonzero_None": 471,
+    "preceding52_pickup_known": 156,
+    "preceding52_pickup_None": 68,
+    "preceding52_pickup_nonzero_None": 60,
+    "preceding53_NPC_known": 1216,
+    "preceding53_NPC_None": 512,
+    "preceding53_NPC_nonzero_None": 471,
+    "preceding53_pickup_known": 156,
+    "preceding53_pickup_None": 68,
+    "preceding53_pickup_nonzero_None": 60,
+    "preceding54_NPC_known": 1216,
+    "preceding54_NPC_None": 512,
+    "preceding54_NPC_nonzero_None": 471,
+    "preceding54_pickup_known": 156,
+    "preceding54_pickup_None": 68,
+    "preceding54_pickup_nonzero_None": 60,
+    "preceding55_NPC_known": 1216,
+    "preceding55_NPC_None": 512,
+    "preceding55_NPC_nonzero_None": 471,
+    "preceding55_pickup_known": 156,
+    "preceding55_pickup_None": 68,
+    "preceding55_pickup_nonzero_None": 60,
+    "preceding56_NPC_known": 1216,
+    "preceding56_NPC_None": 512,
+    "preceding56_NPC_nonzero_None": 471,
+    "preceding56_pickup_known": 156,
+    "preceding56_pickup_None": 68,
+    "preceding56_pickup_nonzero_None": 60,
+    "preceding57_NPC_known": 1216,
+    "preceding57_NPC_None": 512,
+    "preceding57_NPC_nonzero_None": 471,
+    "preceding57_pickup_known": 156,
+    "preceding57_pickup_None": 68,
+    "preceding57_pickup_nonzero_None": 60,
+    "preceding58_NPC_known": 1216,
+    "preceding58_NPC_None": 512,
+    "preceding58_NPC_nonzero_None": 471,
+    "preceding58_pickup_known": 156,
+    "preceding58_pickup_None": 68,
+    "preceding58_pickup_nonzero_None": 60,
+    "preceding59_NPC_known": 1216,
+    "preceding59_NPC_None": 512,
+    "preceding59_NPC_nonzero_None": 471,
+    "preceding59_pickup_known": 156,
+    "preceding59_pickup_None": 68,
+    "preceding59_pickup_nonzero_None": 60,
+    "preceding60_NPC_known": 1216,
+    "preceding60_NPC_None": 512,
+    "preceding60_NPC_nonzero_None": 471,
+    "preceding60_pickup_known": 156,
+    "preceding60_pickup_None": 68,
+    "preceding60_pickup_nonzero_None": 60,
+    "preceding61_NPC_known": 1216,
+    "preceding61_NPC_None": 512,
+    "preceding61_NPC_nonzero_None": 471,
+    "preceding61_pickup_known": 156,
+    "preceding61_pickup_None": 68,
+    "preceding61_pickup_nonzero_None": 60,
+    "preceding62_NPC_known": 1216,
+    "preceding62_NPC_None": 512,
+    "preceding62_NPC_nonzero_None": 471,
+    "preceding62_pickup_known": 156,
+    "preceding62_pickup_None": 68,
+    "preceding62_pickup_nonzero_None": 60,
+    "preceding63_NPC_known": 1216,
+    "preceding63_NPC_None": 512,
+    "preceding63_NPC_nonzero_None": 471,
+    "preceding63_pickup_known": 156,
+    "preceding63_pickup_None": 68,
+    "preceding63_pickup_nonzero_None": 60,
+    "preceding64_NPC_known": 1216,
+    "preceding64_NPC_None": 512,
+    "preceding64_NPC_nonzero_None": 471,
+    "preceding64_pickup_known": 156,
+    "preceding64_pickup_None": 68,
+    "preceding64_pickup_nonzero_None": 60,
+    "preceding65_NPC_known": 1216,
+    "preceding65_NPC_None": 512,
+    "preceding65_NPC_nonzero_None": 471,
+    "preceding65_pickup_known": 156,
+    "preceding65_pickup_None": 68,
+    "preceding65_pickup_nonzero_None": 60,
+    "preceding66_NPC_known": 1220,
+    "preceding66_NPC_None": 508,
+    "preceding66_NPC_nonzero_None": 467,
+    "preceding66_pickup_known": 260,
+    "preceding66_pickup_None": 188,
+    "preceding66_pickup_nonzero_None": 182,
+    "preceding67_NPC_known": 1220,
+    "preceding67_NPC_None": 508,
+    "preceding67_NPC_nonzero_None": 467,
+    "preceding67_pickup_known": 260,
+    "preceding67_pickup_None": 188,
+    "preceding67_pickup_nonzero_None": 182,
+    "preceding68_NPC_known": 1224,
+    "preceding68_NPC_None": 504,
+    "preceding68_NPC_nonzero_None": 463,
+    "preceding68_pickup_known": 312,
+    "preceding68_pickup_None": 136,
+    "preceding68_pickup_nonzero_None": 130,
+    "preceding69_NPC_known": 1224,
+    "preceding69_NPC_None": 504,
+    "preceding69_NPC_nonzero_None": 463,
+    "preceding69_pickup_known": 312,
+    "preceding69_pickup_None": 136,
+    "preceding69_pickup_nonzero_None": 130,
+    "preceding70_NPC_known": 1224,
+    "preceding70_NPC_None": 504,
+    "preceding70_NPC_nonzero_None": 463,
+    "preceding70_pickup_known": 312,
+    "preceding70_pickup_None": 136,
+    "preceding70_pickup_nonzero_None": 130,
+    "preceding71_NPC_known": 1224,
+    "preceding71_NPC_None": 504,
+    "preceding71_NPC_nonzero_None": 463,
+    "preceding71_pickup_known": 312,
+    "preceding71_pickup_None": 136,
+    "preceding71_pickup_nonzero_None": 130,
+    "preceding72_NPC_known": 1224,
+    "preceding72_NPC_None": 504,
+    "preceding72_NPC_nonzero_None": 463,
+    "preceding72_pickup_known": 312,
+    "preceding72_pickup_None": 136,
+    "preceding72_pickup_nonzero_None": 130,
+    "preceding73_NPC_known": 1224,
+    "preceding73_NPC_None": 504,
+    "preceding73_NPC_nonzero_None": 463,
+    "preceding73_pickup_known": 312,
+    "preceding73_pickup_None": 136,
+    "preceding73_pickup_nonzero_None": 130,
+    "preceding74_NPC_known": 1224,
+    "preceding74_NPC_None": 504,
+    "preceding74_NPC_nonzero_None": 463,
+    "preceding74_pickup_known": 312,
+    "preceding74_pickup_None": 136,
+    "preceding74_pickup_nonzero_None": 130,
+    "preceding75_NPC_known": 1224,
+    "preceding75_NPC_None": 504,
+    "preceding75_NPC_nonzero_None": 463,
+    "preceding75_pickup_known": 312,
+    "preceding75_pickup_None": 136,
+    "preceding75_pickup_nonzero_None": 130,
+    "preceding76_NPC_known": 1224,
+    "preceding76_NPC_None": 504,
+    "preceding76_NPC_nonzero_None": 463,
+    "preceding76_pickup_known": 312,
+    "preceding76_pickup_None": 136,
+    "preceding76_pickup_nonzero_None": 130,
+    "preceding77_NPC_known": 1224,
+    "preceding77_NPC_None": 504,
+    "preceding77_NPC_nonzero_None": 463,
+    "preceding77_pickup_known": 312,
+    "preceding77_pickup_None": 136,
+    "preceding77_pickup_nonzero_None": 130,
+    "preceding78_NPC_known": 1224,
+    "preceding78_NPC_None": 504,
+    "preceding78_NPC_nonzero_None": 463,
+    "preceding78_pickup_known": 312,
+    "preceding78_pickup_None": 136,
+    "preceding78_pickup_nonzero_None": 130,
+    "preceding79_NPC_known": 1224,
+    "preceding79_NPC_None": 504,
+    "preceding79_NPC_nonzero_None": 463,
+    "preceding79_pickup_known": 312,
+    "preceding79_pickup_None": 136,
+    "preceding79_pickup_nonzero_None": 130,
+    "preceding80_NPC_known": 1224,
+    "preceding80_NPC_None": 504,
+    "preceding80_NPC_nonzero_None": 463,
+    "preceding80_pickup_known": 312,
+    "preceding80_pickup_None": 136,
+    "preceding80_pickup_nonzero_None": 130
+  },
+  "source_files": 96,
+  "production_files": 79,
+  "import_edges": 399,
+  "current_bodies": 55,
+  "source_before_after_current_match": true,
+  "sources": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+    "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+    "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/ai_world135.py": "379a4e33d987ae6d6cf5344fba35ccd1567366720d106b2d58bdaddad613e078",
+    "reconstruction/core_spec/autocast_dead_source139.py": "95c3190e8e0d38cf99f6352bc06ee83769ede1da126712816c510d57e2d33594",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates139.py": "4ff5b2c3706247a9bb0f733bda6b7b2a9d46bbb19ab46b4d7f418b8e3ee70954",
+    "reconstruction/core_spec/candidates139_data.py": "efb653784d0fe24bdc35cf65437a5226eff64888252f33826a8341645eaf8343",
+    "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+    "reconstruction/core_spec/cast139.py": "88ad210ea3a959b62f19c0fd5f6b43a14983609d7bcb69132166e6c475b50fd0",
+    "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+    "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+    "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+    "reconstruction/core_spec/combat139.py": "4f7f8f00411583608d4c1d8e917733ae1b8068b10ad2f55b63dde675c917fc89",
+    "reconstruction/core_spec/death139.py": "4186d06ccd2338cd09b2be0afda7381e4b76f6b4bfdc1746714951707fad5a7f",
+    "reconstruction/core_spec/death_pickups139.py": "74b6460ab715044a90993ef8d4c74884bca1dadb3329b4b8f6b4e6e309c66cfb",
+    "reconstruction/core_spec/default_damage139.py": "a49c2b8bd191bf53012e96a1e09420cdc220165fa1fdb9195131d9f7cfc23393",
+    "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+    "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+    "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+    "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+    "reconstruction/core_spec/enemy_ai139.py": "db7d8fce02df7674908304768e183b7e75830dbbc98d7e4fa06c4ee28d6e303a",
+    "reconstruction/core_spec/enemy_ai_dead139.py": "19b64a1991afe8964dbd70941dea454c4f79cb7ff07b5ce2db55700541a4baab",
+    "reconstruction/core_spec/enemy_ai_dead139_v2.py": "1b0fe5c7d966860047fb1e8b456fd103a090c72547c9df8c8fe632542e154d0d",
+    "reconstruction/core_spec/frame_clock139.py": "e906286b40374b649d57202097c190d634959d074f54e6350fc6d85d23656cdd",
+    "reconstruction/core_spec/growth139.py": "046d30aacfc3775bfdb2c022e61e3f1b655e858ebfdf865cee6e8e9419ea2169",
+    "reconstruction/core_spec/growth_world139.py": "0ce3d2144d42e5c61a97e21a227e0e46b85c4b955ef68af6f1ee24edbea03993",
+    "reconstruction/core_spec/healing139.py": "6ad9ccf9c161c4bacfa7532dacc53bbf555d14db688e0c7cd85c94f54cb9fc07",
+    "reconstruction/core_spec/hit_events139.py": "c009ef5ef76fc89905fefe4910bd48cff71681721a4ea4699ba582f7f9dbd4e7",
+    "reconstruction/core_spec/hit_events139_data.py": "4d556a86753fe67d48a1fd5c2d2a05dd32d9871f86b768cbfd2923eb7a943bd0",
+    "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+    "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+    "reconstruction/core_spec/incoming139.py": "c3b71824ebce3f932b194f8c1e531827f541d72500e2d9f50b181d0fc10197cd",
+    "reconstruction/core_spec/incoming_history139.py": "13445d0d1594d859d74301a54e392acc51ee60958a38fa50e0077c71a6a27473",
+    "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+    "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+    "reconstruction/core_spec/natural_npc139.py": "0e749d4bf0479b2ebe5fe30b542256e29d9910e15f480b3fbb1a0ab87eee2670",
+    "reconstruction/core_spec/npc_heading139.py": "680ff998e8e77916a2c976ccc590834ff94fa58b484efbde5e1bf41a9458f229",
+    "reconstruction/core_spec/npc_spawn139.py": "c1a4122f82edad2dadddc3a1e63f00544db7e349050a21d05a93247a326b1330",
+    "reconstruction/core_spec/opening139.py": "291a0e2a9374a07c984b6de7143764ae827bc36e6fcc1664598dc9468bf64817",
+    "reconstruction/core_spec/opening_actor139.py": "f6ceb4b648f993c2ff8508f255051fe6c97cb636295e162af8a4af19dc55603b",
+    "reconstruction/core_spec/opening_aux139.py": "a2d3109330e125bd2d70fcf5a37d00c2a4f61ff87486990a54b9bfc3321a5238",
+    "reconstruction/core_spec/opening_aux139_data.py": "4f38958fa24b83cbe7e674d2d659442c65fe90eb6daed4f61558fc588cdb150a",
+    "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+    "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+    "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+    "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+    "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+    "reconstruction/core_spec/player_autocast139.py": "724d2db7c767296fee5cff6b312779210d9a0ca8cb48e3872e532775e384acb5",
+    "reconstruction/core_spec/player_effects139.py": "391efc4a2538e6ca96c9cf2df4afbfd3aa1c0d3cf6ede83d2d445eb7028b7ba1",
+    "reconstruction/core_spec/player_enemy139.py": "22a6f3a6e4f0f4e4b295b7b39e4f7fa735f6e0c4b59ead4c8c8709998926c7ec",
+    "reconstruction/core_spec/player_enemy_probe_source139.py": "fd83f376d0f467a00cb05ef59611fbef87a6fe3b61413b09e99cbb037e4bf286",
+    "reconstruction/core_spec/player_regeneration139.py": "5fb0ce88fab837ed023acfc6315176262c1d76cddf703c6361b652b58721be49",
+    "reconstruction/core_spec/player_update139.py": "1d9abd2fe4db58b4acd02434ec9d5b04133c5860673a6f0535f6fdf3d9d147ac",
+    "reconstruction/core_spec/position_math139.py": "79fe9a84dba5fa4f1f7828c4b018d9045f7b653e573e270c0051e7131c64265a",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+    "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+    "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/select139.py": "d801746fb135cd8a85bb69f5105c1cbe519e312dc1431e858a19b37f53a17412",
+    "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+    "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+    "reconstruction/core_spec/thunder_clap139.py": "16c7681d93746427b5472ae0c35979a86e2a25b739426aa0618f45ccfa77f0a6",
+    "reconstruction/core_spec/thunder_clap_world139.py": "ac89f68bb4a1732325577efcc335c960064bea3253a7899ee53378aa6e20518a",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+    "reconstruction/core_spec/world_position139_data.py": "872dd5d3701cb1344f1a838e2c992117d1f84b844e0d09a0e2d0b9dc32831b81",
+    "reconstruction/core_spec/world_position139_v2.py": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_enemy_ai_dead139_oracle.py": "20ed32b662d6348bd5dfb878b06fc39addefe2f6d3a488be30dd46be25a5a2b2",
+    "scripts/build_enemy_ai_dead139_v2_oracle.py": "91160de49000c680894f31b2cd9a743d29a8d214f2b9fd9bd89ef249fd9f4ce1",
+    "scripts/build_healing139_v3_oracle.py": "f0ccdb415b72d3324c9c6bcaf72352dead8a6b8b466134c524bdd72df5c7def8",
+    "scripts/build_player_autocast139_oracle.py": "c5de5179f1f4c6bf744cf5bcc900959be66dcda2c0ce9be8545b0ececbec7605",
+    "scripts/build_player_update139_oracle.py": "397c800845b1b16883339d1bed77e7f1a1b09efa54a9b52b6f2eb93db181e76d",
+    "scripts/check_asset_world139.py": "7b3717c403fac3a39213edbd9ef7ca13465a51e55206c68aeef7ef2a2b0f2100",
+    "scripts/check_enemy_ai_dead139_v2.py": "e20a2fdaf91aea9a64b2729f87654ae5ec517584edac57e5d2e755239aba4680",
+    "scripts/check_healing139_v3.py": "df19275d2e9d9797bc4c3674d900aef3f17a46f7e8242605e66c3d514cecbef0",
+    "scripts/check_player_autocast139.py": "292daaadb5c1c662f39d69947bce46463c0906dcf5afef2474e2afd7bfe6441b",
+    "scripts/check_player_update139.py": "db9be3eeb8619bae60a7d792fc50a876b644d3fd8c9bc0f695310d09835eba0d",
+    "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_enemy_ai_dead139_v2_oracle.mjs": "5517a3ac6ab9c9aff6b7de3507af1c63d45b7cc5d15fcdbe046cccf728df6f00",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ability_state.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/ai135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_trig135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/demo_ai135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/incoming135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/ai_world135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/default_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/player_autocast139.py"
+    ],
+    [
+      "reconstruction/core_spec/autocast_dead_source139.py",
+      "reconstruction/core_spec/thunder_clap_world139.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/binary32_sqrt.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/candidates139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/cast135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/combat139.py"
+    ],
+    [
+      "reconstruction/core_spec/cast139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/combat135.py"
+    ],
+    [
+      "reconstruction/core_spec/cast_events135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/combat134.py"
+    ],
+    [
+      "reconstruction/core_spec/combat135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/combat139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/combat139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/death139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/death_pickups139.py",
+      "reconstruction/core_spec/world_position139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/default_damage139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/demo_shout135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_ai135.py",
+      "reconstruction/core_spec/record_cells135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/opening_entities135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/owned_cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/demo_shout135.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/derived_stats139.py",
+      "reconstruction/core_spec/progression.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/core_spec/world_position135.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/distance_map135.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/ai_world135.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/enemy_ai_dead139.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_clock139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/frame_clock139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/candidates139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/derived_stats139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth139.py",
+      "reconstruction/core_spec/initial_state139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/candidates139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/growth_world139.py",
+      "reconstruction/core_spec/select139.py"
+    ],
+    [
+      "reconstruction/core_spec/healing139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/healing139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/hit_events139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/hit_events139.py",
+      "reconstruction/core_spec/hit_events139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming135.py",
+      "reconstruction/core_spec/incoming134.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/incoming_history139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/derived_stats139.py"
+    ],
+    [
+      "reconstruction/core_spec/initial_state139.py",
+      "reconstruction/core_spec/initial_state139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/npc_spawn139.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/world_position139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/natural_npc139.py",
+      "reconstruction/core_spec/world_position139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_heading139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_heading139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/initial_state139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/npc_spawn139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/initial_state139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/natural_npc139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_aux139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_actor139.py",
+      "reconstruction/core_spec/world_position139_v2.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/opening_actor139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/opening_aux139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_aux139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/ai_trig135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/opening_entities135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/opening_entities135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/ability_state.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_cast135.py",
+      "reconstruction/core_spec/owned_prelude135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/cast_events135.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/progression134.py"
+    ],
+    [
+      "reconstruction/core_spec/owned_prelude135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/default_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/player_autocast139.py",
+      "reconstruction/core_spec/thunder_clap139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_effects139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/distance_map135.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/enemy_ai_dead139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy139.py",
+      "reconstruction/core_spec/player_autocast139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/default_damage139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/enemy_ai_dead139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/frame_clock139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/player_autocast139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/player_enemy139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_enemy_probe_source139.py",
+      "reconstruction/core_spec/thunder_clap_world139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_regeneration139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/derived_stats139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/player_update139.py",
+      "reconstruction/core_spec/hit_events139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/position_math139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/position_math139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/position_math139.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/progression134.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/radius.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/rng.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "reconstruction/core_spec/select139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_geometry135.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/spawn_heading135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/radius.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap139.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/growth_world139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "reconstruction/core_spec/thunder_clap_world139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_geometry135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_heading135.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position135.py",
+      "reconstruction/core_spec/spawn_position135_data.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/binary32_sqrt.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/npc_heading139.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/position_math139.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/rng.py"
+    ],
+    [
+      "reconstruction/core_spec/world_position139_v2.py",
+      "reconstruction/core_spec/world_position139_data.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/entry_resources135.py",
+      "reconstruction/resource_spec/dbc.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/terrain135.py",
+      "reconstruction/resource_spec/entry_resources135.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "reconstruction/resource_spec/world_query135.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/build_enemy_ai_dead139_oracle.py",
+      "scripts/build_player_autocast139_oracle.py"
+    ],
+    [
+      "scripts/build_enemy_ai_dead139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_enemy_ai_dead139_v2_oracle.py",
+      "scripts/build_enemy_ai_dead139_oracle.py"
+    ],
+    [
+      "scripts/build_enemy_ai_dead139_v2_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_healing139_v3_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_player_autocast139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/build_player_update139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/check_asset_world139.py",
+      "reconstruction/resource_spec/__init__.py"
+    ],
+    [
+      "scripts/check_asset_world139.py",
+      "reconstruction/resource_spec/terrain135.py"
+    ],
+    [
+      "scripts/check_asset_world139.py",
+      "reconstruction/resource_spec/world_query135.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/autocast_dead_source139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/cast139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/default_damage139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/enemy_ai_dead139_v2.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/player_autocast139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "reconstruction/core_spec/player_enemy_probe_source139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "scripts/build_enemy_ai_dead139_v2_oracle.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "scripts/check_healing139_v3.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "scripts/check_player_autocast139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "scripts/check_player_update139.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_enemy_ai_dead139_v2.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/growth_world139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/player_regeneration139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "scripts/build_healing139_v3_oracle.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "scripts/check_asset_world139.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_healing139_v3.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/candidates139_data.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/death139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/death_pickups139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/default_damage139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/enemy_ai139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/healing139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/hit_events139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/incoming139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/incoming_history139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/player_autocast139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/player_regeneration139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "reconstruction/core_spec/thunder_clap_world139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "scripts/build_player_autocast139_oracle.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "scripts/check_healing139_v3.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "scripts/check_player_update139.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_player_autocast139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/growth139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/growth_world139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/opening139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/opening_profile139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/player_effects139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "reconstruction/core_spec/player_update139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/build_player_update139_oracle.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/check_asset_world139.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_player_update139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/incoming139_tools.py",
+      "scripts/wasm139_profile.py"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "functions": {
+    "913": {
+      "index": 913,
+      "signature": [
+        "7f7e7d7f7f7f7f",
+        ""
+      ],
+      "body_start": 2317860,
+      "body_end": 2346188,
+      "body_bytes": 28328,
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_bytes": 443907,
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "index": 922,
+      "signature": [
+        "7f7f",
+        "7f"
+      ],
+      "body_start": 2557118,
+      "body_end": 2582332,
+      "body_bytes": 25214,
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_bytes": 442895,
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "925": {
+      "index": 925,
+      "signature": [
+        "7f7d",
+        ""
+      ],
+      "body_start": 2631914,
+      "body_end": 2655741,
+      "body_bytes": 23827,
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_bytes": 353318,
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "994": {
+      "index": 994,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 4433607,
+      "body_end": 4445466,
+      "body_bytes": 11859,
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_bytes": 351403,
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1076": {
+      "index": 1076,
+      "signature": [
+        "7f7d7e7f7f7f",
+        ""
+      ],
+      "body_start": 5969750,
+      "body_end": 5982285,
+      "body_bytes": 12535,
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_bytes": 201850,
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1093": {
+      "index": 1093,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 6261290,
+      "body_end": 6277720,
+      "body_bytes": 16430,
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_bytes": 315209,
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "index": 1108,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 6502655,
+      "body_end": 6514771,
+      "body_bytes": 12116,
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_bytes": 180946,
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "index": 1173,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 7464512,
+      "body_end": 7471604,
+      "body_bytes": 7092,
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_bytes": 104133,
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "index": 1238,
+      "signature": [
+        "7f7d",
+        ""
+      ],
+      "body_start": 8573326,
+      "body_end": 8580459,
+      "body_bytes": 7133,
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_bytes": 105525,
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1466": {
+      "index": 1466,
+      "signature": [
+        "7f7d7f7f7f",
+        ""
+      ],
+      "body_start": 10362076,
+      "body_end": 10367948,
+      "body_bytes": 5872,
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_bytes": 119957,
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "index": 1542,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 10921827,
+      "body_end": 10926572,
+      "body_bytes": 4745,
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_bytes": 62140,
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "index": 1600,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 11298574,
+      "body_end": 11305645,
+      "body_bytes": 7071,
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_bytes": 90865,
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "index": 1775,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 12449988,
+      "body_end": 12454490,
+      "body_bytes": 4502,
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_bytes": 54524,
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "2077": {
+      "index": 2077,
+      "signature": [
+        "7f7f7e7f7d",
+        ""
+      ],
+      "body_start": 14232233,
+      "body_end": 14236499,
+      "body_bytes": 4266,
+      "body_sha256": "36cc754bbbce303102ce675fb8e65add6b866e983068934ab8312b0d25f2b967",
+      "WAT_bytes": 55039,
+      "WAT_sha256": "a75a15d2f980b6f60e5b0934c60a42f80b3e1575cd3a464a7342c96dfb478949"
+    },
+    "2123": {
+      "index": 2123,
+      "signature": [
+        "7f7d",
+        ""
+      ],
+      "body_start": 14483573,
+      "body_end": 14486843,
+      "body_bytes": 3270,
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_bytes": 39166,
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "index": 2181,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 14742766,
+      "body_end": 14747143,
+      "body_bytes": 4377,
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_bytes": 65739,
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "index": 2189,
+      "signature": [
+        "7f7e7f7d7f",
+        ""
+      ],
+      "body_start": 14768822,
+      "body_end": 14772100,
+      "body_bytes": 3278,
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_bytes": 55097,
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2945": {
+      "index": 2945,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 17914642,
+      "body_end": 17917186,
+      "body_bytes": 2544,
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_bytes": 33472,
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "index": 3755,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 20275909,
+      "body_end": 20279024,
+      "body_bytes": 3115,
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_bytes": 50312,
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "index": 4593,
+      "signature": [
+        "7f7e7f7f",
+        ""
+      ],
+      "body_start": 22733483,
+      "body_end": 22735263,
+      "body_bytes": 1780,
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_bytes": 19439,
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "index": 4603,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 22761731,
+      "body_end": 22763719,
+      "body_bytes": 1988,
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_bytes": 22960,
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "index": 4677,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 22932705,
+      "body_end": 22934700,
+      "body_bytes": 1995,
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_bytes": 22557,
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "8569": {
+      "index": 8569,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 31095523,
+      "body_end": 31097095,
+      "body_bytes": 1572,
+      "body_sha256": "758f94f8950ed6c4fde0a127c17d6b8135aa3b00be6910ae192c494c4797a3d1",
+      "WAT_bytes": 27879,
+      "WAT_sha256": "cdeb4c86d5ce7fcc15dd33923b5fa27a749419eae46972e242560e613e88687d"
+    },
+    "8673": {
+      "index": 8673,
+      "signature": [
+        "7f7f7f7d",
+        ""
+      ],
+      "body_start": 31285091,
+      "body_end": 31288927,
+      "body_bytes": 3836,
+      "body_sha256": "cfe20b3b60b4d26e824594c12c76f6a6700992c64f9c067cfe43ff20e0c45ece",
+      "WAT_bytes": 52107,
+      "WAT_sha256": "a35959c6b908f8be8d656b991f458b497f0ac8bfa4cbeb5ce255c42f6e1ad712"
+    },
+    "9541": {
+      "index": 9541,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 32743769,
+      "body_end": 32745083,
+      "body_bytes": 1314,
+      "body_sha256": "0f54eea8b871474bd57aa5f7b73538597e84ab824d315d9185270ea50b0200c1",
+      "WAT_bytes": 20261,
+      "WAT_sha256": "dcf3f6bb95ecd30defec2809169c25c2b46c28fe245c3deac62cfcd3f3eb4570"
+    },
+    "10490": {
+      "index": 10490,
+      "signature": [
+        "7f7e7f7f7f7f7f",
+        ""
+      ],
+      "body_start": 34515908,
+      "body_end": 34517043,
+      "body_bytes": 1135,
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_bytes": 11676,
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11033": {
+      "index": 11033,
+      "signature": [
+        "7f7d7f7f7f",
+        ""
+      ],
+      "body_start": 35211003,
+      "body_end": 35212047,
+      "body_bytes": 1044,
+      "body_sha256": "279f887e41dfa0accc0ac3caf4f28e8faafadefcc4e40a1188a1e28add1e4513",
+      "WAT_bytes": 11221,
+      "WAT_sha256": "5091bc319e1aa68cd4241ff3749f4df2313c333b661fc10c9070c19e41adf443"
+    },
+    "13833": {
+      "index": 13833,
+      "signature": [
+        "7f7e7e7f7f",
+        ""
+      ],
+      "body_start": 38737236,
+      "body_end": 38738098,
+      "body_bytes": 862,
+      "body_sha256": "7657e041e585e81104729868558ab9bf0a28131a5df021c9e4dd8d82645d34e9",
+      "WAT_bytes": 7863,
+      "WAT_sha256": "4e4cbd1675449406fc867d53efe3382c769666c2d6ec58f09d4bd8d1f74a9fbb"
+    },
+    "18421": {
+      "index": 18421,
+      "signature": [
+        "7f",
+        "7d"
+      ],
+      "body_start": 43645649,
+      "body_end": 43646297,
+      "body_bytes": 648,
+      "body_sha256": "268c270a22568c1252d87b4eeb020937dc3860c2a34c54fd600578c939758044",
+      "WAT_bytes": 6744,
+      "WAT_sha256": "308daf31efbe89997280dd22dac2cb29779bdb1955e8e1b3ce43ca7d66ff1855"
+    },
+    "19598": {
+      "index": 19598,
+      "signature": [
+        "7f7f7c7f7f",
+        ""
+      ],
+      "body_start": 44838412,
+      "body_end": 44839044,
+      "body_bytes": 632,
+      "body_sha256": "58f38842752fe5aeb325edad798d13460bfcbb5d1ea6030e73a5cd035d5d1200",
+      "WAT_bytes": 7030,
+      "WAT_sha256": "a8652f10d73f4a5e657deaa0609517cb36d66851ac962490e341f62413f2f901"
+    },
+    "20123": {
+      "index": 20123,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 45341028,
+      "body_end": 45341651,
+      "body_bytes": 623,
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_bytes": 8024,
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "23328": {
+      "index": 23328,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 48489008,
+      "body_end": 48490293,
+      "body_bytes": 1285,
+      "body_sha256": "2ff4e1aab09fa7d43376d1bfdbaf96f78c8e11f36465fe4a77835eb374268574",
+      "WAT_bytes": 17981,
+      "WAT_sha256": "875576e8933acca580e1cce84ef85855aa1bf20bcaea201e418e3d038e14d708"
+    },
+    "26202": {
+      "index": 26202,
+      "signature": [
+        "7f7f7f7f7f",
+        ""
+      ],
+      "body_start": 51396856,
+      "body_end": 51397434,
+      "body_bytes": 578,
+      "body_sha256": "21cdefa04d2854bcd0ee6e5e05dc42edaa2b007a898508a0e00e24185e21f210",
+      "WAT_bytes": 5012,
+      "WAT_sha256": "2727c02723974154bc562d8531561ec9493adde032594ff5b8075f451bbc2f6f"
+    },
+    "27754": {
+      "index": 27754,
+      "signature": [
+        "7f7f7f7d7f7f",
+        ""
+      ],
+      "body_start": 52532158,
+      "body_end": 52532606,
+      "body_bytes": 448,
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_bytes": 4381,
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "index": 28155,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 52865706,
+      "body_end": 52866213,
+      "body_bytes": 507,
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_bytes": 6363,
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "30861": {
+      "index": 30861,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 55555833,
+      "body_end": 55556265,
+      "body_bytes": 432,
+      "body_sha256": "87885424a4638fe31e22b44ca21874ea94d36840e26b6b69baa4281dafbb75c8",
+      "WAT_bytes": 5631,
+      "WAT_sha256": "579279bd09b708e3b9372927c000c3370b904d9faf209971369515fe90e6dc1b"
+    },
+    "36364": {
+      "index": 36364,
+      "signature": [
+        "7d",
+        "7d"
+      ],
+      "body_start": 59282353,
+      "body_end": 59282717,
+      "body_bytes": 364,
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_bytes": 3976,
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36520": {
+      "index": 36520,
+      "signature": [
+        "7f7f7e7f7d",
+        ""
+      ],
+      "body_start": 59546565,
+      "body_end": 59546904,
+      "body_bytes": 339,
+      "body_sha256": "56936cd9e3b8c6af09ac1d37b1cf75fdf79ed166dda699f4244f5e2c8350366a",
+      "WAT_bytes": 3627,
+      "WAT_sha256": "b214bd48e1ba90c8c44f48a8176724ba3e32c4e5c62bfc0342816f60a5f1405f"
+    },
+    "46690": {
+      "index": 46690,
+      "signature": [
+        "7f7f7f7d",
+        "7d"
+      ],
+      "body_start": 64641534,
+      "body_end": 64641813,
+      "body_bytes": 279,
+      "body_sha256": "b8120348643d400b9efdfde0bea367d29b817bbd397de6695d7f83da91565ea7",
+      "WAT_bytes": 2717,
+      "WAT_sha256": "ee353ccaa65702e791e69cb5dee27f036a313bbfcdcdbee4d6fdb2f16ad6c900"
+    },
+    "83299": {
+      "index": 83299,
+      "signature": [
+        "7f7f7f",
+        "7f"
+      ],
+      "body_start": 72927444,
+      "body_end": 72927511,
+      "body_bytes": 67,
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_bytes": 763,
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    },
+    "5719": {
+      "index": 5719,
+      "signature": [
+        "7f7f7f7f",
+        ""
+      ],
+      "body_start": 25561476,
+      "body_end": 25563260,
+      "body_bytes": 1784,
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_bytes": 17379,
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "11425": {
+      "index": 11425,
+      "signature": [
+        "7d",
+        "7d"
+      ],
+      "body_start": 35658060,
+      "body_end": 35659397,
+      "body_bytes": 1337,
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_bytes": 14765,
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "index": 11499,
+      "signature": [
+        "7d",
+        "7d"
+      ],
+      "body_start": 35769360,
+      "body_end": 35770657,
+      "body_bytes": 1297,
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_bytes": 15786,
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "15962": {
+      "index": 15962,
+      "signature": [
+        "7e7f",
+        ""
+      ],
+      "body_start": 40897972,
+      "body_end": 40898749,
+      "body_bytes": 777,
+      "body_sha256": "0cd2998ebc1278489ae5e6ebee9630a729a450d69f9ab0cdabb3c1b849d985bb",
+      "WAT_bytes": 7341,
+      "WAT_sha256": "b07d3d8c01f35f69928d037eee33c7cb77e9b1fa29889a69aeacb5252f45db7a"
+    },
+    "20060": {
+      "index": 20060,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 45293574,
+      "body_end": 45294222,
+      "body_bytes": 648,
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_bytes": 7385,
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "23333": {
+      "index": 23333,
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "body_start": 48493294,
+      "body_end": 48493788,
+      "body_bytes": 494,
+      "body_sha256": "aba9edac229ba04aaf90f3243bdec129dfdc7db637b39557b8160687cde48c98",
+      "WAT_bytes": 7130,
+      "WAT_sha256": "59395916c27696fc28dc4fa492b57a8965c89d2c453b0c61e6470a1d379284a3"
+    },
+    "29237": {
+      "index": 29237,
+      "signature": [
+        "7f7f7f7f7f",
+        ""
+      ],
+      "body_start": 54076724,
+      "body_end": 54077167,
+      "body_bytes": 443,
+      "body_sha256": "4b4e968c0308aac7eb2d772b3d2ce45c24835cbca4537efc9ac799dcd6bdcd77",
+      "WAT_bytes": 5400,
+      "WAT_sha256": "117070ce51044ed58fb14d0dc0b18fb7c9ddf08a3b88a8bbaca780774f5d3ac7"
+    },
+    "29912": {
+      "index": 29912,
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "body_start": 54774712,
+      "body_end": 54775120,
+      "body_bytes": 408,
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_bytes": 4790,
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "30179": {
+      "index": 30179,
+      "signature": [
+        "7f7f7f",
+        "7d"
+      ],
+      "body_start": 55046292,
+      "body_end": 55046725,
+      "body_bytes": 433,
+      "body_sha256": "33e979a9e4ceb648fe4aee3a30833126dbf7ed89270e52dd0aa769d5713048db",
+      "WAT_bytes": 5013,
+      "WAT_sha256": "cfe49054c275e7cb6cc7711b99fd28681f2a025a80091bd5565f00d7a5c36aef"
+    },
+    "40215": {
+      "index": 40215,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 61769894,
+      "body_end": 61770279,
+      "body_bytes": 385,
+      "body_sha256": "f1caf5b2294ea254006a1140136da2ce705e2849883414684f147bb292881891",
+      "WAT_bytes": 3966,
+      "WAT_sha256": "5cb63d69709801b763b99557a79dcd13c350d6dfc231f1c0d4a8f6cb2244a083"
+    },
+    "50441": {
+      "index": 50441,
+      "signature": [
+        "7d7d",
+        "7d"
+      ],
+      "body_start": 66105097,
+      "body_end": 66105328,
+      "body_bytes": 231,
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_bytes": 2485,
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "52557": {
+      "index": 52557,
+      "signature": [
+        "7f7f7f",
+        "7f"
+      ],
+      "body_start": 67015943,
+      "body_end": 67016158,
+      "body_bytes": 215,
+      "body_sha256": "9235b7a554194a122d90cf5077f5d7e202886ef8564701e72327f105f5d5bdee",
+      "WAT_bytes": 2444,
+      "WAT_sha256": "9a113a5df313fed6810e112932580b3d1c6d8e6d5cfe5124bf408e002af67df5"
+    },
+    "59230": {
+      "index": 59230,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 69164322,
+      "body_end": 69164468,
+      "body_bytes": 146,
+      "body_sha256": "34b9b3fd6c38222ed0de72bf0244ccdbd062d8c99aafff3ec4bca3d78b0bcbb6",
+      "WAT_bytes": 1151,
+      "WAT_sha256": "af7c92895159b57584e8be759c9d705796716d16cd5bf372704eaba0ebbfbd67"
+    },
+    "70932": {
+      "index": 70932,
+      "signature": [
+        "7f7d",
+        "7d"
+      ],
+      "body_start": 71272558,
+      "body_end": 71272653,
+      "body_bytes": 95,
+      "body_sha256": "a042121711a053832e07b547d48e7f284d074af011deb3871949ffb79d6f7086",
+      "WAT_bytes": 856,
+      "WAT_sha256": "0185b15affb4541d6e20b1ff72db4bc19054479344fa2ef56cdc393af922b773"
+    },
+    "81682": {
+      "index": 81682,
+      "signature": [
+        "7f7d",
+        "7d"
+      ],
+      "body_start": 72667622,
+      "body_end": 72667709,
+      "body_bytes": 87,
+      "body_sha256": "7d2bae1ea62daa87d5bba3a3af0d7761e3fec6d1b3c041280c35042c5221c5bb",
+      "WAT_bytes": 730,
+      "WAT_sha256": "426760ab586f6853f952fe0e3fe245a0c2d315e40cfd7dd5a4ba00bb57dcba67"
+    }
+  },
+  "phase_source": [
+    {
+      "label": "queued_remove40215",
+      "first_WAT_line": 6937
+    },
+    {
+      "label": "queued_despawn170",
+      "first_WAT_line": 6971
+    },
+    {
+      "label": "deferred_motion221",
+      "first_WAT_line": 7163
+    },
+    {
+      "label": "deferred_incoming1076",
+      "first_WAT_line": 7809
+    }
+  ],
+  "only_export_section_changed": true,
+  "added_exports": [
+    [
+      "research139_gw_companion",
+      0,
+      2945
+    ],
+    [
+      "research139_gw_initial",
+      0,
+      1600
+    ],
+    [
+      "research139_gw_opening",
+      0,
+      1108
+    ],
+    [
+      "research139_gw_gain",
+      0,
+      4677
+    ],
+    [
+      "research139_gw_select",
+      0,
+      1093
+    ],
+    [
+      "research139_gw_stack",
+      3,
+      0
+    ],
+    [
+      "research139_tc_cast922",
+      0,
+      922
+    ],
+    [
+      "research139_tc_hits1775",
+      0,
+      1775
+    ],
+    [
+      "research139_tc_areas3755",
+      0,
+      3755
+    ],
+    [
+      "research139_heal_update2123",
+      0,
+      2123
+    ],
+    [
+      "research139_heal_incoming1076",
+      0,
+      1076
+    ],
+    [
+      "research139_heal_direct913",
+      0,
+      913
+    ],
+    [
+      "research139_auto_tick1238",
+      0,
+      1238
+    ],
+    [
+      "research139_auto_ai925",
+      0,
+      925
+    ]
+  ],
+  "packet_rule": "queued40215/170 exactGUID-order phase before preserved221/330 deferredphase;notglobalpacketsort",
+  "target_packet_types": {
+    "221": 46,
+    "170": 23,
+    "330": 4
+  },
+  "true_sameframe_probe_observations": [
+    {
+      "group": "sameframe_recycle_then_attack",
+      "input": {
+        "id": 9,
+        "cooccur_probe": true,
+        "source_case_id": 0,
+        "app_seed_u64": "11",
+        "amount": 5,
+        "select_index": 0,
+        "placement": null,
+        "target_index": 81,
+        "timestamps64": [
+          "4593671619917905920",
+          "4598175219545276416",
+          "4600427019358961664",
+          "4602678819172646912",
+          "4603804719079489536",
+          "4604930618986332160",
+          "4606056518893174784",
+          "4607182418800017408",
+          "4607745368753438720",
+          "4608308318706860032",
+          "4608871268660281344",
+          "4609434218613702656",
+          "4609997168567123968",
+          "4610560118520545280",
+          "4611123068473966592",
+          "4611686018427387904",
+          "4611967493404098560",
+          "4612248968380809216",
+          "4612530443357519872",
+          "4612811918334230528",
+          "4613093393310941184",
+          "4613374868287651840",
+          "4613656343264362496",
+          "4613937818241073152",
+          "4614219293217783808",
+          "4614500768194494464",
+          "4614782243171205120",
+          "4615063718147915776",
+          "4615345193124626432",
+          "4615626668101337088",
+          "4615908143078047744",
+          "4616189618054758400",
+          "4616330355543113728",
+          "4616471093031469056",
+          "4616611830519824384",
+          "4616752568008179712",
+          "4616893305496535040",
+          "4617034042984890368",
+          "4617174780473245696",
+          "4617315517961601024",
+          "4617456255449956352",
+          "4617596992938311680",
+          "4617737730426667008",
+          "4617878467915022336",
+          "4618019205403377664",
+          "4618159942891732992",
+          "4618300680380088320",
+          "4618441417868443648",
+          "4618582155356798976",
+          "4618722892845154304",
+          "4618863630333509632",
+          "4619004367821864960",
+          "4619145105310220288",
+          "4619285842798575616",
+          "4619426580286930944",
+          "4619567317775286272",
+          "4619708055263641600",
+          "4619848792751996928",
+          "4619989530240352256",
+          "4620130267728707584",
+          "4620271005217062912",
+          "4620411742705418240",
+          "4620552480193773568",
+          "4620693217682128896",
+          "4620763586426306560",
+          "4620833955170484224",
+          "4620904323914661888",
+          "4620974692658839552",
+          "4621045061403017216",
+          "4621115430147194880",
+          "4621185798891372544",
+          "4621256167635550208",
+          "4621326536379727872",
+          "4621396905123905536",
+          "4621467273868083200",
+          "4621537642612260864",
+          "4621608011356438528",
+          "4621678380100616192",
+          "4621748748844793856",
+          "4621819117588971520",
+          "4621889486333149184",
+          "4621959855077326848"
+        ],
+        "updates": [
+          {
+            "now_bits": 1090728750,
+            "dt_bits": 1036831949
+          }
+        ]
+      },
+      "prefix_pairs": 81,
+      "old_raw_input_only_fidelity": {
+        "original_input_file": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-enemy139-oracle-20261102T133001.979760Z/inputs.json",
+        "original_input_sha256": "af8867644e2b5152646960bfc0170bfb2624a6c31b046b42425dd066db1d294b",
+        "old_actual_expected_outputs_read": false,
+        "source_helper_handoff_sha256": "36724e73dcb53483e9112d85cc03b8caa5caf609236a20161d63c0631cc00323",
+        "helper_target_AI_not_executed": true
+      },
+      "full_target_packet_types": [
+        170,
+        330
+      ],
+      "target_packets": [
+        [
+          170,
+          "0b000058020030f1"
+        ],
+        [
+          330,
+          "02000000d90c580230f1000200000001000000000000004002000000000000000000000001000000000000000000000000000000"
+        ]
+      ],
+      "expected_target_packets": [
+        [
+          170,
+          "0b000058020030f1"
+        ],
+        [
+          330,
+          "02000000d90c580230f1000200000001000000000000004002000000000000000000000001000000000000000000000000000000"
+        ]
+      ],
+      "target_removed": [
+        "17379390972089073675"
+      ]
+    },
+    {
+      "group": "sameframe_recycle_then_motion",
+      "input": {
+        "id": 10,
+        "cooccur_probe": true,
+        "source_case_id": 1,
+        "app_seed_u64": "11",
+        "amount": 5,
+        "select_index": 0,
+        "placement": {
+          "anchor_index": 0,
+          "height_bits": 1116294321
+        },
+        "target_index": 39,
+        "timestamps64": [
+          "4593671619917905920",
+          "4598175219545276416",
+          "4600427019358961664",
+          "4602678819172646912",
+          "4603804719079489536",
+          "4604930618986332160",
+          "4606056518893174784",
+          "4607182418800017408",
+          "4607745368753438720",
+          "4608308318706860032",
+          "4608871268660281344",
+          "4609434218613702656",
+          "4609997168567123968",
+          "4610560118520545280",
+          "4611123068473966592",
+          "4611686018427387904",
+          "4611967493404098560",
+          "4612248968380809216",
+          "4612530443357519872",
+          "4612811918334230528",
+          "4613093393310941184",
+          "4613374868287651840",
+          "4613656343264362496",
+          "4613937818241073152",
+          "4614219293217783808",
+          "4614500768194494464",
+          "4614782243171205120",
+          "4615063718147915776",
+          "4615345193124626432",
+          "4615626668101337088",
+          "4615908143078047744",
+          "4616189618054758400",
+          "4616330355543113728",
+          "4616471093031469056",
+          "4616611830519824384",
+          "4616752568008179712",
+          "4616893305496535040",
+          "4617034042984890368",
+          "4617174780473245696",
+          "4617315517961601024"
+        ],
+        "updates": [
+          {
+            "now_bits": 1082130425,
+            "dt_bits": 1036831949
+          }
+        ]
+      },
+      "prefix_pairs": 39,
+      "old_raw_input_only_fidelity": {
+        "original_input_file": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/player-enemy139-oracle-20261102T133001.979760Z/inputs.json",
+        "original_input_sha256": "af8867644e2b5152646960bfc0170bfb2624a6c31b046b42425dd066db1d294b",
+        "old_actual_expected_outputs_read": false,
+        "source_helper_handoff_sha256": "36724e73dcb53483e9112d85cc03b8caa5caf609236a20161d63c0631cc00323",
+        "helper_target_AI_not_executed": true
+      },
+      "full_target_packet_types": [
+        170,
+        221
+      ],
+      "target_packets": [
+        [
+          170,
+          "0c000058020030f1"
+        ],
+        [
+          221,
+          "d90e580230f1e9f412c6ba9c18c415b489420d00000000000100006a0a00000100000069c512c625c216c404348942"
+        ]
+      ],
+      "expected_target_packets": [
+        [
+          170,
+          "0c000058020030f1"
+        ],
+        [
+          221,
+          "d90e580230f1e9f412c6ba9c18c415b489420d00000000000100006a0a00000100000069c512c625c216c404348942"
+        ]
+      ],
+      "target_removed": [
+        "17379390972089073676"
+      ]
+    }
+  ],
+  "v1_not_accepted_for_composition": {
+    "handoff_path": "evidence/enemy-ai-dead139-full-20261102T132540.709690Z/task-handoff.json",
+    "handoff_sha256": "8c2e079718be44192ff824266e1955dca16191e85e2d8bd6933963b13c5ac1f5",
+    "author6_unchanged": {
+      "reconstruction/core_spec/enemy_ai_dead139.py": "19b64a1991afe8964dbd70941dea454c4f79cb7ff07b5ce2db55700541a4baab",
+      "scripts/build_enemy_ai_dead139_oracle.py": "20ed32b662d6348bd5dfb878b06fc39addefe2f6d3a488be30dd46be25a5a2b2",
+      "scripts/check_enemy_ai_dead139.py": "ca6b8d5b5f72cf94ea6091a9c7e239128847acdaa7724f5edde5e9db7a514c82",
+      "scripts/run_enemy_ai_dead139_oracle.mjs": "f3e26c04907d65d827413e337f1424dd78638c49f0c6eb36118a6c29d857c99b",
+      "reports/2026-11-02-enemy-ai-dead0139.json": "fa59bcee9368bc3af115d0d8461a3b2854ac6d8cf5455877a9729e0b42c0635c",
+      "reports/2026-11-02-enemy-ai-dead0139.md": "442052998808d412c909de75f44077cf207d1e5f45897a98d91980e711508f4c"
+    },
+    "isolated144_comparison": "7747193d380a017837e91f7d0443e2f36e86d28a51663bef60e9a3f1168fdb2f",
+    "counterexample_comparison": "evidence/player-enemy139-oracle-20261102T133001.979760Z/comparison.json",
+    "counterexample_sha256": "3d97d1550acac2020650580006fa806712cc9c546c2ec1c18f3aca2a748651b3",
+    "first_bad_case0_step81": "original170_then330;v1reverse",
+    "second_bad_case1_step39": "original170_then221;v1reverse",
+    "numeric_physical_history_remaining360_matched_but_order_failed": true
+  },
+  "typed_probe_helper": {
+    "handoff_path": "evidence/player-enemy139-probe-source-20261102T133200Z/task-handoff.json",
+    "handoff_sha256": "36724e73dcb53483e9112d85cc03b8caa5caf609236a20161d63c0631cc00323",
+    "source_helper": "reconstruction/core_spec/player_enemy_probe_source139.py",
+    "source_helper_sha256": "fd83f376d0f467a00cb05ef59611fbef87a6fe3b61413b09e99cbb037e4bf286",
+    "frozen_numeric_pipeline": "reconstruction/core_spec/player_enemy139.py",
+    "frozen_numeric_pipeline_sha256": "22a6f3a6e4f0f4e4b295b7b39e4f7fa735f6e0c4b59ead4c8c8709998926c7ec",
+    "helper_target_AI_executions": 0,
+    "pure_reorganization_not_new_original_acceptance": true
+  },
+  "frozen_inputs": {
+    "inputs.json": "daeeb0765e8a7b10217c86b7c7682296f209d5e4ec4bd4294713dd2d3709e796",
+    "expected.json": "4df225acb64994a0472ddbc58db675f2af20b904f6a6c68c9841962bd5fcae32",
+    "config.json": "1d55f375592ae9462886f3621725282a870db19aa61fa655baa0dba8435ff7ef",
+    "manifest.json": "2a537526bcb0fde1aa87654cd1c963eec55729ce4cbfad9cd008908f1dd3e800",
+    "enemy-ai-dead139-v2-original-exports.wasm": "d22bab3c1c43fa9e1ee34bc77a27b7bdd9d0626c89576218536f22799e34be2a",
+    "expectation-read-audit.json": "9ffb40a8f8e822a899fc0b6561baace7d3cb510ed86bbdd7cea5abf2b0f45693",
+    "probe-input-fidelity.json": "18f2177740608afb693578613ec326c84d70d887f5944fdb76c5ab3fdd8607d7"
+  },
+  "artifacts": {
+    "actual.jsonl": "597a29db5f21458d2aad968860043c168a894b02c0ddb8da898c76908467f1c1",
+    "runtime.json": "92b1e55517c3499b03f9aca84cbff2692a03607a2227781d02831559a91254f6",
+    "owned-start.json": "de93f334468625df54bcb741d6c3d2759f49bdd57e0699d4f39b723c1bce66af",
+    "owned-terminal.json": "a85ecdda503312c1e823cfbf6916ef7938b9b84654cce35c93c43af823f15f66",
+    "prepared.json": "d7af6f2ad9d908ca753baf4679e2409ef94e3bc177c547a1ff0bfc2e748cab01",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "runtime": {
+    "cases": 11,
+    "fresh_instances": 11,
+    "full_calls": {
+      "922": 18,
+      "925": 275,
+      "1076": 0,
+      "1093": 11,
+      "1108": 11,
+      "1238": 0,
+      "1600": 11,
+      "1775": 0,
+      "2123": 176,
+      "2945": 11,
+      "3755": 0,
+      "4677": 11
+    },
+    "stack_checks": 579,
+    "allocator_calls": 55,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "old_Game_used_as_target": false,
+    "readiness_flags_injected": false,
+    "NPC_dead_or_HP_or_position_writes": false,
+    "NPC_records_removed_by_driver": false,
+    "physical_capacity_or_staleTail_cleared": false,
+    "source_headers_cleared": false,
+    "live_racial_CD_cleared": false,
+    "HP_filled_or_reset": false,
+    "full925_2123_922_body_unchanged": true,
+    "App_or_world_Rc_producer_executed": false,
+    "externref_restored": false,
+    "native_executions": 0,
+    "full_mainloop_frames": 0,
+    "complete_games": 0,
+    "external_clock_and_player_position_controls": true,
+    "output_bytes": 37108878,
+    "error": null
+  },
+  "runtime_captures": {
+    "original_returns": 524,
+    "all_SP1048576": true,
+    "allocator_calls": 55,
+    "stackchecks": 579,
+    "worldchecks": 524,
+    "ranges_each": 2318,
+    "hostcalls": 0
+  },
+  "process": {
+    "pid": 88201,
+    "pgid": 88201,
+    "exit_code": 0,
+    "seconds": 3.808460083000682,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "failed_probe_preserved": {
+    "directory": "evidence/enemy-ai-dead139-v2-probes-20261102T134227.529664Z",
+    "comparison_sha256": "67149b4843b520b4c5d7e148941473e1d448b4f2d2ab5d35e5e4b783f006aa8f",
+    "runtime_original_function_calls": 0,
+    "fresh_instances": 0,
+    "terminal": {
+      "pid": 84915,
+      "pgid": 84915,
+      "exit_code": 1,
+      "seconds": 0.5034402090022922,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "cause": "Newcheckercommandstillpointedtov1runner;v1schema refusednewprobeinput beforeinstance. Newcontrollerexplicitpath+sourceSHA gate."
+  },
+  "probe_pilot_excluded": {
+    "directory": "evidence/enemy-ai-dead139-v2-probes-20261102T134305.090771Z",
+    "comparison_sha256": "c057df646fe1da3367579e7c1101e96f8cce22999b7884b8c2d2954282fc54f9",
+    "formal_targets_not_transferred": 2,
+    "differences": 0
+  },
+  "limits": [
+    "Complete current925 standalone numeric/physical lifecycle plus exact170-before-deferred221/330 ordering; bounded default ordinary owners,not all925 branches or completegame.",
+    "V1 144 isolated pass was insufficient: failed real360 composition proved two order counterexamples. V1 source6/receipts and full360 failure stay immutable and are not accepted as combined-order implementation.",
+    "V2 reuses frozenv1 numeric/physical rules only,verifies exact queued170suffix fromremovedGUIDs,then composes queued170 followed by unchanged deferred221/330. No global sort;unknown deferred packet types raise Pending.",
+    "Formal target146=isolated144+2trueco-occurrence. Source setup378 separate:120prior2123/925 pairs,2target2123,54cold2123,9initial925,18extra922,55opening/growthsetup. Prior120pairs numeric/physicalknown/history/ledger checked,but their oldpacket outputs never used as expected order or acceptedstream.",
+    "Probe raw inputs fromoriginal failed experiment are reused only as controlledtimestamps/placement/seed. No oldactual or oldexpected output read by expectedmodel. Typedhelper produces targetpreAI solely from fresh pureopening and preceding components;fresh originalprefix repeated in newbatch.",
+    "All146targets preservephysicalcapacity4/staleTail/None andrealcorpse membership. Default64/244=-1,232=0,uniqueGUID,zero nearby1624 admitted;other marker/family/destructor resources/duplicateGUID/positive nearby callback scope Pending.",
+    "Isolated144 invoke925 after cold6×2123/optionalreal922;live/Aura/racial/2owned retained withoutfurther2123. Probe120priorpairs do interleaveactual2123/925,sourceprovidedstage. Direct922inputs are controlledbodyinvocations,not a reconstructedinput/cooldown scheduler.",
+    "Knownupstreamtelemetry/packet subset only;whole73targetpackets exact. No completeorderedstream claim forsourceprefix120pairs or fullgame.",
+    "Clock884 prefix formula and phase1 clockadvance are reimplementedcontrolledarithmetic in helper/JS;no full884/originalphase1clockentry executed.",
+    "Full2592input/nonwrite inheritance andall1728physicalNPCbytes/target checked. None remains semanticunknown;capturedinputbytes are used solely forphysicalinheritance replay,not learnedbehavior.",
+    "BFS78400u16 maps comparecompleteexpectedhash vsrecordedoriginalhash;raw originalarrays are not serialized. Default observedrouting doesnotnewlyvalidateblocked-flow.",
+    "Originalcontext remainslegalv2resource-onlysnapshot+newGame;canonicalgeometry independent. App/WorldRc/externref/native/network/save/UI/spawn952/nonzero killcatchup remainoutside. Existinginstallers/saves/Android/public/Git unchanged.",
+    "Firstv2 probecontroller accidentallyselectedlegacyrunner and was schema-refused beforeanyinstance/functioncall;failurepreserved. Correctnewrunnerpath+SHA isexplicitprerungate. Subsequent2probe pilotexcludedfromformal11batch.",
+    "This is author validation;differentauthor independent review stillPending."
+  ],
+  "postcapture_statistics_not_independent_review": true
+}

@@ -1,0 +1,349 @@
+{
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "author_full_original_differential_passed_pending_independent_review",
+  "domain": "26364gather_35988stop_25613resume_over_actualmovingopening",
+  "comparison": "evidence/world-pause139-20261102T142612.009278Z/comparison.json",
+  "comparison_sha256": "4626b50b8ede4872868da3b18603878fe57e53a53805f3a8cc4aabc62f1a0428",
+  "formal_fixtures": 8,
+  "formal_full26364_entries": 12,
+  "formal_full35988_entries": 15,
+  "formal_full25613_entries": 15,
+  "formal_target_entries": 42,
+  "setup_counts": {
+    "925": 8,
+    "1108": 8,
+    "1600": 8,
+    "2945": 8
+  },
+  "cleanup73034_entries_excluded": 11,
+  "all_direct_entries": 85,
+  "counts": {
+    "assertions": 16852,
+    "known_cells_compared": 16196,
+    "None_observed": 4652,
+    "formal_gather": 12,
+    "complete221_packets": 158,
+    "packet_payload_bytes": 5490,
+    "Game2592_bytes_compared": 108864,
+    "all_actor_backing_bytes_conserved": 148368,
+    "formal_pause": 15,
+    "formal_resume": 15
+  },
+  "process": {
+    "pid": 55172,
+    "pgid": 55172,
+    "exit_code": 0,
+    "seconds": 1.7531375420003315,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "source_files": 75,
+  "production_files": 63,
+  "local_edges": 250,
+  "current_body_bindings": 18,
+  "function_proofs": {
+    "925": {
+      "index": 925,
+      "signature": [
+        "7f7d",
+        ""
+      ],
+      "body_start": 2631914,
+      "body_end": 2655741,
+      "body_bytes": 23827,
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_bytes": 353318,
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "1108": {
+      "index": 1108,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 6502655,
+      "body_end": 6514771,
+      "body_bytes": 12116,
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_bytes": 180946,
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1600": {
+      "index": 1600,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 11298574,
+      "body_end": 11305645,
+      "body_bytes": 7071,
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_bytes": 90865,
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "2181": {
+      "index": 2181,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 14742766,
+      "body_end": 14747143,
+      "body_bytes": 4377,
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_bytes": 65739,
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2945": {
+      "index": 2945,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 17914642,
+      "body_end": 17917186,
+      "body_bytes": 2544,
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_bytes": 33472,
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "15962": {
+      "index": 15962,
+      "signature": [
+        "7e7f",
+        ""
+      ],
+      "body_start": 40897972,
+      "body_end": 40898749,
+      "body_bytes": 777,
+      "body_sha256": "0cd2998ebc1278489ae5e6ebee9630a729a450d69f9ab0cdabb3c1b849d985bb",
+      "WAT_bytes": 7341,
+      "WAT_sha256": "b07d3d8c01f35f69928d037eee33c7cb77e9b1fa29889a69aeacb5252f45db7a"
+    },
+    "23333": {
+      "index": 23333,
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "body_start": 48493294,
+      "body_end": 48493788,
+      "body_bytes": 494,
+      "body_sha256": "aba9edac229ba04aaf90f3243bdec129dfdc7db637b39557b8160687cde48c98",
+      "WAT_bytes": 7130,
+      "WAT_sha256": "59395916c27696fc28dc4fa492b57a8965c89d2c453b0c61e6470a1d379284a3"
+    },
+    "25613": {
+      "index": 25613,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 50753152,
+      "body_end": 50753680,
+      "body_bytes": 528,
+      "body_sha256": "80894c1d0bf8d7e0ff7402410346ace7e1ddaf251aebdc9632ab7c3a8b5818f7",
+      "WAT_bytes": 5268,
+      "WAT_sha256": "7806a9999e0a5697a29472b53599ae7c2d03dd17dde96f24ca24b6480c5b798c"
+    },
+    "26364": {
+      "index": 26364,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 51514759,
+      "body_end": 51517733,
+      "body_bytes": 2974,
+      "body_sha256": "658557371e2a1f1f173fb3bbce2c7bff384a31a781fbdad123eea358f56f0586",
+      "WAT_bytes": 34735,
+      "WAT_sha256": "c064903ec232875c34c13430fa42fa8bca634be66203423a84651ac74e892310"
+    },
+    "27650": {
+      "index": 27650,
+      "signature": [
+        "7f7e7f7f7f7f",
+        ""
+      ],
+      "body_start": 52463423,
+      "body_end": 52463895,
+      "body_bytes": 472,
+      "body_sha256": "b1f898c892e2ac838a6261d3894dbf9f22ebbaa5277391548b650cbf70ebdac8",
+      "WAT_bytes": 4295,
+      "WAT_sha256": "20f9bfe01543a9a0c26ff666ddd126ffca30bb1ea67a0e3da12203123a4e4e86"
+    },
+    "29912": {
+      "index": 29912,
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "body_start": 54774712,
+      "body_end": 54775120,
+      "body_bytes": 408,
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_bytes": 4790,
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "35988": {
+      "index": 35988,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 59008515,
+      "body_end": 59008875,
+      "body_bytes": 360,
+      "body_sha256": "0cb2b4fdb1f7911f5157a55f2cb39fc5d2f57e7ce6ed4c7946e30723fb4937cf",
+      "WAT_bytes": 3504,
+      "WAT_sha256": "f4ff6c7648e33debdd89f697708cfa45681b60d7d506d7ca823beabe195cc1c9"
+    },
+    "46462": {
+      "index": 46462,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 64552688,
+      "body_end": 64552959,
+      "body_bytes": 271,
+      "body_sha256": "0e973aad0327257a313c04257b8cf84a01375278ee70dfc47fe5e42c56d363d6",
+      "WAT_bytes": 2211,
+      "WAT_sha256": "01447b4ca97a20092413e70e35a7ed1d331d129bc0b138513186536719f917d2"
+    },
+    "46692": {
+      "index": 46692,
+      "signature": [
+        "7f7e7f7f",
+        ""
+      ],
+      "body_start": 64642027,
+      "body_end": 64642291,
+      "body_bytes": 264,
+      "body_sha256": "28c270eefe8c3c1f39ce4be1ae78f96730bcdf64744a4f5041f07c30ff2db115",
+      "WAT_bytes": 2351,
+      "WAT_sha256": "fd2969ba03ad22bed793983c00ef1385ef864f64b6cee757dd435c3e86c02902"
+    },
+    "55846": {
+      "index": 55846,
+      "signature": [
+        "7f7f7f7f7f",
+        ""
+      ],
+      "body_start": 68128364,
+      "body_end": 68128539,
+      "body_bytes": 175,
+      "body_sha256": "3090fa8b5cebf03843a7e792450fed18cd9813ab97762c205f3c84e90e07c0b0",
+      "WAT_bytes": 1476,
+      "WAT_sha256": "5f826b35dfbc879cbe6578fe95e9d31a64de030c1fc3ba1eae3b7a1b3828919e"
+    },
+    "66546": {
+      "index": 66546,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 70620383,
+      "body_end": 70620492,
+      "body_bytes": 109,
+      "body_sha256": "58a8fe8aa039f5e77083d3a31b3736679e49fffee8e7205a2ecc850e97630565",
+      "WAT_bytes": 899,
+      "WAT_sha256": "37e33b39641ee0522336869b8775e0042ffe9ce8c7491eccb0f324de78c2921d"
+    },
+    "73034": {
+      "index": 73034,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 71555227,
+      "body_end": 71555324,
+      "body_bytes": 97,
+      "body_sha256": "7eca01ccb48d4b0cbfe7bc55d79630deaa698aaf2c9ce6b45a2c04ff5b26cd4b",
+      "WAT_bytes": 855,
+      "WAT_sha256": "cc640ebca25092b397d760395501680b5517364f0f470d689db39a732c17303c"
+    },
+    "108362": {
+      "index": 108362,
+      "signature": [
+        "7f7f",
+        "7f"
+      ],
+      "body_start": 76649375,
+      "body_end": 76649399,
+      "body_bytes": 24,
+      "body_sha256": "0ee0c30715ea4b1bd121935ba5d56724b9b23bd04ac3334c9ed4e761657a4d89",
+      "WAT_bytes": 229,
+      "WAT_sha256": "116a09e14cd923db727003e12e5bcede0f5467d5c895a540bad3206170e82e57"
+    }
+  },
+  "only_export_section_changed": true,
+  "actual_full925_produces_motion": true,
+  "actor_motion_records_unchanged": true,
+  "packet_source_or_player_positions_or_HP_patched": false,
+  "caller_phase_clock_explicit": true,
+  "controlled_auxiliary_companion_fixtures": true,
+  "model_source_reads_no_original": true,
+  "independent_world_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+  "resource_context_snapshot_only": true,
+  "pilot_excluded": {
+    "cases": 2,
+    "targets": 12,
+    "comparison_sha256": "5974df9d9ae6e2a055f46d86ef34ba3b4c4882c44a4ade1fbf1b93cfe34de4cf"
+  },
+  "new_full_main884_frames": 0,
+  "native_windows_execution": false,
+  "complete_games": 0,
+  "gather_capacity_cases": {
+    "real4moving": [
+      4,
+      4,
+      0
+    ],
+    "three_family_order": [
+      8
+    ],
+    "seed11_endtime_boundaries": [
+      4,
+      4,
+      4
+    ],
+    "seed69_before_motion_start": [
+      4
+    ],
+    "merge_cap9_then18": [
+      18
+    ],
+    "only_auxiliary_selected_cap5": [
+      5
+    ],
+    "only_companions_selected_cap9": [
+      9
+    ],
+    "expired_controlled_owners": [
+      4
+    ]
+  },
+  "API": [
+    "WorldMotionOwners139",
+    "gather_world_motion139",
+    "update_world_pause139"
+  ],
+  "rules": [
+    "NPCmarker0/dur>0/end>now;auxdur>0/end>now;compdur>0andnot(end<=now).",
+    "CurrentXYZf32clampedlerp;remaining=f32(f32(start+duration)-now).",
+    "StableNPC→aux→compgather40;tail4Unknown;familycap4double/mergemax(2cap,len+additional,4).",
+    "Stop221usescurrentheightprojectedXYZ/sequence/mode1;resume221projectsstartandend/mode0/remainingmillisecondstruncsatandmin1.",
+    "Actorrecords/internalmovementclocksunchanged;helperswritemovementsequence2412andpacketheaderonly."
+  ],
+  "limits": [
+    "Fresh2945/1600/1108/925prefixusesresource-onlyv2snapshot;independentexpectationusespreviousraw-producedcanonicalworld,notrawproductionrerun.",
+    "NPCactorsareactualfull925movingoutputs;auxiliary/companionfixturesareexplicitseparatecontrolledownerinputs.",
+    "Callerphase/clockpatchesexplicit;26364/35988/25613donotimplement2181/1093orcompletechoice.",
+    "Activefinitecoordinates/times/no-primaryworld;NaNprocessedmovementandprimaryfallbackremainunvalidated.",
+    "CompleteGame2592change-and-all-actorphysicalconservation,fullnew221payload/capacity;wholeheapallocationnotpredicted.",
+    "Directgather40tail4andspareallocatedcellsremainUnknown;cleanup73034iscountedseparatelyasnon-target.",
+    "Pilotnotcounted;noWindowsapplicationexecutionorcompletegame."
+  ]
+}

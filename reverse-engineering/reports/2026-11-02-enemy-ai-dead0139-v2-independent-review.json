@@ -1,0 +1,397 @@
+{
+  "status": "pass_current139_dead_lifetime146_and_two_sameframe_orders_readonly",
+  "reviewer": "/root/growth139_world",
+  "author": "/root/collection139_finish",
+  "handoff_sha256": "bd52f7ff7583ff937963342cc188e7b04d43d2811fcfcdf9e4af765501e9fd49",
+  "comparison_sha256": "ebd66ceb975472a40d290c5468a66a884f0faef3742a0ece34717dea2b75ce23",
+  "reviewer_source_sha256": "51649bb168d147837872f385cb5d64799deebd938daa08031ab63754e86c7aa7",
+  "author6": {
+    "reconstruction/core_spec/enemy_ai_dead139_v2.py": "1b0fe5c7d966860047fb1e8b456fd103a090c72547c9df8c8fe632542e154d0d",
+    "scripts/build_enemy_ai_dead139_v2_oracle.py": "91160de49000c680894f31b2cd9a743d29a8d214f2b9fd9bd89ef249fd9f4ce1",
+    "scripts/check_enemy_ai_dead139_v2.py": "e20a2fdaf91aea9a64b2729f87654ae5ec517584edac57e5d2e755239aba4680",
+    "scripts/run_enemy_ai_dead139_v2_oracle.mjs": "5517a3ac6ab9c9aff6b7de3507af1c63d45b7cc5d15fcdbe046cccf728df6f00",
+    "reports/2026-11-02-enemy-ai-dead0139-v2.json": "a974fc00eb2065ffdfa64323f7d533503b20be17b809c5d9174a553b71bc0884",
+    "reports/2026-11-02-enemy-ai-dead0139-v2.md": "75c621fb55d1816f6704c66d4bf89c7f25aa4c0b6c1b67bf5fd67ebd1eac0ada"
+  },
+  "helpers": {
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_death_pickups139.py": "092328f7b6e7c5323f1d3b9c74b1080b1181fdd002f7153d32756110d9dcaef3",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_death139.py": "fe7790f0adcb3e3d5010d53c44f375bec5bbee6d3fe780873a6e1613afe11e6a",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_growth_world139.py": "0e82a1f20fd7c02ed7edcd73f4d9edfca1d3ab406402e1aa8e0b5ae4e34322a1",
+    "scripts/review_player_update139.py": "4123e0715620c0d050bfad0c1c060b0fc5b426c36d0789c95a0c7801d52c8bde",
+    "scripts/review_thunder_clap139.py": "775b8234a04067711ac126eb0ded2ce90a553db396f1bd26e07f5662fdbe0b23",
+    "scripts/review_healing_hurtactor139_v3.py": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+    "scripts/review_incoming139.py": "adaa5e21f2e491fe3eee18a8ec57c9d8b249481c6edc52a29408ad194dece07b",
+    "scripts/review_enemy_ai139.py": "73b093bdfcc59c08c010fb2c074298435b6d0f057fe15a0e5d2a8228c0fe0f42",
+    "scripts/review_player_autocast139.py": "f6d2d39c357888765a42a2b1147d32b5538c00b02e2869d1662d99ff41329893"
+  },
+  "current_body_bindings": {
+    "913": {
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "994": {
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1076": {
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "2077": {
+      "body_sha256": "36cc754bbbce303102ce675fb8e65add6b866e983068934ab8312b0d25f2b967",
+      "WAT_sha256": "a75a15d2f980b6f60e5b0934c60a42f80b3e1575cd3a464a7342c96dfb478949"
+    },
+    "2123": {
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "8569": {
+      "body_sha256": "758f94f8950ed6c4fde0a127c17d6b8135aa3b00be6910ae192c494c4797a3d1",
+      "WAT_sha256": "cdeb4c86d5ce7fcc15dd33923b5fa27a749419eae46972e242560e613e88687d"
+    },
+    "8673": {
+      "body_sha256": "cfe20b3b60b4d26e824594c12c76f6a6700992c64f9c067cfe43ff20e0c45ece",
+      "WAT_sha256": "a35959c6b908f8be8d656b991f458b497f0ac8bfa4cbeb5ce255c42f6e1ad712"
+    },
+    "9541": {
+      "body_sha256": "0f54eea8b871474bd57aa5f7b73538597e84ab824d315d9185270ea50b0200c1",
+      "WAT_sha256": "dcf3f6bb95ecd30defec2809169c25c2b46c28fe245c3deac62cfcd3f3eb4570"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11033": {
+      "body_sha256": "279f887e41dfa0accc0ac3caf4f28e8faafadefcc4e40a1188a1e28add1e4513",
+      "WAT_sha256": "5091bc319e1aa68cd4241ff3749f4df2313c333b661fc10c9070c19e41adf443"
+    },
+    "13833": {
+      "body_sha256": "7657e041e585e81104729868558ab9bf0a28131a5df021c9e4dd8d82645d34e9",
+      "WAT_sha256": "4e4cbd1675449406fc867d53efe3382c769666c2d6ec58f09d4bd8d1f74a9fbb"
+    },
+    "18421": {
+      "body_sha256": "268c270a22568c1252d87b4eeb020937dc3860c2a34c54fd600578c939758044",
+      "WAT_sha256": "308daf31efbe89997280dd22dac2cb29779bdb1955e8e1b3ce43ca7d66ff1855"
+    },
+    "19598": {
+      "body_sha256": "58f38842752fe5aeb325edad798d13460bfcbb5d1ea6030e73a5cd035d5d1200",
+      "WAT_sha256": "a8652f10d73f4a5e657deaa0609517cb36d66851ac962490e341f62413f2f901"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "23328": {
+      "body_sha256": "2ff4e1aab09fa7d43376d1bfdbaf96f78c8e11f36465fe4a77835eb374268574",
+      "WAT_sha256": "875576e8933acca580e1cce84ef85855aa1bf20bcaea201e418e3d038e14d708"
+    },
+    "26202": {
+      "body_sha256": "21cdefa04d2854bcd0ee6e5e05dc42edaa2b007a898508a0e00e24185e21f210",
+      "WAT_sha256": "2727c02723974154bc562d8531561ec9493adde032594ff5b8075f451bbc2f6f"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "30861": {
+      "body_sha256": "87885424a4638fe31e22b44ca21874ea94d36840e26b6b69baa4281dafbb75c8",
+      "WAT_sha256": "579279bd09b708e3b9372927c000c3370b904d9faf209971369515fe90e6dc1b"
+    },
+    "36364": {
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36520": {
+      "body_sha256": "56936cd9e3b8c6af09ac1d37b1cf75fdf79ed166dda699f4244f5e2c8350366a",
+      "WAT_sha256": "b214bd48e1ba90c8c44f48a8176724ba3e32c4e5c62bfc0342816f60a5f1405f"
+    },
+    "46690": {
+      "body_sha256": "b8120348643d400b9efdfde0bea367d29b817bbd397de6695d7f83da91565ea7",
+      "WAT_sha256": "ee353ccaa65702e791e69cb5dee27f036a313bbfcdcdbee4d6fdb2f16ad6c900"
+    },
+    "83299": {
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    },
+    "5719": {
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "15962": {
+      "body_sha256": "0cd2998ebc1278489ae5e6ebee9630a729a450d69f9ab0cdabb3c1b849d985bb",
+      "WAT_sha256": "b07d3d8c01f35f69928d037eee33c7cb77e9b1fa29889a69aeacb5252f45db7a"
+    },
+    "20060": {
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "23333": {
+      "body_sha256": "aba9edac229ba04aaf90f3243bdec129dfdc7db637b39557b8160687cde48c98",
+      "WAT_sha256": "59395916c27696fc28dc4fa492b57a8965c89d2c453b0c61e6470a1d379284a3"
+    },
+    "29237": {
+      "body_sha256": "4b4e968c0308aac7eb2d772b3d2ce45c24835cbca4537efc9ac799dcd6bdcd77",
+      "WAT_sha256": "117070ce51044ed58fb14d0dc0b18fb7c9ddf08a3b88a8bbaca780774f5d3ac7"
+    },
+    "29912": {
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "30179": {
+      "body_sha256": "33e979a9e4ceb648fe4aee3a30833126dbf7ed89270e52dd0aa769d5713048db",
+      "WAT_sha256": "cfe49054c275e7cb6cc7711b99fd28681f2a025a80091bd5565f00d7a5c36aef"
+    },
+    "40215": {
+      "body_sha256": "f1caf5b2294ea254006a1140136da2ce705e2849883414684f147bb292881891",
+      "WAT_sha256": "5cb63d69709801b763b99557a79dcd13c350d6dfc231f1c0d4a8f6cb2244a083"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "52557": {
+      "body_sha256": "9235b7a554194a122d90cf5077f5d7e202886ef8564701e72327f105f5d5bdee",
+      "WAT_sha256": "9a113a5df313fed6810e112932580b3d1c6d8e6d5cfe5124bf408e002af67df5"
+    },
+    "59230": {
+      "body_sha256": "34b9b3fd6c38222ed0de72bf0244ccdbd062d8c99aafff3ec4bca3d78b0bcbb6",
+      "WAT_sha256": "af7c92895159b57584e8be759c9d705796716d16cd5bf372704eaba0ebbfbd67"
+    },
+    "70932": {
+      "body_sha256": "a042121711a053832e07b547d48e7f284d074af011deb3871949ffb79d6f7086",
+      "WAT_sha256": "0185b15affb4541d6e20b1ff72db4bc19054479344fa2ef56cdc393af922b773"
+    },
+    "81682": {
+      "body_sha256": "7d2bae1ea62daa87d5bba3a3af0d7761e3fec6d1b3c041280c35042c5221c5bb",
+      "WAT_sha256": "426760ab586f6853f952fe0e3fe245a0c2d315e40cfd7dd5a4ba00bb57dcba67"
+    }
+  },
+  "source_files": 96,
+  "production_files": 79,
+  "source_edges": 399,
+  "counts": {
+    "live_known": 24256,
+    "live_None": 40000,
+    "live_nonzero_None": 35140,
+    "aura_known": 104760,
+    "aura_None": 280776,
+    "aura_nonzero_None": 234244,
+    "logical_player_maps": 502,
+    "openingunits_known": 13332,
+    "openingunits_None": 5676,
+    "openingunits_nonzero_None": 5225,
+    "openingpickups_known": 1144,
+    "openingpickups_None": 1320,
+    "openingpickups_nonzero_None": 1166,
+    "openingwindows_known": 264,
+    "openingwindows_None": 88,
+    "openingwindows_nonzero_None": 88,
+    "openingspecial_known": 1232,
+    "openingspecial_None": 528,
+    "openingspecial_nonzero_None": 528,
+    "openingboundaries_known": 6072,
+    "openingboundaries_None": 5192,
+    "openingboundaries_nonzero_None": 2244,
+    "path_rebuilds": 11,
+    "BFS_values": 862400,
+    "frames": 275,
+    "movement221": 90,
+    "removals": 27,
+    "initial925": 9,
+    "damage": 59,
+    "critical": 19,
+    "Leech": 5,
+    "basic": 13,
+    "basic_crit": 10,
+    "combatNPC_known": 246756,
+    "combatNPC_None": 104028,
+    "combatNPC_nonzero_None": 96119,
+    "combatPickup_known": 36764,
+    "combatPickup_None": 25508,
+    "combatPickup_nonzero_None": 23476,
+    "semantic_ledger_snapshots": 203,
+    "Vec48_rows": 75,
+    "coldprefix2123": 54,
+    "deaths": 27,
+    "cleave": 13,
+    "slow_writes": 33,
+    "thunder_clap": 11,
+    "racial": 11,
+    "path_refreshes": 9,
+    "segment_nav_probes": 2958,
+    "direct_clear_routes": 83,
+    "clamped14_motions": 47,
+    "packet_height_queries": 166,
+    "target_physical_replay_bytes": 252288,
+    "targetNPC_known": 178148,
+    "targetNPC_None": 74140,
+    "targetNPC_nonzero_None": 68705,
+    "background_owners": 730,
+    "target_Game_nonowned_bytes": 364416,
+    "targets": 146,
+    "target_packets": 73,
+    "target_packet_bytes": 2578,
+    "extra922": 18,
+    "stop_kind3_packets": 7,
+    "contacts": 8,
+    "history_None": 7262,
+    "history_nonzero_None": 7068,
+    "history_known": 3298,
+    "preceding2123": 120,
+    "preceding925": 120,
+    "moving_deaths": 2,
+    "inherited_Vec48_nonvalue_bytes": 2840,
+    "target_setup2123": 2,
+    "sameframe_probes": 2
+  },
+  "author_terminal": {
+    "pid": 88201,
+    "pgid": 88201,
+    "exit_code": 0,
+    "seconds": 3.808460083000682,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "author_executions": 0,
+  "original_executions": 0,
+  "reference_sha256": "bfff3e9e840d141964897e22c2fc113ed48b706d81498638cec0a82b458c99ef",
+  "seconds": 19.750098000000435,
+  "limitations": [
+    "146target925;120preceding2123/925 pairs numeric/physical/history/ledger source setup only, not formal corrected packet target coverage.",
+    "v1 isolated144 and failed360 order counterexamples remain preserved; no v1 wide pass.",
+    "Actual normal uniqueGUID corpses; default empty destructor owners; duplicateGUID/status/boss/projectile blocked-flow branches remain Pending.",
+    "Entire target925 packet stream matches this scope; player2123 packet observations in source prefixes remain scoped known subsets.",
+    "Explicit XP5/selectedThunder/playerplacement, resourceonly context; no complete884/bootstrap/nativeApp/fullgame.",
+    "None bytes are never treated as0; target physical storage replay uses actual inherited owner bytes and full432B stable compaction/stale tails."
+  ],
+  "owned_reviewer_terminal": {
+    "pid": 20698,
+    "pgid": 20698,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 20.18344183299996
+  },
+  "review_result_sha256": "a2a80a039d58fe3bbad2ce77e6c94e455d9749ce93fe07b81d125475a959f6d6",
+  "own_failed_receipts_preserved": [
+    "evidence/ai-dead139-v2-readonly-review-20261102T140104.128209Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140147.371768Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140211.862612Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140231.305448Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140331.269468Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140402.446149Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140423.597058Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140450.158058Z",
+    "evidence/ai-dead139-v2-readonly-review-20261102T140533.515282Z"
+  ],
+  "own_reference_corrections": [
+    "Whitespace/address-expression static assertion shapes corrected before acceptance.",
+    "Multiple GUID removals must execute sequentially: later stable compaction observes prior stale tail copies.",
+    "Combat observer physical records include inactive capacity tail; pure executable rows remain active only.",
+    "Probe after_producer includes target2123 prefix, prior to target925."
+  ],
+  "target_vs_setup_counts": {
+    "target_full925": 146,
+    "target_removals": 23,
+    "target_packets": 73,
+    "target_packet_bytes": 2578,
+    "preceding_pairs": 120,
+    "initial_full925": 9,
+    "cold_prefix2123": 54,
+    "target_prefix2123": 2,
+    "extra922": 18,
+    "opening2945_1600_1108_4677_1093": 55,
+    "total_direct": 524
+  }
+}

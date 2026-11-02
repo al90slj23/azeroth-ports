@@ -1,0 +1,44 @@
+// Actual new1600→1108→925 owners, then full26364/35988/25613 consumers.
+import fs from'node:fs/promises';import{createHash}from'node:crypto';import{once}from'node:events';
+const[dir,configFile]=process.argv.slice(2),hash=x=>createHash('sha256').update(x).digest('hex');
+if(!process.execArgv.includes('--max-old-space-size=512')||!process.execArgv.includes('--wasm-max-mem-pages=4096'))throw Error('Memory budget');
+const cfg=JSON.parse(await fs.readFile(configFile,'utf8')),m=JSON.parse(await fs.readFile(dir+'/manifest.json','utf8'));
+const[raw,input,snapshot,rangeRaw]=await Promise.all([fs.readFile(dir+'/'+m.module_file),fs.readFile(cfg.input_file),fs.readFile(cfg.snapshot_file),fs.readFile(cfg.range_file)]);
+if(hash(raw)!==m.module_sha256||hash(input)!==cfg.input_sha256||hash(rangeRaw)!==cfg.range_sha256||hash(snapshot)!=='5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0'||snapshot.length!==177078272||m.source_sha256!=='71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299'||cfg.world_rc!==20544696||input.length>4194304)throw Error('Frozen input identity');
+const ranges=JSON.parse(rangeRaw),cases=JSON.parse(input),module=await WebAssembly.compile(raw),imports=WebAssembly.Module.imports(module);
+if(imports.length!==882||imports.some(x=>x.kind!=='function')||JSON.stringify(imports.map(({module,name})=>({module,name})))!==JSON.stringify(m.original_imports.map(({module,name})=>({module,name})))||ranges.length!==2318||!cases.length||cases.length>24)throw Error('Cases/imports/ranges');
+let e,memory,stack,hostCalls=0,instances=0,peak=0,error=null,outputBytes=0,stackChecks=0;
+const calls={2945:0,1600:0,1108:0,925:0,26364:0,35988:0,25613:0,73034:0},returns=[],worldChecks=[];
+const b=()=>new Uint8Array(memory.buffer),d=()=>new DataView(memory.buffer),u=p=>d().getUint32(p,true),w=(p,v)=>d().setUint32(p,v,true),hex=(p,n)=>Buffer.from(b().subarray(p,p+n)).toString('hex');
+function call(role,fn,...args){if(stack.value!==1048576)throw Error('Stack before');let returned=false;try{if(role!=='malloc')calls[role]++;const result=fn(...args);returned=true;return result;}finally{stackChecks++;if(role!=='malloc')returns.push({case:instances-1,role:Number(role),before:1048576,after:stack.value,returned});if(stack.value!==1048576||memory.buffer.byteLength>268435456)throw Error('Stack/memory after');}}
+function alloc(n){if(!Number.isInteger(n)||n<1||n>4194304)throw Error('Allocation bound');const p=call('malloc',e.__wbindgen_malloc,n,8)>>>0;if(!p||p+n>memory.buffer.byteLength)throw Error('Allocation address');return p;}
+function verifyWorld(phase){for(const r of ranges)if(r.offset+r.bytes>memory.buffer.byteLength||hash(b().subarray(r.offset,r.offset+r.bytes))!==r.sha256)throw Error('Resource mutation');worldChecks.push({case:instances-1,phase,ranges:2318,unchanged:true});}
+function vector(G,cap,ptr,count,stride){const c=u(G+cap),p=u(G+ptr),n=u(G+count);if(n>c||c>512||p+c*stride>memory.buffer.byteLength)throw Error('Owner bound');return{capacity:c,pointer:p,count:n,stride,storage:Array.from({length:c},(_,j)=>hex(p+j*stride,stride))};}
+function owners(G){return{units:vector(G,1784,1788,1792,432),auxiliary:vector(G,652,656,660,112),companions:vector(G,2108,2112,2116,88),pickups:vector(G,1868,1872,1876,56),special:vector(G,1916,1920,1924,40),windows:vector(G,1964,1968,1972,8),boundaries:vector(G,2120,2124,2128,8)};}
+function packets(G){const n=u(G+1888),p=u(G+1884);if(n>2048||n>u(G+1880))throw Error('Packet bound');return Array.from({length:n},(_,j)=>{const r=p+16*j,k=u(r+8),q=u(r+4);if(k>u(r)||k>4096||q+k>memory.buffer.byteLength)throw Error('Payload bound');return[d().getUint16(r+12,true),u(r),hex(q,k)];});}
+function capture(G){return{raw_game2592_hex:hex(G,2592),owners:owners(G),sequence:u(G+2412),packet_capacity:u(G+1880),packet_count:u(G+1888),packets:packets(G),rng_words:[0,1,2,3].map(j=>u(G+1720+j*4))};}
+try{for(const c of cases){
+ if(Object.keys(c).sort().join()!=='fixtures,id,seed,updates'||c.id!==instances||!Number.isInteger(c.seed)||c.seed<0||c.seed>127||!Array.isArray(c.updates)||!c.updates.length||c.updates.length>32)throw Error('Input schema');
+ if(global.gc)global.gc();const bindings={};for(const v of imports){bindings[v.module]??={};bindings[v.module][v.name]=()=>{hostCalls++;throw Error('Denied host '+v.name);};}
+ e=(await WebAssembly.instantiate(module,bindings)).exports;memory=e.memory;stack=e.research139_pause_stack;instances++;
+ if(memory.buffer.byteLength>snapshot.length)throw Error('Initialmemory');memory.grow((snapshot.length-memory.buffer.byteLength)/65536);b().set(snapshot);if(hash(b())!==cfg.snapshot_sha256)throw Error('Resource context restore');verifyWorld('restored');
+ const A=alloc(368);b().fill(0xa5,A,A+368);for(const off of[196,244,256,268])w(A+off,0);const account=hex(A,368),Q=alloc(72),O=Q+16;b().fill(0xc3,Q,O);b().fill(0xa5,O,O+40);b().fill(0xd7,O+40,Q+72);call('2945',e.research139_pause_account,O,A);const selected=hex(O,40);
+ const G=alloc(8192),P=alloc(376),N=alloc(6);b().fill(0xa5,G,G+8192);b().fill(0,P,P+376);b().set(Buffer.from('elwynn'),N);w(P+156,4);w(P+168,N);w(P+172,6);b().set(b().slice(O,O+16),P+224);b()[P+344]=b()[P+345]=1;d().setBigUint64(P+176,0n,true);d().setBigUint64(P+184,BigInt.asUintN(64,BigInt(c.seed)*6364136223846793005n+1442695040888963407n),true);const profile=hex(P,376);
+ call('1600',e.research139_pause_ctor,G,P,cfg.world_rc);
+ if(G===14685248||u(G+2348)!==cfg.world_rc||u(G+1792)||u(G+1876)||u(G+1736)||u(G+1740)||u(G+2368)||b()[G+2587]!==0)throw Error('Actual constructor admission');
+ call('1108',e.research139_pause_opening,G);const opening=capture(G);if(u(G+1792)!==4||u(G+1876)!==2||u(G+1924)!==4||u(G+2128)!==69)throw Error('Opening owners');
+ w(G+2352,0x3f800000);call('925',e.research139_pause_AI,G,Math.fround(.1));const moving=capture(G);verifyWorld('actual925');
+ if(!c.fixtures||Object.keys(c.fixtures).sort().join()!=='auxiliary,companions')throw Error('Fixture schema');
+ for(const[name,base,stride]of[['auxiliary',652,112],['companions',2108,88]]){const f=c.fixtures[name];if(Object.keys(f).sort().join()!=='count,storage'||!Number.isInteger(f.count)||f.count<0||f.count>f.storage.length||f.storage.length>64||u(G+base)||u(G+base+8))throw Error('Empty controlled owner');if(f.storage.length){const p=alloc(f.storage.length*stride);for(let j=0;j<f.storage.length;j++){if(typeof f.storage[j]!=='string'||f.storage[j].length!==stride*2||!/^[0-9a-f]+$/.test(f.storage[j]))throw Error('Fixture record');b().set(Buffer.from(f.storage[j],'hex'),p+j*stride);}w(G+base,f.storage.length);w(G+base+4,p);w(G+base+8,f.count);}}
+ const before=capture(G),stages=[];
+ for(const update of c.updates){if(Object.keys(update).sort().join()!=='action,now_bits,phase'||!['gather','pause','resume'].includes(update.action)||!Number.isInteger(update.now_bits)||update.now_bits<0||update.now_bits>0xffffffff||![1,2].includes(update.phase))throw Error('Update schema');w(G+2352,update.now_bits);b()[G+2587]=update.phase;const inputGame=hex(G,2592),oldCount=u(G+1888);let gathered=null;
+  if(update.action==='gather'){const out=alloc(12);b().fill(0xa5,out,out+12);call('26364',e.research139_pause_gather,out,G);const cap=u(out),p=u(out+4),n=u(out+8);if(n>cap||cap>2048||p+cap*40>memory.buffer.byteLength)throw Error('Gather bound');gathered={capacity:cap,pointer:p,count:n,storage:Array.from({length:cap},(_,j)=>hex(p+j*40,40))};if(cap)call('73034',e.research139_pause_free,p,cap*40);}
+  else if(update.action==='pause')call('35988',e.research139_pause_stop,G);
+  else call('25613',e.research139_pause_resume,G);
+  const after=capture(G);stages.push({action:update.action,input_game2592_hex:inputGame,gathered,...after,new_packets:after.packets.slice(oldCount)});verifyWorld('consumer');
+ }
+ if(hostCalls||account!==hex(A,368)||profile!==hex(P,376)||selected!==hex(O,40))throw Error('Borrowed inputs changed');
+ const result=JSON.stringify({id:c.id,opening,moving,before,stages,profile_before:profile,profile_after:hex(P,376),account_before:account,account_after:hex(A,368),stack_after:stack.value})+'\n';if((outputBytes+=Buffer.byteLength(result))>134217728)throw Error('Output budget');if(!process.stdout.write(result))await once(process.stdout,'drain');peak=Math.max(peak,memory.buffer.byteLength);
+}}catch(x){error=String(x);throw x;}finally{
+ await fs.writeFile(dir+'/runtime.json',JSON.stringify({version:'0.139.0',build:'f79c5e2b4',fresh_instances:instances,calls,returns,stack_checks:stackChecks,world_checks:worldChecks,denied_imports:882,actual_host_calls:hostCalls,peak_memory_bytes:peak,memory_cap_bytes:268435456,old_Game_used_as_target:false,resource_context_snapshot_restores:instances,NPC_or_player_positions_or_HP_patched:false,controlled_auxiliary_companion_owners:true,phase_clock_controls_explicit:true,full_main884_frames:0,complete_games:0,output_bytes:outputBytes,error},null,2)+'\n');
+}

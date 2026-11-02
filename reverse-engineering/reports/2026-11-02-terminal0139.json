@@ -1,0 +1,1164 @@
+{
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "author_original_differential_pass_pending_independent_review",
+  "scope": "Explicit terminal trigger over genuine139 fullopening and actualmovingNPC; not naturalBoss victory.",
+  "formal": {
+    "fresh_instances": 5,
+    "full49961_targets": 10,
+    "setup_full2945": 5,
+    "setup_full1600": 5,
+    "setup_full1108": 5,
+    "setup_full925": 5,
+    "direct_original_entries": 30,
+    "stops": 10,
+    "stops_from_actual_NPCs": 8,
+    "controlled_auxiliary_stops": 1,
+    "controlled_companion_stops": 1,
+    "complete_packets": 12,
+    "complete_packet_bytes": 236,
+    "complete_notifications": 2,
+    "complete_notification_bytes": 466,
+    "all_Game2592_changed_bytes_compared": 25920,
+    "known_physical_bytes_compared": 12920,
+    "None_physically_conserved": 5160,
+    "nonzero_None_observations": 4750,
+    "differences": 0
+  },
+  "comparison": {
+    "path": "reverse-engineering/evidence/terminal139-oracle-20261102T131953.320492Z/comparison.json",
+    "sha256": "ac44ab48fd44f86435bc813363cb628a921a016d199b0cf48570ac864b66181e"
+  },
+  "process": {
+    "pid": 47994,
+    "pgid": 47994,
+    "exit_code": 0,
+    "seconds": 1.141928959001234,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "source_identity": {
+    "files": 75,
+    "production_files": 63,
+    "import_edges": 250,
+    "current_complete_function_bodies": 22,
+    "source_hashes": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/ability_state.py": "708a2d18674c68bfcc96c9421fb6aa409a7979f5fef46dd47de16361db4c7622",
+      "reconstruction/core_spec/ai135.py": "42ed540a36ec00b93a64c1094117178296e12d46b8a6f06bcf8783449b0ef551",
+      "reconstruction/core_spec/ai135_data.py": "18eb643d5d50737e437e4c7a469df064f7c5b852908d5d2ac2d354029e0d34a4",
+      "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+      "reconstruction/core_spec/ai_world135.py": "379a4e33d987ae6d6cf5344fba35ccd1567366720d106b2d58bdaddad613e078",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+      "reconstruction/core_spec/candidates139.py": "4ff5b2c3706247a9bb0f733bda6b7b2a9d46bbb19ab46b4d7f418b8e3ee70954",
+      "reconstruction/core_spec/candidates139_data.py": "efb653784d0fe24bdc35cf65437a5226eff64888252f33826a8341645eaf8343",
+      "reconstruction/core_spec/cast135.py": "14c6e5dbca4f329884d8e17731b7f65a89b11793e9c41f092ffc07f73b679e08",
+      "reconstruction/core_spec/cast_events135.py": "25bbb4483521ee6ac96dd9653dfd59762782e6a50914ba384fb96637475e25f7",
+      "reconstruction/core_spec/combat134.py": "0aa00f945271e0d2e8e09a2a0e1565d1d2a7931c5910ec6191f5e823efd2adb7",
+      "reconstruction/core_spec/combat135.py": "33c81cb58b0a41e5d00dcdf1cd6832fc1b48a66a5c6ab4518b68b6c721e04798",
+      "reconstruction/core_spec/demo_ai135.py": "43391909719bbf953eee678ff49d0a4957bfcc90013ea7af479eeb83b7a6893c",
+      "reconstruction/core_spec/demo_shout135.py": "b0d3461972b37cdab591c7970fe39e5dfca5971a3fb7052effbe4262e125a927",
+      "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+      "reconstruction/core_spec/distance_map135.py": "958f0a987fb21e6fbcdbdd959cf0088683dd998a97d3581cb71a0412533ad0de",
+      "reconstruction/core_spec/enemy_ai139.py": "db7d8fce02df7674908304768e183b7e75830dbbc98d7e4fa06c4ee28d6e303a",
+      "reconstruction/core_spec/growth139.py": "046d30aacfc3775bfdb2c022e61e3f1b655e858ebfdf865cee6e8e9419ea2169",
+      "reconstruction/core_spec/growth_world139.py": "0ce3d2144d42e5c61a97e21a227e0e46b85c4b955ef68af6f1ee24edbea03993",
+      "reconstruction/core_spec/hit_events139_data.py": "4d556a86753fe67d48a1fd5c2d2a05dd32d9871f86b768cbfd2923eb7a943bd0",
+      "reconstruction/core_spec/incoming134.py": "715ed988a52ba087d1ab745e98db20280d80cf19ecd52742add70a38714a6c41",
+      "reconstruction/core_spec/incoming135.py": "29339d5e4d937b22ac20cd1f9dc00c4bf5f8088ad1c7d2b554a618ac85854bff",
+      "reconstruction/core_spec/incoming139.py": "c3b71824ebce3f932b194f8c1e531827f541d72500e2d9f50b181d0fc10197cd",
+      "reconstruction/core_spec/incoming_history139.py": "13445d0d1594d859d74301a54e392acc51ee60958a38fa50e0077c71a6a27473",
+      "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+      "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+      "reconstruction/core_spec/natural_npc139.py": "0e749d4bf0479b2ebe5fe30b542256e29d9910e15f480b3fbb1a0ab87eee2670",
+      "reconstruction/core_spec/npc_heading139.py": "680ff998e8e77916a2c976ccc590834ff94fa58b484efbde5e1bf41a9458f229",
+      "reconstruction/core_spec/npc_spawn139.py": "c1a4122f82edad2dadddc3a1e63f00544db7e349050a21d05a93247a326b1330",
+      "reconstruction/core_spec/opening139.py": "291a0e2a9374a07c984b6de7143764ae827bc36e6fcc1664598dc9468bf64817",
+      "reconstruction/core_spec/opening_actor139.py": "f6ceb4b648f993c2ff8508f255051fe6c97cb636295e162af8a4af19dc55603b",
+      "reconstruction/core_spec/opening_aux139.py": "a2d3109330e125bd2d70fcf5a37d00c2a4f61ff87486990a54b9bfc3321a5238",
+      "reconstruction/core_spec/opening_aux139_data.py": "4f38958fa24b83cbe7e674d2d659442c65fe90eb6daed4f61558fc588cdb150a",
+      "reconstruction/core_spec/opening_entities135.py": "226cf8afcc253015ed6b4717591efb7dd54b9c4f6fd6f2728901c30f1befc36a",
+      "reconstruction/core_spec/opening_entities135_data.py": "acb6379ff5fcae838775cfc4198f9dba670b6d46c01b9c8cc20289921ae6bf5d",
+      "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+      "reconstruction/core_spec/owned_cast135.py": "5e4afdd3a5800ef48ef5685e9278dca0fbc6b99bf48b1d9bb1cbcabde8ce3181",
+      "reconstruction/core_spec/owned_prelude135.py": "0893fae7d04fc2ed72465fa8c348def4591e354a3b4ca4426ffe82c3cba0f359",
+      "reconstruction/core_spec/player_effects139.py": "391efc4a2538e6ca96c9cf2df4afbfd3aa1c0d3cf6ede83d2d445eb7028b7ba1",
+      "reconstruction/core_spec/player_update139.py": "1d9abd2fe4db58b4acd02434ec9d5b04133c5860673a6f0535f6fdf3d9d147ac",
+      "reconstruction/core_spec/position_math139.py": "79fe9a84dba5fa4f1f7828c4b018d9045f7b653e573e270c0051e7131c64265a",
+      "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+      "reconstruction/core_spec/progression134.py": "000e5edd73e7204691dd9a7965b5d2405a12c7d9256eb883b1d8243581d8527c",
+      "reconstruction/core_spec/radius.py": "d7cc6ceb124bbb90fe2c5a7cd01659b4115c6280e16cd292a05fbd1d5a4eac30",
+      "reconstruction/core_spec/record_cells135.py": "ccc768bde5f43dba968cf435f2d2fd125aae2570a1985480bbeb96366863a776",
+      "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+      "reconstruction/core_spec/select139.py": "d801746fb135cd8a85bb69f5105c1cbe519e312dc1431e858a19b37f53a17412",
+      "reconstruction/core_spec/spawn135_data.py": "690815c229cc23b9a8a9258a12e230992f03c9dc83ae18112ee3506011fa0a19",
+      "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+      "reconstruction/core_spec/spawn_heading135.py": "138dfa6654a722c7961bd11791ac4e0c7f728c9de24fe72285c96984f2b22729",
+      "reconstruction/core_spec/spawn_position135_data.py": "4ff57c41b62b3cf29f35a91ee816894e916733b73d9aeac9a6e04b823f363198",
+      "reconstruction/core_spec/terminal139.py": "de6eeafc8585179162f1b7e5200b34d4f803c4e804e71f9b38aaf264b9b4c040",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "reconstruction/core_spec/world_position135.py": "b029291dc17530a8917b8496145cd5ef6ab05734206848c919ffd841b99143b1",
+      "reconstruction/core_spec/world_position139_data.py": "872dd5d3701cb1344f1a838e2c992117d1f84b844e0d09a0e2d0b9dc32831b81",
+      "reconstruction/core_spec/world_position139_v2.py": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+      "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+      "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+      "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+      "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+      "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+      "scripts/build_player_update139_oracle.py": "397c800845b1b16883339d1bed77e7f1a1b09efa54a9b52b6f2eb93db181e76d",
+      "scripts/build_terminal139_oracle.py": "60e4265056463d6a6728cf115a87db89f14843eed8a64af08fe0e413dbe64013",
+      "scripts/check_asset_world139.py": "7b3717c403fac3a39213edbd9ef7ca13465a51e55206c68aeef7ef2a2b0f2100",
+      "scripts/check_player_update139.py": "db9be3eeb8619bae60a7d792fc50a876b644d3fd8c9bc0f695310d09835eba0d",
+      "scripts/check_terminal139.py": "b6fb8b3542d2aadcef600525101e57f3c36b16ac46472038f5741a4905858f6c",
+      "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/run_terminal139_oracle.mjs": "55e743eaae6c3cf566a96cd87b0cab2619b8eabb4b17f32a8ae04f198f498924",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    },
+    "source_import_edges": [
+      [
+        "reconstruction/core_spec/__init__.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/__init__.py",
+        "reconstruction/core_spec/upgrade_values.py"
+      ],
+      [
+        "reconstruction/core_spec/ability_state.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/ability_state.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/ability_state.py",
+        "reconstruction/core_spec/upgrade_values.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/ai135_data.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/demo_ai135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/incoming135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/record_cells135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai135.py",
+        "reconstruction/core_spec/spawn_geometry135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_trig135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_trig135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_trig135.py",
+        "reconstruction/core_spec/spawn_geometry135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/ai135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/ai_trig135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/demo_ai135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/distance_map135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/incoming135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/core_spec/record_cells135.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/resource_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/ai_world135.py",
+        "reconstruction/resource_spec/world_query135.py"
+      ],
+      [
+        "reconstruction/core_spec/binary32_sqrt.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/binary32_sqrt.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/candidates139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/candidates139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/candidates139.py",
+        "reconstruction/core_spec/candidates139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/candidates139.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/ability_state.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/combat135.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/radius.py"
+      ],
+      [
+        "reconstruction/core_spec/cast135.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/cast_events135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/cast_events135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/cast_events135.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/cast_events135.py",
+        "reconstruction/core_spec/cast135.py"
+      ],
+      [
+        "reconstruction/core_spec/cast_events135.py",
+        "reconstruction/core_spec/combat135.py"
+      ],
+      [
+        "reconstruction/core_spec/cast_events135.py",
+        "reconstruction/core_spec/radius.py"
+      ],
+      [
+        "reconstruction/core_spec/combat134.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/combat134.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/combat135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/combat135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/combat135.py",
+        "reconstruction/core_spec/combat134.py"
+      ],
+      [
+        "reconstruction/core_spec/combat135.py",
+        "reconstruction/core_spec/record_cells135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_ai135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_ai135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_ai135.py",
+        "reconstruction/core_spec/demo_shout135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_ai135.py",
+        "reconstruction/core_spec/record_cells135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/cast135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/cast_events135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/opening_entities135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/owned_cast135.py"
+      ],
+      [
+        "reconstruction/core_spec/demo_shout135.py",
+        "reconstruction/core_spec/radius.py"
+      ],
+      [
+        "reconstruction/core_spec/derived_stats139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/derived_stats139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/derived_stats139.py",
+        "reconstruction/core_spec/progression.py"
+      ],
+      [
+        "reconstruction/core_spec/distance_map135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/distance_map135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/distance_map135.py",
+        "reconstruction/core_spec/world_position135.py"
+      ],
+      [
+        "reconstruction/core_spec/distance_map135.py",
+        "reconstruction/resource_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/distance_map135.py",
+        "reconstruction/resource_spec/world_query135.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/ai_world135.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/distance_map135.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/incoming139.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/incoming_history139.py"
+      ],
+      [
+        "reconstruction/core_spec/enemy_ai139.py",
+        "reconstruction/core_spec/position_math139.py"
+      ],
+      [
+        "reconstruction/core_spec/growth139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/growth139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/growth139.py",
+        "reconstruction/core_spec/candidates139.py"
+      ],
+      [
+        "reconstruction/core_spec/growth139.py",
+        "reconstruction/core_spec/derived_stats139.py"
+      ],
+      [
+        "reconstruction/core_spec/growth139.py",
+        "reconstruction/core_spec/initial_state139.py"
+      ],
+      [
+        "reconstruction/core_spec/growth_world139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/growth_world139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/growth_world139.py",
+        "reconstruction/core_spec/candidates139.py"
+      ],
+      [
+        "reconstruction/core_spec/growth_world139.py",
+        "reconstruction/core_spec/growth139.py"
+      ],
+      [
+        "reconstruction/core_spec/growth_world139.py",
+        "reconstruction/core_spec/select139.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming134.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming134.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming135.py",
+        "reconstruction/core_spec/incoming134.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming_history139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/incoming_history139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/initial_state139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/initial_state139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/initial_state139.py",
+        "reconstruction/core_spec/derived_stats139.py"
+      ],
+      [
+        "reconstruction/core_spec/initial_state139.py",
+        "reconstruction/core_spec/initial_state139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/natural_npc139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/natural_npc139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/natural_npc139.py",
+        "reconstruction/core_spec/npc_spawn139.py"
+      ],
+      [
+        "reconstruction/core_spec/natural_npc139.py",
+        "reconstruction/core_spec/world_position139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/natural_npc139.py",
+        "reconstruction/core_spec/world_position139_v2.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_heading139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_heading139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_spawn139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_spawn139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_spawn139.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_spawn139.py",
+        "reconstruction/core_spec/initial_state139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_spawn139.py",
+        "reconstruction/core_spec/npc_heading139.py"
+      ],
+      [
+        "reconstruction/core_spec/npc_spawn139.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/initial_state139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/natural_npc139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/opening_actor139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/opening_aux139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/opening_aux139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/opening139.py",
+        "reconstruction/core_spec/opening_profile139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_actor139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_actor139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_actor139.py",
+        "reconstruction/core_spec/opening_aux139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_actor139.py",
+        "reconstruction/core_spec/position_math139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_actor139.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_actor139.py",
+        "reconstruction/core_spec/world_position139_v2.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/ai_trig135.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/opening_actor139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/opening_aux139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/position_math139.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_aux139.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/ai_trig135.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/opening_entities135_data.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/spawn135_data.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/spawn_geometry135.py"
+      ],
+      [
+        "reconstruction/core_spec/opening_entities135.py",
+        "reconstruction/core_spec/spawn_position135_data.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_cast135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_cast135.py",
+        "reconstruction/core_spec/ability_state.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_cast135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_cast135.py",
+        "reconstruction/core_spec/cast135.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_cast135.py",
+        "reconstruction/core_spec/cast_events135.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_cast135.py",
+        "reconstruction/core_spec/owned_prelude135.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/cast135.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/cast_events135.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/progression134.py"
+      ],
+      [
+        "reconstruction/core_spec/owned_prelude135.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/player_effects139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/player_effects139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/player_effects139.py",
+        "reconstruction/core_spec/candidates139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/player_effects139.py",
+        "reconstruction/core_spec/growth139.py"
+      ],
+      [
+        "reconstruction/core_spec/player_effects139.py",
+        "reconstruction/core_spec/player_update139.py"
+      ],
+      [
+        "reconstruction/core_spec/player_update139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/player_update139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/player_update139.py",
+        "reconstruction/core_spec/candidates139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/player_update139.py",
+        "reconstruction/core_spec/derived_stats139.py"
+      ],
+      [
+        "reconstruction/core_spec/player_update139.py",
+        "reconstruction/core_spec/growth139.py"
+      ],
+      [
+        "reconstruction/core_spec/player_update139.py",
+        "reconstruction/core_spec/hit_events139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/position_math139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/position_math139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/position_math139.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/progression.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/progression.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/progression134.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/progression134.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/radius.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/radius.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/rng.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/rng.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/select139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/select139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/select139.py",
+        "reconstruction/core_spec/candidates139_data.py"
+      ],
+      [
+        "reconstruction/core_spec/select139.py",
+        "reconstruction/core_spec/growth139.py"
+      ],
+      [
+        "reconstruction/core_spec/spawn_geometry135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/spawn_geometry135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/spawn_geometry135.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/spawn_heading135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/spawn_heading135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/terminal139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/terminal139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/upgrade_values.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/upgrade_values.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position135.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position135.py",
+        "reconstruction/core_spec/spawn_geometry135.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position135.py",
+        "reconstruction/core_spec/spawn_heading135.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position135.py",
+        "reconstruction/core_spec/spawn_position135_data.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/binary32_sqrt.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/npc_heading139.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/position_math139.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/rng.py"
+      ],
+      [
+        "reconstruction/core_spec/world_position139_v2.py",
+        "reconstruction/core_spec/world_position139_data.py"
+      ],
+      [
+        "reconstruction/resource_spec/entry_resources135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/resource_spec/entry_resources135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/resource_spec/entry_resources135.py",
+        "reconstruction/resource_spec/__init__.py"
+      ],
+      [
+        "reconstruction/resource_spec/entry_resources135.py",
+        "reconstruction/resource_spec/dbc.py"
+      ],
+      [
+        "reconstruction/resource_spec/terrain135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/resource_spec/terrain135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/resource_spec/terrain135.py",
+        "reconstruction/resource_spec/__init__.py"
+      ],
+      [
+        "reconstruction/resource_spec/terrain135.py",
+        "reconstruction/resource_spec/entry_resources135.py"
+      ],
+      [
+        "reconstruction/resource_spec/world_query135.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "reconstruction/resource_spec/world_query135.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "reconstruction/resource_spec/world_query135.py",
+        "reconstruction/resource_spec/__init__.py"
+      ],
+      [
+        "reconstruction/resource_spec/world_query135.py",
+        "reconstruction/resource_spec/terrain135.py"
+      ],
+      [
+        "scripts/build_player_update139_oracle.py",
+        "scripts/incoming139_tools.py"
+      ],
+      [
+        "scripts/build_terminal139_oracle.py",
+        "scripts/incoming139_tools.py"
+      ],
+      [
+        "scripts/check_asset_world139.py",
+        "reconstruction/resource_spec/__init__.py"
+      ],
+      [
+        "scripts/check_asset_world139.py",
+        "reconstruction/resource_spec/terrain135.py"
+      ],
+      [
+        "scripts/check_asset_world139.py",
+        "reconstruction/resource_spec/world_query135.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/growth139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/growth_world139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/opening139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/opening_profile139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/player_effects139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "reconstruction/core_spec/player_update139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "scripts/build_player_update139_oracle.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "scripts/check_asset_world139.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "scripts/production_closure135.py"
+      ],
+      [
+        "scripts/check_player_update139.py",
+        "scripts/source_closure137.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/__init__.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/binary32.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/enemy_ai139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/growth139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/incoming139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/incoming_history139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/opening139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/opening_profile139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "reconstruction/core_spec/terminal139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "scripts/build_terminal139_oracle.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "scripts/check_player_update139.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "scripts/production_closure135.py"
+      ],
+      [
+        "scripts/check_terminal139.py",
+        "scripts/source_closure137.py"
+      ],
+      [
+        "scripts/incoming139_tools.py",
+        "scripts/wasm139_profile.py"
+      ],
+      [
+        "scripts/wasm134_profile.py",
+        "scripts/wasm_index.py"
+      ],
+      [
+        "scripts/wasm139_profile.py",
+        "scripts/wasm134_profile.py"
+      ],
+      [
+        "scripts/wasm139_profile.py",
+        "scripts/wasm_index.py"
+      ]
+    ]
+  },
+  "rules": [
+    "49961 requires Game400!=0,phase2587==1 and!(endless2568&1); setsphase5 before stopping. Repeat call seesphase5 and makes no new mutations/messages.",
+    "17209 visits active NPC432 marker0 withduration>0 andnow<start+duration; then17319 auxiliary112, then16380 companion88. It does not clear player movement.",
+    "Finite binary32 lerp clamps0..1. Real29912 height replacesz; onmiss23333 nearestprimary only replacesz, retainingxy. Canonicalnonflat terrain is supplied independently.",
+    "Every actualstop increments2412 in producer order and emits complete46692/221 packedGUID+XYZ+sequence+01.",
+    "55851/232 carries original action1644 and casterGUID, then49961 increments1644. 1965 victory notification is appended to existingVec12, preserving original startnotification.",
+    "Complete1965 numeric/text order, current53225 numberformat,UTF8/quotes/backslashes/newline/tab/CR/NUL escaping and exact JSON buffercapacity are compared.",
+    "OnlyWarrior5877920/Human5874636/Elwynn5871348 currentlabels admitted; heroString controlledfixture allocates validcapacity/ptr/len. Game408 is checked actualzero and nevercleared."
+  ],
+  "API": {
+    "module": "core_spec.terminal139",
+    "state": "TerminalInput139 with actual counts/capacities/counters/wholephysicalknownNone432/112/88 storage,defaultcurrentlabels,explicitrecap408",
+    "call": "transition_terminal(state,canonical_world)->TerminalResult139(state,packets,notifications,stopped_guids,status)",
+    "packets": "tuple(opcode,buffer_capacity,payload_hex),complete newmessages",
+    "notifications": "tuple(buffer_capacity,payload_hex)"
+  },
+  "layers": {
+    "static": "22 current wholebody/binary identities + static labels/victory/type/counter initialization bindings; no builder execution",
+    "model": "Independent source algorithm adapted from135 code, expected-first with no original/output reads; 135 runtimeacceptance not transferred",
+    "native": "5 new resource-only admitted instances,actualprefix1108/925 andintact49961 callees",
+    "independent_review": "Pending"
+  },
+  "separate_pilot": {
+    "path": "evidence/terminal139-oracle-20261102T131931.588792Z/comparison.json",
+    "sha256": "74ca00e6ca8505f2a28edaa22e870b2c040fd20ee86a31a4a6053ea1760a9b65",
+    "fresh_instances": 1,
+    "full49961": 2,
+    "differences": 0,
+    "excluded_from_formal": true
+  },
+  "unknowns": [
+    "Bossdeath→field400 producer is not recovered by this batch. All successful terminals use an explicit400 control, so0 naturalvictories/completegames.",
+    "Auxiliary112 andcompanion88 are explicit knownbyte fixtures over actualempty owners, independentlyscoped; their naturalcreation producers remainpending.",
+    "Onlycanonical terrainhit path observed; heightmiss/nearestprimary math staticallyrebound,notclaimed dynamicallytested. Negative/NaN/interrupted motion andgeneral variants remainoutsidefinite domain.",
+    "Onlydefaultcurrent class/race/zoneEnglishfallback profile andsampledJSON/number inputs admitted. Generaltranslations,deathrecap/history serialization,overflow andallocationfailure paths pending.",
+    "Gameplayerposition/motion retained andall2592changedbytes verified, butno fullheap/allocatorlifetime/UI/render/nativeWindows/network/save parity claim.",
+    "No full884/mainloop,collection/spawn/clock/AIcontinuous integration acceptance; continuouspipeline work remainsseparate.",
+    "Existingpackages/saves/Android andalloldfrozenrecords untouched."
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "status": "accepted_current139_stationary_before60s_with_real40_resources",
+  "counts": {
+    "opening_Game_known": 2304,
+    "opening_Game_None": 8064,
+    "opening_Game_nonzero_None": 919,
+    "opening_units_known": 4848,
+    "opening_units_None": 2064,
+    "opening_units_nonzero_None": 1900,
+    "opening_pickups_known": 416,
+    "opening_pickups_None": 480,
+    "opening_pickups_nonzero_None": 424,
+    "opening_special_known": 448,
+    "opening_special_None": 192,
+    "opening_special_nonzero_None": 192,
+    "opening_windows_known": 72,
+    "opening_windows_None": 56,
+    "opening_windows_nonzero_None": 56,
+    "opening_boundaries_known": 2208,
+    "opening_boundaries_None": 1888,
+    "opening_boundaries_nonzero_None": 816,
+    "far55_predicates_not_taken": 66576,
+    "first_velocity_jump_filtered": 4,
+    "zero_killcost_decay_predicates": 3119,
+    "choice_RNG_draws": 132,
+    "budget_choice_attempts": 132,
+    "NPC_yaw_jitter_draws": 264,
+    "new_NPCs": 132,
+    "new169_packets": 132,
+    "new169_payload_bytes": 23628,
+    "definition0_births": 108,
+    "density_predicates": 3119,
+    "density_fill_requested": 0,
+    "full952_recomputed": 3119,
+    "definition1_births": 24,
+    "kind3range_draws": 7,
+    "kind3_resource_births": 2,
+    "resource169_packets": 4,
+    "units_known": 238764,
+    "units_None": 203604,
+    "units_nonzero_None": 178717,
+    "units_None_physical_inheritance": 132534,
+    "pickups_known": 4524,
+    "pickups_None": 3764,
+    "pickups_nonzero_None": 3324,
+    "pickups_None_physical_inheritance": 3764,
+    "complete_ordered_packet_snapshots": 3465,
+    "background_owners_conserved": 222,
+    "Game_nonowned_bytes_inherited": 92648,
+    "checkpoints": 37,
+    "fresh_instances": 4,
+    "kind4_resource_births": 1,
+    "kind5_resource_births": 1
+  },
+  "author_handoff_sha256": "3addfbcefc16415241548ab0fab9dea47b87b632b0afb5d585c9a1346b0d5418",
+  "author_files": {
+    "reconstruction/core_spec/spawn_schedule139_v2.py": "c3bd51883fd2de9423400c885ce9cd6f478f47b3ff965aa75eabc0ff9955c451",
+    "scripts/build_spawn_schedule139_v2_oracle.py": "b1780d065f62cb9b8ce7547a51cdbf5272bc7c19046d2580ce5bd558df205d94",
+    "scripts/check_spawn_schedule139_v2.py": "a77193b82c2a20f2a59d835b419a7b8808c670d186eacacbe9d0beb89a7b9816",
+    "scripts/run_spawn_schedule139_v2_oracle.mjs": "4fb6564a681bf3d37ba1adf95be2e5f85b29f069b6e1d4e0f2bed7ecfc203e03",
+    "scripts/check_spawn_schedule139_v2_kind5.py": "523545a137ff2e647875966960cd641c607090e6daea4c6614d89543f17356b4",
+    "reports/2026-11-02-spawn-schedule0139-v2.json": "afcdcd5b492a29ead3b7dab579abf67322fb82d9b58ad12c5ed4aad0d66b7d00",
+    "reports/2026-11-02-spawn-schedule0139-v2.md": "52f93c30349ab59f1c9c7fb366b3955ba61b612cbe4c73ee5e802b3edbb3b05d"
+  },
+  "sources": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/ai_trig135.py": "8d6989241d6bd1430c2c1754165730a779ccb27c1994a66aec89fe2623d6e202",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/binary32_sqrt.py": "6592ebc02d3232da08b13f3943baf9a9b305fe2944eadd12c30240827895f7b5",
+    "reconstruction/core_spec/candidates139.py": "4ff5b2c3706247a9bb0f733bda6b7b2a9d46bbb19ab46b4d7f418b8e3ee70954",
+    "reconstruction/core_spec/candidates139_data.py": "efb653784d0fe24bdc35cf65437a5226eff64888252f33826a8341645eaf8343",
+    "reconstruction/core_spec/derived_stats139.py": "1e8edc3ae73fa895438a7a725d235da6d03ea941ad979072479b8d54145acfc7",
+    "reconstruction/core_spec/growth139.py": "046d30aacfc3775bfdb2c022e61e3f1b655e858ebfdf865cee6e8e9419ea2169",
+    "reconstruction/core_spec/growth_world139.py": "0ce3d2144d42e5c61a97e21a227e0e46b85c4b955ef68af6f1ee24edbea03993",
+    "reconstruction/core_spec/initial_state139.py": "b8e572193a975fea802c3085c7134e16cc94a5f9014ebeefa778fe0349d8b9e1",
+    "reconstruction/core_spec/initial_state139_data.py": "73f73d1151812aa0178229c0842fd2ff2b23414b6ae7d62a092895f5582b21b5",
+    "reconstruction/core_spec/natural_npc139.py": "0e749d4bf0479b2ebe5fe30b542256e29d9910e15f480b3fbb1a0ab87eee2670",
+    "reconstruction/core_spec/npc_heading139.py": "680ff998e8e77916a2c976ccc590834ff94fa58b484efbde5e1bf41a9458f229",
+    "reconstruction/core_spec/npc_spawn139.py": "c1a4122f82edad2dadddc3a1e63f00544db7e349050a21d05a93247a326b1330",
+    "reconstruction/core_spec/opening139.py": "291a0e2a9374a07c984b6de7143764ae827bc36e6fcc1664598dc9468bf64817",
+    "reconstruction/core_spec/opening_actor139.py": "f6ceb4b648f993c2ff8508f255051fe6c97cb636295e162af8a4af19dc55603b",
+    "reconstruction/core_spec/opening_aux139.py": "a2d3109330e125bd2d70fcf5a37d00c2a4f61ff87486990a54b9bfc3321a5238",
+    "reconstruction/core_spec/opening_aux139_data.py": "4f38958fa24b83cbe7e674d2d659442c65fe90eb6daed4f61558fc588cdb150a",
+    "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+    "reconstruction/core_spec/position_math139.py": "79fe9a84dba5fa4f1f7828c4b018d9045f7b653e573e270c0051e7131c64265a",
+    "reconstruction/core_spec/progression.py": "aded0fd244432efc0eb1a3d3aefe3b98053df499425813c8693a5512f4257a26",
+    "reconstruction/core_spec/rng.py": "d1a26be4423ee6123b6111b35bc679081a3b92e710ab606eab08deafa0a466cd",
+    "reconstruction/core_spec/select139.py": "d801746fb135cd8a85bb69f5105c1cbe519e312dc1431e858a19b37f53a17412",
+    "reconstruction/core_spec/spawn_geometry135.py": "9e5adeb1aadff0a9b61834e6d823a7b8235f925976afc0df9b777b8beea76946",
+    "reconstruction/core_spec/spawn_schedule139_data.py": "fda5dbf72540d54fcf5d716de3469ad0c8cdb316d7051f06c64a5572c20e61e2",
+    "reconstruction/core_spec/spawn_schedule139_v2.py": "c3bd51883fd2de9423400c885ce9cd6f478f47b3ff965aa75eabc0ff9955c451",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "reconstruction/core_spec/world_position139_data.py": "872dd5d3701cb1344f1a838e2c992117d1f84b844e0d09a0e2d0b9dc32831b81",
+    "reconstruction/core_spec/world_position139_v2.py": "8671bdee2059614a1c9be0a9ee36d1131444dd16f3eb0ae0c60ca177b201d41c",
+    "reconstruction/resource_spec/__init__.py": "cb3b9a2558df77cb5832e8c46752b499a3814007c29c03b32552d3a8d1d3f8db",
+    "reconstruction/resource_spec/dbc.py": "23897746ce8f8727425837712b1d6cd260115e74dc00bebf1edc0c7677bf94d0",
+    "reconstruction/resource_spec/entry_resources135.py": "e99d62fbce512b43dd3d0daf3a912b983a18efe62ab1068275df568ae76c4774",
+    "reconstruction/resource_spec/terrain135.py": "635953df7be652626cb6b89442f2675d65d88d4c4d1caa7b4d0486cb58a04a1e",
+    "reconstruction/resource_spec/world_query135.py": "83f137751e2339d474021d50b9f5951954d1f8ba1979cf3cd877373f9263d28e",
+    "scripts/build_growth_world139_oracle.py": "c992d85ce1cd2645123671ffeb8d8a605b8170f7dcac7c706ccdfa5df238ad90",
+    "scripts/build_spawn_schedule139_v2_oracle.py": "b1780d065f62cb9b8ce7547a51cdbf5272bc7c19046d2580ce5bd558df205d94",
+    "scripts/check_asset_world139.py": "7b3717c403fac3a39213edbd9ef7ca13465a51e55206c68aeef7ef2a2b0f2100",
+    "scripts/check_growth_world139.py": "ff8fd88e984867cdb87b204d9a5dcb3e01f728dcb89af11cae9c2a9cfa51912f",
+    "scripts/check_spawn_schedule139_v2.py": "a77193b82c2a20f2a59d835b419a7b8808c670d186eacacbe9d0beb89a7b9816",
+    "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_spawn_schedule139_v2_oracle.mjs": "4fb6564a681bf3d37ba1adf95be2e5f85b29f069b6e1d4e0f2bed7ecfc203e03",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b",
+    "scripts/check_spawn_schedule139_v2_kind5.py": "523545a137ff2e647875966960cd641c607090e6daea4c6614d89543f17356b4"
+  },
+  "unique_source_files": 47,
+  "per_batch_source_files": 46,
+  "production_files": 34,
+  "per_batch_source_edges": 136,
+  "current_bindings": {
+    "952": {
+      "body_sha256": "e6c80338ca9a8182e86fad0b039786aa37fe6306486bb5ecc64588fc5047ed7b",
+      "WAT_sha256": "307c7ab8e6c947dbcd81718aca944d6614af38b95a8b9edcfbea2e8fbeca3fdb"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1446": {
+      "body_sha256": "8767d1f7e85c487759afa70602d9ae1793a7fd9118c0d8f57bca75c05ae3c958",
+      "WAT_sha256": "285f5c4878af3a685fbfc1dbff5f36ac2529bdc62cc4de81024f9cdda8f08abe"
+    },
+    "1586": {
+      "body_sha256": "6f318b3b6c75e99768e6a940e2d8306cc613ec13bca4a462cbc1d8d136ffe179",
+      "WAT_sha256": "124c2552506e98fe18dbd0d80dcf710639138370a488ca375e8ead3aa76f8368"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1711": {
+      "body_sha256": "1372cec05f22259cae4590ee02ba566c50bbc3b9cfc8cd38f74c05fff43ca426",
+      "WAT_sha256": "aa0a02cd6aa9d05eee102969d68aa56c60ee8f1d064a06c5e711d0df4c76f029"
+    },
+    "1886": {
+      "body_sha256": "7307a96d26652424b521a57769caa076118a3fa1b0f5fa767015ae9665fdf458",
+      "WAT_sha256": "42303255f7eaf67d66b0c9aab4a14d2b79d2e31ce07ca93394f6bd93e44d7bc1"
+    },
+    "2801": {
+      "body_sha256": "ddf83880954f9a84056c09c2a5dd89c22a6cdb038c3dc20aa206c89667f5b33c",
+      "WAT_sha256": "9dd779e78668e6004c684f4e15559651c849fb2e15931420ca4906466dde3b53"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "5719": {
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "6440": {
+      "body_sha256": "4ea9db44425a01afe9e8ac0f8d0791be0ead60714c863673240e0e306417752c",
+      "WAT_sha256": "ae0241f072f22c23aa023b8320e737af71a016b642562f74ffb2b8df702f7080"
+    },
+    "6786": {
+      "body_sha256": "628dfa51726dd61f49c61f0afd62151bf189a3d29c8397e5a8ddb217021d2b67",
+      "WAT_sha256": "55085c6a3b0da7f9770d0cddc6b21062cd9eb877f26ceeee725ffdce8eca902a"
+    },
+    "8740": {
+      "body_sha256": "35e2f8bf141c22a07857ff8327892bf7b6f971aea2d1ad0f705ba12dfa02af38",
+      "WAT_sha256": "ae82725c4b84528ce67a730a31f6a8ca631f41cdf0b3bac500fabeb4cea9c13b"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "13563": {
+      "body_sha256": "724158538ddf6fdcb38eb520beaa5ff8467952b418be3400132013b105a136ae",
+      "WAT_sha256": "718739b8790b32422f5c947657685744eb6f32a052b1f48320010c1f7696a03a"
+    },
+    "20060": {
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "20357": {
+      "body_sha256": "ca7a1ee671740078b1c57b89c01432e6abe220eccf4ec92c9a1ce94b5760526b",
+      "WAT_sha256": "6abafb185a2c34b7741ea127cef081066eead8e8345b57d445cdb257346751ce"
+    },
+    "21552": {
+      "body_sha256": "cf052ccc9a12542cc1d57cce7f38d9ad9ff4815a54d2bae215cc6a05ec9e887e",
+      "WAT_sha256": "6982eda67cb53174032b07367d6616c8b03b2cf1e27224799ff27341cd285a8e"
+    },
+    "24602": {
+      "body_sha256": "7eb347950c8d414529c9dc57a8ba5a3faa2ef19849f004ef9fada22d826787d2",
+      "WAT_sha256": "50b1d16630203df0ddaf3d13acf8b0208b78e862f425aa78566b631e297883d1"
+    },
+    "26521": {
+      "body_sha256": "9edfc2ca7713db5050ef5f01df09fd0cff2bab85e944040739910c5b1217c114",
+      "WAT_sha256": "eacfcef05bb6ac37aa415401b8258b702969b10d19227b2ddddd81623e284eba"
+    },
+    "33028": {
+      "body_sha256": "ad6febcb39fb63482c83b3916de67a60749c9516fe45ec790e80ec0593314630",
+      "WAT_sha256": "f273d4ae39059284d97afce94486be65cc95b434f8dc740054c9ec175791ce19"
+    },
+    "35202": {
+      "body_sha256": "376014a64c5dc9188224bff920007b7f6bc872b0990ff88656a00c37f3df5220",
+      "WAT_sha256": "1416334266676d4cb554846f9b9ca007a3052bd84da247de0430fc2c6c7a175f"
+    },
+    "35232": {
+      "body_sha256": "e115a906d9275ce40cc061c56d4182a96daf09bf52d12ecbe172d5a179f55248",
+      "WAT_sha256": "cc48aa84cf34ae4d0317385740b0d65dfd11c7a1cad5b0f50bd2a4b33306bb39"
+    },
+    "38882": {
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379",
+      "WAT_sha256": "4b8c39db5b6e440a44f796e52a7b02663496a9592335db390461170e335ff65d"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "57285": {
+      "body_sha256": "6ba065ba8b2e671264defd9ecd58842ed471ed8ff59df02f101e0c08d30a282e",
+      "WAT_sha256": "bf6e1c06effefc4fe0af93b57bd455cb78e0b03567c9b3f2f8e59ca060c4ed92"
+    },
+    "66558": {
+      "body_sha256": "bd4503156bac2513b41a4d9c9d4aa6161accbdb4e553afc102ef6329ac3ff90a",
+      "WAT_sha256": "281ff2fe714154f88c180806ae37420efdd93869a0e64ed53aeef3175cb2804c"
+    },
+    "66565": {
+      "body_sha256": "61a15cc00c53f22465daa4e68e0d43fe6cc7b92142f8f5c23eee3e77e0ce48cd",
+      "WAT_sha256": "03aecfb0287822d7e8b8fbc063761f4388bd7684d96f6203afbb8dc2875911df"
+    },
+    "66611": {
+      "body_sha256": "fbe38fa5d8dba46b8a09590117675c8b578abd891c2c88b1d92a79f6dd03a41e",
+      "WAT_sha256": "1119c8c1bc9fbda68ffb84c9d08d03702a06994be23a24d02315a1dbae4aa0ee"
+    },
+    "97426": {
+      "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432",
+      "WAT_sha256": "ae3086a8a1ab779ef7c5225bebac799acb3fd5aabb17cf1f39ecdc73388a03fc"
+    },
+    "97427": {
+      "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18",
+      "WAT_sha256": "9fbc00025f477557d113eb432853adc224934d060e91c937006dacd0b2ec53b1"
+    },
+    "108362": {
+      "body_sha256": "0ee0c30715ea4b1bd121935ba5d56724b9b23bd04ac3334c9ed4e761657a4d89",
+      "WAT_sha256": "116a09e14cd923db727003e12e5bcede0f5467d5c895a540bad3206170e82e57"
+    }
+  },
+  "helper_SHA": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_spawn_schedule139.py": "b2e9997dff3d356e637945806802dde95354e7ffdc86c796275e7bfa3d2e1fe2",
+    "scripts/review_death_pickups139.py": "092328f7b6e7c5323f1d3b9c74b1080b1181fdd002f7153d32756110d9dcaef3"
+  },
+  "batches": [
+    {
+      "path": "evidence/spawn-schedule139-v2-oracle-20261102T133738.600939Z",
+      "comparison_sha256": "849da7e82cbd176d98483fd93a7fbcd2b20206dd3add47caa1490aead24f58c2",
+      "process": {
+        "pid": 77475,
+        "pgid": 77475,
+        "exit_code": 0,
+        "seconds": 0.9301775839994662,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    },
+    {
+      "path": "evidence/spawn-schedule139-v2-kind5-oracle-20261102T134231.621630Z",
+      "comparison_sha256": "1e498df80daae2ed3f9f91987cc758664b6d0404b29e5f7ac6236b77ee2fae1e",
+      "process": {
+        "pid": 84890,
+        "pgid": 84890,
+        "exit_code": 0,
+        "seconds": 1.012222458000906,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    }
+  ],
+  "author_or_original_executions_by_reviewer": 0,
+  "expected_file_used_as_reference": false,
+  "reviewer_audit": {},
+  "limits": [
+    "4 genuineopening instances,3119 full952 target entries and12 setup classified separately;natural40s kind3/4/5 matched. No60s wave/Rune or240s elite/Boss coverage.",
+    "Stationary/no combat/no death/zero killcost/default owners;far55 recycle,densitypositive/spawncap50/resourcecount2 not silently accepted.",
+    "Correct2424=60wave/2440=240elite timer roles. Only2444 triggers here, setsnow+45;naturalresourcecapture stilldoesnotimplement theircollection.",
+    "Previous independentlywritten ordinary/opening/geometry/NPC/Fraction/packet algorithms reused withcurrentwholeWAT/body/data binding;noauthor production imports.",
+    "Resource-onlyv2 context,new2945/1600/full1108;fullApp/Rc/externref/bootstrap/full884/nativeWindows/network/save/completegame remainPending."
+  ],
+  "reviewer_process": {
+    "pid": 23468,
+    "pgid": 23468,
+    "exit_code": 0,
+    "seconds": 33.999851249998756,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_source_sha256": "a32289bf07df28773bb12d741729ead39b4f9718804b2e04b4a96f6606cd33c4",
+  "reviewer_artifacts": {
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "owned-terminal.json": "7c754f1f2df32efad64740cd3fdf42eed276412d15fbfe2ad9279d460aa4fcd4",
+    "owned-start.json": "411246d74190482875339dd41cbb3198e59fb0d5624d03a40b347def990edd8b",
+    "stdout.log": "a82a460ff5e8bc3254cb46b07dfa2f279d93868a4aac133a5d7ed1e46ff7d8e8",
+    "result/reference-traces.json": "6cb9b642503dc17ee25bdeedc960ad8de064529aed5529ac29fe3d2927995198",
+    "result/review.json": "97a718970cae6ce4debe144d77dd601320459aa8de59a0eebe81c353a7a3d7d7"
+  },
+  "prior_reviewer_attempts": [
+    {
+      "path": "evidence/spawn-schedule139-v2-review-owned-20261102T140431.714176Z",
+      "reason": "Independentreference usedmutabletimerdict;40seventretroactivelychangedearliertimeline"
+    },
+    {
+      "path": "evidence/spawn-schedule139-v2-review-owned-20261102T140544.916214Z",
+      "reason": "Sameindependenttimeralias located atframe0; noauthorchange"
+    },
+    {
+      "path": "evidence/spawn-schedule139-v2-review-owned-20261102T140626.002476Z",
+      "reason": "Bothbatcheshave46sourcesbutdifferentcheckerfilenames;sharedSHAequal,union47;reviewermetadataassertioncorrected"
+    }
+  ],
+  "independent_raw_reference_uses_expected_values": false,
+  "formal": {
+    "fresh_instances": 4,
+    "full952_targets": 3119,
+    "setup2945": 4,
+    "setup1600": 4,
+    "setup1108": 4,
+    "direct_entries": 3131,
+    "checkpoints": 37,
+    "original_calls_by_reviewer": 0,
+    "author_program_calls_by_reviewer": 0
+  },
+  "source_summary": {
+    "per_batch_files": 46,
+    "unique_union_files": 47,
+    "per_batch_production": 34,
+    "per_batch_edges": 136,
+    "formal_manifest_bodies": 23
+  },
+  "limitations_extra": [
+    "Previous pureindependent helpers include current-world-position reference whose author-target review rejected an oldhypot implementation; thisnewreference uses correctdirectf32norm fromcurrent13563. Nooldrejectedauthorproduction executed or inherited.",
+    "Independentreviewerattempts didnotrerun originals orchange author7; allrawformaloutputs remain identical."
+  ]
+}

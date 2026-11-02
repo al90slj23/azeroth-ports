@@ -1,0 +1,122 @@
+{
+  "status": "accepted_bounded_current139_fixture_consumer",
+  "counts": {
+    "full38553": 124,
+    "removed": 187,
+    "queue_bytes": 15456,
+    "Game_bytes": 321408,
+    "exact_inclusive_expiry_rows": 144,
+    "packets": 187,
+    "packet_bytes": 5582,
+    "payload_capacity32": 135,
+    "allocator_pointer_observations_not_predictions": 50,
+    "payload_capacity64": 52,
+    "NaN_nonexpiry_rows": 86
+  },
+  "source_files": 13,
+  "source_edges": 18,
+  "author_files_unchanged": {
+    "reconstruction/core_spec/frame_systems139.py": "c0810f5f99d5fb4bc6b4d28560e451be39fccf1ba64b725c5f1101d05c58431d",
+    "scripts/build_frame_deadline139_oracle.py": "bff059c50cc3b4d6847a43dbf1f2c6374eee031dbbf78ed09005cbf4bc505579",
+    "scripts/run_frame_deadline139_oracle.mjs": "b5919818ecb93f09049ae58431525e26573efa91814ca2634b0a1699956a8cab",
+    "scripts/check_frame_deadline139.py": "00fcad079d5f0ccf59b3f606d61b2bbee1809845ad5be2a05a50a14a2bb303e4",
+    "reports/2026-11-02-frame-deadline0139.json": "397a3e187fc0c4d0cdcd126851fc903cb77ec0f8ddd3248efe85c421688fd3bd",
+    "reports/2026-11-02-frame-deadline0139.md": "1a3403b8539c6dc933e84a98f632d7c3fcf7c97051d1fe794f25178f020da40b"
+  },
+  "functions": {
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "signature": [
+        "7f7e7f7f7f7f7f",
+        ""
+      ],
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "15962": {
+      "body_sha256": "0cd2998ebc1278489ae5e6ebee9630a729a450d69f9ab0cdabb3c1b849d985bb",
+      "signature": [
+        "7e7f",
+        ""
+      ],
+      "WAT_sha256": "b07d3d8c01f35f69928d037eee33c7cb77e9b1fa29889a69aeacb5252f45db7a"
+    },
+    "38553": {
+      "body_sha256": "5195a39be1d4ffdcca1f80e15bf9d7ca0c78ceab25d74d7a48db5eedb374d2bb",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "WAT_sha256": "a2e3f446a73948ad367b38e89fb28da24746294746467cb7f6320fc98cf40889"
+    },
+    "46462": {
+      "body_sha256": "0e973aad0327257a313c04257b8cf84a01375278ee70dfc47fe5e42c56d363d6",
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "WAT_sha256": "01447b4ca97a20092413e70e35a7ed1d331d129bc0b138513186536719f917d2"
+    },
+    "66546": {
+      "body_sha256": "58a8fe8aa039f5e77083d3a31b3736679e49fffee8e7205a2ecc850e97630565",
+      "signature": [
+        "7f",
+        ""
+      ],
+      "WAT_sha256": "37e33b39641ee0522336869b8775e0042ffe9ce8c7491eccb0f324de78c2921d"
+    }
+  },
+  "author_process": {
+    "pid": 55550,
+    "pgid": 55550,
+    "exit_code": 0,
+    "seconds": 1.9199939579993952,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "author_original_executions_by_reviewer": 0,
+  "author_production_checker_builder_executions": 0,
+  "expected_file_used_as_reference": false,
+  "helper_execution": "Frozen independent review_combat139 parser/ASTclosure only",
+  "limitations": [
+    "Scheduled32 queue is controlled fixture, naturalproducer0. Actual1600 emptyprofile/world-query fixture is not App/resourcebootstrap.",
+    "Allocatorpointer is observation only, not independentlypredicted. All otherGame2592 bytes andwhole32B capacity/staleTail compare exactly.",
+    "Phaseignored by currentconsumer; inclusiveIEEE comparisons/NaN nonexpiry andpackedGUID/XYZ bitpayload verified. No mainloop/nativeWindows/completegame acceptance.",
+    "Pilot11 excluded; 124 formal currentconsumer entries and58 setups classified separately."
+  ],
+  "reviewer_process": {
+    "pid": 87878,
+    "pgid": 87878,
+    "exit_code": 0,
+    "seconds": 4.56628095799897,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "author_handoff_sha256": "26229438e06e9676259d2df06b7fbd43f3778287845d97e4f72e3ada066be001",
+  "author_comparison_sha256": "c4495b084ac7b1d43ea26a781f63c06e0a6174f71475f4fe670dce6d64da45d8",
+  "reviewer_artifacts": {
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "owned-terminal.json": "842f0320748a9f07eb5da0ed6759c6646a7e9f3f8c248471428c3ca6bc21902f",
+    "owned-start.json": "bf3f9568d84aa1d860ffe17f5a6e44579348c731d492f389d66e3b0985592a37",
+    "stdout.log": "463ad27883991d77eb0bd446635fc7c129fa16102c02bee3f1bc0e4a473dab3c",
+    "result/independent-reference.json": "ba2679c4adde8b248237c9f32566fce0c4e3c023de23f84aaabee3d43e6be246",
+    "result/current-source-proof.json": "2846845a7710710d015e7e8b950e5ada488fab0e8a5bac2dd0187ab4c49e0f70",
+    "result/review.json": "b0f6083b68c941affc41feea018355eb569261085a41f8a303eb9c268fd95883"
+  },
+  "reviewer_source_sha256": "b80bc1063540589dcabdd4861c9cc36608d9384322d4f066e1339eecf0391060",
+  "explicit_boundaries": {
+    "natural_scheduled32_producers": 0,
+    "new_original_calls_by_reviewer": 0,
+    "App_bootstrap": false,
+    "nativeWindows": false,
+    "full_mainloop_frames": 0,
+    "complete_games": 0
+  }
+}

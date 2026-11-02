@@ -1,0 +1,79 @@
+{
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "not_accepted_v1_combined_AI_emit_order",
+  "comparison_sha256": "3d97d1550acac2020650580006fa806712cc9c546c2ec1c18f3aca2a748651b3",
+  "frozen_files": {
+    "reconstruction/core_spec/player_enemy139.py": "22a6f3a6e4f0f4e4b295b7b39e4f7fa735f6e0c4b59ead4c8c8709998926c7ec",
+    "scripts/build_player_enemy139_oracle.py": "331688bee22e6ca01a3377b1de6786438dbcb58765c2ec11221e0678a98873ca",
+    "scripts/check_player_enemy139.py": "8a6c53a26e74c127c854759f0ba0e77dd34b949804e1ddc121c71c436c1b7661",
+    "scripts/run_player_enemy139_oracle.mjs": "a1251e1fb94212b30bb5abb7607b8b72b62b96aa0b5d245a3caea61703d58a39"
+  },
+  "cases": 3,
+  "consecutive_component_steps": 360,
+  "full2123": 360,
+  "full925": 360,
+  "setup_prefix": 15,
+  "direct_original_entries": 735,
+  "process": {
+    "pid": 66065,
+    "pgid": 66065,
+    "exit_code": 0,
+    "seconds": 3.129735417001939,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "rejected_order_observations": [
+    {
+      "case_id": 0,
+      "step_index": 81,
+      "model_order": [
+        330,
+        170
+      ],
+      "original_order": [
+        170,
+        330
+      ]
+    },
+    {
+      "case_id": 1,
+      "step_index": 39,
+      "model_order": [
+        221,
+        170
+      ],
+      "original_order": [
+        170,
+        221
+      ]
+    }
+  ],
+  "reason": "FrozenAIdeadV1 appends expired-corpse170 after existingAI packets; current925 queued40215/170 emits before deferredmotion221/attack330. All other sampled fields matched, but this batch is not accepted.",
+  "current_source_support": "current925 WAT6937 call40215 /6971 opcode170 /7163 opcode221 /7773 call13833 /7809 call1076",
+  "future": "Separate frozen enemy_ai_dead139_v2 and newplayer_enemy139_v2 files/newfreshbatch required; this failed result is never overwritten.",
+  "typed_prefix_handoff": {
+    "path": "evidence/player-enemy139-probe-source-20261102T133200Z/task-handoff.json",
+    "sha256": "36724e73dcb53483e9112d85cc03b8caa5caf609236a20161d63c0631cc00323"
+  },
+  "numeric_only_observations": {
+    "AI_attacks": 9,
+    "corpse_removals": 12,
+    "basic_success": 7,
+    "cleave_success": 9,
+    "thunder_clap_success": 3,
+    "racial_success": 3,
+    "regen_events": 103,
+    "leech_events": 10
+  },
+  "separate_pilot": {
+    "path": "evidence/player-enemy139-oracle-20261102T132910.658690Z/comparison.json",
+    "sha256": "055cddf1b5b43dfc195eef4401a05ecef5258514995fce6bc0f936e95cf861ce",
+    "fresh_instances": 1,
+    "component_steps": 72,
+    "differences": 0,
+    "does_not_cover_two_later_order_failures": true
+  },
+  "complete_games": 0,
+  "fullmain_frames": 0
+}

@@ -1,0 +1,276 @@
+{
+  "status": "pass_current49961_controlled_terminal_transition_and_three_guards_only",
+  "author_handoff_sha256": "9feaec0233ca1948a5899c09baee7c1edb06e8a9970365b25255c7d1727f32f3",
+  "comparison_sha256": "ac44ab48fd44f86435bc813363cb628a921a016d199b0cf48570ac864b66181e",
+  "author6_unchanged": {
+    "reconstruction/core_spec/terminal139.py": "de6eeafc8585179162f1b7e5200b34d4f803c4e804e71f9b38aaf264b9b4c040",
+    "scripts/build_terminal139_oracle.py": "60e4265056463d6a6728cf115a87db89f14843eed8a64af08fe0e413dbe64013",
+    "scripts/check_terminal139.py": "b6fb8b3542d2aadcef600525101e57f3c36b16ac46472038f5741a4905858f6c",
+    "scripts/run_terminal139_oracle.mjs": "55e743eaae6c3cf566a96cd87b0cab2619b8eabb4b17f32a8ae04f198f498924",
+    "reports/2026-11-02-terminal0139.json": "f785d9e81e8cfb9e88ee33e5c1642baaa734e7f5d0d0c57af8120d160464bf6c",
+    "reports/2026-11-02-terminal0139.md": "966a21ef0a0f29e91724edf90149c4b088566f052d61c4024ea61a2b4b009b96"
+  },
+  "reviewer_script_sha256": "a0fcc6b308ce962a84ac827097898c7216c2d8d580d544ea7ac972ffe071c3ea",
+  "pure_helpers": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_incoming139.py": "adaa5e21f2e491fe3eee18a8ec57c9d8b249481c6edc52a29408ad194dece07b",
+    "scripts/review_enemy_ai139.py": "73b093bdfcc59c08c010fb2c074298435b6d0f057fe15a0e5d2a8228c0fe0f42"
+  },
+  "source_files": 75,
+  "production_files": 63,
+  "source_edges": 250,
+  "current_bindings": {
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1711": {
+      "body_sha256": "1372cec05f22259cae4590ee02ba566c50bbc3b9cfc8cd38f74c05fff43ca426",
+      "WAT_sha256": "aa0a02cd6aa9d05eee102969d68aa56c60ee8f1d064a06c5e711d0df4c76f029"
+    },
+    "1965": {
+      "body_sha256": "73454af16a2661f72dc28263917a7359a4f38312d61fadd1b892be6da6092a8f",
+      "WAT_sha256": "e08129db74721f21406d09d508b2ba2da8c9bae5d846dcbf7fdeabb15c8e8ef4"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "6786": {
+      "body_sha256": "628dfa51726dd61f49c61f0afd62151bf189a3d29c8397e5a8ddb217021d2b67",
+      "WAT_sha256": "55085c6a3b0da7f9770d0cddc6b21062cd9eb877f26ceeee725ffdce8eca902a"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "11741": {
+      "body_sha256": "4ba4219917e897086b3443147b1cdf4c0b6e1a72a678d20fd607de5a21b54dfa",
+      "WAT_sha256": "aa2dd40beae98530b199eb847ba236be4ff92fb938ba04bfc0a56abab08c5671"
+    },
+    "16380": {
+      "body_sha256": "a7cedd508b58a6e23fa5b61d32c9d487a89dc23841a7cecbb0e1917b0f4af4b4",
+      "WAT_sha256": "f9ef0f7f1bfc69c64b08c240248933c6e5161020cc3e9525c384b2eaf12b068e"
+    },
+    "17209": {
+      "body_sha256": "3c66dfd29f9ed50e41dfd8fb35c3badfbb69601d07be7b5fa478a9ef6e76531b",
+      "WAT_sha256": "cd39901121dff4069b27f992d9473c445071b8cb450e067bca72b68e25d4e325"
+    },
+    "17319": {
+      "body_sha256": "ec38eee8c583035944686bcb3d39161cd3a9c7aa78a2c92d2e4a04d4f38aede3",
+      "WAT_sha256": "7c57f921e09039fe5607dfb4c6e5759928a10aa72689e5f0c5021644f78a9b08"
+    },
+    "20060": {
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "23333": {
+      "body_sha256": "aba9edac229ba04aaf90f3243bdec129dfdc7db637b39557b8160687cde48c98",
+      "WAT_sha256": "59395916c27696fc28dc4fa492b57a8965c89d2c453b0c61e6470a1d379284a3"
+    },
+    "28993": {
+      "body_sha256": "9a9b5720d084c8026cdf05f714afe428d0b4310723466762bc423fa78062406d",
+      "WAT_sha256": "aaadea57302b3ad263ba2a3d53b26e2337dd0409a021a3ab3d0754fe9fea3685"
+    },
+    "29237": {
+      "body_sha256": "4b4e968c0308aac7eb2d772b3d2ce45c24835cbca4537efc9ac799dcd6bdcd77",
+      "WAT_sha256": "117070ce51044ed58fb14d0dc0b18fb7c9ddf08a3b88a8bbaca780774f5d3ac7"
+    },
+    "29912": {
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "30179": {
+      "body_sha256": "33e979a9e4ceb648fe4aee3a30833126dbf7ed89270e52dd0aa769d5713048db",
+      "WAT_sha256": "cfe49054c275e7cb6cc7711b99fd28681f2a025a80091bd5565f00d7a5c36aef"
+    },
+    "32605": {
+      "body_sha256": "8f0882e1cfc10997b27af2c6464e75454f45975e1e8bdabc94397b0bca0d5726",
+      "WAT_sha256": "01d0169ad7e2c8868bc3990f9e032a9afa480151d4a7e4395d644a0cd3899978"
+    },
+    "35202": {
+      "body_sha256": "376014a64c5dc9188224bff920007b7f6bc872b0990ff88656a00c37f3df5220",
+      "WAT_sha256": "1416334266676d4cb554846f9b9ca007a3052bd84da247de0430fc2c6c7a175f"
+    },
+    "35232": {
+      "body_sha256": "e115a906d9275ce40cc061c56d4182a96daf09bf52d12ecbe172d5a179f55248",
+      "WAT_sha256": "cc48aa84cf34ae4d0317385740b0d65dfd11c7a1cad5b0f50bd2a4b33306bb39"
+    },
+    "38882": {
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379",
+      "WAT_sha256": "4b8c39db5b6e440a44f796e52a7b02663496a9592335db390461170e335ff65d"
+    },
+    "45182": {
+      "body_sha256": "0fd36c33dda4643cde8714693e55ccf7fd57c9805519d208ad23c695a2bbcdff",
+      "WAT_sha256": "faddc6507e6cdb5bbec1bf0789911574f8f94ee100f94cedfa76139acb131c60"
+    },
+    "46692": {
+      "body_sha256": "28c270eefe8c3c1f39ce4be1ae78f96730bcdf64744a4f5041f07c30ff2db115",
+      "WAT_sha256": "fd2969ba03ad22bed793983c00ef1385ef864f64b6cee757dd435c3e86c02902"
+    },
+    "49961": {
+      "body_sha256": "ba1cb5f9d7344ea209cf2da26defcc8beff5bb77cc4c4ea0cd5c16076f748461",
+      "WAT_sha256": "9f4f6d680d1ae9e737a2d9d142542091a91b64848f532fdc2ebc7dd0c06b21f5"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "53225": {
+      "body_sha256": "ea7074222cb0412819fadbce7a6fc4f8e7895932e4595f0fd4dfaa1a1fa406c1",
+      "WAT_sha256": "43f74cb688def84d910cc92e803003b4ba20cd5b570602b6a80c59528d19b718"
+    },
+    "55846": {
+      "body_sha256": "3090fa8b5cebf03843a7e792450fed18cd9813ab97762c205f3c84e90e07c0b0",
+      "WAT_sha256": "5f826b35dfbc879cbe6578fe95e9d31a64de030c1fc3ba1eae3b7a1b3828919e"
+    },
+    "55851": {
+      "body_sha256": "55819b171bed6b09b2cac3d4ece810970940942622237cd54ac6404bdf92b7e1",
+      "WAT_sha256": "bb5d4f041ca6b6d8d3d6d2c2c56bbbe8fafd72a093230fde76a861633e3c96b7"
+    },
+    "66545": {
+      "body_sha256": "c2d78732d50bea9ab442dc297764c477c28173fa4c28392fd876d796ce10b57b",
+      "WAT_sha256": "615b234c2fcc6e31ea29efb47732a7af94248ea25f96335d1cf1d851114926f8"
+    },
+    "66546": {
+      "body_sha256": "58a8fe8aa039f5e77083d3a31b3736679e49fffee8e7205a2ecc850e97630565",
+      "WAT_sha256": "37e33b39641ee0522336869b8775e0042ffe9ce8c7491eccb0f324de78c2921d"
+    },
+    "81682": {
+      "body_sha256": "7d2bae1ea62daa87d5bba3a3af0d7761e3fec6d1b3c041280c35042c5221c5bb",
+      "WAT_sha256": "426760ab586f6853f952fe0e3fe245a0c2d315e40cfd7dd5a4ba00bb57dcba67"
+    },
+    "108362": {
+      "body_sha256": "0ee0c30715ea4b1bd121935ba5d56724b9b23bd04ac3334c9ed4e761657a4d89",
+      "WAT_sha256": "116a09e14cd923db727003e12e5bcede0f5467d5c895a540bad3206170e82e57"
+    }
+  },
+  "original22body_claims_rebound": true,
+  "only_export_section_changed": true,
+  "formal_counts": {
+    "fixtures": 5,
+    "target49961": 10,
+    "setup2945_1600_1108_925_each": 5,
+    "all_direct_entries": 30,
+    "controlled_transitions": 2,
+    "natural_victories": 0,
+    "complete_games": 0,
+    "reviewer_original_executions": 0,
+    "reviewer_author_program_executions": 0,
+    "differences": 0
+  },
+  "counts": {
+    "openingGame_known": 2780,
+    "openingGame_None": 10180,
+    "openingGame_nonzero_None": 1150,
+    "path_rebuilds": 5,
+    "BFS_values": 392000,
+    "clamped14_motions": 20,
+    "segment_nav_probes": 940,
+    "direct_clear_routes": 20,
+    "packet_height_queries": 40,
+    "frames": 5,
+    "movement221": 20,
+    "movingNPC_known": 6060,
+    "movingNPC_None": 2580,
+    "movingNPC_nonzero_None": 2375,
+    "processed_height_hits": 10,
+    "stop_units": 8,
+    "JSON_reserve_events": 12,
+    "controlled_terminal_transitions": 2,
+    "whole_Game2592_bytes": 25920,
+    "terminal_units_known": 12120,
+    "terminal_units_None": 5160,
+    "terminal_units_nonzero_None": 4750,
+    "physical_None_inheritance": 5160,
+    "full_physical_vector_bytes": 18080,
+    "other_background_groups_conserved": 50,
+    "full49961_targets": 10,
+    "new_stop221_or232_packets": 12,
+    "packet_payload_bytes": 236,
+    "complete_victory_notifications": 2,
+    "notification_UTF8_payload_bytes": 466,
+    "stop_auxiliary": 1,
+    "stop_claims": 1,
+    "terminal_auxiliary_known": 448,
+    "terminal_claims_known": 352
+  },
+  "author_process": {
+    "pid": 47994,
+    "pgid": 47994,
+    "exit_code": 0,
+    "seconds": 1.141928959001234,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_audit": {},
+  "independent_expected_outputs_read": false,
+  "limits": [
+    "Controlledfield400=1 transition with real1108/925 NPCs and separatecontrolledaux112/companion88 case;field400 naturalBoss/endproducer not restored.",
+    "Field400zero/endlessbit1/phase2 and repeatedphase5 guards actualfixtures;not allterminalstates/classes/locale/recap or wholegame.",
+    "Fullphysical2592Game no additionalchanges andallvectorNone inheritance checked;heap/resource ownerpointer meaning remainsunknown.",
+    "Full12newpackets/236B and2completevictoryUTF8 strings/466B/cap272 checked;17fieldorder/quotecontrolformat current1965/11741/45182/53225/reserve55846 bound.",
+    "Fresh925 setup onlynow1/dt.1,quietcenter/noincoming;independentpureAI geometry matched4moves perfixture. BFS rawarrays not serialized,not claimed newlyverified here.",
+    "Canonicalnonflat10height hits;worldmiss/nearestprimary/detachedrecap/nonEnglish/generalnumberformatting outsidefixtures remainPending.",
+    "Sourcecontextlegalresource-onlyv2/newGame notApp/WorldRc/externref bootstrap.0native/full884/naturalvictory/completegame/network/save acceptance."
+  ],
+  "seconds": 15.55016245799925,
+  "review_directory": "evidence/terminal139-independent-owned-20261102T140535.721357Z/review",
+  "review_sha256": "74f970c1aed23527e0a70ca61e2de5941fc6c98da77565b50ce9d4edda59ae37",
+  "reference_traces_sha256": "141777c77d7ff6a3732d1239b7c798fa0b6623a560aacfcce4828a6d8ea8a51b",
+  "reviewer_owned_terminal": {
+    "pid": 19644,
+    "pgid": 19644,
+    "exit_code": 0,
+    "seconds": 15.790836583000782,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "source_before_after_same": true
+  },
+  "failed_reviewer_attempt_preserved": {
+    "directory": "evidence/terminal139-independent-owned-20261102T140149.806587Z",
+    "terminal": {
+      "pid": 15905,
+      "pgid": 15905,
+      "exit_code": 1,
+      "seconds": 0.9779473340022378,
+      "pid_missing": true,
+      "pgid_missing": true,
+      "source_before_after_same": true
+    },
+    "stderr_sha256": "fc99d56b59312fb2a88173dab8423591248e8cc23a86390515903cf07c17a9be",
+    "cause": "Reviewerlookedupoldhelperhandoffusingwrongfieldname;correctfrozen_reviewer_filesusedinfinalreview.",
+    "reviewer_author_original_executions": 0,
+    "excluded": true
+  },
+  "model_diagnostic_counter_disclosure": {
+    "BFS_values_392000": "Independentreferencemodelonly;originalBFSarraynotserializedinthistargetbatch",
+    "path_rebuilds5": "Independentreferencepluscurrent925staticproducer,movingoutputmatches;notdirectoriginalcounter"
+  },
+  "validation": {
+    "Python_AST_JSON": true,
+    "single_LF_no_trailing_whitespace": true
+  }
+}

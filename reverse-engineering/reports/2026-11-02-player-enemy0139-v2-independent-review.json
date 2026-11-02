@@ -1,0 +1,327 @@
+{
+  "status": "pass_current139_consecutive2123_925_360steps_readonly",
+  "reviewer": "/root/growth139_world",
+  "author": "/root/growth139_review",
+  "handoff_sha256": "153f9f8f6696bbcc2b418535a89c1178555b2aecbef679fb834b64f942bde5d6",
+  "comparison_sha256": "c062cf804b1f9bf9a21d654ead648b407fdd9c863fe7ad4c14023862194d03c6",
+  "reviewer_source_sha256": "c30da653210f7b81d311c5a8af0e2b6ab6ede3fe93b0807d87cf4b75da03208f",
+  "author6": {
+    "reconstruction/core_spec/player_enemy139_v2.py": "b6cca1f9d0b62c1b8887ef3e57eaa203cb5ec3291240a960d75b1cbb32e6ece0",
+    "scripts/build_player_enemy139_v2_oracle.py": "1f09de53b5a1e4d709890a6073ba659420703d2133865d5b65868ca2cb16fc66",
+    "scripts/check_player_enemy139_v2.py": "033af16faa4e15b13236bc9f43cf5416338f488b0c4140fdd0493b60f6c7bd02",
+    "scripts/run_player_enemy139_v2_oracle.mjs": "a0a790c94d554ba7d7f5775fdf345626cfaf41a2e3ed9e596fd34cbfbb504bfd",
+    "reports/2026-11-02-player-enemy0139-v2.json": "8fd5108932e31fe90ccef5b3484b10b81140cfa201f57df815eb308552e531f5",
+    "reports/2026-11-02-player-enemy0139-v2.md": "22051faf4f4d3eaacc233ca685697cc51b33c1710e0a67e581d8fa0b2a3ff02c"
+  },
+  "helpers": {
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_death_pickups139.py": "092328f7b6e7c5323f1d3b9c74b1080b1181fdd002f7153d32756110d9dcaef3",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_death139.py": "fe7790f0adcb3e3d5010d53c44f375bec5bbee6d3fe780873a6e1613afe11e6a",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_growth_world139.py": "0e82a1f20fd7c02ed7edcd73f4d9edfca1d3ab406402e1aa8e0b5ae4e34322a1",
+    "scripts/review_player_update139.py": "4123e0715620c0d050bfad0c1c060b0fc5b426c36d0789c95a0c7801d52c8bde",
+    "scripts/review_thunder_clap139.py": "775b8234a04067711ac126eb0ded2ce90a553db396f1bd26e07f5662fdbe0b23",
+    "scripts/review_healing_hurtactor139_v3.py": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+    "scripts/review_incoming139.py": "adaa5e21f2e491fe3eee18a8ec57c9d8b249481c6edc52a29408ad194dece07b",
+    "scripts/review_enemy_ai139.py": "73b093bdfcc59c08c010fb2c074298435b6d0f057fe15a0e5d2a8228c0fe0f42",
+    "scripts/review_player_autocast139.py": "f6d2d39c357888765a42a2b1147d32b5538c00b02e2869d1662d99ff41329893",
+    "scripts/review_enemy_ai_dead139_v2.py": "51649bb168d147837872f385cb5d64799deebd938daa08031ab63754e86c7aa7"
+  },
+  "current_body_bindings": {
+    "884": {
+      "body_sha256": "e6ed2847bcafc4e5f3fdf918af04c672b152fcf89eea7171531d056ba140eece",
+      "WAT_sha256": "c3c6e002656faafe3e468dd038c13471fd3f09f6a8942ce05d592103cb576501"
+    },
+    "913": {
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "994": {
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1076": {
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "2077": {
+      "body_sha256": "36cc754bbbce303102ce675fb8e65add6b866e983068934ab8312b0d25f2b967",
+      "WAT_sha256": "a75a15d2f980b6f60e5b0934c60a42f80b3e1575cd3a464a7342c96dfb478949"
+    },
+    "2123": {
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "8569": {
+      "body_sha256": "758f94f8950ed6c4fde0a127c17d6b8135aa3b00be6910ae192c494c4797a3d1",
+      "WAT_sha256": "cdeb4c86d5ce7fcc15dd33923b5fa27a749419eae46972e242560e613e88687d"
+    },
+    "8673": {
+      "body_sha256": "cfe20b3b60b4d26e824594c12c76f6a6700992c64f9c067cfe43ff20e0c45ece",
+      "WAT_sha256": "a35959c6b908f8be8d656b991f458b497f0ac8bfa4cbeb5ce255c42f6e1ad712"
+    },
+    "9541": {
+      "body_sha256": "0f54eea8b871474bd57aa5f7b73538597e84ab824d315d9185270ea50b0200c1",
+      "WAT_sha256": "dcf3f6bb95ecd30defec2809169c25c2b46c28fe245c3deac62cfcd3f3eb4570"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11033": {
+      "body_sha256": "279f887e41dfa0accc0ac3caf4f28e8faafadefcc4e40a1188a1e28add1e4513",
+      "WAT_sha256": "5091bc319e1aa68cd4241ff3749f4df2313c333b661fc10c9070c19e41adf443"
+    },
+    "13833": {
+      "body_sha256": "7657e041e585e81104729868558ab9bf0a28131a5df021c9e4dd8d82645d34e9",
+      "WAT_sha256": "4e4cbd1675449406fc867d53efe3382c769666c2d6ec58f09d4bd8d1f74a9fbb"
+    },
+    "18421": {
+      "body_sha256": "268c270a22568c1252d87b4eeb020937dc3860c2a34c54fd600578c939758044",
+      "WAT_sha256": "308daf31efbe89997280dd22dac2cb29779bdb1955e8e1b3ce43ca7d66ff1855"
+    },
+    "19598": {
+      "body_sha256": "58f38842752fe5aeb325edad798d13460bfcbb5d1ea6030e73a5cd035d5d1200",
+      "WAT_sha256": "a8652f10d73f4a5e657deaa0609517cb36d66851ac962490e341f62413f2f901"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "23328": {
+      "body_sha256": "2ff4e1aab09fa7d43376d1bfdbaf96f78c8e11f36465fe4a77835eb374268574",
+      "WAT_sha256": "875576e8933acca580e1cce84ef85855aa1bf20bcaea201e418e3d038e14d708"
+    },
+    "26202": {
+      "body_sha256": "21cdefa04d2854bcd0ee6e5e05dc42edaa2b007a898508a0e00e24185e21f210",
+      "WAT_sha256": "2727c02723974154bc562d8531561ec9493adde032594ff5b8075f451bbc2f6f"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "30861": {
+      "body_sha256": "87885424a4638fe31e22b44ca21874ea94d36840e26b6b69baa4281dafbb75c8",
+      "WAT_sha256": "579279bd09b708e3b9372927c000c3370b904d9faf209971369515fe90e6dc1b"
+    },
+    "36364": {
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36520": {
+      "body_sha256": "56936cd9e3b8c6af09ac1d37b1cf75fdf79ed166dda699f4244f5e2c8350366a",
+      "WAT_sha256": "b214bd48e1ba90c8c44f48a8176724ba3e32c4e5c62bfc0342816f60a5f1405f"
+    },
+    "40215": {
+      "body_sha256": "f1caf5b2294ea254006a1140136da2ce705e2849883414684f147bb292881891",
+      "WAT_sha256": "5cb63d69709801b763b99557a79dcd13c350d6dfc231f1c0d4a8f6cb2244a083"
+    },
+    "46690": {
+      "body_sha256": "b8120348643d400b9efdfde0bea367d29b817bbd397de6695d7f83da91565ea7",
+      "WAT_sha256": "ee353ccaa65702e791e69cb5dee27f036a313bbfcdcdbee4d6fdb2f16ad6c900"
+    },
+    "83299": {
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    }
+  },
+  "source_files": 91,
+  "production_files": 77,
+  "source_edges": 351,
+  "counts": {
+    "live_known": 39408,
+    "live_None": 53520,
+    "live_nonzero_None": 45096,
+    "aura_known": 148032,
+    "aura_None": 409536,
+    "aura_nonzero_None": 356202,
+    "logical_player_maps": 726,
+    "semantic_ledger_snapshots": 363,
+    "Vec48_rows": 434,
+    "openingunits_known": 3636,
+    "openingunits_None": 1548,
+    "openingunits_nonzero_None": 1425,
+    "openingpickups_known": 312,
+    "openingpickups_None": 360,
+    "openingpickups_nonzero_None": 318,
+    "openingwindows_known": 72,
+    "openingwindows_None": 24,
+    "openingwindows_nonzero_None": 24,
+    "openingspecial_known": 336,
+    "openingspecial_None": 144,
+    "openingspecial_nonzero_None": 144,
+    "openingboundaries_known": 1656,
+    "openingboundaries_None": 1416,
+    "openingboundaries_nonzero_None": 612,
+    "Game_input_inheritance_bytes": 933120,
+    "positive_Regen": 103,
+    "afterplayerNPC_known": 438248,
+    "afterplayerNPC_None": 183832,
+    "afterplayerNPC_nonzero_None": 172321,
+    "afterplayerPickup_known": 90480,
+    "afterplayerPickup_None": 39216,
+    "afterplayerPickup_nonzero_None": 36887,
+    "player_NPC_physical_replay_bytes": 622080,
+    "path_rebuilds": 3,
+    "BFS_values": 235200,
+    "frames": 360,
+    "movement221": 77,
+    "removals": 12,
+    "afterAINPC_known": 438228,
+    "afterAINPC_None": 183852,
+    "afterAINPC_nonzero_None": 172390,
+    "afterAIPickup_known": 90480,
+    "afterAIPickup_None": 39216,
+    "afterAIPickup_nonzero_None": 36887,
+    "AI_NPC_physical_replay_bytes": 622080,
+    "observed_packets": 223,
+    "observed_packet_bytes": 9572,
+    "background_owners": 1800,
+    "AI_Game_nonowned_bytes": 898560,
+    "component_steps": 360,
+    "clamped14_motions": 45,
+    "segment_nav_probes": 2778,
+    "direct_clear_routes": 70,
+    "packet_height_queries": 140,
+    "known_packets": 168,
+    "known_packet_bytes": 7571,
+    "racial": 3,
+    "damage": 25,
+    "critical": 4,
+    "Leech": 10,
+    "slow_writes": 9,
+    "thunder_clap": 3,
+    "cleave": 9,
+    "moving_deaths": 4,
+    "deaths": 12,
+    "basic": 7,
+    "basic_crit": 1,
+    "stop_kind3_packets": 7,
+    "contacts": 9,
+    "history_None": 23636,
+    "history_nonzero_None": 22440,
+    "history_known": 20332,
+    "inherited_Vec48_nonvalue_bytes": 17120
+  },
+  "author_terminal": {
+    "pid": 98069,
+    "pgid": 98069,
+    "exit_code": 0,
+    "seconds": 3.7451860000001034,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "author_executions": 0,
+  "original_executions": 0,
+  "reference_sha256": "033b628cbe46a86c4bb9c6e054e92ace4ad42dec802bada1eac5479a1b44baa3",
+  "seconds": 8.349869667003077,
+  "limitations": [
+    "360consecutive component steps=360full2123+360full925;15prefixsetup separate,735direct.",
+    "Explicit XP5/firstnewThunder, optionalcontrolledplayerplacement, explicitclock;2890collection/952spawn andother884stages notexecuted.",
+    "168knownpackets7571B orderedsubset of223observed9572B; AI suffix complete in domain, player callbacks/UI packet stream stillPending.",
+    "v1failed360 order counterexamples and oldsources remain unchanged; no v1 pass transfer.",
+    "Fullknown/None physical capacity/tail anddefaultordinary no-blockedpath only; nofullmain/App/bootstrap/native/fullgame."
+  ],
+  "own_terminal": {
+    "pid": 30645,
+    "pgid": 30645,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 8.722308500000509
+  },
+  "own_terminal_sha256": "dd18630c689641002311f565abfc44318db50ecc6fb33edca367ce7b538433cb",
+  "review_sha256": "d2afc17ee59372d762ec45d47e79031ddf572481d716c21fa3d23b897f4fbafc",
+  "own_failed_receipts_preserved": [
+    "evidence/player-enemy139-v2-readonly-review-20261102T140950.886770Z",
+    "evidence/player-enemy139-v2-readonly-review-20261102T141026.104269Z",
+    "evidence/player-enemy139-v2-readonly-review-20261102T141104.918451Z",
+    "evidence/player-enemy139-v2-readonly-review-20261102T141119.538777Z"
+  ],
+  "own_prepass_corrections": [
+    "Observed clock uses tag/previous64, not timestamp64; explicit initialtag1/previous0 fixed.",
+    "after_player nests independent player/combat, unlike standalone player view.",
+    "Continuous semantic combat rows are active-only; observed records include whole physical capacity. Both are separately checked."
+  ]
+}

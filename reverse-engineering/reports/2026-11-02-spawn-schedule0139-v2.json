@@ -1,0 +1,197 @@
+{
+  "status": "author_pass_current139_full952_ordinary_and_real40pickup_before60wave_not_complete952",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "formal_batches": [
+    {
+      "path": "evidence/spawn-schedule139-v2-oracle-20261102T133738.600939Z",
+      "comparison_sha256": "849da7e82cbd176d98483fd93a7fbcd2b20206dd3add47caa1490aead24f58c2",
+      "manifest_sha256": "34ac6850e5a8f3d47d13b5bddec7270514b18edf53783d31cb9f19273f2dff6b",
+      "prepared_sha256": "2a15da5dcf79b2488f35daccd7e69e5ea4bf39a2eb35ba2ddec6d00f17c81f44",
+      "sources": 46,
+      "production": 34,
+      "edges": 136,
+      "current_bodies": 23,
+      "full_calls": {
+        "952": 2479,
+        "1108": 3,
+        "1600": 3,
+        "2945": 3
+      },
+      "process": {
+        "pid": 77475,
+        "pgid": 77475,
+        "exit_code": 0,
+        "seconds": 0.9301775839994662,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "world_source_checks": 36,
+      "stack_checks": 2503
+    },
+    {
+      "path": "evidence/spawn-schedule139-v2-kind5-oracle-20261102T134231.621630Z",
+      "comparison_sha256": "1e498df80daae2ed3f9f91987cc758664b6d0404b29e5f7ac6236b77ee2fae1e",
+      "manifest_sha256": "34ac6850e5a8f3d47d13b5bddec7270514b18edf53783d31cb9f19273f2dff6b",
+      "prepared_sha256": "354cab318a68e31b0274f0dd7e929aba7fc73468672fb7d8254bd8e2be3e9e00",
+      "sources": 46,
+      "production": 34,
+      "edges": 136,
+      "current_bodies": 23,
+      "full_calls": {
+        "952": 640,
+        "1108": 1,
+        "1600": 1,
+        "2945": 1
+      },
+      "process": {
+        "pid": 84890,
+        "pgid": 84890,
+        "exit_code": 0,
+        "seconds": 1.012222458000906,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "world_source_checks": 9,
+      "stack_checks": 648
+    }
+  ],
+  "formal_counts": {
+    "assertions": 469267,
+    "NPC_known": 238764,
+    "NPC_None": 203604,
+    "NPC_nonzero_None": 178717,
+    "NPC_None_physically_conserved": 132534,
+    "known_packet_snapshots": 3465,
+    "background_owners_conserved": 222,
+    "pickup_known": 4524,
+    "pickup_None": 3764,
+    "pickup_nonzero_None": 3324,
+    "inherited_Game2592_bytes": 92352,
+    "full_checkpoints": 37,
+    "full952_calls": 3119,
+    "new_NPCs": 132,
+    "unlocked_definition1_spawns": 24,
+    "new_NPC_packet169": 132,
+    "new_pickups": 4
+  },
+  "unique_fresh_instances": 4,
+  "full952_target_calls": 3119,
+  "prefix2945_1600_1108_each": 4,
+  "direct_entries_including_setup": 3131,
+  "actual_pickup_kinds": [
+    {
+      "batch": "evidence/spawn-schedule139-v2-oracle-20261102T133738.600939Z",
+      "case_id": 0,
+      "kind": 3,
+      "argument2": 3201145396
+    },
+    {
+      "batch": "evidence/spawn-schedule139-v2-oracle-20261102T133738.600939Z",
+      "case_id": 1,
+      "kind": 3,
+      "argument2": 2457622128
+    },
+    {
+      "batch": "evidence/spawn-schedule139-v2-oracle-20261102T133738.600939Z",
+      "case_id": 2,
+      "kind": 4,
+      "argument2": 2049114574
+    },
+    {
+      "batch": "evidence/spawn-schedule139-v2-kind5-oracle-20261102T134231.621630Z",
+      "case_id": 0,
+      "kind": 5,
+      "argument2": 89151923
+    }
+  ],
+  "maximum_active_NPC_count": 45,
+  "source_files_perbatch": 46,
+  "production_files_perbatch": 34,
+  "import_edges_perbatch": 136,
+  "current_bodies_perbatch": 23,
+  "executable_API": {
+    "module": "core_spec.spawn_schedule139_v2",
+    "initializer": "from_opening139(actual independently composed fullopening)",
+    "transition": "update_spawn_schedule139(state,now_bits,dt_bits,world)",
+    "projection": "projection139(state)",
+    "state": "SpawnScheduleState139V2 with completeknownNone432storage,orderedRNG/counter/packets and56Bpickupvector"
+  },
+  "timer_roles_corrected": {
+    "2424": "multi-shape wave initial60s; stillPending guardbefore60",
+    "2440": "ordinaryelite initial240s; stillPending",
+    "2444": "resourcepickup initial40s; actualupdate now+45; cap2ofkinds3/4/5 static-onlybranch",
+    "2448": "rune initial60s; stillPending",
+    "Boss": "firstactualdefault3minutes; Pending"
+  },
+  "first40pickup_rule": {
+    "order": "afterordinarybudget/density andafterfuturenonduewave/elite/Boss guards, beforerunepickup",
+    "selection": "boundedxoshiro3 multiplication/rejection; index0/1/2→kind3/4/5",
+    "argument2": "saved newRNGwordA afterkinddraw before13563; knownproducer notplaceholderorobservedpointer",
+    "position": "full13563 radius15..40 onpurecanonicalworld,1446clamp/height query",
+    "actor": "current1886 exacttype5 fields/counter/GUID/yaw; descriptors9006/5931/1,9007/5995/1,9008/5991/1",
+    "storage": "1446 stable56B append; inactivepaddingNone retained",
+    "packets": "completeknown169 actorpayload, inactualordered queue"
+  },
+  "accepted_dynamic_domain": {
+    "clocks": "dt=.0625, naturalcontinuous0..59.9375/50/45/40; nojumptimer orNPCclear",
+    "ordinary_NPCs": 132,
+    "pickup_40_objects": 4,
+    "complete_known_new169_packets": 136,
+    "actual_definition1_unlocked_spawns": 24,
+    "density_positive_spawns": 0,
+    "global50cap_reached": false,
+    "kind3_4_5_cap2_reached": false,
+    "wave60_or_elite240_entered": false,
+    "all_initial_background_retained": true,
+    "only_clock2352_harness_write_after1108": true,
+    "NPC_budget_timer_RNG_velocity_path_injection": false
+  },
+  "world_boundaries": {
+    "independent_canonical_receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+    "originalresourceonlyv2snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "resource_context_is_not_independentApp_orWorldRcproducer": true
+  },
+  "prior_frozen7_preserved": {
+    "handoff_sha256": "16cd40079b7d0c84e752eac10cd1272d252e41c5023149384beeecd2f11160ef",
+    "timer_label_corrigendum_path": "evidence/spawn-schedule139-timer-label-corrigendum-20261102T125058.478630Z/notes.json",
+    "timer_label_corrigendum_sha256": "98f3777b83f838636f162f1922a6ddd13c7746195c8f4a6cf502cee2362dc6a9",
+    "old7_unchanged": true
+  },
+  "prior_attempts_excluded": [
+    {
+      "path": "evidence/spawn-schedule139-v2-oracle-20261102T133501.493338Z",
+      "failure_sha256": "2dcfcaf510a9235a9c2790aaa5d6948a1377e5537c69efc09b160a6a6ef8c12c",
+      "result": "clonedcheckercommand pointedfrozenv1runner; its40sguardrefused after639full952, no40s call, noresultrow; source/owned/runtime retained andexcluded"
+    },
+    {
+      "path": "evidence/spawn-schedule139-v2-oracle-20261102T133622.154483Z",
+      "comparison_sha256": "600eaf5723ca0455d0511b12b69bc22331bb1ee54b7e851f9ebcefdbecb4b6d3",
+      "result": "pilot1fresh640full952/0diff; notformal"
+    }
+  ],
+  "pure_kind5_search": {
+    "path": "evidence/spawn-schedule139-v2-kind-search-20261102T134104.492278Z/result.json",
+    "sha256": "11235ccb69a90687c9e0a7d6f9002c240f9ee9516e0a191f6fb8a773dca9c2f2",
+    "seeds2_3_4_5_6": "modelonly produced3/3/4/4/5; seed6 then freshoriginal640, notforcedRNG orrerolledkind",
+    "original_calls_fromsearch": 0
+  },
+  "unknowns": [
+    "actual60s multipleformationwave2424 mustbe restored,notsimplifiedtoelite",
+    "240s ordinaryelite2440 andBoss3/6/9/12/16min",
+    "60sRune andwindowkind6;collecteffects ofnew40skinds",
+    "nonzerokillcost/combat/death/AI-integration,positive density/spawncap50 andresourcelimit2",
+    "farNPC>55 replay,otherclasses/mode/endless/zone owners",
+    "full952/allbranches andcontinuous884/game/bootstrap/native/network/save remainPending"
+  ],
+  "independent_review_pending": true,
+  "original_executions": "3119currentfull952 acceptedcomponentcalls only; nofull884 orNative",
+  "source_before_after_frozen_equal": true,
+  "expected_before_original": true,
+  "forbidden_expectation_reads": [],
+  "hostcalls": 0,
+  "all_formal_owned_processes_exit0_missing": true,
+  "all_artifacts_on4TB": true,
+  "old_frozen_installers_saves_public_Git_Android_changed": false
+}
