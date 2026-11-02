@@ -1,0 +1,362 @@
+{
+  "status": "pass_current139_full925_natural_fourNPC_movement_nonfatal_contact_path_history",
+  "reviewer": "/root/collection139_finish",
+  "author": "/root/growth139_world",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer_script_sha256": "73b093bdfcc59c08c010fb2c074298435b6d0f057fe15a0e5d2a8228c0fe0f42",
+  "author_handoff_sha256": "e2144c801b6cef68283a76ead068b4312c2ad0823be4ba5cd8e86f7c53fca720",
+  "comparison_sha256": "dac8878e298546011ec6ddf35738f078ae8dbafd0f00689c4de4c5a7fef186bc",
+  "author_files": {
+    "reconstruction/core_spec/enemy_ai139.py": "db7d8fce02df7674908304768e183b7e75830dbbc98d7e4fa06c4ee28d6e303a",
+    "scripts/build_enemy_ai139_oracle.py": "933fad006637f7a6ef4bda406da66fa4c5ea78f2bc9d413f7ee5765201288942",
+    "scripts/run_enemy_ai139_oracle.mjs": "eea5fd90124fe4d75c7ee675be82faa663e73019bcbe4f91cbf99cc7e5c71a34",
+    "scripts/check_enemy_ai139.py": "1a0d65640925ceea6931eef74c246f2b38312231e96515b4b1a122f74c41e86a",
+    "scripts/trace_enemy_ai139.py": "5a560469a6135500f5d093d1e924fd990c87309657b356b8236fe4d9e7cdd4df",
+    "reports/2026-11-02-enemy-ai0139.json": "f3e0b085e020b75b0cae4249a027aa230fed93edfcb71e5ead4707f32637a6ec",
+    "reports/2026-11-02-enemy-ai0139.md": "854a65590e8bd4385fdc5c6a2c23b49260fb928c0b82c35bfe71ae6edc3d762c"
+  },
+  "helper_sha256": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_initial139.py": "86d33e69c361eef223ad3ef271b6fb987d170f4d94847c0c068148c56ebe6fbc",
+    "scripts/review_stats139.py": "175667eded3461b118ddc2b7e47ee29517434b0bee7dfe77d4e388a9cc327473",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_natural_npc139.py": "e14d0e0baa3f408380525a78c85ee068d5f5d4c52322e6dae20e76d8c1f4b665",
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2",
+    "scripts/review_opening_actor139.py": "85d620150923205eaaa286afe764ebb7db65be5d2854c3893a3d4208860c370f",
+    "scripts/review_growth139.py": "db6246b4dc0da5aa902ef87e629ce4d460c04e2e41acad4c7b63fba2a2e9d243",
+    "scripts/review_opening139.py": "29de9cb7dbeb7595ce2baced0a0de9d5c5e967ce73cecd8cff5868d4feafc5c9",
+    "scripts/review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "scripts/review_incoming139.py": "adaa5e21f2e491fe3eee18a8ec57c9d8b249481c6edc52a29408ad194dece07b"
+  },
+  "counts": {
+    "openingGame_known": 1668,
+    "openingGame_None": 6108,
+    "openingGame_nonzero_None": 689,
+    "opening_packets": 228,
+    "opening_units_known": 3636,
+    "opening_units_None": 1548,
+    "opening_units_nonzero_None": 1425,
+    "opening_pickups_known": 312,
+    "opening_pickups_None": 360,
+    "opening_pickups_nonzero_None": 318,
+    "opening_windows_known": 56,
+    "opening_windows_None": 40,
+    "opening_windows_nonzero_None": 40,
+    "opening_special_known": 336,
+    "opening_special_None": 144,
+    "opening_special_nonzero_None": 144,
+    "opening_boundaries_known": 1656,
+    "opening_boundaries_None": 1416,
+    "opening_boundaries_nonzero_None": 612,
+    "path_rebuilds": 3,
+    "BFS_values": 235200,
+    "clamped14_motions": 45,
+    "segment_nav_probes": 2976,
+    "direct_clear_routes": 79,
+    "packet_height_queries": 158,
+    "frames": 92,
+    "movement221": 83,
+    "full_tree_captures": 92,
+    "NPC_known": 111504,
+    "NPC_None": 47472,
+    "NPC_nonzero_None": 43700,
+    "background_other_conserved_bytes": 132480,
+    "Game_nonowned_conserved_bytes": 230736,
+    "NPC_full_physical_replay_bytes": 158976,
+    "stop_kind3_packets": 4,
+    "contacts": 52,
+    "history_None": 15396,
+    "history_nonzero_None": 12770,
+    "history_known": 18972
+  },
+  "cases": 3,
+  "full925_calls": 92,
+  "full1108_calls": 3,
+  "setup2945_calls": 3,
+  "setup1600_calls": 3,
+  "source_files": 72,
+  "production_sources": 59,
+  "source_edges": 237,
+  "current_function_bindings": {
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "1076": {
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1446": {
+      "body_sha256": "8767d1f7e85c487759afa70602d9ae1793a7fd9118c0d8f57bca75c05ae3c958",
+      "WAT_sha256": "285f5c4878af3a685fbfc1dbff5f36ac2529bdc62cc4de81024f9cdda8f08abe"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1886": {
+      "body_sha256": "7307a96d26652424b521a57769caa076118a3fa1b0f5fa767015ae9665fdf458",
+      "WAT_sha256": "42303255f7eaf67d66b0c9aab4a14d2b79d2e31ce07ca93394f6bd93e44d7bc1"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "5719": {
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "6786": {
+      "body_sha256": "628dfa51726dd61f49c61f0afd62151bf189a3d29c8397e5a8ddb217021d2b67",
+      "WAT_sha256": "55085c6a3b0da7f9770d0cddc6b21062cd9eb877f26ceeee725ffdce8eca902a"
+    },
+    "8740": {
+      "body_sha256": "35e2f8bf141c22a07857ff8327892bf7b6f971aea2d1ad0f705ba12dfa02af38",
+      "WAT_sha256": "ae82725c4b84528ce67a730a31f6a8ca631f41cdf0b3bac500fabeb4cea9c13b"
+    },
+    "11425": {
+      "body_sha256": "4b88668c4b7f35ecc740a6f9b5b564b39234b7e0dc9404585af0a86b254c7d3e",
+      "WAT_sha256": "2ad755afe1fae61f012e277c40bbeb7ab1c34734ce33be471c785480ec96710d"
+    },
+    "11499": {
+      "body_sha256": "ea8c36e442f2c6b31c797a8ccb3e0f504152644b709488aa1885a51cb703b346",
+      "WAT_sha256": "8305287bb6ab80bb12931090c1bac2b0c43066c6670ea40b59c7e26ee70c5a58"
+    },
+    "13563": {
+      "body_sha256": "724158538ddf6fdcb38eb520beaa5ff8467952b418be3400132013b105a136ae",
+      "WAT_sha256": "718739b8790b32422f5c947657685744eb6f32a052b1f48320010c1f7696a03a"
+    },
+    "13833": {
+      "body_sha256": "7657e041e585e81104729868558ab9bf0a28131a5df021c9e4dd8d82645d34e9",
+      "WAT_sha256": "4e4cbd1675449406fc867d53efe3382c769666c2d6ec58f09d4bd8d1f74a9fbb"
+    },
+    "15962": {
+      "body_sha256": "0cd2998ebc1278489ae5e6ebee9630a729a450d69f9ab0cdabb3c1b849d985bb",
+      "WAT_sha256": "b07d3d8c01f35f69928d037eee33c7cb77e9b1fa29889a69aeacb5252f45db7a"
+    },
+    "20060": {
+      "body_sha256": "d5ab0a488c8f8f86f0fda74033f7df4ed731d8f006fe816fc2a9b7f0dedd5375",
+      "WAT_sha256": "b588bc53fd844257376385d92f0bff1b45d460579b839b2db2f9e9516f984228"
+    },
+    "23333": {
+      "body_sha256": "aba9edac229ba04aaf90f3243bdec129dfdc7db637b39557b8160687cde48c98",
+      "WAT_sha256": "59395916c27696fc28dc4fa492b57a8965c89d2c453b0c61e6470a1d379284a3"
+    },
+    "24602": {
+      "body_sha256": "7eb347950c8d414529c9dc57a8ba5a3faa2ef19849f004ef9fada22d826787d2",
+      "WAT_sha256": "50b1d16630203df0ddaf3d13acf8b0208b78e862f425aa78566b631e297883d1"
+    },
+    "25511": {
+      "body_sha256": "a627059d8fa98d0b6385cd67224d047ce1320f06b83517c8d78d3e58507d555f",
+      "WAT_sha256": "b0e2ae4202aa0f728c3a30798842ca63740f959dacce8b9f650a3eb57f42f022"
+    },
+    "25613": {
+      "body_sha256": "80894c1d0bf8d7e0ff7402410346ace7e1ddaf251aebdc9632ab7c3a8b5818f7",
+      "WAT_sha256": "7806a9999e0a5697a29472b53599ae7c2d03dd17dde96f24ca24b6480c5b798c"
+    },
+    "26364": {
+      "body_sha256": "658557371e2a1f1f173fb3bbce2c7bff384a31a781fbdad123eea358f56f0586",
+      "WAT_sha256": "c064903ec232875c34c13430fa42fa8bca634be66203423a84651ac74e892310"
+    },
+    "27650": {
+      "body_sha256": "b1f898c892e2ac838a6261d3894dbf9f22ebbaa5277391548b650cbf70ebdac8",
+      "WAT_sha256": "20f9bfe01543a9a0c26ff666ddd126ffca30bb1ea67a0e3da12203123a4e4e86"
+    },
+    "29237": {
+      "body_sha256": "4b4e968c0308aac7eb2d772b3d2ce45c24835cbca4537efc9ac799dcd6bdcd77",
+      "WAT_sha256": "117070ce51044ed58fb14d0dc0b18fb7c9ddf08a3b88a8bbaca780774f5d3ac7"
+    },
+    "29912": {
+      "body_sha256": "5d5ab0c4efa8bc6a3dc74b3c16dd0466c3fce83663e204d5b90f962c1a3cef7f",
+      "WAT_sha256": "95e055891611ac6cf5946e516aacfaea90e9e0fb812e5f969f65961ac76dc21f"
+    },
+    "30179": {
+      "body_sha256": "33e979a9e4ceb648fe4aee3a30833126dbf7ed89270e52dd0aa769d5713048db",
+      "WAT_sha256": "cfe49054c275e7cb6cc7711b99fd28681f2a025a80091bd5565f00d7a5c36aef"
+    },
+    "30628": {
+      "body_sha256": "5cb37659a6c6d10d8c7d7180ddf0dcc755e1fbb2ebfe34f89c9ae9bd0037b147",
+      "WAT_sha256": "92d7db2c8956db17b03c46487515d5b83fb93c6816d0a664161b24a62ecffe8d"
+    },
+    "33028": {
+      "body_sha256": "ad6febcb39fb63482c83b3916de67a60749c9516fe45ec790e80ec0593314630",
+      "WAT_sha256": "f273d4ae39059284d97afce94486be65cc95b434f8dc740054c9ec175791ce19"
+    },
+    "50441": {
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "52557": {
+      "body_sha256": "9235b7a554194a122d90cf5077f5d7e202886ef8564701e72327f105f5d5bdee",
+      "WAT_sha256": "9a113a5df313fed6810e112932580b3d1c6d8e6d5cfe5124bf408e002af67df5"
+    },
+    "59230": {
+      "body_sha256": "34b9b3fd6c38222ed0de72bf0244ccdbd062d8c99aafff3ec4bca3d78b0bcbb6",
+      "WAT_sha256": "af7c92895159b57584e8be759c9d705796716d16cd5bf372704eaba0ebbfbd67"
+    },
+    "70932": {
+      "body_sha256": "a042121711a053832e07b547d48e7f284d074af011deb3871949ffb79d6f7086",
+      "WAT_sha256": "0185b15affb4541d6e20b1ff72db4bc19054479344fa2ef56cdc393af922b773"
+    },
+    "81682": {
+      "body_sha256": "7d2bae1ea62daa87d5bba3a3af0d7761e3fec6d1b3c041280c35042c5221c5bb",
+      "WAT_sha256": "426760ab586f6853f952fe0e3fe245a0c2d315e40cfd7dd5a4ba00bb57dcba67"
+    }
+  },
+  "all_nonexport_sections_identical": true,
+  "source_labels": {
+    "5830904": "Kobold Vermin"
+  },
+  "reference_sha256": "8ec3a25d5fe6c5de153d152d9f4b912c28bbf093ebcbe46b85a4063692fc4945",
+  "author_process": {
+    "pid": 76862,
+    "pgid": 76862,
+    "exit_code": 0,
+    "seconds": 1.4091974590010068,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_original_executions": 0,
+  "reviewer_author_model_checker_builder_executions": 0,
+  "author_files_modified": false,
+  "limitations": [
+    "Only current139 full925 standalone schedule: no2123/1466/884 integration, movement input, spawning-after-opening, native or complete game.",
+    "Initial four actual NPC positions/full1108 and background retained; explicit velocity0/pathNone constructor setup, path genuinely built by first925 and retained.",
+    "Three full78400 nonuniform BFS maps matched; every reached motion direct_clear independently ray sampled. Blocked-flow139 remains Pending; no old135 runtime acceptance reused.",
+    "Nonfatal default ordinary melee, no status/guardian/boss/ranged/pet/item/modifier/shield callbacks; no positive regen scheduled and actual HP declines.",
+    "All432B physical NPC storage replayed from actual previous owners, known updates independently calculated; unconsumed None preserved and never zero-filled.",
+    "History known semantics/padding/resource strings and physical deque layout matched; heap/resource pointers and allocator-unwritten bytes remain None.",
+    "Full captured925 packet stream matched inthisscope; complete UI/network/save/bootstrap/externref/fullgame not claimed.",
+    "Driver does not capture a separate pre925 view per frame; unchanged Game domains compared across outputs and sole2352 clock writes statically bound to frozen driver.",
+    "Canonical world comes from earlier independently raw-produced resource artifacts; healthyv2 snapshot resource context is not natural App/worldRc bootstrapping."
+  ],
+  "author_handoff": "evidence/enemy-ai139-oracle-20261102T105256.293681Z/task-handoff.json",
+  "review_receipt": "evidence/enemy-ai139-independent-review-owned-20261102T110424.508946Z/review/review.json",
+  "review_receipt_sha256": "83979458ba79f627bdc2596a97401821e90e61ccf0ffcc53b9e47ea0161802bc",
+  "owned_process": {
+    "pid": 11299,
+    "pgid": 11299,
+    "exit_code": 0,
+    "seconds": 5.669329249998555,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "owned_terminal_sha256": "cba4c17c928a40266c83b6d2ac1340a432497a368093a0286fbc465fe5294039",
+  "owned_process_journal_sha256": "39517771aaff921964600db036e8a8e9f55dc73a096323bf4534c54fc4658622",
+  "stdout_sha256": "db057f0ea09d57d0ca74c1477fdc426a18cb04a42c36b725cf42f4dfdc61743f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "case_summary": [
+    {
+      "id": 0,
+      "frames": 32,
+      "contacts": 23,
+      "first_contact_frame": 11,
+      "final_hp_bits": 1126765689,
+      "final_hp": 169.07997131347656,
+      "incoming992_hex": "404e75c5d6000000",
+      "new_packets": 50,
+      "new_packet_bytes": 2481,
+      "final_history_header": {
+        "capacity": 32,
+        "head": 0,
+        "count": 23
+      },
+      "path": {
+        "capacity": 78400,
+        "count": 78400,
+        "start_index": 39340,
+        "field24": 72660,
+        "u16le_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+      }
+    },
+    {
+      "id": 1,
+      "frames": 48,
+      "contacts": 16,
+      "first_contact_frame": 20,
+      "final_hp_bits": 1127980784,
+      "final_hp": 187.620849609375,
+      "incoming992_hex": "40453089a0000000",
+      "new_packets": 47,
+      "new_packet_bytes": 2297,
+      "final_history_header": {
+        "capacity": 16,
+        "head": 0,
+        "count": 16
+      },
+      "path": {
+        "capacity": 78400,
+        "count": 78400,
+        "start_index": 39340,
+        "field24": 72660,
+        "u16le_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+      }
+    },
+    {
+      "id": 2,
+      "frames": 12,
+      "contacts": 13,
+      "first_contact_frame": 5,
+      "final_hp_bits": 1128501539,
+      "final_hp": 195.5669403076172,
+      "incoming992_hex": "4041376fd2000000",
+      "new_packets": 38,
+      "new_packet_bytes": 1859,
+      "final_history_header": {
+        "capacity": 16,
+        "head": 0,
+        "count": 13
+      },
+      "path": {
+        "capacity": 78400,
+        "count": 78400,
+        "start_index": 39340,
+        "field24": 72660,
+        "u16le_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+      }
+    }
+  ],
+  "formal_original_direct_entries": 101,
+  "formal_targets_excluding2945_1600_setup": 95,
+  "new_complete925_packets": 135,
+  "new_complete925_packet_bytes": 6637,
+  "new_complete925_opcodes": {
+    "221": 83,
+    "330": 52
+  },
+  "original_host_calls": 0,
+  "denied_imports": 882,
+  "source72_and_author7_still_match_after_review": true,
+  "postcapture_static_supplement_sha256": "14b44b5670174fc69fa8c4c8b969170528ba77405f368871a27927aa027dfec5",
+  "supplement_not_used_to_inherit135_runtime_acceptance": true,
+  "failures_preserved_excluded": [
+    {
+      "stage": "first2framepilot",
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T104933.147125Z/comparison.json",
+      "sha256": "8dfd88dd852e68b4689c3e9ced77c42f927fe9c7a8498de6e61f9784549f665c",
+      "differences": 12,
+      "reason": "Initial sequence wrongly0 plus ranged-only circle projection wrongly applied to ordinary: twoYoneULP/durationdifferences; corrected from current branch."
+    },
+    {
+      "stage": "firstfull92",
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T105156.263637Z/comparison.json",
+      "sha256": "b1608073adc6897192c0d08db3ff204eb44187083b1c7041044eeaf4c8306196",
+      "differences": 53,
+      "reason": "All state/path/source/history already matched; AIstop221 kind3 payload had omitted rawGUID/remaining splinefields; corrected from current925."
+    }
+  ],
+  "pilot_preserved_excluded": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T105040.748621Z/comparison.json",
+    "sha256": "158594991606758cad61303b5d57e25c0df6d18206d7f978a152d684430c60a1",
+    "frames": 2,
+    "differences": 0
+  },
+  "history_runtime_boundary": "Capacity4/8/16/32 growth and oldest==10s retained; no head wrap, growth relocation or age>10 pruning runtime covered.",
+  "new_original_executions_by_reviewer": 0
+}

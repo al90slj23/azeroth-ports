@@ -1,0 +1,1441 @@
+{
+  "status": "scoped_original_differential_passed_pending_independent_review",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "final_comparison": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T105256.293681Z/comparison.json",
+    "sha256": "dac8878e298546011ec6ddf35738f078ae8dbafd0f00689c4de4c5a7fef186bc"
+  },
+  "author_sources": {
+    "reconstruction/core_spec/enemy_ai139.py": "db7d8fce02df7674908304768e183b7e75830dbbc98d7e4fa06c4ee28d6e303a",
+    "scripts/build_enemy_ai139_oracle.py": "933fad006637f7a6ef4bda406da66fa4c5ea78f2bc9d413f7ee5765201288942",
+    "scripts/run_enemy_ai139_oracle.mjs": "eea5fd90124fe4d75c7ee675be82faa663e73019bcbe4f91cbf99cc7e5c71a34",
+    "scripts/check_enemy_ai139.py": "1a0d65640925ceea6931eef74c246f2b38312231e96515b4b1a122f74c41e86a",
+    "scripts/trace_enemy_ai139.py": "5a560469a6135500f5d093d1e924fd990c87309657b356b8236fe4d9e7cdd4df"
+  },
+  "scope": "Current full925 standalone on fresh1600/full1108 with actual4NPC andindependently supplied canonical world; normal movement/repath/interpolation/navmap/positive+stop221/natural actualsource nonfatal1076/history/keyedHP.",
+  "evidence_layers": {
+    "static_extraction": "Current925 and17 currentdependencies/data; frozen static trace before expectation; finite exact helper rebind supplement after capture.",
+    "model_selfcheck": "Earlier32-frame pure model used to find nonfatal contact; not original acceptance.",
+    "recomposition": "Fresh2945→1600→full1108 source owners; body925 export-only andunchanged.",
+    "original_differential": "3fresh/92full925;52natural contact;83movement221; no producer outputs fed into model."
+  },
+  "formal_counts": {
+    "cases": 3,
+    "full925": 92,
+    "setup2945": 3,
+    "setup1600": 3,
+    "setup1108": 3,
+    "natural_actualNPC_contacts": 52,
+    "movement221": 83,
+    "packet330": 52,
+    "complete_games": 0,
+    "native_executions": 0,
+    "full_mainloop": 0
+  },
+  "validation_counts": {
+    "assertions": 506400,
+    "NPC_known_bytes": 111504,
+    "NPC_None_bytes": 47472,
+    "NPC_nonzero_None_bytes": 43700,
+    "inherited_Game_bytes": 230736,
+    "inherited_NPC_bytes": 142784,
+    "frames": 92,
+    "contacts": 52,
+    "path_rebuilds": 3,
+    "history_None_bytes": 15396,
+    "history_nonzero_None_bytes": 12770,
+    "history_known_bytes": 18972,
+    "movement_packets": 83
+  },
+  "cases": [
+    {
+      "id": 0,
+      "frames": 32,
+      "opening_packets": 76,
+      "finalHP": 169.07997131347656,
+      "final_history": {
+        "capacity": 32,
+        "head": 0,
+        "count": 23
+      },
+      "final_path": {
+        "capacity": 78400,
+        "count": 78400,
+        "start_index": 39340,
+        "field24": 72660,
+        "u16le_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+      },
+      "new_packet_counts": {
+        "221": 27,
+        "330": 23
+      },
+      "history_metadata": [
+        [
+          "Kobold Vermin",
+          "Melee",
+          "INV_Sword_04"
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "frames": 48,
+      "opening_packets": 76,
+      "finalHP": 187.620849609375,
+      "final_history": {
+        "capacity": 16,
+        "head": 0,
+        "count": 16
+      },
+      "final_path": {
+        "capacity": 78400,
+        "count": 78400,
+        "start_index": 39340,
+        "field24": 72660,
+        "u16le_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+      },
+      "new_packet_counts": {
+        "221": 31,
+        "330": 16
+      },
+      "history_metadata": [
+        [
+          "Kobold Vermin",
+          "Melee",
+          "INV_Sword_04"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "frames": 12,
+      "opening_packets": 76,
+      "finalHP": 195.5669403076172,
+      "final_history": {
+        "capacity": 16,
+        "head": 0,
+        "count": 13
+      },
+      "final_path": {
+        "capacity": 78400,
+        "count": 78400,
+        "start_index": 39340,
+        "field24": 72660,
+        "u16le_sha256": "66afda2e7f733aebcf4f9204bbaa989b8d9310b317a1bcd6b9a23c1d65c71d32"
+      },
+      "new_packet_counts": {
+        "221": 25,
+        "330": 13
+      },
+      "history_metadata": [
+        [
+          "Kobold Vermin",
+          "Melee",
+          "INV_Sword_04"
+        ]
+      ]
+    }
+  ],
+  "owner_preservation": {
+    "NPCs": 4,
+    "initial_Rune_pickups": 2,
+    "windows": "2or3actual",
+    "special": 4,
+    "boundaries": 69,
+    "auxiliary112": 0,
+    "claims88": 0,
+    "original_NPC_positions_overridden": false,
+    "NPCs_removed": false,
+    "racial_disabled": false,
+    "all_untouched_background_complete_bytes_checked": true,
+    "inherited_Game_bytes": 230736,
+    "inherited_NPC_bytes": 142784
+  },
+  "runtime": {
+    "cases": 3,
+    "fresh_instances": 3,
+    "full_calls": {
+      "925": 92,
+      "1108": 3,
+      "1600": 3,
+      "2945": 3
+    },
+    "world_source_checks": [
+      {
+        "instance": 1,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_3",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_4",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_5",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_6",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_7",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_8",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_9",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_10",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_11",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_12",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_13",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_14",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_15",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_16",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_17",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_18",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_19",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_20",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_21",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_22",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_23",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_24",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_25",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_26",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_27",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_28",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_29",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_30",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 1,
+        "phase": "after925_31",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_3",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_4",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_5",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_6",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_7",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_8",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_9",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_10",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_11",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_12",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_13",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_14",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_15",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_16",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_17",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_18",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_19",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_20",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_21",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_22",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_23",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_24",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_25",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_26",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_27",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_28",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_29",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_30",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_31",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_32",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_33",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_34",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_35",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_36",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_37",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_38",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_39",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_40",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_41",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_42",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_43",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_44",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_45",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_46",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 2,
+        "phase": "after925_47",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "restored_resource_context",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "before_full1108",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_0",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_1",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_2",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_3",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_4",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_5",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_6",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_7",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_8",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_9",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_10",
+        "ranges": 2318,
+        "unchanged": true
+      },
+      {
+        "instance": 3,
+        "phase": "after925_11",
+        "ranges": 2318,
+        "unchanged": true
+      }
+    ],
+    "target_and_setup_returns": [
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 2945,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1600,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 1108,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": 925,
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "stack_checks": 116,
+    "allocator_calls": 15,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "peak_memory_bytes": 177078272,
+    "memory_cap_bytes": 268435456,
+    "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "old_Game_used_as_target": false,
+    "readiness_flags_injected": false,
+    "explicit_dead_marker_fixtures": false,
+    "full925_body_unchanged": true,
+    "NPC_positions_written_by_driver": false,
+    "full1076_internal_calls_notinstrumented": true,
+    "App_or_world_Rc_producer_executed": false,
+    "externref_restored": false,
+    "native_executions": 0,
+    "full_mainloop_frames": 0,
+    "complete_games": 0,
+    "error": null
+  },
+  "process": {
+    "pid": 76862,
+    "pgid": 76862,
+    "exit_code": 0,
+    "seconds": 1.4091974590010068,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "source_closure": {
+    "files": 72,
+    "edges": 237,
+    "before_equals_after": true,
+    "expected_before_original": true,
+    "original_input_contains_expected": false
+  },
+  "failures_preserved": [
+    {
+      "stage": "first2framepilot",
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T104933.147125Z/comparison.json",
+      "sha256": "8dfd88dd852e68b4689c3e9ced77c42f927fe9c7a8498de6e61f9784549f665c",
+      "differences": 12,
+      "reason": "Initial sequence wrongly0 plus ranged-only circle projection wrongly applied to ordinary: twoYoneULP/durationdifferences; corrected from current branch."
+    },
+    {
+      "stage": "firstfull92",
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T105156.263637Z/comparison.json",
+      "sha256": "b1608073adc6897192c0d08db3ff204eb44187083b1c7041044eeaf4c8306196",
+      "differences": 53,
+      "reason": "All state/path/source/history already matched; AIstop221 kind3 payload had omitted rawGUID/remaining splinefields; corrected from current925."
+    }
+  ],
+  "pilot_excluded_duplicate": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T105040.748621Z/comparison.json",
+    "sha256": "158594991606758cad61303b5d57e25c0df6d18206d7f978a152d684430c60a1",
+    "frames": 2,
+    "differences": 0
+  },
+  "postcapture_static_supplement": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/enemy-ai139-oracle-20261102T105256.293681Z/postcapture-static-supplement.json",
+    "sha256": "14b44b5670174fc69fa8c4c8b969170528ba77405f368871a27927aa027dfec5",
+    "original_calls": 0
+  },
+  "unknowns": [
+    "Only actual default ordinary NPC5830904/localphase1; dead fade/removal,boss,ranged,guardian,projectile andotherstatus/fear/pendingcaster branches remain Pending.",
+    "All3formal positions use same initial playercell: genuine obstacle distance map78400costs is compared, but direct_clear route only. Blocked route30179/29237 helper semantics rebound statically; no new139blocked-route runtime coverage claimed.",
+    "Only nonfatal incoming1076 withspellID0/emptycallback sources/no positive shields; itemretaliation994,reserveheal1466,death/revival remain unresolved.",
+    "No player2123 scheduling in this batch. Owned/racial state retained butnot scheduled. Existingplayer_update139 positiveHPregen guard must be restored before joining contact into continuous automatic frames.",
+    "No fullMain883/NativeWindows/render/UI/network/save/completegame. Resource-contextsnapshot isexplicit input; naturalApp/bootstrap/WorldRc/externref producer not reconstructed.",
+    "Physical BTree allocations/pointers andunknownhistoryresourcepointer/unwrittenbytes observed separately, never inventedzero. Naturalring grows to32, no pruning boundary exercised here."
+  ],
+  "protected": {
+    "frozen_previous_author_sources_unchanged": true,
+    "public_registry_modified": false,
+    "Git_push": false,
+    "Android_modified": false,
+    "original_installers_or_saves_modified": false,
+    "all_artifacts_on_4TB": true
+  }
+}
