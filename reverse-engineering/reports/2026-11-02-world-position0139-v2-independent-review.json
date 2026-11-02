@@ -1,0 +1,251 @@
+{
+  "status": "pass_with_declared_healthy_snapshot_consumer_limits",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/stats138_review",
+  "component_scope_accepted": true,
+  "review_script_sha256": "845d38d7d293f785b59c952fe200e9a74744817efddb485314f17581265b7a5e",
+  "independent_receipt": "evidence/world-position139-v2-independent-review-20261102T044432.168408Z/review.json",
+  "independent_receipt_sha256": "13cc31dd94a4ea71a49a8c51874f3d415a202f65f0378b6c60848f29c7562893",
+  "owned_terminal": "evidence/world-position139-v2-independent-review-owned-20261102T044431.148888Z/process-terminal.json",
+  "owned_terminal_sha256": "61d4b34ded959d46743b0f6fada7252d64b07cb7cf64b28977b26536f1e83ac4",
+  "author_comparison_sha256": "0bcff452e5ad0cb93399e3e215200309bfe02d8d368afe0b0b33a3b0f1ab8b3b",
+  "author_handoff_sha256": "37ca3314afb61927725ce9985df88792a87408fbc7de9953b99575b29a68be75",
+  "cases": 85,
+  "full8740_direct": 63,
+  "full13563_direct": 22,
+  "independent_mismatches": 0,
+  "old80_inputs_and_full_actual_identical": true,
+  "all85_recomputed_independently": true,
+  "new5_original_counterexamples": [
+    {
+      "id": 80,
+      "actual": {
+        "position_bits": [
+          3323133279,
+          3292274078,
+          1116194242
+        ],
+        "rng_words": [
+          3280341869,
+          274167459,
+          1172006293,
+          3649586427
+        ]
+      },
+      "independent_old_hypot_prediction": {
+        "position_bits": [
+          3323133279,
+          3292274077,
+          1116194241
+        ],
+        "rng_words": [
+          3280341869,
+          274167459,
+          1172006293,
+          3649586427
+        ]
+      },
+      "old_rule_rejected": true
+    },
+    {
+      "id": 81,
+      "actual": {
+        "position_bits": [
+          3322998931,
+          3290220496,
+          1115758485
+        ],
+        "rng_words": [
+          3467629735,
+          1514356493,
+          1036474984,
+          561669187
+        ]
+      },
+      "independent_old_hypot_prediction": {
+        "position_bits": [
+          3322998932,
+          3290220496,
+          1115758500
+        ],
+        "rng_words": [
+          3467629735,
+          1514356493,
+          1036474984,
+          561669187
+        ]
+      },
+      "old_rule_rejected": true
+    },
+    {
+      "id": 82,
+      "actual": {
+        "position_bits": [
+          3323000477,
+          3289991553,
+          1115853700
+        ],
+        "rng_words": [
+          1942394774,
+          3839740812,
+          3462884924,
+          3816814455
+        ]
+      },
+      "independent_old_hypot_prediction": {
+        "position_bits": [
+          3323000477,
+          3289991554,
+          1115853701
+        ],
+        "rng_words": [
+          1942394774,
+          3839740812,
+          3462884924,
+          3816814455
+        ]
+      },
+      "old_rule_rejected": true
+    },
+    {
+      "id": 83,
+      "actual": {
+        "position_bits": [
+          3323000640,
+          3290657245,
+          1115803094
+        ],
+        "rng_words": [
+          4046343142,
+          2056226113,
+          694683752,
+          385506372
+        ]
+      },
+      "independent_old_hypot_prediction": {
+        "position_bits": [
+          3323000640,
+          3290657244,
+          1115803096
+        ],
+        "rng_words": [
+          4046343142,
+          2056226113,
+          694683752,
+          385506372
+        ]
+      },
+      "old_rule_rejected": true
+    },
+    {
+      "id": 84,
+      "actual": {
+        "position_bits": [
+          3323004324,
+          3290900511,
+          1115932001
+        ],
+        "rng_words": [
+          1516312309,
+          2831641487,
+          1122181288,
+          2437706700
+        ]
+      },
+      "independent_old_hypot_prediction": {
+        "position_bits": [
+          3323004324,
+          3290900512,
+          1115932001
+        ],
+        "rng_words": [
+          1516312309,
+          2831641487,
+          1122181288,
+          2437706700
+        ]
+      },
+      "old_rule_rejected": true
+    }
+  ],
+  "AST_correction": {
+    "spawn_AST_unchanged": true,
+    "random_only_expression_change": "f32(dx*dx)+f32(dy*dy), then f32sqrt",
+    "independent_AST_normalization": true
+  },
+  "nonRNG_Game_bytes": 218960,
+  "RNG_Game_bytes": 1360,
+  "source_closure_count": 26,
+  "production_source_count": 14,
+  "local_import_edges": 51,
+  "author_owned_files": 8,
+  "nonexport_sections_byte_identical": true,
+  "reference_helpers": {
+    "scripts/review_world_position139.py": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2"
+  },
+  "world_query_review_dependency": {
+    "path": "evidence/world139-independent-review-owned-20261102T041305.531201Z/review/review.json",
+    "sha256": "dcbd2ad0703771e1b023306a91594f33f0d333419b330da0a8797b45c8bfcdff"
+  },
+  "world_ranges_observation": {
+    "count": 2318,
+    "bytes": 5950608,
+    "digest": "fdd8a0dad2966135695481ef66a09d79ebcce467efc84bb163e0e331fd6c8ad0",
+    "as_read_ranges_sha256": "ca4a5849d38f0b4244bb9744ec6858a320a5490ad5fb34c595c90e390b477216"
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "cases": 85,
+    "full8740_direct_calls": 63,
+    "full13563_direct_calls": 22,
+    "original_export_calls": 85,
+    "original_internal_fallback_calls_not_counted": true,
+    "snapshot_restores": 85,
+    "healthy_v2_input": true,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "allocator_calls": 107,
+    "stack_checks": 192,
+    "peak_memory_bytes": 111804416,
+    "memory_cap_bytes": 268435456,
+    "original_full_callees_preserved": true,
+    "only_export_section_changed": true,
+    "native_executions": 0,
+    "complete_games": 0,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "author_owned_process": {
+    "pid": 60231,
+    "pgid": 60231,
+    "exit_code": 0,
+    "seconds": 8.10831033300201,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "reviewer_executions": {
+    "author_model": 0,
+    "author_checker": 0,
+    "author_builder": 0,
+    "original": 0,
+    "native": 0
+  },
+  "limits": [
+    "85fresh controlled original invocations onhealthyv2snapshots,not85natural constructors or independent Rc owners.OnlycurrentElwynn/no-primary/nonflat context and explicitplayer/RNG/pathMap inputs.",
+    "13563 correction is callsite f32square/f32sum/f32sqrt;8740 stilluses50441hypot.5new original cases distinguish rules;80regression results remain evidence of these inputs only,not oldv1source acceptance.",
+    "Expectation reference reads raw139canonical assets only,never snapshot memory.Independent geometry math is rebound to current139 getters through previous static/independent worldreview;no oldbehavior pass transferred.",
+    "192stackchecks are runner assertions/aggregate.2318ranges/5950608B and path-view immutability are original runner observations,not independent world production or reviewer rehash of memory.218960nonRNG and1360RNG Game byte occurrences directlychecked.",
+    "Attempts/draws/shrinks/internal13563fallback counts are modeldiagnostics;only63full8740+22direct13563 exports countasobserved entry calls.",
+    "Same original exportbinary reused onlyfor admission and prior static validator;Node compiled/instantiated fresh for85.45s preparation timeout/unjournaled initialvalidator PID and6pilot calls retained,not formal coverage or claimed clean ownedhistory.",
+    "Supplementary stimulus/correction scripts and reports are posthoc hashes,not retroactively added to26experimental source-before entries.Only input fields from counterexample files are used to recompute expected values.",
+    "Pythonopen audit is notOSsyscall audit. No naturalpathMapproducer/App/WorldRc ownership/full1108/native/fullgame acceptance;oldv1notaccepted receipts remainunchanged."
+  ],
+  "oldv1_status": "Old80captured outputs matched, but original v1 source still not accepted. Original v1 sources/receipts/independent rejection remain unchanged.",
+  "review_history": "First v2 independent reference pass succeeded; no new original executions by reviewer."
+}

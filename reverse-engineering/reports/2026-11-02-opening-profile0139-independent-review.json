@@ -1,0 +1,50 @@
+{
+  "status": "pass_declared_empty_sources_and_resolved_UTF8_components",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer": "/root",
+  "author": "/root/motion38_review",
+  "independent_receipt": "evidence/opening-profile139-independent-review-owned-20261102T044655.824637Z/review/review.json",
+  "independent_receipt_sha256": "aacec7b1f06aaca70aa18f910a01a3ae49d49ffed120ebfe6004ade8fce04899",
+  "owned_process": {
+    "pid": 96940,
+    "pgid": 96940,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 1.1379474589921301,
+    "source_after_sha256": "e0a4569c8701bd49c5994e444f7e64202698bb164e2edff4a37d46fbed688999"
+  },
+  "review_script_sha256": "e0a4569c8701bd49c5994e444f7e64202698bb164e2edff4a37d46fbed688999",
+  "pure_parser_helper_sha256": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+  "author_comparison_sha256": "d976cb2ab8d1c79389ce956d66f4313a6528c14cf21ccceb3cfb6481fd4388f9",
+  "author_handoff_sha256": "5029a5890ae57afb933d34b3a3ed66a0449d212f94f00660e4e22b44519e085a",
+  "counts": {
+    "complete2945": 18,
+    "full40_output_bytes": 720,
+    "physical_pointer_observed_bytes": 284,
+    "stack_unwritten_padding_observed_bytes": 142,
+    "complete18062": 71,
+    "payload_bytes": 12329
+  },
+  "independent_cases": 89,
+  "source_files": 14,
+  "local_edges": 17,
+  "bound_full_functions": 21,
+  "reviewer_original_executions": 0,
+  "reviewer_author_model_builder_checker_executions": 0,
+  "author_files_modified": false,
+  "limitations": [
+    "Only four explicitly empty account source counts and resolved UTF8 strings;not a natural App/account/storage/localization producer.",
+    "Thirty2945 bytes are known writes;6 internal padding and4 trailing caller bytes retain input poison.71 packet pointers and142 stack-padding bytes are observations.",
+    "Full1108/6786 are static-bound only;LCG three examples are model selfchecks,not new target calls.",
+    "Runner has89 detailed target stack returns and aggregate249 allocator guards;allocator states are not249 serialized guard records.",
+    "18 complete statically bound opening functions are not behavioral acceptance;0 full opening/native/complete game."
+  ],
+  "failed_review_attempt": "evidence/opening-profile139-independent-review-owned-20261102T044603.957075Z",
+  "markdown_sha256": "d340261f32981d57ad4efc1e82745f4cde9964e3facbd1910f8f9879295f41e4",
+  "full1108_calls": 0,
+  "full6786_calls": 0,
+  "complete_games": 0,
+  "native_executions": 0
+}

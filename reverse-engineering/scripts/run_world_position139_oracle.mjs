@@ -1,0 +1,39 @@
+// Full8740/13563, genuine healthy139v2 world; exact882 imports denied.
+import fs from'node:fs/promises';import{createHash}from'node:crypto';
+const[dir,configFile]=process.argv.slice(2),config=JSON.parse(await fs.readFile(configFile,'utf8')),m=JSON.parse(await fs.readFile(dir+'/manifest.json','utf8')),hash=x=>createHash('sha256').update(x).digest('hex');
+if(!process.execArgv.includes('--wasm-max-mem-pages=4096')||!process.execArgv.includes('--max-old-space-size=512'))throw Error('Separate256MiB/512MiB caps');
+const bytes=await fs.readFile(dir+'/'+m.module_file),snapshot=await fs.readFile(config.snapshot_path),input=await fs.readFile(config.input_path);
+if(hash(bytes)!==m.module_sha256||m.source_sha256!=='71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299'||hash(snapshot)!==config.snapshot_sha256||snapshot.length!==111804416||hash(input)!==config.input_sha256||input.length>33554432)throw Error('Frozen139/v2 identities');
+const module=await WebAssembly.compile(bytes),imports=WebAssembly.Module.imports(module),cases=JSON.parse(input);if(imports.length!==882||imports.some(x=>x.kind!=='function')||JSON.stringify(imports.map(({module,name})=>({module,name})))!==JSON.stringify(m.original_imports.map(({module,name})=>({module,name})))||!cases.length||cases.length>300)throw Error('Exact882 surface/budget');
+const number=x=>{const d=new DataView(new ArrayBuffer(4));d.setUint32(0,x,true);return d.getFloat32(0,true);};let calls=0,spawns=0,randoms=0,allocations=0,hostCount=0,stackChecks=0,peak=0;
+for(const c of cases){
+ if(global.gc)global.gc();
+ if(Object.keys(c).sort().join()!=='id,input,kind'||!['spawn','random'].includes(c.kind))throw Error('Input-only keyset');
+ const bindings={};for(const x of imports){bindings[x.module]??={};bindings[x.module][x.name]=()=>{hostCount++;throw Error('Denied139 host '+x.name);};}
+ const e=(await WebAssembly.instantiate(module,bindings)).exports,memory=e.memory,stack=e.research139_position_stack0;if(stack.value!==1048576||memory.buffer.byteLength>snapshot.length)throw Error('Fresh stack/memory');memory.grow((snapshot.length-memory.buffer.byteLength)/65536);new Uint8Array(memory.buffer).set(snapshot);if(hash(new Uint8Array(memory.buffer))!==config.snapshot_sha256)throw Error('Complete healthy139v2 restore');
+ const b=()=>new Uint8Array(memory.buffer),d=()=>new DataView(memory.buffer),u=p=>d().getUint32(p,true),w=(p,v)=>d().setUint32(p,v,true),hex=(p,n)=>Buffer.from(b().subarray(p,p+n)).toString('hex');
+ const guard=fn=>{if(stack.value!==1048576)throw Error('Stack before');const r=fn();if(stack.value!==1048576)throw Error('Stack after');stackChecks++;return r;};
+ const alloc=(n,a=8)=>{if(!Number.isInteger(n)||n<1||n>4194304)throw Error('Allocation cap');allocations++;const p=guard(()=>e.__wbindgen_malloc(n,a))>>>0;if(!p||p+n>memory.buffer.byteLength||memory.buffer.byteLength>268435456)throw Error('Owned allocation');return p;};
+ const G=config.game_pointer,R=u(G+2348);if(G!==14685248||R!==20544696||u(config.app_pointer+5116)!==R||b()[G+2587]!==0)throw Error('Healthy v2 source identity');
+ const ranges=[],seen=new Set();function add(label,p,n){if(!Number.isInteger(p)||!Number.isInteger(n)||p<0||n<0||p+n>memory.buffer.byteLength||n>16777216)throw Error('World range');const key=p+':'+n;if(n&&!seen.has(key)){seen.add(key);ranges.push({label,p,n});}}
+ add('worldRc124',R,124);const tc=u(R+16),tp=u(R+12),bc=u(R+28),bp=u(R+24);if(tc>512||bc>512||tc>u(R+8)||bc>u(R+20))throw Error('Worldtile headers');add('tile36',tp,tc*36);add('bounds16',bp,bc*16);
+ for(let i=0;i<tc;i++){const q=tp+i*36,n=u(q+8),p=u(q+4);if(n>1024||n>u(q))throw Error('Chunk header');add('chunks264-'+i,p,n*264);for(let j=0;j<n;j++){const a=p+j*264,vc=u(a+8);if(vc!==145||vc>u(a))throw Error('Vertex header');add('vertices-'+i+'-'+j,u(a+4),vc*12);}}
+ if(u(R+32)!==0xffffffff)add('nav',u(R+36),u(R+40));if(u(R+56)!==0xffffffff)throw Error('This139world primary mustbeabsent');if(u(R+92)!==0xffffffff)add('secondary',u(R+96),u(R+100)*4);
+ if(ranges.length>5000||ranges.reduce((n,x)=>n+x.n,0)>33554432)throw Error('World range budget');const digest=()=>{const h=createHash('sha256');for(const x of ranges){h.update(Buffer.from(x.p+':'+x.n+':'));h.update(b().subarray(x.p,x.p+x.n));}return h.digest('hex');};
+ const worldBefore=hex(R,124),worldDigest=digest(),s=c.input;if(s.zone!==0||s.player_xyz.length!==3||s.velocity_xy.length!==2||s.rng_words.length!==4)throw Error('ExplicitElwynn input');s.player_xyz.forEach((v,j)=>w(G+1416+4*j,v));s.velocity_xy.forEach((v,j)=>w(G+1736+4*j,v));s.rng_words.forEach((v,j)=>w(G+1720+4*j,v));
+ let pathView=null;
+ if(s.distance_map!==null){const q=s.distance_map,P=alloc(32);b().fill(0x5a,P,P+32);w(P+24,q.field24);let ptr=null,n=null;
+  if(q.fill_u16!==null){n=q.count;if(!Number.isInteger(n)||n<0||n>16777216||!Number.isInteger(q.fill_u16)||q.fill_u16<0||q.fill_u16>65535||n*2>4194304)throw Error('Distance explicitarray budget');ptr=alloc(Math.max(8,n*2),2);for(let j=0;j<n;j++)d().setUint16(ptr+j*2,q.fill_u16,true);w(P+12,ptr);w(P+16,n);}
+  w(G+2368,P);pathView={pointer:P,before_hex:hex(P,32),values_pointer:ptr,values_count:n,values_sha256:ptr===null?null:hash(b().subarray(ptr,ptr+n*2)),read_view_only_not_Rc_owner:true};
+ }else w(G+2368,0);
+ const allocation=alloc(48),O=allocation+16;b().fill(0xc3,allocation,O);b().fill(0xa5,O,O+16);b().fill(0xd7,O+16,allocation+48);const before=b().slice(G,G+2592);
+ if(c.kind==='spawn'){guard(()=>e.research139_position_spawn(O,G,number(s.low_radius_bits),number(s.high_radius_bits),number(s.bias_probability_bits)));spawns++;}
+ else{guard(()=>e.research139_position_random(O,G,number(s.low_radius_bits),number(s.high_radius_bits)));randoms++;}calls++;
+ const projection={position_bits:[0,1,2].map(j=>u(O+4*j)),rng_words:[0,1,2,3].map(j=>u(G+1720+4*j))};const expectedUnchanged=Buffer.from(before);projection.rng_words.forEach((v,j)=>expectedUnchanged.writeUInt32LE(v,1720+4*j));
+ if(!Buffer.from(b().subarray(G,G+2592)).equals(expectedUnchanged))throw Error('NonRNG Game mutation');const afterDigest=digest();if(worldDigest!==afterDigest||worldBefore!==hex(R,124))throw Error('Originalworld modified');
+ if(hex(allocation,16)!=='c3'.repeat(16)||hex(O+16,16)!=='d7'.repeat(16)||hex(O+12,4)!=='a5'.repeat(4))throw Error('Output12/16/canary');
+ if(pathView&&(pathView.before_hex!==hex(pathView.pointer,32)||(pathView.values_pointer!==null&&pathView.values_sha256!==hash(b().subarray(pathView.values_pointer,pathView.values_pointer+pathView.values_count*2)))))throw Error('Pathview mutation');
+ if(hostCount||stack.value!==1048576)throw Error('Host/stack');if(c.id===0)await fs.writeFile(dir+'/observed-world-ranges.json',JSON.stringify({ranges,digest:worldDigest,bytes:ranges.reduce((n,x)=>n+x.n,0)})+'\n');
+ process.stdout.write(JSON.stringify({id:c.id,projection,raw_game_before_hex:Buffer.from(before).toString('hex'),raw_game_after_hex:hex(G,2592),world124_before_hex:worldBefore,world124_after_hex:hex(R,124),world_data_digest_before:worldDigest,world_data_digest_after:afterDigest,world_ranges:ranges.length,output16_hex:hex(O,16),before16_hex:hex(allocation,16),after16_hex:hex(O+16,16),path_view:pathView,stack_after:stack.value})+'\n');peak=Math.max(peak,memory.buffer.byteLength);
+}
+await fs.writeFile(dir+'/runtime.json',JSON.stringify({version:'0.139.0',build:'f79c5e2b4',cases:cases.length,full8740_direct_calls:spawns,full13563_direct_calls:randoms,original_export_calls:calls,original_internal_fallback_calls_not_counted:true,snapshot_restores:cases.length,healthy_v2_input:true,denied_imports:882,actual_host_calls:hostCount,allocator_calls:allocations,stack_checks:stackChecks,peak_memory_bytes:peak,memory_cap_bytes:268435456,original_full_callees_preserved:true,only_export_section_changed:true,native_executions:0,complete_games:0,user_saves_accessed:false,network_used:false})+'\n');

@@ -1,0 +1,195 @@
+{
+  "status": "not_accepted_source_fidelity_finding_despite80_output_matches",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "reviewer": "/root/self_buffs119_review",
+  "author": "/root/stats138_review",
+  "component_acceptance": false,
+  "current80_outputs_and_RNG_match": true,
+  "new_original_executions_by_reviewer": 0,
+  "author_model_checker_builder_executions_by_reviewer": 0,
+  "review_script_sha256": "d842c619169a582ab8eb540cab2829233eb633bbd79d10ab674c50e71c92ab7e",
+  "independent_receipt": "evidence/world-position139-independent-review-20261102T042537.052543Z/review.json",
+  "independent_receipt_sha256": "a9a83567b6f9c0873dff1e858ad2f032249952f108055a9523ded2eaa0392aea",
+  "owned_terminal": "evidence/world-position139-independent-review-owned-20261102T042536.131120Z/process-terminal.json",
+  "owned_terminal_sha256": "0274472eefa7235aca5c9b36b7572e5071ea5cc1746d1692925342efce8bbdd6",
+  "author_comparison_sha256": "eb52328da53d1f90ccba3957f649cd3d52314e20287096e23cac2c46794bb931",
+  "author_handoff_sha256": "b055af94f470d828211f361245ba81d0d4ecfc36bd5f2946b72774d0d7bea3f9",
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "scope": {
+    "cases": 80,
+    "full8740": 63,
+    "direct13563": 17,
+    "nonRNG_Game_bytes": 206080,
+    "RNG_Game_bytes": 1280,
+    "sources": 25,
+    "production_sources": 14,
+    "local_edges": 49
+  },
+  "finding": {
+    "severity": "P2",
+    "file": "reconstruction/core_spec/world_position139.py",
+    "line": 100,
+    "rule": "13563 current original computes f32(dx*dx), f32(dy*dy), f32sum and f32sqrt. Current model calls hypot_bits, whose products/sum occur in f64 before demotion.8740 correctly uses50441 and must retain its own rule.",
+    "current80_differences": 0,
+    "effect": "A legitimate first accepted clamped trial differs by1ulp in Y and Z. Future candidate/nav boundaries can depend on these exact words.",
+    "recommended_change": "Keep old80 evidence/sources untouched; create corrected new13563 callsite with ordered f32 norm and fresh expected-first original batch including counterexample; do not replace8740 hypot globally."
+  },
+  "counterexample": {
+    "path": "evidence/world-position139-review-work/counterexample.json",
+    "sha256": "cbc42c1bdc0bf26ca72b390bc3b7273d63e3e1241ec3ff3af5526f4411d591ad",
+    "input": {
+      "id": 80,
+      "kind": "random",
+      "input": {
+        "zone": 0,
+        "player_xyz": [
+          3323121664,
+          3292266496,
+          1116209152
+        ],
+        "velocity_xy": [
+          0,
+          0
+        ],
+        "low_radius_bits": 1104150528,
+        "high_radius_bits": 1108344832,
+        "bias_probability_bits": 1056964608,
+        "rng_words": [
+          2604202828,
+          455852230,
+          828458172,
+          3706585583
+        ],
+        "distance_map": null
+      }
+    },
+    "current_WAT_reference_prediction": {
+      "position_bits": [
+        3323133279,
+        3292274078,
+        1116194242
+      ],
+      "rng_words": [
+        3280341869,
+        274167459,
+        1172006293,
+        3649586427
+      ]
+    },
+    "old_hypot_reference_prediction": {
+      "position_bits": [
+        3323133279,
+        3292274077,
+        1116194241
+      ],
+      "rng_words": [
+        3280341869,
+        274167459,
+        1172006293,
+        3649586427
+      ]
+    },
+    "norm_bits": {
+      "current_WAT_f32": 1125604199,
+      "old_hypot_f64sum": 1125604200
+    },
+    "both_first_trials_accepted": true,
+    "is_original_observation": false,
+    "original_executions": 0,
+    "author_production_executions": 0,
+    "current_final_reader_recomputed_WAT_prediction": {
+      "position_bits": [
+        3323133279,
+        3292274078,
+        1116194242
+      ],
+      "rng_words": [
+        3280341869,
+        274167459,
+        1172006293,
+        3649586427
+      ]
+    }
+  },
+  "helper_sha256": {
+    "scripts/review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9",
+    "scripts/review_npc_spawn139.py": "aa1c8a9d5ca4fe0363f97cbdad71f13ce00ebccf238fe89b213f354627ef5074",
+    "scripts/review_player_motion135.py": "8a339b74435adbc4abcf5aff7f3a25a24d5f8495653e42135f06aa94230de2b2"
+  },
+  "world_query_review_dependency": {
+    "path": "evidence/world139-independent-review-owned-20261102T041305.531201Z/review/review.json",
+    "sha256": "dcbd2ad0703771e1b023306a91594f33f0d333419b330da0a8797b45c8bfcdff"
+  },
+  "world_readonly_observation": {
+    "count": 2318,
+    "bytes": 5950608,
+    "digest": "fdd8a0dad2966135695481ef66a09d79ebcce467efc84bb163e0e331fd6c8ad0",
+    "range_file_as_read_sha256": "ca4a5849d38f0b4244bb9744ec6858a320a5490ad5fb34c595c90e390b477216",
+    "original_memory_rehashed_by_reviewer": false
+  },
+  "snapshot_scope": {
+    "sha256": "ed3a755752ddf9907712b408f7ef042f5a9407d684d0aa6afd3f0a394bbd7ce2",
+    "R": 20544696,
+    "G": 14685248,
+    "App": 14680072,
+    "healthy_v2": true,
+    "old_invalid_snapshot": false
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "build": "f79c5e2b4",
+    "cases": 80,
+    "full8740_direct_calls": 63,
+    "full13563_direct_calls": 17,
+    "original_export_calls": 80,
+    "original_internal_fallback_calls_not_counted": true,
+    "snapshot_restores": 80,
+    "healthy_v2_input": true,
+    "denied_imports": 882,
+    "actual_host_calls": 0,
+    "allocator_calls": 102,
+    "stack_checks": 182,
+    "peak_memory_bytes": 111804416,
+    "memory_cap_bytes": 268435456,
+    "original_full_callees_preserved": true,
+    "only_export_section_changed": true,
+    "native_executions": 0,
+    "complete_games": 0,
+    "user_saves_accessed": false,
+    "network_used": false
+  },
+  "author_owned_process": {
+    "pid": 79403,
+    "pgid": 79403,
+    "exit_code": 0,
+    "seconds": 8.259163666996756,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "limitations": [
+    "80 complete controlled snapshot8740/13563 output/RNG matches are retained but source fidelity is not accepted due concrete13563 clamp arithmetic defect.",
+    "Counterexample is independent current-WAT/raw-world prediction only,not new original observation;author must freeze corrected new sources and perform fresh original test including this input.",
+    "World expectation reads only current139raw canonical terrain/nav/secondary artifacts;World.__init__ is never called and no originalmemory is read by reference. Earlier135math implementation is reused only as independent arithmetic with current139 five-getter static/independent review binding;no old cases/results transferred.",
+    "World2318ranges/5950608B digests and input path no-mutation are frozen-runner observations/assertions;review does not rehash original memory or claim independent WorldRc production.",
+    "182stackchecks are runner assertions/aggregate,not individually serialized.63full8740+17direct13563;internal fallback callcounts/attempts/draws are reference-only diagnostics.",
+    "FullGame2592 conservation verified outside fourRNG words.Output writes12B into16B with4B A5padding and both16B canaries intact;explicitpathMap views are controlled input,not natural owner production.",
+    "Expected Pythonopen audit is not OSsyscall auditing.Healthyv2snapshot accepted as supplied context,not naturalApp/world ownership/full1108/native/fullgame restoration."
+  ],
+  "review_history": [
+    {
+      "receipt": "evidence/world-position139-independent-review-20261102T041737.725076Z/review.json",
+      "sha256": "f1e8903f168d22bb3e4fb92a6a0ecd160934ad51ca43566f1fac75004a3df5e5",
+      "status": "80outputs match, source-finding-open; preserved unchanged."
+    },
+    {
+      "owned_directory": "evidence/world-position139-independent-review-owned-20261102T042158.104421Z",
+      "status": "Reviewer literal static guard expected get18 instead of tee18 and failed; corrected own guard only, no original/author execution."
+    },
+    {
+      "receipt": "evidence/world-position139-independent-review-20261102T042250.126381Z/review.json",
+      "sha256": "511bcb6cb55f5951866020cfa7baeebedbd12660c45143ceaf818d6e9ba42d9f",
+      "status": "Notaccepted source-finding unchanged; as-issued reader/report bytes archived beside this receipt. Final reader additionally binds raw Game RNG words and realRc/phase; same80 stored original results,0neworiginal."
+    }
+  ]
+}

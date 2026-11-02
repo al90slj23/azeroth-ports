@@ -1,0 +1,19 @@
+# 0.139 自然位置修正版独立复核
+
+结论：修正版在声明域内通过。85个新原件调用（63次完整8740、22次直接13563）均由独立参考重算一致，其中5个新增clamp反例真实区分并拒绝旧hypot规则。复核没有执行作者生产模块、检查器、构建器或原件。
+
+13563前12次试探现采用逐次f32乘法、f32相加、f32.sqrt；8740仍调用50441的hypot。独立AST核对证明8740在类型重命名后未改，13563唯一可执行表达式变化就是这处距离计算。5个新原件结果都吻合正确f32参考，并与独立旧hypot算式的XYZ不同，最终RNG仍相同；此前提供的首个反例也获确认。
+
+旧80输入及完整actual JSON逐项一致，但本次85条全部重新复算，未转移旧组件验收。旧v1的源码错误与不接受报告保持原状，旧证据没有被改写。
+
+独立期望只读取139原始资产生成的terrain/nav/secondary canonical数据，没有读取原件memory；纯几何参考通过当前139五getter静态及独审依据绑定，不使用旧135的actual/expected。26来源/14生产文件/51导入边、8作者文件及来源快照逐项核SHA。两个后补的stimulus/AST说明脚本只作posthoc交付绑定，未冒充预运行闭包。输入文件只取counterexample文件中的输入字段，结果由修正版及本独立参考各自重算。
+
+完整Game核对218,960个非RNG字节守恒及1,360个RNG字节；输出12B、16B区域尾4A5和双16B canary均保持。真实healthy-v2 R20544696/G14685248，world124和2318ranges/5950608B前后digest不变是原件runner只读观察，不称独立WorldRc生产；路径field400未知backing确实未被独立参考消费，field401及0/65535/500cost相关结果均一致。尝试、draw、缩小半径与内部fallback次数仍是模型诊断，未算成原件直接计数。
+
+原件仅增加导出，所有其他段逐字节相同；882导入全部拒绝、实际0host。原件导出模块与旧模块字节完全一致，复用的仅是该二进制静态validator凭证，本次Node重新编译并为85条恢复独立snapshot，不继承旧模型通过。107次allocator加85次入口共192次栈检查是runner断言和汇总。原件60231与复核92483都有exit0及PID/PGID消失收据。
+
+此前45秒冗余validator准备超时及6次pilot单独保留，不计85正式覆盖。首次准备的validator PID未写入journal，无法补成已闭环的历史证据，报告保留此限制。当前新原件进程的闭环单独成立。Pythonopen期望读取审计也不等于OS系统调用审计。
+
+本次仍只覆盖当前Elwynn、无primary、非flat、显式player/RNG/pathMap输入的snapshot consumer域；自然pathMap owner、App/WorldRc所有权、完整1108、Windows执行和完整游戏均未验收。
+
+最终收据：`evidence/world-position139-v2-independent-review-20261102T044432.168408Z/review.json`，SHA13cc31dd94a4ea71a49a8c51874f3d415a202f65f0378b6c60848f29c7562893。

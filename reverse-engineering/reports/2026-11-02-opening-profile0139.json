@@ -1,0 +1,987 @@
+{
+  "status": "author_component_differential_passed_pending_independent_review",
+  "version": "0.139.0",
+  "actual_build": "f79c5e2b4",
+  "source_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "evidence_directory": "evidence/opening-profile139-oracle-20261102T044006.251632Z",
+  "comparison_sha256": "d976cb2ab8d1c79389ce956d66f4313a6528c14cf21ccceb3cfb6481fd4388f9",
+  "cases": 89,
+  "complete2945_calls": 18,
+  "complete18062_calls": 71,
+  "counts": {
+    "full2945": 18,
+    "exact40_output_bytes": 720,
+    "full18062": 71,
+    "exact_packet_payload_bytes": 12329,
+    "observed_physical_pointer_bytes": 284,
+    "unwritten_stack_descriptor_padding_observed_bytes": 142
+  },
+  "runtime": {
+    "version": "0.139.0",
+    "actual_build": "f79c5e2b4",
+    "cases": 89,
+    "full2945_calls": 18,
+    "full18062_calls": 71,
+    "fresh_instances": 3,
+    "denied_imports": 882,
+    "host_calls": 0,
+    "allocator_calls": 249,
+    "stack_guards": 338,
+    "target_returns": [
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "2945",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      },
+      {
+        "role": "18062",
+        "before": 1048576,
+        "after": 1048576,
+        "returned": true
+      }
+    ],
+    "peak_memory_bytes": 14745600,
+    "memory_cap_bytes": 33554432,
+    "heap_cap_mib": 512,
+    "output_bytes": 48314,
+    "original_snapshot_loaded": false,
+    "locale_flags_written": false,
+    "App_produced": false,
+    "account_or_storage_producer_executed": false,
+    "world_producer_executed": false,
+    "network_used": false,
+    "user_saves_accessed": false,
+    "error": null
+  },
+  "process": {
+    "pid": 82844,
+    "pgid": 82844,
+    "exit_code": 0,
+    "seconds": 0.4439346670114901,
+    "deadline_seconds": 60,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "source_closure": {
+    "files": 14,
+    "edges": 17,
+    "sources": {
+      "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+      "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+      "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+      "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+      "scripts/build_opening_profile139_oracle.py": "02614d1e319fc612c8020c52003e2faa78bed13cb0326a8cadd48fedf15c6f5c",
+      "scripts/check_opening_profile139.py": "92db7f0fe9a62b6e053f0994ba0ab9ff1ab552b15d4bf0d3c77d1707d5df5c36",
+      "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+      "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+      "scripts/run_opening_profile139_oracle.mjs": "16ed6357457d2a20d97c33c030889ebb6a3bcef0a8d1b4e6bc95eac1b436bd30",
+      "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+      "scripts/trace_opening_aux139.py": "679ebc678f7741bbb79fde000531e87a467194b991ada593243bd1f3514ccfed",
+      "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+      "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+      "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+    }
+  },
+  "author_sources": {
+    "reconstruction/core_spec/opening_profile139.py": "587d933751a8cc5995f255eb0b3d1128daa0ebb47b3b1a0ba8b91571361990bb",
+    "scripts/trace_opening_aux139.py": "679ebc678f7741bbb79fde000531e87a467194b991ada593243bd1f3514ccfed",
+    "scripts/build_opening_profile139_oracle.py": "02614d1e319fc612c8020c52003e2faa78bed13cb0326a8cadd48fedf15c6f5c",
+    "scripts/run_opening_profile139_oracle.mjs": "16ed6357457d2a20d97c33c030889ebb6a3bcef0a8d1b4e6bc95eac1b436bd30",
+    "scripts/check_opening_profile139.py": "92db7f0fe9a62b6e053f0994ba0ab9ff1ab552b15d4bf0d3c77d1707d5df5c36"
+  },
+  "static_trace": {
+    "path": "static/trace.json",
+    "sha256": "177944dfd37f685c0feab54f1feeeb67019fa481779eb4188a5729029a6b2d03",
+    "full1108_body": {
+      "index": 1108,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 6502655,
+      "body_end": 6514771,
+      "body_bytes": 12116,
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_bytes": 180946,
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "whole1108_phase_boundaries": [
+      {
+        "name": "phase1_and_real_Spell_DBC4562",
+        "first_line": 1,
+        "last_line": 14,
+        "sha256": "b739e7b0f650bd6af4d1ff5ea9537dadd8ba1a353e5d9e21d3b80b49533f7924",
+        "status": "explicit resource-context precondition;4562 is not locale"
+      },
+      {
+        "name": "protection_debug_abilities_and_bosses",
+        "first_line": 15,
+        "last_line": 1221,
+        "sha256": "479fd115e3ec40221583e42ace9c9f045d9f7559834c7fa8bd7c58258e634a1a",
+        "status": "default2576=0 skipped;nondefault unknown"
+      },
+      {
+        "name": "localized_start_packet150",
+        "first_line": 1222,
+        "last_line": 1417,
+        "sha256": "18ed08b823103bd08acf1bf76e5f9d90b78460a377a1247d86cd99a1a75af523",
+        "status": "18062 resolved-string component being recovered"
+      },
+      {
+        "name": "selected_rank_gate",
+        "first_line": 1418,
+        "last_line": 1724,
+        "sha256": "cfd96d57887c6dec47565c84cdd25e38c0b55a6feaa09033f5353d129d8e9a12",
+        "status": "default387=0 skip;nondefault unknown"
+      },
+      {
+        "name": "startJSON_and_10099",
+        "first_line": 1725,
+        "last_line": 1889,
+        "sha256": "d241d879a90d5d607d268cee1bdb2682023f1913a26a09418ecaeea93616b206",
+        "status": "default startJSON;remaining10099 field publication separately bound"
+      },
+      {
+        "name": "protection_extra_effects",
+        "first_line": 1890,
+        "last_line": 2515,
+        "sha256": "411646011c0d4f034e9017753ce0e244140abc3912a1a04305525cb1358e4ca8",
+        "status": "default2576=0 skip;nondefault unknown"
+      },
+      {
+        "name": "companion1795",
+        "first_line": 2516,
+        "last_line": 2520,
+        "sha256": "25a458d3a5884f252c5c3aaeb7a0f8bf403fcf4f182d1cb48729bd0f250235d7",
+        "status": "2945 absent tags255 component;nonempty slots unknown"
+      },
+      {
+        "name": "four_natural_NPC5719",
+        "first_line": 2521,
+        "last_line": 2556,
+        "sha256": "4ed7c6d021e7ce0d0ab734973eda41bf885bff5a97361ac965667bcba4006d37",
+        "status": "owned by separate current139 naturalNPC component"
+      },
+      {
+        "name": "two_random_kind2_pickups",
+        "first_line": 2557,
+        "last_line": 2621,
+        "sha256": "2ac9004813af35f094505e7ee311b036e852083bed002f3b638586edf80f10f9",
+        "status": "13563 position v2 dependency;1446 record/actor producer pending"
+      },
+      {
+        "name": "event_windows2or3",
+        "first_line": 2622,
+        "last_line": 2929,
+        "sha256": "10a465cb980bd266ce4bf74454f082b4e5c80e79346d6a8f33657a0914d4be85",
+        "status": "independent RNG/window producer pending"
+      },
+      {
+        "name": "special40_declarations",
+        "first_line": 2930,
+        "last_line": 4320,
+        "sha256": "b39bf55db37c31c1956f866ccf1c06a00dd19d4071600bc972f4a4f4a15f6dcd",
+        "status": "current72B definition table and nav/world consumers pending"
+      },
+      {
+        "name": "boundary_objects",
+        "first_line": 4321,
+        "last_line": 4879,
+        "sha256": "09063462b373834e8d437141a4b8c9220b3981e980fcb558fd29b45cdc316c2f",
+        "status": "circle and actor1886 current139 producer pending"
+      },
+      {
+        "name": "optional_rank_and_active_events",
+        "first_line": 4880,
+        "last_line": 5584,
+        "sha256": "1466705ea9964cdaa64110719059bdf0af84e3cc6fbf3af8d3c5adfd6a9dedc5",
+        "status": "default2577=0 and2140=0 skips;nonempty event scripts unknown"
+      }
+    ],
+    "critical_full_functions": 18,
+    "direct1108_callee_count": 49,
+    "selection2945": {
+      "required_output_bytes": 36,
+      "written_bytes": 30,
+      "written_stores": [
+        {
+          "line": 1161,
+          "offset": 24,
+          "width": 4,
+          "instruction": "f32.store offset=24"
+        },
+        {
+          "line": 1164,
+          "offset": 33,
+          "width": 1,
+          "instruction": "i32.store8 offset=33"
+        },
+        {
+          "line": 1167,
+          "offset": 32,
+          "width": 1,
+          "instruction": "i32.store8 offset=32"
+        },
+        {
+          "line": 1170,
+          "offset": 12,
+          "width": 1,
+          "instruction": "i32.store8 offset=12"
+        },
+        {
+          "line": 1173,
+          "offset": 8,
+          "width": 4,
+          "instruction": "i32.store offset=8"
+        },
+        {
+          "line": 1176,
+          "offset": 4,
+          "width": 1,
+          "instruction": "i32.store8 offset=4"
+        },
+        {
+          "line": 1179,
+          "offset": 0,
+          "width": 4,
+          "instruction": "i32.store"
+        },
+        {
+          "line": 1182,
+          "offset": 28,
+          "width": 4,
+          "instruction": "f32.store offset=28"
+        },
+        {
+          "line": 1185,
+          "offset": 20,
+          "width": 4,
+          "instruction": "i32.store offset=20"
+        },
+        {
+          "line": 1188,
+          "offset": 16,
+          "width": 4,
+          "instruction": "i32.store offset=16"
+        },
+        {
+          "line": 1193,
+          "offset": 35,
+          "width": 1,
+          "instruction": "i32.store8 offset=35"
+        },
+        {
+          "line": 1198,
+          "offset": 34,
+          "width": 1,
+          "instruction": "i32.store8 offset=34"
+        }
+      ],
+      "untouched_within36": [
+        5,
+        6,
+        7,
+        13,
+        14,
+        15
+      ],
+      "prefix16_copied_to_selected376_offset224": true
+    },
+    "seed6786": {
+      "app_offset": 4928,
+      "multiplier": 6364136223846793005,
+      "increment": 1442695040888963407,
+      "constructor_selectedP_offset": 184,
+      "window": "                    i32.const 152\n                    memory.copy\n                    local.get 1\n                    local.get 1\n                    i64.load offset=4928\n                    i64.const 6364136223846793005\n                    i64.mul\n                    i64.const 1442695040888963407\n                    i64.add\n                    local.tee 74\n                    i64.store offset=4928\n                    local.get 13\n                    local.get 13"
+    },
+    "zone0": {
+      "pointer": 5871348,
+      "raw152_hex": "00000000000000002af858000600000030f858000d0000003df85800130000000400000000000000040000000000000004000000000000000400000000000000f8f858000c000000dc0359000500000044055900180000005c05590093000000000000000c00000000d012c600401ec400008842cdcccc3f0000f0420a000000000000000000000085eb513f000000000000000000000000",
+      "identifier": "elwynn",
+      "center_xy_bits": [
+        3323121664,
+        3290316800
+      ],
+      "heading_bits": 1070386381,
+      "radius_bits": 1123024896,
+      "fallback_bits": 1116209152,
+      "boundary_flag148": 0,
+      "normal72_pointer": 5830904,
+      "normal_count": 12,
+      "normal72_sha256": "de540292f6c6ff1ffbb3bcccd658de8c337f8489b42b043c65ab9ab92d599b33",
+      "eliteIDs": [
+        609,
+        610,
+        611
+      ],
+      "boss72_pointer": 5833692,
+      "boss_count": 5,
+      "boss72_sha256": "2f30638377b9ea293951972cc878558af2f5f94eb6b59270cffc2dcf69264f07",
+      "last_boss_minutes_bits": 1098907648,
+      "window_count_range": [
+        2,
+        3
+      ],
+      "boundary_descriptor": [
+        9013,
+        4831,
+        1065353216
+      ],
+      "kind2_descriptor": [
+        9005,
+        259,
+        1065353216
+      ]
+    },
+    "English": {
+      "embedded_bytes": 233725,
+      "embedded_sha256": "ed413af92731015d4a9022e57d7860ed1010ccf5a702d13e723400b05f54867f",
+      "title": "Elwynn Forest",
+      "subtitle": "The Defias Uprising — survive the onslaught!",
+      "source_subtitle": "The Defias Uprising",
+      "template": "{subtitle} — survive the onslaught!"
+    }
+  },
+  "scope": "Full actual2945 with four explicit empty account sources and legal40-byte output/outer canaries; full18062 resolvedUTF8 payload/capacity/opcode,all882 hosts denied.",
+  "model_checks": {
+    "original_calls": 0,
+    "kind": "model_only_unknown_and_seed_selfchecks",
+    "rejected": [
+      {
+        "kind": "nonempty_or_bool_source_rejected",
+        "input": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kind": "nonempty_or_bool_source_rejected",
+        "input": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "kind": "nonempty_or_bool_source_rejected",
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "kind": "nonempty_or_bool_source_rejected",
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "kind": "nonempty_or_bool_source_rejected",
+        "input": [
+          false,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "uninitialized40_known_cells": 30,
+    "uninitialized40_unknown_cells": 10,
+    "seed_examples": [
+      {
+        "input": "0",
+        "output": "1442695040888963407"
+      },
+      {
+        "input": "1",
+        "output": "7806831264735756412"
+      },
+      {
+        "input": "18446744073709551615",
+        "output": "13525302890751722018"
+      }
+    ],
+    "seed_rule": "Static6786 provenance only;not a new runtime6786 differential."
+  },
+  "pilot": {
+    "directory": "evidence/opening-profile139-oracle-20261102T043942.766069Z",
+    "comparison_sha256": "a3e89ac234e5693c6f3841202f3cd0a6fdbbae34427c5e5d0b764ed495cc9785",
+    "calls2945": 2,
+    "calls18062": 3,
+    "included_in_formal89": false
+  },
+  "failed_static_preparation": {
+    "directory": "evidence/opening-aux139-static-20261102T043627.276356Z",
+    "reason": "Initial static extractor recognized immediate-value stores only and missed two boolean-expression store8 fields34/35. Corrected extractor follows each local.get0 to its actual store and proves all12 stores/30bytes. No model or original execution;oldstaticfiles retained.",
+    "original_calls": 0
+  },
+  "next_phase": [
+    "Actual1391886 actor/wire and1446 kind2 record56,with current position13563v2 dependency.",
+    "Window2..3 producer,elite609/610/611 special40,69 boundary actors and typed absent-companion handoff.",
+    "Fresh controlled1108 with legal initialized resourcecontext and new1600 Game,or separately declared resource bootstrap."
+  ],
+  "limitations": [
+    "2945 input is an explicit368B account component,not a natural App/2917Storage producer.",
+    "Thirty output2945 bytes are actually written;caller padding and tail40 are preserved or unknown,not assumed zero.",
+    "18062 resource pointer and stack-unwritten descriptor padding retained as observations;no allocator reimplementation.",
+    "English/currentzone/banner source is freshly extracted static data;full1108 localization/resource bootstrap not accepted by these calls.",
+    "6786 LCG is statically recovered and model-selfchecked only.",
+    "NaturalNPC/13563v2/pickups1446/windows/special/boundaries/full1108 remain next composition work.",
+    "No old135/138/139 runtime cases are transferred.",
+    "The whole1108 trace is a static coverage/boundary list;it is not89 full1108 runs.",
+    "2945 prefix16 composition to selectedProfile224 is an explicit research handoff contract;naturalmenu/App assembly is not recovered by this component.",
+    "Account196/244/256/268 counts are provided,not inferred from omitted fields;all other bytes may remain poison and are checked unchanged."
+  ],
+  "frozen_artifacts": {
+    "inputs.json": "5f4b10ad55f6e675906ab87f598edc0cf2768ca03b42509d06ec7afdcf48e59d",
+    "expected.json": "d2a55fa600565f7650988188368c0cd7d939278df428251763c8edbe0b3e83c0",
+    "model-checks.json": "efab4bca34152a7c1e3cfecefaea92ef063475798afdcb6507b2b4f95b862707",
+    "manifest.json": "9d7c65c7ae8b16405a8865db5ccde0ad1339b9abfc3ff7053b3b5f46b78537a5",
+    "opening-profile139-original-exports.wasm": "607365ae694cbc924ac8475455ffb63f7a2a1e566d3ea936b5607d4b39f33826"
+  },
+  "artifacts": {
+    "actual.jsonl": "f6a9b479a73a1a36815bc96c3dce0c29ab2138c5ad3732b48844ddc22e8582ee",
+    "runtime.json": "56257cb368ca40095fedf31932978cd18f80a0c8afc96e13b04e2fa4ffb11aa3",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "owned-terminal.json": "9ed6fded893ce64eae465f9109728d1e6e233a9776283000f76b74f44dd23dcb",
+    "prepared.json": "79dfbb865eb815ee3c7baa73ffe8170b11cc1bbcbe7cdd7800e8c5fb47460fa3",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "static/trace.json": "177944dfd37f685c0feab54f1feeeb67019fa481779eb4188a5729029a6b2d03"
+  },
+  "full1108_calls": 0,
+  "full6786_calls": 0,
+  "full_game_runs": 0,
+  "native_runs": 0,
+  "old_acceptance_transferred": false
+}
