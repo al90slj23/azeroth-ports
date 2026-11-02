@@ -1,0 +1,506 @@
+{
+  "status": "pass_current139_v3_scoped_numbers_and_input_fidelity",
+  "author": "/root/growth139_review",
+  "reviewer": "/root/growth139_world",
+  "fixed_version": "0.139.0",
+  "fixed_build": "f79c5e2b4",
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "author_handoff_path": "evidence/hurtactor139-v3-oracle-20261102T121344.276555Z/task-handoff.json",
+  "author_handoff_sha256": "89dc742f740d5d8dde81618322b2e89c80bd7fe7e0d99ed77305076161119239",
+  "frozen_author8": {
+    "scripts/build_healing139_v3_oracle.py": "f0ccdb415b72d3324c9c6bcaf72352dead8a6b8b466134c524bdd72df5c7def8",
+    "scripts/check_healing139_v3.py": "df19275d2e9d9797bc4c3674d900aef3f17a46f7e8242605e66c3d514cecbef0",
+    "scripts/run_healing139_v3_oracle.mjs": "8861772a4692d9312efa4c60d3ed3cc912dc0d5af1a85841478e8e0aa73defac",
+    "scripts/build_hurtactor139_v3_oracle.py": "f8f35e443a8e1ae06e45fde38c7d7c61319aba2d6e2a6a1e907d71416e1529bb",
+    "scripts/check_hurtactor139_v3.py": "e5ee1d48d723978479541dd2e1f3e4ebe3af754c40f4ef8ffec8947199bd51b5",
+    "scripts/run_hurtactor139_v3_oracle.mjs": "a56e408ec6cc8eafa021098a0ea77919b7ab9c93ca7e1751ec97be906f8deb18",
+    "reports/2026-11-02-healing-hurtactor0139-v3.json": "77714c379a7482b241ff7a279a4b8d40ed7bc7ed6c493fd31a02c8d57bfa3c6b",
+    "reports/2026-11-02-healing-hurtactor0139-v3.md": "d5a3576c6132b7eb78c6d9ea802bd3d8d9fe194cb99ccea098c79169591a50ba"
+  },
+  "formal_review_receipt_path": "evidence/healing-hurtactor139-v3-review-20261102T122235.145962Z/review/review.json",
+  "formal_review_receipt_sha256": "b9f8166b779860b53f90422c3f6be00d9d343d89c1ebcbfa04bbd12fc87c2f33",
+  "independent_reference_path": "evidence/healing-hurtactor139-v3-review-20261102T122235.145962Z/review/independent-reference.json",
+  "independent_reference_sha256": "edc1120b83442f34f05537e8775a4bf7f003852812cc2b309e1a3efdf7e2b516",
+  "reviewer_source_sha256": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+  "current_body_bindings": {
+    "913": {
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "994": {
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1076": {
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "2077": {
+      "body_sha256": "36cc754bbbce303102ce675fb8e65add6b866e983068934ab8312b0d25f2b967",
+      "WAT_sha256": "a75a15d2f980b6f60e5b0934c60a42f80b3e1575cd3a464a7342c96dfb478949"
+    },
+    "2123": {
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11033": {
+      "body_sha256": "279f887e41dfa0accc0ac3caf4f28e8faafadefcc4e40a1188a1e28add1e4513",
+      "WAT_sha256": "5091bc319e1aa68cd4241ff3749f4df2313c333b661fc10c9070c19e41adf443"
+    },
+    "18421": {
+      "body_sha256": "268c270a22568c1252d87b4eeb020937dc3860c2a34c54fd600578c939758044",
+      "WAT_sha256": "308daf31efbe89997280dd22dac2cb29779bdb1955e8e1b3ce43ca7d66ff1855"
+    },
+    "19598": {
+      "body_sha256": "58f38842752fe5aeb325edad798d13460bfcbb5d1ea6030e73a5cd035d5d1200",
+      "WAT_sha256": "a8652f10d73f4a5e657deaa0609517cb36d66851ac962490e341f62413f2f901"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "26202": {
+      "body_sha256": "21cdefa04d2854bcd0ee6e5e05dc42edaa2b007a898508a0e00e24185e21f210",
+      "WAT_sha256": "2727c02723974154bc562d8531561ec9493adde032594ff5b8075f451bbc2f6f"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "30861": {
+      "body_sha256": "87885424a4638fe31e22b44ca21874ea94d36840e26b6b69baa4281dafbb75c8",
+      "WAT_sha256": "579279bd09b708e3b9372927c000c3370b904d9faf209971369515fe90e6dc1b"
+    },
+    "36364": {
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36520": {
+      "body_sha256": "56936cd9e3b8c6af09ac1d37b1cf75fdf79ed166dda699f4244f5e2c8350366a",
+      "WAT_sha256": "b214bd48e1ba90c8c44f48a8176724ba3e32c4e5c62bfc0342816f60a5f1405f"
+    },
+    "83299": {
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    },
+    "8569": {
+      "body_sha256": "758f94f8950ed6c4fde0a127c17d6b8135aa3b00be6910ae192c494c4797a3d1",
+      "WAT_sha256": "cdeb4c86d5ce7fcc15dd33923b5fa27a749419eae46972e242560e613e88687d"
+    }
+  },
+  "formal_author_batches": [
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/healing139-v3-oracle-20261102T121237.785322Z",
+      "comparison_sha256": "5d773c21620cb1334a816776d129b1cf8859e5d0c2ca0b9605e9585446733e20",
+      "source_files": 62,
+      "production_files": 47,
+      "import_edges": 217,
+      "current_function_bodies": 31,
+      "author_terminal": {
+        "pid": 32050,
+        "pgid": 32050,
+        "exit_code": 0,
+        "seconds": 2.0989919999992708,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    },
+    {
+      "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/hurtactor139-v3-oracle-20261102T121344.276555Z",
+      "comparison_sha256": "7925e334e6a9328ff3bf57c28afa0cea54325b34cda893a538e93a66f4a142bf",
+      "source_files": 62,
+      "production_files": 47,
+      "import_edges": 217,
+      "current_function_bodies": 35,
+      "author_terminal": {
+        "pid": 37426,
+        "pgid": 37426,
+        "exit_code": 0,
+        "seconds": 3.7397414590013796,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    }
+  ],
+  "counts": {
+    "input_parameter_fidelity_cases": 9,
+    "live_known": 2540,
+    "live_None": 9236,
+    "live_nonzero_None": 8771,
+    "aura_known": 18756,
+    "aura_None": 51900,
+    "aura_nonzero_None": 45212,
+    "logical_player_maps": 92,
+    "semantic_ledger_snapshots": 83,
+    "Vec48_rows": 66,
+    "full1076": 9,
+    "inherited_Game2592_bytes": 158112,
+    "positive_regen_events": 27,
+    "zero_regen_steps": 4,
+    "full2123": 42,
+    "inherited_Vec48_nonvalue_bytes": 2200,
+    "damage_calls": 42,
+    "positive_critical_hits": 8,
+    "full922": 32,
+    "successful_casts": 19,
+    "multi_target_casts": 18,
+    "max_targets": 3,
+    "slow_write_operations": 99,
+    "NPC_known": 38940,
+    "NPC_None": 16356,
+    "NPC_nonzero_None": 15044,
+    "NPC_unknown_conserved": 16356,
+    "pickup_known": 5824,
+    "pickup_None": 4032,
+    "pickup_nonzero_None": 3758,
+    "background_vectors_conserved": 160,
+    "positive_Leech_events": 28,
+    "known_packets": 30,
+    "known_packet_bytes": 2093,
+    "deaths": 9
+  },
+  "entry_classification": {
+    "full2123": 42,
+    "full1076": 9,
+    "full922": 32,
+    "target_entries": 83,
+    "prefix_setup_entries": 45,
+    "empty1775": 32,
+    "empty3755": 32,
+    "total_direct_entries": 192,
+    "internal_calls_not_added_to_direct_count": true
+  },
+  "independent_method": [
+    "Only prior reviewed independent review_* functions plus new reviewer Fraction/binary32 heal and shared-ledger code; no author production/checker/runner/builder or original execution.",
+    "Independent fullopening/XP5/firstnew/RNG from frozen input, immutable current data bytes; original snapshots only compared after independent prediction.",
+    "All nine cases independently recomputed: incoming numeric hurt, 42 playerupdates including warmups/postcasts, 32 Thunder casts, death/drop/crit, positive Leech, regeneration cap/keys/stats/owned/live/Aura/shared f64ledger.",
+    "Full physical known/None conservation and stale bytes maintained; original outputs never complete None in reference.",
+    "Fresh v3 input GUID independently produced from NPC432+112; expected/actual controls checked; source AST and JS call use the same explicit frozen input controls."
+  ],
+  "incoming_parameter_proof": {
+    "1076_signature": "(func (;1076;) (type 284) (param i32 f32 i64 i32 i32 i32)",
+    "1076_WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e",
+    "925_WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3",
+    "925_actual_call_local_line": 7809,
+    "925_actual_call_window": [
+      "          i32.store offset=1888",
+      "          local.get 0",
+      "          local.get 35",
+      "          local.get 57",
+      "          i32.const 1",
+      "          i32.const 0",
+      "          local.get 2",
+      "          call 1076"
+    ],
+    "category0_skip_entry_param5_reads": {
+      "first_entry_local5_read_lines": [
+        3398,
+        3401
+      ],
+      "category_guard_lines": [
+        3395,
+        3396,
+        3397
+      ],
+      "default_category0_branch_lines": [
+        3444,
+        3445,
+        3446,
+        3447,
+        3448
+      ],
+      "category0_local5_overwrite_line": 3457,
+      "claim": "category0 skips entryparam5 spelllookup; explicit0 is controlled and does not reproduce925 queueindex"
+    }
+  },
+  "incoming_parameter_source_proof": {
+    "healing": {
+      "checker_sha256": "df19275d2e9d9797bc4c3674d900aef3f17a46f7e8242605e66c3d514cecbef0",
+      "driver_sha256": "8861772a4692d9312efa4c60d3ed3cc912dc0d5af1a85841478e8e0aa73defac",
+      "actual_call": "call('1076',e.research139_heal_incoming1076,G,fv(c.hurt_amount_bits),source,ic.contact_flag,ic.category,ic.spell_id)",
+      "expected_contact_argument": "incoming_control['contact_flag']",
+      "actual_guid": "first actual full1108 NPC432 at +112",
+      "category_and_param5_controlled": 0
+    },
+    "hurtactor": {
+      "checker_sha256": "e5ee1d48d723978479541dd2e1f3e4ebe3af754c40f4ef8ffec8947199bd51b5",
+      "driver_sha256": "a56e408ec6cc8eafa021098a0ea77919b7ab9c93ca7e1751ec97be906f8deb18",
+      "actual_call": "call('1076',e.research139_heal_incoming1076,G,fv(c.hurt_amount_bits),incomingSource,ic.contact_flag,ic.category,ic.spell_id)",
+      "expected_contact_argument": "incoming_control['contact_flag']",
+      "actual_guid": "first actual full1108 NPC432 at +112",
+      "category_and_param5_controlled": 0
+    }
+  },
+  "incoming_parameter_receipts": [
+    {
+      "batch": "healing139-v3-oracle-20261102T121237.785322Z",
+      "id": 0,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "healing139-v3-oracle-20261102T121237.785322Z",
+      "id": 1,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "healing139-v3-oracle-20261102T121237.785322Z",
+      "id": 2,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "healing139-v3-oracle-20261102T121237.785322Z",
+      "id": 3,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "healing139-v3-oracle-20261102T121237.785322Z",
+      "id": 4,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "hurtactor139-v3-oracle-20261102T121344.276555Z",
+      "id": 0,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "hurtactor139-v3-oracle-20261102T121344.276555Z",
+      "id": 1,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "hurtactor139-v3-oracle-20261102T121344.276555Z",
+      "id": 2,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    },
+    {
+      "batch": "hurtactor139-v3-oracle-20261102T121344.276555Z",
+      "id": 3,
+      "independent_control": {
+        "contact_flag": 1,
+        "category": 0,
+        "spell_id": 0,
+        "source_guid": "17379390972089073675"
+      },
+      "expected_equal": true,
+      "actual_equal": true
+    }
+  ],
+  "incoming_control_scope": {
+    "contact_flag": 1,
+    "category": 0,
+    "spell_id": 0,
+    "source": "actual full1108 firstNPC GUID; independent model equals actual bytes",
+    "entry_arguments_instrumented_inside1076": false,
+    "actual_call_bound_by_frozen_driver_and_original_signature": true,
+    "natural925_queueindex_reproduced": false,
+    "full1076_incoming_history_category_callbacks_validated": false
+  },
+  "metadata1466_scope": {
+    "regen": [
+      0,
+      -1,
+      0,
+      1592624
+    ],
+    "Leech": [
+      0,
+      -2,
+      -1
+    ],
+    "arg3_arg4_descriptor_heads_static_only_not_dynamically_sampled": true
+  },
+  "v2_preservation": {
+    "status": "not_accepted_current139_v2_source_parameter_mismatch",
+    "handoff_sha256": "fbc171f9445f5fc20bd81ca7ae8bc156628aacf65727610d1d42c16df8506f37",
+    "all3_review_files_unchanged": true,
+    "author11_and_shared3_original_hashes_rechecked": true,
+    "numeric_equivalence_does_not_replace_input_fidelity": true
+  },
+  "reviewer_owned_terminal": {
+    "pid": 54002,
+    "pgid": 54002,
+    "exit_code": 0,
+    "timed_out": false,
+    "seconds": 18.062200917000155,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "source_before_sha256": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+    "source_after_sha256": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+    "author_executions": 0,
+    "original_executions": 0
+  },
+  "reviewer_owned_terminal_sha256": "d6e5e85650d2f05f03ed113b1d4b6ce05af1a7a4f132575e591b7f60a05baec1",
+  "reviewer_owned_start_sha256": "c43ca116f0e4a480daa8173ae25eb7465ae7f38a5e4b04e5bdfca239966869fd",
+  "prior_review_attempts_excluded": [
+    {
+      "path": "evidence/healing-hurtactor139-v3-review-20261102T122019.746600Z",
+      "label": "reviewer NameError missing re; before independent recomputation; not author discrepancy",
+      "reviewer_source_sha256": "1570385d9166030e5976c6cdef4fb5ed4577fba30bbfb4f7a39e8b8e46476697",
+      "owned_terminal_sha256": "565f83d7e6e623c5147a7e18db5ba98ef8ccdf1499094543f3bdd288965dba58",
+      "review_json_sha256": null
+    },
+    {
+      "path": "evidence/healing-hurtactor139-v3-review-20261102T122041.585838Z",
+      "label": "numeric pass before strengthened static param5 guard; excluded duplicate",
+      "reviewer_source_sha256": "58d1db9b9d16c56011983e7ca8abc391c9771f763bdec7bb575ec463efb14280",
+      "owned_terminal_sha256": "076c05600f33000f0888e3a7fb207876e94bb2aff03b4ac61e47fb9ccaf654a8",
+      "review_json_sha256": "a9eb2a837735a224911eaa692476f072b30a6a6ae7efcb29c36158f5a6b94380"
+    }
+  ],
+  "evidence_layers": {
+    "static_current_body_binding": true,
+    "independent_numeric_recomputation": true,
+    "read_only_saved_original_differential_recheck": true,
+    "new_original_execution": false,
+    "new_author_execution": false,
+    "full2077_physical_state": false,
+    "full1076_history_callback": false,
+    "full884": false
+  },
+  "limitations": [
+    "OnlydefaultWarrior empty-source finite nonfatalhurt/positiveRegen/rank1ThunderLeech domain; incoming controls1/0/0and actualNPC GUID match both sides.",
+    "Category0 param5controlled0 is unconsumed spelllookup payload, not actual925 dynamic330queueindex.",
+    "Incominghistory/category/callback remainsPending; no full1076 projection or complete2077 claim.",
+    "Metadataarg3/4headsareboundtostaticcallersandliterals,notcapturedfunctionarguments.",
+    "SharedledgersemanticG960/G1016/reasonf64totalsandVec48name/iconprojectiononly;full2077physical96key/catalog/buckets/historynotaccepted.",
+    "Controlleddt/clockanddirectcasts;notreal884framecap/AI/full1238success/naturalApp/native/game.",
+    "Knownpacketsorderedsubsequence;complete592/HP169/presentation/physicalBTreepointersunknown.",
+    "Reviewerpreviouslyprovidedstatic1466/2077notes;thisreviewindependentlyrecomputesnumbersusingpriorreferencehelpersandnewheal/ledgerlogic,doesnotexecuteauthorscode."
+  ],
+  "public_registry_changes": 0,
+  "original_executions": 0,
+  "author_production_executions": 0,
+  "new_original_cases": 0
+}

@@ -1,0 +1,691 @@
+{
+  "task": "current139_positive_regeneration_and_hurtactor_Leech_v3_source_parameter_fidelity",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "status": "author_source_faithful_differential_pass_independent_review_pending",
+  "complete_game_restored": false,
+  "original_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "source_files": {
+    "scripts/build_healing139_v3_oracle.py": "f0ccdb415b72d3324c9c6bcaf72352dead8a6b8b466134c524bdd72df5c7def8",
+    "scripts/check_healing139_v3.py": "df19275d2e9d9797bc4c3674d900aef3f17a46f7e8242605e66c3d514cecbef0",
+    "scripts/run_healing139_v3_oracle.mjs": "8861772a4692d9312efa4c60d3ed3cc912dc0d5af1a85841478e8e0aa73defac",
+    "scripts/build_hurtactor139_v3_oracle.py": "f8f35e443a8e1ae06e45fde38c7d7c61319aba2d6e2a6a1e907d71416e1529bb",
+    "scripts/check_hurtactor139_v3.py": "e5ee1d48d723978479541dd2e1f3e4ebe3af754c40f4ef8ffec8947199bd51b5",
+    "scripts/run_hurtactor139_v3_oracle.mjs": "a56e408ec6cc8eafa021098a0ea77919b7ab9c93ca7e1751ec97be906f8deb18"
+  },
+  "source_scope": {
+    "prefix": "resource-only admitted v2 ->fresh2945/1600->full1108->explicitXP5/full4677->actualfirstnewThunder/full1093",
+    "warmup": "full2123 dt1 atnow1 expiresactual1020 and successfully castsrealHumanperception",
+    "damage_input": "actualfull1076(Game,amount,actualNPC_GUID,1,0,0),allthreecontrolsinfrozeninputsandconsumedbybothmodelandrunner;HPnotwritten",
+    "regeneration_input": "explicitcomponentclock/delta over actualhurtHP,allNPCbackgroundunchanged",
+    "hurtactor_input": "controlledactualNPCpairmidpoint/canonicalmapheight;full92232callswithactual2owned/live8/racial andhurtHP",
+    "healing_gate387": 0,
+    "source_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "source_headers_written_or_cleared": false,
+    "racial_disabled": false,
+    "HP_reset_or_written_by_harness": false,
+    "owned_or_RNG_edited": false,
+    "actual_heal_on_kill1600_bits": 0
+  },
+  "rules": [
+    "1466 does not writeHP. Callers2123/913 update actualHP inline and writekeys22/28 around the account call. New modules preserve that separation.",
+    "2123 default no-periodic28 source: request=f32(dt*(regen1576+(now-lastHit>=3?maxHP*extra1620:0))); ifoldHP<maxHP, HP=min(maxHP,oldHP+request+0), keys22/28=ceilnonnegativeHP/max; 1466receives min(max(HP-oldHP,0),request).",
+    "1466 rejects nonpositive amount before accounting; positive amount increments sharedG960 eventID and2077G1016 accepted_count, adds f64 source total, and19598 updates thehealVec48 name/icon/total.",
+    "Current18421 defaultWarrior class5877920+80 is0x3c75c28f (1.5%). Emptyactuallinked12/item8/passive16 owners allow this base; other sources reject.",
+    "913 appliesdamage and accounts min(max(oldNPC_HP,0),actualDamage) first;36520 assigns a sharedG960 eventID,2077 adds the actual rank1Thunder damage-source amount. Then Leech HP=min(maxHP,oldHP+actualDamage*.015),1466(actualHPdelta), then callerHPkeys. Leech uses full damage, not the overkill-capped damage-account amount.",
+    "OutgoingLedger139 extends the narrower heal-onlyledger becauseG960/G1000 also receive damage events. Actualowned80(def5882916,rank1) through8569/30861/26202 gives ability:thunder_clap:r1, independently bound tocurrentformats.",
+    "Realconstructor source-registryG2192=[0,8,0] andsavedhistoryG2204=[0,8,0] are retained, not cleared.1466 skips448Bhisto append at that real sourceguard while2077 andVec48 still execute.",
+    "Static caller parameters, zero-based WASM indexing: Regen param2=0, param3pointee head=-1, param4pointee head=0 withstaticrecord1592624. Leech param2=0,param3pointeehead=-2,param4pointeehead=-1. These fields are metadata fromcurrentcaller body bindings, not dynamically sampled args.",
+    "Regen attribution id/name/icon=regen/Regeneration/Spell_Nature_Rejuvenation; Leech=leech/Leech/Spell_Shadow_LifeDrain02. Bothfinalbreakdownrowsborrow metadata (owns0), nestedcount0."
+  ],
+  "formal_batches": [
+    {
+      "kind": "positive_regeneration_v3",
+      "directory": "evidence/healing139-v3-oracle-20261102T121237.785322Z",
+      "comparison_sha256": "5d773c21620cb1334a816776d129b1cf8859e5d0c2ca0b9605e9585446733e20",
+      "cases": 5,
+      "differences": 0,
+      "counts": {
+        "assertions": 14759,
+        "known_player_fields": 3168,
+        "live_known": 1212,
+        "live_None": 4420,
+        "live_nonzero_None": 4303,
+        "aura_known": 8964,
+        "aura_None": 24828,
+        "aura_nonzero_None": 21596,
+        "inherited_Game2592_bytes": 75168,
+        "breakdown_rows_compared": 28,
+        "positive_heal_events": 25,
+        "zero_heal_steps": 4,
+        "full2123_calls": 29,
+        "expiry1542_1173_paths": 1,
+        "expired_live_events": 1
+      },
+      "full_calls": {
+        "1076": 5,
+        "1093": 5,
+        "1108": 5,
+        "1600": 5,
+        "2123": 34,
+        "2945": 5,
+        "4677": 5
+      },
+      "direct_entry_returns": 64,
+      "source_files": 62,
+      "production_files": 47,
+      "import_edges": 217,
+      "source_before_after_current_match": true,
+      "expected_before_original": true,
+      "original_input_contains_expected": false,
+      "forbidden_model_reads": [],
+      "artifacts_sha256": {
+        "inputs.json": "d96779cd229d1d84da404dea429c8e1e81c285b8e9bb5450c5b4ab2e339cf21a",
+        "expected.json": "0b463ae6a51787d0c9b81381cfcc3f44b8aff09ffa3b9d58a936d832db739956",
+        "config.json": "5ed064641ef25f9a67e02244ee82e3a37c1609048fd2cd7a4ca50997b6c310c7",
+        "manifest.json": "9b70bd57d68135e6571f75f932eec2d2b2714be2b93e275f1d211d7a2b731e7d",
+        "prepared.json": "2ba5002c7206e814875a01bd587c9144f4569afdea49689f4c72c7becd5b9676",
+        "actual.jsonl": "95680d397839f9a456a16b04bc8f45f6c8e311227f781862a85c0f6926ce4dd6",
+        "runtime.json": "5355adced14275544ab84dfc5fef6b67a9f793d8ba3c6bb60ef3824a51c8af6e",
+        "owned-start.json": "91360bdc0b993c9e45070ccff84dc73680bb2bb49ea53407a48fda4266fe8236",
+        "owned-terminal.json": "d703ad4ddb4497e28cc4611b0d1adf8bdb834f60aa7688442cb8f1caed9f20f1",
+        "expectation-read-audit.json": "a06eeffac5f62ed92077b74ee399253a492588e167d19f6e71a10cef6b9efb8a",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "process": {
+        "pid": 32050,
+        "pgid": 32050,
+        "exit_code": 0,
+        "seconds": 2.0989919999992708,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "runtime": {
+        "cases": 5,
+        "fresh_instances": 5,
+        "full_calls": {
+          "1076": 5,
+          "1093": 5,
+          "1108": 5,
+          "1600": 5,
+          "2123": 34,
+          "2945": 5,
+          "4677": 5
+        },
+        "stack_checks": 89,
+        "allocator_calls": 25,
+        "denied_imports": 882,
+        "actual_host_calls": 0,
+        "peak_memory_bytes": 177078272,
+        "memory_cap_bytes": 268435456,
+        "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+        "old_Game_used_as_target": false,
+        "readiness_flags_injected": false,
+        "explicit_dead_marker_fixtures": false,
+        "input_dead_mask_all_zero": true,
+        "full2181_internal_calls_notinstrumented": true,
+        "full26364_35988_25613_calls_notinstrumented": true,
+        "App_or_world_Rc_producer_executed": false,
+        "externref_restored": false,
+        "native_executions": 0,
+        "full_mainloop_frames": 0,
+        "complete_games": 0,
+        "external_clock_components": true,
+        "full2123_callees_intact": true,
+        "internal1238_1542_1173_1466_notinstrumented": true,
+        "HP_hurt_via_actual1076": true,
+        "HP_or_source_headers_written_by_harness": false,
+        "incoming_params_from_frozen_input": true,
+        "output_bytes": 3457944,
+        "error": null
+      },
+      "current_function_bodies_bound": 31,
+      "incoming_control_schema": {
+        "signature": "i32/f32/i64/i32/i32/i32",
+        "param3": "contact_flag",
+        "param4": "category",
+        "param5": "spell_id_or_unused_when_category0",
+        "controlled_values": [
+          1,
+          0,
+          0
+        ],
+        "actual925_param5": "prior330packetqueueindex;currentcategory0doesnotconsumeforlookup",
+        "model_and_original_share_frozen_input": true
+      },
+      "signature1076": [
+        "7f7d7e7f7f7f",
+        ""
+      ],
+      "body1076_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "body925_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91"
+    },
+    {
+      "kind": "hurtactor_Thunder_Leech_and_regeneration_v3",
+      "directory": "evidence/hurtactor139-v3-oracle-20261102T121344.276555Z",
+      "comparison_sha256": "7925e334e6a9328ff3bf57c28afa0cea54325b34cda893a538e93a66f4a142bf",
+      "cases": 4,
+      "differences": 0,
+      "counts": {
+        "assertions": 63662,
+        "initial_live_known": 112,
+        "initial_live_None": 400,
+        "initial_live_nonzero_None": 370,
+        "initial_aura_known": 816,
+        "initial_aura_None": 2256,
+        "initial_aura_nonzero_None": 1968,
+        "inherited_Game2592_bytes": 82944,
+        "NPC_unknown_physically_conserved": 16356,
+        "NPC_known": 38940,
+        "NPC_None": 16356,
+        "NPC_nonzero_None": 15044,
+        "pickup_known": 5824,
+        "pickup_None": 4032,
+        "pickup_nonzero_None": 3758,
+        "positive_leech_events": 28,
+        "known_packets": 30,
+        "known_packet_bytes": 2093,
+        "full922": 32,
+        "successful_casts": 19,
+        "damage_calls": 42,
+        "positive_critical_hits": 8,
+        "multi_target_casts": 18,
+        "max_targets": 3,
+        "deaths": 9,
+        "slow_write_operations": 99,
+        "postcast_regen_positive_events": 2
+      },
+      "full_calls": {
+        "922": 32,
+        "1076": 4,
+        "1093": 4,
+        "1108": 4,
+        "1600": 4,
+        "1775": 32,
+        "2123": 8,
+        "2945": 4,
+        "3755": 32,
+        "4677": 4
+      },
+      "direct_entry_returns": 128,
+      "source_files": 62,
+      "production_files": 47,
+      "import_edges": 217,
+      "source_before_after_current_match": true,
+      "expected_before_original": true,
+      "original_input_contains_expected": false,
+      "forbidden_model_reads": [],
+      "artifacts_sha256": {
+        "inputs.json": "1f01f6228a13962fe8e2fa9775b12d94fdb8145f44c395d5b7a2e0b03893631b",
+        "expected.json": "a60e6f6aaa48c30c0b6e22c693b78c29b6c6d3789037ba83411dc57c8cbff787",
+        "config.json": "dd485f9d7a9fa5cac8f2e1269f46bf9fd677043dfb6de63ed9cef83d078c32f8",
+        "manifest.json": "10a994942d51d739a33be8ee4186209e06447be1613b06bebbb882c060101236",
+        "prepared.json": "f25b336aa0c01984ab6940fa36d11f6d6fa366ce574ab6f70a5cb81441f149eb",
+        "actual.jsonl": "6cc356dcd41e849fab871e1f974ecc7b7f0717c64fbdbf4b7ef18832ce7b8201",
+        "runtime.json": "c804aa2497dc01bd7847b602c27c4f47306c1c3e3b5131b57254932403d7a114",
+        "owned-start.json": "5d68aff5dac7bc3e4788933ea27261589ef68e8061265e52e9338a08fa7e3cf2",
+        "owned-terminal.json": "21400311669abd292f4e56d7876ac2a2075414268ca6c87640424d60b20895ba",
+        "expectation-read-audit.json": "a06eeffac5f62ed92077b74ee399253a492588e167d19f6e71a10cef6b9efb8a",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "process": {
+        "pid": 37426,
+        "pgid": 37426,
+        "exit_code": 0,
+        "seconds": 3.7397414590013796,
+        "pid_missing": true,
+        "pgid_missing": true
+      },
+      "runtime": {
+        "cases": 4,
+        "fresh_instances": 4,
+        "full_calls": {
+          "922": 32,
+          "1076": 4,
+          "1093": 4,
+          "1108": 4,
+          "1600": 4,
+          "1775": 32,
+          "2123": 8,
+          "2945": 4,
+          "3755": 32,
+          "4677": 4
+        },
+        "stack_checks": 148,
+        "allocator_calls": 20,
+        "denied_imports": 882,
+        "actual_host_calls": 0,
+        "peak_memory_bytes": 177078272,
+        "memory_cap_bytes": 268435456,
+        "resource_only_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+        "old_Game_used_as_target": false,
+        "readiness_flags_injected": false,
+        "explicit_dead_marker_fixtures": false,
+        "input_dead_mask_all_zero": true,
+        "full2181_internal_calls_notinstrumented": true,
+        "full26364_35988_25613_calls_notinstrumented": true,
+        "App_or_world_Rc_producer_executed": false,
+        "externref_restored": false,
+        "native_executions": 0,
+        "full_mainloop_frames": 0,
+        "complete_games": 0,
+        "external_clock_components": true,
+        "full922_callees_intact": true,
+        "internal913_2189_notinstrumented": true,
+        "controlled_player_relocation": true,
+        "empty1775_3755_only": true,
+        "actual_positive_hurtactor_leech": true,
+        "HP_or_source_headers_written_by_harness": false,
+        "incoming_params_from_frozen_input": true,
+        "output_bytes": 5709561,
+        "error": null
+      },
+      "current_function_bodies_bound": 35,
+      "incoming_control_schema": {
+        "signature": "i32/f32/i64/i32/i32/i32",
+        "param3": "contact_flag",
+        "param4": "category",
+        "param5": "spell_id_or_unused_when_category0",
+        "controlled_values": [
+          1,
+          0,
+          0
+        ],
+        "actual925_param5": "prior330packetqueueindex;currentcategory0doesnotconsumeforlookup",
+        "model_and_original_share_frozen_input": true
+      },
+      "signature1076": [
+        "7f7d7e7f7f7f",
+        ""
+      ],
+      "body1076_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "body925_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91"
+    }
+  ],
+  "formal_combined_counts": {
+    "fresh_instances": 9,
+    "full2123": 42,
+    "full1076": 9,
+    "full922": 32,
+    "empty1775": 32,
+    "empty3755": 32,
+    "prefix_each2945_1600_1108_4677_1093": 9,
+    "direct_entries": 192,
+    "positive_heal_events": 55,
+    "positive_regen_events": 27,
+    "positive_Leech_events": 28,
+    "outgoing_damage_events": 42,
+    "positive_critical_hits": 8,
+    "NPC_deaths": 9,
+    "slow_write_operations": 99,
+    "declared_differences": 0
+  },
+  "semantic_projection": {
+    "HP_and_max_cap": true,
+    "all72player_keys": true,
+    "all23derived_stats": true,
+    "actual2owned80_andracial": true,
+    "live_Aura_knownNone_andfullphysicalpreservation": true,
+    "sharedG960_G1016": true,
+    "source_reason_f64totals": true,
+    "healVec48_name_icon_total_owns_nestedcount": true,
+    "complete2077_96key_catalog_bucket_layout": false,
+    "complete448event_history": false,
+    "fullknownpacketstream": false,
+    "known_packet_subsequence_in_hurtactor": {
+      "packets": 30,
+      "bytes": 2093
+    }
+  },
+  "static_supplements": [
+    {
+      "path": "evidence/healing139-static-notes-20261102T105949.289697Z/handoff.json",
+      "sha256": "421a8025d4fba4aaad20b8158bb73c813c13490a4d2ead63984cfb5292fba122",
+      "original_executions": 0,
+      "author_production_executions": 0,
+      "postcapture_or_separate_static_only": true
+    },
+    {
+      "path": "evidence/healing139-static-notes-20261102T105949.289697Z/constructor-supplement/proof.json",
+      "sha256": "b6400fe5f387b9d501cfd29af4070a54330d6c581734e821f17d76396cbc0f7a",
+      "original_executions": 0,
+      "author_production_executions": 0,
+      "postcapture_or_separate_static_only": true
+    },
+    {
+      "path": "evidence/healing2077-layout139-static-20261102T112202.159411Z/handoff.json",
+      "sha256": "b3bba4c56f54ed25c6d579fffb5fe9788bfdf6334dbaafd4244ffce655799902",
+      "original_executions": 0,
+      "author_production_executions": 0,
+      "postcapture_or_separate_static_only": true
+    },
+    {
+      "path": "evidence/healing2077-layout139-static-20261102T112202.159411Z/damage-source-supplement/handoff.json",
+      "sha256": "470f68f23c621b4a2fffe5368b6b2bc8b52adea5d4b2ee60c6aaf059cdf2f53b",
+      "original_executions": 0,
+      "author_production_executions": 0,
+      "postcapture_or_separate_static_only": true
+    }
+  ],
+  "retained_prior_studies_excluded": [
+    {
+      "path": "evidence/healing139-oracle-20261102T111734.395190Z",
+      "comparison_sha256": "361edf07760e89c5ef7c6ea6907f385c67fd0c7df0c5a75c126e8aeb458fac3e",
+      "fresh_instances": 1,
+      "full2123": 9,
+      "full1076": 1,
+      "prefix_each": 1,
+      "differences": 0,
+      "note": "Regenpilot, beforestrongerVec48semantic checks."
+    },
+    {
+      "path": "evidence/hurtactor139-oracle-20261102T112751.955655Z",
+      "comparison_sha256": "a0011b2d9e75be078b00c89c438f351923090b1aa17c2c2863face6db0c91ac3",
+      "fresh_instances": 1,
+      "full922": 8,
+      "empty1775": 8,
+      "empty3755": 8,
+      "full2123": 2,
+      "full1076": 1,
+      "prefix_each": 1,
+      "differences": 27,
+      "note": "Preserved failure: HP/key/Leech/damage/death all matched; ledger wronglytreatedG960/G1000asheal-only. Current913/36520/2077/sourceformat rebound beforecorrectedfreshruns."
+    },
+    {
+      "path": "evidence/hurtactor139-oracle-20261102T113116.135063Z",
+      "comparison_sha256": "910da86c1bbd02d73190ca53309364ea64e0fefc548db4a4e4e9bb80274be638",
+      "fresh_instances": 1,
+      "full922": 8,
+      "empty1775": 8,
+      "empty3755": 8,
+      "full2123": 2,
+      "full1076": 1,
+      "prefix_each": 1,
+      "differences": 0,
+      "note": "Correctedfreshpilot;formal4subsequentlyaddedactualownedrank1guardandfourcurrentidentitybodies topre-oraclebuilder."
+    },
+    {
+      "path": "evidence/healing139-oracle-20261102T111900.410155Z",
+      "comparison_sha256": "2e9748feb5a6014752801ca9dcf8b38fe3a204210fc505352056e2faab13def3",
+      "fresh_instances": 5,
+      "full_calls": {
+        "1076": 5,
+        "1093": 5,
+        "1108": 5,
+        "1600": 5,
+        "2123": 34,
+        "2945": 5,
+        "4677": 5
+      },
+      "differences": 0,
+      "note": "Priorformalbeforeexplicitparam3/param4metadata rename;byte-identicalnumericbehaviorretained,notcountedagain. Originalcomparison/handoff/sourcearchivespreserved."
+    },
+    {
+      "path": "evidence/hurtactor139-oracle-20261102T113244.894136Z",
+      "comparison_sha256": "297634b5e68ecf4b8a28b206c5f1188de72e370b8341b4be3d28e5101b3fafde",
+      "fresh_instances": 4,
+      "full_calls": {
+        "922": 32,
+        "1076": 4,
+        "1093": 4,
+        "1108": 4,
+        "1600": 4,
+        "1775": 32,
+        "2123": 8,
+        "2945": 4,
+        "3755": 32,
+        "4677": 4
+      },
+      "differences": 0,
+      "note": "Priorformalbeforeexplicitparam3/param4metadata rename;byte-identicalnumericbehaviorretained,notcountedagain. Originalcomparison/handoff/sourcearchivespreserved."
+    },
+    {
+      "path": "evidence/healing139-oracle-20261102T113942.871601Z",
+      "comparison_sha256": "1028911f7b4ef3ace46eed0098f04dadbf5efbdeedc03605745a055016417ac1",
+      "status": "v2numeric_only_source_parameter_mismatch_notaccepted"
+    },
+    {
+      "path": "evidence/hurtactor139-oracle-20261102T114019.166570Z",
+      "comparison_sha256": "672f1629ab546a9810f6c81f9723bf065cfaa06ff1a66104b68c02be3cb797fb",
+      "status": "v2numeric_only_source_parameter_mismatch_notaccepted"
+    }
+  ],
+  "whole_study_executions_not_formal_coverage": {
+    "fresh_instances": 30,
+    "full2123": 139,
+    "full1076": 30,
+    "full922": 112,
+    "empty1775": 112,
+    "empty3755": 112,
+    "prefix_each2945_1600_1108_4677_1093": 30,
+    "direct_entries": 655
+  },
+  "APIs": {
+    "healing139": "DefaultHealingSources139 / HealingLedger139 / regenerate_player139 / leech_player139",
+    "player_regeneration139": "update_player_regeneration139(PlayerUpdateState139,ledger,now,dt,actualsync/perceptioncallbacks)->state+ledger+healevents",
+    "hurtactor139": "OutgoingLedger139 / resolve_hurtactor_damage139 / cast_thunder_clap_hurtactor139; actualrank1Thunder source only;returnsnewHP/playerkeywrites/ledger/knownNPCdeathpickups"
+  },
+  "unknowns_and_limits": [
+    "v3parameterinputsarefaithfulandexplicit(1,0,0),butthisisacontrolled1076entry,notnatural925contactdispatch;incominghistory/category/callbacksremainPending.",
+    "This removes the explicit fullHP barrier for defaultregeneration and currentThunder913Leech. The new2123 adapter still composes thequiet1238 scheduler; near basic/owned success scheduling andnaturalAI925→2123/full884 integration have not been accepted.",
+    "Hurtactor outgoing attribution is only actual rank1Thunder; basic/cleave/otherabilities requiretheircurrenteventidentity andcaller recovery. NonzerohealOnKill1600/11033,overheal32/33,gate>4,nonemptylinked/item/passive sources,shields,periodic28 andrevival/fatal paths remainoutsidecurrentdomain.",
+    "G1000 semantic source totals/counters are validated; complete96key ordering,optionalCow flags,related lists,catalog140/112 ownership,Deque16/Vec40 buckets,pointers/padding/capacities are not predicted. Staticrecovery oftheselayouts isnotdynamicacceptance.",
+    "Vec48 name/icon/total/owns/nestedcount arevalidated;all48Bphysicalpadding,heapaddresses andcompleteUI/account packet streams remainunknown. Saved448historyisemptybyactualconstructor sourceguard,notageneralhistoryimplementation.",
+    "Regen5 usesfixedseed0 andcontrolledamount/dt. Hurtactor4 usesseed11twopairs/seed38/seed69 withcontrolledplayerplacement anddirectcasts. No naturalinput/AI/full884frame/nativeWindows/network/save/Android/completegame execution.",
+    "Resource-only context is admitted, notApp/worldRc/bootstrap/externref producer. Existingpackages/saves/alloldfrozenfiles/publicregistries/Git untouched.",
+    "Independentreviewpending;nofullautoorgamecompletionclaim.",
+    "Explicitparam3/param4metadata isstaticcallerproofonly;theoriginalrunnerdoesnotinstrument1466entryarguments."
+  ],
+  "metadata_revision2": {
+    "reason": "Remove ambiguous source_tail_tag by explicit zero-based WASM parameter pointee heads. Numeric/ledger projection unchanged;fresh5/4 sourcefrozen runs required and completed.",
+    "parameter_indexing": "WASM0=Game,1=amount,2=resolvedspellID,3=descriptorpointerA,4=descriptorpointerB",
+    "static_caller_metadata_not_dynamic_argument_capture": true,
+    "regen": {
+      "param2_resolved_spell_id": 0,
+      "arg3_descriptor_head": -1,
+      "arg4_descriptor_head": 0,
+      "arg4_static_record_pointer": 1592624
+    },
+    "leech": {
+      "param2_resolved_spell_id": 0,
+      "arg3_descriptor_head": -2,
+      "arg4_descriptor_head": -1
+    },
+    "prior_handoff_path": "evidence/hurtactor139-oracle-20261102T113244.894136Z/task-handoff.json",
+    "prior_handoff_sha256": "41b1236495ec9c45a402b935f6849927bdc8c2ed4633dd853b78bd37c3bdfdbf",
+    "prior_exact11_archive": "evidence/hurtactor139-oracle-20261102T113244.894136Z/author-revision1",
+    "prior_archive_receipt_sha256": "b583dabe0ee043f05a7a97d7baeaf41b051b5cd63093f282133470f7dd77ced4",
+    "prior_comparisons_not_modified": true
+  },
+  "frozen_shared_core_unchanged": {
+    "reconstruction/core_spec/healing139.py": "6ad9ccf9c161c4bacfa7532dacc53bbf555d14db688e0c7cd85c94f54cb9fc07",
+    "reconstruction/core_spec/player_regeneration139.py": "5fb0ce88fab837ed023acfc6315176262c1d76cddf703c6361b652b58721be49",
+    "reconstruction/core_spec/hurtactor139.py": "43000e70b8c27ea208683d80def2cc0f81c07afb42db2331fe381983b50094d4"
+  },
+  "source_fidelity_revision3": {
+    "reason": "v2notaccepted:actualcontact0/category0/param5=1differedfrommodeledcontact1;numeric-equivalenceisnotinputfidelity",
+    "v2_status": "numeric_only_observations_source_fidelity_not_accepted",
+    "v2_author11_unchanged": true,
+    "v2_handoff_sha256": "853c2ecc932ac946586f6166f083295fb9b4eb522d07f87609f2082f70d385b5",
+    "v2_independent_handoff": "evidence/healing-hurtactor139-v2-fidelity-20261102T120709.762548Z/task-handoff.json",
+    "v2_independent_handoff_sha256": "fbc171f9445f5fc20bd81ca7ae8bc156628aacf65727610d1d42c16df8506f37",
+    "new_input_control": {
+      "contact_flag": 1,
+      "category": 0,
+      "spell_id": 0
+    },
+    "parameter_indexing": "0Game,1amount,2sourceGUID,3contactFlag,4category,5spellIDorinactivepayload",
+    "actual925_ordinary_call": "1076(Game,damage,GUID,1,0,local2),where local2 is prior330queueindex",
+    "param5_scope": "v3explicitcontrolled0;category0branchdoesnotconsumetheentryparam5forspelllookup;notaclaimofduplicatingactual925dynamicqueueindex",
+    "all9_parameters_match": true,
+    "argument_receipts": [
+      {
+        "batch": "positive_regeneration_v3",
+        "id": 0,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "positive_regeneration_v3",
+        "id": 1,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "positive_regeneration_v3",
+        "id": 2,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "positive_regeneration_v3",
+        "id": 3,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "positive_regeneration_v3",
+        "id": 4,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "hurtactor_Thunder_Leech_and_regeneration_v3",
+        "id": 0,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "hurtactor_Thunder_Leech_and_regeneration_v3",
+        "id": 1,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "hurtactor_Thunder_Leech_and_regeneration_v3",
+        "id": 2,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      },
+      {
+        "batch": "hurtactor_Thunder_Leech_and_regeneration_v3",
+        "id": 3,
+        "expected": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "observed": {
+          "contact_flag": 1,
+          "category": 0,
+          "spell_id": 0,
+          "source_guid": "17379390972089073675"
+        },
+        "equal": true
+      }
+    ],
+    "static_signature_and_callsite_proof_in_both_manifests": true,
+    "model_and_native_take_same_frozen_input": true,
+    "no_expected_state_passed_to_original": true,
+    "incoming_history_category_callback_not_validated": true
+  }
+}

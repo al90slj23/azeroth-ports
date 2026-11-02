@@ -1,0 +1,162 @@
+{
+  "status": "not_accepted_current139_v2_source_parameter_mismatch",
+  "numeric_projection_status": "matched_with_independent_reference_but_not_formal_source_input_acceptance",
+  "reviewer": "/root/growth139_world",
+  "author": "/root/growth139_review",
+  "author_handoff_sha256": "853c2ecc932ac946586f6166f083295fb9b4eb522d07f87609f2082f70d385b5",
+  "author_files": {
+    "reconstruction/core_spec/healing139.py": "6ad9ccf9c161c4bacfa7532dacc53bbf555d14db688e0c7cd85c94f54cb9fc07",
+    "reconstruction/core_spec/player_regeneration139.py": "5fb0ce88fab837ed023acfc6315176262c1d76cddf703c6361b652b58721be49",
+    "reconstruction/core_spec/hurtactor139.py": "43000e70b8c27ea208683d80def2cc0f81c07afb42db2331fe381983b50094d4",
+    "scripts/build_healing139_oracle.py": "e39617243ea4d66a2a49594447016a639d74ad3ed0d57d8afb2afa777096a0e9",
+    "scripts/check_healing139.py": "e2949114fa2b2c9f44946faad15b8bdd8e8abf8bea832ce8fe6ee2385df4eeca",
+    "scripts/run_healing139_oracle.mjs": "a17673b90649a3f3e6a3089f618395cc764b35858bab746264f40a477938e325",
+    "scripts/build_hurtactor139_oracle.py": "dfabe0080a48cbf5c79684e89cc58a2996260a3ba75270acfab1b3e63da4b322",
+    "scripts/check_hurtactor139.py": "4ab409d41966fc00ac5935ba1d89b5cf4511d7a153d0e8f9cd27f1664dbc8b34",
+    "scripts/run_hurtactor139_oracle.mjs": "4f696dd0f8531282e5150d1cb845faa21489be65a3a526275e85397a9731bff1",
+    "reports/2026-11-02-healing-hurtactor0139-v2.json": "ca6a4c031d96cc62d6582296bf97f6144bee2eeea65a0dd8942ccf2172b60c7b",
+    "reports/2026-11-02-healing-hurtactor0139-v2.md": "58a509e030dc7df731b804125f73d6add8067b3741d5c8807e3eeebb6c29907e"
+  },
+  "reviewer_script_sha256": "3c9f3d80e3a05e1c7a14ead00936ed80527306a9188b93ef51ae3642a48c5f0b",
+  "numeric_receipt": {
+    "path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/healing-hurtactor139-review-20261102T115849.005296Z/review/review.json",
+    "sha256": "7cdd2ba7bb1e2cc12f25a4d976421099716594b841c8ad6e5fcf8c8687906d83",
+    "owned_terminal_path": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/healing-hurtactor139-review-20261102T115849.005296Z/owned-terminal.json",
+    "owned_terminal_sha256": "80166b36cc4484fd8cb60bf8887807533e8b74ddd19f8d06bf0af7d854498fc3",
+    "reference_sha256": "e3f97bc19ef56651ee4a67ac176689474db36621417b6ab30b7aea01ce5c3dc3",
+    "source_sha256": "bcb255b5a12669b86b0da66b7dbbf769459c5d516bc07febb144e6fad9d8497c",
+    "counts": {
+      "live_known": 2540,
+      "live_None": 9236,
+      "live_nonzero_None": 8771,
+      "aura_known": 18756,
+      "aura_None": 51900,
+      "aura_nonzero_None": 45212,
+      "logical_player_maps": 92,
+      "semantic_ledger_snapshots": 83,
+      "Vec48_rows": 66,
+      "full1076": 9,
+      "inherited_Game2592_bytes": 158112,
+      "positive_regen_events": 27,
+      "zero_regen_steps": 4,
+      "full2123": 42,
+      "inherited_Vec48_nonvalue_bytes": 2200,
+      "damage_calls": 42,
+      "positive_critical_hits": 8,
+      "full922": 32,
+      "successful_casts": 19,
+      "multi_target_casts": 18,
+      "max_targets": 3,
+      "slow_write_operations": 99,
+      "NPC_known": 38940,
+      "NPC_None": 16356,
+      "NPC_nonzero_None": 15044,
+      "NPC_unknown_conserved": 16356,
+      "pickup_known": 5824,
+      "pickup_None": 4032,
+      "pickup_nonzero_None": 3758,
+      "background_vectors_conserved": 160,
+      "positive_Leech_events": 28,
+      "known_packets": 30,
+      "known_packet_bytes": 2093,
+      "deaths": 9
+    }
+  },
+  "findings": [
+    {
+      "runner": "scripts/run_healing139_oracle.mjs",
+      "runner_sha256": "a17673b90649a3f3e6a3089f618395cc764b35858bab746264f40a477938e325",
+      "checker": "scripts/check_healing139.py",
+      "checker_sha256": "e2949114fa2b2c9f44946faad15b8bdd8e8abf8bea832ce8fe6ee2385df4eeca",
+      "original_callsite": {
+        "line": 46,
+        "source": "call('1076',e.research139_heal_incoming1076,G,fv(c.hurt_amount_bits),source,0,0,1);",
+        "actual_param3_contact_flag": 0,
+        "actual_param4_category": 0,
+        "actual_param5_spell_id": 1,
+        "actual_NPC_GUID": true
+      },
+      "model_callsite": {
+        "line": 75,
+        "source": "resolve_prefix139(incoming,f.from_float(amount),source_guid=guid139(g.units432_cells[0]),contact_flag=1)",
+        "modeled_contact_flag": 1
+      },
+      "input_parameter_equal": false
+    },
+    {
+      "runner": "scripts/run_hurtactor139_oracle.mjs",
+      "runner_sha256": "4f696dd0f8531282e5150d1cb845faa21489be65a3a526275e85397a9731bff1",
+      "checker": "scripts/check_hurtactor139.py",
+      "checker_sha256": "4ab409d41966fc00ac5935ba1d89b5cf4511d7a153d0e8f9cd27f1664dbc8b34",
+      "original_callsite": {
+        "line": 51,
+        "source": "call('1076',e.research139_heal_incoming1076,G,fv(c.hurt_amount_bits),incomingSource,0,0,1);",
+        "actual_param3_contact_flag": 0,
+        "actual_param4_category": 0,
+        "actual_param5_spell_id": 1,
+        "actual_NPC_GUID": true
+      },
+      "model_callsite": {
+        "line": 47,
+        "source": "resolve_prefix139(incoming,f.from_float(amount),source_guid=guid139(g.units432_cells[0]),contact_flag=1)",
+        "modeled_contact_flag": 1
+      },
+      "input_parameter_equal": false
+    }
+  ],
+  "decision": "Actual1076 contactFlag0/category0/spellID1 is not the model contactFlag1 input. Finite default empty-source HP/lastHit/key/heal totals matched,but that does not establish input fidelity or accept v2 as a completed reconstruction domain. Await newv3 matching inputs and freshformal5+4.",
+  "parameter_metadata1466": {
+    "regen": {
+      "param2_spell_id": 0,
+      "param3_pointee_head": -1,
+      "param4_pointee_head": 0,
+      "static_record": 1592624
+    },
+    "Leech": {
+      "param2_spell_id": 0,
+      "param3_pointee_head": -2,
+      "param4_pointee_head": -1
+    },
+    "validation": "Currentcaller/28155/staticliteral bindingsonly;notdynamicargsampling."
+  },
+  "preserved": {
+    "prior_numeric_receipts_unchanged": true,
+    "author11_andrevision1_unchanged": true,
+    "original_failed_hurtactor_a0011_preserved": true,
+    "clock7_unchanged": true
+  },
+  "scope": [
+    "Numericreferencecovered42full2123+9full1076+32full922 asstored observations;45prefixsetup/64emptyconsumersareseparate. Reviewercreated0neworiginalcalls.",
+    "27positiveRegen/28positiveLeech/42damageevents,cap/key22/28,f32order/sharedG960/G1016/semanticf64reasonTotals/Vec48nameicon matched inthosenumericprojections.",
+    "Incomingcategory/history/callback areoutsidev2comparison;contact0vs1canselectdifferentsemanticbranches. Numericcoincidenceisnotanacceptancesubstitute.",
+    "SourceSpellID/param3/param4metadataarestaticproofonly. No full2077physical96key/catalog/bucket/Vec448implementationorfull884/native/gameaccepted."
+  ],
+  "reviewer_original_executions": 0,
+  "reviewer_author_module_checker_runner_builder_executions": 0,
+  "reviewer_original_target_calls": 0,
+  "author_files_modified": false,
+  "requires_v3": true,
+  "final_verdict_evidence": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/healing-hurtactor139-v2-fidelity-20261102T120709.762548Z",
+  "final_verdict_evidence_sha256": "ab9067b6a76643b7988f1b709943a21f5d60b750f303acab5f1e6afae20da1a7",
+  "reviewer_owned_terminal": {
+    "pid": 14515,
+    "pgid": 14515,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 0.07104366700150422
+  },
+  "reviewer_owned_terminal_sha256": "400f5e743c054e1cee9089396f73a0699f201d1a11f584c6da109eb2098800e2",
+  "reviewer_numeric_owned_terminal_sha256": "80166b36cc4484fd8cb60bf8887807533e8b74ddd19f8d06bf0af7d854498fc3",
+  "prior_numeric_receipts_excluded": [
+    {
+      "directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/healing-hurtactor139-review-20261102T115257.348735Z",
+      "status": "reviewer_only_failure_wrong_prior_reference_height_API_not_author_failure"
+    },
+    {
+      "directory": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/evidence/healing-hurtactor139-review-20261102T115512.306396Z",
+      "status": "prior_numeric_match_beforefinalruntime/archivechecks_not_formal_acceptance"
+    }
+  ],
+  "pending_action": "v3 mustalignactual1076inputandmodeledinput,freeze newsourceclosure,andrunfresh5+4;v2remainsnotaccepted."
+}
