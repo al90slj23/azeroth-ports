@@ -1,0 +1,9 @@
+# Official0.139.1 acquisition and static identity
+
+Official metadata checked at 2026-11-02T13:28:03.744843+00:00 reports0.139.1. New Windows and Web bytes were downloaded into the4T research archive, without replacing any fixed139 experiment, installed package or save.
+
+Native executable:150,633,472B, SHA `1c0912276637a41a1a971886bb74626577d021af55a313128f85fdbfcc3b2f1d`, matching publisher size and SHA. Web WASM:92,537,579B, locally computed SHA `8831b4a21314cefd0b9f56dcb5681ac822a9ee30770ab1acae473f9e8f2aec71`; no independent publisher WASM digest is claimed. Acquisition before/after manifest and HTML agree. Actual Windows and Web instruction/pointer/length consumers both bind nine-byte build `b89633f9b`; adjacent branding alone is not used as proof.
+
+The new single full WABT profile validates the module and indexes177,148 defined functions /882 function imports. Its completed read-only SQLite integrity check is ok. This is47 more defined functions than fixed139, not47 restored game features. Profile `evidence/wasm01391-profile-20261102T133454.115329Z/manifest.json`, SHA `6d77e31ccf88ba5106524556a131614a7de385502fd5da5794063508190982fc`; identity `evidence/branding01391-identity-20261102T133938.757910Z/identity.json`, SHA `faf432f45518700f9ef2726a2fa3c280bd7ee5ec2337df309ce8db3a96f830b0`; acquisition `originals/official-release-v2-20261102T133059.984802Z/release-acquisition.json`, SHA `73c3bcb6ede42adf40a41ef8f73c6d1cb422a20f6d421fcc24451244df797cca`.
+
+The release notes describe menu click/scroll propagation and Linux Wine/Proton alt-tab fixes. They are source statements, not our runtime verification. Semantic body/data/resource/protocol differences remain to be checked. New1391 runtime acceptance is0; no139 fixture, Native emulation, clock fragment or continuous experiment is transferred. Ongoing139 experiments retain original SHA and inputs.

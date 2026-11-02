@@ -1,0 +1,689 @@
+{
+  "task": "current139_actual_native_scalar_instruction_emulation_and_intact_WASM25511",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "author_validated": true,
+  "independent_review_pending": true,
+  "formal_directory": "evidence/native-upgrade139-full-20261102T124511.825553Z",
+  "comparison_sha256": "cc2da65bc3266331971c5adee19c3576073982e12020b5016c7336052d9a3e2a",
+  "prepared_sha256": "b7eafad241fc12f5d7134540a68cbb9db0db3c17a9bce82f4633363e129f912b",
+  "native_identity": {
+    "file": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-release-20261102T011227.335145Z/windows-0.139.0/AzerothSurvivors.exe",
+    "sha256": "0e8e314df4d78ab211b1bef5c48d78d713ed64260894af342f998d298d74d274",
+    "start": "0x145f64cc0",
+    "end_exclusive": "0x145f64ec1",
+    "bytes": 513,
+    "code_sha256": "ea9dc1a05053d7b28fd70a1af296556e92df40408b3da9891b66ab97635d7d25",
+    "pdata_match": [
+      354893,
+      [
+        100027584,
+        100028097,
+        128792788
+      ]
+    ],
+    "original_bytes_patched": false
+  },
+  "wasm_identity": {
+    "file": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/originals/official-release-20261102T011227.335145Z/latest-wenilla_bg.wasm",
+    "sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+    "function": 25511,
+    "type": "(i32,i32,i32)->f32",
+    "exports_only_changed": true,
+    "module_sha256": "32c9cf4efc86df98defd6f14d20c1e154475986d032614e4daae21fa2910a8bc"
+  },
+  "formal_counts": {
+    "unique_logical_fixtures": 2150,
+    "native_instruction_emulation_calls": 2150,
+    "full_WASM25511_entries": 2150,
+    "Native_fresh_emulators": 2150,
+    "WASM_fresh_instances": 1,
+    "negative_harness_attempts_excluded": 3,
+    "Windows_whole_application_runs": 0,
+    "native_damage_AI_mainloop_entries": 0,
+    "full_WASM_mainloop_entries": 0,
+    "differences": 0,
+    "assertions": 27911
+  },
+  "counts": {
+    "assertions": 27911,
+    "native_instruction_emulation_calls": 2150,
+    "native_instructions": 48335,
+    "native_data_reads": 13750,
+    "native_owner_None_cells": 114840,
+    "native_NaN_input_or_output_classification_only": 60,
+    "full_WASM25511_calls": 2150,
+    "WASM_NaN_input_or_output_classification_only": 60,
+    "kind0": 50,
+    "input_NaN_cases": 60,
+    "kind1": 110,
+    "kind2": 1770,
+    "kind3": 110,
+    "kind4": 110,
+    "NaN_input_or_output_classification_only": 60,
+    "harness_negative_guard_probes": 3
+  },
+  "kind_tier_counts": [
+    {
+      "kind": 0,
+      "tier": 0,
+      "cases": 10
+    },
+    {
+      "kind": 0,
+      "tier": 1,
+      "cases": 10
+    },
+    {
+      "kind": 0,
+      "tier": 2,
+      "cases": 10
+    },
+    {
+      "kind": 0,
+      "tier": 3,
+      "cases": 10
+    },
+    {
+      "kind": 0,
+      "tier": 4,
+      "cases": 10
+    },
+    {
+      "kind": 1,
+      "tier": 0,
+      "cases": 22
+    },
+    {
+      "kind": 1,
+      "tier": 1,
+      "cases": 22
+    },
+    {
+      "kind": 1,
+      "tier": 2,
+      "cases": 22
+    },
+    {
+      "kind": 1,
+      "tier": 3,
+      "cases": 22
+    },
+    {
+      "kind": 1,
+      "tier": 4,
+      "cases": 22
+    },
+    {
+      "kind": 2,
+      "tier": 0,
+      "cases": 354
+    },
+    {
+      "kind": 2,
+      "tier": 1,
+      "cases": 354
+    },
+    {
+      "kind": 2,
+      "tier": 2,
+      "cases": 354
+    },
+    {
+      "kind": 2,
+      "tier": 3,
+      "cases": 354
+    },
+    {
+      "kind": 2,
+      "tier": 4,
+      "cases": 354
+    },
+    {
+      "kind": 3,
+      "tier": 0,
+      "cases": 22
+    },
+    {
+      "kind": 3,
+      "tier": 1,
+      "cases": 22
+    },
+    {
+      "kind": 3,
+      "tier": 2,
+      "cases": 22
+    },
+    {
+      "kind": 3,
+      "tier": 3,
+      "cases": 22
+    },
+    {
+      "kind": 3,
+      "tier": 4,
+      "cases": 22
+    },
+    {
+      "kind": 4,
+      "tier": 0,
+      "cases": 22
+    },
+    {
+      "kind": 4,
+      "tier": 1,
+      "cases": 22
+    },
+    {
+      "kind": 4,
+      "tier": 2,
+      "cases": 22
+    },
+    {
+      "kind": 4,
+      "tier": 3,
+      "cases": 22
+    },
+    {
+      "kind": 4,
+      "tier": 4,
+      "cases": 22
+    }
+  ],
+  "all114_actual_definitions_count_scalar": {
+    "definitions": 114,
+    "tiers_each": 5,
+    "count0_1_2_each": true,
+    "actual_exec11_special_cap2": [
+      "seal_fate",
+      "soul_fire",
+      "lightwell",
+      "faerie_fire"
+    ],
+    "other_exec11_cap0": [
+      "bloodrage",
+      "redemption",
+      "hunters_mark",
+      "polymorph"
+    ],
+    "nonexec11_cap12": true,
+    "definition_names_and_execution_matched_by_slug_not_index": true
+  },
+  "coefficient_table_words": [
+    [
+      1043878380,
+      1048576000,
+      1051595899,
+      1055622431,
+      1059481190
+    ],
+    [
+      1032805417,
+      1036831949,
+      1040522936,
+      1043207291,
+      1047233823
+    ],
+    [
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      1039516303,
+      1043878380,
+      1048576000,
+      1051931443,
+      1056964608
+    ],
+    [
+      1041865114,
+      1046562734,
+      1050253722,
+      1053609165,
+      1058642330
+    ]
+  ],
+  "Native_table_VAs": [
+    "0x147a1fc5c",
+    "0x147a1fc88",
+    "0x147a1fcb8",
+    "0x147a1fce8",
+    "0x147a1fd18"
+  ],
+  "WASM_table_addresses": [
+    5405004,
+    5405040,
+    5405076,
+    5405112,
+    5405148
+  ],
+  "coefficient_bytes_match": 100,
+  "partial_owner_ABI": [
+    {
+      "kind": 0,
+      "Native_offset": 36,
+      "WASM_offset": 32,
+      "type": "uint32",
+      "other_owned_bytes": "None"
+    },
+    {
+      "kind": 1,
+      "Native_offset": 20,
+      "WASM_offset": 16,
+      "type": "binary32",
+      "other_owned_bytes": "None"
+    },
+    {
+      "kind": 2,
+      "Native_offset": 24,
+      "WASM_offset": 20,
+      "type": "uint32",
+      "other_owned_bytes": "None"
+    },
+    {
+      "kind": 3,
+      "Native_offset": 28,
+      "WASM_offset": 24,
+      "type": "binary32",
+      "other_owned_bytes": "None"
+    },
+    {
+      "kind": 4,
+      "Native_offset": 32,
+      "WASM_offset": 28,
+      "type": "binary32",
+      "other_owned_bytes": "None"
+    }
+  ],
+  "Native_definition_pointer": "owner+0:u64 -> actual114x120 definition; execByte117; nameptr0/nameLen8 when exec11 only",
+  "WASM_definition_pointer": "owner+0:u32 -> actual114x88 definition; execByte84; slugptr12/nameLen16",
+  "Win64_controlled_call": {
+    "RCX": "state",
+    "DL": "kind0..4",
+    "R8": "tier0..4 zero extended",
+    "return": "XMM0 low32",
+    "entry_RSP_mod16": 8,
+    "MXCSR": "0x1f80",
+    "nonvolatile_GPR8_and_XMM10_preserved": true,
+    "higher_result_lanes_and_CPU_flags_claimed": false
+  },
+  "expected": {
+    "Fraction_exact_rational_binary32_round_each_operation": true,
+    "independent_of_Unicorn_WASM_execution": true,
+    "expected_written_and_hashed_before_both_engines": true,
+    "runtime_outputs_not_supplied": true,
+    "static_original_tables_and_name_execution_data_supplied": true,
+    "read_audit": {
+      "opened": [],
+      "forbidden": [],
+      "static_manifest_data_supplied": true,
+      "no_runtime_output_supplied": true
+    },
+    "result_class_counts": {
+      "finite": 1840,
+      "zero": 290,
+      "infinity": 20
+    },
+    "NaN_cases_classification_only": 60,
+    "other_cases_strict_result_bits": 2090
+  },
+  "Native_instrumentation": {
+    "original_PE_pages": 15,
+    "page_bytes": 4096,
+    "valid_static_instructions": 108,
+    "unique_valid_PC_boundaries_observed": 94,
+    "instructions": 48335,
+    "data_read_events": 13750,
+    "data_read_bytes": 67090,
+    "read_source_counts": {
+      "original_switch5": 2150,
+      "owned_consumed_field": 2150,
+      "original_scalar": 760,
+      "original_upgrade_table_element": 2150,
+      "initialized_return_address": 2150,
+      "owned_definition_pointer": 1770,
+      "actual_definition_exec117": 1770,
+      "actual_definition_name_fatptr": 320,
+      "actual_definition_slug": 530
+    },
+    "all_consumed_owned_bytes_known": true,
+    "owned_None_cells_not_consumed": 114840,
+    "all_guest_writes_denied": true,
+    "original_PE_pages_all_unchanged": true,
+    "owner_page_and_stack_all_unchanged": true,
+    "function_entry_or_ret_sentinel_only": true
+  },
+  "negative_guard_probes": [
+    {
+      "probe": "uninitialized_owner",
+      "case": 0,
+      "instructions_before_stop": 9,
+      "result_unknown": true,
+      "returned": false,
+      "violation": [
+        {
+          "reason": "Uninitialized_or_out_of_whitelist_read",
+          "PC": 5468736738,
+          "address": 4294967588,
+          "size": 4
+        }
+      ],
+      "guest_writes": []
+    },
+    {
+      "probe": "invalid_variant",
+      "case": 1,
+      "instructions_before_stop": 4,
+      "result_unknown": true,
+      "returned": false,
+      "violation": [
+        {
+          "reason": "Uninitialized_or_out_of_whitelist_read",
+          "PC": 5468736718,
+          "address": 5496767924,
+          "size": 4
+        }
+      ],
+      "guest_writes": []
+    },
+    {
+      "probe": "out_of_range_tier",
+      "case": 2,
+      "instructions_before_stop": 13,
+      "result_unknown": true,
+      "returned": false,
+      "violation": [
+        {
+          "reason": "Forbidden_call_syscall_or_trap",
+          "address": 5468737210,
+          "assembly": "CALL 0x1464ce413"
+        }
+      ],
+      "guest_writes": []
+    }
+  ],
+  "runtimes": {
+    "native": {
+      "kind": "Unicorn2.1.4_actual_original_x86_64_instruction_emulation",
+      "native_function_calls_completed": 2150,
+      "native_function_attempts": 2150,
+      "harness_negative_guard_probes": 0,
+      "native_instructions": 48335,
+      "Unicorn_version": "2.1.4",
+      "core_version": [
+        2,
+        1,
+        33621247
+      ],
+      "Unicorn_library": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/unicorn139-2.1.4/venv/lib/python3.14/site-packages/unicorn/lib/libunicorn.2.dylib",
+      "Unicorn_library_sha256": "7207c8e3d7a63118fb0bca73e01816797fd51b1d8a39a4cbc7abfd562ee59c85",
+      "function_bytes": 513,
+      "original_code_patched": false,
+      "Windows_application_executions": 0,
+      "Windows_syscalls": 0,
+      "guest_host_calls": 0,
+      "guest_network_calls": 0,
+      "guest_saves": 0,
+      "PC_restricted_to_original_function_or_ret_sentinel": true,
+      "all_guest_writes_forbidden": true,
+      "all_reads_initialized_or_original_PE_bytes": true,
+      "error": null
+    },
+    "wasm": {
+      "kind": "intact_current139_fullWASM25511_export_only",
+      "full25511_calls": 2150,
+      "fresh_instances": 1,
+      "imports_denied": 882,
+      "actual_host_calls": 0,
+      "memory_bytes": 33554432,
+      "memory_cap_bytes": 67108864,
+      "heap_cap_mib": 512,
+      "owner_page_each_call_unchanged": true,
+      "outside_owner_page_batch_hash_unchanged": true,
+      "full_mainloop_calls": 0,
+      "Windows_application_executions": 0,
+      "error": null
+    }
+  },
+  "owned_processes": {
+    "native": {
+      "pid": 89185,
+      "pgid": 89185,
+      "exit_code": 0,
+      "seconds": 2.3035999999992782,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "wasm": {
+      "pid": 89212,
+      "pgid": 89212,
+      "exit_code": 0,
+      "seconds": 0.30978995799887343,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "native-guards": {
+      "pid": 89217,
+      "pgid": 89217,
+      "exit_code": 0,
+      "seconds": 0.12650479199874098,
+      "pid_missing": true,
+      "pgid_missing": true
+    }
+  },
+  "sources": {
+    "reconstruction/core_spec/__init__.py": "2d4def898123e75c5e15d0586ccaedb98017833663f6cbefd13c73991e0502e2",
+    "reconstruction/core_spec/binary32.py": "7a2cba21a680d30986c0ff730348bd2f29ef6f412cbb204ceaf730a3112ed482",
+    "reconstruction/core_spec/native_upgrade139.py": "179dcf3e6bd509178d4bc24bc82eb398df79fd2c068ecc9ee1468ac2b6e6bd37",
+    "reconstruction/core_spec/upgrade_values.py": "aaefe8bca626a25589b51f454a20ff1b9654c77f33e5a23e32930444e95efc00",
+    "scripts/build_native_upgrade139_oracle.py": "b3857abb4e4314301e014e7e05f735d604b01ac6ebc5a7f06661f6d7e71d20f3",
+    "scripts/check_native_upgrade139.py": "0ecf611e42a9bd5fb51fc031154b1c61ae95aaa83a90a2e0ad5bcc85b690500c",
+    "scripts/incoming139_tools.py": "aadbff70efaff76f768aa1402d58f61cf151863a147818dce9090b37880de38c",
+    "scripts/production_closure135.py": "4b72a8574ee9f79bab9bc5316dde5905feb6ec85e0a5f89fd7687162ce97d417",
+    "scripts/run_native_upgrade139_unicorn.py": "f7ca4dc82e7433856b8f967a22f3249770d45cc1aa9e2155049fb7007c8a367d",
+    "scripts/run_native_upgrade139_wasm.mjs": "446c8b2324ea5bef062c577d1f45d71e241848b6bea9fcdd500d666bd2266983",
+    "scripts/source_closure137.py": "71468c12942e0b2c81631818bb5bf22dea306d45c54dc8b4600c7287d04fe6de",
+    "scripts/wasm134_profile.py": "ecbdc939fe1cad8b240a6d5f6645a96b54fe69b87b69ee54ab39290d14969cf9",
+    "scripts/wasm139_profile.py": "a662a064a0753f7e9e1ea1dfce12d1cab23e037095fdd6214cd335f283ec584c",
+    "scripts/wasm_index.py": "750f333c6a4ba088494e309259d8065fead9344870d4f3b26ba3227046bc085b"
+  },
+  "source_files": 14,
+  "source_import_edges": [
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/__init__.py",
+      "reconstruction/core_spec/upgrade_values.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "reconstruction/core_spec/upgrade_values.py",
+      "reconstruction/core_spec/binary32.py"
+    ],
+    [
+      "scripts/build_native_upgrade139_oracle.py",
+      "scripts/incoming139_tools.py"
+    ],
+    [
+      "scripts/check_native_upgrade139.py",
+      "reconstruction/core_spec/__init__.py"
+    ],
+    [
+      "scripts/check_native_upgrade139.py",
+      "reconstruction/core_spec/native_upgrade139.py"
+    ],
+    [
+      "scripts/check_native_upgrade139.py",
+      "scripts/build_native_upgrade139_oracle.py"
+    ],
+    [
+      "scripts/check_native_upgrade139.py",
+      "scripts/production_closure135.py"
+    ],
+    [
+      "scripts/check_native_upgrade139.py",
+      "scripts/source_closure137.py"
+    ],
+    [
+      "scripts/incoming139_tools.py",
+      "scripts/wasm139_profile.py"
+    ],
+    [
+      "scripts/wasm134_profile.py",
+      "scripts/wasm_index.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm134_profile.py"
+    ],
+    [
+      "scripts/wasm139_profile.py",
+      "scripts/wasm_index.py"
+    ]
+  ],
+  "source_files_before_after_current_match": true,
+  "frozen_inputs": {
+    "inputs.json": "a1867c75a5cc2d8e22101b8ce2a86a059793403a4000cf69468a18e7b1997150",
+    "expected.json": "3d2953eded6fab78c8eb0769ae0f6f8084b701060c0507189d90a8d6125888f3",
+    "expectation-read-audit.json": "e9f89e413f7b39ed3e4ea8a7961227fe69c1138e66723f71cd66965cc55a078d",
+    "config.json": "9818fc32c382c9d2b8d2a1e26bb9f3eff0794cc4d9ec69fa5d13fcadc915e601",
+    "guard-inputs.json": "4d3e622f3c681b3d55d9de2da002490b138c2493c08ceefb9f32aa70a68b6a01",
+    "guard-expected.json": "23b90f6541e5881862fcdd701f87e74c08323133d4ece769f252551c5c071490",
+    "guard-config.json": "d25a40796b99634d686087fcbb2e908872e8b4990b58480d47ef4ac231fda2de",
+    "manifest.json": "69a1a5623903bd0469f78b06c951f44b2e725c9c500e2ead7284b7b2fd1ba6fa",
+    "native513.bin": "ea9dc1a05053d7b28fd70a1af296556e92df40408b3da9891b66ab97635d7d25",
+    "native-upgrade139-full25511-exports.wasm": "32c9cf4efc86df98defd6f14d20c1e154475986d032614e4daae21fa2910a8bc"
+  },
+  "artifacts": {
+    "native-actual.jsonl": "4ceddddde2a65e79234028a44f1f315df2c8b6eec86e63fcb3b733227bb4680c",
+    "wasm-actual.jsonl": "964299cdf919296fc0f24965368dab1f9100e3dd8021003bd0970f9829ab685e",
+    "native-runtime.json": "432cf2f7d287ae199eba8fdfceea5a58dcd2a2a6a8209d849ce766f9bfc3fa99",
+    "wasm-runtime.json": "f5cbadfeb75df2503b4d19846fdb14c58551a78bf4762587f5b2b3598939c8bd",
+    "native-guards-runtime.json": "3b63bbf10987cb90ef968ae6acc22a033e515b0c6b6baa57aeed84475c27e39d",
+    "native-guards-actual.jsonl": "454eda076f505fe4234bc8e206c7ddd4b29cdab3e6770460f78fdbada963e830",
+    "native-guards-owned-start.json": "042516059bd5ea364a97c2cf261e7f0c3a634fea366c97dc874be0ed2718e2ef",
+    "native-guards-owned-terminal.json": "364f39239ffe0c3f2abc0045d4ae8c6170fcccbb9e40cdfbe0f6f0eae8ac0b22",
+    "native-guards-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-owned-start.json": "8f1915b8d5d600d71245f5db11110e1ca7b24573462047ca5fc55063a96d02ad",
+    "wasm-owned-start.json": "c07b9ff8eb2bfac7693016979d672bbbc0f850931351f75b16a9c0759a79d9bb",
+    "native-owned-terminal.json": "853fcee530f228107b38e19223289cad123f021ded70b7bbc7b66f59d908f7fc",
+    "wasm-owned-terminal.json": "d414c370da2d74862a7236123b90431bd1278c8922d0b27e6cd1e97b02728e22",
+    "prepared.json": "b7eafad241fc12f5d7134540a68cbb9db0db3c17a9bce82f4633363e129f912b",
+    "differences.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "native-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wasm-stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "failed_first_pilot_preserved": {
+    "directory": "evidence/native-upgrade139-pilot-20261102T123440.439019Z",
+    "comparison_sha256": "862ae4d469d850e41d443c18413e7542ca288b47f142ed814052874cb856494d",
+    "native_terminal": {
+      "pid": 71138,
+      "pgid": 71138,
+      "exit_code": -4,
+      "seconds": 0.23049983400051133,
+      "pid_missing": true,
+      "pgid_missing": true
+    },
+    "native_result_rows": 0,
+    "native_stderr_bytes": 0,
+    "first_checker_zip_limitation": "The failed first checker did not compare successful WASM rows because Native list was empty. This report separately re-read the original frozen13 expected/WASM rows and observed13 exact-bit matches; not new original calls or an independent review.",
+    "separate_postcapture_WASM13_exact_bit_matches": 13,
+    "native_runtime_file_missing": true
+  },
+  "capability_probes": [
+    {
+      "directory": "evidence/unicorn139-capability-20261102T124014.202305Z",
+      "terminal": {
+        "pid": 81372,
+        "exit_code": -4,
+        "seconds": 1.173274875000061,
+        "Windows_application_executions": 0,
+        "original_function_calls": 0
+      },
+      "artifacts": {
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "owned-terminal.json": "6a9007685582dbdf3ea4be2088aa5ee1012dd5d26a1118cd78f7aa83be823f32",
+        "owned-start.json": "deb0c93d762c2c47a4f7bd24a1f21bb094c6a2577068f3921213a8bb001c1c36",
+        "stdout.log": "5d52417d6606b28407e73a54024bf807e4ba4ca2daf964a98b50f92a66ba82df",
+        "probe.py": "2ac3b8cccfe63eb110e9bc4427ae60dad79a278d9a0f4fd5591533bf81a561e5"
+      },
+      "stdout": "imported 2.1.4\ncreated\n",
+      "original_function_calls": 0
+    },
+    {
+      "directory": "evidence/unicorn139-capability-unsandboxed-20261102T124036.669818Z",
+      "terminal": {
+        "pid": 82028,
+        "exit_code": 0,
+        "seconds": 0.7815512920024048,
+        "Windows_application_executions": 0,
+        "original_function_calls": 0
+      },
+      "artifacts": {
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "owned-terminal.json": "be80a31fd6eb905690282c5a67e9003080bb705200ded8c62fa981cf66cbc32b",
+        "owned-start.json": "b5fcc2b701e58ed9bec512f0c2ac282a4ae36676088de41090d3355198c522e3",
+        "stdout.log": "339604b75790b16b6779c6f2ef2f8e153988e4a63e00935adc5b0390111bbc96"
+      },
+      "stdout": "imported 2.1.4\ncreated\nmapped\nexecuted 0x100002\n",
+      "original_function_calls": 0
+    }
+  ],
+  "successful_prior_pilots_excluded": [
+    {
+      "directory": "evidence/native-upgrade139-pilot-20261102T124130.962494Z",
+      "comparison_sha256": "3953fed46c6415178a0ba9dbac5e8ce8c5b37052cf5689123b3ae3058ddba270",
+      "native_calls": 13,
+      "fullWASM25511_calls": 13,
+      "differences": 0,
+      "counts_excluded_from_formal": true
+    },
+    {
+      "directory": "evidence/native-upgrade139-pilot-20261102T124405.133759Z",
+      "comparison_sha256": "bc145089e4304a137c516d7912783c82b741ee37841cdfb0cd852b35c053e83c",
+      "native_calls": 13,
+      "fullWASM25511_calls": 13,
+      "differences": 0,
+      "counts_excluded_from_formal": true
+    }
+  ],
+  "toolchain": {
+    "version": "Unicorn2.1.4",
+    "official_wheel": "/Volumes/RuiRui4TB/CloudBackup/Mac/code/github/al90slj23/azeroth-ports/reverse-engineering/.toolchain/unicorn139-2.1.4/wheels/unicorn-2.1.4-cp37-abi3-macosx_11_0_arm64.whl",
+    "official_PyPI_wheel_sha256": "d6c93e0f60328d8f4a1792af3f834137a28050fcc2305f2ec01efe8558a9844e",
+    "installed_py_dylib_bytes_match_official_wheel": true,
+    "system_install": false,
+    "all_download_venv_cache_tmp_on_4TB": true,
+    "official_documentation": [
+      "https://www.unicorn-engine.org/docs/tutorial.html",
+      "https://github.com/unicorn-engine/unicorn/releases/tag/2.1.4",
+      "https://pypi.org/project/unicorn/2.1.4/"
+    ],
+    "initial_sandbox_PyPI_DNS_failure_preserved": ".toolchain/unicorn139-2.1.4/install-20261102T120854.104991Z",
+    "official_network_download_receipt": ".toolchain/unicorn139-2.1.4/network-install-20261102T121026.020093Z",
+    "offline_install_receipt": ".toolchain/unicorn139-2.1.4/local-install-20261102T121559.660888Z"
+  },
+  "limits": [
+    "Native result is true Unicorn2.1.4 x86_64 instruction emulation on macOS arm64, not launching Windows, the EXE, Wine, a VM or the application.",
+    "Only this exact513-byte pure upgrade-scalar function and the intact export-only currentWASM25511 are checked. Full Native damage/AI/mainloop/network/save behavior is not dynamically validated by this batch.",
+    "Controlled partial owner fixtures retain all non-consumed Native64 bytes as semanticNone;64 is fixture extent, not recovered Native sizeof. WASM controlled80-byte owner/page is not a real App-owned live object.",
+    "Actual114 definitions are dynamically consulted only by kind2 count scalar; this does not exercise114 skill behaviors or full native definition/Game/Unit ABI.",
+    "Native execution permits only exact original instruction boundaries inside513B then RET sentinel. Other bytes in the4096-byte original code page are mapped but may not execute. No guest data writes or externalcall/syscall is accepted.",
+    "Valid kinds/tiers0..4, uint32 counters and IEEE binary32 input patterns only. Native MXCSR0x1f80: round-to-nearest-even,masked exceptions,DAZ/FTZ off. Other floating environments are untested.",
+    "NaN-input cases compare result classification only; positivezero was the recorded output, but NaN payload/sign equality is not an acceptance claim.",
+    "WASM fresh instance1 / fixed controlled fixture page reused2150times; each4096-byte page/SP is verified per call, outside-page32MiB memory is hashed only before/after the batch. No intermediate outside-memory hash pair is retained.",
+    "Native each case creates a fresh emulator and compares full4096-byte owner page,65536-byte stack and15 original PE pages. Unknown memory backing is not evidence of known fields; every guest data read is separately whitelisted.",
+    "Three negative guard probes are refused harness attempts, not valid function-behavior fixtures and not Windows panic behavior; no tier5 externalCALL is executed.",
+    "No whole-game progress, natural upgrade selection/application, combat cycle or multiplayer proof is added. Formal logical fixtures2150; Native emulations2150; fullWASM function entries2150; they are separate acceptance layers, not4300unique fixtures.",
+    "This is author validation; independent review remains pending. Source/raw-capture diagnostic statistics are postcapture and not a second independent expectation."
+  ],
+  "postcapture_reports_not_independent_runtime_rechecks": true
+}

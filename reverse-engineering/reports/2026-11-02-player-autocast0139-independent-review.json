@@ -1,0 +1,393 @@
+{
+  "status": "pass_current139_default_player_autocast96targets_readonly_independent_review",
+  "author": "/root/growth139_review",
+  "reviewer": "/root/growth139_world",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "author_handoff_path": "evidence/player-autocast139-oracle-20261102T125128.084675Z/task-handoff.json",
+  "author_handoff_sha256": "6d8ea6c9bdb1322d43d4875c16e9e10723fc7136b16f7ba16b2b69ad3e1d73dc",
+  "author7": {
+    "reconstruction/core_spec/default_damage139.py": "a49c2b8bd191bf53012e96a1e09420cdc220165fa1fdb9195131d9f7cfc23393",
+    "reconstruction/core_spec/player_autocast139.py": "724d2db7c767296fee5cff6b312779210d9a0ca8cb48e3872e532775e384acb5",
+    "scripts/build_player_autocast139_oracle.py": "c5de5179f1f4c6bf744cf5bcc900959be66dcda2c0ce9be8545b0ececbec7605",
+    "scripts/check_player_autocast139.py": "292daaadb5c1c662f39d69947bce46463c0906dcf5afef2474e2afd7bfe6441b",
+    "scripts/run_player_autocast139_oracle.mjs": "b5ae87c006cb221da597138fb8b3c3db5128ca7c716cf083ef3a16c8f708eeb4",
+    "reports/2026-11-02-player-autocast0139.json": "5ce9ca2bfd83e959abf32cfdfdcba51992b478930c61a414a9e7440d79c23305",
+    "reports/2026-11-02-player-autocast0139.md": "01b8f6e6e4a788712e97194118aab4a89ed819b8635da696c41f795ab0eab5d8"
+  },
+  "comparison_sha256": "6932653ea3c74f45cbf8cf9276a223a055d310b794a07e107724bde243b3bdc4",
+  "readonly_review_path": "evidence/player-autocast139-readonly-review-20261102T132118.787059Z/review/review.json",
+  "readonly_review_sha256": "5522764ceb5eefab2b72dbd030d0cdb1c7cd458b79fad069b6101f5936dc5963",
+  "independent_reference_path": "evidence/player-autocast139-readonly-review-20261102T132118.787059Z/review/independent-reference.json",
+  "independent_reference_sha256": "7cb0b6ac2bfac1afa0b898f824827a2efa4287d6e7043cc8655375d562b704cb",
+  "reviewer_source_sha256": "f6d2d39c357888765a42a2b1147d32b5538c00b02e2869d1662d99ff41329893",
+  "independent_helpers": {
+    "review_healing_hurtactor139_v3.py": "3b69d5e1814c3575d5e09ee21012b1feed0595a393f403bb9f178ee846249656",
+    "review_enemy_ai139.py": "73b093bdfcc59c08c010fb2c074298435b6d0f057fe15a0e5d2a8228c0fe0f42",
+    "review_player_update139.py": "4123e0715620c0d050bfad0c1c060b0fc5b426c36d0789c95a0c7801d52c8bde",
+    "review_thunder_clap139.py": "775b8234a04067711ac126eb0ded2ce90a553db396f1bd26e07f5662fdbe0b23",
+    "review_death139.py": "fe7790f0adcb3e3d5010d53c44f375bec5bbee6d3fe780873a6e1613afe11e6a",
+    "review_cast139.py": "bc0fc0e1a107a504893168d713b3ca73bce77e03a9aade0d9961c2761aa06c5b",
+    "review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9"
+  },
+  "frozen_v3_review3_reused_unchanged": {
+    "handoff_sha256": "87bdc5996f2d024b035f9e1013002a39af30fadf0ec67665f233ebf74c1f6c93",
+    "all3_source_hashes_match": true
+  },
+  "source_files": 87,
+  "production_files": 73,
+  "import_edges": 333,
+  "current_body_bindings": {
+    "913": {
+      "body_sha256": "61a92bffb8f71c3e07a43c2a9543b3069d88c6f706e6e1930d03cfd0adb3490d",
+      "WAT_sha256": "fb72a572cf6ba84efea1f4e08b9a6b34b945eaaac436c3aa93a637ed36451c41"
+    },
+    "922": {
+      "body_sha256": "31db598295ad27f67409285df183935207bc22635d19c8d8e3b4e4ca53ff4cd1",
+      "WAT_sha256": "86da39d3ca0e32006c462396bd3d76f1bce6410327321ed87c8d000bfbd66f8b"
+    },
+    "925": {
+      "body_sha256": "d76b5f25d00c99de4dc36010be4a7bca56be3b3de644e45f67816b53aa335b91",
+      "WAT_sha256": "420ebd35026a3f965a4b52c0d64f2b3d291dfaddc404d10d59cfaf3cd55652d3"
+    },
+    "994": {
+      "body_sha256": "7a20f0ed7cb83c69ca277b2e093096de9c2a545317e1de90dc2294e65ec48113",
+      "WAT_sha256": "c0fd11b17ad2ff7179c660927f3946ba695df3add49f22c96ee91adc1a5cf314"
+    },
+    "1076": {
+      "body_sha256": "bb04f2302a54e8472fdfdd7f2deff6ec5fc1af149020a4e3b13f679abab38a39",
+      "WAT_sha256": "727e565fe7131653fb387cb7360cb41d7e93dbd3a5a6115b9cd7b3d72cbd927e"
+    },
+    "1093": {
+      "body_sha256": "87ea31478d8a1e75bdbf3f386bb727351577bf84c8911852aa1e4ee458e72113",
+      "WAT_sha256": "115a8d82625b83c285c2bfd799d08db24155c97ea461ffd1a2f65314bb103030"
+    },
+    "1108": {
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1173": {
+      "body_sha256": "26b61d181b88dc67b5b0f8890c1708d426e676bd415057cd7cf53cbe8220445a",
+      "WAT_sha256": "504d15350d483a1730e777c3c9d486385d77b47122b5606902941aa4bbb67f9e"
+    },
+    "1238": {
+      "body_sha256": "a8cfb0a06071b19299b3b4385e6ddb2305c6dd4d35dbfd1b2e96ffc60a301454",
+      "WAT_sha256": "7f636b4cd79c4323b0a4347b78021f1a55b429f77f97e2e1c2ce5b345a850e64"
+    },
+    "1466": {
+      "body_sha256": "d1b3bbc686d592b1a5e1eb4c6f4b1ede85d428b9f1a2330d67df620f6d1b291a",
+      "WAT_sha256": "c16d3cc586dcc04c2f96e741c38e01e4ff6fb118f3b917b625eb3a9501996f2f"
+    },
+    "1542": {
+      "body_sha256": "43d5e3cd844d1cf156dd0cb058dc05c0a33ce41280649000a7a2b2d3a8f0a72c",
+      "WAT_sha256": "9524b661e4db3c1438ce1d16f0e5b15dfefda59917120e5f4d5fbd9878881204"
+    },
+    "1600": {
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "1775": {
+      "body_sha256": "2a9a55f88ba4fdb3485173d68a4fbe28f51dd8abd0269aff44676669de903c9e",
+      "WAT_sha256": "e6a7a7300fa53b7ac25320edeae1d9f349eaf27e04a28e67cbc371e878b5076e"
+    },
+    "2077": {
+      "body_sha256": "36cc754bbbce303102ce675fb8e65add6b866e983068934ab8312b0d25f2b967",
+      "WAT_sha256": "a75a15d2f980b6f60e5b0934c60a42f80b3e1575cd3a464a7342c96dfb478949"
+    },
+    "2123": {
+      "body_sha256": "193106f82436ac80d1ac8253724ef3cf3bda0f5e00733bfc1d0dd763dbaf2c28",
+      "WAT_sha256": "d222b42d8d16ff2dfb37e745fcbcde7bbe031a487d8a919751642175e3b7037a"
+    },
+    "2181": {
+      "body_sha256": "7f57d8805a2d6f254d6d962f5624b1abc2cd9403827367dc72c664b9380905ba",
+      "WAT_sha256": "0bb690eb0e9466051372bb1262f1ec91cd48eaccbd28a84732682702a27e2d24"
+    },
+    "2189": {
+      "body_sha256": "8ff42ffde12229dc88c759978a10aae50ab29d8d7fe18fe0704511676599edef",
+      "WAT_sha256": "3f365629c5294b240147ddf89ba19be343b1c392cf6a68266ce948cf33605370"
+    },
+    "2945": {
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "3755": {
+      "body_sha256": "51d74a5bba9609a2b4a0465f0aecaa8e685d104e58cae86ba971fa543fed2c5c",
+      "WAT_sha256": "53bd5d80a6cd56840cc7e0b009f28261bb54f83a8ba8668d1f8d3ba28e3b96f6"
+    },
+    "4593": {
+      "body_sha256": "4b13e75f7973bd95d9fdff2fa7666e13e2472e22e898d642d9d0bdcd3517c8dc",
+      "WAT_sha256": "bafd5abdb8e9f73fa460625ccc4a6a9fa25d74b1ae232f78a6aaf909898af6f7"
+    },
+    "4603": {
+      "body_sha256": "d9a3208ee6a92bf18938e89f61c8814e6df27f1e92327b66e9144a51ff6eeaf4",
+      "WAT_sha256": "93f190218d4f1bca8a24efdbc911771d1cdac0f54b60db02841fb6a316349572"
+    },
+    "4677": {
+      "body_sha256": "40838a28f42a799605964f71b6f95073dc6a7adaf3a28be64ccbb5db70dcc04c",
+      "WAT_sha256": "e2d72eda1cbf37f7930c9868ba74bdd6ab28d6be085f3c59e9bd68b1283d9230"
+    },
+    "8569": {
+      "body_sha256": "758f94f8950ed6c4fde0a127c17d6b8135aa3b00be6910ae192c494c4797a3d1",
+      "WAT_sha256": "cdeb4c86d5ce7fcc15dd33923b5fa27a749419eae46972e242560e613e88687d"
+    },
+    "8673": {
+      "body_sha256": "cfe20b3b60b4d26e824594c12c76f6a6700992c64f9c067cfe43ff20e0c45ece",
+      "WAT_sha256": "a35959c6b908f8be8d656b991f458b497f0ac8bfa4cbeb5ce255c42f6e1ad712"
+    },
+    "9541": {
+      "body_sha256": "0f54eea8b871474bd57aa5f7b73538597e84ab824d315d9185270ea50b0200c1",
+      "WAT_sha256": "dcf3f6bb95ecd30defec2809169c25c2b46c28fe245c3deac62cfcd3f3eb4570"
+    },
+    "10490": {
+      "body_sha256": "cd8e7a90db9f1539270fb0504f8cf1c814357b262148a3c4f9003581f482258e",
+      "WAT_sha256": "f85959b0530f88fff29e24b69cb40a9bbf2786299456e015b2f362d5bb335c0a"
+    },
+    "11033": {
+      "body_sha256": "279f887e41dfa0accc0ac3caf4f28e8faafadefcc4e40a1188a1e28add1e4513",
+      "WAT_sha256": "5091bc319e1aa68cd4241ff3749f4df2313c333b661fc10c9070c19e41adf443"
+    },
+    "13833": {
+      "body_sha256": "7657e041e585e81104729868558ab9bf0a28131a5df021c9e4dd8d82645d34e9",
+      "WAT_sha256": "4e4cbd1675449406fc867d53efe3382c769666c2d6ec58f09d4bd8d1f74a9fbb"
+    },
+    "18421": {
+      "body_sha256": "268c270a22568c1252d87b4eeb020937dc3860c2a34c54fd600578c939758044",
+      "WAT_sha256": "308daf31efbe89997280dd22dac2cb29779bdb1955e8e1b3ce43ca7d66ff1855"
+    },
+    "19598": {
+      "body_sha256": "58f38842752fe5aeb325edad798d13460bfcbb5d1ea6030e73a5cd035d5d1200",
+      "WAT_sha256": "a8652f10d73f4a5e657deaa0609517cb36d66851ac962490e341f62413f2f901"
+    },
+    "20123": {
+      "body_sha256": "dcf3412ced9fc11a39a6592152f412619d9b8fb2f72cf2af213bbd54f960bd8b",
+      "WAT_sha256": "cf015adb16c0c9b72485b2ec9a577f6859084dc1169b4de68cdb2a7d58e732da"
+    },
+    "23328": {
+      "body_sha256": "2ff4e1aab09fa7d43376d1bfdbaf96f78c8e11f36465fe4a77835eb374268574",
+      "WAT_sha256": "875576e8933acca580e1cce84ef85855aa1bf20bcaea201e418e3d038e14d708"
+    },
+    "26202": {
+      "body_sha256": "21cdefa04d2854bcd0ee6e5e05dc42edaa2b007a898508a0e00e24185e21f210",
+      "WAT_sha256": "2727c02723974154bc562d8531561ec9493adde032594ff5b8075f451bbc2f6f"
+    },
+    "27754": {
+      "body_sha256": "4cd588e27b745d14826aec82cf1a160a9cfc02cf9d12e102cac8b5193f997d6a",
+      "WAT_sha256": "c433b8ba1cf3a8c392cad1297a87c779e3f718e70ccf0946f29dc01dd57a7180"
+    },
+    "28155": {
+      "body_sha256": "3dc18118a6f5260e6c2cc108f02afb68b9960f10474ff337d7c2cd2bc2b1b1d4",
+      "WAT_sha256": "039729f04a4ac41366902f99e0ed939c2ce72f84e6b5b230b87bd92032b0e720"
+    },
+    "30861": {
+      "body_sha256": "87885424a4638fe31e22b44ca21874ea94d36840e26b6b69baa4281dafbb75c8",
+      "WAT_sha256": "579279bd09b708e3b9372927c000c3370b904d9faf209971369515fe90e6dc1b"
+    },
+    "36364": {
+      "body_sha256": "31ccd3fd72d9691629a6df855cf68a38be6fc19ca2679165bf2fa0e368a63162",
+      "WAT_sha256": "090228663b17817439c9ca3e4c61e41a80833b17b0ac4e6042592b3249b94b9f"
+    },
+    "36520": {
+      "body_sha256": "56936cd9e3b8c6af09ac1d37b1cf75fdf79ed166dda699f4244f5e2c8350366a",
+      "WAT_sha256": "b214bd48e1ba90c8c44f48a8176724ba3e32c4e5c62bfc0342816f60a5f1405f"
+    },
+    "46690": {
+      "body_sha256": "b8120348643d400b9efdfde0bea367d29b817bbd397de6695d7f83da91565ea7",
+      "WAT_sha256": "ee353ccaa65702e791e69cb5dee27f036a313bbfcdcdbee4d6fdb2f16ad6c900"
+    },
+    "83299": {
+      "body_sha256": "b710b2e9416f4d6402f158db1bfe414cb0c3f01f001515cd68ac1665b27e85a6",
+      "WAT_sha256": "80840ac26564548e1c251d5a7ce2e1de9b872f6e8903c2f623a2928f90942323"
+    }
+  },
+  "counts": {
+    "live_known": 3744,
+    "live_None": 11232,
+    "live_nonzero_None": 10170,
+    "aura_known": 23916,
+    "aura_None": 65940,
+    "aura_nonzero_None": 57304,
+    "logical_player_maps": 117,
+    "semantic_ledger_snapshots": 100,
+    "Vec48_rows": 93,
+    "setup2123": 3,
+    "path_rebuilds": 3,
+    "BFS_values": 235200,
+    "clamped14_motions": 8,
+    "segment_nav_probes": 376,
+    "direct_clear_routes": 8,
+    "packet_height_queries": 16,
+    "frames": 3,
+    "movement221": 8,
+    "AI_NPC_known": 3636,
+    "AI_NPC_None": 1548,
+    "AI_NPC_nonzero_None": 1425,
+    "setup925": 3,
+    "setup1076": 3,
+    "Game_inherited_bytes": 248832,
+    "full1238": 48,
+    "NPC_known": 116796,
+    "NPC_None": 49092,
+    "NPC_nonzero_None": 45156,
+    "pickup_known": 16952,
+    "pickup_None": 9704,
+    "pickup_nonzero_None": 8934,
+    "NPC_None_conserved": 49092,
+    "all_packet_observations": 64,
+    "all_packet_observation_bytes": 2593,
+    "background_vectors": 480,
+    "damage": 13,
+    "critical": 4,
+    "Leech": 10,
+    "basic": 4,
+    "basic_crit": 3,
+    "moving_deaths": 3,
+    "deaths": 5,
+    "cleave": 4,
+    "slow_writes": 9,
+    "thunder_clap": 3,
+    "known_packets": 37,
+    "known_packet_bytes": 1587,
+    "inherited_Vec48_nonvalue_bytes": 3560,
+    "Regen": 24,
+    "full2123": 48,
+    "racial": 1,
+    "expiry": 1
+  },
+  "entry_accounting": {
+    "full1238_targets": 48,
+    "full2123_targets": 48,
+    "targets_total": 96,
+    "actual925_setup": 3,
+    "warmup2123_setup": 3,
+    "matched_incoming1076_setup": 3,
+    "prefix2945_1600_1108_4677_1093_each": 4,
+    "prefix_total": 20,
+    "all_direct_entries": 125,
+    "internal922_913_1466_calls_not_added_again": true
+  },
+  "control_fidelity": {
+    "class360": 1,
+    "race361": 1,
+    "level1432": 2,
+    "playerGUID1336": 0,
+    "owned": {
+      "cleave": 5882740,
+      "thunder_clap": 5882916,
+      "rank": 1
+    },
+    "racial": 5891892,
+    "Game908": 0,
+    "Game770_548_768_772_after": 0,
+    "basic_913_call": "(Game,actual targetGUID,amount,0,0,critical,1)",
+    "owned_913_call": "nonzero spellID845/6343, raw school85, critical, flag0",
+    "three_distinct_controls": "basic packetflag1 / owned packetflag0 / inheritedGame9080 are separate; no genericflag conflation",
+    "incoming": "threeactual warmuphurt calls sharefrozen(1,0,0) andindependently produced actualNPCGUID; param5 controlled0 not925queueindex",
+    "velocity_and_path": "driver explicitly writes0 to1736/1740/2368 before1108; known constructor has samezeros in952staticproof but this harness remains explicitsetup",
+    "playerXYZ": "controlledteleport derivedfromactualNPC0 at firstclock plusoffset0/8, heightpurecanonicalworld; noNPC-positionorHPwrite",
+    "basic_and_racial_disabled": false,
+    "no_dead_mask_clearing": true
+  },
+  "independent_method": [
+    "Raw currentWASM data reconstructs defaultopening/RNG/growth/firstnew selection andactualcardtier0/4.",
+    "Reuse frozenV3 Fraction heal/ledger helpers; new pure basic→ownedcleave→Thunder→racial scheduler withonef32roundperoperation,success/failurecooldowns.",
+    "Independent known/None8673 selector computes realposition interpolation, distance ordering, priority andnearsame6unitclusterHPordering.",
+    "Independent925 reference generates3pathmaps/235200BFSu16cells and8actualmotions; compareactual movingNPC rows/pathhash beforecontrolledplayer placement.",
+    "13actual outgoinghits recomputed againstNPCmultipliers/HP; shareddamage ledgerrecordedbeforepositiveLeech, cappedaccountamount vsfulldamageLeech distinguished.",
+    "3movingdeaths independently interpolateXYZ, queryheightonlyfor221stopvisual, incrementsequence,freezeNPCposition andconsumeactualXP/currencyRNG withknown/Nonepickupstorage.",
+    "Positive2123regen/retention/1020expiry andHumanperceptionsuccess arefully threaded with23stats/72logicalfields/owned/live32/Aura48x16 andrawsourceflags.",
+    "AllknownNPC/pickupbytes,49092NPCNonephysicalinheritance,248832BGameinputinheritance,480backgroundowners plusoriginal2Rune arechecked.",
+    "Full40body/sourceclosure87/73/333,privateWASMonlyexportmodified,explicitinputsand3incomingcontrols verified."
+  ],
+  "packets": {
+    "known_ordered_subset": 37,
+    "known_bytes": 1587,
+    "all_original_packets_observed": 64,
+    "all_observed_bytes": 2593,
+    "complete_stream_accepted": false,
+    "basic330_metadata": "current913/9541/13833 literalsMelee\\0melee\\0; no stale metadata-free helper reused"
+  },
+  "shared_ledger_scope": {
+    "event_counter_G960": true,
+    "accepted_count_G1016": true,
+    "reason_f64totals": [
+      "melee",
+      "ability:cleave:r1",
+      "ability:thunder_clap:r1",
+      "regen",
+      "leech"
+    ],
+    "snapshot_count": 100,
+    "Vec48_rows": 93,
+    "full2077_composite96key_catalog_bucket_history": false
+  },
+  "author_failed_pilot_preserved": {
+    "path": "evidence/player-autocast139-oracle-20261102T125009.609481Z/comparison.json",
+    "sha256": "3e26185987a3f34c2d79d12f51689419ebcef5cf386a67be508309d671fe8734",
+    "fresh_instances": 1,
+    "full1238": 12,
+    "differences": 1,
+    "reason": "Basic330 metadata missing only; numbers and sampled owners matched. Corrected from current913/9541 and staticdata, then fresh formal4; pilot excluded from formal coverage."
+  },
+  "reviewer_failed_attempts_preserved": [
+    {
+      "path": "evidence/player-autocast139-readonly-review-20261102T131422.332901Z",
+      "reason": "reviewer fp alias NameError",
+      "source_sha256": "c562745f66d2529cd36d1638a22fc46bfd412f6f9a0da5541921ef778a895237",
+      "terminal_sha256": "7c1fe47dc51e37bef95a9f23934a915a34937e0cd27715b587ff122b2dfe9058",
+      "stderr_sha256": "18eec5518fb7690da61d98f959c03eb06d6e2b7a30ae983cec06f6abcdcb4290",
+      "author_or_original_executions": 0
+    },
+    {
+      "path": "evidence/player-autocast139-readonly-review-20261102T131521.841613Z",
+      "reason": "reviewer bytes-only selector called on known/None cells; replaced with pure known-field selector",
+      "source_sha256": "9ba7aebd0451903b16ecf1e27d156ec6862c909cda9cc6405ef22b49fa5b8044",
+      "terminal_sha256": "24a051c5cd9d570c61110162a7f12ab539c29d1e582f4b46ef5f7738b91559da",
+      "stderr_sha256": "1332663690f825a4a81b9d2254890c6a0e7051bbd31febfb59795d6d2516b232",
+      "author_or_original_executions": 0
+    },
+    {
+      "path": "evidence/player-autocast139-readonly-review-20261102T131620.259577Z",
+      "reason": "reviewer expiry diagnostic event not yet prepended; numeric/player/combat matched through cold case step9",
+      "source_sha256": "416d3fe0748f50eb8d548f6d0eb556de86b0134ce2cd4b0605f3e236e60fb34b",
+      "terminal_sha256": "368b80cc453458b70b4f7ede20ed556323ad5c975d8e48a556ed5ed725c8294a",
+      "stderr_sha256": "05b979740d2df0d41a54d8d69b94816721703a3acc002ff0ec48ef1f51703c00",
+      "author_or_original_executions": 0
+    },
+    {
+      "path": "evidence/player-autocast139-readonly-review-20261102T131845.461846Z",
+      "reason": "same reviewer omitted expiry event isolated by diagnostic assertion; no author discrepancy",
+      "source_sha256": "9a358985b0c247f23f00cf402e51b85efca1ba398d5b64b1268a33af25102196",
+      "terminal_sha256": "df1fd2fab3600347ed488ae8059415740083f914ec49ed1b77a16e818c09e699",
+      "stderr_sha256": "a417ecf8bef5844b28ed32d45ed65ecc84fcded27dee4be91e107a30c3033ba3",
+      "author_or_original_executions": 0
+    }
+  ],
+  "reviewer_owned_terminal": {
+    "pid": 50117,
+    "pgid": 50117,
+    "exit_code": 0,
+    "timed_out": false,
+    "seconds": 12.511754208000639,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "source_before_sha256": "f6d2d39c357888765a42a2b1147d32b5538c00b02e2869d1662d99ff41329893",
+    "source_after_sha256": "f6d2d39c357888765a42a2b1147d32b5538c00b02e2869d1662d99ff41329893",
+    "original_executions": 0,
+    "author_executions": 0
+  },
+  "reviewer_owned_start_sha256": "23b85af4ffc4d2b655a5feeec810c6c4525c26d9a1d5741cf4bb9df38fba5bc4",
+  "reviewer_owned_terminal_sha256": "15efa5d00ea7e6b23cde496e29efda5364e3966a72a1289282c3affbce7a0d98",
+  "limits": [
+    "DefaultHumanWarrior/actualcleave+firstnewThunder only; controlledplayerXYZ andexplicitclock; nofullApp/884/game.",
+    "96targets=48full1238+48full2123;3moving925setup+3warmup2123+3full1076+20prefix=125direct,not125targetcases.",
+    "Basicspell0/packetflag1 vsownednonzero/flag0 andinheritedGame9080 arestaticbounddistinctcontrols; flags/metadata not dynamically sampled inside913.",
+    "13damage sharedG960/G1016/reasonf64/Vec48projection only; full2077physical96keys/catalog/bucket/history remainPending.",
+    "37knownpackets1587B are orderedsubset of64observedpackets2593B; completepacket/UI/statecallbackstream notaccepted.",
+    "Literal3flags/sourceGUID/type andincoming1/0/0 verified sourcefaithfully; incominghistory/category/callback stilloutside scopedprojection."
+  ],
+  "original_executions": 0,
+  "author_production_executions": 0,
+  "new_original_calls": 0,
+  "frozen_author_and_previous_sources_unchanged": true,
+  "public_Git_Android_changes": 0
+}

@@ -1,0 +1,170 @@
+{
+  "status": "pass_current139_native513_and_WASM25511_scoped2150_readonly_independent_review",
+  "author": "/root/collection139_finish",
+  "reviewer": "/root/growth139_world",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "author_handoff_path": "evidence/native-upgrade139-full-20261102T124511.825553Z/task-handoff.json",
+  "author_handoff_sha256": "57d6668d23a5b79ced19f62154db55babcae46050a5b684a73fe1fb53f1f12f7",
+  "author7": {
+    "reconstruction/core_spec/native_upgrade139.py": "179dcf3e6bd509178d4bc24bc82eb398df79fd2c068ecc9ee1468ac2b6e6bd37",
+    "scripts/build_native_upgrade139_oracle.py": "b3857abb4e4314301e014e7e05f735d604b01ac6ebc5a7f06661f6d7e71d20f3",
+    "scripts/run_native_upgrade139_unicorn.py": "f7ca4dc82e7433856b8f967a22f3249770d45cc1aa9e2155049fb7007c8a367d",
+    "scripts/run_native_upgrade139_wasm.mjs": "446c8b2324ea5bef062c577d1f45d71e241848b6bea9fcdd500d666bd2266983",
+    "scripts/check_native_upgrade139.py": "0ecf611e42a9bd5fb51fc031154b1c61ae95aaa83a90a2e0ad5bcc85b690500c",
+    "reports/2026-11-02-native-upgrade0139.json": "7c4034aa23ff0f6e3ca19fd2ce0cf3e61a0e9ed0f4036001dd575660e3037768",
+    "reports/2026-11-02-native-upgrade0139.md": "d3e43c54fb23f8158b4f71195dc40fdd08c02284c0c96ea0753cd133c8df4934"
+  },
+  "comparison_sha256": "cc2da65bc3266331971c5adee19c3576073982e12020b5016c7336052d9a3e2a",
+  "formal_readonly_review_path": "evidence/native-upgrade139-readonly-review-20261102T125925.523004Z/review/review.json",
+  "formal_readonly_review_sha256": "4bcf5036e9979c58dfe52eefb63822b0e2f4034af24ff91943cf709092eabf2b",
+  "independent_reference_path": "evidence/native-upgrade139-readonly-review-20261102T125925.523004Z/review/independent-reference.json",
+  "independent_reference_sha256": "e68116db7a19e8fb5015608dec8a6d5107c4f51643a7114a48173ed268d9fada",
+  "reviewer_source_sha256": "6788e292ee11de0082f4bc40791a50be74532fa47fb847756d986e766b8bf201",
+  "independent_helpers": {
+    "review_frame_clock139.py": "4800e26fdd36c34e24067753d98532fdaf516bf9c7de8dc14ed9ce9d78b21e65",
+    "review_combat139.py": "158d211c3ec36093e26536aaf402606fb558c059ee528134abe12294328932b9"
+  },
+  "source_files": 14,
+  "source_import_edges": 14,
+  "source8852": {
+    "status": "not_a_field_in_this_batch",
+    "actual_sources": 14,
+    "actual_import_edges": 14
+  },
+  "counts": {
+    "strict_nonNaN_result_bits": 2090,
+    "fixtures": 2150,
+    "kind0": 50,
+    "instructions": 48335,
+    "data_reads": 13750,
+    "read_bytes": 67090,
+    "owner_None_cells": 114840,
+    "kind1": 110,
+    "kind2": 1770,
+    "kind3": 110,
+    "kind4": 110,
+    "NaN_input_cases": 60
+  },
+  "result_classes": {
+    "finite": 1840,
+    "zero": 290,
+    "infinity": 20
+  },
+  "unique_native_PC_boundaries_observed": 94,
+  "static_native_boundaries": 108,
+  "read_source_counts": {
+    "original_switch5": 2150,
+    "owned_consumed_field": 2150,
+    "original_scalar": 760,
+    "original_upgrade_table_element": 2150,
+    "initialized_return_address": 2150,
+    "owned_definition_pointer": 1770,
+    "actual_definition_exec117": 1770,
+    "actual_definition_name_fatptr": 320,
+    "actual_definition_slug": 530
+  },
+  "fixture_accounting": {
+    "unique_logical_fixtures": 2150,
+    "saved_original_Native_instruction_emulations": 2150,
+    "saved_complete_WASM25511_entries": 2150,
+    "native_fresh_emulators": 2150,
+    "WASM_fresh_instances": 1,
+    "negative_guard_attempts_excluded": 3,
+    "Windows_whole_application_runs": 0,
+    "reviewer_original_calls": 0
+  },
+  "independent_method": [
+    "Stdlib struct PE32+ headers/.pdata/current15pages and original513B bytes verified; archived independent LLVM/Ghidra108 boundaries match currentPE and frozenNative instructions.",
+    "CurrentWASM parser checks all nonexportsections bytewiseunchanged, full25511body/WAT/type and5tables bound; implicitstart absent by separate postcapture static read.",
+    "114 native120B definitions andnamefatptr are read fromcurrentPE; 114WASM88B definitions read fromcurrentdata andmatched byslug/exec, not assumedindexABI.",
+    "Reuses prior differentauthor reviewed genericIEEE Fraction decode/round helper; new independent exceptionalfloat ops and5scalar rules predict all2150 inputs without authors model or outputs.",
+    "Reconstructed legalbranchplan checks every savedPC trace,94/108boundaries; independently predicts every datareadPC/address/size/source fromfrozeninput/currentdefs, not just whitelistflags.",
+    "Native64B fixture owner array independentlybuilt with onlyconsumed4B field pluskind2definitionpointerknown; every consumedbyteknown, all114840Nonecells remainunconsumed.",
+    "Wheel officialSHA andinstalled.py/dylib bytes are compared byzip withoutimportingUnicorn/loadinglibrary.",
+    "Frozen driver source andflagschecked forprotections, noforeignCALL/syscall, readonly data,writehooks,1second/2000instruction budget andWin64controlregisters."
+  ],
+  "NaN_scope": {
+    "input_NaN_related_cases": 60,
+    "author_gate": "result classification only on NaNinputorNaNoutput; no payload/sign equality claimed",
+    "saved_actual_result_classes": {
+      "finite": 1840,
+      "zero": 290,
+      "infinity": 20
+    },
+    "actual_NaN_outputs": 0,
+    "independent_saved_positive_zero_observations": 60,
+    "other_strict_bits": 2090,
+    "NaN_payload_equivalence": false
+  },
+  "memory_scope": {
+    "native_fixtures": "controlled64B partialowner, notsizeof",
+    "WASM_fixtures": "controlled80B owner insidefixed4096B page, notnaturalAppobject",
+    "runtime_native_flags": "owner4096B/stack65536B/15PEpages equal percase plusnonvolatilepreserved",
+    "raw_native_memory_before_after_pairs_saved": false,
+    "runtime_WASM_flags": "eachownerpage4096B andSP equal, outside32MiB hashboolonlybeforeafterbatch",
+    "raw_WASM_intermediate_memory_hash_pairs_saved": false,
+    "independent_PC_read_trace_audit": true,
+    "independent_raw_memory_pair_recomparison_claimed": false
+  },
+  "negative_guard_scope": {
+    "count": 3,
+    "reasons": [
+      "Uninitialized_or_out_of_whitelist_read",
+      "Uninitialized_or_out_of_whitelist_read",
+      "Forbidden_call_syscall_or_trap"
+    ],
+    "invalidVariant": "outofrange5 jump-table read refused beforeexecution",
+    "tier5": "CALL instruction refused bycodehook; panic notexecuted",
+    "valid_original_behavior_cases": 0
+  },
+  "failure_and_capability_scope": [
+    {
+      "path": "evidence/unicorn139-capability-20261102T124014.202305Z",
+      "exit_code": -4,
+      "stdout": "imported 2.1.4\ncreated\n",
+      "original_function_calls": 0
+    },
+    {
+      "path": "evidence/unicorn139-capability-unsandboxed-20261102T124036.669818Z",
+      "exit_code": 0,
+      "stdout": "imported 2.1.4\ncreated\nmapped\nexecuted 0x100002\n",
+      "original_function_calls": 0
+    }
+  ],
+  "postcapture_static_notes_path": "evidence/native-upgrade139-readonly-review-20261102T125925.523004Z/postcapture-static-notes.json",
+  "postcapture_static_notes_sha256": "23c425b2efeef6a4dfffad798fbd6bc5f64b1b6a9d300676b7d121882fe2fa53",
+  "failed_initial_Native_pilot": "SIGILL/-4,0Native rows andmissingruntime,unknownNative result; 13successfulWASMrowsareold excludedseparateobservations",
+  "two_success_pilots": "13each pairedfixture excludedfromformal2150",
+  "reviewer_owned_terminal": {
+    "pid": 8870,
+    "pgid": 8870,
+    "exit_code": 0,
+    "timed_out": false,
+    "seconds": 14.631534416999784,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "source_before_sha256": "6788e292ee11de0082f4bc40791a50be74532fa47fb847756d986e766b8bf201",
+    "source_after_sha256": "6788e292ee11de0082f4bc40791a50be74532fa47fb847756d986e766b8bf201",
+    "original_executions": 0,
+    "author_executions": 0
+  },
+  "reviewer_owned_start_sha256": "e9b86dd091359e00c3451903161582fb501b8be93dc7f15e75e24a22e379280e",
+  "reviewer_owned_terminal_sha256": "7c04d6394cd20f83fa3496fe61dd881ad9cc70699e61ac88b9f58d8591b24ef1",
+  "original_executions": 0,
+  "author_production_executions": 0,
+  "Unicorn_imports": 0,
+  "limits": [
+    "2150unique fixtures supplied both saved engines; not4300unique fixtures. Nativeinstructionemulations2150 and fullWASM25511entries2150 are distinct layers.",
+    "Only513B scalar and matching25511; noWindowsApp/exe/Wine/VM/bootstrap/fullABI/damageAI/mainloop/network/save behavior is accepted.",
+    "60classification-only author cases are NaNinput-related; independent saved outputs are all+zero, actualoutputNaNcount0; NaNpayload/sign equivalence unclaimed.",
+    "Native64B andWASM80B controlledpartial fixtures are notsizeof/naturalAppowner proofs; original114defs onlyexercise countscalar kind2, not114fullskill behaviors.",
+    "AllPC/read traces independently recomputed; unchangedPE/owner/stack flags are runtime instrumentation+source checks, not reread rawbeforeafterbytepairs.",
+    "WASM outside32MiB ownerpage hash preserved only asbatchbool, nointermediate or rawhashpair stored.",
+    "Negative3 probes are refused harnessattempts; noforeignCALL/panic behavior execution.",
+    "FirstSIGILL Nativepilot0rows/unknown result andsandbox2NOP capability failure are retained; successfulunsandboxed2NOP is capabilityevidence, notNativegameexecution."
+  ],
+  "all_author7_and_sources_after_match": true,
+  "public_registry_Git_Android_mutations": 0,
+  "complete_game": false
+}

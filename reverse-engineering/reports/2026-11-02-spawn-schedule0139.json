@@ -1,0 +1,396 @@
+{
+  "status": "author_pass_current139_complete952_entries_default_ordinary_before40s_not_complete_scheduler",
+  "version": "0.139.0",
+  "build": "f79c5e2b4",
+  "source_wasm_sha256": "71a44d44a91245aa0a4db4171b5893e4343ba84c3699f7fa87dafc2856973299",
+  "formal_evidence_directory": "evidence/spawn-schedule139-oracle-20261102T124327.004589Z",
+  "formal_comparison_sha256": "92b096b89c44450fe1efcb96fc976fdb286e75f6ac5544891d5284a1564458c3",
+  "formal_manifest_sha256": "c6de87f917bc6f5dc167b9b3ae084785120e3e73ea34cdc7f4eb60d28318d5b5",
+  "formal_prepared_sha256": "750224b4531c2e854b5f2c6cf1a4107e41b0d953c2c6ff74aa6e13ad874a1983",
+  "source_files": 46,
+  "production_files": 34,
+  "import_edges": 135,
+  "current_bodies": {
+    "952": {
+      "index": 952,
+      "signature": [
+        "7f7d",
+        ""
+      ],
+      "body_start": 3542020,
+      "body_end": 3560071,
+      "body_bytes": 18051,
+      "body_sha256": "e6c80338ca9a8182e86fad0b039786aa37fe6306486bb5ecc64588fc5047ed7b",
+      "WAT_bytes": 369471,
+      "WAT_sha256": "307c7ab8e6c947dbcd81718aca944d6614af38b95a8b9edcfbea2e8fbeca3fdb"
+    },
+    "1108": {
+      "index": 1108,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 6502655,
+      "body_end": 6514771,
+      "body_bytes": 12116,
+      "body_sha256": "dee71e4ff450ac47056dff085773678b6ec5e5bcc82b24884097c7519b44ed92",
+      "WAT_bytes": 180946,
+      "WAT_sha256": "1d32a5b049f3e088f41b2d3895bbdff2e41869296edd9729218451fbf359d8cb"
+    },
+    "1446": {
+      "index": 1446,
+      "signature": [
+        "7f7f7f7f",
+        ""
+      ],
+      "body_start": 10221337,
+      "body_end": 10226398,
+      "body_bytes": 5061,
+      "body_sha256": "8767d1f7e85c487759afa70602d9ae1793a7fd9118c0d8f57bca75c05ae3c958",
+      "WAT_bytes": 71325,
+      "WAT_sha256": "285f5c4878af3a685fbfc1dbff5f36ac2529bdc62cc4de81024f9cdda8f08abe"
+    },
+    "1586": {
+      "index": 1586,
+      "signature": [
+        "7f7e7f7f7d7d7f7f",
+        ""
+      ],
+      "body_start": 11218088,
+      "body_end": 11222507,
+      "body_bytes": 4419,
+      "body_sha256": "6f318b3b6c75e99768e6a940e2d8306cc613ec13bca4a462cbc1d8d136ffe179",
+      "WAT_bytes": 52757,
+      "WAT_sha256": "124c2552506e98fe18dbd0d80dcf710639138370a488ca375e8ead3aa76f8368"
+    },
+    "1600": {
+      "index": 1600,
+      "signature": [
+        "7f7f7f",
+        ""
+      ],
+      "body_start": 11298574,
+      "body_end": 11305645,
+      "body_bytes": 7071,
+      "body_sha256": "17f2335fc31fe91be1509ffcabe89e56662b61cc2c684f862c54c681eb69b8b1",
+      "WAT_bytes": 90865,
+      "WAT_sha256": "3815a03f4a156722b0d3391520b346976b1afa183775f4269a8626e96fae862f"
+    },
+    "2801": {
+      "index": 2801,
+      "signature": [
+        "7f7f7d",
+        ""
+      ],
+      "body_start": 17395935,
+      "body_end": 17399684,
+      "body_bytes": 3749,
+      "body_sha256": "ddf83880954f9a84056c09c2a5dd89c22a6cdb038c3dc20aa206c89667f5b33c",
+      "WAT_bytes": 41084,
+      "WAT_sha256": "9dd779e78668e6004c684f4e15559651c849fb2e15931420ca4906466dde3b53"
+    },
+    "2945": {
+      "index": 2945,
+      "signature": [
+        "7f7f",
+        ""
+      ],
+      "body_start": 17914642,
+      "body_end": 17917186,
+      "body_bytes": 2544,
+      "body_sha256": "a0061b5e61a38fbfe39c28b958d6ee853ead59f8cbba9668a473e2a3effe055a",
+      "WAT_bytes": 33472,
+      "WAT_sha256": "6112a9aa81086d241c9c98ff654328f1aae76caf1bc847ae4a92f7e92ea2541e"
+    },
+    "5719": {
+      "index": 5719,
+      "signature": [
+        "7f7f7f7f",
+        ""
+      ],
+      "body_start": 25561476,
+      "body_end": 25563260,
+      "body_bytes": 1784,
+      "body_sha256": "8035b0969dab682144a748cb3b535602f50600763e83dadfcb4e62d45d3e3ed5",
+      "WAT_bytes": 17379,
+      "WAT_sha256": "d96dfe65d00fcf236865f9d8189c004d839014bca67ed8af650fe3b06652e4cb"
+    },
+    "6440": {
+      "index": 6440,
+      "signature": [
+        "7d7d",
+        "7d"
+      ],
+      "body_start": 27379585,
+      "body_end": 27381073,
+      "body_bytes": 1488,
+      "body_sha256": "4ea9db44425a01afe9e8ac0f8d0791be0ead60714c863673240e0e306417752c",
+      "WAT_bytes": 23311,
+      "WAT_sha256": "ae0241f072f22c23aa023b8320e737af71a016b642562f74ffb2b8df702f7080"
+    },
+    "8740": {
+      "index": 8740,
+      "signature": [
+        "7f7f7d7d7d",
+        ""
+      ],
+      "body_start": 31389731,
+      "body_end": 31391094,
+      "body_bytes": 1363,
+      "body_sha256": "35e2f8bf141c22a07857ff8327892bf7b6f971aea2d1ad0f705ba12dfa02af38",
+      "WAT_bytes": 21481,
+      "WAT_sha256": "ae82725c4b84528ce67a730a31f6a8ca631f41cdf0b3bac500fabeb4cea9c13b"
+    },
+    "13563": {
+      "index": 13563,
+      "signature": [
+        "7f7f7d7d",
+        ""
+      ],
+      "body_start": 38407283,
+      "body_end": 38408172,
+      "body_bytes": 889,
+      "body_sha256": "724158538ddf6fdcb38eb520beaa5ff8467952b418be3400132013b105a136ae",
+      "WAT_bytes": 9818,
+      "WAT_sha256": "718739b8790b32422f5c947657685744eb6f32a052b1f48320010c1f7696a03a"
+    },
+    "20357": {
+      "index": 20357,
+      "signature": [
+        "7f7f7f7d",
+        "7f"
+      ],
+      "body_start": 45540321,
+      "body_end": 45541234,
+      "body_bytes": 913,
+      "body_sha256": "ca7a1ee671740078b1c57b89c01432e6abe220eccf4ec92c9a1ce94b5760526b",
+      "WAT_bytes": 11381,
+      "WAT_sha256": "6abafb185a2c34b7741ea127cef081066eead8e8345b57d445cdb257346751ce"
+    },
+    "21552": {
+      "index": 21552,
+      "signature": [
+        "7f7f",
+        "7f"
+      ],
+      "body_start": 46861111,
+      "body_end": 46861626,
+      "body_bytes": 515,
+      "body_sha256": "cf052ccc9a12542cc1d57cce7f38d9ad9ff4815a54d2bae215cc6a05ec9e887e",
+      "WAT_bytes": 6301,
+      "WAT_sha256": "6982eda67cb53174032b07367d6616c8b03b2cf1e27224799ff27341cd285a8e"
+    },
+    "26521": {
+      "index": 26521,
+      "signature": [
+        "7d",
+        "7d"
+      ],
+      "body_start": 51622741,
+      "body_end": 51623261,
+      "body_bytes": 520,
+      "body_sha256": "9edfc2ca7713db5050ef5f01df09fd0cff2bab85e944040739910c5b1217c114",
+      "WAT_bytes": 6263,
+      "WAT_sha256": "eacfcef05bb6ac37aa415401b8258b702969b10d19227b2ddddd81623e284eba"
+    },
+    "38882": {
+      "index": 38882,
+      "signature": [
+        "7f7f",
+        "7f"
+      ],
+      "body_start": 61036889,
+      "body_end": 61037234,
+      "body_bytes": 345,
+      "body_sha256": "e66444e6b908d7294642194c8043c8288012eabd1d0adac2b54a48f055c0c379",
+      "WAT_bytes": 4909,
+      "WAT_sha256": "4b8c39db5b6e440a44f796e52a7b02663496a9592335db390461170e335ff65d"
+    },
+    "50441": {
+      "index": 50441,
+      "signature": [
+        "7d7d",
+        "7d"
+      ],
+      "body_start": 66105097,
+      "body_end": 66105328,
+      "body_bytes": 231,
+      "body_sha256": "8b67b510e6785ae70dc13a6135fa25e1cb1537ba4e0525b48579da257fb3f302",
+      "WAT_bytes": 2485,
+      "WAT_sha256": "4782ad3bc38554ae2e2a99549432ebe5c3f06a4554fb6c9e6f6ed8255c9856c7"
+    },
+    "66565": {
+      "index": 66565,
+      "signature": [
+        "7f",
+        ""
+      ],
+      "body_start": 70622468,
+      "body_end": 70622578,
+      "body_bytes": 110,
+      "body_sha256": "61a15cc00c53f22465daa4e68e0d43fe6cc7b92142f8f5c23eee3e77e0ce48cd",
+      "WAT_bytes": 900,
+      "WAT_sha256": "03aecfb0287822d7e8b8fbc063761f4388bd7684d96f6203afbb8dc2875911df"
+    },
+    "97426": {
+      "index": 97426,
+      "signature": [
+        "7d7d",
+        "7d"
+      ],
+      "body_start": 76182498,
+      "body_end": 76182544,
+      "body_bytes": 46,
+      "body_sha256": "442e45ccda27e06f92ae6e9de53ed80e141a33e4377779c9c06b9184d632e432",
+      "WAT_bytes": 436,
+      "WAT_sha256": "ae3086a8a1ab779ef7c5225bebac799acb3fd5aabb17cf1f39ecdc73388a03fc"
+    },
+    "97427": {
+      "index": 97427,
+      "signature": [
+        "7d7d",
+        "7d"
+      ],
+      "body_start": 76182545,
+      "body_end": 76182591,
+      "body_bytes": 46,
+      "body_sha256": "c351aee9ba131c59f7a97e029e782db6ea97f0dcbebed71556d9d1e940013a18",
+      "WAT_bytes": 436,
+      "WAT_sha256": "9fbc00025f477557d113eb432853adc224934d060e91c937006dacd0b2ec53b1"
+    }
+  },
+  "full_calls": {
+    "952": 1080,
+    "1108": 3,
+    "1600": 3,
+    "2945": 3
+  },
+  "stack_checks": 1104,
+  "allocator_calls": 15,
+  "world_source_checks": 33,
+  "process": {
+    "pid": 86599,
+    "pgid": 86599,
+    "exit_code": 0,
+    "seconds": 1.0126214589981828,
+    "pid_missing": true,
+    "pgid_missing": true
+  },
+  "counts": {
+    "assertions": 201378,
+    "NPC_known": 85749,
+    "NPC_None": 69771,
+    "NPC_nonzero_None": 61295,
+    "NPC_None_physically_conserved": 47061,
+    "known_packet_snapshots": 2227,
+    "background_owners_conserved": 189,
+    "inherited_Game2592_bytes": 67824,
+    "full_checkpoints": 27,
+    "full952_calls": 1080,
+    "new_NPCs": 47,
+    "unlocked_definition1_spawns": 2,
+    "new_NPC_packet169": 47
+  },
+  "matrix": [
+    {
+      "seed": 0,
+      "dt": ".0625",
+      "frames": 600,
+      "final_time": 37.5
+    },
+    {
+      "seed": 1,
+      "dt": ".0625",
+      "frames": 320,
+      "final_time": 20
+    },
+    {
+      "seed": 42,
+      "dt": ".0625",
+      "frames": 160,
+      "final_time": 10
+    }
+  ],
+  "initial_producers": {
+    "velocity1736_1740": "T1824i64zero",
+    "budget2416_killcost2420": "T2504i64_0x40400000",
+    "path2368": "T2456i64zero",
+    "events1984": "profile371less3→defaultlocal13zero→T2072",
+    "Game_copy": "T+88,2592bytes"
+  },
+  "ordinary_spec": {
+    "component_entry": "complete unchanged952(Game,dt)",
+    "table": "current Elwynn5830904/12x72B, zone5871348/152B",
+    "timers": "real constructor budget2416=3, nextelite2424=60, nextwave2440=240, pickup2444=40/2448=60, Bossindex2456=0",
+    "rate": "f32((((now/60)*.32+.9)+(now/60)*((now/60)*.025))*.6); dt*rate added tobudget; zero killcatchup and noBoss in admitteddomain",
+    "eligibility": "normal68=0 and unlock64<=minutes; actual30s unlockdefinition1 crossed",
+    "choice": "min(4,(max(0,minute-unlock)*.5+1))/cost; sum starts -0; sharedRNG uniform[0,max(.001,sum))",
+    "budget": "up to8 draws/spawns whilebudget>=1; stopchosenCost>budget; oncapacity failurebudget=min(cost,budget)",
+    "density": "trunc(min(36,minute*1.6+4)); subtract actualactiveordinarycount; attemptup to3; genuineglobal50cap inside5719",
+    "position": "full8740 with absent producer-ownedpath; canonical world provider, headingbias parameter.5; noflat substitution",
+    "NPC": "current5719/97427/1586/21552; orderedHP/attack timecurves,2draws yaw/jitter,actualGUID/counter,432Bknownranges,completeknown169payload",
+    "stationary_preamble": "full952 evaluatesactual nearrows,none are >55units; farNPC replay is Pending"
+  },
+  "scope_boundaries": {
+    "only_clock2352_written_afterfull1108": true,
+    "timer_budget_RNG_NPC_velocity_path_injection": false,
+    "full1108_original4NPC_retained": true,
+    "original2Rune_windows_special_boundaries_retained": true,
+    "full952_entry_bodies_unchanged": true,
+    "all1080_scalar_timelines_compared": true,
+    "physical_fullcheckpoints": 27,
+    "no_combat_or_AI_tick_composition": true,
+    "full_scheduler_recovered": false,
+    "full884_or_App_bootstrap": false,
+    "native_execution": false,
+    "complete_games": 0
+  },
+  "world_boundaries": {
+    "independent_canonical_world_receipt_sha256": "46a89c27c6be70beb9f957dd05c6fecb8c93c83647fcb40182e255d352ff3a48",
+    "original_resource_only_context_snapshot_sha256": "5082076b26e04c1c9a1f27bc05e89f4d5ef0b60425f9000d0aafbbd997487da0",
+    "original_WorldRc_explicit": 20544696,
+    "old_Game_not_target": 14685248,
+    "resourceonly_context_not_independent_ownership_producer": true
+  },
+  "prior_attempts_excluded": [
+    {
+      "path": "evidence/spawn-schedule139-oracle-20261102T124109.189727Z",
+      "result": "expectation-only TypeError None inbytes; nooriginal process launched",
+      "failure_sha256": "42d6e0931c5ea50d21234bffe617fe31f48dc0a4021a10e70c4370ef18a7fe0a"
+    },
+    {
+      "path": "evidence/spawn-schedule139-oracle-20261102T124159.315449Z",
+      "result": "pilot8full952/3newNPC/0diff; excluded duplicate",
+      "comparison_sha256": "97c185872ceb1d70e91cbfa89c667151cce11d9738df25c1d3c67d6906db61cf"
+    }
+  ],
+  "pending": [
+    "40s1446 kind3/4/5 pickup scheduler andrandomkind selection",
+    "60s ordinaryelite scheduling (eligiblefirsteliteunlock3.5min),periodic2424",
+    "240s specialwave owner/placement",
+    "Boss2801 scheduled/endless branches",
+    "window pickupkind6 andmessages,initial windows retained without due event in this domain",
+    "combat/death nonzerokillcatchup,near/farNPC replay,moving actors,group/difficulty/endless variants",
+    "full952 with all timers/owners andcompletegameplay; this module raises Pending when admittedordinarydomain ends"
+  ],
+  "independent_review_pending": true,
+  "evidence_layers": {
+    "static_current_body_data_binding": true,
+    "pure_implementation": true,
+    "expected_first_original_full952_differential": true,
+    "model_only_selfcheck_claimed_as_original": false,
+    "original_instruction_fragment_only": false,
+    "full952_allbranches": false,
+    "main884_frame": false
+  },
+  "all_sources_frozen_before_original": true,
+  "source_before_after_equal": true,
+  "expectation_forbidden_reads": [],
+  "max_WASM_bytes": 177078272,
+  "WASM_cap_bytes": 268435456,
+  "heap_cap_MiB": 512,
+  "host_imports_denied": 882,
+  "host_calls": 0,
+  "originals_installers_saves_changed": false,
+  "public_Git_Android_changed": false
+}
