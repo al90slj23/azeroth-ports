@@ -1,0 +1,892 @@
+{
+  "kind": "current139_first_natural_growth_choice_spawn_different_author_readonly",
+  "review": "evidence/natural-growth139-v2-independent-owned-20261102T153937.237827Z/review/review.json",
+  "review_sha256": "f214cd403421a61c38f4ede87a15263e55383a4b8bb3c87cb2e1d6d322a07ed7",
+  "owned_terminal": {
+    "pid": 41478,
+    "pgid": 41478,
+    "exit_code": 0,
+    "pid_missing": true,
+    "pgid_missing": true,
+    "seconds": 34.1361944579985,
+    "author_original_executions": 0,
+    "source_unchanged": true
+  },
+  "readonly_schema_failure_excluded": "evidence/natural-growth139-v2-independent-owned-20261102T153732.187089Z",
+  "accepted": true,
+  "author_handoff_sha256": "8747945288895de3050a1dc5115519c004664adc05885e26fc17121fea22845c",
+  "reviewer_sha256": "94159b53391a89ef002f01093ded4a5f15db92825dba20b79d681816ff2feab6",
+  "source_counts": {
+    "files": 104,
+    "production": 89,
+    "edges": 427,
+    "bodies": 78
+  },
+  "batches": [
+    {
+      "evidence": "evidence/natural-run139-v2-oracle-20261102T151854.097863Z",
+      "comparison_sha256": "16b4c51032dc150522d9279da7c69ba826e637a912e70853581b22b55c4a518c",
+      "original_process": {
+        "pid": 19190,
+        "pgid": 19190,
+        "exit_code": 0,
+        "seconds": 2.361926833000325,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    },
+    {
+      "evidence": "evidence/natural-spawn139-oracle-20261102T151856.594632Z",
+      "comparison_sha256": "5cab88ba3b2090e794c41ff23753ecd5aaf1fabb394765ea604cb949e29f3ec9",
+      "original_process": {
+        "pid": 19249,
+        "pgid": 19249,
+        "exit_code": 0,
+        "seconds": 2.6597104579996085,
+        "pid_missing": true,
+        "pgid_missing": true
+      }
+    }
+  ],
+  "formal_counts": {
+    "fresh_instances": 6,
+    "component_steps": 588,
+    "full2123": 588,
+    "full925": 588,
+    "full2890": 588,
+    "full952": 306,
+    "full1093": 4,
+    "target_entries": 2074,
+    "setup2945_1600_1108": 18,
+    "direct_entries": 2092,
+    "reviewer_author_program_executions": 0,
+    "reviewer_original_executions": 0
+  },
+  "counts": {
+    "player_views": 2670,
+    "semantic_ledger_snapshots": 600,
+    "openingGame_known": 3336,
+    "openingGame_None": 12216,
+    "openingGame_nonzero_None": 1380,
+    "opening_units_known": 7272,
+    "opening_units_None": 3096,
+    "opening_units_nonzero_None": 2850,
+    "opening_pickups_known": 624,
+    "opening_pickups_None": 720,
+    "opening_pickups_nonzero_None": 636,
+    "opening_special_known": 672,
+    "opening_special_None": 288,
+    "opening_special_nonzero_None": 288,
+    "opening_windows_known": 120,
+    "opening_windows_None": 72,
+    "opening_windows_nonzero_None": 72,
+    "opening_boundaries_known": 3312,
+    "opening_boundaries_None": 2832,
+    "opening_boundaries_nonzero_None": 1224,
+    "Game_clock_input_inheritance_bytes": 1524096,
+    "positive_Regen": 204,
+    "player_NPC_physical_replay_bytes": 2213568,
+    "path_rebuilds": 6,
+    "BFS_values": 470400,
+    "clamped14_motions": 213,
+    "segment_nav_probes": 13163,
+    "direct_clear_routes": 322,
+    "packet_height_queries": 644,
+    "frames": 588,
+    "movement221": 354,
+    "removals": 20,
+    "AI_NPC_physical_replay_bytes": 2213568,
+    "attractions": 31,
+    "collections": 31,
+    "XP_awarded": 43,
+    "NPC_known": 1083277,
+    "NPC_None": 459395,
+    "NPC_nonzero_None": 414083,
+    "pickup_known": 94352,
+    "pickup_None": 46096,
+    "pickup_nonzero_None": 40908,
+    "physicalNPC_known": 1172336,
+    "physicalNPC_None": 1056784,
+    "physicalNPC_nonzero_None": 930627,
+    "known_packets": 686,
+    "known_packet_bytes": 35090,
+    "observed_packets": 859,
+    "observed_packet_bytes": 43315,
+    "natural_steps": 588,
+    "AI_attacks": 64,
+    "formal_removals": 20,
+    "racial": 6,
+    "live_known": 80172,
+    "live_None": 243540,
+    "live_nonzero_None": 221423,
+    "aura_known": 517956,
+    "aura_None": 1424316,
+    "aura_nonzero_None": 1244746,
+    "damage": 72,
+    "critical": 3,
+    "Leech": 47,
+    "cleave": 19,
+    "moving_deaths": 6,
+    "deaths": 31,
+    "basic": 20,
+    "basic_crit": 2,
+    "level_transitions": 6,
+    "level_up_positive_events": 6,
+    "stop_kind3_packets": 32,
+    "contacts": 59,
+    "history_None": 59256,
+    "history_nonzero_None": 45612,
+    "history_known": 66504,
+    "phase2_choices": 6,
+    "default0_selections": 4,
+    "selection_pickups": 3,
+    "selection_raw_XP": 4,
+    "selection_award": 5,
+    "post_select_basic": 3,
+    "post_select_Thunder": 3,
+    "active_live12_guarded_contacts": 5,
+    "slow_writes": 30,
+    "thunder_clap": 3,
+    "spawn_steps": 306,
+    "spawn_NPCs": 25,
+    "positive_spawn_cost_steps": 174,
+    "spawn_velocity_jump_filtered": 3,
+    "spawn_far55_predicates_not_taken": 2400,
+    "spawn_moving_far_guard_predicates": 1696,
+    "spawn_exp_evaluations": 306,
+    "spawn_positive_catchup": 4,
+    "spawn_choice_RNG_draws": 25,
+    "spawn_NPC_yaw_jitter_draws": 50,
+    "spawn_newNPC": 25,
+    "spawn_densityNPC": 0,
+    "spawn_path_cost_queries": 25,
+    "spawnNPC_known": 829688,
+    "spawnNPC_None": 912136,
+    "spawnNPC_nonzero_None": 797173,
+    "spawn_velocity_smoothing_branch": 303,
+    "spawn_dead_rows_skipped": 170
+  },
+  "choices": [
+    [
+      {
+        "step": 68,
+        "now_bits": 1088212164,
+        "cards": [
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "thunder_clap",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "upgrade",
+            "tier": 2,
+            "ability_id": "cleave",
+            "owned_index": 0,
+            "kinds": [
+              0
+            ],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 2,
+            "ability_id": "whirlwind",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          }
+        ],
+        "active_live_before": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0,
+            154,
+            153,
+            25,
+            62,
+            null,
+            null,
+            null,
+            null,
+            120,
+            80,
+            0,
+            0,
+            154,
+            153,
+            105,
+            65,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "growth": [
+          {
+            "levels": [],
+            "card_draws": 0,
+            "phase2_stop_pending": false
+          },
+          {
+            "levels": [
+              {
+                "before_level": 1,
+                "after_level": 2,
+                "threshold_spent": 5,
+                "old_max_hp_bits": 1130758144,
+                "old_hp_bits": 1130649728,
+                "after1542_hp_bits": 1131239552,
+                "new_max_hp_bits": 1131347968,
+                "heal_request_bits": 1111438131,
+                "heal_actual_delta_bits": 1070841856,
+                "heal_events": [
+                  {
+                    "reason_id": "level_up",
+                    "amount_bits": 1070841856,
+                    "now_bits": 1088212164,
+                    "event_id": 24,
+                    "resolved_spell_id_or_zero": 0,
+                    "arg3_descriptor_head": -1,
+                    "arg4_descriptor_head": 0
+                  }
+                ]
+              }
+            ],
+            "card_draws": 9,
+            "phase2_stop_pending": true
+          }
+        ],
+        "selection": {
+          "consumed": [],
+          "raw_XP": 0,
+          "award": 0,
+          "known_packets": [],
+          "growth": null,
+          "retained_live_indices": [
+            0
+          ],
+          "new1020_index": 1
+        }
+      },
+      {
+        "step": 83,
+        "now_bits": 1090938466,
+        "cards": [
+          {
+            "variant": "new",
+            "tier": 1,
+            "ability_id": "thunder_clap",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "bloodrage",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "bloodthirst",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          }
+        ],
+        "active_live_before": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0,
+            154,
+            153,
+            25,
+            62,
+            null,
+            null,
+            null,
+            null,
+            120,
+            80,
+            0,
+            0,
+            154,
+            153,
+            105,
+            65,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "growth": [
+          {
+            "levels": [
+              {
+                "before_level": 1,
+                "after_level": 2,
+                "threshold_spent": 5,
+                "old_max_hp_bits": 1130758144,
+                "old_hp_bits": 1130448809,
+                "after1542_hp_bits": 1131038633,
+                "new_max_hp_bits": 1131347968,
+                "heal_request_bits": 1111438131,
+                "heal_actual_delta_bits": 1083640544,
+                "heal_events": [
+                  {
+                    "reason_id": "level_up",
+                    "amount_bits": 1083640544,
+                    "now_bits": 1090938466,
+                    "event_id": 47,
+                    "resolved_spell_id_or_zero": 0,
+                    "arg3_descriptor_head": -1,
+                    "arg4_descriptor_head": 0
+                  }
+                ]
+              }
+            ],
+            "card_draws": 6,
+            "phase2_stop_pending": true
+          }
+        ],
+        "selection": {
+          "consumed": [],
+          "raw_XP": 0,
+          "award": 0,
+          "known_packets": [],
+          "growth": null,
+          "retained_live_indices": [
+            0
+          ],
+          "new1020_index": 1
+        }
+      },
+      {
+        "step": 89,
+        "now_bits": 1091567614,
+        "cards": [
+          {
+            "variant": "new",
+            "tier": 2,
+            "ability_id": "rend",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "upgrade",
+            "tier": 0,
+            "ability_id": "cleave",
+            "owned_index": 0,
+            "kinds": [
+              1
+            ],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "bloodthirst",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          }
+        ],
+        "active_live_before": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0,
+            154,
+            153,
+            25,
+            62,
+            null,
+            null,
+            null,
+            null,
+            120,
+            80,
+            0,
+            0,
+            154,
+            153,
+            105,
+            65,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "growth": [
+          {
+            "levels": [
+              {
+                "before_level": 1,
+                "after_level": 2,
+                "threshold_spent": 5,
+                "old_max_hp_bits": 1130758144,
+                "old_hp_bits": 1130268442,
+                "after1542_hp_bits": 1130858266,
+                "new_max_hp_bits": 1131347968,
+                "heal_request_bits": 1111438131,
+                "heal_actual_delta_bits": 1089412288,
+                "heal_events": [
+                  {
+                    "reason_id": "level_up",
+                    "amount_bits": 1089412288,
+                    "now_bits": 1091567614,
+                    "event_id": 50,
+                    "resolved_spell_id_or_zero": 0,
+                    "arg3_descriptor_head": -1,
+                    "arg4_descriptor_head": 0
+                  }
+                ]
+              }
+            ],
+            "card_draws": 7,
+            "phase2_stop_pending": true
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "step": 86,
+        "now_bits": 1091253040,
+        "cards": [
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "thunder_clap",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "battle_shout",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "bloodthirst",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          }
+        ],
+        "active_live_before": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0,
+            154,
+            153,
+            25,
+            62,
+            null,
+            null,
+            null,
+            null,
+            120,
+            80,
+            0,
+            0,
+            154,
+            153,
+            105,
+            65,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "growth": [
+          {
+            "levels": [
+              {
+                "before_level": 1,
+                "after_level": 2,
+                "threshold_spent": 5,
+                "old_max_hp_bits": 1130758144,
+                "old_hp_bits": 1129228668,
+                "after1542_hp_bits": 1129818492,
+                "new_max_hp_bits": 1131347968,
+                "heal_request_bits": 1111438131,
+                "heal_actual_delta_bits": 1102754848,
+                "heal_events": [
+                  {
+                    "reason_id": "level_up",
+                    "amount_bits": 1102754848,
+                    "now_bits": 1091253040,
+                    "event_id": 56,
+                    "resolved_spell_id_or_zero": 0,
+                    "arg3_descriptor_head": -1,
+                    "arg4_descriptor_head": 0
+                  }
+                ]
+              }
+            ],
+            "card_draws": 6,
+            "phase2_stop_pending": true
+          }
+        ],
+        "selection": {
+          "consumed": [
+            {
+              "index": 2,
+              "guid": "17379391113034465376",
+              "raw_amount": 2,
+              "marker": 1
+            },
+            {
+              "index": 2,
+              "guid": "17379391113034465378",
+              "raw_amount": 1,
+              "marker": 1
+            }
+          ],
+          "raw_XP": 3,
+          "award": 4,
+          "known_packets": [
+            [
+              170,
+              "60000029230030f1"
+            ],
+            [
+              170,
+              "62000029230030f1"
+            ],
+            [
+              221,
+              "d95c580230f1eafd12c64e5821c4ed4c85425a00000000000100001208000001000000a3e512c6b6181fc4e9d38642"
+            ],
+            [
+              221,
+              "d95e580230f1b13313c602301bc49aa290425b00000000000100007608000001000000330913c65c341cc439039142"
+            ]
+          ],
+          "growth": {
+            "levels": [],
+            "card_draws": 0,
+            "phase2_stop_pending": true
+          },
+          "retained_live_indices": [
+            0
+          ],
+          "new1020_index": 1
+        }
+      },
+      {
+        "step": 86,
+        "now_bits": 1091253040,
+        "cards": [
+          {
+            "variant": "new",
+            "tier": 2,
+            "ability_id": "thunder_clap",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 1,
+            "ability_id": "demo_shout",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 2,
+            "ability_id": "mortal_strike",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          }
+        ],
+        "active_live_before": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0,
+            154,
+            153,
+            25,
+            62,
+            null,
+            null,
+            null,
+            null,
+            120,
+            80,
+            0,
+            0,
+            154,
+            153,
+            105,
+            65,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "growth": [
+          {
+            "levels": [
+              {
+                "before_level": 1,
+                "after_level": 2,
+                "threshold_spent": 5,
+                "old_max_hp_bits": 1130758144,
+                "old_hp_bits": 1129039705,
+                "after1542_hp_bits": 1129629529,
+                "new_max_hp_bits": 1131347968,
+                "heal_request_bits": 1111438131,
+                "heal_actual_delta_bits": 1104266552,
+                "heal_events": [
+                  {
+                    "reason_id": "level_up",
+                    "amount_bits": 1104266552,
+                    "now_bits": 1091253040,
+                    "event_id": 52,
+                    "resolved_spell_id_or_zero": 0,
+                    "arg3_descriptor_head": -1,
+                    "arg4_descriptor_head": 0
+                  }
+                ]
+              }
+            ],
+            "card_draws": 6,
+            "phase2_stop_pending": true
+          }
+        ],
+        "selection": {
+          "consumed": [
+            {
+              "index": 2,
+              "guid": "17379391113034465377",
+              "raw_amount": 1,
+              "marker": 1
+            }
+          ],
+          "raw_XP": 1,
+          "award": 1,
+          "known_packets": [
+            [
+              170,
+              "61000029230030f1"
+            ],
+            [
+              221,
+              "d95a580230f177c512c629371fc428b28742590000000000010000a50200000100000093c512c671531ec4e2478842"
+            ],
+            [
+              221,
+              "d95c580230f1fc1213c6f5b91bc4b8dc91425a00000000000100007608000001000000dcea12c638111dc45e4f8842"
+            ],
+            [
+              221,
+              "d95f580230f1566d12c6a6941dc4d7c487425b0000000000010000da08000001000000ec9c12c665a71dc44bc28842"
+            ]
+          ],
+          "growth": {
+            "levels": [],
+            "card_draws": 0,
+            "phase2_stop_pending": true
+          },
+          "retained_live_indices": [
+            0
+          ],
+          "new1020_index": 1
+        }
+      },
+      {
+        "step": 85,
+        "now_bits": 1091148182,
+        "cards": [
+          {
+            "variant": "new",
+            "tier": 2,
+            "ability_id": "demo_shout",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "shield_slam",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          },
+          {
+            "variant": "new",
+            "tier": 0,
+            "ability_id": "bloodthirst",
+            "owned_index": 0,
+            "kinds": [],
+            "gold": 0
+          }
+        ],
+        "active_live_before": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0,
+            154,
+            153,
+            25,
+            62,
+            null,
+            null,
+            null,
+            null,
+            120,
+            80,
+            0,
+            0,
+            154,
+            153,
+            105,
+            65,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "growth": [
+          {
+            "levels": [
+              {
+                "before_level": 1,
+                "after_level": 2,
+                "threshold_spent": 5,
+                "old_max_hp_bits": 1130758144,
+                "old_hp_bits": 1129392506,
+                "after1542_hp_bits": 1129982330,
+                "new_max_hp_bits": 1131347968,
+                "heal_request_bits": 1111438131,
+                "heal_actual_delta_bits": 1101444144,
+                "heal_events": [
+                  {
+                    "reason_id": "level_up",
+                    "amount_bits": 1101444144,
+                    "now_bits": 1091148182,
+                    "event_id": 53,
+                    "resolved_spell_id_or_zero": 0,
+                    "arg3_descriptor_head": -1,
+                    "arg4_descriptor_head": 0
+                  }
+                ]
+              }
+            ],
+            "card_draws": 6,
+            "phase2_stop_pending": true
+          },
+          {
+            "levels": [],
+            "card_draws": 0,
+            "phase2_stop_pending": true
+          }
+        ]
+      }
+    ]
+  ],
+  "failure_localization": {
+    "path": "evidence/natural-run139-v2-joint-20261102T152159.601512Z/failure-localization.json",
+    "sha256": "135b3b59891af9c7a4cd9fb4c93be4379b76f7ea08147fc74f7e5e3da0592c55",
+    "initial273_differences_kept": true,
+    "old_incorrect_2890_hypothesis_explicitly_corrected": true
+  },
+  "old_v1_not_accepted": true,
+  "limits": [
+    "Current139/71a44 fixed input; no 1391 migration transfer.",
+    "Sixfresh defaultHumanWarrior/Elwynn initialsinglecleave/noXP/noHP/CD/RNG/card/position/racialpatches; UIindex0 actualofferedThunder orunsupported cardstopphase2.",
+    "Two declared schedules2123->925->2890 and2123->925->2890->952 at external884-compatibleclock, including952afterphase2entered; neither actualfull884 scheduling/frame nor completegame.",
+    "New1093->4603 forwardstable56BXP consumption accepts marker1 withoutarrival/radius; marker0 usespost1542radius; rawu32sum scaled/roundedonce->4677 whilephase2. Additionalpending choice remains explicitPending and was not dynamically admitted.",
+    "Stats maxHP+9 adjustsHP before11033; onlypositiveclampedhealdelta goes1466/G960/2077/G1016/reasonlevel_up; descriptorheads remainstatic,not sampledarguments.",
+    "Inherited20600 and1020nonemptylive/Aura retained. Current1076activekind12 guard beforeHP/history recovers the priorreadonlyhelperdomain failure; oldsource/failure retained.",
+    "686 known packets35090B only orderedsubset of859observed43315B; unknown173/8225B includespresentation/UI/callbackstream. No fullnetwork/nativeWindows acceptance.",
+    "Known/None NPC/pickup/live/Aura/history matched, NPCphysicalknownupdates/stablecompaction/staleTail andinitial2Rune/background preserved; newallocationholes remainUnknown.",
+    "Sharedledger/f64/Vec48semantic view only; full2077 physical keys/catalog/buckets/history/heapaddresses andentire outputGame not reconstructed. ExactGameinputclockinheritance checked.",
+    "Current952domain through~11s;25newNPC/positivecost174, no60swave/40spickup/Boss180/elite240/windowdue/wholegame regression implied.",
+    "Resource-onlyv2context andcanonicalworld remainexplicit dependencies, no independentApp/WorldRc/externref bootstrap.",
+    "Oldnaturalv1 threefixture observations not acceptedasgeneralchoice composition; initial273differences andcorrected1093/4603localization retained. Freshnewold3 are separately captured and independently replayed."
+  ]
+}
